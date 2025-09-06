@@ -1,14 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIConsciousnessEvolution2025() {
-  
-    />
-  );
-=======
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
 export default function AIConsciousnessEvolution2025() {
 	return (
 		<ServiceLanding
@@ -20,11 +11,11 @@ export default function AIConsciousnessEvolution2025() {
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
-				"Affective signals and sentiment grounding";
-				"Self-reflection loops and memory consolidation";
-				"Safety layers for alignment and guardrails";
-				"Evaluation harness for subjective tasks";
-				"Multi-modal context fusion (text, voice, UI)";
+				"Affective signals and sentiment grounding",
+				"Self-reflection loops and memory consolidation",
+				"Safety layers for alignment and guardrails",
+				"Evaluation harness for subjective tasks",
+				"Multi-modal context fusion (text, voice, UI)",
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
@@ -32,4 +23,3 @@ export default function AIConsciousnessEvolution2025() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

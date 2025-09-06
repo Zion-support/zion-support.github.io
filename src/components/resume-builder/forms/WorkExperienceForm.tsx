@@ -1,28 +1,25 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { Input } from '@/components/ui/input'
+import { Checkbox } from '@/components/ui/checkbox'
+import { format } from 'date-fns'
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
-} from '@/components/ui/form';
-import { WorkExperience } from '@/types/resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-
+  FormMessage,
+} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+import { Loader2, Edit, Trash2 } from 'lucide-react'
+import { useResume } from '@/hooks/useResume'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Card, CardContent } from '@/components/ui/card'
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton'
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -32,16 +29,13 @@ const workExperienceSchema = z.object({
   is_current: z.boolean().default(false),
   description: z.string().optional(),
   location: z.string().optional(),
-});
-
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
-
+})
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
 interface WorkExperienceFormProps {
-  resumeId: string;
-  workExperiences: WorkExperience[];
-  onComplete: () => void;
-  onBack: () => void;
-
+  resumeId: string
+  workExperiences: WorkExperience[]
+  onComplete: () => void
+  onBack: () => void
 export function WorkExperienceForm({
   resumeId,
   workExperiences,
@@ -53,17 +47,15 @@ export function WorkExperienceForm({
     updateWorkExperience,
     deleteWorkExperience,
     isLoading,
-  } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
+  } = useResume()
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd');
-  };
-
+    if (!dateValue) return ''
+    if (typeof dateValue === 'string') return dateValue
+    return format(dateValue, 'yyyy-MM-dd')
+  }
   const form = useForm<WorkExperienceFormValues>({
     resolver: zodResolver(workExperienceSchema),
     defaultValues: {
@@ -74,13 +66,11 @@ export function WorkExperienceForm({
       description: '',
       location: '',
     },
-  });
-
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
+  })
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
-      setError(null);
-      let success;
-
+      setError(null)
+      let success
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
@@ -89,12 +79,11 @@ export function WorkExperienceForm({
         is_current: data.is_current,
         description: data.description,
         location: data.location,
-      };
-
+      }
       if (editingId) {
-        success = await updateWorkExperience(editingId, experienceData);
+        success = await updateWorkExperience(editingId, experienceData)
       } else {
-        success = await addWorkExperience(resumeId, experienceData);
+        success = await addWorkExperience(resumeId, experienceData)
       }
 
       if (success) {
@@ -105,52 +94,35 @@ export function WorkExperienceForm({
           is_current: false,
           description: '',
           location: '',
-        });
-        setEditingId(null);
+        })
+        setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred')
     }
-  };
-=======
-
-<<<<<<< HEAD
-
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
-
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  }
+  const handleEdit = (work: WorkExperience) => {
+    setEditingId(work.id!);    form.reset({
+      ...work,
 
   const handleEdit = (work: WorkExperience) => {
-    setEditingId(work.id!);
+    setEditingId(work.id!)
     form.reset({
-<<<<<<< HEAD
-      ...work,
       start_date: formatDateValue(work.start_date),
       end_date:
         work.end_date && !work.is_current
           ? formatDateValue(work.end_date)
           : undefined,
-    });
-  };
-
-  const handleDelete = async (id: string) => {
+    })
+  }
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
-      await deleteWorkExperience(id);
+      await deleteWorkExperience(id)
     }
-  };
-
+  }
   const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent);
-  };
-
+    form.setValue('description', enhancedContent)
+  }
   return (
     <div className='space-y-6'>
       <div>
@@ -166,8 +138,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
           {workExperiences.map(work => (
             <Card key={work.id} className='bg-muted/40'>
               <CardContent className='pt-6'>
-                <div className='flex justify-between'>
-                  <div>
+                <div className='flex justify-between'>                  <div>
                     <h4 className='font-medium'>{work.role_title}</h4>
                     <p className='text-sm text-muted-foreground'>
                       {work.company_name}
@@ -196,16 +167,14 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
-                      aria-label='Edit experience'
-                    >
+                      aria-label='Edit experience'                    >
                       <Edit className='h-4 w-4' />
                     </Button>
                     <Button
                       variant='ghost'
                       size='icon'
                       onClick={() => handleDelete(work.id!)}
-                      aria-label='Delete experience'
-                    >
+                      aria-label='Delete experience'                    >
                       <Trash2 className='h-4 w-4' />
                     </Button>
                   </div>
@@ -235,8 +204,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
               <FormField
                 control={form.control}
                 name='company_name'
-                render={({ field }: { field: any }) => (
-                  <FormItem>
+                render={({ field }: { field: any }) => (                  <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder='Google, Microsoft, etc.' {...field} />
@@ -249,8 +217,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
               <FormField
                 control={form.control}
                 name='role_title'
-                render={({ field }: { field: any }) => (
-                  <FormItem>
+                render={({ field }: { field: any }) => (                  <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input
@@ -272,8 +239,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-                      <Input type='date' {...field} value={field.value || ''} />
-                    </FormControl>
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -284,11 +250,10 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                   control={form.control}
                   name='is_current'
                   render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>
-                      <FormControl>
+                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
                         <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                         />
                       </FormControl>
                       <div className='space-y-1 leading-none'>
@@ -309,8 +274,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                           <Input
                             type='date'
                             {...field}
-                            value={field.value || ''}
-                          />
+                            value={field.value || ''}                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -328,8 +292,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder='San Francisco, CA (Remote)'
-                      {...field}
+                      placeholder='San Francisco, CA (Remote)'                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -375,7 +338,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                 variant='outline'
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null);
+                    setEditingId(null)
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -383,9 +346,9 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                       is_current: false,
                       description: '',
                       location: '',
-                    });
+                    })
                   } else {
-                    onBack();
+                    onBack()
                   }
                 }}
               >
@@ -411,19 +374,11 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
         </Form>
       </div>
     </div>
-  );
-
-}> {';
-  editingId ? 'Cancel': 'Back' ;
-}</Button> Next </Button>) ;
-}</div> </div> </form> </Form> </div> </div>) ;
-}'"
-=======
-      ...work;
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  };
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}> {'
+  editingId ? 'Cancel': 'Back' 
+}</Button> Next </Button>) 
+}</div> </div> </form> </Form> </div> </div>) 
+}'"  )
+}
+;

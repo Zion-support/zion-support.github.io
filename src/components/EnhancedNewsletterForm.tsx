@@ -1,64 +1,56 @@
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useState, useRef } from 'react'
+import { Mail } from 'lucide-react'
+import { useToast } from '@/hooks/use-toast'
+import { logErrorToProduction } from '@/utils/productionLogger'
 export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const lastSubmit = useRef(0);
-
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const { toast } = useToast()
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const lastSubmit = useRef(0)
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
-
-    const trimmed = email.trim();
+    e.preventDefault()
+    const now = Date.now()
+    if (now - lastSubmit.current < 1000) return
+    lastSubmit.current = now
+    const trimmed = email.trim()
     if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error('Invalid email');
-      return;
+      toast.error('Invalid email')
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed }),
-      });
-
-      const data = await res.json().catch(() => ({}));
-
+      })
+      const data = await res.json().catch(() => ({}))
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!");
+          toast.success(data.message || "You're already subscribed!")
         } else {
-          toast.success(data.message || 'Thanks for subscribing!');
+          toast.success(data.message || 'Thanks for subscribing!')
         }
-        setIsSubmitted(true);
-        setEmail('');
+        setIsSubmitted(true)
+        setEmail('')
       } else {
         // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data });
-        toast.error(data.error || 'Subscription failed. Please try again.');
+        logErrorToProduction('Newsletter subscription failed:', { data: data })
+        toast.error(data.error || 'Subscription failed. Please try again.')
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error('Unable to subscribe right now. Please try again later.');
+      logErrorToProduction('Newsletter subscription error:', { data: err })
+      toast.error('Unable to subscribe right now. Please try again later.')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   return (
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
       <div className='flex items-center mb-4'>
@@ -105,8 +97,7 @@ export function EnhancedNewsletterForm() {
           <Button
             type='submit'
             disabled={isSubmitting}
-            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
-          >
+            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'          >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </form>
@@ -118,21 +109,12 @@ export function EnhancedNewsletterForm() {
             <div
               key={i}
               className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'
-            >
-              {String.fromCharCode(65 + i)}
+            >              {String.fromCharCode(65 + i)}
             </div>
           ))}
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  );
-=======
-
-<<<<<<< HEAD
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}

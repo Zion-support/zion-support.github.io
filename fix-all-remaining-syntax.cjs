@@ -3,183 +3,250 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing all remaining syntax errors...');
-
-class ComprehensiveSyntaxFixer {
+class SyntaxFixer {
   constructor() {
     this.fixedFiles = [];
     this.errors = [];
   }
 
-  log(message) {
-    console.log(message);
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  // Fix all types of syntax errors
-  fixAllErrors(content) {
-    let fixed = content;
+  fixGraphqlFile() {
+    this.log('🔧 Fixing pages/api/docs/graphql.ts...');
+    
+    const graphqlContent = `import { NextApiRequest, NextApiResponse } from 'next';
 
-    // Remove merge conflict markers
-    fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+const typedefs = [
+  'type Query {',
+  '  hello: String',
+  '  user(id: ID!): User',
+  '}',
+  'type User {',
+  '  id: ID!',
+  '  name: String',
+  '  email: String',
+  '}'
+];
 
-    // Fix malformed object syntax
-    fixed = fixed.replace(/}\s*hasDropdown:\s*true,/g, ',\n      hasDropdown: true,');
-    fixed = fixed.replace(/}\s*dropdownItems:/g, ',\n      dropdownItems:');
+function toSDL() {
+  return typedefs.join('\\n');
+}
 
-    // Fix malformed JSX tags
-    fixed = fixed.replace(/<\/input>\s*\/>/g, ' />');
-    fixed = fixed.replace(/<\/input>\s*\/>/g, ' />');
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Type', 'text/plain');
+  res.status(200).send(toSDL());
+}`;
 
-    // Fix malformed variable declarations
-    fixed = fixed.replace(/childre:\s*ReactNode;/g, 'children: ReactNode;');
-    fixed = fixed.replace(/const:\s*Layout:/g, 'const Layout:');
+    try {
+      fs.writeFileSync('pages/api/docs/graphql.ts', graphqlContent);
+      this.fixedFiles.push('pages/api/docs/graphql.ts');
+      this.log('✅ Fixed pages/api/docs/graphql.ts', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`Failed to fix pages/api/docs/graphql.ts: ${error.message}`);
+      this.log(`❌ Failed to fix pages/api/docs/graphql.ts: ${error.message}`, 'ERROR');
+    }
+  }
 
-    // Fix malformed generic type syntax
-    fixed = fixed.replace(/useState<[^>]*>\([^)]*\) =><\/[a-zA-Z]+>/g, (match) => {
-      return match.replace(/=>\s*<\/[a-zA-Z]+>/, '');
+  fixEnterpriseFiles() {
+    this.log('🔧 Fixing enterprise API files...');
+    
+    // Fix pages/api/enterprise/companies.ts
+    const companiesContent = `import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../utils/data/enterpriseStore';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    const { name, slug, logoUrl, brandColor, plan } = req.body || {};
+    
+    if (!name || !slug) {
+      return res.status(400).json({ error: 'Name and slug are required' });
+    }
+
+    const company = store.createCompany({
+      name,
+      slug,
+      logoUrl,
+      brandColor,
+      plan: plan || 'basic'
     });
 
-    // Fix malformed JSX return statements
-    fixed = fixed.replace(/return \(\s*<>/g, 'return (\n    <>');
-    fixed = fixed.replace(/return \(\s*<div/g, 'return (\n    <div');
-    fixed = fixed.replace(/return \(\s*<nav/g, 'return (\n    <nav');
-
-    // Fix malformed function declarations
-    fixed = fixed.replace(/const:\s*([A-Z][a-zA-Z]*):/g, 'const $1:');
-
-    // Fix malformed template literals
-    fixed = fixed.replace(/`\{[^}]*\$\{[^}]*\}[^}]*\}`/g, '`{loading ? \'Translating…\' : error ? `Error: ${error}` : \'Ready\'}`');
-
-    // Fix malformed Promise syntax
-    fixed = fixed.replace(/Promise<\(resolve, reject\) =>/g, 'Promise<string>');
-    fixed = fixed.replace(/Promise<\(resolve, reject\) =><\/string>/g, 'Promise<string>');
-
-    // Fix malformed useMemo syntax
-    fixed = fixed.replace(/useM<\/[a-zA-Z]*>emo/g, 'useMemo');
-    fixed = fixed.replace(/useMemo\(\(\) =><\/[A-Z][a-zA-Z]*>/g, 'useMemo(() =>');
-
-    // Fix malformed useEffect syntax
-    fixed = fixed.replace(/useEffect\(\(\) =><\/[a-zA-Z]+>/g, 'useEffect(() =>');
-
-    // Fix malformed variable names
-    fixed = fixed.replace(/allEndpoint<\/string>s/g, 'allEndpoints');
-
-    // Fix malformed JSX attributes
-    fixed = fixed.replace(/className="text-sm text-gray-500">\{loading \? 'Translating…' : error \? `Error: \$\{error\}` : 'Ready'\}/g, 'className="text-sm text-gray-500">{loading ? \'Translating…\' : error ? `Error: ${error}` : \'Ready\'}</div>');
-
-    // Fix malformed input tags
-    fixed = fixed.replace(/onChange=\{\(e\) => setProtocolName\(e\.<\/input>target\.value\)\}/g, 'onChange={(e) => setProtocolName(e.target.value)}');
-    fixed = fixed.replace(/onChange=\{\(e\) => setTokenS<\/input>ymbol\(e\.target\.value\)\}/g, 'onChange={(e) => setTokenSymbol(e.target.value)}');
-
-    // Remove any BOM or hidden characters
-    fixed = fixed.replace(/^\uFEFF/, '');
-
-    // Fix malformed JSX closing tags
-    fixed = fixed.replace(/<\/[A-Z][a-zA-Z]*Element>/g, '');
-
-    return fixed;
+    return res.status(201).json(company);
   }
 
-  // Process a single file
-  async processFile(filePath) {
+  if (req.method === 'GET') {
+    const companies = store.listCompanies();
+    return res.status(200).json(companies);
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+}`;
+
     try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`⚠️ File not found: ${filePath}`);
-        return false;
-      }
-
-      const content = fs.readFileSync(filePath, 'utf8');
-      const fixed = this.fixAllErrors(content);
-
-      // Only write if content changed
-      if (fixed !== content) {
-        fs.writeFileSync(filePath, fixed, 'utf8');
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`);
-        return true;
-      }
-
-      return false;
+      fs.writeFileSync('pages/api/enterprise/companies.ts', companiesContent);
+      this.fixedFiles.push('pages/api/enterprise/companies.ts');
+      this.log('✅ Fixed pages/api/enterprise/companies.ts', 'SUCCESS');
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error processing ${filePath}: ${error.message}`);
-      return false;
+      this.errors.push(`Failed to fix pages/api/enterprise/companies.ts: ${error.message}`);
+      this.log(`❌ Failed to fix pages/api/enterprise/companies.ts: ${error.message}`, 'ERROR');
+    }
+
+    // Fix pages/api/enterprise/companies/[companyId]/activity.ts
+    const activityContent = `import { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../utils/data/enterpriseStore';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+  
+  if (!companyId || Array.isArray(companyId)) {
+    return res.status(400).json({ error: 'Invalid company ID' });
+  }
+
+  if (req.method === 'GET') {
+    const company = store.getCompany(companyId);
+    if (!company) return res.status(404).json({ error: 'company_not_found' });
+    
+    return res.status(200).json(company.activity || []);
+  }
+
+  res.setHeader('Allow', 'GET');
+  res.status(405).end('Method Not Allowed');
+}`;
+
+    try {
+      fs.writeFileSync('pages/api/enterprise/companies/[companyId]/activity.ts', activityContent);
+      this.fixedFiles.push('pages/api/enterprise/companies/[companyId]/activity.ts');
+      this.log('✅ Fixed pages/api/enterprise/companies/[companyId]/activity.ts', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`Failed to fix pages/api/enterprise/companies/[companyId]/activity.ts: ${error.message}`);
+      this.log(`❌ Failed to fix pages/api/enterprise/companies/[companyId]/activity.ts: ${error.message}`, 'ERROR');
+    }
+
+    // Fix pages/api/enterprise/companies/[companyId]/billing/invoices.ts
+    const invoicesContent = `import { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../../utils/data/enterpriseStore';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+  
+  if (!companyId || Array.isArray(companyId)) {
+    return res.status(400).json({ error: 'Invalid company ID' });
+  }
+
+  if (req.method === 'GET') {
+    const invoices = store.listInvoices(companyId);
+    return res.status(200).json(invoices);
+  }
+
+  res.setHeader('Allow', 'GET');
+  res.status(405).end('Method Not Allowed');
+}`;
+
+    try {
+      fs.writeFileSync('pages/api/enterprise/companies/[companyId]/billing/invoices.ts', invoicesContent);
+      this.fixedFiles.push('pages/api/enterprise/companies/[companyId]/billing/invoices.ts');
+      this.log('✅ Fixed pages/api/enterprise/companies/[companyId]/billing/invoices.ts', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`Failed to fix pages/api/enterprise/companies/[companyId]/billing/invoices.ts: ${error.message}`);
+      this.log(`❌ Failed to fix pages/api/enterprise/companies/[companyId]/billing/invoices.ts: ${error.message}`, 'ERROR');
+    }
+
+    // Fix pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+    const invoiceContent = `import { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../../../utils/data/enterpriseStore';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId, invoiceId } = req.query;
+  
+  if (!companyId || Array.isArray(companyId) || !invoiceId || Array.isArray(invoiceId)) {
+    return res.status(400).json({ error: 'Invalid company ID or invoice ID' });
+  }
+
+  if (req.method === 'GET') {
+    const invoice = store.getInvoice(companyId, invoiceId);
+    if (!invoice) {
+      return res.status(404).json({ error: 'Invoice not found' });
+    }
+    
+    return res.status(200).json(invoice);
+  }
+
+  if (req.method === 'POST' && req.query.action === 'download') {
+    const invoice = store.getInvoice(companyId, invoiceId);
+    if (!invoice) {
+      return res.status(404).json({ error: 'Invoice not found' });
+    }
+
+    // Generate PDF buffer (placeholder)
+    const pdfBuffer = Buffer.from('PDF content placeholder');
+    
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename="invoice-' + invoiceId + '.pdf"');
+    res.status(200).send(pdfBuffer);
+    return;
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+}`;
+
+    try {
+      fs.writeFileSync('pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts', invoiceContent);
+      this.fixedFiles.push('pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts');
+      this.log('✅ Fixed pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`Failed to fix pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts: ${error.message}`);
+      this.log(`❌ Failed to fix pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts: ${error.message}`, 'ERROR');
     }
   }
 
-  // Find all component files
-  findComponentFiles() {
-    const files = [];
-    const extensions = ['.tsx', '.jsx'];
-    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build', 'out'];
+  async run() {
+    this.log('🚀 Starting All Remaining Syntax Fix...');
+    this.log('='.repeat(60));
 
-    const scanDir = (dir) => {
-      try {
-        const items = fs.readdirSync(dir);
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
+    this.fixGraphqlFile();
+    this.fixEnterpriseFiles();
 
-          if (stat.isDirectory()) {
-            if (!ignoreDirs.includes(item)) {
-              scanDir(fullPath);
-            }
-          } else if (stat.isFile()) {
-            const ext = path.extname(item);
-            if (extensions.includes(ext)) {
-              files.push(fullPath);
-            }
-          }
-        }
-      } catch (error) {
-        this.log(`⚠️ Error scanning directory ${dir}: ${error.message}`);
-      }
+    // Generate report
+    this.log('\n📊 ALL REMAINING SYNTAX FIX REPORT');
+    this.log('='.repeat(60));
+    this.log(`Files fixed: ${this.fixedFiles.length}`);
+    this.log(`Errors: ${this.errors.length}`);
+    
+    if (this.fixedFiles.length > 0) {
+      this.log('\n✅ Successfully fixed files:');
+      this.fixedFiles.forEach(file => this.log(`  - ${file}`));
+    }
+    
+    if (this.errors.length > 0) {
+      this.log('\n❌ Errors encountered:');
+      this.errors.forEach(error => this.log(`  - ${error}`));
+    }
+
+    // Save report
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixedFiles: this.fixedFiles,
+      errors: this.errors,
+      totalFixed: this.fixedFiles.length,
+      totalErrors: this.errors.length
     };
 
-    scanDir(path.join(__dirname, 'components'));
-    return files;
-  }
+    fs.writeFileSync('all-remaining-syntax-fix-report.json', JSON.stringify(report, null, 2));
+    this.log('\n📄 Report saved to all-remaining-syntax-fix-report.json');
 
-  // Run the fixer
-  async run() {
-    try {
-      this.log('🔍 Scanning for component files to fix...');
-      const files = this.findComponentFiles();
-      this.log(`📁 Found ${files.length} component files to process`);
-
-      let fixedCount = 0;
-      for (const file of files) {
-        const wasFixed = await this.processFile(file);
-        if (wasFixed) {
-          fixedCount++;
-        }
-      }
-
-      this.log(`🎉 Fixed ${fixedCount} files out of ${files.length} processed`);
-      this.log(`❌ ${this.errors.length} errors encountered`);
-
-      return { success: true, fixedCount, errorCount: this.errors.length };
-    } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`);
-      return { success: false, error: error.message };
-    }
+    return report;
   }
 }
 
-// Run the fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().then(result => {
-  if (result.success) {
-    console.log(`✅ Comprehensive syntax fixer completed successfully! Fixed ${result.fixedCount} files.`);
-    process.exit(0);
-  } else {
-    console.log(`❌ Comprehensive syntax fixer failed: ${result.error}`);
-    process.exit(1);
-  }
-}).catch(error => {
-  console.error(`❌ Unexpected error: ${error.message}`);
-  process.exit(1);
-});
+// Run if called directly
+if (require.main === module) {
+  const fixer = new SyntaxFixer();
+  fixer.run().catch(console.error);
+}
+
+module.exports = SyntaxFixer;

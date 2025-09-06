@@ -1,5 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
 async function scorePage(url) {
   const t0 = Date.now();
@@ -51,9 +50,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};
-=======
-async function scorePage(url) {
+};async function scorePage(url) {
   const t0 = Date.now(),
   try {
     const resp = await fetch(url),
@@ -92,4 +89,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

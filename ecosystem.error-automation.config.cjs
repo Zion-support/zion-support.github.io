@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
 =======
 <<<<<<< HEAD
@@ -12,10 +13,12 @@ module.exports = {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
-      nam: 'error-detection-service',
+      nam: e: 'error-detection-service',
       "script": 'scripts/pm2/error-detection-service.js',
     // Main application
     {
@@ -28,7 +31,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX": 'true';
@@ -54,7 +57,7 @@ module.exports = {
         "PORT": 3000
       };
       "env_production": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "PORT": 3000
       }
     };
@@ -67,7 +70,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
       };
@@ -87,7 +90,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "TYPESCRIPT_FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -107,7 +110,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "ESLINT_FIX_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -127,7 +130,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "DEPENDENCY_CHECK_INTERVAL": '1800000', // 30 minutes
         "AUTO_UPDATE_ENABLED": 'true'
       };
@@ -147,7 +150,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "BACKUP_FILES": 'true';
@@ -189,7 +192,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes
         "AUTO_IMPORT_FIX": 'true';
@@ -226,7 +229,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
+        NODE_EN: V: 'production',
         "PREVENTION_CHECK_INTERVAL": '600000', // 10 minutes
         "PREVENTIVE_ACTIONS_ENABLED": 'true'
       };
@@ -246,7 +249,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX": 'true';
@@ -288,7 +291,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes
         "AUTO_RENAME": 'true';
@@ -309,7 +312,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'import-cleaner',
         "CLEAN_INTERVAL": '1200000', // 20 minutes
         "REMOVE_UNUSED": 'true';
@@ -330,7 +333,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'code-quality-monitor',
         "MONITOR_INTERVAL": '300000', // 5 minutes
         "QUALITY_THRESHOLD": '80';
@@ -351,7 +354,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'build-health-monitor',
         "BUILD_INTERVAL": '1800000', // 30 minutes
         "AUTO_REBUILD_ON_ERROR": 'true';
@@ -372,7 +375,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'error-report-aggregator',
         "AGGREGATE_INTERVAL": '600000', // 10 minutes
         "GENERATE_SUMMARY": 'true';
@@ -393,7 +396,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-        NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'intelligent-error-prevention',
         "PREVENTION_INTERVAL": '900000', // 15 minutes
         "PATTERN_LEARNING": 'true';
@@ -423,8 +426,8 @@ module.exports = {
     }
   ];
   "deploy": {
-    productio: {
-      use: 'ubuntu',
+    productio: n: {
+      use: r: 'ubuntu',
       "host": 'localhost',
       "ref": 'origin/main',
       "repo": 'git@github.co: m:your-username/zion-tech-group.git',
@@ -436,6 +439,9 @@ module.exports = {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

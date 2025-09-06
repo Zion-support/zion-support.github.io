@@ -1,16 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import {
   ArrowRight,
   BookOpen,
   Code,
   Webhook,
   AlertCircle,
-  Zap,;
-} from 'lucide-react';
-import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
-
+  Zap,
+} from 'lucide-react'
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
 export function ApiDocsHub() {
   const sections = [
     {
@@ -48,8 +46,7 @@ export function ApiDocsHub() {
       path: '/developers/docs/errors',
       color: 'from-red-500 to-rose-500',
     },
-  ];
-
+  ]
   return (
     <ApiDocsLayout>
       <div className='max-w-4xl'>
@@ -67,8 +64,7 @@ export function ApiDocsHub() {
             <Link
               key={section.path}
               href={section.path}
-              className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'
-            >
+              className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'            >
               <div
                 className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}
               >
@@ -104,13 +100,5 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
-  );
-
-export default ApiDocsHub;
-=======
-
-<<<<<<< HEAD
-
-export default ApiDocsHub;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+export default ApiDocsHub

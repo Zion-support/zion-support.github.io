@@ -1,14 +1,8 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore) ) 
-}</ul> </li>) ) 
-}</ul>) 
-}</div> </EnhancedLayout>) 
-=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/security/osv-report.json';
+import data from '../../data/security/osv-report.json',;
 export default function OsvWatchPage() {
-  const results: any[] = (data?.results || []).slice(0, 50);
+  const results: any[] = (data?.results || []).slice(0, 50),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -33,5 +27,4 @@ export default function OsvWatchPage() {
       </div>
     </EnhancedLayout>
   )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};

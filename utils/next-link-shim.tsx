@@ -1,11 +1,31 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
 import React from 'react';
+
+// Define HTMLAnchorElement if not available
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
+}
+
+interface HTMLAnchorElement extends HTMLElement {
+  tagName: 'A';
+  href: string;
+  target: string;
+}
+
 type Href = string | { pathname?: string; href?: string };
+
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
   children: React.ReactNode;
@@ -13,6 +33,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
+<<<<<<< HEAD
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
@@ -38,6 +59,8 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href,
   children: React.ReactNode,
 };
+=======
+>>>>>>> origin/main
 
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
@@ -57,6 +80,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       ...rest,
     });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,11 +109,15 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/main
   return (
     <a href={resolved} className={className} {...rest}>
       {children}
     </a>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -108,3 +136,6 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> origin/main

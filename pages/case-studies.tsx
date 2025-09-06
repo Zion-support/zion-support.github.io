@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -82,7 +85,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -287,9 +289,14 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
+=======
+  );
+>>>>>>> origin/main
 <<<<<<< HEAD
+}
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -317,10 +324,10 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout> 
-=======
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
 	return (
+=======
+}	return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>
@@ -334,4 +341,7 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main

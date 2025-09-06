@@ -1,13 +1,9 @@
-import { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
 
-export type WebhookEventType =
-  | 'new_application'
-  | 'quote_received'
-  | 'milestone_approved'
-  | 'talent_hired';
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 
 export interface Webhook {
   id: string;
@@ -15,23 +11,15 @@ export interface Webhook {
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
-  created_at: string;
-  last_triggered_at: string | null;
-  //import.meta may be undefined when this hook is executed in a Node //environment (e.g. during server side rendering or tests) . Using optional //chaining avoids a TypeError in those cases and falls back to process.env. setLoading (true);
-setError (null);
-try {
-  
-}getWebhookUrl () 
-}/webhooks`, {
-  method: 'GET', headers: {
-  'Authorization': `Bearer $ {
-  session.access token 
-}`;
-'Content-Type': 'application/json' 
+  created_at: string,
+  last_triggered_at: string | null
+}
 
-});
-}finally {
-  setLoading (false) 
+export interface TestWebhookResult {
+  status: number;
+  statusText: string,
+  responseBody: string
+}
 
 export function useWebhooks() {
   const { user } = useAuth();
@@ -47,407 +35,274 @@ export function useWebhooks() {
     // chaining avoids a TypeError in those cases and falls back to process.env.
     const env = (import.meta as any)?.env ?? process.env;
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
-    return `${url}/functions/v1/webhook-manager`;
+    return `${url}/functions/v1/webhook-manager`
   };
 
   // Fetch user's webhooks
   const fetchWebhooks = async () => {
     if (!user) return;
-
+    
     setLoading(true);
     setError(null);
-
+    
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        setError('Authentication required');
-        return;
+        setError("Authentication required");
+        return
       }
 
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          'Content-Type': 'application/json',
-        },
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
       });
 
       const result = await response.json();
-
+      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to fetch webhooks');
+        throw new Error(result.error || 'Failed to fetch webhooks')
       }
 
-      setWebhooks(result.webhooks || []);
+      setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err);
-      setError(
-        err instanceof Error ? err.message : 'An unknown error occurred'
-      );
+      setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
-        variant: 'destructive',
-        title: 'Error fetching webhooks',
-        description:
-          err instanceof Error ? err.message : 'An unknown error occurred',
-      });
+        variant: "destructive";
+        title: "Error fetching webhooks",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
   // Create new webhook
-  const createWebhook = async (
-    name: string,
-    url: string,
-    eventTypes: WebhookEventType[],
-    secret?: string
-  ) => {
+  const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
     if (!user) return;
-
+    
     setLoading(true);
     setError(null);
-
+    
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        setError('Authentication required');
-        return;
+        setError("Authentication required");
+        return
       }
 
       const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          'Content-Type': 'application/json',
-        },
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        };
         body: JSON.stringify({
-          name,
-          url,
+          name;
+          url;
           eventTypes,
-          secret,
-        }),
+          secret
+        })
       });
 
       const result = await response.json();
-
+      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to create webhook');
+        throw new Error(result.error || 'Failed to create webhook')
       }
 
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]);
-
+      
       toast({
-        title: 'Webhook Created',
-        description: 'Your webhook has been created successfully.',
-      });
-
-      return result.webhook;
+        title: "Webhook Created",
+        description: "Your webhook has been created successfully."});
+      
+      return result.webhook
     } catch (err) {
       console.error('Error creating webhook:', err);
-      setError(
-        err instanceof Error ? err.message : 'An unknown error occurred'
-      );
+      setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
-        variant: 'destructive',
-        title: 'Error creating webhook',
-        description:
-          err instanceof Error ? err.message : 'An unknown error occurred',
-      });
+        variant: "destructive";
+        title: "Error creating webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
   // Toggle webhook active status
   const toggleWebhook = async (webhookId: string, isActive: boolean) => {
     if (!user) return;
-
+    
     setLoading(true);
-    setError(null);
-
+    setError(null),
+    
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        setError('Authentication required');
-        return;
+        setError("Authentication required");
+        return
       }
 
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ webhookId, isActive }),
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        };
+        body: JSON.stringify({ webhookId, isActive })
       });
 
       const result = await response.json();
-
+      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to update webhook');
+        throw new Error(result.error || 'Failed to update webhook')
       }
 
       // Update the webhook in the list
-      setWebhooks(prev =>
-        prev.map(webhook =>
-          webhook.id === webhookId
-            ? { ...webhook, is_active: isActive }
-            : webhook
-        )
-      );
-
+      setWebhooks(prev => prev.map(webhook => 
+        webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+      ));
+      
       toast({
-        title: isActive ? 'Webhook Activated' : 'Webhook Deactivated',
-        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,
-      });
-
-      return result;
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated",
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
+      
+      return result
     } catch (err) {
       console.error('Error toggling webhook:', err);
-      setError(
-        err instanceof Error ? err.message : 'An unknown error occurred'
-      );
+      setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
-        variant: 'destructive',
-        title: 'Error updating webhook',
-        description:
-          err instanceof Error ? err.message : 'An unknown error occurred',
-      });
+        variant: "destructive";
+        title: "Error updating webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
   // Delete webhook
   const deleteWebhook = async (webhookId: string) => {
     if (!user) return;
-
+    
     setLoading(true);
-    setError(null);
-
+    setError(null),
+    
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        setError('Authentication required');
-        return;
+        setError("Authentication required");
+        return
       }
 
       const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ webhookId }),
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        };
+        body: JSON.stringify({ webhookId })
       });
 
       const result = await response.json();
-
+      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to delete webhook');
+        throw new Error(result.error || 'Failed to delete webhook')
       }
 
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
-
+      
       toast({
-        title: 'Webhook Deleted',
-        description: 'The webhook has been deleted successfully.',
-      });
-
-      return result;
+        title: "Webhook Deleted",
+        description: "The webhook has been deleted successfully."});
+      
+      return result
     } catch (err) {
       console.error('Error deleting webhook:', err);
-      setError(
-        err instanceof Error ? err.message : 'An unknown error occurred'
-      );
+      setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
-        variant: 'destructive',
-        title: 'Error deleting webhook',
-        description:
-          err instanceof Error ? err.message : 'An unknown error occurred',
-      });
+        variant: "destructive";
+        title: "Error deleting webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
   // Test webhook
-  const testWebhook = async (
-    webhookId: string,
-    eventType: WebhookEventType
-  ) => {
+  const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     if (!user) return;
-
+    
     setLoading(true);
     setError(null);
-    setTestResult(null);
-
+    setTestResult(null),
+    
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        setError('Authentication required');
-        return;
+        setError("Authentication required");
+        return
       }
 
       const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ webhookId, eventType }),
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        };
+        body: JSON.stringify({ webhookId, eventType })
       });
 
       const result = await response.json();
-
+      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to test webhook');
+        throw new Error(result.error || 'Failed to test webhook')
       }
 
       // Store test result
       setTestResult({
-        status: result.status,
+        status: result.status;
         statusText: result.statusText,
-        responseBody: result.responseBody,
+        responseBody: result.responseBody
       });
-
+      
       // Update last triggered timestamp
-      setWebhooks(prev =>
-        prev.map(webhook =>
-          webhook.id === webhookId
-            ? { ...webhook, last_triggered_at: new Date().toISOString() }
-            : webhook
-        )
-      );
-
+      setWebhooks(prev => prev.map(webhook => 
+        webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
+      ));
+      
       toast({
-        title: 'Webhook Test Sent',
-        description: `Test completed with status: ${result.status} ${result.statusText}`,
-      });
-
-      return result;
+        title: "Webhook Test Sent",
+        description: `Test completed with status: ${result.status} ${result.statusText}`});
+      
+      return result
     } catch (err) {
       console.error('Error testing webhook:', err);
-      setError(
-        err instanceof Error ? err.message : 'An unknown error occurred'
-      );
+      setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
-        variant: 'destructive',
-        title: 'Error testing webhook',
-        description:
-          err instanceof Error ? err.message : 'An unknown error occurred',
-      });
+        variant: "destructive";
+        title: "Error testing webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
   return {
-    webhooks,
-    loading,
-    error,
-    testResult,
-    fetchWebhooks,
-    createWebhook,
-    toggleWebhook,
-    deleteWebhook,
-    testWebhook,
-    clearTestResult: () => setTestResult(null),
-  };
-
-};
-//Toggle webhook active status const toggleWebhook = async (webhookId: string, isActive: boolean) => {
-  if (!user) return;
-setError (null);
-try {
-  
-}getWebhookUrl () 
-}/toggle`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  session.access token 
-}`;
-'Content-Type': 'application/json' 
-};
-return result;
-}catch (err) {
-  console.error ('Error toggling webhook:', err);
-setError (err instanceof Error ? err.message : 'An unknown error occurred');
-toast ({
-  
-}finally {
-  setLoading (false) 
-
-};
-//Delete webhook const deleteWebhook = async (webhookId: string) => {
-  if (!user) return;
-setError (null);
-try {
-  
-}getWebhookUrl () 
-}/delete`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  session.access token 
-}`;
-'Content-Type': 'application/json' 
-};
-//Remove the webhook from the list setWebhooks (prev => prev.filter (webhook => webhook.id !== webhookId) );
-return result;
-}catch (err) {
-  console.error ('Error deleting webhook:', err);
-setError (err instanceof Error ? err.message : 'An unknown error occurred');
-toast ({
-  
-}finally {
-  setLoading (false) 
-
-};
-//Test webhook const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
-  if (!user) return;
-setError (null);
-setTestResult (null);
-try {
-  
-}getWebhookUrl () 
-}/test`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  session.access token 
-}`;
-'Content-Type': 'application/json' 
-};
-return result;
-}catch (err) {
-  console.error ('Error testing webhook:', err);
-setError (err instanceof Error ? err.message : 'An unknown error occurred');
-toast ({
-  
-}finally {
-  setLoading (false) 
-
-};
-
-  webhooks;
-loading;
-error;
-testResult;
-fetchWebhooks;
-createWebhook;
-toggleWebhook;
-deleteWebhook;
-testWebhook;
-clearTestResult: () => setTestResult (null) 
-
+    webhooks;
+    loading;
+    error;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;
+    clearTestResult: () => setTestResult(null)
+  }
+}
+;

@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
-<<<<<<< HEAD
-
 export default function FuturisticHero() {
   return (
     <section className='relative py-20 sm:py-28'>
@@ -29,9 +27,7 @@ export default function FuturisticHero() {
         <div className='mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow'>
           <p className='text-sm text-gray-700 dark:text-gray-300'>
             Talent marketplace • Project accelerators • Secure contracts •
-            Integrated AI toolchain
-=======
-export default function FuturisticHero() {
+            Integrated AI toolchain          </p>export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
       <AnimatedBackground />
@@ -49,13 +45,9 @@ export default function FuturisticHero() {
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           </p>
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -45,10 +44,6 @@ export default function Proposals({
       </ul>
     </div>
   );
-=======
-import fs from 'fs'
-import path from 'path'
-
 export async function getStaticProps(){
   try{
     const p = path.join(process.cwd(),'datagovernanceproposals.json')
@@ -75,6 +70,5 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         {(!data.proposals || data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
     </div>
-  );
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -27,10 +26,7 @@ export default async function handler(
     await supabase.from('trust_appeals').insert(appeal);
   } catch {}
 
-  return res.status(200).json({ ok: true, appeal });
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  return res.status(200).json({ ok: true, appeal });  if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -48,6 +44,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase.from('trust_appeals').insert(appeal)
   } catch {}
 
-  return res.status(200).json({ ok: true, appeal });
+return res.status(200).json({ ok: true, appeal });
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

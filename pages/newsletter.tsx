@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
+=======
+import React, { useState } from "react";
+import Head from "next/head";
+import Layout from "./components/Layout";
+import { motion } from "framer-motion";
+import {
+>>>>>>> origin/main
   ArrowRight,
   Users,
   Calendar,
@@ -17,16 +25,23 @@ import {
   Star,
   TrendingUp,
   Award,
+<<<<<<< HEAD
   Clock
 } from 'lucide-react';
+=======
+  Clock,
+} from "lucide-react";
+>>>>>>> origin/main
 
 const benefits = [
   {
-    title: 'Exclusive Content',
-    description: 'Get access to exclusive white papers, case studies, and industry insights.',
-    icon: FileText
+    title: "Exclusive Content",
+    description:
+      "Get access to exclusive white papers, case studies, and industry insights.",
+    icon: FileText,
   },
   {
+<<<<<<< HEAD
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
     icon: Video
@@ -41,10 +56,30 @@ const benefits = [
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
+=======
+    title: "Webinar Invitations",
+    description:
+      "Receive invitations to our expert-led webinars and virtual events.",
+    icon: Video,
+  },
+  {
+    title: "Early Access",
+    description:
+      "Be the first to know about new features, products, and services.",
+    icon: Zap,
+  },
+  {
+    title: "Industry Insights",
+    description:
+      "Stay updated with the latest trends and developments in technology.",
+    icon: TrendingUp,
+  },
+>>>>>>> origin/main
 ];
 
 const testimonials = [
   {
+<<<<<<< HEAD
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -66,16 +101,49 @@ const testimonials = [
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
+=======
+    name: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    content:
+      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
+    rating: 5,
+  },
+  {
+    name: "Michael Chen",
+    role: "Product Manager, InnovateLab",
+    content:
+      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",
+    rating: 5,
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Developer, CodeCraft",
+    content:
+      "The technical deep-dives and case studies have been incredibly helpful for my projects.",
+    rating: 5,
+  },
+];
+
+export default function NewsletterPage() {
+  const [email, setEmail] = useState("");
+>>>>>>> origin/main
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+<<<<<<< HEAD
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
+=======
+
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+>>>>>>> origin/main
     setIsSubscribed(true);
     setIsLoading(false);
   };
@@ -84,7 +152,14 @@ export default function NewsletterPage() {
     <Layout>
       <Head>
         <title>Newsletter - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
+=======
+        <meta
+          name="description"
+          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
+        />
+>>>>>>> origin/main
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -101,9 +176,16 @@ export default function NewsletterPage() {
                 Stay Ahead with Our Newsletter
               </h1>
               <p className="text-xl mb-8 text-blue-100">
+<<<<<<< HEAD
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
+=======
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
+
+>>>>>>> origin/main
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -162,7 +244,12 @@ export default function NewsletterPage() {
                 What You'll Get
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
+=======
+                Join thousands of professionals who rely on our newsletter for
+                the latest insights and updates.
+>>>>>>> origin/main
               </p>
             </motion.div>
 
@@ -181,9 +268,13 @@ export default function NewsletterPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {benefit.title}
                   </h3>
+<<<<<<< HEAD
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
+=======
+                  <p className="text-gray-600">{benefit.description}</p>
+>>>>>>> origin/main
                 </motion.div>
               ))}
             </div>
@@ -200,7 +291,13 @@ export default function NewsletterPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0 }}
               >
+<<<<<<< HEAD
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  10K+
+                </div>
+>>>>>>> origin/main
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -218,7 +315,13 @@ export default function NewsletterPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  Weekly
+                </div>
+>>>>>>> origin/main
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -247,7 +350,12 @@ export default function NewsletterPage() {
                 What Our Subscribers Say
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
                 Don't just take our word for it. Here's what our community has to say.
+=======
+                Don't just take our word for it. Here's what our community has
+                to say.
+>>>>>>> origin/main
               </p>
             </motion.div>
 
@@ -262,7 +370,14 @@ export default function NewsletterPage() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+=======
+                      <Star
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                      />
+>>>>>>> origin/main
                     ))}
                   </div>
                   <p className="text-gray-600 mb-4 italic">
@@ -295,9 +410,16 @@ export default function NewsletterPage() {
                 Ready to Join Our Community?
               </h2>
               <p className="text-xl mb-8 text-green-100">
+<<<<<<< HEAD
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
+=======
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
+
+>>>>>>> origin/main
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -341,4 +463,8 @@ export default function NewsletterPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

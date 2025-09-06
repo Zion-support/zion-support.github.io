@@ -1,7 +1,6 @@
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 
 async function getLatest(pkg) {
   try {
@@ -60,9 +59,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};
-=======
-async function getLatest(pkg) {
+};async function getLatest(pkg) {
   try {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),
     if (!resp.ok) return null,
@@ -101,4 +98,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

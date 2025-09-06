@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-
 export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -22,9 +20,7 @@ export default function CaseStudiesPage() {
         </p>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
-export default function CaseStudiesPage() {
+  );export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />
@@ -35,4 +31,3 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

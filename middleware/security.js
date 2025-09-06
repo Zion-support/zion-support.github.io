@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -29,9 +33,13 @@ export function securityMiddleware(request) {
     );
   }
   
+<<<<<<< HEAD
   return response;
 =======
 // Security headers middleware
+=======
+  return response;// Security headers middleware
+>>>>>>> origin/main
 export function securityHeaders(req, res, next) {
   Object.entries({
     'X-Content-Type-Options': 'nosniff',
@@ -48,9 +56,12 @@ export function securityHeaders(req, res, next) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

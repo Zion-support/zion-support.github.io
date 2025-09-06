@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
+import {execSync} from 'child_process';
 
 console.log('🔧 Performing selective merge of main source files...');
 
@@ -27,13 +27,13 @@ const mainSourceDirs = [
   'tsconfig.json',
   'package.json',
   'package-lock.json',
-  'yarn.lock'
+  'yarn.lock';
 ];
 
 // Try to merge specific files from the clean-merge-services-improvements branch
 const mergeSpecificFiles = () => {
   try {
-    // First, let's see what files are in the clean-merge-services-improvements branch
+    // First, let's see what files are in the clean-merge-services-improvements branch;
     console.log('📋 Checking files in clean-merge-services-improvements branch...');
     
     const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
@@ -41,7 +41,7 @@ const mergeSpecificFiles = () => {
     
     // Filter for main source files
     const mainFiles = fileList.filter(file => {
-      return mainSourceDirs.some(dir => file.startsWith(dir)) || 
+      return mainSourceDirs.some(dir => file.startsWith(dir)) || ;
              mainSourceDirs.includes(file);
     });
     
@@ -73,7 +73,7 @@ const mergeSpecificFiles = () => {
 
 // Main execution
 const main = () => {
-  if (mergeSpecificFiles()) {
+  if (mergeSpecificFiles()) {;
     console.log('✅ Selective merge completed');
     
     // Add the merged files

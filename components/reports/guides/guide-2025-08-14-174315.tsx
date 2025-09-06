@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -31,9 +29,7 @@ export default function Page() {
         </p>
       </main>
     </div>
-  );
-=======
-export default function Page() {
+  );export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -51,4 +47,3 @@ export default function Page() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Star,
   Clock,
@@ -24,27 +23,20 @@ import {
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-
-=======
-import { 
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
   const [sortBy, setSortBy] = useState<
     'popularity' | 'price' | 'rating' | 'newest'
   >('popularity');
-
   // Combine all services
   const allServices = [
     ...comprehensiveMicroSaasServices,
@@ -152,16 +144,7 @@ export default function ComprehensiveServicesShowcase() {
       icon: '🧠',
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
         .length,
-    },
-=======
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-
-  // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
+    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
     { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length },
     { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length },
     { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },
@@ -177,34 +160,26 @@ export default function ComprehensiveServicesShowcase() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  ];
 
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-<<<<<<< HEAD
       const matchesCategory =
         selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch =
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-=======
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
-<<<<<<< HEAD
           return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
@@ -216,21 +191,16 @@ export default function ComprehensiveServicesShowcase() {
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
-          return 0;
-=======
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+          return 0;      }          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      }
     });
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
-<<<<<<< HEAD
     return categoryData?.icon || '🚀';
   };
 
@@ -240,10 +210,7 @@ export default function ComprehensiveServicesShowcase() {
 
   return (
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
-      <div className='max-w-7xl mx-auto'>
-=======
-    return categoryData?.icon || '🚀'
-  };
+      <div className='max-w-7xl mx-auto'>        {/* Header */}  };
 
   const formatPrice = (price: string) => {
     return price.replace('$', '').replace(, '')
@@ -252,14 +219,12 @@ export default function ComprehensiveServicesShowcase() {
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
@@ -301,10 +266,7 @@ export default function ComprehensiveServicesShowcase() {
               </div>
               <div>
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>
-                <div className='text-white/60'>Average ROI</div>
-=======
-          className="text-center mb-16"
-        >
+                <div className='text-white/60'>Average ROI</div>              </div>        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Revolutionary Micro SAAS Services 2025
           </h2>
@@ -342,7 +304,6 @@ export default function ComprehensiveServicesShowcase() {
               <div>
                 <div className="text-3xl font-bold text-orange-400">500%+</div>
                 <div className="text-white/60">Average ROI</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </div>
             </div>
           </div>
@@ -354,7 +315,6 @@ export default function ComprehensiveServicesShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='mb-12'
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
@@ -366,10 +326,11 @@ export default function ComprehensiveServicesShowcase() {
                 placeholder='Search services...'
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'
-=======
-          className="mb-12"
-        >
+                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />
+            </div>
+
+            {/* Sort and View Controls */}
+            <div className='flex items-center gap-4'>        >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
@@ -380,12 +341,10 @@ export default function ComprehensiveServicesShowcase() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               />
             </div>
 
             {/* Sort and View Controls */}
-<<<<<<< HEAD
             <div className='flex items-center gap-4'>
               <select
                 value={sortBy}
@@ -407,47 +366,26 @@ export default function ComprehensiveServicesShowcase() {
                       : 'text-white/60 hover:text-white'
                   }`}
                 >
-                  <Grid className='w-5 h-5' />
-=======
-            <div className="flex items-center gap-4">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
-              >
-                <option value="popularity">Most Popular</option>
-                <option value="price">Price: Low to High</option>
-                <option value="rating">Highest Rated</option>
-                <option value="newest">Newest First</option>
-              </select>
-
-              <div className="flex bg-white/10 rounded-xl p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
                     viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   <Grid className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
-<<<<<<< HEAD
                     viewMode === 'list'
                       ? 'bg-blue-600 text-white'
                       : 'text-white/60 hover:text-white'
                   }`}
                 >
-                  <List className='w-5 h-5' />
-=======
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                  <List className='w-5 h-5' />                </button>                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   <List className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </button>
               </div>
             </div>
           </div>
@@ -459,18 +397,13 @@ export default function ComprehensiveServicesShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
-            {categories.map(category => (
-=======
-          className="mb-12"
+            {categories.map(category => (              <button          className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -481,13 +414,9 @@ export default function ComprehensiveServicesShowcase() {
               >
                 <span>{category.icon}</span>
                 {category.name}
-<<<<<<< HEAD
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
-                </span>
-=======
-                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
             ))}
           </div>
@@ -495,11 +424,7 @@ export default function ComprehensiveServicesShowcase() {
 
         {/* Services Display */}
         {viewMode === 'grid' ? (
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -508,27 +433,21 @@ export default function ComprehensiveServicesShowcase() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                 >
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                      <Star className='w-3 h-3' />
-=======
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                      <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                       <Star className="w-3 h-3" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                      Popular
                     </div>
                   )}
 
                   {/* Service Content */}
-<<<<<<< HEAD
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
@@ -556,15 +475,7 @@ export default function ComprehensiveServicesShowcase() {
                           key={idx}
                           className='flex items-center gap-2 text-sm text-white/60'
                         >
-                          <CheckCircle className='w-4 h-4 text-green-400' />
-=======
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{service.icon}</div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-white">{service.price}</div>
-                        <div className="text-xs text-white/60">{service.period}</div>
-                      </div>
+                          <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -575,14 +486,12 @@ export default function ComprehensiveServicesShowcase() {
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                           <CheckCircle className="w-4 h-4 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           {feature}
                         </div>
                       ))}
                     </div>
 
                     {/* Stats */}
-<<<<<<< HEAD
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
@@ -600,10 +509,7 @@ export default function ComprehensiveServicesShowcase() {
                         <div className='text-lg font-bold text-purple-400'>
                           {service.trialDays}d
                         </div>
-                        <div className='text-xs text-white/60'>Trial</div>
-=======
-                    <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                      <div>
+                        <div className='text-xs text-white/60'>Trial</div>                      </div>                      <div>
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
@@ -614,40 +520,30 @@ export default function ComprehensiveServicesShowcase() {
                       <div>
                         <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
                         <div className="text-xs text-white/60">Trial</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </div>
                     </div>
 
                     {/* CTA */}
                     <a
                       href={service.link}
-<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
                     >
                       Learn More
-                      <ExternalLink className='w-4 h-4' />
-=======
-                      target="_blank"
+                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                     >
                       Learn More
                       <ExternalLink className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                    </a>
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         ) : (
-<<<<<<< HEAD
-          <div className='space-y-6'>
-=======
-          <div className="space-y-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+          <div className='space-y-6'>            <AnimatePresence>          <div className="space-y-6">
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -656,7 +552,6 @@ export default function ComprehensiveServicesShowcase() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
@@ -664,24 +559,19 @@ export default function ComprehensiveServicesShowcase() {
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
-                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>
-=======
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
-                >
+                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular                >
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Left Side - Icon and Basic Info */}
                     <div className="flex-shrink-0">
                       <div className="text-6xl mb-4">{service.icon}</div>
                       {service.popular && (
                         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           Popular
                         </div>
                       )}
                     </div>
 
                     {/* Center - Service Details */}
-<<<<<<< HEAD
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
                         <div>
@@ -699,11 +589,10 @@ export default function ComprehensiveServicesShowcase() {
                           <div className='text-3xl font-bold text-white'>
                             {service.price}
                           </div>
-                          <div className='text-white/60'>{service.period}</div>
-=======
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
+                          <div className='text-white/60'>{service.period}</div>                        </div>
+                      </div>
+
+                      {/* Features Grid */}                        <div>
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-white/70 text-lg mb-3">{service.tagline}</p>
                           <p className="text-white/60 text-sm">{service.description}</p>
@@ -711,12 +600,10 @@ export default function ComprehensiveServicesShowcase() {
                         <div className="text-right">
                           <div className="text-3xl font-bold text-white">{service.price}</div>
                           <div className="text-white/60">{service.period}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                         </div>
                       </div>
 
                       {/* Features Grid */}
-<<<<<<< HEAD
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -724,53 +611,39 @@ export default function ComprehensiveServicesShowcase() {
                             className='flex items-center gap-2 text-sm text-white/60'
                           >
                             <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
-                            <span className='truncate'>{feature}</span>
-=======
-                      <div className="grid grid-cols-2 gap-2 mb-4">
+                            <span className='truncate'>{feature}</span>                          </div>                      <div className="grid grid-cols-2 gap-2 mb-4">
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="truncate">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                          </div>
                         ))}
                       </div>
 
                       {/* Stats Row */}
-<<<<<<< HEAD
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
                           <Star className='w-4 h-4 text-yellow-400' />
                           <span>
                             {service.rating} ({service.reviews} reviews)
                           </span>
+                        </div>                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-blue-400" />
+                          <span>{service.customers}+ customers</span>
                         </div>
                         <div className='flex items-center gap-2'>
                           <Users className='w-4 h-4 text-blue-400' />
                           <span>{service.customers}+ customers</span>
                         </div>
                         <div className='flex items-center gap-2'>
-                          <Clock className='w-4 h-4 text-green-400' />
-=======
-                      <div className="flex items-center gap-6 text-sm text-white/60">
-                        <div className="flex items-center gap-2">
-                          <Star className="w-4 h-4 text-yellow-400" />
-                          <span>{service.rating} ({service.reviews} reviews)</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4 text-blue-400" />
-                          <span>{service.customers}+ customers</span>
-                        </div>
-                        <div className="flex items-center gap-2">
+                          <Clock className='w-4 h-4 text-green-400' />                          <span>{service.setupTime} setup</span>                        <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           <span>{service.setupTime} setup</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Right Side - CTA and Category */}
-<<<<<<< HEAD
                     <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                       <div className='text-right'>
                         <div className='text-sm text-white/60 mb-1'>
@@ -778,36 +651,27 @@ export default function ComprehensiveServicesShowcase() {
                         </div>
                         <div className='flex items-center gap-2 text-white'>
                           <span>{getCategoryIcon(service.category)}</span>
-                          <span className='text-sm'>{service.category}</span>
-=======
-                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
+                          <span className='text-sm'>{service.category}</span>                        </div>                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
                       <div className="text-right">
                         <div className="text-sm text-white/60 mb-1">Category</div>
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                        </div>
                       </div>
 
                       <a
                         href={service.link}
-<<<<<<< HEAD
                         target='_blank'
                         rel='noopener noreferrer'
                         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2'
                       >
                         Learn More
-                        <ArrowRight className='w-4 h-4' />
-=======
-                        target="_blank"
+                        <ArrowRight className='w-4 h-4' />                      </a>                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -821,7 +685,6 @@ export default function ComprehensiveServicesShowcase() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
             className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -830,15 +693,11 @@ export default function ComprehensiveServicesShowcase() {
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
-            </p>
-=======
-            className="text-center py-20"
+            </p>          </motion.div>            className="text-center py-20"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          </motion.div>
         )}
 
         {/* Contact CTA */}
@@ -847,7 +706,6 @@ export default function ComprehensiveServicesShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='mt-20 text-center'
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
@@ -868,10 +726,7 @@ export default function ComprehensiveServicesShowcase() {
               </a>
               <a
                 href='tel:+13024640950'
-                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'
-=======
-          className="mt-20 text-center"
-        >
+                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'              >        >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -890,7 +745,6 @@ export default function ComprehensiveServicesShowcase() {
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               >
                 Call +1 302 464 0950
               </a>
@@ -899,8 +753,5 @@ export default function ComprehensiveServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

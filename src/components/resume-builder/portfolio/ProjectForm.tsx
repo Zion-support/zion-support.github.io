@@ -1,25 +1,21 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { logErrorToProduction } from '@/utils/productionLogger'; import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-
+  FormMessage,
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
+import { useAuth } from '@/hooks/useAuth'
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -33,25 +29,21 @@ const projectSchema = z.object({
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
   pdf_url: z.string().optional(),
-});
-
-type ProjectFormValues = z.infer<typeof projectSchema>;
-
+})
+type ProjectFormValues = z.infer<typeof projectSchema>
 interface ProjectFormProps {
-  project?: PortfolioProject;
-  onSuccess: () => void;
-  onCancel: () => void;
-
+  project?: PortfolioProject
+  onSuccess: () => void
+  onCancel: () => void
 export function ProjectForm({
   project,
   onSuccess,
   onCancel,
 }: ProjectFormProps) {
-  const { user } = useAuth();
-  const { addProject, updateProject } = usePortfolio();
-  const [isLoading, setIsLoading] = useState(false);
-  const isEditing = !!project;
-
+  const { user } = useAuth()
+  const { addProject, updateProject } = usePortfolio()
+  const [isLoading, setIsLoading] = useState(false)
+  const isEditing = !!project
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema),
     defaultValues: {
@@ -65,13 +57,10 @@ export function ProjectForm({
       demo_url: project?.demo_url || '',
       pdf_url: project?.pdf_url || '',
     },
-  });
-
+  })
   const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return;
-
-    setIsLoading(true);
-
+    if (!user) return
+    setIsLoading(true)
     try {
       const projectData: PortfolioProject = {
         title: data.title,
@@ -83,28 +72,25 @@ export function ProjectForm({
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
         pdf_url: data.pdf_url,
-      };
-
-      let success = false;
-
+      }
+      let success = false
       if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData);
+        success = await updateProject(project.id, projectData)
       } else {
-        const projectId = await addProject(projectData);
-        success = !!projectId;
+        const projectId = await addProject(projectData)
+        success = !!projectId
       }
 
       if (success) {
-        onSuccess();
-        form.reset();
+        onSuccess()
+        form.reset()
       }
     } catch (error) {
-      logErrorToProduction('Error saving project:', { data: error });
+      logErrorToProduction('Error saving project:', { data: error })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
-
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
@@ -117,8 +103,7 @@ export function ProjectForm({
               <FormControl>
                 <Input
                   placeholder='E.g., AI Chatbot, E-commerce Website'
-                  {...field}
-                />
+                  {...field}                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -128,8 +113,7 @@ export function ProjectForm({
         <FormField
           control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea
@@ -164,8 +148,7 @@ export function ProjectForm({
           <FormField
             control={form.control}
             name='github_url'
-            render={({ field }: { field: any }) => (
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Github className='h-4 w-4' />
                   GitHub URL
@@ -184,8 +167,7 @@ export function ProjectForm({
           <FormField
             control={form.control}
             name='demo_url'
-            render={({ field }: { field: any }) => (
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Link className='h-4 w-4' />
                   Demo URL
@@ -205,8 +187,7 @@ export function ProjectForm({
         <FormField
           control={form.control}
           name='image_url'
-          render={({ field }: { field: any }) => (
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel className='flex items-center gap-2'>
                 <FileImage className='h-4 w-4' />
                 Screenshot URL
@@ -235,21 +216,7 @@ export function ProjectForm({
         </div>
       </form>
     </Form>
-  );
-=======
-
-<<<<<<< HEAD
-  const isEditing = !!project;
-
-  
-
-    if (!user) return;
-    
-<<<<<<< HEAD
-      
-      let success = false;
-      
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+}
+;

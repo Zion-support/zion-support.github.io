@@ -1,27 +1,18 @@
-<<<<<<< HEAD
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react';
-import { format } from 'date-fns';
-
+import { Certification } from '@/types/resume'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Edit, Trash2 } from 'lucide-react'
+import { format } from 'date-fns'
 interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-
+  certifications: Certification[]
+  onEdit: (cert: Certification) => void
+  onDelete: (id: string) => void
 export function CertificationsList({
   certifications,
   onEdit,
   onDelete,
-}: CertificationsListProps) {
-=======
-
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react'
-import { format } from 'date-fns';
+}: CertificationsListProps) {  if (certifications.length === 0) {
+export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
 interface CertificationsListProps {
   certifications: Certification[],
   onEdit: (cert: Certification) => void,
@@ -29,20 +20,17 @@ interface CertificationsListProps {
 }
 
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   if (certifications.length === 0) {
-    return null;
+    return null
   }
 
   return (
-<<<<<<< HEAD
     <div className='space-y-4'>
       <h3 className='text-md font-medium'>Added Certifications</h3>
       {certifications.map(cert => (
         <Card key={cert.id} className='bg-muted/40'>
           <CardContent className='pt-6'>
             <div className='flex justify-between'>
-              <div>
                 <h4 className='font-medium'>{cert.name}</h4>
                 <p className='text-sm text-muted-foreground'>
                   {cert.issuing_organization}
@@ -60,14 +48,14 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                       · Expires:{' '}
                       {typeof cert.expiration_date === 'string'
                         ? cert.expiration_date
-                        : format(cert.expiration_date, 'MMM yyyy')}
-=======
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Certifications</h3>
-      {certifications.map((cert) => (
-        <Card key={cert.id} className="bg-muted/40">
-          <CardContent className="pt-6">
-            <div className="flex justify-between">
+                        : format(cert.expiration_date, 'MMM yyyy')}                    </>
+                  )}
+                </p>
+              </div>
+              <div className='flex gap-2'>
+                    <> · Expires: {typeof cert.expiration_date === 'string' 
+                      ? cert.expiration_date 
+                      : format(cert.expiration_date, 'MMM yyyy')}
               <div>
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">{cert.issuing_organization}</p>
@@ -79,18 +67,19 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                     <> · Expires: {typeof cert.expiration_date === 'string' 
                       ? cert.expiration_date 
                       : format(cert.expiration_date, 'MMM yyyy')}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </>
                   )}
                 </p>
               </div>
-<<<<<<< HEAD
               <div className='flex gap-2'>
                 <Button
                   variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
-                  aria-label='Edit certification'
+                  aria-label='Edit certification'                  variant="ghost"
+                  size="icon"
+                  onClick = {() => onEdit(cert),}
+                  aria-label="Edit certification"
                 >
                   <Edit className='h-4 w-4' />
                 </Button>
@@ -98,47 +87,26 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert.id!)}
-                  aria-label='Delete certification'
-                >
-                  <Trash2 className='h-4 w-4' />
-=======
-              <div className="flex gap-2">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => onEdit(cert)}
-                  aria-label="Edit certification"
-                >
-                  <Edit className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => onDelete(cert.id!)}
-                  aria-label="Delete certification"
-                >
-                  <Trash2 className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  aria-label='Delete certification'                >
+                  <Trash2 className='h-4 w-4' />                </Button>
+              </div>
+            </div>
+            {cert.credential_url && (                  <Trash2 className="h-4 w-4" />
                 </Button>
               </div>
             </div>
             {cert.credential_url && (
-<<<<<<< HEAD
               <p className='text-xs mt-2'>
                 <a
                   href={cert.credential_url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-primary hover:underline'
-=======
-              <p className="text-xs mt-2">
+                  className='text-primary hover:underline'                >              <p className="text-xs mt-2">
                 <a 
-                  href={cert.credential_url} 
+                  href = {cert.credential_url,}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                >
                   View credential
                 </a>
               </p>
@@ -147,8 +115,5 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
         </Card>
       ))}
     </div>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

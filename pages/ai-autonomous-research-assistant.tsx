@@ -1,14 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIAutonomousResearchAssistant() {
-  
-    />
-  );
-=======
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
 export default function AIAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
@@ -20,11 +11,11 @@ export default function AIAutonomousResearchAssistant() {
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
-				"Automated web and document monitoring with source citations";
-				"Daily/weekly executive briefs and dashboards";
-				"Regulatory watchlists and impact analysis";
-				"RFP/RFI opportunity discovery and alerts";
-				"Export to Slides/Docs/Notion";
+				"Automated web and document monitoring with source citations",
+				"Daily/weekly executive briefs and dashboards",
+				"Regulatory watchlists and impact analysis",
+				"RFP/RFI opportunity discovery and alerts",
+				"Export to Slides/Docs/Notion",
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
@@ -32,4 +23,3 @@ export default function AIAutonomousResearchAssistant() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

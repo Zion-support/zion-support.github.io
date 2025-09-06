@@ -1,84 +1,68 @@
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import { CalendarIcon } from 'lucide-react';
-import { UseFormReturn, ControllerRenderProps } from 'react-hook-form';
+import { format } from 'date-fns'
+import { CalendarIcon } from 'lucide-react'
+import { UseFormReturn, ControllerRenderProps } from 'react-hook-form'
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import {
+  FormMessage,
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
   Popover,
   PopoverContent,
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Calendar } from '@/components/ui/calendar';
-import { ContractFormValues } from './ContractForm';
-
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-=======
-
-import { format } from "date-fns";
-import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
-import { 
-  FormField;
+  PopoverTrigger,
+} from '@/components/ui/popover'
+import { Calendar } from '@/components/ui/calendar'
+import { ContractFormValues } from './ContractForm'
+import { format } from "date-fns"
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
+  FormField,
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
   FormMessage 
-
 } from "@/components/ui/form",
-
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Calendar } from "@/components/ui/calendar"
+import { ContractFormValues } from "./ContractForm"
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
       <FormField
         control={form.control}
-<<<<<<< HEAD
         name='projectName'
         render={({
           field,
         }: {
-          field: ControllerRenderProps<ContractFormValues, 'projectName'>;
+          field: ControllerRenderProps<ContractFormValues, 'projectName'>
         }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
-              <Input placeholder='AI Website Development' {...field} />
-=======
+              <Input placeholder='AI Website Development' {...field} />            </FormControl>        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-<<<<<<< HEAD
 
       <FormField
         control={form.control}
@@ -86,26 +70,25 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         render={({
           field,
         }: {
-          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
-        }) => (
-=======
+          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>
+        }) => (          <FormItem>
+            <FormLabel>Scope Summary</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder='Describe the project scope, deliverables, and expectations...'
+                className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (
       
       <FormField
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD
                 placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'
-=======
-                placeholder="Describe the project scope, deliverables, and expectations..."
+                className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 {...field}
               />
             </FormControl>
@@ -116,7 +99,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-<<<<<<< HEAD
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <FormField
@@ -125,27 +107,21 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           render={({
             field,
           }: {
-            field: ControllerRenderProps<ContractFormValues, 'startDate'>;
+            field: ControllerRenderProps<ContractFormValues, 'startDate'>
           }) => (
-            <FormItem className='flex flex-col'>
-=======
-      
+            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> }) => (
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
             <FormItem className="flex flex-col">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              <FormLabel>Start Date</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -160,10 +136,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
-                    disabled={date => date < new Date()}
-=======
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    disabled={date => date < new Date()}                    initialFocus                    mode="single"
+                    selected = {field.value,}
+                    onSelect = {field.onChange,}
+                    disabled = {(date,) => date < new Date(),}
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -180,7 +156,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     initialFocus
                   />
                 </PopoverContent>
@@ -189,7 +164,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             </FormItem>
           )}
         />
-<<<<<<< HEAD
 
         <FormField
           control={form.control}
@@ -197,26 +171,20 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           render={({
             field,
           }: {
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>;
+            field: ControllerRenderProps<ContractFormValues, 'endDate'>
           }) => (
-            <FormItem className='flex flex-col'>
-=======
-        
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>        
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> }) => (
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
             <FormItem className="flex flex-col">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              <FormLabel>End Date (Optional)</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -231,10 +199,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                     mode='single'
                     selected={field.value || undefined}
                     onSelect={field.onChange}
-                    disabled={date => date < form.getValues('startDate')}
-=======
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
+                    selected = {field.value || undefined,}
+                    onSelect = {field.onChange,}
+                    disabled = {(date,) => date < form.getValues("startDate"),}
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -251,7 +219,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     initialFocus
                   />
                 </PopoverContent>
@@ -265,8 +232,5 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
       </div>
     </>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,5 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL(
@@ -52,9 +51,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};
-=======
-async function psi(url, strategy = 'mobile', key) {
+};async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
@@ -96,4 +93,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

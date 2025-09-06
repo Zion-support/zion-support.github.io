@@ -2,6 +2,9 @@ import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -89,6 +92,7 @@ const categories = [
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
+<<<<<<< HEAD
 
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
@@ -106,6 +110,18 @@ const ProductsIndex: NextPage = () => {
 const Index: NextPage = () => {
   return (
 <<<<<<< HEAD
+=======
+
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+>>>>>>> origin/main
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -307,6 +323,7 @@ const Index: NextPage = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 =======
     <div>
       <Head>
@@ -332,8 +349,21 @@ const Index: NextPage = () => {
 
 export default Index;
 =======
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default ProductsIndex;
+>>>>>>> origin/main
   )
+=======
+export default ProductsIndex;  )
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
 export default Index;
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {
   Bell,
   FileText,
@@ -6,9 +6,8 @@ import {
   Mail,
   Search,
   Settings,
-  Users,;
-} from 'lucide-react';
-import {
+  Users,
+} from 'lucide-react'; import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -16,28 +15,23 @@ import {
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed;
-} from '@/components/ui/sidebar';
-=======
-
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
-import {
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
+  // SidebarGroupContent, // Not needed
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
+} from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-<<<<<<< HEAD
         <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -63,11 +57,7 @@ export function AppSidebar() {
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
             <span>Profile</span>
           </SidebarMenuItem>
-          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
-=======
-        <SidebarGroup title="Dashboard">
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
-            <span>Home</span>
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -91,14 +81,10 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

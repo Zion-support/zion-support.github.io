@@ -1,13 +1,10 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-03T16:40:29.524Z",
-=======
   "timestamp": "2025-09-03T16:46:24.499Z",
->>>>>>> origin/main
 =======
-  "timestamp": "2025-09-03T16:46:24.499Z",
->>>>>>> origin/main
+  "timestamp": "2025-09-03T16:40:29.524Z",  "timestamp": "2025-09-03T16:46:24.499Z",
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   "outdated": [],
   "security": [],
   "recommendations": []

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Menu,
   X,
@@ -105,9 +104,7 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Github,;
-=======
-import { 
+  Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
@@ -130,18 +127,12 @@ import {
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-  website: 'https://ziontechgroup.com',
-=======
-  website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 };
 
 const serviceCategories = [
@@ -151,7 +142,6 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
     services: [
-<<<<<<< HEAD
       {
         name: 'AI Business Intelligence Pro',
         href: '/ai-business-intelligence-pro',
@@ -177,22 +167,17 @@ const serviceCategories = [
         price: '$3,999/month',
       },
     ],
-  },
-=======
-      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights', price: '$299/month' },
+  },  {      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights', price: '$299/month' },
       { name: 'AI Video Generation Platform', href: '/ai-video-generation-platform', description: 'Create professional videos with AI', price: '$499/month' },
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-generation threat detection', price: '$799/month' },
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug discovery with AI', price: '$3,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  {
     title: '⚛️ Quantum & Emerging Tech',
     icon: AtomIcon,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
     services: [
-<<<<<<< HEAD
       {
         name: 'Quantum Machine Learning',
         href: '/quantum-machine-learning-platform',
@@ -218,22 +203,17 @@ const serviceCategories = [
         price: '$1,299/month',
       },
     ],
-  },
-=======
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Harness quantum computing for ML', price: '$1,999/month' };
+  },  {      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Harness quantum computing for ML', price: '$1,999/month' };
       { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', description: 'Decentralized AI for the future', price: '$899/month' },
       { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', description: 'AI at the edge for real-time processing', price: '$599/month' },
       { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', description: 'Predict climate change with AI', price: '$1,299/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  {
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
     services: [
-<<<<<<< HEAD
       {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
@@ -259,22 +239,17 @@ const serviceCategories = [
         price: '$199/month',
       },
     ],
-  },
-=======
-      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' },
+  },  {      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' },
       { name: 'Customer Success Automation', href: '/customer-success-automation', description: 'Automate customer success workflows', price: '$199/month' },
       { name: 'HR Automation Suite', href: '/hr-automation-suite', description: 'Streamline HR processes with AI', price: '$179/month' },
       { name: 'Project Management AI', href: '/project-management-ai-platform', description: 'AI-powered project management', price: '$199/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Streamline business operations',
     services: [
-<<<<<<< HEAD
       {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
@@ -300,22 +275,17 @@ const serviceCategories = [
         price: '$399/month',
       },
     ],
-  },
-=======
-      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' },
+  },  {      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' },
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', description: 'Automate your entire marketing operation', price: '$279/month' },
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Real-time financial insights', price: '$349/month' },
       { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automate legal document creation', price: '$399/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  {
     title: '🤖 Robotics & Automation',
     icon: RocketIcon,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Intelligent automation solutions',
     services: [
-<<<<<<< HEAD
       {
         name: 'Autonomous Robotics Platform',
         href: '/autonomous-robotics-platform',
@@ -341,22 +311,17 @@ const serviceCategories = [
         price: '$299/month',
       },
     ],
-  },
-=======
-      { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' };
+  },  {      { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' };
       { name: 'AI Content Generator Elite', href: '/ai-content-generator-elite', description: 'Professional AI content creation', price: '$49/month' },
       { name: 'AI Guardrails Suite', href: '/ai-guardrails-suite', description: 'Policy and safety for LLM apps', price: '$199/month' },
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  {
     title: '🔬 Research & Development',
     icon: MicroscopeIcon,
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-<<<<<<< HEAD
       {
         name: 'Quantum DNA Computing',
         href: '/quantum-dna-computing-platform',
@@ -382,16 +347,12 @@ const serviceCategories = [
         price: '$2,999/month',
       },
     ],
-  },
-=======
-      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' };
+  },];      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' };
       { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
       { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' };
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-];
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -401,11 +362,7 @@ const quickLinks = [
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
-<<<<<<< HEAD
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
 const companyLinks = [
@@ -414,7 +371,6 @@ const companyLinks = [
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
-<<<<<<< HEAD
   { name: 'Status', href: '/status', icon: Activity },
 ];
 
@@ -446,10 +402,7 @@ const certifications = [
   'PCI DSS Level 1',
   'FedRAMP Authorized',
   'Quantum Security Certified',
-  'AI Ethics Compliant',
-=======
-  { name: 'Status', href: '/status', icon: Activity }
-];
+  'AI Ethics Compliant',];];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -461,7 +414,6 @@ const socialLinks = [
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ];
 
 export default function UltraFuturisticNavigation2034() {
@@ -471,7 +423,6 @@ export default function UltraFuturisticNavigation2034() {
 
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -483,10 +434,7 @@ export default function UltraFuturisticNavigation2034() {
   };
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
-=======
-      setIsScrolled(window.scrollY > 50)
-    };
+    setActiveDropdown(null);  };    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -497,13 +445,11 @@ export default function UltraFuturisticNavigation2034() {
 
   const closeDropdown = () => {
     setActiveDropdown(null)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   return (
     <>
       {/* Top Contact Bar */}
-<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
@@ -521,15 +467,10 @@ export default function UltraFuturisticNavigation2034() {
             </div>
             <div className='flex items-center space-x-2'>
               <MapPin className='w-4 h-4 text-purple-400' />
-              <span className='hover:text-purple-400 transition-colors'>
-=======
-      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="hover:text-cyan-400 transition-colors">
-                {contactInfo.mobile}
+              <span className='hover:text-purple-400 transition-colors'>                {contactInfo.address}
+              </span>
+            </div>
+          </div>                {contactInfo.mobile}
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -541,12 +482,10 @@ export default function UltraFuturisticNavigation2034() {
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-purple-400" />
               <span className="hover:text-purple-400 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 {contactInfo.address}
               </span>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='flex items-center space-x-4'>
             <div className='flex items-center space-x-2'>
               <Star className='w-4 h-4 text-yellow-400' />
@@ -556,9 +495,7 @@ export default function UltraFuturisticNavigation2034() {
               <Users className='w-4 h-4 text-green-400' />
               <span className='text-green-400 font-semibold'>
                 50K+ Customers
-              </span>
-=======
-          <div className="flex items-center space-x-4">
+              </span>            </div>          <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-400 font-semibold">5.0 Rating</span>
@@ -566,14 +503,11 @@ export default function UltraFuturisticNavigation2034() {
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-<<<<<<< HEAD
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
@@ -582,22 +516,17 @@ export default function UltraFuturisticNavigation2034() {
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-20'>
-=======
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-<<<<<<< HEAD
               className='flex items-center space-x-3'
             >
               <div className='relative'>
@@ -612,10 +541,10 @@ export default function UltraFuturisticNavigation2034() {
                 </h1>
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
-                </p>
-=======
-              className="flex items-center space-x-3"
-            >
+                </p>              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}            >
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -627,31 +556,28 @@ export default function UltraFuturisticNavigation2034() {
                   Zion Tech Group
                 </h1>
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
-<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-=======
+                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                >
+                  {link.name}
+                </Link>
+              ))}
             <div className="hidden lg:flex items-center space-x-8">
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                >
                   {link.name}
                 </Link>
               ))}
-<<<<<<< HEAD
 
               {/* Services Dropdown */}
               <div className='relative group'>
@@ -680,10 +606,7 @@ export default function UltraFuturisticNavigation2034() {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'
-=======
-              
-              {/* Services Dropdown */}
+                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'                            >              {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
                   <span>Services</span>
@@ -704,7 +627,6 @@ export default function UltraFuturisticNavigation2034() {
                               key={service.name}
                               href={service.href}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                             >
                               {service.name}
                             </Link>
@@ -713,23 +635,18 @@ export default function UltraFuturisticNavigation2034() {
                       </div>
                     ))}
                   </div>
-<<<<<<< HEAD
                   <div className='mt-4 pt-4 border-t border-cyan-500/20'>
                     <Link
                       href='/services'
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'
                     >
                       View All Services
-                      <ArrowRight className='w-4 h-4 ml-2' />
-=======
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
+                      <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
                       href="/services"
                       className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
                     >
                       View All Services
                       <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </Link>
                   </div>
                 </div>
@@ -737,20 +654,15 @@ export default function UltraFuturisticNavigation2034() {
 
               {/* Contact Button */}
               <Link
-<<<<<<< HEAD
                 href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'
-=======
-                href="/contact"
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'              >                href="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               >
                 Get Started
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
-<<<<<<< HEAD
             <div className='lg:hidden'>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -760,15 +672,11 @@ export default function UltraFuturisticNavigation2034() {
                   <X className='w-6 h-6' />
                 ) : (
                   <Menu className='w-6 h-6' />
-                )}
-=======
-            <div className="lg:hidden">
-              <button
+                )}              </button>              <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-cyan-400 transition-colors"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </button>
             </div>
           </div>
@@ -782,31 +690,29 @@ export default function UltraFuturisticNavigation2034() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
             >
               <div className='px-4 py-6 space-y-4'>
-                {quickLinks.map(link => (
-=======
+                {quickLinks.map(link => (                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >
+                    {link.name}
+                  </Link>
+                ))}
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
             >
               <div className="px-4 py-6 space-y-4">
                 {quickLinks.map((link) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  <Link
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-=======
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
 
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map(category => (
@@ -823,10 +729,7 @@ export default function UltraFuturisticNavigation2034() {
                         className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === category.title ? 'rotate-180' : ''
                         }`}
-                      />
-=======
-                
-                {/* Mobile Services Accordion */}
+                      />                    </button>                {/* Mobile Services Accordion */}
                 {serviceCategories.map((category) => (
                   <div key={category.title} className="border-b border-cyan-500/20 pb-4">
                     <button
@@ -837,7 +740,6 @@ export default function UltraFuturisticNavigation2034() {
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -846,24 +748,20 @@ export default function UltraFuturisticNavigation2034() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-<<<<<<< HEAD
                           className='mt-3 ml-4 space-y-2'
                         >
-                          {category.services.map(service => (
-=======
-                          className="mt-3 ml-4 space-y-2"
+                          {category.services.map(service => (                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2"
                         >
                           {category.services.map((service) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                             <Link
                               key={service.name}
                               href={service.href}
                               onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'
-=======
-                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                             >
                               {service.name}
                             </Link>
@@ -873,19 +771,14 @@ export default function UltraFuturisticNavigation2034() {
                     </AnimatePresence>
                   </div>
                 ))}
-<<<<<<< HEAD
 
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
-=======
-                
-                <Link
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 >
                   Get Started
                 </Link>
@@ -896,13 +789,9 @@ export default function UltraFuturisticNavigation2034() {
       </nav>
 
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
       <div className='h-20'></div>
     </>
-  );
-=======
-      <div className="h-20"></div>
+);      <div className="h-20"></div>
     </>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

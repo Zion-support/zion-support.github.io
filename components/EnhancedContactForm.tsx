@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  setErrors (newErrors);
 
 };
@@ -33,24 +32,6 @@ const handleInputBlur = (name: keyof FormData) => {
 }</button> </form> </div> </div> </section>) 
 };
 export default EnhancedContactForm;
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { FormData, FormErrors } from '../types';
-import { useToast } from './ui/Toast';
-const EnhancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { showSuccess, showError } = useToast();
-
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
   ];
@@ -367,4 +348,3 @@ const EnhancedContactForm: React.FC = () => {
 };
 
 export default EnhancedContactForm;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

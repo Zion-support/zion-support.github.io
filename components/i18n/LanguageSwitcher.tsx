@@ -1,41 +1,29 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
-
+import {supportedLocales, isRtl} from '../../utils/i18n';
 const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
-<<<<<<< HEAD
   ar: 'sa',
-};
-
-=======
-  ar: 'sa'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};  ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-<<<<<<< HEAD
   ar: 'lang.arabic',
-};
-
-=======
-  ar: 'lang.arabic'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage || i18n.language || 'en';
 
   const changeLanguage = async (lng: string) => {
-    await i18n.changeLanguage(lng);
+    await i18n.changeLanguage(lng),
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
-<<<<<<< HEAD
     setOpen(false);
   };
 
@@ -73,10 +61,7 @@ export default function LanguageSwitcher() {
               <button
                 role='option'
                 aria-selected={current.startsWith(lng)}
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
-=======
-    setOpen(false)
-  };
+                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
 
   return (
     <div className="relative">
@@ -98,7 +83,6 @@ export default function LanguageSwitcher() {
                 role="option"
                 aria-selected={current.startsWith(lng)}
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 onClick={() => changeLanguage(lng)}
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
@@ -109,8 +93,5 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

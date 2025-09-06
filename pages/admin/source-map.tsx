@@ -1,5 +1,9 @@
 <<<<<<< HEAD
-export { default } from '../dev/tree';
+<<<<<<< HEAD
+export { default } from "../dev/tree",
+=======
+export { default } from &quot;../dev/tree&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 =======
 export { default } from "../dev/tree";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

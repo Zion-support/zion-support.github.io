@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 export default function TalentMarketplace() {
   const schema = {
     '@context': 'https://schema.org',
@@ -13,29 +11,15 @@ export default function TalentMarketplace() {
     name: 'Talent Marketplace',
     description:
       'Hire vetted AI and tech professionals from around the world on Zion.',
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace',
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function TalentMarketplace() {
-  const schema = {
-
-    "@context": "https: //schema.org",
-    "@type": "WebPage",
-    "name": "Talent Marketplace",
+    url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Talent Marketplace"
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  };
-
+  }
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='Talent Marketplace'
         description='Discover and hire top AI specialists through the Zion talent marketplace.'
         keywords='AI talent marketplace, hire developers, tech freelancers'
@@ -92,13 +76,7 @@ export default function TalentMarketplace() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/talent'>Browse Talent</Link>
-=======
-        title="Talent Marketplace"
-        description="Discover and hire top AI specialists through the Zion talent marketplace."
-        keywords="AI talent marketplace, hire developers, tech freelancers"
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace"
-      />
+              <Link href='/talent'>Browse Talent</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -138,14 +116,11 @@ export default function TalentMarketplace() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </Button>
           </div>
         </div>
       </main>
     </>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

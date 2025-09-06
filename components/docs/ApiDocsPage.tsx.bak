@@ -3,11 +3,22 @@ import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 import {
   ApiDocsSpec,
   EndpointSpec,
   Visibility,;
 } from '../../data/api-docs/types';
+<<<<<<< HEAD
+=======
+=======
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1; // could switch by version later
@@ -30,10 +41,16 @@ export default function ApiDocsPage() {
   const activeEndpoint =
     allEndpoints.find(e => e.id === activeEndpointId) || firstEndpoint;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   
     >
 =======
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
@@ -47,17 +64,40 @@ export default function ApiDocsPage() {
 
   return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  return (
+    <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <Sidebar
         spec={spec}
         activeEndpointId={activeEndpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
         selectedVersion={selectedVersion}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
         onChangeVersion={v => {
           setSelectedVersion(v);
           setActiveEndpointId(undefined);
         }}
+<<<<<<< HEAD
+=======
+=======
+        onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         visibilityFilter={visibility}
         onChangeVisibility={setVisibility}
       />
@@ -69,6 +109,11 @@ export default function ApiDocsPage() {
               Developer-friendly API docs with live testing
             </div>
           </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='flex gap-2'>
             <a
               className='px-3 py-1 rounded border border-high-contrast-accent'
@@ -105,17 +150,39 @@ export default function ApiDocsPage() {
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
           </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <div className="flex gap-2">
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           </div>
         </header>
 
         {activeEndpoint ? (
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           <div className='text-sm text-high-contrast-muted'>
             Select an endpoint from the sidebar
@@ -125,21 +192,50 @@ export default function ApiDocsPage() {
         <section className='mt-8'>
           <div className='text-lg font-semibold mb-2'>Changelog</div>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
         )}
 
         <section className="mt-8">
           <div className="text-lg font-semibold mb-2">Changelog</div>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
+        )}
+
+        <section className="mt-8">
+          <div className="text-lg font-semibold mb-2">Changelog</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <ChangelogWidget />
         </section>
       </main>
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 function ChangelogWidget() {
   const [content, setContent] = useState('');
@@ -150,14 +246,33 @@ function ChangelogWidget() {
     const res = await fetch('/api/docs/changelog');
     const data = await res.json();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     setContent(data.content || '');
 =======
     setContent(data.content || '')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    setContent(data.content || '')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    setContent(data.content || '')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   async function save() {
     setMessage('');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     await fetch('/api/docs/changelog', {
       method: 'POST',
@@ -165,6 +280,15 @@ function ChangelogWidget() {
       body: JSON.stringify({ content }),
     });
     setMessage('Saved');
+<<<<<<< HEAD
+=======
+=======
+    await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) }),
+    setMessage('Saved')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   return (
@@ -194,6 +318,11 @@ function ChangelogWidget() {
       />
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) }),
     setMessage('Saved')
@@ -211,3 +340,12 @@ function ChangelogWidget() {
   );
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

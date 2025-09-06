@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -171,6 +174,7 @@ export default function ApiDocsPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 =======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
@@ -186,14 +190,42 @@ export default function ApiDocsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 =======
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+  );
+<<<<<<< HEAD
+}
+import Layout from '../components/Layout';
+
+export default function APIDocsPage() {
+export default function ApiDocsPage() {
+=======
+}export default function ApiDocsPage() {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+  return (
+    <>
+      <Head>
+        <title>API Docs | Zion Tech Group</title>
+        <meta name='description' content='API reference and guides.' />
+<<<<<<< HEAD
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
       </Head>
+>>>>>>> origin/main
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />      </Head>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
+    </Layout>
+<<<<<<< HEAD
+  );
     </>
+=======
+  );    </>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   )
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main

@@ -1,26 +1,23 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { NextSeo } from '@/components/NextSeo';
-import { Globe, MapPin } from 'lucide-react';
+import React, { useEffect, useState } from 'react'
+import { Header } from '@/components/Header'
+import { NextSeo } from '@/components/NextSeo'
+import { Globe, MapPin } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 interface Instance {
-  id: number;
-  name: string;
-  lat: number;
-  lng: number;
-  talent: number;
-  governance: 'admin' | 'hybrid' | 'vote';
-  votesPassed: number;
-  votesPending: number;
-  region: string;
-
+  id: number
+  name: string
+  lat: number
+  lng: number
+  talent: number
+  governance: 'admin' | 'hybrid' | 'vote'
+  votesPassed: number
+  votesPending: number
+  region: string
 const INSTANCES: Instance[] = [
   {
     id: 1,
@@ -55,41 +52,36 @@ const INSTANCES: Instance[] = [
     votesPending: 3,
     region: 'Europe',
   },
-];
-
+]
 interface FeedItem {
-  id: number;
-  text: string;
-
+  id: number
+  text: string
 export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const [feed, setFeed] = useState<FeedItem[]>([])
+  useEffect((,) => {
+    const interval = setInterval((,) => {
       const messages = [
         'ZionGPT upgraded to v1.7 in Egypt',
         'Proposal #121 passed in Zion DevOps',
         'New franchise deployed: Zion Indonesia',
-      ];
-      const id = Date.now();
+      ]
+      const id = Date.now()
       const text =
         messages[Math.floor(Math.random() * messages.length)] ||
-        'System update in progress';
-      setFeed(f => [{ id, text }, ...f].slice(0, 5));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const width = 800;
-  const height = 400;
+        'System update in progress'
+      setFeed(f => [{ id, text }, ...f].slice(0, 5))
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+  const width = 800
+  const height = 400
   function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width;
-    const y = ((90 - lat) / 180) * height;
-    return { x, y };
+    const x = ((lng + 180) / 360) * width
+    const y = ((90 - lat) / 180) * height
+    return { x, y }
   }
 
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
-
+  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
   return (
     <div className='min-h-screen bg-background'>
       <NextSeo
@@ -103,14 +95,13 @@ export default function GlobalMapPage() {
           <div className='relative' style={{ width, height }}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
-              const { x, y } = project(i.lat, i.lng);
+              const { x, y } = project(i.lat, i.lng)
               const color =
                 i.governance === 'admin'
                   ? 'bg-red-500'
                   : i.governance === 'hybrid'
                     ? 'bg-yellow-500'
-                    : 'bg-green-500';
-              return (
+                    : 'bg-green-500'; return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -132,7 +123,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              );
+              )
             })}
           </div>
           <div className='flex-1 space-y-6'>
@@ -142,8 +133,7 @@ export default function GlobalMapPage() {
               </h2>
               <ul className='space-y-1'>
                 {topRegions.map(r => (
-                  <li key={r.id} className='flex justify-between border-b pb-1'>
-                    <span>{r.region}</span>
+                  <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
                     <span>{r.talent}</span>
                   </li>
                 ))}
@@ -155,20 +145,16 @@ export default function GlobalMapPage() {
                 {feed.map(f => (
                   <li key={f.id} className='text-sm'>
                     {f.text}
-                  </li>
-                ))}
+                  </li>                ))}
               </ul>
             </section>
           </div>
         </div>
       </main>
     </div>
-  );
-=======
+  )
+}
 
-<<<<<<< HEAD
+}
 
-  const width = 800;
-  const height = 400;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

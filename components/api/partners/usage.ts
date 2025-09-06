@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest,
@@ -19,10 +18,6 @@ export default async function handler(
   }
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
@@ -35,4 +30,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

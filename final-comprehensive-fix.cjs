@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
@@ -51,6 +54,7 @@ const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
@@ -59,6 +63,8 @@ console.log('✅ Fixed SEO.tsx');
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -82,12 +88,16 @@ const talentFixed = talentContent
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const filesToFix = [
   'components/ContactForm.tsx',
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/main
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -100,6 +110,7 @@ const toastFixed = toastContent.replace('  return { showToast };\n}', '  return 
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
@@ -108,6 +119,8 @@ console.log('✅ Fixed use-toast.ts');
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -121,6 +134,7 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
+
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -130,11 +144,15 @@ const authFixed = authContent
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(`\n📊 Syntax fixing complete:`)) {
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/main
 ) {
     ) {
     if (processFile(file)) {
@@ -142,9 +160,11 @@ console.log(`\n📊 Syntax fixing complete:`)) {
   }
 }
 }
+
 if ( {
   ) {
      {
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.log('\n✅ All syntax errors have been fixed!')}} else {
   console.log('\n✅ No syntax errors found!')}
@@ -161,6 +181,11 @@ console.log('✨ Final comprehensive fixes completed!');
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+console.log('✨ Final comprehensive fixes completed!');
+  }} else {
+  }
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -202,7 +227,11 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
 <<<<<<< HEAD
+<<<<<<< HEAD
   .replace(/"isLoading": fals e/g, '"isLoading")
 =======
   .replace(/"isLoading": fals e/g, '"isLoading")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+  .replace(/"isLoading": fals e/g, '"isLoading")
+>>>>>>> origin/main

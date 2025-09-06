@@ -12,8 +12,12 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class AdvancedSourceFixer {
   constructor() {
@@ -42,7 +46,17 @@ class AdvancedSourceFixer {
     if (!fs.existsSync(dir)) return;
 
     const items = fs.readdirSync(dir);
-     else if (
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules"
+      ) {
+        await this.fixDirectory(fullPath);
+      } else if (
         item.endsWith(".ts") ||
         item.endsWith(".tsx") ||
         item.endsWith(".js") ||
@@ -161,7 +175,7 @@ class AdvancedSourceFixer {
       if (
         !fixed.includes("import React") &&
         !fixed.includes("import * as React")
-      ) {;
+      ) {
         fixed = "import React from 'react';\n" + fixed;
       }
     }
@@ -202,7 +216,7 @@ class AdvancedSourceFixer {
       if (original.length !== fixed.length) {
         fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {;
+      if (fixed.includes("import React")) {
         fixes.push("Added React import");
       }
       if (fixed.includes("export default")) {
@@ -228,6 +242,7 @@ class AdvancedSourceFixer {
     this.log(`Report generated: ${this.reportFile}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 const fixer = new AdvancedSourceFixer();
 fixer.fixAllSourceFiles().catch(console.error);
@@ -241,10 +256,18 @@ fixer.fixAllSourceFiles().catch(console.error);
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
+=======
+}
+>>>>>>> origin/main
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
+}
 
+<<<<<<< HEAD
 module.exports = AdvancedSourceFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+export default AdvancedSourceFixer;
+>>>>>>> origin/main

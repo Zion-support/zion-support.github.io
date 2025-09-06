@@ -1,19 +1,14 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants',
-];
-
-=======
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -22,13 +17,9 @@ export default function ApplyGrantPage() {
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
-<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
-  );
-=======
-  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -39,12 +30,11 @@ export default function ApplyGrantPage() {
   const save = async (submit: boolean) => {
     try {
       setLoading(true);
-      setError(null);
+      setError(null),
       const resp = await fetch('/api/grants', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
           program,
           projectName,
           teamInfo,
@@ -68,14 +58,7 @@ export default function ApplyGrantPage() {
     } catch (e: any) {
       setError(e.message);
     } finally {
-      setLoading(false);
-=======
-          program;
-          projectName;
-          teamInfo;
-          proposalSummary;
-          timeline;
-          budgetAmount: Number(budgetAmount || 0),
+      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),
           budgetCurrency;
           supportingLinks: supportingLinks
             .split('\n')
@@ -92,13 +75,11 @@ export default function ApplyGrantPage() {
       setError(e.message)
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   };
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
@@ -230,16 +211,11 @@ export default function ApplyGrantPage() {
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-          </button>
-=======
-      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
-      <div className="grid gap-4 max-w-3xl">
-        <div className="grid md:grid-cols-2 gap-3">
-          <label className="text-sm">Program
-            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
-              <option value="grant">Grant</option>
-              <option value="incubator">Incubator</option>
-            </select>
+          </button>        </div>
+      </div>
+    </EnhancedLayout>
+  );
+}            </select>
           </label>
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
@@ -286,12 +262,8 @@ export default function ApplyGrantPage() {
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         </div>
       </div>
     </EnhancedLayout>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,41 +1,56 @@
-export type MonitoredSource =
-  | 'signup'
-  | 'job_post'
-  | 'message'
-  | 'quote'
-  | 'review';
+// Fraud detection types
+export type AdminActionType = 
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+  | 'dismiss'
+  | 'escalate';
 
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
-
-export interface AdminActionRecord {
+export interface AdminAction {
   id: string;
-  fraudId: string;
-  action: AdminActionType;
-  adminId: string | null;
-  reason: string | null;
-  createdAt: string; // ISO
+  caseId: string;
+  type: AdminActionType;
+  adminId: string;
+  reason: string,
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: 'pending' | 'executed' | 'failed',
+}
 
-export interface PrivacySettings {
-  userId: string;
-  monitoringContentAnalysisOptOut: boolean;
-  updatedAt: string; // ISO
+export interface FraudDetectionResult {
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+  suggestedActions: AdminActionType[],
+  metadata: Record<string, any>;
+}
 
-export interface ListFilters {
-  source?: MonitoredSource;
-  userId?: string;
-  label?: GptClassificationLabel;
-  status?: FraudReviewStatus;
-
-export interface MonthlyReport {
-  month: string; // YYYY-MM
-  totals: {
-    all: number;
-    safe: number;
-    suspicious: number;
-    dangerous: number;
+export interface FraudDetectionConfig {
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
+      threshold: number,
+    };
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number,
+    };
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number,
+    };
+    spam: {
+      enabled: boolean;
+      threshold: number,
+    };
   };
-  bySource: Record<MonitoredSource, number>;
-  falsePositives: number; // count of IGNORED actions
-  topReasons: Array<{ reason: string; count: number }>;
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number,
+  };
+}

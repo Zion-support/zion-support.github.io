@@ -429,11 +429,7 @@ jobs:
 def main():
     """Main function to run the auto-heal engine"""
     print("🚀 GitHub Actions Workflow Auto-Heal Engine")
-<<<<<<< HEAD
-    print("===========================================")
-=======
-    print("=")
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    print("    print("=")
     
     engine = WorkflowAutoHealEngine()
     

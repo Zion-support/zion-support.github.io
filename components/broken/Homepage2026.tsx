@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   ArrowRight,
   Star,
@@ -18,20 +17,15 @@ import {
   Rocket,
   CheckCircle,
   Phone,
-  Mail,;
-=======
-import { 
+  Mail,;} from 'lucide-react';import {
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-} from 'lucide-react';
 
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
       <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -42,10 +36,11 @@ const Homepage2026: React.FC = () => {
             <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
           </div>
 
-          <div className='text-center max-w-4xl mx-auto relative z-10'>
-=======
-      <main className="relative z-10">
-        {/* Hero Section */}
+          <div className='text-center max-w-4xl mx-auto relative z-10'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'            >        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
@@ -55,23 +50,17 @@ const Homepage2026: React.FC = () => {
           </div>
           
           <div className="text-center max-w-4xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='space-y-6'
-=======
-              className="space-y-6"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+              className='space-y-6'              className="space-y-6"
             >
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
               >
                 <Star className='w-4 h-4' />
@@ -103,10 +92,10 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
                 <a href='mailto:kleber@ziontechgroup.com'>
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
-=======
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium"
-              >
+                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
+                  </button>
+                </a>
+              </div>              >
                 <Star className="w-4 h-4" />
                 <span>Innovation Leader 2026</span>
               </motion.div>
@@ -135,24 +124,26 @@ const Homepage2026: React.FC = () => {
                 </Link>
                 <a href="mailto:kleber@ziontechgroup.com">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Get Started
                   </button>
                 </a>
               </div>
-<<<<<<< HEAD
-
-=======
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
                 className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >
+              >              >
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-4 h-4 text-green-400" />
+                  <span>Enterprise Security</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe className="w-4 h-4 text-blue-400" />
+                  <span>Global Reach</span>
+                </div>
                 <div className='flex items-center space-x-2'>
                   <Shield className='w-4 h-4 text-green-400' />
                   <span>Enterprise Security</span>
@@ -162,21 +153,8 @@ const Homepage2026: React.FC = () => {
                   <span>Global Reach</span>
                 </div>
                 <div className='flex items-center space-x-2'>
-                  <TrendingUp className='w-4 h-4 text-purple-400' />
-=======
-                className="flex items-center justify-center space-x-6 text-sm text-gray-400"
-              >
-                <div className="flex items-center space-x-2">
-                  <Shield className="w-4 h-4 text-green-400" />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Globe className="w-4 h-4 text-blue-400" />
-                  <span>Global Reach</span>
-                </div>
-                <div className="flex items-center space-x-2">
+                  <TrendingUp className='w-4 h-4 text-purple-400' />                  <span>Proven Results</span>                <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-purple-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   <span>Proven Results</span>
                 </div>
               </motion.div>
@@ -185,20 +163,19 @@ const Homepage2026: React.FC = () => {
         </section>
 
         {/* Company Stats */}
-<<<<<<< HEAD
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
-          <div className='max-w-6xl mx-auto relative z-10'>
-=======
-        <section className="py-20 px-4 bg-black/30 relative">
+          <div className='max-w-6xl mx-auto relative z-10'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'        <section className="py-20 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-6xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -210,10 +187,10 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}            >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver innovative solutions that drive real business transformation
@@ -221,27 +198,21 @@ const Homepage2026: React.FC = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD
                 className='text-center'
               >
                 <div className='text-4xl mb-4'>🚀</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Micro SAAS Solutions
                 </h3>
-                <p className='text-gray-300 text-sm'>
-=======
-                className="text-center"
+                <p className='text-gray-300 text-sm'>                  Starting at $69/month for specialized business solutions                className="text-center"
               >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  Starting at $69/month for specialized business solutions
                 </p>
               </motion.div>
 
@@ -249,22 +220,17 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
                 className='text-center'
               >
                 <div className='text-4xl mb-4'>🏗️</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   IT Infrastructure
                 </h3>
-                <p className='text-gray-300 text-sm'>
-=======
-                className="text-center"
+                <p className='text-gray-300 text-sm'>                  Starting at $499/month for robust infrastructure solutions                className="text-center"
               >
                 <div className="text-4xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  Starting at $499/month for robust infrastructure solutions
                 </p>
               </motion.div>
 
@@ -272,22 +238,17 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
                 className='text-center'
               >
                 <div className='text-4xl mb-4'>🤖</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   AI Automation
                 </h3>
-                <p className='text-gray-300 text-sm'>
-=======
-                className="text-center"
+                <p className='text-gray-300 text-sm'>                  Starting at $199/month for intelligent automation                className="text-center"
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-300 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  Starting at $199/month for intelligent automation
                 </p>
               </motion.div>
 
@@ -295,22 +256,17 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
                 className='text-center'
               >
                 <div className='text-4xl mb-4'>🧠</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Cutting-Edge AI
                 </h3>
-                <p className='text-gray-300 text-sm'>
-=======
-                className="text-center"
+                <p className='text-gray-300 text-sm'>                  Starting at $179/month for next-generation AI                className="text-center"
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
                 <p className="text-gray-300 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  Starting at $179/month for next-generation AI
                 </p>
               </motion.div>
             </div>
@@ -318,18 +274,17 @@ const Homepage2026: React.FC = () => {
         </section>
 
         {/* Service Categories */}
-<<<<<<< HEAD
         <section className='py-20 px-4'>
-          <div className='max-w-6xl mx-auto'>
-=======
-        <section className="py-20 px-4">
+          <div className='max-w-6xl mx-auto'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
@@ -341,10 +296,7 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>              {/* AI Automation Services */}            >
               <h2 className="text-4xl font-bold text-white mb-6">Our Service Portfolio</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive solutions covering every aspect of modern business technology needs
@@ -352,13 +304,11 @@ const Homepage2026: React.FC = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {/* AI Automation Services */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'>🤖</div>
@@ -385,10 +335,7 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>
-=======
-                className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300"
-              >
+                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -411,7 +358,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Learn More
                   </button>
                 </Link>
@@ -422,7 +368,6 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'>🏗️</div>
@@ -449,10 +394,7 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>
-=======
-                className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
-              >
+                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -475,7 +417,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Learn More
                   </button>
                 </Link>
@@ -486,7 +427,6 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'>🚀</div>
@@ -513,10 +453,7 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>
-=======
-                className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
-              >
+                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
@@ -539,7 +476,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Learn More
                   </button>
                 </Link>
@@ -550,7 +486,6 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
               >
                 <div className='text-5xl mb-6'>🧠</div>
@@ -577,10 +512,7 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>
-=======
-                className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
-              >
+                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -603,7 +535,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Learn More
                   </button>
                 </Link>
@@ -613,18 +544,17 @@ const Homepage2026: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
-          <div className='max-w-4xl mx-auto text-center'>
-=======
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='space-y-6'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
@@ -648,10 +578,10 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='https://ziontechgroup.com'
                         className='text-cyan-400 hover:underline font-medium'
-                      >
-=======
-              className="space-y-6"
-            >
+                      >                        ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>            >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -668,12 +598,10 @@ const Homepage2026: React.FC = () => {
                     <div>
                       <div className="text-sm text-gray-400">Website</div>
                       <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                         ziontechgroup.com
                       </a>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-3'>
                     <Phone className='w-5 h-5 text-green-400' />
                     <div>
@@ -681,19 +609,17 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='tel:+13024640950'
                         className='text-cyan-400 hover:underline font-medium'
-                      >
-=======
-                  <div className="flex items-center space-x-3">
+                      >                        +1 302 464 0950
+                      </a>
+                    </div>
+                  </div>                  <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-green-400" />
                     <div>
                       <div className="text-sm text-gray-400">Phone</div>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                        +1 302 464 0950
                       </a>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-3'>
                     <Mail className='w-5 h-5 text-yellow-400' />
                     <div>
@@ -701,41 +627,34 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='mailto:kleber@ziontechgroup.com'
                         className='text-cyan-400 hover:underline font-medium'
-                      >
-=======
-                  <div className="flex items-center space-x-3">
+                      >                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>                  <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-yellow-400" />
                     <div>
                       <div className="text-sm text-gray-400">Email</div>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                        kleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-3'>
                     <MapPin className='w-5 h-5 text-purple-400' />
                     <div>
                       <div className='text-sm text-gray-400'>Address</div>
                       <div className='text-white font-medium'>
                         364 E Main St STE 1008
-                        <br />
-=======
-                  <div className="flex items-center space-x-3">
+                        <br />                        Middletown DE 19709                  <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-purple-400" />
                     <div>
                       <div className="text-sm text-gray-400">Address</div>
                       <div className="text-white font-medium">
                         364 E Main St STE 1008<br />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                        Middletown DE 19709
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
@@ -747,11 +666,7 @@ const Homepage2026: React.FC = () => {
                 </a>
                 <a
                   href='tel:+13024640950'
-                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'
-=======
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'                >                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
@@ -761,7 +676,6 @@ const Homepage2026: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 >
                   Call Now
                 </a>
@@ -771,14 +685,10 @@ const Homepage2026: React.FC = () => {
         </section>
       </main>
     </Layout>
-<<<<<<< HEAD
   );
 };
 
-export default Homepage2026;
-=======
-  )
+export default Homepage2026;  )
 };
 
 export default Homepage2026;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

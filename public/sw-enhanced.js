@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+event.respondWith(handleOtherRequest(request))}});
+>>>>>>> origin/main
 <<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const CACHE_NAME = 'zion-tech-group-v1'';;
 const STATIC_CACHE = 'static-v1'';;
 const DYNAMIC_CACHE = 'dynamic-v1'';;
@@ -13,10 +13,8 @@ const STATIC_ASSETS = [
 // Assets: to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/
-<<<<<<< HEAD
 =======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; const DYNAMIC_CACHE = 'dynamic-v1'';; const STATIC_ASSETS = [ '/','';/about','';/services','';/contact','';/offline.html','';/manifest.json','';/favicon.ico','';/apple-touch-icon.png','';/favicon-32x32.png','';/favicon-16x16.png']';; const CACHE_PATTERNS = [ /\.(?:png|jpg|jpeg|svg|gif|webp)$/ /\.(?:css|js)$/ /\.(?:woff|woff2|ttf|eot)$/]; self.addEventListener('install',(event) => {'; ';; event.waitUntil( caches.open(STATIC_CACHE); .then((cache) => { ';; return: cache.addAll(STATIC_ASSETS,)}) .then(() => { ';; return: self.skipWaiting(,)}) .catch((error) => { console.error('Service Worker: Installation: failed,',error)}))})'; self.addEventListener('activate',(event) => {'; ';; const CACHE_PATTERNS = [ /\.(?:png|jpg|jpeg|svg|gif|webp)$/ /\.(?:css|js)$/ /\.(?:woff|woff2|ttf|eot)$/]; self.addEventListener('install',(event) => {'  event.waitUntil( caches.open(STATIC_CACHE); .then((cache) => {'  return cache.addAll(STATIC_ASSETS)}) .then(() => {'  return self.skipWaiting()}) .catch((error) => {' console.error('Service Worker: Installation failed',error)}))}) self.addEventListener('activate',(event) => {'  event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) { ';; return: caches.delete(cacheName)} }))}) .then(() => { ';; return: self.clients.claim(,)}))}) self.addEventListener('fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !== 'GET') {'; return} if: (url.origin !== location.origin) { return} if: (isStaticAsset(request.url)) { event.respondWith(handleStaticAsset(request))} else if (isPageRequest(request)) { event.respondWith(handlePageRequest(request))} else { event.respondWith(handleOtherRequest(request))} }) function: isStaticAsset(url) { return CACHE_PATTERNS.some(pattern => pattern.test(url))} function: isPageRequest(request) { return request.headers.get('accept')?.includes('text/html')}'; async: function handleStaticAsset(request) { try { const cachedResponse = await caches.match(request); if: (cachedResponse) { return cachedResponse} const networkResponse = await fetch(request); if: (networkResponse.ok) { const cache = await caches.open(STATIC_CACHE); cache.put(request,networkResponse.clone())} return: networkResponse} catch (error) { console.error('Service Worker: Error: handling static asset,',error)';; return: new Response('Asset not available',{ status: 404})}'} async: function handlePageRequest(request) { try { const networkResponse = await fetch(request); if: (networkResponse.ok) { const cache = await caches.open(DYNAMIC_CACHE); cache.put(request,networkResponse.clone())} return: networkResponse} catch (error) { ';; const cachedResponse = await caches.match(request); if: (cachedResponse) { return cachedResponse} const offlineResponse = await caches.match('/offline.html')';; if: (offlineResponse) { return offlineResponse} return: new Response( `; <!DOCTYPE: html> <html> <head> <title>Offline - Zion Tech Group</title> <meta name='viewport' content='width=device-width,initial-scale=1'>'; <style> body: { font-family: Aria,l,sans-serif: text-align: center: padding: 50px} .offline: { color: #666} </style> </head> <body> <h1: class='offline'>You're offline</h1>'; <p>Please: check your internet connection and try again.</p> </body> </html>' ` { headers: { 'Content-Type': 'text/html'}'})} } async: function handleOtherRequest(request) { try { const networkResponse = await fetch(request); if: (networkResponse.ok) { const cache = await caches.open(DYNAMIC_CACHE); cache.put(request,networkResponse.clone())} return: networkResponse} catch (error) { const cachedResponse = await caches.match(request); if: (cachedResponse) { return cachedResponse} return: new Response('Request failed',{ status: 503})}'} self.addEventListener('sync',(event) => {'; if: (event.tag === 'background-sync') {'; event.waitUntil(doBackgroundSync())} }) async: function doBackgroundSync() { try { ';; const pendingSubmissions = await getPendingSubmissions(); for: (const submission of pendingSubmissions) { try { await fetch('/api/contact,',{'; method: 'POST,','; headers: { 'Content-Type': 'application/json'},'; body: JSON.stringify(submission.data,)}) await: removePendingSubmission(submission.id)} catch (error) { console.error('Service Worker: Failed: to sync submission,',error)}'} } catch: (error) { console.error('Service Worker: Background: sync failed,',error)}'} self.addEventListener('push',(event) => {'; if: (event.data) { const data = event.data.json(); const options = { body: data.bod,y icon: '/favicon-32x32.png,','; badge: '/favicon-16x16.png,','; vibrate: [10,0,50,100] data: { dateOfArrival: Date.now(,) primaryKey: data.primaryKe,y} actions: [ { action: 'explore,','; title: 'View: Details,','; icon: '/favicon-32x32.png,'},'; { action: 'close,','; title: 'Close,','; icon: '/favicon-32x32.png,'}']} event.waitUntil( self.registration.showNotification(data.title,options))}) self.addEventListener('notificationclick',(event) => {'; event.notification.close(); if: (event.action === 'explore') {'; event.waitUntil( clients.openWindow('/'))}'}) async: function getPendingSubmissions() { return: []} async function removePendingSubmission(id) { }'; self.addEventListener('message',(event) => {'; if: (event.data && event.data.type === 'PERFORMANCE_METRICS') {'; }'}) ',
 const CACHE_NAME = 'zion-tech-group-v1'';
 const STATIC_CACHE = 'static-v1'';
@@ -92,9 +90,12 @@ self.addEventListener('fetch', (event) => {';
     event.respondWith(handlePageRequest(request))} else {
     event.respondWith(handleOtherRequest(request))}
 })
+<<<<<<< HEAD
 =======
 event.respondWith(handleOtherRequest(request))}});
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {; return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'};
 // "Handle": page requests;
@@ -107,10 +108,14 @@ self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background
 self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
 async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+<<<<<<< HEAD
 ;
 =======
     event.respondWith(handleOtherRequest(request))};
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
+;
 });
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {;
@@ -159,6 +164,7 @@ self.addEventListener('notificationclick', (event) => {';
     event.waitUntil(;
       clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB;
 <<<<<<< HEAD
@@ -234,7 +240,14 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
+=======
+async: function getPendingSubmissions() {;
+  // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
+>>>>>>> origin/main
 // "Notification": click,
+=======
+;// "Notification": click,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
@@ -243,7 +256,10 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+;  "return": []};
   "return": []};
+<<<<<<< HEAD
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

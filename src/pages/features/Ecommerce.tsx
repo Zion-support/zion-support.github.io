@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 export default function Ecommerce() {
   const schema = {
     '@context': 'https://schema.org',
@@ -13,29 +11,15 @@ export default function Ecommerce() {
     name: 'E-commerce Platform',
     description:
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app.ziontechgroup.com/features/e-commerce',
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function Ecommerce() {
-  const schema = {
-
-    "@context": "https: //schema.org",
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
+    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "E-commerce Platform"
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  };
-
+  }
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='E-commerce Platform'
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
@@ -96,13 +80,7 @@ export default function Ecommerce() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/marketplace'>Start Shopping</Link>
-=======
-        title="E-commerce Platform"
-        description="Buy and sell hardware, software and services in the Zion marketplace."
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
-      />
+              <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -142,14 +120,11 @@ export default function Ecommerce() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </Button>
           </div>
         </div>
       </main>
     </>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

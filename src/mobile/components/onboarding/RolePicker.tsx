@@ -1,22 +1,16 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Users, Check } from 'lucide-react';
-
-type UserRole = 'talent' | 'client' | null;
-
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Briefcase, Users, Check } from 'lucide-react'
+type UserRole = 'talent' | 'client' | null
 interface RolePickerProps {
-  onSelect: (role: UserRole) => void;
-
+  onSelect: (role: UserRole) => void
 export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null)
   const handleSelect = (role: UserRole) => {
-    setSelectedRole(role);
-    onSelect(role);
-  };
-
+    setSelectedRole(role)
+    onSelect(role)
+  }
   return (
     <div className='space-y-4 px-4'>
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
@@ -31,7 +25,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('talent')}
+          onClick = {(,) => handleSelect('talent'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -57,7 +51,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('client')}
+          onClick = {() => handleSelect('client'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -78,8 +72,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

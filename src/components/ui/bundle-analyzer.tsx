@@ -1,148 +1,115 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import { AlertTriangle, Package, Zap } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import { logErrorToProduction } from '@/utils/productionLogger'
 interface BundleInfo {
-  totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-  cacheHitRate: number;
-
+  totalSize: number
+  gzippedSize: number
+  chunkCount: number
+  loadTime: number
+  cacheHitRate: number
 interface ChunkInfo {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean;
-
+  name: string
+  size: number
+  loadTime: number
+  cached: boolean
 export function BundleAnalyzer() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin
   if (!isAllowed) {
-    return null;
+    return null
   }
 
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isCollecting, setIsCollecting] = useState(false);
-  const [shouldShow, setShouldShow] = useState(false);
-
-  useEffect(() => {
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' ||
-      localStorage.getItem('bundle-analyzer') === 'true';
-
-    setShouldShow(show);
-
-    if (!show) return;
-
-    setIsVisible(true);
-    collectBundleInfo();
-  }, []);
-
+      localStorage.getItem('bundle-analyzer') === 'true'
+    setShouldShow(show)
+    if (!show) return
+    setIsVisible(true)
+    collectBundleInfo()
+  }, [])
   const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return;
-
-    setIsCollecting(true);
-
+    if (typeof window === 'undefined') return
+    setIsCollecting(true)
     try {
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
-      ) as PerformanceResourceTiming[];
+      ) as PerformanceResourceTiming[]
       const scriptEntries = resourceEntries.filter(
         entry =>
           entry.name.includes('/_next/static/') &&
           (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
-      );
-
+      )
       // Calculate bundle information
-      let totalSize = 0;
-      let totalLoadTime = 0;
-      const chunkData: ChunkInfo[] = [];
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = [],
 
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0;
-        const loadTime = entry.responseEnd - entry.requestStart;
-        const cached = entry.transferSize === 0;
-<<<<<<< HEAD
-
-        totalSize += size;
-        totalLoadTime += loadTime;
-
+        const size = entry.transferSize || entry.encodedBodySize || 0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
           cached,
-        });
-      });
-
+        })
+      })
       // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7;
+      const gzippedSize = totalSize * 0.7
       const cacheHitRate =
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length;
-
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
         cacheHitRate: cacheHitRate * 100,
-      });
-
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
-    } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error });
+      })
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
-      setIsCollecting(false);
+      setIsCollecting(false)
     }
-  };
-
+  }
   const formatSize = (bytes: number): string => {
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  };
-
+    if (bytes === 0) return '0 B'
+    const k = 1024
+    const sizes = ['B', 'KB', 'MB', 'GB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+  }
   const getSizeColor = (size: number) => {
     if (size < 100000) return 'bg-green-500'; // < 100KB
     if (size < 500000) return 'bg-yellow-500'; // < 500KB
     return 'bg-red-500'; // > 500KB
-  };
-
+  }
   const toggleAnalyzer = () => {
-    const current = localStorage.getItem('bundle-analyzer') === 'true';
-    localStorage.setItem('bundle-analyzer', (!current).toString());
-    setIsVisible(!current);
+    const current = localStorage.getItem('bundle-analyzer') === 'true'
+    localStorage.setItem('bundle-analyzer', (!current).toString())
+    setIsVisible(!current)
     if (!current) {
-      collectBundleInfo();
+      collectBundleInfo()
     }
-  };
-
+  }
   if (!shouldShow) {
-    return null;
+    return null
   }
 
   if (!isVisible) {
@@ -152,13 +119,12 @@ export function BundleAnalyzer() {
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
-          className='bg-background/80 backdrop-blur-sm'
-        >
+          className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
           Bundle Analyzer
         </Button>
       </div>
-    );
+    )
   }
 
   return (
@@ -176,16 +142,14 @@ export function BundleAnalyzer() {
                 size='sm'
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className='h-6 w-6 p-0'
-              >
+                className='h-6 w-6 p-0'              >
                 <Zap className='w-3 h-3' />
               </Button>
               <Button
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
-                className='h-6 w-6 p-0'
-              >
+                className='h-6 w-6 p-0'              >
                 ✕
               </Button>
             </div>
@@ -239,8 +203,7 @@ export function BundleAnalyzer() {
                         <span className='w-4 text-muted-foreground'>
                           {index + 1}.
                         </span>
-                        <span className='truncate' title={chunk.name}>
-                          {chunk.name}
+                        <span className='truncate' title={chunk.name}>                          {chunk.name}
                         </span>
                         {chunk.cached && (
                           <Badge
@@ -279,9 +242,5 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
-  );
-=======
-        
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+} 

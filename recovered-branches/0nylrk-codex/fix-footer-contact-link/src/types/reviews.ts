@@ -1,3 +1,4 @@
+
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {
@@ -18,9 +19,10 @@ export interface Review {
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-    display_name: string;
-    avatar_url?: string;
-  };
+    display_name: string,
+    avatar_url?: string
+  }
+}
 
 export interface ReviewReport {
   id: string;
@@ -28,5 +30,6 @@ export interface ReviewReport {
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
-  created_at: string;
-  resolved_at?: string;
+  created_at: string,
+  resolved_at?: string
+}

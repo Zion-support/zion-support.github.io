@@ -4,44 +4,55 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting merge conflict resolution...');
+console.log('🔧 Starting automatic merge conflict resolution...');
 
-try {
-  // Start the merge
-  console.log('📥 Starting merge...');
-  execSync('git merge cursor/automate-test-improve-and-merge-code-663c --no-ff -m "Merge automation improvements and fixes"', { stdio: 'pipe' });
-  console.log('✅ Merge completed successfully!');
-} catch (error) {
-  console.log('⚠️  Merge had conflicts, resolving automatically...');
-  
-  // Get list of conflicted files
-  const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  
-  console.log(`📋 Found ${conflictedFiles.length} conflicted files`);
-  
-  // Resolve each conflict by accepting our changes
-  for (const file of conflictedFiles) {
-    if (fs.existsSync(file)) {
-      console.log(`🔧 Resolving conflicts in ${file}...`);
-      
-      try {
-        // Use git checkout --ours to accept our changes
-        execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
-        execSync(`git add "${file}"`, { stdio: 'pipe' });
-        console.log(`✅ Resolved ${file}`);
-      } catch (fileError) {
-        console.log(`⚠️  Could not resolve ${file}: ${fileError.message}`);
-      }
-    }
-  }
-  
-  // Commit the resolved merge
+// Get list of files with merge conflicts
+const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+const conflictFiles = gitStatus.split('\n')
+  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+  .map(line => line.split(' ').pop())
+  .filter(file => file && file !== '');
+
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+// Function to resolve conflicts by choosing incoming changes
+function resolveConflicts(filePath) {
   try {
-    execSync('git commit --no-edit', { stdio: 'pipe' });
-    console.log('✅ Merge conflicts resolved and committed!');
-  } catch (commitError) {
-    console.log('⚠️  Could not commit merge:', commitError.message);
+    console.log(`Resolving conflicts in ${filePath}...`);
+    
+    // Read the file content
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Replace merge conflict markers with incoming changes
+    // Remove <<<<<<< HEAD and ======= lines, keep only >>>>>>> branch-name content
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]*\n/g, '');
+    
+    // Write the resolved content back
+    fs.writeFileSync(filePath, content);
+    
+    // Add the file to git
+    execSync(`git add "${filePath}"`, { stdio: 'inherit' });
+    
+    console.log(`✅ Resolved conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`❌ Failed to resolve conflicts in ${filePath}:`, error.message);
   }
 }
 
-console.log('🎉 Merge conflict resolution complete!');
+// Resolve conflicts for each file
+conflictFiles.forEach(resolveConflicts);
+
+console.log('🎉 Merge conflict resolution completed!');
+console.log('Files resolved:', conflictFiles.length);
+
+// Check if there are any remaining conflicts
+const remainingConflicts = execSync('git status --porcelain', { encoding: 'utf8' })
+  .split('\n')
+  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+
+if (remainingConflicts.length === 0) {
+  console.log('✅ All conflicts resolved successfully!');
+} else {
+  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
+}

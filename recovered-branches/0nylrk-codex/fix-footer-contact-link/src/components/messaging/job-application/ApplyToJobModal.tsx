@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { ApplyForm } from './ApplyForm';
-import { ApplyToJobModalProps } from './types';
-
+DialogTitle,
+} from "@/components/ui/dialog";
+import { ApplyForm } from "./ApplyForm";
+import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({
   job,
   isOpen,
@@ -17,7 +16,7 @@ export function ApplyToJobModal({
 }: ApplyToJobModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className='sm:max-w-[600px]'>
+      <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle>Apply to Job: {job.title}</DialogTitle>
           <DialogDescription>
@@ -33,3 +32,4 @@ export function ApplyToJobModal({
       </DialogContent>
     </Dialog>
   );
+}

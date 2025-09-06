@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -77,20 +78,27 @@ export default function NewsPage() {
 import { motion } from 'framer-motion';
 import { 
   Newspaper;
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+import { 
+  Newspaper,
+>>>>>>> origin/main
   Calendar, 
   User, 
   Tag, 
   ArrowRight, 
-  ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
+  ExternalLink,
+  TrendingUp,
+  Award,
+  Rocket,
+  Globe,
+  Brain,
+  Atom,
   Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -103,7 +111,7 @@ const NewsPage: React.FC = () => {
       featured: true,
       image: '/images/news/ai-consciousness-breakthrough.jpg',
       tags: ['AI ConsciousnessBreakthroughResearchInnovation']
-    };
+    },
     {
       id: 2,
       title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',
@@ -115,11 +123,11 @@ const NewsPage: React.FC = () => {
       featured: true,
       image: '/images/news/series-c-funding.jpg',
       tags: ['FundingInvestmentGrowthExpansion']
-    };
+    },
     {
       id: 3,
       title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',
-      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.';
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',
       category: 'partnerships',
       date: '2025-01-05',
       author: 'Zion Tech Group',
@@ -128,7 +136,7 @@ const NewsPage: React.FC = () => {
       image: '/images/news/quantum-azure-partnership.jpg',
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
-  ];
+  ],
 
   const latestNews = [
     {
@@ -142,7 +150,7 @@ const NewsPage: React.FC = () => {
       featured: false,
       image: '/images/news/ai-customer-success.jpg',
       tags: ['AICustomer SuccessRetentionPlatform']
-    };
+    },
     {
       id: 5,
       title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year',
@@ -154,31 +162,31 @@ const NewsPage: React.FC = () => {
       featured: false,
       image: '/images/news/forbes-ai-50.jpg',
       tags: ['RecognitionForbesAI LeadershipInnovation']
-    };
+    },
     {
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
-    category: 'research',
+      category: 'research',
       date: '2025-01-03',
       author: 'Dr. Michael Rodriguez',
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
       tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
-    };
+    },
     {
       id: 7,
       title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
       excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.',
-    category: 'partnerships',
+      category: 'partnerships',
       date: '2024-12-28',
       author: 'Zion Tech Group',
       readTime: '3 min read',
       featured: false,
       image: '/images/news/deloitte-partnership.jpg',
       tags: ['PartnershipDeloitteEnterpriseAI Implementation']
-    };
+    },
     {
       id: 8,
       title: 'AI Autonomous Business Operations Platform Beta Launch',
@@ -190,12 +198,12 @@ const NewsPage: React.FC = () => {
       featured: false,
       image: '/images/news/ai-autonomous-business.jpg',
       tags: ['AIAutonomous OperationsBusinessPlatform']
-    };
+    },
     {
       id: 9,
       title: 'Zion Tech Group Expands to European Markets',
       excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.',
-    category: 'company',
+      category: 'company',
       date: '2024-12-15',
       author: 'Zion Tech Group',
       readTime: '3 min read',
@@ -203,48 +211,48 @@ const NewsPage: React.FC = () => {
       image: '/images/news/european-expansion.jpg',
       tags: ['ExpansionEuropeInternationalGrowth']
     }
-  ];
+  ],
 
   const pressReleases = [
     {
       title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
       date: '2025-01-15',
       summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'
-    };
+    },
     {
       title: 'Series C Funding Round: $250M Investment for Global Expansion',
       date: '2025-01-10',
       summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'
-    };
+    },
     {
       title: 'Quantum-Secure Cloud Partnership with Microsoft Azure',
       date: '2025-01-05',
       summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'
     }
-  ];
+  ],
 
   const mediaResources = [
     {
       title: 'Company Fact Sheet',
       description: 'Key facts, figures, and company information for media and investors.',
-    type: 'PDF',
+      type: 'PDF',
       size: '2.1 MB',
       download: '/media/zion-tech-group-fact-sheet.pdf'
-    };
+    },
     {
       title: 'Executive Biographies',
       description: 'Professional backgrounds and photos of Zion Tech Group leadership team.',
       type: 'ZIP',
       size: '15.3 MB',
       download: '/media/executive-bios.zip'
-    };
+    },
     {
       title: 'Company Logo Package',
       description: 'High-resolution logos and brand assets for media use.',
       type: 'ZIP',
       size: '8.7 MB',
       download: '/media/logo-package.zip'
-    };
+    },
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI and quantum computing platforms.',
@@ -252,27 +260,27 @@ const NewsPage: React.FC = () => {
       size: '25.1 MB',
       download: '/media/product-screenshots.zip'
     }
-  ];
+  ],
 
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
+    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory,
     const searchMatch = searchQuery === '' || 
       news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     return categoryMatch && searchMatch
-  });
+  }),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
-      year: 'numeric',
-      month: 'long',
+      year: 'numeric', 
+      month: 'long', 
       day: 'numeric' 
     })
-  };
-import React from 'react';
-import SEO from '../components/SEO';
+  },;
+import React from 'react',;
+import SEO from '../components/SEO',;
 export default function NewsPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -288,11 +296,11 @@ export default function NewsPage() {
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               initial={{ opacity: 0, y: 30 }}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">News & Updates</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -317,6 +325,8 @@ export default function NewsPage() {
                   {category.name} ({category.count})
                 </motion.button>
 =======
+=======
+>>>>>>> origin/main
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
@@ -345,46 +355,46 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react';
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',;
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
   ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
 export default function NewsPage() {
   const newsItems = [
     {
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
       category: "Awards & Recognition",
-      date: "January 15, 2025";
-      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.";
+      date: "January 15, 2025",
+      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.",
       image: "/api/placeholder/600/400",
       source: "TechCrunch",
       url: "#",
       featured: true,
       icon: Award,
       color: "from-yellow-500 to-orange-500"
-    };
+    },
     {
       title: "Revolutionary Quantum AI Breakthrough Announced",
       category: "Technology Innovation",
-      date: "January 10, 2025";
-      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.";
+      date: "January 10, 2025",
+      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.",
       image: "/api/placeholder/600/400",
       source: "MIT Technology Review",
       url: "#",
       featured: false,
       icon: Brain,
       color: "from-purple-500 to-pink-500"
-    };
+    },
     {
       title: "Partnership with Fortune 500 Financial Institution",
       category: "Business Development",
-      date: "January 5, 2025";
+      date: "January 5, 2025",
       excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.",
       image: "/api/placeholder/600/400",
       source: "Business Insider",
@@ -392,36 +402,36 @@ export default function NewsPage() {
       featured: false,
       icon: Users,
       color: "from-blue-500 to-cyan-500"
-    };
+    },
     {
       title: "New Cybersecurity Division Launch",
       category: "Company News",
-      date: "December 28, 2024";
-      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.";
+      date: "December 28, 2024",
+      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.",
       image: "/api/placeholder/600/400",
       source: "Security Weekly",
       url: "#",
       featured: false,
       icon: Rocket,
       color: "from-red-500 to-orange-500"
-    };
+    },
     {
       title: "Record-Breaking AI Model Performance",
       category: "Research & Development",
-      date: "December 20, 2024";
-      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.";
+      date: "December 20, 2024",
+      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.",
       image: "/api/placeholder/600/400",
       source: "AI Research Journal",
       url: "#",
       featured: false,
       icon: Brain,
       color: "from-emerald-500 to-teal-500"
-    };
+    },
     {
       title: "Global Expansion: New Office in Singapore",
       category: "Company News",
-      date: "December 15, 2024";
-      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.";
+      date: "December 15, 2024",
+      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.",
       image: "/api/placeholder/600/400",
       source: "Singapore Business Times",
       url: "#",
@@ -429,16 +439,16 @@ export default function NewsPage() {
       icon: Globe,
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
 
   const filteredNews = selectedCategory === "All" 
     ? newsItems 
-    : newsItems.filter(item => item.category === selectedCategory);
+    : newsItems.filter(item => item.category === selectedCategory),
 
-  const featuredNews = newsItems.filter(item => item.featured);
+  const featuredNews = newsItems.filter(item => item.featured),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -697,12 +707,16 @@ export default function NewsPage() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Article */}
         {featuredArticle && (
@@ -785,6 +799,8 @@ export default function NewsPage() {
                         <ArrowRight className="ml-1 w-4 h-4" />
                       </Link>
 =======
+=======
+>>>>>>> origin/main
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -937,7 +953,6 @@ export default function NewsPage() {
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-400 text-sm">{news.date}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </div>
                   </div>
                 </motion.article>
@@ -946,6 +961,7 @@ export default function NewsPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -976,6 +992,8 @@ export default function NewsPage() {
                   Learn More
                 </Link>
 =======
+=======
+>>>>>>> origin/main
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -989,7 +1007,7 @@ export default function NewsPage() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information;
+                For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1006,16 +1024,11 @@ export default function NewsPage() {
                 >
                   Press Kit
                 </a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1320,4 +1333,8 @@ export default function NewsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+;
+>>>>>>> origin/main

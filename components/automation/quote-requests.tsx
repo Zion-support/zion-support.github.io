@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- 
-=======
-export default function QuoteRequestsPage() {
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Quote Requests Log</h1>
@@ -10,4 +6,3 @@ export default function QuoteRequestsPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

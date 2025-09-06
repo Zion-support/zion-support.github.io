@@ -1,11 +1,7 @@
-<<<<<<< HEAD
- </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/global-bounties.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore - JSON import import data from '../../data/global-bounties.json',;
 export default function GlobalBountiesPage() {
-  const items: any[] = (data?.items || []).slice(0, 100);
+  const items: any[] = (data?.items || []).slice(0, 100),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -27,5 +23,4 @@ export default function GlobalBountiesPage() {
       </div>
     </EnhancedLayout>
   )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};

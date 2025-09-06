@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
 
 export default function Status() {
   return (
@@ -10,7 +15,13 @@ export default function Status() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              System Status
+            </h1>
+>>>>>>> origin/main
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>

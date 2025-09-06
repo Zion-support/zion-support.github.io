@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   ArrowRight,
   Star,
@@ -10,45 +9,33 @@ import {
   Rocket,
   Globe,
   Sparkles,;
-} from 'lucide-react';
-=======
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+} from 'lucide-react';import Link from 'next/link';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-<<<<<<< HEAD
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
     0,
     3
-  );
-=======
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
-    },
-=======
-        staggerChildren: 0.1
+    },  };        staggerChildren: 0.1
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const itemVariants = {
@@ -57,7 +44,6 @@ export default function Revolutionary2026ServicesShowcase() {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
         duration: 0.6,
       },
     },
@@ -73,12 +59,7 @@ export default function Revolutionary2026ServicesShowcase() {
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
       </div>
 
-      <div className='max-w-7xl mx-auto relative z-10'>
-=======
-        duration: 0.6
-      }
-    }
-  };
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -91,14 +72,12 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         {/* Enhanced Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-20'
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
@@ -148,10 +127,7 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
             <div className='text-center'>
               <div className='text-3xl font-bold text-green-400'>∞</div>
-              <div className='text-gray-400 text-sm'>Possibilities</div>
-=======
-          className="text-center mb-20"
-        >
+              <div className='text-gray-400 text-sm'>Possibilities</div>            </div>        >
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
             <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
@@ -185,7 +161,6 @@ export default function Revolutionary2026ServicesShowcase() {
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400">∞</div>
               <div className="text-gray-400 text-sm">Possibilities</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </div>
           </div>
         </motion.div>
@@ -193,7 +168,6 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
@@ -213,11 +187,11 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className='group relative'          viewport={{ once: true }}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -231,12 +205,10 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             {featuredAIServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-<<<<<<< HEAD
                 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -259,35 +231,18 @@ export default function Revolutionary2026ServicesShowcase() {
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
                         <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-                        <span className='text-gray-400 text-sm'>{feature}</span>
-=======
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
-                    <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-blue-300 text-sm">{service.tagline}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                        <span className='text-gray-400 text-sm'>{feature}</span>                      </div>
+                    ))}                  </div>
 
-                  <div className="space-y-3 mb-6">
+                  <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                         <span className="text-gray-400 text-sm">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </div>
                     ))}
                   </div>
 
-<<<<<<< HEAD
                   <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-blue-400'>
@@ -310,10 +265,7 @@ export default function Revolutionary2026ServicesShowcase() {
                     href={service.link}
                     className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium'
                   >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />
-=======
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                    Learn More <ArrowRight className='w-4 h-4 ml-2' />                  </Link>                    <div>
                       <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -329,37 +281,30 @@ export default function Revolutionary2026ServicesShowcase() {
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
 
-<<<<<<< HEAD
           <div className='text-center mt-8'>
             <Link
               href='/services?category=ai-autonomous'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
             >
               View All AI Autonomous Services{' '}
-              <ArrowRight className='w-5 h-5 ml-2' />
-=======
-          <div className="text-center mt-8">
+              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">
             <Link 
               href="/services?category=ai-autonomous"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
           </div>
         </motion.div>
 
         {/* Quantum Space Tech Services Section */}
         <motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
@@ -379,11 +324,11 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className='group relative'          viewport={{ once: true }}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -397,12 +342,10 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             {featuredQuantumServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-<<<<<<< HEAD
                 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -427,35 +370,18 @@ export default function Revolutionary2026ServicesShowcase() {
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
                         <div className='w-2 h-2 bg-indigo-400 rounded-full'></div>
-                        <span className='text-gray-400 text-sm'>{feature}</span>
-=======
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
-                    <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-indigo-300 text-sm">{service.tagline}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                        <span className='text-gray-400 text-sm'>{feature}</span>                      </div>
+                    ))}                  </div>
 
-                  <div className="space-y-3 mb-6">
+                  <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
                         <span className="text-gray-400 text-sm">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </div>
                     ))}
                   </div>
 
-<<<<<<< HEAD
                   <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-indigo-400'>
@@ -478,10 +404,7 @@ export default function Revolutionary2026ServicesShowcase() {
                     href={service.link}
                     className='inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium'
                   >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />
-=======
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                    Learn More <ArrowRight className='w-4 h-4 ml-2' />                  </Link>                    <div>
                       <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -497,37 +420,30 @@ export default function Revolutionary2026ServicesShowcase() {
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
 
-<<<<<<< HEAD
           <div className='text-center mt-8'>
             <Link
               href='/services?category=quantum-space'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
             >
               View All Quantum Space Services{' '}
-              <ArrowRight className='w-5 h-5 ml-2' />
-=======
-          <div className="text-center mt-8">
+              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">
             <Link 
               href="/services?category=quantum-space"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
           </div>
         </motion.div>
 
         {/* Metaverse & Digital Reality Services Section */}
         <motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
@@ -547,11 +463,11 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredMetaverseServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className='group relative'          viewport={{ once: true }}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -565,12 +481,10 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             {featuredMetaverseServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-<<<<<<< HEAD
                 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -593,35 +507,18 @@ export default function Revolutionary2026ServicesShowcase() {
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
                         <div className='w-2 h-2 bg-pink-400 rounded-full'></div>
-                        <span className='text-gray-400 text-sm'>{feature}</span>
-=======
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
-                    <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-pink-300 text-sm">{service.tagline}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                        <span className='text-gray-400 text-sm'>{feature}</span>                      </div>
+                    ))}                  </div>
 
-                  <div className="space-y-3 mb-6">
+                  <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
                         <span className="text-gray-400 text-sm">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </div>
                     ))}
                   </div>
 
-<<<<<<< HEAD
                   <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-pink-400'>
@@ -644,10 +541,7 @@ export default function Revolutionary2026ServicesShowcase() {
                     href={service.link}
                     className='inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium'
                   >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />
-=======
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                    Learn More <ArrowRight className='w-4 h-4 ml-2' />                  </Link>                    <div>
                       <span className="text-2xl font-bold text-pink-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -663,30 +557,24 @@ export default function Revolutionary2026ServicesShowcase() {
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
 
-<<<<<<< HEAD
           <div className='text-center mt-8'>
             <Link
               href='/services?category=metaverse'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
             >
               View All Metaverse Services{' '}
-              <ArrowRight className='w-5 h-5 ml-2' />
-=======
-          <div className="text-center mt-8">
+              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">
             <Link 
               href="/services?category=metaverse"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
           </div>
         </motion.div>
 
@@ -696,9 +584,7 @@ export default function Revolutionary2026ServicesShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center'
-        >
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
               Ready to Experience the Future?
@@ -738,52 +624,16 @@ export default function Revolutionary2026ServicesShowcase() {
                 <span className='text-purple-300'>
                   ✉️ kleber@ziontechgroup.com
                 </span>
-                <span className='text-purple-300'>🌐 ziontechgroup.com</span>
-=======
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
-              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
-              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
-            </p>
-            
-            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link 
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                <Zap className="w-5 h-5 mr-2" />
-                Get Started Today
-              </Link>
-              
-              <Link 
-                href="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300"
-              >
-                Explore All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-
-            <div className="mt-8 text-center">
+                <span className='text-purple-300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm mb-2">Contact Information</p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
                 <span className="text-purple-300">📱 +1 302 464 0950</span>
                 <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>
                 <span className="text-purple-300">🌐 ziontechgroup.com</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

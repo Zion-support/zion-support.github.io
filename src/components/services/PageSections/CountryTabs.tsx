@@ -1,28 +1,25 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react'
+import { Search } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious,;
-} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-
+  PaginationPrevious,
+} from '@/components/ui/pagination'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { CountryServiceCard } from '@/components/services/CountryServiceCard'
+import { CountryPricing } from '@/data/onsiteServicePricing'
 interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-
+  popularCountries: string[]
+  filteredCountries: CountryPricing[]
+  handleCountrySelect: (country: CountryPricing) => void
+  onQuote?: (country: CountryPricing) => void
+  searchQuery: string
+  setSearchQuery: (query: string) => void
 export function CountryTabs({
   popularCountries,
   filteredCountries,
@@ -31,18 +28,16 @@ export function CountryTabs({
   searchQuery,
   setSearchQuery,
 }: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const countriesPerPage = 50
   useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery]);
-
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+    setCurrentPage(1)
+  }, [searchQuery])
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
-  );
+  )
   return (
     <Tabs defaultValue='featured' className='w-full'>
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>
@@ -70,13 +65,12 @@ export function CountryTabs({
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
-            .map(country => (
-              <CountryServiceCard
-                key={country.country}
-                country={country}
-                onSelect={handleCountrySelect}
-                onQuote={onQuote}
-                isPopular={true}
+            .map(country => (              <CountryServiceCard
+                key = {country.country,}
+                country = {country,}
+                onSelect = {handleCountrySelect,}
+                onQuote = {onQuote,}
+                isPopular = {true,}
               />
             ))}
         </div>
@@ -91,19 +85,17 @@ export function CountryTabs({
               placeholder='Search by country...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-            />
+              onChange={e => setSearchQuery(e.target.value)}            />
           </div>
         </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-          {paginatedCountries.map(country => (
-            <CountryServiceCard
-              key={country.country}
-              country={country}
-              onSelect={handleCountrySelect}
-              onQuote={onQuote}
-              isPopular={popularCountries.includes(country.country)}
+          {paginatedCountries.map(country => (            <CountryServiceCard
+              key = {country.country,}
+              country = {country,}
+              onSelect = {handleCountrySelect,}
+              onQuote = {onQuote,}
+              isPopular = {popularCountries.includes(country.country),}
             />
           ))}
         </div>
@@ -116,8 +108,8 @@ export function CountryTabs({
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
                     onClick={e => {
-                      e.preventDefault();
-                      setCurrentPage(Math.max(1, currentPage - 1));
+                      e.preventDefault()
+                      setCurrentPage(Math.max(1, currentPage - 1))
                     }}
                   />
                 </PaginationItem>
@@ -128,9 +120,8 @@ export function CountryTabs({
                         page={page}
                         isActive={page === currentPage}
                         onClick={e => {
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}
+                          e.preventDefault()
+                          setCurrentPage(page) }}
                       />
                     </PaginationItem>
                   )
@@ -139,9 +130,8 @@ export function CountryTabs({
                   <PaginationNext
                     href={`?page=${currentPage + 1}`}
                     onClick={e => {
-                      e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1));
-                    }}
+                      e.preventDefault()
+                      setCurrentPage(Math.min(totalPages, currentPage + 1)) }}
                   />
                 </PaginationItem>
               </PaginationContent>
@@ -150,11 +140,9 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
-  );
-=======
-
-<<<<<<< HEAD
-  const countriesPerPage = 50;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+  )
+}
+  )
+}
+;

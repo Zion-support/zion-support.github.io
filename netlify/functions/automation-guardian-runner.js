@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- 
-=======
-const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
@@ -43,4 +39,3 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
-
 export type EmptyStateProps = {
   title: string;
   description?: string;
@@ -30,12 +28,7 @@ export default function EmptyState({
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
-                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
-=======
-import React from 'react';
-import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = {
+                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
   title: string,
   description?: string;
   icon?: React.ReactNode;
@@ -55,20 +48,15 @@ export default function EmptyState({ title, description, icon, primaryAction, se
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </a>
             </Link>
           )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
-<<<<<<< HEAD
                 <EnhancedButton variant='secondary' size='md'>
                   {secondaryAction.label}
-                </EnhancedButton>
-=======
-                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
               </a>
             </Link>
           )}
@@ -76,7 +64,4 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

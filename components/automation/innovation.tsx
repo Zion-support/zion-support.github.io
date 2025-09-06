@@ -1,29 +1,8 @@
-<<<<<<< HEAD
- 
-
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
-}</ul> </div>) 
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = { source: string, title: string, url: string, date?: string, summary?: string };
-
-type Props = { items: Item[] },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { items: data.items || [] }, revalidate: 1800 }
-  } catch {
-    return { props: { items: [] }, revalidate: 1800 }
-  }
-};
-
+}</ul> </div>)
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -47,6 +26,5 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
     </div>
-  );
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

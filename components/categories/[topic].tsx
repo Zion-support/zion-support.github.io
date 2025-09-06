@@ -1,23 +1,17 @@
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { BlogPost } from '@/utils/types/blog';
+import {BlogPost} from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore';
+import {listPublishedPosts} from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
-<<<<<<< HEAD
 
-type Props = { topic: string; posts: BlogPost[] };
-
-=======
-type Props = { topic: string, posts: BlogPost[] },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-<<<<<<< HEAD
         <meta name='description' content={`Articles about ${topic}`} />
         <meta property='og:title' content={`${topic} - Zion Blog`} />
         <meta property='og:description' content={`Articles about ${topic}`} />
@@ -77,18 +71,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   return { props: { topic, posts } };
 };
 
-export default TopicPage;
-=======
-        <meta name="description" content={`Articles about ${topic}`} />
-        <meta property="og:title" content={`${topic} - Zion Blog`} />
-        <meta property="og:description" content={`Articles about ${topic}`} />
-        <meta property="og:image" content="/images/og/topic-default.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
-        <meta name="twitter:description" content={`Articles about ${topic}`} />
-        <meta name="twitter:image" content="/images/og/topic-default.jpg" />
-      </Head>
+export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -117,4 +100,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 };
 
 export default TopicPage;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

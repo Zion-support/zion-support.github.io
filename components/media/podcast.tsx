@@ -1,5 +1,4 @@
-<<<<<<< HEAD
- useEffect ( () => {
+useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
@@ -33,43 +32,10 @@
                     href={ep.audio.mp3Url}
                     className='px-3 py-2 bg-blue-600 text-white rounded'
                     download
-                  >
-=======
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-type EpisodeListItem = {
-  id: string,
-  title: string,
-  inviteeName: string,
-  createdAt: string,
-  summary: string,
-  audio?: {
-    mp3Url?: string;
-    wavUrl?: string;
-    mp4Url?: string
-  }
-};
-
-export default function PodcastIndexPage() {
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const res = await fetch('/api/podcast/list');
-        const data = await res.json();
-        setEpisodes(data.episodes || [])
-      } catch (err) {
-        console.error(err)
-      } finally {
-        setLoading(false)
-      }
-    };
-    load()
-  }, []);
-
-  if (loading) return <div>Loading episodes…</div>;
+                  >                    MP3
+                  </a>
+                )}
+                {ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
 
   return (
     <div className="space-y-6">
@@ -90,57 +56,45 @@ export default function PodcastIndexPage() {
               <div className="flex gap-3">
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     MP3
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
-<<<<<<< HEAD
                   <a
                     href={ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded'
                     download
-                  >
-=======
-                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  >                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
-<<<<<<< HEAD
                   <a
                     href={ep.audio.mp4Url}
                     className='px-3 py-2 bg-purple-700 text-white rounded'
                     download
-                  >
-=======
-                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
                     MP4
                   </a>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
             <div className='mt-3 flex gap-4'>
               <Link
                 href={`/media/podcast/${ep.id}`}
                 className='text-blue-600 underline'
               >
                 View Transcript
-              </Link>
-=======
-            <div className="mt-3 flex gap-4">
+              </Link>            </div>            <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </div>
           </li>
         ))}
       </ul>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

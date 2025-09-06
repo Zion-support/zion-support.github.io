@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest,
@@ -17,9 +16,14 @@ export default async function handler(
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
+    return res.status(401).json({ error: 'Unauthorized' });  }
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,21 +34,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  }
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
-<<<<<<< HEAD
-  const existing = keys.find(k => k.id === apiKey.id);
-=======
-  const existing = keys.find((k) => k.id === apiKey.id);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  const existing = keys.find(k => k.id === apiKey.id);  const existing = keys.find((k) => k.id === apiKey.id);
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
   const newKey = {
-<<<<<<< HEAD
     id: uuidv4(),
     partnerId: auth.partner.id,
     key: uuidv4(),
@@ -54,14 +51,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
   keys.push(newKey as any);
   await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key });
-=======
-    id: uuidv4(), partnerId: auth.partner.id,
-    key: uuidv4(), active: true,
-    createdAt: now,
+  return res.status(201).json({ apiKey: newKey.key });    id: uuidv4();
+    partnerId: auth.partner.id;
+    key: uuidv4();
+    active: true;
+    createdAt: now;
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

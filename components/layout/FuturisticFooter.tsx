@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import {
   Mail,
   Phone,
@@ -12,26 +11,16 @@ import {
   Shield,
   ArrowRight,;
 } from 'lucide-react';
-
 export default function FuturisticFooter() {
-  const currentYear = new Date().getFullYear();
-
-=======
-import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();
   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
 
   const quickLinks = [
@@ -40,7 +29,6 @@ export default function FuturisticFooter() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-<<<<<<< HEAD
     { name: 'Blog', href: '/blog' },
   ];
 
@@ -114,10 +102,7 @@ export default function FuturisticFooter() {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
                 >
-                  <span className='text-lg'>{social.icon}</span>
-=======
-    { name: 'Blog', href: '/blog' }],
-  const serviceCategories = [
+                  <span className='text-lg'>{social.icon}</span>                </a>  const serviceCategories = [
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
     { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
     { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
@@ -163,7 +148,6 @@ export default function FuturisticFooter() {
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
                   <span className="text-lg">{social.icon}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </a>
               ))}
             </div>
@@ -171,7 +155,6 @@ export default function FuturisticFooter() {
 
           {/* Quick Links */}
           <div>
-<<<<<<< HEAD
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
               <ArrowRight className='w-5 h-5 text-blue-400 mr-2' />
               Quick Links
@@ -181,11 +164,7 @@ export default function FuturisticFooter() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
-=======
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <ArrowRight className="w-5 h-5 text-blue-400 mr-2" />
-              Quick Links
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -193,7 +172,6 @@ export default function FuturisticFooter() {
                   <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   >
                     {link.name}
                   </Link>
@@ -204,7 +182,6 @@ export default function FuturisticFooter() {
 
           {/* Services */}
           <div>
-<<<<<<< HEAD
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
               <Cloud className='w-5 h-5 text-green-400 mr-2' />
               Services
@@ -214,11 +191,7 @@ export default function FuturisticFooter() {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
-=======
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <Cloud className="w-5 h-5 text-green-400 mr-2" />
-              Services
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
             </h3>
             <ul className="space-y-3">
               {serviceCategories.map((service) => (
@@ -226,7 +199,6 @@ export default function FuturisticFooter() {
                   <Link
                     href={service.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   >
                     {service.name}
                   </Link>
@@ -237,7 +209,6 @@ export default function FuturisticFooter() {
 
           {/* Contact Info */}
           <div>
-<<<<<<< HEAD
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
               <Shield className='w-5 h-5 text-purple-400 mr-2' />
               Contact Us
@@ -249,11 +220,7 @@ export default function FuturisticFooter() {
                   <p className='text-white font-medium'>Phone</p>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className='text-gray-400 hover:text-blue-400 transition-colors duration-200'
-=======
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <Shield className="w-5 h-5 text-purple-400 mr-2" />
-              Contact Us
+                    className='text-gray-400 hover:text-blue-400 transition-colors duration-200'                  >              Contact Us
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -263,13 +230,11 @@ export default function FuturisticFooter() {
                   <a 
                     href={`tel:${contactInfo.mobile}`}
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   >
                     {contactInfo.mobile}
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className='flex items-start space-x-3'>
                 <Mail className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
@@ -277,47 +242,31 @@ export default function FuturisticFooter() {
                   <p className='text-white font-medium'>Email</p>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className='text-gray-400 hover:text-green-400 transition-colors duration-200'
-=======
-              
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <div>
+                    className='text-gray-400 hover:text-green-400 transition-colors duration-200'                  >                <div>
                   <p className="text-white font-medium">Email</p>
                   <a 
                     href={`mailto:${contactInfo.email}`}
                     className="text-gray-400 hover:text-green-400 transition-colors duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   >
                     {contactInfo.email}
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className='flex items-start space-x-3'>
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />
                 <div>
                   <p className='text-white font-medium'>Address</p>
-                  <p className='text-gray-400 text-sm'>{contactInfo.address}</p>
-=======
-              
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-medium">Address</p>
+                  <p className='text-gray-400 text-sm'>{contactInfo.address}</p>                </div>                  <p className="text-white font-medium">Address</p>
                   <p className="text-gray-400 text-sm">
                     {contactInfo.address}
                   </p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom section */}
-<<<<<<< HEAD
         <div className='pt-8 border-t border-gray-800'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-gray-400 text-sm'>
@@ -340,12 +289,7 @@ export default function FuturisticFooter() {
               <Link
                 href='/cookies'
                 className='text-gray-400 hover:text-white transition-colors duration-200'
-              >
-=======
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+              >                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
             <div className="flex space-x-6 text-sm">
@@ -356,7 +300,6 @@ export default function FuturisticFooter() {
                 Terms of Service
               </Link>
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 Cookie Policy
               </Link>
             </div>
@@ -365,17 +308,13 @@ export default function FuturisticFooter() {
       </div>
 
       {/* Floating elements */}
-<<<<<<< HEAD
       <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />
       <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />
     </footer>
-  );
-=======
-      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+  );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-  );
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

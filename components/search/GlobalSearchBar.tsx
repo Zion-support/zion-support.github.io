@@ -1,9 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default function GlobalSearchBar() {
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -14,17 +10,12 @@ export default function GlobalSearchBar() {
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
-<<<<<<< HEAD
-      return;
-=======
-      return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      return;      return
     }
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
       try {
-<<<<<<< HEAD
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
           signal: controller.current!.signal,
         });
@@ -34,52 +25,45 @@ export default function GlobalSearchBar() {
       } catch {}
     };
     const id = setTimeout(run, 150);
-    return () => clearTimeout(id);
-=======
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
-        const j = await r.json();
+    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions || []);
         setOpen(true)
       } catch {}
     };
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }, [query]);
 
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
-<<<<<<< HEAD
     fetch('/api/telemetry/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ q: query }),
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);
-=======
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+    setOpen(false);  };
+
+  const startVoice = () => {
+    if (typeof window === 'undefined') return;
+    const Speech: any =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const startVoice = () => {
     if (typeof window === 'undefined') return;
-<<<<<<< HEAD
     const Speech: any =
       (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;
-=======
-    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '';
-<<<<<<< HEAD
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     };
     rec.start();
@@ -123,10 +107,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
-=======
-      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
-    };
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
     rec.start()
   };
 
@@ -157,7 +138,6 @@ export default function GlobalSearchBar() {
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 >
                   {s}
                 </button>
@@ -167,9 +147,5 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
-<<<<<<< HEAD
-  );
-=======
-  )
+);  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

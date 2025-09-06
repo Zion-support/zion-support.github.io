@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
 
 export default function RequestToHirePage() {
   const router = useRouter();
@@ -9,44 +8,32 @@ export default function RequestToHirePage() {
   const selected = useMemo(
     () => TALENT_PROFILES.find(t => t.slug === talent),
     [talent]
-  );
-=======
-export default function RequestToHirePage() {
+  );export default function RequestToHirePage() {
   const router = useRouter();
   const { talent } = router.query as { talent?: string };
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
   const [form, setForm] = useState({
     name: '',
     email: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
     description: '',
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string; message: string }>(
     null
-  );
-=======
-    description: ''}),
+  );  const [error, setError] = useState<string | null>(null);    description: ''}),
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const [error, setError] = useState<string | null>(null);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
+    setError(null),
 
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
-<<<<<<< HEAD
-      return;
-=======
-      return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      return;    }      return
     }
 
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
@@ -57,7 +44,6 @@ export default function RequestToHirePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
           ...form,
           budget: normalizedBudget,
           talentSlug: selected?.slug || null,
@@ -69,10 +55,7 @@ export default function RequestToHirePage() {
     } catch (err: any) {
       setError(err.message || 'Something went wrong');
     } finally {
-      setSubmitting(false);
-=======
-          ...form;
-          budget: normalizedBudget,
+      setSubmitting(false);    }          budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to submit');
@@ -81,13 +64,11 @@ export default function RequestToHirePage() {
       setError(err.message || 'Something went wrong')
     } finally {
       setSubmitting(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   };
 
   if (result) {
     return (
-<<<<<<< HEAD
       <div className='max-w-xl mx-auto py-12'>
         <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>
         <p className='text-gray-600 mb-4'>
@@ -156,13 +137,7 @@ export default function RequestToHirePage() {
         <button
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'
-        >
-=======
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-      </div>
+        >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>
     )
   }
 
@@ -192,13 +167,9 @@ export default function RequestToHirePage() {
         </div>
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

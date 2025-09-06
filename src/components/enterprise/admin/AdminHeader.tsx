@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
-
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Download, Settings } from 'lucide-react'
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace'
 export function AdminHeader() {
   // const { user } = useAuth(); // Unused but available
-  const { company } = useCompanyWorkspace();
-
+  const { company } = useCompanyWorkspace()
   return (
     <div className='space-y-4'>
       <div className='flex items-center justify-between'>
@@ -25,40 +22,20 @@ export function AdminHeader() {
             Settings
           </Button>
           <Button variant='outline' size='sm' className='gap-2'>
-            <Download className='h-4 w-4' />
-=======
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-
-export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
-  const { company  } = useCompanyWorkspace(),
-
-
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
-          <p className="text-muted-foreground mt-1">
-            Manage your company's account, team members, and subscription
-          </p>
+            <Download className='h-4 w-4' />            Export Data
+          </Button>
         </div>
-        <div className="flex items-center gap-2">
+      </div>        <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
             Settings
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             Export Data
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
@@ -88,19 +65,15 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
               src={company?.logoUrl || '/placeholder.svg'}
               alt={company?.name || 'Company'}
               className='max-h-10 max-w-10'
-              loading='lazy'
-            />
+              loading='lazy'            />
           </div>
           <div>
             <h2 className='font-medium'>{company?.name || 'Company Name'}</h2>
             <p className='text-sm text-muted-foreground'>
-              Workspace URL: {company?.workspaceUrl || 'loading...'}
-=======
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Subscription Plan</div>
-          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
+              Workspace URL: {company?.workspaceUrl || 'loading...'}            </p>
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl || "loading..."}
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -126,15 +99,12 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </p>
           </div>
         </div>
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

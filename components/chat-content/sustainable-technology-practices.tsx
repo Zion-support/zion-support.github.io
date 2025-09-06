@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
 export default function SustainableTechnologyPracticesPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -11,9 +9,7 @@ export default function SustainableTechnologyPracticesPage() {
         Article coming soon.
       </p>
     </div>
-  );
-=======
-export default function SustainableTechnologyPracticesPage() {
+  );export default function SustainableTechnologyPracticesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>
@@ -21,4 +17,3 @@ export default function SustainableTechnologyPracticesPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

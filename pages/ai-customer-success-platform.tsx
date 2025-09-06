@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-import ServicePage, {
-  getStaticProps as getSlugStaticProps,;
-} from './services/[slug]';
-
-export default function AICustomerSuccessPlatform() {
-  
-    />
-  );
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
@@ -21,11 +11,11 @@ export default function AICustomerSuccessPlatform() {
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
-				"Unified customer health scoring (usage, support, sentiment, billing)";
-				"Churn risk prediction with explainable insights";
-				"Playbook automation (email, CS tasks, in-app guides, offers)";
-				"Expansion signals for upsell/cross-sell";
-				"Executive QBR reports and cohort analytics";
+				"Unified customer health scoring (usage, support, sentiment, billing)",
+				"Churn risk prediction with explainable insights",
+				"Playbook automation (email, CS tasks, in-app guides, offers)",
+				"Expansion signals for upsell/cross-sell",
+				"Executive QBR reports and cohort analytics",
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
@@ -33,4 +23,3 @@ export default function AICustomerSuccessPlatform() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

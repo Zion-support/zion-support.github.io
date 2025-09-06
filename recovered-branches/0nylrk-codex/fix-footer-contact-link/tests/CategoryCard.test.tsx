@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react',
-import { MemoryRouter } from 'react-router-dom',
-import { CategoryCard } from '@/components/CategoryCard',
-
+import {render, screen} from '@testing-library/react',
+import {MemoryRouter} from 'react-router-dom',
+import {CategoryCard} from '@/components/CategoryCard',
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -45,3 +44,4 @@ it('treats underscores as spaces in slug', () => {
   const link = screen.getByRole('link', { name: /ai_tools/i }),
   expect(link).toHaveAttribute('href/category/ai-tools'),
 }),
+;

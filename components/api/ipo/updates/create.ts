@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST')
@@ -21,9 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
   updates.unshift(update);
   writeJsonFile('updates.json', updates);
-  res.status(200).json(update);
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(update);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req.body || {};
@@ -34,4 +30,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeJsonFile('updates.json', updates);
   res.status(200).json(update)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

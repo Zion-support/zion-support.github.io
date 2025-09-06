@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 // SEO optimization tasks
@@ -174,130 +175,89 @@ console.log(' SEO Optimizer Starting...\n')
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
+=======
+
+>>>>>>> origin/main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+console.log('🔍 Starting SEO Optimizer...');
+
 class SEOOptimizer {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
-    this.ensureLogDir();
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
   }
 
-  ensureLogDir() {
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    console.log(`[${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-        timeout: 60000
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async generateSitemap() {
-    this.log('🗺️ Generating sitemap...');
-    
-    const sitemapGeneration = await this.runCommand(
-      'npm run sitemap:generate',
-      'Sitemap generation'
-    );
-    
-    if (sitemapGeneration.success) {
-      this.log('✅ Sitemap generated successfully');
-    }
-  }
-
-  async optimizeMetaTags() {
-    this.log('🏷️ Optimizing meta tags...');
-    
-    // This would typically involve analyzing and updating meta tags
-    // For now, we'll just log that this step was completed
-    this.log('✅ Meta tags optimization completed');
-  }
-
-  async checkSEOHealth() {
-    this.log('🔍 Checking SEO health...');
-    
-    const seoChecks = [
-      { command: 'npm run sitemap', description: 'Sitemap check' },
+  async optimizeSEO() {
+    const seoOptimizations = [
+      { name: 'Sitemap Generation', command: 'npm run sitemap:generate', description: 'Generating sitemap for search engines' },
+      { name: 'Search Index', command: 'npm run search:index', description: 'Generating search index' },
+      { name: 'Meta Tags Check', command: 'npm run test:accessibility', description: 'Checking meta tags and accessibility' },
+      { name: 'Robots.txt Check', command: 'ls -la public/robots.txt', description: 'Checking robots.txt file' }
     ];
 
-    for (const check of seoChecks) {
-      await this.runCommand(check.command, check.description);
-    }
-  }
+    const results = [];
+    let successfulOptimizations = 0;
 
-  async generateSEOReport() {
-    this.log('📊 Generating SEO report...');
-    
+    for (const optimization of seoOptimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
+        
+        execSync(optimization.command, { stdio: 'pipe' });
+        
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+      }
+    }
+
     const report = {
       timestamp: new Date().toISOString(),
-      seoChecks: {
-        sitemap: 'completed',
-        metaTags: 'completed',
-        structuredData: 'completed'
-      },
-      recommendations: [
-        'Add more descriptive alt text to images',
-        'Implement structured data markup',
-        'Optimize page titles for better search visibility',
-        'Add canonical URLs to prevent duplicate content',
-        'Implement breadcrumb navigation'
-      ]
+      totalOptimizations: seoOptimizations.length,
+      successfulOptimizations,
+      failedOptimizations: seoOptimizations.length - successfulOptimizations,
+      results,
+      seoScore: Math.round((successfulOptimizations / seoOptimizations.length) * 100)
     };
 
-    const reportFile = path.join(__dirname, 'logs', 'seo-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 SEO report saved to: ${reportFile}`);
-  }
-
-  async optimize() {
-    this.log('🔍 Starting SEO optimization...');
+    const reportPath = path.join(this.reportsDir, 'seo-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    await this.generateSitemap();
-    await this.optimizeMetaTags();
-    await this.checkSEOHealth();
-    await this.generateSEOReport();
+    this.log(`📊 SEO optimization completed! Report saved to: ${reportPath}`);
+    this.log(`🔍 SEO Score: ${report.seoScore}% (${successfulOptimizations}/${seoOptimizations.length} optimizations successful)`);
     
-    this.log('🎉 SEO optimization completed!');
-  }
-
-  async start() {
-    this.log('🚀 SEO Optimizer started');
-    
-    // Initial optimization
-    await this.optimize();
-    
-    // Set up periodic optimization every 6 hours
-    setInterval(async () => {
-      await this.optimize();
-    }, 6 * 60 * 60 * 1000);
-
-    this.log('🔄 SEO Optimizer is running. Optimization every 6 hours.');
+    return report;
   }
 }
 
+<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -306,3 +266,8 @@ if (require.main === module) {
 
 module.exports = SEOOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+// Run SEO optimization
+const optimizer = new SEOOptimizer();
+optimizer.optimizeSEO().catch(console.error);
+>>>>>>> origin/main

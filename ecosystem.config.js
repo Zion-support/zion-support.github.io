@@ -1,10 +1,109 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+module.exports = {;
+  apps:[;
+    {;
+      name:'error-fixer',;
+      script:'automation/lint-error-fixer.cjs',;
+      args:'continuous',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/error-fixer-error.log',;
+      out_file:'./logs/error-fixer-out.log',;
+      log_file:'./logs/error-fixer-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'intelligent-orchestrator',;
+      script:'automation/intelligent-orchestrator.cjs',;
+      args:'continuous',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/orchestrator-error.log',;
+      out_file:'./logs/orchestrator-out.log',;
+      log_file:'./logs/orchestrator-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'automation-dashboard',;
+      script:'automation/automation-dashboard.cjs',;
+      args:'start',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'1G',;
+      env:{;
+        NODE_ENV:'production',;
+        PORT:3001;
+      },;
+      error_file:'./logs/dashboard-error.log',;
+      out_file:'./logs/dashboard-out.log',;
+      log_file:'./logs/dashboard-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'code-quality-monitor',;
+      script:'automation/code-quality-monitor.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/code-quality-error.log',;
+      out_file:'./logs/code-quality-out.log',;
+      log_file:'./logs/code-quality-combined.log',;
+      time:true;
+    },;
+    {;
+      name:'performance-optimizer',;
+      script:'automation/performance-optimizer.cjs',;
+      instances:1,;
+      autorestart:true,;
+      watch:false,;
+      max_memory_restart:'512M',;
+      env:{;
+        NODE_ENV:'production';
+      },;
+      error_file:'./logs/performance-error.log',;
+      out_file:'./logs/performance-out.log',;
+      log_file:'./logs/performance-combined.log',;
+      time:true;
+    }
+  ];
+};      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/performance-error.log',
+      out_file: './logs/performance-out.log',
+      log_file: './logs/performance-combined.log',
+      time: true
+    }
+  ]
+<<<<<<< HEAD
+},
+>>>>>>> origin/main
 export default {
+=======
+},export default {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   apps: [
     {
       name: 'bolt-zion-app',
@@ -182,9 +281,12 @@ export default {
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
@@ -208,6 +310,9 @@ module.exports = {
     time: true
   }]
 };
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

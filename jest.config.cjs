@@ -188,5 +188,9 @@ const customJestConfig = {
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> origin/main

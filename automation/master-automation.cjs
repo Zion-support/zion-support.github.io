@@ -1,21 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
 const { promisify } = require("util");
 const execAsync = promisify(exec);
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
   log(message) {
 class MasterAutomation {}
   constructor() {}
@@ -35,6 +44,7 @@ class MasterAutomation {}
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runCommand(command, options = {}) {
+<<<<<<< HEAD
 =======
 
   ensureLogsDir() {
@@ -63,6 +73,14 @@ class MasterAutomation {}
         stdio: 'pipe',
       });
 <<<<<<< HEAD
+=======
+    try {
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 30000, 
+        ...options 
+      });
+>>>>>>> origin/main
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -151,6 +169,7 @@ class MasterAutomation {}
       } catch (error) {
         this.log(`Error parsing PM2 process list: ${error.message}`);
         return [];
+<<<<<<< HEAD
 =======
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -185,6 +204,14 @@ class MasterAutomation {}
     return { success: true, results };
   }
 <<<<<<< HEAD
+=======
+      }
+    } else {
+      this.log("Failed to get PM2 process list");
+      return [];
+    }
+  }
+>>>>>>> origin/main
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -295,6 +322,7 @@ class MasterAutomation {}
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 =======
 
   async runQualityChecks() {
@@ -370,6 +398,22 @@ class MasterAutomation {}
       },
     };
 <<<<<<< HEAD
+=======
+    }
+  }
+  async generateReport() {
+    this.log("Generating automation report.");
+    const report = {
+      timestamp: new Date().toISOString(),
+      processes: await this.monitorProcesses(),
+      logs: {
+        errorMonitor: await this.getPM2Logs("error-monitor", 20),
+        lintFixer: await this.getPM2Logs("lint-fixer", 20),
+        buildMonitor: await this.getPM2Logs("build-monitor", 20),
+        gitAutomation: await this.getPM2Logs("git-automation", 20)
+      }
+    };
+>>>>>>> origin/main
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -390,6 +434,7 @@ class MasterAutomation {}
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
+<<<<<<< HEAD
 =======
 
     // Calculate summary
@@ -415,6 +460,13 @@ class MasterAutomation {}
   }
   async start() {
 <<<<<<< HEAD
+=======
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report saved to ${reportFile}`);
+    return report;
+  }
+  async start() {
+>>>>>>> origin/main
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -452,6 +504,7 @@ class MasterAutomation {}
   }
 }
 // Handle command line arguments
+<<<<<<< HEAD
 =======
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
@@ -506,11 +559,16 @@ class MasterAutomation {}
 
 // CLI interface
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
   switch (command) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -578,6 +636,7 @@ if (require.main === module) {}
       }
 });
       break;
+<<<<<<< HEAD
     case "report":
       automation.generateReport().catch(error => {
         console.error("Failed to generate report: ", error);
@@ -623,12 +682,25 @@ if (require.main === module) {}
 }
 module.exports = MasterAutomation;
 <<<<<<< HEAD
+=======
+    default: 
+      console.log('Usage: node master-automation.cjs [start|status]');
+      process.exit(1);
+      break;
+  }
+}
+module.exports = MasterAutomation;
+>>>>>>> origin/main
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
+<<<<<<< HEAD
 module.exports = MasterAutomation;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+module.exports = MasterAutomation;
+>>>>>>> origin/main

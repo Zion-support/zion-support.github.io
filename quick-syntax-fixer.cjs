@@ -21,11 +21,7 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-<<<<<<< HEAD
-=======
         .replace(/[\s\S]*?
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -90,11 +86,6 @@ if (require.main === module) {
   }
 
 module.exports = QuickSyntaxFixer;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -102,5 +93,3 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

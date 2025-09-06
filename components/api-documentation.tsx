@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Code,
   Database,
@@ -54,15 +53,7 @@ export default function APIDocumentation() {
         </ul>
       </div>
     </div>
-  );
-=======
-import { 
-  Code, Database, Shield, Zap, Globe, Cpu, 
-  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
-} from 'lucide-react';
-
-export default function APIDocumentation() {
-	return (
+  );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -78,6 +69,5 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-	);
+	),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

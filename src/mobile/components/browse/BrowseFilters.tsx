@@ -1,44 +1,36 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Switch } from '@/components/ui/switch';
-import { Input } from '@/components/ui/input';
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Slider } from '@/components/ui/slider'
+import { Switch } from '@/components/ui/switch'
+import { Input } from '@/components/ui/input'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { X, Filter } from 'lucide-react';
-import {
+  SelectValue,
+} from '@/components/ui/select'
+import { X, Filter } from 'lucide-react'
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetFooter,
-  SheetTrigger,;
-} from '@/components/ui/sheet';
-import { Badge } from '@/components/ui/badge';
-import { Label } from '@/components/ui/label';
-
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { Badge } from '@/components/ui/badge'
+import { Label } from '@/components/ui/label'
 interface BrowseFiltersProps {
-  type: 'jobs' | 'talents';
-
+  type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
     }
-  };
-
+  }
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter));
-  };
-
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
   return (
     <div className='space-y-3'>
       <div className='flex justify-between items-center px-4'>
@@ -153,8 +145,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-                        className='my-4'
-                      />
+                        className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
                         <span>0+ years</span>
                         <span>20+ years</span>
@@ -269,17 +260,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               {filter}
               <X
                 className='h-3 w-3 cursor-pointer'
-                onClick={() => removeFilter(filter)}
-              />
+                onClick={() => removeFilter(filter)}              />
             </Badge>
           ))}
         </div>
       </div>
     </div>
-  );
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

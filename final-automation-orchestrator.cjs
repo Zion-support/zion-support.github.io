@@ -7,11 +7,14 @@ class FinalAutomationOrchestrator {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { "recursive": true })}
 =======
+=======
+>>>>>>> origin/main
     this.results = [];
     this.startTime = Date.now();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -454,4 +457,7 @@ if (require.main === module) {
 }
 
 module.exports = FinalAutomationOrchestrator;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main

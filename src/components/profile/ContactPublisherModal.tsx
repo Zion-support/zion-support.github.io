@@ -1,179 +1,119 @@
-import React from 'react';
-import FocusLock from 'react-focus-lock';
+import React from 'react'
+import FocusLock from 'react-focus-lock'
 import {
-<<<<<<< HEAD
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-=======
-
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog',
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-<<<<<<< HEAD
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  DialogTitle,
+} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react';
-=======
-  FormMessage} from '@/components/ui/form',
-
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+  FormMessage,
+} from '@/components/ui/form'
+import { useForm, type Resolver } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
+import { toast } from '@/hooks/use-toast'
+import { useAuth } from '@/hooks/useAuth'
+import { LoginModal } from '@/components/auth/LoginModal'
+  Form
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage} from '@/components/ui/form'
+import {useForm, type, Resolver} from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup'
 import { SendIcon, Mail } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-
-interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
-  productId?: string;
-
+import api from '@/services/apiClient'
+  isOpen: boolean
+  onClose: () => void
+  publisherName: string
+  publisherEmail?: string
+  productId?: string
 type FormValues = {
-  subject: string;
-  message: string;
-=======
+  subject: string
+  message: string }
+  subject: string,
+  message: string
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
   publisherName: string,
-  publisherEmail?: string;
+  publisherEmail?: string
   productId?: string
 }
 
 type FormValues = {
   subject: string,
   message: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-};
-
+}
 const schema: yup.ObjectSchema<FormValues> = yup
   .object({
     subject: yup
       .string()
       .min(5, 'Subject must be at least 5 characters')
-<<<<<<< HEAD
       .required('Subject is required'),
-    message: yup
       .string()
       .min(20, 'Message must be at least 20 characters')
       .required('Message is required'),
   })
-  .required();
-
-export function ContactPublisherModal({
-=======
-      .required('Subject is required');
-    message: yup
-      .string()
-      .min(20, 'Message must be at least 20 characters')
-      .required('Message is required')})
-  .required();
-
-export function ContactPublisherModal({
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  isOpen,
+  .required()
+export function ContactPublisherModal({  isOpen,  isOpen,
   onClose,
   publisherName,
   publisherEmail,
-<<<<<<< HEAD
   productId,
 }: ContactPublisherModalProps) {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
-  const [loginOpen, setLoginOpen] = React.useState(false);
-=======
-  productId}: ContactPublisherModalProps) { const { user  } = useAuth(),
-  const [ isSubmitting, setIsSubmitting ] = React.useState(false),
-  const [ error, setError ] = React.useState<string | null>(null),
-  const [ loginOpen, setLoginOpen ] = React.useState(false),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [error, setError] = React.useState<string | null>(null)
+  const [loginOpen, setLoginOpen] = React.useState(false)
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
-<<<<<<< HEAD
     defaultValues: { subject: '', message: '' },
-  });
-
+  })
   const handleSend = async () => {
     if (!user) {
-      setLoginOpen(true);
-      return;
-=======
-    defaultValues: { subject: '', message: '' }});
+      setLoginOpen(true)
+      return }    defaultValues: { subject: '', message: '' }}),
   const handleSend = async () => {
     if (!user) {
-      setLoginOpen(true);
+      setLoginOpen(true)
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
-    const values = form.getValues();
-    setIsSubmitting(true);
-    setError(null);
+    const values = form.getValues()
+    setIsSubmitting(true)
+    setError(null)
     try {
       await api.post('/api/messages', {
-<<<<<<< HEAD
         productId,
-        subject: values.subject,
         body: values.message,
         fromUser: user.id,
-      });
-      toast.success('Message sent');
-      form.reset();
-      onClose();
-=======
-        productId;
-        subject: values.subject,
-        body: values.message,
-        fromUser: user.id});
-      toast.success('Message sent');
-      form.reset();
-      onClose()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+      })
+      toast.success('Message sent')
+      form.reset()
+      onClose() } finally {      onClose()
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  }
+  const handleKeyDown = (e: React.KeyboardEvent,) => {
     if (e.key === 'Escape') {
-      e.stopPropagation();
-<<<<<<< HEAD
-      onClose();
-    }
-  };
-
+      e.stopPropagation()
+      onClose()
+  }
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
@@ -254,23 +194,11 @@ export function ContactPublisherModal({
           </DialogContent>
         </FocusLock>
       </Dialog>
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
-  );
-=======
-      onClose()
-    }
-  };
-
-
-  return (
-    <>
-    <Dialog open={isOpen} onOpenChange={onClose}>
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />    <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown={handleKeyDown}
-          aria-modal="true"
+          onKeyDown = {handleKeyDown,}          aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -289,12 +217,11 @@ export function ContactPublisherModal({
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="subject"
-              render={({ field }: { field: any }) => (
-                <FormItem>
+              render={({ field }: { field: any },) => (                <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -308,10 +235,9 @@ export function ContactPublisherModal({
               )}
             />
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="message"
-              render={({ field }: { field: any }) => (
-                <FormItem>
+              render={({ field }: { field: any },) => (                <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -325,10 +251,9 @@ export function ContactPublisherModal({
               )}
             />
             <Button
-              onClick={handleSend}
+              onClick = {handleSend,}
               className="w-full"
-              disabled={!form.formState.isValid || isSubmitting}
-            >
+              disabled = {!form.formState.isValid || isSubmitting,}            >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
@@ -339,6 +264,7 @@ export function ContactPublisherModal({
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  ) </>
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+;

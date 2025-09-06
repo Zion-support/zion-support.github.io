@@ -1,10 +1,6 @@
-<<<<<<< HEAD
- 
-
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
-};
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -16,35 +12,13 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-  gptRecommendation?: string;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
-import OpenAI from 'openai';
-type RequestBody = {
-  roleTitle: string, skills: string[],
-  region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead',
-  remote: boolean,
-  employmentType: 'contract' | 'freelance' | 'full-time'
-};
-
-type InsightResponse = {
-  recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
-  medianHourlyUsd: number, minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number, // 0..1
-  trendMonthly: { label: string, value: number }[];
-  regionalComparison: { region: string, medianHourlyUsd: number }[];
-  tags: string[],
-  gptRecommendation?: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  gptRecommendation?: string;};  gptRecommendation?: string
 };
 
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
-<<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 
 function groupBy<T, K extends string | number>(
@@ -118,11 +92,11 @@ function buildTrend(
 async function maybeGetGptRecommendation(
   input: RequestBody,
   stats: { median: number; min: number; max: number; country: string }
-) {
-=======
-  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
-}
-
+) {  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return undefined;
+  try {
+    const client = new OpenAI({ apiKey });
+    const skillsStr = input.skills.join(', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
     const key = getKey(item);
@@ -167,22 +141,16 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
-    const skillsStr = input.skills.join(', ');
-=======
-    const skillsStr = input.skills.join();
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-<<<<<<< HEAD
         {
           role: 'system',
           content:
@@ -201,37 +169,26 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<InsightResponse | { error: string }>
-) {
-=======
-        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
-        { role: 'user', content: prompt }];
-      temperature: 0.2,
-      max_tokens: 300});
-    return completion.choices?.[0]?.message?.content || undefined
-  } catch {
+) {  if (req.method !== 'POST') {  } catch {
     return undefined
   }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD
   const body: RequestBody = req.body;
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body;
-=======
-  const body: RequestBody = req.body,
-  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  const country = extractCountry(region || 'Global');
+
+  // Score and filter candidate profiles  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
 
   const country = extractCountry(region || 'Global');
 
   // Score and filter candidate profiles
-<<<<<<< HEAD
   const scored = TALENT_PROFILES.map(p => ({
     profile: p,
     score:
@@ -244,10 +201,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const sample =
     scored.length > 0 ? scored.map(s => s.profile) : TALENT_PROFILES;
-  const rates = sample.map(p => p.hourlyRateUsd);
-=======
-  const scored = TALENT_PROFILES.map((p) => ({
-    profile: p,
+  const rates = sample.map(p => p.hourlyRateUsd);  const baseMedian = median(rates);  const scored = TALENT_PROFILES.map((p) => ({
+    profile: p;
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -255,13 +210,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const baseMedian = median(rates);
   const min = Math.min(...rates);
   const max = Math.max(...rates);
 
   // Adjustments
-<<<<<<< HEAD
   const expMultiplier =
     experienceLevel === 'Junior'
       ? 0.8
@@ -297,10 +250,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({
       region: r,
       medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),
-    }))
-=======
-  const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
-  const remoteMultiplier = remote ? 1.1 : 1.0;
+    }))    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
+    .slice(0, 8);
+
+  // Tags  const remoteMultiplier = remote ? 1.1 : 1.0;
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher
 
   const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
@@ -319,12 +272,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
 
   // Tags
-<<<<<<< HEAD
   const scarceSkills = [
     'RAG',
     'LangChain',
@@ -336,9 +287,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const undersupplied = (skills || []).some(s =>
     scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
   );
-  const tags: string[] = [];
   if (remote) tags.push('Remote Premium');
-  if (undersupplied) tags.push('Undersupplied Skill');
+  if (undersupplied) tags.push('Undersupplied Skill'),
 
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian,
@@ -360,23 +310,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     gptRecommendation,
   };
 
-  return res.status(200).json(response);
-=======
-  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
-  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
-  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
-  if (undersupplied) tags.push('Undersupplied Skill');
-
-  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
-
-  const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
-    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
-    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
-    trendMonthly: trend, regionalComparison,
-    tags;
-    gptRecommendation};
-
-  return res.status(200).json(response)
+return res.status(200).json(response);  return res.status(200).json(response)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

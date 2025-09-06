@@ -1,52 +1,18 @@
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-export async function simulateAction<T = any>(
+async function mockProviderCall<T>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any> = {}
-<<<<<<< HEAD
+  details: Record<string, any>,
 ): Promise<{ log: SyncLogEntry; result: T }> {
-=======
-): Promise<{ log: SyncLogEntry, result: T }> {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const log: SyncLogEntry = {
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
-    level: 'info',
+    level: "info",
     action,
-<<<<<<< HEAD
     details,
-  };
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T };
-
-// CRM actions
-export const crm = {
-  async syncContact(
-    connection: ProviderConnection,
-    contact: Record<string, any>
-  ) {
-    return simulateAction(connection, 'crm.syncContact', { contact });
-  },
-  async addProjectNote(
-    connection: ProviderConnection,
-    note: Record<string, any>
-  ) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
-  },
-  async addEmailTouchpoint(
-    connection: ProviderConnection,
-    touch: Record<string, any>
-  ) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  },
-=======
-    details
   };
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T };
@@ -54,50 +20,34 @@ export const crm = {
 
 // CRM actions
 export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
-    return simulateAction(connection, 'crm.syncContact', { contact });
+  async syncContact(
+    connection: ProviderConnection,
+    contact: Record<string, any>,
+  ) {
+    return mockProviderCall(connection, "sync_contact", { contact });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touchpoint: Record<string, any>,
+  ) {
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
+  async addProjectNote(
+    connection: ProviderConnection,
+    note: Record<string, any>,
+  ) {
+    return mockProviderCall(connection, "add_project_note", { note });
+  },
 };
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-  async pushApplicant(
-    connection: ProviderConnection,
-    applicant: Record<string, any>
-  ) {
-    return simulateAction(connection, 'ats.pushApplicant', { applicant });
-  },
-  async uploadResume(
-    connection: ProviderConnection,
-    resume: Record<string, any>
-  ) {
-    return simulateAction(connection, 'ats.uploadResume', {
-      resumeMeta: { name: resume?.name },
-    });
-  },
   async updateStatus(
     connection: ProviderConnection,
-    change: Record<string, any>
+    status: Record<string, any>,
   ) {
-    return simulateAction(connection, 'ats.updateStatus', { change });
+    return mockProviderCall(connection, "update_status", { status });
   },
 };
-=======
-  async pushApplicant($2) {
-    return simulateAction($3);
-  },
-  async uploadResume($2) {
-    return simulateAction($3);
-  },
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-    return simulateAction(connection, 'ats.updateStatus', { change })
-  }};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

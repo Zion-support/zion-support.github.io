@@ -3,7 +3,6 @@ import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   ArrowRight,
   Star,
@@ -24,22 +23,16 @@ import {
   Palette,
   Target,
   CheckCircle,
-  Sparkles,;
-=======
-import { 
+  Sparkles,;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock, 
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-} from 'lucide-react';
 
 // Import new service data
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
 import { realITServices2025 } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
-<<<<<<< HEAD
-
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025
@@ -51,18 +44,17 @@ const Homepage2037: React.FC = () => {
   const featuredAI = realAIServices2025
     .filter(service => service.popular)
     .slice(0, 3);
-=======
-const Homepage2037: React.FC = () => {
+  return (
+    <Layout>
+      {/* Main Content */}
+      <main className='relative z-10'>const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
   const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
   const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
   return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
       <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative'>
@@ -73,10 +65,7 @@ const Homepage2037: React.FC = () => {
             <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
           </div>
 
-          <div className='text-center max-w-5xl mx-auto relative z-10'>
-=======
-      <main className="relative z-10">
-        {/* Hero Section */}
+          <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion.div        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
@@ -86,14 +75,12 @@ const Homepage2037: React.FC = () => {
           </div>
           
           <div className="text-center max-w-5xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
               {/* Main heading with enhanced typography */}
-<<<<<<< HEAD
               <div className='mb-8'>
                 <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
                   Zion Tech Group
@@ -118,11 +105,10 @@ const Homepage2037: React.FC = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40'
-=======
-              <div className="mb-8">
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
-                  Zion Tech Group
+                    className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40'                  >
+                    Start Your Transformation
+                  </motion.button>
+                </Link>                  Zion Tech Group
                 </h1>
                 <div className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
                   Pioneering the Future of Technology
@@ -144,25 +130,19 @@ const Homepage2037: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   >
                     Start Your Transformation
                   </motion.button>
                 </Link>
-<<<<<<< HEAD
                 <Link href='/services'>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'
-=======
-                <Link href="/services">
+                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'                  >                <Link href="/services">
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  >
                     Explore Services
                   </motion.button>
                 </Link>
@@ -172,19 +152,14 @@ const Homepage2037: React.FC = () => {
         </section>
 
         {/* Enhanced Company Stats */}
-<<<<<<< HEAD
         <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -196,10 +171,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>              <motion.div            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Trusted by Industry Leaders
               </h2>
@@ -209,13 +181,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'
               >
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>
@@ -223,23 +193,17 @@ const Homepage2037: React.FC = () => {
                 <div className='text-cyan-400 text-sm mt-2'>
                   Revolutionary Solutions
                 </div>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
-              >
+              </motion.div>              >
                 <div className="text-5xl font-bold text-cyan-400 mb-3">50+</div>
                 <div className="text-gray-300 text-lg">AI Services</div>
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'
               >
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
@@ -249,23 +213,17 @@ const Homepage2037: React.FC = () => {
                 <div className='text-blue-400 text-sm mt-2'>
                   Future Technology
                 </div>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
-              >
+              </motion.div>              >
                 <div className="text-5xl font-bold text-blue-400 mb-3">100+</div>
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3'>
@@ -277,23 +235,17 @@ const Homepage2037: React.FC = () => {
                 <div className='text-purple-400 text-sm mt-2'>
                   Always Available
                 </div>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
-              >
+              </motion.div>              >
                 <div className="text-5xl font-bold text-purple-400 mb-3">24/7</div>
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300'
               >
                 <div className='text-5xl font-bold text-green-400 mb-3'>∞</div>
@@ -302,33 +254,24 @@ const Homepage2037: React.FC = () => {
                 </div>
                 <div className='text-green-400 text-sm mt-2'>
                   Limitless Innovation
-                </div>
-=======
-                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+                </div>              </motion.div>                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
               >
                 <div className="text-5xl font-bold text-green-400 mb-3">∞</div>
                 <div className="text-gray-300 text-lg">Future Possibilities</div>
                 <div className="text-green-400 text-sm mt-2">Limitless Innovation</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Featured AI Services */}
-<<<<<<< HEAD
         <section className='py-24 px-4'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="py-24 px-4">
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -343,10 +286,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredAI.map((service, index) => (            >
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Brain className="w-8 h-8 text-cyan-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -359,7 +299,6 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -376,50 +315,39 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-<<<<<<< HEAD
                       features: service.features.slice(0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
                     }}
-                    variant='ai'
-=======
-                      features: service.features.slice(0, 5);
-                      popular: service.popular,
+                    variant='ai'                  />
+                </motion.div>
+              ))}
+            </div>                      popular: service.popular,
                       category: service.category,
                       icon: service.icon
                     }}
                     variant="ai"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mt-12'
             >
               <Link href='/ai-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25'>
                   View All AI Services
-                  <ArrowRight className='w-5 h-5' />
-=======
-              className="text-center mt-12"
-            >
+                  <ArrowRight className='w-5 h-5' />                </button>            >
               <Link href="/ai-services">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25">
                   View All AI Services
                   <ArrowRight className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </button>
               </Link>
             </motion.div>
@@ -427,19 +355,14 @@ const Homepage2037: React.FC = () => {
         </section>
 
         {/* Featured Enterprise IT Services */}
-<<<<<<< HEAD
         <section className='py-24 px-4 bg-black/20'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="py-24 px-4 bg-black/20">
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -454,10 +377,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredIT.map((service, index) => (            >
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Shield className="w-8 h-8 text-blue-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -470,7 +390,6 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -487,50 +406,39 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-<<<<<<< HEAD
                       features: service.features.slice(0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
                     }}
-                    variant='enterprise'
-=======
-                      features: service.features.slice(0, 5);
-                      popular: service.popular,
+                    variant='enterprise'                  />
+                </motion.div>
+              ))}
+            </div>                      popular: service.popular,
                       category: service.category,
                       icon: service.icon
                     }}
                     variant="enterprise"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mt-12'
             >
               <Link href='/it-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25'>
                   View All IT Services
-                  <ArrowRight className='w-5 h-5' />
-=======
-              className="text-center mt-12"
-            >
+                  <ArrowRight className='w-5 h-5' />                </button>            >
               <Link href="/it-services">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25">
                   View All IT Services
                   <ArrowRight className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </button>
               </Link>
             </motion.div>
@@ -538,19 +446,14 @@ const Homepage2037: React.FC = () => {
         </section>
 
         {/* Featured Micro SAAS Services */}
-<<<<<<< HEAD
         <section className='py-24 px-4'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="py-24 px-4">
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -565,10 +468,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredMicroSaas.map((service, index) => (            >
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Rocket className="w-8 h-8 text-green-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
@@ -581,7 +481,6 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -598,50 +497,39 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-<<<<<<< HEAD
                       features: service.features.slice(0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
                     }}
-                    variant='automation'
-=======
-                      features: service.features.slice(0, 5);
-                      popular: service.popular,
+                    variant='automation'                  />
+                </motion.div>
+              ))}
+            </div>                      popular: service.popular,
                       category: service.category,
                       icon: service.icon
                     }}
                     variant="automation"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   />
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mt-12'
             >
               <Link href='/micro-saas'>
                 <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25'>
                   View All SAAS Solutions
-                  <ArrowRight className='w-5 h-5' />
-=======
-              className="text-center mt-12"
-            >
+                  <ArrowRight className='w-5 h-5' />                </button>            >
               <Link href="/micro-saas">
                 <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25">
                   View All SAAS Solutions
                   <ArrowRight className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </button>
               </Link>
             </motion.div>
@@ -649,19 +537,14 @@ const Homepage2037: React.FC = () => {
         </section>
 
         {/* Enhanced Why Choose Us Section */}
-<<<<<<< HEAD
         <section className='py-24 px-4 bg-black/30'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="py-24 px-4 bg-black/30">
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -673,10 +556,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-=======
-              className="text-center mb-16"
-            >
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
@@ -686,13 +566,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group'
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -705,11 +583,7 @@ const Homepage2037: React.FC = () => {
                   Leading-edge artificial intelligence solutions that adapt,
                   evolve, and transform your business operations
                 </p>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
-              >
+              </motion.div>              >
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-10 h-10 text-white" />
                 </div>
@@ -717,13 +591,11 @@ const Homepage2037: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group'
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -736,11 +608,7 @@ const Homepage2037: React.FC = () => {
                   Next-generation quantum computing and security solutions that
                   prepare you for the future
                 </p>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
-              >
+              </motion.div>              >
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Atom className="w-10 h-10 text-white" />
                 </div>
@@ -748,13 +616,11 @@ const Homepage2037: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">Next-generation quantum computing and security solutions that prepare you for the future</p>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group'
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -767,11 +633,7 @@ const Homepage2037: React.FC = () => {
                   Military-grade security and compliance solutions that protect
                   your most valuable assets
                 </p>
-              </motion.div>
-
-=======
-                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
-              >
+              </motion.div>              >
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
@@ -779,13 +641,11 @@ const Homepage2037: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">Military-grade security and compliance solutions that protect your most valuable assets</p>
               </motion.div>
               
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -797,35 +657,26 @@ const Homepage2037: React.FC = () => {
                 <p className='text-gray-300 leading-relaxed'>
                   Fast implementation and continuous optimization to get you up
                   and running quickly
-                </p>
-=======
-                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group"
-              >
+                </p>              </motion.div>              >
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Rapid Deployment</h3>
                 <p className="text-gray-300 leading-relaxed">Fast implementation and continuous optimization to get you up and running quickly</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* Enhanced Call to Action */}
-<<<<<<< HEAD
         <section className='py-24 px-4'>
-          <div className='max-w-5xl mx-auto text-center'>
-=======
-        <section className="py-24 px-4">
+          <div className='max-w-5xl mx-auto text-center'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
               className='relative'
             >
               {/* Background decoration */}
@@ -846,10 +697,10 @@ const Homepage2037: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className='px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25'
-=======
-              className="relative"
-            >
+                      className='px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25'                    >
+                      Start Your Journey Today
+                    </motion.button>
+                  </Link>            >
               {/* Background decoration */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
               
@@ -867,30 +718,23 @@ const Homepage2037: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     >
                       Start Your Journey Today
                     </motion.button>
                   </Link>
-<<<<<<< HEAD
                   <Link href='/demo'>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className='px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105'
-=======
-                  <Link href="/demo">
+                      className='px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105'                    >                  <Link href="/demo">
                     <motion.button 
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover: bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                    >
                       Request Demo
                     </motion.button>
                   </Link>
                 </div>
-<<<<<<< HEAD
 
                 <div className='mt-8 text-gray-400'>
                   <p className='text-sm'>
@@ -910,28 +754,20 @@ const Homepage2037: React.FC = () => {
                     >
                       kleber@ziontechgroup.com
                     </a>
-                  </p>
-=======
-                
+                  </p>                </div>                
                 <div className="mt-8 text-gray-400">
                   <p className="text-sm">Contact us: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
                   <p className="text-sm">Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
               </div>
             </motion.div>
           </div>
         </section>
       </main>
     </Layout>
-<<<<<<< HEAD
   );
 };
 
-export default Homepage2037;
-=======
-  )
+export default Homepage2037;  )
 };
 
 export default Homepage2037;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

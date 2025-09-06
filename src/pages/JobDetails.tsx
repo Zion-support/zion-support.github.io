@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
 import { Header } from '@/components/Header';
@@ -12,8 +11,7 @@ import {
   Tag,
   Users,
   Briefcase,;
-} from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
+} from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
@@ -21,7 +19,6 @@ import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
-
 interface Job {
   id: string;
   title: string;
@@ -53,7 +50,6 @@ export default function JobDetails() {
     if (!budget) return 'Not specified';
     return `$${budget.min} - $${budget.max}`;
   };
-
   if (isLoading) {
     return <JobDetailsSkeleton />;
   }
@@ -67,8 +63,7 @@ export default function JobDetails() {
           <p className='mb-8'>
             The job you're looking for doesn't exist or has been removed.
           </p>
-          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
-        </div>
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
       </>
     );
   }
@@ -98,14 +93,13 @@ export default function JobDetails() {
     toast.success('Application submitted successfully!');
     setIsApplyModalOpen(false);
   };
-
   const isOwnJob = user?.id === job.client_id;
 
   return (
     <>
       <SEO
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
+        description = {job.description.substring(0, 160),}
       />
       <Header />
       <main className='container mx-auto px-4 py-8'>
@@ -113,8 +107,7 @@ export default function JobDetails() {
           <Button
             variant='outline'
             size='sm'
-            onClick={() => router.push('/careers')}
-          >
+            onClick={() => router.push('/careers')}          >
             ← Back to Jobs
           </Button>
         </div>
@@ -153,8 +146,7 @@ export default function JobDetails() {
                   </h3>
                   <div className='flex flex-wrap gap-2'>
                     {job.skills?.map((skill: string, i: number) => (
-                      <Badge key={i} variant='secondary'>
-                        {skill}
+                      <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>
                     ))}
                   </div>
@@ -198,8 +190,7 @@ export default function JobDetails() {
                   <Button
                     className='w-full mt-4'
                     onClick={handleApply}
-                    disabled={isOwnJob}
-                  >
+                    disabled={isOwnJob}                  >
                     Apply Now
                   </Button>
                 )}
@@ -229,8 +220,7 @@ export default function JobDetails() {
             client_id: job.client_id,
           }}
           isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}
-        />
+          onClose={() => setIsApplyModalOpen(false)}        />
       )}
     </>
   );
@@ -272,14 +262,6 @@ const isOwnJob = user?.id === job.client id;
   />) ;
 }</>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-
-  const isOwnJob = user?.id === job.client_id;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+}
+}
+;

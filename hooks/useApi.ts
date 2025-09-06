@@ -1,13 +1,65 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 const { useState,useEffect,useCallback } from "react"; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (.args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (.args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(.args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;''"
 import React from 'react';
+=======
+      setLoading(false)};
+;
+  return { data, loading, error, execute }};
+};
+};
+};
+};import { useState, useEffect } from 'react';
+
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
+export function useApi<T>(url: string, options?: RequestInit) {
+  const [state, setState] = useState<ApiState<T>>({
+    data: null,
+    loading: true,
+    error: null,
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setState(prev => ({ ...prev, loading: true, error: null }));
+        const response = await fetch(url, options);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setState({ data, loading: false, error: null });
+      } catch (error) {
+        setState({
+          data: null,
+          loading: false,
+          error: error instanceof Error ? error.message : 'An error occurred',
+        });
+      }
+    };
+
+    fetchData();
+  }, [url, JSON.stringify(options)]);
+
+  return state;
+}
+>>>>>>> origin/main
 <<<<<<< HEAD
+};
 
 interface UseApiProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 =======
 interface UseApiProps {
   // Add props here as needed
@@ -45,6 +97,22 @@ export const useApi = <T = unknown>(
   const [error, setError] = useState<Error | null>(null);
 
   const execute = useCallback(async (...args: unknown[]) => {
+=======
+interface UseApiOptions {
+=======
+};interface UseApiOptions {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+  immediate?: boolean;
+  onSuccess?: (data: any) => void;
+  onError?: (error: any) => void}
+export const useApi = <T = any>(
+  apiFunction: (...args: any[]) => Promise<T>,
+  options: UseApiOptions = {}
+) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+  const execute = useCallback(async (...args: any[]) => {
+>>>>>>> origin/main
     try {
       setLoading(true);
       setError(null);
@@ -57,6 +125,7 @@ export const useApi = <T = unknown>(
       setError(error);
       options.onError?.(error);
       throw error;
+<<<<<<< HEAD
     } finally {
       setLoading(false);
     }
@@ -73,6 +142,17 @@ export const useApi = <T = unknown>(
 
 export default useApi;
 <<<<<<< HEAD
+=======
+      setLoading(false);
+    }
+  }, [apiFunction, options]);
+  useEffect(() => {
+    if (options.immediate) {
+      execute()}
+  }, [execute, options.immediate]);
+  return { data, loading, error, execute }};
+export default useApi;
+>>>>>>> origin/main
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 export default function UseApi({ }: UseApiProps) {
   return (
@@ -85,6 +165,7 @@ export default function UseApi({ }: UseApiProps) {
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 interface ApiState<T> {
@@ -94,6 +175,8 @@ interface ApiState<T> {
 
 interface UseApiOptions {
   immediate?: boolean;
+=======
+>>>>>>> origin/main
 }
 
 export function useApi<T>(
@@ -131,4 +214,8 @@ export function useApi<T>(
   return state;
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main

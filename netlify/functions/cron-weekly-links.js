@@ -1,5 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
 async function fetchHtml(url) {
   const resp = await fetch(url);
@@ -69,9 +68,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};
-=======
-async function fetchHtml(url) {
+};async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
@@ -125,4 +122,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

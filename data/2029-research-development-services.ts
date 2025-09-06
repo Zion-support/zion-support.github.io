@@ -1,5 +1,4 @@
 export interface ResearchDevelopmentService2029 {
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -356,39 +355,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
-  ];
-=======
-  id: string, name: string,
-  description: string, category: string[],
-  price: string, features: string[],
-  benefits: string[], useCases: string[],
-  marketSize: string, competitors: string[],
-  technology: string[], integration: string[],
-  support: string[], compliance: string[],
-  scalability: string, roi: string,
-  deployment: string, maintenance: string,
-  training: string, documentation: string,
-  api: string, mobile: string,
-  security: string, backup: string,
-  monitoring: string, analytics: string,
-  customization: string, whiteLabel: string,
-  affiliate: string, referral: string,
-  partnership: string, funding: string,
-  exit: string,
-  contact: {
-    mobile: string, email: string,
-    website: string,
-    address: string
-  }
-}
-
-export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
-  {
-    id: 'advanced-research-automation', name: 'Advanced Research Automation',
-    description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.',
-    category: ['ResearchAutomationAIData ScienceScientific Computing'],
-    price: '$4,999/month',
-    features: [
+  ];    features: [
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
     ];
     benefits: [
@@ -419,16 +386,14 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     exit: 'Acquisition by major research platform',
     contact: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
     id: 'quantum-research-platform', name: 'Quantum Research Platform',
     description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.',
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
-    price: '$8,999/month',
-    features: [
+    price: '$8,999/month',    features: [
       'Quantum computing accessQuantum algorithm libraryQuantum simulation toolsResearch collaboration spaceQuantum education resourcesPerformance analyticsResearch project managementPublication tools'
     ];
     benefits: [
@@ -459,16 +424,14 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     exit: 'IPO or quantum acquisition',
     contact: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
     id: 'ai-research-assistant', name: 'AI Research Assistant',
     description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
-    price: '$2,999/month',
-    features: [
+    price: '$2,999/month',    features: [
       'Intelligent literature reviewData analysis assistanceHypothesis generationResearch planning toolsKnowledge synthesisCitation managementResearch collaborationProgress tracking'
     ];
     benefits: [
@@ -499,16 +462,14 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     exit: 'Acquisition by major research platform',
     contact: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
     id: 'biotech-research-suite', name: 'Biotech Research Suite',
     description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.',
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
-    price: '$6,999/month',
-    features: [
+    price: '$6,999/month',    features: [
       'Genetic research toolsDrug discovery platformClinical trial managementBiotech analyticsResearch collaborationData visualizationRegulatory compliancePublication tools'
     ];
     benefits: [
@@ -539,9 +500,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     exit: 'IPO or biotech acquisition',
     contact: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

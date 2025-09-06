@@ -1,8 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 // Security headers configuration
@@ -48,3 +55,7 @@ export const getSecurityHeaders = () => securityHeaders;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+>>>>>>> origin/main

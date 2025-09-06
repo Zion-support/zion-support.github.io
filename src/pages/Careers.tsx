@@ -1,19 +1,15 @@
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { CAREER_JOBS } from '@/data/careersJobs';
-
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import Link from 'next/link'
+import { CAREER_JOBS } from '@/data/careersJobs'
 export default function Careers() {
-  const applyEmail = 'careers@ziontechgroup.com';
-  const jobs = CAREER_JOBS;
-
+  const applyEmail = 'careers@ziontechgroup.com'
+  const jobs = CAREER_JOBS
   const whyWork =
-    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
-
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.'
   // Benefits list
   const benefits = [
     {
@@ -121,8 +117,7 @@ export default function Careers() {
         </svg>
       ),
     },
-  ];
-
+  ]
   return (
     <>
       <SEO
@@ -168,8 +163,7 @@ export default function Careers() {
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
                 >
-                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>
-                    {benefit.icon}
+                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit.icon}
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {benefit.title}
@@ -225,8 +219,7 @@ export default function Careers() {
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
                     >
                       <CardContent className='p-6'>
-                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>
-                          <div>
+                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
                             <h3 className='text-xl font-bold text-white mb-2'>
                               {job.title}
                             </h3>
@@ -288,8 +281,21 @@ export default function Careers() {
         </div>
       </main>
     </>
-  );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+import React from 'react'
+import { SEO } from '../components/SEO'
+const Careers: React.FC = () => {
+  return(<>
+      <SEO title="Careers - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  )
+}
+export default Careers
+}
+;

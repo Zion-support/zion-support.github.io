@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-
 export default function CommunityPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -36,7 +34,7 @@ export default function CommunityPage() {
               or email{' '}
               <a
                 className='text-purple-400'
-                href='mailto:kleber@ziontechgroup.com'
+                href='mailto: kleber@ziontechgroup.com'
               >
                 kleber@ziontechgroup.com
               </a>
@@ -92,6 +90,7 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 =======
 export default function CommunityPage() {
 	return (
@@ -125,3 +124,5 @@ export default function CommunityPage() {
 	)
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main

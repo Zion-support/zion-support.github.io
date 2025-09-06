@@ -1,24 +1,23 @@
-<<<<<<< HEAD
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { StarIcon } from 'lucide-react'
 import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
-
+import { Star } from 'lucide-react'
 interface ListingScoreCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string;
-
+  title: string
+  description: string
+  image?: string
+  category: string
+  tags?: string[]
+  author?: string
+  authorImage?: string
+  aiScore?: number
+  rating?: number
+  reviewCount?: number
+  className?: string
 export function ListingScoreCard({
   title,
   description,
@@ -32,10 +31,8 @@ export function ListingScoreCard({
   reviewCount = 0,
   className,
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
-
-  
+  const [mainImageError, setMainImageError] = useState(false)
+  const [authorImageError, setAuthorImageError] = useState(false)
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
@@ -47,8 +44,7 @@ export function ListingScoreCard({
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             onError={() => setMainImageError(true)}
             priority={false}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes
-          />
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -96,8 +92,7 @@ export function ListingScoreCard({
                     star <= Math.round(rating)
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
-                  )}
-                />
+                  )}                />
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>
@@ -113,8 +108,7 @@ export function ListingScoreCard({
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
-              >
-                {tag}
+              >                {tag}
               </Badge>
             ))}
           </div>
@@ -135,8 +129,7 @@ export function ListingScoreCard({
                   alt={author}
                   className='object-cover rounded-full'
                   onError={() => setAuthorImageError(true)}
-                  priority={false}
-                />
+                  priority={false}                />
               </div>
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple'>
@@ -148,14 +141,6 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  );
-=======
-
-<<<<<<< HEAD
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
-<<<<<<< HEAD
-                  key={star}
-                  className={cn("h-4 w-4", star <= Math.round(rating) 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

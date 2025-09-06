@@ -55,12 +55,21 @@ echo "🔒 Phase 3: Security & Performance"
 echo "====="
 # Security scan
 <<<<<<< HEAD
+<<<<<<< HEAD
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 =======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+
+=======
+run_with_log "Security Scanner" "node scripts/security-audit.cjs"
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> origin/main
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 # Performance monitoring

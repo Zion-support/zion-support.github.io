@@ -5,11 +5,11 @@ export class TestingSystem {
   ) {
     switch (action) {
       case 'click':
-        element.click(),
-        break,
+        element.click();
+        break;
       case 'type': // Handle typing
-        break,
+        break;
       case 'hover': // Handle hover
-        break
+        break;
     }
   }

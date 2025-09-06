@@ -4,11 +4,7 @@
 # Fixes missing checkout steps, incorrect indentation, and malformed YAML
 
 echo "🔧 Comprehensive GitHub Actions Workflow Fix Script"
-<<<<<<< HEAD
-echo "=================================================="
-=======
-echo "="
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+echo "echo "="
 
 WORKFLOWS_DIR=".github/workflows"
 FIXED_COUNT=0

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- 
-=======
-export default function BrokenLinksPage() {
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Broken Links Report</h1>
@@ -10,4 +6,3 @@ export default function BrokenLinksPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

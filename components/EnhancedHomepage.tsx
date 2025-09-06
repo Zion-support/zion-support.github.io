@@ -1,5 +1,4 @@
-<<<<<<< HEAD
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -19,7 +18,6 @@ visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1 
 
-
 };
 
 };
@@ -29,29 +27,7 @@ visible: {
 };
 
 };
-export default EnhancedHomepage;
-=======
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  ArrowRight;
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles;
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin;
-  ArrowUpRight
-} from 'lucide-react';
-import Head from 'next/head';
-// Import our enhanced components
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
+export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 // Import service data
@@ -542,4 +518,3 @@ const EnhancedHomepage: React.FC = () => {
 };
 
 export default EnhancedHomepage;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
 exports.handler = async function () {
   try {
@@ -45,10 +44,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};
-=======
-exports.handler = async function() {
-  try {
+};  try {
     // Demo ranking: based on certifications and progress
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
@@ -75,4 +71,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

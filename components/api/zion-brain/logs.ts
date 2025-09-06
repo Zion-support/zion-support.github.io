@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readLogs } from '@/utils/zionBrain';
-<<<<<<< HEAD
-
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
@@ -9,9 +7,7 @@ function isAuthorized(req: NextApiRequest): boolean {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req))
-    return res.status(401).json({ error: 'Unauthorized' });
-=======
-function isAuthorized(req: NextApiRequest): boolean {
+    return res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken
@@ -19,26 +15,23 @@ function isAuthorized(req: NextApiRequest): boolean {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const { entries } = readLogs();
   const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true';
 
   if (stuckOnly) {
-<<<<<<< HEAD
     return res.status(200).json({
       entries: entries.filter(
         e => e.status === 'stuck' || e.status === 'laggy'
       ),
-    });
-=======
-    return res.status(200).json({ entries: entries.filter((e) => e.status === 'stuck' || e.status === 'laggy') });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    });  }
+
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};    return res.status(200).json({ entries: entries.filter((e) => e.status === 'stuck' || e.status === 'laggy') });
   }
 
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
-<<<<<<< HEAD
   
 
   return res.status(200).json({
@@ -46,13 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     byModule,
     byType,
     total: entries.length,
-  });
-=======
-  for (const e of entries) {
+  });  for (const e of entries) {
     byModule[e.module] = (byModule[e.module] || 0) + 1;
     byType[String(e.type)] = (byType[String(e.type)] || 0) + 1
   }
 
-  return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
+return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

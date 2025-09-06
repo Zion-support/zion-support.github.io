@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
@@ -55,6 +56,8 @@ for (const file of files) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -108,6 +111,7 @@ let fixedCount = 0;
 for (const file of files) {}
 	if (processFile(file)) fixedCount++
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 =======
@@ -206,3 +210,6 @@ walkDir('/workspace/src');
 console.log('Final syntax fix completed!');
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
+>>>>>>> origin/main

@@ -4,7 +4,7 @@
     "Found 3 images",
     "Analyzed 113 dependencies"
   ],
-  "recommendation": [
+  "recommendations": [
     "Consider implementing code splitting",
     "Optimize images using WebP format",
     "Remove unused dependencies",

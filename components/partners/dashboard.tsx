@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-
 export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState('');
-=======
-import { useEffect, useState } from "react";
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
 import Head from "next/head";
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState("");
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  const [token, setToken] = useState<string | null>(null);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
   }, []);
@@ -29,11 +22,7 @@ export default function PartnerDashboard() {
     const data = await res.json();
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
-      setToken(data.token);
-=======
-    const saved = localStorage.getItem("zion_partner_token");
-    if (saved) setToken(saved)
-  }, []);
+      setToken(data.token);    }  }, []);
 
   async function getToken() {
     const res = await fetch("/api/partners/token", {
@@ -44,13 +33,11 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   }
 
   async function fetchUsage() {
     setLoading(true);
-<<<<<<< HEAD
     const res = await fetch('/api/partners/usage', {
       headers: token ? { Authorization: `Bearer ${token}` } : {},
     });
@@ -66,11 +53,11 @@ export default function PartnerDashboard() {
     });
     const data = await res.json();
     if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`);
-=======
-    const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json();
+      alert(`New API Key: ${data.apiKey}`);    }
+  }
+
+  return (
+    <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
     setUsage(data.summary || null);
     setLoading(false)
   }
@@ -82,14 +69,11 @@ export default function PartnerDashboard() {
     const data = await res.json();
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   }
 
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50 text-gray-900'>
-      <Head>
         <title>Zion Partner Dashboard</title>
       </Head>
       <div className='max-w-5xl mx-auto py-12 px-4'>
@@ -113,28 +97,17 @@ export default function PartnerDashboard() {
                 className='bg-black text-white px-4 py-2 rounded'
               >
                 Get JWT
-              </button>
-=======
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      <Head>
-        <title>Zion Partner Dashboard</title>
-      </Head>
-      <div className="max-w-5xl mx-auto py-12 px-4">
-        <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
-        <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
-
-        {!token && (
+              </button>            </div>
+          </div>
+        )}
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
             <div className="flex gap-2">
               <input className="border rounded px-3 py-2 flex-1" placeholder="Paste your API key" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </div>
           </div>
         )}
 
-<<<<<<< HEAD
         <div className='grid md:grid-cols-3 gap-6'>
           <div className='bg-white p-6 rounded-lg shadow'>
             <h3 className='font-medium mb-2'>API Keys</h3>
@@ -168,14 +141,7 @@ export default function PartnerDashboard() {
                     {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
                       <li key={k}>
                         {k}: {v as any}
-                      </li>
-=======
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="font-medium mb-2">API Keys</h3>
-            <button onClick={regenerateKey} className="bg-gray-900 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
-            <p className="text-xs text-gray-500 mt-2">Old key becomes inactive.</p>
-          </div>
+                      </li>                    ))}          </div>
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
@@ -188,22 +154,19 @@ export default function PartnerDashboard() {
                   <ul className="list-disc ml-6">
                     {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     ))}
                   </ul>
                 </div>
               </div>
             ) : (
-<<<<<<< HEAD
-              <p className='text-gray-500 text-sm'>No usage yet.</p>
-=======
+              <p className='text-gray-500 text-sm'>No usage yet.</p>            )}
+          </div>
+        </div>
               <p className="text-gray-500 text-sm">No usage yet.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             )}
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
           <a
@@ -217,18 +180,15 @@ export default function PartnerDashboard() {
             href='/api/partners/sdk?type=graphql'
           >
             GraphQL SDK
-          </a>
-=======
-        <div className="bg-white p-6 rounded-lg shadow mt-6">
-          <h3 className="font-medium mb-2">SDKs</h3>
-          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
-          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        </div>
+          </a>        </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
+}        <div className="bg-white p-6 rounded-lg shadow mt-6">
+          <h3 className="font-medium mb-2">SDKs</h3>
+          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
+          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
+      </div>
+    </div>
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

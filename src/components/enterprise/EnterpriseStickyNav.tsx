@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next/link';
+import { useState } from 'react'
+import { Menu } from 'lucide-react'
+import Link from 'next/link'
+  const [ open, setOpen ] = useState(false),
 
-export function EnterpriseStickyNav() {
-  const [open, setOpen] = useState(false);
   return (
     <nav className='sticky top-16 z-40 bg-card border-b border-border'>
       <div className='container mx-auto px-4 md:px-6'>
@@ -13,8 +11,7 @@ export function EnterpriseStickyNav() {
             className='md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
             onClick={() => setOpen(!open)}
             aria-label='Toggle navigation'
-            aria-expanded={open}
-          >
+            aria-expanded={open}          >
             <Menu className='h-6 w-6' />
           </button>
           <ul
@@ -50,15 +47,10 @@ export function EnterpriseStickyNav() {
                 className='text-sm font-medium hover:text-primary'
               >
                 Contact Us
-              </Link>
-=======
-import { useState } from "react";
-import { Menu } from 'lucide-react'
-import Link from "next/link";
+              </Link>            </li>
+              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 export function EnterpriseStickyNav() {
-
-  const [ open, setOpen ] = useState(false),
-
+  const [open, setOpen] = useState(false)
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
@@ -83,14 +75,10 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

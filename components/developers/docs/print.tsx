@@ -1,12 +1,9 @@
-<<<<<<< HEAD
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
     },
-  };
-=======
-import React, { useEffect } from 'react';
+  };};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = {
@@ -29,13 +26,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-};
 
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
-<<<<<<< HEAD
     return () => clearTimeout(id);
   }, []);
 
@@ -55,10 +49,7 @@ export default function PrintDocs({ docs }: PageProps) {
                 >
                   {c.content}
                 </pre>
-              ))}
-=======
-    return () => clearTimeout(id)
-  }, []);
+              ))}          </section>  }, []);
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
@@ -71,13 +62,9 @@ export default function PrintDocs({ docs }: PageProps) {
             {s.code && s.code.map((c, i) => (
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           </section>
         ))}
       </div>
     </div>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

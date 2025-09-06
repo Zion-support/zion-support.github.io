@@ -4,16 +4,11 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
 
   const categories = [
-<<<<<<< HEAD
     {
       id: 'all',
       name: 'All Services',
@@ -54,41 +49,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       id: 'revolutionary',
       name: 'Revolutionary',
       count: revolutionary2025MicroSaasServices.length,
-    },
-  ];
-
-  const allServices = [
-    ...revolutionary2025MicroSaasServices,
-    ...emergingTech2025Services,
-    ...enterpriseIT2025Services,
-  ];
-
-  const filteredServices =
-    activeCategory === 'all'
-      ? allServices
-      : allServices.filter(service => {
-          if (activeCategory === 'ai') return service.category.includes('AI');
-          if (activeCategory === 'quantum')
-            return service.category.includes('Quantum');
-          if (activeCategory === 'emerging')
-            return emergingTech2025Services.includes(service);
-          if (activeCategory === 'enterprise')
-            return enterpriseIT2025Services.includes(service);
-          if (activeCategory === 'revolutionary')
-            return revolutionary2025MicroSaasServices.includes(service);
-          return true;
-        });
-
-  const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
-=======
-    { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length };
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length };
-    { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
-    { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
-    { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
-  ];
+    },  ];
 
   const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
 
@@ -104,8 +65,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       });
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
   };
 
   const containerVariants = {
@@ -113,15 +73,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
-    },
-=======
-        staggerChildren: 0.1
+    },  };        staggerChildren: 0.1
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const itemVariants = {
@@ -130,7 +86,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
         duration: 0.5,
       },
     },
@@ -141,12 +96,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <motion.div
-          className='text-center mb-16'
-=======
-        duration: 0.5
-      }
-    }
-  };
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
 
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -154,13 +104,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Revolutionary 2025
@@ -171,11 +119,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future with our cutting-edge AI, quantum computing,
             and emerging technology solutions. Transform your business with
-            services that were once science fiction.
-=======
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Revolutionary 2025
+            services that were once science fiction.          </p>
+        </motion.div>
+
+        {/* Category Filter */}
+        <motion.div
+          className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
             </span>
             <br />
             <span className="text-white">Services</span>
@@ -183,37 +132,28 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. 
             Transform your business with services that were once science fiction.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           </p>
         </motion.div>
 
         {/* Category Filter */}
-<<<<<<< HEAD
         <motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'
-=======
-        <motion.div 
+          className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
-          {categories.map(category => (
-=======
-          {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+          {categories.map(category => (            <button
+              key={category.id}
+              onClick={() => {
+                setActiveCategory(category.id);
+                setVisibleServices(12);              }}          {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
-<<<<<<< HEAD
-                setVisibleServices(12);
-=======
-                setVisibleServices(12)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                setVisibleServices(12);                setVisibleServices(12)
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id
@@ -222,11 +162,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               }`}
             >
               {category.name}
-<<<<<<< HEAD
-              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>
-=======
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                 {category.count}
               </span>
             </button>
@@ -235,24 +171,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
           variants={containerVariants}
           initial='hidden'
-          whileInView='visible'
-=======
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          viewport={{ once: true }}
         >
           {filteredServices.slice(0, visibleServices).map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-<<<<<<< HEAD
               className='group relative cursor-pointer'
               style={{ perspective: '1000px' }}
             >
@@ -261,10 +191,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                 {/* Background Effects */}
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
-                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
-=======
-              className="group relative cursor-pointer"
-              style={{ perspective: '1000px' }}
+                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>
+
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
+                    <Star className='w-3 h-3 inline mr-1' />                    POPULAR              style={{ perspective: '1000px' }}
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
@@ -272,24 +204,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </div>
 
                 {/* Popular Badge */}
                 {service.popular && (
-<<<<<<< HEAD
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
-                    <Star className='w-3 h-3 inline mr-1' />
-=======
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
                     <Star className="w-3 h-3 inline mr-1" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     POPULAR
                   </div>
                 )}
 
                 {/* Service Header */}
-<<<<<<< HEAD
                 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center space-x-3'>
@@ -309,13 +235,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       </div>
                       <div className='text-gray-400 text-sm'>
                         {service.period}
-                      </div>
-=======
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="text-4xl">{service.icon}</div>
-                      <div>
+                      </div>                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className='text-gray-300 mb-4 leading-relaxed'>
+                    {service.description}
+                  </p>                      <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {service.name}
                         </h3>
@@ -325,12 +251,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{service.price}</div>
                       <div className="text-gray-400 text-sm">{service.period}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </div>
                   </div>
 
                   {/* Description */}
-<<<<<<< HEAD
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -359,10 +283,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <Shield className='w-4 h-4 text-blue-400' />
                       <span className='text-gray-300'>
                         {service.trialDays} day trial
-                      </span>
-=======
-                  <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                      </span>                    </div>
+                  </div>
 
+                  {/* Action Buttons */}
+                  <div className='flex space-x-3 mt-6'>
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="flex items-center space-x-2 text-sm">
@@ -380,12 +305,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     <div className="flex items-center space-x-2 text-sm">
                       <Shield className="w-4 h-4 text-blue-400" />
                       <span className="text-gray-300">{service.trialDays} day trial</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     </div>
                   </div>
 
                   {/* Action Buttons */}
-<<<<<<< HEAD
                   <div className='flex space-x-3 mt-6'>
                     <a
                       href={service.link}
@@ -396,10 +319,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <span>Get Started</span>
                       <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />
                     </a>
-                    <button className='px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5'>
-=======
-                  <div className="flex space-x-3 mt-6">
-                    <a
+                    <button className='px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5'>                      Learn More                    <a
                       href={service.link}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -409,14 +329,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </a>
                     <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       Learn More
                     </button>
                   </div>
                 </div>
 
                 {/* Floating Particles */}
-<<<<<<< HEAD
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>
                   <div
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
@@ -437,16 +355,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   <div
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
                     style={{ left: '80%', top: '70%' }}
-                  ></div>
-=======
-                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  ></div>                </div>                <div className="absolute inset-0 pointer-events-none overflow-hidden">
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
               </div>
             </motion.div>
           ))}
@@ -454,13 +368,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
-<<<<<<< HEAD
           <motion.div
-            className='text-center'
-=======
-          <motion.div 
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
             className="text-center"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -468,11 +378,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           >
             <button
               onClick={loadMore}
-<<<<<<< HEAD
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
-=======
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
             >
               Load More Revolutionary Services
             </button>
@@ -480,19 +386,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         )}
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <motion.div
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
-=======
-        <motion.div 
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
           <h3 className='text-3xl font-bold text-white mb-4'>
             Ready to Experience the Future?
           </h3>
@@ -510,10 +411,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </a>
             <a
               href='/pricing'
-              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
-=======
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience the Future?
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'            >            Ready to Experience the Future?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services. 
@@ -529,7 +427,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <a 
               href="/pricing" 
               className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             >
               View Pricing
             </a>
@@ -537,14 +434,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 };
 
-export default RevolutionaryServicesShowcase;
-=======
-  )
+export default RevolutionaryServicesShowcase;  )
 };
 
 export default RevolutionaryServicesShowcase;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

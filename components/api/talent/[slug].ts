@@ -1,15 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase as supabaseClient } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL } from '@/data/talent';
+import {supabase, as, supabaseClient} from '@/utils/supabase/client';
+import {TALENT_PROFILES, as, LOCAL} from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
-<<<<<<< HEAD
 
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-=======
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang || !item.translations) return { item, translated: false };
@@ -19,7 +15,6 @@ function applyTranslations(item: TalentProfile, lang?: string) {
   if (t.summary?.[lang]) translated.summary = t.summary[lang];
   if (t.bio?.[lang]) translated.bio = t.bio[lang];
   if (t.category?.[lang]) translated.category = t.category[lang];
-<<<<<<< HEAD
   return {
     item: { ...item, ...translated },
     translated: Object.keys(translated).length > 0,
@@ -56,10 +51,6 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-=======
-  return { item: { ...item, ...translated }, translated: Object.keys(translated).length > 0 }
-}
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
@@ -80,6 +71,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ item, translated })
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
-  };
+};
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

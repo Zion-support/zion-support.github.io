@@ -1,14 +1,6 @@
-import dynamic from 'next/dynamic';
-<<<<<<< HEAD
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), {
-  ssr: false,
-});
+import dynamic from 'next/dynamic',;
+const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
 
 export default function FounderJournalPage() {
-  return <BookBuilder />;
-=======
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false }),
-export default function FounderJournalPage() {
   return <BookBuilder />
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+};

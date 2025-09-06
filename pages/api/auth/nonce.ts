@@ -1,33 +1,34 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
 function randomString(length: number) {
-<<<<<<< HEAD
-  const charset =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-=======
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  let res = '';
-  const cryptoObj = require('crypto');
-  const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-<<<<<<< HEAD
-  return res;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const nonce = randomString(16);
-  res.setHeader(
-    'Set-Cookie',
-    `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`
-  );
-  res.status(200).json({ nonce });
-=======
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+  let res = '',
+  const cryptoObj = require('crypto'),
+  const bytes: Buffer = cryptoObj.randomBytes(length),
+  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
   return res
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const nonce = randomString(16);
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
+  const nonce = randomString(16),
+  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`),
   res.status(200).json({ nonce })
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+function randomString(length: number) {
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let res = '';
+  const cryptoObj = require('crypto');
+  const bytes: Buffer = cryptoObj.randomBytes(length);
+  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
+  return res;
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const nonce = randomString(16);
+  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`);
+  res.status(200).json({ nonce });
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd

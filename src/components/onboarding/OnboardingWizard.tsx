@@ -1,51 +1,47 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import {
+  CardTitle,
+} from '@/components/ui/card'
   Rocket,
   FileText,
   Users,
   Calendar,
   Eye,
-  MessageSquare,;
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-
+  MessageSquare,
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 interface WizardStep {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
+  title: string
+  description: string
+  icon: React.ReactNode
   action: {
-    text: string;
-    url: string;
-  };
-  skipText?: string;
-
+    text: string
+    url: string
+  }
+  skipText?: string
 interface OnboardingWizardProps {
-  type: 'client' | 'talent';
-  onComplete: () => void;
-  onSkip: () => void;
-  className?: string;
-
+  type: 'client' | 'talent'
+  onComplete: () => void
+  onSkip: () => void
+  className?: string
 export function OnboardingWizard({
   type,
   onComplete,
   onSkip,
   className,
 }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0)
   const router = useRouter(); // Changed from useNavigate to useRouter
-  const { user } = useAuth();
-
+  const { user } = useAuth()
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -77,8 +73,7 @@ export function OnboardingWizard({
         url: '/talent',
       },
     },
-  ];
-
+  ]
   const talentSteps: WizardStep[] = [
     {
       title: 'Complete your profile',
@@ -119,36 +114,30 @@ export function OnboardingWizard({
         url: '/talent-dashboard',
       },
     },
-  ];
-
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
+  ]
+  const steps = type === 'client' ? clientSteps : talentSteps
   // Navigate to the specified URL
   const handleAction = () => {
-    const currentStepData = steps[currentStep];
-    if (!currentStepData) return;
-
+    const currentStepData = steps[currentStep]
+    if (!currentStepData) return
     if (currentStep < steps.length - 1) {
       router.push(currentStepData.action.url); // Changed to router.push
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1)
     } else {
       // Last step
       router.push(currentStepData.action.url); // Changed to router.push
-      onComplete();
+      onComplete()
     }
-  };
-
+  }
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1)
     } else {
       // Last step
-      onSkip();
+      onSkip()
     }
-  };
-
-  
+  }
     >
       <CardHeader>
         <CardTitle className='text-center text-white'>
@@ -165,14 +154,12 @@ export function OnboardingWizard({
               <div
                 key={index}
                 className={cn(
-                  'h-2 w-2 rounded-full mx-1',
-                  index === currentStep
+                  'h-2 w-2 rounded-full mx-1',                  index === currentStep
                     ? 'bg-zion-purple scale-125'
                     : index < currentStep
                       ? 'bg-zion-cyan'
                       : 'bg-zion-blue-light'
-                )}
-              />
+                )}              />
             ))}
           </div>
         </div>
@@ -192,8 +179,7 @@ export function OnboardingWizard({
       <CardFooter className='flex flex-col space-y-2'>
         <Button
           className='w-full bg-zion-purple hover:bg-zion-purple-light'
-          onClick={handleAction}
-        >
+          onClick={handleAction}        >
           {steps[currentStep]?.action.text}
         </Button>
 
@@ -201,23 +187,12 @@ export function OnboardingWizard({
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
-            onClick={handleSkip}
-          >
+            onClick={handleSkip}          >
             {steps[currentStep]?.skipText}
           </Button>
         )}
       </CardFooter>
     </Card>
-  );
-=======
-
-<<<<<<< HEAD
-
-        url: "/profile?tab=skills"
-      };
-<<<<<<< HEAD
-  ];
-  
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const GITHUB_API = 'https://api.github.com';
 
 async function getFile(owner, repo, path, token) {
@@ -37,10 +36,7 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   }
   return resp.json();
 
-module.exports = { upsertFile };
-=======
-const GITHUB_API = 'https: //api.github.com',
-async function getFile(owner, repo, path, token) {
+module.exports = { upsertFile };async function getFile(owner, repo, path, token) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
@@ -77,4 +73,3 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 }
 
 module.exports = { upsertFile },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-
 export interface TreeNode {
   name: string;
   path: string;
@@ -27,10 +25,7 @@ function NodeItem({
   const toggle = () => setOpen(v => !v);
 
   const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path);
-=======
-import React, { useState } from "react";
-
+    await navigator.clipboard.writeText(node.path);  };
 export interface TreeNode {
   name: string,
   path: string,
@@ -52,13 +47,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
 
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
-<<<<<<< HEAD
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -66,21 +59,16 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
       } as any,
       body: JSON.stringify({ path: node.path }),
-    });
-=======
-      method: "POST",
-      headers: {
+    });  };      headers: {
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
       body: JSON.stringify({ path: node.path })})
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const deploy = () => onDeploy && onDeploy(node.path);
 
   return (
-<<<<<<< HEAD
     <div className='ml-2'>
       <div className='flex items-center gap-2 py-1'>
         {hasChildren ? (
@@ -127,11 +115,10 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
               node={child}
               depth={depth + 1}
               onDeploy={onDeploy}
-            />
-=======
-    <div className="ml-2">
-      <div className="flex items-center gap-2 py-1">
-        {hasChildren ? (
+            />          ))}
+        </div>
+      )}
+    </div>        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">
             {open ? "▾" : "▸"}
           </button>
@@ -151,32 +138,28 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full'>
-      {nodes.map(n => (
-=======
-  )
+      {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );  )
 }
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className="w-full">
       {nodes.map((n) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
   );
-<<<<<<< HEAD
 
 export default Tree;
 }</div> </div> {
@@ -206,9 +189,6 @@ export default Tree;
   onDeploy 
 }/>) ) 
 }</div>) 
-}export default Tree;
-=======
-}
+}export default Tree;}
 
 export default Tree;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

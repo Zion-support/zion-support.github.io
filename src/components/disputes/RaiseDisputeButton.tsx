@@ -1,30 +1,28 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import {
-  Dialog,
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {  Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,;
-} from '@/components/ui/dialog';
-import { DisputeForm } from './DisputeForm';
-import { useRouter } from 'next/router';
-import { ShieldAlert } from 'lucide-react';
-
+  DialogDescription,
+} from '@/components/ui/dialog'
+import { DisputeForm } from './DisputeForm'
+import { ShieldAlert } from 'lucide-react'
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm"
+import { useRouter } from 'next/router'
 interface RaiseDisputeButtonProps {
-  projectId: string;
-  milestoneId?: string;
+  projectId: string
+  milestoneId?: string
   variant?:
     | 'default'
     | 'outline'
     | 'secondary'
     | 'destructive'
     | 'ghost'
-    | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
-  className?: string;
-
+    | 'link'
+  size?: 'default' | 'sm' | 'lg' | 'icon'
+  className?: string
 export function RaiseDisputeButton({
   projectId,
   milestoneId,
@@ -32,22 +30,19 @@ export function RaiseDisputeButton({
   size,
   className,
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const router = useRouter();
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
   const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false);
-    router.push(`/dashboard/disputes/${disputeId}`);
-  };
-
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
   return (
     <>
       <Button
         variant={variant}
         size={size}
         className={className}
-        onClick={() => setIsDialogOpen(true)}
-      >
+        onClick={() => setIsDialogOpen(true)}      >
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
@@ -66,16 +61,10 @@ export function RaiseDisputeButton({
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
-            onCancel={() => setIsDialogOpen(false)}
-          />
+            onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
     </>
-  );
-=======
-
-<<<<<<< HEAD
-  milestoneId, 
-  variant = "outline", 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

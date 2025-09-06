@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -15,6 +18,7 @@ export default function Training() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Professional training and education services for technology professionals.
             </p>
+<<<<<<< HEAD
           </div>
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
@@ -1489,11 +1493,28 @@ export default function TrainingPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-};
 =======
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">Training page is under construction.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+<<<<<<< HEAD
+}
+>>>>>>> origin/main
+};
   )
+=======
+}  )
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 export default Training;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+};export default Training;
+>>>>>>> origin/main

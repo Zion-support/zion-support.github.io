@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-
 export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -22,9 +20,7 @@ export default function BlogPage() {
         </p>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
-export default function BlogPage() {
+  );export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup.com/blog/" />
@@ -35,4 +31,3 @@ export default function BlogPage() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

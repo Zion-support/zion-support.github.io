@@ -1,33 +1,27 @@
-<<<<<<< HEAD
-import React, { useMemo } from 'react';
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
-
+import React, { useMemo } from 'react'
+import { User } from 'lucide-react'
+import { Conversation } from '@/types/messaging'
+import { ConversationItem } from './ConversationItem'
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window'
 interface ConversationsListProps {
-  conversations: Conversation[];
-  activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>;
-
+  conversations: Conversation[]
+  activeConversation: Conversation | null
+  setActiveConversation: (conversation: Conversation) => void
+  markAsRead: (conversationId: string) => Promise<void>
 export function ConversationsList({
   conversations,
   activeConversation,
   setActiveConversation,
   markAsRead,
 }: ConversationsListProps) {
-  const itemSize = 80;
-
+  const itemSize = 80
   const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600);
-  }, [conversations.length]);
-
+    return Math.min(conversations.length * itemSize, 600)
+  }, [conversations.length])
   const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index];
-
+    const conversation = conversations[index]
     if (!conversation) {
-      return <div style={style} />;
+      return <div style={style} />
     }
 
     return (
@@ -36,14 +30,12 @@ export function ConversationsList({
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
           onClick={() => {
-            setActiveConversation(conversation);
-            markAsRead(conversation.id);
-          }}
+            setActiveConversation(conversation)
+            markAsRead(conversation.id) }}
         />
       </div>
-    );
-  };
-
+    )
+  }
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>
       <div className='p-3 border-b border-zion-purple/20'>
@@ -63,14 +55,11 @@ export function ConversationsList({
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-          width='100%'
-        >
+          width='100%'        >
           {Row}
         </List>
       )}
     </div>
-  );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

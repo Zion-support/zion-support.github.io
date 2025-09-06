@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import {
   Search,
   TrendingUp,
@@ -25,14 +24,13 @@ import {
   Rocket,
   Settings,;
 } from 'lucide-react';
-=======
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
 export default function AISeosuitePage() {
   const features = [
     {
-<<<<<<< HEAD
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+    {
       icon: <Search className='w-8 h-8 text-white' />,
       title: 'AI Keyword Research',
       description:
@@ -126,10 +124,7 @@ export default function AISeosuitePage() {
         'Competitor monitoring',
         'Custom dashboards',
       ],
-    },
-=======
-      icon: <Search className="w-8 h-8 text-white" />,
-      title: 'AI Keyword Research',
+    },  ];      title: 'AI Keyword Research',
       description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
@@ -184,7 +179,6 @@ export default function AISeosuitePage() {
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ];
 
   const pricingPlans = [
@@ -194,7 +188,6 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-<<<<<<< HEAD
         'Up to 5 websites',
         'Basic keyword research',
         'Monthly site audits',
@@ -205,22 +198,17 @@ export default function AISeosuitePage() {
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700',
-    },
-=======
-        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
+    },    {        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
       ];
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    {
       name: 'Professional',
       price: '$129',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-<<<<<<< HEAD
         'Up to 25 websites',
         'Advanced keyword research',
         'Weekly site audits',
@@ -233,22 +221,17 @@ export default function AISeosuitePage() {
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700',
-    },
-=======
-        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
+    },    {        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
       ];
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-<<<<<<< HEAD
         'Unlimited websites',
         'Full SEO suite',
         'Daily site audits',
@@ -274,11 +257,7 @@ export default function AISeosuitePage() {
       name: 'Google Search Console',
       icon: '🔍',
       description: 'Search performance data',
-    },
-=======
-        'Unlimited websitesFull SEO suiteDaily site auditsDedicated supportCustom reportingAdvanced analyticsSLA guaranteeOn-premise option'
-      ];
-      popular: false,
+    },    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },      popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
@@ -287,26 +266,19 @@ export default function AISeosuitePage() {
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
     { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
     { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' },
     { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
-<<<<<<< HEAD
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' },
-=======
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    { name: 'API Access', icon: '🔑', description: 'Custom integrations' },  ];    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
   ];
 
   const useCases = [
     {
       title: 'E-commerce Websites',
-<<<<<<< HEAD
       description:
         'Optimize product pages, category pages, and search functionality for better conversions.',
-      icon: '🛍️',
       benefits: [
         'Higher search rankings',
         'Increased organic traffic',
@@ -372,44 +344,14 @@ export default function AISeosuitePage() {
       metric: 'ROI',
       value: '400%',
       description: 'Average return on investment',
-    },
-=======
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
-    icon: '🛍️',
-      benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
-    };
-    {
-      title: 'Content Marketing',
-      description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
-    icon: '📝',
-      benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
-    };
-    {
-      title: 'Local Businesses',
-      description: 'Improve local search visibility and attract customers in your area.',
-      icon: '📍',
-      benefits: ['Local search dominanceIncreased foot trafficBetter customer acquisitionCompetitive positioning']
-    };
-    {
-      title: 'SaaS Companies',
-      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
-    icon: '💻',
-      benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
-    }
-  ];
-
-  const successMetrics = [
-    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
+    },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  ];
 
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>
           AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools &
           Analytics
@@ -467,14 +409,7 @@ export default function AISeosuitePage() {
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
-              <Play className='w-5 h-5 mr-2' />
-=======
-        <title>AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics</title>
-        <meta name="description" content="Comprehensive AI-powered SEO suite with keyword research, content optimization, technical SEO audits, and real-time analytics. Boost your search rankings and organic traffic." />
-        <meta property="og:title" content="AI-Powered SEO Suite | Zion Tech Group" />
-        <meta property="og:description" content="Advanced SEO tools with AI-powered optimization, keyword research, and comprehensive analytics." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -514,13 +449,11 @@ export default function AISeosuitePage() {
               className="border-white/20 hover:border-white/40 hover:bg-white/5"
             >
               <Play className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               Watch Demo
             </Button>
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>
@@ -544,13 +477,7 @@ export default function AISeosuitePage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
                 400%
               </div>
-              <div className='text-gray-400'>ROI</div>
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">+150%</div>
-              <div className="text-gray-400">Organic Traffic</div>
-            </div>
+              <div className='text-gray-400'>ROI</div>            </div>            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">+45%</div>
               <div className="text-gray-400">Search Rankings</div>
@@ -562,14 +489,12 @@ export default function AISeosuitePage() {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">400%</div>
               <div className="text-gray-400">ROI</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -599,13 +524,7 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
-                <p className='text-gray-400 leading-relaxed'>
-=======
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Powerful SEO Features
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Everything you need to dominate search rankings and drive organic traffic
@@ -628,7 +547,6 @@ export default function AISeosuitePage() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   {feature.description}
                 </p>
               </Card>
@@ -638,28 +556,26 @@ export default function AISeosuitePage() {
       </section>
 
       {/* SEO Tools Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Comprehensive SEO Tools
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
-      <section className="py-24 bg-black relative overflow-hidden">
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Professional-grade tools used by top SEO agencies and marketers
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Comprehensive SEO Tools
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
               <Card
@@ -678,10 +594,7 @@ export default function AISeosuitePage() {
                           key={toolIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
-                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {seoTools.map((tool, index) => (
+                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools.map((tool, index) => (
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -696,7 +609,6 @@ export default function AISeosuitePage() {
                       {tool.tools.map((toolName, toolIndex) => (
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           {toolName}
                         </div>
                       ))}
@@ -710,28 +622,26 @@ export default function AISeosuitePage() {
       </section>
 
       {/* Success Metrics Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Proven Results
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              See the impact our AI-powered SEO suite has on businesses
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Proven Results
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {successMetrics.map((metric, index) => (
               <Card
@@ -744,10 +654,7 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-2 text-white'>
                   {metric.metric}
                 </h3>
-                <p className='text-gray-400 text-sm'>{metric.description}</p>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successMetrics.map((metric, index) => (
+                <p className='text-gray-400 text-sm'>{metric.description}</p>              </Card>            {successMetrics.map((metric, index) => (
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
@@ -757,7 +664,6 @@ export default function AISeosuitePage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
                 <p className="text-gray-400 text-sm">{metric.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </Card>
             ))}
           </div>
@@ -765,28 +671,26 @@ export default function AISeosuitePage() {
       </section>
 
       {/* Use Cases Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
-      <section className="py-24 bg-black relative overflow-hidden">
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              Trusted by businesses across industries for SEO success
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -808,10 +712,7 @@ export default function AISeosuitePage() {
                           key={benefitIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
-                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases.map((useCase, index) => (
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -829,7 +730,6 @@ export default function AISeosuitePage() {
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           {benefit}
                         </div>
                       ))}
@@ -843,7 +743,6 @@ export default function AISeosuitePage() {
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <section
         id='pricing'
         className='py-24 bg-gray-900 relative overflow-hidden'
@@ -853,43 +752,37 @@ export default function AISeosuitePage() {
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Simple, Transparent Pricing
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
-      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              Choose the plan that fits your SEO needs
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
-<<<<<<< HEAD
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-=======
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
+                    </span>
+                  </div>
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       Most Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -908,14 +801,7 @@ export default function AISeosuitePage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
-=======
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
-                  </div>
+                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
 
@@ -923,28 +809,22 @@ export default function AISeosuitePage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Button
-<<<<<<< HEAD
                   href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
                 >
                   Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />
-=======
-                  href="/contact"
-                  className={`w-full ${plan.buttonColor} text-white`}
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </Button>
               </Card>
             ))}
@@ -953,28 +833,26 @@ export default function AISeosuitePage() {
       </section>
 
       {/* Integrations Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Seamless Integrations
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
-      <section className="py-24 bg-black relative overflow-hidden">
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
+            </p>
+          </div>
+
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              Connect with your favorite tools and platforms
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -989,10 +867,7 @@ export default function AISeosuitePage() {
                 </h3>
                 <p className='text-sm text-gray-400'>
                   {integration.description}
-                </p>
-=======
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
+                </p>              </Card>            {integrations.map((integration, index) => (
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -1002,7 +877,6 @@ export default function AISeosuitePage() {
                 </div>
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </Card>
             ))}
           </div>
@@ -1010,7 +884,6 @@ export default function AISeosuitePage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
@@ -1037,13 +910,7 @@ export default function AISeosuitePage() {
               size='lg'
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
-              <Play className='w-5 h-5 mr-2' />
-=======
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            Ready to Dominate Search Rankings?
+              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of businesses who are already ranking higher and driving more organic traffic.
@@ -1065,15 +932,11 @@ export default function AISeosuitePage() {
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               Watch Demo
             </Button>
           </div>
         </div>
       </section>
     </>
-  );
-<<<<<<< HEAD
-=======
+);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

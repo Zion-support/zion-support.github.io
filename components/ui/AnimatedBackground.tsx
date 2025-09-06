@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 export default function AnimatedBackground() {
   return (
@@ -25,9 +24,7 @@ export default function AnimatedBackground() {
         }
       `}</style>
     </div>
-  );
-=======
-  return (
+  );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />
@@ -86,9 +83,8 @@ export default function AnimatedBackground() {
           backgroundSize: '50px 50px',
         }}
       />
-    </div>
+    </div>;
   );
 };
 
 export default AnimatedBackground;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

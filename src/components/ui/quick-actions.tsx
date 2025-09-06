@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   Zap,
   Download,
@@ -13,43 +12,37 @@ import {
   Settings,
   Activity,
   Package,
-  Monitor,;
-} from 'lucide-react';
-
+  Monitor,
+} from 'lucide-react'
 interface QuickAction {
-  id: string;
-  label: string;
-  description: string;
-  icon: React.ReactNode;
-  action: () => void;
-  category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean;
-
+  id: string
+  label: string
+  description: string
+  icon: React.ReactNode
+  action: () => void
+  category: 'performance' | 'development' | 'maintenance'
+  dangerous?: boolean
 export function QuickActions() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin
   if (!isAllowed) {
-    return null;
+    return null
   }
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-
+  const [isVisible, setIsVisible] = useState(false)
+  const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing(actionId);
-    try {
-      await action();
+    setIsProcessing(actionId);    try {
+      await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error,
-      });
+      })
     } finally {
-      setIsProcessing(null);
+      setIsProcessing(null)
     }
-  };
-
+  }
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -59,8 +52,8 @@ export function QuickActions() {
       icon: <Activity className='w-4 h-4' />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('performance-monitoring', 'true');
-        window.location.reload();
+        localStorage.setItem('performance-monitoring', 'true')
+        window.location.reload()
       },
     },
     {
@@ -70,8 +63,8 @@ export function QuickActions() {
       icon: <Package className='w-4 h-4' />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('bundle-analyzer', 'true');
-        window.location.reload();
+        localStorage.setItem('bundle-analyzer', 'true')
+        window.location.reload()
       },
     },
     {
@@ -84,12 +77,12 @@ export function QuickActions() {
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
-            names.forEach(name => caches.delete(name));
-          });
+            names.forEach(name => caches.delete(name))
+          })
         }
-        localStorage.clear();
-        sessionStorage.clear();
-        window.location.reload();
+        localStorage.clear()
+        sessionStorage.clear()
+        window.location.reload()
       },
     },
     {
@@ -103,28 +96,25 @@ export function QuickActions() {
         const criticalFonts = [
           '/fonts/inter-var.woff2',
           '/fonts/cal-sans.woff2',
-        ];
-
+        ]
         criticalFonts.forEach(font => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'font';
-          link.type = 'font/woff2';
-          link.crossOrigin = 'anonymous';
-          link.href = font;
-          document.head.appendChild(link);
-        });
-
+          const link = document.createElement('link')
+          link.rel = 'preload'
+          link.as = 'font'
+          link.type = 'font/woff2'
+          link.crossOrigin = 'anonymous'
+          link.href = font
+          document.head.appendChild(link)
+        })
         // Preload critical images
-        const criticalImages = ['/logos/zion-logo.png', '/images/hero-bg.webp'];
-
+        const criticalImages = ['/logos/zion-logo.png', '/images/hero-bg.webp']
         criticalImages.forEach(img => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'image';
-          link.href = img;
-          document.head.appendChild(link);
-        });
+          const link = document.createElement('link')
+          link.rel = 'preload'
+          link.as = 'image'
+          link.href = img
+          document.head.appendChild(link)
+        })
       },
     },
     {
@@ -145,20 +135,18 @@ export function QuickActions() {
             height: screen.height,
             colorDepth: screen.colorDepth,
           },
-        };
-
+        }
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json',
-        });
-
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `performance-report-${Date.now()}.json`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
+        })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `performance-report-${Date.now()}.json`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        URL.revokeObjectURL(url)
       },
     },
     {
@@ -171,7 +159,7 @@ export function QuickActions() {
       action: () => {
         throw new Error(
           'Test error for Sentry integration - this is intentional!'
-        );
+        )
       },
     },
     {
@@ -181,17 +169,15 @@ export function QuickActions() {
       icon: <RefreshCw className='w-4 h-4' />,
       category: 'maintenance',
       action: () => {
-        window.location.reload();
+        window.location.reload()
       },
     },
-  ];
-
+  ]
   const categorizedActions = {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
     maintenance: actions.filter(a => a.category === 'maintenance'),
-  };
-
+  }
   const categoryColors = {
     performance:
       'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
@@ -199,8 +185,7 @@ export function QuickActions() {
       'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
-  };
-
+  }
   if (!isVisible) {
     return (
       <div className='fixed bottom-4 left-4 z-50'>
@@ -208,13 +193,12 @@ export function QuickActions() {
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
-          className='bg-background/80 backdrop-blur-sm'
-        >
+          className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
           Quick Actions
         </Button>
       </div>
-    );
+    )
   }
 
   return (
@@ -230,8 +214,7 @@ export function QuickActions() {
               variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
-              className='h-6 w-6 p-0'
-            >
+              className='h-6 w-6 p-0'            >
               ✕
             </Button>
           </div>
@@ -274,8 +257,7 @@ export function QuickActions() {
                             </div>
                             <div className='text-xs opacity-70 mt-1'>
                               {action.description}
-                            </div>
-                          </div>
+                            </div>                          </div>
                         </div>
                       </Button>
                     </div>
@@ -287,21 +269,7 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  );
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-
-
-<<<<<<< HEAD
-        ];
-        
-<<<<<<< HEAD
-
-        
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+} 
+} 
+}

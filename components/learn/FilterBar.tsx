@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
 type Props = {
   category: string;
   level: string;
@@ -21,9 +19,7 @@ export default function FilterBar({
         value={category}
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
-        <option value=''>All Categories</option>
-=======
-type Props = {
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
   category: string,
   level: string,
   isFree: string,
@@ -39,32 +35,25 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         <option>AI Development</option>
         <option>Freelancing</option>
         <option>Remote Hiring</option>
         <option>Cloud Architecture</option>
       </select>
       <select
-<<<<<<< HEAD
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={level}
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
-        <option value=''>All Levels</option>
-=======
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
-        value={level}
+        <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
         onChange={(e) => onChange({ category, level: e.target.value, isFree })}
       >
         <option value="">All Levels</option>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         <option>Beginner</option>
         <option>Intermediate</option>
         <option>Advanced</option>
       </select>
       <select
-<<<<<<< HEAD
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={isFree}
         onChange={e => onChange({ category, level, isFree: e.target.value })}
@@ -74,10 +63,7 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         <option value='false'>Paid</option>
       </select>
     </div>
-  );
-=======
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
-        value={isFree}
+  );        value={isFree}
         onChange={(e) => onChange({ category, level, isFree: e.target.value })}
       >
         <option value="">All Pricing</option>
@@ -87,4 +73,3 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node 
-=======
-#!/usr/bin/env node
-import { mkdirSync, existsSync } from 'node: fs',
-import { resolve } from 'node: path', import sharp from 'sharp',
-const root = new URL('.',
+#!/usr/bin/env node const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
 const outDir = resolve(root, '../public/icons'),
@@ -18,4 +12,3 @@ for (const size of sizes) {
   // eslint-disable-next-line no-console
   console.log('generated', out)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ProfileProject } from '@/types/profile';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { FileText } from 'lucide-react';
-
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { ProfileProject } from '@/types/profile'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { FileText } from 'lucide-react'
 interface ProfileProjectsProps {
-  projects: ProfileProject[];
-
+  projects: ProfileProject[]
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
@@ -18,15 +15,19 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
           <Card
             key={project.id}
             className='bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300'
-          >
+          >    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project,) => (
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16 / 9}>
                 <img
                   src={project.imageUrl}
                   alt={project.title}
                   className='w-full h-full object-cover'
-                  loading='lazy'
-                />
+                  loading='lazy'                />
               </AspectRatio>
             ) : (
               <div className='h-40 w-full flex items-center justify-center bg-zion-blue'>
@@ -47,27 +48,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       key={i}
                       variant='outline'
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
-                    >
-=======
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProfileProject } from "@/types/profile";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { FileText } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-interface ProfileProjectsProps {
-  projects: ProfileProject[]
-}
-
-export function ProfileProjects({ projects }: ProfileProjectsProps) {
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
         {projects.map((project) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
@@ -93,19 +74,14 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       {tag}
                     </Badge>
                   ))}
                 </div>
               )}
-<<<<<<< HEAD
 
-              <div className='text-xs text-zion-slate-light mt-2'>
-=======
-              
+              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
               <div className="text-xs text-zion-slate-light mt-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 {project.date}
               </div>
             </CardContent>
@@ -113,8 +89,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         ))}
       </div>
     </div>
-  );
-<<<<<<< HEAD
-=======
+  )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -12,7 +11,7 @@ import {
   SortAsc,
   Sparkles,
   TrendingUp,
-  Star,;
+  Star,
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -28,7 +27,6 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 /**
  * Marketplace component props
  */
@@ -41,8 +39,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     <CardContent className='p-6'>
       <div className='flex items-center gap-2 mb-4'>
         <TrendingUp className='h-5 w-5 text-blue-400' />
-        <h3 className='text-lg font-semibold'>Market Insights</h3>
-      </div>
+        <h3 className='text-lg font-semibold'>Market Insights</h3>      </div>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         <div className='text-center'>
           <div className='text-2xl font-bold text-blue-400'>
@@ -94,8 +91,7 @@ const FilterControls: React.FC<{
   locations: string[];
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
-  loading: boolean;
-}> = ({
+  loading: boolean;}> = ({
   sortBy,
   setSortBy,
   filterCategory,
@@ -126,8 +122,7 @@ const FilterControls: React.FC<{
       <select
         value={filterCategory}
         onChange={e => setFilterCategory(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Categories</option>
         {categories.map(category => (
           <option key={category} value={category}>
@@ -142,8 +137,7 @@ const FilterControls: React.FC<{
       <select
         value={sortBy}
         onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value='newest'>Newest First</option>
         <option value='price-low'>Price: Low to High</option>
         <option value='price-high'>Price: High to Low</option>
@@ -170,8 +164,7 @@ const FilterControls: React.FC<{
         min={priceRange[0]}
         max={MAX_PRICE}
         onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-      />
+        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
     </div>
 
     <div className='flex items-center gap-2'>
@@ -182,8 +175,7 @@ const FilterControls: React.FC<{
         min={0}
         max={100}
         onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'
-      />
+        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
     </div>
 
     <div className='flex items-center gap-2'>
@@ -191,8 +183,7 @@ const FilterControls: React.FC<{
       <select
         value={minRating}
         onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'
-      >
+        className='bg-background border border-border px-2 py-1 rounded'      >
         <option value={0}>Any</option>
         <option value={5}>5</option>
         <option value={4}>4</option>
@@ -206,8 +197,7 @@ const FilterControls: React.FC<{
       <select
         value={filterAvailability}
         onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>
@@ -221,8 +211,7 @@ const FilterControls: React.FC<{
       <select
         value={filterLocation}
         onChange={e => setFilterLocation(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>
@@ -236,8 +225,7 @@ const FilterControls: React.FC<{
       variant={showRecommended ? 'default' : 'outline'}
       size='sm'
       onClick={() => setShowRecommended(!showRecommended)}
-      className='flex items-center gap-2'
-    >
+      className='flex items-center gap-2'    >
       <Sparkles className='h-4 w-4' />
       {showRecommended ? 'All Products' : 'Recommended'}
     </Button>
@@ -272,7 +260,7 @@ export default function Marketplace() {
   const { handleApiError, retryQuery } = useApiErrorHandling();
 
   // Handle Add Product button with authentication check
-  const handleAddProduct = useCallback(() => {
+  const handleAddProduct = useCallback((,) => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true); // Use the new auth modal
       return;
@@ -297,7 +285,6 @@ export default function Marketplace() {
   const fetchProducts = useCallback(
     async (page: number, limit: number) => {
       await new Promise(resolve => setTimeout(resolve, 200));
-
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type)
         const params = {
@@ -319,8 +306,7 @@ export default function Marketplace() {
         if (filterCategory) {
           items = items.filter(
             p => p.category.toLowerCase() === filterCategory.toLowerCase()
-          );
-        }
+          );        }
 
         logInfo(
           'Marketplace.tsx: Raw items from static data before filtering/sorting:',
@@ -438,7 +424,7 @@ export default function Marketplace() {
   } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
 
   // Effect to refresh data when filters change
-  useEffect(() => {
+  useEffect((,) => {
     if (firstRenderRef.current) {
       firstRenderRef.current = false;
       // On initial mount, useInfiniteScrollPagination handles the first load.
@@ -476,8 +462,7 @@ export default function Marketplace() {
   useEffect(() => {
     logInfo(
       'Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'
-    );
-    // We call refresh directly to ensure data is re-fetched.
+    );    // We call refresh directly to ensure data is re-fetched.
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
     refresh();
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
@@ -490,8 +475,7 @@ export default function Marketplace() {
       // Check flag and ensure loading is false
       logInfo('Refresh complete and products updated, scrolling to top.');
       scrollToTop();
-      isRefreshingAfterFilterChange.current = false; // Reset flag
-      // Optionally, provide user feedback about the filter change
+      isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
     }
   }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
@@ -503,8 +487,7 @@ export default function Marketplace() {
       averagePrice:
         products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating:
-        products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
-      totalProducts: products.length,
+        products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,      totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category)))
         .length,
     };
@@ -527,8 +510,7 @@ export default function Marketplace() {
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(() => {    const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800);
     };
     window.addEventListener('scroll', handleScroll);
@@ -552,8 +534,7 @@ export default function Marketplace() {
           </p>
         </motion.div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {Array.from({ length: 12 }).map((_, i) => (
-            <SkeletonCard key={i} />
+          {Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />
           ))}
         </div>
       </div>
@@ -598,8 +579,8 @@ export default function Marketplace() {
   return (
     <div className='container py-8'>
       <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
+        isOpen = {isAuthModalOpen,}
+        onClose = {(,) => setIsAuthModalOpen(false),}
         returnUrl={router.asPath} // Pass current path for better UX on return
       />
       {/* Header */}
@@ -634,26 +615,26 @@ export default function Marketplace() {
         transition={{ delay: 0.3 }}
       >
         <FilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          minAiScore={minAiScore}
-          setMinAiScore={setMinAiScore}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions.filter(Boolean) as string[]}
-          filterLocation={filterLocation}
-          setFilterLocation={setFilterLocation}
-          locations={locations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
+          sortBy = {sortBy,}
+          setSortBy = {setSortBy,}
+          filterCategory = {filterCategory,}
+          setFilterCategory = {setFilterCategory,}
+          categories = {categories,}
+          priceRange = {priceRange,}
+          setPriceRange = {setPriceRange,}
+          minAiScore = {minAiScore,}
+          setMinAiScore = {setMinAiScore,}
+          minRating = {minRating,}
+          setMinRating = {setMinRating,}
+          filterAvailability = {filterAvailability,}
+          setFilterAvailability = {setFilterAvailability,}
+          availabilityOptions = {availabilityOptions.filter(Boolean) as string[],}
+          filterLocation = {filterLocation,}
+          setFilterLocation = {setFilterLocation,}
+          locations = {locations,}
+          showRecommended = {showRecommended,}
+          setShowRecommended = {setShowRecommended,}
+          loading = {isFetching,}
         />
       </motion.div>
 
@@ -665,10 +646,9 @@ export default function Marketplace() {
         transition={{ delay: 0.4 }}
       >
         <AnimatePresence mode='popLayout'>
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
+          {products.map((product, index) => (            <motion.div
+              key = {product.id,}
+              ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -694,12 +674,11 @@ export default function Marketplace() {
                   stock: product.stock,
                   in_stock: (product.stock || 0) > 0,
                 }}
-                onBuy={async () => {
+                onBuy = {async () => {
                   if (!isAuthenticated) {
                     setIsAuthModalOpen(true);
                     return; // Stop further execution
-                  }
-                  try {
+                  }                  try {
                     await router.push(`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', {
@@ -747,8 +726,7 @@ export default function Marketplace() {
           animate={{ opacity: 1 }}
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-            {Array.from({ length: 4 }).map((_, i) => (
-              <SkeletonCard key={`loading-${i}`} />
+            {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
             ))}
           </div>
         </motion.div>
@@ -775,8 +753,7 @@ export default function Marketplace() {
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'
-            initial={{ opacity: 0, scale: 0 }}
+            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -808,7 +785,6 @@ case 'ai-score': return (b.aiScore || 0) - (a.aiScore || 0);';
 case 'newest': ;
 }else {;
   handleApiError (err), //This might show a toast or log to Sentry ;
-
 
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
@@ -955,7 +931,6 @@ case 'newest': ;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
 
-
 }buyDisabled= {;
   false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {;
@@ -1031,12 +1006,54 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        variant: "destructive"}),
-      return;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+const Marketplace = () => {;
+  return (;
+    <>;
+      <Head>;
+        <title>Marketplace - Zion Tech Group</title>;
+        <meta name="description" content="Professional Marketplace services"  />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
+          <div className="text-center">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+              Marketplace;
+            </h1>;
+            <p className="text-xl text-gray-600 mb-12">;
+              Professional Marketplace services and solutions;
+            </p>;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24/7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Industry Expertise</li>;
+                  <li>• Proven Results</li>;
+                  <li>• Scalable Solutions</li>;
+                  <li>• Competitive Pricing</li>;
+                </ul>;
+              </div>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+                View Pricing;
+              </Link>;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+    </>;
+  );
+}
+;

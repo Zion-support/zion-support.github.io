@@ -14,7 +14,6 @@
         "solutions",
         "automation"
       ],
-      "id": 1
     },
     {
       "title": "About",
@@ -26,7 +25,6 @@
         "team",
         "mission"
       ],
-      "id": 2
     },
     {
       "title": "Services",
@@ -38,7 +36,6 @@
         "automation",
         "development"
       ],
-      "id": 3
     },
     {
       "title": "Contact",
@@ -49,7 +46,6 @@
         "support",
         "help"
       ],
-      "id": 4
     },
     {
       "title": "Portfolio",
@@ -61,7 +57,6 @@
         "work",
         "examples"
       ],
-      "id": 5
     },
     {
       "title": "Blog",
@@ -75,5 +70,4 @@
       ],
       "id": 6
     }
-  ]
 }

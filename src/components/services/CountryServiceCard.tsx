@@ -1,21 +1,27 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Badge } from '@/components/ui/badge';
-import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-
+  CardHeader,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
+import { CountryPricing } from '@/data/onsiteServicePricing'
 interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  isPopular?: boolean;
+  country: CountryPricing
+  onSelect: (country: CountryPricing) => void
+  onQuote?: (country: CountryPricing) => void
+  isPopular?: boolean; import Link from 'next/link'
+import { Badge } from "@/components/ui/badge"
+import { CountryPricing } from "@/data/onsiteServicePricing"
+interface CountryServiceCardProps {
+  country: CountryPricing,
+  onSelect: (country: CountryPricing,) => void,
+  onQuote?: (country: CountryPricing,) => void,
+  isPopular?: boolean
+}
 
 export function CountryServiceCard({
   country,
@@ -25,8 +31,7 @@ export function CountryServiceCard({
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
-    if (!countryName) return '🌐';
-
+    if (!countryName) return '🌐'
     const emojiMap: Record<string, string> = {
       'United States': '🇺🇸',
       'United Kingdom': '🇬🇧',
@@ -44,15 +49,12 @@ export function CountryServiceCard({
       'South Africa': '🇿🇦',
       // Default if no flag is found
       default: '🌐',
-    };
-
-    return emojiMap[countryName] || '🌐';
-  };
-
+    }
+    return emojiMap[countryName] || '🌐'
+  }
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return '8-24 hours';
-
+    if (!countryName) return '8-24 hours'
     const tier1 = [
       'United States',
       'United Kingdom',
@@ -62,7 +64,7 @@ export function CountryServiceCard({
       'Australia',
       'Canada',
       'France',
-    ];
+    ]
     const tier2 = [
       'China',
       'Brazil',
@@ -70,18 +72,15 @@ export function CountryServiceCard({
       'South Korea',
       'South Africa',
       'Russia',
-    ];
-
+    ]
     if (tier1.includes(countryName)) {
-      return '4 hours';
+      return '4 hours'
     } else if (tier2.includes(countryName)) {
-      return '6 hours';
+      return '6 hours'
     } else {
-      return '8-24 hours';
+      return '8-24 hours'
     }
-  };
-
-  
+  }
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -128,7 +127,7 @@ export function CountryServiceCard({
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
         <Button
-          onClick={() => onSelect(country)}
+          onClick = {() => onSelect(country),}
           className={`w-full ${
             isPopular
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
@@ -140,8 +139,7 @@ export function CountryServiceCard({
         <Button
           variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}
-        >
+          onClick={() => onQuote?.(country)}        >
           Get Quote
         </Button>
         <Button
@@ -153,12 +151,6 @@ export function CountryServiceCard({
         </Button>
       </CardFooter>
     </Card>
-  );
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

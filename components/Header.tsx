@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -160,9 +161,172 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
             >
               Contact
             </Link>
+=======
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
+  Zap,
+  Building,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+} from "lucide-react";
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const servicesDropdown = [
+    {
+      title: "Web Development",
+      description: "Custom websites and web applications",
+      href: "/services/web-development",
+      icon: Code,
+    },
+    {
+      title: "Mobile Development",
+      description: "iOS and Android applications",
+      href: "/services/mobile-development",
+      icon: Smartphone,
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure",
+      href: "/services/cloud-solutions",
+      icon: Cloud,
+    },
+    {
+      title: "Database Management",
+      description: "Database design and optimization",
+      href: "/services/database-management",
+      icon: Database,
+    },
+    {
+      title: "Security Services",
+      description: "Cybersecurity and data protection",
+      href: "/services/security",
+      icon: Shield,
+    },
+    {
+title: "Performance Optimization",
+      description: "Speed and efficiency improvements",
+      href: "/services/performance",
+      icon: Zap,
+    },
+  ];
+
+  const solutionsDropdown = [
+    {
+      title: "Enterprise Solutions",
+      description: "Comprehensive business technology solutions",
+      href: "/solutions/enterprise",
+      icon: Building,
+    },
+    {
+      title: "E-commerce Platforms",
+      description: "Online store development and management",
+      href: "/solutions/ecommerce",
+      icon: ShoppingCart,
+    },
+    {
+      title: "Healthcare Technology",
+      description: "Specialized healthcare IT solutions",
+      href: "/solutions/healthcare",
+      icon: Heart,
+    },
+    {
+title: "Educational Platforms",
+      description: "Learning management systems",
+      href: "/solutions/education",
+      icon: GraduationCap,
+    },
+  ];
+
+  const industriesDropdown = [
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
+    { name: "Logistics", href: "/industries/logistics", icon: Truck },
+    { name: "Finance", href: "/industries/finance", icon: CreditCard },
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
+    { name: "Education", href: "/industries/education", icon: GraduationCap },
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
+  ];
+
+  const navigation = [
+    { name: "Home", href: "/" },
+    {
+      name: "Services",
+      href: "/services",
+      submenu: [
+        { name: "AI Services", href: "/ai-services", icon: Brain },
+        { name: "IT Services", href: "/it-services", icon: Network },
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
+      ],
+    },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Industries", href: "/industries" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const handleServiceClick = (href: string) => {
+    closeMenu();
+    window.location.href = href;
+  };
+
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+>>>>>>> origin/main
           </nav>
 
-          {/* CTA Button */}
+          {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
@@ -175,11 +339,13 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -188,11 +354,12 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white shadow-lg"
             >
               <div className="px-4 py-6 space-y-4">
+<<<<<<< HEAD
                 <Link
                   href="/"
                   onClick={closeMenu}
@@ -262,6 +429,25 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                     Get Started
                   </Link>
                 </div>
+=======
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
+>>>>>>> origin/main
               </div>
             </motion.div>
           )}
@@ -269,6 +455,4 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

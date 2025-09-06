@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { SEO } from '@/components/SEO';
+import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import Link from 'next/link'
+import { SEO } from '@/components/SEO'
 import {
   BriefcaseIcon,
   UserIcon,
@@ -12,37 +11,34 @@ import {
   PlusCircle,
   FileText,
   Inbox,
-  Video,;
-} from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
-import { useAuth } from '@/hooks/useAuth';
-import {
+  Video,
+} from 'lucide-react'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
+import { useAuth } from '@/hooks/useAuth'
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps';
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { MyApplications } from '@/components/jobs/MyApplications';
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-
+  CardTitle,
+} from '@/components/ui/card'
+import { Avatar } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
+import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
+import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
+import { MyApplications } from '@/components/jobs/MyApplications'
+import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
+import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
 function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState('job-matches');
-  const onboardingStatus = useOnboardingStatus();
+  const { user } = useAuth()
+  const [activeTab, setActiveTab] = useState('job-matches')
+  const onboardingStatus = useOnboardingStatus()
   const showAdvanced =
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived;
-
+    onboardingStatus.matchReceived
   return (
     <>
       <SEO
@@ -220,18 +216,12 @@ function TalentDashboardContent() {
         </div>
       </main>
     </>
-  );
-
+  )
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  );
-=======
-
-<<<<<<< HEAD
-    onboardingStatus.matchReceived;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  )
+}
+;

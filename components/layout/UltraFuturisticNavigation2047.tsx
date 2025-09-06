@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Menu,
   ChevronDown,
@@ -65,9 +64,7 @@ import {
 
 interface NavigationItem {
   name: string;
-  href: string;
-=======
-import { 
+  href: string;  icon?: React.ReactNode;import { 
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
@@ -81,35 +78,28 @@ import {
 interface NavigationItem {
   name: string,
   href: string,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  icon?: React.ReactNode;
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
   featured?: boolean;
   category?: string;
-<<<<<<< HEAD
-  color?: string;
-=======
-  color?: string
+  color?: string;  color?: string
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 const navigationItems: NavigationItem[] = [
   {
     name: 'Home & Core',
     href: '/',
-<<<<<<< HEAD
-    icon: <Home className='w-5 h-5' />,
-=======
-    icon: <Home className="w-5 h-5" />,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from-emerald-500 to-cyan-500',
+    children: [
+      {    icon: <Home className="w-5 h-5" />,
     description: 'Main pages and core information',
     category: 'core',
     color: 'from-emerald-500 to-cyan-500',
     children: [
-<<<<<<< HEAD
       {
         name: 'Home',
         href: '/',
@@ -144,10 +134,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Technology Services',
     href: '/services',
-    icon: <Brain className='w-5 h-5' />,
-=======
-      { 
-        name: 'Home',
+    icon: <Brain className='w-5 h-5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
         href: '/',
         description: 'Main homepage',
         icon: <Home className="w-4 h-4" />,
@@ -181,13 +168,11 @@ const navigationItems: NavigationItem[] = [
     name: 'AI & Technology Services',
     href: '/services',
     icon: <Brain className="w-5 h-5" />,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     description: 'Advanced AI and technology solutions',
     badge: 'Featured',
     category: 'services',
     color: 'from-purple-500 to-pink-500',
     children: [
-<<<<<<< HEAD
       {
         name: 'All Services',
         href: '/services',
@@ -230,10 +215,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Advanced Solutions',
     href: '/solutions',
-    icon: <Rocket className='w-5 h-5' />,
-=======
-      { 
-        name: 'All Services',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {        name: 'All Services',
         href: '/services',
         description: 'Complete services overview',
         icon: <Grid className="w-4 h-4" />,
@@ -275,12 +261,10 @@ const navigationItems: NavigationItem[] = [
     name: 'Advanced Solutions',
     href: '/solutions',
     icon: <Rocket className="w-5 h-5" />,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     description: 'Cutting-edge technology solutions',
     category: 'solutions',
     color: 'from-blue-500 to-cyan-500',
     children: [
-<<<<<<< HEAD
       {
         name: 'Solutions Overview',
         href: '/solutions',
@@ -314,10 +298,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources & Insights',
     href: '/blog',
-    icon: <FileText className='w-5 h-5' />,
-=======
-      { 
-        name: 'Solutions Overview',
+    icon: <FileText className='w-5 h-5' />,    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+      {        name: 'Solutions Overview',
         href: '/solutions',
         description: 'Complete solutions overview',
         icon: <Rocket className="w-4 h-4" />,
@@ -350,12 +335,10 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources & Insights',
     href: '/blog',
     icon: <FileText className="w-5 h-5" />,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     description: 'Knowledge base and insights',
     category: 'resources',
     color: 'from-orange-500 to-red-500',
     children: [
-<<<<<<< HEAD
       {
         name: 'Blog & Articles',
         href: '/blog',
@@ -389,10 +372,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Company & Support',
     href: '/about',
-    icon: <Building className='w-5 h-5' />,
-=======
-      { 
-        name: 'Blog & Articles',
+    icon: <Building className='w-5 h-5' />,    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+      {        name: 'Blog & Articles',
         href: '/blog',
         description: 'Latest insights and articles',
         icon: <FileText className="w-4 h-4" />,
@@ -425,14 +409,11 @@ const navigationItems: NavigationItem[] = [
     name: 'Company & Support',
     href: '/about',
     icon: <Building className="w-5 h-5" />,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     description: 'Company information and support',
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
-<<<<<<< HEAD
       {
-        name: 'About Zion Tech Group',
         href: '/about',
         description: 'Our story and mission',
         icon: <Info className='w-4 h-4' />,
@@ -460,46 +441,16 @@ const navigationItems: NavigationItem[] = [
         color: 'from-red-500 to-pink-500',
       },
     ],
-  },
-=======
-      { 
-        name: 'About Zion Tech Group',
-        href: '/about',
-        description: 'Our story and mission',
-        icon: <Info className="w-4 h-4" />,
-        featured: true
-      };
-      { 
-        name: 'Careers',
-        href: '/careers',
-        description: 'Join our team',
-        icon: <Users className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-500'
-      };
-      { 
-        name: 'Support',
-        href: '/support',
-        description: 'Get help and support',
-        icon: <MessageCircle className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
-      };
-      { 
-        name: 'Privacy Policy',
-        href: '/privacy',
-        description: 'Privacy and data protection',
-        icon: <Shield className="w-4 h-4" />,
+  },];        icon: <Shield className="w-4 h-4" />,
         color: 'from-red-500 to-pink-500'
       }
     ]
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-];
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 };
 
@@ -527,18 +478,10 @@ const socialLinks = [
     href: 'https://youtube.com/@ziontechgroup',
     icon: Youtube,
     color: 'hover:text-red-500',
-  },
-=======
-  website: 'https://ziontechgroup.com'
-};
-
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-];
 
 const UltraFuturisticNavigation2047 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -548,27 +491,22 @@ const UltraFuturisticNavigation2047 = () => {
   const closeMenu = () => setIsOpen(false);
 
   const handleDropdownToggle = (name: string) => {
-<<<<<<< HEAD
-    setActiveDropdown(activeDropdown === name ? null : name);
-=======
-    setActiveDropdown(activeDropdown === name ? null : name)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
-<<<<<<< HEAD
-        setActiveDropdown(null);
-=======
-        setActiveDropdown(null)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+        setActiveDropdown(null);      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);        setActiveDropdown(null)
       }
     };
 
     window.addEventListener('resize', handleResize);
-<<<<<<< HEAD
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -582,10 +520,7 @@ const UltraFuturisticNavigation2047 = () => {
               <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center'>
                 <Rocket className='w-5 h-5 text-white' />
               </div>
-              <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
-=======
-    return () => window.removeEventListener('resize', handleResize)
-  }, []);
+              <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
 
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
@@ -598,14 +533,12 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>
             {navigationItems.map(item => (
               <div key={item.name} className='relative group'>
@@ -615,19 +548,13 @@ const UltraFuturisticNavigation2047 = () => {
                 >
                   {item.icon}
                   <span>{item.name}</span>
-                  <ChevronDown className='w-4 h-4' />
-=======
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
+                  <ChevronDown className='w-4 h-4' />                </button>                <button
                   onClick={() => handleDropdownToggle(item.name)}
                   className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 </button>
 
                 <AnimatePresence>
@@ -637,7 +564,6 @@ const UltraFuturisticNavigation2047 = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-<<<<<<< HEAD
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
                     >
                       <div className='space-y-4'>
@@ -659,10 +585,13 @@ const UltraFuturisticNavigation2047 = () => {
                                   {child.name}
                                 </span>
                                 {child.featured && (
-                                  <span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full'>
-=======
-                      className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
-                    >
+                                  <span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full'>                                    Featured
+                                  </span>
+                                )}
+                              </div>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {child.description}
+                              </p>                            </div>                    >
                       <div className="space-y-4">
                         {item.children?.map((child) => (
                           <Link
@@ -679,18 +608,13 @@ const UltraFuturisticNavigation2047 = () => {
                                 <span className="font-medium text-white">{child.name}</span>
                                 {child.featured && (
                                   <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                                     Featured
                                   </span>
                                 )}
                               </div>
-<<<<<<< HEAD
                               <p className='text-sm text-gray-400 mt-1'>
                                 {child.description}
-                              </p>
-=======
-                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
                           </Link>
                         ))}
@@ -703,42 +627,38 @@ const UltraFuturisticNavigation2047 = () => {
           </div>
 
           {/* Contact Info & CTA */}
-<<<<<<< HEAD
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
               <a
                 href={`tel:${contactInfo.mobile}`}
                 className='flex items-center space-x-1 hover:text-white transition-colors'
               >
-                <Phone className='w-4 h-4' />
-=======
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+                <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                <span>{contactInfo.mobile}</span>
               </a>
             </div>
             <Link
-<<<<<<< HEAD
               href='/contact'
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
             >
               Get Started
-              <ArrowRight className='ml-2 w-4 h-4' />
-=======
-              href="/contact"
+              <ArrowRight className='ml-2 w-4 h-4' />            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className='lg:hidden'>              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
               <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
           </div>
 
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <div className='lg:hidden'>
             <button
               onClick={toggleMenu}
@@ -748,10 +668,7 @@ const UltraFuturisticNavigation2047 = () => {
               {isOpen ? (
                 <X className='block h-6 w-6' />
               ) : (
-                <Menu className='block h-6 w-6' />
-=======
-          <div className="lg:hidden">
-            <button
+                <Menu className='block h-6 w-6' />              )}            <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
@@ -760,7 +677,6 @@ const UltraFuturisticNavigation2047 = () => {
                 <X className="block h-6 w-6" />
               ) : (
                 <Menu className="block h-6 w-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               )}
             </button>
           </div>
@@ -775,7 +691,6 @@ const UltraFuturisticNavigation2047 = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
@@ -792,11 +707,7 @@ const UltraFuturisticNavigation2047 = () => {
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
                     />
-                  </button>
-
-=======
-            className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
-          >
+                  </button>          >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <div key={item.name}>
@@ -811,7 +722,6 @@ const UltraFuturisticNavigation2047 = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
                   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
@@ -819,23 +729,18 @@ const UltraFuturisticNavigation2047 = () => {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-<<<<<<< HEAD
                         className='ml-4 mt-2 space-y-1'
                       >
                         {item.children?.map(child => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
-=======
-                        className="ml-4 mt-2 space-y-1"
-                      >
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
                         {item.children?.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                             onClick={closeMenu}
                           >
                             {child.name}
@@ -846,7 +751,6 @@ const UltraFuturisticNavigation2047 = () => {
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
 
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
@@ -882,10 +786,7 @@ const UltraFuturisticNavigation2047 = () => {
                     onClick={closeMenu}
                   >
                     Get Started
-                    <ArrowRight className='ml-2 w-4 h-4' />
-=======
-              
-              {/* Mobile Contact Info */}
+                    <ArrowRight className='ml-2 w-4 h-4' />                  </Link>              {/* Mobile Contact Info */}
               <div className="pt-4 pb-3 border-t border-slate-700/50">
                 <div className="px-3 py-2 text-sm text-gray-400">
                   <div className="flex items-center space-x-2 mb-2">
@@ -914,7 +815,6 @@ const UltraFuturisticNavigation2047 = () => {
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </Link>
                 </div>
               </div>
@@ -923,14 +823,10 @@ const UltraFuturisticNavigation2047 = () => {
         )}
       </AnimatePresence>
     </nav>
-<<<<<<< HEAD
   );
 };
 
-export default UltraFuturisticNavigation2047;
-=======
-  )
+export default UltraFuturisticNavigation2047;  )
 };
 
 export default UltraFuturisticNavigation2047;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

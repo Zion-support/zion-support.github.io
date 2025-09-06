@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,10 +59,7 @@ const EnhancedNavigation = () => {
             <Link
               href='/contact'
               className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
-            >
-=======
-import { Star } from 'lucide-react';
-const EnhancedNavigation = () => {
+            >              Get Startedconst EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
   return (
@@ -99,14 +95,12 @@ const EnhancedNavigation = () => {
               Careers
             </Link>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
-<<<<<<< HEAD
             className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -121,21 +115,16 @@ const EnhancedNavigation = () => {
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M4 6h16M4 12h16M4 18h16'
-              />
-=======
-            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+              />            </svg>            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </svg>
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-<<<<<<< HEAD
           <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link
@@ -177,12 +166,7 @@ const EnhancedNavigation = () => {
               <Link
                 href='/contact'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-=======
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
-              <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
-                Home
+              >                Contact                Home
               </Link>
               <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
                 Services
@@ -200,7 +184,6 @@ const EnhancedNavigation = () => {
                 Careers
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 Contact
               </Link>
             </div>
@@ -208,13 +191,9 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-  );
-<<<<<<< HEAD
+);
 };
 
-export default EnhancedNavigation;
-=======
-},
+export default EnhancedNavigation;},
 
 export default EnhancedNavigation;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

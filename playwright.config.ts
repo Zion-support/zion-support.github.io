@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 ;
 interface Playwright.configProps {;
@@ -11,9 +12,14 @@ export default function Playwright.config({ }: Playwright.configProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
 =======
+>>>>>>> origin/main
+<<<<<<< HEAD
+}}},
+}
+}}};
+=======
+<<<<<<< HEAD
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
@@ -28,3 +34,7 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 };
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}}},}}};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
