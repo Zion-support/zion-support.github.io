@@ -1,5 +1,5 @@
-import Head from 'next/head';
 
+<<<<<<< HEAD
 export default function Page() {
 
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -47,3 +47,7 @@ export default function Page() {
       </main>
     </div>
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

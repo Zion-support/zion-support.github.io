@@ -1,27 +1,54 @@
-/**
- * Environment Polyfill for Browser
- * 
- * This polyfill ensures that process.env is always available in the browser environment.
- * It prevents the "Cannot read properties of undefined (reading 'env')" error.
- */
-// Define safe defaults for environment variables
 
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
+<<<<<<< HEAD
 
 // Create a safe process object
+=======
+  NEXT_PUBLIC_APP_URL: ''
+  NEXT_PUBLIC_SUPABASE_URL: ''
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
+}
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv }
+  versions: {}
+  platform: 'browser'
+  arch: 'x64'
+  version: '18.0.0'
+  browser: true
+})
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
+
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+}
+>>>>>>> // Create a safe process object
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const createProcessObject = () => ({
   env: { ...defaultEnv },
   versions: {},
   platform: 'browser',
   arch: 'x64',
   version: '18.0.0',
+<<<<<<< HEAD
 
 // Ensure process is available on globalThis
+=======
+  browser: true}),
+
+  browser: true,
+})
+>>>>>>> // Ensure process is available on globalThis
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
     (globalThis as any).process = createProcessObject()
   } else if (typeof (globalThis as any).process.env === 'undefined') {
+<<<<<<< HEAD
+=======
+export default safeEnv
+export default safeEnv
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     (globalThis as any).process.env = { ...defaultEnv }
   }
@@ -64,24 +91,14 @@ export function isDevelopment(): boolean {;
 export function isProduction(): boolean {;
   return getEnv('NODE_ENV') === 'production';
 }
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 
-// Export the polyfilled process object
-export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
-  NODE_ENV: 'production',
-  NEXT_PUBLIC_APP_URL: '',
-  NEXT_PUBLIC_SUPABASE_URL: '',
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
-
-// // // console.log('✅ Environment polyfill loaded successfully'),
-
-export default safeEnv,
-;
-// Export the polyfilled process object;
-export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {;
-  NODE_ENV: 'production',;
-  NEXT_PUBLIC_APP_URL: '',;
-  NEXT_PUBLIC_SUPABASE_URL: '',;
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},;
-// // // console.log('✅ Environment polyfill loaded successfully'),;
 export default safeEnv;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

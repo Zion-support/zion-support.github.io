@@ -1,5 +1,35 @@
+<<<<<<< HEAD
 
 
+=======
+import React, { useState, useEffect } from 'react',
+import { useRouter } from 'next/router', // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth  } from '@/hooks/useAuth';
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
+import { FilterSidebar  } from '@/components/talent/FilterSidebar';
+import { TalentResults  } from '@/components/talent/TalentResults';
+import { TalentSkeleton  } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner  } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
+import { useTalentDirectory  } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS  } from '@/data/sortOptions';
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import Image from 'next/image';
+import { TalentProfile } from '@/types/talent';
+import { Pagination;
+  PaginationContent;
+  PaginationItem;
+  PaginationButton;
+  PaginationNext;
+  PaginationPrevious } from '@/components/ui/pagination';
+export default function TalentDirectory() {
+  const router = null;
+                            setCurrentPage(
+                              Math.min(totalPages, currentPage + 1)
+                            )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -132,10 +162,6 @@ export default function TalentDirectory() {;
     currentPage,
     initialized]), // Fixed dependencies
 
-  const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent),
-    setIsHireModalOpen(true)
-  },
 
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
@@ -293,8 +319,12 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
+<<<<<<< HEAD
 
                           }}
+=======
+>>>>>>>                           }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -303,7 +333,7 @@ export default function TalentDirectory() {;
               )}
             </ErrorBoundary>
           </div>
-
+>>>>>>> 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -343,4 +373,24 @@ export default function TalentDirectory() {;
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
+=======
+        </div>
+      </div>
+    </div>
+  )
+}
+  );
+}
+>>>>>>> 
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

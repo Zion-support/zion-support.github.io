@@ -1,22 +1,67 @@
 
+<<<<<<< HEAD
 
+=======
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   DialogContent, 
   DialogHeader, 
   DialogTitle, 
   DialogDescription 
+<<<<<<< HEAD
 
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
 
+=======
+>>>>>>> interface QuoteDetailsProps {
+  quote: QuoteRequest | null
+  isOpen: boolean
+  onClose: () => void
+}
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
+  if (!quote) return null
+  const formatDate = (dateString?: string) => {
+}
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+  const formatDate = (dateString?: string) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!dateString) return 'Not specified';    try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
     }
   }
+<<<<<<< HEAD
 
+=======
+import React from "react",
+import { 
+  Dialog,
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+import { format } from "date-fns",
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null,
+  isOpen: boolean,
+  onClose: () => void
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",;
 import {;
   Dialog,;
@@ -37,19 +82,25 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-;
+
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
+  if (!quote) return null;
+
   const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
+    if (!dateString) return 'Not specified';    try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
   },
 
   return (
+=======
+  }
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
@@ -61,9 +112,26 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
 
+=======
+        <Separator className="my-4" />
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
+>>>>>>>           <Card>
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+        
+        <Separator className="my-4" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Card>
-            <CardContent className="pt-6">
+>>>>>>>             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -77,9 +145,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 
+=======
+>>>>>>>           <Card>
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Card>
-            <CardContent className="pt-6">
+>>>>>>>             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -94,19 +167,39 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>>         <Card className="mt-6">
+          <CardContent className="pt-6">
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>
+            <p className="mb-4">{quote.project_summary}</p>
+>>>>>>>             {quote.project_description && (
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
 
+<<<<<<< HEAD
+=======
+
+            
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             {quote.project_description && (
-              <>
+>>>>>>>               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -119,13 +212,23 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
+=======
+>>>>>>>         <div className="mt-6 flex justify-end">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mt-6 flex justify-end">
-          <Button onClick={onClose}>Close</Button>
+>>>>>>>           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
   )
 
 },
+<<<<<<< HEAD
 
+=======
+>>>>>>> >>>>>>> 
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

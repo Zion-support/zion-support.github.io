@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 
 
+=======
+
+    unreadCount
+    markAsRead
+  const handleFilterChange = (newFilter: FilterType,) => {
+    setFilter(newFilter as any)
+  }
+  return (
+    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -18,9 +29,13 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+<<<<<<< HEAD
 
+=======
+>>>>>>>     unreadCount, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     unreadCount, 
-    markAsRead, 
+>>>>>>>     markAsRead, 
     markAllAsRead,
     dismissNotification, 
     loading,
@@ -34,6 +49,14 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+<<<<<<< HEAD
+=======
+  const handleFilterChange = (newFilter: FilterType,) => {
+    setFilter(newFilter as any)
+  }
+  return (
+    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -97,15 +120,6 @@ export const NotificationCenter: React.FC = () => {;
     }
   }, [open, loadedOnce, fetchNotifications]),
 
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
@@ -113,12 +127,17 @@ export const NotificationCenter: React.FC = () => {;
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
+<<<<<<< HEAD
 
       <PopoverTrigger asChild>
+=======
+>>>>>>>       <PopoverTrigger asChild>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
 
           )}
         </Button>
@@ -136,6 +155,42 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>
     </Popover>
   )
+=======
+              {unreadCount > 9 ? '9+' : unreadCount}
+            </span>
+>>>>>>>           )}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+ursor/fix-website-loading-errors-and-merge-6662
+    setFilter(newFilter as any);
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          )}
+
+        </Button>;
+      </PopoverTrigger>;
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
+>>>>>>>         <NotificationHeader
+          unreadCount = {unreadCount,}
+          onMarkAllAsRead = {handleMarkAllAsRead,}
+        />;
+
+        <NotificationFilter
+          filter = {filter as FilterType,}
+          onFilterChange = {handleFilterChange,}
+        />;
+
+
+        <NotificationList
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
@@ -154,9 +209,18 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
+
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+        <NotificationHeader 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+import React, { useState } from 'react',
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string;
+  alt?: string;
+  /** Source to use if the main src fails */
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -10,10 +20,18 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> }
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-  fallbackSrc?: string
+>>>>>>>   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string
@@ -31,6 +49,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  */
 export function ImageWithRetry({
 
+<<<<<<< HEAD
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
@@ -74,6 +93,14 @@ export function ImageWithRetry({
       )}
     </div>
   )
+=======
+  src
+  alt = ''
+  fallbackSrc = '/images/image-placeholder.svg'
+  className
+  retryClassName
+export default ImageWithRetry
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   ...props
 }: ImageWithRetryProps) {
@@ -116,4 +143,16 @@ export function ImageWithRetry({
 }
 ;
 export default ImageWithRetry;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

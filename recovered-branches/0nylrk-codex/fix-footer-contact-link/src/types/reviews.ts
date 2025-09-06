@@ -1,5 +1,17 @@
 
+<<<<<<< HEAD
 
+=======
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+;
+
+export interface Review {
+=======
+
+export interface Review {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -17,18 +29,29 @@
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-    display_name: string
-    avatar_url?: string
+
+    display_name: string,
+    avatar_url?: string;
+
   }
 }
+<<<<<<< HEAD
 
+=======
+
+
+
+export interface ReviewReport {;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
-  created_at: string
 
+<<<<<<< HEAD
   resolved_at?: string
 }
 
@@ -67,3 +90,9 @@ export interface ReviewReport {;
 }
 ;
 
+=======
+  created_at: string,
+  resolved_at?: string;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

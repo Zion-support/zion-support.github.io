@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+
 
 const ReleaseNotesAgent: NextPage = () => {
   return (
@@ -13,8 +11,26 @@ const ReleaseNotesAgent: NextPage = () => {
         <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+=======
+=======
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </main>
     </div>
   )
 },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including LLM applications, RAG systems, custom AI agents, and MLOps solutions for enterprise-grade AI implementation.'
@@ -13,64 +14,12 @@ export const metadata = {
           and production-ready MLOps. We help you harness AI to solve real business problems.
         </p>
       </section>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-      {/* Featured AI Solutions */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Our AI Solutions
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AISolutionCard
-            title="Intelligent Document Processing"
-            description="AI-powered document analysis, extraction, and intelligent routing for enterprise workflows"
-            features={["OCR & NLP processing", "Smart data extraction", "Automated routing", "Compliance checking", "Multi-format support"]}
-            pricing="$3,500/month"
-            category="Document AI"
-            icon="📄"
-          />
-          <AISolutionCard
-            title="Conversational AI Assistant"
-            description="Custom chatbots and virtual assistants with natural language understanding and context awareness"
-            features={["Multi-language support", "Context retention", "Integration APIs", "Analytics dashboard", "Custom training"]}
-            pricing="$2,800/month"
-            category="Conversational AI"
-            icon="💬"
-          />
-          <AISolutionCard
-            title="Predictive Analytics Engine"
-            description="Machine learning models for forecasting, risk assessment, and business intelligence"
-            features={["Time series forecasting", "Anomaly detection", "Risk modeling", "Real-time predictions", "Custom algorithms"]}
-            pricing="$4,200/month"
-            category="Predictive AI"
-            icon="📊"
-          />
-          <AISolutionCard
-            title="Computer Vision Platform"
-            description="Image and video analysis for quality control, security, and automated inspection"
-            features={["Object detection", "Quality inspection", "Facial recognition", "Video analytics", "Real-time processing"]}
-            pricing="$3,800/month"
-            category="Computer Vision"
-            icon="👁️"
-          />
-          <AISolutionCard
-            title="AI-Powered Search & RAG"
-            description="Intelligent search with retrieval-augmented generation for knowledge management"
-            features={["Semantic search", "Vector databases", "Knowledge graphs", "Context-aware responses", "Multi-source integration"]}
-            pricing="$2,200/month"
-            category="Search AI"
-            icon="🔍"
-          />
-          <AISolutionCard
-            title="Automated Content Generation"
-            description="AI content creation for marketing, documentation, and personalized communications"
-            features={["Multi-format content", "Brand voice training", "SEO optimization", "A/B testing", "Content scheduling"]}
-            pricing="$1,900/month"
-            category="Content AI"
-            icon="✍️"
-          />
-        </div>
-      </section>
+export const metadata = { title: 'AI Services | Zion Tech Group' }; export default function AIPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>AI Services</h1> <p style={{marginTop: 8,color: '#374151'}}>Ship AI features with confidence: RAG,agents,fine-tuning,evals and MLOps.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Applied AI" details={["RAG over private data","Task-specific agents","Vision + speech","Personalization"]} /> <Item title="Model Ops" details={["Offline evals","Safety + guardrails","Batch + streaming","Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines","Feature stores","Vector DBs","Monitoring + drift"]} /> </div> <Pricing /> </section> )} function Item(): any ({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details && details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks","Use-case design","Tech selection","Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks","RAG/agent MVP","Evals + safety","Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra","Monitoring","SLAs","Cost optimization"]} /> </div> )} function Plan(): any ({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features && features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
 
+<<<<<<< HEAD
       {/* Core AI Services */}
       <section className="py-12 bg-gray-50">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -297,3 +246,20 @@ function ContactSection() {
     </div>
   );
 }
+=======
+=======
+export const metadata = { title: 'AI Services | Zion Tech Group' } export default /**
+ * AIPage - Function description
+ */
+function AIPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>AI Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Ship AI features with confidence: RAG, agents, fine - tuning, evals and MLOps.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Applied AI" details={["RAG over private data", "Task - specific agents", "Vision + speech", "Personalization"]} /> <Item title="Model Ops" details={["Offline evals", "Safety + guardrails", "Batch + streaming", "Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines", "Feature stores", "Vector DBs", "Monitoring + drift"]} /> </div> <Pricing /> </section> )} /**
+ * Item - Function description
+ */
+function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
+ * Pricing - Function description
+ */
+function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks", "Use - case design", "Tech selection", "Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks", "RAG / agent MVP", "Evals + safety", "Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization"]} /> </div> )} /**
+ * Plan - Function description
+ */
+function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

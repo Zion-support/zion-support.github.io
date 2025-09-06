@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
 import { Award } from 'lucide-react'
 interface TalentCardBadgesProps {
   featured: boolean | undefined
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
 
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+  if (!featured) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Award } from 'lucide-react'
@@ -14,7 +20,10 @@ interface TalentCardBadgesProps {
 
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -23,7 +32,11 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
       </Badge>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from 'lucide-react';
@@ -43,4 +56,11 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

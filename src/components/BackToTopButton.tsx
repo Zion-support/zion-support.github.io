@@ -1,5 +1,16 @@
 import { ArrowUp } from 'lucide-react'
+<<<<<<< HEAD
 
+=======
+import { useEffect, useState } from "react";
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const updateVisibility = null;
+  return (
+    <button
+      aria-label="Back to top"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useEffect, useState } from "react",
 
 export function BackToTopButton() {
@@ -32,7 +43,7 @@ export function BackToTopButton() {
       <ArrowUp className="h-5 w-5" />
     </button>
   )
-import { ArrowUp } from 'lucide-react';
+>>>>>>> import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
@@ -53,9 +64,24 @@ export function BackToTopButton() {;
   return (;
     <button;
       aria-label="Back to top";
+<<<<<<< HEAD
 
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
 
+=======
+>>>>>>>       onClick={scrollToTop}
+      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <ArrowUp className="h-5 w-5" />
+    </button>
+  )
+}"}
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

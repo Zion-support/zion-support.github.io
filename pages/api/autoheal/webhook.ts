@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
 
@@ -50,13 +51,23 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (e) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       // ignore if missing;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    }
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
   }
 }
 ;
+<<<<<<< HEAD
     return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (error) {
     console.error(e);
@@ -70,3 +81,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+=======
+  try {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

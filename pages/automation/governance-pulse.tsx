@@ -1,9 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
-export default function GovernancePulsePage() {
 
-  const items: any[] = (data?.items |[]).slice(0, 60)
 
+<<<<<<< HEAD
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -42,3 +39,5 @@ export default function GovernancePulsePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

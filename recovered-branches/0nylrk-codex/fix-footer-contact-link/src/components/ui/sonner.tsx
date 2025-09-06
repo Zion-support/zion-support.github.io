@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 const Toaster = ({ ...props }: ToasterProps) => {
 
+=======
+
+import { useTheme } from "next-themes"
+import { Toaster as Sonner, toast } from "sonner"
+
+
+type ToasterProps = React.ComponentProps<typeof Sonner>
+const Toaster = ({ ...props }: ToasterProps) => {
+
+  const { theme = "system" } = useTheme()
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -10,12 +24,48 @@ const Toaster = ({ ...props }: ToasterProps) => {
         classNames: {
           toast:
 
+<<<<<<< HEAD
+=======
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
+=======
+import { use_theme } from &quot;next - themes & quot;
+import { Toaster as Sonner, toast } from &quot;sonner & quot;
+;
+type ToasterProps = React.ComponentProps < typeof Sonner>;
+const Toaster = ({ ...props }: ToasterProps) =>: any {
+  const { theme = &quot;system & quot; } = use_theme ();
+  return (
+    <Sonner;
+      theme={theme as ToasterProps[&quot;theme & quot;]}
+      className=&quot;toaster group & quot;
+      toast_options={{
+        class_names: {
+          toast:;
+            &quot;group toast group-[.toaster]:bg - background group-[.toaster]:text - foreground group-[.toaster]:border - border group-[.toaster]:shadow - lg & quot;,
+          description: &quot;group-[.toast]:text - muted - foreground & quot;,
+          action_button:;
+            &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
+          cancel_button:;
+            &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
+      {...props}
+    />);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 ;
 
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

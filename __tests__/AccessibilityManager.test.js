@@ -19,6 +19,12 @@ describe('AccessibilityManager', () => {'}
     render(<AccessibilityManager />);,
   });
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

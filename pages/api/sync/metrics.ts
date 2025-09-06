@@ -1,6 +1,24 @@
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -16,10 +34,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
+<<<<<<< HEAD
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -28,6 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
+<<<<<<< HEAD
 
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
@@ -107,3 +136,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+      const p = e.payload as any,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

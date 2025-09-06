@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react',;
+=======
+
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches
+        description: 'Your browser does not support app installation.'})
+      return
+
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
+        description: 'Your browser does not support app installation.'}),
+      return;
+
+>>>>>>> import React, { useEffect, useState } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner',;
@@ -66,4 +79,10 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 export default PwaInstallButton,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

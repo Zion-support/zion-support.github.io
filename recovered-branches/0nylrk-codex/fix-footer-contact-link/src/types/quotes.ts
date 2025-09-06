@@ -1,9 +1,16 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
+<<<<<<< HEAD
 
   name: string;
   email: string;
@@ -11,11 +18,64 @@ export type BudgetType = "fixed" | "hourly" | "range";
   company: string
 }
 
+=======
+
+;
+export interface ListingItem {
+=======
+
+
+export interface ListingItem {;
+
+  id: string;
+  title: string;
+  category: string,
+  image?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+
+export interface ContactInfo {;
+
+
+  name: string;
+  email: string;
+
+  phone: string,
+  company: string;
+}
+export interface Budget {
+  amount: number;
+  max_amount?: number,
+  type: BudgetType;
+
+}
+export interface QuoteFormData {
+  service_type: ServiceType;
+  service_category: ServiceCategory;
+  specific_item: ListingItem | null;
+  project_name: string;
+  project_description: string;
+  start_date?: Date;
+  end_date?: Date;
+=======
+
+
+export interface Budget {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   amount: number;
   maxAmount?: number
   type: BudgetType
 }
+<<<<<<< HEAD
 
+=======
+
+
+export interface QuoteFormData {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -23,12 +83,26 @@ export type BudgetType = "fixed" | "hourly" | "range";
   projectDescription: string;
   startDate?: Date;
   endDate?: Date;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
-  budget: Budget
-  contactInfo: ContactInfo
+
+  budget: Budget,
+  contact_info: ContactInfo;
 }
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
+<<<<<<< HEAD
 
+=======
+;
+
+export interface QuoteRequest {
+=======
+
+
+export interface QuoteRequest {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -47,8 +121,8 @@ export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'clos
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
-  created_at: string
 
+<<<<<<< HEAD
   updated_at: string
 }
 
@@ -124,3 +198,9 @@ export interface QuoteRequest {;
 }
 ;
 
+=======
+  created_at: string,
+  updated_at: string;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

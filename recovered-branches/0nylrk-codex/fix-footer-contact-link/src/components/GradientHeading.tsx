@@ -1,5 +1,38 @@
 
+<<<<<<< HEAD
 
+=======
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+
+export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+
+  return (
+    <Tag
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
+
+        className
+      )}>;
+=======
+
+import { cn } from "@/lib/utils",
+import React from "react",
+=======
+import {cn} from "@/lib/utils";
+import React from "react";
+=======
+import { cn } from "@/lib/utils",
+import React from "react",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -7,12 +40,17 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
+<<<<<<< HEAD
 export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
     <Tag
       className={cn(
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",;
 import React from "react",;
 interface GradientHeadingProps {;
@@ -28,10 +66,41 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
       className={cn(;
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
         className;
+=======
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       )}
     >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
-    </Tag>
-  )
+
+    </Tag>;
+  );
 }
+
+=======
+import { cn } from '@/lib / utils';
+import React from './react';
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  class_name?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+export /**
+ * GradientHeading - Function description
+ */
+function GradientHeading() {
+  const Tag = level;
+;
+  return (
+    <Tag;
+      className={cn (
+        "text - 4xl font - bold tracking - tight bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent";
+        class_name)}
+    >;
+      {children}
+    </Tag>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

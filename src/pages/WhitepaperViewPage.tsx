@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase  } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
@@ -24,7 +28,11 @@ interface SharedWhitepaper {
   }
   created_at: string
   is_public: boolean
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client',;
@@ -50,11 +58,18 @@ interface SharedWhitepaper {;
   },;
   created_at: string,;
   is_public: boolean;
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> }
+
+onst WhitepaperViewPage: React.FC = () => {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter()
+>>>>>>>   const router = useRouter()
   const { id: rawId } = router.query
   const id = typeof rawId === 'string' ? rawId : undefined
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
@@ -64,9 +79,16 @@ const WhitepaperViewPage: React.FC = () => {
   useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
+<<<<<<< HEAD
 
         return;
 
+=======
+        setError("No whitepaper ID provided.")
+        setLoading(false)
+        return
+        return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
       setLoading(true)
       setError(null)
@@ -85,7 +107,11 @@ const WhitepaperViewPage: React.FC = () => {
       } finally {
         setLoading(false)
       }
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     fetchWhitepaper()
   }, [id])
   if (loading) {
@@ -136,16 +162,23 @@ const WhitepaperViewPage: React.FC = () => {
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
+<<<<<<< HEAD
+=======
+}
+export default WhitepaperViewPage;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     },;
     fetchWhitepaper();
   }, [id]),;
+
   if (loading) {;
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
   }
-;
+
   if (error) {;
-    return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
         <Button asChild variant="link" className="mt-4">;
@@ -154,9 +187,11 @@ const WhitepaperViewPage: React.FC = () => {
       </div>;
     );
   }
-;
+
+
   if (!sharedData) { // Check sharedData which includes the is_public flag;
-    return (;
+
+    return (
          <div className="flex flex-col justify-center items-center h-screen">;
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
             <Button asChild variant="link" className="mt-4">;
@@ -165,10 +200,12 @@ const WhitepaperViewPage: React.FC = () => {
         </div>;
     );
   }
-;
+
+
   // Access control based on is_public and admin role;
-  if (!sharedData.is_public && !isAdmin) {;
-    return (;
+  if (!sharedData && sharedData.is_public && !isAdmin) {;
+
+    return (
       <div className="flex flex-col justify-center items-center h-screen">;
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;
@@ -178,9 +215,12 @@ const WhitepaperViewPage: React.FC = () => {
       </div>;
     );
   }
-;
+
+
   const { whitepaper_data: whitepaper } = sharedData,;
-  return (;
+
+
+  return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
         <div className="mb-6 flex justify-between items-center">;
             <Button asChild variant="outline">;
@@ -188,21 +228,33 @@ const WhitepaperViewPage: React.FC = () => {
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
-            {!sharedData.is_public && isAdmin && (;
+            {!sharedData && sharedData.is_public && isAdmin && (;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;
             )}
         </div>;
-      <WhitepaperPreviewPanel;
-        sections={whitepaper.sections}
-        distributionChartData={whitepaper.distributionChartData}
-        tokenName={whitepaper.tokenName}
-        tokenSupply={whitepaper.tokenSupply}
+      <WhitepaperPreviewPanel
+
+        sections = {whitepaper && whitepaper.sections,}
+        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
+        tokenName = {whitepaper && whitepaper.tokenName,}
+        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
       />;
     </div>;
   );
 },;
+<<<<<<< HEAD
 
 export default WhitepaperViewPage;
 
+=======
+export default WhitepaperViewPage;
+export default WhitepaperViewPage;
+>>>>>>> 
+        setError("No whitepaper ID provided."),
+        setLoading(false),
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

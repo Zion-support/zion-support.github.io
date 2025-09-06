@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -8,6 +12,7 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 
+<<<<<<< HEAD
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -145,6 +150,8 @@ class BuildMonitor {
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
@@ -165,6 +172,7 @@ class BuildMonitor {
     }
   }
 
+<<<<<<< HEAD
     const report = {
       ...results,
       trends: {
@@ -217,6 +225,8 @@ class BuildMonitor {
   }
   async run() {
     this.log('Starting build health check...');
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   async checkBuildStatus() {
     try {
@@ -238,12 +248,15 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 
+<<<<<<< HEAD
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       return true;
     } catch (error) {
@@ -445,6 +458,10 @@ class BuildMonitor {
 const monitor = new BuildMonitor();
 if (require.main === module) {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -471,6 +488,13 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
+=======
+
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 const fs = require('fs);
 const path = require('path'),
@@ -696,4 +720,10 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 module.exports = BuildMonitor;

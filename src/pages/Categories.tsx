@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+import { GradientHeading } from "@/components/GradientHeading";
+import { SkeletonCard  } from '@/components/ui';
+import ErrorBoundary from "@/components/GlobalErrorBoundary";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -8,6 +14,7 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
+<<<<<<< HEAD
 
       logErrorToProduction('Categories API error:', { data: response.statusText })
       return CATEGORIES as CategoryType[]
@@ -137,6 +144,11 @@ export default Categories""
 export: default Categories
 export default Categories," ]
 
+=======
+}
+export default Categories"")))))))))
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -236,4 +248,11 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

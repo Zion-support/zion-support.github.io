@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
+<<<<<<< HEAD
 
 export function AppHeader() {
 
@@ -15,6 +16,13 @@ export function AppHeader() {
         </div>
       </div>
 
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+export function AppHeader() {
+    return (<header className="bg-white shadow-sm border-b border-gray-200">
+    </header>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function AppHeader() {;
     return (<header className="bg-white shadow-sm border-b border-gray-200">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
@@ -30,4 +38,9 @@ export function AppHeader() {;
     </header>);
 
 '"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

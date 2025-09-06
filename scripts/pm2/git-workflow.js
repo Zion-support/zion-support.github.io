@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
             }).trim(),
 ,
@@ -315,3 +316,11 @@ gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),
 
+=======
+
+
+=======
+gitWorkflow.run().catch(error = > {; process.exit(1)});
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

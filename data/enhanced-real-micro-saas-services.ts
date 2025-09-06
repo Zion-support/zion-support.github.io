@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 name: string;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 tagline: string;
 price: string;
 period: string;
@@ -8,10 +12,10 @@ features: string[];
 popular: boolean;
 icon: string;
 category: string;
-}export const microSaasServices: MicroSaasService[] = [ {;
-  id: 'ai-content-generator';
+}export const microSaasServices: MicroSaasService[] = [ {
+  id: 'ai - content - generator';
 name: 'AI Content Generator';
-tagline: 'Generate high-quality content with AI';
+tagline: 'Generate high - quality content with AI';
 price: '$29';
 period: '/month';
 popular: true;
@@ -24,6 +28,7 @@ category: 'AI & Machine Learning';
 'Cloud Computing';
 'Data Analytics' ];
 
+<<<<<<< HEAD
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -2262,3 +2267,13 @@ export const serviceCategories = [
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
+=======
+
+=======
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

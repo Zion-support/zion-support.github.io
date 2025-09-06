@@ -1,16 +1,40 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
 
+<<<<<<< HEAD
+=======
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+=======
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (
     !id |
     !fileName |
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+
+=======
     return res.status(400).json({ error: "Invalid parameters" });
   }
 
@@ -35,34 +59,32 @@ import {
   stream.pipe(res);
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Download endpoint' });
+=======
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export default async function handler(req, res) {
-  try {
-  const { id, fileName } = req.query as { id?: string, fileName?: string },;
-  if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {;
-    return res.status(400).json({ error: 'Invalid parameters' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id, fileName } = req.query as { id?: string, fileName?: string };
+  if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
+    return res.status(400).json({ error: 'Invalid parameters' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
+<<<<<<< HEAD
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (error) {
@@ -109,3 +131,10 @@ export default async function handler(req, res) {
   }
 }
 
+=======
+  if (!dispute) return res && res.status($1).json({ $2 });
+  try {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

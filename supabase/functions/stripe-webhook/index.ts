@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { serve } from
   "https": //deno.land/std@0.190.0/http/server.ts'';
@@ -70,7 +71,40 @@ if (event.type === 'checkout.session.completed') {const session = event.data.obj
   return new Response('Not found', { "status": 404 })}),;
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;
 
+=======
+
+
+
+
+=======
+          .eq('id', orderId)};
+    };
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })}),
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

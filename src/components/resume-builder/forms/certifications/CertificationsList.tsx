@@ -1,17 +1,14 @@
 
+<<<<<<< HEAD
+=======
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
 interface CertificationsListProps {
 
-  certifications: Certification[]
-  onEdit: (cert: Certification) => void
-  onDelete: (id: string) => void
-export function CertificationsList({
-  certifications
-  onEdit
-  onDelete
-}: CertificationsListProps) {  if (certifications.length === 0) {
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
@@ -77,22 +74,35 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
                   onClick = {() => onEdit(cert),}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns',;
 interface CertificationsListProps {;
-  certifications: Certification[],;
+  certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
+export function CertificationsList(): any ({;
+  certifications,;
+  onEdit,;
+  onDelete,;
+}: CertificationsListProps) {  if (certifications && certifications.length === 0) {;
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react';
+import { format } from 'date-fns';
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void,;
+  onDelete: (id: string) => void;
 }
-;
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-  if (certifications.length === 0) {;
-    return null;
-  }
 
   return (
     <div className="space-y-4">
@@ -121,13 +131,20 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
+<<<<<<< HEAD
 
                   aria-label="Edit certification"
+=======
+>>>>>>>                   aria-label="Edit certification"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 >
                   <Edit className="h-4 w-4" />
                 </Button>
                 <Button
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -141,19 +158,30 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
               <p className="text-xs mt-2">
                 <a 
                   href={cert.credential_url} 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   target="_blank" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
+
                 >
-                  View credential
-                </Link>
-              </p>
+
+>>>>>>>                   View credential
+                </a>;
+              </p>;
             )}
           </CardContent>;
         </Card>;
       ))}
+
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

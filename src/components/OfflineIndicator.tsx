@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { WifiOff, Wifi } from 'lucide-react'
 
@@ -8,6 +9,22 @@ import { Alert, AlertDescription } from '@/components/ui/alert',
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
 
+=======
+import { useState, useEffect  } from 'react';
+import { WifiOff, Wifi } from 'lucide-react'
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
+>>>>>>> 
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+  const [isOnline, setIsOnline] = useState(true)
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
+  useEffect((,) => {
+    const updateOnlineStatus = () => {
+      const online = navigator.onLine
+      setIsOnline(online)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -15,18 +32,106 @@ export const OfflineIndicator = () => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine,
       setIsOnline(online),
+<<<<<<< HEAD
+=======
+      
+>>>>>>>       if (!online) {
+        setShowOfflineAlert(true)
+      } else if (showOfflineAlert) {
+        // Show brief "back online" message then hide
+        setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
+        setTimeout(() => setShowOfflineAlert(false), 3000)
+>>>>>>>       }
+    }
+
+  }, [showOfflineAlert]),
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
 
+<<<<<<< HEAD
       }
     }
 
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
+=======
+import { useState, useEffect } from 'react';
+        setTimeout(() => setShowOfflineAlert(false), 3000)
+import { useState, useEffect } from 'react',;
+
+import { WifiOff, Wifi } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+export const OfflineIndicator = () =>: any {
+  const [is_online, setIsOnline] = useState (true);
+  const [showOfflineAlert, setShowOfflineAlert] = useState (false);
+  useEffect ((, ) => {
+    const updateOnlineStatus = () =>: any {
+      const online = navigator.on_line;
+      setIsOnline (online);
+      // Check condition
+if ( {) {
+  $2
+}
+        setShowOfflineAlert (true);
+      } else // Check condition
+if ( {) {
+  $2
+}
+        // Show brief "back online" message then hide;
+        set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000);
+        set_timeout (() => setShowOfflineAlert (false), 3000);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+import { Alert, AlertDescription } from '@/components/ui/alert';
+export const OfflineIndicator = () => {;
+  const [isOnline, setIsOnline] = useState(true);
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false);
+
+  useEffect((,) => {;
+    const updateOnlineStatus = () => {;
+      const online = navigator && navigator.onLine;
+      setIsOnline(online);
+
+      if (!online) {;
+        setShowOfflineAlert(true);
+      } else if (showOfflineAlert) {;
+        // Show brief "back online" message then hide;
+        setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
+        setTimeout(() => setShowOfflineAlert(false), 3000);
+
+>>>>>>>       }
+    };
+
+    // Set initial status;
+    updateOnlineStatus();
+
+    // Listen for online/offline events;
+    window && window.addEventListener('online', updateOnlineStatus);
+    window && window.addEventListener('offline', updateOnlineStatus);
+
+
+
+    }
+  }, [showOfflineAlert]);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+
+>>>>>>> 
+
+  if (!showOfflineAlert) return null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
@@ -37,16 +142,35 @@ export const OfflineIndicator = () => {
           ) : (
             <WifiOff className="h-4 w-4" />
           )}
-          <AlertDescription>;
-            {isOnline ? (;
-              'Connection restored';
-            ) : (;
-              'You are offline. Some features may not work.';
+          <AlertDescription>
+            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
             )}
-          </AlertDescription>;
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  )
+} }
+
+
+
         </div>;
       </Alert>;
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+};
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

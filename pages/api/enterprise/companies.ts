@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -88,3 +89,19 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    return res.status (201).json (created);
+  }
+  res.set_header ("Allow", "GET, POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

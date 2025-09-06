@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+import { Loader2 } from 'lucide-react'
+
+import { useTranslation } from 'react-i18next'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -13,26 +19,44 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   hidden: { opacity: 0
   y: 20
 }
+      setIsSubmitting (true);
+      // Simulate API call;
+      set_timeout (: unknown {
+        setIsSubmitting (false);
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+  const container_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.6
-        staggerChildren: 0.2
+        duration: 0.6,
+        stagger_children: 0.2;
 }
 }
 }
-  const itemVariants = {
-  hidden: { opacity: 0
-  y: 20
-}
+  const item_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: { duration: 0.5 }
 }
 }
+<<<<<<< HEAD
 
+=======
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" }
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" }
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" }
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+  ]
+import { motion  } from 'framer-motion'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Link  } from 'react-router-dom';"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"
@@ -67,7 +91,31 @@ export function ITServiceRequestHero() {
       return;
     }
     setIsSubmitting(true)
+<<<<<<< HEAD
 
+=======
+    try {
+      const res = await axios.post('/api/onsite-request', {
+        name
+        email
+        phone
+        company
+        location
+        details
+      })
+      if (res.status === 200) {
+        toast({
+          title: 'Request received'
+          description:
+            "We've received your request. Our team will reach out shortly."
+        })
+        setName('')
+        setEmail('')
+        setPhone('')
+        setCompany('')
+        setLocation('')
+        setDetails('')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",
 import Image from "next/image",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -103,15 +151,39 @@ export function ITServiceRequestHero() {
     }
 
     setIsSubmitting(true),
+<<<<<<< HEAD
 
     try {
+=======
+>>>>>>>     try {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const res = await axios.post("/api/onsite-request", {
-        name,
+ursor/fix-website-loading-errors-and-merge-6662
+    try {
+      const res = await axios.post ('/api / onsite - request', {
+>>>>>>>         name,
         email,
         phone,
         company,
         location,
+<<<<<<< HEAD
 
+=======
+        details,
+      })
+      if (res.status === 200) {
+        toast({
+          title: 'Request received',
+          description:
+            "We've received your request. Our team will reach out shortly.",
+        })
+        setName('')
+        setEmail('')
+        setPhone('')
+        setCompany('')
+        setLocation('')
+        setDetails('')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         details}),
 
       if (res.status === 200) {
@@ -124,18 +196,33 @@ export function ITServiceRequestHero() {
         setCompany(""),
         setLocation(""),
         setDetails("")
+<<<<<<< HEAD
 
       }
     } catch (err: any) {
       logErrorToProduction(err)
       toast({
 
+=======
+>>>>>>>       }
+    } catch (err: any) {
+      logErrorToProduction(err)
+      toast({
+        title: 'Submission Failed'
+        description: 'There was an error submitting your request.'
+        variant: 'destructive'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       })
+
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         title: "Submission Failed",
         description: "There was an error submitting your request.",
         variant: "destructive"})
@@ -143,8 +230,13 @@ export function ITServiceRequestHero() {
       setIsSubmitting(false)
     }
   },
+<<<<<<< HEAD
 
   return (
+=======
+>>>>>>> 
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
     >
@@ -160,15 +252,36 @@ export function ITServiceRequestHero() {
         <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Image
+<<<<<<< HEAD
 
+=======
+>>>>>>>               />
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               />
-              <p className='text-xs text-zion-slate-light'>
+>>>>>>>               <p className='text-xs text-zion-slate-light'>
                 {t(
                   'onsite_form.name_helper'
                   'Enter the main contact for this request.'
+
+                onChange={e => setName(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
+              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t(;
+                  'onsite_form && onsite_form.name_helper',;
+                  'Enter the main contact for this request.';
+
+                )}
+              </p>;
+              <Input
+                type='email'
+                value={email}
+
                 )}
               </p>
               <Input
+<<<<<<< HEAD
 
                 type='email'
                 value={email}
@@ -176,14 +289,26 @@ export function ITServiceRequestHero() {
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
 
               />
+=======
+>>>>>>>               />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <p className='text-xs text-zion-slate-light'>
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
+                onChange={e => setEmail(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
+              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t(;
+                  'onsite_form && onsite_form.email_helper',;
+                  "We'll confirm your request here.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-              </p>
+              </p>;
               <Input
                 value={phone}
+<<<<<<< HEAD
 
                 onChange={e => setPhone(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
@@ -205,6 +330,31 @@ export function ITServiceRequestHero() {
                 onChange={e => setLocation(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
 
+=======
+              />
+              <p className='text-xs text-zion-slate-light'>
+                {t(
+                  'onsite_form.location_helper'
+                  'Where do you need on-site support?'
+                )}
+              </p>;
+              <Textarea
+                value={details}
+
+                onChange={e => setDetails(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t(;
+                  'onsite_form && onsite_form.details_helper',;
+                  'Share any important context for our technicians.';
+
+                )}
+              </p>;
+              <Button
+                type='submit'
+                disabled={isSubmitting}
+                className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 onChange={(e) => setPhone(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
@@ -220,12 +370,31 @@ export function ITServiceRequestHero() {
                 onChange={(e) => setLocation(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
+<<<<<<< HEAD
 
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
 
+=======
+>>>>>>>               />
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
+              <Textarea
+                value={details}
+                onChange={e => setDetails(e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />
+              <p className='text-xs text-zion-slate-light'>
+                {t(
+                  'onsite_form.details_helper',
+                  'Share any important context for our technicians.'
+                )}
+              </p>
+              <Button
+                type='submit'
+                disabled={isSubmitting}
+                className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 onChange={(e) => setDetails(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
@@ -235,21 +404,39 @@ export function ITServiceRequestHero() {
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
+<<<<<<< HEAD
 
                 {isSubmitting && (
+=======
+>>>>>>>                 {isSubmitting && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
+
                 Request Service
               </Button>
             </form>
           </div>
+<<<<<<< HEAD
 
+=======
+          <p className='text-xs text-center text-zion-slate-light mt-3'>
+            {t(
+              'onsite_form.privacy_notice'
+              'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.'
+            )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </p>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 
+=======
+}finally {
+  setIsSubmitting (false)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -281,7 +468,10 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'"
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -414,17 +604,67 @@ export function ITServiceRequestHero() {;
                 {isSubmitting && (;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 )}
+
                 Request Service;
               </Button>;
             </form>;
           </div>;
-          <p className="text-xs text-center text-zion-slate-light mt-3">;
-            {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+          <p className='text-xs text-center text-zion-slate-light mt-3'>;
+            {t(;
+              'onsite_form && onsite_form.privacy_notice',;
+              'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.';
+            )}
           </p>;
         </div>;
       </div>;
     </section>;
   );
+
+}catch (err: any) {;
+  logErrorToProduction (err);
+toast ({;
+
+}finally {;
+  setIsSubmitting (false) ;
+};";
+py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image<Input type="email" value= {
+  email 
+}onChange= {
+  (e) => setEmail (e && e.target.value) ";
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <p className="text-xs text-zion-slate-light" > {";
+  t ('onsite form && form.email helper', "We'll confirm your request here.") ;
+}</p> <Inputvalue= {
+  phone 
+}onChange= {
+  (e) => setPhone (e && e.target.value) ";
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Inputvalue= {
+  company 
+}onChange= {
+  (e) => setCompany (e && e.target.value) ";
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Inputvalue= {
+  location 
+}onChange= {
+  (e) => setLocation (e && e.target.value) ";
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textareavalue= {
+  details 
+}onChange= {
+  (e) => setDetails (e && e.target.value) ";
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Buttontype="submit" disabled= {
+  isSubmitting "
+}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"> {";
+  isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;
+}Request Service </Button> </form> </div> ;
+}'";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

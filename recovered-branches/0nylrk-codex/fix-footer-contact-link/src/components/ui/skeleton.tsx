@@ -1,16 +1,30 @@
 
+<<<<<<< HEAD
 
 function Skeleton({
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+=======
+import { cn } from &quot;@/lib / utils & quot;
+;
+/**
+ * Skeleton - Function description
+ */
+function Skeleton() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
-    <div
-      className={cn("animate-pulse rounded-md bg-muted", className)}
+    <div;
+      className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
       {...props}
-    />;
-  );
+    />);
+
 }
 
 ;
 
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

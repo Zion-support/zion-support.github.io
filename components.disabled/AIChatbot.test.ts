@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+import { useRouter } from 'next/router', // Changed from useParams
+import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Image from 'next/image';
 import { Button  } from '@/components/ui/button';
 import { NEW_PRODUCTS  } from '@/data/newProductsData';
@@ -31,7 +36,10 @@ export default function ProductPage() {;
         if (res.ok) {
           const data = await res.json();
           setProduct(data)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useRouter } from 'next/router', // Changed from useParams;
 import { useEffect, useState } from 'react',;
 import Image from 'next/image',;
@@ -65,41 +73,150 @@ export default function ProductPage() {;
         if (res.ok) {;
           const data = await res.json(),;
           setProduct(data);
+<<<<<<< HEAD
 
+=======
+>>>>>>>         }
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         }
-      } catch (err) {
+>>>>>>>       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
+        logErrorToProduction('Error fetching product', { data: err });
       }
+<<<<<<< HEAD
 
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
 
+=======
+    }
+    // Only fetch if id is available (from router)
+    if (id) {
+      fetchProduct()
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     },;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
+<<<<<<< HEAD
 
     }
+=======
+>>>>>>>     }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
     return <div className="p-6 text-white">Loading product details...</div>
   }
   if (!product) {
+<<<<<<< HEAD
 
+=======
+    return <div className="p-6 text-white">Product not found</div>;
+  }
+  const inCart = items.some(i => i.id === product.id);
+  const handleAdd = () => {
+    if (inCart) return;
+    setAdding(true);
+    dispatch({
+      type: 'ADD_ITEM'
+      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
+    });
+    toast.success(`1× ${product.title} added`);
+    setTimeout(() => setAdding(false), 500)
+  }
+
+  return (
+    <>
+      <SEO
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
+>>>>>>>       />
+ursor/fix-website-loading-errors-and-merge-6662
+    }
+
+  }, [id]), // id is now from router.query
+  if (!product && !id) { // If no id from router yet, it might still be loading
+
+    return <div className="p-6 text-white">Loading product details...</div>;
+  }
+  if (!product) {
+
+        if (res && res.ok) {;
+          const data = await res && res.json();
+          setProduct(data);
+        }
+      } catch (err) {;
+        // Fail silently and fall back to local data;
+        logErrorToProduction('Error fetching product', { data: err });
+      }
+    };
+
+    // Only fetch if id is available (from router);
+    if (id) {;
+      fetchProduct();
+    }
+  }, [id]), // id is now from router && router.query;
+
+    return <div className="p-6 text-white">Product not found</div>
+  }, [id]), // id is now from router.query;
+
+  if (!product && !id) { // If no id from router yet, it might still be loading;
+    return <div className="p-6 text-white">Loading product details...</div>;
+  }
+
+  if (!product) {;
+    return <div className="p-6 text-white">Product not found</div>;
+  }
+
+  const inCart = items && items.some(i => i && i.id === product && product.id);
+
+  const handleAdd = () => {;
+    if (inCart) return;
+    setAdding(true);
+    dispatch({;
+      type: 'ADD_ITEM',;
+      payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
+    });
+    toast && toast.success(`1× ${product && product.title} added`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setTimeout(() => setAdding(false), 500);
+  };
+    setTimeout(() => setAdding(false), 500)
+  }
+>>>>>>> 
+  return (
+    <>;
+      <SEO
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
+>>>>>>>       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
 
               className="object-cover rounded-md"
+=======
+              src = {product.images[0] |'/placeholder.svg',}
+              alt = {product.title,}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>               className="object-cover rounded-md"
+              fill
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+<<<<<<< HEAD
 
         </Button>
       </div>
@@ -126,10 +243,23 @@ product.title ;
 }';
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </Button>;
       </div>;
     </>;
   );
+
+}
+//Only fetch if id is available (from router) ;
+
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

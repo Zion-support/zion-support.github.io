@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+  const shareUrl =
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -31,7 +35,10 @@
           title: 'Link Copied!'
           description: 'The link has been copied to your clipboard'
         })
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast",
@@ -64,19 +71,66 @@ export function SocialShareSection() {
         toast({
           title: "Link Copied!",
           description: "The link has been copied to your clipboard"})
+<<<<<<< HEAD
 
+=======
+          title: t('errors.failed_to_copy')
+          description: 'Please try again or copy the URL manually'
+          variant: 'destructive'
+        })
+      })
+  }
+  const shareLinks = [
+    {
+      name: 'Twitter'
+      icon: <Twitter className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
+      onClick: shareToTwitter
+    }
+    {
+      name: 'Facebook'
+      icon: <Facebook className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80'
+      onClick: shareToFacebook
+    }
+    {
+      name: 'LinkedIn'
+      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80'
+      onClick: shareToLinkedIn
+    }
+    {
+      name: 'Copy Link'
+      icon: <Link className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80'
+      onClick: copyLinkToClipboard
+    }
+  ]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       })
       .catch(() => {
         toast({
           title: t('errors.failed_to_copy'),
+<<<<<<< HEAD
 
+=======
+          description: 'Please try again or copy the URL manually',
+          variant: 'destructive',
+        })
+      })
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           description: "Please try again or copy the URL manually",
           variant: "destructive"
         })
       })
   },
 
+<<<<<<< HEAD
   const shareLinks = [
+=======
+>>>>>>>   const shareLinks = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     {
       name: "Twitter",
       icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
@@ -96,14 +150,28 @@ export function SocialShareSection() {
       onClick: shareToLinkedIn
     },
     {
+<<<<<<< HEAD
 
+=======
+      name: 'Copy Link',
+      icon: <Link className='h-5 w-5' aria-hidden='true' />,
+      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',
+      onClick: copyLinkToClipboard,
+    },
+  ]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       name: "Copy Link",
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     }],
+<<<<<<< HEAD
 
   return (
+=======
+>>>>>>> 
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -111,7 +179,14 @@ export function SocialShareSection() {
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
 
+=======
+}
+}</div> </div> </div> </section>)
+}'"
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -202,11 +277,37 @@ export function SocialShareSection() {;
                 <span aria-hidden="true">{link.name}</span>
               </Button>
             ))}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
     </section>;
   );
+
+  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
+  toast ({;
+
+}) .catch ( () => {;
+  toast ({;
+  title: t ('errors && errors.failed to copy');
+});
+};
+}</div> </div> </div> </section>) ;
+}'";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+
+}</div> </div> </div> </section>)
+}'"
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

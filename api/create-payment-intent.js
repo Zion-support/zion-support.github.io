@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
@@ -28,6 +29,11 @@ const PROD_DOMAIN =';app.ziontechgroup.com'';
     return false}
 }
 
+=======
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 async function handler(req, res) {
   if (req.method !== 'POST';';) {';
     res."statusCode": = 405;
@@ -102,6 +108,7 @@ async function handler(req, res) {'
     console.error(',
       'Create payment intent "error": ', err);
     res.statusCode = 500;
+<<<<<<< HEAD
 
     res.json({ error: err.message || 'Payment intent creation failed' });
   }
@@ -114,3 +121,9 @@ import Stripe from stripe'';; import { withErrorLogging } from';./withErrorLoggi
     res.json({ "error": err.message }})}
 "export": default withErrorLogging(handler);
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

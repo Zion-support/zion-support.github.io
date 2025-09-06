@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker'
+export function TalentOnboardingSteps() {
+  const { user } = useAuth()
+  const onboardingStatus = useOnboardingStatus()
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+<<<<<<< HEAD
 
   const steps: OnboardingStep[] = [
     {
@@ -29,6 +41,49 @@ import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
 
+=======
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
+
+
+
+  return <OnboardingTracker steps={steps} />
+}
+>>>>>>>   const steps: OnboardingStep[] = [
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>     {
+      id: 'profile',
+      label: 'Complete your profile',
+      completed: onboarding_status.profile_completed,
+      link: '/profile',
+      action: 'Update',
+    },
+    {
+      id: 'skills',
+      label: 'Add your top skills',
+      completed: onboarding_status.skills_added,
+      link: '/profile / skills',
+      action: 'Add Skills',
+    },
+    {
+      id: 'availability',
+      label: 'Set your availability',
+      completed: onboarding_status.availability_set,
+      link: '/profile / availability',
+      action: 'Set',
+    },
+    {
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+      link: '/talent-dashboard',
+      action: 'View Matches',
+    },
+  ];
+  return <OnboardingTracker steps={steps} />;
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       link: "/talent-dashboard",
       action: "View Matches"}],
   
@@ -69,4 +124,8 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

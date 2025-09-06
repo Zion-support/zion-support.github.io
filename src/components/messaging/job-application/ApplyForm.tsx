@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
+=======
+      let fullMessage = message
+import React, { useState } from 'react'
+import { Button } from "@/components/ui/button"
+import { Loader2 } from 'lucide-react'import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useJobApplications } from "@/hooks/useJobApplications"
+import { useMessaging } from "@/context/MessagingContext"
+import { toast } from "@/hooks/use-toast"
+import { ResumeSelector, ResumeOption } from "../resume-selector"
+import { MessageTab } from "./MessageTab"
+import { ResumeTab } from "./ResumeTab"
+import { Job } from "./types"
+import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -10,23 +25,49 @@ import { toast } from "@/hooks/use-toast",
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",
+<<<<<<< HEAD
 
 interface ApplyFormProps {
+=======
+import { Job } from "./types";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ApplyFormProps {
+>>>>>>> interface ApplyFormProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   job: Job,
   onClose: () => void,
   onApplySuccess?: (jobId: string) => Promise<void>
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   job: Job
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
 
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
+<<<<<<< HEAD
 
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
 
+=======
+  const { createConversation } = useMessaging(),
+  const { applyToJob } = useJobApplications(),
+
+  )
+  const [proposalLink, setProposalLink] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  const handleResumeSelected = (resume: ResumeOption) => {;
+    setSelectedResume(resume);    setSelectedResumeId(resume.id)
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -38,14 +79,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResume(resume),
     setSelectedResumeId(resume.id)
   },
+<<<<<<< HEAD
 
   const handleApply = async () => {
+=======
+  
+>>>>>>>   const handleApply = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
+<<<<<<< HEAD
 
+=======
+      return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     try {
       setIsSubmitting(true)
@@ -94,7 +144,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
+<<<<<<< HEAD
 
+=======
+      toast({
+        title: "Application sent"
+        description: `Your application for "${job.title}" has been sent.`})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }),
       return
     }
@@ -209,13 +265,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
       }
+<<<<<<< HEAD
 
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
 
+=======
+      
+>>>>>>>       toast({
+        title: "Application sent",
+        description: `Your application for "${job.title}" has been sent.`}),
+      
+>>>>>>>       onClose()
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       onClose()
-    } catch (error) {
+>>>>>>>     } catch (error) {
       logErrorToProduction('Failed to send application:', { data: error })
       toast({
         title: "Application failed"
@@ -225,8 +291,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 
   return (
+=======
+  }
+
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
@@ -237,14 +309,35 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
             Resume
           </TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
 
             message = {message,}
+=======
+          <MessageTab
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+          <MessageTab 
+
+>>>>>>>             message = {message,}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
             setProposalLink = {setProposalLink,}
           />
         </TabsContent>
+<<<<<<< HEAD
 
+=======
+        <TabsContent value="resume">
+          <ResumeTab
+            onResumeSelected = {handleResumeSelected,}
+            selectedResumeId = {selectedResumeId,}
+          />
+        </TabsContent>
+      </Tabs>
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <TabsContent value="message">
           <MessageTab 
 ;
@@ -264,6 +357,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     }
   };
   return (;
+
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -274,6 +368,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
             Resume;
           </TabsTrigger>;
         </TabsList>;
+
         <TabsContent value="message">;
           <MessageTab;
             message={message}
@@ -282,26 +377,54 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
             setProposalLink={setProposalLink}
           />
         </TabsContent>
+<<<<<<< HEAD
 
         <TabsContent value="resume">
+=======
+        
+>>>>>>>         <TabsContent value="resume">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <ResumeTab 
             onResumeSelected={handleResumeSelected}
             selectedResumeId={selectedResumeId} 
           />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
 
+=======
+>>>>>>>       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
-        <Button
+          />;
+        </TabsContent>;
+
+        <TabsContent value="resume">;
+          <ResumeTab
+            onResumeSelected = {handleResumeSelected,}
+            selectedResumeId = {selectedResumeId,}
+          />;
+        </TabsContent>;
+      </Tabs>;
+
+      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>>         <Button
           type="button"
           variant="outline"
-          onClick={onClose}
-          className="border-zion-purple/30 text-white"
-        >
-          Cancel
-        </Button>
+          onClick = {onClose,}
+          className="border-zion-purple/30 text-white">;
+          Cancel;
+        </Button>;
         <Button
+<<<<<<< HEAD
 
+=======
+          type="button"
+          onClick = {handleApply,}
+          disabled = {isSubmitting,}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -312,7 +435,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
 
+=======
+  return
+}//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
@@ -365,11 +493,140 @@ return (<> <Tabs value= {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
 }</Button> </div> </>)
 }'"}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </Button>;
       </div>;
     </>;
   );
-}
-;
 
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    <>;
+      <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
+        <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30">;
+          <TabsTrigger value="message" className="flex - 1">;
+            Message;
+          </TabsTrigger>;
+          <TabsTrigger value="resume" className="flex - 1">;
+            Resume;
+          </TabsTrigger>;
+        </TabsList>;
+        <TabsContent value="message">;
+          <MessageTab;
+            message = {message, }
+            set_message = {set_message, }
+            proposal_link = {proposal_link, }
+            setProposalLink = {setProposalLink, }
+          />;
+        </TabsContent>;
+        <TabsContent value="resume">;
+          <ResumeTab;
+            onResumeSelected = {handleResumeSelected, }
+            selectedResumeId = {selectedResumeId, }
+          />;
+        </TabsContent>;
+      </Tabs>;
+      <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4">;
+        <Button;
+          type="button";
+          variant="outline";
+          on_click = {on_close, }
+          className="border - zion - purple / 30 text - white";
+        >;
+          Cancel;
+        </Button>;
+        <Button;
+          type="button";
+          on_click = {handle_apply, }
+          disabled = {is_submitting, }
+          className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+        >;
+          {is_submitting ? (
+            <>;
+              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+              Submitting...;
+            </>) : (
+            'Submit Application')}
+        </Button>;
+      </div>;
+    </>);
+  if () {) {
+  $2
+}
+  toast ({
+  return;
+}//First submit the application to the job applications table const application_success = await applyToJob (job.id, message, selected_resume && selected_resume.type === 'ai resume'? selectedResumeId || undefined : undefined, selected_resume && selected_resume.type === 'custom upload'? selected_resume.file : undefined);
+// Check condition
+if ( {) {
+  $2
+}
+}//Format message with proposal link if provided let full_message = message;
+// Check condition
+if ( {') {
+  $2
+}
+  full_message += `\n\n_here's a link to my proposal: $ {
+  proposal_link;
+}`;
+}//Add info about attached resume if available // Check condition
+if ( {') {
+  $2
+}
+  full_message += `\n\n_i've attached my resume: $ {
+  selected_resume.title;
+}`;
+}//Create context data for the conversation const context_data = {
+  title: job.title;
+description: job.description;
+attached_resume: selected_resume ? {
+  id: selected_resume.id;
+title: selected_resume.title;
+type: selected_resume.type;
+}: null;
+}
+full_message;';
+'job';
+job.id;
+context_data);
+//Call onApplySuccess to update job status in the UI on_close ();
+}catch (error) {';
+  logErrorToProduction ('Failed to send application:', {
+  data: error;
+});
+toast ({
+}finally {
+  setIsSubmitting (false);
+}
+return (<> <Tabs value= {
+  active_tab;
+}onValueChange= {
+  setActiveTab ";
+}className="w - full" > <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30" > <TabsTrigger value="message" className="flex - 1" > resume"className=" flex - 1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
+  message;
+}set_message= {
+  set_message;
+}proposal_link= {
+  proposal_link;
+}setProposalLink= {
+  setProposalLink ";
+}/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {
+  handleResumeSelected;
+}selectedResumeId= {
+  selectedResumeId ";
+}/> </TabsContent> </Tabs> <div className=" flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4"> <Button > Cancel </Button> <Button > {'";
+  is_submitting ? (<> <Loader2 className=" h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ('Submit Application');
+}</Button> </div> </>);
+}'"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> }
+;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

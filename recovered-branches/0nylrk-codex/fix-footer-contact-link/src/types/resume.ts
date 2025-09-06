@@ -1,13 +1,19 @@
 
+<<<<<<< HEAD
 
   id?: string;
   title: string;
+=======
+  headline?: string,
+  summary?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-  headline?: string
-
-  summary?: string
 }
+<<<<<<< HEAD
 
+=======
+export interface WorkExperience {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   company_name: string;
   role_title: string;
@@ -16,11 +22,15 @@
   is_current: boolean;
   description?: string;
 
-  company_logo_url?: string
+  company_logo_url?: string,
+  location?: string;
 
-  location?: string
 }
+<<<<<<< HEAD
 
+=======
+export interface Education {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   institution: string;
   degree: string;
@@ -30,31 +40,43 @@
   is_current: boolean;
   description?: string;
 
-  institution_logo_url?: string
+  institution_logo_url?: string,
+  location?: string;
 
-  location?: string
 }
+<<<<<<< HEAD
 
+=======
+export interface Skill {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   name: string;
   proficiency?: number;
 
-  category?: string
+  category?: string,
+  years_experience?: number;
 
-  years_experience?: number
 }
+<<<<<<< HEAD
 
+=======
+export interface Certification {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   name: string;
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
-  credential_id?: string
+  credential_id?: string,
+  credential_url?: string;
 
-  credential_url?: string
 }
+<<<<<<< HEAD
 
+=======
+export interface PortfolioProject {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   title: string;
   description?: string;
@@ -62,11 +84,15 @@
   image_url?: string;
   github_url?: string;
 
-  demo_url?: string
+  demo_url?: string,
+  pdf_url?: string;
 
-  pdf_url?: string
 }
+<<<<<<< HEAD
 
+=======
+export interface Resume {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -75,6 +101,7 @@
   skills: Skill[];
   certifications: Certification[];
 
+<<<<<<< HEAD
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean
@@ -149,7 +176,20 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
+=======
+  portfolio_projects?: PortfolioProject[],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   is_active: boolean;
+
 }
+<<<<<<< HEAD
 ;
 
+=======
+=======
+
+
+export interface ResumeBasicInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

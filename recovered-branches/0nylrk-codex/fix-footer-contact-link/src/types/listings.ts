@@ -1,20 +1,26 @@
 
+<<<<<<< HEAD
 
   id: string;
   name: string;
+=======
+  description: string,
+  icon: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-  description: string
-
-  icon: string
 }
+<<<<<<< HEAD
 
+=======
+export interface ProductListing {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   title: string;
   description: string;
 
-  category: string
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
 
-  subcategory?: string, // Adding optional subcategory field
   price: number | null;
   currency: string;
   tags: string[];
@@ -22,26 +28,31 @@
     name: string;
     id: string;
 
-    avatarUrl?: string
-    email?: string, // Added optional email property
+    avatar_url?: string,
+    email?: string, // Added optional email property;
   }
 
   images: string[];
-  createdAt: string;
+  created_at: string;
   rating?: number;
-  reviewCount?: number;
 
-  featured?: boolean
+  review_count?: number;
+  featured?: boolean,
+  ai_score?: number, // Added ai_score as optional property;
+  location?: string, // Adding location property to fix TypeScript errors;
+  availability?: string, // Adding availability property to fix TypeScript errors;
 
-  aiScore?: number, // Added aiScore as optional property
-  location?: string, // Adding location property to fix TypeScript errors
-  availability?: string, // Adding availability property to fix TypeScript errors
 }
+<<<<<<< HEAD
 
+=======
+export interface ListingItem {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
   image?: string
   description?: string
 }
@@ -89,3 +100,17 @@ export interface ListingItem {;
 
 export type ListingView = 'grid' | 'list';
 
+=======
+  image?: string,
+  description?: string;
+}
+=======
+
+
+export interface ListingCategory {;
+
+
+export type ListingView = 'grid' | 'list';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Import components
 import { ResumeProgress  } from './ResumeProgress';
@@ -58,6 +59,18 @@ export function ResumeWizard() {
     fetchResume(resumeId)
   }
 
+=======
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -123,6 +136,7 @@ export function ResumeWizard() {;
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   },
+<<<<<<< HEAD
 
   if (isLoading) {
     return (
@@ -132,6 +146,17 @@ export function ResumeWizard() {;
     )
   }
 
+=======
+  
+>>>>>>>   if (isLoading) {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>     return (
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -141,20 +166,33 @@ export function ResumeWizard() {;
       </Alert>
     )
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   if (showNewResumeForm) {
+  if (!resume && !showNewResumeForm) {;
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
+  }
+
+  if (showNewResumeForm) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
-      />
-    )
-  }
 
+      />;
+    );
+  }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -169,15 +207,39 @@ export function ResumeWizard() {;
       />;
     );
   }
+<<<<<<< HEAD
 
   return (
+=======
+  
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+<<<<<<< HEAD
 
             variant="outline"
+=======
+          <Button
+            onClick = {(,) => setShowNewResumeForm(true),}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
+        <h1 className="text-2xl font-bold">Resume Builder</h1>;
+        <div className="flex gap-4 flex-wrap items-center">;
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+
+
+          <Button;
+            onClick={() => setShowNewResumeForm(true)}
+
+
+>>>>>>>             variant="outline"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             size="sm"
             className="gap-2"
           >
@@ -186,20 +248,30 @@ export function ResumeWizard() {;
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>>       <Card>
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <Card>
-        <CardContent className="pt-6">
+>>>>>>>         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
+<<<<<<< HEAD
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
+=======
+>>>>>>>           <Tabs value={activeTab} onValueChange={setActiveTab}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <ResumeSteps
               steps = {RESUME_STEPS,}
               activeTab = {activeTab,}
               onChange = {setActiveTab,}
             />
+<<<<<<< HEAD
 
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
@@ -241,14 +313,96 @@ export function ResumeWizard() {;
   nextStep
 }onPrevStep= {
 
+=======
+            {resume && (
+              <ResumeStepContent
+  prevStep
+}/>)
+}</Tabs> </CardContent> </Card> </div>)
+}'"}
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             {resume && (
               <ResumeStepContent 
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
-              />;
+ursor/fix-website-loading-errors-and-merge-6662
+          <Tabs value={activeTab} onValueChange={setActiveTab}>
+            variant="outline";
+            size="sm";
+            className="gap-2";
+          >;
+            <FilePlus className="h-4 w-4" /> ;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="flex justify - center items - center h - 64">;
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Alert variant="destructive" className="mb - 6">;
+        <AlertCircle className="h - 4 w - 4" />;
+        <AlertTitle > Error</AlertTitle>;
+        <AlertDescription>{error}</AlertDescription>;
+      </Alert>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <CreateResumeForm;
+        onCreateResume = {handleCreateNewResume, }
+        on_cancel = {(, ) => setShowNewResumeForm (false), }
+        is_loading = {is_loading, }
+      />);
+  }
+  return (
+    <div className="space - y-6">;
+      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
+        <h1 className="text - 2xl font - bold">Resume Builder</h1>;
+        <div className="flex gap - 4 flex - wrap items - center">;
+          {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
+          <Button;
+            on_click = {(, ) => setShowNewResumeForm (true), }
+            variant="outline";
+            size="sm";
+            className="gap - 2";
+          >;
+            <FilePlus className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Create New;
+          </Button>;
+        </div>;
+      </div>;
+
+            />;
+
+            {resume && (;
+
+              <ResumeStepContent
+                activeTab = {activeTab,}
+                resume = {resume as Resume,}
+                onNextStep = {nextStep,}
+                onPrevStep = {prevStep,}
+>>>>>>>               />;
             )}
+
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -256,4 +410,11 @@ export function ResumeWizard() {;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -8,12 +8,27 @@ interface TalentRateRecommenderProps {
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {logErrorToProduction} from '@/utils/productionLogger'
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
 
 import { 
+=======
+import {
+  getTalentRateSuggestion
+  PricingSuggestion
+  TalentRateParams
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService"
+import { PricingSuggestionBox } from "./PricingSuggestionBox"
+import { useAuth } from "@/hooks/useAuth"
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> import { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   getTalentRateSuggestion,
   PricingSuggestion,
   TalentRateParams,
@@ -21,12 +36,23 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
   rateType: "hourly" | "fixed"
 
+=======
+>>>>>>> import { Sparkles } from 'lucide-react'
+interface TalentRateRecommenderProps {
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number,) => void
+    if (skills.length === 0 |yearsExperience <= 0) {
+      return
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     setIsLoading(true)
     try {
@@ -47,7 +73,10 @@ interface TalentRateRecommenderProps {
       // We'll use the middle of the range as the suggested rate
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
       onSuggestionApplied(suggestedRate)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -102,9 +131,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       // We'll use the middle of the range as the suggested rate
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
       onSuggestionApplied(suggestedRate),
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>>       // Track this suggestion application
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       // Track this suggestion application
-      if (user && user.id) {
+>>>>>>>       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id
           suggestionType: "talent"
@@ -113,23 +148,151 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate
           accepted: true
         })
-      }
+>>>>>>> interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string;
+  onSuggestionApplied: (value: number) => void,;
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { ;
+  getTalentRateSuggestion,;
+  PricingSuggestion,;
+  TalentRateParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react';
+interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string,;
+  onSuggestionApplied: (value: number,) => void,;
+  rateType: "hourly" | "fixed";
+}
+
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+  skills;
+  yearsExperience;
+  location;
+  onSuggestionApplied,;
+  rateType}) => {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
+  const generateSuggestion = async () => {;
+    if (skills && skills.length === 0 || yearsExperience <= 0) {;
+      return;
     }
 
+    setIsLoading(true);
+    try {;
+      const params: TalentRateParams = {;
+        skills;
+        yearsExperience,;
+        location};
+
+      const result = await getTalentRateSuggestion(params);
+      setSuggestion(result);
+    } catch (error) {;
+      logErrorToProduction('Error generating rate suggestion:', { data: error });
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      // We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
+      onSuggestionApplied(suggestedRate);
+
+      // Track this suggestion application;
+      if (user && user.id) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: "talent",;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
+          actualValue: suggestedRate,;
+          accepted: true;
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const handleApplySuggestion = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      // We'll use the middle of the range as the suggested rate;
+      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
+      onSuggestionApplied (suggested_rate);
+      // Track this suggestion application;
+      // Check condition
+if ( {) {
+  $2
+}
+        trackPricingSuggestion ({
+          user_id: user.id,
+          suggestion_type: "talent",
+          suggested_min: suggestion.min_rate,
+          suggested_max: suggestion.max_rate,
+          actual_value: suggested_rate,
+          accepted: true;
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    }
+<<<<<<< HEAD
+
   return (
+=======
+  }
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
             type="button"
             variant="outline"
+<<<<<<< HEAD
 
             className="w-full"
+=======
+            onClick = {generateSuggestion,}
+            disabled = {skills.length === 0 |yearsExperience <= 0,}
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+            onClick={generateSuggestion}
+            disabled={skills.length === 0 || yearsExperience <= 0}
+
+
+>>>>>>>             className="w-full"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
         ) : (
+            disabled = {skills && skills.length === 0 || yearsExperience <= 0,}
+            className="w-full">;
+            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
+          </Button>;
+        ) : (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
+<<<<<<< HEAD
+=======
+  rateType
+}/>)
+}</div> </div>)
+}
+'"}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             suggestion={suggestion}
             isLoading={isLoading}
@@ -137,8 +300,16 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             rateType={rateType}
           />;
         )}
+
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

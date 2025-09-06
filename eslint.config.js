@@ -1,4 +1,36 @@
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -10,6 +42,13 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
 
+<<<<<<< HEAD
+=======
+import js from '@eslint/js';
+
+    files: ["**/*.{js,jsx,ts,tsx}"],
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     ignores: [
       '.next/**',
       'out/**',
@@ -17,6 +56,11 @@ import js from '@eslint/js';
       'build/**',
       'node_modules/**',
 
+<<<<<<< HEAD
+=======
+      'coverage/**',
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -32,6 +76,22 @@ import js from '@eslint/js';
       '**/*.test.*',
       '**/*.spec.*',
 
+<<<<<<< HEAD
+=======
+      '**/performance-*.txt'
+=======
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -45,10 +105,65 @@ import js from '@eslint/js';
       globals: {
         // Browser globals
 
+<<<<<<< HEAD
         // React
         React: 'readonly',
         // Jest/Testing globals
 
+=======
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
+        navigator: "readonly",
+        performance: "readonly",
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
+        requestAnimationFrame: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        self: "readonly",
+        // Node.js globals
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly",
+        global: "readonly",
+        // DOM types
+        Element: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        HTMLDivElement: "readonly",
+        MouseEvent: "readonly",
+        KeyboardEvent: "readonly",
+        Node: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
+        LayoutShift: "readonly",
+        IntersectionObserver: "readonly",
+        IntersectionObserverEntry: "readonly",
+
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -57,22 +172,60 @@ import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
+<<<<<<< HEAD
 export default [
   {
 
+=======
+=======
+
+      "*.test && test.js",
+      "*.test && test.ts",
+      "*.test && test.tsx",
+      "*.spec && spec.js",
+      "*.spec && spec.ts",
+      "*.spec && spec.tsx",
+    ],
+
+  },
+  js && js.configs.recommended,
+  {
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals && globals.browser,
+        ...globals && globals.node,
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
+<<<<<<< HEAD
 
+=======
+      }
+    },
+    plugins: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       react,
       "react-hooks": reactHooks
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -87,6 +240,7 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
+<<<<<<< HEAD
         ...globals.browser,
         ...globals.node,
 
@@ -116,6 +270,56 @@ export default [
 
         afterAll: "readonly"
 
+=======
+
+        ...globals && globals.browser,
+        ...globals && globals.node,
+
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+
+        React: 'readonly',
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+=======
+
+
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default [
+  {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+
+
+
+
+=======
+        afterAll: "readonly"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       },
       parser: tsparser,
       parserOptions: {
@@ -134,16 +338,31 @@ export default [
 
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
+
+      ...tseslint && tseslint.configs.recommended && recommended.rules,
+      ...react && react.configs.recommended && recommended.rules,
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
 
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
 
+<<<<<<< HEAD
+=======
+
+
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -151,6 +370,7 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD
 
         jest: 'readonly',
         test: 'readonly',
@@ -162,12 +382,17 @@ export default [
       }
     },
     plugins: {
+=======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
+<<<<<<< HEAD
 
       'no-unused-vars': 'off',
       'no-console': 'warn',
@@ -176,6 +401,16 @@ export default [
 
       "react/react-in-jsx-scope": "off"
 
+=======
+
+
+
+
+=======
+      "react/react-in-jsx-scope": "off"
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     },
     settings: {
       react: {
@@ -194,7 +429,7 @@ export default [
       ecmaVersion: 2021,
       sourceType: "script",
       globals: {
-        ...globals.node,
+        ...globals && globals.node,
         console: "readonly",
         process: "readonly",
         require: "readonly",
@@ -212,6 +447,7 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
+<<<<<<< HEAD
 
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -219,6 +455,16 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
 
+=======
+=======
+
+=======
+  }
+];
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       'no-unused-vars': 'warn'
     }
   },
@@ -250,6 +496,7 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
+<<<<<<< HEAD
 
   }
 ];
@@ -257,3 +504,24 @@ export default [
   }
 ];
 
+=======
+
+
+
+=======
+
+
+  }
+];
+
+
+
+=======
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

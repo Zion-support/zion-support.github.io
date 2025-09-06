@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }
 import _React from 'react'; import Head from 'next/head'; export default function AIEthicsAutomation() {}; return null} }
 import React from \'react\'; import Head from \'next/head\'; export default function AIEthicsAutomation() {}; return null} }

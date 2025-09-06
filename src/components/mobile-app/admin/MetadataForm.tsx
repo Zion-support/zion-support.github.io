@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
-}
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+=======
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from 'lucide-react'
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+}
+
+<<<<<<< HEAD
   const { control, register, watch, setValue } = form
   const keywords = watch("keywords")
   const platform = watch("platform")
@@ -140,7 +147,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

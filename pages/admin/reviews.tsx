@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -25,6 +26,15 @@ import type { Review } from '../../types/reviews';
   }
 }
 
+=======
+
+    if (res.ok) refresh()
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -44,18 +54,12 @@ import type { Review } from '../../types/reviews';
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {!pending.length && <div>No pending reviews.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
+          {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
+
+
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
@@ -63,5 +67,22 @@ import type { Review } from '../../types/reviews';
     </main>
   )
 
+<<<<<<< HEAD
 },
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default AdminReviewsPage,
+
+=======
+},
+
+export default AdminReviewsPage,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

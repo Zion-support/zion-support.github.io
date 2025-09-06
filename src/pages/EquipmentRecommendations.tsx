@@ -46,7 +46,10 @@ export default function EquipmentRecommendations() {
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useEffect, useState } from 'react',;
 import { ProductListingCard } from '@/components/ProductListingCard',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -55,41 +58,125 @@ import type { ProductListing } from '@/types/listings',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
-import Link from 'next/link',;
-import { ErrorState } from '@/components/jobs/applications',;
+import Link from 'next/link';
+import { ErrorState } from '@/components/jobs/applications';
+
+export default function EquipmentRecommendations() {;
+  const { isAuthenticated, user } = useAuth();
+  const [listings, setListings] = useState<ProductListing[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  useEffect(() => {;
 export default function EquipmentRecommendations() {;
   const { isAuthenticated, user } = useAuth(),;
   const [listings, setListings] = useState<ProductListing[]>([]),;
   const [loading, setLoading] = useState<boolean>(false),;
   const [error, setError] = useState<boolean>(false),;
-  useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  useEffect((,) => {;
     if (isAuthenticated && user?.id) {;
+
+import { useEffect, useState } from 'react';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { useAuth } from '@/hooks/useAuth';
+import { fetchRecommendations } from '@/api/recommendations';
+import type { ProductListing } from '@/types/listings';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react'
+import Link from 'next/link';
+import { ErrorState } from '@/components/jobs/applications';
+
+export default function EquipmentRecommendations() { const { isAuthenticated, user  } = useAuth(),
+  const [ listings, setListings ] = useState<ProductListing[]>([]),
+  const [ loading, setLoading ] = useState<boolean>(false),
+  const [ error, setError ] = useState<boolean>(false),
+
+
+  useEffect(() => {
+    if (isAuthenticated && user?.id) {
+
       setLoading(true);
-      fetchRecommendations(user.id);
+
+
+      fetchRecommendations(user && user.id);
         .then(setListings);
         .catch(() => setError(true));
+        .finally(() => setLoading(false));    }        .catch((,) => setError(true));
+        .finally((,) => setLoading(false));
         .finally(() => setLoading(false));
-    }
-  }, [isAuthenticated, user]),
 
   if (!isAuthenticated) {
     return (
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+<<<<<<< HEAD
 
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
 
+=======
+>>>>>>>           <DialogHeader>
+            <DialogTitle>Authentication required</DialogTitle>
+          </DialogHeader>
+          <p>Please sign in to get personalized AI picks.</p>
+          <Button
+            asChild
+            className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
+          >
+            <Link href='/auth/login?returnTo=/equipment/recommendations'>
+              Sign In
+            </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+>>>>>>>             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
+    }
+  }, [isAuthenticated, user]);
+
+  if (!isAuthenticated) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+
+
+          <DialogHeader>
+            <DialogTitle>Authentication required</DialogTitle>
+          </DialogHeader>
+          <p>Please sign in to get personalized AI picks.</p>
+
+
+          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
-          </Button>
+>>>>>>>           </Button>
         </DialogContent>
       </Dialog>
     )
+            className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
+            <Link href='/auth/login?returnTo=/equipment/recommendations'>;
+              Sign In;
+            </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
+            <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>;
+          </Button>;
+        </DialogContent>;
+      </Dialog>;
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
 
+=======
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
       {loading && (
@@ -102,6 +189,7 @@ export default function EquipmentRecommendations() {;
         {listings.map((listing) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
+<<<<<<< HEAD
 
           </div>
         ))}
@@ -109,3 +197,16 @@ export default function EquipmentRecommendations() {;
     </div>;
   );
 
+=======
+>>>>>>>           </div>
+>>>>>>>         ))}
+
+      </div>;
+    </div>;
+  );
+};
+}
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

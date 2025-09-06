@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -324,6 +325,26 @@ export const real2036ITServices = [
     ]
     useCases: [
 
+=======
+
+
+
+export const real2036ITServices = [
+  {
+
+
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -535,6 +556,16 @@ export const real2036ITServices = [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
     ];
 
+<<<<<<< HEAD
   }
 ];
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

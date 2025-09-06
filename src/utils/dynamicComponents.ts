@@ -21,8 +21,68 @@ const LoadingSkeleton = () =>
     React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' })
     React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
   )
+<<<<<<< HEAD
 
 import React from 'react',
+=======
+// Chart components (heavy - only load when needed)
+// TODO: Uncomment when Chart component is available
+// export const DynamicChart = dynamic(
+//   () => import('../components/charts/Chart')
+//   {//     loading: LoadingSkeleton
+//     ssr: false
+//   }
+// )
+export const DynamicPieChart = dynamic(
+  () => import('recharts').then(mod => ({ default: mod.PieChart }))
+  {    loading: LoadingSkeleton
+    ssr: false
+  }
+
+  () => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),
+);
+// TODO: Uncomment when these components are available;
+// export const DynamicPDFGenerator = dynamic (
+//   () => import ('../components / pdf / PDFGenerator'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// export const DynamicVideoPlayer = dynamic (
+//   () => import ('../components / video / VideoPlayer'),
+//   {//     loading: LoadingSkeleton,
+//     ssr: false;
+//   }
+// );
+// export const DynamicModelViewer = dynamic (
+//   () => import ('../components / ar / ModelViewer'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// export const DynamicRichEditor = dynamic (
+//   () => import ('../components / editor / RichTextEditor'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// Virtual list for large datasets;
+export const DynamicVirtualList = dynamic (
+  () => import ('react - window').then (mod => ({ default: mod.FixedSizeList })),
+
+  {    loading: LoadingSkeleton,
+    ssr: false,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+
+// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
+// Usage examples: // Replace: import Chart from '../components/charts/Chart'
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
+
+
+>>>>>>> import React from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import dynamic from 'next/dynamic',
 const LoadingSpinner = () => React.createElement('div',
   { className: "flex items-center justify-center p-8" },
@@ -36,11 +96,69 @@ const LoadingSkeleton = () => React.createElement('div',
   React.createElement('div', { className: "h-32 bg-gray-200 rounded" })
 ),
 
+<<<<<<< HEAD
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
 
+=======
+>>>>>>> // Chart components (heavy - only load when needed)
+// TODO: Uncomment when Chart component is available
+// export const DynamicChart = dynamic(
+//   () => import('../components/charts/Chart'),
+//   {//     loading: LoadingSkeleton,
+//     ssr: false
+//   }
+// )
+export const DynamicPieChart = dynamic(
+  () => import('recharts').then(mod => ({ default: mod.PieChart })),
+  {    loading: LoadingSkeleton,
+    ssr: false,
+  }
+)
+export const DynamicBarChart = dynamic(
+  () => import('recharts').then(mod => ({ default: mod.BarChart })),
+  {    loading: LoadingSkeleton,
+    ssr: false,
+  }
+)
+// TODO: Uncomment when these components are available
+// export const DynamicPDFGenerator = dynamic(
+//   () => import('../components/pdf/PDFGenerator'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false
+//   }
+// )
+// export const DynamicVideoPlayer = dynamic(
+//   () => import('../components/video/VideoPlayer'),
+//   {//     loading: LoadingSkeleton,
+//     ssr: false
+//   }
+// )
+// export const DynamicModelViewer = dynamic(
+//   () => import('../components/ar/ModelViewer'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false
+//   }
+// )
+// export const DynamicRichEditor = dynamic(
+//   () => import('../components/editor/RichTextEditor'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false
+//   }
+// )
+// Virtual list for large datasets
+export const DynamicVirtualList = dynamic(
+  () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
+  {    loading: LoadingSkeleton,
+    ssr: false,;
+  };
+);
+// Usage examples:;
+// Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 //   { 
 //     loading: LoadingSkeleton,
 //     ssr: false 
@@ -120,6 +238,23 @@ export const DynamicVirtualList = dynamic(;
     ssr: false;
   }
 ),;
+<<<<<<< HEAD
 
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
+=======
+>>>>>>> // Usage examples: // Replace: import Chart from '../components/charts/Chart';
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+// Chart components (heavy - only load when needed)
+// TODO: Uncomment when Chart component is available
+// export const DynamicChart = dynamic(
+//   () => import('../components/charts/Chart'),
+
+
+// Usage examples: // Replace: import Chart from '../components/charts/Chart';
+
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,11 +1,26 @@
 
+<<<<<<< HEAD
 
+=======
+import { formatDistanceToNow } from "date-fns"
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ForumReply } from "@/types/community"
+import { cn } from "@/lib/utils"
+interface ReplyCardProps {
+  reply: ForumReply,
+  onMarkAnswer?: () => void
+  canMarkAnswer?: boolean
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
   className?: string
 }
@@ -13,13 +28,54 @@ import { Badge } from "@/components/ui/badge",
 export const ReplyCard = ({ 
 
   className
+=======
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {
+
+  reply: ForumReply
+  onMarkAnswer?: () => void
+  canMarkAnswer?: boolean
+  className?: string
+}
+export const ReplyCard = ({
+  reply
+  onMarkAnswer
+  canMarkAnswer = false
+  className
+}: ReplyCardProps,) => {
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
+  return (
+    <Card className={cn(
+      "transition-shadow"
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
+>>>>>>>   className?: string
+}
+
+export const ReplyCard = ({ 
+  reply,
+  onMarkAnswer, 
+  canMarkAnswer = false,
+  reply
+  onMarkAnswer, 
+  canMarkAnswer = false
+>>>>>>>   className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
 
   return (
     <Card className={cn(
+<<<<<<< HEAD
 
       className
+=======
+      "transition-shadow",
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+      "transition-shadow"
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
+>>>>>>>       className
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-8 w-8">
@@ -33,18 +89,23 @@ export const ReplyCard = ({
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+<<<<<<< HEAD
 
                 {reply.authorRole}
+=======
+>>>>>>>                 {reply.authorRole}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </Badge>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
             )}
-            {reply.isAnswer && (
-              <Badge className="ml-2 bg-green-500 text-white">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Answer
-              </Badge>
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
           </div>
         </div>
@@ -52,9 +113,14 @@ export const ReplyCard = ({
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
+<<<<<<< HEAD
 
+=======
+>>>>>>>       <CardFooter className="flex justify-between">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-2">
+>>>>>>>         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
             <ThumbsUp className="h-4 w-4 mr-1" />
             <span>{reply.upvotes}</span>
@@ -70,8 +136,22 @@ export const ReplyCard = ({
             Mark as Answer
           </Button>
         )}
+<<<<<<< HEAD
+=======
+      </CardFooter>
+    </Card>
+  )
+}
+export default ReplyCard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     </Card>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

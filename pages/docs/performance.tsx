@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 export default function PerformanceDocRedirect() {
   return (
@@ -12,4 +13,19 @@ export default function PerformanceDocRedirect() {
   )
 
 ;
+=======
+
+
+    <>;
+      <Head>;
+        <meta http_equiv="refresh" content="0, url=/PERFORMANCE.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p > Redirecting to Performance documentation…</p>;
+      </main>;
+    </>);
+}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

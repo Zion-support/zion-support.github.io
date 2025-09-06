@@ -1,9 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
-export default function InnovationRadarPage() {
 
-  const items: any[] = (data?.items |[]).slice(0, 50)
 
+<<<<<<< HEAD
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -14,6 +11,14 @@ export default function InnovationRadarPage() {
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  );
+};
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -44,3 +49,10 @@ export default function InnovationRadarPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

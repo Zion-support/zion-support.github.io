@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -29,10 +30,13 @@
     mobile: string;
     email: string;
     address: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-    website: string;
+
   }
 
+<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -647,3 +651,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   }
 ];
 
+=======
+=======
+
+export interface InnovativeAIAutomationService {;
+
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

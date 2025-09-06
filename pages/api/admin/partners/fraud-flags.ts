@@ -1,41 +1,33 @@
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-  const code = (req.query.code as string)?.toLowerCase()
-  if (!code) return res.status(400).json({ error: 'Missing code' })
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key') === 'placeholder-key'
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ flags: [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
+
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-.gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
-    if (error) return res.status(500).json({ error: error.message })
-    const counts = new Map<string, number>()
-    for (const row of data |[]) {
-      const key = (row as any).ip_address |'unknown'
-      counts.set(key, (counts.get(key) |0) + 1)
+
+
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
-        flags.push({ type: 'suspicious_ip', severity: 'medium', ip, count, note: 'High number of events from a single IP in 7 days' })
-      }
-    })
-    return res.status(200).json({ flags })
 
+<<<<<<< HEAD
   } catch (e: any) {
+=======
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+
+<<<<<<< HEAD
     if (req.method === 'GET') {
       const code = (req.query.code as string)?.toLowerCase();
       if (!code) return res.status(400).json({ error: 'Code required' });
@@ -57,3 +49,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+=======
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

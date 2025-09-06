@@ -17,6 +17,12 @@ const { withErrorLogging } = require(
     const { email } = req.body || {}
     if (!email) {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -45,6 +51,7 @@ async function handler(req, res) {
     res."statusCode": = 500;
     res.json({ error: err.message: ||';Subscription: failed})}', err);
     res.statusCode = 500;
+<<<<<<< HEAD
 
     res.json({ error: err.message || 'Subscription failed' });
   }
@@ -57,3 +64,9 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
     res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler);
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -28,12 +28,19 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
 
+<<<<<<< HEAD
 interface EmptyFraudStateProps {
+=======
+>>>>>>> interface EmptyFraudStateProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   hasFilters: boolean
   onResetFilters: () => void
@@ -53,20 +60,45 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+<<<<<<< HEAD
+=======
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
-}
-;
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
-  hasFilters;
-  onResetFilters;
-}) => {;
-  return (;
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+interface EmptyFraudStateProps {
+  hasFilters: boolean,
+
+  onResetFilters: () => void
+interface EmptyFraudStateProps {;
+  hasFilters: boolean,;
+  onResetFilters: () => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> }
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
+  hasFilters,;
+  onResetFilters ;
+},) => {;
+
+  return (
     <div className="text-center py-12">;
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
       <h3 className="text-lg font-medium">No fraud flags found</h3>;
@@ -77,8 +109,17 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
       </p>;
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+<<<<<<< HEAD
 
       )}
     </div>;
   );
 
+=======
+>>>>>>>       )}
+    </div>;
+  );
+};
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'

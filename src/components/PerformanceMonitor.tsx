@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 
 export default function PerformanceMonitor() {
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <div className="performance-monitor">
-      <p>Performance Monitor</p>
+      {/* Performance monitoring component */}
     </div>
   );
+<<<<<<< HEAD
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -97,3 +104,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <button,;
             onClick={() => setIsVisible(false)},;
 
+=======
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

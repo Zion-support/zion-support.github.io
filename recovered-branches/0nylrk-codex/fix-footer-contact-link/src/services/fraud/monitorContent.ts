@@ -1,5 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+
+
+export const monitorContent = async (;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -7,16 +15,26 @@
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
-  if (analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
+
+  
+  if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    
     // If contains highly suspicious phrases, mark as dangerous
-    if (analysis.reasons.some(r =>
-      r.includes('payment') |
-      r.includes('external') |
-      r.includes('bypass')
+    if (analysis && analysis.reasons.some(r => 
+      r && r.includes('payment') || 
+      r && r.includes('external') || 
+      r && r.includes('bypass')
+
     )) {
       severity = 'dangerous'
 
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -42,24 +60,42 @@ export const monitorContent = async (;
     )) {;
       severity = 'dangerous';
 
+<<<<<<< HEAD
     }
 
+=======
+
+
+    }
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     await flagContent(
-      userId,
-      userEmail,
-      contentType,
-      contentId,
-      content,
-      severity,
-      analysis.reasons.join(),
+      userId;
+      userEmail;
+      contentType;
+      contentId;
+      content;
+      severity;
+      analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
 
+<<<<<<< HEAD
+=======
+
+    ),
+    
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
-      // // // console.log('Auto-hiding dangerous content:', contentId),
+      console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
 
+<<<<<<< HEAD
 ;
     await flagContent(;
       userId,;
@@ -81,3 +117,67 @@ export const monitorContent = async (;
   }
 };
 
+=======
+// Content monitoring functionality;
+import {FraudFlag, FraudSeverity} from '@/types / fraud';
+import {analyze_content} from './analyze_content';
+import {flag_content} from './flag_content';
+/**;
+* Create a monitoring system helper to easily monitor any content;
+*/;
+export const monitor_content = async (
+  user_id: string;
+  user_email: string | undefined;
+  content_type: FraudFlag['content_type'];
+  content_id: string;
+  content: string): Promise < void> => {
+  const analysis = analyze_content (content);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    // If contains highly suspicious phrases, mark as dangerous;
+    // Check condition
+if (||) {
+  $2
+}
+      r.includes ('external') ||;
+      r.includes ('bypass'))) {
+      severity = 'dangerous';
+    }
+    await flag_content (
+      user_id;
+      user_email;
+      content_type;
+      content_id;
+      content;
+      severity;
+      analysis.reasons.join ();
+      undefined // IP address would be added in a real implementation);
+=======
+
+
+=======
+
+;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.log ('Auto - hiding dangerous content:', content_id);
+      // Code to hide content would go here;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 
+=======
+
+
+import * as React from "react"
+import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import { Check, ChevronRight, Circle } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const MenubarMenu = MenubarPrimitive.Menu
 const MenubarGroup = MenubarPrimitive.Group
 const MenubarPortal = MenubarPrimitive.Portal
@@ -12,6 +25,13 @@ const Menubar = React.forwardRef<
     ref={ref}
     className={cn(
 
+<<<<<<< HEAD
+=======
+
+      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
@@ -20,16 +40,37 @@ const Menubar = React.forwardRef<
 Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef<;
 
+<<<<<<< HEAD
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Trigger>,;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Trigger;
     ref={ref}
 
+<<<<<<< HEAD
       &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 
+<<<<<<< HEAD
+=======
+=======
+      &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
+=======
+    className={cn(
+      "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
@@ -38,21 +79,93 @@ const MenubarTrigger = React.forwardRef<;
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
 
+<<<<<<< HEAD
+=======
+import * as React from &quot;react & quot;
+import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
+import { Check, ChevronRight, Circle } from &quot;lucide-react & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+;
+const MenubarMenu = MenubarPrimitive.Menu;
+const MenubarGroup = MenubarPrimitive.Group;
+const MenubarPortal = MenubarPrimitive.Portal;
+const MenubarSub = MenubarPrimitive.Sub;
+const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
+const Menubar = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Root>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.Root;
+    ref={ref}
+    className={cn (
+      &quot;flex h - 10 items - center space - x-1 rounded - md border bg - background p - 1&quot;,
+      class_name)}
+    {...props}
+  />));
+Menubar.display_name = MenubarPrimitive.Root.display_name;
+const MenubarTrigger = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Trigger>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.Trigger;
+    ref={ref}
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 3 py - 1.5 text - sm font - medium outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarTrigger.display_name = MenubarPrimitive.Trigger.display_name;
+const MenubarSubTrigger = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.SubTrigger>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {
+    inset?: boolean;
+
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
+    inset?: boolean;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <MenubarPrimitive.SubTrigger;
     ref={ref}
 
+<<<<<<< HEAD
+=======
+
+      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
+      inset && &quot;pl-8&quot;,
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
   >;
     {children}
 
+<<<<<<< HEAD
+=======
+
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   </MenubarPrimitive.SubTrigger>
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
@@ -64,6 +177,13 @@ const MenubarSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 
+<<<<<<< HEAD
+=======
+
+      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
@@ -76,6 +196,13 @@ const MenubarContent = React.forwardRef<
 >(
   (
 
+<<<<<<< HEAD
+=======
+
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     ref
   ) => (
     <MenubarPrimitive.Portal>
@@ -85,11 +212,25 @@ const MenubarContent = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
 
+<<<<<<< HEAD
           &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
         className={cn(
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
+<<<<<<< HEAD
+=======
+=======
+          &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
+=======
+        className={cn(
+          "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           className
         )}
         {...props}
@@ -100,15 +241,86 @@ const MenubarContent = React.forwardRef<
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
 
+<<<<<<< HEAD
+=======
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </MenubarPrimitive.SubTrigger>));
+MenubarSubTrigger.display_name = MenubarPrimitive.SubTrigger.display_name;
+const MenubarSubContent = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarSubContent.display_name = MenubarPrimitive.SubContent.display_name;
+const MenubarContent = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Content>;
+>(
+  (
+    { class_name, align = &quot;start & quot;, align_offset = -4, side_offset = 8, ...props },
+    ref) => (
+    <MenubarPrimitive.Portal>;
+      <MenubarPrimitive.Content;
+        ref={ref}
+        align={align}
+        align_offset={align_offset}
+        side_offset={side_offset}
+className={cn (
+          &quot;z - 50 min - w-[12rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+          class_name)}
+        {...props}
+      />;
+    </MenubarPrimitive.Portal>));
+MenubarContent.display_name = MenubarPrimitive.Content.display_name;
+const MenubarItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Item> & {
+    inset?: boolean;
+
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
+    inset?: boolean;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Item;
     ref={ref}
 
+<<<<<<< HEAD
+=======
+
+      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+      inset && &quot;pl-8&quot;,
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
@@ -117,42 +329,92 @@ const MenubarItem = React.forwardRef<;
 MenubarItem.displayName = MenubarPrimitive.Item.displayName;
 const MenubarCheckboxItem = React.forwardRef<;
 
+<<<<<<< HEAD
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <MenubarPrimitive.CheckboxItem;
     ref={ref}
 
+<<<<<<< HEAD
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
+<<<<<<< HEAD
+=======
+=======
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+=======
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
+=======
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarItem.display_name = MenubarPrimitive.Item.display_name;
+const MenubarCheckboxItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.CheckboxItem>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.CheckboxItem>;
+>(({ class_name, children, checked, ...props }, ref) => (
+  <MenubarPrimitive.CheckboxItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <MenubarPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </MenubarPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <MenubarPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </MenubarPrimitive.ItemIndicator>;
+    </span>;
     {children}
+<<<<<<< HEAD
   </MenubarPrimitive.CheckboxItem>;
 ));
 MenubarCheckboxItem.displayName = MenubarPrimitive.CheckboxItem.displayName;
 const MenubarRadioItem = React.forwardRef<;
+=======
+
+
+  React.ElementRef<typeof MenubarPrimitive.RadioItem>,;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
     ref={ref}
 
+<<<<<<< HEAD
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
+<<<<<<< HEAD
       className
     )}
     {...props}
@@ -168,15 +430,77 @@ const MenubarRadioItem = React.forwardRef<;
 MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
 const MenubarLabel = React.forwardRef<;
 
+=======
+=======
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+=======
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      className
+    )}
+=======
+  </MenubarPrimitive.CheckboxItem>));
+MenubarCheckboxItem.display_name = MenubarPrimitive.CheckboxItem.display_name;
+const MenubarRadioItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.RadioItem>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.RadioItem>;
+>(({ class_name, children, ...props }, ref) => (
+  <MenubarPrimitive.RadioItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {...props}
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <MenubarPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </MenubarPrimitive.ItemIndicator>;
+    </span>;
+    {children}
+
+  </MenubarPrimitive.RadioItem>));
+MenubarRadioItem.display_name = MenubarPrimitive.RadioItem.display_name;
+const MenubarLabel = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Label>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Label> & {
+    inset?: boolean;
+
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Label>,;
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
+    inset?: boolean;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Label;
     ref={ref}
 
+<<<<<<< HEAD
+=======
+
+      &quot;px-2 py-1.5 text-sm font-semibold&quot;,
+      inset && &quot;pl-8&quot;,
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
     )}
     {...props}
@@ -185,12 +509,33 @@ const MenubarLabel = React.forwardRef<;
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
 
+<<<<<<< HEAD
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Separator>,;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+=======
+className={cn (
+      &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarLabel.display_name = MenubarPrimitive.Label.display_name;
+const MenubarSeparator = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <MenubarPrimitive.Separator;
     ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-muted", className)}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 />
 ))
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
@@ -211,3 +556,57 @@ const MenubarShortcut = ({
 
 ;
 
+=======
+
+
+        "ml-auto text-xs tracking-widest text-muted-foreground",
+
+
+        className
+      )}
+=======
+/>));
+MenubarSeparator.display_name = MenubarPrimitive.Separator.display_name;
+const MenubarShortcut = ({
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
+  return (
+    <span;
+      className={cn (
+        &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
+        class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {...props}
+    />);
+}
+
+MenubarShortcut.displayname = &quot;MenubarShortcut & quot;
+;
+=======
+
+MenubarShortcut.displayname = "MenubarShortcut"
+
+
+export {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarSeparator,
+  MenubarLabel,
+  MenubarCheckboxItem,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarPortal,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarGroup,
+  MenubarSub,
+
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

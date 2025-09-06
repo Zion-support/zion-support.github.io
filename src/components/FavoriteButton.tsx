@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Heart } from 'lucide-react'
 
@@ -18,6 +19,13 @@ interface FavoriteButtonProps {
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
 
+=======
+
+  const { isWishlisted, toggle } = useWishlist()
+  const { isAuthenticated } = useAuth()
+  const [loginOpen, setLoginOpen] = React.useState(false)
+  const handleClick = (e: React.MouseEvent) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -33,7 +41,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     })
   }
   const active = isWishlisted(itemId)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -74,12 +85,17 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
   const active = isWishlisted(itemId),
 
+<<<<<<< HEAD
   return (
+=======
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <button
+<<<<<<< HEAD
 
               )}
               onClick={handleClick}
@@ -128,6 +144,8 @@ className: {`w-4 h-4 transition-all duration-300 ${
 '`
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -145,27 +163,41 @@ className: {`w-4 h-4 transition-all duration-300 ${
         <Tooltip>;
           <TooltipTrigger asChild>;
             <button;
-              className={cn(;
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
-                className;
-              )}
-              onClick={handleClick}
-              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
-            >;
+              class_name = {cn (
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
+                class_name)}
+              on_click={handle_click}
+              aria - label={
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
               <Heart;
-                className={cn(;
-                  'h-4 w-4 transition-transform duration-200';
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
-                )}
-              />;
+                class_name = {cn (
+                  'h - 4 w - 4 transition - transform duration - 200',
+                  active;
+                    ? 'fill - red - 500 text - red - 500 scale - 110';
+                    : 'text - zion - slate')}              />;
             </button>;
           </TooltipTrigger>;
-          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+  return (
+    <>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

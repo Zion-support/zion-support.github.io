@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -29,23 +30,33 @@ import { readState } from "../../../utils/sync/storage",
 import { filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   if (req.method === "GET") {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
-    const scopedEvents = filterEventsByScope(state.events, scope),
-    return res.status(200).json({
+    const scoped_events = filterEventsByScope (state.events, scope),
+    return res.status (200).json ({
       status: "ok",
-      instanceId: state.config.instanceId,
+      instance_id: state.config.instance_id,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
+
         totalEvents: scopedEvents.length,
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -108,4 +119,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

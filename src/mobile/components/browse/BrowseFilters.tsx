@@ -1,18 +1,46 @@
+<<<<<<< HEAD
 
 
+=======
+import { X, Filter } from 'lucide-react'
+
+
+interface BrowseFiltersProps {
+  type: 'jobs' | 'talents'
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const addFilter = null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
 
 import { X, Filter } from 'lucide-react'
+=======
+>>>>>>> import { X, Filter } from 'lucide-react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+<<<<<<< HEAD
 
+=======
+  type: 'jobs' | 'talents'
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   type: "jobs" | "talents"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -39,8 +67,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
+<<<<<<< HEAD
 
   return (
+=======
+  
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
@@ -55,9 +88,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+<<<<<<< HEAD
 
+=======
+              <div className='py-6 space-y-6'>
+                {type === 'jobs' ? (
+>>>>>>>                   <>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <>
-                    <div className="space-y-2">
+>>>>>>>                     <div className="space-y-2">
                       <Label>Job Type</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>
@@ -66,9 +105,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+                    <div className='space-y-2'>
+>>>>>>>                       <Label>Experience Level</Label>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <Label>Experience Level</Label>
-                      <div className="flex gap-2 flex-wrap">
+>>>>>>>                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
@@ -86,37 +130,70 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+                    <div className='space-y-2'>
+                      <Label>Experience (years)</Label>
+                      <Slider
+                        aria-label='Years of experience'
+                        defaultValue={[0, 10]}
+                        max={20}
+                        step={1}
+                        className='my-4'                      />
+                      <div className='flex justify-between text-xs text-muted-foreground'>
+>>>>>>>                         <span>0+ years</span>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         <span>0+ years</span>
-                        <span>20+ years</span>
+>>>>>>>                         <span>20+ years</span>
                       </div>
                     </div>
                   </>
                 )}
+<<<<<<< HEAD
 
                   <Label>Location</Label>
+=======
+                <div className='space-y-2'>
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                   <Label>Location</Label>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
+                      <SelectValue placeholder='Select location' />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
+                      <SelectItem value='remote'>Remote</SelectItem>
+                      <SelectItem value='us'>United States</SelectItem>
+                      <SelectItem value='europe'>Europe</SelectItem>
+                      <SelectItem value='asia'>Asia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
+<<<<<<< HEAD
 
                   <Label>Salary Range</Label>
+=======
+                <div className='space-y-2'>
+>>>>>>>                   <Label>Salary Range</Label>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
+ursor/fix-website-loading-errors-and-merge-6662
+                  <Label>Salary Range</Label>
+                  <div className='flex gap-4 items-center'>
+                    <Input placeholder='Min' type='number' className='w-full' />
+>>>>>>>                     <span>to</span>
+                    <Input placeholder='Max' type='number' className='w-full' />
                   </div>
                 </div>
+<<<<<<< HEAD
 
                   <Label>Skills</Label>
+=======
+                <div className='space-y-2'>
+>>>>>>>                   <Label>Skills</Label>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
@@ -126,6 +203,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
                   </div>
                 </div>
+<<<<<<< HEAD
 
                   <Label>Only show verified profiles</Label>
                   <Switch />
@@ -133,23 +211,116 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               </div>
 
               <SheetFooter>
+=======
+                <div className='flex items-center justify-between'>
+>>>>>>>                   <Label>Only show verified profiles</Label>
+                  <Switch />
+                </div>
+              </div>
+>>>>>>>               <SheetFooter>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+<<<<<<< HEAD
 
           <Select>
+=======
+>>>>>>>           <Select>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
+ursor/fix-website-loading-errors-and-merge-6662
+                  <Label>Skills</Label>
+                  <div className='grid grid-cols-2 gap-2'>
+                <div className='space-y-2'>;
+                  <Label>Location</Label>;
+                    <div className='space - y-2'>;
+                      <Label > Experience (years)</Label>;
+                      <Slider;
+                        aria - label='Years of experience';
+                        default_value={[0, 10]}
+                        max={20}
+                        step={1}
+                        className='my - 4'                      />;
+                      <div className='flex justify - between text - xs text - muted - foreground'>;
+                        <span > 0+ years</span>;
+                        <span > 20+ years</span>;
+                      </div>;
+                    </div>;
+                  </>)}
+                <div className='space - y-2'>;
+                  <Label > Location</Label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  <Select>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder='Select location' />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+                      <SelectItem value='remote'>Remote</SelectItem>;
+                      <SelectItem value='us'>United States</SelectItem>;
+                      <SelectItem value='europe'>Europe</SelectItem>;
+                      <SelectItem value='asia'>Asia</SelectItem>;
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+
+
+                
+                <div className="flex items-center justify-between">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  <Label>Only show verified profiles</Label>
+                  <Switch />
+                </div>
+              </div>
+
+
+              
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              <SheetFooter>
+                <Button variant='outline' className='w-full'>
+                  Reset
+                </Button>
+                <Button
+                  className='w-full'
+                  onClick={() => addFilter('Experience: 3+ years')}
+                >
+                  Apply Filters
+                </Button>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+
+
+          
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          <Select>
+            <SelectTrigger className='w-[120px] h-8'>
+              <SelectValue placeholder='Sort By' />
+>>>>>>>             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
+              <SelectItem value='newest'>Newest</SelectItem>
+              <SelectItem value='relevance'>Best Match</SelectItem>
+              <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+<<<<<<< HEAD
 
+=======
+      </div>
+    </div>
+  )
+}
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -163,10 +334,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               />
             </Badge>
           ))}
+
         </div>;
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -45,6 +50,11 @@ test.describe('Performance Tests', () => {
     
     await page.waitForTimeout(2000);
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -66,4 +76,23 @@ test.describe('Performance Tests', () => {
     }
   });
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+const { test, expect } = require('@playwright/test')'
+test && test.describe('"Performance"
+  test('"page"
+    "await"
+    "await"
+            "output"
+  test('"bundle"
+    "await"
+    page && page.on('console', "msg"
+              "output"
+          resolve({ "error"
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

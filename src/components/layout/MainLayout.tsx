@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function MainLayout({
   children,
 }: {
@@ -21,4 +25,8 @@ export default function MainLayout({
     </>,;
   );
 },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,12 +1,24 @@
 
+<<<<<<< HEAD
             endDate: endDate?.toISOString()}
+=======
+...formData;            startDate: startDate?.toISOString()
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>             endDate: endDate?.toISOString()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         }
       })
 
 }
 }
+<<<<<<< HEAD
 
 import { useState } from 'react',
+=======
+;
+
+>>>>>>> import { useState } from 'react',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -484,4 +496,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

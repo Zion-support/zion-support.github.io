@@ -1,5 +1,25 @@
 
+<<<<<<< HEAD
 
+=======
+import { useRouter } from 'next/router'
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { z } from "zod"
+import { LockKeyhole } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import {
+  Form
+  FormControl
+  FormField
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
+import { cleanupAuthState } from "@/utils/authUtils"
+import { logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -20,27 +40,50 @@ import {
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
 
 // Form validation schema
+=======
+>>>>>>> // Form validation schema
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
+<<<<<<< HEAD
 
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
+=======
+    confirmPassword: z.string()})
+  .refine((data,) => data.password === data.confirmPassword, {
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+}
+
+  )
+}
+>>>>>>>     confirmPassword: z.string()})
+      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters"),
+
+>>>>>>>     confirmPassword: z.string()})
+>>>>>>>   .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
+
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+}
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
-export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false),
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [success, setSuccess] = useState(false),
-  const router = useRouter(),
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -387,4 +430,10 @@ export default function UpdatePassword() {;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

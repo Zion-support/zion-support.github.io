@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 interface TeamProps {
@@ -8,6 +9,10 @@ import React from 'react';
 interface TeamProps {
   // Add props here as needed
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -15,4 +20,12 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

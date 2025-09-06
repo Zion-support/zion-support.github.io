@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
           price: priceId,
           quantity: quantity,
         },
@@ -30,6 +31,10 @@ export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
 
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       url: session.url
     })
   } catch (err) {,

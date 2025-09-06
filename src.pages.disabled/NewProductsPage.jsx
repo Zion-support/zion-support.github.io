@@ -1,5 +1,17 @@
 
 
+<<<<<<< HEAD
 <<<<<<< \"HEAD\": src.pages.disabled/NewProductsPage.jsx import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today&apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
 <<<<<<< "HEAD": src.pages.disabled/NewProductsPage.jsx import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< \"HEAD\": src.pages.disabled/NewProductsPage.jsx import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today&apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
+<<<<<<< "HEAD": src.pages.disabled/NewProductsPage.jsx import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

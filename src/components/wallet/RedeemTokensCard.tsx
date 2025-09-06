@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 
+=======
+import React, { useState } from 'react'
+import { useWallet } from '@/hooks/useWallet'
+
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+import {
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import {
   Card,
   CardContent,
@@ -11,16 +24,70 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+<<<<<<< HEAD
 
   Dialog,
+=======
+>>>>>>>   Dialog,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
 
 } from '@/components/ui/dialog'
 type RewardOption = {
 
+=======
+  DialogTrigger} from "@/components/ui/dialog",
+
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+const REWARD_OPTIONS: RewardOption[] = [
+  {
+    id: 'premium-week'
+    title: 'Premium Week'
+    description:
+      '7 days of premium features including top placement in search results'
+    cost: 100
+    type: 'feature'
+  }
+  {
+    id: 'resume-review'
+    title: 'AI Resume Review'
+    description: 'Get your resume analyzed and optimized by our AI'
+    cost: 50
+    type: 'feature'
+  }
+  {
+    id: 'platform-credit'
+    title: '$5 Platform Credit'
+    description: 'Get $5 credit to use on any paid service'
+    cost: 100
+    type: 'credit'
+  }
+]
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet()
+  const [open, setOpen] = useState(false)
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet |wallet.balance < option.cost) return
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)
+    setOpen(false)
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   id: string,
   title: string,
   description: string,
@@ -28,7 +95,11 @@ type RewardOption = {
   type: 'credit' | 'feature' | 'course'
 },
 
+<<<<<<< HEAD
 const REWARD_OPTIONS: RewardOption[] = [
+=======
+onst REWARD_OPTIONS: RewardOption[] = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   {
     id: 'premium-week',
     title: 'Premium Week',
@@ -48,14 +119,25 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
+<<<<<<< HEAD
 
+=======
+    type: 'credit',
+  },
+]
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet()
+  const [open, setOpen] = useState(false)
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet || wallet.balance < option.cost) return;
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)
+    setOpen(false)
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     type: 'credit'
   }
 ],
 
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet(),
-  const [open, setOpen] = useState(false),
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return,
@@ -63,8 +145,13 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
+<<<<<<< HEAD
 
   return (
+=======
+>>>>>>> 
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -81,7 +168,10 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
@@ -107,7 +197,13 @@ export function RedeemTokensCard() {
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
+<<<<<<< HEAD
 
+=======
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
+              </DialogDescription>
+            </DialogHeader>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -124,8 +220,12 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
+<<<<<<< HEAD
 
                     </Button>
+=======
+>>>>>>>                     </Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   </div>
                 </div>
               ))}
@@ -134,13 +234,20 @@ export function RedeemTokensCard() {
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </DialogContent>
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
+=======
+  );
+};
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -206,36 +313,54 @@ export function RedeemTokensCard() {;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle>Available Rewards</DialogTitle>;
+              <DialogTitle > Available Rewards</DialogTitle>;
               <DialogDescription>;
-                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.;
+                Exchange your tokens for these rewards. You currently have{' '}
+                {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className="space-y-4 py-4">;
-              {REWARD_OPTIONS.map((option) => (;
-                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
-                  <div>;
-                    <h3 className="font-medium">{option.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{option.description}</p>;
+            <div className='space - y-4 py - 4'>;
+              {REWARD_OPTIONS.map (option => (
+                <div;
+                  key={option.id}
+                  className='flex justify - between items - center border - b pb - 4';
+                >                  <div>;
+                    <h3 className='font - medium'>{option.title}</h3>;
+                    <p className='text - sm text - muted - foreground'>;
+                      {option.description}
+                    </p>;
                   </div>;
-                  <div className="flex flex-col items-end gap-1">;
-                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
+                  <div className='flex flex - col items - end gap - 1'>;
+                    <span className='text - sm font - bold'>;
+                      {option.cost} ZION$;
+                    </span>;
                     <Button;
-                      size="sm";
-                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
+                      size='sm';
+                      variant={
+                        wallet && wallet.balance >= option.cost;
+                          ? 'default';
+                          : 'outline';
+                      }
                       disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-                    >;
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                      on_click={() => handle_redeem (option)}                    >;
+                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
                     </Button>;
                   </div>;
-                </div>;
-              ))}
+                </div>))}
             </div>;
-            <div className="flex justify-between">;
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
-              <Button variant="ghost" size="sm">;
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+            <div className='flex justify - between'>;
+              <Button;
+                variant='outline';
+                size='sm';
+                on_click={() => set_open (false)}
+
+              >;
+                Close;
+              </Button>;
+              <Button variant='ghost' size='sm'>;
+
+                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
+
               </Button>;
             </div>;
           </DialogContent>;
@@ -245,4 +370,12 @@ export function RedeemTokensCard() {;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+  )
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

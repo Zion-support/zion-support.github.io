@@ -10,3 +10,7 @@
     "publishedAt": new: Date().toISOString()
     tags: ['AI, ', 'Technology', 'Innovation'], ';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

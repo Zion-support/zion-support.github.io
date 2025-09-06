@@ -11,3 +11,8 @@ export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProp
     </div>
   );
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

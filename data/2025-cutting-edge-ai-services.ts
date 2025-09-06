@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
@@ -423,12 +424,48 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
+=======
+
+
+
+export const cuttingEdgeAIServices2025 = [
+  {
+
+
+      'SOC2',
+      'ISO 27001',
+      'GDPR',
+      'CCPA',
+      'Intellectual property protection',
+    ],
+
+];      'Creative content generation and design_marketing and advertising creative_product design and innovation_artistic expression and creation_creative problem - solving and ideation';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
+    compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
+  }
+];
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  },;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export const cuttingEdgeAIServices2025 = [;
   {;
     id: 'ai-consciousness-evolution-pro',;
@@ -635,6 +672,15 @@ export const cuttingEdgeAIServices2025 = [;
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],;
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
 
+<<<<<<< HEAD
   }
 ];
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

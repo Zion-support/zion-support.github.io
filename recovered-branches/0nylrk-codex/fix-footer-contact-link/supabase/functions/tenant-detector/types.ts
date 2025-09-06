@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   id: string;
   brand_name: string;
@@ -26,15 +27,32 @@
   landing_page_copy: {;
     headline: string,;
     subtitle: string,;
+=======
+    subtitle: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     cta: string;
-  },;
+  }
   is_active: boolean;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
-
 export interface TenantResponse {
   tenant: TenantInfo | null,
+<<<<<<< HEAD
   error?: string
 }
 ;
 
+=======
+  error?: string;
+
+}
+=======
+
+
+export interface TenantInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 
+=======
+=======
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/profile/HireNowCTA.js.jsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 "export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""

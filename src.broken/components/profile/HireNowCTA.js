@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -88,6 +89,8 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
@@ -103,12 +106,15 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         startDate: '',
         message: ''
 
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
         e.preventDefault();
         if (onHire) {
@@ -120,6 +126,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             budget: '',
             startDate: '',
 
+<<<<<<< HEAD
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -128,6 +135,8 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         });
         setIsFormOpen(false);
     };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     const handleChange = (e) => {
         setFormData(prev => ({
@@ -193,3 +202,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
       </CardContent>
     </Card>);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

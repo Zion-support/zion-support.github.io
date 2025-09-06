@@ -1,5 +1,126 @@
 
 
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: ServiceVariant;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
+  customers: number;
+  rating: number;
+  reviews: number;
+  benefits: string[];
+  capabilities: string[];
+
+  market_advantage: string;
+;
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
+
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+
+=======
+export interface AdvancedInnovativeService {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number, reviews: number,
+  benefits: string[], capabilities: string[],
+  marketAdvantage: string
+}
+
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export const advancedInnovativeServices: AdvancedInnovativeService[] = [
+  // Advanced AI & Machine Learning Services
+  {
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+=======
+
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },;
+];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
+    ];
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -512,6 +633,19 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
+<<<<<<< HEAD
   }
 ];
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

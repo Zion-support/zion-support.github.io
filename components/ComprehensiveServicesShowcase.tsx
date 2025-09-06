@@ -1,204 +1,335 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
 
+=======
+
+import {;
+  Star,;
+  Clock,;
+  Users,;
+  TrendingUp,;
+  CheckCircle,;
+  ExternalLink,;
+  ChevronRight,;
+  Shield,;
+  Zap,;
+  Globe,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Search,;
+  Filter,;
+  Grid,;
+  List,;
+  ArrowRight,;
+  Award,;
+  Target,;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
+
+=======
+import { 
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
-  Search, Filter, Grid, List, ArrowRight, Award, Target
- } from 'lucide-react';
-import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
+  Search, Filter, Grid, List, ArrowRight, Award, Target;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+
 export default function ComprehensiveServicesShowcase() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),
   const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
 
   // Combine all services
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
 
-  const allServices = [
-    ...comprehensiveMicroSaasServices
-    ...specializedEmergingTechServices
-  ];
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-    {
-      id: 'AI & Machine Learning'
-      name: 'AI & ML'
-      icon: '🧠'
-      count: allServices.filter(s => s.category === 'AI & Machine Learning')
-        .length
-    }
-    {
-      id: 'Healthcare AI'
-      name: 'Healthcare'
-      icon: '🏥'
-      count: allServices.filter(s => s.category === 'Healthcare AI').length
-    }
-    {
-      id: 'Fintech AI'
-      name: 'Fintech'
-      icon: '💰'
-      count: allServices.filter(s => s.category === 'Fintech AI').length
-    }
-    {
-      id: 'Cybersecurity'
-      name: 'Security'
-      icon: '🛡️'
-      count: allServices.filter(s => s.category === 'Cybersecurity').length
-    }
-    {
-      id: 'IoT & Smart Cities'
-      name: 'Smart Cities'
-      icon: '🏙️'
-      count: allServices.filter(s => s.category === 'IoT & Smart Cities')
-        .length
-    }
-    {
-      id: 'Blockchain & DeFi'
-      name: 'Blockchain'
-      icon: '🔗'
-      count: allServices.filter(s => s.category === 'Blockchain & DeFi').length
-    }
-    {
-      id: 'Quantum Computing'
-      name: 'Quantum'
-      icon: '⚛️'
-      count: allServices.filter(s => s.category === 'Quantum Computing').length
-    }
-    {
-      id: 'Space Technology'
-      name: 'Space Tech'
-      icon: '🚀'
-      count: allServices.filter(s => s.category === 'Space Technology').length
-    }
-    {
-      id: 'Autonomous Systems'
-      name: 'Autonomous'
-      icon: '🤖'
-      count: allServices.filter(s => s.category === 'Autonomous Systems')
-        .length
-    }
-    {
-      id: 'AR/VR & Metaverse'
-      name: 'AR/VR'
-      icon: '🥽'
-      count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length
-    }
-    {
-      id: '5G/6G Networks'
-      name: '5G/6G'
-      icon: '📡'
-      count: allServices.filter(s => s.category === '5G/6G Networks').length
-    }
-    {
-      id: 'Biotechnology AI'
-      name: 'Biotech'
-      icon: '🧬'
-      count: allServices.filter(s => s.category === 'Biotechnology AI').length
-    }
-    {
-      id: 'Renewable Energy'
-      name: 'Energy'
-      icon: '⚡'
-      count: allServices.filter(s => s.category === 'Renewable Energy').length
-    }
-    {
-      id: 'Edge Computing'
-      name: 'Edge'
-      icon: '🌐'
-      count: allServices.filter(s => s.category === 'Edge Computing').length
-    }
-    {
-      id: 'Quantum Internet'
-      name: 'Q-Internet'
-      icon: '🌍'
-      count: allServices.filter(s => s.category === 'Quantum Internet').length
-    }
-    {
-      id: 'Neuromorphic Computing'
-      name: 'Neuro'
-      icon: '🧠'
-      count: allServices.filter(s => s.category === 'Neuromorphic Computing')
-        .length
-    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length }
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length }
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length }
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length }
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length }
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length }
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length }
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length }
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length }
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length },
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length },
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+  ];
+
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-      const matchesCategory =
-        selectedCategory === 'all' |service.category === selectedCategory;
-      const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch
+    })
+
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
-          return (
-            parseFloat(a.price.replace('$', '').replace(',', '')) -
-            parseFloat(b.price.replace('$', '').replace(',', ''))
-          );
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return (
-            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-          );
-        default:
-          return 0;      }          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<;
+    'popularity' | 'price' | 'rating' | 'newest';
+  >('popularity');
+  // Combine all services;
+  const allServices = [;
+    ...comprehensiveMicroSaasServices,;
+    ...specializedEmergingTechServices,;
+  ];
+=======
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
+      }
     });
 
+<<<<<<< HEAD
+=======
+
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
+    {;
+      id: 'AI & Machine Learning',;
+      name: 'AI & ML',;
+      icon: '🧠',;
+      count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning');
+        .length,;
+    },;
+    {;
+      id: 'Healthcare AI',;
+      name: 'Healthcare',;
+      icon: '🏥',;
+      count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length,;
+    },;
+    {;
+      id: 'Fintech AI',;
+      name: 'Fintech',;
+      icon: '💰',;
+      count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length,;
+    },;
+    {;
+      id: 'Cybersecurity',;
+      name: 'Security',;
+      icon: '🛡️',;
+      count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length,;
+    },;
+    {;
+      id: 'IoT & Smart Cities',;
+      name: 'Smart Cities',;
+      icon: '🏙️',;
+      count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities');
+        .length,;
+    },;
+    {;
+      id: 'Blockchain & DeFi',;
+      name: 'Blockchain',;
+      icon: '🔗',;
+      count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length,;
+    },;
+    {;
+      id: 'Quantum Computing',;
+      name: 'Quantum',;
+      icon: '⚛️',;
+      count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length,;
+    },;
+    {;
+      id: 'Space Technology',;
+      name: 'Space Tech',;
+      icon: '🚀',;
+      count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length,;
+    },;
+    {;
+      id: 'Autonomous Systems',;
+      name: 'Autonomous',;
+      icon: '🤖',;
+      count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems');
+        .length,;
+    },;
+    {;
+      id: 'AR/VR & Metaverse',;
+      name: 'AR/VR',;
+      icon: '🥽',;
+      count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length,;
+    },;
+    {;
+      id: '5G/6G Networks',;
+      name: '5G/6G',;
+      icon: '📡',;
+      count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length,;
+    },;
+    {;
+      id: 'Biotechnology AI',;
+      name: 'Biotech',;
+      icon: '🧬',;
+      count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length,;
+    },;
+    {;
+      id: 'Renewable Energy',;
+      name: 'Energy',;
+      icon: '⚡',;
+      count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length,;
+    },;
+    {;
+      id: 'Edge Computing',;
+      name: 'Edge',;
+      icon: '🌐',;
+      count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length,;
+    },;
+    {;
+      id: 'Quantum Internet',;
+      name: 'Q-Internet',;
+      icon: '🌍',;
+      count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length,;
+    },;
+    {;
+      id: 'Neuromorphic Computing',;
+      name: 'Neuro',;
+      icon: '🧠',;
+      count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing');
+        .length,;
+    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning').length },;
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length },;
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length },;
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length },;
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities').length },;
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length },;
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length },;
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length },;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems').length },;
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length },;
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length },;
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length },;
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length },;
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length },;
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length },;
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing').length }
+
+  // Filter and sort services;
+  const filteredServices = allServices;
+    .filter(service => {;
+      const matchesCategory =;
+        selectedCategory === 'all' || service && service.category === selectedCategory;
+      const matchesSearch =;
+        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                           service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;
+    .sort((a, b) => {;
+      switch (sortBy) {;
+        case 'popularity':;
+          return b && b.popular ? 1 : -1;
+        case 'price':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          return (
+            parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
+            parseFloat(b && b.price.replace('$', '').replace(',', ''));
+          );
+        case 'rating':;
+          return b && b.rating - a && a.rating;
+        case 'newest':;
+          return (
+            new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
+          );
+        default:;
+          return 0;      }          return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
+        case 'rating':;
+          return b && b.rating - a && a.rating;
+        case 'newest':;
+          return new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
+        default: return 0;
+    });
+
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon |'🚀';
-  }
-  const formatPrice = (price: string) => {
-    return price.replace('$', '').replace(',', '');
-  }
+
+
+  const getCategoryIcon = (category: string) => {;
+    const categoryData = categories && categories.find(cat => cat && cat.id === category);
+    return categoryData?.icon || '🚀';
+  };
+
+  const formatPrice = (price: string) => {;
+    return price && price.replace('$', '').replace(',', '');
+  };
+
   return (
+<<<<<<< HEAD
+
+=======
+    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
+      <div className='max-w-7xl mx-auto'>        {/* Header */}  };
+
+
+  const formatPrice = (price: string) => {;
+    return price && price.replace('$', '').replace(, '');
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+
+
+        {/* Header */}
+        <motion&& motion.div
+=======
+
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
-      <div className='max-w-7xl mx-auto'>        {/* Header */}  }
-  const formatPrice = (price: string) => {
-    return price.replace('$', '').replace(, '')
-  }
+      <div className='max-w-7xl mx-auto'>        {/* Header */}
 
-  return (
+        {/* Header */}
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='text-center mb-16'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -240,6 +371,10 @@ export default function ComprehensiveServicesShowcase() {
               <div>
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>
                 <div className='text-white/60'>Average ROI</div>              </div>        >
+=======
+          className="text-center mb-16"
+        >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Revolutionary Micro SAAS Services 2025
           </h2>
@@ -281,87 +416,684 @@ export default function ComprehensiveServicesShowcase() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 
+=======
+
+
+          className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className='text-xl text-white/70 max-w-3xl mx-auto mb-8'>;
+            Discover our cutting-edge micro SAAS solutions that are transforming;
+            industries and driving the future of technology;
+          </p>;
+          <div className='flex items-center justify-center gap-6 text-white/60 mb-8'>;
+            <div className='flex items-center gap-2'>;
+              <Shield className='w-5 h-5' />;
+              <span>Enterprise-grade security</span>;
+            </div>;
+            <div className='flex items-center gap-2'>;
+              <Zap className='w-5 h-5' />;
+              <span>AI-powered optimization</span>;
+            </div>;
+            <div className='flex items-center gap-2'>;
+              <Globe className='w-5 h-5' />;
+              <span>Global deployment</span>;
+            </div>;
+          </div>;
+          <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>;
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-center'>;
+              <div>;
+                <div className='text-3xl font-bold text-blue-400'>;
+                  {allServices && allServices.length}+;
+                </div>;
+                <div className='text-white/60'>Services Available</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-green-400'>99 && 99.9%</div>;
+                <div className='text-white/60'>Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-purple-400'>24/7</div>;
+                <div className='text-white/60'>Support Available</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-orange-400'>500%+</div>;
+                <div className='text-white/60'>Average ROI</div>              </div>        >;
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">;
+            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology;
+          </p>;
+          <div className="flex items-center justify-center gap-6 text-white/60 mb-8">;
+            <div className="flex items-center gap-2">;
+              <Shield className="w-5 h-5" />;
+              <span>Enterprise-grade security</span>;
+            </div>;
+            <div className="flex items-center gap-2">;
+              <Zap className="w-5 h-5" />;
+              <span>AI-powered optimization</span>;
+            </div>;
+            <div className="flex items-center gap-2">;
+              <Globe className="w-5 h-5" />;
+              <span>Global deployment</span>;
+            </div>;
+          </div>;
+          <div className="bg-white/5 rounded-2xl p-6 border border-white/10">;
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-blue-400">{allServices && allServices.length}+</div>;
+                <div className="text-white/60">Services Available</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-green-400">99 && 99.9%</div>;
+                <div className="text-white/60">Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-purple-400">24/7</div>;
+                <div className="text-white/60">Support Available</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-orange-400">500%+</div>;
+                <div className="text-white/60">Average ROI</div>;
+              </div>;
+            </div>;
+          </div>;
+        </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Search and Filters */}
-        <motion.div
+        <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mb-12'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search */}
-            <div className='relative flex-1 max-w-md'>
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
+            <div className='relative flex-1 max-w-md'>;
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />;
               <input
                 type='text'
                 placeholder='Search services...'
                 value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />
-            </div>
+
+                onChange={e => setSearchTerm(e && e.target.value)}
+                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />;
+            </div>;
+
+
+            {/* Sort and View Controls */}
+<<<<<<< HEAD
+
+=======
+
+=======
+          className="mb-12"
+        >
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">;
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+
+
             {/* Sort and View Controls */}
 
+                onChange={e => setSortBy(e && e.target.value as any)}
+                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
+=======
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Shield,
+  Zap,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  Award,
+  Target,
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion';
+import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025';import {
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink,
+  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
+  Search, Filter, Grid, List, ArrowRight, Award, Target;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion';
+import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025';
+  const [selected_category, setSelectedCategory] = useState ('all');
+  const [selected_service, setSelectedService] = useState < string | null>(null);
+  const [search_term, setSearchTerm] = useState ('');
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sort_by, setSortBy] = useState<;
+    'popularity' | 'price' | 'rating' | 'newest';
+  >('popularity');
+  // Combine all services;
+  const all_services = [;
+    ...comprehensiveMicroSaasServices,
+    ...specializedEmergingTechServices,
+  ];
+;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
+    {
+      id: 'AI & Machine Learning',
+      name: 'AI & ML',
+      icon: '🧠',
+      count: all_services.filter (string => s.category === 'AI & Machine Learning');
+        .length,
+    },
+    {
+      id: 'Healthcare AI',
+      name: 'Healthcare',
+      icon: '🏥',
+      count: all_services.filter (string => s.category === 'Healthcare AI').length,
+    },
+    {
+      id: 'Fintech AI',
+      name: 'Fintech',
+      icon: '💰',
+      count: all_services.filter (string => s.category === 'Fintech AI').length,
+    },
+    {
+      id: 'Cybersecurity',
+      name: 'Security',
+      icon: '🛡️',
+      count: all_services.filter (string => s.category === 'Cybersecurity').length,
+    },
+    {
+      id: 'IoT & Smart Cities',
+      name: 'Smart Cities',
+      icon: '🏙️',
+      count: all_services.filter (string => s.category === 'IoT & Smart Cities');
+        .length,
+    },
+    {
+      id: 'Blockchain & DeFi',
+      name: 'Blockchain',
+      icon: '🔗',
+      count: all_services.filter (string => s.category === 'Blockchain & DeFi').length,
+    },
+    {
+      id: 'Quantum Computing',
+      name: 'Quantum',
+      icon: '⚛️',
+      count: all_services.filter (string => s.category === 'Quantum Computing').length,
+    },
+    {
+      id: 'Space Technology',
+      name: 'Space Tech',
+      icon: '🚀',
+      count: all_services.filter (string => s.category === 'Space Technology').length,
+    },
+    {
+      id: 'Autonomous Systems',
+      name: 'Autonomous',
+      icon: '🤖',
+      count: all_services.filter (string => s.category === 'Autonomous Systems');
+        .length,
+    },
+    {
+      id: 'AR / VR & Metaverse',
+      name: 'AR / VR',
+      icon: '🥽',
+      count: all_services.filter (string => s.category === 'AR / VR & Metaverse').length,
+    },
+    {
+      id: '5G / 6G Networks',
+      name: '5G / 6G',
+      icon: '📡',
+      count: all_services.filter (string => s.category === '5G / 6G Networks').length,
+    },
+    {
+      id: 'Biotechnology AI',
+      name: 'Biotech',
+      icon: '🧬',
+      count: all_services.filter (string => s.category === 'Biotechnology AI').length,
+    },
+    {
+      id: 'Renewable Energy',
+      name: 'Energy',
+      icon: '⚡',
+      count: all_services.filter (string => s.category === 'Renewable Energy').length,
+    },
+    {
+      id: 'Edge Computing',
+      name: 'Edge',
+      icon: '🌐',
+      count: all_services.filter (string => s.category === 'Edge Computing').length,
+    },
+    {
+      id: 'Quantum Internet',
+      name: 'Q - Internet',
+      icon: '🌍',
+      count: all_services.filter (string => s.category === 'Quantum Internet').length,
+    },
+    {
+      id: 'Neuromorphic Computing',
+      name: 'Neuro',
+      icon: '🧠',
+      count: all_services.filter (string => s.category === 'Neuromorphic Computing');
+        .length,
+    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: all_services.filter (string => s.category === 'AI & Machine Learning').length },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: all_services.filter (string => s.category === 'Healthcare AI').length },
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: all_services.filter (string => s.category === 'Fintech AI').length },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: all_services.filter (string => s.category === 'Cybersecurity').length },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: all_services.filter (string => s.category === 'IoT & Smart Cities').length },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: all_services.filter (string => s.category === 'Blockchain & DeFi').length },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: all_services.filter (string => s.category === 'Quantum Computing').length },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: all_services.filter (string => s.category === 'Space Technology').length },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: all_services.filter (string => s.category === 'Autonomous Systems').length },
+    { id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽', count: all_services.filter (string => s.category === 'AR / VR & Metaverse').length },
+    { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡', count: all_services.filter (string => s.category === '5G / 6G Networks').length },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: all_services.filter (string => s.category === 'Biotechnology AI').length },
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: all_services.filter (string => s.category === 'Renewable Energy').length },
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: all_services.filter (string => s.category === 'Edge Computing').length },
+    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍', count: all_services.filter (string => s.category === 'Quantum Internet').length },
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: all_services.filter (string => s.category === 'Neuromorphic Computing').length }
+  // Filter and sort services;
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_category =;
+        selected_category === 'all' || service.category === selected_category;
+      const matches_search =;
+        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_term.toLowerCase ());
+      return matches_category && matches_search;    })      const matches_category = selected_category === 'all' || service.category === selected_category;
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ());
+      return matches_category && matches_search;
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'popularity':;
+          return b.popular ? 1 : -1;
+        case 'price':;
+          return (
+            parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+            parse_float (b.price.replace ('$', '').replace (', ', '')));
+        case 'rating':;
+          return b.rating - a.rating;
+        case 'newest':;
+          return (
+            new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time ());
+        default:;
+          return 0;      }          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+        case 'rating':;
+          return b.rating - a.rating;
+        case 'newest':;
+          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time ();
+        default: return 0;
+    });
+;
+  const getCategoryIcon = (category: string) =>: any {
+    const category_data = categories.find (cat => cat.id === category);
+    return category_data?.icon || '🚀';
+  }
+;
+  const format_price = (price: string) =>: any {
+    return price.replace ('$', '').replace (', ', '');
+  }
+;
+  return (
+    <section className='py - 20 px - 6 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950'>;
+      <div className='max - w-7xl mx - auto'>        {/* Header */}  }
+;
+  const format_price = (price: string) =>: any {
+    return price.replace ('$', '').replace (, '');
+  }
+;
+  return (
+    <section className="py - 20 px - 6 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
+      <div className="max - w-7xl mx - auto">;
+        {/* Header */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className='text - center mb - 16';
+        >;
+          <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className='text - xl text - white / 70 max - w-3xl mx - auto mb - 8'>;
+            Discover our cutting - edge micro SAAS solutions that are transforming;
+            industries and driving the future of technology;
+          </p>;
+          <div className='flex items - center justify - center gap - 6 text - white / 60 mb - 8'>;
+            <div className='flex items - center gap - 2'>;
+              <Shield className='w - 5 h - 5' />;
+              <span > Enterprise - grade security</span>;
+            </div>;
+            <div className='flex items - center gap - 2'>;
+              <Zap className='w - 5 h - 5' />;
+              <span > AI - powered optimization</span>;
+            </div>;
+            <div className='flex items - center gap - 2'>;
+              <Globe className='w - 5 h - 5' />;
+              <span > Global deployment</span>;
+            </div>;
+          </div>;
+          <div className='bg - white / 5 rounded - 2xl p - 6 border border - white / 10'>;
+            <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 6 text - center'>;
+              <div>;
+                <div className='text - 3xl font - bold text - blue - 400'>;
+                  {all_services.length}+;
+                </div>;
+                <div className='text - white / 60'>Services Available</div>;
+              </div>;
+              <div>;
+                <div className='text - 3xl font - bold text - green - 400'>99.9%</div>;
+                <div className='text - white / 60'>Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className='text - 3xl font - bold text - purple - 400'>24 / 7</div>;
+                <div className='text - white / 60'>Support Available</div>;
+              </div>;
+              <div>;
+                <div className='text - 3xl font - bold text - orange - 400'>500%+</div>;
+                <div className='text - white / 60'>Average ROI</div>              </div>        >;
+          <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
+            Discover our cutting - edge micro SAAS solutions that are transforming industries and driving the future of technology;
+          </p>;
+          <div className="flex items - center justify - center gap - 6 text - white / 60 mb - 8">;
+            <div className="flex items - center gap - 2">;
+              <Shield className="w - 5 h - 5" />;
+              <span > Enterprise - grade security</span>;
+            </div>;
+            <div className="flex items - center gap - 2">;
+              <Zap className="w - 5 h - 5" />;
+              <span > AI - powered optimization</span>;
+            </div>;
+            <div className="flex items - center gap - 2">;
+              <Globe className="w - 5 h - 5" />;
+              <span > Global deployment</span>;
+            </div>;
+          </div>;
+          <div className="bg - white / 5 rounded - 2xl p - 6 border border - white / 10">;
+            <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 text - center">;
+              <div>;
+                <div className="text - 3xl font - bold text - blue - 400">{all_services.length}+</div>;
+                <div className="text - white / 60">Services Available</div>;
+              </div>;
+              <div>;
+                <div className="text - 3xl font - bold text - green - 400">99.9%</div>;
+                <div className="text - white / 60">Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className="text - 3xl font - bold text - purple - 400">24 / 7</div>;
+                <div className="text - white / 60">Support Available</div>;
+              </div>;
+              <div>;
+                <div className="text - 3xl font - bold text - orange - 400">500%+</div>;
+                <div className="text - white / 60">Average ROI</div>;
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+        {/* Search and Filters */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='mb - 12';
+        >;
+          <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
+            {/* Search */}
+            <div className='relative flex - 1 max - w-md'>;
+              <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 40 w - 5 h - 5' />;
+              <input;
+                type='text';
+                placeholder='Search services...';
+                value={search_term}
+                on_change={e => setSearchTerm (e.target.value)}
+                className='w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - white / 40 focus:outline - none focus:border - blue - 400 focus:ring - 2 focus:ring - blue - 400 / 20'              />;
+            </div>;
+            {/* Sort and View Controls */}
+            <div className='flex items - center gap - 4'>        >;
+          <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
+            {/* Search */}
+            <div className="relative flex - 1 max - w-md">;
+              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 40 w - 5 h - 5" />;
+              <input;
+                type="text";
+                placeholder="Search services...";
+                value={search_term}
+                on_change={(e) => setSearchTerm (e.target.value)}
+                className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - white / 40 focus:outline - none focus:border - blue - 400 focus:ring - 2 focus:ring - blue - 400 / 20";
+              />;
+            </div>;
+            {/* Sort and View Controls */}
+            <div className='flex items - center gap - 4'>;
+              <select;
+                value={sort_by}
+                on_change={e => setSortBy (e.target.value as any)}
+                className='bg - white / 10 border border - white / 20 rounded - xl px - 4 py - 3 text - white focus:outline - none focus:border - blue - 400';
+
+              >;
+                <option value='popularity'>Most Popular</option>;
+                <option value='price'>Price: Low to High</option>;
+                <option value='rating'>Highest Rated</option>;
+                <option value='newest'>Newest First</option>;
+              </select>;
+
+            <div className="flex items-center gap-4">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
+                className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
+              >
+                <option value="popularity">Most Popular</option>
+                <option value="price">Price: Low to High</option>
+                <option value="rating">Highest Rated</option>
+                <option value="newest">Newest First</option>
+              </select>
+
+
+              <div className='flex bg-white/10 rounded-xl p-1'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all ${;
+                    viewMode === 'grid';
+                      ? 'bg-blue-600 text-white';
+                      : 'text-white/60 hover:text-white';
+                  }`}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
+<<<<<<< HEAD
 
+=======
+
+
+                </button>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </div>
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 
+=======
+
+
+                >;
+                  <List className="w-5 h-5" />;
+              </div>;
+            </div>;
+          </div>;
+        </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Category Filter */}
-        <motion.div
+        <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                on_click={() => setSelectedCategory (category.id)}
+                className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                  selected_category === category.id;
+                    ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
+                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                 }`}
-              >
-                <span>{category.icon}</span>
+              >;
+                <span>{category.icon}</span>;
                 {category.name}
+<<<<<<< HEAD
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
 
+=======
+
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+            ))}
+          </div>
+        </motion.div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Services Display */}
-        {viewMode === 'grid' ? (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
+        {viewMode === 'grid' ? (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            <AnimatePresence>;
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                >
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
+
+
+        {/* Services Display */}
+        {viewMode === 'grid' ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {filteredServices.map((service, index) => (
+                <motion.div
+=======
+                <span className='text - xs bg - white / 20 px - 2 py - 1 rounded - full'>;
+                  {category.count}
+                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
+              </button>))}
+          </div>;
+        </motion.div>;
+        {/* Services Display */}
+        {view_mode === 'grid' ? (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+            <AnimatePresence>;
+              {filtered_services.map ((service, index) => (
+                <motion.div;
+
+                  key={service.id}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  exit={{ opacity: 0, coordinate_y: -30 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   )}
+<<<<<<< HEAD
 
                   {/* Service Content */}
                   <div className='p-6'>
@@ -375,52 +1107,145 @@ export default function ComprehensiveServicesShowcase() {
                           {service.period}
                         </div>
 
+=======
+                  {/* Service Content */}
+
+                  className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className='absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'>;
+                      <Star className='w - 3 h - 3' />                      Popular                  className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
+                >;
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1">;
+                      <Star className="w - 3 h - 3" />;
+                    </div>)}
+                  {/* Service Content */}
+                  <div className='p - 6'>;
+                    <div className='flex items - start justify - between mb - 4'>;
+                      <div className='text - 4xl'>{service.icon}</div>;
+                      <div className='text - right'>;
+                        <div className='text - 2xl font - bold text - white'>;
+
+                          {service.price}
+                        </div>;
+                        <div className='text - xs text - white / 60'>;
+                          {service.period}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
+=======
+                        </div>;
+                      </div>;
+                    </div>;
+                    <h3 className='text - xl font - bold text - white mb - 2'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {service.name}
-                    </h3>
-                    <p className='text-white/70 text-sm mb-4'>
+                    </h3>;
+                    <p className='text - white / 70 text - sm mb - 4'>;
                       {service.tagline}
-                    </p>
+
+                  <div className='p-6'>;
+                    <div className='flex items-start justify-between mb-4'>;
+                      <div className='text-4xl'>{service && service.icon}</div>;
+                      <div className='text-right'>;
+                        <div className='text-2xl font-bold text-white'>;
+                          {service && service.price}
+                        </div>;
+                        <div className='text-xs text-white/60'>;
+                          {service && service.period}
+                        </div>;
+                      </div>;
+                    </div>;
+
+                    <h3 className='text-xl font-bold text-white mb-2'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-white/70 text-sm mb-4'>;
+                      {service && service.tagline}
+                    </p>;
+
+
                     {/* Features */}
-                    <div className='space-y-2 mb-6'>
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                    <div className='space-y-2 mb-6'>;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
                         <div
                           key={idx}
-                          className='flex items-center gap-2 text-sm text-white/60'
-                        >
-                          <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                    <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
+
+
+                          className='flex items-center gap-2 text-sm text-white/60'>;
+                          <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
+                    </div>;
+
+                    <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
+                    <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
+
+
                           {feature}
-                        </div>
+                        </div>;
                       ))}
+<<<<<<< HEAD
                     </div>
 
+=======
+
+                    </p>;
+                    {/* Features */}
+                    <div className='space - y-2 mb - 6'>;
+                      {service.features.slice (0, 3).map ((feature, idx) => (
+                        <div;
+                          key={idx}
+                          className='flex items - center gap - 2 text - sm text - white / 60';
+                        >;
+                          <CheckCircle className='w - 4 h - 4 text - green - 400' />                          {feature}                      </div>;
+                    </div>;
+                    <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
+                    <p className="text - white / 70 text - sm mb - 4">{service.tagline}</p>;
+                    {/* Features */}
+                    <div className="space - y-2 mb - 6">;
+                      {service.features.slice (0, 3).map ((feature, idx) => (
+                        <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                          {feature}
+                        </div>))}
+                    </div>;
+
+                    {/* Stats */}
+                    <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
+                      <div>;
+                        <div className='text - lg font - bold text - blue - 400'>;
+=======
+
+
+                    {/* Stats */}
+                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.rating}
-                        </div>
-                        <div className='text-xs text-white/60'>Rating</div>
-                      </div>
+
+                    </div>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
-                        <div className='text-lg font-bold text-green-400'>
-                          {service.customers}+
-                        </div>
-                        <div className='text-xs text-white/60'>Customers</div>
-                      </div>
-                      <div>
-                        <div className='text-lg font-bold text-purple-400'>
-                          {service.trialDays}d
-                        </div>
-                        <div className='text-xs text-white/60'>Trial</div>                      </div>                      <div>
+
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
@@ -433,6 +1258,7 @@ export default function ComprehensiveServicesShowcase() {
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
+<<<<<<< HEAD
 
                     {/* CTA */}
                     <a
@@ -465,31 +1291,85 @@ export default function ComprehensiveServicesShowcase() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
+=======
+
+                    </div>;
+
+                    {/* Stats */}
+                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
+                      <div>;
+                        <div className='text-lg font-bold text-blue-400'>;
+                          {service && service.rating}
+                        </div>;
+                        <div className='text-xs text-white/60'>Rating</div>;
+                      </div>;
+                      <div>;
+                        <div className='text-lg font-bold text-green-400'>;
+                          {service && service.customers}+;
+                        </div>;
+                        <div className='text-xs text-white/60'>Customers</div>;
+                      </div>;
+                      <div>;
+                        <div className='text-lg font-bold text-purple-400'>;
+                          {service && service.trialDays}d;
+                        </div>;
+                        <div className='text-xs text-white/60'>Trial</div>                      </div>                      <div>;
+                        <div className="text-lg font-bold text-blue-400">{service && service.rating}</div>;
+                        <div className="text-xs text-white/60">Rating</div>;
+                      </div>;
+                      <div>;
+                        <div className="text-lg font-bold text-green-400">{service && service.customers}+</div>;
+                        <div className="text-xs text-white/60">Customers</div>;
+                      </div>;
+                      <div>;
+                        <div className="text-lg font-bold text-purple-400">{service && service.trialDays}d</div>;
+                        <div className="text-xs text-white/60">Trial</div>;
+                      </div>;
+                    </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {/* CTA */}
+                    <a
+
+                      )}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
 
-                        <div>
-                          <h3 className='text-2xl font-bold text-white mb-2'>
-                            {service.name}
-                          </h3>
-                          <p className='text-white/70 text-lg mb-3'>
-                            {service.tagline}
-                          </p>
-                          <p className='text-white/60 text-sm'>
-                            {service.description}
-                          </p>
+=======
+
+                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
+
+                          Popular
+
                         </div>
-                        <div className='text-right'>
-                          <div className='text-3xl font-bold text-white'>
-                            {service.price}
-                          </div>
-                          <div className='text-white/60'>{service.period}</div>                        </div>
-                      </div>
-                      {/* Features Grid */}                        <div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      )}
+                    </div>
+
+                    {/* Center - Service Details */}
+
+                    <div className='flex-1'>
+                      <div className='flex items-start justify-between mb-4'>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+                        <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-white/70 text-lg mb-3">{service.tagline}</p>
                           <p className="text-white/60 text-sm">{service.description}</p>
@@ -499,8 +1379,49 @@ export default function ComprehensiveServicesShowcase() {
                           <div className="text-white/60">{service.period}</div>
                         </div>
                       </div>
+=======
+                    </div>;
+
+                    {/* Center - Service Details */}
+                    <div className='flex-1'>;
+                      <div className='flex items-start justify-between mb-4'>;
+                        <div>;
+                          <h3 className='text-2xl font-bold text-white mb-2'>;
+                            {service && service.name}
+                          </h3>;
+                          <p className='text-white/70 text-lg mb-3'>;
+                            {service && service.tagline}
+                          </p>;
+                          <p className='text-white/60 text-sm'>;
+                            {service && service.description}
+                          </p>;
+                        </div>;
+                        <div className='text-right'>;
+                          <div className='text-3xl font-bold text-white'>;
+                            {service && service.price}
+                          </div>;
+                          <div className='text-white/60'>{service && service.period}</div>                        </div>;
+                      </div>;
+
+                      {/* Features Grid */}                        <div>;
+                          <h3 className="text-2xl font-bold text-white mb-2">{service && service.name}</h3>;
+                          <p className="text-white/70 text-lg mb-3">{service && service.tagline}</p>;
+                          <p className="text-white/60 text-sm">{service && service.description}</p>;
+                        </div>;
+                        <div className="text-right">;
+                          <div className="text-3xl font-bold text-white">{service && service.price}</div>;
+                          <div className="text-white/60">{service && service.period}</div>;
+                        </div>;
+                      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {/* Features Grid */}
 
+<<<<<<< HEAD
+=======
+                        ))}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -509,62 +1430,134 @@ export default function ComprehensiveServicesShowcase() {
                             {service.rating} ({service.reviews} reviews)
                           </span>
                         </div>                        </div>
+=======
+                      <div className="grid grid-cols-2 gap-2 mb-4">
+                        {service.features.slice(0, 6).map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <span className="truncate">{feature}</span>
+                          </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                        ))}
+                      </div>
+
+                      {/* Stats Row */}
+                      <div className="flex items-center gap-6 text-sm text-white/60">
+                        <div className="flex items-center gap-2">
+                          <Star className="w-4 h-4 text-yellow-400" />
+                          <span>{service.rating} ({service.reviews} reviews)</span>
+                        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         <div className="flex items-center gap-2">
                           <Users className="w-4 h-4 text-blue-400" />
                           <span>{service.customers}+ customers</span>
                         </div>
-                        <div className='flex items-center gap-2'>
-                          <Users className='w-4 h-4 text-blue-400' />
-                          <span>{service.customers}+ customers</span>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                          <Clock className='w-4 h-4 text-green-400' />                          <span>{service.setupTime} setup</span>                        <div className="flex items-center gap-2">
+
+                        <div className="flex items-center gap-2">
+
                           <Clock className="w-4 h-4 text-green-400" />
                           <span>{service.setupTime} setup</span>
                         </div>
                       </div>
                     </div>
                     {/* Right Side - CTA and Category */}
-                    <div className='flex-shrink-0 flex flex-col items-end gap-4'>
-                      <div className='text-right'>
-                        <div className='text-sm text-white/60 mb-1'>
-                          Category
-                        </div>
-                        <div className='flex items-center gap-2 text-white'>
-                          <span>{getCategoryIcon(service.category)}</span>
-                          <span className='text-sm'>{service.category}</span>                        </div>                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
+
+                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
+
                       <div className="text-right">
                         <div className="text-sm text-white/60 mb-1">Category</div>
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
+
+                        </div>
+
                       </div>
+=======
+                      </div>;
+
+                      {/* Stats Row */}
+                      <div className='flex items-center gap-6 text-sm text-white/60'>;
+                        <div className='flex items-center gap-2'>;
+                          <Star className='w-4 h-4 text-yellow-400' />;
+                          <span>;
+                            {service && service.rating} ({service && service.reviews} reviews);
+                          </span>;
+                        </div>                        </div>;
+                        <div className="flex items-center gap-2">;
+                          <Users className="w-4 h-4 text-blue-400" />;
+                          <span>{service && service.customers}+ customers</span>;
+                        </div>;
+                        <div className='flex items-center gap-2'>;
+                          <Users className='w-4 h-4 text-blue-400' />;
+                          <span>{service && service.customers}+ customers</span>;
+                        </div>;
+                        <div className='flex items-center gap-2'>;
+                          <Clock className='w-4 h-4 text-green-400' />                          <span>{service && service.setupTime} setup</span>                        <div className="flex items-center gap-2">;
+                          <Clock className="w-4 h-4 text-green-400" />;
+                          <span>{service && service.setupTime} setup</span>;
+                        </div>;
+                      </div>;
+                    </div>;
+
+                    {/* Right Side - CTA and Category */}
+                    <div className='flex-shrink-0 flex flex-col items-end gap-4'>;
+                      <div className='text-right'>;
+                        <div className='text-sm text-white/60 mb-1'>;
+                          Category;
+                        </div>;
+                        <div className='flex items-center gap-2 text-white'>;
+                          <span>{getCategoryIcon(service && service.category)}</span>;
+                          <span className='text-sm'>{service && service.category}</span>                        </div>                    <div className="flex-shrink-0 flex flex-col items-end gap-4">;
+                      <div className="text-right">;
+                        <div className="text-sm text-white/60 mb-1">Category</div>;
+                        <div className="flex items-center gap-2 text-white">;
+                          <span>{getCategoryIcon(service && service.category)}</span>;
+                          <span className="text-sm">{service && service.category}</span>;
+                      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <a
+
+=======
                         href={service.link}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2'
-                      >
-                        Learn More
-                        <ArrowRight className='w-4 h-4' />                      </a>                        target="_blank"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
               ))}
             </AnimatePresence>
           </div>
         )}
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              ))}
+            </AnimatePresence>;
+          </div>;
+        )}
+
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* No Results */}
-        {filteredServices.length === 0 && (
-          <motion.div
+        {filteredServices && filteredServices.length === 0 && (;
+          <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+
+
+=======
             className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -574,20 +1567,38 @@ export default function ComprehensiveServicesShowcase() {
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </p>          </motion.div>
 
           </motion.div>
 
+<<<<<<< HEAD
         )}
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {/* Contact CTA */}
-        <motion.div
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mt-20 text-center'
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -598,16 +1609,28 @@ export default function ComprehensiveServicesShowcase() {
               SAAS services to drive innovation and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
-                href='mailto:kleber@ziontechgroup.com'
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
-              >
-                Contact Sales Team
-                <ArrowRight className='w-5 h-5' />
-              </a>
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>;
+                Contact Sales Team;
+                <ArrowRight className='w-5 h-5' />;
+              </a>;
               <a
                 href='tel:+13024640950'
-                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'              >        >
+                className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'>        >;
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">;
+            <h3 className="text-3xl font-bold text-white mb-4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Join thousands of companies already using our revolutionary micro SAAS services to drive innovation and growth.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+
+=======
+          className="mt-20 text-center"
+        >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -616,15 +1639,17 @@ export default function ComprehensiveServicesShowcase() {
               Join thousands of companies already using our revolutionary micro SAAS services to drive innovation and growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Contact Sales Team
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                href="mailto:kleber@ziontechgroup && ziontechgroup.com"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2">;
+                Contact Sales Team;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
               <a
                 href="tel:+13024640950"
+<<<<<<< HEAD
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
@@ -640,3 +1665,25 @@ export default function ComprehensiveServicesShowcase() {
   );
 
 }
+=======
+
+
+                Call +1 302 464 0950;
+              </a>;
+            </div>;
+          </div>;
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        </motion.div>;
+      </div>;
+    </section>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

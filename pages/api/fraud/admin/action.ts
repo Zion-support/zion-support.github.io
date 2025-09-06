@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -6,19 +10,25 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {;
-    return res.status(405).json({ error: "Method not allowed" });
+  try {
+  if (req && req.method !== "POST") {
+    return res && res.status(405).json({ error: "Method not allowed" });
+
   }
-  const { fraudId, action, reason, adminId } = req.body |{}
-  if (!fraudId |!action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
+
+
+  const { fraudId, action, reason, adminId } = req && req.body || {};
+  if (!fraudId || !action) {
+    return res && res.status(400).json({ error: "Missing fraudId or action" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const store = getFraudStore();
-  const fraud = store.getById(fraudId);
+  const fraud = store && store.getById(fraudId);
   if (!fraud) {
-    return res.status(404).json({ error: "Fraud record not found" });
+    return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
+<<<<<<< HEAD
     id: `action-${Date.now()}`
     fraudId
     action
@@ -53,72 +63,72 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+    id: `action-${Date && Date.now()}`,
+    fraudId,
+    action,
+    reason,
+    adminId,
+    timestamp: new Date().toISOString(),
+  };
+
+  store && store.addAdminAction(adminAction);
+
+  return res && res.status(200).json({ success: true, action: adminAction });
+
+}
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getFraudStore  } from '../../../../utils / fraud / store';
+import { AdminActionType  } from '../../../../utils / fraud / types';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status (405).json ({ error: "Method not allowed" });
   }
+  const { fraud_id, action, reason, admin_id } = req.body || {}
+  // Check condition
+if ( {) {
+  $2
 }
-  if (!ensureAdmin(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status (400).json ({ error: "Missing fraud_id or action" });
   }
+  const store = getFraudStore ();
+  const fraud = store.getById (fraud_id);
+  // Check condition
+if ( {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status (404).json ({ error: "Fraud record not found" });
   }
-}
+  const admin_action: AdminActionType = {
+    id: `action-${Date.now ()}`,
+    fraud_id,
+    action,
+    reason,
+    admin_id,
+    timestamp: new Date ().toISOString (),
+  }
 ;
-  const { fraudId, action, reason, adminId } = req.body || {};
-  if (!fraudId || !action) {;
-    res.status(400).json({ error: 'Missing fraudId or action' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+  store.addAdminAction (admin_action);
 ;
-  const act = (action as string).toUpperCase() as AdminActionType;
-  if (!['SUSPENDWARNIGNORE'].includes(act)) {;
-    res.status(400).json({ error: 'Invalid action' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  return res.status (200).json ({ success: true, action: admin_action });
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -144,3 +154,9 @@ export default async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

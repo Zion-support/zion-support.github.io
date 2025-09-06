@@ -1,13 +1,28 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
+<<<<<<< HEAD
 
+=======
+
+
+
+export interface Notification extends BaseNotification {;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -16,9 +31,18 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
 
+<<<<<<< HEAD
+=======
+import {Notification, as, BaseNotification} from '@/types / notifications';
+=======
+
+
+export interface NotificationContextType {;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   notifications: Notification[];
   filteredNotifications: Notification[];
   unreadCount: number;
@@ -32,24 +56,34 @@ export type FilterType =
   fetchNotifications: () => Promise<void>
 
 import { Notification as BaseNotification } from '@/types/notifications',;
+
 export type NotificationType =;
   | 'message';
   | 'quote_request';
   | 'booking_confirmation';
   | 'hire_request';
   | 'onboarding';
-  | 'system',;
-export interface Notification extends BaseNotification {;
-  type: NotificationType,;
-  action_url?: string,;
+  | 'system';
+;
+export interface Notification extends BaseNotification {
+  type: NotificationType;
+  action_url?: string,
   action_text?: string;
 }
-;
 export type FilterType =;
   | 'all';
   | 'unread';
   | 'messages';
   | 'onboarding';
+
+  markAsRead: (id: string) => Promise < void>;
+  markAllAsRead: () => Promise < void>;
+  dismiss_notification: (id: string) => Promise < void>;
+  set_filter: (filter: FilterType) => void,
+  fetch_notifications: () => Promise < void>;
+}
+
+=======
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;
@@ -63,4 +97,11 @@ export interface NotificationContextType {;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

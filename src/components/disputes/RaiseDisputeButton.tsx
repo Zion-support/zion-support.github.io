@@ -21,25 +21,38 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
+<<<<<<< HEAD
 
+=======
+  projectId
+  milestoneId
+  variant = 'outline'
+  size
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { 
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useRouter } from 'next/router',
-import { ShieldAlert } from 'lucide-react'
-
-interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -48,14 +61,37 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
+<<<<<<< HEAD
 
   projectId,
+=======
+>>>>>>>   projectId,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
 
+=======
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -75,16 +111,39 @@ export function RaiseDisputeButton({
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
+<<<<<<< HEAD
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+=======
+      
+>>>>>>>       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <DialogContent className="sm:max-w-[550px]">
-          <DialogHeader>
+ursor/fix-website-loading-errors-and-merge-6662
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className='sm:max-w-[550px]'>
+>>>>>>>           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with this project.
+              Please provide details about the issue you're experiencing with
+              this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
 
+=======
+            projectId={projectId}
+            milestoneId={milestoneId}
+            onDisputeCreated={handleDisputeCreated}
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
+}
+
+>>>>>>>           
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -138,8 +197,12 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
+<<<<<<< HEAD
 
             projectId={projectId}
+=======
+>>>>>>>             projectId={projectId}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
@@ -147,4 +210,11 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
 
+=======
+};
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

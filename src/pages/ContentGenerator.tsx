@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+}
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -13,7 +19,17 @@ import { toast } from "sonner",
 import { Loader2 } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 
+=======
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter  } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function ContentGenerator() {
+
+  const { user, isLoading } = useAuth();
+  const router = null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Check if user is still loading
   if (isLoading) {
     return (
@@ -111,7 +127,10 @@ import { useAuth } from "@/hooks/useAuth",
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
@@ -222,4 +241,12 @@ import { useAuth } from "@/hooks/useAuth",
     </>
   )
 }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

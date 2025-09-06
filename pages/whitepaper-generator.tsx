@@ -1,22 +1,61 @@
 
+<<<<<<< HEAD
+=======
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
+export default function WhitepaperGeneratorRedirect() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const router = useRouter();
-  useEffect(() => {
-router.replace('/tokenomics');
+  useEffect(() => {;
+    router && router.replace('/tokenomics');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [router]);
   return null;
 
+<<<<<<< HEAD
+=======
+=======
+
+
+}
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-export default function WhitepaperGeneratorRedirect(req, res) {
-  try {
+export default function WhitepaperGeneratorRedirect() {
   const router = useRouter();
-  useEffect(() => {;
-    router.replace('/tokenomics');
+  useEffect(() => {
+    router.replace('/tokenomics')
+  }, [router]);
+  return null
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import {useEffect} from 'react';
+import {use_router} from 'next / router';
+export default /**
+ * WhitepaperGeneratorRedirect - Function description
+ */
+function WhitepaperGeneratorRedirect() {
+  const router = use_router ();
+  useEffect (() => {
+router.replace ('/tokenomics');
   }, [router]);
   return null;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

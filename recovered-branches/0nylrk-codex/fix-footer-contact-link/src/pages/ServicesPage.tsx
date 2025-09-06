@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
@@ -6,6 +7,10 @@ import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
 
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -17,6 +22,10 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -28,6 +37,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 124}
   {
 
+<<<<<<< HEAD
+=======
+
+    id: "service-2",
+    title: "Cloud Infrastructure Management",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"],
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -38,6 +60,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 92}
   {
 
+<<<<<<< HEAD
+=======
+
+    id: "service-3",
+    title: "Big Data Analysis & Insights",
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
+    category: "Analytics",
+    price: 4500,
+    currency: "$",
+    tags: ["Big Data", "Analytics", "Business Intelligence"],
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -49,6 +84,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 78}
   {
 
+<<<<<<< HEAD
+=======
+
+    id: "service-4",
+    title: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
+    category: "Security",
+    price: 6000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -59,6 +107,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 103}
   {
 
+<<<<<<< HEAD
+=======
+
+    id: "service-5",
+    title: "IT Infrastructure Modernization",
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+    category: "Consulting",
+    price: 8500,
+    currency: "$",
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -69,6 +130,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 67}
   {
 
+<<<<<<< HEAD
+=======
+
+    id: "service-6",
+    title: "AI Strategy & Implementation",
+    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -86,6 +160,7 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
+<<<<<<< HEAD
 
 export default function ServicesPage() {
   return (
@@ -116,6 +191,16 @@ import { TrustedBySection } from "@/components/TrustedBySection",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
+=======
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import {AppLayout} from "@/layout/AppLayout";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Globe} from "lucide-react";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
   {;
@@ -125,31 +210,31 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Development",;
     price: 5000,;
     currency: "$",;
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],;
+    tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {;
       name: "TechSolutions Inc.",;
       id: "tech-solutions",;
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},;
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2023-12-10T14:48:00.000Z",;
+      avatarUrl: "https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},;
+    images: ["https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2023-12-10T14:48:00 && 00.000Z",;
     aiScore: 95,;
-    rating: 4.9,;
+    rating: 4 && 4.9,;
     reviewCount: 124},;
   {;
     id: "service-2",;
     title: "Cloud Infrastructure Management",;
-    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",;
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
     category: "Management",;
     price: 3000,;
     currency: "$",;
-    tags: ["Cloud", "DevOps", "Security"],;
+    tags: ["Cloud", "DevOps", "Security"];
     author: {;
       name: "CloudPro Experts",;
       id: "cloud-pro"},;
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2023-11-20T09:30:00.000Z",;
+    images: ["https://images && images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2023-11-20T09:30:00 && 00.000Z",;
     aiScore: 88,;
-    rating: 4.7,;
+    rating: 4 && 4.7,;
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -158,15 +243,15 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
-    tags: ["Big Data", "Analytics", "Business Intelligence"],;
+    tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {;
       name: "DataMind Solutions",;
       id: "datamind",;
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},;
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-05T11:15:00.000Z",;
+      avatarUrl: "https://images && images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"},;
+    images: ["https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2024-01-05T11:15:00 && 00.000Z",;
     aiScore: 92,;
-    rating: 4.8,;
+    rating: 4 && 4.8,;
     reviewCount: 78},;
   {;
     id: "service-4",;
@@ -175,58 +260,104 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Security",;
     price: 6000,;
     currency: "$",;
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],;
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
     author: {;
       name: "SecureNet Team",;
       id: "secure-net"},;
-    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2023-12-28T16:22:00.000Z",;
+    images: ["https://images && images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
+    createdAt: "2023-12-28T16:22:00 && 00.000Z",;
     aiScore: 89,;
-    rating: 4.9,;
+    rating: 4 && 4.9,;
     reviewCount: 103},;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
-    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",;
+=======
+import { DynamicListingPage } from '@/components / DynamicListingPage';
+import { ProductListing } from '@/types / listings';
+import { AppLayout } from '@/layout / AppLayout';
+import { TrustedBySection } from '@/components / TrustedBySection';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+import { Globe } from './lucide-react';
+// Sample service listings;
+const SERVICE_LISTINGS: ProductListing[] = [;
+  {
+    id: "service - 1",
+    title: "AI Development & Integration",
+    description: "Full - stack AI development services to integrate advanced machine learning models into your existing business systems.",
+    category: "Development",
+    price: 5000,
+    currency: "$",
+    tags: ["AI Integration", "Machine Learning", "Enterprise"];
+    author: {
+      name: "TechSolutions Inc.",
+      id: "tech - solutions",
+      avatar_url: "https://images.unsplash.com / photo - 1568602471122 - 7832951cc4c5?auto = format & fit = crop & w=100 & h=100"},
+    images: ["https://images.unsplash.com / photo - 1581092918056 - 0c4c3acd3789?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2023 - 12 - 10T14:48:00.000Z",
+    ai_score: 95,
+    rating: 4.9,
+    review_count: 124},
+  {
+    id: "service - 2",
+    title: "Cloud Infrastructure Management",
+    description: "24 / 7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"];
+    author: {
+      name: "CloudPro Experts",
+      id: "cloud - pro"},
+    images: ["https://images.unsplash.com / photo - 1544197150 - b99a580bb7a8?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2023 - 11 - 20T09:30:00.000Z",
+    ai_score: 88,
+    rating: 4.7,
+    review_count: 92},
+  {
+    id: "service - 3",
+    title: "Big Data Analysis & Insights",
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
+    category: "Analytics",
+    price: 4500,
+    currency: "$",
+    tags: ["Big Data", "Analytics", "Business Intelligence"];
+    author: {
+      name: "DataMind Solutions",
+      id: "datamind",
+      avatar_url: "https://images.unsplash.com / photo - 1573497019940 - 1c28c88b4f3e?auto = format & fit = crop & w=100 & h=100"},
+    images: ["https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2024 - 01 - 05T11:15:00.000Z",
+    ai_score: 92,
+    rating: 4.8,
+    review_count: 78},
+  {
+    id: "service - 4",
+    title: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
+    category: "Security",
+    price: 6000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
+    author: {
+      name: "SecureNet Team",
+      id: "secure - net"},
+    images: ["https://images.unsplash.com / photo - 1510511459019 - 5dda7724fd87?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2023 - 12 - 28T16:22:00.000Z",
+    ai_score: 89,
+    rating: 4.9,
+    review_count: 103},
+  {
+    id: "service - 5",
+    title: "IT Infrastructure Modernization",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
     currency: "$",;
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],;
-    author: {;
-      name: "ModernizeIT Consulting",;
-      id: "modernize-it"},;
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2023-11-10T08:45:00.000Z",;
-    aiScore: 86,;
-    rating: 4.6,;
-    reviewCount: 67},;
-  {;
-    id: "service-6",;
-    title: "AI Strategy & Implementation",;
-    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",;
-    category: "Strategy",;
-    price: 7500,;
-    currency: "$",;
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],;
-    author: {;
-      name: "AI Future Consulting",;
-      id: "ai-future",;
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"},;
-    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-02-02T10:30:00.000Z",;
-    aiScore: 94,;
-    rating: 4.8,;
-    reviewCount: 85}],;
-// Filter options specific to services;
-const SERVICE_FILTERS = [;
-  { label: 'Development', value: 'development' },;
-  { label: 'Management', value: 'management' },;
-  { label: 'Security', value: 'security' },;
-  { label: 'Analytics', value: 'analytics' },;
-  { label: 'Consulting', value: 'consulting' },;
-  { label: 'Strategy', value: 'strategy' }];
-export default function ServicesPage() {;
-  return (;
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+
     <AppLayout>;
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
@@ -240,23 +371,95 @@ export default function ServicesPage() {;
             </Link>;
             <Link to="/request-quote">;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+=======
+    author: {
+      name: "ModernizeIT Consulting",
+      id: "modernize - it"},
+    images: ["https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2023 - 11 - 10T08:45:00.000Z",
+    ai_score: 86,
+    rating: 4.6,
+    review_count: 67},
+  {
+    id: "service - 6",
+    title: "AI Strategy & Implementation",
+    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
+    author: {
+      name: "AI Future Consulting",
+      id: "ai - future",
+      avatar_url: "https://images.unsplash.com / photo - 1560250097 - 0b93528c311a?auto = format & fit = crop & w=100 & h=100"},
+    images: ["https://images.unsplash.com / photo - 1519389950473 - 47ba0277781c?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2024 - 02 - 02T10:30:00.000Z",
+    ai_score: 94,
+    rating: 4.8,
+    review_count: 85}],
+// Filter options specific to services;
+const SERVICE_FILTERS = [;
+  { label: 'Development', value: 'development' },
+  { label: 'Management', value: 'management' },
+  { label: 'Security', value: 'security' },
+  { label: 'Analytics', value: 'analytics' },
+  { label: 'Consulting', value: 'consulting' },
+  { label: 'Strategy', value: 'strategy' }],
+export default /**
+ * ServicesPage - Function description
+ */
+function ServicesPage() {
+  return (
+    <AppLayout>;
+      <div className="bg - zion - blue - dark py - 4 px - 4 md:px - 8 mb - 6 border - b border - zion - blue - light">;
+        <div className="container mx - auto flex flex - col md:flex - row items - center justify - between gap - 4">;
+          <h2 className="text - white text - lg font - medium">Featured Services</h2>;
+          <div className="flex flex - wrap gap - 2">;
+            <Link to="/it - onsite - services">;
+              <Button variant="outline" className="border - zion - purple text - zion - cyan hover:bg - zion - purple / 10">;
+                <Globe className="h - 4 w - 4 mr - 2" />;
+                Global IT Onsite Services;
+              </Button>;
+            </Link>;
+            <Link to="/request - quote">;
+              <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
                 Request a Quote;
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
-      <DynamicListingPage;
-        title="IT & AI Services";
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
-        categorySlug="services";
-        listings={SERVICE_LISTINGS}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
+
       />;
       <TrustedBySection />;
     </AppLayout>;
   );
 }
+<<<<<<< HEAD
 ;
 
+=======
+
+=======
+      <DynamicListingPage;
+        title="IT & AI Services";
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
+        category_slug="services";
+        listings={SERVICE_LISTINGS}
+        category_filters={SERVICE_FILTERS}
+        initial_price={{ min: 3000, max: 10000 }}
+      />;
+      <TrustedBySection />;
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

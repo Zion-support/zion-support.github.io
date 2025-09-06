@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+
+import Link from 'next/link'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
@@ -11,7 +17,49 @@ export function InteractiveFeatures({
   style
 }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+<<<<<<< HEAD
 
+=======
+  const features = [
+    {
+      title: 'AI Talent Matching'
+      description:
+        'Connect with the perfect talent using intelligent matching.'
+      details:
+        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.'
+      icon: <Search className='h-8 w-8 text-blue-700' />
+      link: '/match'
+    }
+    {
+      title: 'Talent Directory'
+      description: 'Browse a verified database of AI and tech specialists.'
+      details:
+        'Every profile is vetted for quality and authenticity so you can hire with confidence.'
+      icon: <Users className='h-8 w-8 text-purple-700' />
+      link: '/talent'
+    }
+    {
+      title: 'Services Marketplace'
+      description:
+        'Discover professional tech and AI services for your business.'
+      details:
+        'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.'
+      icon: <Zap className='h-8 w-8 text-cyan-700' />
+      link: '/services'
+    }
+    {
+      title: 'Equipment Catalog'
+      description: 'Find specialized hardware for development and research.'
+      details:
+        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.'
+      icon: <Settings className='h-8 w-8 text-amber-700' />
+      link: '/equipment'
+    }
+  ]
+  const handleToggle = (index: number) => {
+    setOpenIndex(prev => (prev === index ? null : index))
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -26,7 +74,11 @@ interface InteractiveFeaturesProps {
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null),
 
+<<<<<<< HEAD
   const features = [
+=======
+>>>>>>>   const features = [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     {
       title: "AI Talent Matching",
       description: "Connect with the perfect talent using intelligent matching.",
@@ -52,7 +104,18 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
+<<<<<<< HEAD
 
+=======
+        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',
+      icon: <Settings className='h-8 w-8 text-amber-700' />,
+      link: '/equipment',
+    },
+  ]
+  const handleToggle = (index: number) => {
+    setOpenIndex(prev => (prev === index ? null : index))
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
@@ -61,7 +124,11 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
     setOpenIndex((prev) => (prev === index ? null : index))
   },
 
+<<<<<<< HEAD
   return (
+=======
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
@@ -72,14 +139,134 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
+<<<<<<< HEAD
 
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          {features.map((feature, index) => (
+            <Card
+>>>>>>>               key={index}
+              onMouseEnter={() => setOpenIndex(index)}
+              onMouseLeave={() => setOpenIndex(null)}
+              onClick={() => handleToggle(index)}
+              className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'            >
+              <CardHeader className='flex flex-row items-start space-x-3'>
+>>>>>>>                 {feature.icon}
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
+  className?: string,;
+  style?: React && React.CSSProperties;
+}
+
+interface InteractiveFeaturesProps {;
+  className?: string;
+  style?: React && React.CSSProperties;
+
+export function InteractiveFeatures(): any ({;
+  className,;
+  style,;
+}: InteractiveFeaturesProps) {;
+  const [openIndex, setOpenIndex] = React && React.useState<number | null>(null);
+
+  const features = [;
+    {;
+      title: 'AI Talent Matching',;
+      description:;
+        'Connect with the perfect talent using intelligent matching.',;
+      details:;
+        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.',;
+      icon: <Search className='h-8 w-8 text-blue-700' />,;
+      link: '/match',;
+    },;
+    {;
+      title: 'Talent Directory',;
+      description: 'Browse a verified database of AI and tech specialists.',;
+      details:;
+        'Every profile is vetted for quality and authenticity so you can hire with confidence.',;
+      icon: <Users className='h-8 w-8 text-purple-700' />,;
+      link: '/talent',;
+    },;
+    {;
+      title: 'Services Marketplace',;
+      description:;
+        'Discover professional tech and AI services for your business.',;
+      details:;
+        'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.',;
+      icon: <Zap className='h-8 w-8 text-cyan-700' />,;
+      link: '/services',;
+    },;
+    {;
+      title: 'Equipment Catalog',;
+      description: 'Find specialized hardware for development and research.',;
+      details:;
+        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',;
+      icon: <Settings className='h-8 w-8 text-amber-700' />,;
+      link: '/equipment',;
+    },;
+  ];
+
+  const handleToggle = (index: number) => {;
+    setOpenIndex(prev => (prev === index ? null : index));
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
+          {features.map((feature, index) => (;
+            <Card;
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
 
+<<<<<<< HEAD
+=======
+
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+            >
+              <CardHeader className="flex flex-row items-start space-x-3">
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 {feature.icon}
-                <div>
+>>>>>>>                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
                     {feature.description}
@@ -88,20 +275,47 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
+<<<<<<< HEAD
 
+=======
+                  'transition-all duration-300'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
+<<<<<<< HEAD
 
                   "transition-all duration-300",
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+                  openIndex === index
+                    ? 'max-h-48 opacity-100 p-6 pt-0'
+                    : 'max-h-0 opacity-0 p-0'
+                )}>;
+                <CardContent className='text-sm text-zion-slate-light p-0'>;
+                  <p>{feature && feature.details}</p>;
+                  <Button
+                    asChild
+                    variant='link'
+                    className='mt-3 p-0 h-auto text-primary'>;
+                    <Link
+                      href={feature && feature.link}
+                      className='flex items-center gap-1'>;
+                      Learn more <ArrowRight className='h-4 w-4' />;
+>>>>>>>                   "transition-all duration-300",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
+<<<<<<< HEAD
 
                   <p>{feature.details}</p>
+=======
+>>>>>>>                   <p>{feature.details}</p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
                       Learn more <ArrowRight className="h-4 w-4" />
@@ -111,12 +325,33 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
 
         </div>;
+=======
+export default InteractiveFeatures
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>         </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       </div>;
     </section>;
   );
-}
+
+
+            </Card>))}
+        </div>;
+      </div>;
+    </section>);
+export default InteractiveFeatures;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> }
 ;
 export default InteractiveFeatures;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

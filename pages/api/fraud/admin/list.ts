@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
@@ -20,41 +21,65 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.status(405).json({ error: 'Method not allowed' })
+    return
   }
+  if (!ensureAdmin(req)) {
+    res.status(401).json({ error: 'Unauthorized' })
+    return
+  }
+  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>
+  const store = getFraudStore()
+  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
+    source: source as any
+    userId
+    status: status as any
+    label: label as any})
+
+  res.status(200).json({ items })
+
+=======
 }
-;
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { getFraudStore } from '../../../../utils / fraud / store',
+function ensure_admin (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'],
+  // Check condition
+if (return true, // allow if not configured) {
+  $2
+}
+  return token === process.env.ADMIN_TOKEN;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+  if () {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!ensureAdmin(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status (401).json ({ error: 'Unauthorized' }),
     return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -83,3 +108,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

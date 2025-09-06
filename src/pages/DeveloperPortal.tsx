@@ -21,16 +21,31 @@ interface TabDefinition {
   label: string;
   icon: LucideIcon
 export function DeveloperPortal() {
+<<<<<<< HEAD
 
+=======
+  const { user } = useAuth();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+ursor/fix-website-loading-errors-and-merge-6662
+          Developer Portal
+        </h1>
+        <p className='text-zinc-400 mt-2'>
+          Access the Zion API, manage your API keys, and set up webhooks.
+        </p>
+      </div>
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
-import { ApiLogs } from "@/components/developers/ApiLogs",
+
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string,
   label: string,
@@ -39,6 +54,7 @@ interface TabDefinition {
 
 export function DeveloperPortal() {
   const { user } = useAuth(),
+<<<<<<< HEAD
 
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
@@ -46,19 +62,85 @@ export function DeveloperPortal() {
   const tabs: TabDefinition[] = [
 
   return (
+=======
+>>>>>>>   const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: 'documentation', label: 'Documentation', icon: BookOpen }
+    { id: 'api-keys', label: 'API Keys', icon: Key }
+    { id: 'webhooks', label: 'Webhooks', icon: Webhook }
+    { id: 'logs', label: 'Logs', icon: List }
+  ]
+  return (
+
+    <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
+      <div className='mb-8'>
+        <h1 className='text-3xl font-bold text-white flex items-center'>
+          <Terminal className='mr-3' size={32} />
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
+<<<<<<< HEAD
 
           Developer Portal
+=======
+>>>>>>>           Developer Portal
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </h1>
         <p className="text-zinc-400 mt-2">
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+<<<<<<< HEAD
 
         {activeTab === "documentation" && <ApiDocumentation />}
+=======
+      {/* Tabs */}
+      <div className='border-b border-zinc-800 mb-8'>
+        <div className='flex flex-wrap -mb-px'>
+          {tabs.map(tab => {
+            const Icon = tab.icon
+                onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+
+                  activeTab === tab.id
+                    ? "text-white border-zion-purple"
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                }`}
+                onClick = {(,) => setActiveTab(tab.id),}
+              >
+                <Icon size={16} className='mr-2' />
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
+        {activeTab === 'documentation' && <ApiDocumentation />}
+        {activeTab === 'api-keys' && <ApiKeysManager />}
+        {activeTab === 'webhooks' && <WebhooksManager />}
+        {activeTab === 'logs' && <ApiLogs />}
+      </div>
+    </div>
+  )
+                onClick={() => setActiveTab(tab.id)}
+              >
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
+>>>>>>>         {activeTab === "documentation" && <ApiDocumentation />}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
@@ -66,21 +148,51 @@ export function DeveloperPortal() {
     </div>
   )
 }
+<<<<<<< HEAD
 
 export default function ProtectedDeveloperPortal() {
+=======
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "logs" && <ApiLogs />}
+
+
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+xport default function ProtectedDeveloperPortal() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 
+=======
+}
+}
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
+
 export default function ProtectedDeveloperPortal() {;
-  return (;
+  return (
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

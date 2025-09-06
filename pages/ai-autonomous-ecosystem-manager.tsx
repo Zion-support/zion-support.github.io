@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousEcosystemManager() {
@@ -9,12 +10,26 @@ export default function AIAutonomousEcosystemManager() {
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
 			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -25,6 +40,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 
+<<<<<<< HEAD
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,3 +64,7 @@ export default function AIAutonomousEcosystemManager() {
   }
 }
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

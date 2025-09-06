@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 
 
 interface TalentCardContentProps {
+=======
+import React, { useState } from 'react'
+import { MapPin } from 'lucide-react'
+import { TalentCardSkills } from './TalentCardSkills'
+import React, { useState } from "react"
+import { TalentCardSkills } from "./TalentCardSkills"
+
+import { TalentCardSkills } from "./TalentCardSkills";
+>>>>>>> interface TalentCardContentProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
 
+<<<<<<< HEAD
 export function TalentCardContent({
   summary
   bio
@@ -34,6 +46,25 @@ export function TalentCardContent({
         </div>
       )}
 
+=======
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        onMouseEnter = {() => setIsHovering(true),}
+        onMouseLeave = {() => setIsHovering(false),}
+      >
+        <p className='text-zion-slate mb-4'>{summary |bio}</p>
+      </div>
+        <p className="text-zion-slate mb-4">
+          {summary |bio}
+        </p>
+      </div>
+      <TalentCardSkills skills={skills} />
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from "react",;
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from "./TalentCardSkills",;
@@ -56,12 +87,32 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
+<<<<<<< HEAD
 
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
 
+=======
+>>>>>>>       {/* Short bio or summary - longer on hover for desktop */}
+      <div 
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        onMouseEnter = {() => setIsHovering(true),}
+        onMouseLeave = {() => setIsHovering(false),}
+      >
+        <p className='text-zion-slate mb-4'>{summary || bio}</p>
+      </div>
+        <p className="text-zion-slate mb-4">
+          {summary || bio}
+        </p>
+      </div>
+      <TalentCardSkills skills={skills} />
+    </div>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -69,10 +120,14 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
           {summary || bio}
         </p>;
       </div>;
-      {/* Skills */}
       <TalentCardSkills skills={skills} />;
-    </div>;
-  );
+    </div>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

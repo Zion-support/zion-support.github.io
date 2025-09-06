@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-grade solutions.'
@@ -13,64 +14,12 @@ export const metadata = {
           We help modernize your infrastructure and optimize your IT operations.
         </p>
       </section>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-      {/* Featured IT Solutions */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          Our IT Solutions
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ITSolutionCard
-            title="Cloud Migration & Modernization"
-            description="Complete cloud migration with modern architecture, cost optimization, and performance tuning"
-            features={["Multi-cloud strategy", "Container orchestration", "Serverless architecture", "Cost optimization", "Disaster recovery"]}
-            pricing="$15,000 - $75,000"
-            category="Cloud Services"
-            icon="☁️"
-          />
-          <ITSolutionCard
-            title="DevOps & CI/CD Pipeline"
-            description="Automated deployment pipelines with monitoring, testing, and quality gates"
-            features={["GitOps workflows", "Automated testing", "Blue-green deployments", "Infrastructure as code", "Monitoring integration"]}
-            pricing="$8,000 - $35,000"
-            category="DevOps"
-            icon="🔄"
-          />
-          <ITSolutionCard
-            title="Cybersecurity & Compliance"
-            description="Comprehensive security assessment, hardening, and compliance management"
-            features={["Security audits", "Penetration testing", "Compliance frameworks", "Zero Trust architecture", "Incident response"]}
-            pricing="$12,000 - $50,000"
-            category="Security"
-            icon="🔒"
-          />
-          <ITSolutionCard
-            title="Site Reliability Engineering"
-            description="SRE practices with monitoring, alerting, and incident management"
-            features={["SLO/SLI definition", "Error budget management", "Chaos engineering", "On-call automation", "Performance optimization"]}
-            pricing="$10,000 - $40,000"
-            category="SRE"
-            icon="⚡"
-          />
-          <ITSolutionCard
-            title="Data Infrastructure & Analytics"
-            description="Data pipeline setup with warehousing, analytics, and real-time processing"
-            features={["Data lake architecture", "ETL/ELT pipelines", "Real-time analytics", "Data governance", "ML infrastructure"]}
-            pricing="$18,000 - $60,000"
-            category="Data Engineering"
-            icon="📊"
-          />
-          <ITSolutionCard
-            title="Managed IT Services"
-            description="24/7 IT operations management with proactive monitoring and support"
-            features={["24/7 monitoring", "Proactive maintenance", "Incident management", "Performance tuning", "Security updates"]}
-            pricing="$5,000+/month"
-            category="Managed Services"
-            icon="🛠️"
-          />
-        </div>
-      </section>
+export const metadata = { title: 'IT Services | Zion Tech Group' }; export default function ITServicesPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>IT Services</h1> <p style={{marginTop: 8,color: '#374151'}}>Cloud,DevOps,SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Cloud & Infra" details={["AWS/GCP/Azure","Kubernetes","Serverless","IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI/CD","Observability","Autoscaling","Chaos testing"]} /> <Item title="Security" details={["Hardening","Zero Trust","Vuln mgmt","Compliance"]} /> </div> <Pricing /> </section> )} function Item(): any ({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details && details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks","Cloud review","Security audit","Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks","Infra as code","CI/CD","Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24/7 on-call","SLO mgmt","Cost optimization","Reports"]} /> </div> )} function Plan(): any ({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features && features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
 
+<<<<<<< HEAD
       {/* Core IT Services */}
       <section className="py-12 bg-gray-50">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -297,3 +246,20 @@ function ContactSection() {
     </div>
   );
 }
+=======
+=======
+export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
+ * ITServicesPage - Function description
+ */
+function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
+ * Item - Function description
+ */
+function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
+ * Pricing - Function description
+ */
+function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
+ * Plan - Function description
+ */
+function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

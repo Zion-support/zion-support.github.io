@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+=======
+
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export type DisputeReason =;
   | 'Scope Disagreement';
@@ -6,8 +14,10 @@ export type DisputeReason =;
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+
   | 'Other',;
 
+<<<<<<< HEAD
 export type DisputeAttachment = {
   id: string;
   fileName: string;
@@ -32,3 +42,11 @@ export type UserSummary = {
 
   role: 'admin' | 'client' | 'talent';
 
+=======
+
+  role: 'admin' | 'client' | 'talent';
+
+};
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

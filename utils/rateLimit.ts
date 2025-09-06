@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
@@ -18,10 +19,24 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   }
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' });
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return false;
   }
   current.count++;
-  rateLimitMap.set(key, current);
+  rateLimitMap.set (key, current);
   return true;
+<<<<<<< HEAD
 }
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

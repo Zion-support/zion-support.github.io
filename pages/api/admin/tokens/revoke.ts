@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { revokeTokens } from "../../../../utils/token/service";
@@ -12,3 +13,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: err.message });
   }
 
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

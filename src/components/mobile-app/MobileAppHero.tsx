@@ -1,12 +1,24 @@
 
+<<<<<<< HEAD
 
+=======
+}
+import React from "react"
+import Link from "next/link"
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
+import { AppStoreButtons } from "./AppStoreButtons"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
+<<<<<<< HEAD
 
 export const MobileAppHero: React.FC = () => {
+=======
+xport const MobileAppHero: React.FC = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available
@@ -21,21 +33,40 @@ export const MobileAppHero: React.FC = () => {
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
             </p>
+<<<<<<< HEAD
 
             <div className="mb-8">
+=======
+            <div className="mb-8">
+              <AppStoreButtons
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+              />
+            </div>
+            
+>>>>>>>             <div className="mb-8">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
+<<<<<<< HEAD
 
             <Link href="/open-app">
+=======
+>>>>>>>             <Link href="/open-app">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
-                Open App
+ursor/fix-website-loading-errors-and-merge-6662
+            <Link href="/open-app">
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
+>>>>>>>                 Open App
                 <ArrowRight size={20} />
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
 
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
@@ -43,15 +74,84 @@ export const MobileAppHero: React.FC = () => {
               <Phone className="w-full h-auto text-white" />
 
 import React from "react",;
+=======
+>>>>>>>           <div className="flex-1 flex justify-center">
+            <div className="relative w-64 h-auto">
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
+              <Phone className="w-full h-auto text-white" />
+  )
+}
+"
+
+ursor/fix-website-loading-errors-and-merge-6662
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-64 h-auto">
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
+              <Phone className="w-full h-auto text-white" />
+
+  // These would come from environment variables or a config;
+  const appStoreUrl = "#", // Replace with actual App Store URL when available;
+  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+  return (
+    <section className="relative bg - gradient - to - r from - zion - blue - dark to - zion - purple py - 16 md:py - 24">;
+      <div className="container mx - auto px - 4 lg:px - 8">;
+        <div className="flex flex - col md:flex - row items - center gap - 8 md:gap - 16">;
+          <div className="flex - 1 text - white">;
+            <h1 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold mb - 6">;
+              <span className="text - zion - cyan">Zion</span> in Your Pocket;
+            </h1>;
+            <p className="text - lg md:text - xl opacity - 90 mb - 8">;
+              Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.;
+            </p>;
+            <div className="mb - 8">;
+              <AppStoreButtons;
+                appStoreUrl = {appStoreUrl, }
+                googlePlayUrl = {googlePlayUrl, }
+              />;
+            </div>;
+            <Link href="/open - app">;
+              <Button variant="outline" size="lg" className="flex gap - 2 border - white text - white hover: bg - white / 10">;
+                Open App;
+                <ArrowRight size={20} />;
+              </Button>;
+            </Link>;
+          </div>;
+          <div className="flex - 1 flex justify - center">;
+            <div className="relative w - 64 h - auto">;
+              <div className="absolute inset - 0 bg - zion - cyan / 20 rounded - 3xl blur - xl"></div>;
+              <Phone className="w - full h - auto text - white" />;
+
+              {/* This would be replaced with an actual phone mockup image in production */}
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+
+
+};
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+  );
+};
+";
+
+>>>>>>> import React from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
-  return (;
+
+  return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
@@ -62,19 +162,22 @@ export const MobileAppHero: React.FC = () => {;
             <p className="text-lg md:text-xl opacity-90 mb-8">;
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.;
             </p>;
+
             <div className="mb-8">;
-              <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+              <AppStoreButtons
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
               />;
             </div>;
+
             <Link href="/open-app">;
-              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">;
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">;
                 Open App;
                 <ArrowRight size={20} />;
               </Button>;
             </Link>;
           </div>;
+
           <div className="flex-1 flex justify-center">;
             <div className="relative w-64 h-auto">;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
@@ -87,4 +190,11 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

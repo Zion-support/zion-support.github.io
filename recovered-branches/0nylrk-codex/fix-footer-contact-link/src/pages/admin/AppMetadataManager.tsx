@@ -1,22 +1,65 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 const AppMetadataManager: React.FC = () => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <AppLayout>
+
+    <AppLayout>;
+
       <SEO
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
+<<<<<<< HEAD
       />
       <div className="container py-8">
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>
@@ -32,19 +75,58 @@ import { SEO } from "@/components/SEO",;
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
 const AppMetadataManager: React.FC = () => {;
   return (;
+=======
+
+      />;
+
+      <div className="container py-8">;
+        <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>;
+
+        <MetadataManager />;
+      </div>;
+    </AppLayout>;
+  );
+};
+
+
+export default AppMetadataManager;
+
+=======
+import React from './react';
+import { AppLayout } from '@/layout / AppLayout';
+import { SEO } from '@/components / SEO';
+import { MetadataManager } from '@/components / mobile - app / admin / MetadataManager';
+const AppMetadataManager: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <AppLayout>;
       <SEO;
         title="App Metadata Manager";
         description="Manage app store metadata for the Zion mobile application";
         noindex={true}
       />;
-      <div className="container py-8">;
-        <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>;
+      <div className="container py - 8">;
+        <h1 className="text - 3xl font - bold text - zion - cyan mb - 8">App Metadata Manager</h1>;
         <MetadataManager />;
       </div>;
+<<<<<<< HEAD
     </AppLayout>;
   );
 },;
 
 export default AppMetadataManager;
 
+=======
+    </AppLayout>);
+}
+;
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AppMetadataManager;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

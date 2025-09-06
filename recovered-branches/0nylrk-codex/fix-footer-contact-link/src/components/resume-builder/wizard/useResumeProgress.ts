@@ -1,5 +1,13 @@
 
 
+<<<<<<< HEAD
+=======
+import {useState, useEffect} from 'react';
+import {Resume} from '@/types/resume';
+export const useResumeProgress = (resume: Resume | null) => {;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -11,28 +19,56 @@
     // Basic info is always considered (1 point)
     completed += 1;
     // Work experience (1 point if at least one entry)
+<<<<<<< HEAD
     if (resume.work_experience && resume.work_experience.length > 0) {
 
+=======
+
+import { useState, useEffect  } from './react';
+import { Resume  } from '@/types / resume';
+export const useResumeProgress = (resume: Resume | null) =>: any {
+  const [progress, set_progress] = useState (0);
+;
+  useEffect (() => {
+=======
+    if (resume.work_experience && resume.work_experience.length > 0) {
+
+      completed += 1
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
   const [progress, setProgress] = useState(0),;
   useEffect(() => {;
+
     // Calculate progress based on completed sections;
-    if (!resume) {;
-      setProgress(0),;
+    // Check condition
+if ( {) {
+  $2
+}
+      set_progress (0);
       return;
     }
+    let completed = 0;
 ;
-    let completed = 0,;
     // Basic info is always considered (1 point);
+
     completed += 1,;
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+<<<<<<< HEAD
     // Education (1 point if at least one entry);
     if (resume.education && resume.education.length > 0) {;
 
@@ -56,8 +92,77 @@ export const useResumeProgress = (resume: Resume | null) => {;
 ;
     const progressPercentage = (completed / 5) * 100,;
     setProgress(progressPercentage);
+=======
+    // Work experience (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      completed += 1;
+=======
+    if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
+      completed += 1
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+    // Education (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+
+      completed += 1;
+=======
+    if (resume && resume.education && resume && resume.education.length > 0) {
+      completed += 1
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+    // Skills (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+
+      completed += 1;
+=======
+    if (resume && resume.skills && resume && resume.skills.length > 0) {
+      completed += 1
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+    // Certifications (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+
+      completed += 1;
+=======
+    if (resume && resume.certifications && resume && resume.certifications.length > 0) {
+      completed += 1
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+    const progress_percentage = (completed / 5) * 100;
+    set_progress (progress_percentage);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }, [resume]);
+;
   return progress;
+<<<<<<< HEAD
 
 };
 
+=======
+}
+;
+
+=======
+
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

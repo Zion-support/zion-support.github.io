@@ -37,6 +37,13 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -70,8 +77,15 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
 
+=======
+
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         timestamp: new Date().toISOString(),
       });
     }
@@ -144,7 +158,14 @@ class ErrorMonitor {
       'src/App.tsx',
       'src/pages/index.tsx',
     ];
+<<<<<<< HEAD
 
+=======
+
+
+     is missing`,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -155,6 +176,10 @@ class ErrorMonitor {
     const errors = [];
     const lines = output.split('\n');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             timestamp: new Date().toISOString(),
           });
 
@@ -164,16 +189,28 @@ class ErrorMonitor {
       }
     }
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
 
+<<<<<<< HEAD
           timestamp: new Date().toISOString()
         });
       }
     }
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     );
       }
@@ -184,6 +221,13 @@ class ErrorMonitor {
       }
     }
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return errors;
   }
   updateHealthStatus() {
@@ -205,10 +249,19 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 
+<<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 
+=======
+
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -225,9 +278,15 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD
 
       console.log('✅ Error fixer completed');
 
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -235,8 +294,15 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
 
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
 
+=======
+
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         timestamp: new Date().toISOString(),
       });
     }
@@ -263,6 +329,13 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -302,8 +375,20 @@ class ErrorMonitor {
     process.exit(0);
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
+<<<<<<< HEAD
 
+=======
+
+
+module.exports = ErrorMonitor;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

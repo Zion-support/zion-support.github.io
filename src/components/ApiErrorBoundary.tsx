@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -114,11 +115,25 @@ export class ApiErrorBoundary extends Component<
     if (this.state.hasError) {
       // Check if it's a network-related error
 
+=======
+import { QueryClient  } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+      const isNetworkError =
+        this.state.error?.message?.includes('fetch') |
+        this.state.error?.message?.includes('network') |
+        this.state.error?.message?.includes('timeout') |
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         !this.state.isOnline
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
+<<<<<<< HEAD
 
+=======
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
@@ -232,10 +247,16 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
+<<<<<<< HEAD
 
       }
 
       return (
+=======
+>>>>>>>       }
+
+>>>>>>>       return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -243,8 +264,18 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
 
                 </AlertTitle>
+=======
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
+>>>>>>>                 </AlertTitle>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </div>
               <AlertDescription className="mt-2">
                 {isNetworkError ? (
@@ -258,9 +289,30 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
 
+=======
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
+>>>>>>>                 {this.state.isRetrying ? (
+ursor/fix-website-loading-errors-and-merge-6662
+
+            <div className='flex flex-col gap-2'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <Button
+
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className="w-full"
+              >
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 {this.state.isRetrying ? (
-                  <>
+>>>>>>>                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
                   </>
@@ -269,50 +321,163 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </Button>
               <Button
+<<<<<<< HEAD
 
+=======
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+>>>>>>>                 Reload Page
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 Reload Page
-              </Button>
+>>>>>>>               </Button>
             </div>
             {!this.state.isOnline && (
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
+              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
+                <WifiOff className='h-4 w-4' />
                 <span>Offline</span>
               </div>
             )}
+              <AlertDescription className='mt - 2'>;
+                {isNetworkError;
+                  ? !this.state.is_online;
+                    ? 'You appear to be offline. Please check your internet connection.';
+                    : 'Unable to connect to our servers. This might be a temporary network issue.';
+                  : 'An unexpected error occurred while loading the page.'}
+              </AlertDescription>;
+            </Alert>;
+            <div className='flex flex - col gap - 2'>;
+              <Button;
+                on_click={this.handle_retry}
+                disabled={this.state.is_retrying}
+                className='w - full'              >;
+                {this.state.is_retrying ? (
+                  <>;
+                    <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
+                    Retrying...;
+                  </>) : (
+                  <>;
+                    <RefreshCw className='mr - 2 h - 4 w - 4' />;
+                    Try Again;
+                  </>)}
+              </Button>;
+              <Button;
+                variant='outline';
+                on_click={() => window.location.reload ()}
+                className='w - full'              >;
+                Reload Page;
+              </Button>;
+            </div>;
+            {!this.state.is_online && (
+              <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+                <WifiOff className='h - 4 w - 4' />;
+                <span > Offline</span>;
+              </div>)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {process.env.NODE_ENV === 'development' && this.state.error && (
+
+    return this.props.children;
+  }
+// Hook for accessing query client in function components;
+export const useApiErrorHandler = () =>: any {
+  const handleApiError = (error: Error) =>: any {
+    Sentry.with_scope (scope => {
+      scope.set_tag ('source', 'useApiErrorHandler');
+      scope.set_level ('error');
+      Sentry.capture_exception (error);
+    });
+
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+
+              </Button>;
+
+              <Button
+                variant='outline'
+                onClick={() => window && window.location.reload()}
+                className='w-full'              >;
+                Reload Page;
+              </Button>;
+            </div>;
+
+            {!this && this.state.isOnline && (;
+              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+                <WifiOff className='h-4 w-4' />;
+                <span>Offline</span>;
+              </div>;
+            )}
+
+            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+              <details className='mt-4 rounded border p-2 text-xs'>;
+                <summary className='cursor-pointer font-medium'>;
+                  Debug Info (Development Only);
+                </summary>;
+                <pre className='mt-2 whitespace-pre-wrap break-all'>;
+                  {this && this.state.error && error.toString()}
+                  {this && this.state.errorInfo?.componentStack}
+                </pre>;
+              </details>;
+            )}
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
 
                   {this.state.error.toString()}
+=======
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+>>>>>>>                   {this.state.error.toString()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 
           </div>;
+=======
+}
+  return { handleApiError }
+}
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>;
       );
     }
-;
-    return this.props.children;
+
+    return this && this.props.children;
   }
-}
-;
+
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
-    Sentry.withScope((scope) => {;
-      scope.setTag('sourceuseApiErrorHandler'),;
-      scope.setLevel('error'),;
-      Sentry.captureException(error);
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('source', 'useApiErrorHandler');
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
     });
   };
   return { handleApiError }
+<<<<<<< HEAD
 
 };
 
+=======
+};
+};
+>>>>>>> 
+
+};
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

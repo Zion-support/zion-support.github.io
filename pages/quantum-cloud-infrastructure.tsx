@@ -1,6 +1,6 @@
 
-import React from 'react';
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function QuantumCloudInfrastructurePage() {
@@ -27,6 +27,8 @@ export default function QuantumCloudInfrastructurePage() {
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
               <div className="mt-6 flex gap-3">
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               </div>
             </div>
           </div>
@@ -34,6 +36,23 @@ export default function QuantumCloudInfrastructurePage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 
 ;
 
+=======
+
+}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

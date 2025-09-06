@@ -1,11 +1,22 @@
 
 
+<<<<<<< HEAD
 module.exports = default function APIPage() { return null}
 
+=======
+=======
+module.exports = default function APIPage() { return null}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function Api({ }: ApiProps) {
   return (
     <div>
@@ -13,4 +24,10 @@ export default function Api({ }: ApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

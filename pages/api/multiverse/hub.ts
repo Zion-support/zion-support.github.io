@@ -1,10 +1,39 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
 
+<<<<<<< HEAD
+=======
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state  } from '../../../utils / sync / storage';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+=======
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -35,13 +64,20 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     return res.status(200).json({
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       peers: state.config.peers,
       scope: state.config.scope,
-      optIn: state.config.optIn,
+      opt_in: state.config.opt_in,
       paused: state.config.paused,
 
+<<<<<<< HEAD
       lastSyncedAt: state.lastSyncedAt})
     } catch (error) {
     console.error("Error:", error);
@@ -98,4 +134,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 

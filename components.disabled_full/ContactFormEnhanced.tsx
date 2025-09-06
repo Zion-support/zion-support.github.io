@@ -7,6 +7,7 @@ import {
   User,
   Mail,
 
+<<<<<<< HEAD
   MessageSquare,
 } from 'lucide-react';
 const ContactFormEnhanced: React.FC = () => {
@@ -16,6 +17,8 @@ const ContactFormEnhanced: React.FC = () => {
     subject: '',
     message: '',
   });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
@@ -29,6 +32,10 @@ const "ContactFormEnhanced": React.FC = () => {
     'idle' | 'success' | 'error'
   >('idle');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const handleSubmit = async ("e": React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -36,12 +43,20 @@ const "ContactFormEnhanced": React.FC = () => {
     setSubmitStatus('success');
     setIsSubmitting(false);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
   };
   return (
     <div className="max-w-2xl mx-auto p-6">
       {' '}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">
@@ -53,6 +68,10 @@ const "ContactFormEnhanced": React.FC = () => {
           <div>
             {' '}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Name *{' '}
@@ -65,6 +84,10 @@ const "ContactFormEnhanced": React.FC = () => {
                 value={formData.name}
                 onChange={e =>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   setFormData({ ...formData, "name": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -76,6 +99,10 @@ const "ContactFormEnhanced": React.FC = () => {
           <div>
             {' '}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Email *{' '}
@@ -88,6 +115,10 @@ const "ContactFormEnhanced": React.FC = () => {
                 value={formData.email}
                 onChange={e =>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   setFormData({ ...formData, "email": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -99,6 +130,10 @@ const "ContactFormEnhanced": React.FC = () => {
           <div>
             {' '}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Subject *{' '}
@@ -108,6 +143,10 @@ const "ContactFormEnhanced": React.FC = () => {
               value={formData.subject}
               onChange={e =>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 setFormData({ ...formData, "subject": 'e.target.value' })
               }
               className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -118,6 +157,10 @@ const "ContactFormEnhanced": React.FC = () => {
           <div>
             {' '}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Message *{' '}
@@ -129,10 +172,13 @@ const "ContactFormEnhanced": React.FC = () => {
                 value={formData.message}
                 onChange={e =>
 
+<<<<<<< HEAD
                   setFormData({ ...formData, message: 'e.target.value' })
                 }
                 rows={6}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   setFormData({ ...formData, "message": 'e.target.value' })
                 }
@@ -147,6 +193,10 @@ const "ContactFormEnhanced": React.FC = () => {
             type="submit"
             disabled={isSubmitting}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
           >
             {' '}
@@ -165,6 +215,10 @@ const "ContactFormEnhanced": React.FC = () => {
           </button>{' '}
           {submitStatus === 'success' && (
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
               {' '}
               <CheckCircle className="w-5 h-5" />{' '}
@@ -178,3 +232,7 @@ const "ContactFormEnhanced": React.FC = () => {
 };
 export default ContactFormEnhanced;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+import { logInfo } from '@/utils/productionLogger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -18,71 +23,148 @@ import { useToast } from "@/hooks/use-toast",
 import { useFollowedCategories } from "@/hooks/useFollowedCategories";
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+<<<<<<< HEAD
 
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
 
+=======
+
+    id: "getting-hired"
+    name: "Getting Hired"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
+<<<<<<< HEAD
 
+=======
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+    id: "getting-hired",
+    name: "Getting Hired",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
+<<<<<<< HEAD
 
   "project-help": {
+=======
+>>>>>>>   "project-help": {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
     icon: "MessageSquare"
+<<<<<<< HEAD
 
   "feedback": {
+=======
+  }
+  "ai-tools": {
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices."
+    adminOnly: false
+    icon: "Code"
+  }
+>>>>>>>   "feedback": {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
 
+=======
+  }
+>>>>>>>   "announcements": {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   "announcements": {
-    id: "announcements"
+>>>>>>>     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
   }
+<<<<<<< HEAD
 
+=======
+}
+const iconMap = {
+  "Briefcase": Briefcase
+  "MessageSquare": MessageSquare
+  "Code": Code
+  "FileText": FileText
+  "Megaphone": Megaphone
+}
+function CategoryContent({
+  categoryId
+  category
+  IconComponent
+>>>>>>>   user}: {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   user}: {
-  categoryId: string
+>>>>>>>   categoryId: string
   category: ForumCategoryInfo
   IconComponent: React.ComponentType<any>
   user: any
 }) {
+<<<<<<< HEAD
 
+=======
+    ...recentPosts.filter(post => post.categoryId === categoryId)
+  ].filter((post, index, self,) =>
+    // Remove duplicates by id
+    index === self.findIndex(p => p.id === post.id)
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
+<<<<<<< HEAD
 
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 
+=======
+>>>>>>>     ...recentPosts.filter(post => post.categoryId === categoryId)
+  ].filter((post, index, self) => 
+    // Remove duplicates by id
+    index === self.findIndex(p => p.id === post.id)
+  ),
+
+  )
+>>>>>>>   // Apply search filter
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Apply search filter
-  const filteredPosts = searchQuery
+>>>>>>>   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
@@ -93,7 +175,10 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -112,37 +197,38 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
-const categoriesInfo: Record<string ForumCategoryInfo> = {;
+const categoriesInfo: Record<string, ForumCategoryInfo> = {;
   "getting-hired": {;
     id: "getting-hired",;
     name: "Getting Hired",;
-    description: "Tips, strategies, and questions about getting hired on the platform.",;
+    description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
-  },;
+  };
   "project-help": {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
-  },;
+  };
   "ai-tools": {;
     id: "ai-tools",;
     name: "AI Tools Discussion",;
-    description: "Discuss AI tools, frameworks, and best practices.",;
+    description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false,;
     icon: "Code";
-  },;
+  };
   "feedback": {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
-  },;
+  };
   "announcements": {;
     id: "announcements",;
     name: "Announcements",;
@@ -150,58 +236,73 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     adminOnly: true,;
     icon: "Megaphone";
   }
-},;
+};
+
 const iconMap = {;
-  "Briefcase": Briefcase,;
-  "MessageSquare": MessageSquare,;
-  "Code": Code,;
-  "FileText": FileText,;
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
   "Megaphone": Megaphone;
-},;
-function CategoryContent({;
-  categoryId,;
-  category,;
-  IconComponent,;
+};
+
+function CategoryContent(): any ({;
+  categoryId;
+  category;
+  IconComponent;
   user}: {;
   categoryId: string,;
   category: ForumCategoryInfo,;
-  IconComponent: React.ComponentType<any>,;
+  IconComponent: React && React.ComponentType<any>,;
   user: any;
 }) {;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const { featuredPosts, recentPosts } = useCommunity(),;
+  const [searchQuery, setSearchQuery] = useState("");
+  const { featuredPosts, recentPosts } = useCommunity();
+
   // Filter posts by category from context data;
   const categoryPosts = [;
-    ...featuredPosts.filter(post => post.categoryId === categoryId),;
-    ...recentPosts.filter(post => post.categoryId === categoryId);
-  ].filter((post, index, self) =>;
+    ...featuredPosts && featuredPosts.filter(post => post && post.categoryId === categoryId);
+    ...recentPosts && recentPosts.filter(post => post && post.categoryId === categoryId);
+  ].filter((post, index, self,) => ;
     // Remove duplicates by id;
-    index === self.findIndex(p => p.id === post.id);
-  ),;
+    index === self && self.findIndex(p => p && p.id === post && post.id);
+  );
+
   // Apply search filter;
-  const filteredPosts = searchQuery;
-    ? categoryPosts.filter(post =>;
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredPosts = searchQuery ;
+    ? categoryPosts && categoryPosts.filter(post => ;
+        post && post.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        post && post.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        post && post.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       );
-    : categoryPosts,;
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),;
-  const { isFollowed, follow, unfollow } = useFollowedCategories(),;
-  const { toast } = useToast(),;
+    : categoryPosts;
+
+  const canCreatePost = user && (!category && category.adminOnly || user && user.userType === 'admin' || user && user.role === 'admin');
+  const { isFollowed, follow, unfollow } = useFollowedCategories();
+  const { toast } = useToast();
+
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
+<<<<<<< HEAD
 
       return;
 
+=======
+>>>>>>>       return;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
-    if (isFollowed(categoryId)) {
-      unfollow(categoryId)
-    } else {
-      follow(categoryId)
+    if (isFollowed(categoryId)) {;
+      unfollow(categoryId);
+    } else {;
+      follow(categoryId);
     }
 
+<<<<<<< HEAD
+=======
+  )
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   },;
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
@@ -281,66 +382,60 @@ function CategoryContent({;
       </div>;
     </div>;
   );
-}
-;
-export default function ForumCategoryPage() {;
-  const router = useRouter(),;
-  const { categoryId } = router.query as { categoryId: string },;
-  const { user } = useAuth(),;
-  // Check if the category exists and user has access;
-  const category = categoryId ? categoriesInfo[categoryId] : null,;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,;
-  // Check access for admin-only categories;
-  const hasAccess = category && (;
-    !category.adminOnly ||;
-    (user && (user.userType === 'admin' || user.role === 'admin'));
-  );
-  useEffect(() => {;
-    // Add a small delay to ensure router is ready;
-    if (categoryId && category) {;
-      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId });
+ursor/fix-website-loading-errors-and-merge-6662
+/**
+ * CategoryContent - Function description
+ */
+function CategoryContent() {
+  const [search_query, setSearchQuery] = useState ("");
+  const { featured_posts, recent_posts } = use_community ();
+  // Filter posts by category from context data;
+  const category_posts = [;
+    ...featured_posts.filter (post => post.category_id === category_id);
+    ...recent_posts.filter (post => post.category_id === category_id);
+  ].filter ((post, index, self, ) =>;
+    // Remove duplicates by id;
+    index === self.find_index (p => p.id === post.id));
+  // Apply search filter;
+  const filtered_posts = search_query;
+    ? category_posts.filter (post =>;
+        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())));
+    : category_posts;
+  const canCreatePost = user && (!category.admin_only || user.user_type === 'admin' || user.role === 'admin');
+  const { is_followed, follow, unfollow } = useFollowedCategories ();
+  const { toast } = use_toast ();
+  const handle_follow = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> }
+      toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
+      return;
     }
-  }, [categoryId, category]);
-  if (!categoryId || !category) {;
-    return <NotFound />;
+    if () {) {
+  $2
+}
+      unfollow (category_id);
+    } else {
+      follow (category_id);
+    }
   }
-
-  if (!hasAccess) {
-    return (
-      <div className="container py-8">
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
-          <p className="text-muted-foreground mb-4">
-            This category is only accessible to administrators.
-          </p>
-          <Button asChild>
-            <Link href="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </div>
-    )
-  }
-;
-  if (!IconComponent) {;
-    return <NotFound />;
-  }
-;
-  return (;
-    <>;
-      <SEO;
-        title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
-        keywords={`community, forum, ${category.name.toLowerCase()}, discussion`}
-        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
-      />;
-      <CategoryContent;
-        categoryId={categoryId}
-        category={category}
-        IconComponent={IconComponent}
-        user={user}
-      />;
-    </>;
+  log_info ('CategoryContent - category_id:', { data: category_id }),
+  log_info ('CategoryContent - category_posts:', { data: category_posts }),
+  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
+  const category = category_id ? categories_info[category_id] : null;
+  const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null;
+}
   );
 }
-;
 
+;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,30 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
 
       const { userId = 'demo-user' } = req.query;
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+
+    const users = readUsers(),
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       const user = users[userId as string];
-      return res.status(200).json({ progress: user?.progress ?? {} });
-    }
-    if (req.method === 'POST') {
-      const {
-        userId = 'demo-user'
-        courseId
-        lessonId
-        percent
-      } = req.body |{}
-      if (!courseId)
-        return res.status(400).json({ error: 'courseId required' });
-      const user = users[userId] |{
-        userId
-        name: userId
-        slug: userId
-        certifications: []
-        badges: []
-        boostInSearch: false
-        progress: {}
+
+
+  }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+        course_progress.completed_lessons.push (lesson_id);
       }
+<<<<<<< HEAD
       const courseProgress = user.progress[courseId] |{
         completedLessons: []
         percent: 0
@@ -39,21 +43,16 @@ import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+=======
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 
-function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
-}
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const users = readUsers();
-    if (req.method === 'GET') {
-      const { userId = 'demo-user' } = req.query;
-      const user = users[userId as string];
-      return res.status(200).json({ progress: user?.progress ?? {} })
-    }
 
+<<<<<<< HEAD
     if (req.method === 'POST') {
       const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {};
       if (!courseId) return res.status(400).json({ error: 'Course ID required' });
@@ -74,3 +73,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

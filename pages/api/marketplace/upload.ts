@@ -1,5 +1,15 @@
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+;
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -11,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
 
+<<<<<<< HEAD
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req, res) {
@@ -33,3 +44,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

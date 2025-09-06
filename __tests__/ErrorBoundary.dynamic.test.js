@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -20,6 +21,10 @@ describe('ErrorBoundarydynamic', () => {
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ErrorBoundarydynamic from "./components/ErrorBoundary.dynamic"; describe("ErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<ErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<ErrorBoundarydynamic />)})});''"
 
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'

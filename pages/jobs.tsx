@@ -1,7 +1,5 @@
-import type { NextPage } from 'next';
-import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
 
+<<<<<<< HEAD
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)'
@@ -60,14 +58,57 @@ const Jobs: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      currency: 'USD',
+      value: 160000,
+      unit_text: 'YEAR'},
+    hiring_organization: {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      name: 'Zion Tech Solutions',
+      same_as: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app / logo.png'},
+    jobLocationType: 'TELECOMMUTE'} as const,
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+    <div>;
+      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />;
+      <JobPostingJsonLd;
+        date_posted={job.date_posted}
+
+        description={job.description}
+        employment_type={job.employment_type}
+        hiring_organization={job.hiring_organization}
+        jobLocationType={job.jobLocationType}
+        title={job.title}
+
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       />;
       <main>;
-        <h1>Jobs</h1>;
+        <h1 > Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
+
     </div>;
   );
 },;
 export default Jobs;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

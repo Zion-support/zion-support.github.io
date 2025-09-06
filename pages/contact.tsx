@@ -1,6 +1,45 @@
 
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import Layout from "../components/Layout";
+=======
+import React from 'react';
+
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 import React from 'react';
 
@@ -12,6 +51,11 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -72,11 +116,20 @@ export default function Contact() {
   };
   return (
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -116,6 +169,10 @@ export default function Contact() {
     </>
   );
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -200,6 +257,7 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+<<<<<<< HEAD
 
     <>
       <Head>
@@ -512,12 +570,20 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
+=======
+=======
+
+}
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
   );
 
 }
@@ -528,3 +594,68 @@ const ContactPage: React.FC = () => {
   }
 }
 
+=======
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Contact Us;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+    </>
+
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * Contact - Function description
+ */
+function Contact() {
+  return (
+    <Layout;
+      title="Contact Us - Zion Tech Group";
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              Contact Us;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

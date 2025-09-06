@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -28,18 +29,18 @@
     mobile: string;
     email: string;
     address: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-    website: string;
-  }
-export const realMicroSaasServices: RealMicroSaasService[] = [
-  // AI-Powered Business Solutions
-  {    website: string
 
+<<<<<<< HEAD
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -1373,86 +1374,207 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
-export const getServicesByCategory = (category: string) => {;
-  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
+export const getServicesByCategory = (category: string) => {
+
+  }, ];
+;
+// Helper functions;
+export const getServicesByCategory = (category: string) =>: any {
+  return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
-    category: 'Data & Platform'
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14, setupTime: '2 hours' }
-
-    features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
-    benefits: ['Fewer incidentsFaster changes'];
-    targetAudience: ['Data platformAnalytics engineers'];
-    marketPosition: 'Complements dbt and warehouse-native governance.';
+    category: 'Data & Platform',
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trial_days: 14, setup_time: '2 hours' }
+    features: ['Schema registry_diff viewerCI gates_backfill helpers'];
+    benefits: ['Fewer incidents_faster changes'];
+    target_audience: ['Data platform_analytics engineers'];
+    market_position: 'Complements dbt and warehouse - native governance.';
     competitors: ['OpenMetadataGreat Expectations'];
-    techStack: ['TypeScriptPostgreSQLdbt'];
-
-    realImplementation: true
-    implementationDetails: 'Contracts as code, PR checks, lineage view.';
+    tech_stack: ['TypeScriptPostgreSQLdbt'];
+    real_implementation: true,
+    implementation_details: 'Contracts as code, PR checks, lineage view.';
 
     roi: 'Reduce data breakage incidents by 50–70%.';
-    useCases: ['Warehouse governanceAnalytics contracts'];
+    use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/data-contracts-hub';
+
+    link: 'https://ziontechgroup.com / services / data - contracts - hub';
+
     icon: '📜';
-    color: 'from-lime-600 to-green-700';
+    color: 'from - lime - 600 to - green - 700';
     popular: false;
-    launchDate: '2025-02-08';
+    launch_date: '2025 - 02 - 08';
     customers: 19;
 
-    rating: 4.6
+    rating: 4 && 4.6,
+
     reviews: 6
   }
 ];
 // Helper functions
-export const getServicesByCategory = (category: string) => {;
-  return realMicroSaasServices.filter(service => service.category === category);
+export const getServicesByCategory = (category: string) => {
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
-techStack: ['Next.jsSupabaseVercel EdgeOpenAI'];
+techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
+=======
+    rating: 4.6,
+    reviews: 6;
+  }
+];
+;
+// Helper functions;
+export const getServicesByCategory = (category: string) =>: any {
+  return realMicroSaasServices.filter (service => service.category === category);
+market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
+competitors: ['TypeformSurveySparrowTally'];
+tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
+real_implementation: true;
+implementation_details: 'Template gallery, response store, analytics, export jobs.';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Improves feedback volume 20–50%.';
-useCases: ['NPSBeta feedbackLead qual'];
+use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
-link: 'https://ziontechgroup.com/mobile-surveys';
+
+link: 'https://ziontechgroup.com / mobile - surveys';
+
 icon: '📱';
-color: 'from-emerald-600 to-teal-700';
+color: 'from - emerald - 600 to - teal - 700';
 popular: false;
-launchDate: '2024-12-10';
+launch_date: '2024 - 12 - 10';
 customers: 95;
-rating: 4.6;
-reviews: 22
-}
+
+rating: 4 && 4.6;
+reviews: 22 
+};
+
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
-techStack: ['Next.jsPrismaPostgreSQL'];
+techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
+=======
+reviews: 22;
+}
+market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
+competitors: ['AsanaClickUpNotion'];
+tech_stack: ['Next.jsPrismaPostgreSQL'];
+real_implementation: true;
+implementation_details: 'Template JSON schemas, rules engine, import / export.';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 roi: 'Deliverables throughput +15–25%.';
-useCases: ['Client deliveryEditorial calendarSprints'];
+use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
-link: 'https://ziontechgroup.com/productivity-planner';
-icon: '🗓️';
-color: 'from-purple-600 to-pink-600';
-popular: false;
-launchDate: '2025-01-20';
-customers: 60;
-rating: 4.5;
-reviews: 14
-}
-export const serviceCategories = [
 
+link: 'https://ziontechgroup.com / productivity - planner';
+
+icon: '🗓️';
+color: 'from - purple - 600 to - pink - 600';
+popular: false;
+launch_date: '2025 - 01 - 20';
+customers: 60;
+
+rating: 4 && 4.5;
+reviews: 14 
+};
+
+
+export const serviceCategories = [
+<<<<<<< HEAD
+
+=======
+  'Legal Technology'
+  'Customer Service & Support'
+  'Digital Marketing & SEO'
+  'Creative & Media'
+  'Data & Analytics'
+  'Human Resources'
+  'Sales & CRM'
+  'Market Research'
+  'Blockchain & Cryptocurrency'
+  'Cloud & DevOps'
+  'Database & Performance'
+  'Design & UI/UX'
+  'Development & DevOps'
+  'Business Intelligence'
+  'Quantum Computing'
+  'Cybersecurity'
+  'Metaverse & Virtual Reality'
+  'Web3 & DeFi'
+  'IoT & Edge Computing'
+  'Autonomous Vehicles & Robotics'
+  'Climate & Environmental'
+  'Biotechnology & Healthcare'
+  'Financial Technology'
+  'Education Technology'
+  'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+=======
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return realMicroSaasServices.filter(service => {
+    const price = parseFloat(service.price.replace('$', '').replace(, ''));
+    return price >= min && (max === Infinity || price <= max)
+  })
+};
+
+export const getPopularServices = () => {
+  return realMicroSaasServices.filter(service => service.popular)
+};
+
+export const serviceCategories = [
+  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+=======
+reviews: 14;
+}
+;
+export const service_categories = [;
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI / UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+<<<<<<< HEAD
   'Enterprise IT'
 ];
 
@@ -2305,3 +2427,17 @@ export const serviceCategories = [;
   'Enterprise IT';
 ];
 
+=======
+  'Enterprise IT';
+];
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface RealMicroSaasService {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

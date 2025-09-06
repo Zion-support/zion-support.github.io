@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   try {
 
     const repoUrl = require('../../../package.json').repository?.url || '';
@@ -83,21 +84,72 @@ export default async function handler(req, res) {
   }
 }
   } catch {;
-    // fall through to GitHub;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+=======
+
+      } catch {
+        // ignore;
+      }
+    }
+return results;
+  } catch {
+    return [];
   }
 }
-;
-  const remote = await fetchFromGitHub();
-  return res.status(200).json({ logs: remote });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+const dir = path.join (process.cwd (), 'automation_logs'),
+  try {
+    if () {) {
+  $2
+}
+      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
+      // Check condition
+if ( {) {
+  $2
+}
+        const logs = files.slice (0, 50).map ((f) => {
+          try {
+            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
+            const json = JSON.parse (raw),
+            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
+          } catch {
+            return { id: f, file: f }
+          }
+        }),
+        return res.status (200).json ({ logs });
+
+      }
+    }
+  } catch {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+    // fall through to GitHub;
   }
 
+<<<<<<< HEAD
   const remote = await fetchFromGitHub();
 
   return res.status(200).json({ logs: remote });
 
+=======
+=======
+}
+
+=======
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  return res.status(200).json({ logs: remote });
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Loader2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
@@ -74,6 +75,17 @@ export function CertificationsForm({
       }
     } catch (err: any) {
 
+=======
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+      setError(err.message |'An error occurred')
+    }
+  }
+  const handleEdit = (cert: Certification) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setEditingId(cert.id!);    form.reset({
       ...cert
   }
@@ -89,7 +101,10 @@ export function CertificationsForm({
       await deleteCertification(id)
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -173,7 +188,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   },
 
+<<<<<<< HEAD
   return (
+=======
+>>>>>>>   return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
@@ -182,51 +201,159 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </p>
       </div>
       {certifications.length > 0 && (
+<<<<<<< HEAD
 
+=======
+      )}
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
+<<<<<<< HEAD
 
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
 
+=======
+>>>>>>>       )}
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+>>>>>>>           {editingId ? 'Update Certification' : 'Add Certification'}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
+>>>>>>>         </h3>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
+<<<<<<< HEAD
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
 
               <Button
+=======
+            <div className='flex justify-between pt-2'>
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+>>>>>>> 
+            <div className="flex justify-between pt-2">
+>>>>>>>               <Button
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
+<<<<<<< HEAD
 
+=======
                     form.reset({
-                      name: '',
+                      name: ''
+                      issuing_organization: ''
+                      issue_date: ''
+                      expiration_date: ''
+                      credential_id: ''
+                      credential_url: ''
+                    })
+
+>>>>>>>                     form.reset({
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {
+                  if (editingId) {
+
+
+                    setEditingId(null),
+                    setEditingId(null),
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+                    form.reset({
+>>>>>>>                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+<<<<<<< HEAD
 
+=======
+                      credential_url: ''})
+                      credential_url: '',
+                    })
+>>>>>>>                   } else {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   } else {
-                    onBack()
+>>>>>>>                     onBack()
+      <div className='bg-muted/40 p-6 rounded-lg'>;
+        <h3 className='text-md font-medium mb-4'>;
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+
+        <Form {...form}>;
+          <form
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'>;
+            <CertificationFormFields form={form} />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: '',;
+                    });
+                  } else {;
+                    onBack();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
-              </Button>
 
-                  Next
+              </Button>
+<<<<<<< HEAD
+
+=======
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && (
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                  )}
+                  {editingId ? 'Update' : 'Add'} Certification
                 </Button>
+                <Button type='button' onClick={onComplete}>
+>>>>>>>                   Next
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+                  Next
+>>>>>>>                 </Button>
               </div>
             </div>
           </form>
@@ -234,4 +361,17 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+}> {
+  editingId ? 'Cancel' : 'Back'
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
+}'"}
+>>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
   title: string
 
+=======
+import { Button  } from '@/components/ui/button';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast',;
@@ -11,17 +15,35 @@ interface SocialShareButtonsProps {;
   title: string;
 }
 
+<<<<<<< HEAD
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
 
   const shareToTwitter = () => {
+=======
+xport function SocialShareButtons({ title }: SocialShareButtonsProps) {
+
+  const shareUrl =
+    typeof window !== 'undefined'
+      ? encodeURIComponent(window.location.href)
+      : ''
+  const shareText = encodeURIComponent(title)
+>>>>>>>   const shareToTwitter = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+<<<<<<< HEAD
 
   },
+=======
+  const copyLink = () => {
+    if (typeof window === 'undefined') return
+
+>>>>>>>   },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
@@ -31,14 +53,26 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   },
 
+<<<<<<< HEAD
   const copyLink = () => {
     if (typeof window === 'undefined') return,
 
+=======
+>>>>>>>   const copyLink = () => {
+    if (typeof window === 'undefined') return,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+<<<<<<< HEAD
 
+=======
+    </div>
+  )
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   },
 
   const buttons = [
@@ -92,4 +126,10 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

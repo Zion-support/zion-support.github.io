@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 console.log('Testing Next.js installation...'),;
 try {;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -324,6 +325,26 @@ export const real2036AIServices = [
     ]
     useCases: [
 
+=======
+
+
+
+export const real2036AIServices = [
+  {
+
+
+      'Autonomous vehicles',
+      'Fleet management',
+      'Traffic optimization',
+      'Safety systems',
+    ],
+
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -535,6 +556,16 @@ export const real2036AIServices = [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
 
+<<<<<<< HEAD
   }
 ];
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

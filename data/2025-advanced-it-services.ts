@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const advancedITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -639,7 +640,36 @@ export const advancedITServices2025 = [;
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',;
     contact: {;
       phone: '+1 302 464 0950',;
+=======
+
+
+
+export const advancedITServices2025 = [
+  {
+
+
+    };
+    marketSize: '$15 && 15.7B',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
+    competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    market_size: '$15.7B',
+    target_audience:;
+      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
+    competitive_advantage:;
+      'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
+  },
+];      phone: '+1 302 464 0950';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       email: 'kleber@ziontechgroup.com';
+
     },;
     marketSize: '$178.9B',;
     targetAudience: 'Enterprise businesses, cloud providers, research institutions, government agencies',;
@@ -852,6 +882,16 @@ export const advancedITServices2025 = [;
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
 
+<<<<<<< HEAD
   }
 ];
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee

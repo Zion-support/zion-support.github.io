@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -12,4 +17,21 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
+<<<<<<< HEAD
 
+=======
+import { useTranslationService } from "@/hooks/useTranslationService";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function TranslationManager() {
+
+
+    let sourceText = ''
+    for (const lang of supportedLanguages.map(l => l.code)) {
+
+}
+}
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
