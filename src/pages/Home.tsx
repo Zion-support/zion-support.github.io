@@ -9,9 +9,17 @@ const Home: React.FC = () => {
   const { metrics } = usePerformance();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const testimonials = [
@@ -76,10 +84,11 @@ const Home: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center">
             <motion.h1
-              className="text-6xl md:text-7xl font-extrabold mb-6"
+              className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -109,6 +118,11 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-500/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-500/20 rounded-full animate-ping"></div>
       </section>
 
       {/* Features Section */}
@@ -135,9 +149,26 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                onHoverStart={() => setHoveredFeature(index)}
+                onHoverEnd={() => setHoveredFeature(null)}
+                whileHover={{ 
+                  scale: 1.05,
+                  rotateY: 5,
+                  transition: { duration: 0.3 }
+                }}
+                className="cursor-pointer"
               >
-                <Card className="text-center h-full">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                <Card className="text-center h-full transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                  <motion.div 
+                    className="text-4xl mb-4"
+                    animate={{ 
+                      scale: hoveredFeature === index ? 1.2 : 1,
+                      rotate: hoveredFeature === index ? 360 : 0
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {feature.icon}
+                  </motion.div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </Card>
@@ -232,6 +263,50 @@ const Home: React.FC = () => {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Showcase Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-4">Cutting-Edge Technologies</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We leverage the latest technologies to deliver exceptional results for our clients.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {[
+              { name: 'React', icon: '⚛️', color: 'from-blue-400 to-blue-600' },
+              { name: 'TypeScript', icon: '🔷', color: 'from-blue-500 to-blue-700' },
+              { name: 'Node.js', icon: '🟢', color: 'from-green-400 to-green-600' },
+              { name: 'Python', icon: '🐍', color: 'from-yellow-400 to-yellow-600' },
+              { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-orange-600' },
+              { name: 'AI/ML', icon: '🤖', color: 'from-purple-400 to-purple-600' }
+            ].map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
+                <div className={`w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-r ${tech.color} flex items-center justify-center text-3xl shadow-lg`}>
+                  {tech.icon}
+                </div>
+                <div className="text-sm font-medium text-gray-300">{tech.name}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
