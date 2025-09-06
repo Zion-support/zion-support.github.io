@@ -11,29 +11,29 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false,
+    sourcemap: true,
     minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom'],
-        },
-      },
+          router: ['react-router-dom']
+        }
+      }
     },
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
-      },
-    },
+        drop_debugger: true
+      }
+    }
   },
   server: {
     port: 3000,
     open: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
-  },
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
 });
