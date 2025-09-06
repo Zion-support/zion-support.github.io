@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Database, Smartphone, Shield, Cloud, Globe } from 'lucide-react';
+import { ArrowRight, Code, Database, Smartphone, Shield, Cloud, Globe, Zap, Brain, Cpu, Lock, BarChart3, Users, Phone, Mail, MapPin } from 'lucide-react';
 import Card from '../components/Card';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
   const services = [
@@ -19,6 +20,7 @@ const Services: React.FC = () => {
         'AI Chatbots',
         'Process Automation'
       ],
+      pricing: 'Starting at $5,000/month',
       href: '/services/ai-services'
     },
     {
@@ -33,6 +35,7 @@ const Services: React.FC = () => {
         'Performance Optimization',
         'Technical Consulting'
       ],
+      pricing: 'Starting at $3,000/month',
       href: '/services/it-services'
     },
     {
@@ -47,6 +50,7 @@ const Services: React.FC = () => {
         'User Management',
         'Analytics Dashboard'
       ],
+      pricing: 'Starting at $2,500/month',
       href: '/services/micro-saas'
     },
     {
@@ -61,6 +65,7 @@ const Services: React.FC = () => {
         'Data Encryption',
         'Security Training'
       ],
+      pricing: 'Starting at $4,000/month',
       href: '/services/cybersecurity'
     },
     {
@@ -75,6 +80,7 @@ const Services: React.FC = () => {
         'Disaster Recovery',
         'Cost Optimization'
       ],
+      pricing: 'Starting at $3,500/month',
       href: '/services/cloud-solutions'
     },
     {
@@ -89,15 +95,63 @@ const Services: React.FC = () => {
         'Machine Learning Models',
         'Custom Reports'
       ],
+      pricing: 'Starting at $2,800/month',
       href: '/services/data-analytics'
     }
   ];
 
+  const additionalServices = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Automation Solutions',
+      description: 'Streamline workflows with intelligent automation',
+      pricing: '$1,500/month'
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: 'Machine Learning Consulting',
+      description: 'Expert guidance on ML implementation',
+      pricing: '$200/hour'
+    },
+    {
+      icon: <Cpu className="w-8 h-8" />,
+      title: 'DevOps & CI/CD',
+      description: 'Modern development and deployment practices',
+      pricing: '$2,200/month'
+    },
+    {
+      icon: <Lock className="w-8 h-8" />,
+      title: 'Compliance & Governance',
+      description: 'Ensure regulatory compliance and data governance',
+      pricing: '$3,200/month'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: 'Business Intelligence',
+      description: 'Transform data into strategic insights',
+      pricing: '$2,600/month'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Team Augmentation',
+      description: 'Scale your team with expert developers',
+      pricing: '$150/hour'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Header />
+    <>
+      <SEO
+        title="Our Services - Zion Tech Group"
+        description="Discover our comprehensive range of technology services including AI solutions, IT services, cybersecurity, cloud solutions, and more."
+        keywords="AI services, IT services, cybersecurity, cloud solutions, data analytics, micro SaaS, technology consulting"
+        url="/services"
+      />
       
-      <main>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Header />
+        
+        <main>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -134,7 +188,7 @@ const Services: React.FC = () => {
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2 mb-8">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
@@ -142,6 +196,15 @@ const Services: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="mb-6">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">
+                      {service.pricing}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Custom pricing available for enterprise
+                    </div>
+                  </div>
 
                   <Link
                     to={service.href}
@@ -152,6 +215,85 @@ const Services: React.FC = () => {
                   </Link>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Services Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Additional <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Specialized solutions to complement your core technology needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {additionalServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
+                >
+                  <div className="text-cyan-400 mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    {service.description}
+                  </p>
+                  <div className="text-lg font-bold text-cyan-400">
+                    {service.pricing}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Touch</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Ready to transform your business? Contact our expert team for a free consultation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-cyan-400 text-lg font-medium">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-cyan-400 text-lg font-medium">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm">24/7 Support Available</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-cyan-400 text-lg font-medium">364 E Main St STE 1008</p>
+                <p className="text-gray-400 text-sm">Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </section>
@@ -182,10 +324,11 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-      </main>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
