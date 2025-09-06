@@ -5,8 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
   }
-res.status(200).json({ message: 'OK' });    return
-  }
   res.status(200).json({ message: 'OK' });
 }
     res.status(401).json({ error: 'Unauthorized' });

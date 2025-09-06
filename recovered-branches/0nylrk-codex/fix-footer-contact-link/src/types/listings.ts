@@ -1,4 +1,3 @@
-export interface ListingCategory {
   id: string;
   name: string;
 
@@ -19,7 +18,6 @@ export interface ProductListing {;
   author: {
     name: string;
     id: string;
-
   }
 
   images: string[];
@@ -68,5 +66,3 @@ export interface ListingItem {;
   description?: string;
 }
 ;
-export type ListingView = 'grid' | 'list';
-

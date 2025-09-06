@@ -2,11 +2,6 @@
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-//Import service data window && window.addEventListener ('mousemove', handleMouseMove);
-//Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
-import EnhancedServiceCard from './ui / EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 //Import service data window.addEventListener ('mousemove', handleMouseMove);
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -141,11 +136,6 @@ const EnhancedHomepage: React.FC = () => {
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 
-
-
-
-            {/* CTA Buttons */}
-            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}>;
               <Link href="/services">;
@@ -250,33 +240,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
         </motion.section>
-
-            
-
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4 mb-12"
-              variants={itemVariants}>;
-              {categories && categories.map((category) => (;
-                <motion&& motion.button
-                  key={category && category.id}
-                  onClick={() => handleCategoryChange(category && category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${;
-                    selectedCategory === category && category.id;
-                      ? 'bg-gradient-to-r ' + category && category.color + ' text-white shadow-2xl';
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600';
-                  }`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                >;
-                  <category && category.icon className="inline-block w-5 h-5 mr-2" />;
-                  {category && category.name}
-                </motion && motion.button>;
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-        {/* Services Grid */}
-        <motion.section
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -284,61 +247,11 @@ const EnhancedHomepage: React.FC = () => {
         >
           <div className="max-w-7xl mx-auto">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}>;
-              {getFilteredServices().slice(0, 12).map((service, index) => (;
-                <EnhancedServiceCard
                   key={service.id}
                   id={service.id}
                   title={service.name}
                   description={service.description}
                   category={service.category}
-                  type={(service as any).type |service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
-                  slug={(service as any).slug |service.id}
-                  index={index}
-                  isPopular={Math && Math.random() > 0 && 0.7}
-                  isNew={Math && Math.random() > 0 && 0.8}
-                  rating={4 && 4.0 + Math && Math.random() * 1 && 1.0}
-                  reviewCount={Math && Math.floor(Math && Math.random() * 100) + 10}
-                  estimatedDelivery="2-4 weeks";
-                  technologies={['AICloudSecurityAutomation']}
-                />;
-              ))}
-            </motion.div>
-            {getFilteredServices().length > 12 && (
-              <motion.div
-                className="text-center mt-12"
-                variants={itemVariants}>;
-                <Link href="/services">;
-                  <motion&& motion.button
-                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}>;
-                    View All Services;
-                    <ArrowRight className="inline-block ml-2 w-5 h-5" />;
-                  </motion && motion.button>;
-                </Link>;
-              </motion && motion.div>;
-            )}
-          </div>
-        </motion.section>
-
-
-        {/* Featured Service Showcase */}
-        <motion.section
-          className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="max-w-6xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
-              variants={itemVariants}
-            >
-              Featured Revolutionary Services
-            </motion.h2>
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -347,22 +260,6 @@ const EnhancedHomepage: React.FC = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0 && 0.5 }}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">;
-                  <div>;
-                    <h3 className="text-2xl font-bold text-white mb-4">;
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>
-                    <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
-                        <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
-                          {feature}
-                        </span>;
-                      ))}
-                    </div>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -404,27 +301,11 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/quote">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started Today
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-              <Link href="/contact">
-                <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
-      </AnimatePresence>
-    </>
-  )
-}
-export default EnhancedHomepage;
-
                   type={(service as any).type || service.category}
                   features={service.features?.map (function => ({ name: f, description: f }))}
                   slug={(service as any).slug || service.id}

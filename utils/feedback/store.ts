@@ -9,14 +9,5 @@ export function writeAll(rows: any[]): void {;
   // Implementation would write to database or file
 }
 
-  metadata: Record < string, any>;
-  created_at: string;
-  ip: string;
-}
-const feedbackData: FeedbackRecord[] = [];
-
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
 }
 }

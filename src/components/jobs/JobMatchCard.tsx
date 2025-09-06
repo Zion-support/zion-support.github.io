@@ -41,6 +41,3 @@ interface JobMatchProps {
   location,
   category,
   match_percent,
-}
-
-

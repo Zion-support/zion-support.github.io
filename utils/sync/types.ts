@@ -32,8 +32,6 @@ export interface InstanceConfig {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-;
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -72,14 +70,11 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
-}
-export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,8 +91,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -110,15 +103,11 @@ export type SyncEventPayload =;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-export interface MultiverseState {;
-  config: InstanceConfig,;
   lastSyncedAt: number;
   seenEventIds: Record<string, true>,;
   latestVersionByEntityId: Record<string, number>,;

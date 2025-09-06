@@ -6,43 +6,9 @@ import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
-
-interface PreviewHeaderProps {;
-  resume: Resume;
-  onBack: () => void;
-
-export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
-  const [isPrinting, setIsPrinting] = useState(false);
-  const isMobile = useIsMobile();
-
-  const handleBrowserPrint = () => {;
-    setIsPrinting(true);
-
-        }
         }
         .print-section, .print-section * {
           visibility: visible
-        }
-
-
-        }
-        .print - section, .print - section * {
-          visibility: visible;
-        }
-        .print - section {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-        }
-        .no-print {;
-          display: none !important;        }
-      }
-    `;
-    document && document.head.appendChild(style);
-        }
-        .print-section, .print-section * {;
-          visibility: visible;
         }
         .print-section {
           position: absolute
@@ -111,25 +77,19 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
           onClick={handleBrowserPrint}
           disabled={isPrinting}
         <Button variant="outline" className="gap-2">
+        
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
-          className='gap-2'>;
-          <FileText className='h-4 w-4' />;
-          Print;
-        </Button>;
-
-        <Button variant='outline' className='gap-2'>;
-          <Link className='h-4 w-4' />          Add to Profile        ;
-        <Button variant="outline" className="gap-2">;
-          <Link className="h-4 w-4" />;
-          Add to Profile;
-        </Button>;
-      </div>;
     </div>;
   );
+};
+    </div>
+  )
 }
+}
+;
   );
 }
         .print - section {

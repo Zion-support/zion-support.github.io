@@ -15,7 +15,6 @@ if ( {) {
   $2
 }
     return res.status (400).json ({ error: 'Missing id' });
-
   }
   // In a real system, look up persisted deployment by id;
   const fake = {
@@ -23,10 +22,6 @@ if ( {) {
     exportedAt: new Date().toISOString()
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
-
-
-
-    id,
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.setHeader('Content-Typeapplication/json'),
@@ -49,7 +44,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    exportedAt: new Date().toISOString(),
     note: 'This is a stub export. Connect to persistence to return real deployment state.'};
   res.setHeader('Content-Typeapplication/json');
   return res.status(200).json(fake);
@@ -57,11 +51,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

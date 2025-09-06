@@ -1,15 +1,8 @@
-
-import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-interface VideoCallRoomProps {;
-
   room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
-import React from 'react',
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
@@ -78,5 +71,3 @@ interface VideoCallRoomProps {;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
 
-
-;

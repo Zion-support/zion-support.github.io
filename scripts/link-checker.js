@@ -345,8 +345,6 @@ class LinkChecker {;
       return false}
   }
 }
-// Run the link checker;
-const linkChecker = new LinkChecker();
 linkChecker && linkChecker.checkLinks().then(() => {
   console && console.log(' "Link": Checker Completed', ')';
   process && process.exit(0)}).catch((error) => {

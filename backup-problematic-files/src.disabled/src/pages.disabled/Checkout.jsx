@@ -9,4 +9,3 @@ const Checkout = ({ className }) => {
   );
 };
 
-export default Checkout;

@@ -11,15 +11,6 @@ type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const key = req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
-  }
-  const action = req.body as AdminAction;
-  const data = readOrgData();
-  if (action.type === 'invite') {
-    const section = action.section;
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
@@ -50,10 +41,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writeOrgData(data);
     return res.status(200).json({ ok: true });
 
-  }
-return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
-  }
-  return res.status(400).json({ error: 'Unknown action' });
   if (action && action.type === 'deactivate') {
     const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section

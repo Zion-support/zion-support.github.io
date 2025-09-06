@@ -2,22 +2,12 @@ import {
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
-
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
-
-  // Combine all services
-  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
-
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
@@ -77,12 +67,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
     visible: {
       opacity: 1
       y: 0
-  },
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
-      opacity: 1,
-      coordinate_y: 0,
       transition: {
         duration: 0.5
       }
@@ -93,14 +77,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -112,53 +88,10 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
       </Head>
       <EnhancedNavigation />
-  },
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  },
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white overflow - hidden">;
-      <Head>;
-        <title > Comprehensive 2025 Innovative Services Showcase  Zion Tech Group</title>;
-        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services. Transform your business with Zion Tech Group." />;
-        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase  Zion Tech Group" />;
-        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting - edge IT services." />;
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />;
-        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2025 - services - showcase" />;
-      </Head>;
-      <EnhancedNavigation />;
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Comprehensive Services Showcase
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
@@ -167,18 +100,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             transition={{ duration: 0.8 }}
 
 
-              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            {/* Contact Information */}
-              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
-            </p>
-            {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -274,7 +195,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 />
               </div>
             </div>
-
                   value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -295,9 +215,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 </select>
               </div>
               {/* Price Range Filter */}
-              <div>
-                <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
-                <select
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -364,7 +281,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 <button
                   onClick={() => {
 
-                    setPriceRange('all')
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
@@ -382,7 +298,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                       view_mode === 'list' ? 'flex' : '';
                     }`}
                   >;
-
                     {/* Service Card Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -405,7 +320,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           </div>
                           <div>
                             <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
-
+                              {service.name}
                               {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -440,17 +355,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
                               <CheckCircle className="w-3 h-3 text-green-400" />
-                      </p>
-                      {/* Features */}
-                      <div className="mb - 4">;
-                        <h4 className="text - sm font - semibold text - white / 70 mb - 2">Key Features:</h4>;
-                        <div className="grid grid - cols - 1 gap - 1">;
-                          {service.features.slice (0, 3).map ((feature, idx) => (
-                            <div key={idx} className="flex items - center gap - 2 text - xs text - white / 60">;
-                              <CheckCircle className="w - 3 h - 3 text - green - 400" />;
-                              {feature}
-                            </div>))}
-
                               {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -469,7 +373,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           )}
                         </div>
                       </div>
-
                       {/* Price and Rating */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
@@ -489,10 +392,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <a
-                      {/* Action Buttons */}
-                      <div className="flex gap - 2">;
-                        <a;
-                          href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
@@ -534,8 +433,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
-
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -593,7 +490,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -613,45 +509,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
       </section>
       <EnhancedFooter />
     </div>
-            className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - white / 80 mb - 8 max - w-2xl mx - auto">;
-              Our team of experts is ready to help you implement the perfect solution for your business needs.;
-              Get in touch today for a personalized consultation.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <a;
-                href={`mailto:${contact_info.email}?subject = Business Consultation Request`}
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
-              >;
-                Schedule Consultation;
-                <ArrowRight className="w - 5 h - 5" />;
-              </a>;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className="px - 8 py - 4 border border - white / 20 hover:border - cyan - 400 / 50 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10 flex items - center justify - center gap - 2";
-              >;
-                <Phone className="w - 5 h - 5" />;
-                Call Now;
-              </a>;
-            </div>;
-            <div className="mt - 8 text - white / 60">;
-              <p > Contact us directly:</p>;
-              <div className="flex flex - wrap justify - center gap - 6 mt - 4">;
-                <span>{contact_info.mobile}</span>;
-                <span>{contact_info.email}</span>;
-                <span>{contact_info.address}</span>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </div>);
-}
   )
   } catch (error) {
     console.error("Error:", error);

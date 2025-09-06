@@ -9,4 +9,3 @@ const FeaturesSection = ({ className }) => {
   );
 };
 
-export default FeaturesSection;

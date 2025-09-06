@@ -4,16 +4,6 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
-// Mock data for demonstration
-
-    id: "1",
-    title: "Senior React Developer",
-    subtitle: "TechCorp Inc.",
-    description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",
-    location: "Remote",
-    badges: ["React", "TypeScript", "GraphQL"],
-    price: "$70-90/hr",
-    timePosted: "2 days ago",
     match: 92
   }
   {
@@ -78,13 +68,6 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-  const handleViewDetails = (id: string) => {
-    console.log(`View details for item ${id}`);
-    // Navigate to details page
-  }
-
-  return (
-    <div className="min-h-screen">;
       <MobileHeader
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
         showBack
@@ -100,19 +83,6 @@ export function MobileBrowse() {
           </Button>;
         </div>;
       </div>;
-
-      <BrowseFilters type={browseType} />;
-
-      <div className="py-4 px-4">;
-          items={browseType === "jobs" ? jobsData : talentsData}
-          type={browseType}
-          onViewDetails={handleViewDetails}
-        />
-      </div>
-      <BottomNavigation />
-    </div>
-  )
-}
       <BrowseFilters type={browse_type} />;
       <div className="py - 4 px - 4">;
         <BrowseCards;

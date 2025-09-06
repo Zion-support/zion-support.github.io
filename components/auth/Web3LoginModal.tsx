@@ -73,10 +73,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
-      const encodedMessage = new TextEncoder().encode(message);
-      const { signature } = await provider && provider.signMessage(encodedMessage, 'utf8');
-      const bs58 = (await import('bs58')).default;
-      const verifyRes = await fetch('/api/auth/verify-sol', {
       onClose()
     } catch (e: any) {
       console.error(e);

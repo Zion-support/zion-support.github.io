@@ -5,8 +5,6 @@ const Messages: NextPage = () => {
       <Head>
         <title>Messages - Zion</title>
       </Head>
-
-
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
@@ -44,7 +42,6 @@ const Messages: NextPage = () => {
   }
 }
       />;
-
     </div>;
   );
 },;

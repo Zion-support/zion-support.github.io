@@ -1,12 +1,8 @@
-
-
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
   ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [
     ; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,,
     "frame-ancestors "none
-
-
     ; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,",
     "frame-ancestors: "none,"
   ].join("; "); response && response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {, const response = NextResponse && NextResponse.next(), ; response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-Content-Type-Options","nosniff"); response && response.headers.set("X-Frame-Options","DENY"); response && response.headers.set("X-XSS-Protection","1; mode=block"); response && response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response && response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [

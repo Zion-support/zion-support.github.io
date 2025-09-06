@@ -182,11 +182,8 @@ if ( {) {
               <AdvancedOnboardingSteps />;
             </div>;
           )}
-
-
               
               <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
                 <JobsList filter="new" onSelectJob={handleJobSelect} />

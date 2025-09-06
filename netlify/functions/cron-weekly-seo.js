@@ -93,11 +93,3 @@ if ( {) {
 }
 exports.handler = async function() {
   try {
-    for (const p of pages) {
-      results && results.push(await scorePage(`${baseUrl}${p}`))
-    }
-
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
-    }

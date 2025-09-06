@@ -101,6 +101,7 @@ export const AppScreenshots: React.FC = () => {;
               <div 
                 key={screenshot.id} 
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
               >
                 <img
                   src={screenshot.src}
@@ -111,10 +112,9 @@ export const AppScreenshots: React.FC = () => {;
               </div>
             ))}
           </div>
-
+          
           
           <Button
-            variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             aria-label="Scroll right"
@@ -124,8 +124,6 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
-};
-  )
 }
 '"}
 }

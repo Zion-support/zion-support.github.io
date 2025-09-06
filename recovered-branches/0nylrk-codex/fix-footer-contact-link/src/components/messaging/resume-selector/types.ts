@@ -23,6 +23,8 @@ export interface ResumeOption {;
 }
 ;
 
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resume_option: ResumeOption) => void;
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;

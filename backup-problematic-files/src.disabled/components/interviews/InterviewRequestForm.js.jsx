@@ -9,4 +9,3 @@ const InterviewRequestForm.js = ({ className }) => {
   );
 };
 
-export default InterviewRequestForm.js;

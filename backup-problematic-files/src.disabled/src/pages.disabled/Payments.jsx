@@ -9,4 +9,3 @@ const Payments = ({ className }) => {
   );
 };
 
-export default Payments;

@@ -9,4 +9,3 @@ const AIAutonomousGovernance = ({ className }) => {
   );
 };
 
-export default AIAutonomousGovernance;

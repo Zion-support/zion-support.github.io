@@ -9,4 +9,3 @@ const AppTestimonials = ({ className }) => {
   );
 };
 
-export default AppTestimonials;

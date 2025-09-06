@@ -1,92 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain, Shield, Rocket, Globe, Cpu, Database
-  TrendingUp, Users, Star, Zap, Lock, Target
-  ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react'
-// Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-const Innovative2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [searchTerm, setSearchTerm] = useState('')
-  // Combine all innovative services
-  const allInnovativeServices = [
-    ...innovativeMicroSaasExpansionV32025
-    ...innovativeITServicesExpansion2025V3
-    ...innovativeAIServicesExpansion2025V3
-  ]
-  const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length }
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length }
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length }
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') |s.category.includes('FinOps')).length }
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
-  ]
-  const filteredServices = allInnovativeServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
-      service.category.toLowerCase().includes(selectedCategory) |
-      (selectedCategory === 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning'))) |
-      (selectedCategory === 'it' && (service.category.includes('IT') |service.category.includes('Infrastructure'))) |
-      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) |
-      (selectedCategory === 'cloud' && (service.category.includes('Cloud') |service.category.includes('FinOps'))) |
-      (selectedCategory === 'developer' && service.category.includes('Developer'))
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
-  const stats = [
-    { number: "15+", label: "Innovative Services", icon: Star }
-    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle }
-    { number: "24/7", label: "AI Support Available", icon: Brain }
-    { number: "200+", label: "Countries Served", icon: Globe }
-  ]
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 }
-    animate: { opacity: 1, y: 0 }
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-  ],
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from - cyan - 500 to - blue - 500', count: allInnovativeServices.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from - yellow - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('IT') || s.category.includes ('Infrastructure')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from - red - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('Security')).length },
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from - blue - 500 to - indigo - 500', count: allInnovativeServices.filter (string => s.category.includes ('Cloud') || s.category.includes ('FinOps')).length },
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from - green - 500 to - teal - 500', count: allInnovativeServices.filter (string => s.category.includes ('Developer')).length }
-  ],
-  const filtered_services = allInnovativeServices.filter (service => {
-    const matches_category = selected_category === 'all' ||;
-      service.category.toLowerCase ().includes (selected_category) ||;
-      (selected_category === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning'))) ||;
-      (selected_category === 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure'))) ||;
-      (selected_category === 'cybersecurity' && service.category.includes ('Security')) ||;
-      (selected_category === 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps'))) ||;
-      (selected_category === 'developer' && service.category.includes ('Developer')),
-    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      (service as any).tagline?.toLowerCase ().includes (search_term.toLowerCase ()),
-    return matches_category && matches_search;
-  }),
-  const stats = [;
-    { number: "15+", label: "Innovative Services", icon: Star },
-    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
-    { number: "24 / 7", label: "AI Support Available", icon: Brain },
-    { number: "200+", label: "Countries Served", icon: Globe }
-  ],
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
   const staggerContainer = {
     animate: {
       transition: {
@@ -125,46 +36,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-                style={{
-                  left: `${Math.random() * 100}%`
-                  top: `${Math.random() * 100}%`
-                  animationDelay: `${Math.random() * 2}s`
-                  animationDuration: `${2 + Math.random() * 3}s`
-                }}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Content */}
-        <div className="relative z - 10">;
-          {/* Header */}
-          <motion.header
-            className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: -20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Innovative 2025
-            </span>
-            <br />
-            <span className="text-white">Services Showcase</span>
-          </motion.h1>
-          <motion.p
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -189,11 +60,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
-              <div className="mb-8">
-                <div className="relative max-w-2xl mx-auto">
-                  <input
-                    type="text"
-                    placeholder="Search innovative services..."
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -215,33 +81,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     <span>{category.name}</span>;
                     <span className="bg - gray - 700 px - 2 py - 1 rounded - full text - xs">;
                       {category.count}
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl border transition-all duration-300 ${;
-                      selectedCategory === category.id;
-                        ? 'border-purple-500 bg-purple-500/20 text-purple-300';
-                        : 'border-gray-700 text-gray-300 hover:border-gray-600 hover:text-white';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  >
-                    <category.icon className="w-5 h-5" />
-                    <span>{category.name}</span>
-                    <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
-
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -319,10 +158,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
-                        <div className="flex items-baseline mb-6">
-                          <span className="text-3xl font-bold text-white">{(service as any).price |(service as any).pricing?.starter |'Contact Us'}</span>
-                          <span className="text-gray-400 ml-2">{(service as any).period |''}</span>
-                        </div>
                         {/* Features */}
                         <div className="space - y-3 mb - 8">;
                           {service.features.slice (0, 5).map ((feature, feature_index) => (
@@ -381,12 +216,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   }
 }
                           {service.features.length > 5 && (
-                            <div className="text-gray-500 text-sm">
-                              +{service.features.length - 5} more features
-                            </div>
-                          )}
-                        </div>
-                        {/* Service Stats */}
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -412,17 +241,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
-                        {/* CTA Button */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        <Link;
-                          href={`/services/${service.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
@@ -435,8 +253,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                 ))}
               </div>
               {filteredServices.length === 0 && (
-                <motion.div
-                  className="text-center py-20"
                 >
                   <div className="text-6xl mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>

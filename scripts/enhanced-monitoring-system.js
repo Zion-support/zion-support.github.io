@@ -236,7 +236,6 @@ class EnhancedMonitoringSystem {
         "error": error && error.message
       }}
   }
-}
 // Run if called directly
 if (require && require.main === module) {
   const monitoring = new EnhancedMonitoringSystem();

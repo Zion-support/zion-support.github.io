@@ -169,4 +169,3 @@ return (<SmartContractBuilder isOpen= {;
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}"

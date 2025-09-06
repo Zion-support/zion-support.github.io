@@ -31,13 +31,11 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -1245,7 +1243,3 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-  }
-];
-
-;

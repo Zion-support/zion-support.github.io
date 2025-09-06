@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 
 import {
   Card
@@ -30,11 +29,9 @@ interface GeneratedContent {
           <p className="text-white">{content.description}</p>
         </div>
 
-
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
-          <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
@@ -42,15 +39,6 @@ interface GeneratedContent {
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
-          </p>
-        </div>
-        <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Suggested Price Range
-          </h3>
-          <p className='text-white'>
-            ${content.suggestedPrice.min.toFixed(2)} - $
-            {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
         <div>
@@ -67,7 +55,6 @@ interface GeneratedContent {
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
-            {content.keyPoints.map((point, index,) => (
               <li key={index}>{point}</li>
           </div>;
         </div>;
@@ -214,5 +201,3 @@ function GeneratedContentDisplay() {
     </Card>);
 }
 ;
-
-

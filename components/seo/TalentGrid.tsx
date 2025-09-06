@@ -10,7 +10,6 @@ type Props = {;
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
   );
-
   if (items && items.length === 0) {;
     return (
       <div className="text-sm text-gray-400">;

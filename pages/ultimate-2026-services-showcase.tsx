@@ -128,38 +128,6 @@ export default function Ultimate2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-  // Combine all services
-  const allServices = [
-    ...ultimate2026Services
-    ...revolutionary2026Innovations
-  ]
-  // Dynamic category counts
-  const aiCount = allServices.filter(service =>
-    service.category?.includes('AI') |service.category?.includes('Machine Learning')
-  ).length
-  const quantumCount = allServices.filter(service =>
-    service.category?.includes('Quantum') |service.category?.includes('Space')
-  ).length
-  const enterpriseCount = allServices.filter(service =>
-    service.category?.includes('Enterprise') |service.category?.includes('IT')
-  ).length
-  const emergingCount = allServices.filter(service =>
-      case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
-        break
-      case 'rating':
-
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
-
-
-
 import {;
   Search, Star, DollarSign, CheckCircle,;
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,;
@@ -277,62 +245,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-2026-services-showcase" />
       </Head>
-  ],
-  // Filter and sort services;
-  const filtered_services = useMemo (() => {
-    let filtered = all_services.filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' ||;
-        (selected_category === 'ai' && service.category.includes ('AI')) ||;
-        (selected_category === 'quantum' && (service.category.includes ('Quantum') || service.category.includes ('Space'))) ||;
-        (selected_category === 'enterprise' && (service.category.includes ('Enterprise') || service.category.includes ('IT'))) ||;
-        (selected_category === 'emerging' && (service.category.includes ('Emerging') || service.category.includes ('Innovation'))),
-      const matches_price = selectedPriceRange === 'all' ||;
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) < 1000) ||;
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) >= 1000 && parse_int (service.price.replace (/[^0 - 9]/g, '')) <= 5000) ||;
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parse_int (service.price.replace (/[^0 - 9]/g, '')) > 5000) ||;
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
-      return matches_search && matches_category && matches_price;
-    }),
-    // Sort services;
-    switch (sort_by) {
-      case 'name':;
-        filtered.sort ((a, b) => a.name.locale_compare (b.name)),
-        break,
-      case 'price':;
-        filtered.sort ((a, b) => {
-          const price_a = a.price === 'Custom pricing' ? 999999 : parse_int (a.price.replace (/[^0 - 9]/g, '')),
-          const price_b = b.price === 'Custom pricing' ? 999999 : parse_int (b.price.replace (/[^0 - 9]/g, '')),
-          return price_a - price_b;
-        }),
-        break,
-      case 'popularity':;
-        filtered.sort ((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
-      case 'rating':;
-        filtered.sort ((a, b) => b.rating - a.rating),
-        break,
-      default: break;
-    }
-    return filtered;
-  }, [all_services, search_term, selected_category, selectedPriceRange, sort_by]),
-  const featured_services = all_services.filter (service => service.popular).slice (0, 6),
-  return (
-    <>;
-      <Head>;
-        <title > Ultimate 2026 Services Showcase | Zion Tech Group</title>;
-        <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting - edge enterprise solutions. Transform your business with next - generation technology." />;
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous AI, metaverse development, space technology, edge computing, 5G networks, cybersecurity, healthcare AI, climate prediction" />;
-        <meta property="og:title" content="Ultimate 2026 Services Showcase | Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary 2026 innovations that will transform your business. AI, quantum computing, and emerging technologies." />;
-        <meta property="og:url" content="https://ziontechgroup.com / ultimate - 2026 - services - showcase" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup.com / ultimate - 2026 - services - showcase" />;
-      </Head>;
-
-
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,9 +285,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               <span className="text-6xl md:text-8xl">Innovations</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents
-              and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
-            </p>
             {/* Service Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -471,7 +380,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
   }
 }
                     </div>
-
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <div className="flex items-center text-yellow-400">
@@ -508,12 +416,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
-
-          {/* Filters and Search */}
-          <div className="mb-12 space-y-6">
-          {/* Filters and Search */}
-          <div className="mb - 12 space - y-6">;
-            {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -523,39 +425,10 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
               />
             </div>
-
-            {/* Filters */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
-            {/* Filters */}
-            <div className="flex flex - wrap items - center justify - center gap - 4">;
-              {/* Category Filter */}
-              <div className="relative">
-                <select
-                  onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-              </div>
               {/* Price Filter */}
               <div className="relative">;
                 <select;
                   value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
-                  {priceRanges.map((range) => (
-                    <option key={range.id} value={range.id}>
-                      {range.name}
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-              </div>
-              {/* Sort */}
-              <div className="relative">
-                <select
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -592,9 +465,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                             <Star className="w-3 h-3 mr-1" />
                             Popular
                           </div>
-                        )}
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
-
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -629,7 +505,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-
 
                           {service.name  } catch (error) {
     console.error("Error:", error);
@@ -670,9 +545,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     </div>;
                     <div className="text - right">;
                       <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
-                        {service.price}
-
-
                         {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -692,8 +564,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
             </motion.div>
-
-
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -709,9 +579,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -724,7 +591,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 View Pricing
               </Link>
             </div>
-
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">500%+</div>
@@ -742,7 +608,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           </motion.div>
         </div>
       </section>
-
 
       {/* Footer Contact */  } catch (error) {
     console.error("Error:", error);
@@ -774,7 +639,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
-  )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

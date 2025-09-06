@@ -10,7 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Dialog
   DialogContent
   DialogFooter
   DialogHeader
@@ -19,9 +18,6 @@ import {
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
-
-
-
 
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -46,7 +42,6 @@ export function ResumeVersionSelector({
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-
         setNewResumeTitle("");
       }
       setIsLoading(false);
@@ -96,7 +91,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title |"My Resume"}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -153,7 +147,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
+      ;
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
               Save;
             </Button>;

@@ -16,7 +16,6 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
-  const url = new URL(req.url);
   const type = url.searchParams.get("type"), // "open" or "click"
   const campaignId = url.searchParams.get("cid");
   const userId = url.searchParams.get("uid");
@@ -32,7 +31,6 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
-        .eq("user_id", userId);
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
@@ -79,9 +77,6 @@ if ( {) {
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
           headers: {
-            "Content-Type": "image/gif"
-            "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
-            "Pragma": "no-cache";
             "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -200,6 +195,3 @@ serve(async (req) => {;
     }
 ;
     return new Response("Error processing event", { status: 500 });
-  }
-});
-

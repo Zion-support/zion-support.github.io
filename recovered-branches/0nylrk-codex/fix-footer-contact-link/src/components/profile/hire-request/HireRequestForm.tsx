@@ -10,9 +10,6 @@ import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ProjectDetailsField} from "./ProjectDetailsField";
 import {TimelineField} from "./TimelineField";
 import {BudgetFields} from "./BudgetFields";
-export interface HireRequestFormProps {;
-  talent: TalentProfile,;
-  onClose: () => void,;
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -69,21 +66,13 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            disabled={isSubmitting}>;
             {isSubmitting ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Submitting...;
               </>;
-            ) : (;
+            ) :(;
               'Submit Request';
-            )}
-          </Button>
-        </DialogFooter>
-      </form>
-    </Form>
-  )
-}
 import React from './react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';

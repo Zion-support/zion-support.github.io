@@ -58,15 +58,6 @@ interface CertificationsListProps {;
                   <Edit className="h-4 w-4" />
                 </Button>
                 <Button
-                  variant='ghost'
-                  size='icon'
-                  onClick={() => onEdit(cert)}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-primary hover:underline'                >              <p className="text-xs mt-2">
-                <a
-                  href = {cert.credential_url,}
-                  target="_blank"
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -189,5 +180,3 @@ if ( {) {
     </div>);
 }
 ;
-
-

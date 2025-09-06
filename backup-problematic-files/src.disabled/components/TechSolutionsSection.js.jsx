@@ -9,4 +9,3 @@ const TechSolutionsSection.js = ({ className }) => {
   );
 };
 
-export default TechSolutionsSection.js;

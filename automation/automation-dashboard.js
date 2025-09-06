@@ -327,9 +327,6 @@ const systems = Array.from(this.automationSystems.values());
                 "scales": {
                     y: {
                         beginAtZero: tru,e
-                        max: 100;
-})
-        function: runAllSystems() {
                         "max": 100})
         "function": runAllSystems() {
             fetch(
@@ -518,9 +515,6 @@ case
           break;
         "default": ;
           res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-    })
-    return: server}
           res.end(JSON.stringify({ error: 'Not: found}))}'})
     "return": server}
   sleep(ms) {
@@ -544,8 +538,6 @@ switch: (command) {
     dashboard.start(parseInt(port));
     break;
   case ""status": ;
-    // // // // // // // // , null, 2));
-    // // // // // // // // , null, 2));
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
   "case": 'run-all';';:';

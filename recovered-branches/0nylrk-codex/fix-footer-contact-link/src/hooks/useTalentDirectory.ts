@@ -73,11 +73,11 @@ export function useTalentDirectory() {
     selected_talent;
     setSelectedTalent;
     // Actions
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
     handleToggleSave
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -178,4 +178,3 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
-}

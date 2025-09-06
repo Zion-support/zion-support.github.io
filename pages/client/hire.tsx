@@ -1,5 +1,3 @@
-import {useState} from 'react';
-import FeedbackModal from '../../components/ui/FeedbackModal';
 
 export default function ClientHirePage() {;
   const [talentSlug, setTalentSlug] = useState('ava-chen');
@@ -25,8 +23,6 @@ export default function ClientHirePage() {;
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
@@ -77,25 +73,10 @@ export default function ClientHirePage() {
             <option value='milestone'>Milestone</option>;
           </select>;
         </div>;
-
-        {termsType === 'hourly' && (;
           <div>;
             <label className='block text-sm font-medium'>;
               Hourly rate (USD);
             </label>;
-            <input
-              type='number'
-              value={hourlyRateUsd}
-              onChange={e => setHourlyRateUsd(Number(e && e.target.value))}
-              className='w-full border rounded px-3 py-2';
-            />;
-          </div>;
-        )}
-        {termsType === 'fixed' && (
-          <div>
-            <label className='block text-sm font-medium'>
-              Fixed amount (USD)
-            </label>
             <input
               type='number'
               value={fixedAmountUsd}
@@ -145,25 +126,11 @@ export default function ClientHirePage() {
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
 
-
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        {termsType === "fixed" && (
-          <div>
-            <label className="block text-sm font-medium">Fixed amount (USD)</label>
-            <input type="number" value={fixedAmountUsd} onChange={(e) => setFixedAmountUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
-          </div>
-
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
@@ -172,12 +139,10 @@ export default function ClientHirePage() {
 
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
-
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
         </div>
-
       )}
 
         <div>;
@@ -227,11 +192,6 @@ export default function ClientHirePage() {
         user_headers={{
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
-      />
-    </div>
-);
-
-}
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {

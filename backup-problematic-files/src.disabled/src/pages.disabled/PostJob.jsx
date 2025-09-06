@@ -9,4 +9,3 @@ const PostJob = ({ className }) => {
   );
 };
 
-export default PostJob;

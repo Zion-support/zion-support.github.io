@@ -1,9 +1,3 @@
-import Link from 'next / link',
-export default /**
- * JobSuccessPage - Function description
- */
-function JobSuccessPage() {
-  return (
       </div>
     </div>
   )

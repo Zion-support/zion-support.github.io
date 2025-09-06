@@ -9,4 +9,3 @@ const AIAutonomousInvention = ({ className }) => {
   );
 };
 
-export default AIAutonomousInvention;

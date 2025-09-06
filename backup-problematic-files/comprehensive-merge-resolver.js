@@ -425,7 +425,6 @@ if ( {) {
       if (conflictFiles && conflictFiles.length > 0) {
         this && this.log(' Resolving merge conflicts...');
         for (const file of conflictFiles) {
-          await this && this.resolveConflictFile(file)}
         // Stage and commit resolved changes
         if (this && this.conflictsResolved > 0) {
           await this && this.stageAndCommitChanges()}

@@ -1,7 +1,6 @@
 import * as React from &quot;react&quot;
 import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
 import { Check, ChevronRight, Circle } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -17,12 +16,10 @@ const ContextMenuSubTrigger = React.forwardRef<
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
       className
-    )}
     {...props}
   >;
     {children}
   </ContextMenuPrimitive.SubTrigger>
-))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>
@@ -32,19 +29,16 @@ const ContextMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   />;
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>;
->(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
         className
-      )}
       {...props}
     />;
   </ContextMenuPrimitive.Portal>;
@@ -60,7 +54,6 @@ const ContextMenuItem = React.forwardRef<;
   <ContextMenuPrimitive.Item;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
@@ -104,14 +97,11 @@ const ContextMenuCheckboxItem = React.forwardRef<;
   <ContextMenuPrimitive.Label;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
         "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}

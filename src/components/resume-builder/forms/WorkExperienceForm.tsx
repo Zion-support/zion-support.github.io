@@ -125,7 +125,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
-import {;
   Form,;
   FormControl,;
   FormField,;
@@ -252,7 +251,6 @@ export function WorkExperienceForm(): any ({;
     form.setValue('description', enhancedContent)
   },
 
-  return (
     <div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
@@ -307,7 +305,6 @@ export function WorkExperienceForm(): any ({;
                     )}
                   </div>
                   <div className="flex gap-2">
-                    <Button
                       onClick={() => handleEdit(work)}
                       aria-label='Edit experience'                    >;
                       <Edit className='h-4 w-4' />;
@@ -317,7 +314,6 @@ export function WorkExperienceForm(): any ({;
                   </div>
                 </div>
                 {work.description && (
-
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
                 )}
               </CardContent>;
@@ -327,97 +323,11 @@ export function WorkExperienceForm(): any ({;
       )}
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>
-        <Form {...form}>
           <form
             onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
-                control={form && form.control}
-                name='company_name'
-                render={({ field }: { field: any }) => (                  <FormItem>;
-                    <FormLabel>Company Name</FormLabel>;
-    <div className='space - y-6'>;
-      <div>;
-        <h2 className='text - xl font - semibold mb - 2'>Work Experience</h2>;
-        <p className='text - muted - foreground'>;
-          Add your work history to showcase your professional experience.;
-        </p>;
-      </div>;
-      {work_experiences.length > 0 && (
-        <div className='space - y-4'>;
-          <h3 className='text - md font - medium'>Added Experience</h3>;
-          {work_experiences.map (work => (
-            <Card key={work.id} className='bg - muted / 40'>;
-              <CardContent className='pt - 6'>;
-                <div className='flex justify - between'>                  <div>;
-                    <h4 className='font - medium'>{work.role_title}</h4>;
-                    <p className='text - sm text - muted - foreground'>;
-                      {work.company_name}
-                    </p>;
-                    <p className='text - xs text - muted - foreground mt - 1'>;
-                      {typeof work.start_date === 'string';
-                        ? work.start_date;
-                        : format (work.start_date, 'MMM yyyy')}{' '}
-                      -{' '}
-                      {work.is_current;
-                        ? 'Present';
-                        : work.end_date;
-                          ? typeof work.end_date === 'string';
-                            ? work.end_date;
-                            : format (work.end_date, 'MMM yyyy');
-                          : ''}
-                    </p>;
-                    {work.location && (
-                      <p className='text - xs text - muted - foreground'>;
-                        {work.location}
-                      </p>)}
-                  </div>;
-                  <div className='flex gap - 2'>;
-                    <Button;
-                      variant='ghost';
-                      size='icon';
-                      on_click={() => handle_edit (work)}
-                      aria - label='Edit experience'                    >;
-                      <Edit className='h - 4 w - 4' />;
-                    </Button>;
-                    <Button;
-                      variant='ghost';
-                      size='icon';
-                      on_click={() => handle_delete (work.id!)}
-                      aria - label='Delete experience'                    >;
-                      <Trash2 className='h - 4 w - 4' />;
-                    </Button>;
-                  </div>;
-                </div>;
-                {work.description && (
-                  <p className='text - sm mt - 3 line - clamp - 2'>;
-                    {work.description}
-                  </p>)}
-              </CardContent>;
-            </Card>))}
-        </div>)}
-      <div className='bg - muted / 40 p - 6 rounded - lg'>;
-        <h3 className='text - md font - medium mb - 4'>;
-          {editing_id ? 'Update Experience' : 'Add Experience'}
-        </h3>;
-        <Form {...form}>;
-          <form;
-            on_submit={form.handle_submit (handleAddOrUpdate)}
-            className='space - y-4';
-          >;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-              <FormField;
-                control={form.control}
-                name='company_name';
-                render={({ field }: { field: any }) => (                  <FormItem>;
-                    <FormLabel > Company Name</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder='Google, Microsoft, etc.' {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
@@ -453,7 +363,11 @@ export function WorkExperienceForm(): any ({;
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
+                control={form.control}
+                name='start_date'
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
                 control={form.control}
                 name="start_date"
                 render={({ field }: { field: any }) => (
@@ -468,55 +382,17 @@ export function WorkExperienceForm(): any ({;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-                )}
-              />
-
-
-
-                )}
-              />
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <FormField
-                control={form && form.control}
-                name='start_date'
-                render={({ field }: { field: any }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className='space-y-4'>
-                <FormField
                   name="is_current"
                   render={({ field }: { field: any }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
                         <Checkbox
-                          checked = {field && field.value,}
-                          onCheckedChange = {field && field.onChange,}
-                        />;
-                      </FormControl>;
-                      <div className='space-y-1 leading-none'>;
-                        <FormLabel>I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>;
                   )}
                 />
                 {!form.watch('is_current') && (
                   <FormField
                     control={form && form.control}
                     name='end_date'
-                    render={({ field }: { field: any }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-                          <Input
-                            type='date'
-                            {...field}
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
@@ -526,7 +402,6 @@ export function WorkExperienceForm(): any ({;
                             {...field} 
                             value={field.value || ''} 
                           />
-                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -535,60 +410,29 @@ export function WorkExperienceForm(): any ({;
               </div>
             </div>
             <FormField
-              control={form && form.control}
-              name='location'
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-                  <FormControl>;
-                    <Input
-                  </FormItem>)}
-              />;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-              <FormField;
-                control={form.control}
-                name='start_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem>;
-                    <FormLabel > Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <div className='space - y-4'>;
-                <FormField;
-                  control={form.control}
-                  name='is_current';
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                      <FormControl>;
-                        <Checkbox;
-                          checked = {field.value, }
-                          onCheckedChange = {field.on_change, }
-                        />;
-                      </FormControl>;
-                      <div className='space - y-1 leading - none'>;
-                        <FormLabel > I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>)}
-                />;
-                {!form.watch ('is_current') && (
-                  <FormField;
-                    control={form.control}
-                    name='end_date';
-                    render={({ field }: { field: any }) => (
-                      <FormItem>;
-                        <FormLabel > End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type='date';
-                            {...field}
-                            value={field.value || ''}                          />;
                         </FormControl>;
                         <FormMessage />;
-                      </FormItem>)}
-                  />)}
+                      </FormItem>;
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+                    )}
+                  />;
+                )}
+
+
+
+              </div>;
+            </div>;
+
+              </div>
+            </div>
+            <FormField
+              control={form.control}
+              name='location'
               </div>;
             </div>;
             <FormField;
@@ -651,17 +495,14 @@ export function WorkExperienceForm(): any ({;
                 </FormItem>;
               )}
             />
-            {error && (
-              <Alert variant='destructive'>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-            <div className='flex justify-between pt-2'>
               <Button
-                type='button'
-                variant='outline'
+                type="button"
+                variant="outline"
                 onClick={() => {
                   if (editingId) {
+                    setEditingId(null),
+                    setEditingId(null),
+                    form.reset({
                     setEditingId(null),
                     setEditingId(null),
                     form.reset({
@@ -670,20 +511,6 @@ export function WorkExperienceForm(): any ({;
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-                  } else {
-                    onBack()
-                  }
-                }}
-              >;
-                {editingId ? 'Cancel' : 'Back'}
-              </Button>
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-                {!editingId && workExperiences.length > 0 && (
-                  <Button type="button" onClick={onComplete}>
-                    Next
-                  </Button>
-                )}
               </div>;
             </div>;
           </form>;
@@ -705,5 +532,3 @@ export function WorkExperienceForm(): any ({;
 }'"  );
 }
 ;
-
-

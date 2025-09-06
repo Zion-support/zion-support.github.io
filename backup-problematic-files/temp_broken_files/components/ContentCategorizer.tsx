@@ -391,7 +391,6 @@ type=&quot;text&quot;
               value={selectedCategory}
               onChange={(e) => {setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
-              }}
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
@@ -406,9 +405,6 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>;
-              ))}
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -452,7 +448,6 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
           </button>
         </div>
       </div>
-      {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
           {categories.map(category => (
@@ -541,8 +536,6 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
                     +{item.tags.length - 3}
                   </span>;
-                )}
-              </div>;
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>

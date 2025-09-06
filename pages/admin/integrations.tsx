@@ -1,10 +1,6 @@
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
-interface ProviderMeta {;
-import React, { useState } from 'react';
-import Head from 'next / head';
-;
 interface ProviderMeta {
   id: string;
   name: string;
@@ -15,9 +11,6 @@ interface ProviderMeta {
       {label}
     </span>;
   );
-
-interface ConnectionMap {;
-  [key: string]: boolean,;
 
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
@@ -43,19 +36,6 @@ export default function AdminIntegrationsPage() {
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-  const [syncRules, setSyncRules] = useState<any>({
-    autoCreateContacts: true
-    pushNotesMode: 'auto'
-    autoSyncApplicants: true
-    autoUploadResumes: true
-  });
-  async function refresh() {
-    const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json())
-      fetch('/api/integrations/status').then(r => r.json())
-    ]);
-    setProviders(p.providers |[]);
-    setConnections(s.connections |{});
   }
   useEffect(() => {
     refresh();
@@ -90,7 +70,6 @@ export default function AdminIntegrationsPage() {
       setLoading(false);
     }
   }
-
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -160,36 +139,10 @@ export default function AdminIntegrationsPage() {
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
-  const grouped = useMemo(;
-    () => ({;
-      crm: providers && providers.filter(p => p && p.category === 'crm'),;
-      ats: providers && providers.filter(p => p && p.category === 'ats'),;
-    }),;
-    [providers];
-  );
-  function Card(): any ({ p }: { p: ProviderMeta }) {;
-    const conn = connections[p && p.id] || { status: 'disconnected' };
-    const isConnected = conn && conn.status === 'connected';
-    return (
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>
-      </div>
-    ),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  function RulesModal() {
-
   function RulesModal() {;
     if (!selected) return null;
     const provider = providers && providers.find(p => p && p.id === selected)!;
@@ -293,18 +246,13 @@ export default function AdminIntegrationsPage() {
               </code>
             </li>          </ul>
         </section>
-        <section>
-          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
-        </section>
       </main>
       <RulesModal />
     </>
-              <code>;
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP;
               </code>;
             </li>          </ul>;
         </section>;
-
         <section>;
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
         </section>;

@@ -5,25 +5,6 @@ import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChar
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { BookOpen, ;
-  Brain, ;
-  Users, ;
-import {;
-  BookOpen,;
-  Brain,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  GraduationCap,;
-  BarChart3,;
-  FileText,;
-  Video,;
-  Globe,;
-  Database;
-} from 'lucide-react';
-import Layout from '../../components/Layout';';
-const services = [;
-  {}
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -66,24 +47,12 @@ const services = [;
     ];
   },;
   {}
-      'Collaboration features'';
-    ];
-  }
 ;];
 const benefits = [;
   {}
     title: 'Improved Learning Outcomes,',;
     description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
-];
-const benefits = [;
-  {;
-    title: 'Improved Learning Outcomes',;
-    description: 'Personalized learning experiences lead to better student performance.',;
-    icon: GraduationCap;
-  },;
-  {}
-  }
 ;];
 export default function EducationPage() {;
   return (
@@ -129,38 +98,6 @@ export default function EducationPage() {;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto">;
-              <div className="flex items-center justify-center mb-6">;
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />;
-                <h1 className="text-5xl md:text-6xl font-bold">;
-                  Education;
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">;
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-                Revolutionize education with cutting-edge learning management systems, virtual classrooms,;
-                AI tutors, and student analytics that enhance learning outcomes.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Education Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">;
-                  View Education Case Studies;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

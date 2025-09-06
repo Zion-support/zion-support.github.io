@@ -42,18 +42,6 @@ interface ServiceLandingTemplateProps {
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
-
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
-  title,;
-  subtitle,;
-  description,;
-  benefits,;
-  features = [],;
-  stats = [],;
-  ctaText,;
-  ctaLink,;
-}) => {;
-  return (
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -63,25 +51,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
-          </p>
-
-
-          {heroImage && (
-            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
-              <Image
-                src={heroImage}
-                alt={title}
-                className="object-cover rounded-lg"
-                loading="lazy"
-              />
-            </div>
-          )}
-        </div>
-      </section>
-
-      <section className="py-12 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -102,29 +71,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>;
         </div>;
       </section>;
-      {benefits.length > 0 && (
-                  )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit && benefit.title}</h3>;
-                  <p className="text-gray-600">{benefit && benefit.description}</p>;
-                </div>;
               ))}
             </div>;
           </div>;
         </section>;
       )}
-              ))}
-            </div>;
-          </div>;
-        </section>;
-      )}
-      {stats.length > 0 && (
-        <section className="py - 16 px - 4">;
-          <div className="max - w-7xl mx - auto">;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
-              {stats.map ((stat, index) => (
-                <div key={index}>;
-                  <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
-                    {stat.value}
               ))}
             </div>;
           </div>;
@@ -134,8 +85,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
-
-      <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
@@ -230,5 +179,3 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>);
 }
 },
-
-

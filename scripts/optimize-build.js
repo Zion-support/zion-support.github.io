@@ -92,7 +92,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let cleanedFiles = 0,"}),"})
 ,"}),"})
-    for (const file of files) {,"}),"})
       try {,"}),"})
         let content = fs && fs.readFileSync(file,,"}),"})
   'utf8'),"}),"})
@@ -136,7 +135,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     let optimizedImages = 0,"}),"})
 ,"}),"})
-    for (const image of images) {,"}),"})
       try {,"}),"})
         const imagePath = path && path.join(imageDir, image),"}),"})
         const stats = fs && fs.statSync(imagePath),"}),"})
@@ -167,7 +165,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let optimizedCSS = 0,"}),"})
 ,"}),"})
-    for (const file of cssFiles) {,"}),"})
       try {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         // Remove unused CSS (basic implementation),"}),"})
@@ -196,7 +193,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let optimizedJS = 0,"}),"})
 ,"}),"})
-    for (const file of jsFiles) {,"}),"})
       try {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         // Basic optimizations,"}),"})
@@ -545,7 +541,6 @@ import path from';path'';
     "s": //ziontechgroup && ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split(',
       'T)[0]}</lastmod>
-    </lastmod>
     <changefreq>daily</changefreq>
     <priority>1 && 1.0</priority>
   </url>

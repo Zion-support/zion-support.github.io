@@ -18,7 +18,7 @@ export const announceToScreenReader = (message: string): void => {;
 }
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -109,23 +109,12 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
-    'button:not([disabled])'
-    'input:not([disabled])'
-    'select:not([disabled])'
-    'textarea:not([disabled])'
-    'a[href]'
-    '[tabindex]:not([tabindex="-1"])'
     'button:not([disabled])',
     'input:not([disabled])',
     'select:not([disabled])',
     'textarea:not([disabled])',
     'a[href]',
     '[tabindex]:not([tabindex="-1"])';
-  ].join(', ');
-  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
-};
-
-export const isElementInViewport = (element: HTMLElement): boolean => {;
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -155,9 +144,6 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   return skipLink;
 }
 
-
-  return skipLink;
-}
 };
     rect.top >= 0 &&;
     rect.left >= 0 &&;

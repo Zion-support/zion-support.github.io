@@ -141,7 +141,6 @@ const researchImpact = [
       </div>;
       {/* Recent Publications */}
 
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
@@ -164,19 +163,15 @@ const researchImpact = [
                     'bg-gray-600/20 text-gray-400'
                   }`}>
                     {publication.impact}
-                  </span>;
-                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
-                </div>;
-                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
-                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
-                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
-                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
-                <a;
+                  </span>
+                  <span className="text-sm text-gray-400">{publication.year}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{publication.title}</h3>
+                <p className="text-sm text-blue-400 mb-3">{publication.authors}</p>
+                <p className="text-sm text-gray-400 mb-3">{publication.journal}</p>
+                <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
+                <a
                   href={`https://doi.org/${publication.doi}`}
-                  target=&quot;_blank & quot;
-                  rel=&quot;noopener noreferrer & quot;
-                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
           </div>;
         </div>;
       </div>;
@@ -191,8 +186,6 @@ const researchImpact = [
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Research Influence
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field
             influencing both academia and industry.
           </p>
         </div>
@@ -209,16 +202,10 @@ const researchImpact = [
         </div>;
       </div>;
       {/* Academic Collaborations */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Academic Partnerships
-          </p>
             the frontiers of AI research and innovation.
           </p>
         </div>

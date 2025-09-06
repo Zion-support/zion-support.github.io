@@ -2,13 +2,6 @@ import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 export default function LearnMarketplace() {
 
-  const [filters, setFilters] = useState({
-export default function LearnMarketplace() {;
-  const [filters, setFilters] = useState({;
-    category: '',;
-    level: '',;
-    isFree: '',;
-  });  const [courses, setCourses] = useState<Course[]>([]);
 
     category: '',
     level: '',
@@ -67,15 +60,11 @@ function load() {
   }, [filters]);
 ;
   return (
-
       setCourses(data.courses || []);
       setLoading(false)
     }
     load()
   }, [filters]);
-      setCourses(data.courses |[]);
-      setLoading(false);
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -92,14 +81,6 @@ function load() {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((c) => (
-            <CourseCard key={c.id} course={c} />
-          ))}
-        </div>;
-      )}
-    </div>;
-  );
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />

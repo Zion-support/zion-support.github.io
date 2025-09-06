@@ -34,31 +34,11 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-import {useState} from 'react';
-import {use_form} from 'react - hook - form';
-import {Button} from '@/components / ui / button';
-import {Form} from '@/components / ui / form';
-import {Certification} from '@/types / resume';
-import {Loader2} from 'lucide-react';
-import {use_resume} from '@/hooks / use_resume';
-import {Alert, AlertDescription} from '@/components / ui / alert';
-import {zod_resolver} from '@hookform / resolvers / zod';
-import {format} from 'date - fns';
-import {CertificationsList} from './CertificationsList';
-import {CertificationFormFields} from './CertificationFormFields';
-import {CertificationFormValues, certificationSchema} from './types';
-
 interface CertificationsFormProps {;
   resumeId: string,;
   certifications: Certification[],;
   onComplete: () => void,;
   onBack: () => void;
-}
-
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
-
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
 import {CertificationFormValues, certification_schema} from './types';
 interface CertificationsFormProps {
@@ -76,6 +56,7 @@ function CertificationsForm() {
   const [error, set_error] = useState < string | null>(null);
 ;
   // Helper function to format dates as strings for form inputs;
+}
       }
       if (success) {
         form.reset({
@@ -146,13 +127,7 @@ function CertificationsForm() {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-}
-    </div>);
-}

@@ -72,11 +72,6 @@ if (
 })
 afterAll(() => {
   console.error = originalError
-  console.warn = originalWarn
-})
-    original_warn.call (console, ...args);
-  }
+  console.warn = originalWarn;
 });
-after_all (() => {
-  console.error = original_error;
-  console.warn = original_warn;
+});

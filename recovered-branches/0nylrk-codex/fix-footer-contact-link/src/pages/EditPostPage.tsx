@@ -15,8 +15,6 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
-
-export default function EditPostPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
@@ -27,7 +25,6 @@ export default function EditPostPage() {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
-  }, [postId]);
   if (isLoading) {
 
   useEffect(() => {;
@@ -62,14 +59,21 @@ export default function EditPostPage() {
   // Check if the user is the author or an admin
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
-  if (!isAuthor && !isAdmin) {
 
   // Check if the user is the author or an admin;
   const isAuthor = user?.id === post && post.authorId;
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
   if (!isAuthor && !isAdmin) {;
     return (
+    ),;
+  }
+  ;
+  // Check if the user is the author or an admin;
+  const isAuthor = user?.id === post.authorId,;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
+  ;
+  if (!isAuthor && !isAdmin) {;
+    return (;
       <AppLayout>;
         <div className="container py-8">;
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
@@ -79,7 +83,6 @@ export default function EditPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
-    );
   }
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -88,7 +91,6 @@ export default function EditPostPage() {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
-      });
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -232,9 +234,7 @@ export default function EditPostPage() {;
         title="Edit Post | Community Forum | Zion AI Marketplace";
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
-
       />;
-
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -247,17 +247,6 @@ export default function EditPostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
-
-        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
-
-        <PostForm
-          initialValues={initialValues} 
-          onSubmit={handleSubmit} 
-          isEditing={true} 
-        />;
-      </div>;
-    </AppLayout>;
-  );
 }
 ;
 export default /**
@@ -377,4 +366,24 @@ if ( {) {
         />;
       </div>;
     </AppLayout>);
+        ;
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
+        ;
+        <PostForm ;
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
+        <PostForm;
+          initialValues={initialValues} ;
+          onSubmit={handleSubmit} ;
+          isEditing={true} ;
+        />;
+      </div>;
+    </AppLayout>;
+};
+return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> Post </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Edit</span> </div> <h1 className="text-3xl font-bold mb-8" >Edit Post</h1> <PostForm initialValues= {
+  initialValues 
+}onSubmit= {
+  handleSubmit 
+}isEditing= {
+  true 
+}/> </div> </AppLayout>) 
 }

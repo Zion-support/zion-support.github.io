@@ -9,4 +9,3 @@ const TalentSkeleton.js = ({ className }) => {
   );
 };
 
-export default TalentSkeleton.js;

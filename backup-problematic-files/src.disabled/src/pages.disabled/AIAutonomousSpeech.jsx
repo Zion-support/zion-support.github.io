@@ -9,4 +9,3 @@ const AIAutonomousSpeech = ({ className }) => {
   );
 };
 
-export default AIAutonomousSpeech;

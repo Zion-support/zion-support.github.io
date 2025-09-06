@@ -1,26 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useState } from 'react';
 
   voice: 'Visionary' | 'Grounded' | 'Technical';
@@ -72,15 +49,6 @@ export default function StudioHostPage() {
       console.error (e);
       alert ('Failed to update RSS');
     } finally {
-      setPublishing(false)
-    }
-  }
-
-      <section className='space-y-3'>
-        <h2 className='text-xl font-semibold'>AI Persona</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <div>
-            <label className='block text-sm font-medium'>Voice</label>
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
 
@@ -300,29 +268,6 @@ export default function StudioHostPage() {
                 <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto'>;
                   {episode && episode.transcript}
                 </pre>;
-              </div>;
-            </div>;
-              </button>;
-              <button
-                className='px-4 py-2 bg-gray-800 text-white rounded'
-                onClick={handlePublishRss}
-                disabled={publishing}>                {publishing ? 'Publishing' : 'Update RSS'}
-              </button>;
-            </div>;
-            {episode && episode.audio && (              <p>{episode && episode.bestQuote}</p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">;
-              <div>;
-                <h4 className="font-semibold">YouTube Description</h4>;
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode && episode.youtubeDescription}</pre>;
-              </div>;
-              <div>;
-                <h4 className="font-semibold">Spotify Description</h4>;
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode && episode.spotifyDescription}</pre>;
-              </div>;
-              <div>;
-                <h4 className="font-semibold">Transcript</h4>;
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto">{episode && episode.transcript}</pre>;
               </div>;
             </div>;
                 {episode.audio.mp3Url && (

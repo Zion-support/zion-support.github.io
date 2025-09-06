@@ -9,4 +9,3 @@ const TranslationManager = ({ className }) => {
   );
 };
 
-export default TranslationManager;

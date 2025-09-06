@@ -144,17 +144,17 @@ if ( {) {
         return
       }
       // Show success message and clean up auth state
-      setSuccess(true);
+      setSuccess(true),
       toast({
         title: "Password updated successfully"
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
-      cleanupAuthState();
+      cleanupAuthState(),
       setTimeout(() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
-      console.error("Password update error:", error);
+      console.error("Password update error:", error),
       toast({
         title: "Password update failed"
         description: error.message |"An unexpected error occurred"
@@ -247,6 +247,37 @@ export default function UpdatePassword() {;
     }
 ;
     setIsLoading(true),;
+
+    }
+    }
+
+  },
+
+
+  return (
+
+    }
+  }
+  return (
+;
+    setIsLoading(true),;
+    try {;
+      // Set the session with the access token;
+      await supabase.auth.setSession({;
+        access_token:accessToken,;
+        refresh_token:''}),;
+;
+      // Update the password;
+      const { error } = await supabase.auth.updateUser({;
+        password:data.password}),;
+;
+      if (error) {;
+        toast({;
+          title:"Password update failed",;
+          description:error.message,;
+          variant:"destructive"}),;
+        setError(error.message),;
+        return,;
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -305,7 +336,6 @@ export default function UpdatePassword() {;
                 Enter your new password below.;
               </p>;
             </div>;
-
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
@@ -317,16 +347,6 @@ export default function UpdatePassword() {;
                 </div>
               )}
 
-                  <Button 
-                    className="mt-3 text-xs"
-                    variant="outline"
-
-                    onClick={() => navigate('/forgot-password')}
-                  >;
-                    Request new reset link;
-                  </Button>;
-                </div>;
-              )}
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -343,7 +363,6 @@ export default function UpdatePassword() {;
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-
               {success ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -357,9 +376,6 @@ export default function UpdatePassword() {;
                     Redirecting you to login...;
                   </p>;
                 </div>;
-              ) : (;
-                <Form {...form}>;
-                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField
                       control={form && form.control}
                       name="password"
@@ -370,7 +386,6 @@ export default function UpdatePassword() {;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              placeholder=""
                               disabled={isLoading}
                               {...field}
                             />;
@@ -388,7 +403,6 @@ export default function UpdatePassword() {;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              placeholder=""
                               disabled={isLoading}
                               {...field}
                             />;
@@ -576,6 +590,3 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-}
-    </>);
-}

@@ -1,7 +1,3 @@
-import React from 'react';
-interface CloudmigrationProps {
-  // Add props here as needed
-}
 export default function Cloudmigration({ }: CloudmigrationProps) {
 
 class ErrorBoundary extends React.Component {

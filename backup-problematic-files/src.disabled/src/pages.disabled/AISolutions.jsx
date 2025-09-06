@@ -9,4 +9,3 @@ const AISolutions = ({ className }) => {
   );
 };
 
-export default AISolutions;

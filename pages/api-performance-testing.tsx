@@ -1,13 +1,3 @@
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function ApiPerformanceTestingPage() {
-
-export default function ApiPerformanceTestingPage() {;
-  const features = [;
-    'k6/Gatling-compatible test runner',;
-    'SLO-aware latency reports',;
-    'Regression baselines per endpoint',;
-    'CI checks and PR annotations',;
     'Synthetic traffic for staging',;
   ];
 
@@ -194,22 +184,8 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
-<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
-            >;
-              Talk to Sales;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
             </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
           </div>;
         </div>;
       </section>;
-    </div>);
-;

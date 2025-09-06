@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
 class LintingIssuesFixer {
   constructor() {
     this && this.projectRoot = path && path.resolve(__dirname, '..');

@@ -9,4 +9,3 @@ const Events.js = ({ className }) => {
   );
 };
 
-export default Events.js;

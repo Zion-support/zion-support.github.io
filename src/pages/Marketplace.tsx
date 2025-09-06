@@ -42,108 +42,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           </div>
           <div className='text-sm text-muted-foreground'>Avg Price</div>
         </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-green-400'>
-            {stats.averageRating.toFixed(1)}
-          </div>
-          <div className='text-sm text-muted-foreground'>Avg Rating</div>
-        </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-purple-400'>
-            {stats.totalProducts}
-          </div>
-          <div className='text-sm text-muted-foreground'>Products</div>
-        </div>
-        <div className='text-center'>
-          <div className='text-2xl font-bold text-yellow-400'>
-            {stats.categoriesCount}
-          </div>
-          <div className='text-sm text-muted-foreground'>Categories</div>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
-// Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string;
-import { SkeletonCard } from '@/components / ui / skeleton';
-import { ErrorState } from '@/components / jobs / applications / ErrorState';
-import { ProductsEmptyState } from '@/components / marketplace / EmptyState';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent } from '@/components / ui / card';
-import Spinner from '@/components / ui / spinner';
-import { ProductListing } from '@/types / listings';
-import { useInfiniteScrollPagination } from '@/hooks / useInfiniteScroll';
-import { use_toast } from '@/hooks / use - toast';
-import { use_auth } from '@/context / auth / AuthProvider';
-import { MARKETPLACE_LISTINGS } from '@/data / listing_data';
-import { MAX_PRICE, MIN_PRICE } from '@/data / marketplace_data';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
-/**;
-* Marketplace component props;
-*/;
-export interface MarketplaceProps {
-  // All props removed - component now fetches data independently;
-// Market insights component;
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className='bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border - blue - 700 / 30 mb - 6'>;
-    <CardContent className='p - 6'>;
-      <div className='flex items - center gap - 2 mb - 4'>;
-        <TrendingUp className='h - 5 w - 5 text - blue - 400' />;
-        <h3 className='text - lg font - semibold'>Market Insights</h3>      </div>;
-      <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 4'>;
-        <div className='text - center'>;
-          <div className='text - 2xl font - bold text - blue - 400'>;
-            ${Math.round (stats.average_price)}
-          </div>;
-          <div className='text - sm text - muted - foreground'>Avg Price</div>;
-        </div>;
-        <div className='text - center'>;
-          <div className='text - 2xl font - bold text - green - 400'>;
-            {stats.average_rating.to_fixed (1)}
-          </div>;
-          <div className='text - sm text - muted - foreground'>Avg Rating</div>;
-        </div>;
-        <div className='text - center'>;
-          <div className='text - 2xl font - bold text - purple - 400'>;
-            {stats.total_products}
-          </div>;
-          <div className='text - sm text - muted - foreground'>Products</div>;
-        </div>;
-        <div className='text - center'>;
-          <div className='text - 2xl font - bold text - yellow - 400'>;
-            {stats.categories_count}
-          </div>;
-          <div className='text - sm text - muted - foreground'>Categories</div>;
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>);
-;
-// Filter and sort controls;
-const FilterControls: React.FC<{
-  sort_by: string;
-  setSortBy: (sort: string) => void;
-  filter_category: string;
-  setFilterCategory: (category: string) => void;
-  categories: string[];
-  price_range: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number;
-  setMinAiScore: (score: number) => void;
-  min_rating: number;
-  setMinRating: (rating: number) => void;
-  filter_availability: string;
-  setFilterAvailability: (value: string) => void;
-  availability_options: string[];
-  filter_location: string;
-  setFilterLocation: (value: string) => void;
-  locations: string[];
-  show_recommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-        </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
@@ -341,9 +239,6 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
-    <div className='flex items-center gap-2'>
-      <SortAsc className='h-4 w-4 text-muted-foreground' />
-      <select
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
@@ -400,11 +295,9 @@ const FilterControls: React.FC<{
 ),
 
 /**
- * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-export default function Marketplace() {
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -425,10 +318,10 @@ export default function Marketplace() {
   const [filterLocation, setFilterLocation] = useState('');
   const { handleApiError, retryQuery } = useApiErrorHandling();
   // Handle Add Product button with authentication check
-  const handleAddProduct = useCallback((,) => {
+  const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
-      setIsAuthModalOpen(true); // Use the new auth modal
-      return;
+      setIsAuthModalOpen(true), // Use the new auth modal
+      return
     }
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
@@ -654,20 +547,6 @@ export default function Marketplace() {
   // Loading state with skeleton
   if (loading && products.length === 0) {
     return (
-      <div className='container py-8' data-testid='marketplace-loading'>;
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-8'>;
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
-            {t('marketplace && marketplace.hero_title')}
-          </h1>;
-          <p className='text-muted-foreground text-lg'>;
-            {t('marketplace && marketplace.hero_subtitle')}
-          </p>;
-        </motion && motion.div>;
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>;
-          {Array && Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />;
           ))}
         </div>;
       </div>;
@@ -721,7 +600,6 @@ export default function Marketplace() {
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
           {t('marketplace.hero_title')}
           {t('marketplace.hero_subtitle')}
-        </p>
       </motion.div>
       {/* Market Insights */}
       {marketStats && (;
@@ -736,17 +614,13 @@ export default function Marketplace() {
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-      {/* Product Grid */}
-      <motion&& motion.div
-        className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-
+              className='relative group'
+              className='relative group'
               className="relative group"
             >
               <ProductCard
@@ -764,20 +638,6 @@ export default function Marketplace() {
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
-                }}
-                onBuy = {async () => {
-                  if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
-                    await router.push(`/checkout/${product.id}`);
-                }}
-                onBuy = {async () => {;
-                  if (!isAuthenticated) {;
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
-                    await router.push (`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', {
                       data: error
@@ -837,33 +697,31 @@ export default function Marketplace() {
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
               />;
               {/* AI Score Badge */}
+              {/* AI Score Badge */}
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-                  AI {product.aiScore}
-                </Badge>
-              )}
               {/* Featured Badge */}
-              {product && product.featured && (;
-                <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>;
-                  <Star className='h-3 w-3 mr-1' />;
+              {product.featured && (
+                <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
+                  <Star className='h-3 w-3 mr-1' />
+                  Featured
+                </Badge>
+;
+              {/* Featured Badge */}
+              {product.featured && (;
+                <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">;
+                  <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
               )}
             </motion && motion.div>;
           ))}
-        </AnimatePresence>
-      </motion.div>
-      {(isFetching || loading) && (
         <motion.div
         </AnimatePresence>;
       </motion && motion.div>;
 
       {/* Loading More Indicator */}
-      {(isFetching |loading) && (
-        <motion.div
-          className='mt-8'
-          initial={{ opacity: 0 }}
             ))}
           </div>;
         </motion && motion.div>;
@@ -873,8 +731,6 @@ export default function Marketplace() {
           <div className="text-sm text-muted-foreground">;
             Showing {products.length} AI-powered solutions;
           </div>;
-      )}
-      {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button
@@ -990,53 +846,6 @@ case 'newest': ;
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-}{
-  /* End of Results */ ;
-}{";
-  !has_more && products.length > 0 && (<motion.div className="text - center mt - 12 py - 8 border - t"initial= {
-  {
-  opacity: 0 ;
-;
-}animate= {
-  {
-  opacity: 1 ;
-}'";
-}> <div className="text - muted - foreground text - lg mb - 2">  You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
-  products.length ;
-}AI - powered solutions </div> </motion.div>) ;
-}{
-  /* Scroll to Top Button */ ;
-}<AnimatePresence> {
-  showScrollTop && (<motion.button on_click={
-  scrollToTop ";
-}className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50"initial= {
-  {
-  opacity: 0, scale: 0 ;
-;
-}animate= {
-  {
-  opacity: 1, scale: 1 ;
-;
-}exit= {
-  {
-  opacity: 0, scale: 0 ;
-;
-}while_hover= {
-  {
-  scale: 1.1 ;
-;
-}while_tap= {
-  {
-  scale: 0.9 ;
-}";
-}> <ArrowUp className="h - 5 w - 5 text - primary - foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'");
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-const Marketplace = () =>: any {
-  return (
     <>;
       <Head>;
         <title > Marketplace - Zion Tech Group</title>;

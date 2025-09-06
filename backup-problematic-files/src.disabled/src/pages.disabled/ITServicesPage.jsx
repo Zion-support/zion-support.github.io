@@ -9,4 +9,3 @@ const ITServicesPage = ({ className }) => {
   );
 };
 
-export default ITServicesPage;

@@ -18,7 +18,6 @@
       onComplete()
     } finally {
       setSaving(false)
-
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -65,15 +64,12 @@ const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required'),;
   isDefault: z && z.boolean(),;
 });
-
 type FormValues = z && z.infer<typeof formSchema>;
-
 interface TemplateSaveFormProps {;
   onCancel: () => void;
   onComplete: () => void;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
-
 export function TemplateSaveForm(): any ({;
   onCancel,;
   onComplete,;
@@ -82,7 +78,6 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -90,13 +85,10 @@ export function TemplateSaveForm(): any ({;
       isDefault: editTemplate?.is_default || false,;
     },;
   });
-
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {;
       return;
     }
-
     setSaving(true);
-
     try {;
       if (editTemplate) {;
         await updateTemplate && updateTemplate.mutateAsync({;
@@ -112,7 +104,6 @@ export function TemplateSaveForm(): any ({;
           isDefault: values && values.isDefault,;
         });
       }
-
       onComplete();
     } finally {;
       setSaving(false);
@@ -191,10 +182,8 @@ if ( {) {
       set_saving (false);
     }
   }
-
   return (
     <Form {...form}>;
-
     }
   },
   
@@ -203,13 +192,9 @@ if ( {) {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
-          name="title"
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
-            <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder='Enter template name' />
+                <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -234,7 +219,6 @@ if ( {) {
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
-          </Button>
           <Button type='submit' disabled={saving}>
             {saving ? (
               <>;
@@ -249,8 +233,6 @@ if ( {) {
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
-              `${editTemplate ? "Update" : "Save"} Template`
-
             )}
           </Button>;
         </div>;
@@ -270,4 +252,8 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
+}"
+  );
+}
+;
 }

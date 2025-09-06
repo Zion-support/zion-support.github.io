@@ -67,23 +67,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
-
-// Form schema;
-const formSchema = z && z.object({;
-  brand_name: z && z.string().min(2, { message: 'Brand name must be at least 2 characters' }),;
-  subdomain: z && z.string();
-    .min(3, { message: 'Subdomain must be at least 3 characters' });
-    .max(20, { message: 'Subdomain must be at most 20 characters' });
-    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' });
-  custom_domain: z && z.string().optional(),;
-  primary_color: z && z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),;
-  theme_preset: z && z.enum(['lightdarkneoncorporatestartup']),;
-  headline: z && z.string().min(5, { message: 'Headline must be at least 5 characters' }),;
-  subtitle: z && z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),;
-  cta: z && z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),;
-
-type FormValues = z && z.infer<typeof formSchema>;
-
 export function WhitelabelRequestForm() {;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -96,46 +79,15 @@ export function WhitelabelRequestForm() {;
       headline: 'AI Marketplace',;
       subtitle: 'Find the best AI talent',;
       cta: 'Get Started'}}),;
-
   const onSubmit = async (values: FormValues) => {;
     try {;
       // Prepare the data;
       const tenantData = {;
-        brand_name: values && values.brand_name,;
-        subdomain: values && values.subdomain,;
-        custom_domain: values && values.custom_domain || null,;
-        primary_color: values && values.primary_color,;
-        theme_preset: values && values.theme_preset,;
-        landing_page_copy: {;
-          headline: values && values.headline,;
-          subtitle: values && values.subtitle,;
-          cta: values && values.cta}
-      };
-
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert(tenantData);
         .select();
-        .single();
-
-      if (error) throw error;
-
-      toast({;
-        title: 'White-label tenant created!',;
-        description: `${values && values.brand_name} has been set up with subdomain ${values && values.subdomain}`}),;
-
-      // Reset form;
-      form && form.reset();
-    } catch (error: any) {;
-      toast({;
-        variant: 'destructive',;
-        title: 'Error creating tenant',;
-        description: error && error.message || 'Something went wrong'});
-    }
-
-  },
-
   return (
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
@@ -230,11 +182,6 @@ if (throw error) {
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
-            <div className="space-y-4">;
-              <FormField
-                control={form && form.control}
-                name="brand_name"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Brand Name</FormLabel>;
@@ -242,36 +189,16 @@ if (throw error) {
                       <Input placeholder="Acme AI Solutions" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-              <FormField
-                control={form && form.control}
-                name="subdomain"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Subdomain</FormLabel>;
                     <FormControl>;
                       <div className="flex items-center">;
                         <Input placeholder="acme" {...field} />;
-                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace && ziontechmarketplace.com</span>;
-                      </div>;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              <FormField
-                control={form && form.control}
-                name="custom_domain"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Custom Domain (Optional)</FormLabel>;
                     <FormControl>;
-                      <Input placeholder="marketplace && marketplace.acme.com" {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              <FormField
-                control={form && form.control}
-                name="primary_color"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Primary Brand Color</FormLabel>;
@@ -282,8 +209,6 @@ if (throw error) {
                       </div>;
                     </FormControl>;
                     <FormMessage />;
-                  </FormItem>;
-                )}
               <FormField
                 control={form && form.control}
                 name="theme_preset"
@@ -423,7 +348,3 @@ if (throw error) {
         </p>;
       </CardFooter>;
     </Card>;
-  );
-}
-    </Card>);
-}

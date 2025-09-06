@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { 
   Home, 
   Brain, 
@@ -13,12 +11,6 @@ import {
   Globe, 
   ArrowRight 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -112,14 +104,6 @@ const sitemapData = [
   }
 ];
 
-export default function SitemapPage() {
-  return (
-    <>
-      <Head>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -214,10 +198,6 @@ function SitemapPage() {
                         <div>;
                           <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
                             {page.name}
-            </div>
-          </div>
-        </section>
-      </div>
             </div>;
           </div>;
         </section>;
@@ -232,18 +212,6 @@ function SitemapPage() {
 
 
 import {
-  Home
-  Search
-  Rocket
-  FileText
-  Users
-  Mail
-  Map
-  ArrowRight
-  ExternalLink
-  ChevronRight
-  Globe
-  Building;
   Home,
   Search,
   Rocket,
@@ -596,10 +564,6 @@ export default function SitemapPage() {;
     { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },
     { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
   ];
-
-
-  const contactInfo = [;
-    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -634,29 +598,6 @@ export default function SitemapPage() {;
               Navigate our comprehensive website and discover all the AI-powered
               technology solutions, resources, and information available at Zion
               Tech Group.
-
-  ];
-
-
-
-
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
-      <Head>
-        <title>Sitemap | Zion Tech Group</title>
-
-
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
-              Site Map
-            </h1>
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
-              Navigate our comprehensive website and discover all the AI-powered
-              technology solutions, resources, and information available at Zion
-              Tech Group.
-
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Site Map;
@@ -669,10 +610,11 @@ export default function SitemapPage() {;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a
                 href='#main-pages'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
-                Explore Site;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </a>;
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'
+              >
+                Explore Site
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </a>
               <a
                 href='/search'
       {/* Main Pages */}
@@ -704,9 +646,6 @@ export default function SitemapPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
               <motion&& motion.div
                 key={page && page.href}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
-              <motion.div
-                key={page.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -765,14 +704,6 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group'
               >
                 <Link
                   href={category.href}
@@ -823,14 +754,6 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
-              <motion.div
-                key={service.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group'
               >
                 <Link
                   href={service.href}
@@ -879,14 +802,6 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group'
               >
                 <Link
                   href={resource.href}
@@ -937,14 +852,6 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
-              <motion.div
-                key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group'
               >
                 <a
                   href={link.href}
@@ -1001,58 +908,15 @@ export default function SitemapPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
-              <motion.div
-                key={contact.type}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
                 </h3>
                 <a
-                  href={contact && contact.action}
-                  target={
-                    contact && contact.action.startsWith('http') ? '_blank' : '_self'
-                  }
-                  rel={
-                    contact && contact.action.startsWith('http')
-                      ? 'noopener noreferrer'
-                      : ''
-                  }
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'>;
-                  {contact && contact.value}
-                </a>;
-              </motion && motion.div>;
-                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
-              >
-                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
-                <a
-                  href={contact.action}
-                  target={contact.action.startsWith('http') ? '_blank' : '_self'}
-                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                >
                   {contact.value}
                 </a>
               </motion.div>
             ))}
-      {/* Quick Navigation */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
-              Need Help Finding Something?;
-            </h2>;
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
-              Use our search functionality or contact us directly for assistance;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -1112,13 +976,6 @@ export default function SitemapPage() {;
               </Link>;
               <Link
                 href='/contact'
-  );
-  );
-  ),
-
-
-
-
   )
 }animate= {
   {
@@ -1140,7 +997,6 @@ export default function SitemapPage() {;
           </motion && motion.div>;
         </div>;
       </section>;
-
       <SmartFooter />;
     </div>;
   ),;
@@ -1160,11 +1016,6 @@ export default function SitemapPage() {;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion && motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1172,345 +1023,28 @@ export default function SitemapPage() {;
   opacity: 1, y: 0
 }transition= {
   {
-  )
-}
-      type: 'Address',
-      value: 'Middletown, DE',
-      action: 'https://maps.google.com/?q = Middletown, DE',
-    },
-  ];
-;
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
-      <Head>;
-        <title > Sitemap | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.";
-        />;
-        <meta property='og:title' content='Sitemap | Zion Tech Group' />;
-        <meta;
-          property='og:description';
-          content='Complete website sitemap and navigation guide.';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / sitemap' />      </Head>;
-      <SmartHeader />;
-      {/* Hero Section */}
-      <section className='pt - 32 pb - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
           >;
-            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
-              Site Map;
-            </h1>;
-            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
-              Navigate our comprehensive website and discover all the AI - powered;
-              technology solutions, resources, and information available at Zion;
-              Tech Group.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <a;
-                href='#main - pages';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
-              >;
-                Explore Site;
-                <ArrowRight className='w - 5 h - 5 ml - 2' />;
-              </a>;
-              <a;
-                href='/search';
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
-              >;
-                Search Site;
-                <Search className='w - 5 h - 5 ml - 2' />              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Main Pages */}
-      <section id='main - pages' className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Main Pages;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Core pages that provide essential information about our company;
-              and services;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
-              <motion.div;
-                key={page.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={page.href}
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {page.label}
-                    </h3>;
-                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {page.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Service Categories */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Service Categories;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Browse our comprehensive range of technology solutions organized;
-              by category;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
-              <motion.div;
-                key={category.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={category.href}
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {category.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {category.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Featured Services */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Featured Services;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
-              <motion.div;
-                key={service.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={service.href}
-                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <div className='flex items - center justify - between mb - 3'>;
-                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
-                      {service.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
-                  </div>;
-                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Resources & Tools */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Resources & Tools;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
-              <motion.div;
-                key={resource.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={resource.href}
-                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <div className='flex items - center justify - between mb - 3'>;
-                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {resource.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 60 text - xs leading - relaxed'>;
-                    {resource.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* External Resources */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              External Resources;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
-              <motion.div;
-                key={link.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <a;
-                  href={link.href}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {link.label}
-                    </h3>;
-                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {link.description}
-                  </p>                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Information */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-4xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Contact Information;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Get in touch with us for consultations, support, or to start your;
-              project;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
-              <motion.div;
-                key={contact.type}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
-              >;
-                <h3 className='text - lg font - bold text - white mb - 3'>;
-                  {contact.type}
-                </h3>;
-                <a;
-                  href={contact.action}
-                  target={
-                    contact.action.starts_with ('http') ? '_blank' : '_self';
-                  }
-                  rel={
-                    contact.action.starts_with ('http');
-                      ? 'noopener noreferrer';
-                      : '';
-                  }
-                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
-                  {contact.value}
-                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Quick Navigation */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Need Help Finding Something?;
             </h2>;
-            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
               Use our search functionality or contact us directly for assistance;
             </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
-                href='/search';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                href="/search";
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
               >;
                 Search Site;
-                <Search className='w - 5 h - 5 ml - 2' />;
+                <Search className="w-5 h-5 ml-2" />;
               </Link>;
               <Link;
-                href='/contact';
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+                href="/contact";
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
               >;
                 Contact Support;
-                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
+                <Mail className="w-5 h-5 ml-2" />;
+              </Link>;
             </div>;
           </motion.div>;
         </div>;
@@ -1521,4 +1055,3 @@ export default function SitemapPage() {;
   )
 
 }
-;

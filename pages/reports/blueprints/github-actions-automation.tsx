@@ -1,44 +1,4 @@
 import React from 'react';
-const GitHubActionsAutomationBlueprint: React.FC = () => {
-  const automation_workflows = [;
-    {
-
-
-
-      name: 'Continuous Integration',
-      description: 'Automated testing, building, and quality checks',
-      status: 'active',
-    },
-    {
-      name: 'Continuous Deployment',
-      description: 'Automated deployment to staging and production',
-      status: 'active',
-    },
-    {
-      name: 'Security Scanning',
-      description: 'Automated vulnerability and dependency scanning',
-      status: 'active',
-      frequency: 'daily',
-    },
-    {
-      name: 'Performance Testing',
-      description: 'Automated performance and load testing',
-      status: 'active',
-      frequency: 'weekly',
-    },
-    {
-      name: 'Content Generation',
-      description: 'Automated content creation and optimization',
-      status: 'active',
-      frequency: 'hourly',
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  const automationFeatures = [
-
     {
       name: 'Continuous Deployment'
       description: 'Automated deployment to staging and production'
@@ -74,11 +34,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'Deployment Frequency', value: '12 / day', target: '5 / day', status: 'exceeded' },
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' },
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
-    { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   ];
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -93,8 +48,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   }
 }
   };
-  const getFrequencyColor = (frequency: string) => {
-    switch (frequency) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -157,15 +110,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <p className="text - gray - 300 text - sm mb - 4">{workflow.description}</p>;
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (workflow.status)}`}>;
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {automationWorkflows.map((workflow, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
-
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -186,9 +130,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                   <span className="text-xs text-green-400">● {workflow.health}</span>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
         {/* Automation Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Features</h2>;
@@ -199,15 +140,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {automationFeatures.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -218,9 +150,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-green-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-            ))}
-          </div>
-        </div>
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -244,28 +173,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                       <td className="py - 3 px - 4">;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
                           {metric.status}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-white/20">
-                    <th className="text-left py-3 px-4 text-green-400">Metric</th>
-                    <th className="text-left py-3 px-4 text-green-400">Current Value</th>
-                    <th className="text-left py-3 px-4 text-green-400">Target</th>
-                    <th className="text-left py-3 px-4 text-green-400">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {performanceMetrics.map((metric, index) => (
-                    <tr key={index} className="border-b border-white/10">
-                      <td className="py-3 px-4 text-white">{metric.metric}</td>
-                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
-                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
-                      <td className="py-3 px-4">
-                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -372,5 +279,3 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       </div>
     </div>
   );
-}
-export default GitHubActionsAutomationBlueprint;

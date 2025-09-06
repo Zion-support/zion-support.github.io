@@ -37,10 +37,6 @@
     {
     }
   ]
-  return (
-              <br />
-              <span className="text-white">AI-Powered Digital Economies</span>
-            </h1>
               Built for the future of decentralized business.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
@@ -80,7 +76,6 @@
         </div>;
       </section>;
       {/* CTA Section */}
-
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

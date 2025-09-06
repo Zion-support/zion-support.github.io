@@ -1,7 +1,4 @@
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -50,7 +47,6 @@ function CountryServiceCard() {
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
-
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -75,8 +71,6 @@ function CountryServiceCard() {
     } else {
       return "8-24 hours"
     }
-  }
-
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
@@ -120,7 +114,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       // Default if no flag is found;
       "default": "🌐";
     };
-
     return emojiMap[countryName] || emojiMap["default"];
   };
 
@@ -138,17 +131,10 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     }
   };
 
-  return (
-    <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
     }`}>;
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
           <div className="flex items-center space-x-2">;
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country && country.country)}</span>;
-            <h3 className="text-lg font-semibold text-white truncate">{country && country.country}</h3>;
           </div>;
           {isPopular && (;
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>;
@@ -162,6 +148,3 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           Select Service;
         </Button>;
       </CardFooter>;
-}
-    </Card>);
-}

@@ -1,7 +1,3 @@
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
 interface Language {
@@ -103,22 +99,6 @@ export function LanguageThemeSelector() {;
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
-              onClick = {(,) => setSelectedLanguage(language && language.code),}
-            >;
-              <CardContent className='p-3 flex items-center justify-between'>;
-                <div className='flex items-center'>;
-                  <span className='text-xl mr-2'>{language && language.flag}</span>;
-                  <span>{language && language.name}</span>;
-                </div>;
-                {selectedLanguage === language && language.code && (;
-                  <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
-            <Card
-              key={language && language.code}
-              className={`cursor-pointer transition-all ${
-                selectedLanguage === language.code 
-                  ? "border-primary bg-primary/5" 
-                  : "border-border hover:border-primary/40"
-              }`}
             >;
               <CardContent className="p-3 flex items-center justify-between">;
                 <div className="flex items-center">;
@@ -131,14 +111,6 @@ export function LanguageThemeSelector() {;
               </CardContent>;
             </Card>;
           ))}
-        </div>
-      </div>
-      <div className='space-y-2'>
-        <h2 className='text-xl font-medium'>Choose theme</h2>
-        <p className='text-muted-foreground'>
-          Select your preferred appearance
-        </p>
-        <div className='flex gap-3 mt-4'>
           <Card
               theme === 'light'
                 ? 'border-primary bg-primary/5'
@@ -199,7 +171,6 @@ export function LanguageThemeSelector() {;
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
-            }`}
             onClick={() => setTheme('dark')}
           >;
             <CardContent className="p-3 flex flex-col items-center justify-center">;
@@ -294,5 +265,3 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
-
-

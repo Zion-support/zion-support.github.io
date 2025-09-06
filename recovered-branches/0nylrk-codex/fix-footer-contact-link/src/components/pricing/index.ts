@@ -5,4 +5,3 @@ export const Index = () => {
   return null;
 };
 
-export * from './TalentRateRecommender';

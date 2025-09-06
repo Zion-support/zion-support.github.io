@@ -60,15 +60,6 @@ export function ReferralLink(): any ({;
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-          Your Referral Link;
-        </CardTitle>;
-        <CardDescription>;
-          Share this link with others to earn rewards when they join and;
-          complete onboarding;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-  return (
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -92,8 +83,6 @@ export function ReferralLink(): any ({;
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
-            <p className="text-sm text-green-600 dark:text-green-500">
   const handleCopy = () => {
     onCopy()
     setCopied(true)
@@ -138,9 +127,6 @@ export function ReferralLink(): any ({;
               value={referralLink}
               readOnly
               className="font-mono text-sm"
-          {copied && (
-          
-          {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>

@@ -1,8 +1,3 @@
-        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
-        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <main className="container mx-auto px-6 py-12">
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -26,14 +21,6 @@
             </p>
           </header>
 
-          {/* Case Study Content */}
-          <div className="max - w-4xl mx - auto">;
-            {/* Company Overview */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
-                <p className="text-white/90 text-lg mb-4">
                   A large healthcare network serving multiple communities with hospitals, 
                   A large healthcare network serving multiple communities with hospitals,
 
@@ -116,7 +103,6 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
                     <p className="text-white/80">
-                      ML algorithms identify patterns, predict outcomes, and provide
                       personalized treatment recommendations.
                     </p>
                   </div>
@@ -132,7 +118,6 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
-                      Advanced predictive models forecast patient outcomes, readmission risks, 
                       Advanced predictive models forecast patient outcomes, readmission risks,
 
                       and resource requirements.
@@ -495,10 +480,6 @@ export default function CaseStudyPage(req, res) {
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  This case study demonstrates the real impact of data analytics transformation.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
                   >
@@ -721,8 +702,6 @@ export default function CaseStudyPage(req, res) {
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case - studies";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - purple - 400 / 50 transition - all duration - 300";
                   >;
                     View All Case Studies;
                   </Link>;
@@ -732,4 +711,3 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-    </>);

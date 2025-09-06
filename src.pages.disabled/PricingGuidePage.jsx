@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
-}
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
   return (
     <div>
@@ -32,12 +31,6 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-
-
-:src.pages.disabled/PricingGuidePage.jsx
-}
 }
 }
 }

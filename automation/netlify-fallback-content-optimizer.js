@@ -1,6 +1,3 @@
-  statusCode: 500;
-body: JSON && JSON.stringify ({
-  error: 'Fallback execution failed';
 
 message: error.message
 })
@@ -13,6 +10,9 @@ message: error.message
 
 exports.handler = async (_event, _context) => {
     // // // console.log('content-optimizer fallback executed locally'),
+#!/usr / bin / env node //Netlify Function Fallback: content - optimizer //This is a local fallback when the main function is unavailable try {
+  console.error ('Fallback execution error:', error);
+
     
     try {
         // Basic fallback logic
@@ -26,39 +26,6 @@ exports.handler = async (_event, _context) => {
 message: error && error.message 
 }) 
 
-        console.error('Fallback execution error:', error)
-        return {
-            statusCode: 500
-            body: JSON.stringify({
-                error: 'Fallback execution failed'
-
-                message: error.message
-            })
-    
-;
-
-        console.error('Fallback execution error:', error)
-        return {
-            statusCode: 500
-            body: JSON.stringify({
-                error: 'Fallback execution failed'
-
-                message: error.message
-            })
-            status_code: 200,
-            body: JSON.stringify ({
-                message: 'content - optimizer executed locally as fallback',
-                timestamp: new Date ().toISOString (),
-                fallback: true;
-            });
-        },
-        return result;
-    } catch (error) {
-        console.error ('Fallback execution error:', error),
-        return {
-            status_code: 500,
-            body: JSON.stringify ({
-                error: 'Fallback execution failed',
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;

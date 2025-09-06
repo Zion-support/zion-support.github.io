@@ -69,12 +69,12 @@ export const CreateResumeForm = ({
             </Button>
           </div>
           <Button
+          
             variant="ghost"
             onClick={onCancel}
             className="mt-4"
           >
           </Button>
-        </div>
       </CardContent>
     </Card>
   )
@@ -93,5 +93,3 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 };
 
   );
-};
-

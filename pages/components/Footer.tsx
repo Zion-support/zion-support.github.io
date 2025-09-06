@@ -13,92 +13,6 @@ import {
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-import React from 'react';
-import Link from 'next/link';
-
-
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
-
-const aiServiceCategories = [
-  { title: 'Machine Learning', icon: Brain, count: 25 },
-  { title: 'Computer Vision', icon: Eye, count: 18 },
-  { title: 'Natural Language', icon: MessageSquare, count: 20 },
-  { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
-  { title: 'Robotics', icon: Settings, count: 8 },
-  { title: 'Quantum AI', icon: Code, count: 5 }
-];
-
-const itServiceCategories = [
-  { title: 'Cloud Computing', icon: Cloud, count: 30 },
-  { title: 'Cybersecurity', icon: Shield, count: 25 },
-  { title: 'DevOps', icon: Settings, count: 20 },
-  { title: 'Data Management', icon: HardDrive, count: 15 },
-  { title: 'Network Security', icon: Lock, count: 18 },
-  { title: 'Infrastructure', icon: Building, count: 22 }
-];
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div>
-                <div className="text-xl font-bold">Zion Tech Group</div>
-                <div className="text-sm text-gray-400">AI & Technology Solutions</div>
-              </div>
-            </div>
-            
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading provider of AI services, IT solutions, and innovative micro SaaS platforms. 
-              We help businesses scale, automate, and innovate with cutting-edge technology.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
 const footerSections = [
   {
     title: 'Services',
@@ -191,56 +105,6 @@ const microSaasCategories = [
   { title: 'Development', icon: Code, count: 14 }
 ];
 
-  const footerLinks = {
-    services: [
-      { name: "AI Services", href: "/ai-services" },
-      { name: "IT Services", href: "/it-services" },
-      { name: "Micro SaaS", href: "/micro-saas" },
-      { name: "Cloud Solutions", href: "/cloud-solutions" },
-      { name: "Cybersecurity", href: "/cybersecurity" },
-      { name: "Database Solutions", href: "/database-solutions" },
-    ],
-    solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" },
-      { name: "Startup Solutions", href: "/startup-solutions" },
-      { name: "Industries", href: "/industries" },
-      { name: "Custom Development", href: "/custom-development" },
-      { name: "Digital Transformation", href: "/digital-transformation" },
-      { name: "Consulting", href: "/consulting" },
-    ],
-    company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Careers", href: "/careers" },
-      { name: "Case Studies", href: "/case-studies" },
-      { name: "News", href: "/news" },
-      { name: "Partners", href: "/partners" },
-    ],
-    resources: [
-      { name: "Blog", href: "/blog" },
-      { name: "Documentation", href: "/docs" },
-      { name: "API Documentation", href: "/docs/api" },
-      { name: "Tutorials", href: "/tutorials" },
-      { name: "White Papers", href: "/white-papers" },
-      { name: "Webinars", href: "/webinars" },
-    ],
-    legal: [
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
-      { name: "Security", href: "/security" },
-      { name: "Compliance", href: "/compliance" },
-      { name: "Accessibility", href: "/accessibility" },
-    ],
-  };
-
-  const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "GitHub", href: "#", icon: Github },
-  ];
 
   const footerLinks = {
     services: [
@@ -340,7 +204,6 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
-
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -350,12 +213,6 @@ const microSaasCategories = [
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-          </div>
-          {/* Services */}
-          <div>
-          </div>
-          {/* Solutions */}
-          <div>
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -397,7 +254,6 @@ const microSaasCategories = [
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
-
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -405,15 +261,6 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-              </ul>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-
-
-
-
-
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -519,7 +366,6 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-
             
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -533,6 +379,11 @@ const microSaasCategories = [
               </Link>
             </div>
 
+            
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+            
+origin/main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

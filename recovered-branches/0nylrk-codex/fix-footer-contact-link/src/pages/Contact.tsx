@@ -26,10 +26,6 @@ import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export default function Contact() {
   const [formData, setFormData] = useState({
-
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
@@ -40,8 +36,6 @@ export default function Contact() {
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -56,7 +50,7 @@ export default function Contact() {
       // Simulate form submission
       setIsSubmitting(true);
       setTimeout(() => {
-        setIsSubmitting(false);
+        setIsSubmitting(false),
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
@@ -83,7 +77,6 @@ export default function Contact() {
         })
       }
     }
-  }
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -99,7 +92,7 @@ export default function Contact() {
       }
       return Promise.resolve()
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
@@ -116,7 +109,6 @@ export default function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData && formData.email}
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example && example.com"
@@ -235,7 +227,6 @@ export default function Contact() {
               </div>;
             </div>;
           </div>;
-
                   Email Support;
                 </a>;
               </Button>;
@@ -243,17 +234,10 @@ export default function Contact() {
           </div>;
         </div>;
       </main>;
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (;
-        <ChatAssistant
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
-    </AppLayout>
-  )
 }
       {/* Chat Assistant Modal */}
       {isChatOpen && (
@@ -269,4 +253,26 @@ export default function Contact() {
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
+;
+      {/* Chat Assistant Modal */}
+      {isChatOpen && (;
+        <ChatAssistant;
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          recipient={{;
+            id:'ai-assistant',;
+            name:'AI Assistant',;
+            avatarUrl:'https://placehold.co/64x64?text=AI',;
+            role:'Support Bot';
+          }}          onSendMessage={handleSendMessage}
+        />;
+      )}
+    </AppLayout>;
+  ),; const [isSubmitting, setIsSubmitting] = useState (false);
+const [isChatOpen, setIsChatOpen] = useState (false);
+}catch (error) {
+  if (error instanceof z.ZodError) {
+  toast ({
+  title: "Form Validation Error";
+description: error.errors[0].message;
 }

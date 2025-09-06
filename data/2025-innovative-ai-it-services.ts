@@ -103,19 +103,6 @@
       'Research collaboration tools'
     ]
     benefits: [
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
-    ],
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic',
-    icon: '🏥',
-    color: 'from-blue-500 to-indigo-600',
-    popular: true,
-    launchDate: '2025-02-15',
-    customers: 350,
-    rating: 4.9,
-    reviews: 189,
-  },;
-];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
-
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
     name: 'AI Healthcare Diagnostic Platform',
@@ -124,33 +111,6 @@
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
-    price: {
-      monthly: 1599,
-      yearly: 15990,
-      currency: 'USD',
-      trial_days: 60,
-      setup_time: '1 month',
-    },
-    features: [;
-      'AI - powered medical imaging analysis',
-      'Early disease detection',
-      'Personalized treatment recommendations',
-      'Patient outcome prediction',
-      'Medical record analysis',
-      'Drug interaction checking',
-      'Clinical decision support',
-      'Telemedicine integration',
-      'Compliance automation',
-      'Research collaboration tools',
-    ],
-    benefits: [;
-      'Improve diagnostic accuracy by 99.9%',
-
-      'Reduce diagnostic errors by 95%',
-      'Enable early disease detection',
-      'Improve patient outcomes by 80%',
-      'Reduce healthcare costs by 40%',
-    ],
     targetAudience: [
       'Hospitals and clinics'
       'Medical imaging centers'
@@ -185,10 +145,6 @@
     support:
       '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.'
     compliance: [
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
-    ]
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic'
-    icon: ''
     color: 'from-blue-500 to-indigo-600'
     popular: true
     launchDate: '2025-02-15'
@@ -196,14 +152,11 @@
     rating: 4.9
     reviews: 189
   }
-    icon: '',
-    color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 15',
     customers: 350,
     rating: 4 && 4.9,
     reviews: 189,
-  },
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
 ];      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research';
@@ -252,7 +205,6 @@
     popular: true;
     launch_date: '2025 - 02 - 15';
     customers: 350;
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -730,4 +682,3 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     reviews: 189;
   }
 ];
-;

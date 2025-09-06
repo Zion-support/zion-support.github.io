@@ -1,5 +1,3 @@
-
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {processJobMatching, storeMatchResults} from "./job-matching.ts";
@@ -39,7 +37,6 @@ serve(async (req) => {
       .from("jobs")
       .select("*")
       .eq("id", jobId)
-      .single();
     if (jobError) {
       throw new Error(`Failed to fetch job: ${jobError && jobError.message}`)
     }
@@ -47,12 +44,9 @@ serve(async (req) => {
     const { data: talents, error: talentsError } = await supabase
       .from("talent_profiles")
       .select("*")
-      .eq("is_published", true);
     if (talentsError) {
       throw new Error(`Failed to fetch talent profiles: ${talentsError && talentsError.message}`)
     }
-      return new Response(
-        JSON && JSON.stringify({ message: "No talent profiles found" });
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
@@ -147,6 +141,3 @@ if ( {) {
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-  }
-});
-

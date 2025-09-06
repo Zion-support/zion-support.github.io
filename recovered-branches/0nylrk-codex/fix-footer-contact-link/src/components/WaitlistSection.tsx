@@ -8,7 +8,6 @@ import {Label} from "@/components/ui/label";
 import {useToast} from "@/hooks/use-toast";
 import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {;
-
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -28,21 +27,18 @@ export function WaitlistSection() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
 
-
-
     
     setIsSubmitting(true),
     
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
-      setEmail("");
-      setName("");
-      setRole("");
+      setEmail(""),
+      setName(""),
+      setRole(""),
       setAgreeTerms(false)
     } catch (error) {
       toast({
@@ -53,7 +49,6 @@ export function WaitlistSection() {
       setIsSubmitting (false);
     }
   }
-
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
@@ -104,61 +99,24 @@ export function WaitlistSection() {
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
-          <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
-            <div className="space - y-2">;
-              <Label html_for="name">Full Name</Label>;
               <Input;
                 id="name";
                 placeholder="John Smith";
                 value={name}
-                on_change={(e) => set_name (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for="email">Email Address</Label>;
               <Input;
                 id="email";
                 type="email";
                 placeholder="you@company.com";
                 value={email}
-                on_change={(e) => set_email (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for="role">Your Role</Label>;
               <Input;
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
-                on_change={(e) => set_role (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="flex items - center space - x-2">;
-              <Checkbox;
-                id="terms";
-                checked={agree_terms}
-                onCheckedChange={(checked) => setAgreeTerms (checked as boolean)}
-              />;
-              <Label;
-                html_for="terms";
-                className="text - sm text - zion - slate font - normal";
               >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
-            <Button;
-              type="submit";
-              disabled={is_submitting}
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-            >;
-              {is_submitting ? "Processing..." : "Complete Registration"}
             </Button>;
           </form>;
         </div>;
       </div>;
-}
-    </section>);
-}

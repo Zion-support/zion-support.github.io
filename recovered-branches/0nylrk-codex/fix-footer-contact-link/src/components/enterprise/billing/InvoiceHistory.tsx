@@ -1,6 +1,4 @@
 
-import React from "react",
-import {
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -14,41 +12,19 @@ export function InvoiceHistory() {
       date: "May 1, 2025",
       amount: "$1,999.00",
 
-      status: "paid",
-      period: "May 2025"},
+      id: "INV-1234"
+      date: "May 1, 2025";
+      amount: "$1,999.00";
+      status: "paid"
+      period: "May 2025"}
     {
       id: "INV-1233"
       date: "Apr 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Apr 2025"}
-    {
-      id: "INV-1232"
-      date: "Mar 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Mar 2025"}
-    {
-      id: "INV-1231"
-      date: "Feb 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Feb 2025"}
-    {
-      id: "INV-1230"
-      date: "Jan 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Jan 2025"}
-    {
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
-  }
-  const getBadgeForStatus = (status: string) => {
-    switch (status) {
 
   return (
     <div className="space-y-6">;
@@ -184,14 +160,29 @@ function InvoiceHistory() {
                       on_click={() => handleDownloadInvoice (invoice.id)}
                     >;
                       <Download className="h - 3.5 w - 3.5" />;
+            {invoices.map((invoice) => (;
+              <TableRow key={invoice.id}>;
+                <TableCell className="font-medium">{invoice.id}</TableCell>;
+                <TableCell>{invoice.date}</TableCell>;
+                <TableCell>{invoice.period}</TableCell>;
+                <TableCell>{invoice.amount}</TableCell>;
+                <TableCell>{getBadgeForStatus(invoice.status)}</TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex justify-end gap-2">;
+                    <Button;
+                      variant="outline";
+                      size="sm";
+                      className="h-8 gap-1";
+                      onClick={() => handleDownloadInvoice(invoice.id)}
+                    >;
+                      <Download className="h-3.5 w-3.5" />;
                       PDF;
                     </Button>;
                     <Button;
                       variant="outline";
                       size="sm";
-                      className="h - 8 gap - 1";
+                      className="h-8 gap-1";
                     >;
-                      <FileText className="h - 3.5 w - 3.5" />;
                       View;
                     </Button>;
                   </div>;
@@ -327,6 +318,3 @@ export function InvoiceHistory() {;
           Next;
         </Button>;
       </div>;
-}
-    </div>);
-}

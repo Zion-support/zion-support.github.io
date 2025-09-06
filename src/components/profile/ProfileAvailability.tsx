@@ -1,4 +1,3 @@
-
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
@@ -29,7 +28,6 @@ export function ProfileAvailability({
       default:;
         return '' }
   }
-  return (
         <Badge 
           variant="outline" 
         >
@@ -69,7 +67,6 @@ import { Calendar } from 'lucide-react';
 
 interface ProfileAvailabilityProps {
   availability: Availability
-}
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -198,8 +195,6 @@ export function ProfileAvailability(): any ({;
                   <Clock className="h-4 w-4 text-zion-cyan" />;
                   <span>{slot && slot.hours}</span>;
                 </div>;
-              ))}
-            </div>;
           </div>;
         )}
       )}
@@ -210,6 +205,12 @@ export function ProfileAvailability(): any ({;
         </div>
     </div>;
   );
+};
+}
+      )};
+    </div>;
+  );
+};
 }
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
@@ -278,4 +279,6 @@ export function ProfileAvailability(): any ({;
         </div>)}
     </div>);
 }
+}
+;
 

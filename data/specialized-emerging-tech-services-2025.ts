@@ -31,16 +31,11 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-
-export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
-  [
-    // AR/VR & Metaverse Services
     {
       id: 'ar-vr-metaverse-platform'
       name: 'AR/VR Metaverse Platform'
@@ -554,11 +549,6 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications';
       'Advanced pattern recognition_custom neuromorphic algorithms';
     ];
-    color: 'from-pink-600 to-rose-600', textColor: 'text-pink-400'
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform', marketPosition: 'Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month)'
-    targetAudience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions'
-    trialDays: 30, setupTime: '3 weeks'
-    category: 'Neuromorphic Computing', realService: true
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'

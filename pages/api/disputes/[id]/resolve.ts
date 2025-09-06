@@ -22,9 +22,6 @@ export default async function handler(
     if (!dispute) return res.status($1).json({ $2 });
     const { resolutionSummary, status } = req.body |{}
     const now = new Date().toISOString();
-
-    if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
-      return res && res.status(400).json({ error: "Invalid status" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -74,7 +71,6 @@ export default async function handler(req, res) {
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(200).json({ dispute });
-  }
 }
   } catch (error) {
     console.error("Error:", error);

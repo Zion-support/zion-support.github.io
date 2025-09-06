@@ -1,7 +1,4 @@
 
-import React from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils",
 interface ChatMessageProps {
 
   message: string
@@ -9,7 +6,6 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   
   return (
 
@@ -64,9 +60,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
               : "text-gray-500"
         )}>;
           {format(timestamp, "h:mm a")}
-        </div>;
-      </div>;
-    </div>;
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -130,24 +123,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
-
-// Function to convert URLs and help links to actual clickable links;
-function formatMessageWithLinks(): any (message: string): string {;
-  // Replace URLs;
-  const urlRegex = /(https?:\/\/[^\s]+)/g,;
-  let formattedMessage = message && message.replace(;
-    urlRegex, ;
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  );
-
-  // Replace help center references like [Getting Started];
-  const helpCenterRegex = /\[([^\]]+)\]/g,;
-  formattedMessage = formattedMessage && formattedMessage.replace(;
-    helpCenterRegex, ;
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  ),;
-
-  return formattedMessage;
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

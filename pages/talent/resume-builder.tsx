@@ -1,10 +1,4 @@
 
-  const [summary, setSummary] = useState('');
-  const [experience, setExperience] = useState('');
-  const [skillsText, setSkillsText] = useState('');
-
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
-
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone])
@@ -15,10 +9,6 @@
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
-
-      <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
-
-      <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -36,7 +26,6 @@
           </label>
         </div>
       </section>
-
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -44,7 +33,6 @@
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
-
 
               defaultPrompt={generateSummaryPrompt  } catch (error) {
     console.error("Error:", error);
@@ -82,9 +70,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            />
-          </div>
-        </div>
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
       <section className="mb-8">
@@ -110,8 +95,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          />
-        </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
       </section>
       <section className="mb-8">
@@ -143,4 +126,3 @@
       </section>
     </div>
   )
-},

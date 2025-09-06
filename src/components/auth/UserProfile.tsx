@@ -12,23 +12,39 @@
   const handleSignIn = () =>: any {
     router.push ('/auth / login');
   }
-  // Check condition
-if ( {) {
-  $2
 }
-    return (
-      <Card className='w - full max - w-sm'>;
-        <CardContent className='p - 6'>;
-          <div className='animate - pulse space - y-4'>;
-            <div className='h - 4 bg - muted rounded'></div>;
-            <div className='h - 4 bg - muted rounded w - 3/4'></div>;
-          </div>;
-        </CardContent>;
-      </Card>);
+;
+export default function UserProfile({ onUserChange }: UserProfileProps) {;
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  useEffect(() => {;
+    // Get initial session;
+    const getInitialSession = async () => {;
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+      setLoading(false);
+      onUserChange?.(session?.user ?? null);
+    };
+
+    getInitialSession();
+    // Listen for auth changes;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(;
+      (event: AuthChangeEvent, session: Session | null) => {;
+        setUser(session?.user ?? null);
+        setLoading(false);
+        onUserChange?.(session?.user ?? null),
+      }
+    );
+    return () => subscription.unsubscribe();
+  }, [onUserChange]);
+  const handleSignOut = async () => {;
+    await supabase.auth.signOut();
+  };
+
+  const handleSignIn = () => {
+    router.push('/auth/login');
   }
-  if (!user) {
-    return (
-  if (loading) {
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -38,8 +54,6 @@ if ( {) {
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-          <Button onClick={handleSignIn} className='w-full'>;
-            <LogIn className='h-4 w-4 mr-2' />;
             Sign In;
           </Button>;
         </CardContent>;
@@ -140,5 +154,3 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
-  )
-} 

@@ -1,57 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Brain
-  Rocket
-  Dna
-  Globe
-  Shield
-  Wifi
-  Package
-  Bot
-  Car
-  Building2
-  DollarSign
-  Monitor
-  Users
-  Cpu
-  Zap
-  Atom
-  Database
-  Cloud
-  Lock
-  Code;
-} from 'lucide-react';
 import Link from 'next/link';import {
   Menu,
   X,
@@ -111,38 +57,6 @@ import Link from 'next/link';
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
-  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
-} from 'lucide-react';
-import Link from 'next / link';
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const navigation_items = [;
-    {
-      name: 'Home',
-      href: '/',
-      icon: null,
-    },    {      icon: null;
-    }
-    {
-      name: 'AI Services',
-      href: '#',
-      icon: Brain,
-      description: 'Cutting - edge AI solutions',
-      dropdown: [;
-        {
       description: 'Benchmarks & vendor references'
     }
     {
@@ -176,7 +90,6 @@ import Link from 'next / link';
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
-
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -226,8 +139,6 @@ import Link from 'next / link';
               </div>;
             </Link>;
           </motion && motion.div>;
-                  </Link>
-                )}
                 {/* Dropdown Menu */}
                 {item && item.dropdown && (;
                   <AnimatePresence>;
@@ -281,17 +192,11 @@ import Link from 'next / link';
           </div>
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
-
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-
 
 
 
@@ -364,20 +269,6 @@ import Link from 'next / link';
       </AnimatePresence>;
     </nav>;
   );
-};
-
-export default UltraAdvancedNavigation;  );
-}
-export default UltraAdvancedNavigation;  )
-}
-};
-
-export default UltraAdvancedNavigation;  );
-};
-export default UltraAdvancedNavigation;  )
-}
-export default UltraAdvancedNavigation;
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -503,5 +394,4 @@ export default UltraAdvancedNavigation;
 export default UltraAdvancedNavigation);
 }
 ;
-export default UltraAdvancedNavigation;
 export default UltraAdvancedNavigation;

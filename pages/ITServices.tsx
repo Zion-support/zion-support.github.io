@@ -1,5 +1,3 @@
-import React from 'react';
-import Layout from '../components/Layout';
 
 
 class ErrorBoundary extends React.Component {
@@ -14,12 +12,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-import Layout from '../components/Layout';
-
 export default function ITServices() {
   return (
     <Layout
@@ -39,7 +31,6 @@ export default function ITServices() {
           </div>
         </div>
       </div>
-    </Layout>
 export default function ITServices() {;
   return (
     <Layout
@@ -86,12 +77,6 @@ function ITServices() {
           </div>;
         </div>;
       </div>;
-}
-}
-    </Layout>);
-}
-
-}
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';

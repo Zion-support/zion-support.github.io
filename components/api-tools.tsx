@@ -48,18 +48,6 @@ import {
   ExternalLink,
   Play,
   BookOpen,
-  Github,;
-  Terminal,;} from 'lucide-react';import { ;
-  Code;
-  Database
-  Globe
-  Shield
-  Zap
-  Bot
-  BarChart3
-
-
-
   Code;
   Database,
   Globe,
@@ -75,39 +63,6 @@ import {
   Play;
   BookOpen;
   Github;
-        free: '1,000 operations/month'
-        pro: '$119/month'
-        enterprise: 'Custom'
-      }
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
-      website: 'https://encrypt.api'
-      docs: 'https://docs.encrypt.api'
-      github: 'https://github.com/encrypt-api'
-      status: 'Live'
-      users: '4,200+'
-      responseTime: '<20ms'
-    }
-  ];
-  const categories = [
-    'All'
-    'Development'
-    'Data'
-    'Location'
-    'Security'
-    'Integration'
-    'AI/ML'
-    'Analytics'
-  ];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-    'All',
-    'Development',
-    'Data',
-    'Location',
-    'Security',
-    'Integration',
-    'AI / ML',
-    'Analytics',
-
   ];
   const [selected_category, setSelectedCategory] = React.useState ('All');
 ;
@@ -188,15 +143,11 @@ import {
                 }`}
               >;
                 {category}
-              </button>;
-            ))}
 
           </div>;
         </div>;
       </section>;
 
-
-      {/* API Tools Grid */}
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -225,17 +176,11 @@ import {
                           <Star className='w - 4 h - 4 fill - current' />;
                           <span className='ml - 1 text - sm font - medium'>;
                             {tool.rating}
-                        Visit API
-                      </Button>
-                      <Button
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400">;
                         <BookOpen className="w-4 h-4 mr-2" />;
                       </Button>;
                       <Button
-
-      {/* Developer Resources */}
-
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -294,8 +239,6 @@ import {
           </div>
         </div>
       </section>
-}
-
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -308,22 +251,15 @@ import {
               with our APIs.;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-            <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>;
-              <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>;
-                <BookOpen className='w-8 h-8 text-indigo-400' />;
               </div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
                 Comprehensive Documentation;
               </h3>;
-              <p className='text-gray-400 mb-6'>;
                 Detailed API references, code examples, and integration guides;
                 for every service.;
               </p>;
               <Button href='/docs' variant='outline' size='sm'>;
                 Explore Docs;
-                <ArrowRight className='w-4 h-4 ml-2' />              </Button>;
             </Card>;
 
             <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>;
@@ -333,13 +269,11 @@ import {
               <h3 className='text-xl font-bold text-white mb-4'>;
                 Interactive Playground;
               </h3>;
-              <p className='text-gray-400 mb-6'>;
                 Test APIs directly in your browser with our interactive testing;
                 environment.;
               </p>;
               <Button href='/playground' variant='outline' size='sm'>;
                 Try Playground;
-                <ArrowRight className='w-4 h-4 ml-2' />;
               </Button>;
             </Card>;
 
@@ -350,20 +284,16 @@ import {
               <h3 className='text-xl font-bold text-white mb-4'>;
                 Open Source SDKs;
               </h3>;
-              <p className='text-gray-400 mb-6'>;
                 Official SDKs and client libraries for popular programming;
                 languages and frameworks.;
               </p>;
               <Button href='/sdk' variant='outline' size='sm'>;
                 Browse SDKs;
-                <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />;
-                <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />;
               </Button>;
             </Card>;
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
 
       {/* CTA Section */}
@@ -399,20 +329,6 @@ import {
         </div>
       </section>
     </>
-);
-}
-              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'>              href="/docs";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl";
-              View Documentation;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
-  );
-}
   );
 }
   );

@@ -105,6 +105,7 @@ export type ServiceVariant =
   | 'industrial-futuristic'
   | 'neural-futuristic',
   | 'quantum - hologographic';
+| 'quantum - hologographic';
   | 'quantum - advanced';
   | 'holographic - advanced';
   | 'neural - quantum';

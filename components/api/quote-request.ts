@@ -1,7 +1,4 @@
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createClient } from "@supabase/supabase-js";
-import OpenAI from "openai";
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
@@ -39,13 +36,6 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
-
-  const { service, description, timeline, budgetRange, email } = req.body || {};
-  if (!service || !description || !email) {
-    return res.status(400).json({ message: 'Missing required fields' });
-  }
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';

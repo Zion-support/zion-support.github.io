@@ -1,13 +1,4 @@
 
-  message?: string;
-  duration?: number
-}
-interface ToastProps {
-  toast: Toast
-  onRemove: (id: string) => void
-}
-
-
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -29,23 +20,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-        return <CheckCircle className='w-5 h-5 text-green-400' />;
-      case 'error':;
-        return <AlertCircle className='w-5 h-5 text-red-400' />;
-      case 'warning':;
-        return <AlertCircle className='w-5 h-5 text-yellow-400' />;
-      case 'info':;
-        return <Info className='w-5 h-5 text-blue-400' />;
-      default:;
-        return <Info className='w-5 h-5 text-blue-400' />;    }      case 'error':;
-        return <AlertCircle className="w-5 h-5 text-red-400" />;
-      case 'warning':;
-        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
-      case 'info':;
-        return <Info className="w-5 h-5 text-blue-400" />;
-      default: return <Info className="w-5 h-5 text-blue-400" />;
-    }
-
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
@@ -55,13 +29,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
-
-  };
-
-  const getBorderColor = () => {
-    switch (toast.type) {
-      case 'success':
-  };
 
   const getBorderColor = () => {;
     switch (toast && toast.type) {;
@@ -76,10 +43,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       default:;
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20';
     }
-  }
-  const getBackgroundColor = () => {
-    switch (toast.type) {
-      case 'success':
         return 'bg-green-500/10';
       case 'error':;
         return 'bg-red-500/10';
@@ -90,15 +53,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       default:;
         return 'bg-blue-500/10';
     }
-  }
-    >
-      <div className='flex items-start space-x-3'>
-        <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
-        <div className='flex-1 min-w-0'>
-          <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>
-          {toast.message && (
-            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}    }
-  }
   };
 
 
@@ -110,7 +64,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           {toast && toast.message && (;
             <p className='mt-1 text-sm text-white/70'>{toast && toast.message}</p>          )}    }
   };
-
   return (
     <motion&& motion.div
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -156,73 +109,15 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
-          transition={{ duration: toast.duration |5000, ease: "linear" }}
-        />
-      </div>
-    </motion.div>
-  )
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-3">
-      <AnimatePresence>
-        {toasts.map((toast) => (
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
-  )
-};
-
-interface ToastContainerProps {;
-  toasts: Toast[],;
-  onRemove: (id: string) => void;
-}
-
-export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {;
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-3">;
-      <AnimatePresence>;
-        {toasts && toasts.map((toast) => (;
-          <ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
-        ))}
-      </AnimatePresence>
-    </div>
-  );  )
-}
-// Hook for managing toasts
-export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
-  const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id }
-    setToasts(prev => [...prev, newToast]);
-  const removeToast = (id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }
-  const showSuccess = (title: string, message?: string) => {
-    addToast({ type: 'success', title, message });
-  }
-  const showError = (title: string, message?: string) => {
-    addToast({ type: 'error', title, message });
-  }
-  const showInfo = (title: string, message?: string) => {
-    addToast({ type: 'info', title, message });
-  }
-  const showWarning = (title: string, message?: string) => {
-    addToast({ type: 'warning', title, message });
-  }
-  return {
-    toasts
-    showSuccess
-    showError
-    showInfo
-    showWarning
-    removeToast
-  }
       </AnimatePresence>;
     </div>;
   );  );
@@ -271,8 +166,6 @@ export const useToast = () => {;
     showInfo;
     showWarning;
     removeToast}
-}
-
     <div className='fixed top - 4 right - 4 z - 50 space - y-3'>;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
@@ -299,63 +192,3 @@ export const useToast = () => {;
       </div>;
     </motion.div>);
 }
-;
-interface ToastContainerProps {
-  toasts: Toast[],
-  on_remove: (id: string) => void;
-}
-export const ToastContainer: React.FC < ToastContainerProps> = ({ toasts, on_remove }) => {
-  return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-3">;
-      <AnimatePresence>;
-        {toasts.map ((toast) => (
-          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
-      </AnimatePresence>;
-    </div>));
-}
-;
-// Hook for managing toasts;
-export const use_toast = () =>: any {
-  const [toasts, set_toasts] = useState < Toast[]>([]);
-;
-  const add_toast = (toast: Omit < Toast, 'id'>) =>: any {
-    const id = Math.random ().to_string (36).substr (2, 9);
-    const new_toast = { ...toast, id }
-    set_toasts (prev => [...prev, new_toast]);
-;
-  const remove_toast = (id: string) =>: any {
-    set_toasts (prev => prev.filter (toast => toast.id !== id));
-  }
-;
-  const show_success = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'success', title, message });
-  }
-;
-  const show_error = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'error', title, message });
-  }
-;
-  const show_info = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'info', title, message });
-  }
-;
-  const show_warning = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'warning', title, message });
-  }
-;
-  return {
-    toasts,
-    show_success,
-    show_error,
-    show_info,
-    show_warning,
-    remove_toast,
-  }
-}    toasts;
-    show_success;
-    show_error;
-    show_info;
-    show_warning;
-    remove_toast}
-}
-;

@@ -1,8 +1,3 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react',;
-export default function AIAutomationTrends2025() {;
-import Head from 'next/head',
 import React from 'react',
 export default /**
  * AIAutomationTrends2025 - Function description
@@ -293,17 +288,6 @@ function AIAutomationTrends2025() {
                 </a>;
                 <a
                   href='#'
-                  className='px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors'>;
-                  LinkedIn;
-                </a>;
-                  Email;
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </main>;
-      </div>;
-
 };
 ;
   } catch (error) {

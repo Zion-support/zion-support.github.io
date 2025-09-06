@@ -2,7 +2,6 @@
 module.exports = next_config;
 ;
 
-
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',

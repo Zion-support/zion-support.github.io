@@ -1,5 +1,3 @@
-export default function VendorRegisterPage() {
-export default function VendorRegisterPage() {;
   const [loading, setLoading] = useState(false);
 
   const [message, setMessage] = useState<string | null>(null);
@@ -8,7 +6,6 @@ export default function VendorRegisterPage() {;
     e && e.preventDefault();
     setLoading(true);
     setMessage(null);
-
             .map(s => s.trim())
             .filter(Boolean)
           caseStudies: []
@@ -40,10 +37,6 @@ export default function VendorRegisterPage() {;
     } catch (err: any) {
       setMessage(err.message)
     } finally {
-  return (
-    }
-  }
-  return (
       set_loading (false);
     }
   }

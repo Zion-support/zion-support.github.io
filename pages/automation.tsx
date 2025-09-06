@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next / head';
 import {
   RefreshCw,
   Zap,
@@ -38,61 +37,6 @@ function AutomationPage() {
   const benefits = [
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import {;
-  RefreshCw,;
-  Zap,;
-  Bot,;
-  Workflow,;
-  ArrowRight,;
-  Check,;
-  BarChart3,;
-} from 'lucide-react';
-export default function AutomationPage() {;
-  const features = [;
-    {;
-      icon: <Workflow className='w-8 h-8 text-white' />,;
-      title: 'Workflow Automation',;
-      description: 'Create complex workflows with drag-and-drop interface',;
-    },;
-    {;
-      icon: <Bot className='w-8 h-8 text-white' />,;
-      title: 'AI-Powered Bots',;
-      description: 'Intelligent automation agents that learn and adapt',;
-    },;
-    {;
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Process Analytics',;
-      description: 'Real-time insights into your automation performance',;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Smart Triggers',;
-      description: 'Automated responses based on events and conditions',;
-    },;
 export default function AutomationPage() {
   const features = [
     {
@@ -162,18 +106,12 @@ export default function AutomationPage() {
     'Real - time monitoring',
     'Custom integration support',  ];
 ;
-  return (
               Automation Hub
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
               AI-powered workflow automation platform that streamlines your
               business processes and increases efficiency.
             </p>
-              <a
-                href="/contact" className="shadow-2xl shadow-blue-500/25">
-                Start Automating
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </a>
               <a
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
@@ -183,17 +121,6 @@ export default function AutomationPage() {
           </div>
         </section>
         {/* Features Section */}
-        <section className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-                Automation Features
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Powerful tools to automate any business process
-              </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              {features.map((feature, index) => (
                 <div
                   key={index}
                   className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -212,18 +139,11 @@ export default function AutomationPage() {
                 Powerful tools to automate any business process
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
-                  </h3>
-
 
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
@@ -299,7 +219,10 @@ export default function AutomationPage() {
           </div>
         </section>
 
-
+        {/* CTA Section */}
+        <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

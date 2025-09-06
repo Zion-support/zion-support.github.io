@@ -1,30 +1,3 @@
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/services/ai-email-responder-pro'
-    marketPosition:
-      'Alternative to Front/Superhuman add-ons with deeper AI and governance.'
-    targetAudience: 'Sales, Success, Support, Ops'
-    trialDays: 14
-    setupTime: '2 hours'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Gmail/O365 APIs', 'OpenAI/Groq', 'Next.js']
-    integrations: ['Gmail', 'Outlook', 'Salesforce', 'HubSpot', 'Zendesk']
-    useCases: ['Inbound triage', 'Follow-ups', 'NPS outreach']
-    roi: 'Reduce first response time by 60% and improve CSAT by 20%+'
-    competitors: ['Superhuman AI', 'Front Workflows']
-    marketSize: '$10B+ communications AI'
-    growthRate: '25% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'OAuth, vector memory, policy guardrails'
-    launchDate: '2025-10-15'
-    customers: 24
-    rating: 4.8
-    reviews: 17
-  }
-  {
     id: 'affiliate-analytics-hub'
     name: 'Affiliate Analytics Hub'
     tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
@@ -66,18 +39,6 @@
     rating: 4.6
     reviews: 21
   }
-    id: 'affiliate - analytics - hub',
-    name: 'Affiliate Analytics Hub',
-    tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
-    price: '$89',
-    period: '/month',
-    description:;
-      'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
-    features: [;
-
-      'Link shortener and branded domains',
-      'UTM builder and traffic quality scoring',
-      'Multi - touch attribution and deduplication',
       'Automated payouts and tax forms',
       'Fraud and bot detection',
       'Partner portal and reports',
@@ -87,51 +48,6 @@
     rating: 4 && 4.6,
     reviews: 21,
   },
-  {
-    id: 'return-management-saas'
-    name: 'Return Management SaaS'
-    tagline:
-      'Self-service returns, labels, refunds, and analytics for e-commerce'
-    price: '$99'
-    period: '/month'
-    description:
-      'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.'
-    features: [
-      'Portal and RMA workflows'
-      'Label generation and tracking'
-      'Warehousing and disposition updates'
-      'Refunds and exchanges automation'
-      'Fraud checks and abuse controls'
-      'Analytics and cohort reports'
-    ]
-    popular: false
-    icon: ''
-    color: 'from-orange-600 to-red-600'
-    textColor: 'text-orange-200'
-    link: 'https://ziontechgroup.com/services/return-management-saas'
-    marketPosition:
-      '90% of SMBs lack streamlined returns; fast ROI with fewer tickets.'
-    targetAudience: 'DTC brands, Marketplaces'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'Stripe', 'Shippo']
-    integrations: ['Shopify', 'Klaviyo', 'Gorgias']
-    useCases: ['Returns and exchanges', 'Warehouse ops']
-    roi: 'Cut support tickets by 35% and improve retention'
-    competitors: ['Loop Returns', 'Returnly']
-    marketSize: '$8B returns tech'
-    growthRate: '10% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Carrier APIs and automation rules'
-    launchDate: '2025-11-20'
-    customers: 12
-    rating: 4.5
-    reviews: 9
-  }
       'Portal and RMA workflows',
       'Label generation and tracking',
       'Warehousing and disposition updates',
@@ -569,6 +485,3 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
-	}
-];
-;

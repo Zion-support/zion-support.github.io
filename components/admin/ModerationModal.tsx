@@ -23,13 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-export type ModerationModalProps = {;
-  flag: any | null;
-  flag
-  onClose
-  onAction
-}: ModerationModalProps) {
-
   flag,
   onClose,
   onAction,

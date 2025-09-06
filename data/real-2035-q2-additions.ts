@@ -1,17 +1,3 @@
-      'Webhooks + API',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
-    marketPosition: 'Faster than legacy survey tools; better mobile UX',
-    targetAudience: 'Product, CX, research teams',
-    trialDays: 7,
-    setupTime: '15 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Twilio', 'Next && Next.js', 'Vercel/Netlify'],
     integrations: ['HubSpot', 'Sheets', 'Slack'],
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],
     roi: '24x higher completion on mobile',
@@ -77,47 +63,6 @@
     reviews: 12
   }
   {
-    id: 'affiliate-tracking-suite'
-    name: 'Affiliate Tracking Suite'
-    tagline: 'Links, attribution, commission rules, and payouts'
-    price: '$29'
-    period: '/month'
-    description:
-      'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
-    features: [
-      'Custom referral links'
-      'UTM attribution'
-      'Rule-based commissions'
-      'Payout exports'
-      'Fraud checks'
-    ]
-    popular: false
-    icon: ''
-    color: 'from-amber-600 to-orange-700'
-    textColor: 'text-amber-300'
-    link: 'https://ziontechgroup.com/services/affiliate-tracking-suite'
-    marketPosition: 'Simple and affordable affiliate ops'
-    targetAudience: 'SaaS, courses, marketplaces'
-    trialDays: 7
-    setupTime: '45 minutes'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'Postgres']
-    integrations: ['Stripe', 'Paddle', 'Shopify']
-    useCases: ['SaaS referrals', 'Course affiliates', 'Partner programs']
-    roi: '+1525% new revenue from partners'
-    competitors: ['FirstPromoter', 'Rewardful']
-    marketSize: '$12B affiliate'
-    growthRate: '9% CAGR'
-    variant: 'holographic-matrix'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Link generator + rules + exports'
-    launchDate: '2025-08-20'
-    customers: 12
-    rating: 4.5
-    reviews: 5
-  }
       'Custom referral links',
       'UTM attribution',
       'Rule - based commissions',
@@ -408,7 +353,6 @@
     rating: 4 && 4.4,
     reviews: 3,
   },
-  {
       'Qualifying flows',
       'Calendar booking',
       'CRM routing',
@@ -465,24 +409,6 @@
       'CI integration',
     ],
     popular: false,
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Git APIs', 'Static analysis'],
-    integrations: ['GitHub', 'GitLab', 'Flagsmith'],
-    use_cases: ['Cleanup debt', 'Reduce risk'],
-    roi: 'Avoid outages; reduce toil',
-    competitors: ['LaunchDarkly add - ons'],
-    market_size: '$1B flags',
-    growth_rate: '10% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Scanner + PR bot',
-    launch_date: '2025 - 08 - 20',
-    customers: 8,
-    rating: 4 && 4.4,
-    reviews: 3,
-  },
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -491,7 +417,6 @@
     description:;
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     features: [;
-
       'Slow query capture',
       'Index suggestions',
       'Risk scoring',
@@ -570,133 +495,6 @@
     reviews: 5,
   },
   {
-  {
-    id: 'postgres-index-advisor-pro'
-    name: 'Postgres Index Advisor Pro'
-    tagline: 'Index recommendations and controlled PR rollouts'
-    price: '$79'
-    period: '/month'
-    description:
-      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-    features: [
-      'Slow query capture'
-      'Index suggestions'
-      'Risk scoring'
-      'PR generation'
-      'Rollback assist'
-    ]
-    popular: true
-    icon: '🗄️'
-    color: 'from-blue-700 to-indigo-800'
-    textColor: 'text-blue-300'
-    link: 'https://ziontechgroup.com/services/postgres-index-advisor-pro'
-    marketPosition: 'Productized tuning for small teams'
-    targetAudience: 'Data + platform teams'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['pg_stat_statements', 'Advisor']
-    integrations: ['GitHub Actions']
-    useCases: ['DB tuning', 'Perf boosts']
-    roi: 'Cut query costs 20–50%'
-    competitors: ['pganalyze (adjacent)']
-    marketSize: '$2B DB tuning'
-    growthRate: '9% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Collector + advisor + PRs'
-    launchDate: '2025-08-20'
-    customers: 15
-    rating: 4.6
-    reviews: 5
-  }
-  {
-    id: 's3-lifecycle-optimizer'
-    name: 'S3 Lifecycle Optimizer'
-    tagline: 'Move objects between storage classes to cut costs'
-    price: '$59'
-    period: '/month'
-    description:
-      'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-    features: [
-      'Usage analysis'
-      'Rule suggestions'
-      'Cost simulator'
-      'Change sets'
-      'Alerting'
-    ]
-    popular: false
-    icon: '🗂️'
-    color: 'from-emerald-700 to-teal-800'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer'
-    marketPosition: 'No-friction cost hygiene'
-    targetAudience: 'Cloud + finops'
-    trialDays: 7
-    setupTime: '1 hour'
-    category: 'Cloud & FinOps'
-    realService: true
-    technology: ['AWS S3', 'Cost models']
-    integrations: ['AWS']
-    useCases: ['Storage hygiene', 'Cost cuts']
-    roi: 'Save 10–30% storage spend'
-    competitors: ['Kubecost (adjacent)']
-    marketSize: '$3B cloud cost'
-    growthRate: '12% CAGR'
-    variant: 'holographic-matrix'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Analyzer + simulator + rule export'
-    launchDate: '2025-08-20'
-    customers: 17
-    rating: 4.5
-    reviews: 4
-  }
-  {
-    id: 'pii-discovery-scanner'
-    name: 'PII Discovery Scanner'
-    tagline: 'Scan buckets and DBs for PII/PHI with evidence exports'
-    price: '$89'
-    period: '/month'
-    description:
-      'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-    features: [
-      'Connectors'
-      'Sensitive entity detection'
-      'Sampling with redaction'
-      'Findings export'
-      'Alerting'
-    ]
-    popular: true
-    icon: '🕵️'
-    color: 'from-red-700 to-rose-800'
-    textColor: 'text-red-300'
-    link: 'https://ziontechgroup.com/services/pii-discovery-scanner'
-    marketPosition: 'Compliance-first discovery'
-    targetAudience: 'Security, compliance'
-    trialDays: 7
-    setupTime: '1–2 days'
-    category: 'Quality & Monitoring'
-    realService: true
-    technology: ['DLP', 'Connectors']
-    integrations: ['AWS', 'GCP', 'Snowflake']
-    useCases: ['Compliance audits', 'Risk reduction']
-    roi: 'Avoid incidents and fines'
-    competitors: ['Google DLP', 'AWS Macie']
-    marketSize: '$5B data security'
-    growthRate: '15% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Connectors + scan jobs + exports'
-    launchDate: '2025-08-20'
-    customers: 13
-    rating: 4.6
-    reviews: 5
-  }
-  {
     features: [
       'Schema registry'
       'Diff rules'
@@ -729,49 +527,6 @@
     launchDate: '2025-08-20'
     customers: 12
     rating: 4.5
-    reviews: 3
-  }
-  {
-    id: 'iam-permission-analyzer'
-    name: 'IAM Permission Analyzer'
-    tagline:
-      'Detect over-privileged access and propose least-privilege policies'
-    price: '$79'
-    period: '/month'
-    description:
-      'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
-    features: [
-      'Policy inventory'
-      'Usage analysis'
-      'Recommendations'
-      'PR generation'
-      'Alerting'
-    ]
-    popular: true
-    icon: ''
-    color: 'from-blue-700 to-slate-800'
-    textColor: 'text-blue-300'
-    link: 'https://ziontechgroup.com/services/iam-permission-analyzer'
-    marketPosition: 'Practical least-privilege for SMB clouds'
-    targetAudience: 'Cloud + security'
-    trialDays: 14
-    setupTime: '12 days'
-    category: 'Cloud & FinOps'
-    realService: true
-    technology: ['AWS/GCP/IAM']
-    integrations: ['AWS', 'GCP']
-    useCases: ['Reduce blast radius']
-    roi: 'Reduce risk + audit toil'
-    competitors: ['Cloud Custodian (DIY)']
-    marketSize: '$3B cloud sec'
-    growthRate: '13% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Collector + analyzer + PRs'
-    launchDate: '2025-08-20'
-    customers: 9
-    rating: 4.6
     reviews: 3
   }
       'Policy inventory',
@@ -2791,6 +2546,3 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-	}
-];
-;

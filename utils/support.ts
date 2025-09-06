@@ -1,7 +1,3 @@
-  logEvent: (event: any) => null
-  getArticles: () => []
-  getArticleById: (id: string) => null
-}
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -36,7 +32,6 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
-  getArticleById: (id: string) => null;
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;

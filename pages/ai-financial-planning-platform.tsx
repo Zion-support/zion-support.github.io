@@ -1,11 +1,3 @@
-			title="AI Financial Planning Platform"
-			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
-			subtitle="Smarter, faster financial decisions"
-			pricePerMonthUSD={349  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 36x ROI via faster cycles and improved accuracy"
 			features={[
@@ -20,9 +12,6 @@
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
-		/>
-	)
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

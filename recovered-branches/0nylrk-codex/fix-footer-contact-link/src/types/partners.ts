@@ -22,17 +22,9 @@ export interface PartnerProfile {;
   created_at: string;
 
 }
-}
 
 
 export interface PartnerSettings {;
-  id: string;
-  commission_rate: number;
-
-  fraud_threshold: number
-
-  is_payouts_enabled: boolean
-}
 }
 
 
@@ -44,7 +36,6 @@ export interface PartnerReferralLink {;
   source?: string;
   clicks: number;
 
-}
 }
 
 

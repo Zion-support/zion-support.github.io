@@ -43,8 +43,6 @@ interface Activity {
         setIsLoading (false);
       }
     }
-      }
-    }
   }, [projectId]);
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
@@ -52,23 +50,11 @@ interface Activity {
 
         return 'created a new milestone'
 
-  }, [projectId]),;
-  function getActivityDescription(activity: Activity): string {;
-    switch (activity.action) {;
-
-      case 'created':;
-        return 'created a new milestone',;
-      case 'status_changed':;
-        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
-    }
-  }
-  if (isLoading) {
-    return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
           <Card key={i}>;
@@ -84,18 +70,11 @@ interface Activity {
           </Card>;
         ))}
       </div>;
-    );
-  }
-  if (activities.length === 0) {
-    return (
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
       </Card>;
-    );
-  }
-  return (
                       {getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
@@ -117,9 +96,6 @@ interface Activity {
     </div>
   )
 }
-    // Check condition
-if ( {) {
-  $2
 }
       fetch_activities ();
     }

@@ -14,4 +14,3 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
-},

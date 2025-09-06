@@ -29,6 +29,3 @@ import Head from 'next / head';
 ;
 export default AutoUpdate20250808t163020949z;
 ;
-  )
-
-

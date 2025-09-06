@@ -122,54 +122,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 480,
   },
   {
-    id: 'ai-powered-threat-hunting-platform'
-    name: 'AI-Powered Threat Hunting Platform'
-    tagline: 'Proactive threat detection with autonomous security intelligence'
-    description:
-      'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.'
-    category: 'AI Cybersecurity & Threat Intelligence'
-    price: {
-      monthly: 399
-      yearly: 3990
-      currency: 'USD'
-      trialDays: 21
-      setupTime: '1-2 weeks'
-      enterprise: 'Custom pricing'
-    }
-    features: [
-      'Autonomous threat hunting'
-      'AI-powered attack pattern analysis'
-      'Real-time threat intelligence'
-      'Behavioral anomaly detection'
-      'Predictive threat modeling'
-      'Automated incident response'
-      'Advanced analytics dashboard'
-      'Multi-source data correlation'
-      'Custom threat hunting rules'
-      'API for security tools integration'
-    ]
-    benefits: [
-      'Detect threats 10x faster than traditional methods'
-      'Reduce false positives by 80%'
-      'Prevent 95% of cyber attacks'
-      'Automate 70% of security operations'
-      'Improve incident response time by 90%'
-    ]
-    targetAudience: [
-      'Security operations centers'
-      'Cybersecurity teams'
-      'IT security professionals'
-      'Managed security providers'
-      'Government agencies'
-      'Financial institutions'
-    ]
-    marketPosition:
-      'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.'
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace']
-    techStack: [
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'
-    ]
-    realImplementation: true
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
@@ -327,7 +279,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
-
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -340,7 +291,6 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -604,4 +554,3 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900;
   }
 ];
-;

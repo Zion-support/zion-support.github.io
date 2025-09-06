@@ -1,10 +1,3 @@
-import {
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
   Users
   MapPin
   Clock
@@ -179,12 +172,6 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-} from "lucide-react";
-
 const jobOpenings = [;
   {;
     id: 1,;
@@ -315,7 +302,6 @@ const values = [;
       "We conduct business with honesty, transparency, and ethical practices.",;
   },;
 ];
-
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -337,16 +323,6 @@ export default function CareersPage() {
 
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Careers
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our team of innovative developers, engineers, and designers
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-  );
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -579,7 +555,6 @@ function CareersPage() {
             </div>;
           </div>;
         </section>;
-
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -595,7 +570,6 @@ function CareersPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Open Positions */}
         <section id="open-positions" className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -665,5 +639,3 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-    </MainLayout>;
-  );

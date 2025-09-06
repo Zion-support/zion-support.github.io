@@ -3,12 +3,6 @@ import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {;
-  Tabs;
-  TabsContent;
-  TabsList;
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -33,39 +27,19 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
 
 
 
-import { Loader2 } from 'lucide-react'
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
-  TabsContent
-  TabsList
-  TabsTrigger} from "@/components/ui/tabs"
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
 
+import { Loader2 } from 'lucide-react'
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+import { Loader2 } from 'lucide-react'
+interface SearchResult {
   id: string
   type: "product" | "service" | "talent" | "blog" | "doc"
   title: string
@@ -73,28 +47,12 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-  return (
-    <>;
-      {parts && parts.map((part, i,) =>;
-        regex && regex.test(part) ? (;
-          <mark key={i} className="bg-yellow-200 text-black">;
             {part}
           </mark>;
         ) : (;
           part;
         );
       )}
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-  const regex = new RegExp(`(${escaped})`, "gi")
-  const parts = text.split(regex)
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-  const regex = new RegExp(`(${escaped})`, "gi"),
-  const parts = text.split(regex),
-  return (
-    <>
-      {parts.map((part, i) =>
-        regex.test(part) ? (
-          <mark key={i} className="bg-yellow-200 text-black">
     </>
   )
 }
@@ -123,7 +81,7 @@ export default function SearchPage() {
   }, [router.isReady, router.query.q]), // Fixed dependency array
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return
+    if (!router.isReady) return;
     if (query.trim()) {
       fetchResults(query.trim())
     }
@@ -227,18 +185,6 @@ if (return) {
     if (!term.trim()) {
       setResults([])
       return
-    }
-    setLoading(true)
-    try {
-      const res = await fetch (`/api / search?query=${encodeURIComponent (term)}`);
-      const data = await res.json ();
-      if () {) {
-  $2
-}
-        set_results (data.results);
-      } else {
-        set_results ([]);
-        logErrorToProduction ('Search API response structure is not as expected:', { data: data });
       }
     } catch (error) {
       logErrorToProduction('Search failed:', { data: error })
@@ -247,22 +193,6 @@ if (return) {
       set_loading (false);
     }
   }
-  const handle_submit = (e: React.FormEvent) =>: any {
-    e.prevent_default ();    if () {) {
-  $2
-}
-      router.push (`/search?q=${encodeURIComponent (query.trim ())}`);
-    }
-  }
-      }
-    } catch (error) {;
-      logErrorToProduction('Search failed:', { data: error }),;
-      setResults([]);
-    } finally {;
-      setLoading(false);
-    }
-
-
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -271,6 +201,8 @@ if (return) {
     }
   },
 
+  // Add key prop to force re-render when route changes
+  const pageKey = `search-${routeKey}-${router.asPath}`,
 
   return (
     <div key={pageKey}>;
@@ -285,7 +217,6 @@ if (return) {
 
             }}
             placeholder="Search talent, jobs, and projects..."
-          />
         </form>
         {loading && (
           <div className="flex justify-center py-8">
@@ -352,9 +283,6 @@ if (return) {
                     </p>;
                   </div>;
                 ))}
-            </TabsContent>;
-          </Tabs>;
-        )}
       </main>
     </div>
   )
@@ -429,10 +357,6 @@ if (data && data.results && Array.isArray (data.results) ) {
             </div>
     </>
   )
-}
-      </main>;
-    </div>;
-  );
 }
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;

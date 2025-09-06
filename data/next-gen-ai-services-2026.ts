@@ -54,14 +54,6 @@
     mobile: string,
     email: string,
     address: string,
-    website: string
-  }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
     website: string;
   },
   real_implementation: boolean,
@@ -71,8 +63,6 @@
   rating: number,
   reviews: number;
 }
-},
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: 'ai-emotional-intelligence-platform',
@@ -105,8 +95,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     tagline: 'Understand and respond to human emotions in real - time',
     price: '$1, 299',
     period: '/month',
-    description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
-    features: [
       'Sentiment analysis with emotional context',
       'Emotional response recommendations',
       'Multi-modal emotion fusion (facial, voice, text)',
@@ -206,7 +194,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     tagline: 'Predict equipment failures before they happen',
     price: '$899',
     period: '/month',
-    features: [
       'Machine learning failure prediction models',
       'Predictive maintenance scheduling',
       'Equipment health scoring',
@@ -228,8 +215,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'AI & Industrial IoT',
-    realService: true,
-    technology: [
       'Python',
       'TensorFlow',
       'Apache Kafka',
@@ -250,21 +235,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
-    useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
-    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
-    competitors: ['UptakeC3 && UptakeC3.aiPTCSiemens Mindsphere'],
-    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
     use_cases: ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
-    growthRate: '120% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails:
-      'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
-    launchDate: '2025-03-15',
-    customers: 78,
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
@@ -410,10 +383,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    targetAudience:
-      'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',    trialDays: 7,
-    setupTime: '1 day',
-    category: 'AI & Voice Technology',
     targetAudience: 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',
     trialDays: 7,
     setupTime: '1 day',
@@ -432,10 +401,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Audiobook narration',
     ],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
-    integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
-    useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
-    roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
-    competitors: ['ElevenLabsPlay && ElevenLabsPlay.htResemble AIDescript'],
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
     use_cases: ['Podcast production_marketing videos_e - learning content_audiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
@@ -493,7 +458,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     tagline: 'Automate code reviews and improve code quality',
     price: '$299',
     period: '/month',
-    features: [
       'Automated code quality analysis',
       'Security vulnerability detection',
       'Performance optimization suggestions',
@@ -503,10 +467,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Team collaboration tools',
       'Code review analytics',
       'Pull request automation',
-    popular: true,
-    icon: '',
-    color: 'from-indigo-600 to-blue-700',
-    textColor: 'text-indigo-400',
     targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
     trialDays: 14,
     setupTime: '2-3 days',
@@ -543,7 +503,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     contactInfo: contact,
     realImplementation: true,
     customers: 203,
-    rating: 4 && 4.7,
     reviews: 445,
   },
     launchDate: '2025-01-25',
@@ -551,10 +510,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4 && 4.7,
     reviews: 445
   }
-];    implementation_details: 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
-    launch_date: '2025 - 01 - 25',
-    customers: 203,
-    rating: 4.7,
     reviews: 445
 import { ServiceVariant } from '../types/service-variants',;
 export interface NextGenAIService2026 {;

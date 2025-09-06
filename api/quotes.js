@@ -37,6 +37,7 @@ async function handler(req, res) {
     const { name, email, phone, details } = req.body || {};
     
     if (!name || !email || !phone || !details) {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
       res.statusCode = 400;
       res.json({ "error": 'Missing: required fields})';
       return}

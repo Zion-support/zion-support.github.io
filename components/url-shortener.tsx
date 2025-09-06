@@ -23,16 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-  Link
-  Copy
-  BarChart3
-  ArrowRight
-  RefreshCw
-  CheckCircle
-  ExternalLink
-  QrCode
-  Settings
-  Trash2;
   Settings,;
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
@@ -120,10 +110,6 @@ export default function URLShortenerPage() {;
                     </>
                   )}
                 </Button>
-                </div>
-              </div>
-            </Card>
-            {/* Statistics */}
                 <Button
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}
@@ -183,7 +169,6 @@ export default function URLShortenerPage() {;
                   <div className="text-center p-4 bg-gray-700 rounded-lg">;
                     <div className="text-3xl font-bold text-red-400 mb-2">;
                       {getTotalClicks()}
-                    </div>;
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -244,7 +229,6 @@ export default function URLShortenerPage() {;
                 Manage and track all your shortened URLs in one place.
               </p>
             </div>
-
             <div className="space-y-4">
               {shortenedUrls.map((url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
@@ -324,7 +308,6 @@ export default function URLShortenerPage() {;
                           QR Code;
                         </Button>;
                         <Button
-                          onClick={() => deleteUrl(url && url.id)}
                           variant='outline';
                           size='sm';
                           className='border-red-600 text-red-400 hover:bg-red-600 hover:text-white';
@@ -337,7 +320,6 @@ export default function URLShortenerPage() {;
                       </div>;
                     </div>;
                   </div>;
-
                   )}
                 </Card>;
               ))}
@@ -416,8 +398,6 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
-      {/* Use Cases */}
-            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
             </p>
@@ -627,10 +607,3 @@ export default function URLShortenerPage() {;
           </div>;
         </div>;
       </section>;
-
-              View Pricing;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-}

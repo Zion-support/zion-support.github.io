@@ -87,14 +87,6 @@ top: `$ {
   opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8
-}viewport= {
-  {
-  once: true
-}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)
-}
-export default Homepage2044;export default Homepage2044;
-const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
 ], []);
 ;
 }window.location.href = '/revolutionary - 2044 - pricing - showcase';

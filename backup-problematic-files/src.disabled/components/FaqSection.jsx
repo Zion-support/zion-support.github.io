@@ -9,4 +9,3 @@ const FaqSection = ({ className }) => {
   );
 };
 
-export default FaqSection;

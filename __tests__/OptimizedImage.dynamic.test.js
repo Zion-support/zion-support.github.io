@@ -1,8 +1,3 @@
-    // Test content display
-  test('handles user interactions', () => {
-    // Test user interactions
-  test('applies correct styling', () => {
-    // Test styling
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -19,19 +14,4 @@ describe('OptimizedImagedynamic', () => {
   test ('applies correct styling', () => {
     // Test styling;
 });
-  
-  test('displays correct content', () => {
-    render(<OptimizedImagedynamic />);
-    // Test content display
-  });
-  
-  test('handles user interactions', () => {
-    render(<OptimizedImagedynamic />);
-    // Test user interactions
-  });
-  
-  test('applies correct styling', () => {
-    render(<OptimizedImagedynamic />);
-    // Test styling
-  });
 });

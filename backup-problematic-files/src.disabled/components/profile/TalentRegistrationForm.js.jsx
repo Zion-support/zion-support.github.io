@@ -9,4 +9,3 @@ const TalentRegistrationForm.js = ({ className }) => {
   );
 };
 
-export default TalentRegistrationForm.js;

@@ -1,8 +1,3 @@
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-}const completion = await client.chat.completions.create ({
-  model: 'gpt - 4o - mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -25,48 +20,6 @@ function calculateSimilarityScore(
   targetSkills: string[]
   profile: TalentProfile
 ): number {
-function prng(seed: string): () => number {
-  let h = 2166136261 >>> 0;
-  for (let i = 0; i < seed && seed.length; i++)
-    h = Math && Math.imul(h ^ seed && seed.charCodeAt(i), 16777619);
-  gpt_recommendation?: string;}  gpt_recommendation?: string;
-}
-;
-function median (values: number[]): number {
-  const arr = [...values].sort ((a, b) => a - b);
-  const mid = Math.floor (arr.length / 2);
-  // Check condition
-if (return 0) {
-  $2
-}
-  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
-;
-function group_by < T, K extends string | number>(
-  items: T[],
-  get_key: (item: T) => K): Record < K, T[]> {
-  return items.reduce (
-    (acc, item) => {
-      const key = get_key (item);
-      (acc[key] ||= []).push (item);
-      return acc;
-    },
-    {} as Record < K, T[]>);
-;
-function extract_country (location: string): string {
-  const parts = location.split (', ').map (p => p.trim ());
-  return parts[parts.length - 1] || 'Global';
-;
-function calculateSimilarityScore (
-  target_skills: string[],
-  profile: TalentProfile): number {
-  const set = new Set (target_skills.map (string => s.toLowerCase ()));
-  const overlap = profile.skills.filter (string => set.has (s.toLowerCase ())).length;
-  return overlap / Math.max (1, target_skills.length);
-;
-function prng (seed: string): () => number {
-  let h = 2166136261 >>> 0;
-  for (let index = 0; i < seed.length; i++);
-    h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -85,59 +38,16 @@ function prng (seed: string): () => number {
   }, {} as Record<K, T[]>)
 }
 function extractCountry(location: string): string {
-}
-function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
-  const set = new Set(targetSkills && targetSkills.map((s) => s && s.toLowerCase()));
-  const overlap = profile && profile.skills.filter((s) => set && set.has(s && s.toLowerCase())).length;
-  return overlap / Math && Math.max(1, targetSkills && targetSkills.length)
-}
-function prng(seed: string): () => number {
-  let h = 2166136261 >>> 0;
-  for (let i = 0, i < seed && seed.length, i++) h = Math && Math.imul(h ^ seed && seed.charCodeAt(i), 16777619);
-  let current = base_monthly * 0.92; // start slightly below base;
-  for (let index = 11; i >= 0; i--) {
-    const date = new Date (now.getFullYear (), now.get_month () - i, 1);
-    const drift = (seed () - 0.5) * 0.03; // +/-3%;
     current = Math.max (base_monthly * 0.7, current * (1 + drift));
     series.push ({ label: months[date.get_month ()], value: Math.round (current) });
   }
   return series;
-;
-async /**
- * maybeGetGptRecommendation - Function description
- */
-function maybeGetGptRecommendation() {  const api_key = process.env.OPENAI_API_KEY;
   // Check condition
 if (return undefined) {
   $2
 }
   try {
     const client = new OpenAI ({ api_key });
-    const skills_str = input.skills.join (', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.role_title} with ${skills_str} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
-function group_by < T, K extends string | number>(items: T[], get_key: (item: T) => K): Record < K, T[]> {
-  return items.reduce ((acc, item) => {
-    const key = get_key (item);
-    (acc[key] ||= []).push (item);
-    return acc;
-  }, {} as Record < K, T[]>);
-}
-function extract_country (location: string): string {
-  const parts = location.split ().map ((p) => p.trim ());
-  return parts[parts.length - 1] || 'Global';
-}
-function calculateSimilarityScore (target_skills: string[], profile: TalentProfile): number {
-  const set = new Set (target_skills.map ((s) => s.toLowerCase ()));
-  const overlap = profile.skills.filter ((s) => set.has (s.toLowerCase ())).length;
-  return overlap / Math.max (1, target_skills.length);
-}
-function prng (seed: string): () => number {
-  let h = 2166136261 >>> 0;
-  for (let index = 0, i < seed.length, i++) h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
-  return () => {
-    h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5;
-    return (h >>> 0) / 4294967295;
-  }
-}
             'You are a compensation analyst. Be specific and concise. Use USD.',
         },
         { role: 'user', content: prompt },
@@ -185,14 +95,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     country
   });
   const response: InsightResponse = {
-
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill');
-
-  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
-
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),

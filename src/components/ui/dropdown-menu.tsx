@@ -1,7 +1,6 @@
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
 import { Check, ChevronRight, Circle } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -17,12 +16,10 @@ const DropdownMenuSubTrigger = React.forwardRef<
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
       className
-    )}
     {...props}
   >;
     {children}
   </DropdownMenuPrimitive.SubTrigger>
-))
 DropdownMenuSubTrigger.displayName =
   DropdownMenuPrimitive.SubTrigger.displayName
 const DropdownMenuSubContent = React.forwardRef<
@@ -33,7 +30,6 @@ const DropdownMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   />;
 ));
@@ -41,13 +37,11 @@ DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
->(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
         className
-      )}
       {...props}
     />;
   </DropdownMenuPrimitive.Portal>;
@@ -63,7 +57,6 @@ const DropdownMenuItem = React.forwardRef<;
   <DropdownMenuPrimitive.Item;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
@@ -107,14 +100,11 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
   <DropdownMenuPrimitive.Label;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
       {...props}
     />);
 }

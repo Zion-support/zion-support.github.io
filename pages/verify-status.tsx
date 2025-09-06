@@ -86,15 +86,6 @@ export default function VerifyStatus() {
     setIsResending(true)
     setError('')
     setMessage('')
-    }
-    return () => clearInterval(interval)
-  }, [countdown]),
-
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address'),
-      return
-    }
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
@@ -138,11 +129,6 @@ export default function VerifyStatus() {
     } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
-  },
-  const handleCheckStatus = async () => {
-    // Check condition
-if ( {) {
-  $2
   useEffect(() => {;
     if (typeof emailParam === 'string') {;
       setEmail(emailParam);
@@ -201,32 +187,16 @@ if ( {) {
       set_error ('Please enter your email address'),
       return;
     }
-  };
-
-    } finally {
-      setIsCheckingStatus (false);
-    }
   return (
     <AuthLayout>;
       <div className="flex min - h-screen items - center justify - center p - 4">;
         <div className="w - full max - w-md space - y-6">;
           {/* Header */}
 
-
-          {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          <div className="text-center">
-            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Mail className="h-6 w-6 text-blue-600" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
-            <p className="text-sm text-gray-600 mt-2">
-              Check and manage your email verification status
-            </p>
-          </div>
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -291,7 +261,6 @@ if ( {) {
               </p>
             )}
           </div>
-          {/* Status Info */}
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -308,9 +277,6 @@ if ( {) {
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
-                <p> Check your email inbox for a verification link</p>
-                <p> Click the link in the email to verify your account</p>
-                <p> Return here or try logging in after verification</p>
               </div>
               {lastSentTime && (
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
@@ -320,7 +286,6 @@ if ( {) {
               )}
             </div>
           )}
-
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -416,54 +381,10 @@ if ( {) {
                 </>
               ) : (
                 <>
-                  <Mail className="h-4 w-4 mr-2" />
-                  Resend Verification Email
-                </>
-              on_click={handleCheckStatus}
-              disabled={!email || isCheckingStatus}
-              className="w - full";
-              variant="outline";
-            >;
-              {isCheckingStatus ? (
-                <>;
-                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
-                  Checking Status...;
-                </>) : (
-                <>;
-                  <Eye className="h - 4 w - 4 mr - 2" />;
-                  Check Verification Status;
-                </>)}
-            </Button>;
-            {/* Resend Email Button */}
-            <Button;
-              on_click={handleResendEmail}
-              disabled={!email || is_resending || countdown > 0}
-              className="w - full";
-              variant="secondary";
-            >;
-              {is_resending ? (
-                <>;
-                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
-                  Sending Email...;
-                </>) : countdown > 0 ? (
-                <>;
-                  <Clock className="h - 4 w - 4 mr - 2" />;
-                  Resend in {countdown}s;
-                </>) : (
-                <>;
-                  <Mail className="h - 4 w - 4 mr - 2" />;
-                  Resend Verification Email;
-                </>)}
-            </Button>;
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
-              className="w-full"
-            >
-              Try Login
-            </Button>
-          </div>
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -496,53 +417,8 @@ if ( {) {
       </div>
     </AuthLayout>
   )
-}
-              className="w - full";
-            >;
-              Try Login;
-            </Button>;
-          </div>;
-          {/* Help Text */}
-          <div className="text - center text - sm text - gray - 500 space - y-2">;
-            <p>;
-              Can't find the verification email? Check your spam folder or try a different email address.;
-            </p>;
-            <Button;
-              on_click={handleGoBack}
-              variant="ghost";
-              size="sm";
-              className="text - blue - 600 hover:text - blue - 500";
-            >;
-              <ArrowLeft className="h - 4 w - 4 mr - 1" />;
-              Go Back;
-            </Button>;
-          </div>;
-          {/* Additional Options */}
-          <div className="border - t pt - 4 space - y-2">;
-            <Button;
-              on_click={() => router.push ('/signup')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Use Different Email Address;
-            </Button>;
-            <Button;
-              on_click={() => router.push ('/contact')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Contact Support;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    </AuthLayout>);
-}
-
-};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;

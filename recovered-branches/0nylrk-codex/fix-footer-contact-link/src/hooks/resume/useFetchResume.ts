@@ -67,9 +67,6 @@ if ( {) {
       // Otherwise, fetch the user's active resume or most recent resume;
       let resume_query = supabase.from ('talent_resumes').select ('*');
 ;
-      const { data: resumeData, error: resumeError } = await resumeQuery.single(),;
-      if (resumeError) {;
-        if (resumeError.code === 'PGRST116') {;
           // No resume found, this is not a critical error for a new user;
           setResume(null),;
           setIsLoading(false),;
@@ -187,4 +184,3 @@ if (throw cert_error) {
     resume;
 
     fetchResume}
-}

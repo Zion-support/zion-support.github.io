@@ -1,7 +1,3 @@
-interface SignupProps {;
-  // Add props here as needed;
-}
-export default function Signup(): any ({ }: SignupProps) {;
   return (
     <div>;
       <h1>Signup</h1>;

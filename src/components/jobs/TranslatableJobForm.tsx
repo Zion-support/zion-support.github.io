@@ -1,4 +1,26 @@
 
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent } from "@/components/ui/card"
+import { Loader2, Globe } from 'lucide-react'import { useTranslation } from "react-i18next"
+import { useTranslationService } from "@/hooks/useTranslationService"
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext"
+import { toast } from "@/components/ui/use-toast"
+import {logErrorToProduction} from '@/utils/productionLogger'
+interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void
+  isSubmitting?: boolean }
+
+export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
+  const { t } = useTranslation()
+  const { translateContent, isTranslating } = useTranslationService()
+  const { supportedLanguages, currentLanguage } = useLanguage()
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
+  // Form fields with translations
+  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -55,6 +77,26 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
+import { toast } from "@/components/ui/use-toast",
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void,
+  isSubmitting?: boolean
+}
+
+export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
+  const { t } = useTranslation(),
+  const { translateContent, isTranslating } = useTranslationService(),
+  const { supportedLanguages, currentLanguage } = useLanguage(),
+  
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
+  
+  // Form fields with translations
+  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
+    en: "",
+    es: "",
+    fr: "",
+    pt: "",
     }
   }
   // Ensure all translations are available
@@ -126,14 +168,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
-
 export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
   const { t } = useTranslation();
   const { translateContent, isTranslating } = useTranslationService();
   const { supportedLanguages, currentLanguage } = useLanguage();
-
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-
   // Form fields with translations;
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
@@ -144,11 +183,8 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   });
     ar: "";
   });
-
-
     let sourceLanguage: SupportedLanguage = 'en';
     let content = '';
-
         content = title[lang];
         sourceLanguage = lang;
         break;      } else if (field === 'description' && description[lang]) {;
@@ -173,16 +209,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     } catch (error) {;
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({;
-        title: t('translation && translation.translation_failed'),;
-        description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
-        variant: "destructive";
-      });
-    }
-  };
-
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {;
-    const promises = [];
 }
   );
 }
@@ -192,4 +218,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     </form>;
   );
 }
+        </Button>;
+      </div>;
+    </form>;
+  );
+}
+;
 ;

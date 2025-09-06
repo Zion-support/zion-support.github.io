@@ -48,11 +48,6 @@
 }
       />;
       <main>;
-        <h1 > Jobs</h1>;
-        <p>{job.title}</p>;
-        <p>{job.description}</p>;
-      </main>;
-
     </div>;
   );
 },;

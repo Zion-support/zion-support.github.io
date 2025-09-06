@@ -3,16 +3,6 @@
     professional: string;
     enterprise: string;
     custom?: string;
-  }
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
-  contactInfo: {email: string;
-    phone: string;
     address: string;
   }
 }

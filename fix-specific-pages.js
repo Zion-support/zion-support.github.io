@@ -73,7 +73,6 @@ function fixSpecificPages() {
       })
       continue
     }
-    const result = restorePage(pagePath),
     if (result.restored) {
       results.restored++
       console.log(` Restored: ${pagePath}`)
@@ -89,7 +88,6 @@ function fixSpecificPages() {
   }
   // Generate summary
 
-  console.log('\n Restoration Summary: ')
   console.log(`   Total pages: ${results.total}`)
   console.log(`   Restored: ${results.restored}`)
   console.log(`   Failed: ${results.failed}`)
@@ -97,9 +95,6 @@ function fixSpecificPages() {
   // Save detailed report
   const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n Detailed report saved to: ${reportPath}`)
-
-  return results
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
 ;
@@ -180,9 +175,3 @@ module.exports = {;
 };
 
 module.exports = {
-
-  restorePage
-  fixSpecificPages
-  findBestBackup
-}
-

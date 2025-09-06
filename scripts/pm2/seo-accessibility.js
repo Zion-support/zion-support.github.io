@@ -1,19 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-class SEOAccessibility {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');
-    this.startTime = Date.now();
-};
-;
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 ;
 #!/usr/bin/env node,;
@@ -71,8 +55,6 @@ class SEOAccessibility {,;
         if (stat.isDirectory()) {,;
           scanDirectory(fullPath);
         } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,;
-          files.push(fullPath);
-        }
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),

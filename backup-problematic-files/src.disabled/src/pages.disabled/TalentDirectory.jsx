@@ -9,4 +9,3 @@ const TalentDirectory = ({ className }) => {
   );
 };
 
-export default TalentDirectory;

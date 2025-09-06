@@ -9,4 +9,3 @@ const ForumCategories = ({ className }) => {
   );
 };
 
-export default ForumCategories;

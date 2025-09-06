@@ -7,8 +7,6 @@ interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-  freezeOnceVisible?: boolean;
-}
   threshold = 0;
   root = null;
   rootMargin = '0%';

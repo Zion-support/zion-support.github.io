@@ -26,25 +26,6 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
-  Shield,;
-  Globe,;} from 'lucide-react';import { ;
-  Brain;
-  MessageSquare
-  Image
-  Video
-  FileText
-  BarChart3
-  Users
-
-
-
-  Brain;
-  MessageSquare,
-  Image,
-  Video,
-  FileText,
-  BarChart3,
-  Users,
   Zap;
   ArrowRight;
   Star;
@@ -226,7 +207,6 @@ function AIBusinessToolsPage() {
       rating: 4.5,
       users: '50K+',
       icon: <Video className='w - 8 h - 8 text - red - 400' />,      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
-
       category: 'AI Video',
       pricing: '$30 - $89 / month',
       rating: 4.5,
@@ -239,34 +219,6 @@ function AIBusinessToolsPage() {
       pricing: '$59 - $199 / month',
       rating: 4.6,
       users: '25K+',
-
-
-        'Data-driven insights',
-        'Content optimization',
-        'Competitor analysis',
-        'Good support',
-      ],
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
-      bestFor: 'SEO specialists, content marketers, businesses',
-    },;
-  ];
-  const categories = [
-    'All'
-    'AI Assistant'
-    'AI Art'
-    'AI Writing'
-    'AI Video'
-    'AI Copywriting'
-    'AI SEO'
-  ];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const filteredTools =
-    selectedCategory === 'All'
-      ? aiTools
-      : aiTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
-    ? aiTools
-    : aiTools.filter(tool => tool.category === selectedCategory);
-
   return (
     <>;
       <Head>;
@@ -352,7 +304,6 @@ function AIBusinessToolsPage() {
 
       {/* Category Filter */}
 
-
               <button
 
                 key={category}
@@ -364,8 +315,6 @@ function AIBusinessToolsPage() {
                 }`}
               >;
                 {category}
-              </button>;
-            ))}
 
           </div>;
         </div>;
@@ -384,13 +333,6 @@ function AIBusinessToolsPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='flex items-start space-x-6'>;
-                  <div className='relative'>;
-                    <div
                       {tool.icon}
                     </div>;
                   </div>;
@@ -403,14 +345,6 @@ function AIBusinessToolsPage() {
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - sm text - gray - 300'>;
                           {tool.rating}
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>
-                        Key Features:
-                      </h4>
-                      <div className='grid grid-cols-2 gap-2'>
-                        {tool.features
-                          .slice(0, 4)
-                          .map((feature, featureIndex) => (
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
@@ -422,8 +356,6 @@ function AIBusinessToolsPage() {
                         href={tool && tool.website}
                         variant='outline'
                         size='sm'
-      {/* AI Benefits Section */}
-
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -674,7 +606,6 @@ function AIBusinessToolsPage() {
                 complete.;
               </p>;
             </Card>;
-
               </div>;
               <h3 className='text-xl font-bold mb-4 text-white'>;
                 Data-Driven Decisions;
@@ -727,14 +658,6 @@ function AIBusinessToolsPage() {
           </div>;
         </div>;
       </section>;
-
-              Explore More Tools;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-  );
-}
   );
 }
   );

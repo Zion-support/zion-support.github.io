@@ -45,19 +45,10 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
-
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
-  const config = statusConfig[status];
-
-  return (
-    <Badge className={config && config.className}>;
-      {config && config.label}
-    </Badge>;
-  );
 };
     </Badge>);
 }

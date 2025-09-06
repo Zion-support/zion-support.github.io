@@ -9,4 +9,3 @@ const TokenIntegrations = ({ className }) => {
   );
 };
 
-export default TokenIntegrations;

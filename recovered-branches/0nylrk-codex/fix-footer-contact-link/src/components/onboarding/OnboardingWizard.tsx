@@ -1,12 +1,9 @@
-import React from 'react';
 
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
-interface WizardStep {
   action: {
     text: string
 
@@ -52,17 +49,6 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 
-
-    url: string
-  }
-  skipText?: string
-}
-interface OnboardingWizardProps {
-
-  type: 'client' | 'talent'
-  onComplete: () => void
-  onSkip: () => void
-
   className?: string
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
@@ -82,9 +68,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
-      }
-      skipText: "I'll do this later"
-    }
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -92,9 +75,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
-      }
-      skipText: "Skip for now"
-    }
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -108,8 +88,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Edit Profile"
         url: "/profile"
       }
-      skipText: "I'll do this later"
-    }
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -117,9 +95,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
-      }
-      skipText: "Skip for now"
-    }
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -182,8 +157,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
-  
-
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -223,7 +196,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ];
-
   const talentSteps: WizardStep[] = [;
     {;
       title: "Complete your profile",;
@@ -265,9 +237,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ];
-
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
   // Navigate to the specified URL;
   const handleAction = () => {;
     if (currentStep < steps && steps.length - 1) {;
@@ -279,7 +248,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onComplete();
     }
   };
-
   // Skip the current step;
   const handleSkip = () => {;
     if (currentStep < steps && steps.length - 1) {;
@@ -289,13 +257,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   };
-
-  return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
-            "Ready to find top IT talent?" : ;
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -315,8 +280,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
-              />;
-            ))}
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -324,15 +287,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         </div>;
       </CardContent>;
       <CardFooter className="flex flex-col space-y-2">;
-        <Button
-          className="w-full bg-zion-purple hover:bg-zion-purple-light"
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}>;
-            {steps[currentStep].skipText}
-          </Button>;
-        )}
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",

@@ -60,5 +60,3 @@ if ( {) {
     return;  }    return;
   }
 const payload = req.body as StatusUpdatePayload;
-}
-  res.status(200).json({ record: existing });

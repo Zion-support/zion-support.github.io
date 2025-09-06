@@ -63,7 +63,6 @@ class ConsoleLogRemover {
     this && this.log(` Report "generated": ${reportPath}`);
     this && this.log(` Console log removal "completed": ${results && results.removed} statements removed from ${results && results.processed} files`);
     return report}
-}
 // Run the script
 if (require && require.main === module) {
   const remover = new ConsoleLogRemover();

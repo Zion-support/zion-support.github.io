@@ -93,35 +93,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitting(true);
-    setMessage(null)
-    try {
-      const res = await fetch('/api/reviews/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          projectId: initial.projectId
-          fromRole: initial.fromRole
-          fromId: initial.fromId
-          rating
-          text
-          anonymous
-          categories: {
-            communication
             qualityOfWork
             timeliness
             wouldWorkWithAgain
           }
         })
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setMessage('Review submitted! Pending admin approval.');
-    } catch (err: any) {
-      setMessage(err.message);
-    } finally {
       setSubmitting(false);    }
   }
   return (
@@ -139,15 +116,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setMessage('Review submitted! Pending admin approval.')
     } catch (err: any) {
-      setMessage(err.message)
     } finally {
       setSubmitting(false)
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 
-
-    }
-  }
-  return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
@@ -159,9 +131,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   }
 
   return (
-        <StarRating value={rating} onChange={setRating} />
-      </div>
-      <div>
       <div className="grid md:grid-cols-2 gap-4">
         <div className="enhanced-card">
           <div className="flex items-center justify-between mb-2">

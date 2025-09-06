@@ -31,23 +31,6 @@
 
     website: string;
   }
-
-    period: '/month'
-    description:
-      'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.'
-    features: [
-      'No-code smart contract creation'
-      'Template library (100+ templates)'
-      'Automated contract execution'
-      'Multi-blockchain support'
-      'Legal compliance tools'
-      'Contract monitoring and analytics'
-      'Integration with business systems'
-      'Mobile app access'
-      'API for developers'
-      '24/7 contract management'
-    ]
-    popular: true
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -57,7 +40,6 @@
       'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
     features: [;
       'No - code smart contract creation',
-
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -188,25 +170,6 @@
       'TensorFlow',
       'Financial APIs',
     ],
-
-
-      'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
-    launchDate: '2024-02-01',
-    customers: 789,
-    rating: 4.8,
-    reviews: 912,
-  },;
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
-    launchDate: '2024-02-01';
-    customers: 789;
-    rating: 4.8
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -674,7 +637,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     customers: 789,
     rating: 4 && 4.8,
     reviews: 912,
-  },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -686,6 +648,3 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     customers: 789;
     rating: 4 && 4.8,
     reviews: 912
-      website: 'https://ziontechgroup.com';
-    }
-

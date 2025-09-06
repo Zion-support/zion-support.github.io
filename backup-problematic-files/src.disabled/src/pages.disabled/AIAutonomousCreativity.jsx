@@ -9,4 +9,3 @@ const AIAutonomousCreativity = ({ className }) => {
   );
 };
 
-export default AIAutonomousCreativity;

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       safe: true,
       equity: true,
       token: false,
-    });
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });

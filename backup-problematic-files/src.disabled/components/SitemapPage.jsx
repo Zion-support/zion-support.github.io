@@ -9,4 +9,3 @@ const SitemapPage = ({ className }) => {
   );
 };
 
-export default SitemapPage;

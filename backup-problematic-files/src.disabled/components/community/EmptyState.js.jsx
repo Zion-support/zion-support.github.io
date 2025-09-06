@@ -9,4 +9,3 @@ const EmptyState.js = ({ className }) => {
   );
 };
 
-export default EmptyState.js;

@@ -1,95 +1,4 @@
 
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-const features = [
-  {
-const pricingPlans = [
-  {
-    name: 'Starter'
-    price: 199
-    period: 'month'
-    description: 'Perfect for individual traders and small investment firms'
-    features: [
-  },  {
-    name: 'Professional'
-    price: 499
-    period: 'month'
-    description: 'Ideal for professional traders and growing investment firms'
-    features: [
-      'Advanced AI models and algorithms'
-      'Automated trading with backtesting'
-      'Custom strategy development'
-      'Priority support and API access'
-      'Advanced risk management tools'
-      'Multi-portfolio management'
-      'Real-time market alerts'
-      'Custom reporting and dashboards'
-    ]
-    popular: true
-    color: 'from-cyan-500 to-purple-600'
-  },  {
-    name: 'Enterprise'
-    price: 1499
-    period: 'month'
-    description: 'For large investment firms and institutional investors'
-    features: [
-      'Custom AI model training and development'
-      'White-label solution with branding'
-      'Dedicated account manager and support'
-      'Advanced compliance automation'
-      '24/7 monitoring and support'
-      'Custom integrations and APIs'
-      'Advanced security and audit trails'
-      'Multi-user access and permissions'
-    ]
-    popular: false
-    color: 'from-purple-500 to-pink-600'
-  },];
-const useCases = [
-  {
-    title: 'Algorithmic Trading Strategy Development'
-    description:
-      'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.'
-    icon: BarChart
-    benefits: [
-      'Increased trading efficiency'
-      'Reduced emotional bias'
-      '24/7 market monitoring'
-    ]
-  }
-  {
-    title: 'Portfolio Risk Management & Optimization'
-    description:
-      'Advanced risk modeling and portfolio optimization using neural networks and machine learning.'
-    icon: PieChart
-    benefits: [
-      'Risk-adjusted returns'
-      'Portfolio diversification'
-      'Real-time risk monitoring'
-    ]
-  }
-  {
-    title: 'Market Trend Prediction & Analysis'
-    description:
-      'Predict market movements and identify trading opportunities with AI-powered analytics.'
-    icon: LineChart
-    benefits: [
-      'Early trend detection'
-      'Improved timing'
-      'Higher success rates'
-    ]
-  }
-  {
-    title: 'Automated Financial Reporting'
-    description:
-      'Generate comprehensive financial reports and compliance documentation automatically.'
-    icon: Activity
-    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting']
-  },];
-const integrations = [
     popular: false,
     color: 'from-gray-500 to-gray-600'
   };
@@ -106,22 +15,11 @@ const integrations = [
   }, ];
 ;
 const integrations = [;
-
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
   { name: 'TradingView', logo: '📊', category: 'Charting' },
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
-
-import { motion } from 'framer-motion';
-import {;
-  Brain, DollarSign, TrendingUp, Shield, Zap,;
-  CheckCircle, ArrowRight, Star, Users, Award,;
-  Clock, Globe, BarChart3, Target, Microscope,;
-  Phone, Mail, MapPin, ArrowUpRight, Play,;
-  BarChart, PieChart, LineChart, Activity;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -318,11 +216,6 @@ const NeuralFinanceAI: React.FC = () => {
                 <br />
                 <span className="text-white">Revolutionary Trading Intelligence</span>
               </h1>
-
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
-                <Brain className="w-4 h-4" />
-                <span>AI-Powered Financial Intelligence</span>
-              </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -351,7 +244,6 @@ const NeuralFinanceAI: React.FC = () => {
                 </button>
               </div>
 
-
               <div className="flex flex-wrap gap-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
@@ -367,9 +259,6 @@ const NeuralFinanceAI: React.FC = () => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className='relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm'>
                 <div className='absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl'></div>
@@ -414,7 +303,6 @@ const NeuralFinanceAI: React.FC = () => {
                       </div>;
                     </div>;
                   </div>;
-
                         Advanced;
                       </span>;
                     </div>;
@@ -468,15 +356,6 @@ const NeuralFinanceAI: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
-                </p>;
-              </motion && motion.div>;
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Use Cases Section */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -522,13 +401,13 @@ const NeuralFinanceAI: React.FC = () => {
                           <span>{benefit}</span>
                         </div>
 
-
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+                      ))}
                     </div>;
                   </div>;
                 </div>;
@@ -538,8 +417,6 @@ const NeuralFinanceAI: React.FC = () => {
         </div>
       </section>
       {/* Pricing Section */}
-      <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -551,20 +428,6 @@ const NeuralFinanceAI: React.FC = () => {
               our core AI-powered features.
             </p>
           </motion.div>
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
-                Pricing Plans;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Choose the perfect plan for your trading needs. All plans include;
-              our core AI-powered features.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (;
-              <motion&& motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -579,49 +442,15 @@ const NeuralFinanceAI: React.FC = () => {
                     </div>
                   </div>
 
-
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
                   <div className="text-4xl font-bold text-white mb-2">
-                    ${plan.price}
-                    <span className='text - lg text - gray - 400 font - normal'>;
-                      /{plan.period}
-                    </span>
-                  </div>
-                </div>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center space-x-3 text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-violet-400 flex-shrink-0' />;
-                      <span className='text-sm'>{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>
-                <Link
-                  href='/contact'                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
-                    plan && plan.popular
-                      ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
-                      : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
-                  }`}>;
-                  Get Started;
-                </Link>;
-              </motion && motion.div>;
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Integrations Section */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
@@ -696,14 +525,6 @@ const NeuralFinanceAI: React.FC = () => {
               </Link>;
               <Link
                 href='/contact'
-              Ready to Transform Your Trading?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading investment firms using Neural Finance AI to gain competitive advantages 
-              in today's dynamic financial markets.
-            </p>
-
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 href="/contact"
@@ -720,7 +541,6 @@ const NeuralFinanceAI: React.FC = () => {
             </div>
 
 
-
             <div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
@@ -729,7 +549,6 @@ const NeuralFinanceAI: React.FC = () => {
         </div>
       </section>
     </Layout>
-  )
                 className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'>;
                 Schedule Demo;
               </Link>;
@@ -750,11 +569,3 @@ const NeuralFinanceAI: React.FC = () => {
           </div>;
         </div>;
       </section>;
-    </Layout>;
-export default NeuralFinanceAI;
-
-    </Layout>),
-}
-;
-export default NeuralFinanceAI;
-;

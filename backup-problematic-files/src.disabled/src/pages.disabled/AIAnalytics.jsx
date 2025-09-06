@@ -9,4 +9,3 @@ const AIAnalytics = ({ className }) => {
   );
 };
 
-export default AIAnalytics;

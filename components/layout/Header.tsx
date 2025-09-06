@@ -1,4 +1,3 @@
-
   ];
   const serviceCategories = [;
     {name: 'Micro SaaS'
@@ -171,5 +170,3 @@
       </nav>;
     </header>);
 }
-};
-

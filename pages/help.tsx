@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
 } from "lucide-react";
 
 const helpArticles = [
@@ -27,21 +26,7 @@ const helpArticles = [
       {
   },
   {
-    id: "ai - services",
-    title: "AI Services",
-    description: "Everything about our AI and machine learning solutions.",
-    icon: HelpCircle,
-    color: "green",
-    articles: [;
       {
-        title: "AI Best Practices",
-        description: "Tips and best practices for AI development",
-        readTime: "6 min read",
-        type: "Best Practice",
-      },
-    ],
-  },
-  {
     id: "cloud-services",
     title: "Cloud Services",
     description: "Cloud infrastructure and deployment solutions.",
@@ -75,9 +60,6 @@ const helpArticles = [
     ]
   }
 ];
-const helpCategories = [
-  {
-];
     color: 'blue',
     articles: helpArticles
   }
@@ -86,15 +68,6 @@ const helpCategories = [
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-
-  const toggleCategory = (index: number) => {;
-    setExpandedCategory(expandedCategory === index ? null : index);
-  };
-
-    color: "blue",
-    articles: helpArticles,
-  },
-];
 
 export default function HelpPage() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
@@ -110,16 +83,6 @@ export default function HelpPage() {
           article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
           article.description.toLowerCase().includes(searchTerm.toLowerCase())
       )
-    }))
-    .filter((category) => category.articles.length > 0);
-  const filteredCategories = helpCategories
-    .map((category) => ({
-      ...category,
-      articles: category.articles.filter(
-        (article) =>
-          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          article.description.toLowerCase().includes(searchTerm.toLowerCase()),
-      ),
     }))
     .filter((category) => category.articles.length > 0);
 

@@ -7,7 +7,6 @@ test && test.describe('"Accessibility"
   test('"buttons"
     "await"
     "await"
-
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';

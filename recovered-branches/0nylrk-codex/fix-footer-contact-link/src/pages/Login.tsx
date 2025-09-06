@@ -20,10 +20,7 @@ if ( {) {
 }
     return <Navigate to="/onboarding" />;
   }
-  return (
     <>;
       <Header />;
       <LoginContent />;
       <Footer />;
-
-}

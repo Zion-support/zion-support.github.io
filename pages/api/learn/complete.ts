@@ -79,28 +79,3 @@ export default function handler(req, res) {
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-
-    // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
-    users[userId] = user
-    writeJson(usersPath, users)
-
-    return res.status(200).json({ ok: true, user })
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-const users_path = path.join (process.cwd (), 'datalearnusers.json'),
-const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
-/**
- * read_json - Function description
- */
-function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
-}
-  }
-
-
-  }
-
-}
-

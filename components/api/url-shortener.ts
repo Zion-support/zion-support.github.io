@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface ShortUrl {
-// In-memory storage (in production, use a database)
-
-const urlStorage = new Map<string, ShortUrl>();
-// Generate a random short code
-function generateShortCode(length: number = 6): string {
   for (let i = 0, i < length, i++) {
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
@@ -25,7 +20,6 @@ function generateShortCode (length: number = 6): string {
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
   return result;
-}
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
@@ -38,12 +32,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<UrlShortenerResponse>
 ) {
-      });    } catch (error) {
-      console.error ('URL shortening error:', error);
-      res.status (500).json ({
-        success: false,
-        error: 'Internal server error',
-      });    }        success: true;
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
@@ -52,10 +40,6 @@ export default async function handler(
       error: 'Method not allowed',
     });
   }
-  params
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   params,
 }: {;
   params: { shortCode: string };

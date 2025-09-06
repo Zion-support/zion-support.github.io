@@ -12,9 +12,6 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
-
-import Link from 'next/link',
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
   return (
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />

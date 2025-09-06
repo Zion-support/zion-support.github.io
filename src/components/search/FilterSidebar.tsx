@@ -31,19 +31,6 @@ interface FilterGroup {
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
-
-interface FilterOption {;
-  value: string;
-  label: string;
-  count?: number;
-}
-
-interface FilterGroup {;
-  title: string;
-  key: string;
-  options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range'}
-
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
@@ -55,10 +42,6 @@ interface FilterGroup {;
             </div>
           ))}
         </div>
-      </div>
-    </>
-  )}
-'"`
 
   filters: FilterGroup[];
   selected_filters: Record < string, any>;

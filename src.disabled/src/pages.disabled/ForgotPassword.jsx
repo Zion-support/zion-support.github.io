@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ForgotPasswordProps {
   // Add props here as needed
-}
 export default function ForgotPassword({ }: ForgotPasswordProps) {
   return (
     <div>

@@ -5,7 +5,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-      "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -56,6 +55,48 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+    const supabase = getServerSupabase();
+    const startOfMonth = new Date();
+    startOfMonth.setDate(1);
+    startOfMonth.setHours(0, 0, 0, 0);
+
+    const { data, error } = await supabase;
+      .from('referral_events');
+      .select('partner_code, event, created_at');
+      .gte('created_at', startOfMonth.toISOString()),;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      map.set(key, (map.get(key) || 0) + 1);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const leaders = Array.from(map.entries());
+      .map(([code, profile_completions]) => ({ code, profile_completions }));
+      .sort((a, b) => b.profile_completions - a.profile_completions);
+      .slice(0, 10);
+    return res.status(200).json({ leaders });
+  } catch (error) {
+
+    return res.status(500).json({ error: e?.message });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }
   } catch (error) {
@@ -95,7 +136,6 @@ export default async function handler(req, res) {
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');

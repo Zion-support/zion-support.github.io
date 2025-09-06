@@ -14,30 +14,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
-interface Integration {;
-import React, { useState } from './react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { Switch  } from '@/components / ui / switch';
-import { toast  } from './sonner';
 interface Integration {
   id: string;
   name: string;
   description: string;
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
-  isOpen: boolean;
-  onClose: () => void;
 
 export function IntegrationConnectionModal({
   isOpen
@@ -50,15 +32,52 @@ export function IntegrationConnectionModal({
     pushNotes: false
     syncJobDetails: true
     syncApplicantData: true
+  integration: Integration
+}
+
+
+interface IntegrationConnectionModalProps {;
+  isOpen: boolean;
+  onClose: () => void;
+  integration: Integration
+}
+export function IntegrationConnectionModal(): any ({;
+  isOpen,;
+  onClose,;
+  integration,;
+}: IntegrationConnectionModalProps) {;
+  const [isConnecting, setIsConnecting] = useState(false);
+  const [syncSettings, setSyncSettings] = useState({;
+    autoCreateContacts: true,;
+    pushNotes: false,;
+    syncJobDetails: true,;
+    syncApplicantData: true,;
+  });
+  const handleConnectOAuth = () => {;
+    setIsConnecting(true);
+    // Simulate OAuth flow;
+    setTimeout(() => {;
+      setIsConnecting(false);
+      toast && toast.success(`Connected to ${integration && integration.name} successfully`);
+      onClose();
+    }, 2000);
+    // In a real application, this would open a popup for OAuth authentication;
+    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
+  };
+  const handleDisconnect = () => {;
+    // In a real application, this would revoke the OAuth token;
+    toast && toast.info(`Disconnected from ${integration && integration.name}`);
+    onClose();
+  };
+  const handleSaveSettings = () => {;
+    // In a real application, this would save the sync settings;
+    toast && toast.success("Integration settings saved");
   });
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
     setTimeout(() => {
       setIsConnecting(false);
-      toast && toast.success(`Connected to ${integration && integration.name} successfully`);
-      onClose();
-    }, 2000);
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -74,7 +93,6 @@ export function IntegrationConnectionModal({
             </DialogDescription>
           </div>
         </DialogHeader>
-        integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
           <>
@@ -82,7 +100,6 @@ export function IntegrationConnectionModal({
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
                 
-
                 <div className="flex items-center space-x-2">
                     }
                   />
@@ -91,40 +108,43 @@ export function IntegrationConnectionModal({
                   </Label>
                 </div>
                 
-
                 <div className="flex items-center space-x-2">
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
                 
-
                 <div className="flex items-center space-x-2">
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
                 
-
                 <div className="flex items-center space-x-2">
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-sm font-medium">API Details</h3>
-                <p className="text-xs text-muted-foreground">
-                  Last synced:{" "}
-                  {integration && integration.lastSync;
-                    ? new Date(integration && integration.lastSync).toLocaleString();
-                    : "Never"}
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
                 onClick={handleDisconnect}
                 type="button"
               >
+              
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium">API Details</h3>
+                <p className="text-xs text-muted-foreground">
+                  Last synced: {integration.lastSync 
+                    ? new Date(integration.lastSync).toLocaleString() 
+                    : "Never"}
+                </p>
+              </div>
+            </div>
+            
+            <DialogFooter className="flex items-center justify-between">
+              <Button variant="outline" onClick={handleDisconnect} type="button">
                 Disconnect
               </Button>
               <Button onClick={handleSaveSettings} type="button">
@@ -158,10 +178,6 @@ export function IntegrationConnectionModal({
               </Button>
             </DialogFooter>
           </>
-        )}
-      </DialogContent>;
-    </Dialog>;
-  );
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {

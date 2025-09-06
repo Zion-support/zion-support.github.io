@@ -6,11 +6,6 @@ export type RedemptionType =
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-  defaultType,
-}: {;
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -45,7 +40,6 @@ export default function UseTokensModal({
       setIsSubmitting(false);
     }
   }
-  if (!isOpen) return null;
 
   return (
             >;
@@ -54,7 +48,6 @@ export default function UseTokensModal({
               <option value="premium_support">Get premium support</option>;
             </select>;
           </div>;
-
               <button
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;

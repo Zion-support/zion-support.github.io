@@ -25,7 +25,6 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-
   return (
     <>;
       <Header />;
@@ -64,7 +63,7 @@ export default function Dashboard() {
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
-                      <a href="/wallet" className="hover:underline">View Wallet</a>
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -107,7 +106,7 @@ export default function Dashboard() {
                           message: "We've added a new notification center to help you stay updated with important information."
                           actionUrl: "/notifications"
                           actionText: "Explore Now"
-                        });
+                        }),
                         toast({
                           title: "System notification sent"
 
@@ -215,5 +214,3 @@ export default function Dashboard() {
         </div>;
       </div>;
       <Footer />;
-;
-

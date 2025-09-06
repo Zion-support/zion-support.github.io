@@ -6,47 +6,6 @@ import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Button } from "@/components/ui/button",
-// Common skills in AI and tech
-
-const POPULAR_SKILLS = [
-import { ChevronDown, ChevronUp } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Checkbox } from '@/components / ui / checkbox';
-import { SkillsFilterProps } from '@/types / filters';
-// Common skills in AI and tech;
-const POPULAR_SKILLS = [;
-  "Machine Learning";
-  "Deep Learning";
-  "Python";
-  "TensorFlow";
-  "PyTorch";
-  "Computer Vision";
-  "NLP";
-  "Data Science";
-  "AWS";
-  "Docker";
-  "Kubernetes";
-  "React";
-  "Node && Node.js";
-  "TypeScript";
-  "DevOps";
-  "Security";
-];
-
-              <Checkbox
-                id={`skill-${skill}`}
-                checked={selectedSkills && selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label
-                htmlFor={`skill-${skill}`}
-                {skill}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      )}
 }
 ;
 export /**

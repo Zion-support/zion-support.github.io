@@ -1,26 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -36,12 +14,6 @@ import RiskIndicator from '../components/ui/RiskIndicator';
   }, []);
   useEffect(() => {
     async function load() {
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-
   }, []);
 
   useEffect(() => {;
@@ -54,22 +26,6 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-  async function submitAppeal(): any (e: React && React.FormEvent) {;
-    e && e.preventDefault();
-    const form = e && e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const message = formData && formData.get('message');
-    const contactEmail = formData && formData.get('email');
-    await fetch('/api/trust/appeal', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, message, contactEmail }),;
-    });
-    alert('Appeal submitted');
-    form && form.reset();  }
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-
   }
   return (
     <EnhancedLayout>;
@@ -87,15 +43,6 @@ export default function TrustPage() {;
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-        </div>
-              Transparent logic;
-            </label>          </div>      <div className="space-y-6">;
-        <div className="flex items-center justify-between">;
-          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>;
-          <div className="flex items-center gap-3">;
-            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
-        </div>;
-              </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -106,53 +53,12 @@ export default function TrustPage() {;
                   <ul className="space-y-1">
                     {data.components.map((c: any) => (
                       <li key={c.key} className="flex justify-between">
-                        <span>{c.key}</span>
-                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
-                      </li>
-
-                  metrics={(data && data.components || []).map((c: any) => ({;
-                    label: c && c.key,;
-                    value: Math && Math.round(c && c.raw * 100),;
-                  }))}
-                />;
-              </div>;
-              {showLogic && (;
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 text-sm'>;
-                  <h3 className='font-medium mb-2'>Score Breakdown</h3>;
-                  <ul className='space-y-1'>;
-                    {data && data.components.map((c: any) => (;
-                      <li key={c && c.key} className='flex justify-between'>;
-                        <span>{c && c.key}</span>;
-                        <span>;
-                          {Math && Math.round(c && c.raw * 100)} / weighted{' '}
-                          {c && c.weighted.toFixed(3)}
-                        </span>                      </li>                <RiskIndicator status={data && data.riskLevel} />;
-              </div>;
-              <div className="bg-white dark:bg-gray-900 rounded border p-4">;
-                <h2 className="font-medium mb-2">Trust Metrics</h2>;
-                <TrustRadar metrics={(data && data.components || []).map((c: any) => ({ label: c && c.key, value: Math && Math.round(c && c.raw * 100) }))} />;
-              </div>;
-              {showLogic && (;
-                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">;
-                  <h3 className="font-medium mb-2">Score Breakdown</h3>;
-                  <ul className="space-y-1">;
-                    {data && data.components.map((c: any) => (;
-                      <li key={c && c.key} className="flex justify-between">;
-                        <span>{c && c.key}</span>;
-                        <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
-                      </li>;
 
   }
   return (
     <EnhancedLayout>
 
 
-
-                      </li>
-
-                    ))}
-                  </ul>
-                </div>
               )}
             </div>;
             <div className='space-y-4'>;
@@ -199,7 +105,6 @@ export default function TrustPage() {;
                     <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />;
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
                 </div>;
-              )}
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -408,4 +313,3 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
-

@@ -1,7 +1,3 @@
-interface AianalyticsProps {;
-  // Add props here as needed;
-}
-export default function Aianalytics(): any ({ }: AianalyticsProps) {;
   return (
     <div>;
       <h1>Aianalytics</h1>;

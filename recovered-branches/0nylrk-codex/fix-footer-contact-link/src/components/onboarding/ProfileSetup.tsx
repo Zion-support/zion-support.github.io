@@ -80,15 +80,12 @@ function ProfileSetup() {
         return "User";
     }
   }
-
-          <FormField
-            control={form && form.control}
             name="displayName"
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
-                <FormControl>;
-                  <div className="relative">;
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                <FormControl>
+                  <div className="relative">
                     <Input
                       placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
@@ -98,6 +95,48 @@ function ProfileSetup() {
                   </div>;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
+          />;
+          <FormField
+            control={form && form.control}
+            name="headline"
+              </FormItem>;            )}
+          />;
+          ;
+          <FormField;
+            control={form.control}
+            name="headline";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
+                <FormControl>;
+                  <div className="relative">;
+          />;
+          <FormField
+            control={form && form.control}
+            name="bio"
+                    <Input;
+                      placeholder={`e.g., ${;
+                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :;
+                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        "Creative Director at XYZ Studios";
+                      }`}
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                      {...field}
+                    />;
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  </div>;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;            )}
+          />;
+          ;
+          <FormField;
+            control={form.control}
+            name="bio";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
+                <FormControl>;
               </FormItem>;
             )}
           />
@@ -114,18 +153,6 @@ function ProfileSetup() {
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
-;
-  return (
-    <div className="space - y-6">;
-      <div className="text - center mb - 6">;
-        <h3 className="text - 2xl font - bold text - white">Create Your {getTypeLabel ()} Profile</h3>;
-        <p className="text - zion - slate - light mt - 2">;
-          Help others get to know you better;
-        </p>;
-      </div>;
-      <Form {...form}>;
-        <form on_submit={form.handle_submit (on_complete)} className="space - y-6">;
-          <FormField;
             control={form.control}
             name="display_name";
             render={({ field }) => (
@@ -144,12 +171,6 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea
-                    <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                  </div>;
-                  />;
-                </FormControl>;
-                <FormMessage className="text-red-400" />;
-              </FormItem>;
             )}
           />
           <Button
@@ -162,11 +183,7 @@ function ProfileSetup() {
       </Form>
     </div>
   )
-}
             Complete Profile;
           </Button>;
         </form>;
       </Form>;
-}
-    </div>);
-}

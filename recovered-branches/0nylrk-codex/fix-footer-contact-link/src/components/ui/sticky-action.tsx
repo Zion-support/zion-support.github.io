@@ -39,25 +39,10 @@ export /**
  */
 function StickyAction() {
   const [is_visible, setIsVisible] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      // Check condition
-if ( {) {
-  $2
-}
-        setIsVisible (true);
-      } else {
-        setIsVisible (false);
-      }
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
-
-  },
-
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -80,34 +65,16 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
-
   useEffect(() => {;
     const handleScroll = () => {;
       if (window && window.scrollY > showAfterScroll) {;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window.scrollY > showAfterScroll) {;
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
-    };
-
-    window && window.addEventListener("scroll", handleScroll);
-    return () => {;
-      window && window.removeEventListener("scroll", handleScroll);
-    }
-  }, [showAfterScroll]);
-
-  const positionClasses = {;
-    bottom: "bottom-4",;
-    top: "top-20";
-  };
-
-  return (
-    <AnimatePresence>;
-      {isVisible && (;
-        <motion&& motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-
-
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

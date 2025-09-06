@@ -639,7 +639,6 @@ class ComprehensiveLinkChecker {;
           status: response && response.status,;
           parent: parentUrl,;
           depth,;
-          error: `HTTP ${response && response.status}`})}
           url,
           "status": response && response.status,
           "parent": parentUrl,
@@ -891,8 +890,6 @@ class ComprehensiveLinkChecker {;
   ' Error: during link check:', error && error.message)}';
   }
 }
-// Run: the link checker,
-if: (require && require.main === module) {
         ]      })}
     return recommendations}
   async run() {

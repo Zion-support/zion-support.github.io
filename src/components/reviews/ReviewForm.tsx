@@ -1,6 +1,3 @@
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
   Form;
   FormControl;
   FormField;
@@ -12,11 +9,6 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -25,11 +17,6 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
-  }
-
-  )
-}
-  is_anonymous?: boolean;
 }
 interface ReviewFormProps {
 
@@ -48,5 +35,3 @@ interface ReviewFormProps {
   on_submit: (data: any) => Promise < boolean>,
   }
   );
-
-

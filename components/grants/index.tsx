@@ -137,7 +137,6 @@ export default function GrantsPage() {;
                   </Link>;
                 </h3>;
                 <div className='text-xs text-gray-600 dark:text-gray-400'>;
-                  {g && g.sector || 'General'}  {g && g.region || 'Global'} {' '}
                   {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
@@ -146,6 +145,6 @@ export default function GrantsPage() {;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
-                )}
 
+  }, [filters]);
 

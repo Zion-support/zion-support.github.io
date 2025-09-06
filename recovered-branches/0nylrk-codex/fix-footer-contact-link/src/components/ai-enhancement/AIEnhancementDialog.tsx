@@ -47,11 +47,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;

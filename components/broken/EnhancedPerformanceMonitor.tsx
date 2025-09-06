@@ -95,4 +95,3 @@ if ( {) {
 }</span> </button> </div> </div> </motion.div>);
 }</AnimatePresence> </>);
 }
-export default EnhancedPerformanceMonitor;

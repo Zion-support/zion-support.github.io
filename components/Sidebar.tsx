@@ -1,17 +1,3 @@
-import {
-  X,
-  ChevronDown,
-  ChevronRight,
-  Home,
-  Briefcase,
-  Users,
-  FileText,
-  HelpCircle,
-  LogOut,
-  User,
-  Search,
-  Brain,
-  Shield,
   Zap,
   ShoppingCart,
   Heart,
@@ -35,13 +21,11 @@ interface SidebarProps {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-          <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-            <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -58,10 +42,6 @@ interface SidebarProps {
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -70,29 +50,6 @@ interface SidebarProps {
                       {link && link.name}
                     </Link>;
                   ))}
-                </div>
-              </div>
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-3" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-3" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-start text-gray-600">
-                    <MapPin className="w-4 h-4 mr-3 mt-1" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-                </div>
-                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  <LogOut className="h-5 w-5" />
-                  <span className="font-medium">Sign Out</span>
-                </button>
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
@@ -123,6 +80,3 @@ interface SidebarProps {
     </AnimatePresence>;
   );
 }
-};
-
-export default Sidebar;

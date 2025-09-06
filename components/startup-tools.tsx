@@ -35,34 +35,6 @@ import {
   Zap,
   Target,
   Rocket;
-  DollarSign, ;
-  Users, ;
-  BarChart3, ;
-  Mail, ;
-  Calendar, ;
-  Shield, ;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Rocket,
-  DollarSign,
-  Users,
-  BarChart3,
-  Mail,
-  Calendar,
-  Shield,
-  Globe,
-  ArrowRight,
-  Star,
-  Check,
-  ExternalLink,
-  TrendingUp,
-  Zap,
-  Target,
-  Lightbulb,
-  BookOpen,} from 'lucide-react';import {
-  Rocket;
   DollarSign,
   Users,
   BarChart3,
@@ -78,9 +50,6 @@ import {
   Zap;
   Target;
   Lightbulb;
-  BookOpen;
-  BookOpen
-} from 'lucide-react';
 
 export default function StartupToolsPage() {
   const startupTools = [
@@ -198,8 +167,6 @@ export default function StartupToolsPage() {
               </Button>
             </div>
           </div>
-          {/* Stats */}
-              </div>
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -227,8 +194,6 @@ export default function StartupToolsPage() {
           </div>;
         </div>;
       </section>;
-
-      {/* Category Filter */}
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -238,17 +203,10 @@ export default function StartupToolsPage() {
                 }`}
               >;
                 {category}
-              </button>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
               Beyond tools, here are additional resources to help your startup;
               succeed.;
             </p>;
           </div>;
-
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Beyond tools, here are additional resources to help your startup succeed.
@@ -319,17 +277,6 @@ export default function StartupToolsPage() {
           </div>;
         </div>;
       </section>;
-
-              Explore More Tools;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-}
-    </>);
-}
-
-import React from 'react';
 
 }
 

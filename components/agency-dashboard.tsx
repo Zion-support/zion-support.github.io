@@ -1,20 +1,9 @@
 import type { GetServerSideProps } from 'next';
 
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function AgencyDashboardPage({ vendor }: Props) {;
-type Props = { vendor: Vendor | null };
-
-export default function AgencyDashboardPage({ vendor }: Props) {
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
-export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-  if (!activeVendor);
-    return (
-      <div className='text-gray-500'>No vendor found. Please apply first.</div>;
-    );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
@@ -33,7 +22,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     setPkgDesc('');
     setPkgPrice('');
   }
-
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -66,9 +54,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -96,47 +81,11 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
               placeholder='Price (USD)'
               type='number'
               value={pkgPrice}
-              onChange={e => setPkgPrice(Number(e && e.target.value))}
-              className='border rounded px-3 py-2 bg-transparent w-full';
-            />;
-            <button
-              onClick={addPackage}
-
-function Pipeline({ vendorId }: { vendorId: string }) {
-  const [items, setItems] = useState<any[]>([]);
-  async function fetchItems() {
-    const res = await fetch(
-      `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
-    );
-    const data = await res.json();
-    setItems(data.items |[]);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
-    const data = await res.json();
-    setItems(data.items |[])
-  }
-  async function changeStatus(itemId: string, status: string) {
-    await fetch('/api/vendors/update-pipeline', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ itemId, status })
-    });
-    fetchItems();
-  useEffect(() => {
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
-
-      <section className='space-y-3'>;
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
-          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e && e.target.value)} className="border rounded px-3 py-2 bg-transparent" />;
-          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e && e.target.value)} className="border rounded px-3 py-2 bg-transparent" />;
-          <div className="flex gap-2">;
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e && e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />;
-            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>;
-        </div>;
-      </section>;
-
   const [items, setItems] = useState<any[]>([]);
 
   async function fetchItems() {;
@@ -156,7 +105,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
-
   useEffect(() => {
     fetchItems();
   }, []);
@@ -183,24 +131,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendor } }
 };  )
 }
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null, // tie to auth later
-  return { props: { vendor } }
-};
-        </div>))}
-    </div>);
-;
-export const getServerSideProps: GetServerSideProps < Props> = async () => {
-  const { list_vendors } = await import ('../utils / vendor - store');
-  const vendor = list_vendors ()[0] || null; // tie to auth later;
-  return { props: { vendor } }
-}  );
-}
-export const getServerSideProps: GetServerSideProps < Props> = async () => {
-  const { list_vendors } = await import ('../utils / vendor - store');
-  const vendor = list_vendors ()[0] || null, // tie to auth later;
-  return { props: { vendor } }
-}
-;
 };
     </div>

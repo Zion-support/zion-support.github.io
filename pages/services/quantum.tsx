@@ -30,21 +30,6 @@ export default function QuantumServicesPage() {
   CheckCircle,
   Star,
   Users,
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Atom, Cpu, Shield, Rocket, Zap, Database,
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
-export default function QuantumServicesPage() {
-  const services = [
-    {
-      title: "Quantum Algorithm Development",
-      description: "Custom quantum algorithms designed for specific business problems",
-      features: ["Optimization Algorithms", "Machine Learning", "Cryptography", "Simulation"],
-      price: "From $15,000",
       icon: Atom,
       color: 'from - blue - 500 to - cyan - 500',
     },
@@ -98,9 +83,6 @@ export default function QuantumServicesPage() {
   ];
 ;
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
-      <Head>;
-        <title>Quantum Computing Services - Zion Tech Group</title>;
         <meta
           name='description'
           content='Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing.'
@@ -152,67 +134,9 @@ export default function QuantumServicesPage() {
         </div>
       </section>
             transition={{ duration: 0 && 0.8 }}
-            className='mb-8'>;
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
-              Quantum Computing;
-            </h1>;
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
-              Revolutionary quantum solutions that unlock unprecedented;
-              computational power            </p>;
-          </motion && motion.div>;
-
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            className='mb-12'>;
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
-      <Head>;
-        <title > Quantum Computing Services - Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing.';
-        />;
-        <meta;
-          property='og:title';
-          content='Quantum Computing Services - Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Revolutionary quantum computing solutions for the future of computing.';
-        />;
-        <link;
-          rel='canonical';
-          href='https://ziontechgroup.com / services / quantum';
-        />      </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */}
-      <section className='relative pt - 32 pb - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='mb - 8';
-          >;
-            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent mb - 6'>;
-              Quantum Computing;
-            </h1>;
-            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
-              Revolutionary quantum solutions that unlock unprecedented;
-              computational power            </p>;
-          </motion.div>;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className='mb - 12';
-          >;
-            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
-              Experience the future of computing with our quantum solutions.;
-              From algorithm development to security protocols, we're pioneering;
-              the quantum revolution.;
-            </p>;
               to security protocols, we're pioneering the quantum revolution.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -226,7 +150,6 @@ export default function QuantumServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-
 
 
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -257,14 +180,12 @@ export default function QuantumServicesPage() {
                 </div>
 
 
-
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -285,7 +206,6 @@ export default function QuantumServicesPage() {
                 </div>
               </motion.div>
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -293,11 +213,6 @@ export default function QuantumServicesPage() {
 }
 
           </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -319,7 +234,6 @@ export default function QuantumServicesPage() {
   }
 }
           >
-            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Experience Quantum Computing?
             </h2>
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
@@ -331,8 +245,6 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
-    </div>
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
@@ -452,7 +364,6 @@ export default function QuantumServicesPage() {
         </div>;
       </section>;
       <EnhancedFooter />;
-
     </div>;
   );
   } catch (error) {

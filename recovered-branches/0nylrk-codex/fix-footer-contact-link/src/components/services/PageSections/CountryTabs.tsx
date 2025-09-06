@@ -58,14 +58,10 @@ interface CountryTabsProps {;
   setSearchQuery: (query: string) => void;
 }
 
-export function CountryTabs(): any ({ ;
-  popularCountries;
   filteredCountries, ;
   handleCountrySelect, ;
   searchQuery, ;
   setSearchQuery ;
-}: CountryTabsProps) {;
-  return (
     <Tabs defaultValue="featured" className="w-full">;
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
         <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
@@ -75,7 +71,6 @@ export function CountryTabs(): any ({ ;
           All Countries;
         </TabsTrigger>;
       </TabsList>;
-
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
           <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
@@ -83,11 +78,6 @@ export function CountryTabs(): any ({ ;
             Browse our most popular service destinations;
           </p>;
         </div>;
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {filteredCountries;
-            .filter(country => popularCountries && popularCountries.includes(country && country.country));
-            .map(country => (;
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
@@ -108,9 +98,6 @@ export function CountryTabs(): any ({ ;
               className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
             >;
               View All {filteredCountries && filteredCountries.length} Countries;
-            </Button>;
-          </div>;
-        )}
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';

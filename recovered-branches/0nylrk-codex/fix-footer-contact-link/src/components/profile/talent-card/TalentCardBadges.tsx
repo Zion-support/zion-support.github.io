@@ -1,9 +1,3 @@
-
-import React from "react",
-interface TalentCardBadgesProps {
-  featured: boolean | undefined;
-}
-export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">

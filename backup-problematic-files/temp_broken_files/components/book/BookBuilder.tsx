@@ -116,9 +116,6 @@ export default function BookBuilder() {
           <button className="btn btn-sm btn-outline" onClick={handleGenerateWithAI} disabled={busy}>
             <Wand2 className="w-4 h-4 mr-1" /> AI Assist
           </button>
-          <select
-            className="border rounded px-2 py-1 text-sm"
-            value={pageSize}
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
@@ -133,7 +130,16 @@ export default function BookBuilder() {
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
-
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.title}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">Subtitle</div>
+              <input
+                className="w-full border rounded px-3 py-2"
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
@@ -141,7 +147,16 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
-
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.subtitle}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">Author</div>
+              <input
+                className="w-full border rounded px-3 py-2"
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
@@ -149,7 +164,17 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
-
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.author}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">ISBN (optional)</div>
+              <input
+                className="w-full border rounded px-3 py-2"
+                placeholder="9781234567897"
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
               <input,

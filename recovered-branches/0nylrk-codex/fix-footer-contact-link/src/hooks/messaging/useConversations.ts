@@ -9,7 +9,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
-export function useConversations(
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
@@ -57,21 +56,6 @@ if (throw error) {
       );
       setUnreadCount(totalUnread)
     } catch (error) {
-      console && console.error('Error fetching conversations:', error)
-          context_id: conv.context_id,
-          context_data: conv.context_data;
-        }
-      });
-;
-      set_conversations (formatted_conversations);
-;
-      // Calculate total unread count;
-      const total_unread = formatted_conversations.reduce (
-        (total, conv) => total + (conv.unread_count || 0),
-        0);
-      setUnreadCount (total_unread);
-    } catch (error) {
-      console.error ('Error fetching conversations:', error);
     } finally {
       setIsLoading (false);
     }
@@ -258,8 +242,6 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
-      }
-      
       // Send the initial message
       await supabase
         .from('messages')
@@ -267,7 +249,7 @@ export function useConversations(;
       // Return the conversation ID
       return conversationId
     } catch (error) {
-      console && console.error('Error creating conversation:', error);
+      console.error('Error creating conversation:', error),
       toast({
         title: "Failed to create conversation";
         description: "Please try again later"
@@ -299,126 +281,3 @@ export function useConversations(;
     }
   };
   return {;
-    fetchConversations;
-
-    createConversation}
-;
-  /**;
-  * Create a new conversation and send initial message;
-  */;
-  const create_conversation = async (
-    recipient_id: string,
-    initial_message: string;
-    context_type: 'job' | 'talent' | 'general' = 'general';
-    context_id?: string;
-    context_data?: ConversationContextData) => {
-    if () return, ) {
-  $2
-}
-    try {
-      // Check if conversation already exists;
-      const { data: existing_conversations, error: fetch_error } = await supabase;
-        .from ('conversations');
-        .select ('id');
-        .or (`and (user_one_id.eq.${user.id}, user_two_id.eq.${recipient_id}), and (user_one_id.eq.${recipient_id}, user_two_id.eq.${user.id})`);
-;
-      // Check condition
-if (throw fetch_error) {
-  $2
-}
-      let conversation_id;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Use existing conversation;
-        conversation_id = existing_conversations[0].id;
-;
-        // Update context if provided;
-        // Check condition
-if ( {) {
-  $2
-}
-          await supabase;
-            .from ('conversations');
-            .update ({
-              context_type: context_type;
-              context_id: context_id;
-              context_data: context_data,
-              updated_at: new Date ().toISOString ();
-            });
-            .eq ('id', conversation_id);
-        }
-      } else {
-        // Get recipient information;
-        const { data: recipient_data, error: recipient_error } = await supabase;
-          .from ('profiles');
-          .select ('display_name, avatar_url, user_type');
-          .eq ('id', recipient_id);
-          .single ();
-;
-        // Check condition
-if (throw recipient_error) {
-  $2
-}
-        // Create a new conversation;
-        const { data: new_conversation, error: create_error } = await supabase;
-          .from ('conversations');
-          .insert ({
-            user_one_id: user.id;
-            user_one_name: user.display_name || user.email;
-            user_one_avatar: user.avatar_url || ('avatar_url' in user ? user.avatar_url : undefined);
-            user_one_type: user.user_type;
-            user_two_id: recipient_id;
-            user_two_name: recipient_data?.display_name || 'User';
-            user_two_avatar: recipient_data?.avatar_url;
-            user_two_type: recipient_data?.user_type;
-            created_at: new Date ().toISOString ();
-            updated_at: new Date ().toISOString ();
-            last_message: initial_message;
-            last_message_time: new Date ().toISOString ();
-            context_type: context_type;
-            context_id: context_id,
-            context_data: context_data;
-          });
-          .select ('id');
-          .single ();
-;
-        // Check condition
-if (throw create_error) {
-  $2
-}
-        conversation_id = new_conversation.id;
-      }
-      // Send the initial message;
-      await supabase;
-        .from ('messages');
-        .insert ({
-          conversation_id: conversation_id;
-          sender_id: user.id;
-          recipient_id: recipient_id;
-          content: initial_message;
-          created_at: new Date ().toISOString (),
-          read: false;
-        });
-;
-      // Update conversations list;
-      await fetch_conversations ();
-;
-      // Return the conversation ID;
-      return conversation_id;
-    } catch (error) {
-      console.error ('Error creating conversation:', error);
-      toast ({
-        title: "Failed to create conversation";
-        description: "Please try again later",
-        variant: "destructive";
-      });
-    }
-  }
-;
-  return {
-    fetch_conversations;
-    create_conversation}
-}

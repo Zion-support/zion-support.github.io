@@ -233,7 +233,6 @@ class EnhancedTestAutomation {
         "error": error && error.message
       }}
   }
-}
 // Run if called directly
 if (require && require.main === module) {
   const testAutomation = new EnhancedTestAutomation();

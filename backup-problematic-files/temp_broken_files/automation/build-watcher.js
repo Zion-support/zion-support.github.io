@@ -217,8 +217,6 @@ class BuildWatcher {
         "stdio": 'pipe',
         "timeout": 60000, // 1 minute timeout
       });
-    } catch (error) {
-      console.log(' Type check failed');
       throw new Error(`Type check "failed": ${error.message}`);
     }
   }
@@ -231,8 +229,6 @@ class BuildWatcher {
         "stdio": 'pipe',
         "timeout": 60000, // 1 minute timeout
       });
-    } catch (error) {
-      console.log(' Lint check failed');
       throw new Error(`Lint check "failed": ${error.message}`);
     }
   }
@@ -275,7 +271,6 @@ class BuildWatcher {
         }
       }, 5000);
     } catch (error) {
-      console.error(' Error fixer "failed": ', error);
     }
   }
   startPeriodicHealthChecks() {

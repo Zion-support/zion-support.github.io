@@ -328,4 +328,3 @@ export default function GovernmentPage() {
   );
 };
 
-export default Government;

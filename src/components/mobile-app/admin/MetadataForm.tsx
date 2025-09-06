@@ -3,42 +3,6 @@ interface MetadataFormProps {
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
-  const { control, register, watch, setValue } = form
-  const keywords = watch("keywords")
-  const platform = watch("platform")
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
-    if (e.key === "Enter" |e.key === ",") {
-      e.preventDefault()
-      const value = e.currentTarget.value.trim()
-      if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value])
-        e.currentTarget.value = ""
-      }
-    }
-  }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
-};  const removeKeyword = (keyword: string,) => {
-    setValue(
-      "keywords"
-      keywords.filter((k,) => k !== keyword)
-    )
-  }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
-  const longDescription = watch("longDescription")
-  return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle>App Metadata</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <div className="space-y-4">;
-            <FormField
-              control = {control,}
-              name="appTitle"
-                    <Input
-                      placeholder="Enter app title"
-                      maxLength = {platform === "ios" ? 30 : 50,}
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
@@ -92,12 +56,6 @@ if ( {) {
                       placeholder="Enter app title";
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Max {platform === "ios" ? "30" : "50"} characters;
-                  </FormDescription>;
-                </FormItem>;
               )}
             />
             <FormField
@@ -123,12 +81,6 @@ if ( {) {
                       placeholder="Brief description of your app";
                       max_length = {platform === "ios" ? 170 : 80, }
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Max {platform === "ios" ? "170" : "80"} characters;
-                  </FormDescription>;
-                </FormItem>;
               )}
             />
             <FormField
@@ -152,9 +104,6 @@ if ( {) {
                       className="min - h-32";
                       max_length = {maxDescriptionLength, }
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"

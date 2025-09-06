@@ -9,4 +9,3 @@ const FeaturesGuideSection = ({ className }) => {
   );
 };
 
-export default FeaturesGuideSection;

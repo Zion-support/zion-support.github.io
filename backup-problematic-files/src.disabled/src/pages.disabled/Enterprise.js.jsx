@@ -9,4 +9,3 @@ const Enterprise.js = ({ className }) => {
   );
 };
 
-export default Enterprise.js;

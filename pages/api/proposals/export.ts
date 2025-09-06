@@ -11,22 +11,6 @@ function buildIpfsClient() {
   const projectId = process && process.env.IPFS_PROJECT_ID;
   const projectSecret = process && process.env.IPFS_PROJECT_SECRET;
   const apiUrl =
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
-import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
-import { create as createIpfsClient } from 'ipfs-http-client';
-import { ethers } from 'ethers';
-import fs from 'fs';
-import path from 'path';
-function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
-  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -73,15 +57,6 @@ export default async function handler(
   }
   return pdfDoc.save();
 }
-  try {
-    const { id } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd()
-      "public"
-      meta.artifacts.markdownPath |""
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")

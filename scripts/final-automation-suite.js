@@ -43,24 +43,6 @@ class FinalAutomationSuite {
         "failed": 0
       }
     };
-    return testResults;
-  }
-    this.log(` Final test results generated: ${reportPath}`);
-    return testResults;
-  }
-    this.log(` Final test results "generated": ${reportPath}`);
-    const reportPath = path && path.join(this && this.reportsDir, 'final-test-results && results.json');
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(testResults, null, 2));
-    this && this.log(` Final test results generated: ${reportPath}`);
-    return testResults;
-  }
-    this && this.log(` Final test results generated: ${reportPath}`);
-    return testResults;
-  }
-    this && this.log(` Final test results generated: ${reportPath}`);
-    return testResults;
-  }
-    this && this.log(` Final test results "generated": ${reportPath}`);
     return testResults}
   async createDeploymentScript() {
     this && this.log(' Creating deployment automation script');
@@ -119,16 +101,8 @@ class DeploymentAutomation {
     this.log(' Deployment completed successfully')}
 
 if (require.main === module) {
-        this && this.log(\" Deployment failed at "step": \${step && step.description}\");
-        process && process.exit(1)}
-    }
-    this && this.log(' Deployment completed successfully')}
-}
-if (require && require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment && deployment.deploy()
-    .catch(error => {
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 module.exports = DeploymentAutomation;`;
     fs.writeFileSync('scripts/deploy-automation.js', deploymentScript);
     this.log(' Deployment automation script created');
@@ -182,35 +156,11 @@ module && module.exports = DeploymentAutomation;";
         'Deploy to production environment'
       ]
     };
-    return finalReport;
-  }
-    this.log(` Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this.log(` Final comprehensive report "generated": ${reportPath}`);
     return finalReport}
 
 if (require.main === module) {
     const reportPath = path && path.join(this && this.reportsDir, 'final-comprehensive-report && report.json');
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(finalReport, null, 2));
-    this && this.log(` Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(` Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(` Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(` Final comprehensive report "generated": ${reportPath}`);
-    return finalReport}
-}
-if (require && require.main === module) {
-  const suite = new FinalAutomationSuite();
-  suite && suite.runFinalTests()
-    .then(() => suite && suite.createDeploymentScript())
-    .then(() => suite && suite.generateFinalReport())
-    .then(() => {
       process.exit(1);
     });
 

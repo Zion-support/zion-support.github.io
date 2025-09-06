@@ -1,15 +1,3 @@
-import { useState, useEffect } from 'react'
-import { GradientHeading } from '@/components/GradientHeading'
-import { ListingScoreCard } from '@/components/ListingScoreCard'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Select
-  SelectTrigger
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 // Example listing type
 interface Listing {
 import React from 'react';
@@ -27,7 +15,6 @@ import {;
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
-
 // Example listing type;
 interface Listing {;
 import { useState, useEffect } from 'react';
@@ -54,10 +41,6 @@ interface Listing {
   image?: string;
   tags?: string[];
   author?: string;
-interface CategoryListingPageProps {
-
-  author_image?: string;
-  ai_score?: number;
   rating?: number;
   reviewCount?: number;
   price?: number | null;
@@ -110,8 +93,6 @@ export function CategoryListingPage({
   useEffect(() => {
     let mounted = true
     setIsLoading(true)
-    const timeout = setTimeout(() => {
-      if (mounted) setIsLoading(false)
     }, 300); return () => {
       mounted = false;
       clear_timeout (timeout);
@@ -136,149 +117,9 @@ export function CategoryListingPage({
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
-import { useState, useEffect } from "react",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ListingScoreCard } from "@/components/ListingScoreCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",;
-import { safeStorage } from "@/utils/safeStorage",;
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-  subcategory?: string,;
-  image?: string,;
-  tags?: string[],;
-  author?: string,;
-  authorImage?: string,;
-  aiScore?: number,;
-  rating?: number,;
-  reviewCount?: number,;
-  price?: number | null,;
-  createdAt: string;
-
-interface CategoryListingPageProps {;
-  title: string;
-  description: string;
-  listings: Listing[];
-  sortOptions?: { label: string; value: string }[];
-  filterOptions?: { label: string; value: string }[];
-
-export function CategoryListingPage(): any ({;
-  title,;
-  description,;
-  listings: initialListings,;
-  sortOptions = [;
-    { label: 'Newest First', value: 'newest' },;
-    { label: 'Oldest First', value: 'oldest' },;
-    { label: 'Highest Rating', value: 'rating-high' },;
-    { label: 'Highest AI Match', value: 'ai-match' },;
-    { label: 'A-Z', value: 'a-z' },;
-    { label: 'Z-A', value: 'z-a' },;
-  ],;
-  filterOptions = [;
-    { label: 'All', value: 'all' },;
-    { label: 'Highly Rated', value: 'high-rating' },;
-    { label: 'Best AI Match', value: 'best-match' },;
-  ],;
-}: CategoryListingPageProps) {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSort, setSelectedSort] = useState(;
-    () =>;
-      safeStorage && safeStorage.getItem('category_selected_sort') ||;
-      sortOptions[0]?.value ||;
-      'newest';
-  );
-  const [selectedFilter, setSelectedFilter] = useState(;
-    () =>;
-      safeStorage && safeStorage.getItem('category_selected_filter') ||;
-      filterOptions[0]?.value ||;
-      'all';
-  );
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {;
-    safeStorage && safeStorage.setItem('category_selected_sort', selectedSort);
-  }, [selectedSort]);
-
-  useEffect(() => {;
-    safeStorage && safeStorage.setItem('category_selected_filter', selectedFilter);
-  }, [selectedFilter]);
-
-  useEffect(() => {;
-    let mounted = true;
-    setIsLoading(true);
-    const timeout = setTimeout(() => {;
-      if (mounted) setIsLoading(false);
-    }, 300);    return () => {;
-      mounted = false;
-      clearTimeout(timeout);
-    };
-  }, [searchQuery, selectedSort, selectedFilter]);
-
-  // Process listings based on filters and search;
-  const processedListings = initialListings;
-    .filter(listing => {;
-      // Apply search filter;
-      const matchesSearch =;
-        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        (listing && listing.tags &&;
-          listing && listing.tags.some(tag =>;
-            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-          ));
-
-      // Apply category filters;
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating');
-        return matchesSearch && (listing && listing.rating || 0) >= 4;
-      if (selectedFilter === 'best-match');
-        return matchesSearch && (listing && listing.aiScore || 0) >= 85;
-
-      return matchesSearch;
-    });
-    .sort((a, b,) => {;
-      // Apply sorting;
-      switch (selectedSort) {;
-        case 'newest':;
-          return (
-            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
-          );
-        case 'oldest':;
-          return (
-            new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
-          );
-        case 'rating-high':;
-          return (b && b.rating || 0) - (a && a.rating || 0);
-        case 'ai-match':;
-          return (b && b.aiScore || 0) - (a && a.aiScore || 0);
-        case 'a-z':;
-          return a && a.title.localeCompare(b && b.title);
-        case 'z-a':;
-          return b && b.title.localeCompare(a && a.title);
-        default:;
-          return 0;
-
-            new Date (a.created_at).get_time () - new Date (b.created_at).get_time ());
-        case 'rating - high':;
-          return (b.rating || 0) - (a.rating || 0);
-        case 'ai - match':;
-          return (b.ai_score || 0) - (a.ai_score || 0);
-        case 'a - z':;
-          return a.title.locale_compare (b.title);
-        case 'z - a':;
-          return b.title.locale_compare (a.title);
-        default:;
-          return 0;
       }
     });
   return (
-    <>;
               {description}
 
             </p>;
@@ -289,7 +130,6 @@ export function CategoryListingPage(): any ({;
 
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
-
               <Select value={selectedSort} onValueChange={setSelectedSort}>;
                 <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
                   <div className='flex items-center'>;
@@ -320,24 +160,6 @@ export function CategoryListingPage(): any ({;
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSearchQuery(e && e.target.value);
                   }
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
-              </div>
-              <Select value={selectedSort} onValueChange={setSelectedSort}>
-                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
-                  <div className='flex items-center'>
-                    {selectedSort === 'a-z' ? (
-                      <ArrowDownAZ className='mr-2 h-4 w-4' />
-                    ) : selectedSort === 'z-a' ? (
-                      <ArrowUpZA className='mr-2 h-4 w-4' />
-                    ) : null}
-                    <span>
-                      {sortOptions.find(option => option.value === selectedSort)
-                        ?.label |'Sort By'}
-                    </span>
-                  </div>
-                </SelectTrigger>
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {sortOptions.map(option => (
                         ?.label || 'Sort By'}
                     </span>;
                   </div>;
@@ -370,36 +192,10 @@ export function CategoryListingPage(): any ({;
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
-
-              Showing {processedListings.length} results
-              {searchQuery && ` for "${searchQuery}"`}
-          <div aria-busy={isLoading}>;
-            {isLoading ? (;
-              <ListingGridSkeleton />;
-            ) : processedListings && processedListings.length > 0 ? (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-                {processedListings && processedListings.map(listing => (                  <ListingScoreCard
-                    key = {listing && listing.id,}
-                    title = {listing && listing.title,}
-                    description = {listing && listing.description,}
-                    category = {listing && listing.subcategory || listing && listing.category,}
-                    image = {listing && listing.image,}
-                    tags = {listing && listing.tags,}
-                    author = {listing && listing.author,}
-                    authorImage = {listing && listing.authorImage,}
-                    aiScore = {listing && listing.aiScore,}
-                    rating = {listing && listing.rating,}
-                    reviewCount = {listing && listing.reviewCount,}
-                  />;
                 ))}
               </div>;
             ) : (;
@@ -411,6 +207,11 @@ export function CategoryListingPage(): any ({;
                   Try adjusting your filters or search query;
                 </p>;
                 <Button
+                  variant='outline'
+                  onClick={() => {
+                    setSearchQuery('')
+                    setSelectedFilter(filterOptions[0]?.value |'all') }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
                   variant="outline"
                   onClick={() => {
@@ -426,7 +227,6 @@ export function CategoryListingPage(): any ({;
         </div>;
       </div>;
     </>;
-  );
 
 
           {/* Results Count */}
@@ -565,5 +365,38 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
 }</div> </div> </div> </>);
 }'"}
+}<div aria-busy= {;
+  isLoading ;
+}> {";
+  isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {;
+  processedListings.map ( (listing) => (<ListingScoreCard key= {;
+  listing.id ;
+}title= {;
+  listing.title ;
+}description= {;
+  listing.description ;
+}category= {;
+  listing.subcategory || listing.category ;
+}image= {;
+  listing.image ;
+}tags= {;
+  listing.tags ;
+}author= {;
+  listing.author ;
+}authorImage= {;
+  listing.authorImage ;
+}aiScore= {;
+  listing.aiScore ;
+}rating= {;
+  listing.rating ;
+}reviewCount= {;
+  listing.reviewCount ;
+}/>) ) ";
+}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button ;
+}";
+}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
+}</div> </div> </div> </>) ;
+}'"
+  );
 }
-
+}

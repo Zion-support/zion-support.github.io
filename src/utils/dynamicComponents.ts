@@ -1,21 +1,3 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
-const LoadingSpinner = () =>
-  React.createElement(
-    'div'
-    { className: 'flex items-center justify-center p-8' }
-    React.createElement('div', {
-      className: 'animate-spin rounded-full h-8 w-8 border-b-2 border-primary'
-    })
-  )
-const LoadingSkeleton = () =>
-  React.createElement(
-    'div'
-    { className: 'animate-pulse space-y-4' }
-    React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-3/4' })
-    React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' })
-    React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
-  )
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
@@ -28,15 +10,21 @@ export const DynamicPieChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.PieChart }))
   {    loading: LoadingSkeleton
     ssr: false
+}
+
+  () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
+);
+export const DynamicBarChart = dynamic (
+  () => import ('recharts').then (mod => ({ default: mod.BarChart })),
+
+  {    loading: LoadingSkeleton,
+    ssr: false,
   }
 )
 export const DynamicBarChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.BarChart }))
   {    loading: LoadingSkeleton
     ssr: false
-  {    loading: LoadingSkeleton,
-    ssr: false,
-  }
 import React from 'react',
 import dynamic from 'next/dynamic',
 const LoadingSpinner = () => React.createElement('div',
@@ -51,10 +39,6 @@ const LoadingSkeleton = () => React.createElement('div',
   React.createElement('div', { className: "h-32 bg-gray-200 rounded" })
 ),
 
-// Chart components (heavy - only load when needed)
-// TODO: Uncomment when Chart component is available
-// export const DynamicChart = dynamic(
-//   () => import('../components/charts/Chart'),
 //     ssr: false
 //   }
 // )
@@ -151,5 +135,3 @@ export const DynamicVirtualList = dynamic(;
     ssr: false;
   }
 ),;
-// Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

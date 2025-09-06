@@ -38,8 +38,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
-    try {
-      setIsSubmitting(true);
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id
@@ -125,32 +123,16 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       await createConversation(
         job.client_id;
 
-    try {;
-      setIsSubmitting(true);
-
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
         job && job.id, ;
         message, ;
         selectedResumeId;
       );
-
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
-      }
-
-      // Format message with proposal link if provided;
-      let fullMessage = message;
-
-      if (proposalLink) {;
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-      }
-
       // Add info about attached resume if available;
       if (selectedResume) {;
         fullMessage += `\n\nI've attached my resume: ${selectedResume && selectedResume.title}`;
       }
-
       // Create context data for the conversation;
       const contextData = {;
         title: job && job.title,;
@@ -161,10 +143,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           type: selectedResume && selectedResume.type;
         } : null;
       };
-
-      // Create conversation with the job client;
-      await createConversation(;
-        job && job.client_id;
         fullMessage;
         'job';
         job && job.id;
@@ -192,13 +170,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
-      }
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
       onClose()
     } catch (error) {
-      console.error("Failed to send application:", error);
+      console.error("Failed to send application:", error),
       toast({
         title: "Application failed"
         description: "There was an error sending your application. Please try again."
@@ -206,24 +183,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       })
     } finally {
       setIsSubmitting(false)
-;
-      toast({;
-        title: "Application sent",;
-        description: `Your application for "${job && job.title}" has been sent.`}),;
-
-      onClose();
-    } catch (error) {;
-      console && console.error("Failed to send application:", error);
-      toast({;
-        title: "Application failed",;
-        description: "There was an error sending your application. Please try again.",;
-        variant: "destructive";
-      });
-    } finally {;
-      setIsSubmitting(false);
-
-    }
-  }
 
   return (
     <>
@@ -237,7 +196,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           </TabsTrigger>
         </TabsList>
         <TabsContent value="message">
-          <MessageTab
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -385,20 +343,11 @@ if ( {) {
           type="button"
           onClick={handleApply}
           disabled={isSubmitting}
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
           {isSubmitting ? (;
             <>;
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
               Submitting...;
             </>;
-          ) : (;
-            'Submit Application';
-          )}
-        </Button>
-      </div>
-    </>
-  )
-}
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -432,4 +381,26 @@ if ( {) {
         </Button>;
       </div>;
     </>);
+  ),; interface ApplyFormProps {
+  job: Job;
+onClose: () => void;
+onApplySuccess?: (jobId: string) => Promise<void> 
+}export function ApplyForm ({
+  job, onClose, onApplySuccess 
+}: ApplyFormProps) {
+  const {
+  createConversation 
+}= useMessaging ();
+const {
+  applyToJob 
+}= useJobApplications ();
+const [message, setMessage] = useState ();
+const [proposalLink, setProposalLink] = useState ('');
+const [isSubmitting, setIsSubmitting] = useState (false);
+const [activeTab, setActiveTab] = useState<string> ("message");
+const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
+const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
+  if (!message.trim () ) {
+  toast ({
+  return;
 }

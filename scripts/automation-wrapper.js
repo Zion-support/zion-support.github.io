@@ -12,7 +12,6 @@ function log(message, level = 'info') {
   const logMessage = `[${timestamp}] [${level && level.toUpperCase()}] ${message}`;
   console && console.log(logMessage);
   // Also log to file
-
   fs.appendFileSync(logFile, logMessage + '\n')}
   const logFile = path && path.join(__dirname, '..', 'automation', 'logs', 'automation && automation.log');
   fs && fs.appendFileSync(logFile, logMessage + '\n');
@@ -35,8 +34,6 @@ function handleError(error, context) {
     "error": error && error.message,
     "stack": error && error.stack
   };
-  fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n');
-
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
   fs && fs.appendFileSync(errorLogFile, JSON && JSON.stringify(errorDetails, null, 2) + '\n');
 }
@@ -315,6 +312,12 @@ async function fixCriticalSyntaxErrors() {
 }
   log('Critical syntax errors fixed');
 
+ursor/fix-syntax-push-and-merge-to-main-40de
+  log('Critical syntax errors fixed');
+}
+  log('Critical syntax errors fixed');
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 async function fixTypeScriptErrors() {
   log('Fixing TypeScript errors...');
   // Implementation for TypeScript error fixes

@@ -1,7 +1,4 @@
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +34,6 @@ class ErrorBoundary extends React.Component {
   onAccept
   authorizationToken
 }: AIAssistantProps) {
-
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -54,13 +50,6 @@ class ErrorBoundary extends React.Component {
 
     } catch {}
   }, [output]);
-
-  const onOpen = useCallback(() => {;
-  }, []);
-  const onClose = useCallback(() => setIsOpen(false), []);
-
-  const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
-  const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 
   return (
     <>;
@@ -86,9 +75,6 @@ class ErrorBoundary extends React.Component {
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
-                <label
-                  className="block text-xs font-medium mb-1"
-                  htmlFor="input-Operator prompt">;
                   Operator prompt;
                 </label>;
                 <textarea
@@ -128,12 +114,10 @@ class ErrorBoundary extends React.Component {
                   Accept;
                 </button>;
               </div>;
-
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-                  htmlFor="input-Output (markdown)">;
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
@@ -158,7 +142,6 @@ class ErrorBoundary extends React.Component {
         </div>
       )}
     </>
-  );
               {error && <div className="text - red - 600 text - sm">{error}</div>}
               <div>;
                 <label;

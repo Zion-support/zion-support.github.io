@@ -29,16 +29,4 @@ export interface EducationFormProps {;
   onComplete: () => void,;
   onBack: () => void;
 
-}
-export interface EducationItemProps {
-  education: Education;
-  on_edit: (education: Education) => void;
-  on_delete: (id: string) => void;
-}
-export interface EducationFormFieldsProps {
-  is_editing: boolean;
-  on_submit: (data: any) => Promise < void>;
-  on_cancel: () => void;
-}
-
 ;

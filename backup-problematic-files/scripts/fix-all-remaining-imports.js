@@ -709,4 +709,3 @@ function processFile(filePath) {
   console.log("\n Comprehensive missing imports fix completed!")}
 // Run the script
 main().catch(console.error);
-main().catch(console.error);

@@ -6,8 +6,6 @@ import { ChatAssistant } from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false);
 
-
-
   // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -24,12 +22,12 @@ export function ChatAssistantTrigger() {
       }
       return Promise.resolve()
     } catch (error) {
-      console.error("Error in AI chat:", error);
+
+      console.error("Error in AI chat:", error),
       return Promise.resolve()
     }
   }
   return (
-    <>;
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
@@ -55,13 +53,4 @@ export function ChatAssistantTrigger() {
     </>
   )
 }
-import { useState } from './react';
-import { MessageSquare } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { ChatAssistant } from '@/components / ChatAssistant';
-export /**
- * ChatAssistantTrigger - Function description
- */
-function ChatAssistantTrigger() {
-  const [is_open, setIsOpen] = useState (false);
 ;

@@ -42,7 +42,6 @@ export default function EnterpriseBilling() {;
   }
 ;
   return (;
-
     <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
@@ -54,7 +53,6 @@ export default function EnterpriseBilling() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
-  );
 }
 import React from './react';
 import { Header } from '@/components / Header';

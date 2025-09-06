@@ -31,7 +31,6 @@
 
     website: string;
   }
-
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -47,21 +46,12 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
-export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
-  // Zero Trust Network Architecture
-  {
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1,199',
     period: '/month',
@@ -126,18 +116,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     growthRate: '220% annual growth',
     variant: 'security-futuristic',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Production-ready zero trust platform with comprehensive security controls, monitoring, and enterprise deployment.',
-    launchDate: '2026-01-10',
-    customers: 850,
-    rating: 4 && 4.8,
-    reviews: 520,
-  },
-
     }
     realImplementation: true
     implementationDetails:

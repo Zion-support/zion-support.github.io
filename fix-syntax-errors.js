@@ -4,9 +4,6 @@ import fs from "fs";
 import path from "path";
 import { glob } from "glob";
 
-      (match) => {
-        if (!match ;")) {
-          modified = true;
         }
         return match;
       },

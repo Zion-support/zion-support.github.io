@@ -1,28 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-
 
 
 import { ChevronUp } from 'lucide-react';
@@ -62,18 +38,12 @@ export default function ScrollToTop() {
       }
     }
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
   }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0
-      behavior: 'smooth'
-    });
       behavior: 'smooth'})
   };
 
@@ -100,34 +70,6 @@ export default function ScrollToTop() {
               strokeLinecap='round'
               strokeLinejoin='round'
               strokeWidth={2}
-          <svg
-            className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />;
-          </svg>;
-        </button>;
-      )}
-    </>;
-  );
-};
-
-export default ScrollToTop;  );
-}
-export default ScrollToTop;  )
-}
-};
-export default ScrollToTop;  );
-};
-export default ScrollToTop;
 
               d='M5 10l7-7m0 0l7 7m-7-7v18'            />        >
           <svg
@@ -148,14 +90,8 @@ export default ScrollToTop;
       )}
     </>
   );
-
 }
 
-            />
-          </svg>
-        </button>
-      )}
-    </>
 }
 export default ScrollToTop;  )
 }
@@ -240,5 +176,4 @@ if ( {) {
 export default ScrollToTop);
 }
 ;
-export default ScrollToTop;
 export default ScrollToTop;

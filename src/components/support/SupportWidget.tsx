@@ -111,10 +111,14 @@ export function SupportWidget() {;
           </div>
           
           <ChatBotPanel />
+          
+          
+          <ChatBotPanel />
         </div>
       )}
     </>;
   );
-
+};
+};
 }
 ;

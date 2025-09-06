@@ -9,4 +9,3 @@ const SignUp = ({ className }) => {
   );
 };
 
-export default SignUp;

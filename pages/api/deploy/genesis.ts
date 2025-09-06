@@ -27,18 +27,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST") {
-    return res && res.status(405).json({ error: "Method not allowed" });
-    const {
-      instanceName,
-      defaultLanguage = "en",
-      deploymentRegion,
-      tokenActivation = false,
-      governanceMode = "democratic",
-      branding = {},
-      modules = {},
-      bonusModules = {},
-    } = body;
       });
     }
     // Simulated provisioning operations
@@ -186,18 +174,6 @@ if ( {) {
     });
 
   } catch (err: any) {
-  }
-}
-      version: 'Zion OS v1.0.0'};
-
-    const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
-
-    const access = {
-      roles: ['FounderSuperadminDAO Multisig'],
-      export: {
-        type: 'application/json',
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -211,15 +187,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
   }

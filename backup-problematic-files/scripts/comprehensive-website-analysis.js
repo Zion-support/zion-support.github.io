@@ -325,7 +325,6 @@ class WebsiteAnalyzer {
         "timeout": TIMEOUT,
         "maxRedirects": 5,
         "validateStatus": status => status < 400});
-      this.results.summary.totalLinksChecked++;
       if (response.status >= 200 && response.status < 300) {;
         this.results.summary.workingLinks++;
         this.results.workingLinks.push({
@@ -337,11 +336,6 @@ class WebsiteAnalyzer {
         });
         // Extract links from the page content
           for (const link of links) {
-            if (link.startsWith('/') || link.startsWith(BASE_URL)) {
-              const fullUrl = link.startsWith('/')
-                ? "${BASE_URL}${link}"
-                : link;
-              if (!this.checkedUrls.has(fullUrl)) {
                 this.linkQueue.push({ "url": fullUrl, "parentUrl": url })}
             }
           }

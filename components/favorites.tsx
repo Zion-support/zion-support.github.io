@@ -1,7 +1,3 @@
-  }, []);
-  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
-  return { favorites, remove }
-}
 
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
@@ -15,11 +11,6 @@ export default function FavoritesPage() {;
       <Head>
         <title>Favorites  Zion AI Marketplace</title>
       </Head>
-        <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2">
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
-            <li aria-hidden="true">/</li>
-            <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
   return { favorites, remove };
 }
@@ -145,37 +136,3 @@ function FavoritesPage() {
                   Remove;
                 </button>;
               </div>;
-  );
-}
-              <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
-              <div className='mt - 3 flex flex - wrap gap - 2'>;
-                {t.skills.slice (0, 4).map (string => (
-                  <span;
-                    key={s}
-                    className='text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800';
-                  >;
-                    {s}
-                  </span>))}
-              </div>;
-              <div className='mt - 4 flex items - center justify - between text - sm'>;
-                <div className='font - medium'>${t.hourlyRateUsd}/hr</div>;
-                <div className='flex items - center gap - 3'>;
-                  <Link href={`/talent/${t.slug}`}>;
-                    <a className='px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white'>;
-                      View Profile;
-                    </a>;
-                  </Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}>;
-                    <a className='px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600'>;
-                      Request to Hire;
-                    </a>;
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify - between text - sm">;
-                <div className="font - medium">${t.hourlyRateUsd}/hr</div>;
-                <div className="flex items - center gap - 3">;
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white">View Profile</a></Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600">Request to Hire</a></Link>;
-              </div>;
-            </div>))}
-        </div>)}
-    </div>);
-}

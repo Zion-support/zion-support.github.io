@@ -11,8 +11,9 @@ import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
   const router = useRouter();
-  const { courseId } = router.query as { courseId: string }
+  const { courseId } = router.query as { courseId: string };
   const [course, setCourse] = useState<any>(null);
+
   const [progress, setProgress] = useState<any>({
     percent: 0
     completedLessons: []
@@ -36,7 +37,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
     }
     load();
   }, [courseId]);
-
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -63,7 +63,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
-
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
@@ -178,8 +177,6 @@ export default function CourseView(req, res) {
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-
-
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
           <div className="mt-3">
@@ -213,10 +210,6 @@ export default function CourseView(req, res) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
-                )}
-              </div>
-            ) : (
-              <div className="text-sm text-gray-500">Select a lesson</div>
             {course.finalQuiz?.questions?.length ? (
               <div className="border rounded p-4">
                 <div className="font-medium mb-2">Final Certification Quiz</div>
@@ -235,7 +228,3 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
-  )
-}
-
-

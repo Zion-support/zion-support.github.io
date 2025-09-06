@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 console.log('🔧 Fixing final syntax errors...');
 
@@ -140,6 +144,11 @@ if (require.main === module) {
 module.exports = { fixFinalSyntax };
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 const fs = require('fs');
 const path = require('path');

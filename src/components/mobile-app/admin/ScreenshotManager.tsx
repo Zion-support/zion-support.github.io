@@ -153,7 +153,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
   
-  return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
@@ -187,15 +186,10 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           <Button 
             variant="outline" 
             className="mt-2"
-          >
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
-        
-
-        <div className="text-xs text-gray-300 mb-4">
-          {platform === "ios"
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
@@ -203,9 +197,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">
-              <img
                 alt="App screenshot"
-                className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
               />;
               <button
@@ -349,5 +341,3 @@ if ( {) {
 },
 ;
 };
-
-

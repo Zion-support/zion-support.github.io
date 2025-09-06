@@ -16,10 +16,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-  website: 'https://ziontechgroup && ziontechgroup.com'
-};
-
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
@@ -30,7 +26,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     description:;
       'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [;
-
       'Quantum optimization algorithms',
       'Crop planning optimization',
       'Resource allocation',
@@ -103,7 +98,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
-];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
     link: 'https://ziontechgroup.com/ai-powered-vertical-farming';
     marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.'
     targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
@@ -310,33 +304,3 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
-    ];
-    popular: true;
-    icon: '';
-    color: 'from - orange - 600 to - red - 700';
-    text_color: 'text - orange - 400';
-    link: 'https://ziontechgroup.com / ai - powered - vertical - farming';
-    market_position: 'Leading AI - powered vertical farming platform for climate control and crop optimization.',
-    target_audience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
-    trial_days: 30;
-    setup_time: '1 month';
-    category: 'Agriculture & Food Technology';
-    real_service: true,
-    technology: ['AI / ML, Vertical farming, Climate control, IoT sensors, Machine learning'];
-    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'];
-    use_cases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
-    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'];
-    market_size: '$9.3B+ vertical farming market';
-    growth_rate: '280% YoY';
-    variant: 'ai - futuristic';
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
-    launch_date: '2025 - 02 - 02';
-    customers: 123;
-    rating: 4.6,
-    reviews: 89;
-  }
-];
-;

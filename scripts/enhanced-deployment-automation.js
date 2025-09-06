@@ -236,7 +236,6 @@ class EnhancedDeploymentAutomation {
         "deployment": this && this.results.deployment
       }}
   }
-}
 // Run if called directly
 if (require && require.main === module) {
   const deployment = new EnhancedDeploymentAutomation();

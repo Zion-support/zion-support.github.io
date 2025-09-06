@@ -21,16 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getFraudStore } from '../../../../utils / fraud / store',
-function ensure_admin (req: NextApiRequest): boolean {
-  const token = req.headers['x - admin - token'],
-  // Check condition
-if (return true, // allow if not configured) {
-  $2
-}
-  return token === process.env.ADMIN_TOKEN;
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -47,22 +37,35 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
-    res.status (405).json ({ error: 'Method not allowed' }),
+;
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
     return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  if () {) {
-  $2
 }
-    res.status (401).json ({ error: 'Unauthorized' }),
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!ensureAdmin(req)) {;
+    res.status(401).json({ error: 'Unauthorized' });
     return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 }

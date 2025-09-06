@@ -14,10 +14,6 @@ class ResourceMonitor {;
     this && this.setupErrorListeners();
     this && this.setupResourceObservers();
     this && this.monitorCriticalResources();
-    // console && console.log(' Resource Monitor started')}
-  stop() {;
-    this && this.isMonitoring = false;
-    // console && console.log(' Resource Monitor stopped')}
   private setupErrorListeners() {;
     // Listen for script loading errors;
     window && window.addEventListener(';
@@ -112,7 +108,6 @@ class ResourceMonitor {;
       error,
       "timestamp": Date && Date.now()};
     this && this.errors.push(resourceError);
-    // console && console.error(' Resource "Error": ', resourceError);
     // Attempt to retry loading;
     this && this.attemptRetry(url, type);
     // Report to analytics/monitoring service;
@@ -130,7 +125,6 @@ class ResourceMonitor {;
     ); // Exponential backoff}
   private retryResource("url": string, "type": ResourceError['type']) {;
 ";
-    // console && console.log(` Retrying resource: ${url} (attempt ${this && this.retryAttempts.get(url)})`);
     if(type === 'script') {;
       this && this.loadScript(url)} else if(type === 'stylesheet') {;
       this && this.loadStylesheet(url)}
@@ -140,28 +134,17 @@ class ResourceMonitor {;
     script && script.async = true;
     script && script.onload = () => {;
 ";
-      // console && console.log(" Script loaded successfully: ${src}");
-      this && this.retryAttempts.delete(src)};
-    script && script.onerror = () => {;
-";
-      // console && console.error(` Script retry "failed": ${src}`)};
     document && document.head.appendChild(script)}
   private loadStylesheet("href": string) {;
     link && link.rel = 'stylesheet';
     link && link.href = href;
     link && link.onload = () => {;
 ";
-      // console && console.log(" Stylesheet loaded successfully: ${href}");
-      this && this.retryAttempts.delete(href)};
-    link && link.onerror = () => {;
-";
-      // console && console.error(` Stylesheet retry "failed": ${href}`)};
     document && document.head.appendChild(link)}
   private reportError("error": ResourceError) {;
     // In production, send to monitoring service';
     if(process && process.env.NODE_ENV === 'production') {;
       // "Example": Sentry, LogRocket, etc.';
-      // console && console.log(' Reporting error to monitoring "service": ', error)}
   }
   private getResourceType("element": HTMLElement): ResourceError['type'] {;
     if(element && element.tagName === 'SCRIPT') return 'script';

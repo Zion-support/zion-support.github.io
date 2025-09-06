@@ -28,17 +28,6 @@ import { CommentsSection } from '@/components/blog/CommentsSection';
       }
     }
   }, [slug, initialPost])
-  if (error) {
-    return <div>{error}</div>
-const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
-  const router = use_router (),
-  const { slug } = router.query,
-  const [post, set_post] = React.useState < BlogPost | null>(initial_post),
-  const [error, set_error] = React.useState < string | null>(null),
-  React.useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
 
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
@@ -47,12 +36,6 @@ function parseMarkdown(filePath: string): BlogPost | null {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-  if (!post) {
-    return <div>Article not found</div>
-  }
-  const articleLd = {
-    author: post.author.name,
-    publishedTime: post.publishedDate,
   }
   // Check condition
 if ( {) {
@@ -78,8 +61,6 @@ if ( {) {
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
-
-
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,32 +77,10 @@ if ( {) {
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-            }}
-          />;
-          <div>;
-            <p className="m - 0 font - medium">{post.author.name}</p>;
-            {post.author.title && (
-              <p className="m - 0 text - sm text - zion - slate - light">;
-                {post.author.title}
-              </p>)}
-          </div>;
-        </div>;
-        {post.featured_image && (
-          <div className="aspect-[16 / 9] w - full relative overflow - hidden rounded - lg mb - 6">;
-            <img;
-              src={post.featured_image}
-              alt={post.title}
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
-              className="object - cover w - full h - full";
-              on_error={(e) => {
-                const target = e.current_target as HTMLImageElement,
-                target.src = '/images / blog - placeholder.svg';
-              }}
-            />;
-          </div>)}
 
               }  } catch (error) {
     console.error("Error:", error);

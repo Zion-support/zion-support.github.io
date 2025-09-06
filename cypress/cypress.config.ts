@@ -54,18 +54,6 @@
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
-    base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts';
-    experimentalModifyObstructiveThirdPartyCode: true;
-    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          launch_options.args.push ('--disable - ipv6');        }
-        return launch_options;
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;

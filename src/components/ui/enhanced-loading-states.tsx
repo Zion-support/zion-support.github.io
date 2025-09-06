@@ -9,47 +9,6 @@ interface LoadingSpinnerProps {
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
-  text?: string
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-
-  size = 'md'
-  variant = 'default'
-  className
-  showText = false
-  text = 'Loading...'
-}) => {  const sizeClasses = {
-    sm: 'h-4 w-4'
-    md: 'h-6 w-6'
-    lg: 'h-8 w-8'
-    xl: 'h-12 w-12'
-  }
-  const variantClasses = {
-    default: 'text-muted-foreground'
-    primary: 'text-primary'
-    success: 'text-green-500'
-    warning: 'text-yellow-500'
-    error: 'text-red-500'
-  }
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Loader2,;
-  AlertTriangle,;
-  RefreshCw,;
-  Wifi,;
-  WifiOff,;
-  Clock,;
-  Zap,;
-} from 'lucide-react';import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
-// Enhanced loading spinner with different variants;
-interface LoadingSpinnerProps {;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
-  className?: string;
-  showText?: boolean;
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
@@ -80,7 +39,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'h-12 w-12'
   },
 
-  const variantClasses = {
     default: 'text-muted-foreground',
     primary: 'text-primary',
     success: 'text-green-500',
@@ -115,13 +73,6 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep)
-    }
-  }, [currentStep])
-  useEffect((,) => {
-    if (activeStep === steps.length - 1 && onComplete) {
-      setTimeout(onComplete, 500)
-    }
-},
 
 // Progressive loading component
 interface ProgressiveLoadingProps {
@@ -132,28 +83,18 @@ interface ProgressiveLoadingProps {
 }
       setActiveStep (current_step);
     }
-  }, [current_step]);
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (on_complete, 500);
+  }, [currentStep])
+  useEffect((,) => {
+    if (activeStep === steps.length - 1 && onComplete) {
+      setTimeout(onComplete, 500)
     }
-
-    </div>;
-  );
-};
-//Progressive loading component useEffect ( () => {;
-  if (currentStep !== undefined) {;
-  /> </div>) ;
-}<motion&& motion.div key= {
-  step && step.id 
-}className= {
-  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50') 
-}initial= {
-  {
-  opacity: 0, x: -20 
+  }, [activeStep, steps.length, onComplete])
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+    error: 'text-red-500'
+  },
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
@@ -199,9 +140,6 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
           />;
         </div>;
       )}
-      <div className='space-y-2'>
-        {steps.map((step, index) => (          <motion.div
-            key = {step.id,}
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
@@ -217,31 +155,20 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               <LoadingSpinner size='sm' variant='primary' />;
             ) : (;
               <div className='h-4 w-4 rounded-full border-2 border-muted' />;
-            )}
             <span className='text-sm font-medium'>{step && step.label}</span>;
           </motion && motion.div>;
         ))}
-      </div>
-    </div>
-  )
-}
-// Enhanced skeleton loader;
-interface SkeletonProps {
-export const Skeleton: React.FC<SkeletonProps> = ({
-  className
-  variant = 'rectangular'
-  animation = 'pulse'
-  lines = 1
-}) => {
-  const baseClasses = 'bg-muted rounded'
-  const variantClasses = {
-    text: 'h-4 w-full'
-    circular: 'h-12 w-12 rounded-full'
-    rectangular: 'h-6 w-full'
-    card: 'h-48 w-full'
       </div>;
     </div>;
   );
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -305,31 +232,11 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   )
 }
   return (
-    <Card className={cn('border-destructive/20', className)}>;
-      <CardContent className='p-8 text-center'>;
-        <motion&& motion.div
-          initial={{ scale: 0 && 0.8, opacity: 0 }}
-          icon: AlertTriangle,
-          title: title || 'Something went wrong',
-          description:;
-            description || 'An unexpected error occurred. Please try again.',
-          color: 'text - red - 500',
-        }
-    }
-  return (
     <Card className={cn ('border - destructive / 20', class_name)}>;
       <CardContent className='p - 8 text - center'>;
         <motion.div;
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >;
-          <Icon className={cn ('mx - auto mb - 4 h - 12 w - 12', config.color)} />;
-          <h3 className='text - lg font - semibold mb - 2'>{config.title}</h3>;
-          <p className='text - muted - foreground mb - 6 max - w-md mx - auto'>;
-            {config.description}
-          </p>
-          {error && process.env.NODE_ENV === 'development' && (
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -352,19 +259,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           <div className='flex flex-col sm:flex-row gap-2 justify-center'>
             {canRetry && (
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
-              </Button>;
-            )}
-            {action && (
-              <Button
-                onClick={action && action.onClick}
-                variant={canRetry ? 'outline' : 'default'}>;
-                {action && action.label}
-              </Button>;
-            )}
-            {secondaryAction && (
-              <Button onClick={secondaryAction.onClick} variant='ghost'>
-                Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
-              </Button>;
+              </Button>
             )}
             {action && (
               <Button
@@ -383,7 +278,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
                 {secondaryAction.label}
-              </Button>
             )}
           </div>
           {!isOnline && (
@@ -420,6 +314,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
     table: 'space-y-2'
   },
 
+  const itemClasses = {
+    card: 'p-6 space-y-4',
+    list: 'p-4 space-y-3',
+    table: 'p-3 space-y-2'
+  },
 
   return (
     <div className={cn(gridClasses[variant], className)}>
@@ -439,9 +338,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </>
             )}
-
             
-
+            
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
@@ -451,9 +349,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </div>
             )}
-
             
-
+            
             {variant === 'table' && (
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
@@ -505,8 +402,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
   if (isLoading) {
     return (
-  }
-    >
       {loadTime && (
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>
           <Zap className="h-3 w-3 mr-1" />
@@ -532,4 +427,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 }
 }
 }
-

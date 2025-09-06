@@ -1,8 +1,3 @@
-  text?: string;
-  description?: string;
-  onRetry?: () => void;
-  showRetry?: boolean;
-
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -19,7 +14,6 @@ export function EmptyState({
   onRetry,
   showRetry = false,
   icon
-}: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">
@@ -82,11 +76,6 @@ export function EmptyState(): any ({;
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
-          Try Again
-        </Button>
-      )}
-    </div>
-  );
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,

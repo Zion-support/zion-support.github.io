@@ -100,19 +100,6 @@ export default async function handler(req, res) {
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
-import { sign_payload  } from '../../../utils / sync / signature';,
-import axios from './axios';,
-import { v4 as uuidv4  } from './uuid';,
-import { nextVersionFor  } from '../../../utils / sync / versioning';,
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
-  $2
-}
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
@@ -120,12 +107,6 @@ function handler() {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
-}
-      })),
-  return res.status (200).json ({ status: "created", version, event_id: event.event_id });
-}
-;
-
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })

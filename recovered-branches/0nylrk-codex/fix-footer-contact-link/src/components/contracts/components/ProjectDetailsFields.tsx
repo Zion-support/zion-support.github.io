@@ -18,17 +18,10 @@ import { Button } from "@/components/ui/button";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {;
-
-
   form: UseFormReturn<ContractFormValues>;
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
-    <>;
-      <FormField
-        control={form && form.control}
-        name="projectName"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Project Name</FormLabel>;
@@ -72,20 +65,10 @@ function ProjectDetailsFields() {
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
-          </FormItem>;
-        )}
-      />
-      <FormField
-        control={form && form.control}
-        control={form.control}
-        name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="Describe the project scope, deliverables, and expectations..."
-                className="min-h-[120px]"
           </FormItem>)}
       />;
       <FormField;
@@ -105,21 +88,6 @@ function ProjectDetailsFields() {
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
-        )}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      />;
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-        <FormField
-          control={form && form.control}
-          name="startDate"
-          render={({ field }) => (;
-            <FormItem className="flex flex-col">;
-              <FormLabel>Start Date</FormLabel>;
-              <Popover>;
-                <PopoverTrigger asChild>;
-                  <FormControl>;
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
@@ -135,46 +103,3 @@ function ProjectDetailsFields() {
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
-                    selected={field && field.value}
-                    onSelect={field && field.onChange}
-                    disabled={(date) => date < new Date()}
-                    initialFocus;
-                  />;
-                </PopoverContent>;
-              </Popover>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-          control={form.control}
-          name="endDate"
-          render={({ field }) => (;
-            <FormItem className="flex flex-col">;
-              <FormLabel>End Date (Optional)</FormLabel>;
-              <Popover>;
-                <PopoverTrigger asChild>;
-                  <FormControl>;
-                    <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
-                      {field && field.value ? (;
-                        format(field && field.value, "PPP");
-                      ) : (;
-                        <span>Pick a date</span>;
-                      )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
-                    </Button>;
-                  </FormControl>;
-                </PopoverTrigger>;
-                <PopoverContent className="w-auto p-0" align="start">;
-                  <Calendar
-                    mode="single"
-
-        />;
-      </div>;
-    </>;
-  );
-            </FormItem>)}
-        />;
-      </div>;
-    </>);
-}

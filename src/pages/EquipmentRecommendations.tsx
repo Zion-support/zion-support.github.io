@@ -30,11 +30,8 @@ export default function EquipmentRecommendations() {
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
-
-
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
-          </Button>
         </DialogContent>
       </Dialog>
     )
@@ -47,8 +44,6 @@ export default function EquipmentRecommendations() {
         </DialogContent>;
       </Dialog>;
     );
-  }
-  return (
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
       {loading && (
@@ -63,12 +58,6 @@ export default function EquipmentRecommendations() {
             <ProductListingCard listing={listing} />
           </div>
         ))}
-      </div>
-    </div>
-  )
-}
-  );
-}
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';

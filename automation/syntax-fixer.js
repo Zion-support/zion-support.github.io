@@ -53,7 +53,6 @@ export default SyntaxFixer;
           const stat = fs.statSync(fullPath)
           if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
             walkDir(fullPath)
-          } else if (item.endsWith(&quot;.ts&quot;) |item.endsWith(&quot;.tsx&quot;) |item.endsWith(&quot;.js&quot;) |item.endsWith(&quot;.jsx&quot;)) {
             files.push(fullPath)
           }
         })
@@ -66,13 +65,6 @@ export default SyntaxFixer;
       this.log(` Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
-}
-// Main execution
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {
-  const fixer = new SyntaxFixer()
-  fixer.run().catch(console.error)
-}
-export default SyntaxFixer
         content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
 ;
         if () {) {
@@ -219,18 +211,6 @@ this.log ("=" * 50),
       this.log (` Syntax Fixer: failed: ${error.message}`, "ERROR");
     }
   }
-},
-,
-// Main execution,
-// Check condition
-if ( {, ) {
-  $2
-}
-  const fixer = new SyntaxFixer (),
-  fixer.run ().catch (console.error);
-},
-,
-export default SyntaxFixer,
 
 ;
 ;

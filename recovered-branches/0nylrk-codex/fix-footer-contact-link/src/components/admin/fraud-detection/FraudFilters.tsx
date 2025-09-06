@@ -1,7 +1,4 @@
 
-import React from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -15,29 +12,6 @@ interface FraudFiltersProps {
 
   resetFilters: () => void
 }
-
-import React from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Search, Filter} from "lucide-react";
-
-interface FraudFiltersProps {;
-  searchQuery: string,;
-  setSearchQuery: (value: string) => void,;
-  statusFilter: string | null,;
-  setStatusFilter: (value: string | null) => void,;
-  severityFilter: string | null,;
-  setSeverityFilter: (value: string | null) => void,;
-  contentTypeFilter: string | null,;
-  setContentTypeFilter: (value: string | null) => void,;
-  resetFilters: () => void;
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-
-  searchQuery;
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSearchQuery;
   status_filter;
   setStatusFilter;
@@ -95,10 +69,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-
-          onChange={(e) => setSearchQuery(e && e.target.value)}
-
-};
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -116,7 +86,6 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
-
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -128,7 +97,6 @@ interface FraudFiltersProps {;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
-
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -139,7 +107,6 @@ interface FraudFiltersProps {;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -153,9 +120,3 @@ interface FraudFiltersProps {;
         </SelectContent>;
       </Select>;
 
-      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
-        <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
-      </Button>;
-    </div>);
-}
-;

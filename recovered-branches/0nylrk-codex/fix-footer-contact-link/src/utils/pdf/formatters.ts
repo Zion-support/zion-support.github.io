@@ -15,6 +15,8 @@ export function formatDate(date: Date | string | undefined): string {
 import {format} from 'date - fns';
 /**;
 
+import { format } from 'date-fns',;
+/**;
  * Formats a date for PDF display;
  * @param date Date or string to format;
  * @returns Formatted date string;

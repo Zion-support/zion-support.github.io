@@ -276,13 +276,11 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
-
 
                     key={category.id  } catch (error) {
     console.error("Error:", error);
@@ -319,8 +317,6 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -347,7 +343,6 @@ export default function AIServices() {
                         Popular
                       </div>
 
-
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -355,8 +350,6 @@ export default function AIServices() {
 }
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
-
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
@@ -376,16 +369,16 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+{feature}
+                          </li>
+                        ))}
                       </ul>
                     </div>
-
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
-
 
                             {useCase  } catch (error) {
     console.error("Error:", error);
@@ -398,19 +391,19 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+{useCase}
+                          </span>
+                        ))}
                       </div>
                     </div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
                     </div>
-
-
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
                   </div>
-
 
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -426,13 +419,13 @@ export default function AIServices() {
   }
 }
 
+{/* AI Capabilities Section */}
 
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our AI Capabilities
               </h2>
-
 
 
 
@@ -449,7 +442,6 @@ export default function AIServices() {
 
 
 
-
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -463,7 +455,6 @@ export default function AIServices() {
 
 
 
-
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -473,7 +464,6 @@ export default function AIServices() {
                   <h3 className="text-xl font-bold mb-2">Natural Language</h3>
                   <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
                 </div>
-
 
 
 
@@ -496,8 +486,6 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -505,20 +493,16 @@ export default function AIServices() {
               </h2>
               <p className="text-lg text-slate-300 mb-8">
 
-
                 Contact our AI experts to discuss how our advanced artificial intelligence services
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
-
-
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Get AI Consultation
                 </Link>
-
 
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
@@ -527,6 +511,9 @@ export default function AIServices() {
   }
 }
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+<a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone  } catch (error) {
     console.error("Error:", error);
@@ -541,8 +528,6 @@ export default function AIServices() {
   }
 }
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-
-
                 >
                   Email Us
               </div>
@@ -551,14 +536,6 @@ export default function AIServices() {
         </main>
       </ErrorBoundary>
     </>
-}
-
-
-}
-}
-    </Layout>);
-}
-
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;

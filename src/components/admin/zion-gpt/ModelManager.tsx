@@ -3,11 +3,6 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -15,7 +10,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
-}
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -26,7 +20,6 @@ interface ModelVersionData extends ModelConfig {
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-  }
         .order('createdAt', { ascending: false }),;
 
 
@@ -121,7 +114,6 @@ interface ModelVersionData extends ModelConfig {
                         <span className="ml-1">Check</span>;
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
                       >
                         {model.active ? (
@@ -241,8 +233,3 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
-
-
-
-
-;

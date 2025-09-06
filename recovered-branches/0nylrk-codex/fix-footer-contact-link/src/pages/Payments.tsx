@@ -62,47 +62,12 @@ export default function Payments() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
 
 // Import UI components for Payment Settings tab;
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { TransactionHistory } from '@/components / transactions / TransactionHistory';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-export default /**
- * Payments - Function description
- */
-function Payments() {
-  return (
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",

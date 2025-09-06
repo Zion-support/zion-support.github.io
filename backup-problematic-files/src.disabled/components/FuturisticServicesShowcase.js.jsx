@@ -9,4 +9,3 @@ const FuturisticServicesShowcase.js = ({ className }) => {
   );
 };
 
-export default FuturisticServicesShowcase.js;

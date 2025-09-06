@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface SignUpProps {
   // Add props here as needed
-}
 export default function SignUp({ }: SignUpProps) {
   return (
     <div>

@@ -9,4 +9,3 @@ const AIBrainInterface.js = ({ className }) => {
   );
 };
 
-export default AIBrainInterface.js;

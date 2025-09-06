@@ -125,10 +125,6 @@ import {
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
-          {quickLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.link}
                 {link.description}
               </p>
               <div className='flex items-center text-zion-cyan text-xs mt-auto'>
@@ -158,18 +154,6 @@ export default function Page() {";
 }
 }
 }
-  return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow - hidden">;
-      {/* Background Elements */}";
-      <div className="absolute inset - 0 opacity - 30">";
-        <div className="absolute top - 20 left - 20 w - 64 h - 64 bg - zion - cyan / 10 rounded - full blur - 3xl"></div>";
-        <div className="absolute bottom - 20 right - 20 w - 80 h - 80 bg - zion - purple / 10 rounded - full blur - 3xl"></div>";
-        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - zion - blue / 10 rounded - full blur - 3xl"></div>;
-      </div>;
-";
-      <div className="container - responsive relative z - 10">;
-        {/* Header */}
-        <motion.div;
-          initial = {
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -224,21 +208,6 @@ export default function Page() {";
                     <motion.div;
                       key={feature}
                       initial = {
-}}
-                      viewport={{ once: true }}";
-                      className="flex items - center gap - 2 text - xs text - gray - 400">";
-                      <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"></div>";
-                      <span className="truncate">{feature}</span>;
-                    </motion.div>))}
-                </div>;
-              </div>;
-              {/* Stats */}";
-              <div className="mb - 4">";
-                <div className="flex items - center justify - between text - sm">;
-                  {Object.entries (link.stats).slice (0, 2).map ([key: unknown, value]: unknown, idx: unknown (
-                    <motion.div;
-                      key={key}
-                      initial = {
                   ))}
                 </div>
               </div>
@@ -258,16 +227,10 @@ export default QuickAccess;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
-
           ))}
         </div>;
       </div>;
     </section>;
-  );
-
-export default QuickAccess;}
-
-export default QuickAccess;
 
   { opacity: 0,
   scale: 0.8;
@@ -304,5 +267,3 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
-
-

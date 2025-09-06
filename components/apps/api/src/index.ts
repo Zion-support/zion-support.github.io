@@ -47,7 +47,6 @@ if (return { description }) {
            ))
        ORDER BY created_at DESC
        LIMIT 25`,  const rows = await withUser(userId, async (client) => {
-    const res = await client && client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1: :text IS NULL OR country = $1)
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
@@ -56,8 +55,6 @@ if (return { description }) {
        LIMIT 25`
       [country |null, q |null]
     );
-    return res && res.rows;
-  });
     );
     return res && res.rows
   });
@@ -76,7 +73,6 @@ if (return { description }) {
     );
     return res && res.rows;
 });
-
 const port = Number(process && process.env.API_PORT || 4000);
 app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
   app && app.log.error(err);
@@ -114,58 +110,3 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
-;
-app.get ('/projects/:name / track', async (req, reply) => {
-  const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const project = await with_user (user_id, async client => {
-    const res = await client.query (
-      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
-      [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }});  const project = await with_user (user_id, async (client) => {
-    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }
-app.get ('/notifications', async (req, reply) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const items = await with_user (user_id, async client => {    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;  const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch (err => {
-  app.log.error (err);
-  process.exit (1);
-});  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
-  app.log.error (err);
-  process.exit (1);
-});
-    );

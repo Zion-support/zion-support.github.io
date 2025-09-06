@@ -1,5 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Octokit } from '@octokit/rest';
     } catch (e) {
       // ignore if missing
     }
@@ -22,6 +20,8 @@ export default async function handler(req, res) {
 }
 ;
   try {
+    const { app, severity, message, stack, metadata } = req.body || {},
+    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
 
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined }),
     const [owner, repo] = REPO.split('/'),
@@ -74,6 +74,17 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
+
+    } catch (e) {
+      // ignore if missing;
+    }
+
+
+
+
+  }
+}
+;
       // ignore if missing;
     }
 return res.status(200).json({ ok: true, issue: issue.data.number })
@@ -96,7 +107,5 @@ return res.status (200).json ({ ok: true, issue: issue.data.number });
   }
 }
 ;
-  }
-}
   }
 }

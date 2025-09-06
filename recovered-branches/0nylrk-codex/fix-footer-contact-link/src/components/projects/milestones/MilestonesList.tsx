@@ -115,21 +115,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false);
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data)
-    setShowAddForm(false)
-  if (isLoading) {
-  onApprove,;
-  onReject;
-}) => {;
-  const [showAddForm, setShowAddForm] = useState(false);
-
-  const handleSubmit = async (data: any) => {;
-    await onCreateMilestone(data),;
-    setShowAddForm(false);
-  };
-
-  if (isLoading) {;
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -184,21 +169,6 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
           <MilestoneCard
-            key={milestone && milestone.id}
-            id={milestone && milestone.id}
-            projectId={milestone && milestone.project_id}
-            title={milestone && milestone.title}
-            description={milestone && milestone.description}
-            amount={parseFloat(milestone && milestone.amount.toString())}
-            status={milestone && milestone.status}
-            dueDate={milestone && milestone.due_date}
-            onApprove={onApprove}
-            onReject={onReject}
-          />;
-        ))}
-      </div>;
-    </div>;
-  );
 };
   is_submitting;
   on_approve,

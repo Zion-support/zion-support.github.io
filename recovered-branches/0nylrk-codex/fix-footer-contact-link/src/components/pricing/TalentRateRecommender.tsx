@@ -1,7 +1,4 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -19,13 +16,6 @@ interface TalentRateRecommenderProps {
       const params: TalentRateParams = {;
         skills;
       const result = await getTalentRateSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating rate suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
 interface TalentRateRecommenderProps {
@@ -76,7 +66,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         location},
 
       const result = await getTalentRateSuggestion(params),
-
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
@@ -107,9 +96,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       // We'll use the middle of the range as the suggested rate;
       const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
-      }
-    }
-
   return (
     <div className="space-y-4">;
       <div>;
@@ -118,23 +104,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-  onSuggestionApplied,
-  rate_type}) => {
-  const [is_loading, setIsLoading] = useState (false);
-  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
-  const { user } = use_auth ();
-;
-  const generate_suggestion = async () => {
-    // Check condition
-if ( {) {
-  $2
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
-      </div>;
-    </div>;
-  );
 };
             rate_type={rate_type}
           />)}

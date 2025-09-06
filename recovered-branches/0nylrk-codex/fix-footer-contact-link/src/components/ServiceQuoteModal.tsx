@@ -63,7 +63,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         title: "Quote Request Submitted!"
         description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form
-      onOpenChange(false);
+
+      onOpenChange(false),
       setFormData({
         description: ''
         email: ''
@@ -73,7 +74,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       setEndDate(undefined);
       setCurrentStep('details')
     } catch (error) {
-      console.error("Error submitting quote:", error);
+      console.error("Error submitting quote:", error),
       toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
@@ -122,7 +123,6 @@ if (throw error) {
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
-  }
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -162,18 +162,11 @@ if (throw error) {
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-
-                    {BUDGET_RANGES.map((range) => (;
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-                        {range.label}
-                      </SelectItem>
-                    ))}
                   </SelectContent>;
                 </Select>;
               </div>;
             </div>;
           )}
-          {/* Step 2: Timeline */}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
@@ -185,10 +178,6 @@ if (throw error) {
                         {option && option.label}
                       </SelectItem>;
                     ))}
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full"
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -202,7 +191,6 @@ if (throw error) {
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -236,7 +224,18 @@ if (throw error) {
                   )}
                 />;
               </div>;
-
+                <Input;
+                  id="email";
+                  name="email";
+                  type="email";
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="your@email.com";
+                  className="bg-zion-blue-dark border-zion-blue-light text-white";
+                  required;
+                />;
+              </div>;
+;
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
                 <div className="space-y-2 text-sm">;
@@ -246,11 +245,11 @@ if (throw error) {
                   </div>;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Budget:</span>;
-                    <span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
+                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>;
                   </div>;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Timeline:</span>;
-                    <span className="text-white">{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;
+                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
                   </div>;
                   {startDate && (;
                     <div className="flex justify-between">;
@@ -262,12 +261,10 @@ if (throw error) {
                     <div className="flex justify-between">;
                       <span className="text-zion-slate-light">End Date:</span>;
                       <span className="text-white">{format(endDate, "PPP")}</span>;
-                    </div>;
-                  )}
+                    </div>;                  )}
                 </div>;
               </div>;
             </div>;
-          )}
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
               <Button

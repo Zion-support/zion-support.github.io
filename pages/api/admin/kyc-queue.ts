@@ -3,9 +3,6 @@ import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
@@ -16,9 +13,6 @@ function load(): Record<string, KycProfile> {
     return {};
   }
 }
-  if (req.method === 'GET') {
-    const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
-    return res.status(200).json({ ok: true, queue })
   }
   if (req.method === 'POST') {
     const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string }

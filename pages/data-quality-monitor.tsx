@@ -15,8 +15,6 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function DataQualityMonitorPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-quality-monitor'))
-  if (!service) return null
-
   return (
     <Layout>
       <Head>
@@ -58,4 +56,3 @@ export default function DataQualityMonitorPage() {
       </div>
     </Layout>
   )
-;

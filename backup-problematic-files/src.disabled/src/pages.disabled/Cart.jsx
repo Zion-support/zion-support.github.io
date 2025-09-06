@@ -9,4 +9,3 @@ const Cart = ({ className }) => {
   );
 };
 
-export default Cart;

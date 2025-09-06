@@ -2,7 +2,6 @@
 
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
-export interface Dispute {
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -16,8 +15,6 @@ export interface Dispute {
   status: DisputeStatus;
   resolution_type: ResolutionType;
   project?: {
-  }
-}
   id: string;
   dispute_id: string;
   user_id: string;
@@ -25,8 +22,6 @@ export interface Dispute {
   created_at: string;
   is_admin_note: boolean;
   user_profile?: {
-  }
-}
   id: string;
   dispute_id: string;
   uploaded_by: string;

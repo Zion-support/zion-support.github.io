@@ -9,4 +9,3 @@ const SearchResultsPage = ({ className }) => {
   );
 };
 
-export default SearchResultsPage;

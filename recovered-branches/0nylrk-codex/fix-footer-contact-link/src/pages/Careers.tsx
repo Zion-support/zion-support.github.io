@@ -35,7 +35,6 @@ export default function Careers() {
         department: "Engineering"
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
-    ];
     product: [
       {
         title: "Product Manager"
@@ -75,7 +74,6 @@ export default function Careers() {
         type: "Full-time"
         department: "Operations"
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
-      }
       {
         title: "Talent Acquisition Specialist"
         location: "Remote"
@@ -84,7 +82,6 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
     ]
-  }
   // Benefits list
   const benefits = [
     {
@@ -95,7 +92,6 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       )
-    }
     {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
@@ -104,7 +100,6 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
-    }
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -148,14 +143,10 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
       }
     ];
-  };
-
                             Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;
-                  ))}
-                </TabsContent>;
               ))}
             </Tabs>
           </div>
@@ -175,30 +166,24 @@ export default function Careers() {
   )
             </Tabs>;
           </div>;
-
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;
+          ;
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-                    </Card>))}
-                </TabsContent>))}
             </Tabs>;
           </div>;
-          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md: p - 12 text - center">;
-            <h2 className="text - 3xl font - bold text - white mb - 6">Don't see the right position?</h2>;
-            <p className="text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto">;
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;
+            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology.;
               Send us your resume and let's start a conversation.;
             </p>;
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
               Send General Application;
             </Button>;
           </div>;
         </div>;
       </main>;
-}
-    </AppLayout>);
-}

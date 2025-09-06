@@ -22,7 +22,6 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 
-
 }
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   
@@ -61,5 +60,13 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
 
 
 
+}
 
 '
+origin/chore/resolve-conflicts-1756215853
+
+'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+

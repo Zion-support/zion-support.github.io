@@ -5,21 +5,15 @@
  * @param format Optional format specification
  * @returns Formatted date string
  */
-  const dateObj = new Date(date);
-  switch (format) {
-    case 'short':
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
-      const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
-      const yesterday = new Date(today);
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
         return 'Yesterday'
       } else {
-
         return dateObj.toLocaleDateString()
 /**;
  * Format a date string or timestamp into a readable format;
@@ -63,9 +57,33 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday';
       } else {;
         return dateObj.toLocaleDateString();
-      }
-    default: return dateObj && dateObj.toLocaleDateString()
   }
+  ;
+  interval = Math.floor(seconds / 2592000),;
+  if (interval >= 1) {;
+    return interval === 1 ? '1 month ago' :`${interval} months ago`,;
+  }
+  ;
+  interval = Math.floor(seconds / 86400),;
+  if (interval >= 1) {;
+    return interval === 1 ? '1 day ago' :`${interval} days ago`,;
+  }
+  ;
+  interval = Math.floor(seconds / 3600),;
+  if (interval >= 1) {;
+    return interval === 1 ? '1 hour ago' :`${interval} hours ago`,;
+  }
+  ;
+  interval = Math.floor(seconds / 60),;
+  if (interval >= 1) {;
+    return interval === 1 ? '1 minute ago' :`${interval} minutes ago`,;
+  }
+  ;
+  return seconds <= 5 ? 'just now' :`${Math.floor(seconds)} seconds ago`,;
+},; /** * Format a date string or timestamp into a readable format * @param date Date to format * @param format Optional format specification * @returns Formatted date string */ switch (format) {
+  case 'short': return dateObj.toLocaleDateString ();
+case 'medium': 
+}
 
 /**
  * Format a date to show how long ago it was
@@ -79,22 +97,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
-  if (interval >= 1) {
-    return interval === 1 ? '1 month ago' : `${interval} months ago`
-  }
-  
-  if (interval >= 1) {
-    return interval === 1 ? '1 day ago' : `${interval} days ago`
-  }
-  
-  if (interval >= 1) {
-    return interval === 1 ? '1 hour ago' : `${interval} hours ago`
-  }
-  
-  if (interval >= 1) {
-    return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
-  }
-  
 ;
   switch (format) {
     case 'short':;
@@ -191,4 +193,3 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-};

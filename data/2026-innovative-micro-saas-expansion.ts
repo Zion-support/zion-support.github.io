@@ -30,14 +30,10 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
 
   reviews: number;
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
-  [
-    // AI-Powered Business Intelligence & Analytics
     {
       id: 'ai-business-intelligence-suite'
       name: 'AI Business Intelligence Suite'
@@ -665,7 +661,10 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 ) => {
     return price >= minPrice && price <= maxPrice;
   });
-};    return price >= minPrice && price <= maxPrice
+
+};
+
+
   })
 
 
@@ -687,5 +686,3 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-};
-

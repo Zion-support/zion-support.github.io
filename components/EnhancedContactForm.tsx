@@ -1,8 +1,5 @@
 
 
- setErrors (newErrors);
-}
-setIsSubmitting (true);
   {
   opacity: 0, y: -10
 }animate= {

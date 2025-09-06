@@ -24,57 +24,6 @@
       '24 / 7 support',
     ],
     popular: true,
-    marketPosition:
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge'
-    targetAudience:
-      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Edge Computing'
-    realService: true
-    technology: [
-      'Edge Computing'
-      'AI/ML'
-      'IoT'
-      'Container Orchestration'
-      'Real-time Analytics'
-    ]
-    integrations: [
-      'AWS IoT'
-      'Azure IoT'
-      'Google Cloud IoT'
-      'Kubernetes'
-      'Docker'
-    ]
-    useCases: [
-      'IoT management'
-      'Real-time analytics'
-      'Edge AI'
-      'Smart manufacturing'
-    ]
-    roi: '300% ROI within 6 months through reduced latency and improved performance'
-    competitors: [
-      'AWS Greengrass ($1000+/month)'
-      'Azure IoT Edge ($2000+/month)'
-      'Google Cloud IoT'
-    ]
-    marketSize: '$50B edge computing market'
-    growthRate: '250% annual growth'
-    variant: 'edge-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.'
-    launchDate: '2024-10-01'
-    customers: 156
-    rating: 4.7
-    reviews: 89
-  }
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -144,137 +93,13 @@
     }
     realImplementation: true
     implementationDetails:
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',
-    launch_date: '2024 - 10 - 01',
-    customers: 156,
-    rating: 4 && 4.7,
-    reviews: 89,
-  },
-  {
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
-    tagline: 'Comprehensive zero trust security implementation'
-    price: '$3,999'
-    period: '/month'
-    description:
-      'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.'
-    features: [
-      'Continuous identity verification'
-      'Micro-segmentation'
-      'Advanced threat detection'
-      'Behavioral analytics'
-      'Compliance tools'
-      'Real-time monitoring'
-      'Automated response'
-      'Integration APIs'
-      'Security dashboard'
-      '24/7 security support'
-    ]
-    popular: true
-    icon: ''
-    color: 'from-red-600 to-orange-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/zero-trust-security-platform'
-      'Continuous identity verification',
-      'Micro - segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Compliance tools',
-      'Real - time monitoring',
-      'Automated response',
-      'Integration APIs',
-      'Security dashboard',
-      '24 / 7 security support',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-red-600 to-orange-700',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
-    marketPosition:
-      'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Cybersecurity'
-    realService: true
-    technology: [
-      'Zero Trust Architecture'
-      'AI/ML'
-      'Identity Management'
-      'Network Security'
-      'Threat Intelligence'
-    ]
-    integrations: [
-      'Active Directory'
-      'Okta'
-      'Palo Alto Networks'
-      'CrowdStrike'
-      'SIEM systems'
-    ]
-    useCases: [
-      'Enterprise security'
-      'Government compliance'
-      'Financial security'
-      'Healthcare compliance'
-    ]
-    roi: '400% ROI within 12 months through security improvements and compliance benefits'
-    competitors: [
-      'Palo Alto Networks ($10000+/month)'
-      'CrowdStrike ($5000+/month)'
-      'Zscaler'
-    ]
-    marketSize: '$30B zero trust market'
-    growthRate: '200% annual growth'
-    variant: 'zero-trust-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.'
-    launchDate: '2024-09-01'
     customers: 89
     rating: 4.8
     reviews: 45
   }
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
-    real_implementation: true,
-    implementation_details:;
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
-    launch_date: '2024 - 09 - 01',
-    customers: 89,
-    rating: 4 && 4.8,
-    reviews: 45,
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    };
-    realImplementation: true;
-    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
-    launchDate: '2024-10-01';
-    customers: 89;
-
-    rating: 4.8
-
     rating: 4 && 4.8,
     reviews: 45
       website: 'https://ziontechgroup.com';
@@ -286,8 +111,6 @@
     rating: 4.8,
     reviews: 45;
   }
-];
-
 export interface AdvancedITService {;
   id: string,;
   name: string,;

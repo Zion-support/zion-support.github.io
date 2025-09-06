@@ -24,36 +24,12 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
-
-      },
-    );
-    // Fix import statements missing semicolons
-    content = content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
-      (match) => {
-        if (!match ;")) {
-          return match && match.trim() + ";";
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
-          return match.trim () + ";";
-
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
-        if (!match.trim().endsWith(";")) {
-          return match.trim() + ";";
         }
         return match;
       }

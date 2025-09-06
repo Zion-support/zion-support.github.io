@@ -9,4 +9,3 @@ const OnChainExport = ({ className }) => {
   );
 };
 
-export default OnChainExport;

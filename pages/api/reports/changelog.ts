@@ -9,28 +9,6 @@ const p = path.join(
   'changelog.json'
 );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
-      const data = fs && fs.readFileSync(p, 'utf8');
-      const changelog = JSON && JSON.parse(data);
-      return res && res.status(200).json(changelog);
-    } catch (error) {
-      return res && res.status(500).json({ error: 'Failed to read changelog' });
-;
-const p = path.join (
-  process.cwd (),
-  'data',
-  'reports',
-  'changelog.json');
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
     try {
       const data = fs.readFileSync (p, 'utf8');
       const changelog = JSON.parse (data);
@@ -38,16 +16,6 @@ if ( {) {
     } catch (error) {
       return res.status (500).json ({ error: 'Failed to read changelog' });
     }
-
-  }
-// Check condition
-if ( {) {
-  $2
-}
-    try {
-      const { version, changes, date } = req.body;
-      if (!version |!changes |!Array.isArray(changes)) {
-        return res.status(400).json({ error: 'Missing required fields' });
       }
       let changelog = [];
       try {

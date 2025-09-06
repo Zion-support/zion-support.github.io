@@ -31,13 +31,11 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -49,25 +47,6 @@
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-    id: 'ai-consciousness-research-platform'
-    name: 'AI Consciousness Research Platform'
-    tagline: 'Advanced AI consciousness simulation and research'
-    price: '$5,999'
-    period: '/month'
-    description:
-      'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.'
-      'Consciousness simulation engine'
-      'Cognitive architecture modeling'
-      'Emotional intelligence algorithms'
-      'Self-awareness development'
-      'Memory and learning systems'
-      'Social interaction modeling'
-      'Research analytics tools'
-      'Collaborative research platform'
-      'API for research integration'
-      'Expert consultation services'
-    ]
-    popular: true
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -80,36 +59,6 @@
       'Expert consultation services',
     ],
     popular: true,
-    marketPosition:
-      'Leading AI consciousness research platform for scientific institutions'
-    targetAudience:
-      'Research institutions, Universities, AI labs, Government agencies, Tech companies'
-    trialDays: 14
-    setupTime: '6-8 weeks'
-    category: 'Advanced AI & Consciousness'
-    realService: true
-    technology: [
-      'Advanced AI/ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch'
-    ]
-    integrations: [
-      'Research platforms, Academic databases, AI frameworks, Collaboration tools'
-    ]
-    useCases: [
-      'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'
-    ]
-    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
-    competitors: ['No direct competitors in consciousness simulation']
-    marketSize: 'Emerging research market'
-    growthRate: 'Projected 500% annual growth'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-      'Advanced research platform with custom AI models and collaborative research tools'
-    launchDate: '2024-11-01'
-    customers: 23
-    rating: 5.0
-    reviews: 18
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -138,7 +87,6 @@
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
-
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -199,8 +147,6 @@
       'Expert IoT consultation',
     ],
     popular: false,
-];
-export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -310,7 +256,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Post - quantum algorithms_lattice cryptography_hash - based signatures_migration tools_compliance support';
     ];
-  {
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -450,5 +395,3 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     market_advantage: 'Advanced predictive analytics platform with custom ML model development';
   }
 ];
-export default specializedEnterpriseServices;
-;

@@ -21,9 +21,6 @@ const "services": Service[] = [// Existing-style Micro SaaS (kept) + new
   { "title": 'RAG Search & Knowledge Agents', "href": '/ai-services', "price": 'Project: $6k$35k', "bullets": ['Hybrid search', 'Eval harness', 'Observability'], "category": 'AI Services' },
   { "title": 'Vision QA for Manufacturing', "href": '/ai-services', "price": 'Project: $8k$50k', "bullets": ['Defect detect', 'Edge deploy', 'Dashboards'], "category": 'AI Services' },
   // IT Services (existing concepts retained) + new
-  { "title": 'Cloud Platforms & SRE', "href": '/cloud-platforms', "price": 'Project: $8k$60k', "bullets": ['Kubernetes', 'Serverless', 'IaC'], "category": 'IT Services' },
-  { "title": 'Cybersecurity & Zero Trust', "href": '/cybersecurity', "price": 'Project: $6k$40k', "bullets": ['ZTA', 'SOC2/GDPR', 'IR plan'], "category": 'IT Services' },
-  { "title": 'Data Platform & MLOps', "href": '/data-analytics', "price": 'Project: $12k$80k', "bullets": ['Data mesh', 'Feature store', 'ML pipelines'], "category": 'IT Services' },
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

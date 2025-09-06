@@ -126,24 +126,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       return;
     }
     try {
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        api_payload.distribution_data = processedDistData;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-      }
-      // Check condition
-if (.error) {) {
-  $2
-}
-        throw new Error (`Generation error: ${(data as any).error}`);
-      }
       if (!data |!(data as any).whitepaperDraft) {
         throw new Error('No whitepaper draft received from the function.')
       }
@@ -197,12 +179,6 @@ if ( {) {
     }
   }
   const handleDownloadPdf = async () => {
-        { message: 'Error generating shareable link' }
-      );
-      set_error ('Failed to generate shareable link: ' + e.message);
-      toast.error ('Failed to generate shareable link.');
-    } finally {
-      setIsSharing (false);
     }
   }
   const handleTogglePublicStatus = async () => {
@@ -212,58 +188,6 @@ if ( {) {
     // For optimistic update:;
     // setCurrentSharedWhitepaperIsPublic (newPublicStatus);
     try {
-      const { data: response, error: func_error } =;
-        await supabase.functions.invoke ('set - shared - whitepaper - public - status', {
-          body: {
-        { message: 'Error toggling public status' }
-      );
-      set_error ('Failed to update public status: ' + e.message);
-      toast.error ('Failed to update public status.');
-      // Revert optimistic update if it failed:;
-      // setCurrentSharedWhitepaperIsPublic (!newPublicStatus);
-    }
-  }
-  const handleSubmitToCounsel = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error (
-        'Please generate and finalize the whitepaper before submitting.');
-      return;
-    }
-    setIsSubmittingToCounsel (true);
-    set_error (null);
-    try {
-        // Check condition
-if (
-          throw new Error () {
-  $2
-}
-            `Failed to make whitepaper public: ${status_error.message}`);
-        // Check condition
-if (
-          throw new Error () {
-  $2
-}
-            'No response received from set - shared - whitepaper - public - status function');
-        if (.error)) {
-  $2
-}
-          throw new Error ((status_response as any).error);
-        setCurrentSharedWhitepaperIsPublic (true);
-      }
-        { message: 'Error submitting to counsel' }
-      );
-      set_error ('Failed to submit to counsel: ' + e.message);
-      toast.error ('Failed to submit to counsel: ' + e.message);
-    } finally {
-
-import { supabase } from '@/integrations/supabase/client';
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel;
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
@@ -554,16 +478,9 @@ import { Trash2, Download, Share2 } from 'lucide-react';
     }
 },
 
-
   return (
     <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
       {/* Left Column: Inputs and Editors */}
-      <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>;
-        <div className='flex justify-between items-center mb-6'>;
-          <h1 className='text-xl font-bold text-center flex-grow'>;
-            Whitepaper Configuration;
-          </h1>;
-          <div className='flex space-x-1'>;
             <Button
               onClick={handleDownloadMarkdown}
               disabled={
@@ -575,170 +492,14 @@ import { Trash2, Download, Share2 } from 'lucide-react';
               }
               variant='outline'
               size='sm'
-              title='Download as Markdown'>;
-              <Download className='h-4 w-4' />{' '}
-              <span className='ml-1 hidden sm:inline'>MD</span>;
-            </Button>;
-            <Button
-              onClick={handleDownloadPdf}
-              disabled={
                 isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
-              title='Download as PDF'>;
-              <Download className='h-4 w-4' />{' '}
-              <span className='ml-1 hidden sm:inline'>PDF</span>;
-            </Button>;
-            <Button
-              onClick={handleGenerateShareableLink}
-              disabled={
                 isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
-              title='Generate Shareable Link'>;
-              <Share2 className='h-4 w-4' />{' '}
-        <form onSubmit={e => e.preventDefault()} className='space-y-6'>
-          {/* ... (Input fields remain the same) ... */}
-          <div>;
-            <label htmlFor='tokenName' className='block text-sm font-medium'>;
-              Token Name:;
-            </label>;
-            <Input
-              id='tokenName'
-              value={tokenName}
-              onChange={e => setTokenName(e && e.target.value)}
-      setIsSubmittingToCounsel (false);
-    }
-  }
-  return (
-    <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>;
-      {/* Left Column: Inputs and Editors */}
-      <div className='md:w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>;
-        <div className='flex justify - between items - center mb - 6'>;
-          <h1 className='text - xl font - bold text - center flex - grow'>;
-            Whitepaper Configuration;
-          </h1>;
-          <div className='flex space - x-1'>;
-            <Button;
-              on_click={handleDownloadMarkdown}
-              disabled={
-                is_downloading ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_sharing ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Download as Markdown';
-            >;
-              <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>MD</span>;
-            </Button>;
-            <Button;
-              on_click={handleDownloadPdf}
-              disabled={
-                is_downloading ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_sharing ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Download as PDF';
-            >;
-              <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>PDF</span>;
-            </Button>;
-            <Button;
-              on_click={handleGenerateShareableLink}
-              disabled={
-                is_sharing ||;
-                sections.length === 0 ||;
-                is_loading ||;
-                is_downloading ||;
-                isSubmittingToCounsel;
-              }
-              variant='outline';
-              size='sm';
-              title='Generate Shareable Link';
-            >;
-              <Share2 className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>Share</span>;
-            </Button>;
-          </div>;
-        </div>;
-        <form on_submit={e => e.prevent_default ()} className='space - y-6'>;
-          {/* ... (Input fields remain the same) ... */}
-          <div>;
-            <label html_for='token_name' className='block text - sm font - medium'>;
-              Token Name:;
-            </label>;
-            <Input;
-              id='token_name';
-              value={token_name}
-              on_change={e => setTokenName (e.target.value)}
-              required;
-            />;
-          </div>;
-          <div>;
-            <label htmlFor='tokenSupply' className='block text-sm font-medium'>;
-              Token Supply:;
-            </label>;
-            <Input
-              id='tokenSupply'
-              value={tokenSupply}
-              onChange={e => setTokenSupply(e && e.target.value)}
-              required;
-            />;
-          </div>;
-          <div>;
-            <label htmlFor='useCases' className='block text-sm font-medium'>;
-              Use Cases:;
-            </label>;
-            <textarea
-              id='useCases'
-              value={useCases}
-              onChange={e => setUseCases(e && e.target.value)}
-              required;
-              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-              rows={3}
-            />;
-          </div>;
-          <div>;
-          {/* Token Distribution Inputs */}
-          <div className='space-y-3 p-3 border rounded-md'>;
-            <h2 className='text-lg font-semibold'>Token Distribution</h2>;
-            {distributionData && distributionData.map(item => (;
-              <div key={item && item.id} className='flex items-center space-x-2'>;
-                <Input
-                  type='text'
-                  placeholder='Category'
-                  value={item && item.name}
-                  onChange={e =>;
-                    handleDistributionChange(item && item.id, 'name', e && e.target.value);
-                  }
-                  className='flex-grow';
-                />;
-                <Input
-                  type='number'
-                  placeholder='%'
-                  }
-                  className='w-24';
-                  min='0';
-                  max='100';
-                />;
-                <Button
-                  variant='ghost'
-                  size='icon'
-                  onClick={() => removeDistributionItem(item.id)}
-                  aria-label='Remove'
-                >
-                  <Trash2 className='h-4 w-4' />
-                </Button>              </div>
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -758,19 +519,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
             <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
             <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
-
-          {/* Token Distribution Inputs */}
-          <div className="space-y-3 p-3 border rounded-md">
-            <h2 className="text-lg font-semibold">Token Distribution</h2>
-            {distributionData.map((item) => (
-              <div key={item.id} className="flex items-center space-x-2">
-                <Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>
-                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
-                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
-              </div>
-            ))}
-          </div>
-          <div>
             <label
               htmlFor='governanceLogic'
               className='block text-sm font-medium'>;
@@ -889,17 +637,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
           <Button
             type='button'
             onClick={handleGenerateWhitepaper}
-            disabled={
-              isLoading |isDownloading |isSharing |isSubmittingToCounsel
-            }
-            size='lg'
-            className='w-full'>;
-            {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
-          </Button>
-          {isLoading && (
-            <p className='text-center text-sm text-blue-600'>
-              Draft generation in progress...
-            </p>
           )}
           {error &&;
             !isLoading &&;
@@ -910,12 +647,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 {error}
               </p>;
             )}
-          {shareableLink && !isSharing && currentSharedWhitepaperId && (
-            <div className='mt-4 p-3 border rounded-md bg-green-50'>
-              <div className='flex justify-between items-center'>
-                <label className='block text-sm font-medium text-green-700'>
-                  Shareable Link:
-                </label>
                 <Button
                   onClick={handleTogglePublicStatus}
                   variant='outline'
@@ -945,22 +676,23 @@ import { Trash2, Download, Share2 } from 'lucide-react';
             type='button';
             on_click={handleGenerateWhitepaper}
             disabled={
-              is_loading || is_downloading || is_sharing || isSubmittingToCounsel;
+              isLoading |isDownloading |isSharing |isSubmittingToCounsel
             }
-            size='lg';
-            className='w - full'          >;
-            {is_loading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
-          </Button>;
-          {is_loading && (
-            <p className='text - center text - sm text - blue - 600'>;
-              Draft generation in progress...;
-            </p>)}
-          {error &&;
-            !is_loading &&;
-            !is_downloading &&;
-            !is_sharing &&;
+            size='lg'
+            className='w-full'          >
+            {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
+          </Button>
+          {isLoading && (
+            <p className='text-center text-sm text-blue-600'>
+              Draft generation in progress...
+            </p>
+          )}
+          {error &&
+            !isLoading &&
+            !isDownloading &&
+            !isSharing &&
             !isSubmittingToCounsel && (
-              <p className='text - center text - sm text - red - 600 p - 2 bg - red - 50 rounded - md'>;
+              <p className='text-center text-sm text-red-600 p-2 bg-red-50 rounded-md'>
                 {error}
               </p>)}
           {shareable_link && !is_sharing && currentSharedWhitepaperId && (
@@ -1015,37 +747,12 @@ import { Trash2, Download, Share2 } from 'lucide-react';
               )}
             </div>;
           )}
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
-
 
           {/* Submit to Counsel Button */}
           {sections && sections.length > 0 && (;
             <Button
               type='button'
               onClick={handleSubmitToCounsel}
-              disabled={
-                isSubmittingToCounsel |isLoading |isSharing |isDownloading
-              }
-              variant='default'
-              size='lg'
-
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
-                type="button"
-                onClick={handleSubmitToCounsel}
-                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default"
-                size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
-            >
-                <Send className="mr-2 h-4 w-4" />
-                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
-            </Button>;
-          )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
-
-        </form>
         {/* Section Editors */}
         {sections && sections.length > 0 && (;
           <div className='mt-8 pt-6 border-t'>;
@@ -1109,7 +816,9 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 key={section.id}
                 title={section.title}
                 content={section.content}
-
+                onContentChange={newContent =>
+                  handleSectionContentChange(section.id, newContent)
+                }              />
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
             ))}
@@ -1127,9 +836,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 </pre>;
             )}
             </div>;
-        )}
-      </div>
-      {/* Right Column: Preview Panel - Pass ref here */}
 '";
 ;
 }
@@ -1156,5 +862,3 @@ import { Trash2, Download, Share2 } from 'lucide-react';
     </div>);
 }
 export default WhitepaperGeneratorPage;
-
-

@@ -1,7 +1,3 @@
-interface AicontentsuiteProps {;
-  // Add props here as needed;
-}
-export default function Aicontentsuite(): any ({ }: AicontentsuiteProps) {;
   return (
     <div>;
       <h1>Aicontentsuite</h1>;

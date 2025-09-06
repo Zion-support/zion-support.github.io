@@ -5,25 +5,16 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
 import { toast  } from '@/components/ui/use-toast';
 export function useInterviews() {
-  const { user } = useAuth();
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
-      });
-      return null;
-    }
-    setIsLoading(true);
-    setError(null);
     try {
       // Insert the interview into the database
       const { data, error: insertError } = await supabase
         .from('interviews')
         .insert({
-      if (insertError) {
-        console && console.error("Error requesting interview:", insertError);
-        setError(insertError && insertError.message);
         return null
       }
       // Create notification for talent
@@ -32,48 +23,6 @@ export function useInterviews() {
     } catch (err: any) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
-      return null
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      // Insert the interview into the database;
-      const { data, error: insert_error } = await supabase;
-        .from ('interviews');
-        .insert ({
-          client_id: interview_request.client_id;
-          talent_id: interview_request.talent_id;
-          scheduled_date: interview_request.scheduled_date;
-          duration_minutes: interview_request.duration_minutes;
-          notes: interview_request.notes;
-          meeting_link: interview_request.meeting_link;
-          meeting_platform: interview_request.meeting_platform;
-          interview_type: interview_request.interview_type;
-          title: interview_request.title,
-          status: 'requested'});
-        .select ('*');
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error requesting interview:", insert_error);
-        set_error (insert_error.message);
-        return null;
-      }
-      // Create notification for talent;
-      await createInterviewNotification (
-        interview_request.talent_id;
-        'interview_requestNew Interview Request';
-        `You have received an interview request for ${interview_request.scheduled_date}`;
-        data.id);
-;
-      return data;
-    } catch (err: any) {
-      console.error ("Error in request_interview:", err);
-      set_error (err.message);
-      return null;
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -94,17 +43,6 @@ export function useInterviews() {;
       }),;
       return null;
     }
-  }
-  // Fetch interviews for the current user (as client or talent)
-  const fetchInterviews = async (): Promise<Interview[]> => {
-    if (!user?.id) {
-      setInterviews([]);
-      return []
-    }
-
-    setIsLoading(true),
-    setError(null),
-
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
@@ -135,23 +73,6 @@ export function useInterviews() {;
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-      return formattedInterviews
-    } catch (err: any) {
-      console && console.error("Error in fetchInterviews:", err);
-      setError(err && err.message);
-      return []
-;
-      set_interviews (formatted_interviews);
-      return formatted_interviews;
-    } catch (err: any) {
-      console.error ("Error in fetch_interviews:", err);
-      set_error (err.message);
-      return [];
-    } finally {
-      setIsLoading (false);
-    }
-  }
-  // Respond to an interview request (as talent)
   const respondToInterview = async (
     interview_id: string;
     response: InterviewResponse): Promise < boolean> => {
@@ -171,12 +92,6 @@ if ( {) {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', interviewId);
-      if (updateError) {
-        console && console.error("Error responding to interview:", updateError);
-        setError(updateError && updateError.message);
         return false
       }
       // Get the interview to notify the client
@@ -348,7 +263,6 @@ if ( {) {
         title;
         message;
         interviewId
-      );
       // Refresh the interviews list
       await fetchInterviews();
       return true
@@ -397,16 +311,12 @@ if ( {) {
     message: string;
     related_id: string) => {
     try {
-      await supabase && supabase.from('notifications').insert({
         user_id: userId;
         type;
         title;
         message
         related_id: relatedId})
     } catch (error) {
-      console && console.error("Error creating notification:", error)
-    }
-    try {
     }
   }
   // Cancel an interview (either client or talent can cancel)
@@ -475,16 +385,10 @@ if ( {) {
       if (fetchError) {;
         setError(fetchError.message),;
         return false;
-      }
       // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
-;
-      // Check if user is part of this interview;
-      if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
-        setError("You don't have permission to cancel this interview"),;
-        return false;
       }
       // Update the interview status
       const { error: updateError } = await supabase
@@ -508,7 +412,6 @@ if ( {) {
         'interview_cancelledInterview Cancelled';
         `The scheduled interview for ${interview && interview.scheduled_date} has been cancelled`;
         interviewId
-      );
       // Refresh the interviews list
       await fetchInterviews();
       return true
@@ -608,8 +511,3 @@ if ( {) {
     isLoading,;
     error,;
     requestInterview,;
-    fetchInterviews;
-    respondToInterview;
-
-    cancelInterview}
-}

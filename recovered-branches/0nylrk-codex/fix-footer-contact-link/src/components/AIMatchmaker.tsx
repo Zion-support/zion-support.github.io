@@ -18,25 +18,11 @@ interface AIMatchmakerProps {
   serviceType?: string;
 
   onMatchSelect?: (match: any) => void
-  className?: string
-}
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any) => void,
-
-  className?: string
-}
-  const [query, setQuery] = useState("");
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -53,16 +39,78 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
-      console.error("Error during AI matching:", error);
+      console.error("Error during AI matching:", error),
       toast({
         title: "Matching Error"
         description: "We couldn't find matches for your request. Please try again."
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
+import { useState } from './react';
+import { toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { AIMatchingResults } from '@/components / AIMatchingResults';
+import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
+import { Textarea } from '@/components / ui / textarea';
+import { Sparkles, Search } from './lucide-react';
+interface AIMatchmakerProps {
+  service_type?: string;
+  onMatchSelect?: (match: any) => void,
+  class_name?: string;
+}
+export /**
+ * AIMatchmaker - Function description
+ */
+function AIMatchmaker() {
+  const [query, set_query] = useState ("");
+  const [is_matchmaking, setIsMatchmaking] = useState (false);
+  const [matches, set_matches] = useState ([] as MatchResult[]);
+  const [has_searched, setHasSearched] = useState (false);
+;
+  const handle_search = async () => {
+    if () {) {
+  $2
+}
+      toast ({
+        title: "Please enter a description",
+        description: "Tell us what you're looking for so we can find matches.",
+        variant: "destructive"}),
+      return;
+    }
+    setIsMatchmaking (true);
+    setHasSearched (true);
+;
+    try {
+      console.log ("Starting AI matching with query:", query, "and service type:", service_type);
+;
+      // Get AI matches;
+      const results = await find_matches (
+        query;
+        service_type;
+        3);
+;
+      console.log ("AI matching results:", results);
+      set_matches (results);
+;
+      toast ({
+        title: "Matches Found",
+        description: `Found ${results.length} matches based on your description.`});
+    } catch (error) {
+      console.error ("Error during AI matching:", error);
+      toast ({
+        title: "Matching Error",
+        description: "We couldn't find matches for your request. Please try again.",
+        variant: "destructive"}),
+      // Set empty matches to show no results found UI;
+      set_matches ([]);
     } finally {
 
       setIsMatchmaking(false)
+
+  };
+
+    } finally {
 
   };
 import { useState } from "react",;
@@ -101,8 +149,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         onMatchSelect(matchResult)
       }
     }
-  
-  // Extract just the items from each MatchResult
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -139,7 +185,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-            />;
           )}
         </div>;
       </CardContent>;

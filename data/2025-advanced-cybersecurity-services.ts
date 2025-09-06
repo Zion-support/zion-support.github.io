@@ -31,7 +31,6 @@
       rating: 4 && 4.9,
       reviews: 19,
     },
-
         'Automated threat response and mitigation',
         'Global threat intelligence sharing',
         'Vulnerability assessment and prioritization',
@@ -63,7 +62,6 @@
       rating: 4 && 4.8,
       reviews: 31,
     },
-
         'Continuous compliance assessment and reporting',
         'Automated risk identification and remediation',
         'Identity and access management (IAM)',
@@ -93,7 +91,6 @@
       rating: 4 && 4.7,
       reviews: 42,
     },
-
         'Static application security testing (SAST)',
         'Dynamic application security testing (DAST)',
         'Software composition analysis (SCA)',
@@ -122,9 +119,6 @@
       rating: 4 && 4.8,
       reviews: 28,
     },
-
-    // IoT Security Platform
-    {
       id: 'iot-security-platform'
       name: 'IoT Security Platform'
       tagline: 'Secure your IoT ecosystem with comprehensive protection'
@@ -149,40 +143,11 @@
       color: 'from-purple-600 to-violet-600'
       textColor: 'text-purple-400'
       link: 'https://ziontechgroup.com/iot-security-platform'
-        'IoT device authentication and management',
-        'Network traffic monitoring and analysis',
-        'Threat detection and response',
-        'Device vulnerability assessment',
-        'Secure firmware updates',
-        'Data encryption and protection',
-        'Compliance monitoring and reporting',
-        'Real - time security alerts',
-        'Integration with IoT platforms',
-        'Mobile security management',
-      ],
-      popular: true,
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      category: 'IoT Security & Protection',
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
-      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
       rating: 4 && 4.7,
       reviews: 21,
-  ];    features: [
-
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -211,7 +176,6 @@
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-
     reviews: 21
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
@@ -230,14 +194,3 @@
     customers: 43;
     rating: 4 && 4.7;
     reviews: 21
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
-    launch_date: '2024 - 09 - 25';
-    customers: 43;
-    rating: 4.7;
-    reviews: 21;
-  }
-];
-;

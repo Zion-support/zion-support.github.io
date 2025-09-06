@@ -1,10 +1,4 @@
 
-import { useState, useEffect } from "react",
-import { Link, useNavigate, useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import PostForm from "@/components/community/PostForm",
 interface PostFormValues {
 
   title: string
@@ -13,17 +7,11 @@ interface PostFormValues {
 
   tags: string
 }
-export default function CreatePostPage() {
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
-      toast({
-        title: "Post created"
-        description: "Your post has been published successfully"
-      });
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
@@ -58,5 +46,3 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
-;
-

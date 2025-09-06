@@ -1,6 +1,3 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -9,26 +6,6 @@ const SystemAdministrationChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <meta
-          name="description"
-          content="SystemAdministrationChat service"
-        />{" "}
-      </Head>
-      <main>
-        <h1>SystemAdministrationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-      <main>;
-        <h1>SystemAdministrationChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-}
-export default SystemAdministrationChat;
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -53,4 +30,3 @@ const SystemAdministrationChat: NextPage = () => {
 ;
 export default SystemAdministrationChat;
 ;
-        <title>SystemAdministrationChat - Zion Tech Solutions</title>

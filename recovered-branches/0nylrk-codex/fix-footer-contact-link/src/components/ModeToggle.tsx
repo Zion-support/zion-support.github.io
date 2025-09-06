@@ -1,8 +1,3 @@
-});
-export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
-// Create a simplified theme hook for offline mode
-
 
   return (
     <Button

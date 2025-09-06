@@ -14,4 +14,3 @@ const CustomerSupportChatbot: NextPage = () => {
       </main>
     </div>
   )
-},

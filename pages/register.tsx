@@ -60,7 +60,6 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
-
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -481,12 +480,10 @@ if ( {) {
                     </Link>;
                   </label>;
                 </div>;
-
                   </span>;
                   Create account;
                 </button>;
               </div>;
-
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}

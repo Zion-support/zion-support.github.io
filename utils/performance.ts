@@ -69,7 +69,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
-
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     fcp: 'good' | 'needs - improvement' | 'poor';
@@ -132,34 +131,5 @@ if ( {) {
   return { overall, scores };
 };
 
-  return { overall, scores }
-}
-;
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
-  console.group (` ${label}`);
-  if (console.log ('First Contentful Paint:', `${metrics.fcp.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('Largest Contentful Paint:', `${metrics.lcp.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('First Input Delay:', `${metrics.fid.to_fixed (2)}ms`)) {
-  $2
-}
-  if (console.log ('Cumulative Layout Shift:', metrics.cls.to_fixed (4))) {
-  $2
-}
-  if (console.log ('Time to First Byte:', `${metrics.ttfb.to_fixed (2)}ms`)) {
-  $2
-}
-  console.group_end ();
-}
-  console.group(`🚀 ${label}`);
-  if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
-  if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
-  if (metrics.fid !== undefined) console.log('First Input Delay:', `${metrics.fid.toFixed(2)}ms`);
-  if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
-  if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
-  console.groupEnd();
 };
 

@@ -18,10 +18,6 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
-
-    error
-    resume
-
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -31,7 +27,6 @@ import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Resume} from '@/types/resume';
-// Import components;
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -82,10 +77,6 @@ export function ResumeWizard() {;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume);
-
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -93,14 +84,11 @@ export function ResumeWizard() {;
       </div>;
     );
   }
-    return (
       <Alert variant="destructive" className="mb-6">;
         <AlertCircle className="h-4 w-4" />;
         <AlertTitle>Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>;
-    );
-  }
   }
   if (showNewResumeForm) {
 
@@ -137,16 +125,4 @@ export function ResumeWizard() {;
     </div>
   )
 }
-export /**
- * ResumeWizard - Function description
- */
-function ResumeWizard() {
-  const { user } = use_auth ();
-  const {
-    is_loading;
-    error,
-    resume,
-    fetch_resume;
-    create_resume;
-  } = use_resume ();
 ;

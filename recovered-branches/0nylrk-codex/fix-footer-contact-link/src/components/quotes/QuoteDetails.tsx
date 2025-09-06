@@ -1,7 +1,4 @@
 
-
-import { QuoteStatusBadge } from "./QuoteStatusBadge";
-import type { QuoteRequest } from "@/types/quotes";
 import React from "react",
 import { 
   Dialog,
@@ -36,15 +33,11 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
-
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
 }
-
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -58,7 +51,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
-        <Separator className="my-4" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
@@ -103,7 +95,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 <p>{quote.project_description}</p>
               </>
             )}
-            <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
               {quote.budget_display |
@@ -120,9 +111,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
-  );
-}
-
       return date_string;
     }
   }

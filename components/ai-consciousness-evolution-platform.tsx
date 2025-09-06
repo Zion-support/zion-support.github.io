@@ -1,5 +1,3 @@
-const AIConsciousnessEvolutionPlatform: React.FC = () => {
- const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -43,18 +41,6 @@ const containerVariants = {;
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
-};
-
-};
-
-}
-}
-}
-}
-;
-}export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-;
 
 };
 

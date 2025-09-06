@@ -9,4 +9,3 @@ const StatsSection.js = ({ className }) => {
   );
 };
 
-export default StatsSection.js;

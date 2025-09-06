@@ -17,13 +17,6 @@ export function ProjectActions({
   disputeId
   isTalent
 
-export function ProjectActions({
-  projectId,
-  isUnderDispute,
-  disputeId,
-  isTalent,
-  onAddMilestone
-}: ProjectActionsProps) {
   return (
     <div className='flex gap-2'>;
       {isUnderDispute && disputeId ? (;
@@ -49,10 +42,6 @@ export function ProjectActions({
     </div>
   )
 }
-    </div>;
-  );
-};
-
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
@@ -104,5 +93,3 @@ function ProjectActions() {
     </div>);
 }
 ;
-
-

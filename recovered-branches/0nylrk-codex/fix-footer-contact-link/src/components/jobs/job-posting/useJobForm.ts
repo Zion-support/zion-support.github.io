@@ -64,39 +64,22 @@ export interface JobPostingProps {
       }
       return jobData
     } catch (error: any) {
-      throw error
-      status: '',
-      external_apply_link: ''}
-    mode: "on_change"});
-;
-  // Function to create / update jobs that will be implemented by parent component;
-  const submit_job = async (values: JobSchemaType) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ("You must be logged in to post a job");
-      navigate ("/login"),
-      return;
     }
-    setIsLoading (true);
-;
-    try {
-      const published_date = start_date ? start_date.to_string () : '';
-      const expiry_date = end_date ? end_date.to_string () : '';
-;
-      const job_data = {
-        ...values;
-        published_date: published_date;
-        expiry_date: expiry_date;
-        is_remote: is_remote,
-        user_id: user.id}
-;
-      // Check condition
-if ( {) {
-  $2
+  }
+  return {
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
+    endDate
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    initialValues;
+    setInitialValues;
+    submitJob
+  }
 }
-        on_success ();
 
       title: '',
       company: '',
@@ -197,13 +180,11 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     is_loading;
     start_date;
     setStartDate;
-    endDate
     setEndDate;
     is_remote;
     setIsRemote;
     initial_values;
     setInitialValues;
-    submit_job;
 ;
       return jobData;
     } catch (error: any) {;
@@ -226,6 +207,3 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
-  }
-}
-

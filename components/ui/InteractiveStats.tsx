@@ -20,7 +20,6 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value;
 }
-
       if (progress < 1) raf = requestAnimationFrame(step)
     };
     raf = requestAnimationFrame(step);
@@ -28,14 +27,10 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
-export default function InteractiveStats() {
-
-export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
-
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
@@ -45,15 +40,6 @@ function Stat({
   value
   suffix = ''
 }: {
-  return (
-    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>;
-      <div className='text-3xl font-bold'>;
-        {value}
-        {suffix}
-      </div>;
-      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>;
-    </div>;
-  );
     </div>);
     </div>);
 }
@@ -82,5 +68,4 @@ function Stat() {
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-
   );

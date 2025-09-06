@@ -126,7 +126,6 @@ console.log(' Improved Automation Orchestrator Started')';class ImprovedAutomati
           "critical": false}
       ];
       // Run each automation script;
-      
       // Generate summary;
       this.generateSummary();
       // Save results;

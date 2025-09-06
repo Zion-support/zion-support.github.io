@@ -6,55 +6,6 @@
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- canvas && canvas.width = window && window.innerWidth;
-canvas && canvas.height = window && window.innerHeight;
-let animationFrameId: number;
-let particles: Array< {;
-
-const UltraAdvancedFuturisticBackgroundV2: React.FC<;
-  UltraAdvancedFuturisticBackgroundV2Props;
-> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ ;
-  children;
-  className = '' ;
-}) => {;
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas && canvas.width = window && window.innerWidth;
-    canvas && canvas.height = window && window.innerHeight;
-
-    let animationFrameId: number;
-    let particles: Array<{;
-      x: number;
-      y: number;
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animationFrameId: number;
@@ -121,9 +72,6 @@ if (return) {
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
           animate={{
-            ease: 'easeInOut',            ease: "easeInOut"
-            ease: "easeInOut"
-          }}
             duration: 7,
             repeat: Infinity,
 
@@ -147,8 +95,6 @@ if (return) {
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
-          <motion.div
-              left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}
             animate={{
@@ -167,28 +113,8 @@ if (return) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 2
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+
             }}
-          />;
-        ))}
-
-      </div>;
-
-
-
-
-
-
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: 'easeInOut',            }}
-
 
           />
         ))}
@@ -228,9 +154,6 @@ if (return) {
               animate={{
                 opacity: [0.1, 0.3, 0.1];
                 strokeDasharray: [0, 100, 0]
-                ease: 'easeInOut',              }}
-
-              }}
 
             />
           ))}
@@ -240,10 +163,6 @@ if (return) {
 
 
 
-      {/* Content */}
-      <div className='relative z-40'>{children}</div>
-    </div>
-  );
                 delay: Math.random () * 2,
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
@@ -268,4 +187,3 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>
 }
 export default UltraAdvancedFuturisticBackgroundV2;
 
-export default UltraAdvancedFuturisticBackgroundV2;

@@ -22,9 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-export default function LeadershipPage() {
-
-export default function LeadershipPage() {;
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;

@@ -1,5 +1,3 @@
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -48,13 +46,3 @@ let totalMetrics = 0;
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
-
-}
-export default PerformanceMonitor;
-
-const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
-  return new Promise ( (resolve) => {
-  // Check condition
-if ( {) {
-  $2
-}

@@ -1,6 +1,3 @@
-
-export interface Notification {
-export interface Notification {;
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -14,20 +11,6 @@ interface NotificationSystemProps {;
   on_dismiss?: (id: string) => void;
 }
 
-  notifications,
-  onDismiss,
-key={notification.id},
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
-
-
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-},
-
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
-
-export function useToast() {
-  return useContext(NotificationContext)
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
@@ -81,12 +64,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
-}: NotificationSystemProps) {
-  if (notifications.length === 0) return null;
-
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">;
-      {notifications && notifications.map((notification) => (;
         <div
           key={notification && notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
@@ -99,26 +76,4 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             </div>;
             {onDismiss && (;
               <button
-                onClick={() => onDismiss(notification && notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600";
-              >;
-                ;
-              </button>;
-            )}
-          </div>;
-        </div>;
-      ))}
-    </div>;
-  );
-}
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const base_styles = "border - l-4";
-  const type_styles = {
-    success: "bg - green - 50 border - green - 400 text - green - 800",
-    error: "bg - red - 50 border - red - 400 text - red - 800",
-    warning: "bg - yellow - 50 border - yellow - 400 text - yellow - 800",
-    info: "bg - blue - 50 border - blue - 400 text - blue - 800",
-  }
-  return `${base_styles} ${type_styles[type]}`;
-}
 }

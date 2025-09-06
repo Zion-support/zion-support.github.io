@@ -30,21 +30,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
       title: "Financial Modeling"
       description: "Advanced risk assessment and market prediction algorithms"
     }
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  Atom, Brain, Cpu, Zap, Shield, Globe,
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react',
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Quantum Consciousness Integration",
-      description: "Advanced AI consciousness with quantum processing capabilities",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -64,11 +49,6 @@ const QuantumNeuralNetworkPlatform = () => {
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   ],
   const benefits = [
     "1000x faster neural network training",
@@ -173,8 +153,6 @@ const QuantumNeuralNetworkPlatform = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -199,9 +177,6 @@ const QuantumNeuralNetworkPlatform = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
-                </motion.div>
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -247,7 +222,6 @@ const QuantumNeuralNetworkPlatform = () => {
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
-
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -269,9 +243,6 @@ const QuantumNeuralNetworkPlatform = () => {
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
-                </motion.div>
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -318,8 +289,6 @@ const QuantumNeuralNetworkPlatform = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <motion.div
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -390,7 +359,3 @@ export default QuantumNeuralNetworkPlatform,
           </div>;
         </section>;
       </div>;
-    </>);
-},
-export default QuantumNeuralNetworkPlatform,
-;

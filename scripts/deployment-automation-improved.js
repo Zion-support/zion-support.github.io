@@ -150,7 +150,6 @@ console.log(' Improved Deployment Automation Started')';class ImprovedDeployment
           "critical": false}
       ];
       // Execute each deployment step;
-      
       // Generate deployment summary;
       this.generateSummary();
       // Save deployment log;

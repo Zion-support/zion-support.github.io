@@ -1,3 +1,7 @@
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -9,8 +13,6 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
-
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
@@ -58,9 +60,6 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
-    // Create the contract prompt for OpenAI
-    let prompt = `
-    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -113,91 +112,6 @@ serve(async (req) => {
         messages: [
           {
             role: 'system'
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
-import "https://deno.land / x/xhr@0.1.0 / mod.ts",
-const cors_headers = {
-  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
-interface Milestone {
-  title: string;
-  description: string;
-  due_date: string,
-  estimated_hours: number;
-}
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    // Get the OpenAI API key from environment variables;
-    const api_key = Deno.env.get ('OPENAI_API_KEY');
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ('OPENAI_API_KEY is not set');
-    }
-    // Parse request body;
-    const {
-      talent_name;
-      client_name;
-      project_name;
-      scope_summary;
-      start_date;
-      end_date;
-      payment_terms;
-      payment_amount;
-      additional_clauses;
-      milestones;
-    } = await req.json ();
-;
-    // Create the contract prompt for OpenAI;
-    let prompt = `;
-    Please generate a professional contractual agreement between ${client_name} (Client) and ${talent_name} (Talent) for the following project:;
-    Project Name: ${project_name}
-    Project Scope: ${scope_summary}
-    Start Date: ${new Date (start_date).toLocaleDateString ()}
-    ${end_date ? `End Date: ${new Date (end_date).toLocaleDateString ()}` : 'End Date: To be determined based on project completion'}
-    Payment Terms: ${payment_terms}
-    Payment Amount: ${payment_amount}
-    The contract should include standard sections like: - Parties involved;
-    - Project scope;
-    - Timeline;
-    - Payment terms;
-    - Deliverables;
-    `,
-    // Check condition
-if ( {) {
-  $2
-}
-      prompt += `;
-      Please also include the following additional clauses:;
-      ${additional_clauses.includes ('nda') ? '- Confidentiality / Non - disclosure agreement' : ''}
-      ${additional_clauses.includes ('ip') ? '- Intellectual Property rights transfer to the client' : ''}
-      ${additional_clauses.includes ('termination') ? '- Termination conditions and process' : ''}
-      ${additional_clauses.includes ('revisions') ? '- Revision and amendment procedures' : ''}
-      `;
-    }
-    // Add milestone information if available;
-    // Check condition
-if ( {) {
-  $2
-}
-      prompt += `;
-      The project will be divided into the following milestones: `,
-      milestones.for_each ((milestone: Milestone, index: number) => {
-        prompt += `;
-        Milestone ${index + 1}: ${milestone.title}
-        - Description: ${milestone.description}
-        - Due Date: ${new Date (milestone.due_date).toLocaleDateString ()}
-        - Estimated Work: ${milestone.estimated_hours} hours;
-        `;
-      });
-;
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
@@ -229,11 +143,6 @@ if ( {) {
           {
             role: 'user'
             content: prompt}];
-        temperature: 0.7})});
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(data.error?.message |'Failed to generate contract')
-    }
 ;
     const data = await response.json ();
 ;

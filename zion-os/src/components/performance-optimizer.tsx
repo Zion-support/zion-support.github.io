@@ -8,10 +8,6 @@
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
   }
-  render() {if (this.state.hasError) {;
-      return this.props.fallback |(;
-        <div className="p-6 text-center">;
-          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
           <button;
             on_click={() => this.set_state ({ has_error: false })}
             className="btn - primary";
@@ -46,4 +42,3 @@ if ( {) {
   }, [value, delay]);
   return debounced_value;
 }
-export { LazyComponent }

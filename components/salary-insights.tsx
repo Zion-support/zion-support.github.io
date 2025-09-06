@@ -1,34 +1,12 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useMemo, useState } from 'react';
-
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
+
+
+
 } from '../components/salary/InsightCharts';
 
 type InsightResponse = {;
@@ -43,11 +21,6 @@ type InsightResponse = {;
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
-  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
-  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
-  const [region, setRegion] = useState('Remote, Global');
-  const [experienceLevel, setExperienceLevel] = useState<;
-    'Junior' | 'Mid' | 'Senior' | 'Lead';
   >('Senior');
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<;
@@ -63,7 +36,6 @@ type InsightResponse = {;
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
-      const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
@@ -170,16 +142,10 @@ if ( {) {
           alert ('Insight saved to your profile');
           return;
         }
-      } catch {
-        // fall back      }          alert ('Insight saved to your profile');
-          return;
         }
       } catch {;
         // fall back;
       }
-      } catch {}
-    })();
-  }
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
@@ -274,16 +240,6 @@ if (return [] as { label: string, value: number }[], ) {
                 Remote role;
               </label>;
             </div>;
-
-            {!isLoggedIn && (;
-              <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.;
-              </div>;
-            )}
-            <div className="flex items-center gap-2 mt-3">;
-              <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e && e.target.checked)} />;
-              <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>;
-            </div>;
-
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -309,7 +265,6 @@ if (return [] as { label: string, value: number }[], ) {
               </button>            </div>;
           </div>;
         </div>;
-
               </div>;
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -413,7 +368,6 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
-                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
 
             </div>
           </div>
@@ -503,9 +457,3 @@ if (return [] as { label: string, value: number }[], ) {
       </div>;
     </div>);
 }
-          {data && (
-
-            </div>
-          )}
-
-          {data && (

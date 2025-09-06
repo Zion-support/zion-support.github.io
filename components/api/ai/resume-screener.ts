@@ -16,10 +16,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
-  const auth = authenticateRequest(req, false);
-  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   const text = await generateText(
     prompt
     'You are an expert technical recruiter. Output strictly valid JSON.'

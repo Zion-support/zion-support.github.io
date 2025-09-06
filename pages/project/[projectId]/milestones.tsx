@@ -1,27 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
@@ -73,31 +49,10 @@ export default function ProjectMilestonesPage(req, res) {
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {;
-    setRole(getRoleFromEnvOrQuery());  }, []);
-
-
-  // Demo cookie-based auth to hit API successfully;
-  useEffect(() => {;
-    if (!role) return;
-
-
-  }, [role]);
-
-
-  useEffect(() => {;
-
-import {useRouter} from 'next/router';
-import { useRouter } from 'next/router';
-
-import Head from 'next/head';
-import MilestoneForm from '../../../components/monetization/MilestoneForm';
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
-  }, [projectId]);
-  const handleCreate = async (payload: {
     title: string;
     description?: string;
     dueDate: string;
@@ -162,39 +117,6 @@ import MilestoneForm from '../../../components/monetization/MilestoneForm';
               <span className='text-xs text-gray-500'>Role: {role}</span>            </div>;
             <MilestoneForm onSubmit={handleCreate} />;
           </div>;
-
-        {!loading && !error && (;
-          <div className='space-y-4'>;
-            {milestones && milestones.length === 0 && (;
-              <div className='text-gray-600'>;
-                No milestones yet.{' '}
-                {role !== 'talent' ? 'Create the first one.' : ''}
-              </div>;
-            )}
-            {milestones && milestones.map(m => (;
-              <MilestoneCard
-                key={m && m.id}
-                milestone={m}
-                projectId={String(projectId)}
-                role={role}
-                onAction={handleAction}
-              />            ))}
-          </div>;
-        )}
-                milestone={m}
-                project_id={String (project_id)}
-                role={role}
-                on_action={handle_action}
-              />            ))}
-          </div>;
-        )}
-        <div className='mt-12 text-xs text-gray-500'>
-          Integration hooks ready: on Approved &rarr; trigger payout intent; on
-          Paid &rarr; capture via Stripe/PayPal/Escrow.
-        </div>
-      </div>
-    </div>
-);
 
         )  } catch (error) {
     console.error("Error:", error);

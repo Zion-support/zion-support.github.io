@@ -44,10 +44,6 @@ if ( {) {
 }
           on_error (error as Error);
         }
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {
-        onMessage(event && event.data);
       }
     } catch (error) {
       if (onError) {
@@ -57,23 +53,3 @@ if ( {) {
     [onMessage, onError]
   );
   useEffect(() => {
-}
-
-}
-
-
-
-}
-
-      }
-    },
-    [on_message, on_error],
-  );
-;
-  useEffect (() => {
-    window.addEventListener ("message", handle_message);
-    return () => {
-      window.removeEventListener ("message", handle_message);
-    }
-  }, [handle_message]);
-}

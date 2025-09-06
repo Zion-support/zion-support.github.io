@@ -135,10 +135,6 @@ export default function PricingPage() {;
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>      <main className="relative z-10 pt-20">;
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             {/* Filter Controls */}
             <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>;
               <select
@@ -184,7 +180,6 @@ export default function PricingPage() {;
             <p className="text-xl text-gray-300 mb-8">;
               Transparent pricing for our cutting-edge technology services that are already operational and delivering transformative results;
             </p>;
-
             {/* Filter Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-8">;
               <select
@@ -211,19 +206,6 @@ export default function PricingPage() {;
             </div>
           </motion.div>
         </section>
-            </div>;
-
-            <div className='text-center text-gray-400'>;
-              <p>;
-                Showing {filteredServices && filteredServices.length} services in{' '}
-                {Object && Object.keys(servicesByCategory).length} categories;
-              </p>            </div>            <div className="text-center text-gray-400">;
-              <p>Showing {filteredServices && filteredServices.length} services in {Object && Object.keys(servicesByCategory).length} categories</p>;
-            </div>;
-          </motion && motion.div>;
-        </section>;
-
-        {/* Pricing Categories */}
                         }}
                         viewport={{ once: true }}
                         className='group cursor-pointer'>;
@@ -343,8 +325,6 @@ export default function PricingPage() {;
                           {/* CTA */}
                           <div className='flex items-center justify-between'>;
                             <Link
-
-        {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
                         {/* Market Position */}
@@ -376,27 +356,6 @@ export default function PricingPage() {;
                       </div>
                     </motion.div>
                   ))}
-                </div>;
-              </motion && motion.div>;
-            ))}
-        </section>
-        </section>;
-
-        {/* Contact CTA Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
-          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                  {' '}
-                  Revolutionary Technology?
-                </span>
-
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -425,8 +384,6 @@ export default function PricingPage() {;
                   </button>
                 </a>
               </div>
-              {/* Contact Information */}
-                </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span>{contactInfo.email}</span>
@@ -437,8 +394,6 @@ export default function PricingPage() {;
                 </div>
               </div>
               {/* Additional Info */}
-                    <span>All services are operational and market-tested</span>
-                  </div>                    <span>All services are operational and market-tested</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
@@ -467,9 +422,6 @@ export default function PricingPage() {;
           </div>
         </section>
       </main>
-      <UltraFuturisticFooter2029 />
-    </UltraFuturisticBackground2029>
-
 
   );
 
@@ -727,6 +679,3 @@ export default function PricingPage() {;
   {
   duration: 0.8;
 }viewport= {
-
-  once: true 
-

@@ -8,9 +8,6 @@ export type BudgetType = "fixed" | "hourly" | "range";
   category: string
   image?: string
 }
-export interface ContactInfo {;
-  name: string;
-  email: string;
 }
 export interface QuoteFormData {
   service_type: ServiceType;
@@ -40,7 +37,6 @@ export interface Budget {;
 }
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
 export interface QuoteRequest {
-
 
 export interface QuoteRequest {;
   id: string;

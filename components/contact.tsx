@@ -1,7 +1,4 @@
 
-const [isSubmitting, setIsSubmitting] = useState (false);
-const [isSubmitting, setIsSubmitting] = useState (false);
- const [isSubmitting, setIsSubmitting] = useState (false);
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -16,11 +13,6 @@ const [submit_success, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
-}</div> </div> <div className= {
-  `text-3xl font-bold $ {
-  stat.color
-}mb-2`
-}> {
 
   stat.label;
 }</div> </div> <div className= {
@@ -28,8 +20,6 @@ setSubmitSuccess (true);
   stat.color
 }mb-2`
 }> {
-  stat.value
-}</div> </div> </div> </motion.div>) )
 }</motion.div> </div> </section> <motion.div initial= {
 }<motion && motion.div > {;
   stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
@@ -43,11 +33,6 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion && motion.div>) ) ;
 }</motion && motion.div> </div> </section> <motion&& motion.div initial= {
   {
-}whileInView= {
-  {
-  opacity: 1, x: 0
-}transition= {
-  {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -55,9 +40,6 @@ setSubmitSuccess (true);
   opacity: 1, y: 0
 }transition= {
   {
-}viewport= {
-  {
-  once: true
 
 }whileInView= {
   {
@@ -114,7 +96,6 @@ setSubmitSuccess (true);
   opacity: 1, y: 0
 }transition= {
   {
-
 }viewport= {
   {
   once: true 
@@ -251,7 +232,6 @@ setSubmitSuccess (true);
                       </div>;
                     )}
                     {/* Service Title and Tagline */}
-
                     className="text - center py - 12";
                   >;
                     <CheckCircle className="w - 20 h - 20 text - green - 400 mx - auto mb - 6" />;
@@ -553,5 +533,3 @@ setSubmitSuccess (true);
     </UltraFuturisticBackground2029>),
 }
 
-  ),
-}

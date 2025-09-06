@@ -6,6 +6,12 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+        }
+      });
+;
+      setRatingDistribution (distribution);
+    }
+  }, [reviews]);
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
@@ -19,25 +25,10 @@ interface ProfileRatingsProps {
   ratingCount?: number;
 }
 
-        }
-      });
-;
-      setRatingDistribution (distribution);
-    }
-  }, [reviews]);
-
-  // Fetch reviews when component mounts;
-  useEffect(() => {;
-    fetchUserReviews(userId);
-  }, [userId]);
-
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
-
-
-  
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;

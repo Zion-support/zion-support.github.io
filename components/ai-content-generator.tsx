@@ -196,37 +196,6 @@ import React from 'react';
               href="#demo"
               variant="outline"
               size="lg"
-              className="border-white/20 hover:border-white/40 hover:bg-white/5"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
-            </Button>
-          </div>
-          {/* Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
-            <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'>
-                50+
-              </div>
-              <div className='text-gray-400'>Languages</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>
-                10M+
-              </div>
-              <div className='text-gray-400'>Words Generated</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'>
-                99.9%
-              </div>
-              <div className='text-gray-400'>Uptime</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
-                24/7
-              </div>
-              <div className='text-gray-400'>Support</div>            </div>            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
               <div className="text-gray-400">Words Generated</div>
@@ -263,76 +232,6 @@ import React from 'react';
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
-              className="border-white/20 hover:border-white/40 hover:bg-white/5">;
-              <Play className="w-5 h-5 mr-2" />;
-              Watch Demo;
-            </Button>;
-          </div>;
-
-          {/* Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'>;
-                50+;
-              </div>;
-              <div className='text-gray-400'>Languages</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>;
-                10M+;
-              </div>;
-              <div className='text-gray-400'>Words Generated</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'>;
-                99 && 99.9%;
-              </div>;
-              <div className='text-gray-400'>Uptime</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>;
-                24/7;
-              </div>;
-              <div className='text-gray-400'>Support</div>            </div>            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>;
-              <div className="text-gray-400">Words Generated</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">99 && 99.9%</div>;
-              <div className="text-gray-400">Uptime</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">24/7</div>;
-              <div className="text-gray-400">Support</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Features Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              Powerful Features;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
-          <div className="text-center mb-20">;
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
-              Powerful Features;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            {features && features.map((feature, index) => (;
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -350,33 +249,6 @@ import React from 'react';
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
-                <div className="relative">;
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
-                    {feature && feature.icon}
-                  </div>;
-                </div>;
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">;
-                  {feature && feature.title}
-                </h3>;
-                <p className="text-gray-400 leading-relaxed">;
-                  {feature && feature.description}
-                </p>;
-              </Card>;
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Use Cases Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Use Cases
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
             </p>
           </div>
 
@@ -552,7 +424,6 @@ import React from 'react';
                 </h3>;
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
-
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
@@ -628,8 +499,6 @@ import React from 'react';
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-                          {example}
-                        </div>;
                         </div>
                       ))}
                     </div>;
@@ -657,9 +526,6 @@ import React from 'react';
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -692,18 +558,12 @@ import React from 'react';
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
-                className={`relative group ${plan && plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan && plan.color} hover:border-purple-500/50 transition-all duration-300`}>;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                    <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular;
                     </span>;
                   </div>;
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
                       Most Popular;
                     </span>;
-                  </div>;
-                )}
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -730,7 +590,6 @@ import React from 'react';
                       {feature}
                     </li>;
                   ))}
-                </ul>
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -743,7 +602,6 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-                      {feature}
 
                     </li>
                   ))}
@@ -759,7 +617,6 @@ import React from 'react';
                 </Button>
               </Card>
             ))}
-
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -806,10 +663,6 @@ import React from 'react';
 
               </Card>
 
-            ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -835,13 +688,6 @@ import React from 'react';
               href='#demo'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?;
-          </h2>;
-          <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
-            Join thousands of content creators who are already saving hours every day with AI-powered content generation.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">;
             <Button
               href="/contact"
               variant="secondary"
@@ -868,5 +714,3 @@ import React from 'react';
         </div>
       </section>
     </>
-
-  );

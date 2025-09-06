@@ -10,7 +10,6 @@ import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
-
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" });
   }
@@ -35,10 +34,6 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
-  if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" });
-
-  const version = nextVersionFor(state, milestoneId);
   const event = {
     eventId: uuidv4()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
@@ -54,12 +49,6 @@ export default async function handler(req, res) {
     version
     timestamp: timestamp |Date.now()
   }
-      score: 0,
-      category: `milestone:${title}`,
-      period: undefined,
-      rank: undefined,
-    },
-  };
 
   upsertEvent(state, event);
   writeState(state);
@@ -72,9 +61,6 @@ export default async function handler(req, res) {
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
-    state && state.config.peers
-      .filter((p) => !p && p.paused)
-      .map(async (peer) => {
         } catch {}
       })
   );
@@ -114,4 +100,3 @@ if (headers["x - zion - signature"] = sig) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

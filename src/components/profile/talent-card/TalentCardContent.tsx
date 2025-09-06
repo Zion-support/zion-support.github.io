@@ -1,6 +1,6 @@
-
 interface TalentCardContentProps {
   summary: string | undefined;
+summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
@@ -28,7 +28,7 @@ export function TalentCardContent({
         onMouseLeave={() => setIsHovering(false)}
       {/* Short bio or summary - longer on hover for desktop */}
       <div
-        className="overflow-hidden transition-all duration-300"
+        className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}

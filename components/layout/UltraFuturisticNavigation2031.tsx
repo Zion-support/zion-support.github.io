@@ -153,7 +153,6 @@ import {
   GlobeIcon,
   ZapIcon,
   SparklesIcon,
-
   BrainIcon,;
   AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -174,9 +173,6 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
-
-];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -193,7 +189,6 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
-];
 ];
 
 
@@ -239,7 +234,6 @@ export default function UltraFuturisticNavigation2031() {;
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
 
   return (
     <>;
@@ -329,8 +323,6 @@ export default function UltraFuturisticNavigation2031() {;
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>;
             </motion && motion.div>;
 
-            {/* Desktop Navigation */}
-
                 >
                   <Link
                     href={item.href}
@@ -340,12 +332,6 @@ export default function UltraFuturisticNavigation2031() {;
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
-
-                  {/* Hover effect */}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
-                </motion && motion.div>;
-              ))}
-            </div>
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -355,39 +341,10 @@ export default function UltraFuturisticNavigation2031() {;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
                 Get Started
               </motion.button>
               <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-                onClick={() => setIsOpen(!isOpen)}
-                className='text-gray-300 hover:text-white transition-colors duration-200'
-              >
-                {isOpen ? (
-                  <X className='w-6 h-6' />
-                ) : (
-                  <Menu className='w-6 h-6' />
-                )}              </motion.button>                className="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </motion.button>
-            </div>
-          </div>
-        </div>
-        {/* Service Categories Bar */}
-        <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='flex items-center justify-center space-x-8 py-3'>              {serviceCategories.map((category, index) => (        <div className="hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center space-x-8 py-3">
-              {serviceCategories.map((category, index) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='relative group';
                 >;
@@ -415,14 +372,6 @@ export default function UltraFuturisticNavigation2031() {;
             <div className='hidden lg:flex items - center space - x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {active_category === category.title && (
-                      <motion.div;
-                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
                       >
                         <div className="p-4">
                           <div className="mb-3">
@@ -496,13 +445,6 @@ export default function UltraFuturisticNavigation2031() {;
                 <h2 className="text-xl font-bold text-white">Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              <div className="space-y-6">
-                {mainNavigation.map((item) => (
                   <Link
                     key={item && item.name}
                     href={item && item.href}

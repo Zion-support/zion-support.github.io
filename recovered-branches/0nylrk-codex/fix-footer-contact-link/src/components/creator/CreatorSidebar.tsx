@@ -1,14 +1,10 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-import {
   Bell,
   FileText,
   Home,
   Mail,
   Search,
   Settings,
-  Users,;
-} from "lucide-react";
 import {;
   Sidebar,;
   SidebarContent,;
@@ -17,11 +13,6 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
-  SidebarGroupContent,;
-} from "@/components/ui/sidebar";
-
-export function AppSidebar() {;
-  return (
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -31,7 +22,7 @@ export function AppSidebar() {;
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -39,7 +30,7 @@ export function AppSidebar() {;
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -54,7 +45,7 @@ export function AppSidebar() {;
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -62,7 +53,7 @@ export function AppSidebar() {;
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -82,9 +73,6 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
-    <Sidebar>;
-      <SidebarContent>;
-        <SidebarGroup>;
           <SidebarGroupLabel>Content</SidebarGroupLabel>;
           <SidebarGroupContent>;
             <SidebarMenu>;
@@ -100,8 +88,6 @@ export function AppSidebar() {;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
-
-        <SidebarGroup>;
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -113,7 +99,3 @@ export function AppSidebar() {;
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
-    </Sidebar>;
-  );
-    </Sidebar>);
-}

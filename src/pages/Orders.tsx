@@ -3,25 +3,6 @@ import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-import Link from 'next/link'; // Changed from react-router-dom;
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-
   Table
   TableBody
   TableCell
@@ -81,6 +62,7 @@ export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -106,16 +88,10 @@ export default function OrdersPage() {
       default:
         return status
     }
-
   },
 
 
   return (
-            ))}
-          </TableBody>;
-        </Table>;
-      ) : orders && orders.length === 0 ? (;
-        <EmptyState
         />
       ) : (
         <Table>
@@ -129,14 +105,10 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-                <TableCell className="font-medium">{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
-                    href={`/orders/${order.orderId}`}
-                    className='text-zion-purple underline'
                   >
                     View
                   </Link>
@@ -257,5 +229,3 @@ function OrdersPage() {
     </div>);
 }
 ;
-
-

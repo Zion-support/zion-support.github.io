@@ -1,8 +1,3 @@
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/media/kit'
-      permanent: false}}
 export const getServerSideProps: GetServerSideProps = async () => {;
   return {;
     redirect: {;

@@ -1,8 +1,3 @@
-import React from 'react';
-
-
-
-import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -186,7 +181,6 @@ const stats = [
             </div>;
           </div>;
         </section>;
-
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -211,10 +205,6 @@ import Head from 'next/head';
 
 
 
-  );
- </Head> </section> </Layout>
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -258,25 +248,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage(req, res) {
-  try {
-	return (;
-		<Layout>;
-			<Head>;
-				<title>Case Studies | Zion Tech Group</title>;
-				<link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/case-studies" />;
-				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
-			</Head>;
-			<section className="container mx-auto px-4 py-24">;
-				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
-				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
-			</section>;
-		</Layout>;
-	);
-}
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;

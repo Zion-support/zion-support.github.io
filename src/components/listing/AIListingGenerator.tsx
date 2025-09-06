@@ -46,7 +46,6 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
       toast({
-        title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
@@ -59,12 +58,10 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     } finally {
       setIsLoading (false);
     }
-      onApplyGenerated(generatedContent),
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -96,37 +93,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-  };
-
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent);
-      toast({;
-        title: "Content Applied",;
-        description: "The generated content has been applied to your listing.";
-      });
-
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onApplyGenerated (generated_content);
-      toast ({
-        title: "Content Applied",
-        description: "The generated content has been applied to your listing.";
-      });
-    }
-  },
-
-  return (
-
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -147,7 +118,6 @@ if ( {) {
   setIsLoading (true);
 try {
   const {
-toast ({
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
   data: error;
@@ -159,7 +129,4 @@ toast ({
 }
 }
 }
-}
-    </div>;
-  );
 }

@@ -9,4 +9,3 @@ const Partners = ({ className }) => {
   );
 };
 
-export default Partners;

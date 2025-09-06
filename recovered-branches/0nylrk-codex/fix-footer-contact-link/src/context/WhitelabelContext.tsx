@@ -79,7 +79,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
-
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {

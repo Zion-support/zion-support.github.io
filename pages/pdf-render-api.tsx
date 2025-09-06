@@ -15,8 +15,6 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function PdfRenderApiPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'))
-  if (!service) return null
-
   return (
     <Layout>
       <Head>
@@ -54,4 +52,3 @@ export default function PdfRenderApiPage() {
       </div>
     </Layout>
   )
-;

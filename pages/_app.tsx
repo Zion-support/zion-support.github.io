@@ -5,7 +5,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
 
-
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 import '../src/styles/globals.css';
@@ -22,15 +21,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  );
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 
 import '../styles/globals.css';
 
-}
-}
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';
 ;
@@ -51,7 +47,4 @@ function App() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
 }

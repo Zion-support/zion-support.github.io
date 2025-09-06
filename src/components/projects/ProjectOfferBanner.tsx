@@ -72,9 +72,7 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-  }
   return (
-    <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
@@ -96,7 +94,6 @@ export function ProjectOfferBanner() {;
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
                 <Button
@@ -187,7 +184,6 @@ updated.add (projectId)
 return updated
 })
 }
-const handleViewOffer = (project_id: string) =>: any {
   router.push (`/project/$ {
   projectId
 }`)
@@ -199,19 +195,8 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
 }</div>)
 }'"}
-
-  project_id;
-}`);
 }
-if () ) {) {
-  $2
-}
-  return null;
-}return (<div className="mb - 6 space - y-3" > {
-  pending_offers offer.id ";
-}> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
-}</div>);
-}'"}
+;
 
     </div>;
   );

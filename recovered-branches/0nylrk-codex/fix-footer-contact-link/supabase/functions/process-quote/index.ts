@@ -24,8 +24,6 @@ interface QuoteDetails {
   email: string;
   budget: string;
   timeframe: string;
-
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -55,10 +53,6 @@ interface RequestBody {
 }
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
     // Extract user identity if authenticated
     let userId = null;
     try {
@@ -69,7 +63,6 @@ serve(async (req) => {
         const token = authHeader && authHeader.replace('Bearer ', '');
         const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
         if (!error && user) {
-
           userId = user.id
 ;
   try {;
@@ -129,8 +122,6 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
-                Service: ${service?.title || 'Custom Service'}
-                Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
@@ -144,14 +135,6 @@ serve(async (req) => {
                 Timeframe: ${quoteDetails && quoteDetails.timeframe}
                 Start Date: ${quoteDetails && quoteDetails.startDate || 'Not specified'}
                 End Date: ${quoteDetails && quoteDetails.endDate || 'Not specified'}`
-              }
-
-        
-        const aiResult = await openAIResponse && openAIResponse.json();
-        if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
-          aiAnalysis = aiResult && aiResult.choices[0].message && message.content
-
-
             ],;
             temperature: 0.5;
           });
@@ -164,101 +147,12 @@ serve(async (req) => {
     } catch (openAIError) {
       console && console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
-  start_date?: string,
-  end_date?: string;
-}
-interface RequestBody {
-  service: Service | null,
-  quote_details: QuoteDetails;
-}
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    const { service, quote_details } = await req.json () as RequestBody;
-;
-    // Extract user identity if authenticated;
-    let user_id = null;
-    try {
-      // Get the JWT from the Authorization header;
-      const auth_header = req.headers.get ('Authorization');
-      // Check condition
-if ( {) {
-  $2
-}
-        // Extract user information from the JWT;
-        const token = auth_header.replace ('Bearer ', '');
-        const { data: { user }, error } = await supabase.auth.get_user (token);
-        // Check condition
-if ( {) {
-  $2
-}
-          user_id = user.id;
-        }
-      }
-    } catch (auth_error) {
-      console.log ("Auth error:", auth_error);
-      // Continue without user identity;
-    }
-    // Generate a summary and tags using OpenAI;
-    let ai_analysis = null;
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        const openAIResponse = await fetch ('https://api.openai.com / v1 / chat / completions', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${openAIApiKey}`;
-            'Content - Type': 'application / json'}
-          body: JSON.stringify ({
-            model: 'gpt - 4o - mini';
-            messages: [;
-              {
-                role: 'system',
-                content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.';
-              }
-              {
-                role: 'user',
-                content: `Analyze this service request and provide:;
-                1. A concise summary (max 100 words);
-                2. 3 - 5 relevant tags for categorization;
-                3. An estimated complexity level (Low, Medium, High);
-                Service: ${service?.title || 'Custom Service'}
-                Category: ${service?.category || 'N / A'}
-                Description: ${quote_details.description}
-                Budget Range: ${quote_details.budget}
-                Timeframe: ${quote_details.timeframe}
-                Start Date: ${quote_details.start_date || 'Not specified'}
-                End Date: ${quote_details.end_date || 'Not specified'}`;
-              }
-            ];
-            temperature: 0.5;
-          });
-        });
-;
-        const ai_result = await openAIResponse.json ();
-        // Check condition
-if ( {) {
-  $2
-}
-          ai_analysis = ai_result.choices[0].message.content;
         }
       }
     } catch (openAIError) {
-      console.error ("OpenAI error:", openAIError);
-      // Continue without AI analysis;
+      console.error("OpenAI error:", openAIError),
+      // Continue without AI analysis
     }
-    // Store the quote request in the database;
-    const { data, error } = await supabase;
-      .from ('service_quotes');
-      .insert ([;
         {
           user_id: user_id;
           service_id: service?.id;
@@ -269,7 +163,6 @@ if ( {) {
       ])
       .select();
     if (error) throw error;
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
           description: quote_details.description;
           email: quote_details.email;
           budget: quote_details.budget;
@@ -326,6 +219,3 @@ if (throw error) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-  }
-});
-;

@@ -1,7 +1,3 @@
-import React from 'react';
-interface ComputervisionProps {
-  // Add props here as needed
-}
 export default function Computervision({ }: ComputervisionProps) {
 
 class ErrorBoundary extends React.Component {

@@ -1,10 +1,4 @@
 
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
@@ -12,8 +6,6 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -210,13 +202,6 @@ if ( {) {
             status: "cancelled"
             cancelled_at: new Date().toISOString()
           })
-          .eq("id", transactionId);
-        result = { message: "Transaction cancelled successfully" }
-        break;
-      default: throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
@@ -234,7 +219,6 @@ const corsHeaders = {;
 serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
-  }
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -266,6 +250,3 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-  }
-});
-;

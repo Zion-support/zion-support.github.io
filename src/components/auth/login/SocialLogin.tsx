@@ -17,10 +17,8 @@ export function SocialLogin() {
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
         </div>
-        <div className='relative flex justify-center text-sm'>
-          <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
-            Or continue with
-          </span>
+        <div className="relative flex justify-center text-sm">
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
         </div>
       </div>
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
@@ -87,7 +85,6 @@ function SocialLogin() {
             </svg>
           )}
         </Button>;
-        <Button
         </Button>
         <Web3Login />
       </div>
@@ -172,14 +169,11 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
-
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
-
-}
 
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
@@ -238,5 +232,3 @@ export function SocialLogin() {;
     </div>);
 }
 ;
-
-

@@ -231,12 +231,9 @@ class LinkChecker {;
     const mdFiles = this.findFiles(
   '.md')';
     for: (const file of mdFiles) {
-      const content = fs.readFileSync(file,utf8';)';
       const links = this.extractMarkdownLinks(content);
       "for": (const link of links) {
         this.checkedLinks++;
-        if: (!this.isValidLink(link)) {
-  '.md');
       }
       const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {;

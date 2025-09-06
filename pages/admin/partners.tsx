@@ -18,32 +18,6 @@ export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-
-  useEffect(() => {
-    // Simulate loading partners
-    setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ code, ...updates })
-    });
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners |[]);  }
-  async function viewFlags(code: string) {
-    setSelected(code)
-    const res = await fetch(
-      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
-    );
-    const json = await res && res.json();
-    setFlags(json && json.flags || []);
-  }
-
-
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
@@ -75,7 +49,6 @@ export default function AdminPartners() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-  return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
       <div className="overflow-auto">
@@ -113,43 +86,10 @@ export default function AdminPartners() {
                 </td>
               </tr>
             ))}
-          </tbody>
-        </table>
-      </div>
-      {selected && (
-        <div className='p-4 rounded border'>
-          <h2 className='font-semibold mb-2'>Fraud Flags  {selected}</h2>
-          <ul className='list-disc pl-6'>
-            {flags.map((f, idx) => (
-              <li key={idx}>
-                <span className='font-medium'>{f.type}</span>  {f.severity}{' '}
-                {f.note && <span className='text-gray-500'>({f.note})</span>}
-              </li>
             ))}
             {flags && flags.length === 0 && (;
               <li className='text-gray-500 list-none'>No flags</li>;
             )}
-          </ul>
-        </div>
-{/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
-            <p className="text-2xl font-bold">{totalPartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
-            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
-            <p className="text-2xl font-bold">{totalReferrals}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
-            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
-          </div>
-        </div>
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -167,22 +107,6 @@ export default function AdminPartners() {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
-                onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Statuses</option>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-                <option value="pending">Pending</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        {/* Partners Table */}
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <div className="px-6 py-4 border-b">
-            <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
-          </div>
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -244,7 +168,6 @@ export default function AdminPartners() {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
-                            <>
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";

@@ -25,17 +25,9 @@ import {Footer} from "@/components/Footer";
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
-    setIsSubmitting(true);
-    try {;
-      await signup(data && data.email, data && data.password, data && data.displayName);
     } finally {;
       setIsSubmitting(false);
     }
-  }
-
-  // Redirect if user is already logged in and has completed profile;
-  if (isAuthenticated && user?.profileComplete) {;
-    return <Navigate to="/" />;
   }
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
@@ -122,14 +114,6 @@ if ( {) {
               </h2>;
               <p className="mt-2 text-sm text-zion-slate-light">;
                 Already have an account?{" "}
-                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-                  Sign in
-                </Link>
-              </p>
-            </div>
-            <div className="bg-zion-blue-dark rounded-lg p-6">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
                   Sign in;
                 </Link>;
               </p>;
@@ -166,8 +150,6 @@ if ( {) {
                           </div>;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
-                      </FormItem>;
-                    )}
                   <FormField
                     control={form && form.control}
                     name="password"
@@ -189,72 +171,40 @@ if ( {) {
                               variant="ghost"
                               size="sm"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                            <Input;
+                              type={showPassword ? "text" :"password"}
+                              placeholder="••••••••";
+                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
+                              {...field}
+                              autoComplete="new-password";
+                            />;
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                            <Button;
+                              type="button";
+                              variant="ghost";
+                              size="sm";
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                               onClick={() => setShowPassword(!showPassword)}
                             >;
                               {showPassword ? (;
                                 <EyeOff className="h-4 w-4" />;
-                              ) : (;
-                                <Eye className="h-4 w-4" />;
-                              )}
-                              <span className="sr-only">;
-                                {showPassword ? "Hide password" : "Show password"}
-            <div className="bg - zion - blue - dark rounded - lg p - 6">;
-              <Form {...form}>;
-                <form on_submit={form.handle_submit (on_submit)} className="space - y-6" no_validate>;
-                  <FormField;
-                    control={form.control}
-                    name="display_name";
-                    render={({ field }) => (
                       <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
+                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
-                            <Input;
-                              placeholder="John Doe";
-                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
-                              {...field}
-                              aria - autocomplete="none";
-                              auto_complete="off";
-                            />;
-                            <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                          </div>;
-                        </FormControl>;
+                            <Input
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
                   <FormField;
                     control={form.control}
-                    name="email";
+                    name="confirm_password";
                     render={({ field }) => (
                       <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Email address</FormLabel>;
+                        <FormLabel className="text - zion - slate - light">Confirm Password</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
                             <Input;
-                              placeholder="you@example.com";
-                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
-                              {...field}
-                              auto_complete="off";
-                              aria - autocomplete="none";
-                              type="email";
-                            />;
-                            <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                          </div>;
-                        </FormControl>;
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <FormField;
-                    control={form.control}
-                    name="password";
-                    render={({ field }) => (
-                      <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input;
-                              type={show_password ? "text" : "password"}
-                              placeholder="";
                               className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
                               {...field}
                               auto_complete="new - password";
@@ -265,13 +215,12 @@ if ( {) {
                               variant="ghost";
                               size="sm";
                               className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan";
-                              on_click={() => setShowPassword (!show_password)}
+                              on_click={() => setShowConfirmPassword (!showConfirmPassword)}
                             >;
-                              {show_password ? (
+                              {showConfirmPassword ? (
                                 <EyeOff className="h - 4 w - 4" />) : (
                                 <Eye className="h - 4 w - 4" />)}
                               <span className="sr - only">;
-                                {show_password ? "Hide password" : "Show password"}
                               </span>;
                             </Button>;
                           </div>;
@@ -298,18 +247,6 @@ if ( {) {
                           <div className="relative">;
                             <Input;
                               type={showConfirmPassword ? "text" : "password"}
-                            >;
-                              {showConfirmPassword ? (;
-                                <EyeOff className="h-4 w-4" />;
-                              ) : (;
-                                <Eye className="h-4 w-4" />;
-                              )}
-                              <span className="sr-only">;
-                                {showConfirmPassword ? "Hide password" : "Show password"}
-                              </span>;
-                            </Button>;
-                          </div>;
-                        </FormControl>;
                   <FormField
                     control={form && form.control}
                     name="termsAccepted"
@@ -325,27 +262,36 @@ if ( {) {
                         <div className="space-y-1 leading-none">;
                           <FormLabel className="text-sm text-zion-slate-light">;
                             I agree to the{" "}
-                            <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">;
-                              Terms of Service;
-                            </a>{" "}
-                            and{" "}
-                            <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">;
-                              Privacy Policy;
-                            </a>;
-                          </FormLabel>;
-                          <FormMessage className="text-red-400" />;
-                        </div>;
-                      </FormItem>;
-                    )}
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+;
+                <div className="mt-6 grid grid-cols-3 gap-3">;
+                  <Button;
+                    type="button";
+                    variant="outline";
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+                    onClick={() => loginWithGoogle()}
+                    disabled={isLoading || isSubmitting}
+                  >;
+                    <span className="sr-only">Sign in with Google</span>;
+                    <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">;
                     onClick={() => loginWithGoogle()}
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                      <path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z" fill="#EA4335" />;
+                      <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />;
+                      <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />;
+                      <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />;
+                    </svg>;
+                  </Button>;
+                  <Button;
+                    type="button";
+                    variant="outline";
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
                     onClick={() => loginWithFacebook()}
                   <Button
                     type="button"
@@ -372,8 +318,3 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-    </>;
-  );
-}
-    </>);
-}

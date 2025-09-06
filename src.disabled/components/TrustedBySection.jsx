@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TrustedBySectionProps {
   // Add props here as needed
-}
 export default function TrustedBySection({ }: TrustedBySectionProps) {
   return (
     <div>

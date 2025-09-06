@@ -9,7 +9,6 @@ import { Globe } from "lucide-react";
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
@@ -40,30 +39,6 @@ export function LanguageSelector() {;
             <div className="flex items-center gap-2">;
               <span className="text-lg">{lang && lang.flag}</span>;
               <span>{t(`language.${lang && lang.code}`)}</span>;
-            </div>;
-          </DropdownMenuItem>;
-        ))}
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-  );
-import React from './react';
-import { use_translation  } from './react - i18next';
-import { Button  } from '@/components / ui / button';
-import { Globe  } from './lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
-export /**
- * LanguageSelector - Function description
- */
-function LanguageSelector() {
-  const { t } = use_translation ();
-  const { current_language, change_language, supported_languages } = use_language ();
-;
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -90,14 +65,3 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
-            }`}
-            on_click={() => change_language (lang.code)}
-          >;
-            <div className="flex items - center gap - 2">;
-              <span className="text - lg">{lang.flag}</span>;
-              <span>{t (`language.${lang.code}`)}</span>;
-            </div>;
-          </DropdownMenuItem>))}
-      </DropdownMenuContent>;
-  );
-}

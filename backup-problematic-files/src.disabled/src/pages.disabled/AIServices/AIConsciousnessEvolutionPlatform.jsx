@@ -9,4 +9,3 @@ const AIConsciousnessEvolutionPlatform = ({ className }) => {
   );
 };
 
-export default AIConsciousnessEvolutionPlatform;

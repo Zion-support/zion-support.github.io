@@ -58,18 +58,6 @@ export const ResumeStepContent = ({ ;
           initialData={resume?.basic_info}
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
-            console && console.log("Saving basic info:", data);
-          }}
-          onComplete={onNextStep}
-        />
-      </TabsContent>
-      <TabsContent value="work-experience">
-
-          onComplete={onNextStep} ;
-        />;
-      </TabsContent>;
-
-      <TabsContent value="work-experience">;
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
@@ -94,15 +82,12 @@ export const ResumeStepContent = ({ ;
 
         />;
       </TabsContent>;
-
+      ;
       <TabsContent value="preview">;
-        <PreviewResume
-          resume={resume as Resume}
           onBack={onPrevStep}
         />;
       </TabsContent>;
     </>;
-  );
 };
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';

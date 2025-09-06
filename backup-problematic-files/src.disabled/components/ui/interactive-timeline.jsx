@@ -9,4 +9,3 @@ const Interactive-timeline = ({ className }) => {
   );
 };
 
-export default Interactive-timeline;

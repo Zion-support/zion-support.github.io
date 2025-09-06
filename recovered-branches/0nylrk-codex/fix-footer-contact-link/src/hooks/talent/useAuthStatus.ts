@@ -1,6 +1,11 @@
 
 export function useAuthStatus() {
   // Mock authenticated status
+
+import { useState } from 'react';
+import {useState} from 'react';
+export function useAuthStatus() {
+  // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
@@ -35,8 +40,6 @@ export function useAuthStatus() {
     userDetails;
     savedTalents;
     handleToggleSave;
-
-    toggleAuth
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
@@ -91,4 +94,3 @@ if ( {) {
     handleToggleSave;
     toggle_auth;
   }
-}

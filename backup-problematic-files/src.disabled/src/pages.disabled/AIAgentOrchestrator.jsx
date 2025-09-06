@@ -9,4 +9,3 @@ const AIAgentOrchestrator = ({ className }) => {
   );
 };
 
-export default AIAgentOrchestrator;

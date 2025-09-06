@@ -1,5 +1,3 @@
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>

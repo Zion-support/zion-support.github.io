@@ -16,7 +16,6 @@
   }
   generateReport() {
     const report = {
-
       );
     }
     if (this && this.metrics.memoryUsage > 100) {

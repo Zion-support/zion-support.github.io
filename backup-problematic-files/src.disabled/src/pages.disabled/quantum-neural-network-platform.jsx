@@ -9,4 +9,3 @@ const Quantum-neural-network-platform = ({ className }) => {
   );
 };
 
-export default Quantum-neural-network-platform;

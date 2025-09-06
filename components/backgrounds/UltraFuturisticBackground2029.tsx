@@ -1,16 +1,3 @@
-initParticles ();
-// Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
-  // Update position particle && particle.x += particle && particle.vx;
-particle && particle.y += particle && particle.vy;
-// Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
-if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
-if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
-if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-// Draw particle ctx && ctx.save ();
-ctx && ctx.globalAlpha = particle && particle.opacity;
-// Different effects for different particle types switch (particle && particle.type) {;
-  case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 }
 export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -215,9 +202,6 @@ export default function UltraFuturisticBackground2029() {;
         style={{ filter: 'blur(0.5px)' }}
       />
       {/* Additional visual layers */}
-            scale: [1, 1.2, 1]
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -236,7 +220,6 @@ export default function UltraFuturisticBackground2029() {;
           transition={{
             duration: 4,
             repeat: Infinity,
-          }}
         />
         {/* Holographic matrix */}
         <motion.div
@@ -322,49 +305,15 @@ export default function UltraFuturisticBackground2029() {;
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
             }}
             animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
 
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
 
-
-            duration: 4,
-            repeat: Infinity,
-
-            transition={{
-              duration: 3 + i * 0.5
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: i * 0.3,            }}              delay: i * 0.3
-
-              delay: i * 0 && 0.3,            }}              delay: i * 0 && 0.3
-            }}
-          />;
-        ))}
-              delay: i * 0 && 0.3,            }}              delay: i * 0 && 0.3
-              delay: i * 0.3
-            }}
-          />;
         ))}
       </div>
     </div>
 );  )
 }
-      </div>;
-    </div>;
-  );  );
-}
-  )
-}
-              delay: i * 0.3,            }}              delay: i * 0.3;
-            }}
-          />))}
-      </div>;
-    </div>));
-}
-
   );

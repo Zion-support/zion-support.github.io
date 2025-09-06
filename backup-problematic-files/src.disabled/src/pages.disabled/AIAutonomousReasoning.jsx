@@ -9,4 +9,3 @@ const AIAutonomousReasoning = ({ className }) => {
   );
 };
 
-export default AIAutonomousReasoning;

@@ -25,15 +25,6 @@ export default function CookieConsent() {;
     };
     }
   }
-  const acceptSelected = () => {
-    localStorage.setItem("cookie-consent", JSON.stringify(preferences));
-    setIsVisible(false);
-    // Initialize analytics if accepted
-    if (preferences.analytics) {
-      // Add your analytics initialization code here
-      console.log("Analytics initialized");
-    }
-  }
   const rejectAll = () => {
     const onlyNecessary = {
       necessary: true
@@ -47,7 +38,6 @@ export default function CookieConsent() {;
                 </p>;
               </div>;
             </div>;
-
               >;
                 <Settings className="w-4 h-4" />;
                 Cookie Settings;

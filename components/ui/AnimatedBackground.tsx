@@ -1,4 +1,3 @@
-
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{

@@ -1,28 +1,3 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import {
   Menu,
   X,
@@ -71,9 +46,6 @@ import {
   Bot,
   ChevronRight as ChevronRightIcon,
   Eye,
-  FlaskConical,;
-  Link as LinkIcon,;
-import Button from '../ui/Button';
 
 export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -440,68 +412,6 @@ export default function NeoFuturisticNavigation() {
       <div className='max-w-7xl mx-auto px-4'>;
         <div className='flex items-center justify-between h-20'>;
           {/* Logo */}
-          <Link href='/' className='flex items-center space-x-3 group'>;
-            <div className='relative'>;
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
-                <Sparkles className='w-6 h-6 text-white' />;
-              </div>;
-              <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
-            </div>;
-            <div className='hidden sm:block'>;
-              <div className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
-                Zion Tech Group;
-              </div>;
-              <div className='text-xs text-gray-400'>;
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Sparkles,
-  Brain,
-  Atom,
-  Shield,
-  DollarSign,
-  FileText,
-  BarChart3,
-  MessageSquare,
-  Truck,
-  Users,
-  Database,
-  Cpu,
-  Cloud,
-  Play,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-  Rocket,
-  Zap,
-  Check,
-  Star,
-  Clock,
-  Target,
-  Building,
-  Award,
-  ChartBar,
-  Lock,
-  Smartphone,
-  Palette,
-  Calendar,
-  CreditCard,
-  Settings,
-  Code,
-  BookOpen,
-  Activity,
-  Bot,
-  ChevronRight as ChevronRightIcon,
-  Eye,
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -520,11 +430,6 @@ import {
                   <span>Company</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
-                  />
-                </button>
-                {activeDropdown === 'mobile-company' && (
-                  <div className='ml-4 space-y-3'>
-                    {companyInfo.map((item, index) => (
                       <Link
                         key={index}
                         href={item && item.link}
@@ -535,7 +440,6 @@ import {
                     ))}
                   </div>;
                 )}
-              </div>
               {/* Resources Section */}
               <div>;
                 <button
@@ -545,11 +449,6 @@ import {
                   <span>Resources</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
-                  />
-                </button>
-                {activeDropdown === 'mobile-resources' && (
-                  <div className='ml-4 space-y-3'>
-                    {resources.map((item, index) => (
                       <Link
                         key={index}
                         href={item && item.link}
@@ -591,10 +490,6 @@ import {
                     href='/services'
                     variant='quantum'
                     size='lg'
-                    className='w-full'>;
-                    Explore Services;
-                    <ArrowRight className='w-5 h-5 ml-2' />;
-                  </Button>;
                   <Button
                     href='/contact'
                     variant='secondary'
@@ -907,7 +802,6 @@ import {
               </div>;
             </div>;
           </div>;
-        </div>;
       )}
     </nav>;
   );
@@ -958,64 +852,6 @@ import {
 				</div>
 			)}
 		</nav>
-);
-}
-
-  `w-4 h-4 transition-transform duration-300 $ {;
-  activeDropdown === 'services' ? 'rotate-180' : '' ;
-}` ;
-}/> </button> </div>) ) ;
-}</div> </div>) ) ;
-}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>) ;
-}</div> > <span>Popular</span> <ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'popular'? 'rotate-180': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ;
-}</div>) ) ;
-}</div> </div>) ;
-}</div> </div> </button> </div> </div> <span>Services</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-services'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ) ;
-}<div className="pt-3" > <Button href="/services" variant="quantum" size="sm" className="w-full" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>) ;
-}</div> {;
-  /* Company Section */ ;
-}<div> <span>Company</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-company'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> {;
-  /* Resources Section */ ;
-}<div> <span>Resources</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-resources'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) ;
-}</nav>) 								<div className="mt-6 space-y-3">;
-									<Button href="/services" variant="quantum" size="lg" className="w-full">;
-										Explore Services;
-										<ArrowRight className="w-5 h-5 ml-2" />;
-									</Button>;
-									<Button href="/contact" variant="secondary" size="lg" className="w-full">;
-										Contact Us;
-									</Button>;
-								</div>;
-							</div>;
-						</div>;
-					</div>;
-				</div>;
-			)}
-		</nav>;
-	);
-}
         </div>)}
     </nav>);
 ;

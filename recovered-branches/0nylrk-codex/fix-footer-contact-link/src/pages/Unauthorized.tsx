@@ -46,8 +46,6 @@ import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
-export default function Unauthorized() {
-  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
@@ -62,9 +60,6 @@ export default function Unauthorized() {
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
           </p>;
           <div className="flex flex-col gap-3">;
-            <Link
-              to="/"
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               Login with Different Account;
             </Link>;
           </div>;

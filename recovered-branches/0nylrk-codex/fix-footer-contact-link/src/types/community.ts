@@ -1,4 +1,3 @@
-
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
@@ -10,6 +9,12 @@ export type ForumCategory =;
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
+  id: ForumCategory;
+  name: string;
+  description: string;
+  adminOnly: boolean
+  icon: string
+}
 
 export interface ForumCategoryInfo {;
   id: ForumCategory;
@@ -34,7 +39,6 @@ export interface ForumPost {;
   upvotes: number;
   downvotes: number;
 }
-}
 
 
 export interface ForumReply {;
@@ -49,9 +53,6 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
-}
-}
-
 
 export interface Badge {;
   id: string;

@@ -9,4 +9,3 @@ const PortfolioBuilder = ({ className }) => {
   );
 };
 
-export default PortfolioBuilder;

@@ -84,7 +84,6 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
-
 };
   )
 },

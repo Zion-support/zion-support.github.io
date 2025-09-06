@@ -21,11 +21,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-export type ProposalType =;
-  | 'Workforce Dev';
-  | 'AI Ethics';
-  | 'Digital ID';
-  | 'Education';
   targetInstitution: string;
   targetInstitution: string;
   type: ProposalType;
@@ -42,10 +37,6 @@ export type ProposalForm = {
   budgetOrGoals: string;
   supporting_multiverses: string;
   language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-  language?: string;
-  customPrompt?: string
-}
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
@@ -56,7 +47,6 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supporting_multiverses: string,
   language?: string;
-  customPrompt?: string
 };
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
@@ -81,17 +71,11 @@ export default function ProposalGenerator() {;
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {;
-      console && console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
-    }
-  }
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -105,14 +89,6 @@ export default function ProposalGenerator() {;
         })
       });
       const data = await res.json();
-      setExportLinks({
-        pdfUrl: data.pdfUrl
-        jsonUrl: data.jsonUrl
-        mdUrl: data.mdUrl
-      });
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {
-      console.error(e);
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
@@ -124,23 +100,10 @@ export default function ProposalGenerator() {;
 
     }
 
-  }
-
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          markdown: draftMarkdown
-          json: draftJson
-          meta: form
-        })
-      });
-      const data = await res.json();
-      setStatusMessage(
-        `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`
     }
   }
 
@@ -195,12 +158,6 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
     }
   }
   return (
@@ -304,43 +261,6 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-              className="w-full border rounded px-3 py-2"
-              value={form && form.regionalScope}
-              onChange={(e) => handleChange('regionalScope', e && e.target.value)}
-              placeholder="Global / Africa / LATAM / APAC / EU / ...";
-            />;
-          </div>;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>;
-            <textarea
-              className="w-full border rounded px-3 py-2 min-h-[80px]"
-              value={form && form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
-            />;
-          </div>;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>;
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form && form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses', e && e.target.value)}
-              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work";
-            />;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <div>;
-              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
-              <input
-                className="w-full border rounded px-3 py-2"
-                value={form && form.language}
-                onChange={(e) => handleChange('language', e && e.target.value)}
-                placeholder="English / French / Spanish / Arabic / ...";
-              />;
-            </div>;
-            <div>;
-              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>;
-              <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form && form.customPrompt}
                 onChange={(e) => handleChange('customPrompt', e && e.target.value)}
@@ -364,15 +284,6 @@ export default function ProposalGenerator() {;
             <button
               className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
               onClick={handleSubmitBridge}
-              )}
-            </div>;
-          )}
-              )}
-            </div>;
-          )}
-        </div>;
-        <div className='space-y-2'>;
-          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
@@ -384,7 +295,5 @@ export default function ProposalGenerator() {;
         </div>
       </div>
     </div>
-  );
-}
   );
 }

@@ -1,5 +1,3 @@
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
 
 import {
   Brain
@@ -31,8 +29,6 @@ import {
           'security testing'
           'DevOps security'
         ]}
-
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
         {/* Hero Section */}
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
@@ -50,14 +46,6 @@ import {
         </section>;
 
 
-        {/* Pricing Section */}
-        <section className='py-20'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
                   popular: false
                 }
                 {
@@ -172,13 +160,6 @@ import {
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
 
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-
                       : 'border-white/10'
                   }`}
                 >
@@ -254,11 +235,6 @@ import {
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                         : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                    }`}>;
-                    Get Started;
-                  </motion && motion.button>;
-                </motion && motion.div>;
-              ))}
 
             </div>;
           </div>;
@@ -276,40 +252,6 @@ import {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Why Choose Our AI Code Security Platform?
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our platform delivers measurable results that improve your
-                security posture, development efficiency, and code quality while
-                reducing costs and risks.
-              </p>
-            </motion.div>
-            <div className='grid md:grid-cols-2 gap-12'>
-              <div className='space-y-8'>
-                {[
-                  {
-                    icon: <Shield className='w-8 h-8' />
-                    title: 'Reduce Security Vulnerabilities by 85%'
-                    description:
-                      'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.'
-                  }
-                  <motion&& motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    className='flex items-start'>;
-                    <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>;
-                      {benefit && benefit.icon}
-                    </div>;
-                    <div>;
-                      <h3 className='text-xl font-semibold text-white mb-2'>;
-                        {benefit && benefit.title}
-                      </h3>;
-                      <p className='text-gray-300'>{benefit && benefit.description}</p>                    </div>;
-                  </motion && motion.div>;
-                ))}
                     </div>
                   </motion.div>
                 ))}
@@ -395,44 +337,14 @@ import {
                       <p className="text-gray-300">{benefit && benefit.description}</p>;
                     </div>;
                   </motion && motion.div>;
-                    title: "Enable Faster Development Cycles",
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes.";
-                  }
-                ].map((benefit, index) => (
-                  <motion.div
                     key={index}
                     initial={{ opacity: 0, coordinate_x: 20 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
               </div>;
             </div>;
           </div>;
         </section>;
-
-        {/* Use Cases Section */}
-        <section className='py-20'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -448,14 +360,6 @@ import {
             </motion.div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {[
-                'Software Development Teams'
-                'DevOps & Security Teams'
-                'Financial Technology Companies'
-                'Healthcare Software Providers'
-                'E-commerce Platforms'
-                'Government Software Projects'
-                'Educational Institutions'
-                'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
         {/* Use Cases Section */}
         <section className='py - 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
@@ -507,7 +411,6 @@ import {
                   </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
-
               transition={{ duration: 0.8 }}
 
               className='text-center mb-16'
@@ -526,45 +429,12 @@ import {
           </div>
         </section>
         {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>;
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <motion&& motion.div
 
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Ready to Secure Your Code?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of development teams who trust our AI-powered
-                platform to protect their applications and improve code quality.
-                Start your free trial today.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'
-                >
-                  Start Free Trial
-                  <ArrowRight className='ml-2 w-5 h-5' />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'                >
-                  Contact Sales
-                </motion.button>
-              </div>                Ready to Secure Your Code?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of development teams who trust our AI-powered platform to protect their applications
@@ -630,10 +500,6 @@ import {
         </section>
       </div>
     </>
-export default AICodeReviewSecurityScanner;  )
-}
-export default AICodeReviewSecurityScanner;
-
                 "Educational Institutions",
                 "Startups & Enterprises";
                 <motion.div;
@@ -788,5 +654,4 @@ export default AICodeReviewSecurityScanner;
 export default AICodeReviewSecurityScanner);
 }
 ;
-export default AICodeReviewSecurityScanner;
 export default AICodeReviewSecurityScanner;

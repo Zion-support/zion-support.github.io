@@ -2,10 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
-  isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-export interface Milestone {
   isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
@@ -40,9 +36,6 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
-  return projects && projects.find(p => p && p.id === id) || null,
-}
-export function getAllProjects(): Project[] {
 
 export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
@@ -53,29 +46,6 @@ export function getAllProjects(): Project[] {;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  };
-  projects && projects.push(newProject);
-
-  return newProject;
-}
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
-    ...project,
-    id: `project_${Date.now()}`,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString();
-  };
-  projects.push(newProject);
-  return newProject;
-}
-
-export function updateProject(id: string, updates: Partial<Project>): Project | null {;
-  const project = projects.find(p => p.id === id);
-  if (!project) return null;
-  
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   const project = projects && projects.find(p => p && p.id === id);
   if (!project) return null,
@@ -90,15 +60,10 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     status: 'pending'
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
-
-
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
-
-    updatedAt: new Date().toISOString();
-  };
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   project && project.milestones[idx] = next;
@@ -110,9 +75,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return newMilestone;
 }
-  const milestone = project.milestones.find(m => m.id === milestoneId);
-  if (!milestone) return null;
-  
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
@@ -123,11 +85,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return milestone;
 }
-  const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false;
-  
-  project.milestones.splice(index, 1);
-  project.updatedAt = new Date().toISOString();
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   

@@ -1,11 +1,3 @@
-import { Twitter, Linkedin } from 'lucide-react'
-interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
-  linkedin?: string;
 }
 interface Speaker {
   name: string,
@@ -23,7 +15,6 @@ interface Speaker {
   linkedin?: string
 }
 
-  name: string
   title: string
   avatar: string
   twitter?: string
@@ -31,17 +22,13 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
-    linkedin: '#'}],
-
 export function SpeakersSection() {
-  return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
-              <Image
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -56,23 +43,14 @@ export function SpeakersSection() {
                   <a
                     href={sp.twitter}
                     aria-label="Twitter"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    <Twitter className="h-4 w-4" aria-hidden="true" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
-                )}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
-
-
-                  </Link>
                 )}
               </div>;
             </div>;
@@ -82,43 +60,3 @@ export function SpeakersSection() {
     </section>
   )
 }
-  );
-}
-                    aria - label='Twitter';
-                    target='_blank';
-                    rel='noopener noreferrer';
-                    className='flex items - center';
-                    href = {sp.twitter, }
-                    aria - label="Twitter";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items - center";
-                  >;
-                    <Twitter className='h - 4 w - 4' aria - hidden='true' />;
-                    <span className='sr - only'>Twitter</span>                  </a>                    <Twitter className="h - 4 w - 4" aria - hidden="true" />;
-                    <span className="sr - only">Twitter</span>;
-                  </a>)}
-                {sp.linkedin && (
-                  <a;
-                    href={sp.linkedin}
-                    aria - label='LinkedIn';
-                    target='_blank';
-                    rel='noopener noreferrer';
-                    className='flex items - center';
-                  >;
-                    <Linkedin className='h - 4 w - 4' aria - hidden='true' />;
-                    <span className='sr - only'>LinkedIn</span>                  </a>                    aria - label="LinkedIn";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items - center";
-                  >;
-                    <Linkedin className="h - 4 w - 4" aria - hidden="true" />;
-                    <span className="sr - only">LinkedIn</span>)}
-              </div>;
-            </div>))}
-        </div>;
-      </div>;
-    </section>);
-}
-;
-

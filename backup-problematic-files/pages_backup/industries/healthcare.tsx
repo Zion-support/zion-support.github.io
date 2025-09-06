@@ -411,4 +411,3 @@ export default function HealthcarePage() {
   );
 };
 
-export default Healthcare;

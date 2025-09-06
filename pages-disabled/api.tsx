@@ -148,25 +148,3 @@ export default function API() {;
         </div>;
 
         {/* Getting Started */}
-        <div className=py-16 bg-white">;
-          <div className="container mx-auto px-4>;
-            <div className=max-w-3xl mx-auto text-center">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-6>Getting Started</h2>;
-              <p className=text-lg text-gray-600 mb-8">;
-                Ready to integrate with our APIs? Get your API key and start building amazing applications.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center>;
-                <Link href=/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300>;
-                  Get API Key;
-                  <ArrowRight className=ml-2 w-5 h-5" />;
-                </Link>;
-                <Link href="/docs className=inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation;
-                  <ExternalLink className="ml-2 w-5 h-5" />;
-                </Link>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  )}

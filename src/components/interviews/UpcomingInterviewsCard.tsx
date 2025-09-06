@@ -1,9 +1,8 @@
         // Filter for confirmed interviews in the future
         const upcoming = interviews
-          .filter(
-            interview =>
-              interview.status === 'confirmed' &&
-              !isPast(parseISO(interview.scheduled_date))
+          .filter(interview => 
+            interview.status === 'confirmed' && 
+            !isPast(parseISO(interview.scheduled_date))
           )
           .sort(
             (a, b) =>
@@ -58,6 +57,13 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { use_interviews } from '@/hooks / use_interviews';
+import { Interview } from '@/types / interview';
+import { format, is_past, parseISO } from 'date - fns';
+import Link from 'next / link';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -106,12 +112,10 @@ export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect((,) => {;
     const loadInterviews = async () => {      setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
-
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(;
@@ -124,7 +128,6 @@ export function UpcomingInterviewsCard() {;
               parseISO(a && a.scheduled_date).getTime() -;
               parseISO(b && b.scheduled_date).getTime()          );
           .slice(0, 3); // Take only the next 3 interviews;
-
         setUpcomingInterviews(upcoming);
       } catch (error) {;
         logErrorToProduction('Error loading upcoming interviews:', {;
@@ -134,10 +137,6 @@ export function UpcomingInterviewsCard() {;
         setIsLoading(false);
       }
     };
-
-    loadInterviews();
-  }, []);
-
   if (isLoading) {;
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
@@ -159,18 +158,7 @@ if ( {) {
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-
-
-
-  }
   if (upcomingInterviews.length === 0) {
-    return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
         <CardHeader>
           <CardTitle className='text-lg flex items-center'>
@@ -245,11 +233,6 @@ if ( {) {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
-            return (
-              <div key={interview.id} className='flex items-center gap-3'>
-                <Avatar className='h-10 w-10 bg-zion-purple/10'>
-                  {interview.client_avatar |interview.talent_avatar ? (
-                    <img
                       loading='lazy'                    />
                   ) : (
                     <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
@@ -266,13 +249,9 @@ if ( {) {
                     </div>
                   )}
                 </Avatar>
-                <div className='flex-1'>
-                  <div className='flex justify-between items-start'>
-                    <p className='font-medium line-clamp-1'>
-                      {interview.title |'Interview'}
                     </p>
                     {isStartingSoon && (
-                      <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
+                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
         

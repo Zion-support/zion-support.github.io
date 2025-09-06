@@ -57,14 +57,9 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
-  const {
-
-// Provider component;
-export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
-
   const {;
     messages;
     active_messages;
@@ -79,43 +74,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
-;
-// Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth(),;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
-      setConversations([]),;
-      setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
   // Create context value with all the methods and states
@@ -164,8 +122,19 @@ if ( {) {
     markAsRead;
     setActiveConversation;
       {children}
-    </MessagingContext.Provider>
-  )
+
+    </MessagingContext && MessagingContext.Provider>;
+  );
+}
+
+    fetchConversations,;
+    loadMessages;
+  };
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}
+    </MessagingContext && MessagingContext.Provider>;
+  );
 }
     fetch_conversations,
     load_messages;
@@ -175,4 +144,14 @@ if ( {) {
     <MessagingContext.Provider value={context_value}>;
       {children}
     </MessagingContext.Provider>);
+),;
+;
+// Hook for using the messaging context;
+export function useMessaging():MessagingContextType {;
+  // Cast to avoid type errors when React type definitions are missing;
+  const context = useContext(MessagingContext) as MessagingContextType,;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider'),;
+  }
+  return context,;
 }

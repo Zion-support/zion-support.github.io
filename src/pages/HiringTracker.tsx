@@ -1,7 +1,3 @@
-    <>;
-      <SEO
-        title='Hiring Tracker | Zion AI Marketplace'
-        description='Manage your candidate pipeline in the Zion AI Marketplace.'
 
 import { useState } from "react",
 import { useRouter } from "next/router",
@@ -18,7 +14,6 @@ function HiringTrackerContent() {
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
   return (
-    <>;
       <SEO
         title="Hiring Tracker | Zion AI Marketplace"
         description="Manage your candidate pipeline in the Zion AI Marketplace."
@@ -31,14 +26,9 @@ function HiringTrackerContent() {
               Hiring Pipeline
             </h1>
             <p className="text-muted-foreground mt-1">
-              Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
-          <TabsList>
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
@@ -46,14 +36,10 @@ function HiringTrackerContent() {
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
-export default function HiringTracker() {
-  return (
-    <ProtectedRoute>
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -66,7 +52,6 @@ export default function HiringTracker() {
 
   return (
   )
-
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
@@ -194,5 +179,3 @@ function HiringTracker() {
     </ProtectedRoute>);
 }
 ;
-
-

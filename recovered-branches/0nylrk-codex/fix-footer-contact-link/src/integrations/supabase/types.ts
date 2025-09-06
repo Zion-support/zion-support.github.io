@@ -1,14 +1,14 @@
+export type Json =;
+  | string;
+  | number;
+  | boolean;
+  | null;
 
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
-          created_at: string;
-          id: string;
-          message: string;
-          response: string;
-          user_id: string;
         }
         Insert: {
           created_at?: string;
@@ -116,18 +116,6 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-          api_key_id: string | null;
-          created_at: string;
-          endpoint: string;
-          id: string;
-          ip_address: string | null;
-          method: string;
-          response_time_ms: number | null;
-          status_code: number;
-          user_agent: string | null;
-          user_id: string | null;
-        }
-        Insert: {
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -139,7 +127,6 @@ export type Database = {
           user_agent?: string | null;
           user_id?: string | null;
         }
-        Update: {
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -159,51 +146,7 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "api_keys";
             referenced_columns: ["id"];
-
           }
-          {
-            foreignKeyName: "api_logs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      certifications: {
-        Row: {
-          created_at: string;
-          credential_id: string | null;
-          credential_url: string | null;
-          expiration_date: string | null;
-          id: string;
-          issue_date: string | null;
-          issuing_organization: string;
-          name: string;
-          resume_id: string;
-        }
-        Insert: {
-          created_at?: string;
-          credential_id?: string | null;
-          credential_url?: string | null;
-          expiration_date?: string | null;
-          id?: string;
-          issue_date?: string | null;
-          issuing_organization: string;
-          name: string;
-          resume_id: string;
-        }
-        Update: {
-          created_at?: string;
-          credential_id?: string | null;
-          credential_url?: string | null;
-          expiration_date?: string | null;
-          id?: string;
-          issue_date?: string | null;
-          issuing_organization?: string;
-          name?: string;
-          resume_id?: string;
-        }
-        Relationships: [;
           {
             foreignKeyName: "certifications_resume_id_fkey";
             columns: ["resume_id"];
@@ -625,12 +568,6 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-            foreignKeyName: "job_applications_talent_id_fkey";
-            columns: ["talent_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       jobs: {
         Row: {
@@ -714,13 +651,6 @@ export type Database = {
         }
         Relationships: [;
           {
-          {
-            foreignKeyName: "milestone_activities_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       notification_preferences: {
         Row: {
@@ -749,12 +679,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "notification_preferences_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: true;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       notifications: {
         Row: {
@@ -792,12 +716,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "notifications_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       partner_payouts: {
         Row: {
@@ -835,304 +753,10 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "partner_payouts_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }];
-      }
-      partner_profiles: {
-        Row: {
-          audience_size: string;
-          bio: string;
-          commission_rate: number | null;
-          created_at: string;
-          fraud_flags: number | null;
-          id: string;
-          name: string;
-          niche: string;
-          payout_method: string;
-          social_media: Json | null;
-          status: string;
-          updated_at: string;
-          user_id: string;
-          website: string | null;
-        }
-        Insert: {
-          audience_size: string;
-          bio: string;
-          commission_rate?: number | null;
-          created_at?: string;
-          fraud_flags?: number | null;
-          id?: string;
-          name: string;
-          niche: string;
-          payout_method: string;
-          social_media?: Json | null;
-          status?: string;
-          updated_at?: string;
-          user_id: string;
-          website?: string | null;
-        }
-        Update: {
-          audience_size?: string;
-          bio?: string;
-          commission_rate?: number | null;
-          created_at?: string;
-          fraud_flags?: number | null;
-          id?: string;
-          name?: string;
-          niche?: string;
-          payout_method?: string;
-          social_media?: Json | null;
-          status?: string;
-          updated_at?: string;
-          user_id?: string;
-          website?: string | null;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "partner_profiles_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      partner_referral_links: {
-        Row: {
-          campaign: string | null;
-          clicks: number | null;
-          conversions: number | null;
-          created_at: string;
-          id: string;
-          name: string;
-          partner_id: string;
-          source: string | null;
-          updated_at: string;
-        }
-        Insert: {
-          campaign?: string | null;
-          clicks?: number | null;
-          conversions?: number | null;
-          created_at?: string;
-          id?: string;
-          name: string;
-          partner_id: string;
-          source?: string | null;
-          updated_at?: string;
-        }
-        Update: {
-          campaign?: string | null;
-          clicks?: number | null;
-          conversions?: number | null;
-          created_at?: string;
-          id?: string;
-          name?: string;
-          partner_id?: string;
-          source?: string | null;
-          updated_at?: string;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "partner_referral_links_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }];
-      }
-      portfolio_projects: {
-        Row: {
-          created_at: string;
-          demo_url: string | null;
-          description: string | null;
-          github_url: string | null;
-          id: string;
-          image_url: string | null;
-          pdf_url: string | null;
-          technologies: string[] | null;
-          title: string;
-          updated_at: string;
-          user_id: string;
-        }
-        Insert: {
-          created_at?: string;
-          demo_url?: string | null;
-          description?: string | null;
-          github_url?: string | null;
-          id?: string;
-          image_url?: string | null;
-          pdf_url?: string | null;
-          technologies?: string[] | null;
-          title: string;
-          updated_at?: string;
-          user_id: string;
-        }
-        Update: {
-          created_at?: string;
-          demo_url?: string | null;
-          description?: string | null;
-          github_url?: string | null;
-          id?: string;
-          image_url?: string | null;
-          pdf_url?: string | null;
-          technologies?: string[] | null;
-          title?: string;
-          updated_at?: string;
-          user_id?: string;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "portfolio_projects_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      profiles: {
-        Row: {
-          avatar_url: string | null;
-          average_rating: number | null;
-          bio: string | null;
-          created_at: string;
-          display_name: string | null;
-          headline: string | null;
-          id: string;
-          ip_address: string | null;
-          last_login_ip: string | null;
-          profile_complete: boolean;
-          rating_count: number | null;
-          rating_sum: number | null;
-          role: string | null;
-          signup_timestamp: string | null;
-          tenant_id: string | null;
-          updated_at: string;
-          user_type: string | null;
-        }
-        Insert: {
-          avatar_url?: string | null;
-          average_rating?: number | null;
-          bio?: string | null;
-          created_at?: string;
-          display_name?: string | null;
-          headline?: string | null;
-          id: string;
-          ip_address?: string | null;
-          last_login_ip?: string | null;
-          profile_complete?: boolean;
-          rating_count?: number | null;
-          rating_sum?: number | null;
-          role?: string | null;
-          signup_timestamp?: string | null;
-          tenant_id?: string | null;
-          updated_at?: string;
-          user_type?: string | null;
-        }
-        Update: {
-          avatar_url?: string | null;
-          average_rating?: number | null;
-          bio?: string | null;
-          created_at?: string;
-          display_name?: string | null;
-          headline?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          last_login_ip?: string | null;
-          profile_complete?: boolean;
-          rating_count?: number | null;
-          rating_sum?: number | null;
-          role?: string | null;
-          signup_timestamp?: string | null;
-          tenant_id?: string | null;
-          updated_at?: string;
-          user_type?: string | null;
-        }
-        Relationships: [;
-          {
-          {
-            foreignKeyName: "profiles_tenant_id_fkey";
-            columns: ["tenant_id"];
-            isOneToOne: false;
-            referenced_relation: "whitelabel_tenants";
-            referenced_columns: ["id"];
-          }];
-      }
-      project_milestones: {
-        Row: {
-          amount: number;
-          created_at: string;
-          created_by: string;
-          deliverables: Json | null;
-          description: string | null;
-          due_date: string | null;
-          id: string;
-          project_id: string;
-          status: string;
-          title: string;
-          updated_at: string;
-        }
-        Insert: {
-          amount: number;
-          created_at?: string;
-          created_by: string;
-          deliverables?: Json | null;
-          description?: string | null;
-          due_date?: string | null;
-          id?: string;
-          project_id: string;
-          status?: string;
-          title: string;
-          updated_at?: string;
-        }
-        Update: {
-          amount?: number;
-          created_at?: string;
-          created_by?: string;
-          deliverables?: Json | null;
-          description?: string | null;
-          due_date?: string | null;
-          id?: string;
-          project_id?: string;
-          status?: string;
-          title?: string;
-          updated_at?: string;
-        }
-        Relationships: [;
-          {
-          {
-            foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
-          }];
-      }
-      project_notes: {
-        Row: {
-          content: string;
-          created_at: string;
-          id: string;
-          project_id: string;
-          user_id: string;
-        }
-        Insert: {
-          content: string;
-          created_at?: string;
-          id?: string;
-          project_id: string;
-          user_id: string;
-        }
-        Update: {
-          content?: string;
-          created_at?: string;
-          id?: string;
-          project_id?: string;
-          user_id?: string;
-        }
-        Relationships: [;
           {
           {
             foreignKeyName: "project_notes_user_id_fkey";
@@ -1190,29 +814,6 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          }];
-      }
-      quote_requests: {
-        Row: {
-          budget_display: string | null;
-          budget_max: number | null;
-          budget_min: number | null;
-          created_at: string;
-          id: string;
-          is_archived: boolean;
-          project_description: string | null;
-          project_name: string;
-          project_summary: string;
-          replied_at: string | null;
-          requester_email: string;
-          requester_id: string | null;
-          requester_name: string;
-          start_date: string | null;
-          status: Database["public"]["Enums"]["quote_request_status"];
-          talent_id: string | null;
-          timeline: string;
-          updated_at: string;
-          viewed_at: string | null;
         }
         Insert: {
           budget_display?: string | null;
@@ -1236,28 +837,6 @@ export type Database = {
           viewed_at?: string | null;
         }
         Update: {
-          budget_display?: string | null;
-          budget_max?: number | null;
-          budget_min?: number | null;
-          created_at?: string;
-          id?: string;
-          is_archived?: boolean;
-          project_description?: string | null;
-          project_name?: string;
-          project_summary?: string;
-          replied_at?: string | null;
-          requester_email?: string;
-          requester_id?: string | null;
-          requester_name?: string;
-          start_date?: string | null;
-          status?: Database["public"]["Enums"]["quote_request_status"];
-          talent_id?: string | null;
-          timeline?: string;
-          updated_at?: string;
-          viewed_at?: string | null;
-        }
-        Relationships: [;
-          {
           code: string;
           created_at: string;
           id: string;
@@ -1271,7 +850,6 @@ export type Database = {
           updated_at?: string;
           user_id: string;
         }
-        Update: {
           code?: string;
           created_at?: string;
           id?: string;
@@ -1326,12 +904,6 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-            foreignKeyName: "referral_rewards_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       referrals: {
         Row: {
@@ -1390,30 +962,12 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-          }
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-            foreignKeyName: "referrals_referrer_id_fkey";
-            columns: ["referrer_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-          clicked_at: string | null;
-          email_body: string;
-          email_subject: string;
-          id: string;
-          opened_at: string | null;
-          reminder_type: string;
-          sent_at: string | null;
-          user_id: string;
-        }
-        Insert: {
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -1423,7 +977,6 @@ export type Database = {
           sent_at?: string | null;
           user_id: string;
         }
-        Update: {
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -1435,42 +988,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "reminder_logs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      resume_skills: {
-        Row: {
-          category: string | null;
-          created_at: string;
-          id: string;
-          name: string;
-          proficiency: number | null;
-          resume_id: string;
-          years_experience: number | null;
-        }
-        Insert: {
-          category?: string | null;
-          created_at?: string;
-          id?: string;
-          name: string;
-          proficiency?: number | null;
-          resume_id: string;
-          years_experience?: number | null;
-        }
-        Update: {
-          category?: string | null;
-          created_at?: string;
-          id?: string;
-          name?: string;
-          proficiency?: number | null;
-          resume_id?: string;
-          years_experience?: number | null;
-        }
-        Relationships: [;
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
             columns: ["resume_id"];
@@ -1580,12 +1097,6 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-            foreignKeyName: "reviews_reviewer_id_fkey";
-            columns: ["reviewer_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       scheduled_jobs: {
         Row: {
@@ -1727,13 +1238,6 @@ export type Database = {
         }
         Relationships: [;
           {
-          {
-            foreignKeyName: "tenant_administrators_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       user_onboarding: {
         Row: {
@@ -2017,11 +1521,6 @@ export type Database = {
     Views: {
       conversion_rates: {
         Row: {
-          conversion_count: number | null;
-          conversion_rate: number | null;
-          conversion_type: string | null;
-          date: string | null;
-          view_count: number | null;
         }
         Relationships: [];
       }
@@ -2114,10 +1613,6 @@ export type Database = {
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
-          date: string;
-          event_type: string;
-          count: number;
-        }[];
       }
       hash_api_key: {
         Args: { api_key: string }
@@ -2159,35 +1654,6 @@ export type Database = {
     }
   }
 }
-    | { schema: keyof Database }
-  TableName extends DefaultSchemaTableNameOrOptions extends {
-    schema: keyof Database;
-  }
-    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
-        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
-    : never = never;
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
-      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
-      Row: infer R;
-    }
-    ? R;
-    : never;
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
-        DefaultSchema["Views"]);
-    ? (DefaultSchema["Tables"] &;
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
-        Row: infer R;
-      }
-
-
-
-
-type DefaultSchema = Database[Extract<keyof Database, "public">]
-export type Tables<
-  DefaultSchemaTableNameOrOptions extends
-
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2211,7 +1677,6 @@ export type Tables<
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2231,7 +1696,6 @@ export type TablesInsert<
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2277,9 +1741,6 @@ export type CompositeTypes<
         "quotes:write";
         "webhooks:manage"]
       fraud_severity: ["safe", "suspicious", "dangerous"];
-        "webhooks:manage"],
-      fraud_severity: ["safe", "suspicious", "dangerous"],
-      quote_request_status: [
         "new",
         "in_review",
         "accepted",
@@ -2353,38 +1814,13 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
+
       ? U;
       : never;
     : never;
 export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
-
-    | { schema: keyof Database }
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database;
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
-    : never = never;
-> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-    : never
-export type CompositeTypes<
-  PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]
-    | { schema: keyof Database }
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database;
-  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
-    : never = never;
-> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
 export const Constants = {
   public: {
     Enums: {

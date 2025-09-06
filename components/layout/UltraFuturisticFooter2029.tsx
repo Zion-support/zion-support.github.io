@@ -117,69 +117,10 @@ const serviceCategories = [
     ];
   }
 ];
-const quickLinks = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'Solutions', href: '/solutions', icon: Rocket }
-  { name: 'About', href: '/about', icon: Users }
-  { name: 'Blog', href: '/blog', icon: BookOpen }
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-  { name: 'Support', href: '/support', icon: MessageCircle }
-  }
-];
-;
-const quick_links = [;
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Rocket },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Support', href: '/support', icon: MessageCircle },
-  { name: 'Privacy', href: '/privacy', icon: Shield }
-];
-const socialLinks = [
-  {
-    name: 'LinkedIn'
-    href: 'https://linkedin.com/company/ziontechgroup'
-    icon: Linkedin
-    color: 'hover:text-blue-400'
-  }
-  {
-    name: 'Twitter'
-    href: 'https://twitter.com/ziontechgroup'
-    icon: Twitter
-    color: 'hover:text-sky-400'
-  }
-  {
-    name: 'GitHub'
-    href: 'https://github.com/Zion-Holdings'
-    icon: Github
-    color: 'hover:text-gray-400'
-  }
-  {
-    name: 'YouTube'
-    href: 'https://youtube.com/@ziontechgroup'
-    icon: Youtube
-    color: 'hover:text-red-500'
-  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
 const footerSections = [
   {
     title: 'Company'
     links: [
-      { name: 'About Us', href: '/about' }
-      { name: 'Our Mission', href: '/mission' }
-      { name: 'Leadership Team', href: '/team' }
-      { name: 'Careers', href: '/careers' }
-      { name: 'Press & Media', href: '/press' }
-      { name: 'Partnerships', href: '/partnerships' }
-    ]
-  },  {      { name: 'Partnerships', href: '/partnerships' }
-    ]
-  }
   {
     title: 'Solutions'
     links: [
@@ -207,25 +148,11 @@ const footerSections = [
     ]
   }
   {
-    title: 'Legal'
-    links: [
-      { name: 'Privacy Policy', href: '/privacy' }
-      { name: 'Terms of Service', href: '/terms' }
-      { name: 'Cookie Policy', href: '/cookies' }
-      { name: 'Data Protection', href: '/data-protection' }
-      { name: 'Accessibility', href: '/accessibility' }
-      { name: 'Compliance', href: '/compliance' }
-    ]
-  },];
-const UltraFuturisticFooter2029 = () => {
       { name: 'About Us', href: '/about' },
       { name: 'Our Mission', href: '/mission' },
       { name: 'Leadership Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
       { name: 'Press & Media', href: '/press' },
-      { name: 'Partnerships', href: '/partnerships' }
-    ]
-  };
   {
     title: 'Solutions',
     links: [;
@@ -233,10 +160,6 @@ const UltraFuturisticFooter2029 = () => {
       { name: 'Quantum Technology', href: '/quantum - technology' },
       { name: 'IT Infrastructure', href: '/it - infrastructure' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Blockchain', href: '/blockchain-solutions' }
-    ]
-  };
   {
     title: 'Resources',
     links: [;
@@ -245,9 +168,6 @@ const UltraFuturisticFooter2029 = () => {
       { name: 'White Papers', href: '/white - papers' },
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api' },
-      { name: 'Support Center', href: '/support' }
-    ]
-  };
   {
     title: 'Legal',
     links: [;
@@ -256,9 +176,6 @@ const UltraFuturisticFooter2029 = () => {
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'Data Protection', href: '/data - protection' },
       { name: 'Accessibility', href: '/accessibility' },
-      { name: 'Compliance', href: '/compliance' }
-    ]
-  }
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
               technology solutions. Transforming businesses with cutting-edge
@@ -303,85 +220,12 @@ const UltraFuturisticFooter2029 = () => {
               </div>
             </div>
             {/* Social Links */}
-            <div className='flex space-x-4'>
-              {socialLinks.map(social => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-                >
-                  <social.icon className='w-5 h-5' />                </a>                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </div>
-          </div>
-
-            {/* Social Links */}
-
-                </a>
-
-const footerSections = [;
-  {;
-    title: 'Company',;
-    links: [;
-      { name: 'About Us', href: '/about' },;
-      { name: 'Our Mission', href: '/mission' },;
-      { name: 'Leadership Team', href: '/team' },;
-      { name: 'Careers', href: '/careers' },;
-      { name: 'Press & Media', href: '/press' },;
-      { name: 'Partnerships', href: '/partnerships' },;
-    ],;
-  },  {      { name: 'Partnerships', href: '/partnerships' }
-    ];
-  };
-  {;
-    title: 'Solutions',;
-    links: [;
-      { name: 'AI Services', href: '/ai-services' },;
-      { name: 'Quantum Technology', href: '/quantum-technology' },;
-      { name: 'IT Infrastructure', href: '/it-infrastructure' },;
-      { name: 'Cybersecurity', href: '/cybersecurity' },;
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },;
-      { name: 'Blockchain', href: '/blockchain-solutions' },;
-    ],;
-  },  {      { name: 'Blockchain', href: '/blockchain-solutions' }
-    ];
-  };
-  {;
-    title: 'Resources',;
-    links: [;
-      { name: 'Blog', href: '/blog' },;
-      { name: 'Case Studies', href: '/case-studies' },;
-      { name: 'White Papers', href: '/white-papers' },;
-      { name: 'Documentation', href: '/docs' },;
-      { name: 'API Reference', href: '/api' },;
-      { name: 'Support Center', href: '/support' },;
-    ],;
-  },  {      { name: 'Support Center', href: '/support' }
-    ];
-  };
-  {;
-    title: 'Legal',;
-    links: [;
-      { name: 'Privacy Policy', href: '/privacy' },;
-      { name: 'Terms of Service', href: '/terms' },;
-      { name: 'Cookie Policy', href: '/cookies' },;
-      { name: 'Data Protection', href: '/data-protection' },;
-      { name: 'Accessibility', href: '/accessibility' },;
-      { name: 'Compliance', href: '/compliance' },;
-    ],;
-  },];
-
-          {/* Service Categories */}
 
               {serviceCategories.map((category, index) => (
                 <div key={index}>
@@ -391,29 +235,10 @@ const footerSections = [;
                   <ul className='space-y-2'>
                     {category.services.map(service => (
                       <li key={service.name}>
-                        <Link
-                          href={service && service.href}
-                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'>;
-                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />                          <span>{service && service.name}</span>              {serviceCategories && serviceCategories.map((category, index) => (;
-                <div key={index}>;
-                  <h5 className="text-sm font-medium text-gray-300 mb-3">{category && category.title}</h5>;
-                  <ul className="space-y-2">;
-                    {category && category.services.map((service) => (;
-                      <li key={service && service.name}>;
-                        <Link
-                          href={service && service.href}
-                          className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">;
-                          <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />;
-                          <span>{service && service.name}</span>;
-                        </Link>;
-                      </li>;
                     ))}
                   </ul>;
                 </div>;
               ))}
-
-          {/* Quick Links */}
-
                 <Link
                   key={link.name}
                   href={link.href}
@@ -428,18 +253,6 @@ const footerSections = [;
               ))}
             </div>
           </div>
-          {/* Footer Sections */}
-          <div className='lg:col-span-1'>;
-            <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>;
-            <div className='space-y-4'>;
-              {footerSections && footerSections.map(section => (;
-                <div key={section && section.title}>;
-                  <h5 className='text-sm font-medium text-gray-300 mb-3'>;
-                    {section && section.title}
-                  </h5>;
-                  <ul className='space-y-2'>;
-                    {section && section.links.map(link => (;
-                      <li key={link && link.name}>;
                         <Link
                           href={link && link.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200'>                <div key={section && section.title}>;
@@ -623,15 +436,6 @@ const UltraFuturisticFooter2029 = () =>: any {
                       <li key={link.name}>;
                         <Link;
                           href={link.href}
-                          className='text - sm text - gray - 400 hover:text - white transition - colors duration - 200'                        >                <div key={section.title}>;
-                  <h5 className="text - sm font - medium text - gray - 300 mb - 3">{section.title}</h5>;
-                  <ul className="space - y-2">;
-                    {section.links.map ((link) => (
-                      <li key={link.name}>;
-                        <Link;
-                          href={link.href}
-                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200";
-                        >;
                           {link.name}
                         </Link>
                       </li>
@@ -643,7 +447,6 @@ const UltraFuturisticFooter2029 = () =>: any {
           </div>
         </div>
       </div>
-      {/* Bottom Footer */}
 
               © 2025 Zion Tech Group. All rights reserved.
             </div>
@@ -696,7 +499,6 @@ const UltraFuturisticFooter2029 = () =>: any {
               technology. Join our newsletter for exclusive updates and industry;
               insights.;
             </p>;
-
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and autonomous technology.
@@ -722,19 +524,6 @@ const UltraFuturisticFooter2029 = () =>: any {
           </div>;
         </div>;
       </div>;
-};
-
-export default UltraFuturisticFooter2029;  );
-}
-export default UltraFuturisticFooter2029;  )
-}
-};
-
-export default UltraFuturisticFooter2029;  );
-};
-
-export default UltraFuturisticFooter2029;
-
     </footer>);
 }
 ;

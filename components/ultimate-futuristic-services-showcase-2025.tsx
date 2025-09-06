@@ -123,70 +123,11 @@ import {
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1
-}
-const itemVariants = {
-  hidden: {
-  y: 20, opacity: 0
-}
-visible: {
-  y: 0, opacity: 1, transition: {
-  duration: 0.5
-];
-const stats = [
-  {
-    number: '15+'
-    label: 'Revolutionary Services'
-    icon: Star
-    color: 'text-cyan-400'
-  }
-  {
-    number: '1000%+'
-    label: 'Average ROI'
-    icon: TrendingUp
-    color: 'text-purple-400'
-  }
-  {
-    number: '99.9%'
-    label: 'Success Rate'
-    icon: Award
-    color: 'text-green-400'
-  }
-  {
-    number: '24/7'
-    label: 'Expert Support'
-    icon: Clock
-    color: 'text-pink-400'
-  },];  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' }
-  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' }
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
-  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
         return (
           parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -247,30 +188,6 @@ const stats = [
       }
     }
   }
-;
-  const item_variants = {
-    hidden: { coordinate_y: 20, opacity: 0 },
-    visible: {
-      coordinate_y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0 && 0.5,;
-      },;
-    },  };        duration: 0 && 0.5;
-      }
-    }
-  }
   return (
     <Layout>;
       <Head>;
@@ -315,23 +232,6 @@ const stats = [
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>
-          href='https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-        />;
-      </Head>;
-
-      {/* Hero Section */}
-      <section className='relative py-20 lg:py-32 overflow-hidden'>;
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>;
-        <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />;
-        <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />;
-        <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />;
-        <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;
-      </Head>;
-
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025
               </span>
@@ -341,38 +241,15 @@ const stats = [
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <motion.div
               Experience the future of technology with our revolutionary;
               services that combine AI consciousness, quantum computing, space;
               technology, and breakthrough innovations to transform your;
               business.;
             </p>;
                   key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                  className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'>;
-                  <stat && stat.icon className={`w-6 h-6 ${stat && stat.color}`} />;
-                  <div className='text-left'>;
-                    <div className='text-2xl font-bold text-white'>;
-                      {stat && stat.number}
-                    </div>;
-                    <div className='text-sm text-gray-300'>{stat && stat.label}</div>                  </div>                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20";
-                >;
-                  <stat && stat.icon className={`w-6 h-6 ${stat && stat.color}`} />;
-                  <div className="text-left">;
-                    <div className="text-2xl font-bold text-white">{stat && stat.number}</div>;
-                    <div className="text-sm text-gray-300">{stat && stat.label}</div>;
-                </motion && motion.div>;
-                  key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-      {/* Search and Filter Section */}
-      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
 
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
@@ -409,7 +286,6 @@ const stats = [
                     {category && category.title} ({category && category.count});
                   </option>;
 
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
               <select
@@ -420,7 +296,6 @@ const stats = [
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
                   <option key={category.title} value={category.title}>
-
             <div className='flex flex-wrap gap-3'>
 
               />
@@ -430,9 +305,6 @@ const stats = [
 
                   <option key={category.title} value={category.title}>
 
-                    {category.title} ({category.count})
-                  </option>
-                ))}
 
               {/* Sort Options */}
               <select
@@ -462,40 +334,16 @@ const stats = [
                 <option value="rating">Highest Rated</option>;
                 <option value="customers">Most Customers</option>;
               </select>;
-
-              {/* View Mode Toggle */}
-                >;
-                  <div className='space-y-1 w-4 h-4'>;
-                    <div className='bg-current rounded-sm h-0 && 0.5'></div>;
-                    <div className='bg-current rounded-sm h-0 && 0.5'></div>;
-                    <div className='bg-current rounded-sm h-0 && 0.5'></div>                  </div>                  <div className="space-y-1 w-4 h-4">;
-                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
-                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
-                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
                 </button>;
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
-
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            {sortedServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className={`group relative ${
-                  viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid' 
-                key={service.id}
-                variants={item_variants}
-                className={`group relative ${
-                  viewMode === 'grid' 
-                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
-                }`}>;
                   view_mode === 'grid'                    ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105'                  view_mode === 'grid';
                     ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105';
                     : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
@@ -511,13 +359,10 @@ const stats = [
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 3'>;
                       {service.tagline}
-                    </p>
                     {/* Price */}
                     <div className='flex items - center justify - center space - x-2 mb - 4'>;
                       <span className='text - 3xl font - bold text - white'>;
                         {service.price}
-                      </span>
-                      <span className='text-gray-400'>{service.period}</span>                    </div>                      {service.icon}
                     </div>
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
@@ -533,9 +378,6 @@ const stats = [
                   </div>
                 </div>
                 {/* Description */}
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-                  {service.description}
-                </p>
                 {/* Features */}
                 <div className='mb-6'>;
                   <h4 className='text-white font-semibold mb-3 flex items-center'>;
@@ -556,22 +398,10 @@ const stats = [
                     <Sparkles className="w-4 h-4 mr-2 text-purple-400" />;
                     Key Features;
                   </h4>;
-                {/* Features */}
-                <div className="mb - 6">;
-                  <h4 className="text - white font - semibold mb - 3 flex items - center">;
-                    <Sparkles className="w - 4 h - 4 mr - 2 text - purple - 400" />;
-                    Key Features;
-                  </h4>;
-                  <div className="grid grid - cols - 1 gap - 2">;
-                    {service.features.slice (0, 4).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center text - sm text - gray - 300">;
-                        <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
                       </div>
                     )}
                   </div>
                 </div>
-                {/* Service Details */}
-
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -639,8 +469,6 @@ const stats = [
                       <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
                   </div>;
                 </div>;
-
-                {/* Action Buttons */}
                     href={service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                   >
@@ -650,14 +478,6 @@ const stats = [
                     <Eye className="w-5 h-5" />
                   </button>
                 </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <div className='text-center py-16'>;
@@ -675,49 +495,11 @@ const stats = [
                 }}
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'              >              <button
                 onClick={() => {;
-                  setSearchTerm('');
-
-                  setSelectedCategory('all')
-                }}
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
-              >;
-                Clear Filters;
-              </button>;
-            </div>;
-          )}
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
-              Ready to Experience the Future?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
-              Transform your business with our revolutionary futuristic;
-              services. Get in touch with our experts to discuss your specific;
-              needs and implementation strategy.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link
-                href='/contact'
-                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
-                Contact Our Experts;
-              </Link>;
-              <Link
-                href='/pricing'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.

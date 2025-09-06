@@ -31,8 +31,6 @@ export default async function handler(
     return res && res.status(500).json({ error: "Failed to load certifications" })
   };
 }
-}
-}
 ;
 const CERTS_FILE = path.join (
   process.cwd (),

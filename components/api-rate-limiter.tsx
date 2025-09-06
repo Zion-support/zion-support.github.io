@@ -23,16 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-import {
-  Shield
-  Zap
-  BarChart3
-  Code
-  ArrowRight
-  Copy
-  RefreshCw
-  CheckCircle
-  AlertTriangle;
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 
@@ -64,14 +54,13 @@ export default function APIRateLimiterPage() {;
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
   }
-  const testRateLimiting = async () => {
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
   const timeWindows = [;
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' },;
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },;
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 
   };
 
@@ -144,28 +133,6 @@ if (break) {
       case 'rate_limited':
         return 'text-red-400'
       default:
-  };
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case 'success':;
-        return 'text-green-400';
-      case 'rate_limited':;
-        return 'text-red-400',;
-      default:;
-        return 'text-yellow-400';    }        return 'text-yellow-400';
-                {/* API Endpoint */}
-                <div>;
-                  <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
-                    API Endpoint
-                  ">;
-                    API Endpoint;
-                  </label>;
-                  <input
-                    type="text"
-                    value={endpoint}
-                  <div className="grid grid - cols - 2 gap - 3">;
-                    {rate_limits.map ((limit) => (
-
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Rate Limit
@@ -201,12 +168,6 @@ if (break) {
                             ? 'border - green - 500 bg - green - 500 / 10 text - green - 300';
                             : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
                         }`}
-                {/* API Key Generation */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>;
-                    API Key;
-                  </label>;
-                  <div className='flex space-x-2'>;
                     <input
                       type='text'
                       value={apiKey}
@@ -245,10 +206,6 @@ if (break) {
                               ? 'OK';
                               : 'Too Many Requests'}
             {/* Test Results */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <div className='flex items-center justify-between mb-6'>
-                <h3 className='text-2xl font-bold text-white flex items-center'>
-                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
@@ -292,12 +249,6 @@ if (break) {
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
-                        </div>;
-
-
-
-
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
@@ -311,13 +262,6 @@ if (break) {
 
                 </div>
               ) : (
-                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
-                  <div className="text-6xl mb-4">📊</div>
-                  <p className="text-gray-400">
-                    Test results will appear here. Configure your settings and click "Test Rate Limiting" to see how it works.
-                  </p>
-                </div>
-
       {/* Features */}
 
 
@@ -392,8 +336,6 @@ if (break) {
           </div>
         </div>
       </section>
-      {/* Code Examples */}
-            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get started with our rate limiting service in just a few lines of code.
             </p>
@@ -411,42 +353,6 @@ if (break) {
               code.;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            <Card className='p-6 bg-gray-800 border border-gray-700'>;
-              <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
-                <Code className='w-5 h-5 mr-2 text-green-400' />;
-                Node && Node.js Example;
-              </h3>;
-              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto'>;
-                <pre className='text-sm text-gray-300'>;
-                  {`const axios = require('axios');              Quick Integration Examples;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-              Get started with our rate limiting service in just a few lines of code.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            <Card className="p-6 bg-gray-800 border border-gray-700">;
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center">;
-                <Code className="w-5 h-5 mr-2 text-green-400" />;
-                Node && Node.js Example;
-              </h3>;
-              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">;
-                <pre className="text-sm text-gray-300">;
-{`const axios = require('axios');
-
-const apiKey = '${apiKey || 'your_api_key_here'}';
-const endpoint = '${endpoint || '/api/users'}';
-
-// Make API request with rate limiting;
-const response = await axios && axios.get(\`https://api && api.zion.tech\${endpoint}\`, {;
-  headers: {;
-    'Authorization': \`Bearer \${apiKey}\`,;
-    'X-RateLimit-Limit': '${rateLimit}',;
-    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
@@ -484,7 +390,6 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
 
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
-
     'X-RateLimit-Window': '${timeWindow}'  }
 
   }
@@ -516,10 +421,6 @@ console.log('Rate Limit Info:', {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-    f'https://api.zion.tech{endpoint}';
-)
-print('Response:', response.json())
-print('Rate Limit Info:', {
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
                 variant="outline";
@@ -577,11 +478,6 @@ print('Rate Limit Info:', {;
 )
 print('Response:', response.json())
 print('Rate Limit Info:', {
-    'limit': response.headers.get('x-ratelimit-limit')
-    'remaining': response.headers.get('x-ratelimit-remaining')
-
-    'reset': response.headers.get('x-ratelimit-reset')
-})`)
                 onClick={() =>;
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
 
@@ -624,7 +520,6 @@ print('Rate Limit Info:', {;
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -656,6 +551,4 @@ print('Rate Limit Info:', {;
       </section>;
     </>);    </>);
 }
-
-  );
 

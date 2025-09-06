@@ -12,10 +12,6 @@ export function useDisputes() {
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
-      setIsLoading(false);
-      return
-    }
-    try {
           *;
           project: projects (
             scope_summary;
@@ -29,27 +25,15 @@ export function useDisputes() {
         `)
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
-      // Transform data if needed
-      const transformedData = data && data.map((dispute: any) => ({
         ...dispute;
         client_profile: dispute && dispute.client_profile?.client_profile;
         talent_profile: dispute && dispute.talent_profile?.talent_profile;
         project: {
-          ...dispute.project,
-          title: dispute.project?.job?.title || 'Untitled Project';
         }
       }));
-;
-      set_disputes (transformed_data as Dispute[]);
-      set_error (null);
+      setDisputes(transformedData as Dispute[]);
+      setError(null)
     } catch (err: any) {
-      console.error ("Error fetching disputes:", err);
-      set_error ("Failed to fetch disputes: " + err.message),
-      toast.error ("Failed to fetch disputes");
-    } finally {
-      setIsLoading (false);
-    }
-  }
     try {
       const { data, error } = await supabase;
         .from ("disputes");
@@ -65,25 +49,15 @@ export function useDisputes() {
         client_profile: data && data.client_profile?.client_profile;
         talent_profile: data && data.talent_profile?.talent_profile;
         project: {
-          ...data.project,
-          title: data.project?.job?.title || 'Untitled Project';
         }
       } as Dispute;
     } catch (err: any) {
-    description: string
-  }): Promise<Dispute | null> => {
-    if (!user) {
-      toast && toast.error("You must be logged in to create a dispute");
       return null
     }
     try {
       const { data, error } = await supabase
         .from("disputes")
         .insert({
-          ...disputeData;
-          raised_by: user && user.id
-        })
-        .select()
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -91,15 +65,11 @@ export function useDisputes() {
       toast && toast.error("Failed to submit dispute");
       return null
     }
-  }
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
-        .eq("id", disputeId);
-      if (error) throw error;
-      // Update local state
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -186,76 +156,6 @@ export function useDisputes() {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
 
-      return null;
-    }
-  }
-;
-  const create_dispute = async (dispute_data: {
-    project_id: string;
-    milestone_id?: string;
-    reason_code: string,
-    description: string;
-  }): Promise < Dispute | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ("You must be logged in to create a dispute");
-      return null;
-    }
-    try {
-      const { data, error } = await supabase;
-        .from ("disputes");
-        .insert ({
-          ...dispute_data;
-          raised_by: user.id;
-        });
-        .select ();
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast.success ("Dispute submitted successfully");
-      fetch_disputes (), // Refresh the list;
-      return data as Dispute;
-    } catch (err: any) {
-      console.error ("Error creating dispute:", err);
-      toast.error ("Failed to submit dispute");
-      return null;
-    }
-  }
-;
-  const updateDisputeStatus = async (dispute_id: string, status: DisputeStatus): Promise < boolean> => {
-    try {
-      const { error } = await supabase;
-        .from ("disputes");
-        .update ({ status });
-        .eq ("id", dispute_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Update local state;
-      set_disputes (prev_disputes =>;
-        prev_disputes.map (dispute =>;
-          dispute.id === dispute_id ? { ...dispute, status } : dispute));
-;
-      toast.success (`Dispute status updated to ${status}`);
-      return true;
-    } catch (err: any) {
-      console.error ("Error updating dispute status:", err);
-      toast.error ("Failed to update dispute status");
-      return false;
-    }
-    resolution: { summary: string, resolution_type: string }
-  ): Promise < boolean> => {
-    try {
-      const { error } = await supabase;
-        .from ("disputes");
-        .update ({
           status: 'resolved';
           resolved_at: new Date().toISOString();
           resolution_summary: resolution.summary
@@ -274,7 +174,6 @@ if (throw error) {
       toast && toast.error("Failed to resolve dispute");
       return false
     }
-  }
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
           resolved_at: new Date ().toISOString ();
           resolution_summary: resolution.summary,
@@ -314,16 +213,6 @@ if (throw error) {
         .from ("dispute_messages");
         .select (`;
           *;
-      return data as DisputeMessage[]
-    } catch (err: any) {
-      console && console.error("Error fetching dispute messages:", err);
-      toast && toast.error("Failed to fetch messages");
-      return []
-    }
-  }
-  const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
-    if (!user) {
-      toast && toast.error("You must be logged in to send a message");
       return false
     }
     try {
@@ -339,32 +228,6 @@ if (throw error) {
       console && console.error("Error sending message:", err);
       toast && toast.error("Failed to send message");
       return false
-          is_admin_note: isAdminNote;
-        });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast.success ("Message sent successfully");
-      return true;
-    } catch (err: any) {
-      console.error ("Error sending message:", err);
-      toast.error ("Failed to send message");
-      return false;
-    }
-  }
-;
-  // Fetch disputes when component mounts or user changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_disputes ();
-    }
-  }, [user]);
-;
   return {
     disputes;
     is_loading;
@@ -466,5 +329,3 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
-  }
-}

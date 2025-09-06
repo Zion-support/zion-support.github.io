@@ -1,12 +1,3 @@
-const CAPABILITIES = [
-  'Full‑stack Web'
-  'Mobile (iOS/Android)'
-  'AI/ML'
-  'Cloud & DevOps'
-  'Data Engineering'
-  'Blockchain'
-  'IoT'
-  'Security',];const CAPABILITIES = [
 ];
 
 export default function CapabilitiesPage() {;

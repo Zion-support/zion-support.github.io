@@ -1,35 +1,17 @@
-'use client';
-
-import React, {;
-  Suspense,;
-  lazy,;
-  useState,;
-  useEffect,;
-  ComponentType,;
-} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {;
   isLoading: boolean;
   error: Error | null;
   retryCount: number;
   isOnline: boolean;
-
-interface DynamicLoaderProps {;
-  importFn: () => Promise<{ default: ComponentType<any> }>;
-  fallback?: React && React.ReactNode;
-  errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
-  loadingComponent?: React && React.ComponentType;
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
-  children?: React && React.ReactNode;
-  [key: string]: any;
 
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
@@ -55,13 +37,9 @@ const EnhancedLoading: React.FC<{;
   show_progress?: boolean;
 }> = ({
   progress = 0,
-  message = 'Loading component...',
-  show_progress = true,
+  message = 'Loading component...', 
+  showProgress = true 
 }) => (
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
@@ -70,7 +48,6 @@ const EnhancedLoading: React.FC<{;
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -97,10 +74,6 @@ const EnhancedError: React.FC<{
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
-
-        </div>
-        {retryCount < maxRetries && (
-
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -110,19 +83,6 @@ const EnhancedError: React.FC<{
             <RefreshCw className="h-4 w-4 mr-2" />
             Try Again
           </Button>
-        )}
-
-            />)}
-        </div>;
-        {retryCount < maxRetries && (;
-          <Button
-            onClick={retry}
-            variant='outline'
-            size='sm'
-            className='border-red-300 text-red-700 hover:bg-red-100'>;
-            <RefreshCw className='h-4 w-4 mr-2' />;
-            Try Again;
-          </Button>;
         )}
     return () => {
       window.removeEventListener ('online', updateOnlineStatus);
@@ -207,7 +167,6 @@ const EnhancedError: React.FC<{
       })
     }
           >
-
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}

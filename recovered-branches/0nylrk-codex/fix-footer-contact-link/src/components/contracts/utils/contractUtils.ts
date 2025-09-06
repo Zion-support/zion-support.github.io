@@ -1,6 +1,4 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
 interface Milestone {
   title: string;
   description: string;
@@ -17,13 +15,6 @@ export async function generateContract(
   if (error) {
     throw error
   }
-
-  values: ContractFormValues,
-
-  // Prepare milestone data if we have AI-generated milestones
-  const milestoneData = generatedMilestones.length > 0
-    ? generatedMilestones.map(m => ({
-
         title: m.title,
         description: m.description,
         dueDate: m.dueDate,
@@ -84,11 +75,6 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
-  }
-  
-
-  if (data.success && data.contract) {
-    return data.contract
   
   if (data && data.success && data && data.contract) {
     return data && data.contract
@@ -147,5 +133,3 @@ if ( {) {
   $2
 }
     return data.contract;
-  }
-}

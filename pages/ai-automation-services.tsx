@@ -29,18 +29,6 @@ const serviceHighlights = [
     icon: BarChart3
     color: 'text-pink-400'
   },];
-  {
-    title: '80% Reduction in Manual Work',
-    description: 'Automate repetitive tasks and focus on high - value activities',
-    icon: Zap,
-import { motion } from 'framer-motion';
-import {;
-  Zap, Brain, Code, Shield, Users, TrendingUp,;
-  CheckCircle, ArrowRight, Star, Clock, Target,;
-  Cpu, Rocket, Globe, BarChart3, Settings;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -134,14 +122,6 @@ const benefits = [;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
-export default function AIAutomationServices() {
-  return (
-    <Layout>;
-      <Head>;
-        <title>;
-          AI Automation Services - Zion Tech Group | Advanced AI-Powered;
-          Automation Solutions;
-        </title>;
         <meta
           name='description'
           content='Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence.'
@@ -191,12 +171,6 @@ export default function AIAutomationServices() {
                 </button>
               </Link>
 
-
-              <Link href="/contact" className="group">
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
               </Link>
             </div>
           </motion.div>
@@ -215,25 +189,6 @@ export default function AIAutomationServices() {
               everything with intelligent AI that learns and adapts to your;
               needs.;
             </p>;
-
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-              <Link href='#services' className='group'>;
-                <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>;
-                  <span>Explore Services</span>;
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
-                </button>;
-              </Link>;
-
-              <Link href='/contact' className='group'>;
-                <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>;
-                  <span>Get Started</span>;
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-
-        {/* Floating Elements */}
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -259,8 +214,6 @@ export default function AIAutomationServices() {
               of your business operations
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
-              <motion.div
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 Services;
               </span>;
@@ -274,27 +227,11 @@ export default function AIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-full h-full text-white" />
-                </div>
-
-
-
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'>;
                       <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>;
                     </li>;
-                  ))}
-                </ul>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </div>;
 
       {/* Detailed Services */}
       <section className='py-20 bg-black'>;
@@ -315,8 +252,6 @@ export default function AIAutomationServices() {
               designed for modern enterprises
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
-              <motion.div
               Portfolio;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -340,28 +275,16 @@ export default function AIAutomationServices() {
                     </div>
                     {service.popular && (
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Popular
-                      </span>
-
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>
-                      <span>Learn More</span>
-                      <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
-                    </Link>
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -436,34 +359,16 @@ export default function AIAutomationServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-                  <span>Start Your Automation Journey</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already transforming their operations with AI automation. 
-              Get started today and see the difference intelligent automation can make.
-            </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-              
-              <Link href="/comprehensive-services-showcase-2025" className="group">
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-                  <span>View All Services</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                </button>
-              </Link>
-            </div>
               <div>
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   24/7
@@ -481,48 +386,10 @@ export default function AIAutomationServices() {
           </motion.div>
         </div>
       </section>
-  )
-            className="max-w-4xl mx-auto";
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-                </p>              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - emerald - 900 / 20 via - teal - 900 / 20 to - cyan - 900 / 20'>;
-        <div className='container mx - auto px - 4 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='max - w-4xl mx - auto';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to{' '}
-              <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
-                Automate;
-              </span>{' '}
-              Your Business?;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-
               Join thousands of companies already transforming their operations;
               with AI automation. Get started today and see the difference;
               intelligent automation can make.;
             </p>;
-
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-              <Link href='/contact' className='group'>;
-                <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>;
-                  <span>Start Your Automation Journey</span>;
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
-                </button>;
-              </Link>;
-
   )
 }
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;

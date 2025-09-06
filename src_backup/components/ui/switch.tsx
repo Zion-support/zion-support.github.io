@@ -160,7 +160,6 @@ export function ServicesPage() {;
           </div>;
         </div>;
       </div>;
-
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
@@ -223,9 +222,6 @@ export function ServicesPage() {;
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
-            <div className="text-center">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl"></span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
@@ -471,7 +467,6 @@ export function ServicesPage() {;
           </div>;
         </div>;
       </div>;
-
       {/* CTA Section */}
             Get started with Zion Tech Group today and discover how our;
             innovative solutions can drive growth, efficiency, and success for;
@@ -530,15 +525,6 @@ interface ServiceCardProps {;
 
 interface ServiceCardProps {;
   service: ServiceSolution;
-  const getPopularPlan = () => {
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional
   const getPopularPlan = () => {;
     if (service && service.pricing.professional && professional.popular);
       return service && service.pricing.professional;
@@ -556,22 +542,6 @@ interface ServiceCardProps {;
           </div>;
           <div>          </div>;
         </div>;
-
-        <p className="text-gray-600 mb-4 line-clamp-3">{service && service.description}</p>;
-
-        {/* Provider Info */}
-        <div className="flex items-center gap-3 mb-4">;
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">;
-            <span className="text-blue-600 font-semibold text-sm">;
-              {service && service.provider.name && name.charAt(0)}
-            </span>;
-          </div>;
-          <div>;
-            <p className='font-medium text-gray-900'>{service && service.provider.name}</p>;
-            <p className='text-sm text-gray-500'>{service && service.provider.location}</p>;
-          </div>;
-          {service && service.provider.verified && (;
-        </div>
         </div>;
 
         {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;

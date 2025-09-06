@@ -1,115 +1,3 @@
-}
-const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-  // Sample content data - in a real implementation, this would come from an API;
-  const contentItems: ContentItem[] = [;
-    {;
-      id: '1';
-      title: 'Structured Data Audit Report';
-      href: '/reports/structured-data-audit.json';
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
-      category: 'seo';
-      subcategory: 'structured-data';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['seojson-ldschemaaudit'];
-      source: 'autonomous-auditor';
-      type: 'report';
-      type: 'insight';
-    }
-  ];
-  const categories: ContentCategory[] = [;
-    }
-    {id: 'seo';
-      name: 'SEO & Analytics';
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
-      color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
-      subcategories: ['structured-dataperformancetechnical-seo'];
-    }
-    {id: 'security';
-      name: 'Security & Compliance';
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
-      color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-scancompliancethreat-detection'];
-    }
-    {id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'AI model performance and insights';
-      color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: ['performancetrainingdeployment'];
-    }
-    {id: 'features';
-      name: 'Feature Updates';
-      icon: Zap;
-      description: 'New features and system updates';
-      color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: ['deploymentenhancementsroadmap'];
-    }
-    {id: 'monitoring';
-      name: 'System Monitoring';
-      icon: Cpu;
-      description: 'Infrastructure and system health';
-      color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-healthperformanceinfrastructure'];
-    }
-    {id: 'analytics';
-      name: 'User Analytics';
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
-      subcategories: ['user-behaviorengagementconversion'];
-    }
-  ];
-  const contentTypes = [;
-    { id: 'all', name: 'All Types', icon: Globe }
-    { id: 'report', name: 'Reports', icon: BookOpen }
-    { id: 'update', name: 'Updates', icon: Zap }
-    { id: 'insight', name: 'Insights', icon: Lightbulb }
-    { id: 'guide', name: 'Guides', icon: Code }
-    { id: 'security', name: 'Security', icon: Shield }
-    { id: 'feature', name: 'Features', icon: TrendingUp }
-    // Sort items;
-    filtered.sort((a, b) => {let comparison = 0;
-      switch (sortBy) {;
-        case 'date':;
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-          break;
-        case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 }
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
-          break;
-        case 'title':;
-          comparison = a.title.localeCompare(b.title);
-          break;
-      }
-      return sortOrder === 'asc' ? comparison : -comparison;
-    });
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
-  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Globe;
-  }
-  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
   return (
     <div className=&quot;space - y-6 & quot;>;
       {/* Search and Advanced Filters */}
@@ -201,10 +89,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
           {categories.map (category => (
             <button;
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
 >;
               <category.icon className=&quot;w - 4 h - 4&quot; />;
@@ -229,8 +113,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
               {/* Title and Description */}
 <h3 className=&quot;text - lg font - semibold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200 & quot;>;
                 {item.title}
-              </h3>
-              <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
               {/* Tags */}
@@ -257,4 +139,3 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
         })}
       </div>;
       {/* No Results */}
-export default ContentCategorizer;

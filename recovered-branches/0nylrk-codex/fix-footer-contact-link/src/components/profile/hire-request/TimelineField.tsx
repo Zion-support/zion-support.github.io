@@ -1,3 +1,4 @@
+  FormField,
 
 import {
   FormField
@@ -16,7 +17,6 @@ import {
 
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
@@ -65,7 +65,6 @@ export function TimelineField({ form }: TimelineFieldProps) {
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -74,7 +73,6 @@ import { FormValues } from "./useHireRequestForm",;
 interface TimelineFieldProps {;
   form: UseFormReturn<FormValues>;
 }
-
 export function TimelineField(): any ({ form }: TimelineFieldProps) {;
   const timelineOptions = [;
     { value: "Less than 1 week", label: "Less than 1 week" },;
@@ -102,22 +100,7 @@ function TimelineField() {
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
           <FormControl>;
-            <Select;
-              onValueChange={field.on_change}
-              value={field.value}
-                    {option.label}
-                  </SelectItem>
-                ))}
-                  </SelectItem>))}
-              </SelectContent>;
-            </Select>;
-          </FormControl>;
-          <FormMessage />;
-        </FormItem>;
       )}
     />
   );
-}
-        </FormItem>)}
-    />);
 }

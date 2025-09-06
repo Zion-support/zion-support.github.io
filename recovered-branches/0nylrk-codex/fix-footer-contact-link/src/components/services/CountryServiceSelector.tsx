@@ -27,9 +27,6 @@ export function CountryServiceSelector({
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
-          onCountryChange={onCountryChange |(() => {})}
-          selectedCountry={initialCountry |null}
-        />
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;

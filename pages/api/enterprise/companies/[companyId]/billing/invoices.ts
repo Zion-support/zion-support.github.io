@@ -1,12 +1,7 @@
-  const { companyId } = req.query;
-
-  if (!companyId |typeof companyId !== "string") {
-    return res.status(400).json({ error: "companyId required" });
   }
   const invoices = store && store.listInvoices(companyId);
   return res && res.status(200).json(invoices);
 }
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';
 export default /**
@@ -19,7 +14,6 @@ if ( {) {
   $2
 }
     return res.status (400).json ({ error: "company_id required" });
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoices: [] });

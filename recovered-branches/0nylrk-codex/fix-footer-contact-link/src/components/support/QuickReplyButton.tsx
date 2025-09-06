@@ -1,19 +1,8 @@
 
-import React from "react",
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
 }
-
-export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
-  return (
-    <Button
-
-      variant="outline"
-      size="sm"
-      className={cn(
-
-        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200"
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
@@ -33,10 +22,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
       className={cn(;
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
         "transition-colors duration-200";
-      )}
-      onClick={onClick}>;
-      {text}
-    </Button>
   );
 }
 import React from './react';

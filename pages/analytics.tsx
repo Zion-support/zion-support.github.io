@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next / head';
 import {
   BarChart3,
   TrendingUp,
@@ -38,61 +37,6 @@ function AnalyticsPage() {
   const benefits = [
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import {;
-  BarChart3,;
-  TrendingUp,;
-  PieChart,;
-  Activity,;
-  ArrowRight,;
-  Check,;
-  Eye,;
-} from 'lucide-react';
-export default function AnalyticsPage() {;
-  const features = [;
-    {;
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Real-time Dashboards',;
-      description: 'Live monitoring and visualization of your key metrics',;
-    },;
-    {;
-      icon: <TrendingUp className='w-8 h-8 text-white' />,;
-      title: 'Predictive Analytics',;
-      description: 'AI-powered forecasting and trend analysis',;
-    },;
-    {;
-      icon: <PieChart className='w-8 h-8 text-white' />,;
-      title: 'Custom Reports',;
-      description: 'Build and schedule personalized reports',;
-    },;
-    {;
-      icon: <Activity className='w-8 h-8 text-white' />,;
-      title: 'Performance Monitoring',;
-      description: 'Track system performance and user behavior',;
-    },;
 export default function AnalyticsPage() {
   const features = [
     {
@@ -162,9 +106,6 @@ export default function AnalyticsPage() {
     'Track business metrics',
     'Generate actionable insights',  ];
 ;
-  return (
-
-      <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className='pt-32 pb-20 relative overflow-hidden'>
           <div className='absolute inset-0'>
@@ -186,11 +127,6 @@ export default function AnalyticsPage() {
               predictive analytics, and custom reporting capabilities.
             </p>
               <a
-                href="/contact" className="shadow-2xl shadow-blue-500/25">
-                Start Analyzing
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </a>
-              <a
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
               >                View Demo
@@ -199,17 +135,6 @@ export default function AnalyticsPage() {
           </div>
         </section>
         {/* Features Section */}
-        <section className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-                Analytics Features
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Powerful tools to understand your data and make better decisions
-              </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              {features.map((feature, index) => (
                 <div
                   key={index}
                   className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -228,18 +153,11 @@ export default function AnalyticsPage() {
                 Powerful tools to understand your data and make better decisions
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
-                  </h3>
-
 
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
@@ -315,7 +233,10 @@ export default function AnalyticsPage() {
           </div>
         </section>
 
-
+        {/* CTA Section */}
+        <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

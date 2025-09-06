@@ -29,10 +29,9 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="keywords" content={keywords} />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
     </Head>;
-  );
-};
+}
 
-export default SEO;
+  );
 }
   image?: string;
   url?: string;
@@ -64,8 +63,6 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
-}
-export default SEO;
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -76,12 +73,3 @@ export default SEO;
 ;
 export default SEO;
 ;
-}
-export default SEO;
-
-
-}
-export default SEO;
-};
-
-export default SEO;

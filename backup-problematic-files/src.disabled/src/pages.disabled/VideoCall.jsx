@@ -9,4 +9,3 @@ const VideoCall = ({ className }) => {
   );
 };
 
-export default VideoCall;

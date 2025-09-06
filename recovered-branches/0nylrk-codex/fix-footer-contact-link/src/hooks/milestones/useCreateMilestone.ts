@@ -32,36 +32,6 @@ export const useCreateMilestone = (project_id?: string) =>: any {
     // Check condition
 if (return null) {
   $2
-}
-    try {
-      setIsSubmitting (true);
-;
-      const { data, error } = await supabase;
-        .from ('project_milestones');
-        .insert ({
-          ...milestone_data;
-          project_id: project_id,
-          created_by: user.id});
-        .select ();
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Create activity record;
-      await recordMilestoneActivity (data.id, 'created', null, 'pending_milestone created');
-;
-      toast.success ("Milestone created successfully");
-;
-      return data;
-    } catch (err: any) {
-      console.error ("Error creating milestone:", err);
-      toast.error ("Failed to create milestone: " + err.message),
-      return null;
-    } finally {
-      setIsSubmitting (false);
-    }
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -76,7 +46,6 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
-
   
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
@@ -148,7 +117,6 @@ export const useCreateMilestone = (projectId?: string) => {;
   return {;
     createMilestone;
     isSubmitting;
-  }
   return {
     createMilestone;
     isSubmitting

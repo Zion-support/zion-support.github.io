@@ -9,4 +9,3 @@ const Mobile = ({ className }) => {
   );
 };
 
-export default Mobile;

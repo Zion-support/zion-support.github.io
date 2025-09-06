@@ -21,7 +21,7 @@ interface ReplyCardProps {
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
-  className?: string;
+  className?: string
 }
 
 interface ReplyCardProps {
@@ -43,19 +43,10 @@ export const ReplyCard = ({
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
-      className
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
-        <Avatar className="h-8 w-8">;
-          <AvatarImage src={reply && reply.authorAvatar} />;
-          <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
-              {reply && reply.authorName}
-            </span>;
-            {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
                 {reply.authorRole}
               </Badge>
@@ -66,17 +57,11 @@ export const ReplyCard = ({
                 Answer;
               </Badge>;
             )}
-          </div>;
-          <div className="text-xs text-muted-foreground">;
-            {timeAgo}
-
-
       </CardFooter>;
     </Card>;
   );
 };
 export default ReplyCard;
-
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';

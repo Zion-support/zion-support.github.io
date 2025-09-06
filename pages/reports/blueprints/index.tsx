@@ -1,9 +1,4 @@
 import React from 'react';
-const BlueprintsIndexPage: React.FC = () => {
-  const blueprint_categories = [;
-    {
-      category: 'System Architecture'
-      blueprints: [
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -12,12 +7,10 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-17'
         },
           id: 'ultimate-redundancy',
-
           name: 'Ultimate Redundancy System',
           description: 'Advanced redundancy with automated failover',
           status: 'active',
           complexity: 'critical',
-
           lastUpdated: '2025-01-16'
         },
           id: 'github-actions-automation',
@@ -44,21 +37,17 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-14'
         },
           id: 'canary-deployment',
-
           name: 'Canary Deployment',
           description: 'Gradual rollout with traffic splitting',
           status: 'active',
           complexity: 'high',
-
           lastUpdated: '2025-01-13'
         },
           id: 'rolling-update',
-
           name: 'Rolling Update Strategy',
           description: 'Sequential instance updates with health monitoring',
           status: 'active',
           complexity: 'medium',
-
           lastUpdated: '2025-01-12'
           } catch (error) {
     console.error("Error:", error);
@@ -71,12 +60,10 @@ const BlueprintsIndexPage: React.FC = () => {
       category: 'Monitoring & Observability'
       blueprints: [
           id: 'health-check-system',
-
           name: 'Health Check System',
           description: 'Comprehensive health monitoring and alerting',
           status: 'active',
           complexity: 'medium',
-
           lastUpdated: '2025-01-11'
         },
           id: 'performance-monitoring',
@@ -87,7 +74,6 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-10'
         },
           id: 'logging-aggregation',
-
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
@@ -106,17 +92,6 @@ const BlueprintsIndexPage: React.FC = () => {
 }
   ];
   const recentBlueprints = [
-      name: 'Quantum Integration Blueprint',
-      description: 'Quantum computing integration framework',
-
-      date: '2025-01-17',
-      status: 'research'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -131,6 +106,8 @@ const BlueprintsIndexPage: React.FC = () => {
 }
   };
   const getComplexityColor = (complexity: string) => {
+;
+  const getComplexityColor = (complexity: string) =>: any {
     switch (complexity) {
 
       case 'critical': return 'bg-red-500/20 text-red-400';
@@ -202,31 +179,6 @@ const BlueprintsIndexPage: React.FC = () => {
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
-                          href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
-                        >
-                          {blueprint.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </Link>
-                        <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
-                          {blueprint.complexity  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </span>
-                      </div>
-                      <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
-                      <div className="flex justify-between items-center text-xs">
-                        <span className={`${getStatusColor(blueprint.status)}`}>
-
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -236,12 +188,6 @@ const BlueprintsIndexPage: React.FC = () => {
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* Recent Blueprints */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Blueprints</h2>;
@@ -252,15 +198,6 @@ const BlueprintsIndexPage: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{blueprint.name}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (blueprint.status)}`}>;
                     {blueprint.status}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {recentBlueprints.map((blueprint) => (
-              <div key={blueprint.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
-
                     {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,7 +208,6 @@ const BlueprintsIndexPage: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{blueprint.date}</span>
-                  <Link
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
                     View Blueprint 
@@ -316,7 +252,6 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/reports"
@@ -339,4 +274,3 @@ const BlueprintsIndexPage: React.FC = () => {
     </div>
   );
 }
-export default BlueprintsIndexPage;

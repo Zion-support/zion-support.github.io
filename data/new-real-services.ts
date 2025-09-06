@@ -1,13 +1,3 @@
-      'Prompt and response tracing',
-      'Cost and token analytics',
-      'Automatic PII redaction',
-      'Offline and online evals',
-      'Guardrail policy engine',
-      'Drift and performance alerts',
-      'SDKs for JS, Python, Go',
-      'Grafana and Datadog exporters',
-    ],
-    popular: true,
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -924,25 +914,6 @@
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
-    integrations: [
-      'OpenAI-compatible'
-      'LangChain'
-      'LlamaIndex'
-      'Datadog'
-      'Grafana'
-    ]
-    useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance']
-    competitors: ['Langfuse', 'Arize', 'Weights & Biases']
-    marketSize: '$5B+ AI Ops and Observability'
-    growthRate: 'Rapid growth with LLM adoption'
-    variant: 'quantum-holographic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-      'Agent SDKs, tracing collectors, and dashboards ready to deploy.'
-    launchDate: '2025-01-10'
-    customers: 32
-    rating: 4.8
       'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launch_date: '2025 - 01 - 10',
     customers: 32,

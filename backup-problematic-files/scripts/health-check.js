@@ -4,4 +4,3 @@ export const Health-check = () => {
   return null;
 };
 
-export default Health-check;

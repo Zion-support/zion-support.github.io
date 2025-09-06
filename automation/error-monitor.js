@@ -70,7 +70,6 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
     }
@@ -159,8 +158,6 @@ class ErrorMonitor {
         }
       }
     }
-
-
     return errors;
   }
   parseESLintErrors(output) {
@@ -169,6 +166,10 @@ class ErrorMonitor {
     );
       }
     }
+    );
+      }
+    }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString(),
         });
       }
@@ -213,7 +214,6 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
     }

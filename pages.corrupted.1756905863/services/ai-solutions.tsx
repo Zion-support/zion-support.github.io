@@ -2,8 +2,6 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface AisolutionsProps {
   // Add props here as needed
-}
-export default function Aisolutions({ }: AisolutionsProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

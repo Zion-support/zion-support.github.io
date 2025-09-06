@@ -170,45 +170,5 @@ if ( {) {
       }
     } catch (error) {
       return {
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
-      }
-    }
-  }
-  async get < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, { ...options, method: 'GET' });
-  }
-  async post < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: data ? JSON.stringify (data) : undefined,
-      headers: {
-        'Content - Type': 'application / json',
-        ...options?.headers,
-      },
-    });
-  }
-  async put < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify (data) : undefined,
-      headers: {
-        'Content - Type': 'application / json',
-        ...options?.headers,
-      },
-    });
-  }
-  async delete < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, { ...options, method: 'DELETE' });
-  }
-}
-export const api_client = new ApiClient ();
-export type { ApiResponse, RequestOptions }
-export type { ApiResponse, RequestOptions };
-export type { ApiResponse, RequestOptions };
-
-export type { ApiResponse, RequestOptions }
-
 export type { ApiResponse, RequestOptions }
 export type { ApiResponse, RequestOptions };

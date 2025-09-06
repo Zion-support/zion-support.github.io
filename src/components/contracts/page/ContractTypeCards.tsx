@@ -47,10 +47,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            <li className="text-sm"> Legally binding templates</li>
-            <li className="text-sm"> Milestone-based payment terms</li>
-            <li className="text-sm"> IP rights and confidentiality clauses</li>
-            <li className="text-sm"> DocuSign integration</li>
           </ul>
         </CardContent>
         <CardFooter>
@@ -93,26 +89,6 @@ interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
 
-export function ContractTypeCards(): any ({;
-  onStandardClick,;
-  onSmartClick,;
-}: ContractTypeCardsProps) {;
-  return (
-    <div className='grid md:grid-cols-2 gap-6 mb-10'>;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <FileText className='h-5 w-5' />            Standard Contracts;
-          <CardTitle className="flex items-center gap-2">;
-            <FileText className="h-5 w-5" />;
-
-interface ContractTypeCardsProps {;
-  onStandardClick: () => void,;
-  onSmartClick: () => void;
-}
-
-export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
-  return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;

@@ -23,7 +23,7 @@ export function ProjectOfferBanner() {
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
   useEffect(() => {
     if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent');
+      const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -56,7 +56,6 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-  }
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -148,22 +147,4 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-    </div>
-  )
-}
-import { useEffect, useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { Bell, Calendar, X } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { use_projects } from '@/hooks / use_projects';
-import { Project } from '@/types / projects';
-export /**
- * ProjectOfferBanner - Function description
- */
-function ProjectOfferBanner() {
-  const navigate = use_navigate ();
-  const { projects, is_loading } = use_projects ();
-  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
-  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;

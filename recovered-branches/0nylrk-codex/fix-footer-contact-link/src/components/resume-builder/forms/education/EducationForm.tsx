@@ -56,6 +56,10 @@ export function EducationForm({ ;
       setEditingId(null)
     } else {
       onBack()
+
+    }
+    if (success) {;
+      setEditingId(null);
     }
   },;
 
@@ -63,13 +67,11 @@ export function EducationForm({ ;
     setEditingId(edu && edu.id!),;
     // Form reset happens in the child component;
   };
-
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
-
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
@@ -104,22 +106,17 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-
-      <EducationList
-        educationEntries={educationEntries} 
+;
+      <EducationList ;
+        educationEntries={educationEntries} ;
         onEdit={handleEdit}
         onDelete={handleDelete}
       />;
-
+;
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Education' : 'Add Education'}
+          {editingId ? 'Update Education' :'Add Education'}
         </h3>;
-
-        <EducationFormFields
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
 export /**
  * EducationForm - Function description
  */

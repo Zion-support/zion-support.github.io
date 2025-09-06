@@ -1,4 +1,3 @@
-
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
@@ -6,8 +5,6 @@ export function ProfileLoadingState() {
         Loading profile...
       </div>
     </div>
-  );
-}
 import React from './react';
 export /**
  * ProfileLoadingState - Function description

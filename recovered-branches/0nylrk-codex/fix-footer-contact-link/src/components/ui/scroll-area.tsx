@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
-import { cn } from &quot;@/lib/utils&quot;
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
@@ -17,10 +14,6 @@ const ScrollArea = React.forward_ref<;
 >(({ class_name, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root;
     ref={ref}
-    className={cn (&quot;relative overflow - hidden & quot;, class_name)}
-    {...props}
-
-
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
       {children}
@@ -47,16 +40,7 @@ const ScrollBar = React.forwardRef<
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className=&quot;relative flex-1 rounded-full bg-border&quot; />
+    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
-export { ScrollArea, ScrollBar }
-
-
-export { ScrollArea, ScrollBar }
-;
-export { ScrollArea, ScrollBar };
-
-export { ScrollArea, ScrollBar }
-;

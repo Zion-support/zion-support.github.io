@@ -1,4 +1,3 @@
-
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
@@ -31,12 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(400).json({ error: 'Invalid request' });
       return
     }
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { rateLimit } from '../../utils/rate-limit';
-import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
-import { v4 as uuidv4 } from 'uuid';
-
       return
     }
     const app: Application = {

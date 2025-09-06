@@ -11,7 +11,6 @@ const [loading, setLoading] = useState(false);
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -75,7 +74,6 @@ export default function OSDeployPage() {;
                   <option value="TECH">Technology</option>;
                 </select>;
               </div>;
-
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -113,12 +111,10 @@ export default function OSDeployPage() {;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
-
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
-
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
@@ -202,13 +198,11 @@ export default function OSDeployPage() {;
               </label>;
             </div>;
           </div>;
-
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
-
                 }`}
               >
 "use client",;
@@ -598,39 +592,6 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
-                {message}
-              </div>;
-            )}
-          </div>;
-        </form>;
-      </div>;
-    </div>;
-  );
-}
-          {/* Submit Button */}
-          <div className="text - center">;
-            <button;
-              disabled={loading}
-              className="btn - primary text - lg px - 12 py - 4 disabled:opacity - 50 disabled:cursor - not - allowed hover - lift";
-            >;
-              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
-            </button>;
-            {message && (
-              <div;
-                className={`mt - 6 p - 4 rounded - lg ${
-                  message_type === 'success';
-                    ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
-                    : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
-                }`}
-              >;
-                {message}
-              </div>)}
-          </div>;
-        </form>;
-      </div>;
-    </div>);
-}
-
 ;
 function labelFor(key: string) {;
   switch (key) {;

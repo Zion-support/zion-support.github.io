@@ -8,7 +8,6 @@ const ModelViewer = React.lazy(async () => {
   return {
     default: (props: any) => React.createElement('model-viewer', props)
   }
-});
 interface ProductGalleryProps {
   images: string[]
   videoUrl?: string
@@ -55,8 +54,6 @@ export function ProductGallery({
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
                     className='w-full h-full object-cover'
-                  />;
-                </div>;
               ))}
             </div>;
           )}
@@ -75,11 +72,6 @@ export function ProductGallery({
                   width='100%'
                   height='100%'
                   controls
-                />;
-              </Suspense>;
-            </AspectRatio>;
-          </TabsContent>;
-        )}
               <Suspense
                 fallback={
                   <img
@@ -187,11 +179,6 @@ function ProductGallery() {
                 />;
               </Suspense>;
             </AspectRatio>;
-          </TabsContent>;
-        )}
-      </Tabs>;
-      {images && images.length > 0 && (;
-        <DialogContent className='max-w-3xl p-0'>;
           <div
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
@@ -204,8 +191,6 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-};
-};
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -225,8 +210,6 @@ interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
   modelUrl?: string;
-
-}
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -242,4 +225,36 @@ interface ProductGalleryProps {;
             />          </div>;
         </DialogContent>)}
     </Dialog>);
+import React, { useState, Suspense } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogTrigger} from '@/components/ui/dialog',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+;
+const ReactPlayer = React.lazy(() => import('react-player')),;
+const ModelViewer = React.lazy(async () => {;
+  await import('@google/model-viewer'),;
+  return {;
+    default:(props:any) => (;
+      React.createElement('model-viewer', props);
+    )},;
+}),;
+;
+interface ProductGalleryProps {;
+  images:string[],;
+  videoUrl?:string,;
+  modelUrl?:string;
+}
+ursor/fix-website-loading-errors-and-merge-6662
+;
+export function ProductGallery({ images, videoUrl, modelUrl } ProductGalleryProps) {;
+  const [selected, setSelected] = useState(0),;
+  const [zoomOpen, setZoomOpen] = useState(false),;
+  const [zoomed, setZoomed] = useState(false),;
+  const poster = images[0],;
+;
+  return (;
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false), }}>;
 }

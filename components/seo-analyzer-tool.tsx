@@ -1,21 +1,3 @@
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import {;
-  Search,;
-  TrendingUp,;
-  CheckCircle,;
-  AlertTriangle,;
-  ArrowRight,;
-  Target,;
-  BarChart3,;
-  Globe,;
-  Smartphone,;
-  Zap,;
-} from 'lucide-react';
-
-
-export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
@@ -116,71 +98,6 @@ export default function SEOAnalyzerToolPage() {;
       popular: false
     },  ];
   const handleAnalyzeSEO = async () => {
-      ];
-      popular: false;
-    }
-  ];
-
-  const pricing = [;
-    {;
-      name: 'Starter',;
-      price: '$39',;
-      period: '/month',;
-      description: 'Perfect for small businesses and bloggers',;
-      features: [;
-        '10 website analyses/month',;
-        'Basic SEO metrics',;
-        'Keyword research (100 keywords)',;
-        'On-page SEO analysis',;
-        'Email support',;
-        'Basic reporting',;
-      ],;
-      popular: false,;
-    },    {        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting';
-      ];
-      popular: false;
-    };
-      name: 'Professional',;
-      price: '$89',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and agencies',;
-      features: [;
-        '50 website analyses/month',;
-        'Advanced SEO metrics',;
-        'Keyword research (500 keywords)',;
-        'Competitive analysis',;
-        'Priority support',;
-        'Advanced reporting',;
-        'API access',;
-        'Team collaboration',;
-      ],;
-      popular: true,;
-    },    {        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration';
-      ];
-      popular: true;
-    };
-      name: 'Enterprise',;
-      price: '$249',;
-      period: '/month',;
-      description: 'For large organizations and SEO agencies',;
-      features: [;
-        'Unlimited analyses',;
-        'Enterprise SEO metrics',;
-        'Unlimited keyword research',;
-        'Advanced competitive analysis',;
-        '24/7 dedicated support',;
-        'Custom reporting',;
-        'White-label options',;
-        'Custom integrations',;
-      ],;
-      popular: false,;
-    },  ];
-
-  const handleAnalyzeSEO = async () => {;
-    if (!url && url.trim()) return;        'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations';
-      ];
-      popular: false;
-    }
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -215,64 +132,6 @@ export default function SEOAnalyzerToolPage() {;
             difficulty: 'high'
           }
         ]
-
-  const handleAnalyzeSEO = async () => {;
-    if (!url && url.trim()) return;
-
-    setIsAnalyzing(true);
-    // Simulate SEO analysis;
-    setTimeout(() => {;
-      setAnalysisResults({;
-        url: url,;
-        overallScore: 78,;
-        onPageScore: 82,;
-        technicalScore: 75,;
-        contentScore: 80,;
-        mobileScore: 85,;
-        issues: [;
-          {;
-            type: 'error',;
-            message: 'Missing meta description',;
-            priority: 'high',;
-          },;
-          {;
-            type: 'warning',;
-            message: 'Title tag too long (65 characters)',;
-            priority: 'medium',;
-          },;
-          {;
-            type: 'info',;
-            message: 'Consider adding more internal links',;
-            priority: 'low',;
-          },;
-        ],;
-        recommendations: [;
-          'Optimize meta descriptions for better click-through rates',;
-          'Improve page load speed by optimizing images',;
-          'Add more relevant internal links to improve site structure',;
-          'Implement schema markup for rich snippets',;
-        ],;
-        keywords: [;
-          {;
-            keyword: 'website optimization',;
-            volume: '12K',;
-            difficulty: 'medium',;
-          },;
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },;
-          {;
-            keyword: 'search engine optimization',;
-            volume: '15K',;
-            difficulty: 'high',;
-          },;
-        ],;
-      });
-    <>;
-      <Head>;
-        <title>;
-          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
-          Optimization;
-        </title>;
-        />;
         <meta
           property='og:title'
           content='SEO Analyzer Tool - Zion Tech Group'
@@ -289,7 +148,6 @@ export default function SEOAnalyzerToolPage() {;
             recommendations to improve your search rankings and drive more;
             organic traffic.;
           </p>;
-
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url && url.trim()}>;
                 {isAnalyzing ? (;
                   <>;
@@ -316,7 +174,6 @@ export default function SEOAnalyzerToolPage() {;
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
-
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">;
             <div className="flex flex-col sm:flex-row gap-4">;
@@ -359,7 +216,6 @@ export default function SEOAnalyzerToolPage() {;
               you dominate search rankings.;
             </p>;
           </div>;
-
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
@@ -388,13 +244,6 @@ export default function SEOAnalyzerToolPage() {;
                 className="card-hover group border-gradient-green"
 
 
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-      {/* SEO Factors Section */}
-
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -404,11 +253,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
-              We analyze every aspect of your website's SEO to provide;
-              actionable insights and recommendations.;
-            </p>;
-          </div>;
-
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
@@ -435,25 +279,10 @@ export default function SEOAnalyzerToolPage() {;
                 </ul>;
               </Card>;
             ))}
-      {/* Demo Analysis Results */}
-      {analysisResults && (
-        <section className='section-padding bg-gradient-cursor-accent'>
-          <div className='container-cursor'>
-            <div className='text-center mb-12'>
-              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-                SEO Analysis Results
-              </h2>
-              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-                Here's a sample analysis of a website. Get comprehensive
-                insights for your own website.
-              </p>
-            </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
                 Here's a sample analysis of a website. Get comprehensive;
                 insights for your own website.;
               </p>;
             </div>;
-
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
@@ -544,32 +373,10 @@ export default function SEOAnalyzerToolPage() {;
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
-              {/* Issues */}
-              <Card className='border-gradient-green'>
-                <h3 className='text-2xl font-bold mb-6 text-white'>
-                  Issues Found
-                </h3>
-                <div className='space-y-3'>
-                  {analysisResults.issues.map((issue, index) => (
-                    <div key={index} className='flex items-start space-x-3'>
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />
-                      ) : issue.type === 'warning' ? (
-                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />
-                      ) : (
-                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                      )}
-                      <div>
-                        <span className='text-gray-300'>{issue.message}</span>
-                        <div className='text-xs text-gray-500 mt-1'>
-                          Priority: {issue.priority}
-
                         </div>                      </div>
 
                       </div>
 
-                    </div>
-                  ))}
 
                 </div>;
               </Card>;
@@ -577,24 +384,6 @@ export default function SEOAnalyzerToolPage() {;
 
 
 
-            {/* Recommendations and Keywords */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-              <Card className='border-gradient-green'>;
-                <h3 className='text-2xl font-bold mb-6 text-white'>;
-                  Optimization Recommendations;
-                </h3>;
-                <div className='space-y-3'>;
-                  {analysisResults && analysisResults.recommendations.map((rec, index) => (;
-                    <div key={index} className='flex items-start space-x-3'>;
-                      <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
-                      <span className='text-gray-300'>{rec}</span>                    </div>            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-              <Card className="border-gradient-green">;
-                <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
-                <div className="space-y-3">;
-                  {analysisResults && analysisResults.recommendations.map((rec, index) => (;
-                    <div key={index} className="flex items-start space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">{rec}</span>;
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
@@ -628,7 +417,6 @@ export default function SEOAnalyzerToolPage() {;
                       </div>;
                     </div>;
 
-
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -650,203 +438,6 @@ export default function SEOAnalyzerToolPage() {;
                       </div>
                     </div>
                   ))}
-            <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
-              {/* Overall Score */}
-              <Card className='border - gradient - green text - center'>;
-                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
-                  Overall SEO Score;
-                </h3>;
-                <div className='text - 6xl font - bold text - green - 400 mb - 4'>;
-                  {analysis_results.overall_score}/100;
-                </div>;
-                <div className='w - 32 h - 32 mx - auto mb - 6'>;
-                  <svg;
-                    className='w - full h - full transform -rotate - 90';
-                    view_box='0 0 36 36';
-                  >;
-                    <path;
-                      d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
-                      fill='none';
-                      stroke='current_color';
-                      stroke_width='2';
-                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
-                      className='text - green - 500';
-                    />;
-                  </svg>;
-                </div>;
-                <p className='text - gray - 400'>;
-                  Good SEO foundation with room for improvement;
-                </p>;
-              </Card>;
-              {/* Detailed Scores */}
-              <Card className='border - gradient - green'>;
-                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
-                  Detailed Scores;
-                </h3>;
-                <div className='space - y-4'>;
-                  <div className='flex justify - between items - center'>;
-                    <span className='text - gray - 400'>On - Page SEO</span>;
-                    <span className='font - bold text - green - 400'>;
-                      {analysis_results.onPageScore}/100;
-                    </span>;
-                  </div>;
-                  <div className='flex justify - between items - center'>;
-                    <span className='text - gray - 400'>Technical SEO</span>;
-                    <span className='font - bold text - orange - 400'>;
-                      {analysis_results.technical_score}/100;
-                    </span>;
-                  </div>;
-                  <div className='flex justify - between items - center'>;
-                    <span className='text - gray - 400'>Content SEO</span>;
-                    <span className='font - bold text - blue - 400'>;
-                      {analysis_results.content_score}/100;
-                    </span>;
-                  </div>;
-                  <div className='flex justify - between items - center'>;
-                    <span className='text - gray - 400'>Mobile SEO</span>;
-                    <span className='font - bold text - green - 400'>;
-                      {analysis_results.mobile_score}/100;
-                    </span>                  </div>                SEO Analysis Results;
-              </h2>;
-              <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-                Here's a sample analysis of a website. Get comprehensive insights for your own website.;
-              </p>;
-            </div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8">;
-              {/* Overall Score */}
-              <Card className="border - gradient - green text - center">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Overall SEO Score</h3>;
-                <div className="text - 6xl font - bold text - green - 400 mb - 4">{analysis_results.overall_score}/100</div>;
-                <div className="w - 32 h - 32 mx - auto mb - 6">;
-                  <svg className="w - full h - full transform -rotate - 90" view_box="0 0 36 36">;
-                    <path;
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
-                      fill="none";
-                      stroke="current_color";
-                      stroke_width="2";
-                      stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
-                      className="text - green - 500";
-                    />;
-                  </svg>;
-                </div>;
-                <p className="text - gray - 400">Good SEO foundation with room for improvement</p>;
-              </Card>;
-              {/* Detailed Scores */}
-              <Card className="border - gradient - green">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Detailed Scores</h3>;
-                <div className="space - y-4">;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">On - Page SEO</span>;
-                    <span className="font - bold text - green - 400">{analysis_results.onPageScore}/100</span>;
-                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Technical SEO</span>;
-                    <span className="font - bold text - orange - 400">{analysis_results.technical_score}/100</span>;
-                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Content SEO</span>;
-                    <span className="font - bold text - blue - 400">{analysis_results.content_score}/100</span>;
-                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Mobile SEO</span>;
-                    <span className="font - bold text - green - 400">{analysis_results.mobile_score}/100</span>;
-                  </div>;
-                </div>;
-              </Card>;
-              {/* Issues */}
-              <Card className='border - gradient - green'>;
-                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
-                  Issues Found;
-                </h3>;
-                <div className='space - y-3'>;
-                  {analysis_results.issues.map ((issue, index) => (
-                    <div key={index} className='flex items - start space - x-3'>;
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className='w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0' />) : issue.type === 'warning' ? (
-                        <AlertTriangle className='w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0' />) : (
-                        <CheckCircle className='w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0' />)}
-                      <div>;
-                        <span className='text - gray - 300'>{issue.message}</span>;
-                        <div className='text - xs text - gray - 500 mt - 1'>;
-                          Priority: {issue.priority}
-                        </div>                      </div>                  {analysis_results.issues.map ((issue, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (
-                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
-                      <div>;
-                        <span className="text - gray - 300">{issue.message}</span>;
-                        <div className="text - xs text - gray - 500 mt - 1">Priority: {issue.priority}</div>;
-                      </div>;
-                    </div>))}
-                </div>;
-              </Card>;
-            </div>;
-            {/* Recommendations and Keywords */}
-            <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-              <Card className='border - gradient - green'>;
-                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
-                  Optimization Recommendations;
-                </h3>;
-                <div className='space - y-3'>;
-                  {analysis_results.recommendations.map ((rec, index) => (
-                    <div key={index} className='flex items - start space - x-3'>;
-                      <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
-                      <span className='text - gray - 300'>{rec}</span>                    </div>            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-              <Card className="border - gradient - green">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Optimization Recommendations</h3>;
-                <div className="space - y-3">;
-                  {analysis_results.recommendations.map ((rec, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0" />;
-                      <span className="text - gray - 300">{rec}</span>))}
-                </div>;
-              </Card>;
-              <Card className='border - gradient - green'>;
-                <h3 className='text - 2xl font - bold mb - 6 text - white'>;
-                  Keyword Opportunities;
-                </h3>;
-                <div className='space - y-4'>;
-                    <div;
-                      key={index}
-                      className='border - b border - gray - 700 pb - 3 last:border - b-0';
-                    >;
-                      <div className='flex justify - between items - center mb - 2'>;
-                        <span className='font - semibold text - white'>;
-                          {keyword.keyword}
-                        </span>;
-                        <span className='text - sm text - gray - 400'>;
-                          Volume: {keyword.volume}
-                        </span>;
-                      </div>;
-                      <div className='flex justify - between items - center'>;
-                        <span className='text - sm text - gray - 400'>;
-                          Difficulty: {keyword.difficulty}
-                        </span>;
-                        <span;
-                          className={`px - 2 py - 1 rounded text - xs ${
-                            keyword.difficulty === 'low';
-                              ? 'bg - green - 500 / 20 text - green - 400';
-                              : keyword.difficulty === 'medium';
-                                ? 'bg - yellow - 500 / 20 text - yellow - 400';
-                                : 'bg - red - 500 / 20 text - red - 400';
-                          }`}
-                        >                          {keyword.difficulty}                      <div className="flex justify - between items - center">;
-                        <span className="text - sm text - gray - 400">Difficulty: {keyword.difficulty}</span>;
-                        <span className={`px - 2 py - 1 rounded text - xs ${
-                          keyword.difficulty === 'low' ? 'bg - green - 500 / 20 text - green - 400' :;
-                          keyword.difficulty === 'medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
-                          'bg - red - 500 / 20 text - red - 400';
-                        }`}>;
-                        </span>;
-                      </div>;
-                    </div>))}
-                </div>;
-              </Card>;
-            </div>;
-          </div>;
-
 
               Simple Pricing
             </h2>
@@ -883,7 +474,6 @@ export default function SEOAnalyzerToolPage() {;
               and goals.;
             </p>;
           </div>;
-
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the SEO analysis plan that best fits your business needs and goals.;
@@ -928,13 +518,6 @@ export default function SEOAnalyzerToolPage() {;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>;
-                      {feature}
-
-
-                    </li>
-                  ))}
               </Card>
             ))}
           </div>
@@ -957,10 +540,6 @@ export default function SEOAnalyzerToolPage() {;
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/contact'
               variant='outline'
@@ -975,7 +554,3 @@ export default function SEOAnalyzerToolPage() {;
         </div>
       </section>
     </>
-}
-}
-  );
-}

@@ -3,33 +3,6 @@ import { formatDistanceToNow } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Button } from '@/components/ui/button'
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Calendar,
-  ExternalLink,
-  Download,
-} from 'lucide-react';
-import Link from 'next / link';
-import { StatusBadge } from './StatusBadge';
-import { ApplicationProgress } from './ApplicationProgress';
-import { toast } from 'sonner';
-import { useState  } from './react';
-import { formatDistanceToNow  } from './date - fns';
-import { JobApplication  } from '@/types / jobs';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from './next / link';
-import { StatusBadge  } from './StatusBadge';
-import { ApplicationProgress  } from './ApplicationProgress';
-import { toast  } from './sonner';
-interface ApplicationCardProps {
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [ expanded, setExpanded ] = useState(false)
   const handleDownloadResume = () => {
@@ -49,7 +22,6 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
-}
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
@@ -113,41 +85,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
 
             <div className="text-sm text-muted-foreground mt-1">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
           </div>
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-
-    <Card className='overflow - hidden'>;
-      <CardHeader className='pb - 3'>;
-        <div className='flex justify - between items - start'>;
-          <div>;
-            <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>;
-            <div className='text - sm text - muted - foreground mt - 1'>;
-              Applied{' '}
-              {formatDistanceToNow (new Date (application.created_at), {
-                add_suffix: true,
-              })}            </div>            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
-            <div className="text - sm text - muted - foreground mt - 1">;
-              Applied {formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}
-            </div>;
-          </div>;
-          <StatusBadge status={application.status} />;
-        </div>;
-      </CardHeader>;
-      <CardContent className='pb - 3'>;
-        <ApplicationProgress status={application.status} className='my - 4' />;
-
-
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
         
         {expanded && (
           <div className='mt - 4 space - y-3'>;
-            {application.cover_letter && (
               <div>;
                 <h4 className='text - sm font - medium mb - 1'>Your Cover Letter</h4>;
                 <p className='text - sm text - muted - foreground'>;
@@ -279,25 +227,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>;
               </div>;
             )}
-                </p>;
-              </div>)}
-            {application.resume && (
-              <div className='border rounded - md p - 3 bg - muted / 20'>;
-                <div className='flex justify - between items - center'>;
-                  <div className='flex items - center'>;
-                    <FileText className='h - 4 w - 4 mr - 2 text - blue - 500' />;
-                    <span className='text - sm font - medium'>;
-                      {application.resume.title || 'Resume'}
-                    </span>;
-                  </div>;
-                  <Button;
-                    variant='ghost';
-                    size='sm';
-                    on_click={handleDownloadResume}
-                  >;
-                    <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;
-                </div>;
-              </div>)}
         {expanded && (
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
@@ -307,16 +236,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>
               </div>
             )}
-            {application.match_score && (
-              <div>;
-                <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
-                <div className='flex items - center'>;
-                  <div className='h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium'>;
-                    {application.match_score}%;
-                  </div>;
-              <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
-                <div className="flex items-center">
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
                     {application.match_score}%
                   </div>
@@ -359,23 +279,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
             )}
           </div>;
         )}
-      </CardContent>
-      <CardFooter className='flex flex-col gap-3 pt-0'>
-        <div className='flex justify-between items-center w-full'>
-      </CardContent>;
-
-      <CardFooter className='flex flex-col gap-3 pt-0'>;
-        <div className='flex justify-between items-center w-full'>;
-          <Button
-            variant='ghost'
-            size='sm'
-            onClick={() => setExpanded(!expanded)}
-          >;
-            {expanded ? 'Show Less' : 'Show More'}
-          </Button>;
-          <div className='flex gap-2'>;
-            {renderActionButtons()}
-            <Button variant='outline' size='sm' asChild>
               <Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job              </Link>
             </Button>
@@ -400,48 +303,15 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         <Button 
           variant="secondary" 
           size="sm"
-          className="w-full"
           asChild
         >
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
-        </Button>
-      </CardFooter>
-    </Card>
-  )
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
-  application.status
-}/> </div> </CardHeader> {"
-  application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
-  application.cover letter
-}</p> </div>)
-}</Button> </div> </div>)
-}{"
-  application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {
-  application.match score "
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>)
 }</div>) "
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>)
 }"
 }
-            </Button>;
-          </div>;
-        </div>;
-
-        <Button variant='secondary' size='sm' className='w-full' asChild>;
-          <Link href={`/messages?jobId=${application && application.job_id}`}>;
-            <MessageSquare className='h-4 w-4 mr-1' /> Message Client        ;
-        <Button
-          variant="secondary" 
-          size="sm"
-          className="w-full"
-          asChild>;
-          <Link href={`/messages?jobId=${application && application.job_id}`}>;
-            <MessageSquare className="h-4 w-4 mr-1" /> Message Client;
-        </Button>;
-      </CardFooter>;
-    </Card>;
-  );
 
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadgestatus= {
   application && application.status 
@@ -488,12 +358,3 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
   application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {
   application.match score ";
 }% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);
-
-}
-;
-
-
-}% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
-}</div>) ";
-}</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
-}";

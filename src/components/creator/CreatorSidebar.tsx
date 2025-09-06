@@ -227,8 +227,3 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
-    </Sidebar>;
-  );
-}
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'

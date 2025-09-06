@@ -1,6 +1,3 @@
-}</div> </div>) };
-
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -58,36 +55,11 @@ import {Star} from 'lucide-react';
             Communication: {review.categories.communication}
           </span>
         )}
-        {typeof review && review.categories?.qualityOfWork === 'number' && (;
-          <span className='pill'>;
-            Quality: {review && review.categories.qualityOfWork};
-          </span>;
-        )}
-        {typeof review && review.categories?.timeliness === 'number' && (;
-          <span className='pill'>;
-            Timeliness: {review && review.categories.timeliness};
-          </span>;
         )}
       </div>;
     </div>;
   );
 };
-
-export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill-success">Would work again</span>
-        )}
-      </div>;
-      <p className="text-sm leading-6">{review && review.text}</p>;
-
-      <div className="flex flex-wrap gap-2 mt-3">;
-        {typeof review && review.categories?.communication === 'number' && (;
-        )}
-        {typeof review && review.categories?.qualityOfWork === 'number' && (;
-          <span className="pill">Quality: {review && review.categories.qualityOfWork}</span>;
-        )}
-        {typeof review && review.categories?.timeliness === 'number' && (;
-          <span className="pill">Timeliness: {review && review.categories.timeliness}</span>;
-        )}
 > Report abuse </button> </div>);
 }</div> </div>) }
 ;
@@ -165,6 +137,4 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
     </div>);
 }
 ;
-export default ReviewCard;
-export default ReviewCard;
 export default ReviewCard;

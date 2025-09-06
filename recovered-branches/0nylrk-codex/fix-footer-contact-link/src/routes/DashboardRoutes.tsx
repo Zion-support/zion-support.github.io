@@ -19,7 +19,6 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
-const DashboardRoutes = () => {
 },
 
 export default DashboardRoutes,
@@ -45,54 +44,29 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
-const DashboardRoutes = () => {;
-  return (
-    <Routes>;
-      {/* Dashboard Routes */}
-      <Route
-        element={
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
-      <Route
-        path="/project/:id"
-        element={
           <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
       />;
-      <Route
-        path="/project/:id/room"
-        element={
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
         }
       />;
-      <Route
-        path="/messages"
-        element={
-      <Route
-        path="/developers"
-        element={
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
-      />;
-      <Route
-        path="/wallet"
-        element={
           <ProtectedRoute>;
             <WalletPage />;
           </ProtectedRoute>;
         }
       />;
-      <Route
-        path="/dashboard/api-access"
-        element={
         element={
           <ProtectedRoute>;
             <ContractBuilder />;

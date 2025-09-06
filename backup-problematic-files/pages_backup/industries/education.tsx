@@ -327,4 +327,3 @@ export default function EducationPage() {
   );
 };
 
-export default Education;

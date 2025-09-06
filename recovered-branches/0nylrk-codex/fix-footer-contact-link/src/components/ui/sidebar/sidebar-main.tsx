@@ -9,12 +9,8 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
   side?: &quot;left&quot; | &quot;right&quot;
   variant?: &quot;sidebar&quot; | &quot;floating&quot; | &quot;inset&quot;
   collapsible?: &quot;offcanvas&quot; | &quot;icon&quot; | &quot;none&quot;
-}
-export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {
-
     return (
       <div
         className={cn(
@@ -47,37 +43,16 @@ if ( {) {
         {...props}
       >;
         {props.children}
-      </div>);
   }
 // Check condition
 if ( {) {
   $2
 }
     return (
-      <Sheet open={open_mobile} onOpenChange={setOpenMobile} {...props}>;
-        <SheetContent;
-          data - sidebar=&quot;sidebar & quot;
-          data - mobile=&quot;true & quot;
-          className=&quot;w-[--sidebar - width] bg - sidebar p - 0 text - sidebar - foreground [&>button]:hidden & quot;
-          style={
-            {
-              &quot;--sidebar - width & quot;: &quot;18rem & quot;} as CSSProperties;
-          }
-          side={props.side}
-        >;
-          <div className=&quot;flex h - full w - full flex - col & quot;>{props.children}</div>;
-        </SheetContent>;
-      </Sheet>);
   }
   return (;
     <div;
       ref={ref}
-className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
-      data - state={state}
-      data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
-      data - variant={props.variant}
-      data - side={props.side}
-
 ;
   return (;
     <div;
@@ -131,12 +106,6 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
             : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon] group - data-[side = left]:border - r group - data-[side = right]:border - l&quot;,
           props.class_name)}
         {...props}
-      >;
-        <div;
-          data - sidebar=&quot;sidebar";
-          className="flex h - full w - full flex - col bg - sidebar group - data-[variant = floating]:rounded - lg group - data-[variant = floating]:border group - data-[variant = floating]:shadow & quot;
-        >;
-          {props.children}
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
         </div>;
@@ -159,15 +128,11 @@ export const SidebarRail = React.forward_ref<;
     />
   )
 })
-SidebarRail.displayName = &quot;SidebarRail&quot;
-export const SidebarInset = React.forwardRef<
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background&quot;
-        &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         props.className
       )}
       {...props}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 backup-problematic-files/
 backup/
 cache/
@@ -47,12 +48,16 @@ analyze-*.cjs
 code-quality-*.js
 automation/
 automation_backup/
+=======
+backup-problematic-files/
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 backup/
-lib_backup/
-data_backup/
-styles_backup/
-api-backup/
+cache/
+clean-build/
+temp_conflicts/
+temp_broken_files/
 temp_backup/
+<<<<<<< HEAD
 corrupted_files_backup_2/
 ai-optimization-backups/
 optimization-reports/
@@ -178,3 +183,21 @@ check-syntax.js
 clean-conflicts.js
 commit-and-push.js
 >>>>>>> origin/main
+=======
+zion-os/
+zion-ai-assistant/
+test-*.js
+test-*.cjs
+ultimate-*.js
+ultimate-*.cjs
+tools/
+tests/
+**/backup-problematic-files/**
+**/backup/**
+**/temp_*/**
+**/zion-*/**
+**/test-*/**
+**/ultimate-*/**
+**/tools/**
+**/tests/**
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

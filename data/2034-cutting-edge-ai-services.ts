@@ -39,23 +39,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     realService: true
   }
   {
-    id: 'ai-product-spec-writer'
-    name: 'AI Product Spec Writer'
-    description:
-      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
-    category: 'AI Business Management'
-    pricing: { starter: '$79/mo' }
-    features: [
-      'PRD templates'
-      'Story generation'
-      'Acceptance criteria'
-      'Analytics alignment'
-    ]
-    integrations: ['Jira', 'Linear']
-    useCases: ['Faster planning', 'Better alignment']
-    link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
-    realService: true
-  }
   {
     id: 'ai-creative-studio'
     name: 'AI Creative Studio'
@@ -81,9 +64,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ],
     integrations: ['Canva', 'Figma'],
     useCases: ['Marketing velocity', 'Cost savings'],
-];	id: string;
-	name: string;
-	description: string;
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'

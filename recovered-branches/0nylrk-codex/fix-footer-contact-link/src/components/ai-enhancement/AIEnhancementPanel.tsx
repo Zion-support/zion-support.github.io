@@ -1,4 +1,3 @@
-
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
@@ -7,10 +6,23 @@
 
 
 export function AIEnhancementPanel({;
+
+export function AIEnhancementPanel(): any ({;
+
+  onClose?: () => void;
+  showInstructions?: boolean;
+  initialContent?: string;
+}
+
+export function AIEnhancementPanel({;
   title;
   defaultOptions;
   onApply;
   onClose;
+    content: initialContent || defaultOptions && defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
   showInstructions = true;
   initialContent = '';
@@ -51,7 +63,6 @@ export function AIEnhancementPanel({;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
     if (result) {;
@@ -65,11 +76,6 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-  }
-  const handleApply = () => {
-    onApply(generatedContent);
-    if (onClose) onClose()
-  }
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
@@ -132,49 +138,26 @@ export function AIEnhancementPanel({;
               <Button
                 variant="ghost"
                 size="sm"
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options && options.content && !options && options.context}>;
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Enhancing...;
             </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;
-          )}
-        </Button>;
-
         {/* Output area */}
         {generatedContent && (;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
-              <Button
-                variant="ghost" 
-                size="sm" 
-                onClick={handleCopy}
-                className="h-8">;
-                {copied ? (;
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
-                ) : (;
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
               </Button>;
             </div>;
             <div className="relative">;
-              <Textarea
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e && e.target.value)}
                 className="min-h-[200px]";
               />;
             </div>;
           </div>;
         )}
-          )}
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;

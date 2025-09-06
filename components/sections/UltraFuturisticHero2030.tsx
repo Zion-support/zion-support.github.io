@@ -120,19 +120,10 @@ const stats = [;
   { number: '24/7', label: 'Support', icon: Shield },;
   { number: '2030', label: 'Future Ready', icon: Star },];
 
-export default function UltraFuturisticHero2030() {;
-  return (
-
-export default function UltraFuturisticHero2030() {;
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star }
 ];
 
         {/* Main Heading */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
 
         >
           <motion.div
@@ -164,25 +155,6 @@ export default function UltraFuturisticHero2030() {;
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-
-          <motion&& motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
-            className='text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
-            Pioneering the future with{' '}
-            <span className='text-purple-400 font-semibold'>;
-              AI Consciousness;
-            </span>;
-            ,{' '}
-            <span className='text-cyan-400 font-semibold'>;
-              Quantum Computing;
-            </span>;
-            , and{' '}
-            <span className='text-emerald-400 font-semibold'>;
-              Space Technology;
-            </span>          </motion && motion.p>            className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
-          >;
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -237,10 +209,6 @@ export default function UltraFuturisticHero2030() {;
         </motion && motion.div>;
 
 
-        {/* Features Grid */}
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
 
         >
           {features.map((feature, index) => (
@@ -316,8 +284,6 @@ export default function UltraFuturisticHero2030() {;
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
-          ))}
-        </motion.div>
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -384,16 +350,6 @@ export default function UltraFuturisticHero2030() {;
             </div>
           </div>
         </motion.div>
-                href={contactInfo && contactInfo.website}
-                className='text-white font-semibold hover:text-emerald-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">;
-              <Globe className="w-6 h-6 text-emerald-400 mb-2" />;
-              <span className="text-gray-300 text-sm">Visit Us</span>;
-              <a href={contactInfo && contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">;
-              </a>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
-
 
         {/* Trust Indicators */}
         <motion&& motion.div
@@ -433,39 +389,6 @@ export default function UltraFuturisticHero2030() {;
         </motion.div>
       </div>
           transition={{ duration: 0 && 0.8, delay: 2 && 2.2 }}
-          className='mt-16 text-center'>;
-          <p className='text-gray-400 text-sm mb-4'>;
-            Trusted by leading companies worldwide;
-          </p>;
-          <div className='flex items-center justify-center space-x-8 opacity-60'>;
-            <div className='flex items-center space-x-2'>;
-              <CheckCircle className='w-5 h-5 text-green-400' />;
-              <span className='text-gray-300 text-sm'>ISO 27001 Certified</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Award className='w-5 h-5 text-yellow-400' />;
-              <span className='text-gray-300 text-sm'>Award Winning</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <TrendingUp className='w-5 h-5 text-blue-400' />;
-              <span className='text-gray-300 text-sm'>Industry Leader</span>            </div>        >;
-          <p className="text-gray-400 text-sm mb-4">Trusted by leading companies worldwide</p>;
-          <div className="flex items-center justify-center space-x-8 opacity-60">;
-            <div className="flex items-center space-x-2">;
-              <CheckCircle className="w-5 h-5 text-green-400" />;
-              <span className="text-gray-300 text-sm">ISO 27001 Certified</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Award className="w-5 h-5 text-yellow-400" />;
-              <span className="text-gray-300 text-sm">Award Winning</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <TrendingUp className="w-5 h-5 text-blue-400" />;
-              <span className="text-gray-300 text-sm">Industry Leader</span>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
-      </div>;
           }}
           transition={{
             duration: 3
@@ -494,11 +417,6 @@ export default function UltraFuturisticHero2030() {;
           transition={{
             duration: 3,
             repeat: Infinity,
-
-          }}
-        />
-      </div>
-        />;
       </div>;
     </section>;
   );            ease: "easeInOut";
@@ -518,5 +436,4 @@ export default function UltraFuturisticHero2030() {;
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3],
           }}
-
     </section>

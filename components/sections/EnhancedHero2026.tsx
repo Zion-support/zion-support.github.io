@@ -1,29 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { motion } from 'framer-motion';
   ArrowRight
   Star
   TrendingUp
@@ -54,12 +28,6 @@ import { motion } from 'framer-motion';
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-    },  };        staggerChildren: 0.2
       }
     }
   }
@@ -71,7 +39,6 @@ import { motion } from 'framer-motion';
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut" as const
       }
     }
   }
@@ -82,22 +49,6 @@ import { motion } from 'framer-motion';
       y: 0
       opacity: 1
       transition: {
-export default function EnhancedHero2026(): any ({;
-  contactInfo,;
-  serviceStats,;
-}: EnhancedHero2026Props) {  const containerVariants = {export default function EnhancedHero2026(): any ({ contactInfo, serviceStats }: EnhancedHero2026Props) {;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.2,;
-      },;
-    },  };        staggerChildren: 0 && 0.2;
-      }
-    }
-  };
-
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
     visible: {;
@@ -150,22 +101,9 @@ export default function EnhancedHero2026(): any ({;
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
             style={{
-            }}
-            animate={{
-              y: [0, -30, 0]
-              opacity: [0.3, 0.8, 0.3]
-              scale: [1, 1.5, 1],            }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,            }}  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
       {/* Floating Elements */}
             style={{
               left: `${Math.random() * 100}%`
@@ -175,15 +113,6 @@ export default function EnhancedHero2026(): any ({;
             transition={{
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-          />
-
-        ))}
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -223,45 +152,6 @@ export default function EnhancedHero2026(): any ({;
             ))}
           </motion.div>
 
-
-
-          {/* Enhanced CTA Section */}
-          <motion && motion.div variants={itemVariants} className='space-y-6'>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-          </motion.div>
-          {/* Enhanced CTA Section */}
-          <motion && motion.div variants={itemVariants} className='space-y-6'>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-              <Button
-                href='/services'
-                variant='primary'
-                size='xl'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-              >              >
-                  {stat.label}
-                </div>;
-              </motion.div>))}
-          </motion.div>;
-          {/* Enhanced CTA Section */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                href="/services" 
-                variant="primary"
-                size="xl"
-                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"
-              >
-                <span className="flex items-center">
-                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
-                  Explore All Services
-                </span>
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                href="/contact"
-              
-              <Button 
-                href="/contact" 
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -307,7 +197,6 @@ export default function EnhancedHero2026(): any ({;
               </div>
             </div>
           </motion.div>
-                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center'>;
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
                   <Shield className="mr-3 w-7 h-7" />;
@@ -338,8 +227,6 @@ export default function EnhancedHero2026(): any ({;
               </div>;
             </div>;
           </motion && motion.div>;
-
-
           {/* Contact Information */}
           <motion&& motion.div
             variants={itemVariants}

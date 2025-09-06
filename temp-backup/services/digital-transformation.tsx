@@ -1,7 +1,3 @@
-interface DigitaltransformationProps {;
-  // Add props here as needed;
-}
-export default function Digitaltransformation(): any ({ }: DigitaltransformationProps) {;
   return (
     <div>;
       <h1>Digitaltransformation</h1>;

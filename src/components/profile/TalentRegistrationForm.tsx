@@ -48,27 +48,20 @@ import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { useAuth } from '@/hooks/useAuth'
 // Define form schema
 const talentProfileSchema = z.object({
-  name: z.string().min(2, 'Full Name must be at least 2 characters long')
-  title: z.string().min(5, 'Professional title is required')
-  bio: z
-    .string()
-    .min(50, 'Bio must be at least 50 characters long')
-    .max(1000, 'Bio cannot exceed 1000 characters')
-  location: z.string().min(2, 'Location is required')
-  skills: z.string().min(2, 'Enter at least one skill')
-  hourlyRate: z.string().refine(val => !isNaN(Number(val)), {
-    message: 'Hourly rate must be a number'
-  })
-  availability: z.enum(['available', 'limited', 'unavailable'])
-  enhancedProfile: z.boolean().default(true)
-})
-type TalentFormValues = z.infer<typeof talentProfileSchema>
-type CategoryType =
-  | 'programming'
-  | 'devops'
-  | 'platforms'
-  | 'softSkills'
-  | 'other'
+  name: z.string().min(2, "Full Name must be at least 2 characters long"),
+  title: z.string().min(5, "Professional title is required"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  location: z.string().min(2, "Location is required"),
+  skills: z.string().min(2, "Enter at least one skill"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+    message: "Hourly rate must be a number"}),
+  availability: z.enum(["available", "limited", "unavailable"]),
+  enhancedProfile: z.boolean().default(true)}),
+
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
+
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -197,27 +190,6 @@ export function TalentRegistrationForm() {
       setSkillTags([...skillTags, skillInput])
       form.setValue('skills', '')
     }
-  }
-  // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) =>: any {
-    setSkillTags (skill_tags.filter (string => s !== skill));
-  }
-  // Handle key press in skills input (add on enter);
-  const handleSkillKeyPress = (e: React.KeyboardEvent) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      handleAddSkill () }
-  }
-  // Handle avatar upload;
-  const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const file = e.target.files?.[0];    // Check condition
-if ( {) {
-  $2
-}
-      const reader = new FileReader ();
       reader.onloadend = () => {
         setUploadedAvatar (reader.result as string);
       }
@@ -226,14 +198,6 @@ if ( {) {
   }
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {
-      // Check condition
-if ( {) {
-  $2
-}
-
-      )
-      if (error) {
-        throw new Error(error.message)
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -378,7 +342,6 @@ export function TalentRegistrationForm() {;
       }
       
     } catch (error: any) {
-
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({
         title: "Generation failed",
@@ -402,8 +365,6 @@ export function TalentRegistrationForm() {;
               typeof skill === 'string' &&
               skill &&
               !skillTags.includes(skill)
-            ) {
-              newSkills.push(skill)
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
@@ -426,8 +387,6 @@ if (
   $2
 }
               new_skills.push (skill);
-            }
-
   },
 
   // Send notification email
@@ -443,8 +402,6 @@ if (
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
-            </div>
-          </div>
       })
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', {
@@ -488,17 +445,17 @@ if (
         variant: 'destructive',
       })
 
+        title: 'Skills required',
+        description: 'Please add at least one skill to your profile.',
+        variant: 'destructive',
+      })
       return;
     }
     setIsSubmitting (true);
     try {
-
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
-      }
-
-      });
 
     setIsSubmitting(true),
 
@@ -507,7 +464,6 @@ if (
       if (!user?.id) {
         throw new Error("User not authenticated")
       }
-      
       // Enhance profile if not already done
       let finalSummary = ''
       let finalSkills = skillTags
@@ -561,42 +517,11 @@ if (
       let finalSkills = skillTags,;
       if (values.enhancedProfile && !generatedContent) {;
         try {;
-          const { data: aiData } = await supabase && supabase.functions.invoke(;
-            'talent-profile-enhancer',;
-            {;
-              body: {;
-                talentData: {;
-                  name: values && values.name,;
-                  title: values && values.title,;
-                  bio: values && values.bio,;
-                  skills: skillTags,;
-                  location: values && values.location,;
-                },;
-              },;
-            }
-          );
-
-          if (aiData) {;
-            finalSummary = (aiData as EnhancedProfile).summary;
-            // Safely merge AI suggested skills with user-provided skills;
-            const categorizedSkills = (aiData as EnhancedProfile);
-              .categorizedSkills;
-            const aiSkills: string[] = [];
-
-            // Extract skills from each category and ensure they're strings;
-            Object && Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array && Array.isArray(categorySkills)) {;
-                categorySkills && categorySkills.forEach(skill => {;
-                  if (typeof skill === 'string' && skill) {;
-                  }
-                });
-              }
             })
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
         } catch (error) {
-          logErrorToProduction ('Error enhancing profile:', { data: error });
           // Continue with submission even if enhancement fails;
           final_summary = '';
         }
@@ -630,7 +555,6 @@ if ( {) {
       }, 1500),
 
       // Here would be the actual code to save the profile to Supabase
-      /*
       const { error } = await supabase
         .from('talent_profiles')
         .insert({
@@ -644,12 +568,6 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
-      */
-
-
-      */
-
-    } catch (error: any) {
       // Get user email for notification;
       const { data: user_data } = await supabase.auth.get_user ();
       const user_email = (user_data as any).user?.email;
@@ -711,8 +629,6 @@ if (throw error) {
         </CardHeader>;
 
         <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
-            <CardContent className='space-y-8'>;
               {/* Basic Information */}
               <div className='space-y-4'>;
                 <h3 className='text-lg font-medium text-white'>;
@@ -963,25 +879,6 @@ if (throw error) {
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
                       <input
-                        type='file'
-                        accept='image/*'
-                        className='hidden'
-                        onChange={handleAvatarUpload}                      />
-                    </label>
-                  </div>
-                        </AspectRatio>
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
-                        </div>
-                      )}
-                    </div>
-
-
-                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4" />
-                      <span>Upload Photo</span>
-                      <input
                         type="file"
                         accept="image/*"
                         className="hidden"
@@ -1037,15 +934,14 @@ if (throw error) {
                   Professional Bio;
                 </h3>;
                 <FormField
-                      <FormControl>
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                           placeholder='Describe your professional background, expertise, and the value you bring to clients...'
+                      <FormControl>
+                        <Textarea
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
                           {...field}
-                />
-                {/* AI Enhancement Option */}
-                <FormField
-                  control={form && form.control}
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (;
                     <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>;
@@ -1099,7 +995,6 @@ if (throw error) {
                   </div>
                 )}
                 {/* Generated Content Display */}
-
                         onClick={applyGeneratedContent}>;
                         <Check className='mr-1 h-3 w-3' /> Apply;
 
@@ -1109,23 +1004,6 @@ if (throw error) {
                         onClick={applyGeneratedContent}
                       >;
                         <Check className="mr-1 h-3 w-3" /> Apply;
-
-                      </Button>;
-                    </div>;
-
-                    <div className='space-y-4'>;
-                      <div>;
-                        <h5 className='text-zion-slate-light text-sm mb-1'>;
-                          Professional Summary;
-                        </h5>;
-                        <p className='text-zion-slate italic'>;
-                          {generatedContent && generatedContent.summary}
-                        </p>;
-                      </div>;
-
-                      {generatedContent && generatedContent.categorizedSkills && (;
-                        <div>;
-
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
@@ -1161,7 +1039,6 @@ if (throw error) {
                     Skills & Expertise;
                   </h3>;
                   <FormField
-
                     control={form.control}
                     name="skills"
                     render={({ field }: { field: any }) => (
@@ -1196,11 +1073,6 @@ if (throw error) {
                 </div>;
 
 
-                {/* Availability Section */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Availability;
-                  </h3>;
                   <FormField
                     control={form && form.control}
                     name='availability'
@@ -1399,7 +1271,6 @@ if (throw error) {
                 >
                   Save as Draft
                 </Button>
-
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -1407,7 +1278,6 @@ if (throw error) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
                 </Button>
-              </div>
             </CardFooter>
           </form>
         </Form>
@@ -1443,17 +1313,6 @@ try {
   data: aiData '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
   body: {
-}> {
-  category "
-}</Badge> <div className="flex flex-wrap gap-1"> {
-  skills.map ( (skill: string) => (<Badge key= {
-
-}
-//Generate enhanced profile with AI return;
-}//Call the Supabase Edge Function const {
-  data, error ';
-}= await supabase.functions.invoke ('talent - profile - enhancer', {
-  body: {
   talentData: {
   name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location
 })
@@ -1486,6 +1345,3 @@ if ( {) {
   try {'
   await supabase.functions.invoke ('send-email', {
   body: {'"
-  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, "> $ {
-  new Date () .getFullYear ()
-}Zion Marketplace</p>

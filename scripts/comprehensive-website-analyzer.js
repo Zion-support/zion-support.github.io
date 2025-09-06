@@ -37,7 +37,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         if (response && response.headers['content-type;,"});,"})
   ']?.includes('text/html;,"});,"})
   ')) {;,"});,"})
-          );,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
               await this && this.checkUrl(fullUrl, url);,"});,"})
             }"});,"})
@@ -524,12 +523,6 @@ class ComprehensiveWebsiteAnalyzer {;
         if (response && response.headers['content-type
   ']?.includes('text/html
   ')) {
-              await this.checkUrl(fullUrl, url);
-            }
-          contentType: response.headers[';content-type]        });
-              await this.checkUrl(fullUrl, url);
-            }
-          contentType: response.headers[';content-type]        });
               await this.checkUrl(fullUrl, url)}
           "contentType": response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
@@ -579,8 +572,6 @@ class ComprehensiveWebsiteAnalyzer {;
   }
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /href=[']([^'';';]+)["']/g';;
-    let: match;
         parentUrl,;
         error: error && error.message,;
         headers: {}})}
@@ -674,8 +665,6 @@ class ComprehensiveWebsiteAnalyzer {;
       '/enterprise-solutions',
       '/ai-business-intelligence'
     ];
-    ${route}`);
-    }
       await this.checkUrl(`${this.baseUrl}${route}`)}
       await this && this.checkUrl(`${this && this.baseUrl}${route}`);
     }
@@ -711,8 +700,6 @@ class ComprehensiveWebsiteAnalyzer {;
       '/digital-twin'
       '/ai-devops-automation-platform'
     ];
-    /services${serviceRoute}`);
-    }
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);
     }

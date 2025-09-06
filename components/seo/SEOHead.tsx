@@ -1,4 +1,3 @@
-
 interface SEOHeadProps {
 
 interface SEOHeadProps {;

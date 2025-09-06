@@ -42,8 +42,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { FileText } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -63,6 +61,17 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   src={project.imageUrl}
                   alt={project.title}
               </AspectRatio>
+                  className='w-full h-full object-cover'
+                  loading='lazy'                />
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className='w-full h-full object-cover'
+                  loading='lazy'                />
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
@@ -79,11 +88,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                     <Badge
                       key={i}
                       variant='outline'
-                      className='text-xs border-zion-slate-dark text-zion-slate-light'>                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
-        {projects && projects.map((project) => (;
-          <Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
-            {project && project.imageUrl ? (;
-              <AspectRatio ratio={16/9}>;
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -103,11 +107,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                   ))}
-                </div>;
-              )}
-              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
-                  ))}
-                </div>;
+                </div>
               )}
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
@@ -206,5 +206,3 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
     </div>);
 }
 ;
-
-

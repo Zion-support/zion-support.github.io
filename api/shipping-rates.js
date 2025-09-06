@@ -126,7 +126,6 @@ async function handler(req, res) {
         days: 'Next business day'
       }
     ];
-
     res.statusCode = 200;
     res.json({ "rates": data.rates })} catch (err) {
     console.error(',

@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:fix-final-errors.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,8 +125,13 @@ files.forEach(file => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -142,10 +148,14 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     "replacement"
+<<<<<<<< HEAD:fix-final-errors.cjs
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -236,5 +246,11 @@ filesToFix.forEach(file => {
 
 console.log(`Fixed final errors in ${fixedCount} files.`);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+========
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

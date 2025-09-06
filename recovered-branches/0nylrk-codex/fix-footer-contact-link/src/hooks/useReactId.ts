@@ -1,4 +1,3 @@
-import * as React from &quot;react&quot;
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
  * React version is used where `useId` is unavailable, this hook provides

@@ -23,8 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-
-
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -33,26 +31,8 @@ import { useEffect, useMemo, useState } from 'react';
   );export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent)
-    [talent]
-  );export default function RequestToHirePage() {
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
-    name: ''
-    email: ''
-    budget: ''
-    timeline: ''
-    description: ''
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );  const [error, setError] = useState<string | null>(null);    description: ''})
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null)
     name: '',
     email: '',
     budget: '',

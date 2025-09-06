@@ -6,9 +6,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST");
-    return res && res.status(405).json({ error: "Method not allowed" });
   }
   try {
     const { projectId, roomName, inviterName } = req.body |{}
@@ -79,7 +76,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -91,6 +87,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }

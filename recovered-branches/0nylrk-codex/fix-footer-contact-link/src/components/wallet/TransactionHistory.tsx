@@ -14,10 +14,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ScrollArea } from "@/components/ui/scroll-area",
 
-  if (loading) {;
-
-
-
   if (loading) {
     return (
       <Card>;
@@ -28,9 +24,6 @@ import { ScrollArea } from "@/components/ui/scroll-area",
       </Card>;
     );
   }
-
-  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
-  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -69,59 +62,9 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
-              {earnTransactions && earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {earnTransactions && earnTransactions.map(tx => (;
-                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx && tx.reason || "Token reward"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx && tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
-                  ))}
-                </div>
-              )}
-            </ScrollArea>
-          </TabsContent>
-          <TabsContent value="spent">
-            <ScrollArea className="h-64">
-              {burnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
-              ) : (
-                <div className="space-y-2 mt-2">
-                  {burnTransactions.map(tx => (
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
-                      <div>
-                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>
-                      </div>
-                      <Badge variant="outline" className="bg-red-100 text-red-800">
-                        -{tx.amount} ZION$
-                      </Badge>
-                    </div>
-                  ))}
-              )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  )
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
     </Card>;
-  );
-}
-    </Card>);
 }

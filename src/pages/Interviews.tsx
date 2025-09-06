@@ -10,6 +10,30 @@ import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
 
+import { Button } from "@/components/ui/button";
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+    }
+    load_interviews ();
+  }, []);
+  // Filter interviews based on status and date;
+  const now = new Date ();
+  const today = startOfDay (now);
+  const upcoming_interviews = interviews;
+    .filter (interview => {
+      const interview_date = parseISO (interview.scheduled_date);
+      return (
+        is_after (interview_date, now) &&;
+        ['confirmed', 'requested'].includes (interview.status));
+    });
+    .sort (
+      (a, b) =>;
+        parseISO (a.scheduled_date).get_time () -;
+        parseISO (b.scheduled_date).get_time ());
+  const pending_interviews = interviews.filter (
+    interview => interview.status === 'requested');
+  const past_interviews = interviews.filter (interview => {
+    const interview_date = parseISO (interview.scheduled_date);
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
@@ -55,6 +79,29 @@ function InterviewsContent() {
     loadInterviews()
   }, []),
 
+  // Filter interviews based on status and date
+  const now = new Date(),
+  const today = startOfDay(now),
+  
+  const upcomingInterviews = interviews
+    .filter((interview) => {
+      const interviewDate = parseISO(interview.scheduled_date),
+      return isAfter(interviewDate, now) && 
+        ['confirmedrequested'].includes(interview.status)
+    })
+    .sort((a, b) => 
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+    ),
+  
+  const pendingInterviews = interviews.filter(interview => 
+    interview.status === 'requested'
+  ),
+  
+  const pastInterviews = interviews.filter(interview => {
+    const interviewDate = parseISO(interview.scheduled_date),
+    return !isAfter(interviewDate, now) || 
+      ['completeddeclinedcancelled'].includes(interview.status)
+  }),
 
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
@@ -64,9 +111,7 @@ function InterviewsContent() {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
-      }
     return Object.entries(groupedInterviews)
-      .sort(
         ([dateA], [dateB]) =>
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
@@ -122,15 +167,8 @@ function InterviewsContent() {
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
-
+                <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
-                  {pendingInterviews.length}
-                </span>
-              )}
-
-
-          
-          <TabsContent value="upcoming" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -145,7 +183,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-            {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
@@ -159,7 +196,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-            {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
@@ -172,48 +208,6 @@ function InterviewsContent() {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-
-          <TabsContent value='upcoming' className='space-y-6'>;
-            {isLoading ? (;
-              <div className='flex justify-center py-12'>;
-                <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>;
-              </div>;
-            ) : upcomingInterviews && upcomingInterviews.length > 0 ? (;
-              renderInterviewGroups(upcomingGrouped);
-            ) : (;
-              <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>;
-                <Video className='h-12 w-12 mx-auto text-muted-foreground mb-4' />;
-                <h3 className='text-xl font-medium mb-2'>;
-                  No upcoming interviews;
-                </h3>;
-                <p className='text-muted-foreground mb-6'>;
-                  You don't have any scheduled interviews coming up.;
-                </p>;
-              </div>;
-            )}
-          </TabsContent>;
-
-          <TabsContent value='pending' className='space-y-6'>;
-            {isLoading ? (;
-              <div className='flex justify-center py-12'>;
-                <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>;
-              </div>;
-            ) : pendingInterviews && pendingInterviews.length > 0 ? (;
-              renderInterviewGroups(pendingGrouped);
-            ) : (;
-              <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>;
-                <Clock className='h-12 w-12 mx-auto text-muted-foreground mb-4' />;
-                <h3 className='text-xl font-medium mb-2'>;
-                  No pending interviews;
-                </h3>;
-                <p className='text-muted-foreground mb-6'>;
-                  You don't have any interview requests that need your;
-                  attention.;
-                </p>;
-              </div>;
-            )}
-          </TabsContent>;
-
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -309,4 +303,3 @@ function Interviews() {
 }
 }
 ;
-

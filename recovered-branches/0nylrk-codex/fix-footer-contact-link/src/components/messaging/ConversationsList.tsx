@@ -1,8 +1,4 @@
 
-  conversations: Conversation[]
-  activeConversation: Conversation | null
-  setActiveConversation: (conversation: Conversation) => void
-
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -16,7 +12,6 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
-
   activeConversation, 
   setActiveConversation, 
   markAsRead 

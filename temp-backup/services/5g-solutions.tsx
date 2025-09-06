@@ -1,7 +1,3 @@
-interface 5gsolutionsProps {;
-  // Add props here as needed;
-}
-export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
   return (
     <div>;
       <h1>5gsolutions</h1>;

@@ -45,6 +45,22 @@ export class ApiErrorBoundary extends Component<
     return {
       hasError: true
       error
+}
+      return (
+
+      // Reset error state after a brief delay;
+      this.retryTimeoutId = set_timeout ((, ) => {
+        this.set_state ({
+          has_error: false,
+          error: null,
+          error_info: null,
+          is_retrying: false,
+        });
+      }, 500);
+    } catch (retry_error) {
+      logErrorToProduction ('Retry failed:', { data: retry_error });
+      Sentry.capture_exception (retry_error);
+      this.set_state ({ is_retrying: false });
     }
   }
   componentDidCatch(error: Error, errorInfo: any) {
@@ -222,60 +238,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
-      }
-
-      }
-      return (
-        <div className='flex min-h-screen items-center justify-center p-4'>;
-          <div className='w-full max-w-md space-y-4'>;
-            <Alert variant='destructive'>;
-              <div className='flex items-center gap-2'>;
-                {isNetworkError ? (;
-                  <WifiOff className='h-4 w-4' />;
-                ) : (;
-                  <RefreshCw className='h-4 w-4' />;
-                )}
-      // Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {
-        this.set_state ({
-          has_error: false,
-          error: null,
-          error_info: null,
-          is_retrying: false,
-        });
-      }, 500);
-    } catch (retry_error) {
-      logErrorToProduction ('Retry failed:', { data: retry_error });
-      Sentry.capture_exception (retry_error);
-      this.set_state ({ is_retrying: false });
-    }
-  }
-  render () {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check if it's a network - related error;
-      const isNetworkError =;
-        this.state.error?.message?.includes ('fetch') ||;
-        this.state.error?.message?.includes ('network') ||;
-        this.state.error?.message?.includes ('timeout') ||;
-        !this.state.is_online;
-      // Use custom fallback if provided;
-      // Check condition
-if ( {) {
-  $2
-}
-        return this.props.fallback;
-      }
-      return (
-        <div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='w - full max - w-md space - y-4'>;
-            <Alert variant='destructive'>;
-              <div className='flex items - center gap - 2'>;
-                {isNetworkError ? (
-                  <WifiOff className='h - 4 w - 4' />) : (
-                  <RefreshCw className='h - 4 w - 4' />)}
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -296,7 +258,6 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
-
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
@@ -312,10 +273,14 @@ if ( {) {
                     Try Again
                   </>
                 )}
-                className="w-full"
-              >
                 Reload Page
               </Button>
+              <Button
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+ursor/fix-website-loading-errors-and-merge-6662
+                Reload Page
             </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
@@ -355,11 +320,29 @@ if ( {) {
                 </pre>;
               </details>;
             )}
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+                variant="outline"
+                onClick={() => window.location.reload()}
+                className="w-full"
+              >
+                Reload Page
+              </Button>
+            </div>
+            {!this.state.isOnline && (
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <WifiOff className="h-4 w-4" />
+                <span>Offline</span>
+              </div>
+            )}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
@@ -371,21 +354,9 @@ if ( {) {
       );
     }
 
-    return this && this.props.children;
-  }
-
-// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {;
-  const handleApiError = (error: Error) => {;
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
-    });
-  };
-  return { handleApiError };
 };
-  return { handleApiError }
+};
+};
 
 },
   return { handleApiError }

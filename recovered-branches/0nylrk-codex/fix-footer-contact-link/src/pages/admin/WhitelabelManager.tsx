@@ -18,9 +18,6 @@ import { SEO } from "@/components/SEO",
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-  // Check if user has admin role
-
-  const isAdmin = user?.role === "admin";
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
@@ -123,12 +120,10 @@ export default function WhitelabelManager() {;
       <Footer />
     </>
   )
-}
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
-
                 </p>;
                 <table>;
                   <thead>;
@@ -145,6 +140,3 @@ export default function WhitelabelManager() {;
         </div>;
       </main>;
       <Footer />;
-}
-    </>);
-}

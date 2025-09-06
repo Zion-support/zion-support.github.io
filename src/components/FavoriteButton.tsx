@@ -11,12 +11,11 @@ import {
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
+return (
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
 
-
-  const { isWishlisted, toggle } = useWishlist()
-  const { isAuthenticated } = useAuth()
-  const [loginOpen, setLoginOpen] = React.useState(false)
-  const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -138,25 +137,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
+
+          <TooltipTrigger as_child>;
             <button;
-              class_name = {cn (
-                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
-                class_name)}
-              on_click={handle_click}
-              aria - label={
-                active ? 'Remove from favorites' : 'Save to favorites';
-              }            >;
-              <Heart;
-                class_name = {cn (
-                  'h - 4 w - 4 transition - transform duration - 200',
-                  active;
-                    ? 'fill - red - 500 text - red - 500 scale - 110';
-                    : 'text - zion - slate')}              />;
-            </button>;
-          </TooltipTrigger>;
-          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
-        </Tooltip>;
-      </TooltipProvider>;
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>);
-}

@@ -84,7 +84,6 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -92,30 +91,17 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
       service.name.toLowerCase().includes(selectedCategory);
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-
-    return matchesCategory && matchesSearch
-  });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-      default: return 0
-    }
-  })
-
 
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
@@ -262,9 +248,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
                 </button>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -334,19 +317,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-                >
-                  key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - purple - 500 / 20";
-                >;
-                  {/* Popular Badge */}
-                  {service.popular && (
                   <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                     {service.name}
                   </h3>;
@@ -376,11 +349,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex space - x-2">;
-                    <Link;
-                      href={service.link}
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More
@@ -389,8 +357,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                       <Heart className="w-4 h-4" />
                     </button>
                   </div>
-
-
                   {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -400,8 +366,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
                       <Link
-
-
                         href={service.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -415,7 +379,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     </div>
                   </div>
                 </motion.div>
-              ))}
             </div>
           ) : (
             <div className="space-y-4">
@@ -437,8 +400,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         <div className="text - right">;
                           <div className="text - 2xl font - bold text - purple - 400">;
                             {service.price}
-
-
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -477,7 +438,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-
+                            {service.name}
                             {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -488,7 +449,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-purple-400">
-
+                            {service.price}
                             {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -503,9 +464,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                           </div>
                         </div>
                       </div>
-
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
-
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
@@ -532,14 +490,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-      {/* CTA Section */}
-      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - red - 900 / 20">;
-        <div className="container mx - auto px - 4 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
               ))  } catch (error) {
@@ -595,24 +545,11 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         </div>
       </section>
     </Layout>
-  )
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-              Join thousands of companies already using our innovative services to gain competitive advantages and drive growth.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <Link;
-                href="/contact";
-                className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 hover:scale - 105";
               >;
                 Get Started Today;
               </Link>;
               <Link;
                 href="/pricing";
-                className="bg - white / 10 border border - white / 20 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 20 transition - all duration - 300";
               >;
                 View Pricing;
               </Link>;

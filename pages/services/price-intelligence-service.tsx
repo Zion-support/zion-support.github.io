@@ -14,4 +14,3 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-},

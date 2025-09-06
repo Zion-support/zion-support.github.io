@@ -12,6 +12,13 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
 >>>>>>> origin/main
@@ -33,11 +40,15 @@ const path = require('path');
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 console.log('🔧 Comprehensive fix for all files...');
 
 // List of problematic files
@@ -62,11 +73,15 @@ const filesToFix = [
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
@@ -211,6 +226,7 @@ function main() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     content = content.replace(/\n?/g, '');
@@ -218,6 +234,9 @@ function main() {
     content = content.replace(/    
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -265,9 +284,13 @@ console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-fix.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

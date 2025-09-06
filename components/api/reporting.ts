@@ -28,17 +28,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-    funnel: { stage: string, count: number }[]
-    timeToHireDays: number
-    costPerHireUsd?: number,
-    updated_at: string;
-  }>;
-}
 
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
-        const next = curr.byTenant |{}
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:
@@ -64,5 +57,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
-
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};

@@ -8,14 +8,10 @@ import {completeSitemap, SitemapItem} from "@/config/sitemap";
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
-import { completeSitemap, SitemapItem } from "@/config/sitemap",
-
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
-  return route?.requiredAuth === true
-
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -30,7 +26,7 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return true
 }
 // Get breadcrumb items for a path
-export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
@@ -44,14 +40,8 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
-      breadcrumbs && breadcrumbs.push({
-        label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
-        path: currentPath
-      })
-    }
-  }
-  return breadcrumbs
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+;
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return complete_sitemap.find (route => route.path === path);
@@ -126,4 +116,3 @@ if ( {) {
     }
   }
   return breadcrumbs;
-};

@@ -22,9 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-export default function PartnersPage() {
-
-export default function PartnersPage() {;
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -47,9 +44,6 @@ export default function PartnersPage() {;
 					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
 					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
 				</ul>
-				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
-			</div>
-		</div>
 import Head from 'next / head';
 export default /**
  * PartnersPage - Function description

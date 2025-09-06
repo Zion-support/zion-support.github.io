@@ -9,4 +9,3 @@ const InnovativeServicesShowcase = ({ className }) => {
   );
 };
 
-export default InnovativeServicesShowcase;

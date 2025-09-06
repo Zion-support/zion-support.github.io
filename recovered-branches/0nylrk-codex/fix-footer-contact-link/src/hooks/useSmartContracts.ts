@@ -7,7 +7,6 @@ import { BlockchainNetwork, DeploymentOptions, SmartContractInfo  } from '@/type
 import { TalentProfile  } from '@/types/talent';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {
-  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
@@ -63,10 +62,6 @@ if ( {) {
         throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
-    } finally {
-      setIsLoading (false);
-    }
-  }
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -79,8 +74,8 @@ if ( {) {
       setDeploymentStatus('success');
       return mockSmartContractInfo
     } catch (err: any) {
-      console && console.error("Error deploying smart contract:", err);
-      toast && toast.error("Failed to deploy smart contract");
+      console.error("Error deploying smart contract:", err);
+      toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
       return null
     }
@@ -91,59 +86,6 @@ if ( {) {
     isLoading;
 
     deploymentStatus
-;
-  const deploySmartContract = async (
-    contract_code: string;
-    options: DeploymentOptions): Promise < SmartContractInfo | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ("You must be logged in to deploy a contract"),
-      return null;
-    }
-    try {
-      setDeploymentStatus ('deploying');
-;
-      // This would normally connect to MetaMask or other Web3 provider;
-      // For now, we'll just simulate success;
-      const mockTransactionHash = `0x${Array.from ({length: 64}, () =>;
-        Math.floor (Math.random () * 16).to_string (16)).join ('')}`;
-;
-      const mockSmartContractInfo: SmartContractInfo = {
-        id: crypto.randomUUID ();
-        transaction_hash: mockTransactionHash;
-        network_name: options.network;
-        block_number: Math.floor (Math.random () * 1000000),
-        deployed_address: `0x${Array.from ({length: 40}, () =>;
-          Math.floor (Math.random () * 16).to_string (16)).join ('')}`;
-        contract_type: 'escrow';
-        created_at: new Date ().toISOString ();
-        created_by: user.id,
-        status: 'deployed';
-      }
-;
-      // Wait to simulate blockchain transaction time;
-      await new Promise (resolve => set_timeout (resolve, 2000));
-;
-      setDeploymentStatus ('success');
-      toast.success ("Smart contract deployed successfully!");
-;
-      return mockSmartContractInfo;
-    } catch (err: any) {
-      console.error ("Error deploying smart contract:", err);
-      toast.error ("Failed to deploy smart contract");
-      setDeploymentStatus ('error');
-      return null;
-    }
-  }
-;
-  return {
-    generateSolidityContract;
-    deploySmartContract;
-    is_loading;
-    deployment_status;
-
       setDeploymentStatus('deploying'),
       
       // This would normally connect to MetaMask or other Web3 provider
@@ -264,5 +206,3 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
-  }
-}

@@ -5,14 +5,3 @@ export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
   });
   const set_value = (value: unknown, ) =>: any {
     try {
-    }
-  }
-  return [storedValue, setValue] as const
-}
-      const valueToStore = value instanceof Function ? value (stored_value) : value;
-      window.local_storage.set_item (key, JSON.stringify (valueToStore));
-    } catch (_error) {
-      console.error ('Error setting local_storage:', _error);
-    }
-  }
-  return [stored_value, set_value] as const;

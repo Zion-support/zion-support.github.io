@@ -110,7 +110,6 @@ const industryApplications = [
                 <a;
                   href={solution.href}
 
-
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   Learn more <span aria-hidden="true">→</span>
@@ -131,8 +130,6 @@ const industryApplications = [
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Transforming Every Sector
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our AI solutions are designed to adapt and excel across diverse industries
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -156,8 +153,6 @@ const industryApplications = [
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Our Proven Process
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            From initial assessment to ongoing optimization, we guide you through every step
             of your AI transformation journey.
           </p>
         </div>

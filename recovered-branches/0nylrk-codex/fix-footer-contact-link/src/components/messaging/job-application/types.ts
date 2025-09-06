@@ -25,15 +25,8 @@ export interface Job {;
 export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
-
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
-}
-
-
-  is_open: boolean;
-  on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>;
 }
 

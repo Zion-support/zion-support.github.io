@@ -12,21 +12,12 @@
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
-export const innovative2026AIServices: Innovative2026AIService[] = [
-  // AI-Powered Business Intelligence
-  {
     period: '/month',
     description:
       'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
@@ -87,18 +78,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.',
-    launchDate: '2025-03-15',
-    customers: 1800,
-    rating: 4 && 4.9,
-    reviews: 950,
-  },
-
     }
     realImplementation: true
     implementationDetails:

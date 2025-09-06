@@ -1,27 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
   Code
   Copy
   RefreshCw
@@ -32,10 +9,6 @@ import React, { useState } from 'react';
   Upload
   Settings
   Eye;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
   Code,
   Copy,
   RefreshCw,
@@ -44,8 +17,6 @@ import {
   ArrowRight,
   Download,
   Upload,
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {;
   const [inputJson, setInputJson] = useState('');
@@ -56,9 +27,6 @@ export default function JSONFormatterPage() {;
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
 
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-      setFormattedJson('');    }        ? JSON && JSON.stringify(parsed);
-        : JSON && JSON.stringify(parsed, null, indentSize);
 
       setIsValid(true);
       setErrorMessage('');
@@ -108,7 +76,6 @@ export default function JSONFormatterPage() {;
                   <label className='text-sm text-gray-300'>Indent:</label>;
             </p>
           </div>
-
           {/* Settings Bar */}
           <Card className="p-6 bg-gray-800 border border-gray-700 mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -135,7 +102,6 @@ export default function JSONFormatterPage() {;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
-
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -149,7 +115,6 @@ export default function JSONFormatterPage() {;
                   </label>;
                 </div>;
               </div>;
-
                 <Button
                   onClick={loadSampleJSON}
                   variant="outline"
@@ -175,10 +140,6 @@ export default function JSONFormatterPage() {;
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
-                    <strong>Error:</strong> {errorMessage}
-                  </div>;
-                )}
-                <div className='flex space-x-3'>
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson && inputJson.trim()}
@@ -216,17 +177,6 @@ export default function JSONFormatterPage() {;
                 </div>;
               </div>;
             </Card>;
-
-
-            {/* Output Section */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>;
-              <div className='flex items-center justify-between mb-6'>;
-                <h3 className='text-2xl font-bold text-white flex items-center'>;
-                  <CheckCircle className='w-6 h-6 mr-3 text-cyan-400' />;
-                  Formatted Output;
-                </h3>;
-                {formattedJson && (;
-                  <div className='flex items-center space-x-2'>;
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -236,7 +186,6 @@ export default function JSONFormatterPage() {;
                       <Copy className='w-4 h-4 mr-2' />;
                       Copy;
                     </Button>;
-                    <Button
                 )}
               </div>
             </Card>
@@ -317,8 +266,6 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
-      {/* Use Cases */}
-            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -523,12 +470,6 @@ export default function JSONFormatterPage() {;
               </p>;
               </ul>;
             </Card>;
-          </div>;
-        </div>;
-      </section>;
-
-              View Pricing;
-            </Button>;
           </div>;
         </div>;
       </section>;

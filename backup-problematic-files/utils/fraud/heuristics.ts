@@ -1,47 +1,3 @@
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-const suspiciousLinkHosts = [
-  'paypal.me'
-  'cash.app'
-  'venmo.com'
-  'wa.me'
-  't.me'
-  'telegram.me'
-  'whatsapp.com'
-  'westernunion.com'
-  'moneygram.com'
-];
-const suspiciousPhrases = [
-  'whatsapp me'
-  'telegram me'
-  'contact me on whatsapp'
-  'cashapp only'
-  'crypto only'
-  'send crypto'
-  'wire transfer'
-  'gift card'
-  'western union'
-  'off-platform payment'
-  'outside payment'
-  'pay outside'
-  'pay me directly'
-  'dm me on'
-  'reach me on whatsapp'
-  'skype me'
-  'email me at'
-];
-const vagueScammyJobPhrases = [
-  'easy work'
-  'quick money'
-  'no experience needed'
-  'work from home and earn fast'
-  'daily payouts'
-  'earn $\\d+ per day'
-];
-function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some(host => lower.includes(host));
-}
-
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
   return suspiciousPhrases.filter(p => lower.includes(p));
@@ -124,9 +80,6 @@ function containsVagueJobClaims (text: string): string[] {
   });
   return reasons;
 }
-  ) => Promise<number>;
-}
-
 export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
@@ -254,7 +207,6 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
-}
 }
 
 export function isHighRiskEvent(result: HeuristicResult): boolean {

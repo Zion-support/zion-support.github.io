@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ServiceIncludesProps {
   // Add props here as needed
-}
 export default function ServiceIncludes({ }: ServiceIncludesProps) {
   return (
     <div>

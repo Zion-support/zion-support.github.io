@@ -59,7 +59,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-  ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -69,7 +68,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features';
         'Mobile App AccessAPI Access (1000 calls/month)'
       ]
@@ -77,8 +75,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'quantum' as const
       popular: false
       cta: 'Start Free Trial'
-      color: 'from-blue-500 to-indigo-600'
-    }
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -86,7 +82,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features';
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ]
@@ -94,8 +89,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'holographic' as const
       popular: true
       cta: 'Start Free Trial'
-      color: 'from-purple-500 to-pink-600'
-    }
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -103,7 +96,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance';
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ]
@@ -113,16 +105,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       cta: 'Contact Sales'
       color: 'from-yellow-500 to-orange-600'
     }
-  ]
-  // Featured services showcase
-  const featuredServices = [
-    {
-      name: 'AI Quantum Financial Trading'
-      price: '$2,999/month'
-      description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy'
-      features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies']
-      link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading'
-      icon: ''
   ];
 
   // Featured services showcase
@@ -133,7 +115,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
       features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
-      icon: '',
       color: 'from-green-500 to-emerald-600'
     }
     {
@@ -178,168 +159,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-      avg_price: '$2, 499 / month',
-      savings: 'Save 60 - 80% vs. competitors',
-      icon: Brain,
-      color: 'from - purple - 500 to - indigo - 600';
-    },
-    {
-      name: 'Quantum & Emerging Tech 2026',
-      description: 'Cutting - edge quantum and emerging technologies',
-      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
-      avg_price: '$4, 199 / month',
-      savings: 'Save 70 - 85% vs. competitors',
-      icon: Atom,
-      color: 'from - blue - 500 to - cyan - 600';
-    },
-    {
-      name: 'Enterprise IT Solutions 2026',
-      description: 'Advanced enterprise infrastructure and security',
-      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
-      avg_price: '$5, 199 / month',
-      savings: 'Save 50 - 75% vs. competitors',
-      icon: Shield,
-      color: 'from - red - 500 to - pink - 600';
-    },
-    {
-      name: 'Innovative Micro SaaS 2026',
-      description: 'Creative and practical SaaS tools',
-      services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
-      avg_price: '$299 / month',
-      savings: 'Save 40 - 60% vs. competitors',
-      icon: Rocket,
-      color: 'from - green - 500 to - emerald - 600';
-    },
-    {
-      name: 'Healthcare & Biotech 2026',
-      description: 'AI - powered healthcare and biotechnology solutions',
-      services: ['AI Healthcare DiagnosticsDNA Computing PlatformNeuromorphic Healthcare AIQuantum Medical Imaging'],
-      avg_price: '$3, 999 / month',
-      savings: 'Save 65 - 80% vs. competitors',
-      icon: FlaskConical,
-      color: 'from - blue - 500 to - teal - 600';
-    },
-    {
-      name: 'Financial Technology 2026',
-      description: 'Advanced financial and trading solutions',
-      services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
-      avg_price: '$4, 499 / month',
-      savings: 'Save 55 - 75% vs. competitors',
-      icon: DollarSign,
-      color: 'from - green - 500 to - emerald - 600';
-    }
-  ],
-  // Enhanced pricing tiers with more realistic and comprehensive offerings;
-  const pricing_tiers = [;
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billing_cycle === 'monthly' ? 99 : 79,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
-      features: [;
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24 / 7)30 - Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
-        'Mobile App AccessAPI Access (1000 calls / month)';
-      ],
-      icon: <Sparkles className="w - 8 h - 8" />,
-      variant: 'quantum' as const,
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'from - blue - 500 to - indigo - 600';
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
-      features: [;
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24 / 7)60 - Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
-        'Custom IntegrationsAPI Access (10, 000 calls / month)Users Collaboration ToolsAdvanced Workflow Automation';
-      ],
-      icon: <Star className="w - 8 h - 8" />,
-      variant: 'holographic' as const,
-      popular: true,
-      cta: 'Start Free Trial',
-      color: 'from - purple - 500 to - pink - 600';
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
-      period: billing_cycle === 'monthly' ? '/month' : '/month',
-      savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
-      features: [;
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90 - Day Free TrialEnterprise Analytics & BI24 / 7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
-        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite - label SolutionsCustom SLA AgreementsOn - site Implementation';
-      ],
-      icon: <Crown className="w - 8 h - 8" />,
-      variant: 'quantum - advanced' as const,
-      popular: false,
-      cta: 'Contact Sales',
-      color: 'from - yellow - 500 to - orange - 600';
-    }
-  ],
-  // Featured services showcase;
-  const featured_services = [;
-    {
-      name: 'AI Quantum Financial Trading',
-      price: '$2, 999 / month',
-      description: 'Revolutionary AI - powered quantum trading with 99.9% accuracy',
-      features: ['Quantum - inspired AI algorithms_real - time market analysis_automated trading strategies'],
-      link: 'https://ziontechgroup.com / services / ai - quantum - financial - trading',
-      icon: '',
-      color: 'from - green - 500 to - emerald - 600';
-    },
-    {
-      name: 'Zero Trust Network Architecture 2026',
-      price: '$6, 999 / month',
-      description: 'ArrowRight - generation network security with continuous verification',
-      features: ['Continuous verification_micro - segmentation_real - time threat detection'],
-      link: 'https://ziontechgroup.com / services / zero - trust - network - architecture - 2026',
-      icon: '',
-      color: 'from - red - 500 to - pink - 600';
-    },
-    {
-      name: 'AI Healthcare Diagnostics Platform',
-      price: '$1, 499 / month',
-      description: 'AI - powered medical diagnostics with 95% accuracy rate',
-      features: ['Medical image analysis_diagnosis prediction_treatment recommendations'],
-      link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics',
-      icon: '',
-      color: 'from - blue - 500 to - cyan - 600';
-    },
-    {
-      name: 'Quantum Internet Security Platform',
-      price: '$4, 999 / month',
-      description: 'Unbreakable quantum encryption for the future internet',
-      features: ['Quantum key distribution_post - quantum cryptography_real - time threat detection'],
-      link: 'https://ziontechgroup.com / services / quantum - internet - security - platform',
-      icon: '',
-      color: 'from - blue - 500 to - cyan - 600';
-    }
-  ],
-  return (
-    <UltraFuturisticBackground variant="holographic" intensity="high">;
-      <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white relative overflow - hidden">;
-        <Head>;
-          <title > Enhanced 2026 Pricing - Zion Tech Group</title>;
-          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting - edge solutions." />;
-          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />;
-          <link rel="icon" href="/favicon.svg" />;
-          {/* Open Graph */}
-          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
-          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
-          <meta property="og:type" content="website" />;
-          <meta property="og:url" content="https://ziontechgroup.com / pricing - enhanced - 2026" />;
-          <meta property="og:image" content="https://ziontechgroup.com / og - image.svg" />;
-          {/* Twitter */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-        </Head>
-
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -380,21 +199,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               Achieve remarkable ROI with transparent, competitive pricing.;
             </p>;
             {/* Billing Cycle Toggle */}
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
-              Achieve remarkable ROI with transparent, competitive pricing.
-            </p>
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-              <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
-                }`}
-              >
-                <span
-                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
-                  }`}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -470,15 +274,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                           Most Popular
                         </div>
                       </div>
-                    variant={tier.variant}
-                    className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
-                  >;
-                    {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
                     )}
                     
                     )  } catch (error) {
@@ -489,7 +284,11 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-                          {tier.icon}
+                          {tier.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -553,25 +352,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Service Categories & Pricing;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Explore our comprehensive service categories with transparent pricing and competitive advantages;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {service_categories.map ((category, index) => (
-                <motion.div;
-                  key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                      </ul>
-                      
                       <Button
                         variant="primary"
                         size="sm"
@@ -591,8 +371,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -641,25 +419,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Featured Services;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Discover our most popular and innovative services that are transforming businesses worldwide;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-                  key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                      </ul>
-                      
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -725,42 +484,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         </div>
       </div>
     </UltraFuturisticBackground>
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
   )
   } catch (error) {
     console.error("Error:", error);

@@ -1,21 +1,3 @@
-
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'
-	website: 'https://ziontechgroup.com'
-}
-
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 }
@@ -3046,11 +3028,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Production-ready feature store with governance and lineage',
     price: '$249',
     period: '/month',
-    marketPosition: 'Accelerates ML platform maturity versus building from scratch.',
-    targetAudience: 'ML platform teams and data engineering',
-    trialDays: 14,
-    setupTime: '1-3 days',
-    category: 'AI & Data',
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'];
@@ -3063,31 +3040,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-15', customers: 7,
     rating: 4.7,
     reviews: 4
-  },
-  {
-    id: 'agentic-browser-recorder-pro',
-    name: 'Agentic Browser Recorder Pro',
-    tagline: 'Record workflows; export resilient agent scripts with retries',
-    price: '$89',
-    period: '/month',
-    description:
-      'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
-    features: [
-      'Auto-wait and idempotent steps',
-      'Proxies and device profiles',
-      'Run history and replays',
-      'Webhooks and schedules',
-    tagline: 'Record workflows, export resilient agent scripts with retries',
-    price: '$89',
-    period: '/month',
-    description: 'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
-    features: [
-      'DOM diff–based selector healingAuto-wait and idempotent steps',
-      'Proxies and device profilesRun history and replays',
-      'Webhooks and schedules'
-    ],
-    popular: false,
-    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup && ziontechgroup.com/services/agentic-browser-recorder-pro',
@@ -3100,7 +3052,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Playwright, Workers, Next && Next.js'],
     integrations: ['S3, Slack, Email'],
     useCases: ['Ops automation, QA journeys, Admin agents'],
-    roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI && UI.Vision'],
     marketSize: '$12B RPA',
     growthRate: '25% CAGR',
@@ -3117,24 +3068,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
     price: '$299',
     period: '/month',
-    description:
-      'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
-    features: [
-      'SAML/OIDC providers ready-to-go',
-      'SCIM provisioning adapters',
-      'End-to-end test suites',
-      'Branding and theming',
-      'Audit logs and support runbooks',
-    description: 'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
-    features: [
-      'SAML/OIDC providers ready-to-goSCIM provisioning adapters',
-      'End-to-end test suitesBranding and theming',
-      'Audit logs and support runbooks'
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
     targetAudience: 'SaaS teams targeting enterprise',
     trialDays: 14,
     setupTime: '3-7 days',
@@ -3143,7 +3076,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     technology: ['NextAuth, WorkOS/Custom, Node && Node.js'],
     integrations: ['Okta, Azure AD, Google Workspace, OneLogin'],
     useCases: ['SSO rollout, Enterprise pilots, User lifecycle'],
-    roi: 'Shorten security review time by 5070%',
     competitors: ['WorkOS, Auth0 PS'],
     marketSize: '$6B identity',
     growthRate: '20% CAGR',
@@ -3157,32 +3089,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'api-performance-optimizer-pro',
     name: 'API Performance Optimizer Pro',
-    tagline:
-      'Latency reduction, rate-limit tuning, and load testing as-a-service',
-    price: '$99',
-    period: '/month',
-    description:
-      'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
-    features: [
-      'Synthetic latency monitoring',
-      'Adaptive rate-limit tuner',
-      'Multi-region load testing',
-      'Schema & contract validation',
-      'Auto-caching recommendations',
-      'Change-impact reports',
-    tagline: 'Latency reduction, rate-limit tuning, and load testing as-a-service',
-    price: '$99',
-    period: '/month',
-    description: 'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
-    features: [
-      'Synthetic latency monitoringAdaptive rate-limit tuner',
-      'Multi-region load testingSchema & contract validation',
-      'Auto-caching recommendationsChange-impact reports'
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
     targetAudience: 'Platform and API teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -3191,22 +3097,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     technology: ['K6, OpenAPI, Next && Next.js, Cloud Functions'],
     integrations: ['Postman, GitHub, GitLab, Jenkins'],
     useCases: ['Latency SLOs, Regression detection, Peak readiness'],
-    roi: 'Cut p95 latency by 2560% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'],
     marketSize: '$12B APM',
     growthRate: '18% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:
-      'Synthetic test agents, results store, optimization engine, and IaC exporter.',
-    launchDate: '2025-03-01',
-    customers: 12,
-    implementationDetails: 'Synthetic test agents, results store, optimization engine, and IaC exporter.',
-    launchDate: '2025-03-01',
-    customers: 12,
-    rating: 4.8,
-    reviews: 9
   },
   {
     id: 'ai-rag-starter-blueprint',
@@ -3214,23 +3110,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Production-ready retrieval augmented generation stack with evals',
     price: '$149',
     period: '/month',
-    description:
-      'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
-    features: [
-      'Document ingestion & chunking',
-      'Embeddings & vector DB (Pinecone/Weaviate/PGVector)',
-      'Prompt templates & guardrails',
-      'Evaluation harness (quality, toxicity, grounding)',
-      'Observability dashboards',
-      'One-click deploys',
-    description: 'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
-    features: [
-      'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)',
-      'Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)',
-      'Observability dashboardsOne-click deploys'
-    ],
-    popular: true,
-    icon: '',
     color: 'from-cyan-600 to-purple-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-rag-starter-blueprint',
@@ -5128,4 +5007,8 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
   }
 ];
+;
+
+
+
 

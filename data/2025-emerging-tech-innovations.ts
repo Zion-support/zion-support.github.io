@@ -31,13 +31,11 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -49,78 +47,6 @@
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-    id: 'quantum-internet-protocol-stack'
-    name: 'Quantum Internet Protocol Stack'
-    tagline:
-      'Next-generation quantum internet infrastructure for unbreakable communication'
-    price: '$6,999'
-    period: '/month'
-    description:
-      'Revolutionary quantum internet protocol stack that enables quantum-secure communication, quantum key distribution, and quantum networking across global infrastructure.'
-      'Quantum key distribution (QKD) protocols'
-      'Quantum internet routing and switching'
-      'Quantum memory and storage systems'
-      'Quantum repeater networks'
-      'Quantum entanglement distribution'
-      'Post-quantum cryptography integration'
-      'Quantum network security and monitoring'
-      'Multi-protocol quantum communication'
-      'Quantum internet governance and compliance'
-      'Integration with classical internet infrastructure'
-    ]
-    popular: true
-    color: 'from-indigo-600 to-purple-700'
-    textColor: 'text-indigo-400'
-    link: 'https://ziontechgroup.com/quantum-internet-protocol-stack'
-    marketPosition: 'Pioneering quantum internet infrastructure platform'
-    targetAudience:
-      'Telecommunications companies, Government agencies, Research institutions, Financial institutions'
-    trialDays: 14
-    setupTime: '6-8 weeks'
-    category: 'Quantum Computing & AI'
-    realService: true
-    technology: [
-      'Qiskit, Cirq, Quantum protocols, Network protocols, Python, C++'
-    ]
-    integrations: [
-      'Classical internet infrastructure, Quantum hardware, Cloud platforms, Security systems'
-    ]
-    useCases: [
-      'Secure government communications, Financial transactions, Healthcare data, Critical infrastructure'
-    ]
-    roi: 'Enable quantum-secure communications and future-proof infrastructure'
-    competitors: [
-      'IBM Quantum Network, Google Quantum Internet, China Quantum Network'
-    ]
-    marketSize: '$15B+ quantum internet market'
-    growthRate: '200% YoY'
-    variant: 'quantum-internet-enterprise'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-      'Custom quantum internet infrastructure with protocol development and hardware integration'
-    launchDate: '2024-08-01'
-    customers: 18
-    rating: 4.9
-    reviews: 12
-    benefits: [
-      'Unbreakable quantum encryption'
-      'Future-proof infrastructure'
-      'Global quantum network access'
-      'Regulatory compliance'
-      'Competitive advantage'
-    ]
-    capabilities: [
-      'Quantum key distribution'
-      'Quantum internet routing'
-      'Quantum memory systems'
-      'Quantum repeater networks'
-      'Quantum entanglement distribution'
-    ]
-    marketAdvantage:
-      'First commercial quantum internet protocol stack with proven infrastructure'
-  }
-  // Autonomous Vehicle AI Services
   {
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
@@ -1153,7 +1079,3 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-  }
-];
-
-;

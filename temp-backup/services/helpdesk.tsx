@@ -1,7 +1,3 @@
-interface HelpdeskProps {;
-  // Add props here as needed;
-}
-export default function Helpdesk(): any ({ }: HelpdeskProps) {;
   return (
     <div>;
       <h1>Helpdesk</h1>;

@@ -9,4 +9,3 @@ const AIAutonomousIncidentResponse = ({ className }) => {
   );
 };
 
-export default AIAutonomousIncidentResponse;

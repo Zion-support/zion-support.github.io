@@ -1,7 +1,3 @@
-import React, { useEffect, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
 type ProposalListItem = {
   id: string
   title: string
@@ -10,20 +6,6 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
-type ProposalListItem = {
-  id: string,
-  title: string,
-  target_institution: string,
-  regional_scope: string,
-  type: string,
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-
-export default function InternationalProposalsPage() {
-    fetch('/api/proposals')
-      .then((r) => r.json())
-      .then((d) => setItems(d.items |[]))
-      .catch(() => setItems([]))
-  }, [])
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
   return (

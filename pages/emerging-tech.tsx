@@ -1,31 +1,3 @@
-
-  return (
-    <Layout>
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
-;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
-export default function EmergingTechPage() {
-  const features = [
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation']
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
-
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'];
-
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -49,7 +21,6 @@ export default function EmergingTechPage() {
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
-                </div>
                 </a>
               ))}
             </div>
@@ -121,7 +92,6 @@ function EmergingTechPage() {
           </section>;
         </div>;
       </div>;
-
     </Layout>;
   );
   } catch (error) {

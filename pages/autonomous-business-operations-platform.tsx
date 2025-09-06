@@ -12,24 +12,6 @@
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  Bot, Brain, Cpu, Zap, Shield, Globe,
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
-      color: "from-blue-500 to-cyan-500"
-    },
     {
       icon: Brain,
       title: "Cognitive Business Intelligence",
@@ -107,7 +89,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
   return (
     <>
       <Head>
@@ -172,9 +153,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-                Transform your business with AI-powered autonomous operations that work 24/7, 
-                Transform your business with AI-powered autonomous operations that work 24/7,
-
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -204,8 +182,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -230,9 +206,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
-                </motion.div>
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -279,8 +252,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {capabilities.map((capability, index) => (
-                <motion.div
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -302,9 +273,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
-                </motion.div>
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -350,7 +318,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
-
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -377,10 +344,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                     <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.value}</div>
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
-                  </div>
-                </motion.div>
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -427,8 +390,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
-                <motion.div
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -499,7 +460,3 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
-    </>);
-},
-export default AutonomousBusinessOperationsPlatform,
-;

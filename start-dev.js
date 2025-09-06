@@ -1,5 +1,3 @@
-console.log('🚀 Starting development server...'),;
-
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
   shell: true;

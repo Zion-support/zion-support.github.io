@@ -1,5 +1,4 @@
 
-import { supabase } from "@/integrations/supabase/client",
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
@@ -34,8 +33,6 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
   return { logout }
 }
 ;
-      // Sign out
-      
       // Update state
       setUser(null)
     } catch (error) {
@@ -55,4 +52,3 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
     } catch (error) {;
       console.error("Error during logout:", error);
     }
-  return { logout }

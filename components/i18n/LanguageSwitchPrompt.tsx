@@ -1,9 +1,3 @@
-const localeLabelKey: Record<string, string> = {
-
-  en: "lang.english"
-  pt: "lang.portuguese"
-  es: "lang.spanish"
-  ar: "lang.arabic"
 }
 export default function LanguageSwitchPrompt() {
 const localeLabelKey: Record<string, string> = {
@@ -17,9 +11,6 @@ export default function LanguageSwitchPrompt() {;
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
     const key = "langPromptShown";
-  }
-  const decline = () => {
-    localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
   }
 

@@ -32,4 +32,3 @@ describe('AppMinimal'
     expect(screen.getByRole('main'
   it('displays correct content'
   it('handles user interactions'
-});

@@ -1,15 +1,7 @@
-
-
-export type SitemapItem = {
-
-
-export type SitemapItem = {;
   path: string;
   label: string;
   description?: string;
   priority?: number;
-  change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  lastmod?: string;
   required_auth?: boolean;
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
   children?: SitemapItem[];
@@ -35,78 +27,42 @@ export const public_pages: SitemapItem[] = [;
     path: '/contact';
     label: 'Contact';
     description: 'Get in touch with the Zion team',
-    priority: 0 && 0.8, 
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-    priority: 0.8,
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/talent';
     label: 'Talent Directory';
     description: 'Browse skilled AI and tech professionals';
-    change_freq: 'daily',
-    lastmod: current_date}
   {
     path: '/marketplace';
     label: 'Marketplace'
     description: 'Explore AI services, products and equipment';
-    change_freq: 'daily',
-    lastmod: current_date}
   {
     path: '/services';
     label: 'Services';
     description: 'Find professional tech and AI services';
-    change_freq: 'weekly',
-    lastmod: current_date}
   {
     path: '/equipment';
     label: 'Equipment';
     description: 'Specialized hardware and tech equipment';
-    change_freq: 'weekly',
-    lastmod: current_date}
   {
     path: '/categories';
     label: 'Categories';
     description: 'Browse service and talent categories';
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/blog';
     label: 'Blog';
     description: 'Articles and insights about AI and tech';
-    change_freq: 'daily',
-    lastmod: current_date}
   {
     path: '/faq';
     label: 'FAQ';
     description: 'Frequently asked questions about Zion';
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/terms';
     label: 'Terms of Service';
     description: 'Terms and conditions for using Zion';
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/privacy';
     label: 'Privacy Policy';
     description: 'How we handle your data';
-    lastmod: currentDate}];
-// Authentication Pages
-export const authPages: SitemapItem[] = [
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Authentication Pages;
-export const auth_pages: SitemapItem[] = [;
-  {
-    path: '/login';
-    label: 'Login';
-    description: 'Sign in to your account';
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/signup';
     label: 'Sign Up';
@@ -115,8 +71,6 @@ export const auth_pages: SitemapItem[] = [;
         path: '/signup / talent';
         label: 'Talent Registration';
         description: 'Sign up as a talent or creator';
-        change_freq: 'monthly',
-        lastmod: current_date}
       {
         path: '/signup / client';
         label: 'Client Registration';
@@ -131,32 +85,10 @@ export const auth_pages: SitemapItem[] = [;
     path: '/forgot - password';
     label: 'Forgot Password';
     description: 'Reset your password';
-    lastmod: currentDate}];
-// Talent/Creator Routes - Requires authentication and appropriate role
-export const talentRoutes: SitemapItem[] = [
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Talent / Creator Routes - Requires authentication and appropriate role;
-export const talent_routes: SitemapItem[] = [;
-  {
-    path: '/talent - dashboard';
-    label: 'Talent Dashboard';
-    description: 'Overview for talent users';
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.9;
-    change_freq: 'daily',
-    lastmod: current_date}
   {
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
     description: 'Complete your talent profile';
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.8;
-    change_freq: 'monthly',
-    lastmod: current_date}
   {
     path: '/portfolio';
     label: 'Portfolio';
@@ -170,58 +102,14 @@ export const talent_routes: SitemapItem[] = [;
     path: '/create - profile';
     label: 'Create Profile';
     description: 'Set up your talent profile';
-    lastmod: currentDate}];
-// Client/Employer Routes - Requires authentication and appropriate role
-export const clientRoutes: SitemapItem[] = [
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.7;
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Client / Employer Routes - Requires authentication and appropriate role;
-export const client_routes: SitemapItem[] = [;
-  {
-    path: '/client - dashboard';
-    label: 'Client Dashboard';
-    description: 'Overview for client users';
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.9;
-    change_freq: 'daily',
-    lastmod: current_date}
   {
     path: '/post - job';
     label: 'Post a Job';
     description: 'Create a new job listing';
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.8;
-    change_freq: 'weekly',
-    lastmod: current_date}
   {
     path: '/hiring - tracker';
     label: 'Hiring Pipeline';
     description: 'Track your hiring process';
-    lastmod: currentDate}];
-// Shared Routes - Authenticated Users
-export const sharedRoutes: SitemapItem[] = [
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.7;
-    change_freq: 'daily',
-    lastmod: current_date}];
-;
-// Shared Routes - Authenticated Users;
-export const shared_routes: SitemapItem[] = [;
-  {
-    path: '/messages';
-    label: 'Messages';
-    description: 'Your inbox and conversations';
-    required_auth: true;
-    priority: 0.9;
-    change_freq: 'hourly',
-    lastmod: current_date}
   {
     path: '/notifications';
     label: 'Notifications';
@@ -276,7 +164,7 @@ export const admin_routes: SitemapItem[] = [;
     description: 'Manage user disputes';
     lastmod: currentDate}];
 // Dynamic Path Patterns
-export const dynamicPaths = {
+export const dynamicPaths = {;
   talentProfile: '/talent/:id';
   projectDetails: '/project/:projectId';
   projectMilestones: '/project/:projectId/milestones';
@@ -285,7 +173,7 @@ export const dynamicPaths = {
   categoryDetails: '/categories/:slug'
   disputeDetails: '/dashboard/disputes/:disputeId'}
 // The complete sitemap
-export const completeSitemap: SitemapItem[] = [
+export const completeSitemap: SitemapItem[] = [;
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -297,7 +185,7 @@ export const getAccessibleRoutes = (
   isAuthenticated: boolean
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
-  // Public routes accessible to everyone
+  // Public routes accessible to everyone;
   let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes
   if (isAuthenticated) {
@@ -306,20 +194,14 @@ export const getAccessibleRoutes = (
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
     }
-    if (userType === 'employer' |userType === 'buyer') {
-      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
+    ;
+    if (userType === 'employer' || userType === 'buyer') {;
+      accessibleRoutes = [...accessibleRoutes, ...clientRoutes],;
     }
-    if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
+    ;
+    if (userType === 'admin') {;
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
   }
-  return accessibleRoutes
-}
-
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.8;
-    change_freq: 'daily',
-    lastmod: current_date}];
   return accessibleRoutes;
 };

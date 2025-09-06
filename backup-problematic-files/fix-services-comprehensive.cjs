@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,10 +78,14 @@ module.exports = ServicesComprehensiveFixer;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-services-comprehensive.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
       this.log(' Comprehensive fix for data/services.ts...')
@@ -92,6 +101,7 @@ const fs = require('fs')
       content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"
 <<<<<<< HEAD:backup-problematic-files/fix-services-comprehensive.cjs
 <<<<<<< HEAD
+      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-services-comprehensive.cjs
@@ -117,7 +127,11 @@ const fs = require('fs')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-services-comprehensive.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

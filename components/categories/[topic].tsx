@@ -72,13 +72,6 @@ export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  return { props: { topic, posts } }
-}
-export default TopicPage;      </Head>
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
-        <div className="mb-6">
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
@@ -95,8 +88,6 @@ export default TopicPage;      </Head>
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-
-  const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }

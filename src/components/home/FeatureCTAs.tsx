@@ -1,7 +1,6 @@
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
-
 export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {;
       key: 'ai_talent_matching',;
@@ -174,139 +173,6 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
           </p>;
         </div>;
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {features && features.map((feature, index) => (;
-            <Card
-              key={index}
-              className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
-              <CardHeader className='pb-2'>;
-                <div className='flex justify-between items-start'>                  {feature && feature.icon}
-                  {feature && feature.badge && (;
-                    <Badge
-                      variant='secondary'
-                      className='bg-primary/20 text-primary'>                      {t(`badges.${feature && feature.badge}`)}
-                    </Badge>;
-                  )}
-                </div>;
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">;
-  return (
-    <section
-      className={cn(
-        "py-16 bg-gradient-to-b from-background to-background/90"
-
-        className
-      )}
-      style={style}
-    >
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
-            {t('home.features_heading')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('home.features_subheading')}
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
-              <CardHeader className="pb-2">
-                <div className="flex justify-between items-start">
-                  {feature.icon}
-                  {feature.badge && (
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">
-                      {t(`badges.${feature.badge}`)}
-                    </Badge>
-                  )}
-                </div>;
-                <CardTitle className='mt-4'>;
-                  {t(`features.${feature && feature.key}`)}
-                </CardTitle>;
-                {feature && feature.descriptionKey && (;
-                  <CardDescription className='line-clamp-2'>                    {t(`features.${feature && feature.descriptionKey}`)}                <CardTitle className="mt-4">{t(`features.${feature && feature.key}`)}</CardTitle>;
-                {feature && feature.descriptionKey && (;
-                  <CardDescription className="line-clamp-2">;
-                    {t(`features.${feature && feature.descriptionKey}`)}
-                  </CardDescription>;
-                )}
-              </CardHeader>;
-              <CardContent>;
-                {feature && feature.detailsKey && (;
-                  <p className='text-sm text-muted-foreground'>                    {t(`features.${feature && feature.detailsKey}`)}                  <p className="text-sm text-muted-foreground">;
-                    {t(`features.${feature && feature.detailsKey}`)}
-                  </p>;
-                )}
-              </CardContent>;
-              <CardFooter>;
-                <Button asChild className='w-full gap-1'>;
-                  <Link
-                    href = {feature && feature.link,}
-                    aria-label={`${t('general && general.explore')} ${t(`features.${feature && feature.key}`)}`}
-                    className='cursor-pointer'
-                    {...(feature.key === 'ai_talent_matching' && {
-                      'data-testid': 'explore-ai-talent-matching-cta'
-                    })}
-                  >
-                    <span>
-                      {t('general.explore')} {t(`features.${feature.key}`)}
-                    </span>
-                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
-                    href={feature && feature.link}
-                    aria-label={`${t('general && general.explore')} ${t(`features.${feature && feature.key}`)}`}
-                    className="cursor-pointer"
-                    {...(feature && feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}>;
-                    <span>{t('general && general.explore')} {t(`features.${feature && feature.key}`)}</span>;
-                    <ArrowRight className="h-4 w-4" />;
-                  </Link>;
-                </Button>;
-              </CardFooter>;
-            </Card>;
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  );  );
-          ))}
-        </div>
-      </div>
-    </section>
-  );  )
-}
-        </div>;
-      </div>;
-    </section>;
-  );  );
-}
-  )
-}
-import React from 'react';
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
-
-interface FeatureCTAsProps {
-  class_name?: string;
-  style?: React.CSSProperties;
-export /**
- * FeatureCTAs - Function description
- */
-function FeatureCTAs() {
-  const { t } = use_translation ();  const features = [    {
-      key: 'ai_talent_matching',
-      description_key: 'ai_talent_matching_desc',
-      details_key: 'ai_talent_matching_details',
-      icon: (
-        <Search className='h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue - 700' />),
-      link: '/match',
     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
@@ -398,54 +264,6 @@ function FeatureCTAs() {
 
         className
       )}
-  ];
-      >;
-      <div className='container mx - auto px - 4'>;
-        <div className='mb - 12 text - center'>;
-          <h2 className='text - 3xl font - bold tracking - tight mb - 3'>;
-            {t ('home.features_heading')}
-          </h2>;
-          <p className='text - lg text - muted - foreground max - w-3xl mx - auto'>;
-            {t ('home.features_subheading')}
-          </p>;
-        </div>;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-          {features.map ((feature, index) => (
-            <Card;
-              key={index}
-              className='overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50';
-            >;
-              <CardHeader className='pb - 2'>;
-                <div className='flex justify - between items - start'>                  {feature.icon}
-                  {feature.badge && (
-                    <Badge;
-                      variant='secondary';
-                      className='bg - primary / 20 text - primary';
-                    >                      {t (`badges.${feature.badge}`)}
-                    </Badge>)}
-                </div>;
-                    <Badge variant="secondary" className="bg - primary / 20 text - primary">;
-  return (
-    <section;
-      className={cn (
-        "py - 16 bg - gradient - to - b from - background to - background / 90";
-        class_name)}
-      style={style}
-    >;
-      <div className="container mx - auto px - 4">;
-        <div className="mb - 12 text - center">;
-          <h2 className="text - 3xl font - bold tracking - tight mb - 3">;
-            {t ('home.features_heading')}
-          </h2>;
-          <p className="text - lg text - muted - foreground max - w-3xl mx - auto">;
-            {t ('home.features_subheading')}
-          </p>;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {features.map ((feature, index) => (
-            <Card key={index} className="overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50">;
-              <CardHeader className="pb - 2">;
-                <div className="flex justify - between items - start">;
                   {feature.icon}
                   {feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
@@ -457,9 +275,6 @@ function FeatureCTAs() {
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-                  <Link
-                    href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
@@ -480,6 +295,3 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
-;
-
-

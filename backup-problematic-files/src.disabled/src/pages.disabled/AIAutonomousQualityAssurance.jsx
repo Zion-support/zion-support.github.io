@@ -9,4 +9,3 @@ const AIAutonomousQualityAssurance = ({ className }) => {
   );
 };
 
-export default AIAutonomousQualityAssurance;

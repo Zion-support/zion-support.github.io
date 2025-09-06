@@ -1,12 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  }
-
-  return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');    return res && res.status(201).json({ ok: true })
   }
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 ;
 export default async /**

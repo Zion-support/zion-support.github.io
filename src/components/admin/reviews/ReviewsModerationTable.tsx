@@ -88,6 +88,7 @@ import { Review, ReviewStatus } from "@/types/reviews",
 
 import {
   Dialog,
+Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -104,6 +105,31 @@ interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
   onRefresh: () => void
+      });
+      on_refresh ();
+      setViewDetailsOpen (false);
+    },
+    on_error: (error: Error, ) => {
+      toast ({
+        title: 'Error',
+        description: `Failed to update review: ${error.message}`,
+        variant: 'destructive',
+      });
+    },
+  });
+  const get_initials = (name: string, ) =>: any {
+    return name;
+      .split (' ');
+      .map (number => n[0]);
+      .join ('');
+      .toUpperCase ();
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+
+
 }
 
 
@@ -123,18 +149,6 @@ interface ReviewsModerationTableProps {
         description: `Review has been ${data.status}.`}),
       onRefresh(),
       setViewDetailsOpen(false)
-    }
-    onError: (error: Error,) => {
-      toast({
-  }
-        variant: "destructive"})
-    }}),
-
-  if (isLoading) {
-
-        title: 'Error'
-        description: `Failed to update review: ${error.message}`
-        variant: 'destructive'
       })
     }
   })
@@ -179,107 +193,15 @@ if ( {) {
                         ) : (;
                           <User className='h-4 w-4' />;
                         )}
-                      </AvatarFallback>;
-                    )}
                     )}
                   </div>;
                 </div>;
               </TableCell>;
-              <TableCell>{renderStars(review && review.rating)}</TableCell>;
-              <TableCell>;
-                {format(new Date(review && review.created_at), 'MMM d, yyyy')}
-              </TableCell>;
-              <TableCell>;
-                <Badge variant='outline'>;
-                  {review && review.status.charAt(0).toUpperCase() +;
-                    review && review.status.slice(1)}
-                </Badge>;
-              </TableCell>;
-              <TableCell>;
-                {review && review.report_count > 0 ? (;
-                  <Badge variant='destructive'>{review && review.report_count}</Badge>;
-                ) : (;
-                  'None';
-                )}
-              </TableCell>;
-              <TableCell className='text-right'>;
-                <div className='flex justify-end gap-2'>;
-                  {review && review.status === 'pending' && (;
-                    <>;
-                      <Button
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleApprove(review && review.id)}
-                        disabled={isPending}                      >;
-                        <Check className='h-4 w-4 text-green-500' />;
-                      </Button>;
-                      <Button
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleReject(review && review.id)}
-                        disabled={isPending}                      >;
-                        <X className='h-4 w-4 text-red-500' />;
                       </Button>;
                     </>;
                   )}
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
-                      <Button variant='ghost' size='sm' className='h-8 w-8 p-0'>;
-                        <MoreHorizontal className='h-4 w-4' />;
-                      </Button>;
-                    </DropdownMenuTrigger>;
-                    <DropdownMenuContent align='end'>;
-                      <DropdownMenuItem
-                        onClick={() => handleViewDetails(review)}
-                      >;
-                        View details;
-                      </DropdownMenuItem>;
-                      {review && review.status === 'approved' && (;
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id
-                              status: 'rejected'
-                            })
-    updateReviewStatus({ reviewId, status: "approved" })
-  },
-
-                          onClick={() =>;
-                            updateReviewStatus({;
-                              reviewId: review && review.id,;
-                              status: 'rejected',;
-                            });
-
-                          }
-                        >;
-                          Mark as rejected;
-                        </DropdownMenuItem>;
-                      )}
-                      {review && review.status === 'rejected' && (;
-                        <DropdownMenuItem
-                          }
-                        >                          Mark as approved;
-                        </DropdownMenuItem>;
-                      )}
-            <TableHead > Reviewer</TableHead>;
-            <TableHead > Rating</TableHead>;
-            <TableHead > Date</TableHead>;
-            <TableHead > Status</TableHead>;
-            <TableHead > Reports</TableHead>;
-            <TableHead className='text - right'>Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {reviews.map (review => (            <TableRow key={review.id}>;
-              <TableCell>;
-                <div className='flex items - center gap - 2'>;
-                  <Avatar className='h - 8 w - 8'>;
-                    {review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage;
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
                       <AvatarFallback>
@@ -291,61 +213,6 @@ if ( {) {
                   </Avatar>
                   <div>
                     {review.is_anonymous ? (
-                      <span className='text - sm font - medium'>Anonymous</span>) : (
-                      <span className='text - sm font - medium'>;
-                        {review.reviewer_profile?.display_name || 'User'}
-                      </span>)}
-                  </div>;
-                </div>;
-              </TableCell>;
-              <TableCell>{render_stars (review.rating)}</TableCell>;
-              <TableCell>;
-                {format (new Date (review.created_at), 'MMM d, yyyy')}
-              </TableCell>;
-              <TableCell>;
-                <Badge variant='outline'>;
-                  {review.status.char_at (0).toUpperCase () +;
-                    review.status.slice (1)}
-                </Badge>;
-              </TableCell>;
-              <TableCell>;
-                {review.report_count > 0 ? (
-                  <Badge variant='destructive'>{review.report_count}</Badge>) : (
-                  'None')}
-              </TableCell>;
-              <TableCell className='text - right'>;
-                <div className='flex justify - end gap - 2'>;
-                  {review.status === 'pending' && (
-                    <>;
-                      <Button;
-                        size='sm';
-                        variant='outline';
-                        className='h - 8 w - 8 p - 0';
-                        on_click={() => handle_approve (review.id)}
-                        disabled={is_pending}                      >;
-                        <Check className='h - 4 w - 4 text - green - 500' />;
-                      </Button>;
-                      <Button;
-                        size='sm';
-                        variant='outline';
-                        className='h - 8 w - 8 p - 0';
-                        on_click={() => handle_reject (review.id)}
-                        disabled={is_pending}                      >;
-                        <X className='h - 4 w - 4 text - red - 500' />;
-                      </Button>;
-                    </>)}
-                  <DropdownMenu>;
-                    <DropdownMenuTrigger as_child>;
-                      <Button variant='ghost' size='sm' className='h - 8 w - 8 p - 0'>;
-                        <MoreHorizontal className='h - 4 w - 4' />;
-                      </Button>;
-                    </DropdownMenuTrigger>;
-                    <DropdownMenuContent align='end'>;
-                      <DropdownMenuItem;
-                        on_click={() => handleViewDetails (review)}
-                      >;
-                        View details;
-                      </DropdownMenuItem>;
                       {review.status === 'approved' && (
                         <DropdownMenuItem;
                           on_click={() =>;
@@ -365,30 +232,6 @@ if ( {) {
                               status: 'approved',
                             });
                           }
-                        >                          Mark as approved;
-                        </DropdownMenuItem>)}
-                    </DropdownMenuContent>;
-                  </DropdownMenu>;
-                </div>;
-              </TableCell>;
-                      </Button>
-                    </>
-                  )}
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-8 w-8 p-0"
-                      >
-                        <MoreHorizontal className="h-4 w-4" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
-                        View details
-                      </DropdownMenuItem>
-
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -406,8 +249,6 @@ if ( {) {
             </TableRow>
           ))}
 
-
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -423,15 +264,10 @@ if ( {) {
                           )
                         ) : (
                           <User className='h-4 w-4' />
-                    )}
-                  </Avatar>
-                  <div>
-                    <div className='font-medium'>
                       {selectedReview.is_anonymous
                         ? 'Anonymous'
                         : selectedReview.reviewer_profile?.display_name |
                           'User'}
-                    </div>
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
                 </div>
@@ -446,52 +282,16 @@ if ( {) {
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-                  )}
-                  {selectedReview && selectedReview.quality_rating && (;
-                    <Badge variant='outline'>;
-                      Quality: {selectedReview && selectedReview.quality_rating}/5;
-                    </Badge>;
-                  )}
-                  {selectedReview && selectedReview.timeliness_rating && (;
-                    <Badge variant='outline'>;
-                      Timeliness: {selectedReview && selectedReview.timeliness_rating}/5;
-                    </Badge>;
-                  )}
-                  {selectedReview && selectedReview.would_work_again !== undefined && (;
-                    <Badge
-
-
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>
                   )}
-                  <Button
-                    variant='destructive'
-                    onClick={() => handleReject(selectedReview && selectedReview.id)}
-                    disabled={isPending}                  >;
-                    Reject;
-                  </Button>;
-                  <Button
-                    onClick = {() => handleApprove(selectedReview && selectedReview.id),}
-                    disabled = {isPending,}
-                  >;
-                    Approve;
-                  </Button>;
-                </>;
-              )}
-              {selectedReview && selectedReview.status === 'approved' && (;
-                <Button
-                  variant='destructive'
-                  }
-                  disabled={isPending}                >;
                   Mark as Rejected;
                 </Button>;
               )}
               {selectedReview && selectedReview.status === 'rejected' && (;
                 <Button
-                  }
-                  disabled={isPending}                >;
                   Mark as Approved;
                 </Button>;
               )}
@@ -499,8 +299,6 @@ if ( {) {
           </DialogContent>;
         </Dialog>;
       )}
-};"
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -639,8 +437,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-
-
 }</AvatarFallback>) 
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
@@ -718,6 +514,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>);
 }</>);
 }"}
+}"
+    </>;
+  );
 }
-
-
+}

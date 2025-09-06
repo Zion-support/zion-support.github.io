@@ -9,4 +9,3 @@ const UseSecurityCompliance.js = ({ className }) => {
   );
 };
 
-export default UseSecurityCompliance.js;

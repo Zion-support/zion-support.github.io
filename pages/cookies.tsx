@@ -2,14 +2,6 @@ import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
-  Shield
-  Settings
-  Info
-  ExternalLink
-  ArrowRight
-  CheckCircle
-  XCircle
-  AlertTriangle
   Shield,
   Settings,
   Info,
@@ -238,7 +230,6 @@ export default function CookiePolicyPage() {;
             </div>;
           </div>;
         </section>;
-
         {/* Cookie Information */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -299,7 +290,6 @@ export default function CookiePolicyPage() {;
             </div>;
           </div>;
         </section>;
-
         {/* Contact Information */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -335,6 +325,7 @@ export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+origin/automation-improvements-final
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -345,62 +336,6 @@ export default function CookiesPage() {
             <li>Retention: session or shortterm</li>
             <li>Optout: browser settings and extensions</li>
           </ul>
-          <p className='text-gray-400 text-sm'>
-            Questions?{' '}
-            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
-              kleber@ziontechgroup.com
-            </a>
-          </p>
-        </div>
-  );
-  );
-
- <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-    </MainLayout>);
-}
-import { motion } from 'framer-motion';
-import Head from 'next / head';
-import Layout from '../components / Layout';
-export default /**
- * CookiesPage - Function description
- */
-function CookiesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <SEO;
-        title='Cookie Policy | Zion Tech Group';
-        description='Information about cookies used by Zion Tech Group.';
-        canonical='https://ziontechgroup.com / cookies/';
-      />;
-      <div className='container mx - auto px - 4 py - 24 text - white'>;
-        <div className='max - w-3xl mx - auto space - y-6'>;
-          <h1 className='text - 4xl md:text - 5xl font - bold'>Cookie Policy</h1>;
-          <p className='text - gray - 300'>;
-            We use minimal, privacy‑respecting analytics. Some third‑party;
-            embeds may set cookies. You can block non‑essential cookies via your;
-            browser.;
-          </p>;
-          <ul className='list - disc list - inside text - gray - 300 space - y-1'>;
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com / cookies/" />;
-      <div className="container mx - auto px - 4 py - 24 text - white">;
-        <div className="max - w-3xl mx - auto space - y-6">;
-          <h1 className="text - 4xl md:text - 5xl font - bold">Cookie Policy</h1>;
-          <p className="text - gray - 300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>;
-          <ul className="list - disc list - inside text - gray - 300 space - y-1">;
-<li > Purpose: performance and security</li>;
-            <li > Retention: session or short‑term</li>;
-            <li > Opt‑out: browser settings and extensions</li>;
-          </ul>;
-          <p className='text - gray - 400 text - sm'>;
-            Questions?{' '}
-            <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
-              kleber@ziontechgroup.com;
-
             </a>;
           </p>;
         </div>;
@@ -414,5 +349,3 @@ function CookiesPage() {
     </UltraAdvancedFuturisticBackground>;
   );
 }
-    </>);
-;

@@ -1,4 +1,3 @@
-
 interface LazyImageProps {
 
 interface LazyImageProps {;
@@ -13,8 +12,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-export default function LazyImage({
-
   src,
   alt,
   width,

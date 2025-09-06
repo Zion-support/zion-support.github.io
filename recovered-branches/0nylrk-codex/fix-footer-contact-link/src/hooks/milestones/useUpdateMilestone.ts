@@ -15,7 +15,7 @@ export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
-
+  
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
@@ -87,17 +87,6 @@ if (throw error) {
       const { error } = await supabase
         .from('project_milestones')
         .update(data)
-      return false
-;
-  const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
-    // Check condition
-if (return false) {
-  $2
-    } catch (err: any) {
-      console.error ("Error updating milestone:", err);
-      toast.error ("Failed to update milestone: " + err.message),
-      return false;
-    } finally {
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -164,5 +153,4 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
-  }
 };

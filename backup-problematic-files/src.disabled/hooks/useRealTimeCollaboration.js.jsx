@@ -9,4 +9,3 @@ const UseRealTimeCollaboration.js = ({ className }) => {
   );
 };
 
-export default UseRealTimeCollaboration.js;

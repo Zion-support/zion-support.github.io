@@ -7,8 +7,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
 
-  const features = [
-    {
       icon: Shield
       title: "Quantum-Resistant Encryption"
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
@@ -181,7 +179,6 @@ function QuantumCybersecurityPage() {
   ];
 ;
   return (
-
     <>;
       <Head>;
         <title>Quantum Cybersecurity - Zion Tech Group</title>;
@@ -437,9 +434,6 @@ function QuantumCybersecurityPage() {
                     </li>
                   ))}
                 </ul>
-
-
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -459,17 +453,6 @@ function QuantumCybersecurityPage() {
               </a>;
               <a
                 href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
-              >
-                Schedule Consultation
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      <EnhancedFooter />
-    </>
-  )
     <>;
       <Head>;
         <title > Quantum Cybersecurity - Zion Tech Group</title>;

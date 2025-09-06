@@ -9,28 +9,6 @@ const p = path.join(
   'pagespeed.json'
 );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
-      const data = fs && fs.readFileSync(p, 'utf8');
-      const pagespeed = JSON && JSON.parse(data);
-      return res && res.status(200).json(pagespeed);
-    } catch (error) {
-      return res && res.status(500).json({ error: 'Failed to read pagespeed report' });
-;
-const p = path.join (
-  process.cwd (),
-  'data',
-  'reports',
-  'pagespeed.json');
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
     try {
       const data = fs.readFileSync (p, 'utf8');
       const pagespeed = JSON.parse (data);
@@ -45,7 +23,6 @@ if ( {) {
   $2
 }
     try {
-      const { performance, accessibility, bestPractices, seo } = req.body;
       const report = {
         performance: performance |0
         accessibility: accessibility |0

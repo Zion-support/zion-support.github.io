@@ -1,13 +1,3 @@
-import React from 'react';
-
-import { useEffect, useState, useRef, ReactNode } from "react",
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
-interface LazyLoadProps {
-  height?: string | number;
-  width?: string | number;
-
-  children: ReactNode
 
   loadingComponent?: ReactNode;
 interface LazyLoadProps {
@@ -26,19 +16,10 @@ interface LazyLoadProps {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-export function LazyLoad({
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-      }
-      {
-        root_margin: "200px", // Start loading when element is within 200px of viewport;
-        threshold: 0.1}
-    );
-      },
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -59,18 +40,35 @@ export function LazyLoad({;
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
+
+
+
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+;
+interface LazyLoadProps {;
+  height?:string | number,;
+  width?:string | number,;
+  children:ReactNode,;
+  loadingComponent?:ReactNode,;
+  className?:string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className} LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+;
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
-
-          setIsVisible(true);
-          observer && observer.disconnect();
-        }
-      }
-      {
-        root_margin: "200px", // Start loading when element is within 200px of viewport;
-        threshold: 0.1}
     }
     return () => {
       // Check condition

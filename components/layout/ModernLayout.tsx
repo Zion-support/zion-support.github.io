@@ -1,4 +1,3 @@
-
 type ModernLayoutProps = {
   children: ReactNode
 
@@ -8,8 +7,6 @@ type ModernLayoutProps = {;
   description?: string;
   keywords?: string;
   canonical?: string;
-
-}
 const ModernLayout = ({
 const ModernLayout = ({;
   children;
@@ -17,7 +14,6 @@ const ModernLayout = ({;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
-
 }: ModernLayoutProps) =>: any {
   return (
     <>;

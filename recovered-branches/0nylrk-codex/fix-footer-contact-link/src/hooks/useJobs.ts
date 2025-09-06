@@ -21,13 +21,20 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+  
+  const clientId = userId || user?.id,
+
+
+      setIsLoading(true),
+      
+
 
   
   const clientId = userId || user?.id,
 
   const fetchJobs = async () => {
     if (!clientId) {
-      setIsLoading(false);
+      setIsLoading(false),
       return
     }
     try {
@@ -47,7 +54,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
-      if (updateError) throw updateError;
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
       toast && toast.success("Job status updated successfully");
@@ -57,7 +63,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       toast && toast.error("Failed to update job status");
       return false
     }
-  }
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -65,7 +70,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
-      if (deleteError) throw deleteError;
       // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
@@ -82,11 +86,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     error;
     refetch: fetch_jobs;
     updateJobStatus;
-
-    delete_job;
-    create_job;
-    update_job,
-    getJobById;
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -178,6 +177,3 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
-  }
-}
-

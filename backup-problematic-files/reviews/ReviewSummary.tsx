@@ -1,4 +1,3 @@
- </div> </div> </div>) };
 import React from 'react',
 import type { ReviewsSummary } from '../../types/reviews',
 import StarRating from './StarRating',

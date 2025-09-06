@@ -27,18 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function readAllGrants(): GrantApplication[] {
   ensureDir();
 
-    });
-    res && res.status(200).json({ items: list });
-    return
-    });
-    res && res.status(200).json({ items: list });
-    return
-  if (req.method === 'POST') {
-
-  if (req && req.method === 'POST') {
-    try {
-      const payload = req && req.body as CreateGrantPayload;
-      if (
         res.status(400).json({ error: 'Missing required fields' });
         !payload ||
         !payload && payload.projectName ||
@@ -144,14 +132,7 @@ if ( {) {
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-    }
-    return;
-  }
-  res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
     }
     return;
   }
-
-  res.setHeader('Allow', 'GET, POST');

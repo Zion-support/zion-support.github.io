@@ -826,6 +826,3 @@ class ComprehensiveLinkChecker {;
     return recommendations;
   }
   async run() {
-// Run the link checker;
-if (require.main === module) {;
-  const checker = new ComprehensiveLinkChecker();

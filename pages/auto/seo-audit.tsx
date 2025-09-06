@@ -14,4 +14,3 @@ const SEOAudit: NextPage = () => {
       </main>
     </div>
   )
-},

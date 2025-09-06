@@ -1,4 +1,3 @@
-export interface TreeNode {
   name: string;
   path: string;
 
@@ -19,10 +18,6 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
-  name: string
-  path: string
-  type: "folder" | "file"
-
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);  };
 export interface TreeNode {;
@@ -51,28 +46,6 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-  };
-
-  const clonePath = async () => {;
-    const url = `${window && window.location.origin}/api/dev/source-map`;
-    await fetch(url, {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/json',;
-        // Expect an admin token in local storage, fall back to prompt;
-        'x-admin-token': localStorage && localStorage.getItem('ADMIN_TOKEN') || '',;
-      } as any,;
-      body: JSON && JSON.stringify({ path: node && node.path }),;
-    });  };      headers: {;
-        "Content-Type": "application/json";
-        // Expect an admin token in local storage, fall back to prompt;
-        "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
-      body: JSON && JSON.stringify({ path: node && node.path })});
-  };
-
-  const deploy = () => onDeploy && onDeploy(node && node.path);
-
-  return (
             Deploy;
           </button>;
         </div>;
@@ -85,22 +58,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         </div>
       )}
     </div>
-  )
-}
-
-export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-  );
-
-export default Tree;
-}</div> </div> {
-  has_children && open && (<div className="ml - 4 border - l pl - 2"> {
-  node.children!.map ( (child) => (<NodeItem key= {
-  child.path
 }node= {
   child
 }depth= {
@@ -147,5 +109,3 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
-    </div>
-  );

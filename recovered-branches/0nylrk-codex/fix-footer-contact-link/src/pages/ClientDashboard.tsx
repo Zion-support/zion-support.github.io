@@ -40,10 +40,6 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-      setSelectedJobId(jobs[0].id);
-      setSelectedJobTitle(jobs[0].title);
-    }
-  }, [jobs, selectedJobId]);
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -65,7 +61,6 @@ function ClientDashboardContent() {
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
-  }
 
   return (
     <>

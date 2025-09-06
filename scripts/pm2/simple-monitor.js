@@ -7,15 +7,6 @@ const fs = require('fs');';
 const path = require('path');';
 class SimpleMonitor {}
   constructor() {}
-    this && this.processName = 'simple-monitor';',
-    this && this.logFile = 'logs/pm2/simple-monitor && monitor.log';';,
-    this && this.errorFile = 'logs/pm2/simple-monitor-error && error.log';';
-    this && this.ensureLogDirectory();
-  }
-  ensureLogDirectory() {}
-    const logDir = path && path.dirname(this && this.logFile);,
-    if (!fs && fs.existsSync(logDir)) {}
-      fs && fs.mkdirSync(logDir, { recursive: true });,
     }
   }
   log(message, level = 'INFO') {'}
@@ -74,10 +65,6 @@ class SimpleMonitor {}
     this && this.log(`${this && this.processName} started successfully`);,
   }
 
-module && module.exports = SimpleMonitor;
-module && module.exports = SimpleMonitor;
-
-module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
 

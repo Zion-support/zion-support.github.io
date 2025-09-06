@@ -1,70 +1,3 @@
-
-export const ExportToCSV = ({;
-  quotes,;
-  filename = 'quote-requests',;
-}: ExportToCSVProps) => {  const handleExport = () => {;
-    // Define CSV Headers;
-    const headers = [;
-      'ID',;
-      'Talent Name',;
-      'Requester Name',;
-      'Requester Email',;
-      'Project Name',;
-      'Project Summary',;
-      'Budget',;
-      'Timeline',;
-      'Status',;
-      'Created Date',;
-    ];
-
-    // Format quote data for CSV;
-    const rows = quotes && quotes.map(quote => [;
-      quote && quote.id,;
-      quote && quote.talent_name || 'Unknown',;
-      quote && quote.requester_name,;
-      quote && quote.requester_email,;
-      quote && quote.project_name,;
-      quote && quote.project_summary,;
-      quote && quote.budget_display ||;
-        (quote && quote.budget_min && quote && quote.budget_max;
-          ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}`;
-          : quote && quote.budget_min;
-            ? `$${quote && quote.budget_min}`;
-            : 'Not specified'),;
-      quote && quote.timeline,;
-      quote && quote.status,;
-      new Date(quote && quote.created_at).toLocaleDateString(),;
-    ]);
-
-    // Create CSV content;
-    const csvContent = [;
-      headers && headers.join(','),;
-      ...rows && rows.map(row =>;
-        row;
-          .map(cell =>;
-            // Escape commas and quotes in cell values;
-            typeof cell === 'string' &&;
-            (cell && cell.includes(',') || cell && cell.includes('"'));
-              ? `"${cell && cell.replace(/"/g, '""')}"`;
-              : cell;
-          );
-          .join(',');
-      ),;
-    ].join('\n');
-
-    // Create download link;
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL && URL.createObjectURL(blob);
-    const link = document && document.createElement('a');
-    link && link.setAttribute('href', url);
-    link && link.setAttribute(;
-      'download',;
-      `${filename}-${new Date().toISOString().split('T')[0]}.csv`;
-    );
-    document && document.body.appendChild(link);
-
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
 
@@ -183,10 +116,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Create CSV content
     const csvContent = [
       headers.join()
-      ...rows.map(row => 
-        row.map(cell => 
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
@@ -319,8 +249,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 '";
   } }
   return (
-
-
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes",
@@ -395,7 +323,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
-
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
@@ -404,15 +331,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   const handleExport = () => {;
     // Define CSV Headers;
     const headers = [;
-    }, 100);
-  };
-
-      >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
 
 
   return (
@@ -428,15 +346,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 '"},;
 
-  );
-};
-  );
-};
-    <Button;
-      variant="outline";
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
       Export CSV;
-
-

@@ -1,5 +1,3 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Referral, ReferralStatus } from "@/types/referrals",
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -45,14 +43,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
   };
   if (isLoading) {;
     return (;
-
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
     );
   }
-  if (referrals.length === 0) {
-    return (
       <div className="flex flex-col items-center justify-center p-8 text-center">;
         <p className="text-muted-foreground mb-2">No referrals yet</p>;
         <p className="text-sm text-muted-foreground">;
@@ -76,9 +71,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
               ) : (;
                 '-';
               )}
-            </TableCell>;
-          </TableRow>;
-        ))}
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Referral, ReferralStatus } from '@/types / referrals';
 import { Badge } from '@/components / ui / badge';

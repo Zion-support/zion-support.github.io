@@ -1,16 +1,4 @@
 
-
-export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-export type JobCategory =
-  | 'development'
-  | 'design'
-  | 'marketing'
-  | 'content'
-  | 'data'
-  | 'business'
-  | 'other';
-export interface JobBudget {
-  min: number;
   min: number;
   max: number
   currency: string
@@ -25,7 +13,6 @@ export interface JobBudget {
   deadline: string;
   status: JobStatus;
 }
-}
 
 
 export interface JobFormData {;
@@ -33,7 +20,6 @@ export interface JobFormData {;
   description: string;
   category: JobCategory;
   skills: string;
-export interface JobMatch {
   id: string;
   job_id: string;
   talent_id: string;
@@ -55,15 +41,11 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
-  }
-}
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
-export interface JobApplication {
-
 
 export interface JobApplication {;
   id: string;
@@ -197,18 +179,3 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 
-      missing: string[];
-    }
-    experience_match?: {
-      score: number
-      analysis: string
-    }
-    education_match?: {
-      score: number
-      analysis: string
-    }
-  }
-  match_suggestion?: string;
-  scored_at?: string;
-}
-;

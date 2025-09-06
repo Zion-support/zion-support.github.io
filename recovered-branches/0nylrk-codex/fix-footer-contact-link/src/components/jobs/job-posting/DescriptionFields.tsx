@@ -50,7 +50,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-              <Textarea 
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e && e.target.value);
@@ -101,28 +100,10 @@ function DescriptionFields() {
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
-      <FormField
-        control={control}
-        name="responsibilities"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Responsibilities (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the main responsibilities of this job"
-                className="resize-none min-h-[100px]"
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="responsibilities";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Responsibilities (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the main responsibilities of this job";
-                className="resize - none min - h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -130,28 +111,10 @@ function DescriptionFields() {
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
-      <FormField
-        control={control}
-        name="qualifications"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the required qualifications for this job"
-                className="resize-none min-h-[100px]"
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="qualifications";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Qualifications (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the required qualifications for this job";
-                className="resize - none min - h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -159,28 +122,10 @@ function DescriptionFields() {
               List the required qualifications for this job.;
             </FormDescription>;
             <FormMessage />;
-      <FormField
-        control={control}
-        name="benefits"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Benefits (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the benefits offered for this job"
-                className="resize-none min-h-[100px]"
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="benefits";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Benefits (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the benefits offered for this job";
-                className="resize - none min - h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -188,16 +133,10 @@ function DescriptionFields() {
               List the benefits offered for this job.;
             </FormDescription>;
             <FormMessage />;
-      <FormField
-        control={control}
-        name="application_instructions"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Application Instructions (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="Provide instructions on how to apply for this job"
-                className="resize-none min-h-[100px]"
           </FormItem>)}
       />;
       <FormField;
@@ -217,8 +156,3 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-  );
-          </FormItem>)}
-      />;
-    </>);
-}

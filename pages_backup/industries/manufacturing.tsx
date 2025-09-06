@@ -5,27 +5,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Settings, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import {;
-  Settings,;
-  Brain,;
-  Shield,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  Cpu,;
-  Wrench,;
-  Activity,;
-  Database,;
-  FileText,;
-  Users;
-} from 'lucide-react';
-import Layout from '../../components/Layout';';
-const services = [;
-  {}
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -68,24 +47,12 @@ const services = [;
     ];
   },;
   {}
-      'Scenario planning'';
-    ];
-  }
 ;];
 const benefits = [;
   {}
     title: 'Increased Efficiency,',;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
-];
-const benefits = [;
-  {;
-    title: 'Increased Efficiency',;
-    description: 'Automated processes and AI optimization improve production efficiency.',;
-    icon: Activity;
-  },;
-  {}
-  }
 ;];
 export default function ManufacturingPage() {;
   return (

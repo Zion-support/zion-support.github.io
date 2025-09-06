@@ -14,15 +14,6 @@
       {message}
     </div>);
 }
-export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {;
-    if (!enabled |!containerRef.current) return;
-    const container = containerRef.current;
-    const focusableElements = container.querySelectorAll(;
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -79,9 +70,6 @@ export function useFocusTrap(enabled: boolean = true) {const containerRef = useR
       </div>;
     </div>);
 }
-  }
-  return (;
-    <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

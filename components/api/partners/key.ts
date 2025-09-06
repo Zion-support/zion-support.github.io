@@ -50,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
-
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });

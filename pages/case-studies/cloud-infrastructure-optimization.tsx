@@ -1,8 +1,3 @@
-        <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
-        <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <main className="container mx-auto px-6 py-12">
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -26,14 +21,6 @@
             </p>
           </header>
 
-          {/* Case Study Content */}
-          <div className="max - w-4xl mx - auto">;
-            {/* Company Overview */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-blue-400 mb-4">E-commerce Platform</h3>
-                <p className="text-white/90 text-lg mb-4">
                   The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -95,9 +82,6 @@
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
                 <p className="text-white/90 text-lg mb-6">
-                  monitors, and heals itself while optimizing costs and performance.
-                  We built a comprehensive cloud infrastructure solution that automatically scales,
-                  monitors, and heals itself while optimizing costs and window.window.window.performance.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
@@ -109,19 +93,16 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Load Balancing</h4>
                     <p className="text-white/80">
-                      Advanced load balancing distributes traffic efficiently across multiple
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Monitoring</h4>
                     <p className="text-white/80">
-                      Comprehensive monitoring and alerting systems provide real-time visibility
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Cost Optimization</h4>
                     <p className="text-white/80">
-                      AI-powered cost optimization algorithms automatically identify and
                       implement cost-saving opportunities.
                     </p>
                   </div>
@@ -475,10 +456,6 @@ export default function CaseStudyPage(req, res) {
               <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Optimize Your Cloud Infrastructure?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  This case study demonstrates the real impact of infrastructure automation.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link
                     href="/contact"
                     className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
                   >
@@ -694,8 +671,6 @@ export default function CaseStudyPage(req, res) {
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case - studies";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - blue - 400 / 50 transition - all duration - 300";
                   >;
                     View All Case Studies;
                   </Link>;
@@ -705,4 +680,3 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-    </>);

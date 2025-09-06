@@ -25,69 +25,6 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-  social_media?: Record<string string>,
-  website?: string,
-  bio?: string,
-  payout_method?: string,
-  fraud_flags?: number,
-  commission_rate?: number
-}
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login");
-      return;
-    }
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login"),
-      return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-interface PartnerProfile {;
-  id: string,;
-  user_id: string,;
-  name: string,;
-  status: 'pending' | 'approved' | 'rejected',;
-  created_at: string,;
-  niche: string,;
-  audience_size: string,;
 
   id: string
   user_id: string
@@ -98,20 +35,6 @@ interface PartnerProfile {;
   audience_size: string
   social_media?: Record<string, string>;
 
-import { useState, useEffect } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_navigate } from './react-router-dom';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
-import { toast } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -236,12 +159,6 @@ export default function PartnerManager() {
           }
         ];
         setPartners(mockData);
-        filterPartners(mockData, activeTab, searchQuery);
-      } else {;
-        setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-
-
       }
     } catch (error) {
       console.error("Error fetching partners:", error);
@@ -250,22 +167,11 @@ export default function PartnerManager() {
         description: "Failed to load partner data"
         variant: "destructive"})
     } finally {
-      setIsLoading (false);
-    }
-  }
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-    } catch (error) {;
-      console && console.error("Error fetching partners:", error);
-      toast({;
-        title: "Error",;
-        description: "Failed to load partner data",;
-        variant: "destructive"});
-    } finally {;
-      setIsLoading(false);
     }
     // Filter by search query
     if (query) {
@@ -277,19 +183,6 @@ export default function PartnerManager() {
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
-    
-    setFilteredPartners(filtered)
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value)
-    filterPartners(partners, activeTab, e.target.value)
-  }
-  const handleTabChange = (value: string) => {
-    setActiveTab(value)
-    filterPartners(partners, value, searchQuery)
-  }
-  const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner)
-    setIsDetailsOpen(true)
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate |25)
@@ -308,15 +201,12 @@ export default function PartnerManager() {
         setIsDetailsOpen(false)
       }
     } catch (error) {
-      console.error("Error updating partner status:", error);
+      console.error("Error updating partner status:", error),
       toast({
         title: "Error"
         description: "Failed to update partner status"
         variant: "destructive"})
     }
-  }
-  const handleSaveSettings = async () => {
-    if (!selectedPartner) return;
     try {
       // Update commission rate
       setPartners(partners.map(p =>
@@ -327,7 +217,7 @@ export default function PartnerManager() {
         variant: "default"})
       setIsSettingsOpen(false)
     } catch (error) {
-      console.error("Error updating partner settings:", error);
+      console.error("Error updating partner settings:", error),
       toast({
         title: "Error"
         description: "Failed to update partner settings"
@@ -378,13 +268,9 @@ export default function PartnerManager() {
         description: "Failed to update partner status",;
         variant: "destructive"});
     }
-      case 'under1k': return 'Under 1,000';
-      case '1k-10k': return '1,000 - 10,000';
-      case '10k-50k': return '10,000 - 50,000';
-      case '50k-100k': return '50,000 - 100,000';
-      case 'over100k': return 'Over 100,000';
       default: return size;
     }
+  },
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -397,20 +283,11 @@ export default function PartnerManager() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
-  const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
-  };
-
-  const getFraudFlagBadge = (flags: number = 0) => {;
-    if (flags === 0) return null,;
-
-    return (
       </Badge>;
     );
   },;
@@ -489,12 +366,10 @@ export default function PartnerManager() {
                 </p>;
               </CardContent>;
             </Card>;
-
                   Currently approved and active partners;
                 </p>;
               </CardContent>;
             </Card>;
-
                   Total potential fraud flags detected;
                 </p>;
               </CardContent>;
@@ -502,7 +377,6 @@ export default function PartnerManager() {
           </div>;
         </CardContent>;
       </Card>;
-
               />;
             </div>;
           </div>;
@@ -515,9 +389,6 @@ export default function PartnerManager() {
               <TabsTrigger value="rejected">Rejected</TabsTrigger>;
               <TabsTrigger value="all">All</TabsTrigger>;
             </TabsList>;
-
-            <TabsContent value="pending" className="space-y-4">;
-              <PartnerTable
                 partners={filteredPartners} 
                 isLoading={isLoading}
             <TabsContent value="pending" className="space - y-4">;
@@ -564,7 +435,6 @@ export default function PartnerManager() {
           </Tabs>;
         </CardContent>;
       </Card>;
-
       {/* Partner Details Dialog */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>;
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">;
@@ -574,36 +444,6 @@ export default function PartnerManager() {
               Review the details of the partner application;
             </DialogDescription>;
           </DialogHeader>;
-
-          {selectedPartner && (;
-            <div className="space-y-4">;
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Name</p>;
-                  <p className="font-medium text-white">{selectedPartner && selectedPartner.name}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Status</p>;
-                  <div>{getStatusBadge(selectedPartner && selectedPartner.status)}</div>;
-                </div>;
-              </div>;
-
-              <div>;
-                <p className="text-xs text-zion-slate-light">Bio</p>;
-                <p className="text-white">{selectedPartner && selectedPartner.bio || "No bio provided"}</p>;
-              </div>;
-
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Niche</p>;
-                  <p className="text-white">{selectedPartner && selectedPartner.niche}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Audience Size</p>;
-                  <p className="text-white">{getAudienceSizeLabel(selectedPartner && selectedPartner.audience_size)}</p>;
-                </div>;
-              </div>;
-
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -646,6 +486,57 @@ export default function PartnerManager() {
                     <Check className="h-4 w-4 mr-1" />;
                     Approve;
                   </Button>;
+                </div>)}
+            </div>)}
+        </DialogContent>;
+      </Dialog>;
+      {/* Partner Settings Dialog */}
+      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
+        <DialogContent className="bg - zion - blue border - zion - blue - light">;
+          <DialogHeader>;
+            <DialogTitle > Partner Settings</DialogTitle>;
+            <DialogDescription>;
+              Configure commission rates and other settings;
+            </DialogDescription>;
+          </DialogHeader>;
+          ;
+          {selectedPartner && (;
+            <div className="space-y-4">;
+              <div>;
+                <label className="text-sm font-medium text-white">Partner Name</label>;
+                <p className="text-zion-slate-light">{selectedPartner.name}</p>;
+              </div>;
+              ;
+              <div>;
+                <label className="text-sm font-medium text-white" htmlFor="commission-rate">;
+                  Commission Rate (%);
+                </label>;
+                <Input;
+                  id="commission-rate";
+                  type="number";
+                  min="1";
+                  max="50";
+                  value={commissionRate}
+                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+                />;
+                <p className="text-xs text-zion-slate-light mt-1">;
+                  Percentage of reward granted to this partner for successful referrals;
+                </p>;
+              </div>;
+              ;
+              <DialogFooter>;
+                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
+                  Cancel;
+                </Button>;
+                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">;
+                  Save Changes;
+                </Button>;
+              </DialogFooter>;
+            </div>;
+          )}
+        </DialogContent>;
+      </Dialog>;
+    </div>;
                 </div>;
               )}
             </div>;
@@ -709,8 +600,6 @@ export default function PartnerManager() {
               </DialogFooter>
             </div>
           )}
-        </DialogContent>;
-      </Dialog>;
 function PartnerTable({
   partners
   isLoading
@@ -732,9 +621,6 @@ function PartnerTable({
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-  }
-  if (partners.length === 0) {
-
   if (partners && partners.length === 0) {;
     return (
       <div className="text-center py-8">;
@@ -771,13 +657,6 @@ function PartnerTable({
             <TableCell>;
               {new Date (partner.created_at).toLocaleDateString ()}
             </TableCell>;
-            <TableCell className="text - right">;
-              <div className="flex justify - end gap - 2">;
-                {partner.status === 'pending' && (
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => onUpdateStatus(partner && partner.id, 'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
                     >;
                       <Check className="h-4 w-4" />;
@@ -785,12 +664,6 @@ function PartnerTable({
                     </Button>;
                   </>;
                 )}
-                <Button
-
-                
-                <Button 
-
-                  variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                   <>;
@@ -831,13 +704,7 @@ function PartnerTable({
                 </Button>;
               </div>;
             </TableCell>;
-          </TableRow>;
-        ))}
       </TableBody>
     </Table>
   )
-}
-          </TableRow>))}
-      </TableBody>;
-    </Table>);
 }

@@ -1,11 +1,3 @@
-
-import { ChevronDown, ChevronUp } from "lucide-react",
-const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" }
-  { id: "part_time", label: "Part-time" }
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {AvailabilityFilterProps} from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
@@ -20,11 +12,6 @@ const AVAILABILITY_OPTIONS = [;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-      </button>
-      {expanded && (
-        <div className="mt-4 space-y-2">
-          {AVAILABILITY_OPTIONS.map((option) => (
-            <div key={option.id} className="flex items-center">
               <Checkbox
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
@@ -38,9 +25,6 @@ const AVAILABILITY_OPTIONS = [;
           ))}
         </div>;
       )}
-    </div>
-    </div>
-  );
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';

@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -67,15 +66,9 @@ function MessagingInbox() {
       try {
         await fetch_conversations ();
       } catch (error) {
-        console.error ("Failed to load conversations:", error);
-        toast.error ("Failed to load messages. Please try again.");
-      }
-    }
-    loadData()
-  }, [fetchConversations]);
   const startVideoCall = () => {
     if (!activeConversation) {
-      toast.error("Please select a conversation first");
+      toast.error("Please select a conversation first"),
       return
     }
     const roomId = `msg-${activeConversation.id}`;
@@ -114,7 +107,6 @@ function MessagingInbox() {
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
               ) : (;
-                <ConversationsList
     }
 ;
     load_data ();
@@ -172,14 +164,3 @@ if ( {) {
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
-                />)}
-              {/* Conversation Detail */}
-              <ConversationDetailView />;
-            </div>;
-          </div>;
-        </div>;
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {is_mobile && <div className="h - 16"></div>}
-      </div>;
-    </ProtectedRoute>);
-}

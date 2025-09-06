@@ -1,16 +1,3 @@
-  Check
-  Shield
-  ShieldAlert
-  Lock
-  Phone
-  Mail
-  MapPin
-  ExternalLink;
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-export default function AIGuardrailsPage() {
-  const contactInfo = {
   Check,
   Shield,
   ShieldAlert,
@@ -43,18 +30,6 @@ export default function AIGuardrailsPage() {
     'Toxicity, bias and safety classifiers'
     'Human handoff flows and escalation policies'
     'Audit logs, alerting and exportable evidence'
-import {;
-  Check,;
-  Shield,;
-  ShieldAlert,;
-  Lock,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
 export default function AIGuardrailsPage() {;
   const contactInfo = {;
@@ -182,14 +157,6 @@ export default function AIGuardrailsPage() {;
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-}
-	);
-}
     </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;

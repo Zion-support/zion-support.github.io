@@ -9,4 +9,3 @@ const Help = ({ className }) => {
   );
 };
 
-export default Help;

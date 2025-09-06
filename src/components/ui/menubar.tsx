@@ -1,7 +1,6 @@
 import * as React from &quot;react&quot;
 import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
 import { Check, ChevronRight, Circle } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
 const MenubarMenu = MenubarPrimitive.Menu
 const MenubarGroup = MenubarPrimitive.Group
 const MenubarPortal = MenubarPrimitive.Portal
@@ -15,7 +14,6 @@ const Menubar = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   />;
 ));
@@ -26,7 +24,6 @@ const MenubarTrigger = React.forwardRef<;
   <MenubarPrimitive.Trigger;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
@@ -41,12 +38,10 @@ const MenubarSubTrigger = React.forwardRef<;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
       className
-    )}
     {...props}
   >;
     {children}
   </MenubarPrimitive.SubTrigger>
-))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
 const MenubarSubContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.SubContent>
@@ -56,7 +51,6 @@ const MenubarSubContent = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   />
 ))
@@ -70,7 +64,6 @@ const MenubarContent = React.forwardRef<
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
 
     ref
-  ) => (
     <MenubarPrimitive.Portal>
       <MenubarPrimitive.Content
         ref={ref}
@@ -78,7 +71,6 @@ const MenubarContent = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
           className
-        )}
         {...props}
       />;
     </MenubarPrimitive.Portal>;
@@ -95,7 +87,6 @@ const MenubarItem = React.forwardRef<;
   <MenubarPrimitive.Item;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
@@ -139,14 +130,11 @@ const MenubarCheckboxItem = React.forwardRef<;
   <MenubarPrimitive.Label;
     ref={ref}
       className
-    )}
     {...props}
   />;
 ));
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
         "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}

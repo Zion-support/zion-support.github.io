@@ -1,3 +1,20 @@
+  language?: string;
+  showLineNumbers?: boolean;
+  className?: string;
+}
+export function CodeBlock(): any ({ ;
+  code;
+  language = 'bash';
+  showLineNumbers = false;
+  className;
+}: CodeBlockProps) {;
+  const [copied, setCopied] = useState(false);
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+
+
+
 
 import { useState  } from 'react';
 import { Check, Copy  } from 'lucide-react';
@@ -8,14 +25,12 @@ interface CodeBlockProps {
 
   language?: string;
   showLineNumbers?: boolean;
-  className?: string;
-}
   code;
 
   language = 'bash';
   showLineNumbers = false;
-  className;
-}: CodeBlockProps) {;
+  className
+}: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
@@ -32,7 +47,6 @@ export function CodeBlock({
   code,
   language = 'bash',
   showLineNumbers = false,
-
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
@@ -40,6 +54,9 @@ export function CodeBlock({
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
+  const handleCopyClick = async () => {
+    await navigator.clipboard.writeText(code),
+    setCopied(true),
     setTimeout(() => {
       setCopied(false)
     }, 2000)
@@ -77,22 +94,6 @@ export function CodeBlock({
     </div>;
   );
 }
-export default CodeBlock;
-
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface CodeBlockProps {
-  code: string,
-  language?: string;
-  showLineNumbers?: boolean;
-  class_name?: string;
-}
-export /**
- * CodeBlock - Function description
- */
-function CodeBlock() {
-  const [copied, set_copied] = useState (false);
 ;
   const handleCopyClick = async () => {
     await navigator.clipboard.write_text (code);
@@ -132,4 +133,3 @@ function CodeBlock() {
     </div>);
 }
 export default CodeBlock;
-;

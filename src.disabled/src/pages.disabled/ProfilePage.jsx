@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ProfilePageProps {
   // Add props here as needed
-}
 export default function ProfilePage({ }: ProfilePageProps) {
   return (
     <div>

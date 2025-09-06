@@ -1,11 +1,4 @@
 import Link from 'next/link';
-
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { OrderTimeline } from '@/components/orders/OrderTimeline';
-
-export default function OrderDetailPage() {
 interface OrderItem {
   id: string;
   name: string;
@@ -28,20 +21,6 @@ interface Order {
     zip_code: string;
     country: string;
   }
-  }
-}
-const getStatusIcon = (status: string) => {
-  switch (status) {
-    case 'delivered':;
-      return <CheckCircle className="h - 4 w - 4" />;
-    case 'shipped':;
-      return <Package className="h - 4 w - 4" />;
-    case 'processing':;
-      return <Clock className="h - 4 w - 4" />;
-    default:;
-      return <Clock className="h - 4 w - 4" />;
-  }
-}
   switch (status) {
     case 'delivered':
       return <CheckCircle className="h-4 w-4" />;
@@ -96,53 +75,6 @@ function OrderDetail() {
   }, [router.query.id]);
   if (loading) {
 
-    if (!order) return;
-    const summary = [
-      `Order #${order.orderId}`,
-      `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
-      ...order.items.map(
-        i => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`
-      ),
-      '',
-      `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
-      order.shippingAddress.name,
-      order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
-    ].join('\n');
-
-    await navigator && navigator.clipboard.writeText(summary);
-    toast && toast.success('Order summary copied to clipboard');
-  };
-
-  if (isLoading || !order) {
-      ],
-      shipping_address: {
-        name: 'John Doe',
-        street: '123 Main St',
-        city: 'New York',
-        state: 'NY',
-        zip_code: '10001',
-        country: 'USA';
-      },
-      payment_method: {
-        type: 'credit_card',
-        last4: '4242';
-      },
-      tracking_number: 'TRK123456789';
-    }
-;
-    set_order (mock_order);
-    set_loading (false);
-  }, [router.query.id]);
-;
-  // Check condition
-if ( {) {
-  $2
-}
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;

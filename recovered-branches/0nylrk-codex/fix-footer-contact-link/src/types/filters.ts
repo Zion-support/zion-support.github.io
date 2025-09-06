@@ -1,12 +1,3 @@
-export interface FilterSidebarProps {
-  search_term: string;
-  setSearchTerm: (term: string) => void;
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (availability: string) => void;
-  selectedRegions: string[];
-
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedSkills: string[];
@@ -18,6 +9,25 @@ export interface FilterSidebarProps {
   toggleRegion: (region: string) => void
   priceRange: [number, number];
 
+  setExperienceRange: (range: [number, number]) => void;
+  expanded_sections: {
+    skills: boolean;
+    availability: boolean;
+    region: boolean;
+    experience: boolean,
+    price: boolean;
+  }
+  toggle_section: (section_name: string) => void;
+  sort_option: string;
+  setSortOption: (option: string) => void;
+  clear_filters: () => void,
+  isMobileFilterOpen?: boolean;
+}
+export interface FilterComponentProps {
+  expanded: boolean;
+  toggle_section: () => void,
+  isMobileFilterOpen?: boolean;
+}
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
@@ -31,7 +41,6 @@ export interface FilterSidebarProps {
   toggleSection: () => void
 
   isMobileFilterOpen?: boolean
-}
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
   experience_range: [number, number];
@@ -87,13 +96,25 @@ export interface RegionFilterProps extends FilterComponentProps {;
 ;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
+export interface SkillsFilterProps extends FilterComponentProps {
+  selected_skills: string[],
+  toggle_skill: (skill: string) => void;
+}
+export interface AvailabilityFilterProps extends FilterComponentProps {
+  selected_availability: string[],
+  toggle_availability: (availability: string) => void;
+}
+export interface RegionFilterProps extends FilterComponentProps {
+  selected_regions: string[],
+  toggle_region: (region: string) => void;
+}
+export interface ExperienceFilterProps extends FilterComponentProps {
+  experience_range: [number, number];
   setExperienceRange: (range: [number, number]) => void;
 }
 export interface PriceFilterProps extends FilterComponentProps {
   price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
-}
-export interface SearchFilterProps {
 
   searchTerm: string
 
@@ -101,7 +122,10 @@ export interface SearchFilterProps {
 }
 export interface SortFilterProps {
 
+  sortOption: string
 
+  setSortOption: (option: string) => void
+}
 ;
 export interface SortFilterProps {;
   sortOption: string;

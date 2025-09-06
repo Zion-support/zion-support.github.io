@@ -30,14 +30,6 @@ import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
-  icon: React && React.ReactNode;
-  title: string;
-  description: string;
-  color: string;
-  gradient: string;
-
-  delay?: number;
-
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;

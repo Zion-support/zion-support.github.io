@@ -1,30 +1,3 @@
-import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
- } from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function ExplorePage() {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Search, Filter, Grid, List, ArrowRight, ChevronRight,;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-} from 'lucide-react',;
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function ExplorePage(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
   const categories = [;
     {;
       id: 'ai';
@@ -487,12 +460,6 @@ import React, { useState } from 'react';
       description: 'Quantum financial trading and AI analytics',;
       color: 'from-emerald-500 to-green-500',;
       serviceCount: 17,;
-      featured: false,;
-    },  ];
-      default: return 0
-    }
-  });
-
   const featuredServices = [;
     {;
       id: 'ai-consciousness-evolution';
@@ -537,10 +504,6 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
-      <Head>;
-        <title>Explore Technology Categories | Zion Tech Group</title>;
         <meta
           name='description'
           content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.'
@@ -556,26 +519,6 @@ import React, { useState } from 'react';
         <link rel='canonical' href='https://ziontechgroup.com/explore' />      </Head>
       <SmartHeader />
       {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>;
-        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Explore Technology Categories | Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />
-        <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/explore" />
-      </Head>
-
-      <SmartHeader />
-
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>;
-        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Explore Technology Categories
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
@@ -594,38 +537,6 @@ import React, { useState } from 'react';
         </div>
       </section>
             transition={{ duration: 0 && 0.8 }}>;
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
-              Explore Technology Categories;
-            </h1>;
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>;
-              Discover our comprehensive range of cutting-edge technology;
-              solutions across AI, quantum computing, cybersecurity, space;
-              technology, and more;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
-                Start Exploring;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </button>;
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View All Services;
-              </button>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-                  <input
-                    type='text'
-                    placeholder='Search categories...'
-                    value={searchTerm}
-                    onChange={e => setSearchTerm(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />
-                </div>
-              </div>
-                    onChange={e => setSearchTerm(e && e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />;
-                </div>;
-              </div>;
               {/* Sort Options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -633,13 +544,6 @@ import React, { useState } from 'react';
 }
               <div className="flex items-center gap-4">
                 <select
-                  value={sortBy}
-                  onChange={e => setSortBy(e.target.value)}
-                  className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'
-                >
-                  <option value='popularity'>Sort by Popularity</option>
-                  <option value='name'>Sort by Name</option>
-                  <option value='featured'>Sort by Featured</option>                </select>
               </div>
             </div>
           </div>
@@ -662,8 +566,6 @@ import React, { useState } from 'react';
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
-              <motion.div
                 key={service.id}
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
@@ -714,62 +616,14 @@ import React, { useState } from 'react';
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
-                  </div>
-                  <a
-                    href={`/services#${service && service.id}`}
-                    className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
-                    Learn More;
-                    <ChevronRight className='w-4 h-4 ml-1' />                  </a>;
-                </div>;
-              </motion && motion.div>;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-
-
-
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                      service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                      'bg-blue-500/20 text-blue-300'
-                    }`}>
-
-                      {service.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </span>
-                    <span className="text-xs text-white/40">{service.category}</span>
-                  </div>
-
-                  <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
-                  <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <span className="text-xl font-bold text-cyan-400">{service.price}</span>
-                  </div>
-                  
-                  <a
-                    href={`/services#${service.id}`}
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1" />
-      {/* Categories Grid */}
-      <section className='px-6 pb-20'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
           >
             <h2 className='text-3xl font-bold text-white mb-4'>
               Technology Categories
@@ -777,24 +631,6 @@ import React, { useState } from 'react';
             <p className='text-white/60'>              {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-              <motion.div
-            transition={{ duration: 0 && 0.6 }}
-            className='mb-12'>;
-            <h2 className='text-3xl font-bold text-white mb-4'>;
-              Technology Categories;
-            </h2>;
-            <p className='text-white/60'>              {sortedCategories && sortedCategories.length} categories available for exploration;
-            </p>;
-          </motion && motion.div>;
-
-          <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
-              <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className='text-center py-20'>;
-                <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>;
-                  <Search className='w-12 h-12 text-white/40' />;
                 </div>;
                 <h3 className='text-2xl font-semibold text-white mb-2'>;
                   No categories found;
@@ -829,18 +665,12 @@ import React, { useState } from 'react';
                         </div>;
                       )}
                       {/* Category Icon */}
-                      <div
-                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        <category.icon className='w-10 h-10 text-white' />
-                      </div>
                       {/* Category Info */}
                       <h3 className='text - 2xl font - bold mb - 3 text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
                         {category.name}
                       </h3>;
                       <p className='text - white / 70 leading - relaxed mb - 6'>;
                         {category.description}
-                      </p>
                       {/* Stats */}
                       <div className='flex items - center justify - between mb - 6'>;
                         <div className='text - center'>;
@@ -851,12 +681,6 @@ import React, { useState } from 'react';
                         </div>;
                         <div className='text - center'>;
                           <div className='text - 2xl font - bold text - purple - 400'>;
-                            {category.featured ? '' : ''}
-                          </div>
-                          <div className='text-xs text-white/60'>                            {category.featured ? 'Featured' : 'Active'}
-                          </div>
-                        </div>
-                      </div>
                       {/* CTA */}
                       <div className='flex items-center justify-between'>;
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
@@ -920,7 +744,6 @@ import React, { useState } from 'react';
                           </span>
                         </div>
 
-
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -932,29 +755,10 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <category.icon className="w-10 h-10 text-white" />
-                      </div>
-                      {/* Category Info */}
-                      <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
-                        {category.name}
-                      </h3>
-                      <p className="text-white/70 leading-relaxed mb-6">
-                        {category.description}
-                      </p>
-                      {/* Stats */}
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-400">
-                            {category.featured ? '⭐' : '🚀'}
-                          </div>
-
-
                           <div className="text-xs text-white/60">
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
     console.error("Error:", error);
@@ -978,16 +782,12 @@ import React, { useState } from 'react';
                     </div>
                   </motion.div>
 
-
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
-      {/* Technology Trends */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -996,41 +796,40 @@ import React, { useState } from 'react';
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
                 icon: Atom
                 title: 'Quantum Supremacy'
                 description:
                   'Breakthroughs in quantum computing and quantum AI applications'
                 trend: 'Breakthrough'
                 color: 'from-blue-500 to-cyan-500'
-              }
+              },
               {
-                icon: Shield
-                title: 'Quantum Security'
-                description:
-                  'Quantum-resistant cryptography and AI-powered threat detection'
-                trend: 'Critical'
+                icon: Shield,
+                title: 'Quantum Security',
+                description: 'Quantum-resistant cryptography and AI-powered threat detection',
+                trend: 'Critical',
                 color: 'from-red-500 to-orange-500'
-              }
+              },
               {
-                icon: Rocket
-                title: 'Space Innovation'
-                description:
-                  'AI-powered space exploration and resource optimization'
-                trend: 'Emerging'
+                icon: Rocket,
+                title: 'Space Innovation',
+                description: 'AI-powered space exploration and resource optimization',
+                trend: 'Emerging',
                 color: 'from-indigo-500 to-purple-500'
-              }
+              },
               {
-                icon: ZapIcon
-                title: 'Neural Interfaces'
-                description:
-                  'Brain-computer interfaces and neural augmentation'
-                trend: 'Experimental'
+                icon: ZapIcon,
+                title: 'Neural Interfaces',
+                description: 'Brain-computer interfaces and neural augmentation',
+                trend: 'Experimental',
                 color: 'from-pink-500 to-rose-500'
-              }
+              },
               {
+
+            ].map((trend, index) => (
+
+              <motion.div
+                key={trend.title}
                 icon: TrendingUp
                 title: 'Autonomous Systems'
                 description:
@@ -1206,14 +1005,6 @@ import React, { useState } from 'react';
           </div>
         </div>
       </section>
-
-                <p className='text-white/70 leading-relaxed'>;
-                  {trend && trend.description}
-                </p>              </motion && motion.div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -1228,19 +1019,15 @@ import React, { useState } from 'react';
               >
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Get Expert Guidance
-              </a>
             </div>
           </motion.div>
         </div>
       </section>
-      <SmartFooter />
-    </div>
   )
 }
                   </span>;
@@ -1284,7 +1071,6 @@ import React, { useState } from 'react';
         </div>;
       </section>;
       <SmartFooter />;
-
     </div>;
   );
   } catch (error) {

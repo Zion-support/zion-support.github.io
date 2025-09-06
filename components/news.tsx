@@ -1,11 +1,3 @@
-};
-{
- featured: true ;
-};
-{;
-  title: 'Cybersecurity Partnership with Global Tech Leaders';
-excerpt: 'Strategic collaboration to advance AI - powered threat detection and response systems.';
-author: 'Partnerships Team';
 }];
 const years = [ {
   id: 'all', name: 'All Years'
@@ -164,13 +156,6 @@ title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
 excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
 category: 'industry';
 author: 'Dr. Robert Chang';
-}
-{
-  id: 8;
-title: 'Micro - SaaS Revolution: How Small Teams Are Building Big Solutions';
-excerpt: 'Exploring the growing trend of micro - SaaS companies and how they are disrupting traditional software markets.';
-category: 'industry';
-author: 'Lisa Wang';
 }];
 const upcoming_events = [ {
   id: 1;
@@ -192,9 +177,6 @@ type: 'Workshop';
   opacity: 1, y: 0
 }transition= {
   {
-}</div> </div> </section> Stay Updated </h2> <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30" > <div className="max-w-4xl mx-auto text-center" > <motion.div initial= {
-  {
-  opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
@@ -217,7 +199,6 @@ type: 'Workshop';
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information;
-please contact our communications team. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml-2 w-5 h-5" /> </a> <a href="/press" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300" > Press Kit </a> </div> </motion && motion.div> </div> </section> </div> </Layout> <motion&& motion.div initial= {
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -225,7 +206,6 @@ please contact our communications team. </p> <div className="flex flex-col sm:fl
   opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8
 }viewport= {
   {
   once: true
@@ -387,57 +367,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 }</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) )
 }</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) )
 }</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)       {/* Latest News Section */}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16"
-          >
-            Latest News
-          </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredNews.slice(2, 8).map((article, index) => (
-              <motion.article
-                key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group cursor-pointer"
-              >
-                <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
-                    <BookOpen className="w-12 h-12 text-cyan-400" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
-                        {categories.find(c => c.id === article.category)?.name}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {article.author}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {article.readTime}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
 
   const years = [
     { id: 'all', name: 'All Years' },
@@ -1071,15 +1000,6 @@ export default function News() {
           </div>
         </div>
       </section>
-
-      {/* Featured News */}
-      <section id="featured" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -1092,28 +1012,12 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">;
-                <div className="flex items-start gap-4">;
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">;
-                    {event && event.type === 'Conference' ? <Globe className="w-8 h-8" /> : <Video className="w-8 h-8" />}
-                  </div>;
-
                   <div className="flex-1">;
                     <div className="flex items-center gap-2 mb-2">;
                       <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">;
                         {event && event.type}
                       </span>;
                     </div>;
-
-                    <h3 className="text-xl font-bold mb-3">;
-                      {event && event.title}
-                    </h3>;
-
-                    <p className="text-gray-300 mb-4 leading-relaxed">;
-                      {event && event.description}
-                    </p>;
-
                     <div className="space-y-2 text-sm text-gray-400 mb-4">;
                       <div className="flex items-center gap-2">;
                         <Calendar className="w-4 h-4" />;
@@ -1124,7 +1028,6 @@ export default function News() {
                         {event && event.location}
                       </div>;
                     </div>;
-
 
                     <a
                       href={event && event.registration}
@@ -1214,25 +1117,6 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group">;
-                  <div className="flex items-center gap-2 mb-3">;
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">;
-                      {release && release.category}
-                    </span>;
-                    <span className="text-gray-400 text-sm">{release && release.readTime}</span>;
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">;
-                    {release && release.title}
-                  </h3>;
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-                    {release && release.excerpt}
-                  </p>;
-                  <div className="flex items-center gap-2">;
-                    <Calendar className="w-4 h-4 text-gray-400" />;
-                    <span className="text-gray-400 text-sm">{release && release.date}</span>;
-                  </div>;
-                </motion && motion.article>;
-              ))}
 
             </div>;
           </div>;
@@ -1251,18 +1135,6 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group cursor-pointer">;
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">;
-                    <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">;
-                      {category && category.icon}
-                    </div>;
-                  </div>;
-                  <h3 className="text-sm font-semibold text-white mb-1">;
-                    {category && category.name}
-                  </h3>;
-                  <p className="text-gray-400 text-xs">{category && category.count} articles</p>;
-                </motion && motion.div>;
-              ))}
 
             </div>;
           </div>;
@@ -1281,31 +1153,6 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group">;
-                  <div className="flex items-center gap-2 mb-3">;
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">;
-                      {news && news.category}
-                    </span>;
-                    <span className="text-gray-400 text-sm">{news && news.readTime}</span>;
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">;
-                    {news && news.title}
-                  </h3>;
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-                    {news && news.excerpt}
-                  </p>;
-                  <div className="flex items-center justify-between">;
-                    <div className="flex items-center gap-2">;
-                      <User className="w-4 h-4 text-gray-400" />;
-                      <span className="text-gray-400 text-sm">{news && news.author}</span>;
-                    </div>;
-                    <div className="flex items-center gap-2">;
-                      <Calendar className="w-4 h-4 text-gray-400" />;
-                      <span className="text-gray-400 text-sm">{news && news.date}</span>;
-                    </div>;
-                  </div>;
-                </motion && motion.article>;
-              ))}
 
             </div>;
           </div>;
@@ -1335,405 +1182,6 @@ export default function News() {
                 </a>;
                 <a
                   href="/press"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300">;
-                  Press Kit;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-read_time: "7 min read";
-image: "";
-}];
-min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white"> <main className=" container mx - auto px - 6 py - 12"> <section className=" text - center mb - 16"> <h1 className=" text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent"> Latest News </h1> > {
-  category;
-}</button>) );
-}</div> <span></span> <span> {
-  article.date;
-}</span> <span></span> <span> {
-  article.read_time;
-}</span> </div> <button className=" px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 200"> Read Full Article </button> </div> </div> </div>) );
-}</div> <button className=" w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 200"> Read More </button> </article>) );
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - white / 50 focus:outline - none focus:border - cyan - 400 / 50"/> <button className=" px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)       {/* Latest News Section */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text - 4xl md:text - 5xl font - bold text - center mb - 16";
-          >;
-            Latest News;
-          </motion.h2>;
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {filtered_news.slice (2, 8).map ((article, index) => (
-              <motion.article;
-                key={article.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group cursor - pointer";
-              >;
-                <div className="h - full bg - white / 5 border border - white / 10 rounded - 2xl overflow - hidden hover:border - cyan - 500 / 50 transition - all duration - 300">;
-                  <div className="aspect - video bg - gradient - to - br from - cyan - 500 / 20 to - purple - 600 / 20 flex items - center justify - center">;
-                    <BookOpen className="w - 12 h - 12 text - cyan - 400" />;
-                  </div>;
-                  <div className="p - 6">;
-                    <div className="flex items - center gap - 2 mb - 3">;
-                      <span className={`px - 2 py - 1 rounded - full text - xs font - medium bg - gradient - to - r ${getCategoryColor (article.category)} text - white`}>;
-                        {categories.find (c => c.id === article.category)?.name}
-                      </span>;
-                    </div>;
-                    <h3 className="text - xl font - bold mb - 3 group - hover:text - cyan - 400 transition - colors duration - 300 line - clamp - 2">;
-                      {article.title}
-                    </h3>;
-                    <p className="text - gray - 300 mb - 4 text - sm leading - relaxed line - clamp - 3">;
-                      {article.excerpt}
-                    </p>;
-                    <div className="flex items - center justify - between text - sm text - gray - 400">;
-                      <span className="flex items - center gap - 1">;
-                        <User className="w - 4 h - 4" />;
-                        {article.author}
-                      </span>;
-                      <span className="flex items - center gap - 1">;
-                        <Clock className="w - 4 h - 4" />;
-                        {article.read_time}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.article>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Upcoming Events Section */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text - 4xl md:text - 5xl font - bold text - center mb - 16";
-          >;
-            Upcoming Events;
-          </motion.h2>;
-          <div className="grid md:grid - cols - 2 gap - 8">;
-            {upcoming_events.map ((event, index) => (
-              <motion.div;
-                key={event.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p - 6 rounded - 2xl bg - white / 5 border border - white / 10 hover:border - cyan - 500 / 50 transition - all duration - 300";
-              >;
-                <div className="flex items - start gap - 4">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center flex - shrink - 0">;
-                    {event.type === 'Conference' ? <Globe className="w - 8 h - 8" /> : <Video className="w - 8 h - 8" />}
-                  </div>;
-                  <div className="flex - 1">;
-                    <div className="flex items - center gap - 2 mb - 2">;
-                      <span className="px - 2 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full">;
-                        {event.type}
-                      </span>;
-                    </div>;
-                    <h3 className="text - xl font - bold mb - 3">;
-                      {event.title}
-                    </h3>;
-                    <p className="text - gray - 300 mb - 4 leading - relaxed">;
-                      {event.description}
-                    </p>;
-                    <div className="space - y-2 text - sm text - gray - 400 mb - 4">;
-                      <div className="flex items - center gap - 2">;
-                        <Calendar className="w - 4 h - 4" />;
-                        {format_date (event.date)} at {event.time}
-                      </div>;
-                      <div className="flex items - center gap - 2">;
-                        <Globe className="w - 4 h - 4" />;
-                        {event.location}
-                      </div>;
-                    </div>;
-                    <a;
-                      href={event.registration}
-                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="inline - flex items - center gap - 2 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300";
-                    >;
-                      Register Now;
-                      <ExternalLink className="w - 4 h - 4" />;
-                    </a>;
-                  </div>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Newsletter Section */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="p - 8 rounded - 3xl bg - gradient - to - r from - cyan - 500 / 10 to - purple - 600 / 10 border border - cyan - 500 / 20";
-          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6">;
-              Stay Updated;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8">;
-              Get the latest news, insights, and updates delivered directly to your inbox.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 max - w-md mx - auto">;
-              <input;
-                type="email";
-                placeholder="Enter your email address";
-                className="flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - full text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 focus:bg - white / 20 transition - all duration - 300";
-              />;
-              <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105">;
-                Subscribe;
-              </button>;
-            </div>;
-            <p className="text - sm text - gray - 400 mt - 4">;
-              No spam, unsubscribe at any time. We respect your privacy.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl font - bold mb - 4">Latest News</h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                Stay updated with our most recent developments and announcements;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {news_articles.filter (article => !article.featured).map ((article, index) => (
-                <motion.article;
-                  key={article.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
-                >;
-                  <div className="flex items - center gap - 4 mb - 4">;
-                    <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - sm font - medium rounded - full border border - cyan - 500 / 30">;
-                      {article.category}
-                    </span>;
-                  </div>;
-                  <h3 className="text - xl font - semibold mb - 3 line - clamp - 2">{article.title}</h3>;
-                  <p className="text - gray - 400 mb - 4 line - clamp - 3">{article.excerpt}</p>;
-                  <div className="flex items - center justify - between text - sm text - gray - 500 mb - 4">;
-                    <div className="flex items - center gap - 2">;
-                      <Calendar className="w - 4 h - 4" />;
-                      {new Date (article.date).toLocaleDateString ()}
-                    </div>;
-                    <div className="flex items - center gap - 2">;
-                      <Clock className="w - 4 h - 4" />;
-                      {article.read_time}
-                    </div>;
-                  </div>;
-                  <button className="w - full px - 4 py - 2 border border - cyan - 500 / 30 text - cyan - 400 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify - center gap - 2">;
-                    Read More;
-                    <ArrowRight className="w - 4 h - 4" />;
-                  </button>;
-                </motion.article>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Newsletter Signup */}
-              <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
-                Stay Updated;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto mb - 8">;
-                Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.;
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 800 / 30">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >;
-              <h2 className="text - 4xl font - bold mb - 6">Stay Updated</h2>;
-              <p className="text - xl text - gray - 400 mb - 8">;
-                Subscribe to our newsletter for the latest news, insights, and technology updates;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center max - w-md mx - auto">;
-                <input;
-                  type="email";
-                  placeholder="Enter your email";
-                  className="flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 / 50";
-                />;
-                <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">;
-                  Subscribe;
-                </button>;
-              </div>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {press_releases.map ((release, index) => (
-                <motion.article;
-                  key={release.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
-                >;
-                  <div className="flex items - center gap - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 rounded - full text - xs font - medium">;
-                      {release.category}
-                    </span>;
-                    <span className="text - gray - 400 text - sm">{release.read_time}</span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 400 transition - colors duration - 300">;
-                    {release.title}
-                  </h3>;
-                  <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-                    {release.excerpt}
-                  </p>;
-                  <div className="flex items - center gap - 2">;
-                    <Calendar className="w - 4 h - 4 text - gray - 400" />;
-                    <span className="text - gray - 400 text - sm">{release.date}</span>;
-                  </div>;
-                </motion.article>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* News Categories */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl font - bold text - white mb - 4">;
-                News Categories;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Explore news by category to find updates in your areas of interest.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6">;
-              {news_categories.map ((category, index) => (
-                <motion.div;
-                  key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text - center group cursor - pointer";
-                >;
-                  <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - lg rounded - 2xl flex items - center justify - center mx - auto mb - 3 group - hover:bg - purple - 500 / 20 transition - all duration - 300 border border - white / 20">;
-                    <div className="text - purple - 400 group - hover:text - purple - 300 transition - colors duration - 300">;
-                      {category.icon}
-                    </div>;
-                  </div>;
-                  <h3 className="text - sm font - semibold text - white mb - 1">;
-                    {category.name}
-                  </h3>;
-                  <p className="text - gray - 400 text - xs">{category.count} articles</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Recent News */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - black / 20">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl font - bold text - white mb - 4">;
-                Recent News;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Stay updated with our latest announcements and developments.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-              {recent_news.map ((news, index) => (
-                <motion.article;
-                  key={news.title}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
-                >;
-                  <div className="flex items - center gap - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 rounded - full text - xs font - medium">;
-                      {news.category}
-                    </span>;
-                    <span className="text - gray - 400 text - sm">{news.read_time}</span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 400 transition - colors duration - 300">;
-                    {news.title}
-                  </h3>;
-                  <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-                    {news.excerpt}
-                  </p>;
-                  <div className="flex items - center justify - between">;
-                    <div className="flex items - center gap - 2">;
-                      <User className="w - 4 h - 4 text - gray - 400" />;
-                      <span className="text - gray - 400 text - sm">{news.author}</span>;
-                    </div>;
-                    <div className="flex items - center gap - 2">;
-                      <Calendar className="w - 4 h - 4 text - gray - 400" />;
-                      <span className="text - gray - 400 text - sm">{news.date}</span>;
-                    </div>;
-                  </div>;
-                </motion.article>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Media Contact */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 4xl font - bold text - white mb - 4">;
-                Media Inquiries;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                For press inquiries, media interviews, or additional information, please contact our communications team.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Contact Media Team;
-                  <Mic className="ml - 2 w - 5 h - 5" />;
-                </a>;
-                <a;
-                  href="/press";
-                  className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 300";
-                >;
-                  Press Kit;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-      {/* CTA Section */}
               <Link
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300">;
@@ -1845,18 +1293,6 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
         <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Latest News;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Stay updated with company news, partnerships, innovations, and industry insights;
-            </p>;
-          </section>;
-
             {/* Featured Article */}
             {newsArticles && newsArticles.filter(article => article && article.featured).map((article) => (;
               <div key={article && article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
@@ -1942,34 +1378,6 @@ min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to
                     </button>;
                   </div>;
                 </div>;
-            {/* News Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {newsArticles && newsArticles.filter(article => !article && article.featured).map((article) => (;
-                <article key={article && article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;
-                  <div className="text-4xl mb-4 text-center">{article && article.image}</div>;
-                  <div className="mb-3">;
-                    <span className="inline-block px-2 py-1 bg-white/20 text-white/80 text-xs rounded-full border border-white/30">;
-                      {article && article.category}
-                    </span>;
-                  </div>;
-                  <h3 className="text-lg font-bold mb-3 text-white hover:text-cyan-400 transition-colors">;
-                    {article && article.title}
-                  </h3>;
-                  <p className="text-white/70 mb-4 text-sm leading-relaxed">;
-                    {article && article.excerpt}
-                  </p>;
-                  <div className="flex items-center justify-between text-sm text-white/50 mb-4">;
-                    <span>{article && article.date}</span>;
-                    <span>{article && article.readTime}</span>;
-                  </div>;
-                  <div className="text-xs text-white/60 mb-4">;
-                    By {article && article.author}
-                  </div>;
-                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
-                    Read More;
-                  </button>;
-                </article>;
-              ))}
             {/* Newsletter Signup */}
             <div className="text-center mt-16">;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;

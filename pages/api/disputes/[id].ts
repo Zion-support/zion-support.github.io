@@ -4,9 +4,6 @@ import { getDisputeById } from "../../../utils/fsdb";
 import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
-  const { id } = req.query;
-
-  if (typeof id !== "string")
   const user = parseUserFromRequest(req);
   if (req.method === "GET") {
   const user = parseUserFromRequest(req);
@@ -15,10 +12,6 @@ import {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-}
-
-  res.setHeader("Allow", "GET");
-  return res.status(405).end("Method Not Allowed");
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';

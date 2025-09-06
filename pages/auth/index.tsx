@@ -68,15 +68,8 @@ const Onboarding: NextPage = () => {
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
-      </div>
-
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
-}
-export default Onboarding;
-  )
-},
-export default Onboarding,

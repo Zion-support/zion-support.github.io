@@ -55,9 +55,3 @@ export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
-  mostRecent: PublicReview[];
-}
-
-
-  mostRecent: PublicReview[];
-}

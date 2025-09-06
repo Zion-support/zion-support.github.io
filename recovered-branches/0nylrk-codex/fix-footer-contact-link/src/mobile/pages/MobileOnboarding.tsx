@@ -6,8 +6,6 @@ import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelec
 import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role")
@@ -68,5 +66,3 @@ import { RolePicker } from '../components / onboarding / RolePicker';
 import { SignUpForm } from '../components / onboarding / SignUpForm';
 type OnboardingStep = "language" | "role" | "signup";
 ;
-;
-

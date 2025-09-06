@@ -159,7 +159,6 @@ import {
   BrainIcon,
   AtomIcon,
   MenuIcon,
-
   CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -180,9 +179,6 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
-
-];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -191,7 +187,6 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
 const mainNavigation = [
@@ -295,12 +290,6 @@ const companyLinks = [;
   return (
     <>;
       {/* Top Contact Bar */}
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Rocket className="w-7 h-7 text-white" />
@@ -324,13 +313,6 @@ const companyLinks = [;
                   2030 Future Technology;
                 </div>              </div>;
             </Link>;
-
-            {/* Desktop Navigation */}
-
-
-
-
-              {/* Services Dropdown */}
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
@@ -389,7 +371,6 @@ const companyLinks = [;
                             </div>
                           </div>
                           <div className="space-y-2">
-
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
@@ -569,35 +550,11 @@ const companyLinks = [;
             </div>;
 
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>;
-              {isOpen ? (;
-                <X className='w-6 h-6' />;
-              ) : (;
-                <Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
-            >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </nav>
-            {/* Mobile Menu Button */}
-            <button;
-              on_click={toggle_menu}
-              className='lg:hidden p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors';
-            >;
-              {is_open ? (
-                <X className='w - 6 h - 6' />) : (
-                <Menu className='w - 6 h - 6' />)}            </button>              className="lg:hidden p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 transition - colors";
-            >;
-              {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
-            </button>;
-          </div>;
-        </div>;
-      </nav>;
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -686,20 +643,6 @@ const companyLinks = [;
                       <span>{item && item.name}</span>;
                     </Link>;
                   ))}
-
-                  {/* Services Accordion */}
-                    <button
-                      onClick={() =>;
-                        setActiveCategory(activeCategory === 0 ? null : 0);
-                      }
-                      className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
-                    >;
-                      <span className='flex items-center space-x-3'>;
-                        <Briefcase className='w-5 h-5' />;
-                        <span>Services</span>;
-                      </span>;
-                      <ChevronRightIcon
-                        className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
                       />;
                     </button>;
 
@@ -739,30 +682,6 @@ const companyLinks = [;
                   </div>;
 
 
-                  {/* Company Links */}
-                  <div className='pt-4 border-t border-gray-700/50'>;
-                    <div className='text-sm font-medium text-gray-400 mb-3'>;
-                      Company;
-                    </div>;
-                    <div className='space-y-2'>;
-                      {companyLinks && companyLinks.map(link => (                        <Link
-                          key={link && link.name}
-                          href={link && link.href}
-                          onClick={closeMenu}
-                          className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'>                  <div className="pt-4 border-t border-gray-700/50">;
-                    <div className="text-sm font-medium text-gray-400 mb-3">Company</div>;
-                    <div className="space-y-2">;
-                      {companyLinks && companyLinks.map((link) => (;
-                          key={link && link.name}
-                          href={link && link.href}
-                          onClick={closeMenu}
-                          className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1";
-                        >;
-                          {link && link.name}
-                        </Link>;
-                      ))}
-                  {/* Contact Info */}
-
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -797,13 +716,6 @@ const companyLinks = [;
               </div>;
             </div>;
           </motion && motion.div>;
-    </>
-);      <div className="h-20" />
-    </>
-  );
-}
-      </AnimatePresence>;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;
@@ -962,5 +874,3 @@ const companyLinks = [;
     </>);      <div className="h - 20" />;
     </>);
 }
-
-

@@ -25,13 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const requestedScope = (Array.isArray(scopeParam) ? scopeParam[0] : scopeParam) |state.config.scope
   const scoped = filterEventsByScope(state.events, state.config.scope)
   const events = scoped.filter((e) => (e.timestamp |0) > since)
-  return res.status(200).json({
-    instanceId: state.config.instanceId
-    lastSyncedAt: state.lastSyncedAt
-    events
-
-    scope: requestedScope})
-}
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -49,12 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const since = Number(Array.isArray(sinceParam) ? sinceParam[0] : sinceParam) || 0,
   const scopeParam = (req.method === "GET" ? req.query.scope : (req.body?.scope as any)) as string | string[] | undefined,
   const requestedScope = (Array.isArray(scopeParam) ? scopeParam[0] : scopeParam) || state.config.scope,
-  const scoped = filterEventsByScope(state.events, state.config.scope),
-  const events = scoped.filter((e) => (e.timestamp || 0) > since),
-  return res.status(200).json({
-    instanceId: state.config.instanceId,
-    lastSyncedAt: state.lastSyncedAt,
-    events,
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -80,13 +67,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
-  $2
 }

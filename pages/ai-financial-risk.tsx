@@ -1,28 +1,4 @@
 
-import { innovativeAIServices } from '../data/innovative-ai-services';
-export default function AIFinancialRiskPage() {
-
-  const service = innovativeAIServices.find(s =>
-    (s.link |'').endsWith('/ai-financial-risk')
-  );
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-const AIFinancialRisk: React.FC = () => {
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <NextHead>
-        <title>
-          {service?.name |'AI Financial Risk Management'} - Zion Tech Group
-        </title>
-import {innovativeAIServices} from '../data/innovative-ai-services';
-
-export default function AIFinancialRiskPage() {;
-  const service = innovativeAIServices && innovativeAIServices.find(s =>;
-    (s && s.link || '').endsWith('/ai-financial-risk');
   );
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -50,12 +26,6 @@ function AIFinancialRiskPage() {
   }
 ;
 const AIFinancialRisk: React.FC = () => {
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <NextHead>;
-        <title>;
-          {service?.name || 'AI Financial Risk Management'} - Zion Tech Group;
-        </title>;
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -117,11 +87,6 @@ export default function AIFinancialRiskPage() {
                       {service?.period |''}
                     </span>
                   </div>
-                      {service?.period || ''}
-                    </span>;
-                  </div>;
-                </div>;
-              </div>;
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>
@@ -135,13 +100,6 @@ export default function AIFinancialRiskPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-                className='w-full'>;
-                Discuss Controls;
-              </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <span>{contactInfo && contactInfo.mobile}</span>;
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';

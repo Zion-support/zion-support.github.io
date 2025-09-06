@@ -31,16 +31,6 @@ interface TalentRateRecommenderProps {
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
-
-  skills
-  yearsExperience
-  location
-  onSuggestionApplied
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
-  const { user } = useAuth()
-  const generateSuggestion = async () => {
     }
     setIsLoading(true)
     try {
@@ -56,7 +46,6 @@ interface TalentRateRecommenderProps {
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
       onSuggestionApplied(suggestedRate)
       // Track this suggestion application
-      if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id
           suggestionType: "talent"
@@ -159,8 +148,6 @@ if ( {) {
         });
       }
     }
-  return (
-            className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
@@ -227,5 +214,3 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"},
-
-

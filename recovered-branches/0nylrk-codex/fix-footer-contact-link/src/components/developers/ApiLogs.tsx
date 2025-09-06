@@ -21,7 +21,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-
+  
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
@@ -45,11 +45,6 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-            <Select
-              value={pageSize && pageSize.toString()}
-              onValueChange={(value) => {;
-                setPageSize(Number(value));
-
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -128,12 +123,10 @@ export function ApiLogs() {
             </Select>;
             <span className="text-sm text-zinc-400">per page</span>;
           </div>;
-
           <Button variant="outline" size="sm" onClick={handleRefresh}>;
             <RefreshCw size={14} className="mr-1" /> Refresh;
           </Button>;
         </div>;
-
         <div className="overflow-x-auto">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -156,7 +149,6 @@ export function ApiLogs() {
                     </div>;
                   </td>;
                 </tr>;
-              ) : logs && logs.length === 0 ? (;
                 <tr>;
                   <td colSpan={6} className="text-center py-12">;
                     <div className="flex flex-col items-center">;
@@ -168,21 +160,6 @@ export function ApiLogs() {
                     </div>;
                   </td>;
                 </tr>;
-              ) : (;
-                logs && logs.map((log) => (;
-                  <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
-                    <td className="px-4 py-3 text-sm">{formatTimestamp(log && log.created_at)}</td>;
-                    <td className="px-4 py-3">;
-                      <Badge
-                        variant="outline"
-                        className={
-                          log && log.method === 'GET' 
-                            ? "border-green-500 text-green-400" 
-                            : log && log.method === 'POST' 
-                            ? "border-blue-500 text-blue-400"
-                            : log && log.method === 'PUT'
-                            ? "border-yellow-500 text-yellow-400"
-                            : "border-red-500 text-red-400"
               <Button
                 variant="outline"
                 size="sm"
@@ -206,8 +183,4 @@ export function ApiLogs() {
     </Card>
   )
 }
-import { useState, useEffect } from './react';
-import { format } from './date - fns';
-import { List, RefreshCw } from './lucide-react';
-import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;

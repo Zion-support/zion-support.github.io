@@ -4,27 +4,6 @@ import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
 
-  const router = useRouter();
-  const { id } = router.query;
-    return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
-            Service Not Found;
-          </h1>;
-          <p className='text-gray-400 mb-6'>;
-            The requested service could not be found.;
-          </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">;
-        <div className="text-center">;
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>;
-          <p className="text-gray-400 mb-6">The requested service could not be found.</p>;
-          <Button href="/services" variant="primary">;
-            <ArrowLeft className="w-4 h-4 mr-2" />;
-          </Button>;
-        </div>;
-      </div>;
     );
   }
   const service = getServiceById(id);
@@ -60,5 +39,3 @@ import Button from '../../components/ui/Button';
                 href='/contact'
                 variant='outline'
                 size='lg'
-;
-              <Button

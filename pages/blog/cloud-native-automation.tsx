@@ -1,6 +1,5 @@
 
 import Head from 'next/head';
-
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -171,7 +170,6 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-                  like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li> Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
@@ -247,10 +245,6 @@ function CloudNativeAutomation() {
               <Link;
                 href='/blog';
                 className='text - cyan - 400 hover:text - cyan - 300 transition - colors';
-              >;
-                 Back to Blog;
-              </Link>;
-            </nav>;
                   scalable, reliable automation systems that can handle the;
                   demands of modern business operations.;
                 </p>;

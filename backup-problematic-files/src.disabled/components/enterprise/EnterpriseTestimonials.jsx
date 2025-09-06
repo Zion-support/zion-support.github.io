@@ -9,4 +9,3 @@ const EnterpriseTestimonials = ({ className }) => {
   );
 };
 
-export default EnterpriseTestimonials;

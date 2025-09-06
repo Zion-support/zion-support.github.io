@@ -23,70 +23,6 @@ interface ResumeVersionSelectorProps {;
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 
-      setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() });
-      if (resumeId) {;
-        await fetchResume(resumeId);
-        onResumeChange(resumeId);
-        setSaveDialogOpen(false);
-        setNewResumeTitle('');
-      setIsLoading(false);
-import { useState } from 'react';
-import {import { useState } from 'react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types / resume';
-import { use_resume } from '@/hooks / use_resume';
-interface ResumeVersionSelectorProps {
-  current_resume: Resume;
-  onResumeChange: (resume_id: string) => void;
-export /**
- * ResumeVersionSelector - Function description
- */
-function ResumeVersionSelector() {
-  const { create_resume, fetch_resume } = use_resume ();
-  const [saveDialogOpen, setSaveDialogOpen] = useState (false);
-  const [newResumeTitle, setNewResumeTitle] = useState ('');
-  const [existing_resumes, setExistingResumes] = useState < Resume[]>([]);
-  const [is_loading, setIsLoading] = useState (false);
-  const handleCreateNewVersion = async () => {
-    if () {) {
-  $2
-}
-      setIsLoading (true);
-      const resume_id = await create_resume ({ title: newResumeTitle.trim () });
-      // Check condition
-if ( {) {
-  $2
-}
-        await fetch_resume (resume_id);
-        onResumeChange (resume_id);
-        setSaveDialogOpen (false);
-        setNewResumeTitle ('');
-      setIsLoading (false);
-    }
-  }
-
-
-
-
-
-
-
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -122,10 +58,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
       }
-      setIsLoading(false)
-    }
-  };
-
 
   return (
     <div className="flex items-center gap-2">
@@ -150,17 +82,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
-            <DropdownMenuItem 
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
             >
               {resume.basic_info.title}
             </DropdownMenuItem>
           ))}
-          <DropdownMenuSeparator />;
             onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
           >
             <Plus className="h-4 w-4 mr-2" />
             Save as new version
@@ -294,9 +221,3 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)
 }"
 }
-  resume.basic info.title 
-}</DropdownMenuItem>) ) ;
-}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) ;
-}";
-};
-;

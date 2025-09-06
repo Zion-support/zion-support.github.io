@@ -14,4 +14,3 @@ const MarketSignals: NextPage = () => {
       </main>
     </div>
   )
-},

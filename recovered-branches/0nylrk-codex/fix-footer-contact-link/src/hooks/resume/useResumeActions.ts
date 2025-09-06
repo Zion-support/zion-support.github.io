@@ -26,7 +26,6 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
-    }
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
@@ -181,7 +180,6 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
-    }
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
@@ -237,7 +235,6 @@ if (throw error) {
     error;
     create_resume;
     updateBasicInfo;
-
     setActiveResume}
   },;
   return {;
@@ -247,7 +244,3 @@ if (throw error) {
     updateBasicInfo;
 
     setActiveResume}
-
-}
-;
-

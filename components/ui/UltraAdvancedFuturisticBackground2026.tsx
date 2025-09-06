@@ -1,39 +1,7 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-import { motion } from 'framer-motion';
-
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme',
-interface UltraAdvancedFuturisticBackground2026Props {;
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
-
 const UltraAdvancedFuturisticBackground2026: React.FC<;
   UltraAdvancedFuturisticBackground2026Props;
 > = ({;
@@ -157,12 +125,6 @@ if ( {) {
       color: string;
       alpha: number;
       life: number;
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      alpha: number,
-      life: number,
       }
       update() {
         this.x += this.vx;
@@ -191,19 +153,10 @@ if ( {) {
 
       }
     }
-    // Neural network node class
-    class NeuralNode {
       x: number;
       y: number;
       connections: NeuralNode[];
       activation: number;
-      }
-
-      update() {;
-        this && this.activation += (Math && Math.random() - 0 && 0.5) * 0 && 0.1;
-        this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
-        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
-      }
       draw() {;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = 0 && 0.8;
@@ -238,10 +191,6 @@ if ( {) {
 
     }
 
-
-    // Quantum field class;
-    class QuantumField {;
-
       x: number;
       y: number;
       radius: number;
@@ -254,10 +203,9 @@ if ( {) {
 
       }
 
-    }
-
 
     }
+
     // Holographic layer class
     class HolographicLayer {
       x: number;
@@ -420,33 +368,11 @@ if ( {) {
       height: number;
       rotation: number;
       alpha: number;
-      color: string;      x: number
-      y: number
-      width: number
-      height: number
-      rotation: number
-      alpha: number
-      color: string
       width: number,
       height: number,
       rotation: number,
       alpha: number,
       color: string,
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.width = Math.random() * 200 + 100;
-        this.height = Math.random() * 200 + 100;
-        this.rotation = Math.random() * Math.PI * 2;
-        this.alpha = Math.random() * 0.3 + 0.1;
-        this.color = getColorSchemeColor();      }
-      update() {
-        this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;      }        this.color = getColorSchemeColor()
-      }
-      update() {
-        this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
       }
       draw() {
         ctx.save();
@@ -465,31 +391,9 @@ if ( {) {
         ctx.stroke();
         ctx.restore()
     }
-
-
-
-    }
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-        'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080']
-        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080']
-        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600']
-        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000']
-        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff']
-      const schemeColors = colors[colorScheme] |colors['neural-network'];
-      return schemeColors[Math.floor(Math.random() * schemeColors.length)];
-    }
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(
-        new Particle(
-          Math.random() * canvas.width
-          Math.random() * canvas.height
-        )
-      );    }
-    // Initialize neural network
-    if (enableNeuralNetworks) {    for (let i = 0, i < particleCount, i++) {
       particles.push(new Particle(
         Math.random() * canvas.width;
         Math.random() * canvas.height
@@ -983,9 +887,6 @@ export default UltraAdvancedFuturisticBackground2026;
       {children}
     </div>
   )
-};
-
-export default UltraAdvancedFuturisticBackground2026;
 
             }}
           />

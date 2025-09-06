@@ -68,10 +68,6 @@ interface SmartContractDeploymentProps {;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
   isDeploying: boolean;
 }
-
-export function SmartContractDeployment(): any ({ ;
-  solidityCode;
-  onDeploy;
   isDeploying;
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
@@ -79,71 +75,10 @@ export function SmartContractDeployment(): any ({ ;
     useEscrow: true,;
     deployToChain: false,;
     walletAddress: '';
-  });
-
-  const handleDeployContract = async () => {;
-    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
-      toast && toast.error("Please enter a wallet address for blockchain deployment");
-      return;
-    }
-
-    try {;
-      await onDeploy(deploymentOptions);
-    } catch (error) {;
-      console && console.error("Deployment error:", error);
-    }
-  };
-
-  const handleDownloadSolidity = () => {;
-    // Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
-    const url = URL && URL.createObjectURL(blob);
-
-    // Create a temporary anchor to trigger download;
-    const a = document && document.createElement('a');
-    a && a.href = url;
-    a && a.download = 'ZionContract && ZionContract.sol';
-    document && document.body.appendChild(a);
-    a && a.click();
-
-    // Clean up;
-    URL && URL.revokeObjectURL(url);
-    document && document.body.removeChild(a);
-
-    toast && toast.success("Solidity contract downloaded");
-  };
-
-  return (
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-;
-  const handleDownloadSolidity = () =>: any {
-    // Create a blob from the Solidity code;
-    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
-    const url = URL.createObjectURL (blob);
-;
-    // Create a temporary anchor to trigger download;
-    const array = document.create_element ('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
-    document.body.append_child (a);
-    a.click ();
-;
-    // Clean up;
-    URL.revokeObjectURL (url);
-    document.body.remove_child (a);
-;
-    toast.success ("Solidity contract downloaded");
-  }
-;
-  return (
-    <Card className="w - full">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <ShieldCheck className="h - 5 w - 5 text - primary" />;
-
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -162,10 +97,6 @@ export function SmartContractDeployment(): any ({ ;
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;
-                    network: value as BlockchainNetwork;
-                  onValueChange={(value) => setDeploymentOptions({;
-                    ...deploymentOptions,;
-                    network: value as BlockchainNetwork;
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -187,16 +118,10 @@ export function SmartContractDeployment(): any ({ ;
                   value={deploymentOptions.walletAddress |''}
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;
-                    walletAddress: e && e.target.value;
-
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
-                  })}
-                />
-              </div>
-              <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
@@ -280,28 +205,18 @@ export function SmartContractDeployment(): any ({ ;
           </div>;
         </div>;
       </CardContent>;
-
-      <CardFooter className="flex justify-between">;
-        <Button variant="outline" onClick={handleDownloadSolidity}>;
-          <Download className="mr-2 h-4 w-4" />;
           Download .sol File;
         </Button>;
-
-}
-      <CardFooter className="flex justify - between">;
-        <Button variant="outline" on_click={handleDownloadSolidity}>;
-          <Download className="mr - 2 h - 4 w - 4" />;
-          Download .sol File;
-        </Button>;
-        <Button on_click={handleDeployContract} disabled={is_deploying}>;
-          {is_deploying ? (
+        ;
+        <Button onClick={handleDeployContract} disabled={isDeploying}>;
+          {isDeploying ? (;
             <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Deploying...;
-            </>) : (
-            'Deploy Contract')}
+            </>;
+          ) :(;
+            'Deploy Contract';
+          )}
         </Button>;
       </CardFooter>;
     </Card>;
-  );
-}

@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
-import React from 'react',
-import Head from 'next/head',
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -148,19 +146,10 @@ const testimonials = [
     content:
       'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.'
     rating: 5
-    avatar: ''
   {
     name: 'Dr. Jennifer Martinez',
     role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
-    content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
-    rating: 5,
-    avatar: ''
-  };
-  {
-    name: 'Robert Thompson',
-    role: 'Infrastructure Director, EdgeNet Solutions',
-    company: 'EdgeNet Solutions',
   };
   {
     name: 'Lisa Chang',
@@ -322,12 +311,10 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -344,7 +331,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
           >
-            <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
               Advanced IT Infrastructure Services
             </h1>
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -353,16 +339,6 @@ export default function AdvancedITInfrastructureServices() {
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
                 <motion.div
-            transition={{ duration: 0 && 0.8 }}>;
-            <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
-              Advanced IT Infrastructure Services;
-            </h1>;
-            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-              Revolutionary infrastructure solutions with quantum computing,;
-              edge computing, and AI-powered automation for the future;
-            </p>;
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map((stat, index) => (;
-                <motion&& motion.div
     content:;
       'Their zero - trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
@@ -450,32 +426,10 @@ function AdvancedITInfrastructureServices() {
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-              ))}
-            </div>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link
-                href='#services'
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-                Explore Services;
-                <ArrowRight className='ml-2 w-5 h-5' />;
-              </Link>;
-              <Link
-                href={`tel:${contactInfo.mobile}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
-              >
-                <Phone className='mr-2 w-5 h-5' />                Get Started
               </Link>
             </div>
           </motion.div>
         </div>
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
-                <Phone className='mr-2 w-5 h-5' />                Get Started;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -522,7 +476,6 @@ function AdvancedITInfrastructureServices() {
                 </div>
               </motion.div>
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -530,15 +483,10 @@ function AdvancedITInfrastructureServices() {
 }
 
           </div>;
-        </div>;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
-              IT Infrastructure Service Categories
-            </h2>
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               IT Infrastructure Service Categories;
@@ -551,79 +499,11 @@ function AdvancedITInfrastructureServices() {
 
           <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
               <motion&& motion.div
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              IT Infrastructure Service Categories
-            </h2>
-
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
-            </p>
-          </motion.div>
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
-                      viewport={{ once: true }}
-                      className='relative group'>;
-                      <div className={`${service && service.color} p-1 rounded-xl`}>;
-                        <div className='bg-gray-900 rounded-xl p-6 h-full'>;
-                          <div className='flex items-center justify-between mb-4'>;
-                            <span className='text-3xl'>{service && service.icon}</span>;
-                            {service && service.popular && (;
-                              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>                                Popular;
-                              </span>;
-                            )}
-                          </div>;
-                          <h4 className='text-xl font-semibold text-white mb-2'>;
-                            {service && service.name}
-                          </h4>;
-                          <p className='text-gray-300 text-sm mb-4'>;
-                            {service && service.tagline}
-                          </p>;
-                          <div className='flex items-center justify-between mb-4'>;
-                            <span className='text-2xl font-bold text-white'>;
-                              {service && service.price}
-                            </span>;
-                            <span className='text-gray-400'>;
-                              {service && service.period}
-                            </span>;
-                          </div>;
-                          <p className='text-gray-300 text-sm mb-4'>;
-                            {service && service.description}
-                          </p>;
-                          <div className='space-y-2 mb-6'>;
-                            {service && service.features;
-                              .slice(0, 3);
-                              .map((feature, featureIndex) => (;
-                                <div
-                                  key={featureIndex}
-                                  className='flex items-center text-sm text-gray-300'>;
-                                  <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
-                                  {feature}
-                                </div>;
-                              ))}
-                          </div>;
-                          <div className='flex items-center justify-between'>;
-                            <Link
-                              href={service && service.link}
-                              className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300'>;
-                              Learn More;
-                              <ArrowRight className='ml-1 w-4 h-4' />;
-                            </Link>;
-                            <Link
-                              href={`tel:${contactInfo && contactInfo.mobile}`}
-                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'>;
-                              Get Started;
-                            </Link>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </motion && motion.div>;
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -693,7 +573,11 @@ function AdvancedITInfrastructureServices() {
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular
                               </span>
-                            )}
+                            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </div>
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -706,7 +590,6 @@ function AdvancedITInfrastructureServices() {
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-
                                 {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -721,14 +604,12 @@ function AdvancedITInfrastructureServices() {
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
-                              href={service.link}
                               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                             >
                               Learn More
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-                              href={`tel:${contactInfo.mobile}`}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
                             >
                               Get Started
@@ -737,10 +618,6 @@ function AdvancedITInfrastructureServices() {
                         </div>
                       </div>
                     </motion.div>
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -766,7 +643,6 @@ function AdvancedITInfrastructureServices() {
 }
             className="text-center mb-16"
           >
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               What Our Clients Say
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -800,25 +676,3 @@ function AdvancedITInfrastructureServices() {
                 Email Us
               </Link>
             </div>
-            <div className='mt-8 text-center'>
-              <p className='text-gray-300 mb-2'> {contactInfo.address}</p>
-              <p className='text-gray-300'> {contactInfo.website}</p>            </div>
-          </motion.div>
-        </div>
-      </section>
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
-                <Mail className='mr-2 w-5 h-5' />;
-                Email Us;
-              </Link>;
-            </div>;
-            <div className='mt-8 text-center'>;
-              <p className='text-gray-300 mb-2'> {contactInfo && contactInfo.address}</p>;
-              <p className='text-gray-300'> {contactInfo && contactInfo.website}</p>            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
-  )
-}

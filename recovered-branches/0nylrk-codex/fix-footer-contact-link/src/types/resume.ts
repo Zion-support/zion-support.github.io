@@ -1,4 +1,3 @@
-export interface ResumeBasicInfo {
   id?: string;
   title: string;
 
@@ -61,10 +60,6 @@ export interface Resume {;
   skills: Skill[];
   certifications: Certification[];
 
-}
-
-  is_active: boolean
-}
   id?: string,;
   title: string,;
   headline?: string,;
@@ -134,7 +129,4 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
-  is_active: boolean;
-
-}
 ;

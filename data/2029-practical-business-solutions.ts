@@ -37,18 +37,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       }
     }
   ];    features: [
-
-      "Practical solutions";
-      "Business applications";
-      "Real-world use cases";
-      "Easy integration",
-      "Affordable pricing"
-
-    ];
-    link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029"
-    realImplementation: true
-
-    contactInfo: {
   ];    features: [;
       "Practical solutions";
       "Business applications";
@@ -75,8 +63,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     address: string;
   }
 }
-
-export interface PracticalBusinessSolution2029 {;
 
       "Affordable pricing"
     ],

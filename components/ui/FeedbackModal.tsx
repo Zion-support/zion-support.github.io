@@ -1,16 +1,5 @@
 import { useState } from 'react';
 
-  isOpen
-  onClose
-  defaultContext
-  defaultKind = 'general'
-  userHeaders
-}: {
-  isOpen: boolean;
-  onClose: (submitted: boolean) => void;
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
   isOpen;
   onClose;
   defaultContext;
@@ -29,13 +18,6 @@ import { useState } from 'react';
     onClose(true)
   }
   return (
-    setLoading(false);
-    onClose(true);
-  }
-
-  }
-  return (
-
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
@@ -45,7 +27,6 @@ import { useState } from 'react';
 
 
             <button
-
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -234,4 +215,3 @@ function submit() {
           <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
 
 }
-  );

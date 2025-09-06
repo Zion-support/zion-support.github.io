@@ -37,12 +37,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
-
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
       issues.push({
         type:
   structure_issues', ';
@@ -169,8 +163,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   'WARN')';;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
-    `);
-    `);
         switch: (issue.type) {
           case
   missing_critical_files': ';;
@@ -198,8 +190,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
-
-
 
 
 
@@ -315,11 +305,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       this.issuesFound += issues.length;
 
 
-
-
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
   ERROR')';;
 ;
   async: createPackageJson() {
@@ -401,6 +386,10 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
 
       if (issues.length > 0) {}
         this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
@@ -649,123 +638,6 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
-
-
-  vite.config.ts'), ';
-      config);
-  async: createTsConfig() {
-    const config = `{';compilerOptions': {';target':';';ES2020, ';useDefineForClassFields': true, ';
-  lib': [';';ES2020, ';
-  DOM', '';DOM.Iterable'], ';module': 'ESNext, ';skipLibCheck': true, ';
-  moduleResolution': 'bundler, ';allowImportingTsExtensions': true, ';resolveJsonModule': true, ';isolatedModules': true, ';noEmit': true, ';
-  jsx': 'react-jsx, ';strict': true, ';noUnusedLocals': true, ';noUnusedParameters': true, ';noFallthroughCasesInSwitch': true, ';
-  baseUrl': '., ';
-  paths': {';@/*': [';';src/*], ';
-  @components/*': [';';src/components/*], ';
-  @pages/*': [';';src/pages/*], ';
-  @layout/*': [';';src/layout/*], ';
-  @utils/*': [';';src/utils/*], ';
-  @hooks/*': [';';src/hooks/*], ';
-  @types/*': [';';src/types/*], ';
-  @assets/*': [';';src/assets/*], ';
-  @styles/*': [';';src/styles/*], ';
-  @data/*': [';';src/data/*], ';
-  @services/*': [';';src/services/*], ';
-  @context/*': [';';src/context/*], ';
-  @constants/*': [';';src/constants/*]}, ';
-  include': [';';src], ';
-  references': [{'';path':';';./tsconfig.node.json: }]}`;
-    fs.writeFileSync(
-      path.join(this.projectRoot
-  'tsconfig.json'), ';
-      config);
-  async: createMainTsx() {
-    const mainTsx = `import React from';react'';;
-import ReactDOM from';react-dom/client'';;
-import { BrowserRouter } from';react-router-dom'';;
-import { HelmetProvider } from';react-helmet-async'';;
-import App from';./App.tsx'';;
-import';./index.css'';;
-ReactDOM.createRoot(document.getElementById(
-  'root')!).render(';
-  baseUrl': '.
-  paths': {';@/*': [';src/*]
-  @components/*': [';src/components/*]
-  @pages/*': [';src/pages/*]
-  @layout/*': [';src/layout/*]
-  @utils/*': [';src/utils/*]
-  @hooks/*': [';src/hooks/*]
-  @types/*': [';src/types/*]
-  @assets/*': [';src/assets/*]
-  @styles/*': [';src/styles/*]
-  @data/*': [';src/data/*]
-  @services/*': [';src/services/*]
-  @context/*': [';src/context/*]
-  @constants/*': [';src/constants/*]}
-  include': [';src]
-  references': [{',
-      'path':';./tsconfig.node.json }]}`;
-    fs.writeFileSync(
-      path.join(this.projectRoot,`
-  'tsconfig.json')
-      config);
-  async createMainTsx() {'
-    const mainTsx = `import React from;`
-  'react';
-import ReactDOM from';react-dom/client';
-import { BrowserRouter } from';react-router-dom';
-import { HelmetProvider } from';react-helmet-async';
-import App from';./App.tsx';
-import';./index.css';
-ReactDOM.createRoot(document.getElementById(',
-      'root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App: />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
-)`;
-    // Ensure: src directory exists;
-    const srcDir = path.join(this.projectRoot
-  'src')';;
-    if: (!fs.existsSync(srcDir)) {
-      fs.mkdirSync(srcDir, { recursive: true})
-    fs.writeFileSync(
-      path.join(this.projectRoot
-  src', '';main.tsx'), ';
-      mainTsx);
-  async: createIndexHtml() {
-    const indexHtml = `<!doctype html>
-<html lang=
-  'en'>';;
-  <head>
-    <meta: charset=
-  'UTF-8' />';;
-    <link: rel=
-  'icon' type=';';image/svg+xml' href=';';/vite.svg' />';;
-    <meta: name=
-  'viewport' content=';';width=device-width, initial-scale=1.0' />';;
-    <title>Zion: App</title>
-  </head>
-  <body>
-    <div id=';root'></div>';
-    <script: type=';module' src=';';/src/main.tsx'></script>';
-  </body>
-</html>`;
-    fs.writeFileSync(
-      path.join(this.projectRoot
-  'index.html'), ';
-      indexHtml);
-  async: createTailwindConfig() {
-    const config = `/** @type {import(
-  'tailwindcss').Config} */';;
-export: default {
-  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
-  ]
-  theme: {
-    extend: { /* empty: */}
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -972,8 +844,6 @@ class FileIntegrityMonitor {
     try {
       issues.push({
 
-      issues.push({
-
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {
@@ -1129,8 +999,6 @@ class FileIntegrityMonitor {
 // Export: the class;
 
 
-
-// Export: the class;
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

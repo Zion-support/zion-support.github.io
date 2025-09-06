@@ -5,16 +5,11 @@
 export type Project = {  id: string;
   title: string;
   description?: string;
-  due_date: string;
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
     value === 'Pending' |
     value === 'In Progress' |
     value === 'Submitted' |
     value === 'Approved' |
     value === 'Paid'
-
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||

@@ -1,4 +1,3 @@
-  Card,
   CardContent,
   CardDescription,
   CardHeader,
@@ -39,6 +38,9 @@ import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 export default function Partners() {;
+ursor/fix-website-loading-errors-and-merge-6662
+
+xport default function Partners() {;
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
   const { t } = useTranslation();
@@ -65,32 +67,11 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-  logInfo('PartnersPage rendering'),;
-  const [activeTab, setActiveTab] = useState("overview"),;
-  const { t } = useTranslation(),;
-  const { user, isAuthenticated } = useAuth(),;
-  const router = useRouter(),;
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
-
-export default function Partners() {
-
   logInfo('PartnersPage rendering'),
   const [activeTab, setActiveTab] = useState("overview"),
   const { t } = useTranslation(),
   const { user, isAuthenticated } = useAuth(),
   const router = useRouter(),
-  useEffect(() => {
-    async function checkHealth() {
-      try {
-        const res = await fetch('/api/auth/health'),
-        setAuthServiceAvailable(res.ok)
-      } catch (err) {
-        logErrorToProduction('Partner login auth health check failed', { data: err }),
-        setAuthServiceAvailable(false)
-      }
-    }
-    checkHealth()
-  }, []),
 
 } from '@/components / ui / card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -153,14 +134,9 @@ function check_health() {
         logErrorToProduction ('Partner login auth health check failed', {
           data: err,
         });
-        setAuthServiceAvailable (false);
-      }
-    }
-    checkHealth();
-  }, []);
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
-    logInfo('PartnersPage rendering Unauthenticated View');
+    logInfo('PartnersPage rendering Unauthenticated View'),
     return (
       <div className='container max-w-6xl py-10'>
         <div className='text-center mb-8'>
@@ -173,46 +149,6 @@ function check_health() {
         </div>
         <div className='grid md:grid-cols-2 gap-8 mb-12'>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
-            <CardHeader>
-              <CardTitle className='text-white'>
-                {t('partner.influencers.title')}
-              </CardTitle>
-              <CardDescription>{t('partner.influencers.desc')}</CardDescription>
-            </CardHeader>
-            <CardContent className='space-y-4'>
-              <div className='flex items-start gap-3'>
-                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0.5' />
-                <div>
-                  <p className='font-medium text-white'>
-                    {t('partner.influencers.points.audience')}
-                  </p>
-                  <p className='text-sm text-zion-slate-light'>
-                    {t('partner.influencers.points.audience_desc')}
-                  </p>
-                </div>
-              </div>
-              <div className='flex items-start gap-3'>
-                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0.5' />
-                <div>
-                  <p className='font-medium text-white'>
-                    {t('partner.influencers.points.insights')}
-                  </p>
-                  <p className='text-sm text-zion-slate-light'>
-                    {t('partner.influencers.points.insights_desc')}
-                  </p>
-                </div>
-              </div>
-              <div className='flex items-start gap-3'>
-                <CheckCircle className='h-5 w-5 text-zion-cyan mt-0.5' />
-                <div>
-                  <p className='font-medium text-white'>
-                    {t('partner.influencers.points.resources')}
-                  </p>
-                  <p className='text-sm text-zion-slate-light'>
-                    {t('partner.influencers.points.resources_desc')}
-                  </p>
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -311,13 +247,10 @@ function check_health() {
                 </CardTitle>
               </CardHeader>
                 <p>{t('partner.steps.earn_desc')}</p>
-              </CardContent>
             </Card>
           </div>
         </div>
         <div className='flex justify-center gap-4'>
-    checkHealth();  }, []);    checkHealth();
-  }, []);
 
           <Button
             size="lg"
@@ -700,19 +633,29 @@ if ( {) {
           )}
         </div>;
       </div>;
-    );
   }
   // Authenticated user view - Partner Dashboard
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
 
   return (
-      <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
           <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
         </div>
         <div className="flex gap-2">
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            className='flex items-center gap-2'
+            onClick={() => window.print()}
+          >
+            <FileDown className='h-4 w-4' />            {t('partner.export_csv')}      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
+          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
+        </div>
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
             {t('partner.export_csv')}
@@ -745,34 +688,16 @@ if ( {) {
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
+        
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
-        <TabsContent value="earnings" className="space-y-4">
-
-
           <Card>
             <CardHeader>
               <CardTitle>{t('partner.earnings_title')}</CardTitle>
               <CardDescription>{t('partner.earnings_desc')}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className='text-zion-slate-light'>
-                {t('partner.earnings_placeholder')}
-              </p>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        <TabsContent value='leaderboard' className='space-y-4'>
-          <PartnerLeaderboard />
-        </TabsContent>
-
-        <TabsContent value='resources' className='space-y-4'>
-              {/* This will be implemented later */}
-              <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
-            </CardContent>
-          </Card>
-        </TabsContent>
         
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
@@ -1036,6 +961,3 @@ function check_health() {
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space - y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space - y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 }
-  )
-}
-;

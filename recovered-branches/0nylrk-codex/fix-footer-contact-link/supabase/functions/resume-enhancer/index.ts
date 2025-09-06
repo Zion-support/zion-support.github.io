@@ -1,55 +1,7 @@
-
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    if (!openAiKey) {
-      throw new Error("OPENAI_API_KEY is not defined")
     }
     if (!content) {
       throw new Error("Content is required")
     }
-import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    const { content, enhancement_type, context } = await req.json ();
-    const openAiKey = Deno.env.get ("OPENAI_API_KEY");
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("OPENAI_API_KEY is not defined");
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("Content is required");
-    }
-    // Determine the system prompt based on enhancement type;
-    let system_prompt = "";
-    let user_prompt = "";
-;
-    switch (enhancement_type) {
-      case "summary":;
-        system_prompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
-        user_prompt = `Create a professional summary for someone with the following background: ${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context: ${context}` : ''}`;
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
@@ -57,10 +9,6 @@ if ( {) {
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
         break;
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -98,9 +46,6 @@ if ( {) {
       JSON.stringify ({
         enhanced_content});
       {
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
-    );
-  } catch (error) {
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -158,6 +103,3 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-  }
-});
-

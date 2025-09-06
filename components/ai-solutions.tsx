@@ -4,13 +4,17 @@ export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+      complexity: 'Advanced'
+    }
+
         'Predictive Analytics'
         'Pattern Recognition'
         'Anomaly Detection'
         'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
       complexity: 'Advanced'
     }
-
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -79,63 +83,6 @@ export default function AISolutionsPage() {
       id: 'ai - automation',
       title: 'AI - Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
-
-  const useCases = [
-    {
-      industry: 'Manufacturing',
-      solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
-      icon: ''
-    }
-    {
-      industry: 'Healthcare'
-      solutions: [
-        'Diagnostic Support'
-        'Patient Care Optimization'
-        'Drug Discovery'
-      ]
-      icon: ''
-    }
-    {
-      industry: 'Finance'
-      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading']
-      icon: ''
-    }
-    {
-      industry: 'Retail'
-      solutions: [
-        'Customer Segmentation'
-        'Inventory Management'
-        'Personalized Marketing'
-      ]
-      icon: ''
-    }
-  ];
-  const technologies = [
-    'TensorFlow'
-    'PyTorch'
-    'Scikit-learn'
-    'OpenAI GPT'
-    'BERT'
-    'YOLO'
-    'Keras'
-    'Pandas',  ];    {
-      industry: 'Healthcare'
-      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']
-      icon: ''
-    }
-    {
-      industry: 'Finance'
-      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']
-      icon: ''
-    }
-    {
-      industry: 'Retail'
-      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']
-      icon: ''
-    }
-  ];
-  const technologies = [
-    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -299,10 +246,6 @@ export default function AISolutionsPage() {
 
                           {feature}
 
-                    <Link
-
-                  </div>
-                ))}
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -401,7 +344,6 @@ export default function AISolutionsPage() {
                   <Link
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                    Read Case Study 
                   </Link>;
                 </div>;
                 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -416,8 +358,6 @@ export default function AISolutionsPage() {
                 </div>;
               </div>;
             </div>;
-
-                <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
@@ -427,6 +367,3 @@ export default function AISolutionsPage() {
                   href="/automation-insights"
 }
 
-}
-  );
-}

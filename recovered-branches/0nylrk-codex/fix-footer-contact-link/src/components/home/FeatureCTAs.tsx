@@ -45,10 +45,13 @@ import {
 export function FeatureCTAs() {
   const features = [
     {
-
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
 
+      title: "AI Talent Matching",;
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
+      title: "AI Talent Matching",
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -119,11 +122,6 @@ export function FeatureCTAs() {
       link: "/zion - hire - ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
-    }
-  ];
-;
-  return (
-
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -229,7 +227,6 @@ export function FeatureCTAs() {;
     }
   ];
   return (;
-
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -238,18 +235,6 @@ export function FeatureCTAs() {;
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.;
           </p>;
         </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {features && features.map((feature, index) => (;
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">;
-              <CardHeader className="pb-2">;
-                <div className="flex justify-between items-start">;
-
-                  {feature.icon}
-                  {feature.badge && (
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">
-                      {feature.badge}
-                    </Badge>
                   )}
                 </div>;
                 <CardTitle className="mt-4">{feature && feature.title}</CardTitle>;
@@ -262,12 +247,6 @@ export function FeatureCTAs() {;
                 <Button asChild className="w-full gap-1">;
                   <Link to={feature && feature.link}>;
                     <span>Explore {feature && feature.title}</span>;
-                    <ArrowRight className="h-4 w-4" />;
-                  </Link>;
-                </Button>;
-              </CardFooter>;
-            </Card>;
-          ))}
                     </Badge>)}
                 </div>;
                 <CardTitle className="mt - 4">{feature.title}</CardTitle>;

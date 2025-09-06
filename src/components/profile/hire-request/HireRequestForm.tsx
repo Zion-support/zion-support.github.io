@@ -3,8 +3,6 @@ import { useHireRequestForm, FormValues } from './useHireRequestForm'
 import { Button } from '@/components/ui/button'
 import { DialogFooter } from '@/components/ui/dialog'
 import { Form } from '@/components/ui/form'
-
-
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -51,16 +49,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             Cancel;
           </Button>;
           <Button
-            type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
-            {isSubmitting ? (;
-              <>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
-
-        <DialogFooter className="pt-4">;
-          <Button
-            type="button" 
-            variant="outline" 
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled = {isSubmitting,}>;
@@ -80,14 +68,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>;
             ) : (;
               'Submit Request';
-          </Button>
                 Submitting...
               </>
             ) : (
               'Submit Request'
-
-
-}
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -275,5 +259,3 @@ function HireRequestForm() {
     </Form>);
 }
 ;
-
-

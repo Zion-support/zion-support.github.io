@@ -9,4 +9,3 @@ const InnovationServicesMarketing = ({ className }) => {
   );
 };
 
-export default InnovationServicesMarketing;

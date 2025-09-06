@@ -77,18 +77,6 @@
     growthRate: '600%+ annual growth',
     variant: 'neural-revolutionary',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Complete brain-computer interface platform with neural signal processing, real-time monitoring, and application development tools.',
-    launchDate: '2025-03-01',
-    customers: 8,
-    rating: 5 && 5.0,
-    reviews: 5,
-  },
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -189,4 +177,3 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     reviews: 18;
   }
 ];
-;

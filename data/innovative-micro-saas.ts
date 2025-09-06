@@ -394,14 +394,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     customers: 3200;
     rating: 4.8
 
-  }
-
-
-export interface InnovativeMicroSaas {;
-
-  }
-
-];
   id: string,;
   name: string,;
   tagline: string,;
@@ -658,5 +650,4 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     rating: 4.8,;
     reviews: 1600;
   }
-
 ];

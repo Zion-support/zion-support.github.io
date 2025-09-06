@@ -18,11 +18,6 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 
-export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
-  const { user } = useAuth();
-  const { applyToJob } = useJobApplications();
-export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-
   const { resumes, isLoading: isResumesLoading } = useResume()
   const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
@@ -36,7 +31,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return
       if (success) {
-        toast.success("Your application has been submitted!");
+        toast.success("Your application has been submitted!"),
         if (onSuccess) {
           onSuccess()
         }
@@ -48,7 +43,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting (false);
     }
   }
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -69,10 +63,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
     setIsSubmitting(true);
     setError(null);
-
-    try {;
-      const success = await applyToJob(job && job.id, coverLetter, selectedResumeId || undefined);
-
       if (success) {;
         toast && toast.success("Your application has been submitted!");
         if (onSuccess) {;
@@ -86,7 +76,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting(false);
     }
   };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">;
       <div>;
@@ -102,10 +91,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
-
-      <div className="space-y-4">;
-        <div>;
-          <Label htmlFor="coverLetter">Cover Letter</Label>;
           <Textarea
             id="coverLetter"
             value={coverLetter}
@@ -136,61 +121,3 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           onClick={() => {;
             if (onSuccess) onSuccess();
           }}
-        >;
-          Cancel;
-        </Button>;
-        <Button type="submit" disabled={isSubmitting}>;
-          {isSubmitting ? (;
-            <>;
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-              Submitting...;
-            </>;
-          ) : (;
-            "Submit Application";
-          )}
-                {resumes.map ((resume) => (
-                  <SelectItem key={resume.id} value={resume.id}>;
-                    {resume.basic_info.title || "Untitled Resume"}
-                  </SelectItem>))}
-              </SelectContent>;
-            </Select>) : (
-            <div className="flex items - center justify - between mt - 2 p - 3 border rounded - md">;
-              <div className="flex items - center gap - 2">;
-                <FileText className="h - 5 w - 5 text - muted - foreground" />;
-                <span > No resumes found</span>;
-              </div>;
-              <Button;
-                variant="outline";
-                size="sm";
-                type="button";
-                on_click={() => navigate ("/dashboard / talent / portfolio")}
-              >;
-                Create Resume;
-              </Button>;
-            </div>)}
-        </div>;
-      </div>;
-      <div className="flex justify - end gap - 2">;
-        <Button;
-          type="button";
-          variant="outline";
-          disabled={is_submitting}
-          on_click={() => {
-            if (on_success ()) {
-  $2
-}
-          }}
-        >;
-          Cancel;
-        </Button>;
-        <Button type="submit" disabled={is_submitting}>;
-          {is_submitting ? (
-            <>;
-              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
-              Submitting...;
-            </>) : (
-            "Submit Application")}
-        </Button>;
-      </div>;
-    </form>);
-}

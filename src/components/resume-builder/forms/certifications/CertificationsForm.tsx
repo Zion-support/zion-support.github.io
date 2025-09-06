@@ -212,20 +212,16 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-
             <div className="flex justify-between pt-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {
-                  if (editingId) {
+                    form.reset({
+                    setEditingId(null),
+                    setEditingId(null),
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-                  } else {
                     onBack()
                   }
                 }}
@@ -240,7 +236,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
                   Next
-                </Button>
               </div>
             </div>
           </form>
@@ -248,9 +243,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
-
-
-
       // Check condition
 if ( {) {
   $2
@@ -358,8 +350,12 @@ if ( {) {
       </div>;
     </div>);
 }> {
-  editing_id ? 'Cancel' : 'Back';
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
+  editingId ? 'Cancel' : 'Back'
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+}
+;
+}
+;
 
 }

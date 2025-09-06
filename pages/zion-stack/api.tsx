@@ -1,6 +1,3 @@
-
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false })
-
 const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
 export default function ZionStackApiRoute(req, res) {
   try {

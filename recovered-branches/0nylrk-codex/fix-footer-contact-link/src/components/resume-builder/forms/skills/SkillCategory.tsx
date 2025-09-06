@@ -1,6 +1,3 @@
-import { SkillCategoryProps  } from './types';
-import { SkillItem  } from './SkillItem';
-export const SkillCategory = ({
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
@@ -19,9 +16,6 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             key={skill.id}
             skill={skill}
             category={category}
-      </div>;
-    </div>;
-  );
 };
             on_delete={on_delete}
           />))}

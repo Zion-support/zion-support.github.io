@@ -9,4 +9,3 @@ const ServiceProcessSteps = ({ className }) => {
   );
 };
 
-export default ServiceProcessSteps;

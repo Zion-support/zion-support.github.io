@@ -3,35 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-import {
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-import {
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-} from "lucide-react";
-  DizzyFace2
-} from 'lucide-react';
-  DizzyFace2
-} from 'lucide-react';
-  DizzyFace2,
-} from "lucide-react";
-
-
-
-
 
   Mail
   Lock
@@ -209,8 +186,6 @@ import {
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -227,17 +202,9 @@ export default function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
+origin/automation-improvements-final
       ...prev
       [name]: value
-
-
-  const [error, setError] = useState("");
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -273,19 +240,12 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-    setError("");
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
     } finally {
     } finally {;
       setIsLoading(false);
     }
   }
   return (
-        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
@@ -306,19 +266,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Or{" "}
-              Or{' '}
-              Or{' '}
-              Or{" "}
-              <Link
-                href="/contact"
-                className="font-medium text-blue-600 hover:text-blue-500"
-              >
-                contact us for access
-              </Link>
-            </p>
-          </motion.div>
-          <motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -338,9 +285,6 @@ export default function LoginPage() {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
                   Email address
                 </label>
                 <div className="relative">
@@ -368,7 +312,6 @@ export default function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
@@ -419,7 +362,6 @@ export default function LoginPage() {
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
@@ -609,10 +551,6 @@ if ( {) {
                 </div>;
               </div>;
 
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -634,10 +572,6 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-              Don't have an account?{" "}
-              Don't have an account?{' '}
-              Don't have an account?{' '}
-              Don't have an account?{" "}
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

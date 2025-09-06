@@ -1,4 +1,3 @@
-import React from 'react';
   Brain,
   Shield,
   Users,
@@ -21,10 +20,6 @@ import React from 'react';
   TrendingUp;
 } from 'lucide-react';
 
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -98,13 +93,6 @@ export default function AboutPage() {
     { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
-
-
-
-
-
-
-
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -130,11 +118,6 @@ import Layout from "../components/Layout";
 export default function About() {
 export default function About() {;
   return (
-import React from "react";
-import Layout from "../components/Layout";
-
-export default function About() {
-  return (
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
@@ -155,7 +138,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Layout>
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -463,35 +445,3 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * About - Function description
- */
-function About() {
-  return (
-    <Layout;
-      title="About Us - Zion Tech Group";
-      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting - edge technology solutions.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              About Zion Tech Group;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, and digital transformation.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">About page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
-}
-
-

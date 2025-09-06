@@ -211,50 +211,6 @@ export default function CloudDevOpsServices() {
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Cloud & DevOps Services?
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our cloud and DevOps experts help you modernize your infrastructure,
-                  improve deployment processes, and optimize costs while maintaining security.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-        {/* Tools Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We work with leading cloud platforms and DevOps tools to deliver the best solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tools.map((tool, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors text-center"
-                >
-                  <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
-                  <p className="text-gray-600 text-sm">{tool.description}</p>
-                </motion.div>
               ))}
             </div>
           </div>

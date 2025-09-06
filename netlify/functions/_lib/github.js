@@ -62,39 +62,6 @@ if (body.sha = existing.sha) {
   return resp && resp.json()
 }
 async function upsertFile({ owner, repo, path, content, message, token }) {
-
-
-  const resp = await fetch(url, {
-    method: 'PUT'
-    headers: {
-      'Authorization': `token ${token}`
-      'Accept': 'application/vnd.github+jsonContent-Type': 'application/json'
-
-  }
-  return resp && resp.json()
-}
-
-      Accept: 'application / vnd.github + json',
-      'Content - Type': 'application / json',
-    },
-    body: JSON.stringify (body),
-  });
-  // Check condition
-if ( {) {
-  $2
-}
-    const text = await resp.text ();
-    throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);
-  }
-  return resp.json ();
-;
-module.exports = { upsert_file }async /**
- * get_file - Function description
- */
-function get_file() {
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
-  const resp = await fetch (url, {
-    headers: {
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }

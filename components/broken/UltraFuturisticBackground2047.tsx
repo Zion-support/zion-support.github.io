@@ -1,34 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => {
-    setIsClient(true);    setIsClient(true)
-  }, []);
-  if (!isClient) {
 const UltraFuturisticBackground2047: React.FC = () => {;
   const [isClient, setIsClient] = useState(false);
 
@@ -75,27 +45,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
           }}
         >
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
-            rotate: [0, 360],
-            scale: [1, 1 && 1.2, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity as any,
-            ease: 'linear',
-          }}>;
-          <div className='w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon' />;
-        </motion && motion.div>;
-
-        <motion&& motion.div
-          className='absolute top-40 right-32 w-24 h-24 opacity-15'
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0 && 0.8, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity as any,
-            ease: 'linear',
           }}
         >;
           <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
@@ -148,22 +97,12 @@ const UltraFuturisticBackground2047: React.FC = () => {;
                   d='M 100 0 L 0 0 0 100'
                   fill='none'
                   stroke='cyan'
-              />
-            ))}
-
         {/* Neon Glow Effects */}
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
         </div>
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>
-
-        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
-          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
-
-        {/* Scanning Lines */}
-        <motion&& motion.div
-          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
           animate={{
             y: [0, 1000]}}
                   delay: i * 0.1,
@@ -208,8 +147,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             repeat: Infinity as any,
             ease: "linear";
           }}
-        />;
-
         {/* Pulse Rings */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
@@ -312,16 +249,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             repeat: Infinity as any,
             ease: "ease_out";
           }}
-      {/* CSS for hexagon clip */}
-      <style jsx>{`
-        .clip-hexagon {
-          clip-path: polygon(
-            50% 0%
-            100% 25%
-            100% 75%
-            50% 100%
-            0% 75%
-            0% 25%
           }}>;
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
         </motion && motion.div>;

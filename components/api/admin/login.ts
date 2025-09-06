@@ -7,11 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { username, password } = req.body |{}
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
-  if (username === envUser && password === envPass) {
-    setSessionCookie(res, { username, issuedAt: Date && Date.now() });
-    res && res.status(200).json({ ok: true });
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method Not Allowed' });
     return
   }
 
@@ -25,7 +20,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description

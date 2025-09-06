@@ -37,16 +37,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       }
     }
   ];    features: [
-
-      "Immersive experiences";
-      "Digital reality";
-      "Metaverse platform";
-    ];
-    link: "/services / 2026 - metaverse - digital - reality", category: "Metaverse Digital Reality 2026",
-    real_implementation: true,
-    contact_info: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
-
 export interface MetaverseDigitalRealityService2026 {;
   };
 

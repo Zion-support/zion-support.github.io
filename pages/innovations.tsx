@@ -2,7 +2,6 @@ import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
-const contactInfo = {
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -62,16 +61,6 @@ export default function InnovationsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.div
-        {/* Hero Section */}
-        <section className="relative pt - 32 pb - 20 overflow - hidden">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="text - center">;
-              <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-
-
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -133,8 +122,6 @@ export default function InnovationsPage() {
                 >
                   <Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
-                </a>
-                <a
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -144,7 +131,6 @@ export default function InnovationsPage() {
             </div>
           </div>
         </section>
-
         {/* Innovation Categories Overview */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -205,7 +191,6 @@ export default function InnovationsPage() {
                   icon: Brain,
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
-                  color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management'];
                 },
                 {
@@ -226,9 +211,6 @@ export default function InnovationsPage() {
                         {category.title}
                       </h3>
                       <p className="text-gray-300 mb-6 leading-relaxed">
-                      </p>
-                    </div>
-                    
                       </p>
                     </div>
                     <div className="space-y-3">
@@ -266,23 +248,6 @@ export default function InnovationsPage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                Innovation <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">Impact</span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Our innovations are already transforming industries and creating unprecedented value;
-                for businesses worldwide.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {[;
-                {
-                  icon: TrendingUp
-                  title: 'Market Leadership'
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology'
-                  stats: '15+ First-to-market innovations'
                 }
                 {
                   icon: Zap
@@ -306,13 +271,6 @@ export default function InnovationsPage() {
                   description: 'Solutions designed for the next decade of technological advancement'
 
                   stats: '2029+ Future-ready'
-                  stats: 'Up to 1500% ROI';
-                },
-                {
-                  icon: Shield,
-                  title: 'Future - Proofing',
-                  description: 'Solutions designed for the next decade of technological advancement',
-                  stats: '2029+ Future - ready';
                 }
               ].map((item, index) => (
                 <motion.div
@@ -384,43 +342,5 @@ export default function InnovationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-              className="text - center";
-            >;
-              <div className="bg - gradient - to - r from - gray - 900 / 80 to - gray - 800 / 80 border border - gray - 700 / 50 rounded - 2xl p - 12 backdrop - blur - sm">;
-                <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                  Ready to Lead the <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">Future?</span>;
-                </h2>;
-                <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
-                  Partner with Zion Tech Group to access the most advanced innovations of 2029.;
-                  Transform your business and lead your industry into the future.;
-                </p>;
-                <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center">;
-                  <a;
-                    href={`mailto:${contact_info.email}?subject = Innovation Partnership Inquiry`}
-                    className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25 text - lg";
-                  >;
-                    <Mail className="w - 5 h - 5 mr - 2" />;
-                    Start Innovation Partnership;
-                  </a>;
-                  <div className="flex items - center space - x-6 text - gray - 300">;
-                    <div className="flex items - center space - x-2">;
-                      <Phone className="w - 5 h - 5 text - cyan - 400" />;
-                      <span>{contact_info.mobile}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-2">;
-                      <Mail className="w - 5 h - 5 text - cyan - 400" />;
-                      <span>{contact_info.email}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Enhanced Footer */}
-        <UltraFuturisticFooter2029V2 />;
-      </div>;
 }
 }

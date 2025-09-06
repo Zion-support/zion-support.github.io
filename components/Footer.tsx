@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 import React from "react";
 import Link from "next/link";
 import {
@@ -11,9 +9,6 @@ import {
   Linkedin
   Instagram
   ArrowRight
-} from "lucide-react";
-
-export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -81,8 +76,6 @@ export default function Footer() {
       { name: "White Papers", href: "/white-papers" },;
       { name: "Support", href: "/support" },;
     ],;
-  };
-
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -97,10 +90,6 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, cloud infrastructure, quantum computing,
-              blockchain, IoT, and digital transformation services.
-            </p>
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
@@ -128,8 +117,6 @@ export default function Footer() {
                   Middletown DE 19709
                 </span>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-
-
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
 
 const Footer: React.FC = () => {
@@ -236,8 +223,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -265,50 +250,12 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
-
-            <div className="space-y-3">;
-              <div className="flex items-center text-gray-300">;
-                <Phone className="w-4 h-4 mr-3" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center text-gray-300">;
-                <Mail className="w-4 h-4 mr-3" />;
-                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-start text-gray-300">;
-                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-
-          {/* Services */}
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Services</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map((link) => (;
-                <li key={link && link.name}>;
-                  <Link
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-          </div>;
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                    className="text-gray-300 hover:text-white transition-colors"
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -321,9 +268,6 @@ const Footer: React.FC = () => {
 
 
 
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -340,14 +284,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
-
-          {/* Company & Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                    className="text-gray-300 hover:text-white transition-colors"
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
@@ -360,9 +296,6 @@ const Footer: React.FC = () => {
 
 
 
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -396,7 +329,6 @@ const Footer: React.FC = () => {
           </div>;
         </div>;
       </div>;
-
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">;
               <a
@@ -429,8 +361,6 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-
-
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
@@ -484,9 +414,7 @@ const Footer: React.FC = () => {
               </Link>;
               <Link
 }
-}
-    </footer>);
-}
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 }

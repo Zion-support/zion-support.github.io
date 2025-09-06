@@ -9,4 +9,3 @@ const ApiKeysManager.js = ({ className }) => {
   );
 };
 
-export default ApiKeysManager.js;

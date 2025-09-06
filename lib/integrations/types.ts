@@ -12,12 +12,6 @@ export type IntegrationProviderId =
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
-
-;
-export interface IntegrationProviderMeta {
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-}
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
@@ -57,28 +51,4 @@ export interface ZapierEvent {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-
-export interface SyncLogEntry {
-  id: string, timestamp: number,
-  providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
-  action: string,
-  details?: Record<string, any>
-}
-
-export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-}
-
-export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
-  timestamp: number,
-  payload: Record<string, any>
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-}
 

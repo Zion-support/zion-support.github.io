@@ -6,7 +6,6 @@
   reason?: string;
   createdAt: string;
 }
-}
 
 
 export interface ModerationFlag {;

@@ -8,9 +8,6 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
-
-
-export interface AIEnhancementOptions {;
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -36,9 +33,6 @@ export function useAIContentEnhancer() {;
         }
       });
       if (error) {
-      }
-      return data.enhancedContent
-    } catch (err: any) {
       const errorMessage = err.message |'Failed to enhance content';
       setError(errorMessage);
       toast({
@@ -103,15 +97,6 @@ export function useAIContentEnhancer() {;
     enhanceContent;
     isEnhancing;
 
-  context?: string,
-  instructions?: string;
-}
-export /**
- * useAIContentEnhancer - Function description
- */
-function useAIContentEnhancer() {
-  const [is_enhancing, setIsEnhancing] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
 
 ;
   const enhance_content = async ({
@@ -159,5 +144,3 @@ if ( {) {
     enhance_content;
     is_enhancing;
     error;
-  }
-}

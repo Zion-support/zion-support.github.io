@@ -9,4 +9,3 @@ const UseBlockchainWeb3.js = ({ className }) => {
   );
 };
 
-export default UseBlockchainWeb3.js;

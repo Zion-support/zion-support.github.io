@@ -1,6 +1,5 @@
-
-
 import { Handshake, MessageSquare, Star } from 'lucide-react'
+import React from "react",
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
 import { ProfileHero } from "./ProfileHero",
@@ -11,10 +10,6 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
 import { HireNowCTA } from './HireNowCTA';
 import { ProfileHero } from './ProfileHero';
 import { ProfileSkills } from './ProfileSkills';
@@ -31,20 +26,14 @@ interface TalentProfileProps {;
   onRequestHire: () => void;
   onMessageTalent?: () => void
 
-  profile,
-  onRequestHire,
-  onMessageTalent
-}: TalentProfileProps) {
-  // Create proper availability object from talent profile
-
 
   return (
-    <div className='container mx-auto px-4 py-8'>
+    <div className='container mx-auto px-4 py-8'>;
       {/* Profile Header */}
       <ProfileHero
-        name={profile.full_name}
-        title={profile.professional_title}
-        avatarUrl={profile.profile_picture_url}
+        name={profile && profile.full_name}
+        title={profile && profile.professional_title}
+        avatarUrl={profile && profile.profile_picture_url}
         profileType='talent'
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>;
@@ -170,7 +159,6 @@ export function TalentProfile({;
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
-
           <ProfileContact 
             email={profile.user_id}
             profileName={profile.full_name}
@@ -211,7 +199,6 @@ export function TalentProfile({;
                   Connect with {profile.full_name} for your next project and get started right away.
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
-
                 
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
@@ -239,12 +226,6 @@ export function TalentProfile({;
             </div>;
           )}
         </div>
-      </div>
-    </div>
-  )
-}
-
-;
 
                 </p>;
                 <div className='flex flex - wrap gap - 4 justify - center'>;
@@ -269,7 +250,8 @@ export function TalentProfile({;
             </div>)}
         </div>;
       </div>;
-    </div>);
+    </div>;
+  );
+};
 }
 ;
-

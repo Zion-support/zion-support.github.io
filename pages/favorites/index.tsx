@@ -1,10 +1,3 @@
-    <div>;
-      <h2 className=&quot;text - xl font - semibold mb - 4&quot;>Favorites</h2>;
-      <ul className=&quot;list - disc pl - 6&quot;>;
-        {favorites.map (function => <li key={f}>{f}</li>)}
-      </ul>;
-    </div>);
-}
 
   if (!favorites.length) {
     return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
@@ -25,5 +18,4 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 }

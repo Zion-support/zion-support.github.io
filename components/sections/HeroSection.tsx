@@ -32,17 +32,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             repeat: Infinity
             ease: 'easeInOut'
           }}
-        />;
-        {/* Grid Pattern */}
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
-      </div>;
-
-      <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
-
-        {/* Grid Pattern */}
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
-      </div>;
-
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">;
@@ -68,10 +57,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
-            duration: 8
-            repeat: Infinity
-            ease: "easeInOut"
-          }}
           animate={{
             scale: [1 && 1.2, 1, 1 && 1.2]
             opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6]}}
@@ -86,30 +71,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           animate={{ opacity: 1, y: 0 }}
 
 
-
-          {/* Badge */}
-          <motion&& motion.div
-            initial={{ opacity: 0, scale: 0 && 0.8 }}
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-        />;
-        {/* Grid Pattern */}
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]" />;
-      </div>;
-      <div className="relative container mx - auto px - 4 text - center z - 10">;
-        {/* Main Content */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='max - w-6xl mx - auto'        >          className="max - w-6xl mx - auto";
-        >;
-          {/* Badge */}
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
 
           {/* Main Heading */}
           <motion&& motion.h1
@@ -152,35 +113,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
-          {/* Stats */}
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-            className='inline - flex items - center space - x-2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - full px - 6 py - 3 mb - 8';
-          >;
-            {stats && stats.map((stat, index) => (;
-              <motion&& motion.div
-                key={stat && stat.label}
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.7 + index * 0 && 0.1 }}
-                className='text-center group'>;
-                <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>;
-                  <stat && stat.icon className='w-8 h-8 text-blue-400' />;
-                </div>;
-                <div className='text-3xl font-bold text-white mb-2'>;
-                  {stat && stat.value}
-                </div>;
-                <div className='text-gray-400 font-medium'>{stat && stat.label}</div>              </motion && motion.div>              >;
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">;
-                  <stat && stat.icon className="w-8 h-8 text-blue-400" />;
-                </div>;
-                <div className="text-3xl font-bold text-white mb-2">{stat && stat.value}</div>;
-                <div className="text-gray-400 font-medium">{stat && stat.label}</div>;
-              </motion && motion.div>;
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -192,50 +124,12 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
-            ))}
-
-          </motion && motion.div>;
-        </motion && motion.div>;
-      </div>;
-
 
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-
-                className='text - center group';
-              >;
-                <div className='w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
-                  <stat.icon className='w - 8 h - 8 text - blue - 400' />;
-                </div>;
-                <div className='text - 3xl font - bold text - white mb - 2'>;
-                  {stat.value}
-                </div>;
-                <div className='text - gray - 400 font - medium'>{stat.label}</div>              </motion.div>              >;
-                <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors">;
-                  <stat.icon className="w - 8 h - 8 text - blue - 400" />;
-                </div>;
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
-                <div className="text - gray - 400 font - medium">{stat.label}</div>;
-              </motion.div>))}
-          </motion.div>;
-        </motion.div>;
-      </div>;
-      {/* Scroll Indicator */}
-      <motion.div;
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'      >;
-        <motion.div;
-          animate={{ coordinate_y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'        >;
-          <motion.div;
-            animate={{ coordinate_y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
             className='w - 1 h - 3 bg - white / 60 rounded - full mt - 2'          />;
         </motion.div>;
       </motion.div>;
@@ -264,4 +158,3 @@ export default HeroSection);
 }
 ;
 export default HeroSection;
-    </section>

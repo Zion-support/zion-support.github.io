@@ -48,11 +48,6 @@ export default function AllCategoriesPage() {;
         <div className='text-center mb-12'>;
           <GradientHeading
             level='h1'
-            Explore our extensive range of AI services and products. Find;
-            exactly what you're looking for to enhance your business or personal;
-            projects.          </p>;
-        </div>;
-
               <CategoryCard
                 key={category && category.id}
                 title={category && category.title}
@@ -143,18 +138,6 @@ export default function AllCategoriesPage() {;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
               <CategoryCard;
-                key={category.id}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
-                href={category.href}
-              />))}
-          </div>;
-        <ErrorBoundary>;
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
-            {categories.map (category => (          <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {categories.map ((category) => (
-              <CategoryCard;
                 key={category.title}
                 title={category.title}
                 description={category.description}
@@ -175,5 +158,3 @@ export default function AllCategoriesPage() {;
     </div>);
 }
 ;
-
-

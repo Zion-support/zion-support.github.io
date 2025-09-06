@@ -6,16 +6,6 @@ import Layout from '../../components/Layout';
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
   },
   {}
-    icon: BookOpen,
-    title: 'Digital Content Management,',
-    description: 'Platforms for creating, managing, and delivering educational content and resources.',
-  },
-  {}
-    icon: Laptop,
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
-  },
-  {}
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },

@@ -1,29 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from 'react';
-export default function EpisodePage() {
-export default function EpisodePage() {;
 
 export default function EpisodePage() {
   const router = useRouter();
@@ -132,5 +107,4 @@ if (return <div > Loading</div>) {
         </pre>
       </div>
     </div>
-
   );

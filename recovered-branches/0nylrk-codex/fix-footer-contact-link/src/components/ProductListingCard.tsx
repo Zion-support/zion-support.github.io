@@ -10,8 +10,6 @@ import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
 
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
 }
 export function ProductListingCard({
   listing
@@ -28,10 +26,13 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-
   listing, 
   view = 'grid',
 
+  listing, ;
+  view = 'grid';
+  listing, 
+  view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -54,13 +55,6 @@ export function ProductListingCard({
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation()
-    if (onRequestQuote) {
-      onRequestQuote(listing.id)
-    } else {
-      // Default behavior if no handler provided;
-      navigate (`/request - quote?listing=${listing.id}`);
-    }
-  }
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
@@ -92,7 +86,6 @@ export function ProductListingCard({
                 )}
               </div>;
             )}
-
 ;
   return (
     <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
@@ -158,7 +151,6 @@ export function ProductListingCard({
               size="sm"
               onClick={(e) => {
 
-
           </div>;
 
           {/* Title & Description */}
@@ -169,21 +161,11 @@ export function ProductListingCard({
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
             {listing.description}
-          </p>
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
-                >
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-        </div>
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
           <div className="text-sm font-medium">;
@@ -195,15 +177,6 @@ export function ProductListingCard({
             ) : (;
               <span className="text-zion-slate-light">;
                 {formatPrice()}
-              </span>;
-            )}
-          </div>
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              onClick={(e) => {
-                e.stopPropagation();
-
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -211,8 +184,6 @@ export function ProductListingCard({
               Buy Now
             </Button>
             {onRequestQuote && (
-          </div>;
-
           <div className="flex gap-2">;
             <Button
               size="sm" 
@@ -224,15 +195,11 @@ export function ProductListingCard({
             >;
               Buy Now;
             </Button>;
-
             {onRequestQuote && (;
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-                Request Quote;
-              </Button>;
             )}
           </div>;
         </div>;

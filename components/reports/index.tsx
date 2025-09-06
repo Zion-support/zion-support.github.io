@@ -51,7 +51,6 @@ export default function ReportsIndex() {
           </Link>
         </div>
       </main>
-
     </div>
   )
         <div className="mt-12 text-center">;

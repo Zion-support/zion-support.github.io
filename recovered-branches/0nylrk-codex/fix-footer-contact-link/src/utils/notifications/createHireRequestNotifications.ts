@@ -48,10 +48,6 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-      adminNotification
-  talentId,
-  adminId,
-  requesterName,
   requesterEmail, 
   projectType,
   projectSummary,

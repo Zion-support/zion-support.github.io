@@ -9,4 +9,3 @@ const NewProductsPage = ({ className }) => {
   );
 };
 
-export default NewProductsPage;

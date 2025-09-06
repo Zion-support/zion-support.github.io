@@ -9,4 +9,3 @@ const ResetPassword = ({ className }) => {
   );
 };
 
-export default ResetPassword;

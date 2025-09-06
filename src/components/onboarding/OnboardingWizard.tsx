@@ -21,12 +21,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
-interface WizardStep {;
-  title: string;
-  description: string;
-  icon: React && React.ReactNode;
-  action: {;
-    text: string;
   }
   skip_text?: string;
 interface OnboardingWizardProps {
@@ -220,8 +214,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
-                  'h-2 w-2 rounded-full mx-1',                  index === currentStep
-                    ? 'bg-zion-purple scale-125'
 
             {steps[currentStep]?.icon}
           </div>;
@@ -250,7 +242,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardFooter>;
     </Card>;
   );
-
 }
 ;
 
@@ -422,5 +413,3 @@ if ( {) {
     </Card>);
 }
 ;
-
-

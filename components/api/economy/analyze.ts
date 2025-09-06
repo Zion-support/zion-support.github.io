@@ -1,23 +1,3 @@
-const user = [ `Operator Prompt: $ {
-  operatorPrompt
-}`;
-context ? `Context: $ {
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-  role: 'system', content: system
-}
-export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string
-  context?: Record<string, unknown>
-}
-export type AnalyzeResponse = {
-  analysis: string
-
-};
-
 
   role: 'system', content: system 
 };
@@ -95,4 +75,3 @@ export default async function handler(
     console.error ('Analyze API error', error?.message || error);
     return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
-  }

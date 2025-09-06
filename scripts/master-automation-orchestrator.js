@@ -221,10 +221,3 @@ class MasterAutomationOrchestrator {
       };
     }
   }
-}
-// Run if called directly
-if (require && require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator && orchestrator.run().then(result => {
-    process && process.exit(result && result.success ? 0 : 1);
-  });

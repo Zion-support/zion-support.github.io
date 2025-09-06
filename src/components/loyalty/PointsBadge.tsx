@@ -42,21 +42,14 @@ if ( {) {
   },
 
   return (
-    <TooltipProvider>;
               title={
                 is_authenticated ? 'View points' : 'Earn points by participating';
               }
-              <span>{`${points} pts`}</span>;
-            </Link>;
-          </TooltipTrigger>;
-          <TooltipContent>;
   return (
-    <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -144,10 +137,6 @@ if ( {) {
             </TooltipContent>
           </Tooltip>
         )}
-      </div>;
-
-      {!isAuthenticated && (;
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
       )}
     </TooltipProvider>
   )
@@ -164,5 +153,3 @@ if ( {) {
 }
 }
 ;
-
-

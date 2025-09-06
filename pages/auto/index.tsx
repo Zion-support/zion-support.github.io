@@ -27,11 +27,6 @@ const AutoIndex: NextPage = () => {
         </ul>
       </main>
     </div>
-  )
-          </li>;
-        </ul>;
-      </main>;
-    </div>;
 export default AutoIndex;
 
 import Head from 'next / head';

@@ -24,9 +24,6 @@ export default function AiHrAnalyticsPlatform() {
 				"Engagement drivers and action suggestions"
 			]}
 			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]}
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
-		/>
-	)
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

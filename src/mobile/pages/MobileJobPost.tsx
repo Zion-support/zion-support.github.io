@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react"
 import {MobileHeader} from "@/mobile/components/common/MobileHeader"
 import {BottomNavigation} from "@/mobile/components/common/BottomNavigation"
@@ -13,14 +12,12 @@ import {Badge} from "@/components/ui/badge"
 import {Card, CardContent} from "@/components/ui/card"
 type JobPostStep = "details" | "requirements" | "budget" | "preview"
 export function MobileJobPost() {
-  const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
     } else if (currentStep === "requirements") {
       setCurrentStep("budget")
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
-    }
   }
   const goToPrevStep = () =>: any {
     // Check condition
@@ -105,7 +102,7 @@ export function MobileJobPost() {;
   };
 
     }
-
+  }
   },
   
   const goToPrevStep = () => {
@@ -116,7 +113,6 @@ export function MobileJobPost() {;
     } else if (currentStep === "preview") {
       setCurrentStep("budget")
     }
-
   },
   
   const renderStepContent = () => {
@@ -138,7 +134,6 @@ export function MobileJobPost() {;
 
       
       <main className="flex-1 py-4 pb-24 px-4">
-        <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
             <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
             <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
@@ -149,8 +144,6 @@ export function MobileJobPost() {;
             <Zap className="h-4 w-4" /> AI Assist
           </Button>
         </div>
-        
-
         {renderStepContent()}
         <div className="flex gap-2 mt-6">
           {currentStep !== "details" && (
@@ -162,13 +155,7 @@ export function MobileJobPost() {;
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
           )}
-          <Button
-            className="flex-1 gap-1"
-
-
-      
       <BottomNavigation />
-    </div>
   )
 }
 function DetailsStep() {
@@ -184,7 +171,6 @@ function DetailsStep() {
         <Input id="company" placeholder="Your company name" />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="location">Location</Label>
         <Select defaultValue="remote">
           <SelectTrigger>
             <SelectValue placeholder="Select location type" />
@@ -197,7 +183,6 @@ function DetailsStep() {
         </Select>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="jobType">Job Type</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select job type" />
@@ -281,7 +266,6 @@ export function MobileJobPost() {;
   },;
   return (;
     <div className="min-h-screen flex flex-col">;
-
       <MobileHeader;
           </Button>;
         </div>;
@@ -329,7 +313,6 @@ function RequirementsStep() {
       <h2 className="text-lg font-medium">Job Requirements</h2>
       
       <div className="space-y-2">
-        <Label htmlFor="experience">Experience Level</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select experience level" />
@@ -343,7 +326,6 @@ function RequirementsStep() {
         </Select>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="education">Education</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select required education" />
@@ -378,28 +360,6 @@ function RequirementsStep() {
                 ×
               </button>
             </Badge>
-;
-function RequirementsStep() {;
-  const [skills, setSkills] = useState<string[]>([;
-    "React", "TypeScript", "Node && Node.js";
-  ]);
-  const [newSkill, setNewSkill] = useState("");
-
-  const addSkill = () => {;
-    if (newSkill && !skills && skills.includes(newSkill)) {;
-      setSkills([...skills, newSkill]);
-      setNewSkill("");
-    }
-  };
-
-  const removeSkill = (skill: string,) => {;
-    setSkills(skills && skills.filter(s => s !== skill));
-  };
-
-  return (
-    <div className="space-y-4">;
-      <h2 className="text-lg font-medium">Job Requirements</h2>;
-
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
     <div className="space - y-4">;
@@ -419,7 +379,6 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Select>;
@@ -448,36 +407,6 @@ function RequirementsStep() {;
           <Button onClick={addSkill}>Add</Button>
         </div>
       </div>
-      
-
-      <div className="space-y-2">
-        <Label>Required Skills</Label>
-        <div className="flex flex-wrap gap-2 mb-3">
-          {skills.map((skill) => (
-            <Badge 
-              key={skill} 
-              variant="secondary"
-              className="flex items-center gap-1 px-3 py-1">;
-              {skill}
-              <button
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
-                onClick = {(,) => removeSkill(skill),}
-              >;
-                ;
-              </button>;
-            </Badge>;
-          ))}
-        </div>
-        <div className="flex gap-2">
-          <Input
-            value = {newSkill,}
-            onChange = {(e,) => setNewSkill(e.target.value),}
-            placeholder="Add a skill"
-            onKeyDown = {(e,) => e.key === 'Enter' && addSkill(),}
-          />
-          <Button onClick={addSkill}>Add</Button>
-        </div>
-      </div>
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
         <Textarea
@@ -498,13 +427,11 @@ function RequirementsStep() {;
       </div>;
     </div>;
   );
-}
 function BudgetStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
       <div className="space-y-2">
-        <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select payment type" />
@@ -517,7 +444,6 @@ function BudgetStep() {
         </Select>
       </div>
       <div className="space-y-2">
-        <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
           <Input placeholder="Min" type="number" className="w-full" />
           <span>to</span>
@@ -543,7 +469,6 @@ function BudgetStep() {
         <Input type="date" id="startDate" />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="duration">Project Duration</Label>
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select project duration" />
@@ -559,7 +484,6 @@ function BudgetStep() {
         </Select>
       </div>
       
-
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
         <Textarea 
@@ -575,7 +499,6 @@ function BudgetStep() {
       </div>;
     </div>;
   );
-}
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -584,11 +507,7 @@ function PreviewStep() {
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
-
-
-          
           <div className="flex gap-2 my-3">
-            <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
             <Badge variant="outline">Node.js</Badge>
           </div>
@@ -605,7 +524,6 @@ function PreviewStep() {
             <p>December 15, 2023</p>
           </div>
           <div className="mt-4 pt-3 border-t border-border">
-            <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
@@ -631,7 +549,6 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
   3
 }/> </div> </div>) '"
-
       <div className="space - y-2">;
         <Label > Required Skills</Label>;
         <div className="flex flex - wrap gap - 2 mb - 3">;
@@ -811,9 +728,3 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
 }<div className=" space - y-2"> <Label html_for=" payment_type">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space - y-2"> <Label > Salary Range</Label> <div className=" flex gap - 4 items - center"> <Input placeholder=" Min"type=" number"className=" w - full"/> <span > to</span> <Input placeholder=" Max"type=" number"className=" w - full"/> <Select default_value=" usd"> <SelectTrigger className=" w - 24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space - y-2"> <Label html_for=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space - y-2"> <Label html_for=" start_date">Expected Start Date</Label> <Input type=" date"id=" start_date"/> </div> <div className=" space - y-2"> <Label html_for=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1 - 3m">1 - 3 months</SelectItem> <SelectItem value=" 3 - 6m">3 - 6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space - y-2"> <Label html_for=" additional_info">Additional Budget Information</Label> <Textarea id=" additional_info"placeholder=" Any additional information about budget or payment"rows= {
   3;
 }/> </div> </div>) '";
-      
-      <Button variant="outline" className="w-full">Edit Job Post</Button>
-    </div>
-  )
-}
-;

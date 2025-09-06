@@ -38,11 +38,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
         return false;
       }
     });
-    // Check condition
-if (return by_link) {
-  $2
-}
-  }, [slug]);
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -60,7 +55,6 @@ import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
 type Service = typeof enhancedRealMicroSaasServices[number];
-
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -345,10 +339,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								"@type": "Service",								name: service.name
 								description: service.tagline |service.description
 								url: canonical
-								provider: {
-									"@type": "Organization"
-									name: "Zion Tech Group"
-									url: "https://ziontechgroup.com"
 								}
 								offers: {
 									"@type": "Offer"
@@ -464,14 +454,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))}
-							</ul>
-						</Card>
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
-							<div className="flex flex-wrap gap-2">
-								{(service.integrations |[]).slice(0, 12).map((i: string) => (
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -495,9 +477,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</Link>								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -505,9 +484,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
-							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>

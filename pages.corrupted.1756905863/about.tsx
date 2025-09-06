@@ -2,8 +2,6 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import N
 import React from 'react';
 interface AboutProps {
   // Add props here as needed
-}
-export default function About({ }: AboutProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

@@ -1,7 +1,3 @@
-interface OnsitesupportProps {;
-  // Add props here as needed;
-}
-export default function Onsitesupport(): any ({ }: OnsitesupportProps) {;
   return (
     <div>;
       <h1>Onsitesupport</h1>;

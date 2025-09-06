@@ -10,11 +10,6 @@ const REWARDS = [
 ]
 
   return (
-    <div className='container max-w-xl py-10'>;
-      <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;
-      <ul className='space-y-4'>;
-        {REWARDS && REWARDS.map(r => (;
-          <li
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
@@ -32,12 +27,6 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
-
-        ))}
-      </ul>
-    </div>
-  )
-}
   );
 }
 import { Gift } from 'lucide-react';

@@ -108,6 +108,13 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         Tutorial not found.;
       </div>;
     );
+
+  if (!tutorial) {
+    return (
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+        Tutorial not found.
+      </div>
+    )
   }
   return (
     <>
@@ -115,27 +122,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button
-            variant='outline'
-            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-            asChild>;
-            <Link href='/tutorials'>;
-              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Tutorials;
-            </Link>;
-          </Button>;
-          <h1 className='text-3xl font-bold text-white mb-4'>;
-            {tutorial && tutorial.title}
-          </h1>;
-          <p className='text-zion-slate-light mb-8'>{tutorial && tutorial.excerpt}</p>;
-          <div className='prose prose-invert'>;
-            <ReactMarkdown>{tutorial && tutorial.content}</ReactMarkdown>;
-          </div>;
-          {tutorial && tutorial.author && (;
-            <p className='mt-8 text-white font-semibold'>;
-              {typeof tutorial && tutorial.author === 'string';
-                ? tutorial && tutorial.author;
-                : tutorial && tutorial.author.name}
-            </p>;
-          )}
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -204,5 +190,3 @@ if ( {) {
     </>);
 }
 ;
-
-

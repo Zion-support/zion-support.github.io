@@ -107,4 +107,3 @@ export const jobSchema = z.object({;
   status: z.string().optional(),;
   external_apply_link: z.string().url({;
     message: "Please enter a valid URL."}).optional()});
-export type JobSchemaType = z.infer<typeof jobSchema>;

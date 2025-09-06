@@ -18,8 +18,6 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
-import Button from '../components/ui/Button',;
-import Button from '../components/ui/Button',
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -112,11 +110,6 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support', color: 'text-green-400' }
     { number: '99.9%', label: 'SLA', color: 'text-blue-400' }]
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
 
   return (
       {/* Mission & Vision */}
@@ -285,13 +278,4 @@ export default function AboutPage() {
         </section>
       </section>
     </>
-              </p>;
-            </div>;
-          </div>;
-        </section>;
-      </section>;
-    </>;
-  );
-}
-    </>);
 }

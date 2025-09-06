@@ -7,11 +7,6 @@ import { NextSeo } from '@/components/NextSeo'
 import { Globe, MapPin } from 'lucide-react'
 
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components / ui / tooltip';
 interface Instance {
   id: number;
   name: string;
@@ -91,7 +86,6 @@ const INSTANCES: Instance[] = [;
     region: 'Europe'}],;
 interface FeedItem {;
   id: number,;
-
   text: string;
 }
 ;
@@ -117,6 +111,9 @@ export default function GlobalMapPage() {;
 
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+  return (
+      <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
+      <Header />
 
   return (
     <div className='min-h-screen bg-background'>;
@@ -142,7 +139,6 @@ export default function GlobalMapPage() {;
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
                 <TooltipProvider key={i.id}>
-                  <Tooltip>
                     <TooltipTrigger asChild>
                       <div
                         className={`absolute ${color} rounded-full p-1`}
@@ -167,7 +163,12 @@ export default function GlobalMapPage() {;
           </div>
           <div className="flex-1 space-y-6">
             <section>
-
+              <h2 className='text-xl font-semibold mb-2'>
+                Top Regions by Talent
+              </h2>
+              <ul className='space-y-1'>
+                {topRegions.map(r => (
+                  <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => (
@@ -179,22 +180,6 @@ export default function GlobalMapPage() {;
               </ul>
             </section>
             <section>
-
-;
-}
-              <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
-              <ul className="space-y-1">
-                {feed.map((f) => (
-                  <li key={f.id} className="text-sm">{f.text}</li>
-                ))}
-              </ul>;
-            </section>;
-            <section>;
-              <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>;
-              <ul className='space-y-1'>;
-                {feed && feed.map(f => (;
-                  <li key={f && f.id} className='text-sm'>;
-                    {f && f.text}
                   </li>                ))}
               </ul>
             </section>
@@ -348,5 +333,3 @@ function project() {
 }
 ;
 ;
-
-

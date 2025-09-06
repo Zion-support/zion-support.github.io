@@ -1,7 +1,3 @@
-import React from 'react';
-interface EnterpriseProps {
-  // Add props here as needed
-}
 export default function Enterprise({ }: EnterpriseProps) {
 
 class ErrorBoundary extends React.Component {

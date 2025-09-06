@@ -1,16 +1,3 @@
-function sanitizeCode(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-export default async function handler(
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { name, niche, socials, payout_method, desired_code } = req.body |{}
-  if (!name |!desired_code) return res.status($1).json({ $2 });
-  const code = sanitizeCode(desired_code);
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
@@ -81,9 +68,6 @@ if ( {) {
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
-  }
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -95,6 +79,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }

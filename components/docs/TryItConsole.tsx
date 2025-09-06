@@ -1,22 +1,3 @@
-
-  method
-  path
-  requiresAuth
-}: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-
-
-  method,
-  path,
-  requiresAuth,
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  path: string, // full URL or relative
-  requiresAuth: boolean
-}
-export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-
-interface TryItProps {;
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
   requiresAuth: boolean;
@@ -29,23 +10,10 @@ export default function TryItConsole(): any ({;
   const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
   path: string, // full URL or relative;
   requiresAuth: boolean;
-}
-
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
-  const url = useMemo(() => {;
-    if (path && path.startsWith('http')) return path;
-    return baseUrl && baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl && baseUrl.replace(/\/$/, '') + path;
-  const url = useMemo(() => {;
-    if (path && path.startsWith('http')) return path;
-    return baseUrl && baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl && baseUrl.replace(/\/$/, '') + path;
-  }, [baseUrl, path]);
     setLoading(true);
     setResponse('');
     try {
@@ -57,14 +25,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       const res = await fetch(url, {
         method;
         headers;
-        body: method === 'GET' |method === 'DELETE' ? undefined : body |undefined})
-      const text = await res.text();
-
-      setResponse(text)
-    } catch (e: any) {
-      setResponse(String(e?.message |e))
-    } finally {
-      setLoading(false)
     }
   }
   return (
@@ -196,4 +156,3 @@ if (headers['Authorization'] = `Bearer ${token}`) {
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
-        <div>

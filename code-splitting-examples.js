@@ -1,4 +1,3 @@
-
 // Example: Route-based code splitting
 const HomePage = React.lazy(() => import('../pages/Home'));
 const AboutPage = React.lazy(() => import('../pages/About'));

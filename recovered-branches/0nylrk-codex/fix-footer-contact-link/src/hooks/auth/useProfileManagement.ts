@@ -1,5 +1,4 @@
 
-import { supabase } from "@/integrations/supabase/client",
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -40,8 +39,6 @@ if ( {) {
           variant: "destructive"});
         return { error: auth_error }
       }
-
-
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -51,7 +48,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
-
 
 
       // Update profiles table
@@ -78,29 +74,11 @@ if ( {) {
         toast ({
           title: "Profile update failed";
           description: profile_error.message,
-          variant: "destructive"});
-        return { error: profile_error }
       }
       toast({
         title: "Profile updated"
         description: "Your profile has been updated successfully."});
-      return { success: true }
-    } catch (error: any) {
-      console && console.error("Profile update error:", error);
-      toast({
-        title: "Profile update failed";
-        variant: "destructive"});
-      return { error }
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-;
-  return { update_profile }
 }
-;
-
 
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
@@ -144,4 +122,3 @@ if ( {) {
       setIsLoading(false);
     }
   };
-  return { updateProfile }

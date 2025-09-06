@@ -25,8 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
   try {
-
-    return res.status(200).json({ jobs })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load jobs" })
 }

@@ -1,10 +1,4 @@
 
-import { jsPDF  } from 'jspdf';
-import { WorkExperience  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addWorkExperienceSection(
-
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -44,9 +38,6 @@ export function addWorkExperienceSection(;
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
-      doc && doc.addPage();
-      yPos = 20
-    }
     }
   }
   return yPos + 5
@@ -133,4 +124,3 @@ if ( {) {
     }
   }
   return y_pos + 5;
-}

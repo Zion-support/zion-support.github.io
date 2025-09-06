@@ -23,11 +23,6 @@ import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
-} from "../context/LanguageContext";
-export function LanguageDetectionPopup() {
-  const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
-  const { changeLanguage, currentLanguage, supportedLanguages } =;
     useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] =;
     useState<SupportedLanguage | null>(null);
@@ -92,7 +87,6 @@ export function LanguageDetectionPopup() {;
             {t("language.switch_to_detected", { language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
-            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -108,7 +102,6 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
-  );
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
 import {
@@ -200,4 +193,3 @@ if (return null) {
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-}

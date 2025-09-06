@@ -90,13 +90,6 @@ const pricingPlans = [
     popular: false
   },];    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations']
     popular: false
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='flex flex-col sm:flex-row gap-4 justify-center items-center'
-
           >
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
               <TrendingUp className='w-4 h-4 mr-2' />
@@ -128,40 +121,6 @@ const pricingPlans = [
               Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
             </p>
           </motion.div>
-          content='https://ziontechgroup && ziontechgroup.com/quantum-trading-algorithm'
-        />;
-      </Head>;
-
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
-
-        {/* Background Elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
-          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>;
-          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
-          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
-        </div>;
-
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'      </Head>;
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>;
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">;
-          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>;
-          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
-          <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
-        </div>;
-
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -213,12 +172,6 @@ const pricingPlans = [
             </a>;
             <a
               href="#contact"
-
-      {/* Features Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-slate-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-slate-900">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,16 +233,6 @@ const pricingPlans = [
                   <CheckCircle className='w-6 h-6 text-white' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
-                  {feature}
-                </h3>              </motion && motion.div>              >;
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">;
-                  <CheckCircle className="w-6 h-6 text-white" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>;
-              </motion && motion.div>;
-
-                className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
-              >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -305,11 +248,6 @@ const pricingPlans = [
 
 
 
-      {/* Pricing Section */}
-      <section id='pricing' className='py-20 bg-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -395,8 +333,6 @@ const pricingPlans = [
           </div>
         </div>
       </section>
-                </ul>;
-
                 <button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">;
                   Get Started;
                 </button>;
@@ -405,10 +341,6 @@ const pricingPlans = [
           </div>;
         </div>;
       </section>;
-
-      {/* Contact Section */}
-
-
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -540,144 +472,6 @@ const pricingPlans = [
           </div>
         </div>
       </section>
-              className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
-                <MapPin className='w-8 h-8 text-white' />;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
-                <MapPin className="w-8 h-8 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-              <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </section>;
-}
-    </Layout>;
-  );
-}
-  );
-}
-                    </span>;
-                  </div>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                    ${plan.price}
-                    <span className="text - lg text - gray - 400 font - normal">/{plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300">;
-                  Get Started;
-                </button>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Section */}
-      <section;
-        id='contact';
-        className='py - 20 bg - gradient - to - b from - slate - 900 to - black';
-      >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Trading?;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Contact our team to learn more about how Quantum Trading Algorithm;
-              Pro can revolutionize your trading strategy.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
-              Ready to Transform Your Trading?;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Phone className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Mail className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <MapPin className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>);
-}
 
   );
 

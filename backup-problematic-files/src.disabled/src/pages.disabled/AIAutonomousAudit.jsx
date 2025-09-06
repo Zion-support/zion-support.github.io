@@ -9,4 +9,3 @@ const AIAutonomousAudit = ({ className }) => {
   );
 };
 
-export default AIAutonomousAudit;

@@ -1,4 +1,3 @@
-import React, { useState } from 'react',
 import {
   Dialog;
   DialogContent;
@@ -16,8 +15,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { JobApplication } from "@/types/jobs";
 export interface HireConfirmationModalProps {
 
-
-
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -28,21 +25,6 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
-export interface HireConfirmationModalProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void
-
-  isSubmitting?: boolean
-}
-  isOpen;
-
-export function HireConfirmationModal({ ;
-
-
-  isOpen;
   application;
   onConfirm;
   isSubmitting = false;
@@ -136,23 +118,6 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
-    setIsLoading(true);
-    // Create a new project
-    try {
-      const { data: project_data, error: project_error } = await supabase;
-        .from ('projects');
-        .insert ([;
-          {
-            setIsLoading(false);
-            client_id: user.id,
-            talent_id: talent_data.user_id,
-            job_id: application?.job_id || null,
-            title: project_name,
-            description: project_description,
-            status: 'active',
-            payment_terms: 'hourly'}]);
-        .select ();
-        .single ();
 ;
       // Check condition
 if ( {) {
@@ -164,50 +129,6 @@ if ( {) {
           variant: 'destructive'}),
         setIsLoading (false);
         return;
-      }
-      // Create a new hiring record;
-      const { error: hiring_error } = await supabase;
-        .from ('hiring_records');
-        .insert ([;
-          {
-            client_id: user.id,
-            talent_id: talent_data.user_id,
-            project_id: project_data.id,
-            hire_date: new Date ().toISOString (),
-            status: 'active'}]),
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Error creating hiring record',
-          description: hiring_error.message,
-          variant: 'destructive'}),
-        setIsLoading (false);
-        return;
-      }
-      // Update the availability status;
-      // Check condition
-if ( {) {
-  $2
-}
-        try {
-          const { error: availability_error } = await supabase;
-            .from ('talent_profiles');
-            .update ({ availability_type: 'unavailable' });
-            .eq ('id', talent_data.id);
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            toast ({
-              title: 'Error updating availability',
-              description: availability_error.message,
-              variant: 'destructive'}),
-            setIsLoading (false);
-            return;
-          }
           setIsLoading(false);
           return;
         }
@@ -283,13 +204,10 @@ if ( {) {
         }
       }
 ;
-
       toast({;
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
       onConfirm();
-    }
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
@@ -341,21 +259,7 @@ if ( {) {
             Cancel;
           </Button>;
           <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>;
-            {isLoading ? "Hiring..." : "Confirm Hire"}
           </Button>;
         </div>;
       </DialogContent>;
     </Dialog>;
-  );
-}
-        <div className="flex justify - end gap - 2">;
-          <Button type="button" variant="secondary" on_click={on_close}>;
-            Cancel;
-          </Button>;
-          <Button type="button" on_click={handleHireCandidate} disabled={is_submitting || is_loading}>;
-            {is_loading ? "Hiring..." : "Confirm Hire"}
-          </Button>;
-        </div>;
-      </DialogContent>;
-    </Dialog>);
-}

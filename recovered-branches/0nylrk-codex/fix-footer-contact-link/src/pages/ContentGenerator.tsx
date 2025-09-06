@@ -49,7 +49,7 @@ export default function ContentGenerator() {
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("You must be logged in to access this page");
+      toast.error("You must be logged in to access this page"),
       navigate("/login?redirect=/content-generator")
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
@@ -79,7 +79,6 @@ export default function ContentGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [previewContent, setPreviewContent] = useState<any>(null),;
   const [testEmail, setTestEmail] = useState(''),;
-
   // Redirect if not logged in;
   React && React.useEffect(() => {;
     if (!isLoading && !user) {;
@@ -87,12 +86,6 @@ export default function ContentGenerator() {;
       navigate("/login?redirect=/content-generator");
     }
   }, [user, isLoading, navigate]);
-  const generateContent = async () => {
-    setIsGenerating(true);
-    setPreviewContent(null);
-          autoPublish;
-          includeImage: contentType === 'blog' ? includeImage : false;
-        }
       });
       if (error) throw error;
       setPreviewContent(data);
@@ -144,8 +137,103 @@ export default function ContentGenerator() {;
       console.error("Error sending test newsletter:", error);
       toast.error("Failed to send test newsletter. Please try again.")
     }
-  }
 
+import React, { useState } from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Button } from "@/components/ui/button",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { Label } from "@/components/ui/label",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { toast } from "sonner",;
+import { Loader2 } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { ScrollArea } from "@/components/ui/scroll-area",;
+import { useNavigate } from "react-router-dom",;
+;
+export default function ContentGenerator() {;
+  const { user, isLoading } = useAuth(),;
+  const navigate = useNavigate(),;
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),;
+  const [customPrompt, setCustomPrompt] = useState(''),;
+  const [topic, setTopic] = useState(''),;
+  const [autoPublish, setAutoPublish] = useState(false),;
+  const [includeImage, setIncludeImage] = useState(true),;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [previewContent, setPreviewContent] = useState<any>(null),;
+  const [testEmail, setTestEmail] = useState(''),;
+;
+  // Redirect if not logged in;
+  React.useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast.error("You must be logged in to access this page"),;
+      navigate("/login?redirect=/content-generator"),;
+    }
+  }, [user, isLoading, navigate]),;
+;
+  const generateContent = async () => {;
+    setIsGenerating(true),;
+    setPreviewContent(null),;
+    ;
+    try {;
+      const { data, error } = await supabase.functions.invoke('generate-content', {;
+        body:{;
+          contentType,;
+          prompt:customPrompt || undefined,;
+          topic:topic || undefined,;
+          autoPublish,;
+          includeImage:contentType === 'blog' ? includeImage :false;
+        }
+      }),;
+      ;
+      if (error) throw error,;
+      ;
+      setPreviewContent(data),;
+      toast.success(`${contentType === 'blog' ? 'Blog post' :'Newsletter'} generated successfully!`),;
+    } catch (error) {;
+      console.error("Error generating content:", error),;
+      toast.error("Failed to generate content. Please try again."),;
+    } finally {;
+      setIsGenerating(false),;
+    }
+  },;
+;
+  const sendTestNewsletter = async () => {;
+    if (!testEmail) {;
+      toast.error("Please enter a test email address"),;
+      return,;
+    }
+    ;
+    if (!previewContent) {;
+      toast.error("Generate newsletter content first"),;
+      return,;
+    }
+    ;
+    try {;
+      const { data, error } = await supabase.functions.invoke('send-newsletter', {;
+        body:{;
+          subject:previewContent.subject,;
+          previewText:previewContent.previewText,;
+          body:previewContent.body,;
+          testMode:true,;
+          testEmail;
+        }
+      }),;
+      ;
+      if (error) throw error,;
+      ;
+      toast.success(`Test newsletter sent to ${testEmail}!`),;
+    } catch (error) {;
+      console.error("Error sending test newsletter:", error),;
+      toast.error("Failed to send test newsletter. Please try again."),;
+    }
+  },;
+;
   // Check if user is still loading;
   if (isLoading) {;
     return (
@@ -191,58 +279,25 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-                    <Input
-                      id="topic"
-                      placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-                      value={topic}
-
                       onChange={(e) => setTopic(e && e.target.value)}
                     />;
                   </div>;
-
                   <div className="space-y-2">;
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>;
-
                     <Textarea
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
-
-                      onChange={(e) => setCustomPrompt(e && e.target.value)}
-                    />;
-                  </div>;
-
                   {contentType === 'blog' && (;
                     <>;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
-
-                        <Switch
-                          id="autoPublish"
-                          checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
-
-                        />;
-                      </div>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
-                        <Switch;
-                          id="includeImage";
-                          checked={includeImage}
-                          onCheckedChange={setIncludeImage}
-                        />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         />;
                       </div>;
 
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
-                        <Switch
-                          id="includeImage"
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />;
@@ -296,8 +351,6 @@ export default function ContentGenerator() {;
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className="h-8 w-8 text-zion-purple">;
-                          <path d="M14 && M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7 && 2V7.5L14.5 2z" />;
                           <polyline points="14 2 14 8 20 8" />;
                           <path d="M12 18v-6" />;
                           <path d="M8 15h8" />;
@@ -307,8 +360,6 @@ export default function ContentGenerator() {;
                       <p className="text-zion-slate-light max-w-md">;
                         Use the settings panel to configure your content and click "Generate" to create AI-powered content.;
                       </p>;
-                    </div>;
-                  )}
                 </CardContent>;
               </Card>;
             </div>;

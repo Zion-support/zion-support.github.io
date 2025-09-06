@@ -644,4 +644,3 @@ export const biotechAIServices: BiotechAIService[] = [
     reviews: 45;
   }
 ];
-;

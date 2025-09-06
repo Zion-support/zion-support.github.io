@@ -2,39 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import {;
-  ArrowRight,;
-  Building2,;
-  Rocket,;
-  Factory,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  CheckCircle,;
-  Star,;
-  Users,;
-  Clock,;
-  DollarSign,;
-  Award,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Bot,;
-  FileText,;
-  Image,;
-  Video,;
-  Mic,;
-  Code,;
-  Settings,;
-  Monitor,;
-  Smartphone,;
-  Server,;
-  Network,;
-  Car,;
-  Rocket as RocketIcon,;
-  Heart,;
-  Building,;
-  Database,;
 
 import React from 'react';
 import Layout from '../components / layout / Layout';
@@ -42,27 +9,16 @@ import { motion } from 'framer-motion';
 import Link from 'next / link';
 import {
 
-const microSaasProducts = [
   {
-    id: 1,
-    title: "AI - Powered Voice Assistant Builder",
-    description: "Create custom voice assistants for your business with our no - code platform",
-    icon: Mic,
-    category: "Voice Technology",
-    pricing: "$99 / month",
-    features: ["No - code voice assistant creation", "Multi - language support", "Custom wake words", "Analytics dashboard"],
-    benefits: ["95% accuracy rate", "24 / 7 availability", "Easy integration", "Custom branding"];
-  },
-  {
-    id: 2,
-    title: "Smart IoT Device Manager",
-    description: "Centralized management platform for all your IoT devices and sensors",
-    icon: Cpu,
-    category: "IoT Management",
-    pricing: "$149 / month",
-    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"],
-    benefits: ["Real - time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"];
-  },
+    id: 2
+    title: "Smart IoT Device Manager"
+    description: "Centralized management platform for all your IoT devices and sensors"
+    icon: Cpu
+    category: "IoT Management"
+    pricing: "$149/month"
+    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"]
+    benefits: ["Real-time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"]
+  }
   {
     id: 3
     title: "AI-Powered Cybersecurity Monitor"
@@ -72,52 +28,6 @@ const microSaasProducts = [
     pricing: "$199/month"
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
-const categories = [;
-  'Voice Technology',
-  'IoT Management',
-  'Cybersecurity',
-  'Supply Chain',
-  'HR Technology',
-  'Environmental',
-  'Maintenance',
-  'Education',
-  'Fleet Management',
-  'Energy Management',
-  'Quality Assurance',
-  'Customer Analytics',
-  'Document Intelligence',
-  'API Management',
-  'Recommendation Engine',
-  'Data Engineering',
-  'Chat Analytics';
-  return (
-    <Layout;
-      title="Micro SaaS Solutions - Zion Tech Group";
-      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools.";
-      keywords="micro saas, saas solutions, business tools, automation, productivity";
-    >;
-      <div className="min - h-screen">;
-        {/* Hero Section */}
-        <section className="bg - gradient - to - r from - blue - 600 to - purple - 700 text - white py - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center";
-            >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-                Micro SaaS Solutions;
-              </h1>;
-              <p className="text - xl md:text - 2xl mb - 8 max - w-3xl mx - auto">;
-                Powerful, focused tools that solve specific business problems with precision and efficiency;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">;
-                  Get Started;
-                </Link>;
-                <Link href="/demo" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-                  View Demo;
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -296,7 +206,6 @@ export default function MicroSaaS(req, res) {
                 </Link>
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
-</Link>
 </Link>;
 import React from 'react';
                 </Link>import React from 'react';
@@ -351,26 +260,6 @@ import {
 import Layout from '../components/Layout';
 
 export default function MicroSaaS() {
-
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);  }, []);
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-export default function MicroSaaS() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer)
-  }, []);
-
-  Cloud,
-  Zap,
-  BarChart3,
   Leaf,
   Truck,
   FileText,
@@ -409,9 +298,6 @@ export default function MicroSaaS() {
   AlertTriangle,
   Link as LinkIcon,
   Award as AwardIcon,
-  Star as StarIcon,
-  Home;
-} from 'lucide-react';
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
@@ -430,10 +316,6 @@ export default function MicroSaaS() {
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-    return () => clearTimeout(timer);  }, []);
-
-
-
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
@@ -448,8 +330,6 @@ export default function MicroSaaS() {
     { id: 'security', name: 'Security', count: 20 }
     { id: 'productivity', name: 'Productivity', count: 15 }
     { id: 'marketing', name: 'Marketing', count: 15 },  ];
-    site: 'https://ziontechgroup.com'
-  };
 
 export default function MicroSaasPage() {
   return (
@@ -669,41 +549,6 @@ export default function MicroSaas() {
         <meta
           name='description'
           content='Explore our 150+ innovative micro SaaS products including AI-powered tools, analytics dashboards, automation solutions, and security services.'
-        />;
-        <meta
-          name='keywords'
-          content='micro SaaS, SaaS products, AI tools, analytics, automation, security, productivity, marketing tools'
-      <ErrorBoundary level='page'>
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-          {/* Hero Section */}
-
-      <ErrorBoundary level='page'>;
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
-          {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>;
-            <div className='max-w-4xl mx-auto'>;
-              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >;
-                Micro SaaS Products;
-              </h1>;
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                150+ Innovative Solutions for Modern Businesses;
-              </p>;
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Discover our comprehensive collection of micro SaaS products
-                designed to solve specific business challenges with focused
-                efficient, and cost-effective solutions.              </p>
-            </div>
-          </section>
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Discover our comprehensive collection of micro SaaS products;
-                designed to solve specific business challenges with focused,;
-                efficient, and cost-effective solutions.              </p>;
-            </div>;
-          </section>;
 
           {/* Category Filter */}
           <section className='py-8 px-4'>;
@@ -716,8 +561,6 @@ export default function MicroSaas() {
                       selectedCategory === category && category.id;
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-            </div>
-          </section>
           {/* Products Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -788,33 +631,6 @@ export default function MicroSaas() {
                       </span>;
                       <span className='text - xs text - slate - 500 capitalize'>;
                         {product.category}
-                {filteredProducts.map((product, index) => (
-                  <div                    key={product.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {product.popular && (
-                      <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
-                        Popular
-                      </div>
-                    <h3 className='text-xl font-bold mb-3'>{product.name}</h3>
-                    <p className='text-slate-300 mb-4 text-sm'>
-                      {product.description}
-                    </p>
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
-                        Key Features:
-                      </h4>
-                      <ul className='text-slate-400 text-sm space-y-1'>
-                      </ul>
-                    </div>
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-2xl font-bold text-green-400'>
-                        {product.price}
-                      </span>
-                      <span className='text-xs text-slate-500 capitalize'>
-                        {product.category}
-                      </span>
                     </div>
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
@@ -832,14 +648,11 @@ export default function MicroSaas() {
                       className='w-8 h-8 text-white'
                       fill='none'
                       stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
                       <path
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M13 10V3L4 14h7v7l9-11h-7z'
-                      />
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -853,16 +666,6 @@ export default function MicroSaas() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          <section className="py-16 px-4 bg-slate-900/40">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                Why Choose Our Micro SaaS Products?
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>
@@ -881,8 +684,6 @@ export default function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-                        d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1'
-                      />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Cost Effective</h3>
@@ -903,7 +704,6 @@ export default function MicroSaas() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                      />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Focused Solutions</h3>
@@ -922,17 +722,6 @@ export default function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-                        d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Easy Integration</h3>
-                  <p className='text-slate-400'>
-                    Seamless integration with your existing tools and workflows
-                  </p>                </div>
-              </div>
-            </div>
-          </section>
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -986,19 +775,6 @@ export default function MicroSaas() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Micro SaaS Products
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product, index) => (
-                <motion.div
-                  key={product.id}
         {/* Solutions Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1023,23 +799,6 @@ export default function MicroSaas() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <motion.div
-              className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Our Micro SaaS Products;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {microSaasProducts && microSaasProducts.map((product, index) => (;
-                <motion&& motion.div
-                  key={product && product.id}
-
-
-
-                  key={product.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -1083,7 +842,6 @@ export default function MicroSaas() {
                     {product && product.features.slice(0, 3).map((feature, idx) => (;
                       <div key={idx} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
                     <product.icon className="w-8 h-8 text-blue-600 mr-3" />
@@ -1117,7 +875,6 @@ export default function MicroSaas() {
                     href="/contact"
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
                   >
-                    Learn More
                   </Link>
                 </motion.div>
               ))}
@@ -1136,8 +893,6 @@ export default function MicroSaas() {
           </div>;
         </section>;
 
-
-
         {/* Categories */}
         <section className="py-20 bg-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1148,29 +903,6 @@ export default function MicroSaas() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-        {/* Categories */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Solution Categories
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We cover a wide range of business domains with specialized micro SaaS solutions
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {categories.map((category, index) => (
-                <motion.div
               className="text-center mb-16">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Solution Categories;
@@ -1227,77 +959,30 @@ export default function MicroSaas() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 transition-colors">;
-                  <span className="text-sm font-medium text-gray-700">;
-                    {category}
-                  </span>;
-                </motion && motion.div>;
-              ))}
-            </div>
-          </div>
-        </section>
-            </div>;
-          </div>;
-        </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Discover how our micro SaaS solutions can solve your specific business challenges
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started Today
-                </Link>
-                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Schedule Demo
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </Layout>
+    </Layout>;
   );
-}
-            </div>
-
-            </div>
-
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-              </h2>;
-              <p className="text-xl mb-8 max-w-3xl mx-auto">;
-                Discover how our micro SaaS solutions can solve your specific business challenges;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
-                  Get Started Today;
-                </Link>;
-                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
-                  Schedule Demo;
-                </Link>;
-              </div>;
             </div>;
           </section>;
           {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
 }
 }

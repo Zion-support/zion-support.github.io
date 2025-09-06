@@ -6,11 +6,6 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
-
-  unreadCount?: number;
-  onClose: () => void;
-}
-
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -25,13 +20,10 @@ export interface MobileMenuProps {
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
-
   
-
   const navItems = [
     {
       name: "Home"
@@ -57,7 +49,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
-    }
     {
       name: "Messages"
       href: "/messages"
@@ -65,7 +56,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
-    }
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -77,8 +67,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
             key={item && item.name}
             to={item && item.href}
             className={cn(
-              "flex items-center px-6 py-3 text-base font-medium";
-
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -108,14 +96,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
-              )}
-            </div>;
-            {item && item.name}
-          </Link>;
-        ))}
-      </nav>;
-    </div>;
-  );
 }
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';

@@ -1,11 +1,3 @@
-import i18n from './i18n';
-export type TranslationMap = Record<string string | undefined>;
-}
-  return res.json ();
-}
-export function getSelectedLanguage (): string {
-  return i18n.resolved_language || i18n.language || 'en';
-}
   const res = await fetch('/api/translate', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;

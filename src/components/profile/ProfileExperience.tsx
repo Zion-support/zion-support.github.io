@@ -39,16 +39,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
               <div className="text-sm text-zion-slate-light mb-2">
-                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
-              </div>
             </div>
           </div>
         ))}
       </div>
-
-import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
-
-}
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
@@ -96,5 +90,3 @@ interface ProfileExperienceProps {;
     </div>);
 }
 ;
-
-

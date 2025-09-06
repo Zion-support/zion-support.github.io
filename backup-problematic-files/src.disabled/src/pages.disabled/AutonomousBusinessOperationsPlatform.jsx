@@ -9,4 +9,3 @@ const AutonomousBusinessOperationsPlatform = ({ className }) => {
   );
 };
 
-export default AutonomousBusinessOperationsPlatform;

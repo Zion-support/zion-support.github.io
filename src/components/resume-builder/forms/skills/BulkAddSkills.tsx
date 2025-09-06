@@ -82,10 +82,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           setError('Failed to parse categorized skills. Please try again.');
         }
       }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to categorize skills');
-    }
-  return (
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
@@ -98,7 +94,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
           className="gap-2"
-        >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
@@ -106,32 +101,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           )}
           Categorize with AI
         </Button>
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>);
-}
-
-            onChange = {(e,) => setBulkSkills(e && e.target.value),}
-          />;
-        </div>;
-
-        <Button
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills && bulkSkills.trim(),}
-          className="gap-2">;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) : (;
-            <Sparkles className="h-4 w-4" />;
-          )}
-          Categorize with AI;
-        </Button>;
-
-        <p className="text-xs text-muted-foreground mt-1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
         
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
@@ -141,4 +110,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       </div>
     </div>
   )
-},

@@ -9,4 +9,3 @@ const WebsiteImprovementDashboard = ({ className }) => {
   );
 };
 
-export default WebsiteImprovementDashboard;

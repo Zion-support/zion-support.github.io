@@ -70,6 +70,10 @@ export default function ProductsIndex() {;
       </main>;
     </div>;
 
+  );
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
@@ -403,6 +407,17 @@ const "Products": NextPage = () => {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {product.title}
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
@@ -490,6 +505,13 @@ const "Products": NextPage = () => {;
                   <div className="flex gap-3">;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+                  <div className=\"flex gap-3\">
+                  <div className="flex gap-3">
+                  <div className=\"flex gap-3\">
+                  <div className="flex gap-3">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <Link
                       href={product && product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\">;

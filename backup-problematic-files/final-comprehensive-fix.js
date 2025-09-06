@@ -1,4 +1,3 @@
-
 // Function to create a proper React component;
 function createPageComponent(fileName) {
   const componentName = fileName && fileName.replace(/[^a-zA-Z0-9]/g, "");

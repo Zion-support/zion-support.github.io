@@ -19,8 +19,6 @@ export interface PortfolioAsset {;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-  }
-}
   totalReturn: number;
   annualizedReturn: number;
   volatility: number;
@@ -34,6 +32,46 @@ export interface PortfolioAsset {;
   asset: {
     symbol: string;
     name: string;
+    type: string,
+    current_price: number;
+  }
+  confidence: number;
+  reasoning: string[];
+  expected_return: number;
+  risk_level: 'low' | 'medium' | 'high',
+  time_horizon: number, // in months;
+  alternatives: string[];
+  created_at: Date,
+  expires_at: Date;
+}
+export interface FinancialGoal {
+  id: string;
+  user_id: string;
+  name: string;
+  target_amount: number;
+  current_amount: number;
+  target_date: Date;
+  priority: 'low' | 'medium' | 'high';
+  category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
+  monthly_contribution: number;
+  expected_return: number;
+  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
+  progress: number, // percentage;
+  created_at: Date,
+  updated_at: Date;
+export interface MarketAnalysis {
+  id: string;
+  market: string;
+
+  analysis: string,
+  key_metrics: Record < string, number>;
+
+}
+export interface MarketAnalysis {
+  id: string;
+  market: string;
+  analysis: string,
+  key_metrics: Record < string, number>;
 
 
 export interface FinancialGoal {;
@@ -56,6 +94,25 @@ export interface FinancialGoal {;
   opportunities: string[];
   recommendations: string[];
   confidence: number;
+  last_updated: Date,
+  next_update: Date;
+}
+export interface FinancialPlan {
+  id: string;
+  user_id: string;
+  name: string;
+  summary: string;
+  goals: FinancialGoal[],
+  investment_strategy: {
+    asset_allocation: Record < string, number>;
+    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
+    risk_management: string[];
+  }
+  cash_flow: {
+    monthly_income: number;
+    monthly_expenses: number;
+    savings_rate: number,
+    emergency_fund: number;
 
 
 export interface FinancialPlan {;
@@ -69,6 +126,24 @@ export interface FinancialPlan {;
     life: boolean;
     health: boolean;
     disability: boolean;
+    property: boolean,
+    recommendations: string[];
+  }
+  tax: {
+    estimatedTaxLiability: number;
+    taxOptimizationStrategies: string[],
+    deductions: string[];
+  }
+  retirement: {
+    target_age: number;
+    estimated_needs: number;
+    current_savings: number;
+    monthly_contribution: number,
+    projected_value: number;
+  }
+  created_at: Date,
+  updated_at: Date;
+}
 
   userId: string;
 
@@ -117,8 +192,6 @@ export interface FinancialResponse {;
   }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
-        headers: {
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
       throw error
@@ -126,8 +199,6 @@ export interface FinancialResponse {;
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
-        headers: {
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
       throw error
@@ -165,22 +236,6 @@ export interface FinancialResponse {;
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-    analysis?: MarketAnalysis,
-    goals?: FinancialGoal[];
-  }
-  insights: string[];
-  next_steps: string[];
-  risk_warnings: string[],
-  estimated_fees: number;
-}
-export class AIFinancialAdvisorService {
-  private api_key: string;
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontechgroup.com') {
-    this.api_key = api_key,
-    this.base_url = base_url;
-  }
-  async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
@@ -192,30 +247,6 @@ if ( {) {
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
-      const data = await response.json ();
-      return data.portfolio;
-    } catch (error) {
-      console.error ('Error analyzing portfolio:', error);
-      throw error;
-    }
-  }
-  async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / recommendations`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, risk_tolerance, investment_horizon })});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json ();
-      return data.recommendations || [];
     } catch (error) {
       console.error ('Error getting investment recommendations:', error);
       throw error;
@@ -343,22 +374,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
       // Check condition
 if ( {) {
   $2
-
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-
-  id: string,;
-  userId: string,;
-  name: string,;
-  totalValue: number,;
-  currency: string,;
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive',;
-  investmentHorizon: number, // in years;
-  targetReturn: number,;
-  assets: PortfolioAsset[],;
-  lastRebalanced: Date,;
-  performance: PortfolioPerformance,;
-  createdAt: Date,;
-  updatedAt: Date;
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -399,6 +414,3 @@ if ( {) {
     }
   }
 }
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
-;
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

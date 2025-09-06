@@ -23,10 +23,6 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-    // Create a request to OpenAI API
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -43,6 +39,16 @@ serve(async (req) => {;
             Bio: ${bio}
             Skills: ${skills.join()}
 
+            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
+            Return the result as a JSON object with these keys: {
+              "summary": "The professional summary text"
+              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
+            }`
+          }
+        ];
+        temperature: 0.7})});
+    const openAIData = await openAIResponse.json();
+    if (!openAIData.choices |openAIData.choices.length === 0) {
             
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
@@ -53,19 +59,11 @@ serve(async (req) => {;
           }
         ],
         temperature: 0.7})}),
-
-    const openAIData = await openAIResponse && openAIResponse.json();
-    
-
-    const responseContent = openAIData && openAIData.choices[0].message && message.content;
-    
-
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
-    const responseContent = openAIData.choices[0].message.content;
     // Parse the JSON response
     let parsedResponse;
     try {
@@ -99,22 +97,6 @@ if ( {) {
         throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
-      console.error ("Error parsing OpenAI response:", e);
-;
-      // Fallback parsing approach if the standard parsing fails;
-      const summary_match = response_content.match (/"summary"\s*:\s*"([^"]*)"/);
-      const skills_match = response_content.match (/"suggested_skills"\s*:\s*\[(.*?)\]/s);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        const summary = summary_match[1];
-        const skills_string = skills_match[1];
-        const suggested_skills = skills_string.split ().map (string =>;
-          s.trim ().replace (/"/g, '')).filter (Boolean);
-;
-        parsed_response = { summary, suggested_skills }
 ;
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
             Return the result as a JSON object with these keys:;

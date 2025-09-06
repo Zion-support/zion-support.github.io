@@ -1,5 +1,3 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
 interface ResourceItem {
 
   id: string
@@ -14,13 +12,6 @@ export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
 
-      id: 'logo-pack'
-      title: 'Zion AI Logo Pack'
-      description: 'Official logos in various formats (PNG, SVG, JPG)';
-      type: 'image'
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />
-      url: '#'
-    }
     {
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
@@ -28,7 +19,6 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-    }
     {
       id: 'banner-templates'
       title: 'Social Media Banners'
@@ -36,7 +26,6 @@ export function PartnerResources() {
       type: 'image'
       icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
-    }
     {
       id: 'promotional-video'
       title: 'Promotional Video'
@@ -44,7 +33,6 @@ export function PartnerResources() {
       type: 'video'
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
-    }
     {
       id: 'email-templates'
       title: 'Email Templates'
@@ -52,7 +40,6 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-    }
     {
       id: 'talking-points'
       title: 'Talking Points'
@@ -61,18 +48,12 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
-  ];
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
-  }
-
-  return (
-    <div className="space - y-6">;
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
           <CardTitle > Marketing Resources</CardTitle>;
           <CardDescription>;
@@ -80,13 +61,6 @@ export function PartnerResources() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-            {resources.map ((resource) => (
-              <Card key={resource.id} className="bg - zion - blue border - zion - blue - light overflow - hidden">;
-                <CardContent className="p - 6 flex flex - col items - center text - center">;
-                  <div className="mb - 4">;
-                    {resource.icon}
-                  <Button
                     onClick={() => handleDownload(resource)}
                     size="sm";
                     variant="outline";
@@ -158,7 +132,6 @@ export function PartnerResources() {
           </div>;
         </CardContent>;
       </Card>;
-
           <CardDescription>;
             Need help with your affiliate marketing? Contact our partner support team.;
           </CardDescription>;

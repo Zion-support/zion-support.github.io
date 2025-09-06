@@ -35,52 +35,27 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
+  const getStatusBadgeVariant = (status: DisputeStatus) => {
+    switch (status) {
+      case "open": return "default",
       case "under_review":
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
-import React, { useState } from './react';
-import { Dispute, DisputeStatus } from '@/types / disputes';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Skeleton } from '@/components / ui / skeleton';
-import { formatDistanceToNow } from './date - fns';
-import { ShieldAlert } from './lucide-react';
-import { Link } from './react-router-dom';
-type DisputesListProps = {
-  disputes: Dispute[],
-  is_loading: boolean;
-}
 ;
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
+  if (disputes.length === 0) {;
+    return (;
+      <div className="text-center py-12 border rounded-md bg-muted/20">;
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
+        <h3 className="text-xl font-medium">No disputes found</h3>;
+        <p className="text-muted-foreground mt-2">;
+          No active disputes match the selected filter;
+        </p>;
+      </div>;
+    ),;
+  }
 ;
-  const filtered_disputes = status_filter === "all";
-    ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
-;
-  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-    switch (status) {
-      case "open": return "default";
-      case "under_review":;
-        return "secondary",
-      case "resolved":;
-        return "outline", // Changed from './success'; to "outline";
-      case "closed":;
-        return "outline";
-      default:;
-        return "default";
-    }
-      <div className="space-y-4">;
-        <div className="flex gap-2 mb-4">;
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
-            <Skeleton key={status} className="h-10 w-24" />;
-          ))}
         </div>;
         <div className="border rounded-md">;
           <Table>;
@@ -153,15 +128,12 @@ function DisputesList() {
         >;
           Resolved;
         </Button>;
-        <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
           size="sm";
         >;
           Closed;
         </Button>;
       </div>;
-
       <div className="border rounded-md overflow-hidden">;
         <Table>;
           <TableHeader>;
@@ -175,10 +147,6 @@ function DisputesList() {
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {filteredDisputes && filteredDisputes.map((dispute) => (;
-              <TableRow key={dispute && dispute.id}>;
-                <TableCell className="font-mono text-xs">;
-                  {dispute && dispute.id.split('-')[0]}
                 </TableCell>;
                 <TableCell>;
                   {dispute && dispute.project?.title || "Unknown Project"}
@@ -186,10 +154,6 @@ function DisputesList() {
                 <TableCell>;
                   <div className="flex flex-col text-sm">;
                     <span>;
-                      Client: {dispute && dispute.client_profile?.display_name || "Unknown Client"}
-                    </span>;
-                    <span>;
-                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>;
                   </div>;
                 </TableCell>;
@@ -200,21 +164,37 @@ function DisputesList() {
     </div>;
   );
 }
-                  {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
-                  <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-                    {dispute.status.replace ('_ ')}
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+                    {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;
-                <TableCell className="text - right">;
-                  <Button as_child size="sm">;
-                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
+                <TableCell className="text-right">;
+                  <Button asChild size="sm">;
+                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details</Link>;
                   </Button>;
                 </TableCell>;
-              </TableRow>))}
+              </TableRow>;
+            ))}
           </TableBody>;
         </Table>;
       </div>;
-    </div>);
+    </div>;
+  ),; import {
+  Table;
+TableBody;
+TableCell;
+TableHead;
+TableHeader;
+type DisputesListProps = {
+  disputes: Dispute[];
+isLoading: boolean 
+};
+export function DisputesList ({
+  disputes, isLoading 
+}: DisputesListProps) {
+  const filteredDisputes = statusFilter === "all" const getStatusBadgeVariant = (status: DisputeStatus) => {
+  switch (status) {
+  
 }

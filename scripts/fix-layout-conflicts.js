@@ -4,7 +4,6 @@ import { glob } from 'glob';
 let totalFixes = 0;
 let filesProcessed = 0;
 // Fix Layout import conflicts
-function fixLayoutConflicts(content, filePath) {
   let fixedContent = content;
   let changes = 0;
   // Check if both Layout component and Layout icon are imported
@@ -31,6 +30,8 @@ function processFile(filePath) {
       totalFixes += result && result.changes}
     filesProcessed++} catch (error) {
 
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Main function
 async function main() {
   console && console.log(' Starting Layout conflicts fix...\n');

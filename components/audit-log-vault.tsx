@@ -1,27 +1,3 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
- return (<UltraAdvancedFuturisticBackground> <Head> <title>Audit Log Vault | Zion Tech Group</title> </Head> <div className="min-h-screen pt-24 pb-16 px-4" > <div className="max-w-6xl mx-auto" > <div className="text-center mb-10" > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3" > <ShieldCheck className="w-10 h-10" /> Audit Log Vault </h1>) ) ;
-import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -29,7 +5,6 @@ import Card from '../components/ui/Card';
 import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 export default function AuditLogVaultPage() {
-
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -37,9 +12,6 @@ export default function AuditLogVaultPage() {
     website: 'https://ziontechgroup.com'
   }
   const features = [
-    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
-  ];
-;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -63,15 +35,10 @@ export default function AuditLogVaultPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
                 {features.map((f) => (
                   <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
-  const features = [;
-    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns';
-  ];
 
               </div>;
             </Card>;
           </div>;
         </div>;
       </div>;
-}
-
 ;

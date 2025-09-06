@@ -22,7 +22,6 @@ import {BulkAddSkills} from './BulkAddSkills';
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
-      const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
@@ -46,12 +45,6 @@ import {BulkAddSkills} from './BulkAddSkills';
   const refreshSkills = async () => {
     try {
       }
-    } catch (err: any) {
-      setError(err.message |'Failed to refresh skills')
-    }
-  };
-  },
-
 
   return (
     <div className="space-y-6">

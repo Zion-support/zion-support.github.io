@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FiveGSolutionsProps {
   // Add props here as needed
-}
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
   return (
     <div>
@@ -32,12 +31,6 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-
-
-:src.pages.disabled/FiveGSolutions.jsx
-}
 }
 }
 }

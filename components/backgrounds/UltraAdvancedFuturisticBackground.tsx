@@ -11,7 +11,6 @@ const particles: Array< {;
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5);
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
-
 export default function UltraAdvancedFuturisticBackground(): any ({;
   children,;
   intensity = 'medium',;
@@ -20,14 +19,6 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
   animationSpeed = 1 && 1.0,;
   enableHolographic = true,;
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({ ;
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const particles: Array< {
-  //Initialize particles with enhanced properties const initParticles = () => {
-  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
-for (let i = 0, i < count, i++) {
-  particles.push ({
-export default function UltraAdvancedFuturisticBackground({
 export default function UltraAdvancedFuturisticBackground({
 
   children,
@@ -183,8 +174,6 @@ if (return) {
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
-          }
-        }
         // Bounce off edges with quantum tunneling
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
@@ -265,56 +254,6 @@ if (< 0.1) {) {
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {
             particle.vy *= -1;
-
-
-            particle.vx *= -1;          }
-
-          }
-        }
-
-        if (particle.y <= 0 || particle.y >= canvas.height) {
-
-          if (enableQuantumEffects && Math.random() < 0.1) {
-            // Quantum tunneling effect
-
-          }
-        }
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-        // Draw particle with enhanced effects
-        ctx.save();
-        ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
-        ctx.translate(particle.x, particle.y);
-        ctx.rotate(particle.rotation);
-        if (particle.type === 'quantum') {
-          // Quantum particle with wave effect
-          const gradient = ctx.createRadialGradient(
-            0
-            0
-            0
-            0
-            0
-            particle.size * 4
-          );          gradient.addColorStop(0, particle.color);
-          gradient.addColorStop(0.3, particle.color + '80');
-          gradient.addColorStop(0.6, particle.color + '40');
-          gradient.addColorStop(1, 'transparent');
-        if (particle.type === 'quantum') {
-          // Quantum particle with wave effect
-          const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4);
-          gradient.addColorStop(0.3, particle.color + '80');
-          gradient.addColorStop(0.6, particle.color + '40');
-          gradient.addColorStop(1, 'transparent');
-          ctx.fillStyle = gradient;
-          ctx.fillRect(
-            -particle.size * 2
-            -particle.size * 2
-            particle.size * 4
-            particle.size * 4
-          );
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -688,7 +627,6 @@ if (< 0.1) {) {
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
-        }
           ctx.stroke();        }
 
         }
@@ -786,4 +724,3 @@ if (particle.coordinate_x = canvas.width) {
         </div>)}
       {children}
     </div>);
-  );

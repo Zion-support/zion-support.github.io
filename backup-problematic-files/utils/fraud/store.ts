@@ -269,7 +269,6 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'
     ipAddress: partial.ipAddress ?? null;
     createdAt: partial.createdAt ?? new Date().toISOString()}
 }
-export interface FraudRecord {
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -329,4 +328,3 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
-export const getFraudStore = () => fraudStore;

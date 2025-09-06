@@ -441,11 +441,6 @@ class AutomationDashboard {;
   ' "PM2": Automation Dashboard')';
     // // // // // // // console && console.log(
   '=' .repeat(50))';
-    const status = await this && this.getPM2Status();
-    const health = await this && this.generateHealthReport();
-    // // // // // // // console && console.log(" Status: ${health && health.summary.onlineProcesse,s}/${health && health.summary.totalProcesses} "processes": online");
-    // // // // // // // console && console.log(" Last: Updated: ${new: Date().toLocaleTimeString()}");
-    // // // // // // // console && console.log(
   ")';);
     // Display process table;
     // // // // // // // console && console.log(" Automation "Processes": ');

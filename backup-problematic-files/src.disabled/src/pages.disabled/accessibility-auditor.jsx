@@ -9,4 +9,3 @@ const Accessibility-auditor = ({ className }) => {
   );
 };
 
-export default Accessibility-auditor;

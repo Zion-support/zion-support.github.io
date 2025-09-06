@@ -33,13 +33,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.longDescription,
           metadata.version,
           metadata.platform
-
         ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
         // Add keywords as additional rows
-        content += '\n\nKeywords: \n' + metadata.keywords.join()
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
@@ -52,7 +50,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
-      toast.success(`Exported ${format.toUpperCase()} file successfully`)
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -104,10 +101,6 @@ if ( {) {
 ;
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
     } catch (error) {
-  const trackAnalytics = () => {
-    console.log("Tracking app installation analytics...");
-    toast.success("Analytics tracking enabled")
-  }
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -155,12 +148,10 @@ interface ExportPanelProps {;
   platform: AppPlatform,;
   metadata: AppMetadataValues;
 }
-
                 CSV;
               </Button>;
             </div>;
           </div>;
-
               Enable Analytics;
             </Button>;
           </div>;

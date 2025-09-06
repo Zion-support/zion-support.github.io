@@ -1,10 +1,16 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+totalSize = getDirectorySize(buildDir);
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 #!/usr/bin/env node;
@@ -295,10 +301,14 @@ const path = require('path')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     totalSize = getDirectorySize(buildDir);
     totalSize = getDirectorySize(buildDir);
 
@@ -330,6 +340,11 @@ if (require.main === module) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -359,11 +374,15 @@ module.exports = { runSimpleAutomation }) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -396,16 +415,23 @@ const { execSync } = require('child_process')
     console.error(' Simple automation "failed")
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
         "status"
 <<<<<<< HEAD
 =======
         "status"
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        "status"
+        "status"
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,9 +457,13 @@ const { execSync } = require('child_process')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         "status"
         "status"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

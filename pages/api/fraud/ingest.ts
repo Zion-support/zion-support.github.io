@@ -42,10 +42,6 @@ export default async function handler(
     }
     const userId = typeof body.userId === "string" ? body.userId : null;
     const content = typeof body.content === "string" ? body.content : null;
-    const body = req && req.body || {};
-    const source = body && body.source as MonitoredSource;
-    if (!allowedSources && allowedSources.includes(source)) {
-      res && res.status(400).json({ error: "Invalid source" });
       return;
     }
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
@@ -58,48 +54,9 @@ export default async function handler(
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
-import type { NextApiRequest, NextApiResponse } from './next';
-import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
-import { classifyWithGPT  } from '../../../utils / fraud / gpt';
-import { getFraudStore, new_event  } from '../../../utils / fraud / store';
-import { extractClientIp  } from '../../../utils / ip';
-import {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
-import { classifyWithGPT } from "../../../utils/fraud/gpt";
-import { getFraudStore, newEvent } from "../../../utils/fraud/store";
-import { extractClientIp } from "../../../utils/ip";
-import {
-  AdminActionRecord,
-  GptClassification,
-  GptClassificationLabel,
-      status: 'PENDING'};
-
     const saved = await store.saveEvent(stored);
-
-    if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
+    if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {;
       const prior = await store.countFlaggedForUser(userId);
-      if (prior <= 1 && combinedLabel !== 'SAFE') {
-        await sendWarningEmail({
-          toUserId: userId, subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
-      }
-    }
-
-    res.status(200).json({
-      id: saved.id, flagged: combinedLabel !== 'SAFE',
-      label: combinedLabel, heuristic,
-      gpt,
-      autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt})
-  } catch (e: any) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
-  }
-}
-
-    res;
-      .status (500);
-      .json ({ error: "Internal error", details: e?.message || String (e) });
   }
 }
   }

@@ -20,9 +20,6 @@ export default async function handler(
     distribution,
     governance,
     jurisdiction,
-
-  const distLines = Array && Array.isArray(distribution)
-    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
     : "";
   const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
   const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
@@ -45,8 +42,6 @@ export default async function handler(
         legalReview
       });
     }
-
-    res && res.status(200).json({ markdown });
   } catch (e: any) {
     console && console.error("generation_error", e?.message || e);
     res && res.status(500).json({ error: "Generation failed" });
@@ -58,9 +53,6 @@ function fallbackMarkdown(input: any): string {
         .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
         .join("\n")
     : "";
-
-
-  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({

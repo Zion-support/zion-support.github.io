@@ -1,6 +1,4 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -8,8 +6,6 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
-export function MobileFilterBar({
-  searchTerm;
 
   setSearchTerm
   setIsMobileFilterOpen
@@ -70,6 +66,3 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
-
-;
-

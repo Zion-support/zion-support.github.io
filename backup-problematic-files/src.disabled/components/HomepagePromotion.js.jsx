@@ -9,4 +9,3 @@ const HomepagePromotion.js = ({ className }) => {
   );
 };
 
-export default HomepagePromotion.js;

@@ -15,10 +15,14 @@
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -30,9 +34,6 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -52,10 +53,14 @@ console.log('=====');
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -154,11 +159,15 @@ function fixFiles() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -194,11 +203,15 @@ function runBuildTest() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -339,11 +352,15 @@ function main() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   
@@ -394,9 +411,13 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

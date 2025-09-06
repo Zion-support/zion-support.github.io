@@ -27,18 +27,3 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatarUrl: profile.avatar_url |undefined, // Add for compatibility
 
     role: profile.user_type // Map user_type to role for backward compatibility
-    email: user.email || "";
-    display_name: profile.display_name || "";
-    user_type: (profile.user_type as "creator" | "job_seeker" | "employer" | "buyer" | "admin" | null) || null;
-    profile_complete: Boolean (profile.profile_complete);
-    created_at: new Date (profile.created_at).toISOString ();
-    updated_at: new Date (profile.updated_at).toISOString ();
-    bio: profile.bio || undefined;
-    headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined,
-    avatar_url: profile.avatar_url || undefined, // Add for compatibility;
-    role: profile.user_type // Map user_type to role for backward compatibility;
-  }
-
-  return {
-

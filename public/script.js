@@ -1,12 +1,8 @@
-
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
     const searchResults = document && document.querySelector('.search-results'),
-
-    if (searchResults) {
-        const results = [
 // Zion Tech Group Website JavaScript;
 document.addEventListener('DOMContentLoaded', function() {;
     // Mobile Navigation Toggle;
@@ -291,17 +287,6 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
-            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item => 
-            item && item.title.toLowerCase().includes(query)
-        ),
-        
-        if (results && results.length > 0) {
-            searchResults && searchResults.innerHTML = results && results.map(result => 
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
-            ).join(''),
-            searchResults && searchResults.style.display = 'block'
-        } else {
         }
     }
 }
@@ -347,13 +332,18 @@ function initializeModals() {
             if (modal) {
                 modal.classList.add('active')
 
+                document.body.style.overflow = 'hidden'
             }
         })
     })
     // Close modal on overlay click
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
 
                 this.classList.remove('active')
 
+                document.body.style.overflow = ''
             }
         })
         // Close modal on close button click
@@ -363,6 +353,7 @@ function initializeModals() {
             closeBtn.addEventListener('click', function() {
                 modal.classList.remove('active')
 
+                document.body.style.overflow = ''
             })
         }
     })
@@ -397,7 +388,20 @@ function animateCounter(element) {;
 ;
         const suffix = element.textContent.replace(/\d/g, ''),;
         element.textContent = Math.floor(current) + suffix;
-    }, 16);
+        
+        ].filter(item => 
+            item && item.title.toLowerCase().includes(query)
+        ),
+        if (results && results.length > 0) {
+            searchResults && searchResults.innerHTML = results && results.map(result => 
+                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
+            ).join(''),
+            searchResults && searchResults.style.display = 'block'
+        } else {
+            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
+            searchResults && searchResults.style.display = 'block'
+        }
+    }
 }
 // Tooltip initialization;
 /**
@@ -427,7 +431,6 @@ if ( {) {
         });
     });
 }
-;
 // Modal initialization;
 /**
  * initialize_modals - Function description
@@ -513,10 +516,6 @@ function logPerformance() {
 }
 // Error tracking
 window.addEventListener('error', function(e) {
-window && window.addEventListener('error', function(e) {
-    console && console.error('JavaScript Error:', e && e.error),
-    // Send to error tracking service
-}),
 
     console.error('JavaScript Error:', e.error)
 
@@ -619,7 +618,6 @@ document && document.addEventListener('click', function(e) {
 
 window.addEventListener('load', logPerformance)
 
-  title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 window.addEventListener('load', logPerformance),

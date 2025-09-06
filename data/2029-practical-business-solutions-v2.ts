@@ -49,17 +49,6 @@
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.';
-    launchDate: '2024-07-01';
-    customers: 95;
-    rating: 4.8
     reviews: 167
   }
 
@@ -78,23 +67,6 @@
   {
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
-
-    tagline: 'AI-powered customer journey optimization and personalization'
-    price: '$1,899';
-    period: '/month'
-    description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.';
-
-    features: [
-      'AI-powered personalizationCustomer journey mappingReal-time optimizationMulti-channel integrationBehavioral analyticsPredictive customer insightsAutomated A/B testingCustomer sentiment analysis';
-      'Loyalty program optimizationRevenue optimization'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-green-500 via-emerald-500 to-teal-500';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/services/intelligent-customer-experience-platform';
-
-    marketPosition: 'Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.'
     targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -139,16 +111,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.';
-    launchDate: '2024-08-15';
-    customers: 78;
-    rating: 4.9
     reviews: 134
   }
 
@@ -167,23 +129,6 @@
   {
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
-
-    tagline: 'AI-powered supply chain intelligence and automation'
-    price: '$3,999';
-    period: '/month'
-    description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.';
-
-    features: [
-      'AI demand forecastingInventory optimizationSupply chain risk managementReal-time monitoringCost optimizationSupplier performance trackingLogistics optimizationSustainability tracking';
-      'Compliance automationPerformance analytics'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-orange-500 via-red-500 to-pink-500';
-    textColor: 'text-orange-400';
-    link: 'https://ziontechgroup.com/services/smart-supply-chain-optimization';
-
-    marketPosition: 'Leading AI supply chain platform. 40% cost reduction compared to traditional supply chain management.'
     targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -228,16 +173,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.';
-    launchDate: '2024-09-01';
-    customers: 65;
-    rating: 4.8
     reviews: 98
   }
 
@@ -256,23 +191,6 @@
   {
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
-
-    tagline: 'AI-powered human resources optimization and talent management'
-    price: '$1,599';
-    period: '/month'
-    description: 'Next-generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data-driven HR strategies that drive business success.';
-
-    features: [
-      'AI-powered recruitmentEmployee engagement analyticsTurnover predictionPerformance optimizationSkills gap analysisTraining recommendationsDiversity and inclusion trackingCompliance automation';
-      'Employee sentiment analysisHR analytics dashboard'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-purple-500 via-violet-500 to-indigo-500';
-    textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/services/intelligent-hr-management-system';
-
-    marketPosition: 'Advanced AI HR platform. 50% better employee retention than traditional HR systems.'
     targetAudience: 'Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -317,16 +235,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production HR management system with AI recruitment, employee analytics, and performance optimization.';
-    launchDate: '2024-10-01';
-    customers: 112;
-    rating: 4.7
     reviews: 189
   }
 
@@ -345,23 +253,6 @@
   {
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
-
-    tagline: 'AI-powered financial planning and business optimization'
-    price: '$2,999';
-    period: '/month'
-    description: 'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real-time financial insights for better business decisions.';
-
-    features: [
-      'AI cash flow optimizationFinancial risk predictionAutomated accountingReal-time financial insightsBudget optimizationExpense tracking automationFinancial forecastingTax optimization';
-      'Compliance monitoringPerformance analytics'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-emerald-500 via-teal-500 to-cyan-500';
-    textColor: 'text-emerald-400';
-    link: 'https://ziontechgroup.com/services/smart-financial-management-platform';
-
-    marketPosition: 'Leading AI financial platform. 45% better financial optimization than traditional financial tools.'
     targetAudience: 'Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -406,16 +297,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced financial management platform with AI optimization, risk prediction, and automated accounting.';
-    launchDate: '2024-11-15';
-    customers: 89;
-    rating: 4.8
     reviews: 156
   }
 
@@ -434,23 +315,6 @@
   {
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
-
-    tagline: 'AI-powered marketing optimization and campaign automation'
-    price: '$1,299';
-    period: '/month'
-    description: 'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.';
-
-    features: [
-      'AI campaign optimizationContent personalizationCustomer behavior predictionMarketing workflow automationROI optimizationMulti-channel campaign managementA/B testing automationCustomer segmentation';
-      'Lead scoring automationPerformance analytics'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-pink-500 via-rose-500 to-red-500';
-    textColor: 'text-pink-400';
-    link: 'https://ziontechgroup.com/services/intelligent-marketing-automation';
-
-    marketPosition: 'Advanced AI marketing platform. 55% better campaign performance than traditional marketing tools.'
     targetAudience: 'Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -495,16 +359,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production marketing automation platform with AI optimization, personalization, and workflow automation.';
-    launchDate: '2024-12-01';
-    customers: 156;
-    rating: 4.9
     reviews: 234
   }
 
@@ -528,18 +382,6 @@
 
     period: '/month'
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.';
-
-    features: [
-      'AI workflow optimizationProject risk predictionTask automationTeam collaboration toolsResource optimizationTimeline predictionQuality assurance automationProgress tracking';
-      'Communication optimizationPerformance analytics'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-cyan-500 via-blue-500 to-indigo-500';
-    textColor: 'text-cyan-400';
-    link: 'https://ziontechgroup.com/services/smart-project-management';
-
-    marketPosition: 'Advanced AI project management platform. 40% better project success rate than traditional tools.'
     targetAudience: 'Project managers, Development teams, Consulting firms, Construction companies, Event planners';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -548,9 +390,6 @@
     technology: ['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'];
     integrations: ['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'];
     useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'];
-    roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.'
-    competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'];
-
     marketSize: '$12B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -580,16 +419,6 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced project management platform with AI optimization, risk prediction, and workflow automation.';
-    launchDate: '2025-01-01';
-    customers: 203;
-    rating: 4.8
     reviews: 312
   }
 
@@ -608,23 +437,6 @@
   {
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
-
-    tagline: 'AI-powered sales intelligence and revenue optimization'
-    price: '$1,799';
-    period: '/month'
-    description: 'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.';
-
-    features: [
-      'AI lead scoringCustomer behavior predictionSales process optimizationRevenue optimizationPipeline managementForecasting automationCustomer insightsSales training optimization';
-      'Performance trackingROI analytics'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-yellow-500 via-orange-500 to-red-500';
-    textColor: 'text-yellow-400';
-    link: 'https://ziontechgroup.com/services/intelligent-sales-optimization';
-
-    marketPosition: 'Advanced AI sales platform. 50% better sales performance than traditional sales tools.'
     targetAudience: 'Sales teams, B2B companies, SaaS businesses, Real estate, Financial services';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -669,23 +481,10 @@
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.';
-    launchDate: '2025-02-01';
-    customers: 134;
-    rating: 4.9
     reviews: 198
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
-export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
-    const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -717,8 +516,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     rating: 4 && 4.8,
     reviews: 167,
   },
-  // Intelligent Customer Experience Platform;
-  {
       'Customer journey mapping',
       'Real - time optimization',
       'Multi - channel integration',
@@ -893,12 +690,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     reviews: 198,
   },
 ];
-
-
-
-export const getPopularPracticalBusinessSolutions2029 = () => {;
-  return practicalBusinessSolutions2029.filter(service => service.popular);
-}
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
@@ -909,28 +700,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
-    color: "from-blue-500 via-indigo-500 to-purple-500"
-    textColor: "text-blue-400"
-    link: "https://ziontechgroup.com/services/ai-business-intelligence-suite"
-    marketPosition: "Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools."
-    targetAudience: "Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies"
-    trialDays: 21
-    setupTime: "2-3 weeks"
-    category: "AI Business Intelligence"
-    realService: true
-    technology["Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics"]
-    integrations["ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms"]
-    useCases["Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making"]
-    roi: "Average customer sees 350% ROI through improved decision making and business optimization."
-    competitors["Tableau, Power BI, Qlik, Looker, Domo"]
-    marketSize: "$18B market"
-    growthRate: "280% annual growth"
-    variant: "ai-futuristic"
-    contactInfo: {;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-      website: "https://ziontechgroup.com";
 
   {;
     id: "ai-business-intelligence-suite",
@@ -1014,8 +783,6 @@ export interface PracticalBusinessSolution2029 {;
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
 },
-}
-
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {

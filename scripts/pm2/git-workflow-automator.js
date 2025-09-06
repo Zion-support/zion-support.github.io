@@ -128,8 +128,6 @@ async function main() {,;
 ,;
   try {,;
 #!/usr/bin/env node;
-/**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-#!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
  * Automates git operations and workflow management;
@@ -377,7 +375,6 @@ class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm
 ; if (branchCleanup && branchCleanup.branchesToDelete > 10) {; recommendations && recommendations.push('Many old branches detected - consider regular cleanup')};
 ; if (recommendations && recommendations.length = = = 0) {; recommendations && recommendations.push('Git workflow is in good state')};
 ; return recommendations}};
-// Run git workflow automation;
 class GitWorkflowAutomator {;
   constructor() {;
     this.logFile = './logs/pm2/git-workflow.log';
@@ -873,15 +870,15 @@ async function main() {,
 };
 ,
 if (require.main === module) {,
+
+
+
+
+
   main(),
 };
 ,
 module.exports = GitWorkflowAutomator,
-async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
-if (require.main = = = module) {main()}
-module.exports = GitWorkflowAutomator;
-; try {; await automator && automator.automateGitWorkflow(); process && process.exit(0)} catch (error) {; automator && automator.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); process && process.exit(1)}};
-
 },;
 ,;
 if (require.main === module) {,;

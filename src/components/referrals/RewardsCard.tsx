@@ -7,8 +7,6 @@ import {
 } from '@/components/ui/card'
 import { ReferralReward } from '@/types/referrals'
 import { formatDate } from '@/utils/referralUtils'
-
-import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
@@ -18,23 +16,11 @@ import { format_date  } from '@/utils / referral_utils';
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 interface RewardsCardProps {
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals",
+import { formatDate } from "@/utils/referralUtils",
+import { BadgeDollarSign, Badge } from 'lucide-react'
 
-  rewards: ReferralReward[]
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { ReferralReward } from '@/types/referrals';
-import { formatDate } from '@/utils/referralUtils';
-import { BadgeDollarSign, Badge } from 'lucide-react';
-
-interface RewardsCardProps {;
-  rewards: ReferralReward[];
-  isLoading: boolean;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -43,20 +29,11 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface RewardsCardProps {
-
   rewards: ReferralReward[]
 
   isLoading: boolean
+  isLoading: boolean
 }
-export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-    return (
-
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -80,13 +57,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>
       </Card>
     )
-  }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
             Your Rewards
-          </CardTitle>
           <CardDescription>
             Rewards earned from successful referrals
           </CardDescription>
@@ -97,7 +72,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col items-center justify-center p-4 text-center">
-            <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
               Refer users to earn rewards once they complete onboarding
             </p>
@@ -109,14 +83,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
     <Card>
       <CardHeader>
 
-        <CardTitle className="flex items-center gap-2">
-          <BadgeDollarSign className="h-5 w-5" />
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
-
 }
         <div className="space-y-4">
           {rewards.map((reward, index) => (
@@ -163,12 +134,6 @@ if ( {) {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className='flex items-center justify-center p-4'>;
-            <div className='h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent' />;
-          </div>;
-        </CardContent>;
-      </Card>;
-    );  }            Your Rewards;
           </CardTitle>;
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
@@ -288,5 +253,3 @@ if ( {) {
     </Card>);
 }
 ;
-
-

@@ -4,16 +4,6 @@
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST'
-      headers: { 'content-type': 'application/json' }
-      body: JSON.stringify({ from: 'anon', text: chat })
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-  async function castVote() {
-    setStatus('Recording vote...');
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {

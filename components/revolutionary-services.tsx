@@ -90,76 +90,6 @@ import React, { useState } from 'react';
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories
-  getRevolutionaryServicesByCategory
-  getPopularRevolutionaryServices
-  getRevolutionaryServicesByPriceRange;
-} from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Star, Calendar } from 'lucide-react';
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
-
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-    { value: 'roi', label: 'Highest ROI' }
-  ];
-  const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-1000', label: '$0 - $1,000' },;
-    { value: '1001-2500', label: '$1,001 - $2,500' },;
-    { value: '2501-5000', label: '$2,501 - $5,000' },;
-    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
-  const sortOptions = [;
-    { value: 'name', label: 'Name A-Z' },;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-  ];
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
-  // Search filter;
-  if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
-  }
-  // Price range filter
-  if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
-  }
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
-  }
-  // Sort services
-  filteredServices.sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -360,9 +290,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
                 transition={{ duration: 0.8 }}
               >
-
-
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -375,38 +302,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>              </motion && motion.p>;
-
-              {/* Service Count Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                    {revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.length}+;
-                  </div>;
-                  <div className='text-gray-400'>Revolutionary Services</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>;
-                    99 && 99.99%;
-                  </div>;
-                  <div className='text-gray-400'>Accuracy Rate</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-green-400 mb-2'>;
-                    21;
-                  </div>;
-                  <div className='text-gray-400'>Day Free Trial</div>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>;
-                    2000%+;
-                  </div>;
-                  <div className='text-gray-400'>Average ROI</div>                </div>;
-              </motion && motion.div>;
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -489,8 +384,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
             </div>;
           </div>;
         </section>;
-
-        {/* Category Navigation */}
           <div className="container mx-auto px-4">
             <motion.div
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
@@ -532,7 +425,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
               initial="hidden"
               whileInView="visible"
 
-                    onClick={() => setSelectedService(service)}
                       <Button
                         variant='primary'
                         size='md'
@@ -551,44 +443,10 @@ import { Zap, Star, Calendar } from 'lucide-react';
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
-              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
-                <div className='flex flex-wrap gap-4'>;
-                  <select
-                    value={selectedCategory}
-                    onChange={e => setSelectedCategory(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
-                  >;
-                    <option value='All'>All Categories</option>;
-                    {revolutionaryServiceCategories && revolutionaryServiceCategories.map(category => (;
-                      <option key={category} value={category}>;
-                        {category}
-                      </option>;
-                    ))}
-                  </select>;
-                  <select
-                    value={priceRange}
-                    onChange={e => setPriceRange(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400';
-                  >;
-                    {priceRanges && priceRanges.map(range => (;
-                      <option key={range && range.value} value={range && range.value}>;
-                        {range && range.label}
-                      </option>;
                     ))}
                   </select>
                   <select
                     value={sortBy}
-                    onChange={e => setSortBy(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
-                  >;
-                    {sortOptions && sortOptions.map(option => (;
-                      <option key={option && option.value} value={option && option.value}>;
-                        {option && option.label}
-                      </option>;
-                    ))}
                     <input
                       type='text'
                       placeholder='Search services...'
@@ -602,17 +460,12 @@ import { Zap, Star, Calendar } from 'lucide-react';
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
               </div>
             </motion.div>
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -672,47 +525,10 @@ import { Zap, Star, Calendar } from 'lucide-react';
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
-            >;
-              <motion&& motion.div
-                className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-                initial={{ scale: 0 && 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0 && 0.9, opacity: 0 }}
-                onClick={e => e && e.stopPropagation()}
-              >;
-                <div className='p-8'>;
-                  <div className='flex justify-between items-start mb-6'>;
-                    <div className='flex items-center gap-4'>;
-                      <div className='text-5xl'>{selectedService && selectedService.icon}</div>;
-                      <div>;
-                        <h2 className='text-3xl font-bold text-white mb-2'>;
-                          {selectedService && selectedService.name}
-                        </h2>;
-                        <p className='text-xl text-gray-300'>;
-                          {selectedService && selectedService.tagline}
-                        </p>                      </div>;
-                    </div>;
-                    <button
-                      onClick={() => setSelectedService(null)}
-                      className='text-gray-400 hover:text-white text-2xl'                    >                initial={{ scale: 0 && 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0 && 0.9, opacity: 0 }}
-                onClick={(e) => e && e.stopPropagation()}
-              >;
-                <div className="p-8">;
-                  <div className="flex justify-between items-start mb-6">;
-                    <div className="flex items-center gap-4">;
-                      <div className="text-5xl">{selectedService && selectedService.icon}</div>;
-                      <div>;
-                        <h2 className="text-3xl font-bold text-white mb-2">{selectedService && selectedService.name}</h2>;
-                        <p className="text-xl text-gray-300">{selectedService && selectedService.tagline}</p>;
-                      </div>;
-                    </div>;
                     <button
                       onClick={() => setSelectedService(null)}
                       className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl"
                     >
-                      
                     </button>
                   </div>
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
@@ -793,20 +609,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
                             <div><span className="text-gray-400">ROI:</span> {selectedService.roi}</div>
                             <div><span className="text-gray-400">Market Size:</span> {selectedService.marketSize}</div>
                             <div><span className="text-gray-400">Growth Rate:</span> {selectedService.growthRate}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
-                        Features & Capabilities
-                      </h3>
-                      <div className='space-y-4'>
-                        <div>
-                          <h4 className='text-sm font-semibold text-purple-400 mb-2'>
-                            Key Features
-                          </h4>
-                          <div className='space-y-2'>
-                            {selectedService.features.map((feature, idx) => (
                               <div
                                 key={idx}
                                 className='flex items-center gap-2 text-sm'>;
@@ -827,14 +629,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
                           </div>;
                         </div>;
                         <div>;
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.features.map((feature, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{feature}</span>;
-                              </div>;
-                            ))}
                           </div>
                         </div>
                         <div>
@@ -863,8 +657,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
         </section>
       </div>
     </UltraFuturisticBackground>
-);  )
-}
   )
 }
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;

@@ -11,14 +11,6 @@ async function mockProviderCall<T>(
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
 
-  async addProjectNote(
-    connection: ProviderConnection,
-    note: Record<string, any>,
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  },
-  async syncContact(
-    return mockProviderCall(connection, "sync_contact", { contact });
   }
 
 };
@@ -33,36 +25,43 @@ export const ats = {
   async pushApplicant($2) {
     return simulateAction($3);
   },
-  async sync_contact (
-    connection: ProviderConnection,
-    contact: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "sync_contact", { contact });
-  },
-  async addEmailTouchpoint (
-    connection: ProviderConnection,
-    touchpoint: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
-  },
-  async addProjectNote (
-    connection: ProviderConnection,
-    note: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_project_note", { note });
-  },
 }
-;
-// ATS actions;
+// CRM actions
+export const crm = {
+  async syncContact(
+    connection: ProviderConnection
+    contact: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    contact: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "sync_contact", { contact });
+  }
+  async addEmailTouchpoint(
+    connection: ProviderConnection
+    touchpoint: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+  }
+  async addProjectNote(
+    connection: ProviderConnection
+    note: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "add_project_note", { note });
+  }
+}
+// ATS actions
 export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
+  async updateStatus(
+    connection: ProviderConnection
+    status: Record<string, any>
   ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
+    connection: ProviderConnection,
+    status: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "update_status", { status });
+  }
 }
-;
 
   async createCandidate(
     connection: ProviderConnection,

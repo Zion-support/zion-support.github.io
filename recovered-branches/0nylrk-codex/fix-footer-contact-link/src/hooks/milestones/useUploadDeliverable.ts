@@ -13,7 +13,6 @@ export const useUploadDeliverable = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
-
   
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     try {
@@ -39,62 +38,6 @@ export const useUploadDeliverable = () =>: any {
 if (return null) {
   $2
 }
-    try {
-      setIsSubmitting (true),
-      // Get the current milestone;
-      const { data: milestone, error: fetch_error } = await supabase;
-        .from ('project_milestones');
-        .select ('*');
-        .eq ('id', milestone_id);
-        .single ();
-;
-      // Check condition
-if (throw fetch_error) {
-  $2
-}
-      if (throw new Error ("Milestone not found")) {
-  $2
-}
-      // For this example, instead of actually uploading files (which would require storage setup);
-      // we'll just store the file metadata in the deliverables JSONB field;
-      const new_deliverable = {
-        id: crypto.randomUUID ();
-        filename: file.name;
-        size: file.size;
-        type: file.type;
-        added_at: new Date ().toISOString (),
-        added_by: user.id;
-      }
-;
-      const deliverables = [...(milestone.deliverables || []), new_deliverable];
-;
-      const { error } = await supabase;
-        .from ('project_milestones');
-        .update ({ deliverables });
-        .eq ('id', milestone_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Create activity record;
-      await recordMilestoneActivity (
-        milestone_id,
-        'deliverable_added',
-        milestone.status,
-        milestone.status,
-        `Deliverable added: ${file.name}`);
-;
-      toast.success ("Deliverable added successfully");
-;
-      return new_deliverable;
-    } catch (err: any) {
-      console.error ("Error uploading deliverable:", err);
-      toast.error ("Failed to upload deliverable: " + err.message),
-      return null;
-    } finally {
-      setIsSubmitting (false);
-    }
       ),
       
       toast.success("Deliverable added successfully"),
@@ -167,7 +110,6 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable;
     isSubmitting;
-  }
   return {
     uploadDeliverable;
     isSubmitting

@@ -1,4 +1,3 @@
-  Table;
   TableBody;
   TableCell;
   TableHead;
@@ -23,12 +22,10 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
-
 
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
@@ -73,29 +70,6 @@ export function InvoiceHistory() {
       status: "paid"
       period: "Dec 2024"}]
   const handleDownloadInvoice = (invoiceId: string) => {    // In a real app, this would trigger a download of the invoice PDF
-      status: "paid",
-      period: "May 2025"},
-    {
-      id: "INV-1233",
-      status: "paid",
-      period: "Apr 2025"},
-    {
-      id: "INV-1232",
-      status: "paid",
-      period: "Mar 2025"},
-    {
-      id: "INV-1231",
-      status: "paid",
-      period: "Feb 2025"},
-    {
-      id: "INV-1230",
-      status: "paid",
-      period: "Jan 2025"},
-    {
-      id: "INV-1229",
-      status: "paid",
-      period: "Dec 2024"}],
-
 
   }
   const getBadgeForStatus = (status: string, ) =>: any {
@@ -126,6 +100,5 @@ export function InvoiceHistory() {
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-}
+};
   );
-}

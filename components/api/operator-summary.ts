@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-    );
-    const metrics = await r && r.json();
-    const jobs24 =
-      metrics?.marketplace?.find((m: any) => m.key === 'jobs_24h')?.value |0;
     const voters =
       metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value |
       0;
@@ -19,10 +15,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
-
-  } catch (e) {
-    res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
-  }
 ;
 export default async /**
  * handler - Function description

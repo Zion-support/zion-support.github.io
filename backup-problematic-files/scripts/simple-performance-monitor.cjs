@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");const metrics = { timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," platform: process.platform," nodeVersion: process.version};/ Save metrics to file"fs.writeFileSync("performance-metrics.json", JSON.stringify(metrics, null, 2));"console.log(" Performance metrics collected and saved to performance-metrics.json");/ Display summary"console.log(`Memory Usage: ${Math.round(metrics.memory.heapUsed / 1024 / 1024)}MB`);"`console.log(`Uptime: ${Math.round(metrics.uptime)}s`);"`console.log(`Platform: ${metrics.platform}`);"`console.log(`Node Version: ${metrics.nodeVersion}`);'"`'"`
@@ -26,6 +22,10 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 /**
  * Simple Performance Monitor;
@@ -103,3 +103,7 @@ console.log(' Performance metrics collected and saved to performance-metrics.jso
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -19,6 +19,7 @@ export default function FuturisticServices2030Page() {
     website: 'https://ziontechgroup.com'
   },
 
+
   const all2030Services = [
     ...futuristicAIServices2030,
     ...quantumEmergingTechServices2030,
@@ -140,7 +141,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "provider": {
           }}
         />
       </Head>
@@ -269,29 +269,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }} className="text - center mb - 16">;
-                <div className={`w - 20 h - 20 bg - gradient - to - r ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 6`}>;
-                  <category.icon className="w - 10 h - 10 text - white" />;
-                </div>;
-                <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                  <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">;
-                    {category.title}
-                  </span>;
-                </h2>;
-                <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                  {category.description}
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                </p>;
-              </motion.div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {category.services.map ((service, service_index) => (
-                  <motion.div;
                     key={service.id}
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -323,7 +300,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                           </div>
                         </div>
                       </div>
-
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-400">Trial: {service.trialDays} days</span>
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
@@ -335,7 +311,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
             </div>
           </section>
         ))}
-
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -380,7 +355,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   View Pricing
                 </motion.button>
               </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -451,5 +425,3 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
         {/* Footer */}
         <UltraFuturisticFooter2030 />;
       </UltraFuturisticBackground2031>;
-}
-}

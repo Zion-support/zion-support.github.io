@@ -26,12 +26,6 @@ export async function exportResumeToPDF(
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
   // Set background color
-
-  // Add portfolio projects if needed
-  if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
-    currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
-  }
-  return doc.output('blob')
 }
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
@@ -91,6 +85,3 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
-  }
-  return doc.output ('blob');
-}

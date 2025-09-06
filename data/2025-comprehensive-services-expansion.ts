@@ -16,19 +16,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-  website: 'https://ziontechgroup && ziontechgroup.com'
-};
-
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-  {
-    id: 'ai-powered-code-review-assistant'
-    name: 'AI-Powered Code Review Assistant'
-    tagline:
-      'Automated code quality analysis, security scanning, and best practice recommendations'
-    price: '$199'
-    period: '/month'
-    description:
-      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
     features: [
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
@@ -59,10 +46,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-    customers: 156,
-    rating: 4 && 4.8,
-    reviews: 89,
-  },
   {
       'Automated incident classification',
       'Smart escalation routing',
@@ -328,21 +311,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 15,
   },
   {
-      'Predictive lead scoring',
-      'Customer behavior analysis',
-      'Sales process optimization',
-      'Revenue forecasting',
-      'Pipeline analytics',
-      'Automated follow - ups',
-      'Integration with CRM systems',
-      'Performance tracking',
-      'Real - time insights dashboard',
-    ],
-    popular: true,
-    customers: 234,
-    rating: 4 && 4.8,
-    reviews: 178,
-  },
       'Real-time insights dashboard'
     ];
     popular: true;
@@ -1082,4 +1050,3 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     reviews: 178;
   }
 ];
-;

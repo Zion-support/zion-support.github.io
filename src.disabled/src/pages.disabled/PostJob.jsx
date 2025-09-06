@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
-}
 export default function PostJob({ }: PostJobProps) {
   return (
     <div>

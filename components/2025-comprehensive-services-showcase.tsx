@@ -1,4 +1,3 @@
-// All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
@@ -34,7 +33,6 @@
   opacity: 1, y: 0
 }transition= {
   {
-
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   /* Service Header */ ;
 }<divclassName= {
@@ -173,13 +171,6 @@
             ))}
           </div>
 
-
-
-
-          {/* Services Display */}
-          <AnimatePresence mode="wait">
-            {viewMode === 'grid' ? (
-              <motion.div
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -213,9 +204,6 @@
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
                           {getServicePricing(service)}
-                    {/* Service Content */}
-                    <div className="p-6">
-                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                       {/* Price */}
                       <div className="mt - 4">;
                         <span className="text - 2xl font - bold">;
@@ -230,8 +218,6 @@
                       <div className="mb - 4">;
                         <span className="text - 3xl font - bold text - gray - 900">;
                           {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-                        </span>
-                      </div>
                       {/* Features */}
                       <div className="mb-6">;
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
@@ -317,12 +303,6 @@
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
                         </div>;
                       </div>;
-                          {/* Category and Action */}
-                          <div className="flex flex-col items-end space-y-3">
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
-                              {getCategoryIcon(service.category)}
-                              <span className="ml-1">{service.category}</span>
-                            </span>
                             <a
                               href={service && service.link}
                               target="_blank"
@@ -364,11 +344,6 @@
                         </div>;
                       </div>;
                     </div>;
-
-          </AnimatePresence>;
-
-
-
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -580,7 +555,6 @@
               className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 900 transition - colors flex items - center justify - center gap - 2";
             >;
               <Globe className="w - 5 h - 5" />;
-
               Visit Website;
             </a>;
           </div>;

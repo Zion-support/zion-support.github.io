@@ -1,8 +1,5 @@
 
 
-export interface ReferralCode {
-
-export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
@@ -24,7 +21,6 @@ export interface Referral {;
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
-}
 }
 
 

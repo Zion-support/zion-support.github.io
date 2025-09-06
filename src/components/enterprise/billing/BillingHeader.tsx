@@ -6,7 +6,6 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from "next/link",
-export function BillingHeader() {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
@@ -52,10 +51,6 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
-        Manage your subscription, view invoice history, and update payment methods.
-      </p>
-    </div>
-  )
 }
 export function BillingHeader() {;
   return (
@@ -82,10 +77,6 @@ export function BillingHeader() {;
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Download, Mail, BarChart3 } from 'lucide-react';
-import Link from "next/link";
-export function BillingHeader() {;
-  return (
     <div className="space-y-2">;
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>;
@@ -165,7 +156,7 @@ function BillingHeader() {
     </div>) <p className="text - muted - foreground">;
         Manage your subscription, view invoice history, and update payment methods.;
       </p>;
-    </div>);
+    </div>;
+  );
 }
 ;
-

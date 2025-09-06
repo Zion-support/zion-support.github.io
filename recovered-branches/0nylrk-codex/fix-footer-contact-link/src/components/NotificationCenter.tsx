@@ -12,9 +12,6 @@ import {FilterType} from '@/components/notifications/NotificationFilter';
     setFilter;
     fetchNotifications;
   } = useNotifications();
-
-
-
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
@@ -34,10 +31,13 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
-
     markAsRead, 
     markAllAsRead,
 
+    markAsRead, ;
+    markAllAsRead;
+    markAsRead, 
+    markAllAsRead,
     dismissNotification, 
     loading,
     filter,
@@ -53,21 +53,12 @@ export const NotificationCenter: React.FC = () => {
     if (open) {
       const loadNotifications = async () => {
         try {
-          await fetchNotifications();
           setError(null);
         } catch (err) {;
-          console && console.error("Failed to fetch notifications:", err);
-          setError("Couldn't load notifications");
-          toast && toast.error("Failed to load notifications");
+          console.error("Failed to fetch notifications:", err),;
+          setError("Couldn't load notifications"),;
+          toast.error("Failed to load notifications");
         }
-      }
-      loadNotifications()
-    }
-
-
-
-  const handleMarkAllAsRead = async () => {
-    try {
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
@@ -80,20 +71,6 @@ export const NotificationCenter: React.FC = () => {
         <Button variant="ghost" size="icon" className="relative">;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </span>;
-          )}
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-        <NotificationHeader
-          unreadCount={unreadCount}
-          onMarkAllAsRead={handleMarkAllAsRead}
-        />
-        <NotificationFilter
-          filter={filter as FilterType}
-          onFilterChange={handleFilterChange}
-        />
         <NotificationList
 // Use the shared icon wrapper;
 import {Bell} from '@/components / icons';
@@ -186,13 +163,6 @@ if ( {) {
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-        />
-        <NotificationFooter onClose={() => setOpen(false)} />
-      </PopoverContent>
-    </Popover>
-  )
-        />;
-
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;

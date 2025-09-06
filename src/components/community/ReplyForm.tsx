@@ -62,9 +62,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   }
   return (
     <Card>;
-
-                field: ControllerRenderProps<ReplyFormValues, 'content'>;
-              }) => (                <FormItem>;
     }
   },
 
@@ -74,7 +71,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -99,18 +95,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                   <FormMessage />;
                 </FormItem>;
               )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-
                 field: ControllerRenderProps < ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
                   <FormControl>;
@@ -129,5 +113,3 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       </CardContent>;
     </Card>);
 }
-},
-

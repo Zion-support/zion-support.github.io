@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-;
 export interface User {
   id: string;
   email: string;
@@ -32,13 +31,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-export function parseUserFromRequest (req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic;
-  const auth_header = req.headers.authorization;
-  // Check condition
-if ( {) {
-  $2
-}
     return { id: 'guest', email: 'guest@example.com', role: 'guest' }
   }
   // Simple mock for admin users
@@ -105,19 +97,6 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
-  }
-
-    user,
-    token,
-    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  };
-}
-
-
-export function isAuthenticated(session: AuthSession | null): boolean {
-    if (!session) return false;
-
-
   }
 
 export function hasRole(session: AuthSession | null, role: string): boolean {

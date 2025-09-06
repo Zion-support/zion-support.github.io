@@ -1,6 +1,3 @@
-
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -38,8 +35,6 @@ function ApplicationProgress() {
         return 100;
       default:;
         return 0;
-    }
-  }
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -63,22 +58,11 @@ function ApplicationProgress() {
         </div>
       </div>
     </div>
-  );
-}
-  const currentRank = statusRank[current];
-  const statusRank_ = statusRank[status];
 
-  if (currentRank < statusRank_) {;
-    // This step is complete;
-    return <CheckCircle2 className="h-4 w-4 text-green-500" />;
-  } else if (currentRank === statusRank_) {;
-    // This is the current step;
-    return <CircleDot className="h-4 w-4 text-blue-500" />;
-  } else {;
-    // This step is upcoming;
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-  }
-;
+
+
+  )
+}
   const progress_value = getProgressValue ();
 ;
   return (

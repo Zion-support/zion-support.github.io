@@ -58,13 +58,6 @@ interface TemplateListProps {;
   onEdit: (template: ContractTemplate) => void;
 }
 
-
-
-
-  const handleSetDefault = async (templateId: string) => {;
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
-  };
-
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
@@ -120,7 +113,6 @@ interface TemplateListProps {;
           </CardContent>;
         </Card>;
       ))}
-
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;

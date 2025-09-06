@@ -7,7 +7,5 @@
   // For now, we'll just return our mock data
   return {
     talents;
-
-    isLoading;
   }
 }

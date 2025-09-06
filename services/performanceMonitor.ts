@@ -7,6 +7,14 @@
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
+
+  speed_index: number;
+  performance_score: number;
+  accessibility_score: number;
+  bestPracticesScore: number,
+  seo_score: number;
+}
+export interface PerformanceAlert {
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
@@ -133,22 +141,6 @@ export class PerformanceMonitorService {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
       }
-      return await response.json()
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-    } catch (error) {
-      // Generate mock historical data
-      return this && this.generateMockHistoricalData(url, days)
-    }
-  }
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
-    try {
-      }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
       throw error
@@ -157,8 +149,6 @@ export class PerformanceMonitorService {;
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
-      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
-        headers: {
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -234,37 +224,6 @@ export class PerformanceMonitorService {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
-      })
-    }
-    return data
-  }
-  private generateMockAlerts(url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-    largestContentfulPaint: number,
-    cumulativeLayoutShift: number;
-  }
-  notifications: {
-    email: boolean;
-    slack: boolean,
-    webhook: boolean;
-  }
-}
-export class PerformanceMonitorService {
-  private api_key: string;
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
-    this.api_key = api_key,
-    this.base_url = base_url;
-  }
-  async monitor_website (url: string): Promise < PerformanceMetrics> {
-    try {
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
-      const response = await fetch (`${this.base_url}/performance / monitor`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ url })});
 ;
       // Check condition
 if ( {) {
@@ -418,8 +377,6 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
-      {
-        id: '1';
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
@@ -433,16 +390,6 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor
-        current_value: 85;
-        timestamp: new Date (),
-        resolved: true;
-      }
-    ];
-;
-    return url ? alerts.filter (array => a.url === url) : alerts;
-  }
-}
-// Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
@@ -485,11 +432,3 @@ export const PERFORMANCE_MONITOR_PRICING = {
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
-
-    ];
-  }
-
-
-
-};
-

@@ -1,4 +1,3 @@
-
         }
     }
   }
@@ -23,7 +22,6 @@
             Popular;
           </motion && motion.div>;
         )}
-
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
           text_color: 'text - purple - 400',
@@ -148,7 +146,6 @@
             Popular;
           </motion.div>)}
 
-
         
 
         {/* Service Header */}
@@ -182,18 +179,6 @@
             {service.competitors && (
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
-              </div>
-        {/* Target Market & Use Cases */}
-        {service.targetMarket && (
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
-            <div className="text-xs">
-              <div className="text-gray-400 mb-2">Target Market:</div>
-              <div className="text-gray-300">{service.targetMarket}</div>
-            </div>
-            {service.useCases && (
-              <div className="text-xs mt-3">
-                <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
               </div>
         {/* Benefits Section */}
         {service && service.benefits && (;

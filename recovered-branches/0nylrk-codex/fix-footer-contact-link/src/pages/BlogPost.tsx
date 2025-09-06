@@ -24,16 +24,11 @@ export default function BlogPost() {
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-export default function BlogPost() {
-
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
   const [post, setPost] = useState<BlogPostType | null>(null),
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
-
   
   useEffect(() => {
     // Find the current post by slug
@@ -44,7 +39,6 @@ export default function BlogPost() {
         p.id !== currentPost.id &&
         (p.category === currentPost.category |
          p.tags.some(tag => currentPost.tags.includes(tag)))
-      ).slice(0, 3);
       setRelatedPosts(related)
     } else {
       // Post not found
@@ -52,8 +46,6 @@ export default function BlogPost() {
     }
     // Scroll to top when post changes
     window.scrollTo(0, 0)
-  }, [slug, navigate]);
-  if (!post) {
       <AppLayout>
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
           <div className="animate-pulse">Loading article...</div>
@@ -72,6 +64,12 @@ import { AppLayout } from "@/layout/AppLayout",;
 import { BLOG_POSTS } from "@/data/blog-posts",;
 export default function BlogPost() {;
   const { slug } = useParams() as { slug: string },;
+;
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import { BLOG_POSTS } from "@/data/blog-posts",;
+;
+export default function BlogPost() {;
+  const { slug } = useParams() as { slug:string },;
   const navigate = useNavigate(),;
   const [post, setPost] = useState<BlogPostType | null>(null),;
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
@@ -98,7 +96,33 @@ export default function BlogPost() {;
   }, [slug, navigate]),;
   if (!post) {;
     return (;
-
+  ;
+  useEffect(() => {;
+    // Find the current post by slug;
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
+    ;
+    if (currentPost) {;
+      setPost(currentPost),;
+      ;
+      // Find related posts (same category, excluding current post);
+      const related = BLOG_POSTS.filter(p => ;
+        p.id !== currentPost.id && ;
+        (p.category === currentPost.category || ;
+         p.tags.some(tag => currentPost.tags.includes(tag)));
+      ).slice(0, 3),;
+      ;
+      setRelatedPosts(related),;
+    } else {;
+      // Post not found;
+      navigate("/blog", { replace:true }),;
+    }
+    ;
+    // Scroll to top when post changes;
+    window.scrollTo(0, 0),;
+  }, [slug, navigate]),;
+  ;
+  if (!post) {;
+    return (;
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
           <div className="animate-pulse">Loading article...</div>;
@@ -106,20 +130,6 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title)
-    switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default: return '#'
-    }
-  
   return (
     <AppLayout>
       <SEO
@@ -168,11 +178,6 @@ export default function BlogPost() {;
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
-                      <a
-                        href={getShareUrl('linkedin')}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
@@ -189,10 +194,6 @@ export default function BlogPost() {;
                 src={post.featuredImage}
                 alt={post.title}
                 className="object-cover w-full h-full"
-                onError={(e) => {;
-                  const target = e && e.target as HTMLImageElement;
-                  target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
@@ -248,15 +249,6 @@ export default function BlogPost() {;
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-
-                            target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-                          }}
-                        />;
-                      </div>;
-                      <div className="p-4">;
-                        <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
-                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
                   ))}
@@ -275,5 +267,3 @@ export default function BlogPost() {;
           </div>;
         </div>;
       </div>;
-;
-

@@ -12,7 +12,6 @@ export interface WhitelabelTenant {;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-
   }
 
   is_active: boolean;
@@ -45,9 +44,6 @@ export interface WhitelabelTenant {;
         const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
-          `${functionName}${params}`;
-  dns_verified: boolean,
-  email_template_override: Record < string, any> | null;
 }
 export /**
  * useWhitelabelTenant - Function description
@@ -78,25 +74,11 @@ if ( {) {
         const function_name = 'tenant - detector';
 ;
         // Build the query parameters;
-        const params = external_subdomain;
-          ? `?subdomain=${encodeURIComponent (external_subdomain)}`;
-          : `?host=${encodeURIComponent (hostname)}`;
-;
-        const { data, error: function_error } = await supabase.functions.invoke (
-          `${function_name}${params}`;
-          {
-            headers: {
-              'Content - Type': 'application / json'}}
-        );
-
 ;
         if (!data) {;
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
-        }
-        if (data.tenant) {
-          setTenant(data.tenant)
 ;
         // Check condition
 if ( {) {
@@ -137,7 +119,7 @@ if ( {) {
   return { tenant, isLoading, error }
 }
 // Hook to check if current user is a tenant admin
-export function useTenantAdminStatus(tenantId?: string) {
+export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -156,22 +138,3 @@ export function useTenantAdminStatus(tenantId?: string) {
           .single();
         setIsAdmin(!!data && !error)
       } catch (err) {
-        console && console.error('Error checking tenant admin status:', err);
-        setIsAdmin(false)
-        console.error ('Error loading tenant:', err);
-        let message = err.message || 'An unexpected error occurred while loading tenant configuration';
-        // Check condition
-if (||) {
-  $2
-}
-          message.includes ('Failed to connect to Supabase') ||;
-          message.includes ('No internet connection')) {
-          message = 'Unable to reach the server. Please check your internet connection and try again.';
-        }
-        set_error (message);
-        set_tenant (null);
-      } finally {
-        setIsLoading (false);
-      }
-  return { isAdmin, isLoading }
-}

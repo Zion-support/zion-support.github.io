@@ -3,6 +3,3 @@ const type { NextPage } from "next"; import Head from "next/head"; import Naviga
 import React from 'react';
 interface AboutProps {
   // Add props here as needed
-}
-export default function About({ }: AboutProps) {
-

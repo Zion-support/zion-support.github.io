@@ -10,22 +10,6 @@
   CardDescription,
   CardFooter,
   CardHeader,
-} from "@/components/ui/card";
-
-interface ContractTypeCardsProps {;
-
-interface ContractTypeCardsProps {
-  onStandardClick: () => void;
-  onSmartClick: () => void
-}
-
-  CardTitle,;
-
-} from "@/components/ui/card";
-
-import { FileText, ShieldCheck } from "lucide-react";
-interface ContractTypeCardsProps {
-interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -96,22 +80,11 @@ interface ContractTypeCardsProps {;
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
-
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-export /**
- * ContractTypeCards - Function description
- */
-function ContractTypeCards() {
-  return (
-    <div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <FileText className="h - 5 w - 5" />;
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -123,8 +96,6 @@ function ContractTypeCards() {
           </Button>;
         </CardFooter>;
       </Card>;
-
-      <Card>;
               Blockchain Powered;
             </span>;
           </div>;
@@ -137,14 +108,8 @@ function ContractTypeCards() {
         </CardContent>;
         <CardFooter>;
           <Button;
-            className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
-            on_click={onSmartClick}
           >;
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-
-    </div>);
-
-}

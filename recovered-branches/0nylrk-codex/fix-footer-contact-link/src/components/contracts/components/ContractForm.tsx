@@ -55,11 +55,6 @@ export function ContractForm({
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
-
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
-  const { toast } = useToast(),
-
   const form = useForm<ContractFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: initialValues |{
@@ -73,9 +68,6 @@ export function ContractForm({
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
-  }, [form, onFormValuesChange]),
-  
-
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -85,7 +77,6 @@ export function ContractForm({
     toast({
       title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
-  }
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -94,94 +85,42 @@ export function ContractForm({
         talent
         clientName
         generatedMilestones
-      );
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error);
+      );
+      ),
+      
+      onContractGenerated(contract)
+    } catch (error) {
+      console.error("Error generating contract:", error),
       toast({
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
-    }
-  }, [initial_values, form]);
-;
-  // Track form values for template saving;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      const subscription = form.watch ((value) => {
-        onFormValuesChange (value as ContractFormValues);
-      });
-;
-      return () => subscription.unsubscribe ();
-    }
-  }, [form, onFormValuesChange]);
-;
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) =>: any {
-    setGeneratedMilestones (milestones),
-    // If payment terms isn't already set to milestone, update it;
-    // Check condition
-if (!== "milestone") {) {
-  $2
-}
-      form.set_value ("payment_terms", "milestone");
-    }
-    toast ({
-      title: "Milestones Generated",
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`});
-  }
-;
-  const on_submit = async (values: ContractFormValues) => {
-    setIsGenerating (true),
-    try {
-      const contract = await generate_contract (
-        values,
-        talent,
-        client_name,
-        generated_milestones);
-;
-      onContractGenerated (contract);
-    } catch (error) {
-      console.error ("Error generating contract:", error);
-      toast ({
-        title: "Contract Generation Failed",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive"});
-    } finally {
-
-  return (
     <>;
       <DialogHeader>;
-        <DialogTitle className="text - xl">Contract Builder</DialogTitle>;
+        <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-
-
   // Track form values for template saving;
   useEffect(() => {;
     if (onFormValuesChange) {;
       const subscription = form && form.watch((value) => {;
         onFormValuesChange(value as ContractFormValues);
       });
-
       return () => subscription && subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]);
-
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
     setGeneratedMilestones(milestones),;
-
     // If payment terms isn't already set to milestone, update it;
     if (form && form.getValues("paymentTerms") !== "milestone") {;
       form && form.setValue("paymentTerms", "milestone");
     }
-
     toast({;
       title: "Milestones Generated",;
       description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
   };
-
   const onSubmit = async (values: ContractFormValues) => {;
     setIsGenerating(true),;
     try {;
@@ -191,7 +130,6 @@ if (!== "milestone") {) {
         clientName, ;
         generatedMilestones;
       );
-
       onContractGenerated(contract);
     } catch (error) {;
       console && console.error("Error generating contract:", error);
@@ -203,26 +141,15 @@ if (!== "milestone") {) {
       setIsGenerating(false);
     }
   };
-
   return (
     <>;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-          Create a professional contract for your project with {talent.full_name}
-        </DialogDescription>
-      </DialogHeader>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <ProjectDetailsFields
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-          <AdditionalClausesFields
-            form={form}
-          />
-          <Button
           <PaymentTermsFields 
             form={form}
             talent={talent}

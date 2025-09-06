@@ -1,5 +1,3 @@
-
-
 export interface PricingAnalysis { serviceId: string, serviceName: string, category: string, currentPrice: string, period: string, marketAnalysis: {
        averageMarketPrice: string, priceRange: string, competitivePosition: string, valueProposition: string, targetMarket: string, marketSize: string,
     growthRate: string
@@ -10,8 +8,6 @@ export interface PricingAnalysis { serviceId: string, serviceName: string, categ
     },
     roiAnalysis: { customerROI: string, implementationCost: string, paybackPeriod: string,
     totalCostOfOwnership: string}; contactInfo: { mobile: string, email: string, address: string,
-
-
 export interface PricingAnalysis { serviceId: string, serviceName: string, category: string, currentPrice: string, period: string, marketAnalysis: {
        averageMarketPrice: string, priceRange: string, competitivePosition: string, valueProposition: string, targetMarket: string, marketSize: string,
     growthRate: string

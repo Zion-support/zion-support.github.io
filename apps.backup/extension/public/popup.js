@@ -1,5 +1,3 @@
-
-
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
@@ -34,14 +32,6 @@ document && document.getElementById('postJob').addEventListener('click', async (
 
 document && document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
-});
-
-document && document.getElementById('viewNotifications').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r));
-  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
-  const res = await fetch(`${API_BASE}/notifications`, {
-    headers: { 'x-user-id': userId }
-  });
 });
 
 document && document.getElementById('signIn').addEventListener('click', async () => {

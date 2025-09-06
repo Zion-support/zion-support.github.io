@@ -40,17 +40,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const effectiveResponseId = useMemo(
-    () => responseId |uuidv4()
-    [responseId]
-  );
-  const submit = async () => {;
-    if (!rating) {;
-      setError('Please choose  or ');
-      return;    }  const effectiveResponseId = useMemo(() => responseId |uuidv4(), [responseId]);
-  const submit = async () => {
-    if (!rating) {
-      setError('Please choose  or ');
       return;      return;
       return
     }
@@ -68,11 +57,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
-            >;
-              <span></span>;
-              <span>Yes</span>;
-            </button>;
-            <button
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}

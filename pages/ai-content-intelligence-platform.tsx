@@ -38,28 +38,10 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
-      'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
-    ];
-    popular: false,
-    color: 'from-gray-500 to-gray-600'
-  };
-  {
-    name: 'Professional',
-    price: '$5, 000',
-    period: '/month',
-    description: 'Ideal for growing businesses and marketing teams',
     name: 'Enterprise',
     price: '$10, 000',
     period: '/month',
     description: 'For large organizations with complex content needs',
-import { motion } from 'framer-motion';
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,;
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,;
-  ShoppingCart;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -113,50 +95,16 @@ const pricingPlans = [;
     period: '/month',;
     description: 'Perfect for small businesses and content creators',;
     features: [;
-      'Real-time content analytics',;
-      'AI optimization suggestions',;
-      'Basic performance tracking',;
-      'SEO content insights',;
-      'Email support',;
-      'Up to 100 content pieces/month',;
-    ],;
-    popular: false,;
-    color: 'from-gray-500 to-gray-600',;
-  },  {;
     name: 'Professional',;
     price: '$5,000',;
     period: '/month',;
     description: 'Ideal for growing businesses and marketing teams',;
     features: [;
-      'Everything in Starter',;
-      'Predictive performance modeling',;
-      'Advanced competitor analysis',;
-      'Multi-channel optimization',;
-      'Priority support',;
-      'Up to 500 content pieces/month',;
-      'Custom integrations',;
-    ],;
-    popular: true,;
-    color: 'from-blue-500 to-purple-600',;
-  },  {;
     name: 'Enterprise',;
     price: '$10,000',;
     period: '/month',;
     description: 'For large organizations with complex content needs',;
     features: [;
-      'Everything in Professional',;
-      'Custom AI models',;
-      'Advanced analytics',;
-      'Dedicated account manager',;
-      '24/7 phone support',;
-      'Unlimited content pieces',;
-      'White-label solutions',;
-      'API access',;
-    ],;
-    popular: false,;
-    color: 'from-purple-500 to-pink-600',;
-  },];
-
 const useCases = [;
   {;
     title: 'Content Marketing Optimization',;
@@ -184,21 +132,6 @@ const useCases = [;
     description:;
       'Optimize product descriptions and marketing content for better conversions',;
     icon: ShoppingCart,;
-const integrations = [
-  'WordPress'
-  'Shopify'
-  'HubSpot'
-  'Mailchimp'
-  'Google Analytics'
-  'Facebook Ads'
-  'Google Ads'
-  'LinkedIn'
-  'Twitter'
-  'Instagram'
-  'YouTube'
-  'TikTok'
-  'Slack'
-  'Zapier'
 ];
 
 const integrations = [;
@@ -232,15 +165,6 @@ const integrations = [;
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-            >
-              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>
-                <div className='text-6xl mb-4'></div>
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  Key Benefits
-                </h3>
-                <div className='space-y-3'>
-                  <div className='flex items-center text-green-400'>
-                    <CheckCircle className='w-5 h-5 mr-3' />
                     <span>300%+ ROI improvement</span>
                   </div>
                   <div className='flex items-center text-green-400'>
@@ -253,31 +177,6 @@ const integrations = [;
             </motion.div>
           </div>
         </div>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              className='relative'>;
-              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>;
-                <div className='text-6xl mb-4'></div>;
-                <h3 className='text-2xl font-bold text-white mb-4'>;
-                  Key Benefits;
-                </h3>;
-                <div className='space-y-3'>;
-                  <div className='flex items-center text-green-400'>;
-                    <CheckCircle className='w-5 h-5 mr-3' />;
-                    <span>300%+ ROI improvement</span>;
-                  </div>;
-                  <div className='flex items-center text-green-400'>;
-                    <CheckCircle className='w-5 h-5 mr-3' />;
-                    <span>80% faster content optimization</span>;
-                  </div>;
-                  <div className='flex items-center text-green-400'>;
-                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -303,21 +202,11 @@ const integrations = [;
                 </div>
               </motion.div>
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Use Cases Section */}
-      <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
@@ -344,21 +233,11 @@ const integrations = [;
                 </div>
               </motion.div>
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Pricing Section */}
-      <section className='py-20'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-
 
       {/* Pricing Section */}
       <section className="py-20">
@@ -390,7 +269,6 @@ const integrations = [;
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
 
-
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature  } catch (error) {
@@ -406,17 +284,12 @@ const integrations = [;
 }
                   </ul>
                   <Link
-
-                  </ul>
-                  <Link
-                    href="/contact"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               </motion.div>
-
             ))}
 
 
@@ -427,8 +300,6 @@ const integrations = [;
 }
 
           </div>;
-        </div>;
-      </section>;
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -440,7 +311,6 @@ const integrations = [;
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
-
     features: [;
       'Everything in Professional',
       'Custom AI models',
@@ -733,8 +603,6 @@ function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -786,17 +654,6 @@ function AIContentIntelligencePlatform() {
           </motion.div>
         </div>
       </section>
-
-
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
-                View All Services;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
   )
 }
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';

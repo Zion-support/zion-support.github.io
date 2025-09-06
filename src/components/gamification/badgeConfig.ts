@@ -43,7 +43,6 @@ export interface BadgeMeta {
 }
 
 export const badgeList: BadgeMeta[] = [
-  {
     key: "first_listing",
     name: "First Listing",
     description: "Published your first product, service, or listing.",

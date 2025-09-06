@@ -1,6 +1,3 @@
-    ? {
-
-
   return theme === 'light' 
     ? { ;
         background: '#ffffff';

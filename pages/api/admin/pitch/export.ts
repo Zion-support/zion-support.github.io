@@ -16,11 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
-
-}
-function escapeHtml(str: string) {
-  return String(str)
-
 .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')

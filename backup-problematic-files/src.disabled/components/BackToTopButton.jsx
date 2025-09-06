@@ -9,4 +9,3 @@ const BackToTopButton = ({ className }) => {
   );
 };
 
-export default BackToTopButton;

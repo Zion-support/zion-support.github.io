@@ -56,24 +56,6 @@ const SAMPLE_QUERIES = [;
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
 ];
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
-
-  }
-  const { q = "" } = req.query;
-  const q = ((req.query.q as string) || '').toLowerCase();
-  const suggestions = new Set<string>();
-
-  for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
-  }
-  for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
-  }
-
-  return res && res.status(200).json({ suggestions });
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -81,14 +63,4 @@ const SAMPLE_QUERIES = [;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }

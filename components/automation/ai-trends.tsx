@@ -31,8 +31,6 @@ export async function getServerSideProps() {;
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
-);
-}
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }

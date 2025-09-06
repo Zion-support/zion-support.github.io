@@ -153,12 +153,6 @@ export default function AccountSettings() {;
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
-
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input
-
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -183,7 +177,6 @@ export default function AccountSettings() {;
                   >
                     <Wallet className="h-4 w-4" />
                     Connect
-                  </Button>
                 </div>
                 <p className="text-xs text-gray-500 mt-1">
                   Link your decentralized identity to display on your profile
@@ -220,7 +213,6 @@ export default function AccountSettings() {;
 
           
           <Card>
-            <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
@@ -263,19 +255,6 @@ export default function AccountSettings() {;
                 </div>;
               </div>;
 
-              
-              <div>
-                <h3 className="font-medium mb-2">Recovery Options</h3>
-                <Button 
-                  variant="outline" 
-                  className="w-full"
-                  disabled={!enableBackup}
-                >
-                  Restore Profile from Backup
-                </Button>
-                <p className="text-xs text-gray-500 mt-1">
-                  {enableBackup 
-                    ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
                 </p>
               </div>
@@ -296,5 +275,3 @@ export default function AccountSettings() {;
     </>);
 }
 ;
-
-

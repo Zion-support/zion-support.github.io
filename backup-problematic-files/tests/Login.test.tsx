@@ -13,4 +13,3 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
   );
 };
 
-export default Login.test;

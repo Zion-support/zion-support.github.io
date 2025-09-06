@@ -29,16 +29,11 @@ export function OnChainExport() {
     try {
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0];
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
-      });
-      setIsConnected(true);
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -71,7 +66,6 @@ export function OnChainExport() {
       setIsExporting (false);
     }
   }
-
   return (
     <Card>;
       <CardHeader>;
@@ -173,7 +167,6 @@ export function OnChainExport() {;
           ) : (;
             <Wallet className="h-5 w-5" />;
           )}
-
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;
@@ -182,26 +175,7 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          {is_connected ? (
-            <Wallet className="h - 5 w - 5 text - primary" />) : (
-            <Wallet className="h - 5 w - 5" />)}
-          On - chain Export;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger as_child>;
-                <Info className="h - 4 w - 4 text - muted - foreground cursor - help" />;
-              </TooltipTrigger>;
-              <TooltipContent>;
-                <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
-;
-
-

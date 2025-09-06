@@ -1,36 +1,7 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-
   RemoteParticipant
   LocalParticipant
   TrackPublication
   Track;
-  TrackPublication,;
-  Track,;
-} from 'livekit-client';
-
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
@@ -42,9 +13,6 @@ type Props = {
   participant: RemoteParticipant | LocalParticipant,
 
   isLocal?: boolean;
-  displayName?: string;
-};
-
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -52,12 +20,6 @@ type Props = {
       if (track.kind === 'video' && videoRef.current) {
         track.attach(videoRef.current);
       }
-      if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
-        track && track.attach(audioRef && audioRef.current);      }
-    };
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
-      if (track && track.kind === 'video' && videoRef && videoRef.current) {;
-        track && track.detach(videoRef && videoRef.current);
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
@@ -71,10 +33,6 @@ type Props = {
       }
       }
     };
-
-    participant.tracks.forEach(pub => {
-      const track = pub.track;
-      if (track) handleTrackSubscribed(pub, track)
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);

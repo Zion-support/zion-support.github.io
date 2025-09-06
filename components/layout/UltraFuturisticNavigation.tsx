@@ -1,7 +1,3 @@
-import Link from 'next/link';
-
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
   Menu
   X
   ChevronDown
@@ -17,16 +13,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface UltraFuturisticNavigationProps {
   className?: string;
 export default function UltraFuturisticNavigation({
-}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
-interface UltraFuturisticNavigationProps {;
-  className?: string;
-
-export default function UltraFuturisticNavigation(): any ({;
-  className = '',;
-}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
-interface UltraFuturisticNavigationProps {;
-  className?: string;
-}
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -70,9 +56,6 @@ interface UltraFuturisticNavigationProps {;
           color: 'from-green-500 to-emerald-600'
         }
         {
-
-  ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -170,7 +153,6 @@ interface UltraFuturisticNavigationProps {;
         : 'bg-transparent'
 
 
-export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {;
 
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
@@ -265,14 +247,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                     </div>;
                                     {dropdownItem && dropdownItem.name === 'View All Services' && (;
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>;
-                    {/* Dropdown Menu */}
-                    <AnimatePresence>;
-                      {active_dropdown === item.name && (
-                        <motion.div;
-                          initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                          exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
                                 </Link>
                               ))}
                             </div>
@@ -340,41 +314,21 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     href={item.href}
                     className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
                   >;
-
                     {item.name}
                   </Link>)}
               </div>))}
           </div>;
-          </div>
-
-
-
-          {/* Contact Info & CTA */}
-          <div className='hidden lg:flex items-center space-x-6'>;
-          <div className="hidden lg:flex items-center space-x-6">
             {/* Contact Info */}
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <div className='flex items-center space-x-2'>;
                 <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
             {/* Contact Info */}
-            <div className="flex items-center space-x-4 text-sm text-gray-300">;
-              <div className="flex items-center space-x-2">;
-                <Phone className="w-4 h-4 text-cyan-400" />;
-              </div>;
-            </div>;
 
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
                 href="/contact"
-          {/* Mobile Menu Button */}
-          <div className='lg:hidden'>;
-
-            </button>;
-          </div>;
-        </div>;
-      </div>;
 
 
 
@@ -405,12 +359,8 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                               onClick={() => setIsOpen(false)}
                             >;
                               <div
-                            <Link
-                              key={dropdownItem && dropdownItem.name}
-                              href={dropdownItem && dropdownItem.href}
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
-                              onClick={() => setIsOpen(false)}
 
+                                {dropdownItem.name}
 
                               </span>
                             </Link>
@@ -420,21 +370,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     </div>;
                   ) : (;
                     <Link
-                      onClick={() => setIsOpen(false)}
-                    >;
-                      {item && item.name}
-                    </Link>;
 
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       onClick={() => setIsOpen(false)}
-
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>;
-              ))}
 
 
                   <span>{contactInfo.mobile}</span>
@@ -595,6 +534,3 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 </Link>;
               </div>;
             </div>;
-  );
-}
-}

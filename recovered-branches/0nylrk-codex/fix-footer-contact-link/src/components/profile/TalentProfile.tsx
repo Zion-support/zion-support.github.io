@@ -17,30 +17,22 @@ interface TalentProfileProps {
   onRequestHire: () => void
 
   onMessageTalent?: () => void
-  profile;
-  onRequestHire;
-  onMessageTalent;
-}: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-  }
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
-  })) |[];
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
-
   })) || [],
   
   return (
@@ -105,7 +97,6 @@ export function TalentProfile({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
-            <ProfileRatings
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}

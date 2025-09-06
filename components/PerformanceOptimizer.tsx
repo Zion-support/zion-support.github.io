@@ -1,26 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
@@ -32,18 +9,12 @@ import { motion } from 'framer-motion';
   Cpu
   Database
   Network;
-} from 'lucide-react';
-
-interface PerformanceMetrics {;
-  loadTime: number;
   Zap,
   Clock,
   TrendingUp,
   Activity,
   Gauge,
   Cpu,
-  Database,
-  Network,
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
@@ -51,9 +22,6 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-
-  timeToInteractive: number;
-}, []);
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -80,7 +48,6 @@ interface PerformanceMetrics {
 interface PerformanceOptimizerProps {
   class_name?: string;
 }
-
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
@@ -117,7 +84,6 @@ if ( {) {
           optimized_count++;
         }
       }
-
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
@@ -125,7 +91,6 @@ if ( {) {
       setIsOptimizing (false);
     }
   }, []);
-
     setIsOptimizing(true);
     setOptimizationStatus('Optimizing images...');
 
@@ -137,20 +102,6 @@ if ( {) {
       document && document.head.appendChild(style);
 
       setOptimizationStatus('Font optimization complete');
-
-      // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 800));
-    } catch (error) {;
-      setOptimizationStatus('Font optimization failed');
-      console && console.error('Font optimization error:', error);
-    } finally {;
-      setIsOptimizing(false);    }      // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 800));
-    } catch (error) {;
-      setOptimizationStatus('Font optimization failed');
-      console && console.error('Font optimization error:', error);
-    } finally {;
-      setIsOptimizing(false);
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
@@ -236,10 +187,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             (link as any)[key] = value;
           }
         });
-      await optimizeImages();
-      await optimizeFonts();
-      await optimizeCode();
-
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
@@ -256,93 +203,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
               console.warn('LCP is too slow:', lcp);            }
           }
         }
-        document.head.append_child (link);
-      });
-;
-      setOptimizationStatus ('Code optimization complete');
-;
-      // Simulate optimization delay;
-      await new Promise (resolve => set_timeout (resolve, 1200));
-    } catch (error) {
-      setOptimizationStatus ('Code optimization failed');
-      console.error ('Code optimization error:', error);
-    } finally {
-      setIsOptimizing (false);    }      setIsOptimizing (false);
-    }
-  }, []);
-;
-  // Run all optimizations;
-  const runAllOptimizations = useCallback (async () => {
-    setIsOptimizing (true);
-    setOptimizationStatus ('Starting comprehensive optimization...');
-;
-    try {
-      await optimize_images ();
-      await optimize_fonts ();
-      await optimize_code ();
-;
-      setOptimizationStatus ('All optimizations complete!');
-;
-      // Re - measure performance after optimization;
-      set_timeout (() => {
-        measure_performance ();
-      }, 500);
-    } catch (error) {
-      setOptimizationStatus ('Optimization failed');
-      console.error ('Optimization error:', error);
-    } finally {
-      setIsOptimizing (false);    }      setOptimizationStatus ('All optimizations complete!');
-;
-      // Re - measure performance after optimization;
-      set_timeout (() => {
-        measure_performance ();
-      }, 500);
-    } catch (error) {
-      setOptimizationStatus ('Optimization failed');
-      console.error ('Optimization error:', error);
-    } finally {
-      setIsOptimizing (false);
-    }
-  }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
-;
-  // Initialize performance monitoring;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Measure initial performance;
-      window.addEventListener ('load', measure_performance);
-;
-      // Monitor for performance issues;
-      const observer = new PerformanceObserver (list => {
-        for (const entry of list.get_entries ()) {
-          // Check condition
-if ( {) {
-  $2
-}
-            const lcp = entry.start_time;
-            // Check condition
-if ( {) {
-  $2
-}
-              // LCP should be under 2.5s;
-              console.warn ('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues;
-      const observer = new PerformanceObserver ((list) => {
-        for (const entry of list.get_entries ()) {
-          // Check condition
-if ( {) {
-  $2
-}
-            const lcp = entry.start_time;
-            // Check condition
-if ( { // LCP should be under 2.5s) {
-  $2
-}
-              console.warn ('LCP is too slow:', lcp);
             }
           }
         }
@@ -355,29 +215,6 @@ if ( { // LCP should be under 2.5s) {
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
-      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      return () => {;
-        window && window.removeEventListener('load', measurePerformance);
-        observer && observer.disconnect();
-      };    }      ;
-      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] }),;
-      return () => {;
-        window && window.removeEventListener('load', measurePerformance);
-        observer && observer.disconnect();
-      }
-  }, [measurePerformance]);
-
-  const getPerformanceScore = (): number => {;
-    let score = 100;
-
-    if (metrics && metrics.firstContentfulPaint > 1800) score -= 20;
-    if (metrics && metrics.largestContentfulPaint > 2500) score -= 25;
-    if (metrics && metrics.loadTime > 3000) score -= 15;
-    if (metrics && metrics.timeToInteractive > 3500) score -= 20;
-
-    return Math && Math.max(0, score);  };    ;
-    return Math && Math.max(0, score);
   };
 
   const getPerformanceGrade = (score: number): string => {;
@@ -385,46 +222,14 @@ if ( { // LCP should be under 2.5s) {
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
-  };
-
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
-
-
-    >;
-      <div className='flex items-center justify-between mb-6'>;
-        <h3 className='text-xl font-bold text-white flex items-center gap-2'>;
-          <Gauge className='w-5 h-5 text-cyan-400' />          Performance Optimizer;
-        </h3>;
-        <button
-          onClick={() => setShowMetrics(!showMetrics)}
-          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'        >  return (
-    <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>;
-      <div className="flex items-center justify-between mb-6">;
-        <h3 className="text-xl font-bold text-white flex items-center gap-2">;
-          <Gauge className="w-5 h-5 text-cyan-400" />;
-        </h3>;
-        <button
-          onClick={() => setShowMetrics(!showMetrics)}
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
-        >;
-          {showMetrics ? 'Hide' : 'Show'} Metrics;
-        </button>;
-      </div>;
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
-      {/* Metrics Display */}
-      {showMetrics && (;
-        <motion&& motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -470,12 +275,6 @@ if ( { // LCP should be under 2.5s) {
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
-      )}
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">;
-        <button
-
-      {/* Optimization Controls */}
       <div className='space-y-3'>        <button
 
         <button
@@ -837,117 +636,5 @@ interface PerformanceOptimizerProps {
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
-    }
-  }, [metrics, enableReporting]);
-  return null;
-};
-
-export default PerformanceOptimizer;
-
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
-  onMetricsUpdate,
-  enable_reporting = false;
-}) => {
-  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
-;
-  const measureWebVitals = useCallback (() => {
-    if () return) {
-  $2
-}
-    const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType ('paint');
-;
-    // Core Web Vitals;
-    const fcp = paint.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0;
-    const lcp = performance.getEntriesByType ('largest - contentful - paint')[0]?.start_time || 0;
-    const ttfb = navigation.response_start - navigation.request_start;
-;
-    // Memory usage (if available);
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize,
-      total: (performance as any).memory.totalJSHeapSize,
-      limit: (performance as any).memory.jsHeapSizeLimit;
-    } : undefined;
-;
-    const new_metrics: PerformanceMetrics = {
-      fcp,
-      lcp,
-      fid: 0, // First Input Delay - would need user interaction to measure;
-      cls: 0, // Cumulative Layout Shift - would need observer;
-      ttfb,
-      memory;
-    }
-;
-    set_metrics (new_metrics);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      onMetricsUpdate (new_metrics);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      console.log ('Performance Metrics:', new_metrics);
-    }
-  }, [onMetricsUpdate, enable_reporting]);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      measureWebVitals ();
-    } else {
-      window.addEventListener ('load', measureWebVitals);
-    }
-    return () => {
-      window.removeEventListener ('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-;
-  // Monitor for performance issues;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    const warnings: string[] = [];
-;
-    if (warnings.push ('First Contentful Paint is slow (>1.8s)')) {
-  $2
-}
-    if (warnings.push ('Largest Contentful Paint is slow (>2.5s)')) {
-  $2
-}
-    if (warnings.push ('Time to First Byte is slow (>600ms)')) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      const memory_usage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (warnings.push ('High memory usage detected')) {
-  $2
-}
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      console.warn ('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enable_reporting]);
-;
-  return null;
-}
-;
-export default PerformanceOptimizer;
-;
-  );
-
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;

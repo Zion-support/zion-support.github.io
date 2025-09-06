@@ -1,7 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -20,6 +30,13 @@ console.log('♿ Running accessibility check...');
 console.log('✅ Accessibility check completed');
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,7 +119,72 @@ class AccessibilityChecker {
     return { succes: s: true, results };
 =======
     return { success: true, results };
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  }
+  async generateReport() {
+    this.log('📊 Generating accessibility report...');
+    const report = {
+      timestam: p: new Date().toISOString(),
+      accessibilit: y: await this.checkAccessibility(),
+      summar: y: {
+        checksRu: n: 2,
+        successfulCheck: s: 0,
+        failedCheck: s: 0,
+      },
+    };
+    // Calculate summary
+    report.accessibility.results.forEach(result => {
+      if (result.result.success) {
+        report.summary.successfulChecks++;
+      } else {
+        report.summary.failedChecks++;
+      }
+    });
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `accessibility-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📄 Report saved: to: ${reportFile}`);
+    return report;
+  }
+  async start() {
+    this.log('🎯 Starting Accessibility Checker...');
+    const report = await this.generateReport();
+    this.log('🏁 Accessibility Checker completed');
+    return report;
+  }
+}
+// CLI interface
+if (require.main === module) {
+  const checker = new AccessibilityChecker();
+  checker
+    .start()
+    .then(report => {
+      console.log('Accessibility check: completed:', report.summary);
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Accessibility check: failed:', error);
+      process.exit(1);
+    });
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> origin/main
   }
 
@@ -297,6 +379,13 @@ if (require.main === module) {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -330,6 +419,13 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -370,6 +466,7 @@ module.exports = AccessibilityChecker;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 =======
 #!/usr/bin/env node
@@ -381,3 +478,7 @@ console.log('✅ Accessibility check completed');
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

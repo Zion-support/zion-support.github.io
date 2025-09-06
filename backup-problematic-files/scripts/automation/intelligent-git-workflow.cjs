@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +77,10 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -99,14 +108,14 @@ class IntelligentGitWorkflow {
       'git-workflow-data.json'
     );
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     try {
       await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
       await this.loadConfiguration();
@@ -116,6 +125,11 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
@@ -136,6 +150,10 @@ class IntelligentGitWorkflow {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       console.log('📚 Creating new workflow data file...');
     }
     return {
@@ -158,18 +176,53 @@ class IntelligentGitWorkflow {
 
   async runWorkflow() {
     console.log('🚀 Starting intelligent Git workflow...');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    try {
+      // Check Git status
+      const status = await this.checkGitStatus();
+      if (status.hasChanges) {
+        console.log('📝 Changes detected, analyzing...');
+        // Analyze changes
+        const changes = await this.analyzeChanges();
+        // Determine if auto-commit should happen
+        if (this.shouldAutoCommit(changes)) {
+          await this.intelligentCommit(changes);
+        }
+      }
+      // Check for merge opportunities
+      if (this.config.autoMerge) {
+        await this.intelligentMerge();
+      }
+      // Update workflow data
+      this.updateWorkflowData();
+      this.saveWorkflowData();
+      console.log('✅ Git workflow completed successfully!');
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
       const config = await fs.readFile(this.configFile, 'utf8');
       this.config = { ...this.config, ...JSON.parse(config) };
       this.log('✅ Git workflow configuration loaded');
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       this.log('📝 Using default Git workflow configuration');
       await this.saveConfiguration();
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  async checkGitStatus() {
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   async saveConfiguration() {
 =======
 
@@ -182,6 +235,10 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     try {
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
       const hasChanges = status.trim().length > 0;
@@ -197,6 +254,67 @@ class IntelligentGitWorkflow {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  async analyzeChanges() {
+    try {
+      const diff = execSync('git diff --cached', { encoding: 'utf8' });
+      const diffStats = execSync('git diff --cached --stat', {
+        encoding: 'utf8',
+      });
+      const changes = {
+        files: [],
+        linesAdded: 0,
+        linesDeleted: 0,
+        types: {
+          features: 0,
+          fixes: 0,
+          refactoring: 0,
+          documentation: 0,
+          tests: 0,
+        },
+      };
+      // Parse diff stats
+      const statLines = diffStats.split('\n');
+      statLines.forEach(line => {
+        if (line.includes('|')) {
+          const parts = line.split('|');
+          const fileName = parts[0].trim();
+          const stats = parts[1].trim();
+          changes.files.push({
+            name: fileName,
+            stats: stats,
+          });
+          // Count lines
+          const match = stats.match(/(\d+)\s+(\+|\-)/);
+          if (match) {
+            if (match[2] === '+') {
+              changes.linesAdded += parseInt(match[1]);
+            } else {
+              changes.linesDeleted += parseInt(match[1]);
+            }
+          }
+        }
+      });
+      // Analyze change types
+      changes.files.forEach(file => {
+        const fileName = file.name.toLowerCase();
+        if (fileName.includes('test') || fileName.includes('spec')) {
+          changes.types.tests++;
+        } else if (fileName.includes('readme') || fileName.includes('doc')) {
+          changes.types.documentation++;
+        } else if (fileName.includes('fix') || fileName.includes('bug')) {
+          changes.types.fixes++;
+        } else if (fileName.includes('refactor')) {
+          changes.types.refactoring++;
+        } else {
+          changes.types.features++;
+        }
+      });
+      return changes;
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 
@@ -216,6 +334,10 @@ class IntelligentGitWorkflow {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       await fs.writeFile(this.configFile, JSON.stringify(this.config, null, 2));
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       this.log(`❌ Failed to save configuration: ${error.message}`, 'ERROR');
     }
@@ -224,6 +346,11 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
@@ -268,13 +395,14 @@ class IntelligentGitWorkflow {
       console.log('🧪 Test changes detected, skipping auto-commit');
       return false;
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     }
 
     // Auto-commit for small fixes and documentation
@@ -293,6 +421,11 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -335,14 +468,14 @@ class IntelligentGitWorkflow {
         changes: changes,
       };
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       this.log(`❌ Git workflow initialization failed: ${error.message}`, 'ERROR');
       throw error;
@@ -352,6 +485,11 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
@@ -407,6 +545,7 @@ class IntelligentGitWorkflow {
       description = 'Update codebase';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -416,6 +555,15 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
+=======
+    }
+    // Add file count
+    const fileCount = changes.files.length;
+    if (fileCount > 0) {
+      description += ` (${fileCount} files)`;
+    }
+    return `${type}: ${description} [${timestamp}]`;
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   }
 =======
 <<<<<<< HEAD
@@ -573,14 +721,14 @@ class IntelligentGitWorkflow {
         for (const branch of mergeableBranches) {
           await this.performIntelligentMerge(branch);
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         }
       } else {
         await this.runGitCommand('git add .');
@@ -589,6 +737,11 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
@@ -739,6 +892,10 @@ class IntelligentGitWorkflow {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       console.log('⚠️  Merge check failed:', error.message);
     }
@@ -765,14 +922,14 @@ class IntelligentGitWorkflow {
         if (branchCommit !== currentCommit && mergeBase === currentCommit) {
           mergeable.push(branch);
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         }
       }
 <<<<<<< HEAD
@@ -833,6 +990,7 @@ class IntelligentGitWorkflow {
     } catch (error) {
       this.log(`⚠️ Conflict check failed: ${error.message}`, 'WARN');
       return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -1230,6 +1388,8 @@ class IntelligentGitWorkflow {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     }
   }
   async resolveConflictsIntelligently(conflicts, workflow) {
@@ -1703,6 +1863,10 @@ class IntelligentGitWorkflow {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       console.log(
         `❌ AI conflict resolution failed for ${branch}:`,
@@ -1772,6 +1936,7 @@ class IntelligentGitWorkflow {
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1783,6 +1948,8 @@ class IntelligentGitWorkflow {
 
       let inConflict = false;
       let conflictType = '';
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1835,6 +2002,10 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           resolvedLines.push(line);
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)
@@ -1843,6 +2014,12 @@ class IntelligentGitWorkflow {
         // Skip their version
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      // Write resolved content
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 ;
@@ -1874,6 +2051,10 @@ class IntelligentGitWorkflow {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
       // Add resolved file
@@ -1888,6 +2069,10 @@ class IntelligentGitWorkflow {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -1898,6 +2083,11 @@ class IntelligentGitWorkflow {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
@@ -2368,6 +2558,14 @@ workflow.runWorkflow().catch(console.error);
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Run the workflow
+const workflow = new IntelligentGitWorkflow();
+workflow.runWorkflow().catch(console.error);
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -2395,3 +2593,7 @@ workflow.runWorkflow().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -29,15 +29,12 @@ function ReviewsModerationContent() {
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
-
-  const fetchReviews = async () => {
     setIsLoading(true);
     try {;
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setReviews([]);
-
   return (
     <>;
       <SEO
@@ -132,13 +129,3 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
-}
-
-export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
-  )
-}
-;

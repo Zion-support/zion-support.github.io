@@ -36,12 +36,6 @@ export interface ServiceCategory {
 
 // SEO and performance
 export interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  noindex?: boolean;
 }
 
 export interface PerformanceMetrics {
@@ -232,7 +226,6 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-  };
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -240,21 +233,6 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-    };
-  };
-  activity: {
-    lastLogin: Date;
-    loginCount: number;
-    projects: string[];
-    tasks: string[];
-  };
-  subscription: {
-    plan: 'free' | 'basic' | 'premium' | 'enterprise';
-    status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    startDate: Date;
-    endDate: Date;
-    features: string[];
-  };
 }
 
 export interface UserPreferences {
@@ -300,7 +278,6 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
-  };
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
@@ -362,26 +339,14 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
-  className?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
-
-export interface InputProps {
-  className?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  onClick?: () => void;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
   error?: string;
   required?: boolean;
 }
@@ -393,4 +358,3 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
-}

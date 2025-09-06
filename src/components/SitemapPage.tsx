@@ -2,7 +2,6 @@
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 
-
 const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
 import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
 import Link from 'next / link';
@@ -71,18 +70,17 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href = {resolvePath(route.path),}
+                      href={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
-                    </Link>;
-                  </li>));
+                    </Link>
+                  </li>
+                ))
               }
             </ul>
           </div>
-            </ul>;
-          </div>;
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -96,18 +94,17 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href = {resolvePath(route.path),}
+                      href={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
-                    </Link>;
-                  </li>));
+                    </Link>
+                  </li>
+                ))
               }
             </ul>
           </div>
-            </ul>;
-          </div>;
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -121,18 +118,17 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href = {resolvePath(route.path),}
+                      href={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
-                    </Link>;
-                  </li>));
+                    </Link>
+                  </li>
+                ))
               }
             </ul>
           </div>
-            </ul>;
-          </div>;
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -145,7 +141,7 @@ export const SitemapPage: React.FC = () => {;
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href = {resolvePath(route.path),}
+                      href={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -204,40 +200,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
-      ]}
-  ];
-  return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
-      <SEO;
-        title="Sitemap - Zion Tech Group";
-        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category.";
-      />;
-      <div className="container mx - auto px - 4 max - w - 6xl">;
-        <div className="text - center mb - 16">;
-          <h1 className="text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">            Sitemap;
-          </h1>";
-          <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
-            Navigate through our comprehensive website structure to find the information and services you need.</p>;
-        </div>;
-                    </a>;
-                  </li>) ) }
-              </ul>;
-            </div>) ) }
-        </div>;
-";
-        <div className="mt - 16 text - center">";
-          <p className="text - zinc - 400">;
-            Can't find what you're looking for?{' '}";
-            <a href="/contact" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-              Contact us;
-            </a>{' '}
-            for assistance.
-          </p>
-        </div>
-      </div>
-    </div>;) }
-'"
-}
-
       </div>;
     </div>;) }
 '"
@@ -255,5 +217,4 @@ export const SitemapPage: React.FC = () => {;
       </div>;
     </div>) }
 '";
-
 

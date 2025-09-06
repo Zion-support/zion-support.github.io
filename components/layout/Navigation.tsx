@@ -1,29 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
   Menu
   X
   Home
@@ -118,8 +92,6 @@ import Link from 'next/link';
       href: '/contact'
       icon: Phone
     }
-  };
-
   return (
     <>;
       {/* Navigation Bar */}
@@ -272,32 +244,16 @@ import Link from 'next/link';
               </motion.a>
             </div>
             {/* Mobile Menu Button */}
-            <div className='lg:hidden'>;
-              <motion&& motion.button
-                whileTap={{ scale: 0 && 0.95 }}
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      {/* Mobile Navigation */}
-      <AnimatePresence>;
-        {isOpen && (;
-          <motion&& motion.div
-          >
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
-            {/* Mobile Menu */}
-            <motion&& motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -321,12 +277,6 @@ import Link from 'next/link';
                           <div className="text - gray - 400 font - medium text - sm uppercase tracking - wider">;
                             {item.name}
                           </div>
-                        </div>
-                      ) : (
-                        <Link
-                          href={item && item.href}
-                          onClick={() => setIsOpen(false)}
-
 
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
@@ -400,21 +350,6 @@ import Link from 'next/link';
                     </div>;
                   </div>;
                 </div>;
-
-                {/* Mobile CTA */}
-};
-
-export default Navigation;  );
-}
-export default Navigation;  )
-}
-};
-
-export default Navigation;  );
-};
-
-export default Navigation;
-
                           </div>;
                           <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {

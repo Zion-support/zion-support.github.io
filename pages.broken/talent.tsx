@@ -220,8 +220,6 @@ const values = [;
   "Continuous learning",;
   "Work-life balance",;
   "Diversity and inclusion",;
-
-
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"

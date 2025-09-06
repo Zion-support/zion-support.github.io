@@ -34,11 +34,8 @@
     </footer>";
     };
   ],
-,
+
   const socialLinks = ['],
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
   ],
 ,
   return ('),
@@ -57,20 +54,11 @@
         <div className="container mx-auto px-4 py-16">",
 </div>,
           <motion.div,",
-            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -81,14 +69,6 @@
 </stat>,
                   </div>,
           {/* Main Footer Content */}",
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">",
-</div>",
-            <div className="lg: col-span-2">",
-</div>,
-              <motion.div,
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }}",
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
@@ -118,7 +98,6 @@
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
-                  <a href="tel: +13024640950" className="hover:text-cyan-400 transition-colors">",
 </a>,
                   </a>,
                 </div>",
@@ -126,7 +105,6 @@
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
-                  <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
 </a>,
                   </a>,
                 </div>",
@@ -150,11 +128,6 @@
 </li>,
                       <Link,
                         href={link.href}",
-                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
-                      >,
-</Link>",
-                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
-                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -163,7 +136,6 @@
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
-            <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">",
 </div>",
               <div className="text-slate-400 text-sm">",
 </div>,
@@ -191,7 +163,6 @@
         </div>,
       </div>,
     </footer>",
-    </footer>";
 
   ],;
 ,;

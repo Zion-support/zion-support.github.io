@@ -1,6 +1,3 @@
-export interface Wallet {
-  user_id: string;
-
   user_id: string;
 
   balance: number
@@ -26,7 +23,4 @@ export interface TokenTransaction {;
   amount: number,;
   transaction_type: TransactionType,;
   reason: string | null;
-  created_at: string;
-
-}
 ;

@@ -9,4 +9,3 @@ const GradientHeading = ({ className }) => {
   );
 };
 
-export default GradientHeading;

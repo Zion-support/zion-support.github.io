@@ -142,19 +142,12 @@ if (throw fetch_error) {
       setIsLoading (false);
     }
   }
-  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
-    if (!user) {
-      toast && toast.error("You must be logged in to apply for jobs");
       return false
     }
     try {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
-      if (error) {
-        }
-        return false
-      }
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -187,11 +180,9 @@ if ( { // Unique violation) {
 }
           toast.error ("You have already applied to this job");
         } else {
-          throw error;
         }
         return false;
       }
-      
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -208,9 +199,6 @@ if ( { // Unique violation) {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
-        .eq("id", applicationId);
-      if (error) throw error;
-      // Update the local state
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -221,88 +209,20 @@ if ( { // Unique violation) {
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
-      if (error) throw error;
-      // Update the local state
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
-      );
       return true
     } catch (err) {
       console && console.error("Error marking application as viewed:", err);
       return false
-      // Add the new application to the local state;
-      const new_application = data as JobApplication;
-      set_applications (prev => [new_application, ...prev]);
-;
-      toast.success ("Application submitted successfully");
-      return true;
-    } catch (err: any) {
-      console.error ("Error applying to job:", err);
-      toast.error ("Failed to submit application: " + err.message),
-      return false;
-    }
-  }
-;
-  const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {
-    try {
-      const { error } = await supabase;
-        .from ("job_applications");
-        .update ({ status });
-        .eq ("id", application_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Update the local state;
-      set_applications (prev =>;
-        prev.map (app => app.id === application_id ? { ...app, status } : app));
-;
-      toast.success (`Application status updated to ${status}`);
-      return true;
-    } catch (err: any) {
-      console.error ("Error updating application status:", err);
-      toast.error ("Failed to update application status: " + err.message),
-      return false;
-    }
-  }
-;
-  const markApplicationAsViewed = async (application_id: string) => {
-    try {
-      const { error } = await supabase;
-        .from ("job_applications");
-        .update ({
-          status: "viewed",
-          viewed_at: new Date ().toISOString ();
-        });
-        .eq ("id", application_id);
-        .is ("viewed_at", null), // Only update if not already viewed;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Update the local state;
-      set_applications (prev =>;
-        prev.map (app => app.id === application_id ?;
-          { ...app, status: "viewed", viewed_at: new Date ().toISOString () } : app));
-;
-      return true;
     } catch (err) {
-      console.error ("Error marking application as viewed:", err);
-      return false;
+      console.error("Error marking application as viewed:", err),
+      return false
     }
   }
-;
-  // Fetch applications when component mounts or dependencies change;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_applications ();
+  // Fetch applications when component mounts or dependencies change
+  useEffect(() => {
+    if (user) {
+      fetchApplications()
     }
-  }, [user, job_id]);
-;
   return {
     applications;
     is_loading;
@@ -377,6 +297,3 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-  }
-}
-

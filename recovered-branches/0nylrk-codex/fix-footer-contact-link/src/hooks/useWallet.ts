@@ -248,4 +248,3 @@ export function useWallet() {;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
-}

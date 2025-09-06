@@ -10,7 +10,6 @@ interface SuggestedJobsProps {
   talentId?: string
 }
 
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -23,10 +22,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
-  if (isLoading) {;
-    return (
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
@@ -103,7 +98,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply}
                 onDecline={handleDecline}
                 showApplied={true}
-              />;
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -208,6 +202,22 @@ if ( {) {
           </div>;
         </div>)}
     </div>);
+  ),; interface SuggestedJobsProps {
+  talentId?: string 
+}export function SuggestedJobs ({
+  talentId 
+}: SuggestedJobsProps) {
+  const {
+  user 
+}= useAuth ();
+const currentTalentId = talentId || user?.id;
+const {
+  isLoading;
+updateJobMatchStatus;
+categorizedMatches: {
+  newMatches;
+viewedMatches;
+appliedMatches 
 }
 
 

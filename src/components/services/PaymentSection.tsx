@@ -3,15 +3,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
-      description:
-        "You'll be redirected to our secure payment portal momentarily."
-    })
-
-      title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily."})
-  },
-  
-  return (
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components / transactions / PaymentButton';

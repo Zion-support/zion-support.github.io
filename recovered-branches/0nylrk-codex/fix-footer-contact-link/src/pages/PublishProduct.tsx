@@ -9,9 +9,6 @@ import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
 
-  // Show loading while checking authentication;
-  if (isLoading) {;
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -54,7 +51,6 @@ export default function PublishProduct() {;
   }
 ;
   return (;
-
     <div className="min-h-screen flex flex-col bg-zion-blue">;
       <SEO
         title="Publish Your Product"
@@ -65,6 +61,3 @@ export default function PublishProduct() {;
         </div>;
       </main>;
       <Footer />;
-}
-    </div>);
-}

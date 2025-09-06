@@ -15,38 +15,19 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
-export default function VideoCall() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-import {useState, useEffect} from 'react';
-import {use_params, use_navigate} from 'react-router-dom';
-import {Header} from '@/components / Header';
-import {Footer} from '@/components / Footer';
-import {SEO} from '@/components / SEO';
-import {VideoCallRoom} from '@/components / video / VideoCallRoom';
-import {Button} from '@/components / ui / button';
-import {toast} from 'sonner';
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
-    is_host?: boolean;
-  }>>([;
-    {
 
 
+  ]);
   const handleJoinCall = () => {;
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
-      toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`
-      })
-    }, 1500)
-  }
-  const handleLeaveCall = () => {
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
@@ -59,7 +40,6 @@ import {toast} from 'sonner';
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
-
   },
   
   const simulateUserJoining = () => {
@@ -75,6 +55,10 @@ import {toast} from 'sonner';
       setHasJoined(true),;
       setIsJoining(false),;
       toast.success("Call joined", {;
+              disabled={isJoining}
+              size="lg"
+              className="bg-zion-purple hover:bg-zion-purple-light">;
+              {isJoining ? "Connecting..." : "Join Call"}
         description: `You have joined meeting room ${roomId}`;
       });
     }, 1500);
@@ -126,15 +110,6 @@ import {toast} from 'sonner';
             </div>;
           </div>;
         )}
-      </main>
-      <Footer />
-    </>
-  )
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,

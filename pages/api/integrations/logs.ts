@@ -1,7 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../lib/integrations/fileStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET")
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.query as { providerId?: string }
   const state = readState();
@@ -10,7 +6,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : state && state.logs;
   res && res.status(200).json({ logs });
 }
-
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
@@ -18,16 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../lib/integrations/fileStore';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
-  const { providerId } = req.query as { providerId?: string };
-  const state = readState();
-  const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
-  res.status(200).json({ logs })
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../lib / integrations / file_store';
@@ -45,5 +30,3 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

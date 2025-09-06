@@ -6,7 +6,13 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Award } from 'lucide-react'
+
 interface LeaderboardEntry {
+  name: string,
+  referrals: number
+
+
+
   rank: number
   name: string
   referrals: number
@@ -76,7 +82,6 @@ export function ReferralLeaderboard() {;
       </CardHeader>
       <CardContent>
             >
-              <div className="flex items-center gap-3">
                 <div 
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
@@ -85,8 +90,6 @@ export function ReferralLeaderboard() {;
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
-
-                      : "bg-muted text-muted-foreground"
       </CardContent>;
     </Card>;
   );
@@ -117,7 +120,6 @@ export function ReferralLeaderboard() {;
         <CardDescription>Top referrers this month</CardDescription>;
       </CardHeader>;
       <CardContent>;
-                >
                   {entry.rank}
                 </div>;
                 <span className='font - medium'>{entry.name}</span>;
@@ -139,33 +141,6 @@ export function ReferralLeaderboard() {;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
             </div>
           ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-                          : 'bg-muted text-muted-foreground'                  }`}>;
-                  {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className='text-sm'>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}              </span>                      ? "bg-slate-200 text-slate-800";
-                      : entry && entry.rank === 3;
-                      ? "bg-amber-200 text-amber-800";
-                      : "bg-muted text-muted-foreground";
-                >;
-                  {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className='text-sm'>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}                <span className="font-medium">{entry && entry.name}</span>;
-              </div>;
-              <span className="text-sm">;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
-            </div>;
-          ))}
         </div>;
       </CardContent>;
     </Card>;
@@ -177,5 +152,3 @@ export function ReferralLeaderboard() {;
     </Card>);
 }
 ;
-
-

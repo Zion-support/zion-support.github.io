@@ -35,7 +35,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           queryString,
           formData.serviceType,
           3
-        );
         setMatches(results)
       } catch (error) {
         console.error("Error during AI matching:", error);
@@ -58,9 +57,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-  }
-  // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -208,7 +204,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>;
         </Card>;
       </div>;
-
                 </div>;
               </div>;
             </div>;

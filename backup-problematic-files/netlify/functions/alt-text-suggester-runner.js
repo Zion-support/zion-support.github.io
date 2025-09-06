@@ -47,4 +47,3 @@ exports.handler = async () => {
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
-

@@ -33,15 +33,6 @@
     marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
     variant: 'ai-healthcare'
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-    launchDate: '2025-03-01', customers: 35
-    rating: 4.9
-
     reviews: 28
   }
 ];

@@ -2,11 +2,6 @@
 			slug="ai-autonomous-ecosystem-manager"
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
 			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-			pricePerMonthUSD={2999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -19,9 +14,6 @@
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

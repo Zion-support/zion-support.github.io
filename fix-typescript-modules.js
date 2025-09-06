@@ -1,47 +1,10 @@
 fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {console.log(`Error processing ${fullPath}: ${error.message}`)}}})};// Fix all TypeScript files in api-disabled directory;
 
-const _apiDisabledDir = path.join(__dirname, 'api-disabled');
-if (fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else {_;}
-      } catch (error) {console.log(`Error processing ${fullPath}: ${error.message}`)};};  })}
-// Fix all TypeScript files in api-disabled directory;
-const apiDisabledDir = path.join(__dirname, 'api-disabled');
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') {  fs.writeFileSync(fullPath,' } catch (error) { } } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); } else { }
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-function fixTypeScriptFiles(dir) {
-  const items = fs.readdirSync(dir);
-  items.forEach(item => {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-      try {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.trim() === '') {
-          console.log(`Fixing empty "file": ${fullPath}`);
 fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {; console.log(`Error processing ${fullPath}: ${error.message}`)}}})};// Fix all TypeScript files in api-disabled directory;
 const _apiDisabledDir = path.join(__dirname, 'api-disabled');
 if (fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else {_;};
 ;
       } catch (error) {;
-// Fix all TypeScript files in api-disabled directory;
-const apiDisabledDir = path.join(__dirname, 'api-disabled');
-  console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {;
-
-      } catch (error) {,;
-
-        console && console.log(`Error processing ${fullPath} ${error && error.message}`)};
-};
-  })};
-
-// Fix all TypeScript files in api-disabled directory,;
-const apiDisabledDir = path && path.join(__dirname, 'api-disabled'),;
-if (fs && fs.existsSync(apiDisabledDir)) {,;
-  fixTypeScriptFiles(apiDisabledDir),;
-          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
-      } catch (error) {,
-        console && console.log(`Error processing ${fullPath}: ${error && error.message}`)};
     };
   })};
 // Fix all TypeScript files in api-disabled directory,
@@ -52,10 +15,6 @@ if (fs && fs.existsSync(apiDisabledDir)) {,
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}
   console.log('❌ api-disabled directory not found')};
-const apiDisabledDir = path.join(__dirname, 'api-disabled');
-
-
-
 if (fs.existsSync(apiDisabledDir)) {fixTypeScriptFiles(apiDisabledDir);
   console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {console.log(`Error processing ${fullPath} ${error.message}`)}
@@ -65,7 +24,6 @@ if (fs.existsSync(apiDisabledDir)) {fixTypeScriptFiles(apiDisabledDir);
 const apiDisabledDir = path.join(__dirname, 'api-disabled');
 if (fs.existsSync(apiDisabledDir)) {fixTypeScriptFiles(apiDisabledDir);
   console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {console.log('❌ api-disabled directory not found')};  console.log('❌ api-disabled directory not found')}
-
 
 
 
@@ -152,13 +110,3 @@ if (=== '') { console.log (`Fixing empty file: ${full_path}`)) {
   $2
 } fs.writeFileSync (full_path, ' } catch (error) { console.log (`Error processing ${full_path}: ${error.message}`)} } })} const apiDisabledDir = path.join (__dirname, 'api - disabled'); if () { fixTypeScriptFiles (apiDisabledDir)) {
   $2
-console.log('❌ api-disabled directory not found')}
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}
-const apiDisabledDir = path.join(__dirname, 'api-disabled')
-if (fs.existsSync(apiDisabledDir)) {
-  fixTypeScriptFiles(apiDisabledDir)
-  console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {
-console.log('❌ api-disabled directory not found')}
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '') { console.log(`Fixing empty file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} const apiDisabledDir = path.join(__dirname,'api-disabled'); if (fs.existsSync(apiDisabledDir)) { fixTypeScriptFiles(apiDisabledDir); console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else { console.log('❌ api-disabled directory not found')}

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 
 import Head from 'next / head';
 import { motion } from 'framer-motion';
@@ -51,28 +50,12 @@ export default function UltraFuturistic2029InnovationsPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
   };
-
         <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
         <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
-          href='https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations'
-        />      </Head>;
-
-      {/* Background */}
-      <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />;
-        <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />;
-        <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />;
-        <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-
-      {/* Background */}
-      <UltraFuturisticBackground2029 />;
-
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />;
 
@@ -115,13 +98,10 @@ export default function UltraFuturistic2029InnovationsPage() {;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-            className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
             <a
               href='#services'
               className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
               Explore Innovations
-            </a>;
             <a
               href='/contact'
               className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
@@ -132,9 +112,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
         </div>
       </section>
       {/* Innovation Categories Overview */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -151,7 +128,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
               {
-                title: ' AI Consciousness & Innovation'
                 description:
                   'Revolutionary AI systems with human-like consciousness and reasoning capabilities'
                 icon: Brain
@@ -163,7 +139,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 )
               }
               {
-                title: ' Quantum & Neuroscience'
                 description:
                   'Quantum computing meets brain-computer interfaces for unprecedented capabilities'
                 icon: Atom
@@ -175,7 +150,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 )
               }
               {
-                title: ' Space Colonization & Mining'
                 description:
                   'Automated space exploration, colonization, and resource extraction systems'
                 icon: Rocket
@@ -186,7 +160,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 )
               }
               {
-                title: ' Space Architecture & Energy'
                 description:
                   'Advanced habitat design and space-based energy harvesting platforms'
                 icon: Globe
@@ -198,7 +171,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 )
               }
               {
-                title: ' AI Reality Augmentation'
                 description:
                   'Real-time AI-powered reality enhancement and content generation'
                 icon: Eye
@@ -208,7 +180,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 )
               }
               {
-                title: ' Quantum Time Manipulation'
                 description:
                   'Quantum-based time perception manipulation and optimization'
                 icon: Timer
@@ -222,43 +193,11 @@ export default function UltraFuturistic2029InnovationsPage() {;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group'>;
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <category && category.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <h3 className='text-2xl font-bold text-white mb-4'>;
-                  {category && category.title}
-                </h3>;
-                <p className='text-gray-300 mb-6'>{category && category.description}</p>;
-                <div className='space-y-2'>;
-                  {category && category.services;
-                    .slice(0, 3);
-                    .map((service, serviceIndex) => (;
-                      <div
-                        key={serviceIndex}
-                        className='flex items-center justify-between text-sm'>;
-                        <span className='text-gray-400'>{service && service.name}</span>;
-                        <span className='text-purple-400 font-semibold'>;
-                          {service && service.price}
-                        </span>;
-                      </div>;
-                    ))}
-                </div>;
-                <div className='mt-4 pt-4 border-t border-gray-700/50'>;
-                  <span className='text-xs text-gray-500'>;
-                    {category && category.services.length} innovation;
-                    {category && category.services.length !== 1 ? 's' : ''} available;
-                  </span>;
-                </div>;
-              </motion && motion.div>;
             ))}
           </div>
         </div>
       </section>
       {/* Services Showcase */}
-      <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
         <UltraFuturistic2029ServiceShowcase
           services={all2029Services}
           title='2029 Ultra-Futuristic Services'
@@ -267,9 +206,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
         />
       </section>
       {/* Innovation Stats */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -332,124 +268,10 @@ export default function UltraFuturistic2029InnovationsPage() {;
               </div>
             </motion.div>
           </div>
-
-        </div>
-      </section>
-      {/* Contact CTA */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Ready to Experience 2029?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
             </p>;
-
-    </>
-  );
-}animate= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8
-}className="mb-8" > <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-full px-6 py-3 mb-8"> <Rocket className="w-5 h-5 text-purple-400" /> <span className="text-purple-400 font-medium">2029 Technology Preview</span> </div> </motion.div> <motion.h1 initial= {
-  {
-  opacity: 0, y: 30
-}animate= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: 0.1
-}className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight" > 2029 Ultra-Futuristic <br /> <span className="text-white">Innovations</span> </motion.h1> <motion.p initial= {
-  {
-  opacity: 0, y: 30
-}animate= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: 0.2
-}className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed" > Experience the future of technology with our revolutionary services that push the boundaries of what's possible. From AI consciousness simulation to Mars colonization automation. </motion.p> <motion.div initial= {
-  {
-  opacity: 0, y: 30
-}animate= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: 0.3
-}className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Explore Innovations </a> <a href="/contact" className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Get Started </a> </motion.div> </div> </section> {
-  /* Innovation Categories Overview */
-}<section className="py-20 px-4 sm:px-6 lg:px-8 relative"> <div className="max-w-7xl mx-auto"> <motion.div initial= {
-  {
-  opacity: 0, y: 30
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8
-}className="text-center mb-16" > <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"> Innovation Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Our 2029 innovations span across multiple cutting-edge technology domains </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
-  [ {
-}initial= {
-  {
-  opacity: 0, y: 20
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.6, delay: index * 0.1
-}className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group" > <div className= {
-  `w-16 h-16 bg-gradient-to-br $ {
-  category.color
-}rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`
-}> <category.icon className="w-8 h-8 text-white" /> </div> <h3 className="text-2xl font-bold text-white mb-4"> {
-  category.title
-}</h3> <p className="text-gray-300 mb-6"> {
-  category.description
-}</p> <div className="space-y-2"> {
-  category.services.slice (0, 3) .map ( (service, serviceIndex) => (<div key= {
-  serviceIndex
-}className="flex items-center justify-between text-sm"> <span className="text-gray-400"> {
-  service.name
-}</span> <span className="text-purple-400 font-semibold"> {
-  service.price
-}</span> </div>) )
-}</div> <div className="mt-4 pt-4 border-t border-gray-700/50"> <span className="text-xs text-gray-500"> {
-  category.services.length
-}innovation {
-  category.services.length !== 1 ? 's' : ''
-}available </span> </div> </motion.div>) )
-}</div> </div> </section> {
-  /* Services Showcase */
-}<section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative"> <UltraFuturistic2029ServiceShowcase services= {
-  all2029Services
-}title="2029 Ultra-Futuristic Services" subtitle="Explore our complete portfolio of revolutionary 2029 technology solutions" maxServices= {
-  20
-}/> </section> {
-  /* Innovation Stats */
-}<section className="py-20 px-4 sm:px-6 lg:px-8 relative"> <div className="max-w-7xl mx-auto"> <motion.div initial= {
-  {
-  opacity: 0, y: 30
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8
-}className="text-center mb-16" > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Innovation Impact </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Our 2029 innovations are already transforming industries and creating new possibilities </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> {
-  [ {
-  label: 'Revolutionary Services', value: all2029Services.filter (s => (s as any) .innovationLevel === 'Revolutionary') .length, icon: Rocket, color: 'from-purple-500 to-pink-500'
 }
 {
   label: 'Patent Pending', value: all2029Services.filter (s => (s as any) .patentStatus === 'Patent Pending') .length, icon: Shield, color: 'from-blue-500 to-cyan-500'

@@ -21,18 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${subjectId}:${period |"global"}:${category}`
   const version = nextVersionFor(state, entityKey)
   const event = {
-    eventId: uuidv4()
-    type: "leaderboard_entry" as const
-    payload: { id: entityKey, subjectId, score, category, period, rank }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
     eventId: uuidv4(),
     type: "leaderboard_entry" as const,
     payload: { id: entityKey, subjectId, score, category, period, rank },
@@ -48,8 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
-
-
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)

@@ -43,9 +43,6 @@ export function OnChainExport() {
           description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
 }
-
-  )
-}
         }),
         return
       }
@@ -173,21 +170,3 @@ export function OnChainExport() {;
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive";
-        });
-        return;
-      }
-      // Request accounts;
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-}
-  );
-}

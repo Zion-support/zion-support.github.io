@@ -9,4 +9,3 @@ const FuturisticAnimatedBackground.js = ({ className }) => {
   );
 };
 
-export default FuturisticAnimatedBackground.js;

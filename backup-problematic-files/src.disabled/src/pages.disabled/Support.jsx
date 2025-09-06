@@ -9,4 +9,3 @@ const Support = ({ className }) => {
   );
 };
 
-export default Support;

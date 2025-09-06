@@ -1,8 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  const { userId, reviewerId, type, note } = req.body || {};
-  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
-    return res.status(400).json({ error: 'Missing or invalid fields' })
-
   }
   try {
     await supabase && supabase.from('trust_peer_reviews').insert(review);
@@ -12,10 +8,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     type,
     note,
     created_at: new Date ().toISOString (),
-    return res.status(400).json({ error: 'Missing or invalid fields' });
-  }
-
-  }
   try {
     await supabase.from('trust_peer_reviews').insert(review);
   } catch {}
@@ -25,10 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     reviewerId;
     type;
     note;
-}
-
-    created_at: new Date ().toISOString ()}
-;
 
 }
 }

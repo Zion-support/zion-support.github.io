@@ -1,5 +1,3 @@
-
-
 export interface Service { id: string, name: string, category: 'micro-saas' | 'it-services' | 'ai-services', description: string, features: string[], pricing: {
        starter: number, professional: number, enterprise: number, currency: string
     },

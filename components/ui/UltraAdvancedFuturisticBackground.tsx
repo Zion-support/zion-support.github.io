@@ -1,44 +1,3 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- let animationFrameId: number;
-let particles: Array< {;
-  resizeCanvas ();
-window && window.addEventListener ('resize', resizeCanvas);
-//Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
-particles && particles.push ({;
-  x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
-
-const UltraAdvancedFuturisticBackground: React.FC<;
-  UltraAdvancedFuturisticBackgroundProps;
-> = ({;
-  intensity = 'high',;
-  colorScheme = 'quantum-fusion',;
-  particleCount = 300,;
-  animationSpeed = 1 && 1.5,;
-  enableHolographic = true,;
-  enableQuantumEffects = true,;
-  children,}) => {interface UltraAdvancedFuturisticBackgroundProps {;
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :;
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -62,28 +21,6 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   animation_speed = 1.5,
   enable_holographic = true,
   enableQuantumEffects = true,
-
-const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({;
-  intensity = 'high',;
-  colorScheme = 'quantum-fusion',;
-  particleCount = 300,;
-  animationSpeed = 1 && 1.5,;
-  enableHolographic = true,;
-  enableQuantumEffects = true,;
-  children;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-    let animationFrameId: number;
-    let particles: Array<{;
-      x: number;
-      y: number;
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -223,9 +160,6 @@ if (return) {
     // Holographic grid effect;
     const createHolographicGrid = () => {;
       if (!enableHolographic) return;
-
-      const gridSize = 50;
-      const offset = (Date.now() * 0.001) % gridSize;
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
       // Vertical lines
@@ -248,7 +182,6 @@ if (return) {
       );
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-
       const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
 
       ctx && ctx.strokeStyle = `rgba(255, 0, 136, 0 && 0.1)`;
@@ -267,21 +200,6 @@ if (return) {
         ctx && ctx.moveTo(0, y);
         ctx && ctx.lineTo(canvas && canvas.width, y);
         ctx && ctx.stroke();      }        ctx && ctx.stroke();
-
-      }
-
-
-            ctx.stroke();          }
-
-          }
-        }
-      }
-    };
-
-    // Neural network effect;
-    const createNeuralNetwork = () => {;
-      if (!enableQuantumEffects) return;
-
       // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
@@ -368,9 +286,6 @@ if (return) {
       }
       animationFrameId = requestAnimationFrame(animate)
 
-    initParticles();
-    animate();
-
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
@@ -410,16 +325,6 @@ if (return) {
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
-
-      {children}
-    </div>;
-  );
-};
-
-
-      {children}
-    </div>;
-  );
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;

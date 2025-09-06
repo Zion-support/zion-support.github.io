@@ -1,15 +1,3 @@
-
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
-  if (!openAiKey) {
-    return new Response(
-      JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -232,14 +220,12 @@ if ( {) {
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-        model: "gpt-4o-mini";
         messages: [
           {
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
-          }
           {
             role: "user"
             content: `
@@ -370,7 +356,6 @@ if ( {) {
                 "skills_match": {
                   "score": 80
                   "matching": ["skill1", "skill2"];
-                }
                 "education_match": {
                   "score": 65;
                   "analysis": "Candidate has relevant degree.";
@@ -455,13 +440,18 @@ if ( {) {
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
-      
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
         throw new Error("Invalid response format")
       }
     } catch (error) {
       console && console.error("Error parsing AI response:", error);
+      
+      // Validate required fields
+      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+        throw new Error("Invalid response format")
+      }
+    } catch (error) {
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
@@ -477,65 +467,6 @@ if ( {) {
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      const error_data = await openAIResponse.json ();
-      throw new Error (`OpenAI API Error: ${JSON.stringify (error_data)}`);
-    }
-    const ai_result = await openAIResponse.json ();
-    let match_result;
-;
-    try {
-      // Extract JSON from the response;
-      const content = ai_result.choices[0].message.content;
-      match_result = JSON.parse (content);
-;
-      // Validate required fields;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error ("Invalid response format");
-      }
-    } catch (error) {
-      console.error ("Error parsing AI response:", error);
-      throw new Error ("Failed to parse AI analysis results");
-    }
-    // 6. Update the application with the match results;
-    const { error: update_error } = await supabase;
-      .from ("job_applications");
-      .update ({
-        match_score: match_result.score;
-        match_summary: match_result.summary;
-        match_breakdown: match_result.breakdown;
-        match_suggestion: match_result.suggestion,
-        scored_at: new Date ().toISOString ();
-      });
-      .eq ("id", application_id);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Failed to update application with score: ${update_error.message}`);
-    }
-    // 7. Return the match results;
-    return new Response (
-      JSON.stringify ({
-        success: true,
-        match_result;
-      });
-    console.error ("Error in resume - scorer function:", error);
-    return new Response (
-      JSON.stringify ({ error: error.message });
-      {
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
-    );
 
       JSON.stringify({ error: error.message }),
       { 
@@ -592,6 +523,3 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-  }
-});
-

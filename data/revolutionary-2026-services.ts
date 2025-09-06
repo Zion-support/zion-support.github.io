@@ -12,21 +12,12 @@
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
-export const revolutionary2026Services: Revolutionary2026Service[] = [
-  // AI-Powered Business Intelligence & Analytics
-  {
     period: '/month',
     description:
       'Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.',
@@ -87,18 +78,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Full-stack SaaS platform with real-time data processing, AI model training pipeline, customizable dashboards, and enterprise SSO integration.',
-    launchDate: '2026-01-15',
-    customers: 1500,
-    rating: 4 && 4.9,
-    reviews: 890,
-  },
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -199,4 +178,3 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     reviews: 25;
   }
 ];
-;

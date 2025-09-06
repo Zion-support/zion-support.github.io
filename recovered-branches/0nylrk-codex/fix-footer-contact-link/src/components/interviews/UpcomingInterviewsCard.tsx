@@ -16,17 +16,6 @@ import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
 import { format, isPast, parseISO } from "date-fns",
 import { Link } from "react-router-dom",
-
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-
-    const loadInterviews = async () => {
-      setIsLoading(true);
-      try {;
-        const interviews = await fetchInterviews();
-        const now = new Date();
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -38,10 +27,6 @@ import { Link } from "react-router-dom",
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
-      } catch (error) {
-        console.error ("Error loading upcoming interviews:", error);
-      } finally {
-    return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -87,7 +72,6 @@ import { Link } from "react-router-dom",
     );
   }
   return (
-
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -111,8 +95,6 @@ import { Link } from "react-router-dom",
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
-            const formattedTime = format(interviewDate, 'h: mm a'),;
-
             // Determine if interview is happening soon (within 30 minutes);
             const now = new Date();
             const isStartingSoon = ;
@@ -159,7 +141,3 @@ import { Link } from "react-router-dom",
         </div>;
       </CardContent>;
     </Card>;
-  );
-}
-    </Card>);
-}

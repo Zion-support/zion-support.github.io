@@ -1,8 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  appendAuditLog({ type: 'metrics_view' });
-
     { label: 'GMV', value: '$4.8M', trend: 5.1 }
     { label: 'Active users (monthly)', value: 18452, trend: 3.9 }
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 }

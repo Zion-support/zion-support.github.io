@@ -1,5 +1,3 @@
-
-
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
@@ -67,18 +65,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
-      {expanded && (
-        <div className='mt-4 space-y-2'>
-          {POPULAR_SKILLS.map(skill => (
-
-      {expanded && (;
-        <div className='mt-4 space-y-2'>;
-          {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
-            <div key={skill} className='flex items-center'>              <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}

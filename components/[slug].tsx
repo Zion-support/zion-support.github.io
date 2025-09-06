@@ -307,16 +307,6 @@ function collectAllServices(): Svc[] {
     realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
-
-function normalizeSlug(): any (value: string): string {;
-  return value;
-    .toLowerCase();
-    .replace(/[^a-z0-9]+/g, '-');
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-  const services = collectAllServices();
-  const candidateSlugs = new Set<string>()
-  // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), 'pages');
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
@@ -376,11 +366,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
-    slug => !staticSlugs.has(slug)
-  );
-  return {
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -415,7 +400,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     fallback: true;
   }
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
   return { props: {} }

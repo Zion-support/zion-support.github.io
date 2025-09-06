@@ -88,11 +88,13 @@ const partnerFormSchema = z.object({;
   payout_method: z.string(),;
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
-
+type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
-
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { user } = useAuth(),;
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
@@ -106,34 +108,32 @@ export function PartnerRegistrationForm() {;
       audience_size: "",;
       payout_method: "paypal",;
       bio: ""}}),;
-
   const checkExistingPartner = async () => {;
     const { data: existingPartner } = await supabase;
       .from('partner_profiles');
       .select('id');
-      .eq('user_id', user && user.id);
-      .single();
-
+      .eq('user_id', user.id);
+      .single(),;
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
-      setIsSubmitting(false);
-      return true;
-    }
-
     return false;
   };
-
   async function onSubmit(): any (data: PartnerFormValues) {;
+      setIsSubmitting(false),;
+      return true;
+    }
+    return false;
+  },;
+  async function onSubmit(data: PartnerFormValues) {;
     if (!user) {;
       toast({;
         title: "Authentication required",;
         description: "You must be logged in to register as a partner.",;
         variant: "destructive"}),;
       return;
-
     }
     setIsSubmitting(true);
     try {;
@@ -145,26 +145,11 @@ export function PartnerRegistrationForm() {;
             name: data.name
             website: data.website |null
             social_media: {
-
-
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
           {;
-            user_id: user && user.id,;
-            name: data && data.name,;
-            website: data && data.website || null,;
-            social_media: {;
-              twitter: data && data.twitter || null,;
-              instagram: data && data.instagram || null,;
-              youtube: data && data.youtube || null,;
-              linkedin: data && data.linkedin || null},;
-            niche: data && data.niche,;
-            audience_size: data && data.audience_size,;
-            payout_method: data && data.payout_method,;
-            bio: data && data.bio,;
-            status: 'pending', // Partners need approval;
           }
         ]);
         .select();
@@ -173,7 +158,6 @@ export function PartnerRegistrationForm() {;
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
     } catch (error: any) {
-      console.error('Error submitting partner application:', error);
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
@@ -181,62 +165,6 @@ export function PartnerRegistrationForm() {;
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
-              twitter: data.twitter || null,
-              instagram: data.instagram || null,
-              youtube: data.youtube || null,
-              linkedin: data.linkedin || null},
-            niche: data.niche,
-            audience_size: data.audience_size,
-            payout_method: data.payout_method,
-            bio: data.bio,
-            status: 'pending', // Partners need approval;
-          }
-        ]);
-        .select ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast ({
-        title: "Application submitted!",
-        description: "Your partner application has been submitted for review.",
-        variant: "default"}),
-      // Create a referral code if they don't have one already;
-      const { data: existing_code } = await supabase;
-        .from ('referral_codes');
-        .select ('code');
-        .eq ('user_id', user.id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase.rpc ('generate_referral_code', { user_id: user.id });
-      }
-    } catch (error: any) {
-      console.error ('Error submitting partner application:', error);
-      toast ({
-        title: "Submission failed",
-        description: error.message || "There was a problem submitting your application.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-  return (
-    <Card className="bg - zion - blue - dark border - zion - blue - light">;
-      <CardHeader>;
-        <CardTitle > Partner Registration</CardTitle>;
-        <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
-            <div className="space - y-4">;
-              <FormField;
-
         ]);
         .select(),;
       if (error) throw error,;
@@ -251,11 +179,6 @@ if ( {) {
                       <Input placeholder="Your name or brand name" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-                  </FormItem>;
-                )}
-              />
-              <FormField
-                control={form && form.control}
                 name="website"
                 render={({ field }) => (;
                   <FormItem>;
@@ -297,18 +220,6 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-                    </FormItem>;
-                  )}
-                />
-                <FormField
-                  control={form && form.control}
-                  name="instagram"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Instagram (Optional)</FormLabel>;
-                    </FormItem>)}
-                />;
-                <FormField;
 
                 />;
                 <FormField;
@@ -360,12 +271,6 @@ if ( {) {
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-                    </FormItem>;
-                  )}
-                />
-              </div>
-              <FormField
-                control={form && form.control}
                 name="niche"
                 render={({ field }) => (;
                   <FormItem>;
@@ -377,15 +282,6 @@ if ( {) {
                 control={form.control}
                 name="niche";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Your Niche</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
-                    </FormControl>;
-                    <FormDescription>;
-                      What topics do you focus on in your content?;
-                    </FormDescription>;
-                    <FormMessage />;
                 <FormField
                   control={form && form.control}
                   name="audience_size"
@@ -400,15 +296,6 @@ if ( {) {
                   control={form.control}
                   name="audience_size";
                   render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Audience Size</FormLabel>;
-                      <Select onValueChange={field.on_change} default_value={field.value}>;
-                        <FormControl>;
-                          <SelectTrigger>;
-                            <SelectValue placeholder="Select audience size" />;
-                          </SelectTrigger>;
-                        </FormControl>;
-                        <SelectContent>;
                 <FormField
                   control={form && form.control}
                   name="payout_method"
@@ -430,38 +317,12 @@ if ( {) {
                   control={form.control}
                   name="payout_method";
                   render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Preferred Payout Method</FormLabel>;
-                      <Select onValueChange={field.on_change} default_value={field.value}>;
-                        <FormControl>;
-                          <SelectTrigger>;
-                            <SelectValue placeholder="Select payout method" />;
-                          </SelectTrigger>;
-                        </FormControl>;
-                        <SelectContent>;
-                          <SelectItem value="paypal">PayPal</SelectItem>;
-                          <SelectItem value="bank">Bank Transfer</SelectItem>;
-                          <SelectItem value="crypto">Cryptocurrency</SelectItem>;
-                          <SelectItem value="platform_credit">Platform Credit</SelectItem>;
-                        </SelectContent>;
-                      </Select>;
-                      <FormMessage />;
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-            </div>;
-
-            <Button
-              type="submit" 
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-              disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." : "Submit Application"}
                   </FormItem>)}
               />;
             </div>;

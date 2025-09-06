@@ -170,4 +170,3 @@ url: string ;
   //In a real app, this would download the actual resource toast ({;
   ;
 };
-

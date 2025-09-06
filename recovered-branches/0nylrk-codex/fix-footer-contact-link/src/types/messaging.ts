@@ -1,4 +1,3 @@
-export interface Conversation {
   id: string;
   user_id: string;
   other_user: {
@@ -13,11 +12,6 @@ export interface Conversation {
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-export interface ConversationContextData {
-  title?: string;
-  description?: string;
-  image_url?: string;
-}
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;

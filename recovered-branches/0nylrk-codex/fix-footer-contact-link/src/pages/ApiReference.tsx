@@ -6,8 +6,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 
-
-
   // Sample endpoint data
 
   const endpoints = [
@@ -62,8 +60,6 @@ function ApiReference() {
       "category": "development";
       "budget": {;
         "min": 5000;
-        "max": 10000
-        "currency": "USD"
       }
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z"
@@ -88,7 +84,6 @@ function ApiReference() {
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
-    }
     {
       id: "post-jobs"
       method: "POST"
@@ -140,6 +135,7 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
+
         "max": 10000,;
         "currency": "USD";
       };
@@ -153,26 +149,18 @@ export function ApiReference() {;
   "offset": 0;
 }`;
         };
+        "max": 10000,;
+        "currency": "USD";
         "401": {;
           description: "Unauthorized",;
           example: `{;
   "error": "invalid_token",;
   "message": "The provided API key is invalid or expired";
 }`;
-        };
-        "429": {;
-          description: "Rate limit exceeded",;
-          example: `{;
-  "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Please try again in 60 seconds",;
   "retry_after": 60;
 }`;
         }
-      };
-      requestExample: `curl -X GET \\;
-  https://api && api.zionai.com/v1/api/jobs?status=open&limit=10 \\;
-  -H "Authorization: Bearer YOUR_API_KEY"`;
-    };
     {;
       id: "post-jobs",;
       method: "POST",;
@@ -182,14 +170,12 @@ export function ApiReference() {;
         { name: "title", type: "string", required: true, description: "Job title" },;
         { name: "description", type: "string", required: true, description: "Detailed job description" },;
         { name: "category", type: "string", required: true, description: "Job category" },;
-        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" };
         { name: "skills", type: "array", description: "Array of required skills" },;
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],;
       responses: {;
         "201": {;
           description: "Job created successfully",;
           example: `{;
-
   "id": "job-456";
   "id": "job - 456";
   "title": "UX Designer";
@@ -197,10 +183,6 @@ export function ApiReference() {;
   "category": "design";
   "budget": {;
     "min": 3000;
-    "max": 5000
-    "currency": "USD"
-  }
-  "status": "open";
         }
         "400": {
           description: "Bad request"
@@ -224,18 +206,6 @@ export function ApiReference() {;
   https://api.zionai.com / v1 / api / jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
-  -d '{
-      };
-      requestExample: `curl -X POST \\;
-  https://api && api.zionai.com/v1/api/jobs \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content-Type: application/json" \\;
-  -d '{;
-    "title": "UX Designer";
-    "description": "Looking for a UX designer with 3+ years experience...";
-    "category": "design";
-    "budget": {;
-      "min": 3000;
     {
       id: "get-talent"
       method: "GET"
@@ -246,8 +216,6 @@ export function ApiReference() {;
         "200": {
           description: "A list of talent profiles"
           example: `{
-  "talent": [;
-    {
       "max": 5000,;
       "currency": "USD";
     };
@@ -313,13 +281,9 @@ export function ApiReference() {;
                         : "text-zinc-400 hover:text-white hover:bg-zinc-900";
                     }`}
                   >;
-                    <span className={`inline-block w-16 font-mono ${endpoint && endpoint.method === "GET" ? "text-green-500" : endpoint && endpoint.method === "POST" ? "text-blue-500" : "text-yellow-500"}`}>;
-                      {endpoint && endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint && endpoint.path}</span>;
                   </button>;
-                </li>;
-              ))}
                               ))}
                             </tbody>;
                           </table>;
@@ -350,11 +314,6 @@ export function ApiReference() {;
                       showLineNumbers={true}
                     />;
                   </div>;
-
-                  {/* Response section */}
-                  <div>;
-                    <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>;
-
                     {Object && Object.entries(activeEndpointData && activeEndpointData.responses).map(([status, response]) => (;
                       <div key={status} className="mb-6">;
                         <div className="flex items-center mb-3">;
@@ -364,114 +323,8 @@ export function ApiReference() {;
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
-                        <CodeBlock
-                          code={response && response.example} 
-
-
-                        
-                        <CodeBlock 
-                          code={response.example} 
                           language="json"
                           showLineNumbers={true}
                         />;
                       </div>;
                     ))}
-                  </div>;
-                </TabsContent>;
-                <TabsContent value="try">;
-                  <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">;
-                    <div className="text-center">;
-                      <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
-                      <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-            <div>;
-              <div className="flex items - center mb - 6">;
-                <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
-                  activeEndpointData.method === "GET" ? "bg - green - 950 text - green - 500" :;
-                  activeEndpointData.method === "POST" ? "bg - blue - 950 text - blue - 500" :;
-                  "bg - yellow - 950 text - yellow - 500";
-                }`}>;
-                  {activeEndpointData.method}
-                </span>;
-                <span className="font - mono text - lg text - white">{activeEndpointData.path}</span>;
-              </div>;
-              <p className="text - zinc - 400 mb - 8">{activeEndpointData.description}</p>;
-              <Tabs default_value="docs">;
-                <TabsList className="mb - 6">;
-                  <TabsTrigger value="docs">Documentation</TabsTrigger>;
-                  <TabsTrigger value="try">Try It</TabsTrigger>;
-                </TabsList>;
-                <TabsContent value="docs">;
-                  {/* Request section */}
-                  <div className="mb - 8">;
-                    <h3 className="text - xl font - semibold text - white mb - 4">Request</h3>;
-                    {activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (
-                      <>;
-                        <h4 className="text - lg font - medium text - white mb - 3">Parameters</h4>;
-                        <div className="overflow - x-auto mb - 6">;
-                          <table className="w - full border - collapse">;
-                            <thead>;
-                              <tr className="border - b border - zinc - 800">;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Name</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Type</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Required</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Description</th>;
-                              </tr>;
-                            </thead>;
-                            <tbody>;
-                              {activeEndpointData.parameters.map ((param, index) => (
-                                <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border - b border - zinc - 800" : ""}>;
-                                  <td className="py - 2 px - 4 text - white font - mono">{param.name}</td>;
-                                  <td className="py - 2 px - 4 text - blue - 400 font - mono">{param.type}</td>;
-                                  <td className="py - 2 px - 4 text - zinc - 300">{param.required ? "Yes" : "No"}</td>;
-                                  <td className="py - 2 px - 4 text - zinc - 300">{param.description}</td>;
-                                </tr>))}
-                            </tbody>;
-                          </table>;
-                        </div>;
-                      </>)}
-                    <h4 className="text - lg font - medium text - white mb - 3">Example Request</h4>;
-                    <CodeBlock;
-                      code={activeEndpointData.request_example}
-                      language="bash";
-                      showLineNumbers={true}
-                    />;
-                  </div>;
-                  {/* Response section */}
-                  <div>;
-                    <h3 className="text - xl font - semibold text - white mb - 4">Responses</h3>;
-                    {Object.entries (activeEndpointData.responses).map (([status, response]) => (
-                      <div key={status} className="mb - 6">;
-                        <div className="flex items - center mb - 3">;
-                          <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
-                            status.starts_with ('2') ? 'bg - green - 950 text - green - 500' :;
-                            status === '401' || status === '403' ? 'bg - orange - 950 text - orange - 500' :;
-                            'bg - red - 950 text - red - 500';
-                          }`}>;
-                            {status}
-                          </span>;
-                          <span className="text - white">{response.description}</span>;
-                        </div>;
-                        <CodeBlock;
-                          code={response.example}
-                          language="json";
-                          showLineNumbers={true}
-                        />;
-                      </div>))}
-                  </div>;
-                </TabsContent>;
-                <TabsContent value="try">;
-                  <div className="p - 8 border border - zinc - 800 rounded - lg flex items - center justify - center">;
-                    <div className="text - center">;
-                      <p className="text - zinc - 400 mb - 3">Interactive API tester coming soon</p>;
-                      <p className="text - zinc - 600 text - sm">Try the Postman collection in the meantime</p>;
-                    </div>;
-                  </div>;
-                </TabsContent>;
-              </Tabs>;
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  );
-}
-export default ApiReference;
-

@@ -190,24 +190,11 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
-  return {
-    components: {
-      button: {
-        primary: {
-          backgroundColor: tokens.colors.primary
-          padding: tokens.spacing.md
-        }
-      }
     }
     tokens
   }
 }
-          background_color: tokens.colors.primary,
-          padding: tokens.spacing.md;
         }
       }
     }
     tokens
-  };
-
-}

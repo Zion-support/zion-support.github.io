@@ -35,7 +35,6 @@ interface ProjectViewProps {
     status: string;
     totalAmount: string;
     progress: number;
-
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -87,46 +86,6 @@ interface ProjectViewProps {;
     totalAmount: string,;
     progress: number,;
     description: string;
-  }
-  milestones: Milestone[]
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-
-  const router = useRouter()
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`
-    toast.success('Starting project call', {
-      description: 'Initializing video connection...'
-    })
-    router.push(`/call/${roomId}`)
-  }
-  const messageClient = () => {
-    toast.info('Opening message thread with client', {
-      description: `Messaging ${project.client.name}...`
-    })
-    // Navigate to messaging with this client
-  }
-    description: string;
-  };
-  milestones: Milestone[];
-
-export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
-  const router = useRouter();
-
-  const startProjectCall = () => {;
-    const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {;
-      description: 'Initializing video connection...',;
-    });
-
-    router && router.push(`/call/${roomId}`);
-  };
-
-  const messageClient = () => {;
-    toast && toast.info('Opening message thread with client', {;
-      description: `Messaging ${project && project.client.name}...`,;
-    });
-    // Navigate to messaging with this client;
-  };
 
   return (
 
@@ -134,24 +93,12 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
-                <span>Progress</span>
-                <span className="font-medium">{project.progress}%</span>
-              </div>
-              <Progress value={project.progress} className="h-2" />
-            </div>
-              <div>
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
-              </div>
-              <div>
-                <p className="text-muted-foreground">Total Amount</p>
-                <p className="font-medium">{project.totalAmount}</p>
-              </div>
-              <div>
                 <p className="text-muted-foreground">Status</p>
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
@@ -170,8 +117,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
-
-
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -192,42 +137,10 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               >
                 <Video className="h-4 w-4" /> Call
               </Button>
-            </div>
           </div>
         </CardContent>
       </Card>
       <section>
-                    ) : (
-                      <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
-                    )}
-                    <h3 className='font-medium'>{milestone && milestone.title}</h3>;
-                  </div>;
-                  <Badge
-                    variant={
-                      milestone && milestone.paymentStatus === 'paid'
-                        ? 'default'
-                        : milestone && milestone.paymentStatus === 'overdue'
-                          ? 'destructive'
-                          : 'outline'
-                    }                  >
-                    {milestone.paymentStatus}
-                  </Badge>
-                </div>
-                <div className='pl-7'>
-                  <div className='flex justify-between text-sm'>
-                    <span className='text-muted-foreground'>Due Date:</span>
-                    <span>{milestone.dueDate}</span>
-                  </div>
-                  <div className='flex justify-between text-sm'>
-                    <span className='text-muted-foreground'>Amount:</span>
-                    <span>{milestone.amount}</span>
-                  </div>
-                  <div className='flex justify-between text-sm'>
-                    <span className='text-muted-foreground'>Status:</span>
-                    <span className='capitalize'>
-                      {milestone.status.replace('_', ' ')}
-                    </span>
-                  </div>
                   <Button
                     size='sm'
                     variant='outline'
@@ -244,7 +157,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   )
 }
 
-
                 </div>;
               </div>;
               <Badge>{project.status}</Badge>;
@@ -255,7 +167,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
         </CardContent>;
       </Card>;
       <section>;
-
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
@@ -292,38 +203,4 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
     </div>;
   );
 };
-}
-
-
-;
-                  </Badge>;
-                </div>;
-                <div className='pl - 7'>;
-                  <div className='flex justify - between text - sm'>;
-                    <span className='text - muted - foreground'>Due Date:</span>;
-                    <span>{milestone.due_date}</span>;
-                  </div>;
-                  <div className='flex justify - between text - sm'>;
-                    <span className='text - muted - foreground'>Amount:</span>;
-                    <span>{milestone.amount}</span>;
-                  </div>;
-                  <div className='flex justify - between text - sm'>;
-                    <span className='text - muted - foreground'>Status:</span>;
-                    <span className='capitalize'>;
-                      {milestone.status.replace ('_', ' ')}
-                    </span>;
-                  </div>;
-                  <Button;
-                    size='sm';
-                    variant='outline';
-                    className='w - full mt - 3 gap - 1';
-                  >;
-                    View Details <ChevronRight className='h - 4 w - 4' />;
-                  </Button>;
-                </div>;
-              </CardContent>;
-            </Card>))}
-        </div>;
-      </section>;
-    </div>);
 }

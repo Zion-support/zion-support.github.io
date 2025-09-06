@@ -25,9 +25,6 @@ import { cn } from &quot;@/lib / utils & quot;
         {...props}
       />);
   }
-export { Input }
-
-export { Input };
 Input.displayName = "Input"
 
 export { Input }

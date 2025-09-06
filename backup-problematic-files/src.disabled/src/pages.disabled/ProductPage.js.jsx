@@ -9,4 +9,3 @@ const ProductPage.js = ({ className }) => {
   );
 };
 
-export default ProductPage.js;

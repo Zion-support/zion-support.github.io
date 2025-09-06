@@ -34,27 +34,6 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
-const formSchema = z && z.object({;
-  projectName: z && z.string().min(1, "Project name is required");
-  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z && z.date({;
-    required_error: "Start date is required"}),;
-  endDate: z && z.date().optional(),;
-  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z && z.string().min(1, "Payment amount is required");
-  additionalClauses: z && z.array(z && z.string()).optional()}),;
-
-export type ContractFormValues = z && z.infer<typeof formSchema>;
-
-
-
-        values, ;
-        talent, ;
-        clientName, ;
-
-}
-  );
-}
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';

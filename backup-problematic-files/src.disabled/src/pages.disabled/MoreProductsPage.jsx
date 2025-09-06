@@ -9,4 +9,3 @@ const MoreProductsPage = ({ className }) => {
   );
 };
 
-export default MoreProductsPage;

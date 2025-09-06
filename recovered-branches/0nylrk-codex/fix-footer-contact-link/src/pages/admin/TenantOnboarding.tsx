@@ -79,7 +79,6 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
-
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -321,7 +320,6 @@ export default function TenantOnboarding() {;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
-
                   </Button>;
                 </div>;
               </form>;
@@ -330,6 +328,3 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
-}
-    </>);
-}

@@ -9,4 +9,3 @@ const QuickAccess = ({ className }) => {
   );
 };
 
-export default QuickAccess;

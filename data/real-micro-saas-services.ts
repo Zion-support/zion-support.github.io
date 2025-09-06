@@ -12,6 +12,7 @@
     email: string;
     address: string;
 
+
     website: string;
   }
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -1364,7 +1365,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     website: string
   }
 }
-
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -3798,7 +3798,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
-export const getServicesByCategory = (category: string) => {
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
@@ -3807,7 +3806,6 @@ export const getServicesByCategory = (category: string) => {
     popular: false;
     launch_date: '2025 - 02 - 08';
     customers: 19;
-
     reviews: 6
   }
 ];
@@ -3860,23 +3858,6 @@ color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
-  return realMicroSaasServices.filter(service => service.category === category)
-};
-
-export const getServicesByPriceRange = (min: number, max: number) => {
-  return realMicroSaasServices.filter(service => {
-    const price = parseFloat(service.price.replace('$', '').replace(, ''));
-    return price >= min && (max === Infinity || price <= max)
-  })
-};
-
-export const getPopularServices = () => {
-  return realMicroSaasServices.filter(service => service.popular)
-};
-
-export const serviceCategories = [
-  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
 }
@@ -3910,8 +3891,6 @@ export const service_categories = [;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
-  'Enterprise IT'
-];
   id: string,;
   name: string,;
   tagline: string,;

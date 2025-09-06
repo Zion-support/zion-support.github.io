@@ -1,4 +1,3 @@
-
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -18,53 +17,15 @@ serve(async (req) => {
     // CORS headers
 
     const headers = {
-      "Access-Control-Allow-Origin": "*";
-      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
-      "Content-Type": "application/json"}
-    // Handle CORS preflight request
-    if (req && req.method === "OPTIONS") {
-      return new Response(null, { headers, status: 204 })
-    }
-  location: string;
-}
-serve (async (req) => {
-  try {
-    // CORS headers;
-    const headers = {
-      "Access - Control - Allow - Origin": "*";
-      "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type";
-      "Content - Type": "application / json"}
-;
-    // Handle CORS preflight request;
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (null, { headers, status: 204 });
-    }
-    const req_data = await req.json ();
-    const provider_data = req_data.provider_data as ServiceProfileData;
-;
-    // Validate input;
     // Check condition
 if ( {) {
   $2
 }
       return new Response (
         JSON.stringify ({
-          error: "Missing required service provider data"});
         { headers, status: 400 }
       );
     }
-
-
-
-
-    // Get OpenAI API key from environment
-    const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({
 
           error: "OpenAI API key not configured"}),
 ;
@@ -85,7 +46,6 @@ if ( {) {
     Business/Service Title: ${providerData.title}
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
-    ${providerData.services && providerData.services.length > 0
       ? `Current Services: ${providerData.services.join(", ")}`
 
     Service Provider Name: ${providerData && providerData.name}
@@ -96,9 +56,6 @@ if ( {) {
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
-        model: "gpt-4";
-        messages: [
-          {
             role: "system"
     const prompt = `;
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
@@ -133,14 +90,22 @@ if ( {) {
             role: "user"
             content: prompt}];
     if (!response.ok) {
-      console.error("OpenAI API error:", responseData);
+      console.error("OpenAI API error:", responseData),
       return new Response(
         JSON.stringify({
-          details: responseData});
           details: responseData}),
     ${providerData.services && providerData.services.length > 0;
       ? `Current Services: ${providerData.services.join(", ")}`;
       : "No services listed yet."}
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+    const responseData = await response && response.json();
+    if (!response && response.ok) {
+      console && console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON && JSON.stringify({
+          error: "Failed to generate enhanced profile content",
+          details: responseData});
 ;
     const response_data = await response.json ();
 ;
@@ -156,11 +121,14 @@ if ( {) {
         { headers, status: 500 }
       );
     }
+;
         { headers, status: 200 }
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
-
+    try {
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
       return new Response(
           raw: responseData.choices[0]?.message?.content}),
       );
@@ -174,10 +142,6 @@ if ( {) {
       );
     }
   } catch (error) {
-          "Content - Type": "application / json",
-          "Access - Control - Allow - Origin": "*"},
-        status: 500;
-
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({

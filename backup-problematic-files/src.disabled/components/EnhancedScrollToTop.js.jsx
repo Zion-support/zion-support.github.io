@@ -9,4 +9,3 @@ const EnhancedScrollToTop.js = ({ className }) => {
   );
 };
 
-export default EnhancedScrollToTop.js;

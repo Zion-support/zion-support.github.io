@@ -7,27 +7,6 @@ import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
-] as const;
-
-type ReasonType = (typeof REASONS)[number];
-import { useRouter } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
-const REASONS = [
-  'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
-
-export default function NewDisputePage() {;
-  const router = useRouter();
-  const {;
-    projectId: qProjectId,;
-    entityType,;
-    entityId,;
-    talentId,;
-    clientId,;
-  } = router && router.query as Record<string, string>;  const user = useCurrentUser();
-
-  const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
@@ -119,32 +98,6 @@ export default function NewDisputePage() {;
             <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div>
-  const [talentUserId, setTalentUserId] = useState(talentId || '');
-  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
-  const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (qProjectId) setProjectId(qProjectId)
-  }, [qProjectId]);
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
-    setSubmitting(true);
-import {use_router} from 'next / router';
-import React, { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components / layout / EnhancedLayout';
-import {useCurrentUser} from '../../utils / auth';
-;
-  'Scope Disagreement',
-  'Quality Issues',
-  'Delivery Delay',
-  'Payment Issue',
-  'Communication Breakdown',
-  'Other',
-    reader.onload = () => resolve(String(reader.result));
-    reader.onerror = reject;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

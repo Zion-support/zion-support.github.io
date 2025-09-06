@@ -8,18 +8,6 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
-
-import js from '@eslint/js';
-
-    files: ["**/*.{js,jsx,ts,tsx}"],
-
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-
       'coverage/**',
 
       '*.config.js',
@@ -125,36 +113,27 @@ export default [
       "dist/",
       "build/",
       "coverage/",
-      "*.config.js",
-      "*.config.cjs",
-      "*.config.mjs",
+      "*.config && config.js",
+      "*.config && config.cjs",
+      "*.config && config.mjs",
       "scripts/",
       "automation/",
       "pm2-automation/",
-      "pages.disabled/",
-      "pages.disabled_auto/",
-      "pages.disabled_full/",
-      "pages.corrupted.*/",
-      "pages.broken/",
-      "pages.bak/",
-      "pages.blog.disabled/",
-      "pages._archive_corrupted/",
-      "pages._quarantine/",
+      "pages && pages.disabled/",
+      "pages && pages.disabled_auto/",
+      "pages && pages.disabled_full/",
+      "pages && pages.corrupted.*/",
+      "pages && pages.broken/",
+      "pages && pages.bak/",
+      "pages && pages.blog.disabled/",
+      "pages && pages._archive_corrupted/",
+      "pages && pages._quarantine/",
       "pages-disabled/",
       "pages-quarantine/",
-      "pages.__backup/",
+      "pages && pages.__backup/",
       "pages-backup/",
-      "tests.disabled/",
-      "components.disabled/",
-      "*.test.js",
-      "*.test.ts",
-      "*.test.tsx",
-      "*.spec.js",
-      "*.spec.ts",
-      "*.spec.tsx"
-    ]
   },
-  js.configs.recommended,
+  js && js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -207,12 +186,11 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 export default [
+  js.configs.recommended,
   {
-
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
-
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -253,8 +231,31 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+
+
+export default [
+  {
+
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+
+
+
+
         afterAll: "readonly"
-        afterAll: "readonly",
       },
       parser: tsparser,
       parserOptions: {
@@ -311,13 +312,6 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-
-
-
-
-      "react/react-in-jsx-scope": "off"
-
-      "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {
@@ -353,7 +347,6 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
-  }
       'no-unused-vars': 'warn'
     }
   },
@@ -385,8 +378,6 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
-  }
-];
 
 
   }
@@ -396,9 +387,4 @@ export default [
 
   }
 ];
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
 ];

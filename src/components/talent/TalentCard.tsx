@@ -18,20 +18,17 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
-
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
 export interface TalentCardProps {
-
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
 }
-const TalentCardComponent = ({
+onst TalentCardComponent = ({
   talent
   onViewProfile
   onRequestHire
@@ -45,9 +42,6 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  },
-
-  const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
     if (onRequestHire) {
@@ -56,11 +50,11 @@ const TalentCardComponent = ({
   }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
-
-
       onClick={handleViewProfile}
       tabIndex={0}
     >
+      onClick = {handleViewProfile,}
+      tabIndex = {0,}
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
@@ -68,8 +62,6 @@ const TalentCardComponent = ({
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
               {talent && talent.profile_picture_url ? (;
                 <img
-
-
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
                   className="w-full h-full object-cover"
@@ -120,37 +112,14 @@ const TalentCardComponent = ({
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
-                  {skill}
-                </span>;
               ))}
               {(talent.skills?.length |0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length |0) - 5} more
                 </span>
-              )}
-            </div>;
-          </div>;
-        )}
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-
-
-          
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
-
-
                 onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                onClick = {handleRequestHire,}
               >
                 Hire
               </Button>

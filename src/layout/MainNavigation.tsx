@@ -96,9 +96,6 @@ interface MainNavigationProps {;
         <span className='navbar-toggler-icon'></span>;
       </button>;
       <nav
-        <div
-          id="main-navbar-collapse"
-          className={cn(
             'navbar-collapse'
             { open: isMobileMenuOpen }
             'w-full md:flex md:w-auto', // Handles visibility and desktop layout
@@ -115,17 +112,12 @@ interface MainNavigationProps {;
                 <Link 
                   href={link.href}
                   aria-label={link.name}
-
-                  onClick={() => setIsMobileMenuOpen(false)}
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
-                  {link.name}
-                </Link>
-              </li>
             )}
             {/* Wallet link */}
             {isAuthenticated && (;
@@ -157,25 +149,6 @@ interface MainNavigationProps {;
                     href="/cart"
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
-                  >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
-                    {t('nav.cartCart')}
-                    {cartCount > 0 && (
-      {/* Desktop Navigation */}
-      <div className="hidden lg: flex items-center space-x-1">
-        {baseLinks.map((link (
-          <div key={link.key}>
-            {link.children ? (
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
-                    ? 'bg-zion-cyan text-white''
-                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
-}`}
-            )}
-          </div>
-        ))}
-      </div>
-      {/* Mobile Menu Button */}
-      <button
 }`};
 ;
                           {link.name}'`;
@@ -202,7 +175,6 @@ interface MainNavigationProps {;
                         {cartCount}
                       </span>;
                     )}
-                  </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
                   <MiniCartPreview />
@@ -254,6 +226,8 @@ interface MainNavigationProps {;
     </>));
 }
 
+  );  )
+}
 ;
 }
   )

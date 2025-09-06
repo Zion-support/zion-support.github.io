@@ -1,7 +1,4 @@
 
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
 
 import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
@@ -14,24 +11,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-import { GetServerSideProps } from 'next',
-import { useState } from 'react',
-import { read_json } from '../../utils / fs_db',
-export const getServerSideProps: GetServerSideProps = async () => {
-  const requests = read_json < any[]>('support / requests.json', []),
-  return { props: { initial_requests: requests } }
-},
-export default /**
- * SupportRequests - Function description
- */
-function SupportRequests() {
-  const [requests, set_requests] = useState (initial_requests),
-  async /**
- * resolve - Function description
- */
-function resolve() {
-    await fetch ('/api / support / resolve', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id }) }),
-    set_requests ((prev: any[]) => prev.map ((r) => (r.id === id ? { ...r, status: 'resolved', resolved_at: Date.now () } : r)));
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -63,7 +42,6 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  return (
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}
       </div>;

@@ -9,4 +9,3 @@ const CommunityDiscussion.js = ({ className }) => {
   );
 };
 
-export default CommunityDiscussion.js;

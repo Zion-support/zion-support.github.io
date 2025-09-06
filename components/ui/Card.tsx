@@ -1,16 +1,3 @@
-
-const CardContent = React.forwardRef<
-  HTMLDivElement
-
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
-));
-CardContent && CardContent.displayName = "CardContent";
-
-const CardFooter = React.forwardRef<
-  HTMLDivElement
-
   <div
   />));
 CardDescription.display_name = "CardDescription";
@@ -30,7 +17,6 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -69,7 +55,6 @@ interface CardProps {
   hover?: boolean;
 }
   return (
-    <div;
       className={classes}
       style={style}
       on_click={on_click}

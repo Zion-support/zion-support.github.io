@@ -60,11 +60,6 @@ export default function Reports() {
                   (r: any) => r.status >= 200 && r.status < 400
                 ).length
               }
-              /{lastUptime && lastUptime.results?.length} ok;
-            </div>;
-          ) : (;
-            <div className='text-sm text-gray-500'>No data</div>;
-          )}
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -80,35 +75,6 @@ export default function Reports() {
         <h1 className="text-2xl font-semibold">Automation Reports</h1>
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>SEO (weekly)</div>;
-          <div className='text-sm text-gray-600'>;
-            Pages: {seo?.results?.length || 0}
-          </div>;
-        </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Broken Links (weekly)</div>;
-          <div className='text-sm text-gray-600'>;
-            Broken: {links?.broken?.length || 0}
-          </div>;
-        </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Dependencies (weekly)</div>;
-          <div className='text-sm text-gray-600'>;
-            Checked: {deps?.entries?.length || 0}
-          </div>;
-        </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Changelog (weekly)</div>;
-          <div className='text-sm text-gray-600'>;
-            Commits: {changelog?.totalCommits || 0}
-          </div>;
-        </div>;
-
             Pages: {pagespeed?.results?.length || 0}
           </div>;
         </div>;
@@ -117,5 +83,3 @@ export default function Reports() {
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
-
-

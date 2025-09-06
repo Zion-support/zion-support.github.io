@@ -9,4 +9,3 @@ const AdvancedServices = ({ className }) => {
   );
 };
 
-export default AdvancedServices;

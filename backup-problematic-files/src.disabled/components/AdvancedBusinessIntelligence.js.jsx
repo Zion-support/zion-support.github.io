@@ -9,4 +9,3 @@ const AdvancedBusinessIntelligence.js = ({ className }) => {
   );
 };
 
-export default AdvancedBusinessIntelligence.js;

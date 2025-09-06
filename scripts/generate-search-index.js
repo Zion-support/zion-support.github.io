@@ -77,87 +77,19 @@ function generateSearchIndex() {
               }
               searchIndex[type].push(entry)
             } catch (error) {
-},
-/**
- * extractTextFromJSX - Function description
- */
-function extractTextFromJSX() {
-  // Simple text extraction from JSX / TSX content;
-  return content;
-    .replace (/<[^>]*>/g, ' ') // Remove HTML / JSX tags;
-    .replace (/import.*?from.*?['"`][^'"`]*['"`], ?/g, '') // Remove imports;
-    .replace (/export.*?function.*?{/g, '') // Remove function declarations;
-    .replace (/[{}()]/g, ' ') // Remove brackets;
-    .replace (/\s+/g, ' ') // Normalize whitespace;
-    .trim ();
-}
-/**
- * generateSearchIndex - Function description
- */
-function generateSearchIndex() {
-  const search_index = {
-    pages: [],
-    blog: [],
-    generated: new Date ().toISOString ();
-  },
-  // Process each content type;
-  Object.entries (CONTENT_TYPES).for_each (([type, config]) => {
-    if () return, ) {
-  $2
-}
-    const files = fs.readdir_sync (config.path, { recursive: true }),
-    files.for_each (file => {
-      // Check condition
-if ( {) {
-  $2
-}
-        const file_path = path.join (config.path, file),
-        const stats = fs.stat_sync (file_path),
-        if () {) {
-  $2
-}
-          const ext = path.extname (file),
-          if () {) {
-  $2
-}
-            const file_name = path.basename (file, ext),
-            // Skip excluded files;
-            if ()) {) {
-  $2
-}
-              return;
-            }
-            try {
-              const content = fs.readFileSync (file_path, 'utf8'),
-              const text = extractTextFromJSX (content),
-              const entry = {
-                id: `${type}-${file_name}`,
-                title: file_name.replace (/-/g, ' ').replace (/\b\w / g, l => l.toUpperCase ()),
-                content: text.substring (0, 500), // Limit content length;
-                url: `/${type === 'pages' ? '' : type + '/'}${file_name}`,
-                type: type,
-                last_modified: stats.mtime.toISOString ();
-              },
-              search_index[type].push (entry);
-            } catch (error) {
             }
           }
         }
       }
-    })
 
   })
 
   // Ensure output directory exists
-  if (!fs && fs.existsSync(OUTPUT_DIR)) {
-    fs && fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   }
   // Write search index
 
   const indexPath = path.join(OUTPUT_DIR, 'index.json')
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2))
-  console.log(` Search index generated at: ${indexPath}`)
-
 }
 if (require.main === module) {
   generateSearchIndex()
@@ -171,37 +103,12 @@ import path from,"}),"})
   'path',"}),"})
 ,"}),"})
 function walk(dir, filelist = []) {,"}),"})
-  const files = fs && fs.readdirSync(dir, { "withFileTypes": true }),"}),"})
-  for (const entry of files) {,"}),"})
-    const full = path && path.join(dir, entry && entry.name),"}),"})
-    if (entry && entry.isDirectory()) {,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      filelist = walk(full, filelist),"}),"})
-    } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"})
-      filelist && filelist.push(full),"}),"})
     }"}),"})
   }"}),"})
   return filelist,"}),"})
 }"}),"})
 ,"}),"})
 function main() {,"}),"})
-  const repoRoot = process && process.cwd(),"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-  const index = [],"}),"})
-  for (const dir of srcDirs) {,"}),"})
-    if (!fs && fs.existsSync(dir)) continue,"}),"})
-    for (const file of walk(dir)) {,"}),"})
-      try {,"}),"})
-        const rel = path && path.relative(repoRoot, file),"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-        index && index.push({ "file": rel, title }),"}),"})
-      } catch {}"}),"})
-    }"}),"})
-  }"}),"})
-  const outDir = path && path.join(repoRoot,,"}),"})
-  'public'),"}),"})
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true }),"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 }"}),"})
 ,"}),"})
 main(),"}),"})
@@ -212,29 +119,11 @@ main(),"}),"})
   ];
   const index = [];
   for (const dir of srcDirs) {
-    if (!fs && fs.existsSync(dir)) continue;
-    for (const file of walk(dir)) {;
-      try {;
-        const rel = path && path.relative(repoRoot, file);
-        const content = fs && fs.readFileSync(file, 'utf8');
-        const titleMatch = content && content.match(
-          /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/
-        );
-        const title = titleMatch
-    }
-  }
-  const outDir = path && path.join(repoRoot, ';public');
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true });
-  const outPath = path && path.join(outDir, 'search-index && index.json');
-  fs && fs.writeFileSync(
-    outPath
-    JSON && JSON.stringify(
       { "generatedAt": new Date().toISOString(), "items": index }
       null
       2
     )
   );
-
     });
   }),
   // Ensure output directory exists;
@@ -390,5 +279,3 @@ function main() {) {
   $2
 } for (const file of walk (dir)) { try { const rel = path.relative (repo_root, file); const content = fs.readFileSync (file, 'utf8'); const title_match = content.match ( /export\s + default\s + function\s+(\w+)|export\s + const\s+(\w+)/ ); const title = title_match ? title_match[1] || title_match[2] : path.basename (file); index.push ({ file: rel, title })} catch {} } } const out_dir = path.join (repo_root, ';public'); if () fs.mkdir_sync (out_dir, { recursive: true })) {
   $2
-} const out_path = path.join (out_dir, 'search - index.json'); fs.writeFileSync ( out_path JSON.stringify ( { generated_at: new Date ().toISOString (), items: index } null 2 ) ); console.log (` Search index generated: ${out_path} (${index.length} items)`)} main ();
-;

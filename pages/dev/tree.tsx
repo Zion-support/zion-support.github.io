@@ -3,31 +3,6 @@ interface ApiResponse {
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
-
-export default function DevTreePage() {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
@@ -40,20 +15,6 @@ export default function DevTreePage() {;
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-
-  const fetchTree = async (token?: string) => {
-    try {
-      const resp = await fetch('/api/dev/source-map', {
-        headers: token ? { 'x-admin-token': token } : undefined
-      });
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error |`HTTP ${resp.status}`);
-      }
-      const data: ApiResponse = await resp.json ();
-      set_nodes (data.nodes);
-      set_git (data.status);
-    } catch (e: any) {
 
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
@@ -75,7 +36,6 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
-
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
@@ -91,57 +51,6 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
-  return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <div className="flex items-center gap-4 mb-4">
-        <h1 className="text-xl font-semibold">Zion OS Source Tree</h1>
-        {git && (
-          <div className="text-sm text-gray-600">
-            Git: {git.gitConnected ? `connected (${git.gitBranch})` : "not connected"  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="ml-auto flex items-center gap-2">
-          <input
-            className="border rounded px-2 py-1 text-sm"
-            placeholder="Admin token"
-            value={adminToken  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setAdminToken(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          />
-          <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>
-            Save Token
-          </button>
-        </div>
-      </div>
-      {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      {nodes ? (
-        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />
-        </div>
-      ) : (
-        <div>Loading...</div>
-
-}
-}
-}
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -254,18 +163,6 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
-          </button>;
-        </div>;
-      </div>;
-      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
-      {nodes ? (;
-        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
-        </div>;
-      ) : (;
-        <div>Loading...</div>;
-      )}
-    </div>;
-  );
   )
 }
       set_error (e.message || 'Failed to load');    }

@@ -11,7 +11,12 @@ export function useProjects() {
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
-      setIsLoading(false);
+
+      setIsLoading(true),
+      
+
+
+      setIsLoading(false),
       return
     }
     try {
@@ -86,25 +91,10 @@ if (throw fetch_error) {
       // Transform the data to match our project types;
       const transformed_data = data.map ((project: any) => ({
         ...project;
-        talent_profile: project.talent_profile ? {
-          ...project.talent_profile
-          full_name: project.talent_profile.display_name
-        } : undefined
-          ...project.talent_profile,
-          full_name: project.talent_profile.display_name;
-        } : undefined;
       }));
-;
-      set_projects (transformed_data as Project[]);
-      set_error (null);
+      setProjects(transformedData as Project[]);
+      setError(null)
     } catch (err: any) {
-      console.error ("Error fetching projects:", err);
-      set_error ("Failed to fetch projects: " + err.message),
-      toast.error ("Failed to fetch projects");
-    } finally {
-      setIsLoading (false);
-    }
-  }
     try {
       const { data, error } = await supabase;
         .from ("projects");
@@ -116,67 +106,16 @@ if (throw fetch_error) {
       toast && toast.error("Failed to fetch project details");
       return null
     }
-  }
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
-        .eq("id", projectId);
-      if (error) throw error;
-      // Update the local state
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
       return false
-          ...data.talent_profile,
-          full_name: data.talent_profile.display_name;
-        } : undefined;
-      }
-;
-      return transformed_project as Project;
-    } catch (err: any) {
-      console.error ("Error fetching project:", err);
-      toast.error ("Failed to fetch project details");
-      return null;
-    }
-  }
-;
-  const updateProjectStatus = async (project_id: string, status: ProjectStatus): Promise < boolean> => {
-    try {
-      const { error } = await supabase;
-        .from ("projects");
-        .update ({ status });
-        .eq ("id", project_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Update the local state;
-      set_projects (prev =>;
-        prev.map (project => project.id === project_id ? { ...project, status } : project));
-;
-      toast.success (`Project status updated to ${status}`);
-      return true;
-    } catch (err: any) {
-      console.error ("Error updating project status:", err);
-      toast.error ("Failed to update project status");
-      return false;
-    }
-  }
-;
-  // Fetch projects when component mounts or user changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_projects ();
-    }
-  }, [user]);
-;
   return {
     projects;
     is_loading;

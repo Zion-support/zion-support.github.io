@@ -1,10 +1,4 @@
 
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -50,12 +44,12 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
-  if (isLoading) {
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">;
@@ -130,7 +124,6 @@ export default function JobDetails() {
                       <Badge key={i} variant="secondary">
 
 
-
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -183,27 +176,27 @@ export default function JobDetails() {;
       return;
     }
 ;
-
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast && toast.error("Please log in to apply for this job");
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      return;
+    }
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
-
     setIsApplyModalOpen(true);
   };
-
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success("Application submitted successfully!"),;
     setIsApplyModalOpen(false);
   };
-
   const formatBudget = (budget: any) => {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
-
   const isOwnJob = user?.id === job && job.client_id;
-
   return (
     <>;
       <SEO
@@ -213,42 +206,23 @@ export default function JobDetails() {;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
-          <Button
-            variant="outline" 
-            size="sm"
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
-                    <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
-                    <div className="flex items-center text-muted-foreground">;
-                      <Calendar className="mr-2 h-4 w-4" />;
-                      <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
-                    </div>;
-                  </div>;
-                  <Badge>{job && job.category}</Badge>;
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
-                    {job && job.description}
-                  </div>;
-                </div>;
-
-                <div>;
-                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
-                  <div className="flex flex-wrap gap-2">;
-                    {job && job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
@@ -285,8 +259,6 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
-                  <Button
-                    className="w-full mt-4"
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
@@ -309,7 +281,6 @@ export default function JobDetails() {;
         </div>;
       </main>;
       <Footer />;
-
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}

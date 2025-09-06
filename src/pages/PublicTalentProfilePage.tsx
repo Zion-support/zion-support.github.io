@@ -46,23 +46,12 @@ export default function ProfilePage() {
           .eq("id", profileId)
         if (error) {
           throw error
+if (error) {
+          throw error
         }
         setProfileData(data)
       } catch (error) {
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
 
-        setIsError(true),
-        toast({
-          title: "Error"
-          description: "Failed to load profile. Please try again later."
-          variant: "destructive"})
-
-
-
-
-  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
@@ -76,12 +65,6 @@ export default function ProfilePage() {
       </div>;
     );
   }
-  return (
-    <>;
-      <SEO
-        title={`${profileData.full_name} | Talent Profile`}
-        description = {profileData.bio |"View the profile of this talented individual.",}
-
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
@@ -144,10 +127,6 @@ export default function ProfilePage() {
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
-
-                  </div>;
-                </div>;
-              </div>;
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -168,6 +147,18 @@ export default function ProfilePage() {
                     <a
                       key = {link + index,}
                       href = {link,}
+              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
+              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+            </div>
+            {/* Portfolio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
+              <div className="space-y-3">
+                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
+                  profileData.portfolio_links.map((link: string, index: number) => (
+                    <a
+                      key={link + index}
+                      href={link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
@@ -179,36 +170,17 @@ export default function ProfilePage() {
               <div className="flex space-x-4">;
                 {profileData && profileData.github_link && (;
                   <a
-                    href = {profileData && profileData.github_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="GitHub"
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="Twitter"
-                    title="Twitter">;
-                    <Twitter className="h-6 w-6" />;
-                  </a>;
-                )}
-                {profileData && profileData.linkedin_link && (;
-                  <a
-                    href = {profileData && profileData.linkedin_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
-
-                    title="LinkedIn"
-                  >
-                    <Linkedin className="h-6 w-6" />
-
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
@@ -260,8 +232,6 @@ if (isLoading) {"
       </div>;
     </>;
   );
-
-
 
     // Check condition
 if ( {) {

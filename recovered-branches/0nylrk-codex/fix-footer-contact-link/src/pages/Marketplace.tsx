@@ -42,7 +42,6 @@ export default function Marketplace() {
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
-
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -75,22 +74,10 @@ export default function Marketplace() {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
-      case 'location':
-        setSelectedLocations(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
-      case 'availability':
-        setSelectedAvailability(prev =>
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
     setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-    setSelectedRating(null)
-  }
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -98,7 +85,6 @@ export default function Marketplace() {
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
-      });
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -239,26 +225,6 @@ if ( {) {
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
-            Discover professional services and products for your AI and tech projects.;
-            Browse our curated collection of solutions from verified providers.;
-          </p>;
-        </div>;
-
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
-          {/* Sidebar Filters */}
-          <div className="lg: col-span-1">;
-            <FilterSidebar
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
-          {/* Sidebar Filters */}
-          <div className="lg: col - span - 1">;
-            <FilterSidebar;
               filters={{
                 selectedProductTypes;
                 selectedLocations;
@@ -277,18 +243,6 @@ if ( {) {
           <div className="lg:col-span-3">;
             {/* Active filters display */}
             <ActiveFiltersBar
-            />;
-          </div>;
-          {/* Main content */}
-          <div className="lg:col - span - 3">;
-            {/* Active filters display */}
-            <ActiveFiltersBar;
-              selectedProductTypes={selectedProductTypes}
-              selected_locations={selected_locations}
-              selected_availability={selected_availability}
-              selected_rating={selected_rating}
-              search_query={search_query}
-              onRemoveFilter={handleFilterChange}
             {/* Results count */}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
@@ -334,8 +288,6 @@ if ( {) {
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
                   </Button>;
-                </div>;
-              )}
             </div>;
           </div>;
         </div>;

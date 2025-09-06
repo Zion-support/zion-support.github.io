@@ -9,4 +9,3 @@ const AllServicesLandingPage = ({ className }) => {
   );
 };
 
-export default AllServicesLandingPage;

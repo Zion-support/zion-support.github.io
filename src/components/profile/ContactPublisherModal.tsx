@@ -35,9 +35,6 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
-type FormValues = {
-  subject: string;
-  message: string }
     }
     const values = form.get_values ();
     setIsSubmitting (true);
@@ -47,49 +44,6 @@ type FormValues = {
       setIsSubmitting (false);
     }
   }
-  }
-import React from 'react';
-import FocusLock from 'react-focus-lock';
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog';import { Button } from '@/components/ui/button';import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Form,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react';import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-  Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage} from '@/components/ui/form';
-import {useForm, type, Resolver} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react';
 import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
@@ -324,8 +278,6 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
           </DialogContent>;
         </FocusLock>;
       </Dialog>;
-        <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -353,11 +305,9 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
                   <FormMessage className="text-red-500" />;
                 </FormItem>;
               )}
-            />;
             <FormField
               control = {form && form.control,}
               name="message"
-
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
@@ -448,5 +398,3 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
     </>) </>);
 }
 ;
-
-

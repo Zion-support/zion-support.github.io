@@ -3,16 +3,6 @@
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
-import {useState} from 'react';
-import {TalentProfile} from '@/types / talent';
-export /**
- * useUIState - Function description
- */
-function useUIState() {
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState (false);
-  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
-  const [selected_talent, setSelectedTalent] = useState < TalentProfile | null>(null);
-  const [expanded_sections, setExpandedSections] = useState ({
     skills: true;
     availability: true;
     region: true;

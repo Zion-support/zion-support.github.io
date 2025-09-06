@@ -77,14 +77,10 @@ import {NextApiRequest,NextApiResponse} from 'next'; import {dbManager} from '..
        responseTime: number, memoryUsage: number, cacheHitRate: number,
     activeConnections: number
     },
-
-
 import { NextApiRequest,NextApiResponse } from 'next'; import { dbManager } from '../../lib/database'; import { apiCache,userCache,staticCache } from '../../lib/cache'; interface SystemHealth { status: healthy | 'degraded' | 'unhealthy', timestamp: string, services: {
        database: boolean, cache: boolean, api: boolean
     },
     metrics: { responseTime: number, memoryUsage: number, cacheHitRate: number,
-
-
 import { NextApiRequest,NextApiResponse } from 'next'; import { dbManager } from '../../lib/database'; import { apiCache,userCache,staticCache } from '../../lib/cache'; interface SystemHealth { status: healthy | 'degraded' | 'unhealthy', timestamp: string, services: {
        database: boolean, cache: boolean, api: boolean
     },

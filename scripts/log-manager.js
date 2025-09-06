@@ -203,7 +203,6 @@ ${this && this.logsDir}/*.log {
     postrotate
         pm2 reloadLogs
     endscript
-}
 `;
       const configPath = path && path.join(this && this.logsDir, 'logrotate && logrotate.conf');
       fs && fs.writeFileSync(configPath, logrotateConfig);
@@ -305,7 +304,6 @@ ${this && this.logsDir}/*.log {
       this && this.log(`Fatal error in log "manager": ${error && error.message}`, 'ERROR');
       throw error}
   }
-}
 // Run the log manager if called directly
 if (require && require.main === module) {
   const manager = new LogManager();

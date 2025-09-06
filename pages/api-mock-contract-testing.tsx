@@ -1,7 +1,3 @@
-import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
-export default function ApiMockContractTestingPage() {
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -71,12 +67,6 @@ export default function ApiMockContractTestingPage(req, res) {
 ;
   const tiers = [;
   return (
-    <Layout>;
-      <Head>;
-        <title>API Mock & Contract Testing | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.'
         />;
         <link
           rel='canonical'
@@ -126,17 +116,7 @@ export default function ApiMockContractTestingPage(req, res) {
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
-            </div>
-            <div className='text-center'>
-              <a
-                href='/contact'
-                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'
-              >
-                Book a Demo
-              </a>            </div>
-            ))}
           </div>
-
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -159,6 +139,3 @@ export default function ApiMockContractTestingPage(req, res) {
 
     </Layout>);
 ;
-;
-
-

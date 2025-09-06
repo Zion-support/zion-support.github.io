@@ -7,13 +7,6 @@ import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
 
 
-// Import refactored components
-
-import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
-
-export default function FraudDetection() {
-  const [flags, setFlags] = useState<FraudFlag[]>([]),
-  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -51,7 +44,6 @@ export default function FraudDetection() {
     } finally {
       setIsLoading(false)
     }
-    }
     // Apply status filter
     if (statusFilter) {
       result = result.filter((flag) => flag.status === statusFilter)
@@ -70,20 +62,17 @@ export default function FraudDetection() {
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
-      console.error("Error updating fraud flag:", error);
+      console.error("Error updating fraud flag:", error),
       toast({
         title: "Error"
         description: "Failed to update flag"
         variant: "destructive"})
     }
-  }
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null)
-  }
-  const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
 
   return (
     <AppLayout>
@@ -111,10 +100,55 @@ export default function FraudDetection() {
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {;
     try {;
       const status = action === 'ignore' ? 'ignored' : 'actioned',;
+  // Fetch fraud flags;
+  const fetchFraudFlags = async () => {;
+    setIsLoading(true);
+import React, { useState, useEffect } from "react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { FraudFlag, FraudStats } from "@/types/fraud",;
+;
+// Import refactored components;
+import {;
+  FraudStatsCards,;
+  FraudFilters,;
+  FraudFlagsTable,;
+  FraudTabContent;
+} from "@/components/admin/fraud-detection",;
+;
+export default function FraudDetection() {;
+  const [flags, setFlags] = useState<FraudFlag[]>([]),;
+  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
+  const [severityFilter, setSeverityFilter] = useState<string | null>(null),;
+  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),;
+  const [stats, setStats] = useState<FraudStats>({;
+    total_flags:0,;
+    pending_flags:0,;
+    suspicious_count:0,;
+    dangerous_count:0,;
+    false_positives:0,;
+    actioned_count:0}),;
+;
+  // Fetch fraud flags;
+  const fetchFraudFlags = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from("fraud_flags");
+        .select("*");
       const actionTaken = action === 'ignore' ? 'none' : action,;
       const { error } = await supabase;
         .from("fraud_flags");
         .update({;
+          status;
           status,;
           action_taken: actionTaken,;
           reviewed_at: new Date().toISOString(),;
@@ -178,16 +212,12 @@ export default function FraudDetection() {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-          <TabsContent value="all" className="mt-6">
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
-
-          <TabsContent value="all" className="mt-6">;
-          <TabsContent value="all" className="mt - 6">;
             {/* Search and Filters */}
             <FraudFilters;
               search_query={search_query}
@@ -211,33 +241,41 @@ export default function FraudDetection() {
               </CardContent>;
             </Card>;
           </TabsContent>;
-
+          ;
           <TabsContent value="pending">;
             <FraudTabContent tabValue="pending" />;
           </TabsContent>;
-
+          ;
           <TabsContent value="dangerous">;
             <FraudTabContent tabValue="dangerous" />;
           </TabsContent>;
-
+          ;
           <TabsContent value="actioned">;
             <FraudTabContent tabValue="actioned" />;
           </TabsContent>;
         </Tabs>;
       </div>;
     </AppLayout>;
-  );
-}
-          <TabsContent value="pending">;
-            <FraudTabContent tab_value="pending" />;
-          </TabsContent>;
-          <TabsContent value="dangerous">;
-            <FraudTabContent tab_value="dangerous" />;
-          </TabsContent>;
-          <TabsContent value="actioned">;
-            <FraudTabContent tab_value="actioned" />;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </AppLayout>);
+  ),; //Import refactored components import {
+  FraudStatsCards;
+FraudFilters;
+FraudFlagsTable;
+FraudTabContent const [stats, setStats] = useState<FraudStats> ({
+  total flags: 0;
+pending flags: 0;
+suspicious count: 0;
+dangerous count: 0;
+false positives: 0;
+actioned count: 0 
+});
+//Fetch fraud flags const fetchFraudFlags = async () => {
+  setIsLoading (true);
+try {
+  const {
+  data, error 
+}= await supabase setFlags (data || []);
+setFilteredFlags (data || []);
+//Calculate stats 
+}finally {
+  setIsLoading (false) 
 }

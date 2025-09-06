@@ -9,4 +9,3 @@ const ChatAssistantTrigger = ({ className }) => {
   );
 };
 
-export default ChatAssistantTrigger;

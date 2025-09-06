@@ -44,6 +44,8 @@ Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+return (
+    <>;
 
   projectId: string,
   milestoneId?: string,
@@ -81,7 +83,6 @@ export function RaiseDisputeButton({
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
-          <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
               Please provide details about the issue you're experiencing with
@@ -161,6 +162,7 @@ export function RaiseDisputeButton({;
           </DialogHeader>;
           <DisputeForm;
             projectId={projectId}
+            projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
@@ -168,5 +170,3 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
-}

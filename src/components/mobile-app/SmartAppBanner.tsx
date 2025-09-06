@@ -1,22 +1,9 @@
-
-import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage",
-import { X, ArrowRight } from 'lucide-react'
-import Link from "next/link";
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-
-import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from 'lucide-react'import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  delay?: number, // Delay in milliseconds before showing the banner
-}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
@@ -25,7 +12,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-      }, delay)
       return () => clearTimeout(timer)
     }
     return undefined
@@ -38,7 +24,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
   // Only render on mobile devices
-  if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
@@ -64,12 +49,19 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
-
+          <h4 className="font-semibold text-white">{appName}</h4>
+          <p className="text-xs text-gray-300">Get our app for the best experience</p>
+        </div>
+        
         
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
+        
+        <div className="flex items-center gap-3">
+          <Link
+        
 
         
         <div className="flex items-center gap-3">
@@ -80,7 +72,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
-
+          <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
           
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
@@ -244,5 +236,3 @@ if ( {) {
       </div>;
     </div>);
 }
-
-

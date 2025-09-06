@@ -7,6 +7,17 @@ import Link from 'next/link', // For a back button, changed from react-router-do
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
+const WhitepaperViewPage: React.FC = () => {
+  const router = useRouter()
+  const { id: rawId } = router.query
+  const id = typeof rawId === 'string' ? rawId : undefined
+  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const { isAdmin } = useAuth(), // Get admin status
+  useEffect((,) => {
+    const fetchWhitepaper = async () => {
+      if (!id) {
 
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
@@ -63,94 +74,6 @@ const WhitepaperViewPage: React.FC = () => {
       if (!id) {
       } finally {
         set_loading (false);
-      }
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router', // Changed from useParams;
-import { supabase } from '@/integrations/supabase/client';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link', // For a back button, changed from react-router-dom;
-import {logErrorToProduction} from '@/utils/productionLogger';
-// Placeholder for user context/role checking;
-// In a real app, this would come from an auth context;
-const useAuth = () => {;
-    // const { user } = useUserContext(), // Example from a real app;
-    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },;
-    return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example;
-},;
-
-interface SharedWhitepaper {;
-  whitepaper_data: {;
-    tokenName: string,;
-    tokenSupply: string,;
-    sections: Array<{ id: string, title: string, content: string }>,;
-    distributionChartData: Array<{ name: string, value: number }>,;
-    distributionBreakdown?: string;
-  },;
-  created_at: string,;
-  is_public: boolean;
-}
-
-const WhitepaperViewPage: React.FC = () => {;
-  const router = useRouter(),;
-  const { id: rawId } = router && router.query,;
-  const id = typeof rawId === 'string' ? rawId : undefined,;
-  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),;
-  const [loading, setLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  const { isAdmin } = useAuth(), // Get admin status;
-
-  useEffect((,) => {;
-    const fetchWhitepaper = async () => {;
-      if (!id) {;
-        setError("No whitepaper ID provided."),;
-        setLoading(false),;
-        return;
-      }
-      setLoading(true),;
-      setError(null),;
-      try {;
-        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
-          body: { id }}),;
-
-        if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
-        if (!responseData || !(responseData as any).whitepaper_data) {;
-          throw new Error('Shared whitepaper not found or data is invalid.');
-        }
-
-        setSharedData(responseData as SharedWhitepaper);
-
-      } catch (e: any) {;
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),;
-        setError(e && e.message || 'An unexpected error occurred.');
-      } finally {;
-        setLoading(false);
       }
     fetchWhitepaper()
   }, [id])
@@ -253,8 +176,9 @@ const WhitepaperViewPage: React.FC = () => {;
                 </span>;
             )}
         </div>;
-      <WhitepaperPreviewPanel
 
+export default WhitepaperViewPage;
+export default WhitepaperViewPage;
     },
     fetch_whitepaper ();
   }, [id]),
@@ -326,4 +250,3 @@ if ( {) {
 },
 export default WhitepaperViewPage,
 ;
-export default WhitepaperViewPage;

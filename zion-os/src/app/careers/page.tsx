@@ -1,11 +1,4 @@
       requirements: [;
-        'PhD in Computer Science, AI, or related field5+ years experience in AI researchExpertise in machine learning and neural networksExperience with quantum computing concepts']}
-    {title: 'Quantum Computing Engineer';
-      department: 'Quantum Solutions';
-      location: 'Remote / Global';
-      type: 'Full-time';
-      description: 'Develop next-generation quantum algorithms and quantum computing infrastructure.';
-      requirements: [;
         'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computingKnowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']}
     {title: 'Full-Stack Developer';
       department: 'Engineering';

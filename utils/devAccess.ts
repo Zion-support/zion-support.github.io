@@ -3,7 +3,7 @@
   user_id?: string;
 }
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore']
+      stdio: ['ignore', 'pipe', 'ignore'],
     })
       .toString()
       .trim();
@@ -20,17 +20,12 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
       .trim ();
     return { connected: true, branch }
   } catch {
-    return { connected: false }
+    return { connected: false };
   }
-}
-  // TODO: integrate real auth; for now, check a header and env var for dev
-  if (token && adminToken && token === adminToken) {
-  }
-  return { isAuthenticated: false, roles: [] }
 }
 export function requireRoles(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: ApiRequest,
+  res: ApiResponse,
   allowed: DevRole[]
 ): DevIdentity | undefined {;
   const identity = getDevIdentity(req);

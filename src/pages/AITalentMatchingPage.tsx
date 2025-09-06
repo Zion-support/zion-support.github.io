@@ -1,7 +1,3 @@
-import { Bot, Users, TrendingUp } from 'lucide-react'
-
-export default function AITalentMatchingPage() {
-
 export default function AITalentMatchingPage() {
 
   const benefits = [
@@ -9,6 +5,22 @@ export default function AITalentMatchingPage() {
       icon: Bot
       title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
+export default function AITalentMatchingPage() {;
+  const benefits = [;
+    {;
+      icon: Bot,;
+      title: "AI-Powered Matching",;
+      description: "Advanced algorithms match the right talent with the right opportunities";
+    },;
+    {;
+      icon: Users,;
+      title: "Verified Professionals",;
+      description: "All candidates are pre-screened and verified for quality";
+    },;
+    {;
+      icon: TrendingUp,;
+      title: "Success Tracking",;
+      description: "Monitor performance and success rates of placements";
     }
     {
       icon: Users
@@ -32,24 +44,6 @@ export default function AITalentMatchingPage() {
   const stats = [
     { label: "Successful Placements", value: "95%" }
     { label: "Client Satisfaction", value: "98%" }
-export default function AITalentMatchingPage() {;
-  const benefits = [;
-    {;
-      icon: Bot,;
-      title: "AI-Powered Matching",;
-      description: "Advanced algorithms match the right talent with the right opportunities";
-    },;
-    {;
-      icon: Users,;
-      title: "Verified Professionals",;
-      description: "All candidates are pre-screened and verified for quality";
-    },;
-    {;
-      icon: TrendingUp,;
-      title: "Success Tracking",;
-      description: "Monitor performance and success rates of placements";
-    }
-  ];
 
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
@@ -60,7 +54,6 @@ export default function AITalentMatchingPage() {
     {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
-      icon: <Bot className = "h-8 w-8" />},
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -133,6 +126,8 @@ function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
   ];
+      avatar: "/placeholder.svg"}],
+
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -184,11 +179,6 @@ export default function AITalentMatchingPage() {;
       stats={stats}
       ctaText="Start Matching Talent"
       ctaLink="/contact"
-    />
-  )
-}
-}
-}
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);

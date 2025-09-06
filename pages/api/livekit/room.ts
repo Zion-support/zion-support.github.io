@@ -15,17 +15,6 @@ export default async function handler(
     const { projectId, preferredName } = req.body |{}
     if (!projectId) {
       return res && res.status(400).json({ error: "Missing projectId" });
-    }
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-      return res && res.status(500).json({ error: "LiveKit env vars not configured" });
-    }
-
-    if (!projectId) {
-      return res.status(400).json({ error: 'Missing projectId' })
-    }
-    if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
-      return res.status(500).json({ error: "LiveKit env vars not configured" });
-      return res && res.status(500).json({ error: "LiveKit env vars not configured" });
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
     }
     const date = new Date();
@@ -144,16 +133,5 @@ if ( {) {
     }
     return res.status (200).json ({ room_name });
   } catch (err: any) {
-  }
-  }
-}
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
   }
 }

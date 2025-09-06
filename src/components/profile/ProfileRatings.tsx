@@ -1,12 +1,3 @@
-  return (
-    <div className='space-y-6'>
-      <div className='flex flex-col md:flex-row gap-6'>
-        <div className='md:w-1/3'>          <ReviewStats
-
-  return (
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
 interface ProfileRatingsProps {
 
   userId: string
@@ -114,35 +105,12 @@ export function ProfileRatings(): any ({;
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId])
-  }, [reviews]);
-
-  // Fetch reviews when component mounts;
-  useEffect(() => {;
-    fetchUserReviews(userId);
-  }, [userId]);
-  return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
-        <div className="md:w-2/3">
-          <Tabs defaultValue="all">
-            <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
-              <TabsTrigger value="positive">Positive</TabsTrigger>
-              <TabsTrigger value="critical">Critical</TabsTrigger>
-            </TabsList>
-            <TabsContent value="all">
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}              />
-            </TabsContent>
-            <TabsContent value="positive">
-              <ReviewsList
-            ratingDistribution={ratingDistribution}
-          />
         </div>
         <div className='md:w-2/3'>
           <Tabs defaultValue='all'>
@@ -166,32 +134,6 @@ export function ProfileRatings(): any ({;
                 isLoading={isLoading}
                 onReportReview={reportReview}              />
             </TabsContent>
-            <TabsContent value='positive'>
-            ratingDistribution={ratingDistribution}          />;
-        </div>;
-
-        <div className='md:w-2/3'>;
-          <Tabs defaultValue='all'>;
-            <TabsList className='mb-4'>;
-              <TabsTrigger value='all'>;
-                All Reviews ({reviews && reviews.length});
-              </TabsTrigger>;
-              <TabsTrigger value='positive'>Positive</TabsTrigger>;
-              <TabsTrigger value='critical'>Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value='all'>              <ReviewsList
-        <div className="md:w-2/3">;
-          <Tabs defaultValue="all">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="all">All Reviews ({reviews && reviews.length})</TabsTrigger>;
-              <TabsTrigger value="positive">Positive</TabsTrigger>;
-              <TabsTrigger value="critical">Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value="all">;
-                reviews={reviews}
-                reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}              />;
             </TabsContent>;
@@ -210,50 +152,11 @@ export function ProfileRatings(): any ({;
 
             <TabsContent value='critical'>;
               <ReviewsList
-                reviews={reviews && reviews.filter(r => r && r.rating < 4)}                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
-
-            <TabsContent value="critical">;
-              <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-            
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-              />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </div>
-  )
-}, [reviews])
-//Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating
-}totalReviews= {
-  ratingCount
-}ratingDistribution= {
-  ratingDistribution "
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
@@ -399,32 +302,3 @@ if ( {) {
           </Tabs>;
         </div>;
       </div>;
-    </div>);
-}, [reviews]);
-//Fetch reviews when component mounts return (<div className="space - y-6" > <div className="flex flex - col md:flex - row gap - 6" > <div className="md:w - 1/3" > <ReviewStats average_rating= {
-  average_rating;
-}total_reviews= {
-  rating_count;
-}rating_distribution= {
-  rating_distribution ";
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews;
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review;
-}/> </TabsContent> </Tabs> </div> </div> </div>);
-}"}
-}

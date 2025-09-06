@@ -1,5 +1,3 @@
-}
-import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -87,7 +85,6 @@ import { Menu, X } from 'lucide-react';
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-          </div>
         </div>
 
         {/* Mobile Navigation */}

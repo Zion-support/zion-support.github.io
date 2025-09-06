@@ -41,9 +41,6 @@ import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-// Define form schema
-
-const formSchema = z.object({
     required_error: 'Start date is required'
   })
   end_date: z.date().optional()
@@ -79,6 +76,10 @@ export function WorkExperienceItemForm({
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
   // Set up form
+// Set up form
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -144,23 +145,24 @@ export function WorkExperienceItemForm({
     setIsEnhancementDialogOpen(false)
   },
 
-  return (
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-
-              name="company_name"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='role_title'
+              render={({ field }: { field: any }) => (                <FormItem>
+ursor/fix-website-loading-errors-and-merge-6662
 
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -240,32 +242,6 @@ function WorkExperienceItemForm() {
     form.set_value ('description', content, { should_dirty: true });
     setIsEnhancementDialogOpen (false);
   }
-import { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { WorkExperience } from '@/types/resume';
-import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import {;
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
-import { Switch } from '@/components/ui/switch';
-import { format } from 'date-fns';
-import { CalendarIcon, Loader2 } from 'lucide-react';
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -279,44 +255,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   <FormMessage />;
                 </FormItem>;
               )}
-            <FormField
-              control={form && form.control}
-              name='location'
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel>Location</FormLabel>;
-                  <FormControl>;
-                    <Input
-                      placeholder='e && e.g. New York, NY (Remote)'
-  return (
-    <>;
-      <Form {...form}>;
-        <form;
-          on_submit={form.handle_submit (handleFormSubmit)}
-          className='space - y-6';
-        >;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <FormField;
-              control={form.control}
-              name='company_name';
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel > Company Name</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder='e.g. Acme Corporation' {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name='role_title';
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel > Role Title</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder='e.g. Senior Developer' {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -325,21 +263,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                 </FormItem>
               )}
             />
-            <FormField
-              control={form && form.control}
-              name='is_current'
-              render={({ field }: { field: any }) => (;
-                <FormItem className='flex flex-col'>                  <FormLabel>Current Position</FormLabel>;
-                  <div className='flex items-center gap-2 h-10'>;
-                    <Switch
-                      aria-label='Current position'
-                      checked={field && field.value}
-                      onCheckedChange={field && field.onChange}
-                      id='current-position'                    />;
-                    <label
-                      htmlFor='current-position'
-                      className='text-sm text-muted-foreground'>;
-                </FormItem>)}
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -347,7 +270,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   <FormMessage />
                 </FormItem>
               )}
-
             />;
             <FormField;
               control={form.control}
@@ -375,14 +297,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-                            "w-full pl-3 text-left font-normal",
-                            !field.value && "text-muted-foreground"
-                          )}
-                        >
-                          {field.value ? (
-                            format(field.value, "MMM yyyy")
-                          ) : (
-                            <span>Select date</span>
                 </FormItem>)}
             />;
           </div>;
@@ -415,30 +329,15 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   <FormMessage />;
                 </FormItem>;
               )}
-              <FormField
-                control={form && form.control}
-                name='end_date'
-                render={({ field }: { field: any }) => (;
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;
-                    <Popover>;
-                      <PopoverTrigger asChild>;
-                        <FormControl>;
-                          <Button
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
-
-                            variant={"outline"}
                             className={cn(
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
-                            {field.value ? (
-                              format(field.value, "MMM yyyy")
-                            ) : (
-                              <span>Select date</span>
                     <PopoverContent className='w - auto p - 0' align='start'>;
                       <Calendar;
                         mode='single';
@@ -484,19 +383,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                 )}
               />;
             )}
-          <FormField
-            control={form && form.control}
-            name='description'
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <div className='flex justify-between items-center'>;
-                  <FormLabel>Description</FormLabel>;
-                  <div className='flex gap-2'>;
-                    <AIEnhancementButton
-                      options={{
-                        enhancementType: 'work-description'
-                        content: field.value |''
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
                       }
                       buttonText='Enhance with AI';
                     />;
@@ -522,15 +408,24 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                   </FormItem>)}
               />)}
           </div>;
-          <FormField;
-            control={form.control}
-            name='description';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <div className='flex justify - between items - center'>;
-                  <FormLabel > Description</FormLabel>;
-                  <div className='flex gap - 2'>;
-                    <AIEnhancementButton;
+
+
+            control={form && form.control}
+            name='description'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <div className='flex justify-between items-center'>
+                  <div className="flex gap-2">
+                    <AIEnhancementButton
                       options={{
+                )}
+              />
+            )}
+          </div>
+          <FormField
+            control={form.control}
+            name='description'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <div className='flex justify-between items-center'>
                         enhancement_type: 'work - description',
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -593,9 +488,6 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
                 </div>
                 <FormControl>
                   <Textarea
-
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
-                    className="min-h-[150px]"
                     {...field}
                   />
                 </FormControl>
@@ -643,8 +535,6 @@ location: z.string () .optional ()
 type FormValues = z.infer<typeof formSchema>
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience)
-}
-setIsEnhancementDialogOpen (false);
 }
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;

@@ -67,20 +67,10 @@ function helpText(): string {
         await respond({ response_type: 'ephemeral', text: 'Project not found.' });
         return
       }
-      await respond({ response_type: 'ephemeral', text: `*${data && data.project.name}*  status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}` });
       return
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
-  }
-});
-(async () => {
-  // eslint-disable-next-line no-console
-console.log(` Zion Slack bot running on port ${port}`);
-})();  console.log(` Zion Slack bot running on port ${port}`)
-})();
-
-  console.log(` Zion Slack bot running on port ${port}`)
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);

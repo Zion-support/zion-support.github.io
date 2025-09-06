@@ -1,8 +1,3 @@
-
-import React from 'react';
-
-              Something went wrong on our end. We&apos,re working to fix it. 
-              Something went wrong on our end. We're working to fix it.
               Please try again in a few moments.
             </p>
           </div>
@@ -30,14 +25,6 @@ import React from 'react';
       </div>
     </>
   )
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * Custom500 - Function description
- */
-function Custom500() {
-  return (
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;

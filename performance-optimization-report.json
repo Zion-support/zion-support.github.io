@@ -1,13 +1,4 @@
 {
-    {
-      "type": "image-optimization",
-      "filesProcessed": 18,
-      "recommendations": [
-        "Consider using WebP format for better compression",
-        "Implement lazy loading for images",
-        "Use responsive images with srcset"
-      ]
-      "type": "code-splitting",
       "recommendations": [
         "Implement route-based code splitting",
         "Use dynamic imports for large components",
@@ -22,5 +13,4 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
-  ]
 }

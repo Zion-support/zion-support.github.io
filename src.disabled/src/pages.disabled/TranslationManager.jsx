@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TranslationManagerProps {
   // Add props here as needed
-}
 export default function TranslationManager({ }: TranslationManagerProps) {
   return (
     <div>

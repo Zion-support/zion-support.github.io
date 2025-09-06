@@ -10,30 +10,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-import { supabase } from '../../../utils / supabase / client';
-import {
-  NotificationItem,
-  NotificationType,
-} from '../../../utils / notifications';
-;
-function getUserId (req: NextApiRequest): string {
-  const cookie = req.headers.cookie || '';
-  const match = cookie;
-    .split (';');
-    .map (c => c.trim ());
-    .find (c => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
-  $2
-}
-  return 'demo - user - 1';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const user_id = getUserId (req);
-    const {
     }
     // Build query based on filter
     let query = supabase
@@ -51,12 +27,6 @@ function handler() {
     } else if (['systemonboardingquotematch'].includes(filter)) {
       query = query && query.eq('type', filter as NotificationType);
     }
-
-    const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-    const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-
-    const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [

@@ -54,9 +54,6 @@ import React, { useState } from 'react';
             .filter(Boolean)
         })
 
-export default function UNBridge(req, res) {
-  try {
-  const [form, setForm] = useState({;
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
@@ -104,10 +101,6 @@ export default function UNBridge(req, res) {
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working' : 'Generate Proposal'}</button>
           </div>
         </div>
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
-            {result?.markdown || 'No draft yet'}
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>

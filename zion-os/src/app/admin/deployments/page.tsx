@@ -88,9 +88,6 @@ const mockDeployments: Deployment[] = [
     switch (status) {
       case 'completed':
         return 'text-green-400';
-        return 'text-gray-400';
-    }
-  ];
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
@@ -270,7 +267,6 @@ const getVerticalIcon = (vertical: string) => {
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
-
       {/* Deployments Grid */}
           <div
             key={deployment && deployment.id}
@@ -294,10 +290,6 @@ const getVerticalIcon = (vertical: string) => {
             key={deployment && deployment.id}
             className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
-        ))}
-      </div>
-      {/* Deployments Grid */}
-
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
@@ -322,12 +314,6 @@ const getVerticalIcon = (vertical: string) => {
                     </div>;
                   </div>;
                 </div>;
-
-
-              {/* Progress Bar for Active Deployments */}
-              {deployment && deployment.status === 'deploying' && (;
-                <div className='space-y-2'>;
-                  <div className='flex justify-between text-sm text-white/70'>;
                     <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
@@ -386,37 +372,6 @@ const getVerticalIcon = (vertical: string) => {
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
                 )}
-              </div>
-              <div className='grid grid-cols-2 gap-4 text-sm'>;
-                <div className='flex items-center gap-2 text-white/70'>;
-                  <Globe className='w-4 h-4' />;
-                  <span className='font-mono'>;
-                    {deployment && deployment.domain ||;
-                      deployment && deployment.subdomain ||;
-                      'No domain set'}
-                  </span>;
-                </div>;
-                {(deployment && deployment.region || deployment && deployment.country) && (;
-                  <div className='flex items-center gap-2 text-white/70'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span>;
-                      {[deployment && deployment.region, deployment && deployment.country];
-                        .filter(Boolean);
-                        .join(', ')}
-                    </span>                  </div>              {/* Domain & Location */}
-              <div className="grid grid-cols-2 gap-4 text-sm">;
-                <div className="flex items-center gap-2 text-white/70">;
-                  <span></span>;
-                  <span className="font-mono">;
-                    {deployment && deployment.domain || deployment && deployment.subdomain || 'No domain set'}
-                  </span>;
-                </div>;
-                {(deployment && deployment.region || deployment && deployment.country) && (;
-                  <div className="flex items-center gap-2 text-white/70">;
-                    <span></span>;
-                    <span>{deployment && deployment.region} {deployment && deployment.country}</span>;
-                  </div>;
-                )}
               </div>;
 
               {/* Features */}
@@ -429,9 +384,6 @@ const getVerticalIcon = (vertical: string) => {
                       +{deployment && deployment.features.length - 4} more;
                     </span>;
                   )}
-                </div>
-              </div>
-              {/* Timestamps */}
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -441,7 +393,6 @@ const getVerticalIcon = (vertical: string) => {
                     <span>🔄</span>
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
-
               {/* Timestamps */}
 
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
@@ -458,43 +409,11 @@ const getVerticalIcon = (vertical: string) => {
               </div>
             </div>
             {/* Action Buttons */}
-            <div className='p-6 pt-0'>;
-              <div className='flex gap-2'>;
-                {deployment && deployment.status === 'pending' && (;
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>;
                     <Play className='w-4 h-4' />;
                     Start Deployment;
                   </button>;
                 )}
-                {deployment.status === 'deploying' && (
-                  <>
-                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
-                      <Pause className='w-4 h-4' />
-                      Pause
-                    </button>
-                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
-                      <StopCircle className='w-4 h-4' />
-                      Stop
-                    </button>
-                  </>
-                )}
-                {deployment.status === 'completed' && (
-                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
-                    <Eye className='w-4 h-4' />
-                    View Instance
-                  </button>
-                )}
-                {deployment.status === 'failed' && (
-                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
-                    <RefreshCw className='w-4 h-4' />
-                    Retry
-                  </button>
-                )}
-                <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
-                  <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
-                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                     Start Deployment
-                  </button>
                 )}
                 {deployment && deployment.status === 'deploying' && (;
                   <>;
@@ -522,8 +441,6 @@ const getVerticalIcon = (vertical: string) => {
               </div>;
             </div>;
           </div>;
-        ))}
-      </div>
       {/* Empty State */}
       {filteredDeployments && filteredDeployments.length === 0 && (;
         <div className='text-center py-16'>;
@@ -570,7 +487,4 @@ const getVerticalIcon = (vertical: string) => {
       )}
     </div>;
   );
-}
-    </div>))}
-    </div>);
 }

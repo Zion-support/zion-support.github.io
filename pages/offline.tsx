@@ -114,6 +114,7 @@ export default function OfflinePage(req, res) {
 }
 ;
 
+  };
   const quickActions = [;
     {;
       title: 'Browse Cached Equipment',;
@@ -139,14 +140,6 @@ export default function OfflinePage(req, res) {
     {;
       title: 'Go to Homepage',;
       description: 'Return to the main page',;
-
-        />;
-        <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>;
-        <div className='container mx-auto px-4 py-8'>;
-          <motion&& motion.div
-
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -215,7 +208,12 @@ export default function OfflinePage(req, res) {
             </h1>
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
-                : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
+                : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </p>
             {lastUpdate && (
           {/* Action Buttons */}
@@ -412,59 +410,18 @@ export default function OfflinePage(req, res) {
           </motion.div>;
           {/* Tips Section */}
           <motion.div;
-          >
-            <Card className='max-w-2xl mx-auto'>
-              <CardHeader>
-                <CardTitle className='text-center'> Offline Tips</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className='space-y-3 text-sm'>
-                  <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'></span>
-                    <span>
-                      Recently viewed pages are cached and available offline
-                    </span>
-                  </div>
-                  <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'></span>
-                    <span>
-                      Your bookmarks and saved items can be accessed anytime
-                    </span>
-                  </div>
-                  <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'></span>
-                    <span>
-                      Form submissions will be synced when you reconnect
-                    </span>
-                  </div>
-                  <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'></span>
-                    <span>
-                      Check your internet connection and try refreshing the page
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
                     <span>;
                       Recently viewed pages are cached and available offline;
                     </span>;
                   </div>;
-                  <div className='flex items-start gap-2'>;
-                    <span className='text-blue-600 font-semibold'></span>;
                     <span>;
                       Your bookmarks and saved items can be accessed anytime;
                     </span>;
                   </div>;
-                  <div className='flex items-start gap-2'>;
-                    <span className='text-blue-600 font-semibold'></span>;
                     <span>;
                       Form submissions will be synced when you reconnect;
                     </span>;
                   </div>;
-                  <div className='flex items-start gap-2'>;
-                    <span className='text-blue-600 font-semibold'></span>;
                     <span>;
                       Check your internet connection and try refreshing the page;
                     </span>;
@@ -472,25 +429,6 @@ export default function OfflinePage(req, res) {
                 </div>;
               </CardContent>;
             </Card>;
-          </motion && motion.div>;
-
-          {/* Auto-refresh when online */}
-          {isOnline && (;
-            <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className='fixed bottom-6 right-6 z-50'>;
-              <Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800'>;
-                <CardContent className='p-4'>;
-                  <div className='flex items-center gap-3'>;
-                    <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />;
-                    <span className='text-sm font-medium text-green-700 dark:text-green-300'>;
-                      Connection restored;
-                    </span>;
-                    <Button
-                      size='sm'
-                      onClick={() => window && window.location.reload()}
-                      className='bg-green-600 hover:bg-green-700';
           </motion.div>;
           {/* Auto - refresh when online */}
           {is_online && (
@@ -539,10 +477,6 @@ export default function OfflinePage(req, res) {
                 </CardContent>
               </Card>
             </motion.div>
-          )}
-        </div>
-      </div>
-    </>
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -552,7 +486,3 @@ export default function OfflinePage(req, res) {
       </div>;
     </>;
   );
-} ;
-} ;
-
-

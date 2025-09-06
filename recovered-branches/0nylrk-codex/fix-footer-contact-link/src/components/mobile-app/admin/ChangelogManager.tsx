@@ -20,12 +20,6 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 }
 type ChangelogEntry = {
-
-}
-;
-export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
-  platform,
-
 }) => {
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
@@ -44,50 +38,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
-    {
-      id: "1",
-      version: "1.0.0",
-      date: "2025-05-15",
-
-  return (
-    <Card className="bg-zion-blue border-zion-purple/30">
-      <CardHeader>
-        <CardTitle>Version History</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <div className="flex flex-col md:flex-row gap-3">
-            <div className="flex-1 grid grid-cols-2 gap-3">
-              <Input
-                placeholder="Version (e.g. 1.0.1)"
-                name="version"
-                value={newEntry.version}
-                onChange={handleInputChange}
-              />
-              <Input
-                type="date"
-                name="date"
-import React, { useState } from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Plus, Trash2 } from "lucide-react",;
-import { AppPlatform } from "./MetadataManager",;
-interface ChangelogManagerProps {;
-  platform: AppPlatform;
-}
-
-type ChangelogEntry = {;
-  id: string;
-  version: string;
-  date: string;
-  changes: string;
-}
-export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
-  platform
-}) => {
-  const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
       id: "1"
       version: "1.0.0"
@@ -122,7 +72,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     const { name, value } = e.target;
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
-  return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
@@ -131,26 +80,35 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-              <Input
-                placeholder="Version (e && e.g. 1 && 1.0.1)"
-                name="version"
-                value={newEntry && newEntry.version}
+
+              onClick={handleAddEntry}
+
+            <Button
+              onClick={handleAddEntry}
+              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+              <Input;
+                placeholder="Version (e.g. 1.0.1)";
+                name="version";
+                value={newEntry.version}
                 onChange={handleInputChange}
               />;
-              <Input
-                type="date"
-                name="date"
-                value={newEntry && newEntry.date}
+              <Input;
+                type="date";
+                name="date";
+                value={newEntry.date}
                 onChange={handleInputChange}
               />;
             </div>;
+            <Button ;
               onClick={handleAddEntry}
-
-              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+              disabled={!newEntry.version || !newEntry.changes}
+            >;
               <Plus className="mr-2 h-4 w-4" />;
               Add;
             </Button>;
           </div>;
+
+          
 
 
           <Textarea
@@ -159,18 +117,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry) => (
-              <div
-                key={entry && entry.id}
-                className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
-                <div className="flex justify-between mb-2">;
-                  <div className="flex items-center gap-3">;
-                    <span className="text-zion-cyan font-semibold">;
-                      v{entry && entry.version}
-                    </span>;
-                    <span className="text-sm text-gray-400">{entry && entry.date}</span>;
-                  </div>;
                   <Button
                     variant="ghost"
                     size="sm"
@@ -197,7 +143,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
         </div>;
       </CardContent>;
     </Card>;
-  );
       id: "1",
       version: "1.0.0",
       date: "2025 - 05 - 15",
@@ -311,4 +256,3 @@ if (return) {
     </Card>);
 }
 ;
-};

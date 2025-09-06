@@ -27,23 +27,11 @@ const whitepapers = {
     category: 'Ethics',
     pages: '32',
     author: 'Zion Tech Group Ethics Committee',
-    publishDate: 'January 2025',
-    content: {
-      executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
-      keyTopics: [
-        'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
-      ],
-      targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
-    }
-  },
-  'automation-roi-calculator': {
-    id: 'automation-roi-calculator',
     title: 'Automation ROI Calculator Guide',
     description: 'How to calculate and maximize return on investment for automation initiatives.',
     category: 'Business',
     pages: '28',
     author: 'Zion Tech Group Business Analytics Team',
-    publishDate: 'January 2025',
     content: {
       executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       keyTopics: [
@@ -93,15 +81,6 @@ import { useRouter } from 'next/router';
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
-  }
-},
-export default /**
- * WhitepaperPage - Function description
- */
-function WhitepaperPage() {
-  const router = use_router (),
-  const { id } = router.query,
-  const whitepaper = whitepapers[id as keyof typeof whitepapers],
   // Check condition
 if ( {) {
   $2
@@ -120,6 +99,29 @@ if ( {) {
         </main>;
       </div>);
   }
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+  return (
+
+
+          {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+          <nav className="mb-8">
+            <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Resources
+            </Link>
+          </nav>
+
   return (
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -167,54 +169,17 @@ if ( {) {
                       <span className="text-white/90">{topic}</span>
                     </div>
                   </div>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
             </section>
-
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
-            </p>;
-            <div className="flex flex - wrap justify - center gap - 6 text - sm text - white / 60">;
-              <span > By {whitepaper.author}</span>;
-              <span></span>;
-              <span>{whitepaper.pages} pages</span>;
-              <span></span>;
-              <span>{whitepaper.publish_date}</span>;
-            </div>;
-          </header>;
-          {/* Whitepaper Content */}
-          <div className="max - w-4xl mx - auto">;
-            <section className="mb - 12">;
-              <h2 className="text - 3xl font - bold mb - 6 text - cyan - 400">Executive Summary</h2>;
-              <p className="text - lg text - white / 80">{whitepaper.content.executive_summary}</p>;
-            </section>;
-            <section className="mb - 12">;
-              <h2 className="text - 3xl font - bold mb - 6 text - fuchsia - 400">Key Topics Covered</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-                {whitepaper.content.key_topics.map ((topic, index) => (
-                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - lg p - 4 border border - white / 20">;
-                    <div className="flex items - center gap - 3">;
-                      <div className="w - 2 h - 2 bg - fuchsia - 400 rounded - full"></div>;
-                      <span className="text - white / 90">{topic}</span>;
-                    </div>;
-                  </div>))}
-              </div>;
-            </section>;
-            <section className="mb - 12">;
-              <h2 className="text - 3xl font - bold mb - 6 text - green - 400">Target Audience</h2>;
-              <p className="text - lg text - white / 80">{whitepaper.content.target_audience}</p>;
-            </section>;
-            {/* Download Section */}
-            <section className="mb - 12">;
-              <div className="bg - gradient - to - r from - fuchsia - 500 / 10 to - purple - 500 / 10 rounded - 2xl p - 8 border border - fuchsia - 500 / 20 text - center">;
-                <h2 className="text - 2xl font - bold mb - 4 text - white">Ready to Download?</h2>;
-                <p className="text - white / 80 mb - 6">;
-                  Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.;
-                </p>;
-                <button className="px - 8 py - 4 bg - gradient - to - r from - fuchsia - 400 to - purple - 400 text - white rounded - lg font - semibold hover:from - fuchsia - 500 hover:to - purple - 500 transition - all duration - 300 text - lg">;
-                  Download {whitepaper.title}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -222,7 +187,7 @@ if ( {) {
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
                 </p>
                 <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
-
+                  Download {whitepaper.title}
                   Download {whitepaper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -230,10 +195,6 @@ if ( {) {
 }
                 </button>
                 <p className="text-white/60 text-sm mt-4">
-                  PDF format  {whitepaper.pages} pages  Free download
-                </p>
-              </div>
-            </section>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -495,11 +456,6 @@ export default function WhitepaperPage(req, res) {
                 <p className="text-white/80 mb-6">;
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.;
                 </p>;
-                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-                  <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300">;
-                    Contact Us;
-                  </Link>;
-                  <Link href="/services" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300">;
                     Our Services;
                   </Link>;
                 </div>;

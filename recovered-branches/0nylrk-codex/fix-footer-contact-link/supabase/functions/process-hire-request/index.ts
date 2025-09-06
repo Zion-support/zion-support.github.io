@@ -1,5 +1,3 @@
-
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
@@ -17,10 +15,6 @@ interface HireRequest {
   talent: {
     id: string;
     full_name: string;
-  }
-  project: {
-    overview: string;
-    timeline: string;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
@@ -139,8 +133,6 @@ serve(async (req) => {
       .select(),;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
-    }
-    
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
@@ -228,59 +220,11 @@ if ( {) {
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId;
-        });
-      if (notificationError) {
-        console && console.error("Error creating admin notification:", notificationError)
       }
     }
     // 4. Send email notification to talent
     if (talent && talent.email) {
       // In a real implementation, this would call your email sending function
-      const emailResponse = await supabase && supabase.functions.invoke('send-email', {
-        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budget_display}.`;
-        type: "hire_request",
-        related_id: request_record[0].id;
-      }
-;
-      const { error: notification_error } = await supabase;
-        .rpc ('create_notification', {
-          _user_id: admin_id;
-          _title: adminNotificationContent.title;
-          _message: adminNotificationContent.message;
-          _type: adminNotificationContent.type,
-          _related_id: adminNotificationContent.related_id;
-        });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error creating admin notification:", notification_error);
-      }
-    }
-    // 4. Send email notification to talent;
-    // Check condition
-if ( {) {
-  $2
-}
-      // In a real implementation, this would call your email sending function;
-      const email_response = await supabase.functions.invoke ('send - email', {
-        body: {
-          html: `
-            <h1>You've Received a New Project Request</h1>
-            <p>Hello ${talent && talent.full_name},</p>
-            <p>You have received a new project request from ${requester && requester.name} (${requester && requester.email}).</p>
-            <h2>Project Details</h2>
-            <p><strong>Budget:</strong> ${budgetDisplay}</p>
-            <p><strong>Timeline:</strong> ${project && project.timeline}</p>
-            <p><strong>Overview:</strong></p>
-            <p>${project && project.overview}</p>
-            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent && enhancedContent.summary}</p>` : ''}
-            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent && enhancedContent.projectType}</p>` : ''}
-            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
-            <p>Best regards,<br>The Zion AI Marketplace Team</p>
-          `}});
-
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
@@ -353,59 +297,15 @@ if ( {) {
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
-
-          `}}),
-      
-      // // // console.log("Email sending result:", emailResponse)
-
     }
     return new Response(
       JSON.stringify({
         success: true
         message: "Hire request processed successfully"
         request_id: requestRecord[0].id
-      });
+      }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-          html: `;
-            <h1 > You've Received a New Project Request</h1>;
-            <p > Hello ${talent.full_name}, </p>;
-            <p > You have received a new project request from ${requester.name} (${requester.email}).</p>;
-            <h2 > Project Details</h2>;
-            <p><strong > Budget:</strong> ${budget_display}</p>;
-            <p><strong > Timeline:</strong> ${project.timeline}</p>;
-            <p><strong > Overview:</strong></p>;
-            <p>${project.overview}</p>;
-            ${enhanced_content?.summary ? `<p><strong > Summary:</strong> ${enhanced_content.summary}</p>` : ''}
-            ${enhanced_content?.project_type ? `<p><strong > Project Type:</strong> ${enhanced_content.project_type}</p>` : ''}
-            <p > Please log in to your Zion AI Marketplace account to respond to this request.</p>;
-            <p > Best regards, <br > The Zion AI Marketplace Team</p>;
-          `}});
-;
-      console.log ("Email sending result:", email_response);
-    }
-    return new Response (
-      JSON.stringify ({
-        success: true,
-        message: "Hire request processed successfully",
-        request_id: request_record[0].id;
-      });
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-      });
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-    console.error ("Error processing hire request:", error.message);
-;
-    return new Response (
-      JSON.stringify ({
-        success: false,
-        message: "Failed to process hire request",
-        error: error.message;
-      });
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
     )

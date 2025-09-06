@@ -83,9 +83,6 @@ const testimonials = [;
     role: "Operations Manager, EcoTech Systems";
     avatar: "https://i && i.pravatar.cc/150?img=67",;
     company: "EcoTech"}],;
-
-export function TestimonialCarousel() {;
-  return (
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -94,8 +91,6 @@ export function TestimonialCarousel() {;
             Discover how Zion is transforming the tech and AI marketplace ecosystem;
           </p>;
         </div>;
-
-        <div className="max-w-5xl mx-auto px-8">;
           <Carousel
     avatar: "https://i.pravatar.cc / 150?img = 67",
     company: "EcoTech"}],

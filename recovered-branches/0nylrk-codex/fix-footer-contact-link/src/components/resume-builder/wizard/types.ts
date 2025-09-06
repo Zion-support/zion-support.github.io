@@ -1,19 +1,8 @@
 
-import {Resume} from "@/types/resume";
 export interface StepProps {
   id: string;
   label: string
 }
-
-import { Resume } from "@/types/resume",
-
-import {Resume} from "@/types/resume";
-  onBack?: () => void;
-  onNext?: () => void;
-  isNextDisabled?: boolean;
-  backLabel?: string;
-  nextLabel?: string;
-  isLoading?: boolean
 
 }
 
@@ -24,12 +13,6 @@ export interface ResumeProgressProps {
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void,
-  isLoading: boolean
-import { Resume } from "@/types/resume",
-export interface StepProps {
-  id: string,
-  label: string
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
@@ -65,7 +48,8 @@ export interface CreateResumeFormProps {;
   isLoading: boolean;
 }
 export interface EmptyResumeProps {
-
+  onCreateClick: () => void;
+}
   onCreateClick: () => void
 }
 ;

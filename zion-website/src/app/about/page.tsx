@@ -35,19 +35,12 @@ const values = [
     bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
     image: '/images/team/elena-petrov.jpg'}
   {
-export default function AboutPage() {
-  return (
-    <div className=&quot;bg - black & quot;>;
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               About{' '}
-              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
-                Zion Tech Group
-              </span>
-            </h1>
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -101,7 +94,6 @@ export default function AboutPage() {
       </div>;
       {/* Leadership Team */}
 
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
@@ -130,16 +122,6 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    {person.name}
-                  </h3>;
-                  <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
-                  <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
-                </div>;
-              </div>;
-            </article>))}
-        </div>;
-      </div>;
-      {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

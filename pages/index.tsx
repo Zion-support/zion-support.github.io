@@ -1,16 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-
-
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect, Suspense  } from 'react';
-import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
-import Link from 'next/link';
-import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
 import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -50,8 +39,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
-  };
   return (;
     <>;
       <Head>;
@@ -238,6 +225,13 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Home() {
+ursor/integrate-build-improve-and-re-verify-8f7d
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
   return (
     <>
       <Head>
@@ -373,7 +367,6 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
-
             </div>
           </div>
         </section>
@@ -540,7 +533,6 @@ export default function Home() {
       </ErrorBoundary>
     </>
   )
-}
 
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
@@ -561,9 +553,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-7xl mx-auto text-center">
-        {/* Services Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -616,52 +605,12 @@ export default function Home() {
                 </div>
               ))}
             </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our <span className="text-cyan-400">Services</span>
-              </h2>
-
-
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive IT solutions designed to accelerate your digital transformation journey.
               </p>
             </motion.div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Our Core Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                Comprehensive technology solutions designed to accelerate your business growth;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services && services.map((service, index) => (;
-                <motion&& motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
@@ -688,58 +637,12 @@ export default function Home() {
                   </Link>;
                 </motion && motion.div>;
               ))}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver innovative solutions that drive business growth and technological advancement
-              </p>
 
 
 
             </motion.div>
 
 
-        {/* Featured Services */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver innovative solutions that drive business growth and technological advancement
-              </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
-                <motion.div
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Featured Services */}
-        <section className="py-16 bg-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Featured Solutions;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                Our most popular and effective technology solutions;
-              </p>;
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="text-3xl mb-4">{service && service.icon}</div>;
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service && service.title}</h3>;
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;
-                  <ul className="text-sm text-gray-500 space-y-2 mb-4">;
-                    {service && service.features.map((feature, idx) => (;
-                      <li key={idx}> {feature}</li>;
                     ))}
                   </ul>
                   <div className="mt-4">
@@ -791,59 +694,10 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We deliver exceptional results through innovation, expertise, and dedication;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {whyChooseUs && whyChooseUs.map((item, index) => (;
-                <motion&& motion.div
-<p className="text-gray-600">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-        {/* Why Choose Us */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whyChooseUs.map((item, index) => (
-                <motion.div
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  <p className="text-gray-600">{item.description}</p>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -885,23 +739,11 @@ export default function Home() {
                       <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                     </div>
                   </Card>
-<p className="text-gray-600">{item.description}</p>
-                </motion.div>
-                </motion.div>
-
-
-                  <p className="text-gray-600">{item.description}</p>                </motion.div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -914,27 +756,6 @@ export default function Home() {
                 Let's discuss how our technology solutions can drive your success
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <section className="py-16 bg-blue-600 text-white">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
-                Let's discuss how our technology solutions can drive your success;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link
-                  href="/contact"
-                  className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center">;
-                  Get Free Consultation;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Link>;
-                <Link
-                  href="tel:+13024640950"
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -949,13 +770,6 @@ export default function Home() {
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-              </div>
-                </Link>              </div>
-            </motion.div>
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1073,7 +887,6 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-
               </div>
             </section>
             {/* Stats Section */  } catch (error) {
@@ -1081,7 +894,8 @@ export default function Home() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+</main>
+    </>
             <section className="py-16 bg-slate-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -1237,30 +1051,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
-          </div>
-        </section>
-          </div>
-        </section>
-      </div>
-      </main>
-    </>
-      </main>
-    </>
       </main>
     </>
 </main>
     </>
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
-                  <Phone className="w-5 h-5 mr-2" />;
-                  Call Now;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-  );
-}
-      </main>;
-    </>;

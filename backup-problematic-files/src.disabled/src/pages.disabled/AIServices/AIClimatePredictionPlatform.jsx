@@ -9,4 +9,3 @@ const AIClimatePredictionPlatform = ({ className }) => {
   );
 };
 
-export default AIClimatePredictionPlatform;

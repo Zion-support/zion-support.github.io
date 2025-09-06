@@ -31,48 +31,11 @@ interface AIEnhancementPanelProps {;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-  $2
-}
-  }
-  const handle_copy = () =>: any {
-    navigator.clipboard.write_text (generated_content);
-    set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
-  }
-
-  initialContent?: string;
-export function AIEnhancementPanel(): any ({;
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
-  initialContent = '',;
-}: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
-    ...defaultOptions,;
-    content: initialContent || defaultOptions && defaultOptions.content,;
-  });
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
-  const handleGenerate = async () => {;
-    const result = await enhanceContent(options);
-    if (result) {;
-      setGeneratedContent(result);
-    }
-  };
-
-  const handleInputChange = (;
-    e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
-    field: keyof AIEnhancementOptions;
-  ,) => {;
-    setOptions({;
-      ...options,;
-      [field]: e && e.target.value,;
-    });
-  };
 
   const handleApply = () => {;
     onApply(generatedContent);
@@ -131,6 +94,10 @@ export function AIEnhancementPanel(): any ({;
 
       ...options,
 
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
 
 
 
@@ -147,7 +114,6 @@ export function AIEnhancementPanel(): any ({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
-
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -165,13 +131,10 @@ export function AIEnhancementPanel(): any ({;
           />;
         </div>;
         {/* Instructions input (optional) */}
-        {showInstructions && (;
-          <div className='space-y-2'>;
-            <label className='text-sm font-medium'>;
-              Special instructions (optional);
-            </label>;
+        {showInstructions && (
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
-          disabled={isEnhancing || (!options.content && !options.context)}        >
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
@@ -179,12 +142,12 @@ export function AIEnhancementPanel(): any ({;
         {/* Generate button */}
           {isEnhancing ? (
             <>
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className='mr-2 h-4 w-4' />
+              <Sparkles className="mr-2 h-4 w-4" />
               Generate Enhanced Content
             </>
           )}
@@ -196,21 +159,15 @@ export function AIEnhancementPanel(): any ({;
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
-              </Button>;
-            </div>;
-            <div className='relative'>;
+              </Button>
+            </div>
+            <div className="relative">
               <Textarea
                 value={generatedContent}
-            </div>
-          </div>
-        )}
-
-
-      
       {generatedContent && (
-        <CardFooter className='flex justify-between'>
+        <CardFooter className="flex justify-between">
           {onClose && (
-            <Button variant='outline' onClick={onClose}>
+            <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
       </CardContent>;
@@ -222,11 +179,6 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-          <Button onClick={handleApply}>Apply to Form</Button>;
-        </CardFooter>;
-      )}
-    </Card>
-  )
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;

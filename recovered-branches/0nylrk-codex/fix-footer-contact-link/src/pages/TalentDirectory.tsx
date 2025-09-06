@@ -21,10 +21,6 @@ import { TalentResults } from "@/components/talent/TalentResults",
 import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
-
-  // Use our custom hook to manage state;
-  const {;
-
     filteredTalents;
     isLoading;
     searchTerm;
@@ -88,7 +84,6 @@ function TalentDirectory() {
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar
-
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -132,18 +127,82 @@ export default function TalentDirectory() {;
     clearFilters,;
     toggleSection,;
     handleToggleSave} = useTalentDirectory(),;
-
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
   };
-
   const viewProfile = (id: string) => {;
     // Navigate to the talent profile page;
     navigate(`/talent/${id}`);
   };
-
   return (
+
+import React, { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { TalentGrid } from "@/components/talent/TalentGrid",;
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;
+import { TalentResults } from "@/components/talent/TalentResults",;
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
+import { SORT_OPTIONS } from "@/data/sortOptions",;
+import { X } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+;
+export default function TalentDirectory() {;
+  const navigate = useNavigate(),;
+;
+  // Use our custom hook to manage state;
+  const {;
+    filteredTalents,;
+    isLoading,;
+    searchTerm,;
+    setSearchTerm,;
+    selectedSkills,;
+    selectedAvailability,;
+    selectedRegions,;
+    priceRange,;
+    setPriceRange,;
+    experienceRange,;
+    setExperienceRange,;
+    sortOption,;
+    setSortOption,;
+    isMobileFilterOpen,;
+    setIsMobileFilterOpen,;
+    isHireModalOpen,;
+    setIsHireModalOpen,;
+    selectedTalent,;
+    setSelectedTalent,;
+    expandedSections,;
+    isAuthenticated,;
+    savedTalents,;
+    toggleSkill,;
+    toggleAvailability,;
+    toggleRegion,;
+    clearFilters,;
+    toggleSection,;
+    handleToggleSave} = useTalentDirectory(),;
+  ;
+  const handleRequestHire = (talent:TalentProfile) => {;
+    setSelectedTalent(talent),;
+    setIsHireModalOpen(true);
+  },;
+  ;
+  const viewProfile = (id:string) => {;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${id}`),;
+  },;
+  ;
+  return (;
+  const handleRequestHire = (talent: TalentProfile) => {;
+    setSelectedTalent(talent),;
+    setIsHireModalOpen(true);
+  },;
+  const viewProfile = (id: string) => {;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${id}`);
+  },;
+  return (;
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col space-y-8">;
@@ -171,7 +230,6 @@ export default function TalentDirectory() {;
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
-
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -181,8 +239,6 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
-                experienceRange;
-                setExperienceRange;
 
                 clearFilters}}
             />
@@ -241,11 +297,3 @@ export default function TalentDirectory() {;
                     setSortOption={setSortOption}
                     clear_filters={clear_filters}
                     isMobileFilterOpen={isMobileFilterOpen}
-                  />;
-                </div>;
-              </div>)}
-          </div>;
-        </div>;
-      </div>;
-    </AppLayout>);
-}

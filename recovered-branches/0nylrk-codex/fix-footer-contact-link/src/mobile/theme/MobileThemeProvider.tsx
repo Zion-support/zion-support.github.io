@@ -9,13 +9,13 @@ interface MobileThemeProviderProps {
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 interface MobileThemeProviderProps {;
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+interface MobileThemeProviderProps {
   children: React.ReactNode;
-}
-export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
-  const { theme } = useTheme();
-      {children}
-    </div>
-  )
 }
 export /**
  * MobileThemeProvider - Function description

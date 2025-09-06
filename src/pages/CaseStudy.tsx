@@ -58,7 +58,6 @@ export default function CaseStudy() {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {;
@@ -67,11 +66,7 @@ export default function CaseStudy() {;
   const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
 
-  if (!study) {
-    return (
-      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-      </div>
     )
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
@@ -90,28 +85,24 @@ export default function CaseStudy() {;
   }
   return (
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
+      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
+        <div className='container mx-auto max-w-3xl'>
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="/">Home</Link>
-                </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-
-
-                  <Link href="/case-studies">Case Studies</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
 
-
                 <BreadcrumbLink asChild aria-current="page">
                   <span>{study.title}</span>
-                </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
@@ -120,8 +111,6 @@ export default function CaseStudy() {;
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
-
-
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
@@ -129,8 +118,6 @@ export default function CaseStudy() {;
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}
-
-
             className="h-12 mb-4"
             loading="lazy"
           />
@@ -144,7 +131,6 @@ export default function CaseStudy() {;
                 Download PDF
               </Link>
             </Button>
-          )}
           <div
             className='prose prose-invert'
             dangerouslySetInnerHTML={{ __html: study.content }}
@@ -301,5 +287,3 @@ if ( {) {
     </>);
 }
 ;
-
-

@@ -9,4 +9,3 @@ const MicroSAAS.js = ({ className }) => {
   );
 };
 
-export default MicroSAAS.js;

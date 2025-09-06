@@ -53,9 +53,6 @@ import React from 'react';
   return (
     <>;
       <header
-
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
@@ -71,8 +68,6 @@ import React from 'react';
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
-
-
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
@@ -84,13 +79,7 @@ import React from 'react';
               ) : (
                 <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
-                aria-label={t('auth.login')}
-                data-testid="login-link"
-                onClick={(e) => {
-                  e.preventDefault(),
-                  // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
-                  // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
@@ -101,8 +90,6 @@ import React from 'react';
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-
-
                 aria-label={t('auth.signup')}
                 data-testid="signup-nav-link"
               >
@@ -131,12 +118,6 @@ import React from 'react';
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
-            />
-          </div>
-        </div>
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
@@ -155,67 +136,6 @@ import React from 'react';
       setResourcesDropdownOpen(false)}
   }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
-    setServicesDropdownOpen (false);    setSolutionsDropdownOpen (false);
-    setCompanyDropdownOpen (false);
-    setResourcesDropdownOpen (false);
-    setActiveNav (null)}
-  return ();
-    <>`;
-      <header className={`sticky top - 0 z - 50 w - full transition - all duration - 300 ${        scrolled;
-          ? 'bg - slate - 900 / 95 backdrop - blur - xl border - b border - cyan - 400 / 20 shadow - 2xl shadow - cyan - 400 / 10';
-          : 'bg - slate - 900 / 80 backdrop - blur - md border - b border - slate - 700 / 20'      }`}>;
-        <div className="container - responsive">";
-          <div className="flex h - 20 items - center justify - between">;
-            {/* Logo */}";
-            <div className="flex items - center">";
-              <Link to="/" className="flex - shrink - 0 group">";
-                <div className="flex items - center space - x-3">";
-                  <div className="relative">";
-                    <div className="w - 10 h - 10 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">";
-                      <Zap className="w - 6 h - 6 text - white"  />;
-                    </div>"                    <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
-                  </div>";
-                  <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent group - hover:scale - 105 transition - transform duration - 300">;
-                    Zion Tech Group;
-                  </h1>;
-                </div>;
-                <span className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Zion Tech Group;
-                </span>;
-              </Link>;
-            </div>;
-            {/* Desktop Navigation */}            <nav className="hidden lg:flex items - center space - x-8">;
-              {navigation.map ((item) => (";
-                <div key={item.name} className="relative">;
-                  {item.has_dropdown ? (";
-                    <div className="relative">;
-                      <button;
-                        on_click={() => {
-              <AnimatePresence>;
-                {active_dropdown === 'services' && (
-                  <motion.div;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
-                    <div className="p - 4">;
-                      <div className="grid grid - cols - 1 gap - 2">;
-                        {services.map ((service) => (
-                          <Link;
-                            key={service.name}
-                            to={service.href}
-                            on_click={() => setActiveDropdown (null)}
-                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
-                            <div className={`w - 10 h - 10 bg - gradient - to - r ${service.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
-                              <service.icon className="w - 5 h - 5 text - white" />;
-                            </div>;
-                            <div>;
-                              <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
-                                {service.name}
-                              </div>;
-                              <div className="text - sm text - zion - slate - light">;
-                                {service.description}
                 )}
               </AnimatePresence>
             </div>
@@ -232,17 +152,6 @@ import React from 'react';
                           <Link;
                             key={solution.name}
                             to={solution.href}
-                            on_click={() => setActiveDropdown (null)}
-                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
-                            <div className={`w - 10 h - 10 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
-                              <solution.icon className="w - 5 h - 5 text - white" />;
-                            </div>;
-                            <div>;
-                              <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
-                                {solution.name}
-                              </div>;
-                              <div className="text - sm text - zion - slate - light">;
-                                {solution.description}
                 )}
               </AnimatePresence>
             </div>
@@ -330,36 +239,6 @@ import React from 'react';
                   onClick={() => toggleDropdown('user')}
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
                   aria-expanded={activeDropdown === 'user'}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top - full right - 0 mt - 2 w - 48 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
-                      <div className="p - 2">;
-                        <Link;
-                          to="/dashboard";
-                          on_click={() => setActiveDropdown (null)}
-                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <PanelLeft className="w - 4 h - 4 mr - 3" />;
-                          Dashboard;
-                        </Link>;
-                        <Link;
-                          to="/profile";
-                          on_click={() => setActiveDropdown (null)}
-                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <User className="w - 4 h - 4 mr - 3" />;
-                          Profile;
-                        </Link>;
-                        <Link;
-                          to="/settings";
-                          on_click={() => setActiveDropdown (null)}
-                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <Settings className="w - 4 h - 4 mr - 3" />;
-                          Settings;
-                        </Link>;
-                        <hr className="border - zion - slate / 20 my - 2" />;
-                        <button;
-                          on_click={() => {
-                            logout ();
-                            setActiveDropdown (null);
-}}
                   )}
                 </AnimatePresence>
               </div>
@@ -377,18 +256,6 @@ import React from 'react';
           {/* Right side actions */}
           <div className="flex items - center space - x-4">;
             {/* Search */}
-            <form on_submit={handle_search} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-  ];
-  const services = [;
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
-    { name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },
-    { name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' },
   ];
   return (
     <>;
@@ -411,9 +278,9 @@ import React from 'react';
             ))}
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex ml - 8 space - x-8">;
-            {navigation.map ((item) => (
-              <Link;
+          <nav className="hidden md:flex ml-8 space-x-8">
+            {navigation.map((item) => (
+              <Link
                 key={item.name}
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
@@ -474,10 +341,6 @@ import React from 'react';
           {/* Right side actions */}
           <div className="ml - 6 flex items - center space - x-4">;
             {/* Notifications */}
-            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-              <Bell className="h - 5 w - 5" />;
-            </button>;
-            {/* User menu */}
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
                   on_click={() => setMobileMenuOpen (false)}
@@ -609,5 +472,3 @@ import React from 'react';
 }
 ;
 ;
-
-

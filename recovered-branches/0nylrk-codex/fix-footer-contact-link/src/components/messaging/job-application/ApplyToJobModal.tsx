@@ -53,14 +53,11 @@ function ApplyToJobModal() {
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
-
-        <ApplyForm
-        <ApplyForm;
+        ;
+        <ApplyForm ;
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-  );
-    </Dialog>);
-}
+

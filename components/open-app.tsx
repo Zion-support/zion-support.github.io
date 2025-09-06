@@ -1,11 +1,5 @@
 import { useEffect } from 'react';
 
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    const now = Date.now();
-    const timeout = setTimeout(() => {
-      const elapsed = Date.now() - now;
-      if (elapsed < 2000) {
       }
     }, 1200);
     // Try to open the deep link

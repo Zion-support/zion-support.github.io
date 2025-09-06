@@ -9,4 +9,3 @@ const AgenticRagHelpdesk = ({ className }) => {
   );
 };
 
-export default AgenticRagHelpdesk;

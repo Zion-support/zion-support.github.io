@@ -9,4 +9,3 @@ const PageLoader = ({ className }) => {
   );
 };
 
-export default PageLoader;

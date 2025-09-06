@@ -59,22 +59,6 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Badge className="bg-zion-purple">Hire Request</Badge>;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
-    case 'system':
-      return <Badge className="bg-yellow-500">System</Badge>
-    default:
-      return <Badge variant="outline">Notification</Badge>
-  }
-}
-const NotificationCard: React.FC<{
-  notification: {
-    id: string
-    title: string
-    message: string
-    type: NotificationType
-    read: boolean
-    created_at: string
-    action_url?: string;
-
   const handleAction = () => {;
 
     if (!notification.read) {;
@@ -88,31 +72,10 @@ const NotificationCard: React.FC<{
   },
   
   return (
-    <divclassName={cn(
-      "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
-      notification && notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30"
-    )}>;
-      <div className="flex items-start gap-4">;
-        <div className="mt-1">;
-          {getNotificationIcon(notification && notification.type, "h-6 w-6")}
-        </div>;
-        <div className="flex-1">;
-          <div className="flex justify-between">;
-            <div className="flex flex-col">;
-              <h3 className="font-medium text-white">{notification && notification.title}</h3>;
-              <div className="flex items-center gap-2 mb-2">;
-                {getNotificationTypeBadge(notification && notification.type)}
-                <span className="text-xs text-zion-slate-light">;
-                  {formatDistanceToNow(new Date(notification && notification.created_at), { addSuffix: true })}
-                </span>;
-                {!notification && notification.read && (;
-                  <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
-                )}
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-                  onClick={() => onMarkAsRead(notification && notification.id)}
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
@@ -126,11 +89,6 @@ const NotificationCard: React.FC<{
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-              onClick={handleAction}>;
-              {notification && notification.action_text}
-              <ChevronRight className="ml-1 h-4 w-4" />;
-            </Button>;
-          )}
     filteredNotifications;
     unreadCount;
     action_text?: string;
@@ -228,27 +186,16 @@ function NotificationsPage() {
     filter;
             <Button
               variant="outline"
+          ;
+          {unreadCount > 0 && (;
+            <Button;
+              variant="outline";
               onClick={() => markAllAsRead()}
             >;
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
             </Button>;
           )}
-                    {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
-                  </p>;
-                </div>;
-              ) : (;
-                <div>;
-                  {filteredNotifications && filteredNotifications.map(notification => (;
-                    <NotificationCard
-                      key={notification && notification.id}
-                      notification={notification}
-                      onMarkAsRead={markAsRead}
-                      onDismiss={dismissNotification}
-                    />;
-                  ))}
-                </div>;
-              )}
             </TabsContent>;
           </Tabs>;
         </div>;

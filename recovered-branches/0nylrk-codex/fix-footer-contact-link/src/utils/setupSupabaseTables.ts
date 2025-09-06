@@ -1,6 +1,5 @@
-
-import {supabase} from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
+
 
 /**
  * Checks if the profiles table exists and creates it if it doesn't
@@ -10,9 +9,6 @@ import { supabase } from "@/integrations/supabase/client",
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
-        AND table_name = 'profiles'
-      ),`
-    });
     // If there's an error, log it and proceed with table creation
     if (error) {
       console && console.warn("Error checking if profiles table exists, attempting to create it:", error)
@@ -81,10 +77,6 @@ if ( {) {
         END IF;
       END;
       $$;
-      -- Set up trigger for new users
-      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
-      RETURNS TRIGGER AS $$
-      BEGIN
                 new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
@@ -100,8 +92,6 @@ if ( {) {
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
-        END IF;
-      END;
       $$;
     `;
     if (createError) {
@@ -117,33 +107,6 @@ if ( {) {
 export const initializeDatabase = async () => {
   await ensureProfilesTableExists()
 }
-
-;
-    // Execute the creation query using RPC to avoid TypeScript errors;
-    const { error: create_error } = await supabase.rpc ('exec', { sql: createTableQuery });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error creating profiles table:', create_error);
-    } else {
-      console.log ('Profiles table setup completed');
-    }
-  } catch (error) {
-    console.error ('Error setting up profiles table:', error);
-  }
-}
-;
-// Call this when the app starts to ensure the table exists;
-export const initialize_database = async () => {
-  await ensureProfilesTableExists ();
-}
-;
-            AFTER INSERT ON auth.users
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
-        END IF,
-      END
 
       $$,
     `,

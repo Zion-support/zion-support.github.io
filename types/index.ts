@@ -1,10 +1,4 @@
 export interface ContactInfo {
-  phone: string, email: string,
-  address: string, site: string,
-
-
-export interface Service {;
-
   phone: string;
   email: string;
   address: string;
@@ -26,35 +20,26 @@ export interface Service {;
   image?: string;
   popular?: boolean;
   title: string;
-  description: string;
-  count: number;
+}
+export interface SEOProps {
+  title?: string;
+  description?: string;
+
+  title: string;
+  }
   features: string[];
+  technologies: string[];
+  deliveryTime: string;
+  support: string;
+  image?: string;
+  popular?: boolean;
+title: string;
   href: string;
+  icon: string;
   color: string;
 
-export interface SEOProps {
-  title: string;
-  description: string;
-  title: string, description: string,
-  features: string[], href: string,
-  icon: string, color: string,
-
-
-export interface ServiceCategory {;
 }
-
 export interface ServiceCategory {
-  title: string, description: string,
-  count: number, features: string[],
-  href: string, color: string,
-
-
-export interface SEOProps {;
-  title: string, description: string,
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  noindex?: boolean;
 }
 export interface LoadingState {
   is_loading: boolean;
@@ -78,14 +63,10 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
-  preferredContact: 'email' | 'phone' | 'both';
-}
   id: string;
   name: string;
   role: string;
   company: string;
-  project?: string;
-}
 
   project?: string;
 }
@@ -104,11 +85,6 @@ export interface BlogPost {;
   tags: string[];
   category: string;
   image: string;
-  featured?: boolean;
-}
-
-}
-
 
 export interface TeamMember {;
   id: string;
@@ -133,15 +109,6 @@ export interface TeamMember {;
   technologies: string[], liveUrl?: string,
 
 export interface Project {;
-  id: string;
-  title: string;
-  name: string;
-  description: string;
-  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-;
-  description: string;
-  image: string;
-  technologies: string[];
   live_url?: string;
   github_url?: string;
   featured: boolean;
@@ -150,11 +117,6 @@ export interface Project {;
   start_date: Date;
   end_date: Date;
   budget: {
-  id: string, title: string,
-  description: string, image: string,
-  technologies: string[], liveUrl?: string,
-  githubUrl?: string;
-  featured: boolean;
   name?: string;
   status?: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
   priority?: 'low' | 'medium' | 'high' | 'critical';
@@ -237,8 +199,6 @@ export interface FAQ {;
   answer: string;
   category?: string;
 }
-
-export interface PricingPlan {;
   id: string;
   name: string;
   price: number;
@@ -252,10 +212,12 @@ export interface FAQ {
   question: string;
   answer: string;
   category?: string;
-
 }
 export interface PricingPlan {
 
+  id: string;
+
+  id: string;
 
   name: string;
   price: number;
@@ -263,13 +225,6 @@ export interface PricingPlan {
   features: string[];
   popular?: boolean;
   cta: string;
-}
-  name: string;
-  href: string;
-  children?: NavigationItem[];
-  submenu?: NavigationItem[];
-  external?: boolean;
-}
   name: string;
   href: string;
   icon: string;
@@ -279,6 +234,9 @@ export interface PricingPlan {
   label: string;
 
 ;
+currency?: string;
+  limitations?: string[];
+  description?: string;
 
 }
 export interface FooterLink {
@@ -291,9 +249,6 @@ export interface FooterSection {
 }
 export interface HeroSection {
 
-export interface FooterLink {;
-  name: string;
-  href: string;
 }
 
 export interface FooterSection {;
@@ -358,7 +313,6 @@ export interface HeroSection {;
   image?: string;
   featured: boolean;
 }
-
   id: string;
   title: string;
   description: string;
@@ -366,10 +320,6 @@ export interface HeroSection {;
   time: string;
   location: string;
   type: 'webinar' | 'workshop' | 'conference' | 'meetup';
-  registration_url?: string;
-  image?: string;
-}
-
   description: string;
   address: {
     street: string;
@@ -385,86 +335,6 @@ export interface HeroSection {;
   };
   certifications: string[];
 }
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  image?: string;
-  featured: boolean;
-}
-  id: string;
-  title: string;
-  description: string;
-  image?: string;
-}
-
-
-export interface Partner {
-  name: string;
-  logo: string;
-  website: string;
-  description: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'bronze';
-}
-
-export interface Award {
-  title: string;
-  organization: string;
-  year: number;
-  description: string;
-  image?: string;
-}
-
-export interface Certification {
-  name: string;
-  issuer: string;
-  date: string;
-  expiry?: string;
-  credentialId?: string;
-  image?: string;
-}
-
-// Technology Types
-export interface Technology {
-  name: string;
-  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
-  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-  yearsOfExperience: number;
-  projects: number;
-}
-
-export interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  type: 'page' | 'blog' | 'service' | 'case-study' | 'job';
-  score: number;
-  highlights?: string[];
-}
-
-export interface FilterOption {
-  label: string;
-  value: string;
-  count?: number;
-}
-
-export interface SortOption {
-  label: string;
-  value: string;
-  direction: 'asc' | 'desc';
-}
-
-export interface Pagination {
-  currentPage: number;
-  totalPages: number;
-  totalItems: number;
-  itemsPerPage: number;
-  hasNext: boolean;
-  hasPrev: boolean;
   message: string;
   code?: string;
   details?: any;
@@ -473,15 +343,6 @@ export interface Pagination {
   url?: string;
 }
 
-export interface ErrorInfo {
-  message: string;
-  code?: string;
-  details?: any;
-  timestamp: string;
-  user_agent?: string;
-  url?: string;
-}
-export interface FormField {
   name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
@@ -496,7 +357,6 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
-  }
 }
 
 
@@ -608,6 +468,3 @@ export interface ErrorResponse {
   data: T;
   message?: string;
 }
-export type Response<T> = SuccessResponse<T> | ErrorResponse;
-export interface ContactInfo {
-

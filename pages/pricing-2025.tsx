@@ -1,15 +1,4 @@
 
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react'
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -38,31 +27,6 @@ export default function Pricing2025() {
     const price = parseFloat(monthlyPrice.replace('$', ''))
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
-import React, { useState } from 'react',
-import Head from 'next / head',
-import { motion } from 'framer-motion',
-import {
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe,
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink;
-} from 'lucide-react',
-import EnhancedNavigation from '../components / EnhancedNavigation',
-import EnhancedFooter from '../components / EnhancedFooter',
-import { innovative2025MicroSaasExpansionV3 } from '../data / 2025 - innovative - micro - saas - expansion - v3',
-export default /**
- * Pricing2025 - Function description
- */
-function Pricing2025() {
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '' },
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '' },
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '' },
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '' },
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '' }
-  ],
-  const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
     selected_category === 'all' || service.category.includes (selected_category)),
   const getAnnualPrice = (monthly_price: string) =>: any {
     const price = parse_float (monthly_price.replace ('$', '')),
@@ -168,29 +132,6 @@ export default function Pricing2025(req, res) {
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Pricing & Services
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
           >;
@@ -200,13 +141,6 @@ export default function Pricing2025(req, res) {
             <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
 
-              AI solutions, quantum technologies, and revolutionary IT services.
-            </p>
-            {/* Billing Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
                 Monthly
@@ -357,25 +291,14 @@ export default function Pricing2025(req, res) {
               >;
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
-                    MOST POPULAR
-                  </div>
-                )}
                 {/* Service Header */}
                 <div className="text - center mb - 8">;
                   <div className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${service.color} p - 5 mx - auto mb - 4 flex items - center justify - center text - 3xl`}>;
                     {service.icon}
-                <div className="text-center mb-8">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
-                    {service.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
-                </div>
                       {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -396,33 +319,6 @@ export default function Pricing2025(req, res) {
                         className={`w - 4 h - 4 ${
                           i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - white / 20';
                         }`}
-                <div className="flex items-center justify-center gap-2 mb-6">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        className={`w-4 h-4 ${;
-                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';
-                        }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      />;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>
-                  <span className="text-white/60 text-sm">
-                    {service.rating} ({service.reviews} reviews)
-                  </span>
-                </div>
                 {/* Features */}
                 <div className="mb - 8">;
                   <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;
@@ -478,27 +374,6 @@ export default function Pricing2025(req, res) {
                   <a;
                     href={service.link}
 
-
-                {/* Action Buttons */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div className="space-y-3">
-                  <a
-                    href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                  >
-                    Get Started
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <a
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
                     Contact Sales
@@ -538,34 +413,6 @@ export default function Pricing2025(req, res) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Need Enterprise Solutions?
-            </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               for organizations requiring multiple services or specialized implementations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -585,16 +432,6 @@ export default function Pricing2025(req, res) {
           </motion.div>
         </div>
       </section>
-      {/* FAQ Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-
-
       {/* FAQ Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -680,16 +517,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
-              >;
-                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
-                <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
-              </motion.div>))}
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-
     </div>;
   );
   } catch (error) {

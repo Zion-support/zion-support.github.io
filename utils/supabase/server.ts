@@ -1,6 +1,3 @@
-// Supabase server utilities
-import { createClient } from '@supabase/supabase-js';
-
 export function getServerSupabase() {
   // Mock implementation - replace with actual Supabase client
   return {
@@ -25,8 +22,3 @@ export /**
 function getServerSupabase() {
   return create_client (supabase_url, supabase_key);
 }
-export function getServerSupabase() {;
-  return createClient(supabaseUrl, supabaseKey);
-}
-
-

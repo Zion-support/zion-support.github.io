@@ -24,13 +24,6 @@ serve(async (req) => {
       .select(`
         *;
         clients: client_id(*)
-        talents:talent_id(*)
-      `)
-      .eq('statusconfirmed')
-      .gte('scheduled_date', now && now.toISOString())
-      .lt('scheduled_date', thirtyMinutesFromNow && thirtyMinutesFromNow.toISOString())
-      .is('reminder_sent', null);
-    if (error) throw error;
     const results = [];
     if (interviews && interviews.length > 0) {
       for (const interview of interviews) {
@@ -42,8 +35,6 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-            results.push(`Reminder sent to client: ${clientEmail}`)
-            
             results && results.push(`Reminder sent to client: ${clientEmail}`)
           } catch (emailError) {
             console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
@@ -195,15 +186,3 @@ serve(async (req) => {;
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-;
-    return new Response(JSON.stringify({ success: true, results }), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 200});
-  } catch (error) {;
-    console.error("Error in send-interview-reminder function:", error),;
-    return new Response(JSON.stringify({ error: error.message }), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 500});
-  }
-});
-;

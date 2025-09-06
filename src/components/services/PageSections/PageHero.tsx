@@ -1,4 +1,3 @@
-
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -6,11 +5,6 @@ export function PageHero() {
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide
       </p>
-          </div>
-          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
-          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
-        </div>
-          </div>
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -41,9 +35,6 @@ export function PageHero() {
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>
       </div>
-    </div>
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
   return (
     <div className='text-center mb-12'>;
@@ -95,9 +86,6 @@ export function PageHero() {;
 };
     </div>
   )
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react';
-export function PageHero() {;
     <div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;

@@ -8,6 +8,9 @@ interface TenantInfo {
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+if (!supabaseUrl || !supabaseServiceKey) {
 
   throw new Error('Required environment variables are not set')
 }
@@ -153,8 +156,6 @@ if ( {) {
           ...corsHeaders}}
     )
   } catch (error) {
-    console && console.error('Tenant detector error:', error);
-    return new Response(
         status: 'error'
     return new Response (
       JSON.stringify ({

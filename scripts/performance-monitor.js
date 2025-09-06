@@ -84,10 +84,6 @@ try {
       "metrics": this && this.metrics,
       "recommendations": this && this.generateRecommendations()
     }
-    console.log('Performance report generated:', reportPath);
-  }
-    console.log('Performance report generated:', reportPath);
-  }
     console.log('Performance report "generated": ', reportPath)}
   generateRecommendations() {
     const recommendations = [];

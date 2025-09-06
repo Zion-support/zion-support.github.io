@@ -32,8 +32,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogHeader
   DialogTitle
   DialogTrigger
-} from '@/components/ui/dialog'
-type RewardOption = {
   {
     id: 'premium-week'
     title: 'Premium Week'
@@ -65,12 +63,6 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
-        </CardTitle>;
-        <CardDescription>;
-          Exchange your ZION$ for rewards and perks;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
   id: string,
   title: string,
   description: string,
@@ -98,74 +90,25 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-    type: 'credit'
-  }
-],
-
-
-
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Gift className="h-5 w-5" /> Redeem Rewards
-        </CardTitle>
-        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Dialog open={open} onOpenChange={setOpen}>
-          <DialogTrigger asChild>
-            <Button className="w-full">View Available Rewards</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Available Rewards</DialogTitle>
-              <DialogDescription>
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance |0} ZION$.
-              </DialogDescription>
-            </DialogHeader>
-            <div className='space-y-4 py-4'>
-              {REWARD_OPTIONS.map(option => (
                 <div
-                  key={option.id}
-                  className='flex justify-between items-center border-b pb-4'
-                >                  <div>
-                    <h3 className='font-medium'>{option.title}</h3>
-                    <p className='text-sm text-muted-foreground'>
-                      {option.description}
-                    </p>
-                  </div>
-                  <div className='flex flex-col items-end gap-1'>
-                    <span className='text-sm font-bold'>
-                      {option.cost} ZION$
-                    </span>
+                  key={option && option.id}
+                  className='flex justify-between items-center border-b pb-4'>                  <div>;
+                    <h3 className='font-medium'>{option && option.title}</h3>;
+                    <p className='text-sm text-muted-foreground'>;
+                      {option && option.description}
+                    </p>;
+                  </div>;
+                  <div className='flex flex-col items-end gap-1'>;
+                    <span className='text-sm font-bold'>;
+                      {option && option.cost} ZION$;
+                    </span>;
                     <Button
                       size='sm'
                       variant={
-                        wallet && wallet.balance >= option.cost
-                          ? 'default'
-                          : 'outline'
+                        wallet && wallet.balance>= option && option.cost;
+                          ? 'default';
+                          : 'outline';
                       }
-            <div className="space-y-4 py-4">
-              {REWARD_OPTIONS.map((option) => (
-                <div key={option.id} className="flex justify-between items-center border-b pb-4">
-                  <div>
-                    <h3 className="font-medium">{option.title}</h3>
-                    <p className="text-sm text-muted-foreground">{option.description}</p>
-                  </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className="text-sm font-bold">{option.cost} ZION$</span>
-                    <Button 
-                      size="sm" 
-                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
-                      disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-                    >
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />
-                    </Button>
-                  </div>
-                </div>
               ))}
             </div>;
             <div className='flex justify-between'>;
@@ -246,54 +189,12 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle > Available Rewards</DialogTitle>;
-              <DialogDescription>;
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance || 0} ZION$.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <div className='space - y-4 py - 4'>;
-              {REWARD_OPTIONS.map (option => (
-                <div;
-                  key={option.id}
-                  className='flex justify - between items - center border - b pb - 4';
-                >                  <div>;
-                    <h3 className='font - medium'>{option.title}</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-                      {option.description}
-                    </p>;
-                  </div>;
-                  <div className='flex flex - col items - end gap - 1'>;
-                    <span className='text - sm font - bold'>;
-                      {option.cost} ZION$;
-                    </span>;
-                    <Button;
-                      size='sm';
-                      variant={
-                        wallet && wallet.balance >= option.cost;
-                          ? 'default';
-                          : 'outline';
-                      }
-                      disabled={!wallet || wallet.balance < option.cost}
-                      on_click={() => handle_redeem (option)}                    >;
-                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
-                    </Button>;
-                  </div>;
-                </div>))}
-            </div>;
-            <div className='flex justify - between'>;
-              <Button;
-                variant='outline';
-                size='sm';
-                on_click={() => set_open (false)}
-
-              >;
-                Close;
-              </Button>;
-              <Button variant='ghost' size='sm'>;
               </Button>;
             </div>;
           </DialogContent>;

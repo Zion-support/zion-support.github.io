@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,59 +16,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-import Link from 'next/link';
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Shield
-  Rocket
-  BarChart3
-  Settings
-  ArrowRight
-  CheckCircle
-  Users
-  Building
-  Globe
-  Target
-} from 'lucide-react';
-import Layout from '../../components/Layout';
-
-const SolutionsPage: NextPage = () => {
-  const solutions = [
-    // Healthcare Solutions
-    {
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
-      <Head>
-        <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
-        <meta name="description" content="Discover industry-specific technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors. Tailored solutions for your business needs." />
-        <meta name="keywords" content="healthcare solutions, fintech, manufacturing 4.0, retail technology, education tech, government solutions, industry solutions" />
-      </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Industry-Specific Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            We deliver tailored technology solutions designed specifically for your industry. 
-            From healthcare AI to smart manufacturing, our solutions address real business challenges 
-            and drive measurable results.
-          </p>
-        </div>
-
-        {/* Solutions Grid */}
-                            {useCase}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
 
                             {benefit}
                           </li>
@@ -239,9 +184,6 @@ const stats = [;
 export default function SolutionsPage() {;
   return (
     <Layout
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
 const SolutionsPage: NextPage = () => {
   const solutions = [
     // Healthcare Solutions
@@ -435,97 +377,6 @@ const SolutionsPage: NextPage = () => {
       solutions: [
         {
           name: "Smart City Platform",
-          description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
-          useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
-          benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"],
-          pricing: "$100,000 - $500,000",
-          link: "https://ziontechgroup.com/solutions/smart-city",
-          icon: "🏙️"
-        },
-        {
-          name: "Government Data Analytics",
-          description: "Advanced analytics platform for government data analysis and decision support.",
-          useCases: ["Policy analysis", "Resource allocation", "Performance monitoring", "Public reporting"],
-          benefits: ["Better policy decisions", "Transparency", "Efficiency improvement", "Public trust"],
-          pricing: "$50,000 - $200,000",
-          link: "https://ziontechgroup.com/solutions/government-analytics",
-          icon: "📊"
-        },
-        {
-          name: "Digital Identity Platform",
-          description: "Secure digital identity and authentication platform for government services.",
-          useCases: ["Citizen services", "Voting systems", "Healthcare access", "Financial services"],
-          benefits: ["Secure access", "Reduced fraud", "Better service delivery", "Cost savings"],
-          pricing: "$75,000 - $300,000",
-          link: "https://ziontechgroup.com/solutions/digital-identity",
-          icon: "🆔"
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-      ];
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  return (
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
-      keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-                Technology Solutions for{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Every Business
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                efficiency, and innovation across all industries.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Custom Solution
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Solutions Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solution Categories
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We offer comprehensive technology solutions tailored to different business needs and stages.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
                 const IconComponent = solution.icon;
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -995,113 +846,6 @@ export default SolutionsPage;
         </section>;
       </div>;
     </Layout>);
-                    <Link;
-                      href={solution.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
-                    >
-                      <span>Explore {solution.title}</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our solutions are designed to meet the unique challenges and requirements of various industries.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-                    {industry.icon}
-                  </div>
-                  <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
-                    {industry.name}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Stats Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss your specific needs and create a custom solution that drives your success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free Consultation
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
   )
 }
                   </div>
@@ -1233,4 +977,3 @@ export default SolutionsPage;
       </main>
     </div>
   )
-export default SolutionsPage;

@@ -1,7 +1,4 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import { CreateNotificationParams, CreateNotificationResult } from './types',
-
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -13,13 +10,10 @@ export async function createNotification({
 
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
-  void actionUrl;
-  void actionText;
+  void actionUrl,
+  void actionText,
   try {
     // Call the create_notification database function
-    // If sendEmail is true, call the edge function to send an email
-    if (sendEmail && data) {
-      const notificationId = data;
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -72,4 +66,3 @@ if ( {) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
-}

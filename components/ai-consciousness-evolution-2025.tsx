@@ -1,31 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next / head';
-import Layout from '../components / layout / Layout';
-import { motion } from 'framer-motion';
-
   Brain
   Star
   Users
@@ -204,9 +176,6 @@ const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
-
-export default function AIConsciousnessEvolution2025() {
-  return (
     <Layout>;
       <Head>;
         <title>;
@@ -245,19 +214,6 @@ export default function AIConsciousnessEvolution2025() {
                 delay: i * 0.3
               }}
               style={{
-                left: `${Math && Math.random() * 100}%`,
-                top: `${Math && Math.random() * 100}%`,
-              }}            />;
-          ))}
-        </div>;
-
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
-            />;
-          ))}
-        </div>;
-
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
-          <motion&& motion.div
           <motion.div
 
 
@@ -266,9 +222,6 @@ export default function AIConsciousnessEvolution2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
             {/* Badge */}
-            <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
@@ -285,9 +238,6 @@ export default function AIConsciousnessEvolution2025() {
               your emotional intelligence, expand self-awareness, and unlock
               your full potential.
             </p>
-            {/* Key Stats */}
-            <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
-              {[;
                 {
                   label: 'Success Rate'
                   value: '94%'
@@ -380,7 +330,6 @@ export default function AIConsciousnessEvolution2025() {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
-
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>
 
                 </motion.div>
@@ -393,9 +342,6 @@ export default function AIConsciousnessEvolution2025() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-              <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,10 +411,8 @@ export default function AIConsciousnessEvolution2025() {
                   <Brain className='w-8 h-8 text-purple-400' />
                 </div>
                 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-                  {feature}
-                </h3>
-                <p className='text-gray-400'>
-                  Advanced AI algorithms guide you through personalized
+
+
               </motion.div>
             ))}
 
@@ -478,11 +422,12 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-      {/* How It Works Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
+
+
+                  {feature}
+                </h3>
+                <p className='text-gray-400'>
+                  Advanced AI algorithms guide you through personalized
 
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -711,12 +656,6 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-      {/* Use Cases Section */}
-      <section className='py-20 bg-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-
 
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
@@ -786,10 +725,8 @@ export default function AIConsciousnessEvolution2025() {
                   <Lightbulb className='w-8 h-8 text-purple-400' />
                 </div>
                 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-                  {useCase}
-                </h3>
-                <p className='text-gray-400'>
-                  Leverage AI-powered consciousness development for enhanced
+
+
               </motion.div>
             ))}
 
@@ -799,11 +736,12 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
-      {/* Technology Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
+
+
+                  {useCase}
+                </h3>
+                <p className='text-gray-400'>
+                  Leverage AI-powered consciousness development for enhanced
 
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -845,33 +783,6 @@ export default function AIConsciousnessEvolution2025() {
               learning, and consciousness research to deliver unprecedented;
               results.;
             </p>;
-
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {technology && technology.map((tech, index) => (          >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Cutting-Edge;
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our platform leverages the latest advancements in AI, machine learning, and consciousness research ;
-              to deliver unprecedented results.;
-            </p>;
-          </motion && motion.div>;
-
-                key={tech}
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-                className='text-center group'>;
-                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>;
-                  <Cpu className='w-10 h-10 text-purple-400' />;
-                </div>;
-                <p className='text-sm text-gray-300 font-medium'>{tech}</p>              </motion && motion.div>              >;
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">;
-                  <Cpu className="w-10 h-10 text-purple-400" />;
-                </div>;
-                <p className="text-sm text-gray-300 font-medium">{tech}</p>;
-              </motion && motion.div>;
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -979,43 +890,15 @@ export default function AIConsciousnessEvolution2025() {
                       className='w-5 h-5 text-yellow-400 fill-current'
                     />;
                   ))}
-                </div>;
-                <p className='text-gray-300 italic'>"{testimonial && testimonial.content}"</p>              </motion && motion.div>              >;
-                <div className="flex items-center mb-4">;
-                  <div className="text-3xl mr-3">{testimonial && testimonial.avatar}</div>;
-                  <div>;
-                    <h4 className="text-lg font-bold text-white">{testimonial && testimonial.name}</h4>;
-                    <p className="text-sm text-purple-300">{testimonial && testimonial.role}</p>;
-                    <p className="text-xs text-gray-400">{testimonial && testimonial.company}</p>;
-                  </div>;
-                </div>;
-                <div className="flex items-center mb-4">;
-                  {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                   ))}
                 </div>
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </motion.div>
-
                 </div>
 
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
 
               </motion.div>
-
-            ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
-
-      {/* Pricing Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
 
 
       {/* Pricing Section */}
@@ -1086,7 +969,6 @@ export default function AIConsciousnessEvolution2025() {
                 ];
                 popular: false
               }
-              <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1109,8 +991,6 @@ export default function AIConsciousnessEvolution2025() {
                 }`}
               >;
                 {plan.popular && (
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
@@ -1123,18 +1003,6 @@ export default function AIConsciousnessEvolution2025() {
                   <div className='mb - 4'>;
                     <span className='text - 4xl font - bold text - purple - 400'>;
                       {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-300'>{plan.description}</p>
-                </div>
-                <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -1144,7 +1012,6 @@ export default function AIConsciousnessEvolution2025() {
                       {feature}
                     </li>;
                   ))}
-                </ul>
                 <button
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                     plan && plan.popular
@@ -1157,7 +1024,6 @@ export default function AIConsciousnessEvolution2025() {
                 }`}>;
                 </button>;
               </motion && motion.div>;
-                      {feature}
 
                     </li>
                   ))}
@@ -1168,24 +1034,12 @@ export default function AIConsciousnessEvolution2025() {
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
                 }`}>
-                  Get Started
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion&& motion.div
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1193,7 +1047,6 @@ export default function AIConsciousnessEvolution2025() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Evolve Your
-
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness?</span>
             </h2>
             <p className="text-xl text-purple-200 mb-8">
@@ -1209,10 +1062,6 @@ export default function AIConsciousnessEvolution2025() {
               </button>
             </div>
             {/* Contact Info */}
-                  icon: <MapPin className='w-6 h-6' />
-                  label: 'Visit Us'
-                  value: contactInfo.address
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
@@ -1292,27 +1141,6 @@ export default function AIConsciousnessEvolution2025() {
                 </motion.div>
 
               ))}
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );  );
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-);  )
-}
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );  );
-}
   )
 }
                     </span>;

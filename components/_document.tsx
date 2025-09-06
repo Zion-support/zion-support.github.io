@@ -5,17 +5,6 @@ import Document, {
   Main
   NextScript
   DocumentContext;
-} from 'next/document';
-
-export default function Document() {
-import Document, {;
-  Html,;
-  Head,;
-  Main,;
-  NextScript,;
-  DocumentContext,;
-} from 'next/document';
-export default function Document() {;
   return (
     <Html lang='en'>;
       <Head>;

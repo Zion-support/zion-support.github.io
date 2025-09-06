@@ -1,9 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-export interface TokenTransaction {
-
-
-export interface TokenTransaction {;
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -68,10 +64,6 @@ function loadConfig(): TokenConfig {
     return getDefaultConfig ();
   }
 }
-export function getAllTransactions(): TokenTransaction[] {
-  return loadTransactions();
-}
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
 
     name: 'ZION Token',
     symbol: 'ZION$',

@@ -9,4 +9,3 @@ const RequestQuote = ({ className }) => {
   );
 };
 
-export default RequestQuote;

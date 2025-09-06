@@ -10,8 +10,6 @@ export default function Playwright.config({ }: Playwright.configProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}}};
 };
 export default function Playwright.config({ }: Playwright.configProps) {;
   return (,
@@ -28,8 +26,6 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 
 
 
-
-
 }}}
 }
 }}}
@@ -37,4 +33,3 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 
 
 
-}}},}}};

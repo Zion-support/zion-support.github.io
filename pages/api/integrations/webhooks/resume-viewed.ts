@@ -32,10 +32,6 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-    });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -67,5 +63,3 @@ results.push({ providerId: conn.providerId, ok: true })
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
-}
-}

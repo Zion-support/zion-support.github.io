@@ -14,26 +14,6 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
-// Define the form schema with zod;
-const productSchema = z && z.object({;
-  title: z && z.string().min(3, "Title must be at least 3 characters");
-  description: z && z.string().min(10, "Description must be at least 10 characters");
-  price: z && z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
-    message: "Price must be a valid number"}),;
-  category: z && z.string().min(1, "Please select a category");
-  image: z && z.instanceof(File).optional(),;
-  tags: z && z.string().optional()}),;
-
-// Type for our form values;
-type ProductFormValues = z && z.infer<typeof productSchema>;
-
-export function ProductSubmissionForm() {;
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
-  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React && React.useState("manual");
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -185,6 +165,12 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -260,6 +246,28 @@ export function ProductSubmissionForm() {;
     // Switch to the manual tab to show applied content;
     setActiveTab("manual");
   },;
+  // Handle image upload preview;
+  const handleImageChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0],;
+    if (file) {;
+      form && form.setValue("image", file);
+      const reader = new FileReader();
+      reader && reader.onloadend = () => {;
+        setImagePreview(reader && reader.result as string);
+      };
+      reader && reader.readAsDataURL(file);
+    }
+  };
+  // Apply AI-generated content to the form;
+  const handleApplyGenerated = (content: any) => {;
+    form && form.setValue("description", content && content.description);
+    form && form.setValue("tags", content && content.tags.join(", "));
+    // Set a default price as the middle of the suggested range;
+    const averagePrice = ((content && content.suggestedPrice.min + content && content.suggestedPrice.max) / 2).toFixed(2);
+    form && form.setValue("price", averagePrice);
+    // Switch to the manual tab to show applied content;
+    setActiveTab("manual");
+  };
   // Handle form submission;
   const onSubmit = async (values: ProductFormValues) => {;
     if (!user) {;
@@ -316,8 +324,6 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
-        }
-      }
       // Show success message
       toast({
         title: "Product Published!"
@@ -532,10 +538,6 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
-              )}
-            />
-            <FormField
-              control={form && form.control}
               name="description"
               render={({ field }) => (
                 <FormItem>
@@ -555,41 +557,9 @@ if ( {) {
               )}
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Provide a detailed description of what you're offering;
-                  </FormDescription>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              <FormField
-                control={form && form.control}
-                name="price"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Price (USD)</FormLabel>;
-                    <FormControl>;
-                      <Input type="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field} />;
-                </FormItem>)}
-            />;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              <FormField;
                 control={form.control}
                 name="price";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Price (USD)</FormLabel>;
-                    <FormControl>;
-                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
-                    </FormControl>;
-                    <FormDescription>;
-                      Set your price in USD;
-                    </FormDescription>;
-                    <FormMessage />;
               <FormField
                 control={form && form.control}
                 name="category"
@@ -612,40 +582,13 @@ if ( {) {
                       <select;
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
-                      >;
-                        <option value="">Select a category</option>;
-                        <option value="digital_product">Digital Product</option>;
-                        <option value="service">Service</option>;
-                        <option value="ai_tool">AI Tool</option>;
-                        <option value="course">Course</option>;
-                        <option value="template">Template</option>;
-                        <option value="other">Other</option>;
-                      </select>;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
                 )}
               />
             </div>
             <FormField
-              control={form && form.control}
-              name="tags"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Tags</FormLabel>;
-                  </FormItem>)}
-              />;
-            </div>;
-            <FormField;
               control={form.control}
               name="tags";
               render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Tags</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="Enter tags separated by commas" {...field} />;
-                  </FormControl>;
-                  <FormDescription>;
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -653,15 +596,6 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
-
-            category: form.getValues("category")
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </TabsContent>;
-
-      <TabsContent value="ai">;
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{

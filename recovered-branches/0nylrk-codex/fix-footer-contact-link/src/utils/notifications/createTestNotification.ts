@@ -79,4 +79,3 @@ export async function createTestNotification(userId: string) {;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
-}

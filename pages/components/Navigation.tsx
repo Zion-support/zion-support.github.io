@@ -40,8 +40,6 @@
   Users,
   X,
   Zap,;
-
-} from "lucide-react";
   Clock,
   DollarSign,
   Cpu,
@@ -79,15 +77,6 @@
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
-
-} from 'lucide-react';
-  Truck,
-  Users,
-  X,
-  Zap,
-} from "lucide-react";
-
-
 
 
 } from 'lucide-react';
@@ -344,8 +333,6 @@ const navigation_items = [;
     ]
   }
 ];
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -370,60 +357,20 @@ const navigation_items = [;
               </Link>;
               <Link
                 href="/pricing"
-                className="hover:text-blue-200 transition-colors"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-
       {/* Main Navigation */}
       <div className="container mx-auto px-4">;
         <div className="flex justify-between items-center py-4">;
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900">
-                Zion Tech Group
-              </div>
-              <div className="text-sm text-gray-500">
-                AI & Technology Solutions
-              </div>
-            </div>
-          </Link>
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">;
-            {navigationItems && navigationItems.map((item) => (;
-              <div
-                key={item && item.title}
-                className="relative group"
-                onMouseEnter={() => setActiveSubmenu(item && item.title)}
-                onMouseLeave={() => setActiveSubmenu(null)}
-              >;
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span>{item.title}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </Link>
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -472,16 +419,12 @@ const navigation_items = [;
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
-            </div>
-          </div>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div

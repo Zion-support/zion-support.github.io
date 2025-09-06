@@ -1,4 +1,3 @@
-import { defineConfig, devices } from '@playwright/test';
   use:{;
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}
@@ -55,8 +54,6 @@ import { defineConfig, devices } from '@playwright/test';
     }
   ];
   reporter:[;
-    ['list'];
-
     {
       name: "Desktop Chrome"
       use: {
@@ -68,7 +65,6 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Firefox"
 
       use: {
-        browser_name: 'firefox';
 }
     }
     {
@@ -76,7 +72,6 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Safari"
 
       use: {
-        browser_name: 'webkit';
 }
     }
     {
@@ -88,11 +83,3 @@ import { defineConfig, devices } from '@playwright/test';
     {
       name: "Mobile Safari"
       use: {
-
-  ],
-  reporter: [;
-    ['list'],
-    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
-];
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});

@@ -17,19 +17,6 @@ import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
-export const SitemapPage: React.FC = () => {
-  return (
-    <AppLayout>;
-      <SEO
-        title="Sitemap | Zion AI Marketplace"
-        description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitemap, zion, ai marketplace, navigation"
-        canonical="https://app.ziontechgroup.com/sitemap-page"
-      />
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Public Pages */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
               Public Pages;
@@ -44,17 +31,6 @@ export const SitemapPage: React.FC = () => {
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                      {route.label}
-                      to={route.path}
-                      className="flex items - center hover:text - zion - purple";
-                    >;
-                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                      {route.label}
-                      to={route.path}
-                      className="flex items - center hover:text - zion - purple";
-                    >;
-                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                      {route.label}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
               Admin Pages;
@@ -73,11 +49,6 @@ export const SitemapPage: React.FC = () => {
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
             </ul>;
           </div>;
         </div>;

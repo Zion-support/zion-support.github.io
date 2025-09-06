@@ -81,10 +81,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
-
-  }
-}
-
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -100,35 +96,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-  };
-  },
-
-
-interface NotificationItemProps {;
-  notification: Notification,;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>;
-}
-
-export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
-  notification, ;
-  onMarkAsRead, ;
-  onDismiss ;
-}) => {;
-  const navigate = useNavigate();
-
-  const handleClick = () => {;
-    if (!notification && notification.read) {;
-      onMarkAsRead(notification && notification.id);
-    }
-    // If there's an action URL, navigate to it;
-    if (notification && notification.action_url) {;
-      navigate(notification && notification.action_url);
-    }
-  }
-  return (
-    <div
-      className={cn(
               <Button
                 variant="link"
                 size="sm"
@@ -138,10 +105,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 <ChevronRight className="h-3 w-3 ml-1" />;
               </Button>;
             )}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
               <Button
                 variant="ghost"
                 size="icon"
@@ -166,9 +129,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e) => {;
-                  e && e.stopPropagation();
-                  onDismiss(notification && notification.id);
                 }}
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />

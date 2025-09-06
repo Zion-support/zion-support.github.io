@@ -171,7 +171,6 @@ const [isDragging, setIsDragging] = useState (false);
 const fileInputRef = useRef<HTMLInputElement> (null);
 if (e.target.files) {;
   return;
-
 }setScreenshots (prev => [...prev, ...newScreenshots]);
 }
 };

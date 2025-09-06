@@ -205,8 +205,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     })
     return filtered
 
-  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
 
 export default function Services2026ShowcaseEnhancedPage(req, res) {
   try {
@@ -382,19 +380,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     }),
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
-
-  // Service statistics
-  const serviceStats = {
-    totalServices: all2026Services.length
-    aiServices: all2026Services.filter(s => s.category.includes('AI')).length
-    quantumServices: all2026Services.filter(s => s.category.includes('Quantum')).length
-    enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('IT')).length
-    microSaasServices: all2026Services.filter(s => s.category.includes('SaaS')).length
-    healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') |s.category.includes('Biotech')).length
-    financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
-    manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
-  }
-
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -409,7 +394,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
 
-
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -420,7 +404,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
-
 
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
@@ -478,12 +461,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
             </motion.div>
           </div>
         </section>
-
-        {/* Enhanced Search and Filters */}
-        <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <div className="bg - gradient - to - r from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8">;
-              {/* Search Bar */}
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -593,38 +570,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                           </div>
                           {/* Description */}
                           <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                              <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full font - medium">;
-                                Popular;
-                              </div>)}
-                          </div>;
-                          {/* Service Title and Tagline */}
-                          <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
-                          <p className="text - gray - 300 text - sm mb - 4">{service.tagline}</p>;
-                          {/* Price */}
-                          <div className="mb - 4">;
-                            <span className="text - 3xl font - bold text - cyan - 400">{service.price}</span>;
-                            <span className="text - gray - 400">{service.period}</span>;
-                          </div>;
-                          {/* Description */}
-                          <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">{service.description}</p>;
-                          {/* Key Features */}
-                          <div className="mb - 4">;
-                            <h4 className="text - sm font - semibold text - gray - 200 mb - 2">Key Features:</h4>;
-                            <ul className="space - y-1">;
-                              {service.features.slice (0, 3).map ((feature, idx) => (
-                                <li key={idx} className="flex items - center text - xs text - gray - 400">;
-                                  <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
-                                  {feature}
-                                </li>))}
-                            </ul>;
-                            {service.features.length > 3 && (
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                             <ul className="space-y-1">
                               {service.features.slice(0, 3).map((feature, idx) => (
                                 <li key={idx} className="flex items-center text-xs text-gray-400">
                                   <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-
                                   {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

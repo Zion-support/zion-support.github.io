@@ -41,6 +41,8 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
+  permissions?: string[],
+  company_id?: string;
 }
 ;
 export interface UserProfile {;

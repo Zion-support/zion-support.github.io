@@ -68,27 +68,6 @@ const RegisterPage = () => {;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
 
-    emailVerificationRequired: boolean;
-  }) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-  },
-
-  return (
-    <>
-      <Head>
-        <title>Create Account - Zion Tech Marketplace</title>
-        <meta name="description" content="Create your Zion Tech Marketplace account" />
-      </Head>
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8">
-          <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="/logos/zion-logo.png"
-              alt="Zion Tech"
               }}
             />;
             <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
@@ -96,12 +75,6 @@ if ( {) {
             </h2>;
             <p className="mt - 2 text - center text - sm text - gray - 600">;
               Or{' '}
-            />
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Create your account
-            </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -134,7 +107,6 @@ if ( {) {
                 Terms of Service;
               </Link>{' '}
               and{' '}
-
 
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
@@ -224,7 +196,3 @@ export default RegisterPage,
           </div>;
         </div>;
       </div>;
-    </>);
-},
-export default RegisterPage,
-;

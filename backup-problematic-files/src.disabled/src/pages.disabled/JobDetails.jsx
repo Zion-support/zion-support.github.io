@@ -9,4 +9,3 @@ const JobDetails = ({ className }) => {
   );
 };
 
-export default JobDetails;

@@ -1,3 +1,4 @@
+  FormField,
 
 import {
   FormField
@@ -45,11 +46,6 @@ function ContactFields() {
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-        )}
-      />
-      <FormField
-        control={control}
-        name="website"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Website</FormLabel>;
@@ -59,8 +55,6 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-      />
-      <FormField
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -70,8 +64,6 @@ function ContactFields() {
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
-  );
-}
               />;
             </FormControl>;
             <FormMessage />;

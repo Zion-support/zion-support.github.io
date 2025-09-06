@@ -9,4 +9,3 @@ const ForumCategoryPage = ({ className }) => {
   );
 };
 
-export default ForumCategoryPage;

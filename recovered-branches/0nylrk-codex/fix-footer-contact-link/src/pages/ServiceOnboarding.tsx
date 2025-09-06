@@ -12,10 +12,6 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 
-  // If not authenticated, redirect to login;
-  if (!isLoading && !user) {;
-    return <Navigate to="/login" replace />;
-
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
@@ -25,10 +21,7 @@ import { Footer } from "@/components/Footer",
               to get discovered on the Zion Marketplace.;
             </p>;
           </div>;
-
           <ServiceProviderRegistrationForm />;
         </div>;
       </div>;
       <Footer />;
-;
-

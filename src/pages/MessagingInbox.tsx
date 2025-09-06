@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
 import { use_messaging } from '@/context / MessagingContext';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
@@ -22,33 +20,25 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 export default function MessagingInbox() {
 
-  const {
-    conversations
-    activeConversation
-    setActiveConversation
 
     markAsRead;
     fetchConversations;
-    isLoading;
+    isLoading
   } = useMessaging();
 
   const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate;
+  const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
-
-  const { 
-    conversations,
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-    // Fetch conversations when component mounts
-    const loadData = async () => {
     };
     
     loadData()
   }, [fetchConversations]);
   const startVideoCall = () => {
+  
     if (!activeConversation) {
       toast.error("Please select a conversation first");
     },
@@ -56,7 +46,6 @@ export default function MessagingInbox() {
     loadData()
   }, [fetchConversations]),
   
-
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
@@ -66,14 +55,8 @@ export default function MessagingInbox() {
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
-    }),
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  },
   
   return (
-    <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
           <div className="flex justify-between items-center mb-6">
@@ -93,7 +76,6 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
-
           
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
@@ -163,7 +145,6 @@ export default function MessagingInbox() {;
                 />;
               )}
               {/* Conversation Detail */}
-              <ConversationDetailView />
             </div>
           </div>
         </div>

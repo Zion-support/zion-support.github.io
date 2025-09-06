@@ -1,28 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { motion } from 'framer-motion';
 
   );
 };
@@ -48,10 +24,6 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>
     </div>
 interface StatsSkeletonProps {
-  className?: string
-
-}
-interface StatsSkeletonProps {
   class_name?: string;
 }
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
@@ -70,12 +42,6 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
           ))}
         </div>
       </div>
-    </div>
-  );
-}
-}
-};
-
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
@@ -119,29 +85,6 @@ export default Skeleton;  );
 
 export default Skeleton;
 
-export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
-  return (
-    <div className={`py - 20 px - 6 ${class_name}`}>;
-      <div className="max - w-7xl mx - auto">;
-        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
-          {[...Array (4)].map ((_, index) => (
-            <div key={index} className='text - center'>;
-              <Skeleton className='w - 16 h - 16 rounded - full mx - auto mb - 4' />;
-              <Skeleton className='h - 10 w - 20 mx - auto mb - 2' />;
-              <Skeleton className='h - 5 w - 24 mx - auto' />            <div key={index} className="text - center">;
-              <Skeleton className="w - 16 h - 16 rounded - full mx - auto mb - 4" />;
-              <Skeleton className="h - 10 w - 20 mx - auto mb - 2" />;
-              <Skeleton className="h - 5 w - 24 mx - auto" />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default Skeleton);
-}
-;
-export default Skeleton;
-;
 
 interface SkeletonProps {
   className?: string;

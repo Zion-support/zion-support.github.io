@@ -50,45 +50,23 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     reason
     timestamp: Date.now()
   }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
 
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
-  transactions.push(transaction);
-  return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+    timestamp: Date.now();
   };
   
   transactions.push(transaction);
   return transaction;
 }
-
-export function getConfig() {
-  return {
-    enabled: true,
-    rate: 1 && 1.0,
-    maxPerDay: 1000
   };
 }
 export function setConfig(

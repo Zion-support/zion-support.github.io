@@ -1,23 +1,3 @@
-interface FraudItem {
-  id: string,
-  userId: string | null,
-  source: string,
-  createdAt: string,
-  heuristic: { reasons: string[], severity: string },
-  gpt?: { label: string, reason: string, confidence: number },
-  status: string
-}
-
-export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([]);
-  const [adminToken, setAdminToken] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('admin-token') || '';
-    setAdminToken(saved)
-  }, []);
 
   id: string
   userId: string | null
@@ -43,30 +23,6 @@ export default function FraudAdminPage() {
     setLoading(true)
     setError(null)
     try {
-export default /**
- * FraudAdminPage - Function description
- */
-function FraudAdminPage() {
-  const [items, set_items] = useState < FraudItem[]>([]),
-  const [admin_token, setAdminToken] = useState < string>(''),
-  const [loading, set_loading] = useState < boolean>(false),
-  const [error, set_error] = useState < string | null>(null),
-  useEffect (() => {
-    const saved = local_storage.get_item ('admin - token') || '',
-    setAdminToken (saved);
-  }, []),
-  const fetch_items = async () => {
-    set_loading (true),
-    set_error (null),
-    try {
-      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
-      const json = await res.json (),
-      if (throw new Error (json.error || 'Failed to load'), ) {
-  $2
-}
-      set_items (json.items || []);
-    } catch (e: any) {
-      set_error (e.message || 'Failed to load');
     } finally {
       setLoading(false)
     }
@@ -233,6 +189,8 @@ function FraudAdminPage() {
 }
   );
 
+  );
+};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -28,8 +28,6 @@ export interface BasicInfoFormProps {
 
   skills?: string[];
   yearsExperience?: number;
-  onComplete?: () => void;
-}
 export function BasicInfoForm({
   resumeId;
 
@@ -83,7 +81,6 @@ export function BasicInfoForm({;
   onSave,;
   skills = [],;
   yearsExperience = 0,;
-
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -98,12 +95,19 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
-      ...initialData}});
 
-  useEffect(() => {;
-    if (initialData) {;
-      Object && Object.entries(initialData).forEach(([key, value]) => {;
-        if (value !== undefined) {;
+
+
+
+  return (
+
+            <RateOptimizationSection
+              control={form && form.control}
+              setValue={form && form.setValue}
+              skills={skills}
+
+              yearsExperience={yearsExperience || 0}
+
 
           form.setValue(key as keyof BasicInfoFormData, value as any);
         }

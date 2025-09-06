@@ -9,4 +9,3 @@ const AdminLayout.js = ({ className }) => {
   );
 };
 
-export default AdminLayout.js;

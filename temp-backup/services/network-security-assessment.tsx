@@ -1,7 +1,3 @@
-import React from 'react';
-interface NetworksecurityassessmentProps {
-  // Add props here as needed
-}
 export default function Networksecurityassessment({ }: NetworksecurityassessmentProps) {
 
 class ErrorBoundary extends React.Component {

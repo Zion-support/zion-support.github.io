@@ -1,9 +1,3 @@
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-}
 export type AmlCheckResult = {
 
 };
@@ -170,27 +164,6 @@ class AmlManager {
     return { status: 'clear' }
   }
 }
-}
-  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.fullLegalName.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    }
-    return { status: 'clear' }
-  }
-  async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.business_name.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-    }
-    return { status: 'clear' }
-  }
 }
 
 export function getAmlProvider(): AmlProvider {;

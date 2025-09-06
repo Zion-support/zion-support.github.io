@@ -9,4 +9,3 @@ const ContractBuilder = ({ className }) => {
   );
 };
 
-export default ContractBuilder;

@@ -10,11 +10,6 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-
-  ),
-});
-export default function Signup() {;
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -87,31 +82,6 @@ if ( {) {
         log_info ('Form submission completed, setting loading to false');
         set_loading (false);
       }
-  }
-  // After successful registration, guide the user to the verification screen;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      const timer = set_timeout (() => {
-        router.push (
-          `/verify - status?email=${encodeURIComponent (formik.values.email)}`);
-      }, 3000);
-      return () => clear_timeout (timer) }
-    return undefined;
-  }, [emailVerificationRequired, formik.values.email, router]);
-  // Show loading state only during initial health check;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-const SignupSchema = Yup && Yup.object({;
-  name: Yup && Yup.string().required('Name is required'),;
-  email: Yup && Yup.string().email('Invalid email').required('Email is required'),;
-  password: Yup && Yup.string();
     .min(8, 'Password must be at least 8 characters');
     .matches(/[A-Z]/, 'Password must include an uppercase letter');
     .matches(/[a-z]/, 'Password must include a lowercase letter');
@@ -158,13 +128,6 @@ const SignupSchema = Yup && Yup.object({;
       email: true,;
       password: true,;
       confirm: true,;
-      terms: true,;
-    });
-    await formik && formik.handleSubmit(e);
-  };
-
-
-  // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
       <AuthLayout>;
@@ -191,22 +154,6 @@ const SignupSchema = Yup && Yup.object({;
               </p>;
             </div>;
           )}
-          <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>;
-            {/* Show Health Check Warning */}
-            {healthCheckError && (;
-              <Alert
-                variant='destructive'
-                className='border-yellow-500 bg-yellow-50 text-yellow-900'>;
-                <AlertCircle className='h-4 w-4' />;
-                <AlertDescription className='flex items-center justify-between'>;
-      <AuthLayout>;
-        <div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='text - center space - y-4'>;
-            <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto'></div>;
-            <p className='text - muted - foreground'>Initializing signup...</p>;
-          </div>;
-        </div>;
-      </AuthLayout>);
   }
   return (
     <AuthLayout>
@@ -246,8 +193,8 @@ const SignupSchema = Yup && Yup.object({;
           )}
           </form>
           {!emailVerificationRequired && (
-            <div className='mt-6'>
-              <AuthButtons providers={['google', 'github']} />
+            <div className="mt-6">
+              <AuthButtons providers={["google", "github"]} />
             </div>
           )}
         </div>
@@ -287,50 +234,6 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-}
-  return (<AuthLayout> <div className="flex min - h-screen items - center justify - center p - 4" > <div className="text - center space - y-4" > <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto" ></div> <p className="text - muted - foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
-}> {';
-  healthCheckLoading ? 'Checking...': 'Retry';
-}</Button> </AlertDescription> </Alert>);
-}<AlertDescription> {
-  error_message;
-}</AlertDescription> </Alert>);
-}<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
-  formik.values.email;
-}</strong>. </AlertDescription> </Alert>) ";
-}<div> <label html_for="name" className="block text - sm font - medium" > Full Name </label> <Input) ";
-}</div> <div> <label html_for="email" className="block text - sm font - medium" > Email address </label> <Input) ";
-}</div> <div> <label html_for="password" className="block text - sm font - medium" > Password </label> <Input) ";
-}</div> <div> <label html_for="confirm" className="block text - sm font - medium" > Confirm Password </label> <Input) ";
-}</div> <div className="flex items - center space - x-2" > <input);
-}{";
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading;
-}> {'";
-  loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account');
-}</Button> > Go to Login </Button> <Button router.push (`/verify - status?email=$ {
-  encodeURIComponent (formik.values.email);
-}`);
-}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>);
-}</form> </div>);
-}</div> </div> </AuthLayout>);
-}'";
-}
-import { useState  } from './react';
-import { Link, Navigate, use_navigate  } from './react-router-dom';
-import { use_form, type UseFormReturn  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2  } from './lucide-react';
-import { use_auth  } from '@/hooks / use_auth';
-import { register  } from '@/services / auth';
-import { toast  } from '@/hooks / use - toast';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { Alert, AlertDescription  } from '@/components / ui / alert';
-import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
-import {
       displayName: "
       email: "
       password: "
@@ -414,6 +317,11 @@ if ( {) {
           console.error ("Error setting session:", session_error);
           form.set_error ("root", { message: session_error.message || "Failed to set session. Please try logging in." });
           toast.error (session_error.message || "Failed to set session. Please try logging in.");
+          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
+          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
+          return
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
 }
 } else {
@@ -424,14 +332,6 @@ if ( {) {
         // Potentially navigate to login or show a more specific error
         return;
 }
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
-      // Check condition
-if ( {) {
-  $2
-}
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
-      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
-        try {
 } catch (err) {
           console.error ('Mailchimp subscription failed', err);
           // Non - critical error, don't block user flow;
@@ -446,150 +346,12 @@ if ( {) {
 } finally {
       setIsSubmitting (false) }
   }
-
-}</div> <div className="flex items-center space-x-2" > <input) 
-}{"
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading 
-}> {'";
-  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') ;
-}</Button> > Go to Login </Button> <Buttonrouter && router.push (`/verify-status?email=$ {
-  encodeURIComponent (formik && formik.values.email) 
-}`) 
-}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>) ;
-}<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) ;
-}</form> </div>) ;
-}</div> </div> </AuthLayout>) ;
-}'";
-}
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { register } from "@/services/auth";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,,;
-} from "@/components/ui/form";
-// Form validation schema;
-const signupSchema = z;
-  .object({;
-    displayName: z && z.string().min(2, "Name must be at least 2 characters"),;
-    email: z && z.string().email("Please enter a valid email"),;
-    password: z && z.string();
-      .min(8, "Password must be at least 8 characters");
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
-      .regex(/[0-9]/, "Password must contain at least one number"),;
-    confirmPassword: z && z.string(),;
-    termsAccepted: z && z.boolean().refine(val => val === true, {;
-      message: "You must accept the terms and conditions",,;
-}),,;
-});
-  .refine(data => data && data.password === data && data.confirmPassword, {;
-    message: "Passwords do not match",;
-    path: ["confirmPassword"],,;
-});
-type SignupFormValues = z && z.infer<typeof signupSchema>;
-export default function Signup() {;
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
-  const passwordValue = form && form.watch("password");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  // Initialize react-hook-form;
-  const form = useForm({;
-    resolver: zodResolver(signupSchema),;
-    defaultValues: {;
-      displayName: ",;
-      email: ",;
-      password: ",;
-      confirmPassword: ",;
-      termsAccepted: false,,;
-},,;
-}) as UseFormReturn<SignupFormValues>;
-  // Form submission handler;
-  const onSubmit = async (data: SignupFormValues) => {;
-    if (isSubmitting) return; // Prevent multiple submissions;
-
-    setIsSubmitting(true);
-    try {;
-      const { res, data: resData } = await register(;
-        data && data.displayName,;
-        data && data.email,;
-        data && data.password;
-      );
-      // Handle duplicate email error from API;
-      if (res && res.status === 409 && resData?.code === 'EMAIL_EXISTS') {;
-        form && form.setError('email', { message: resData && resData.message });
-        toast && toast.error('Email already registered – please login.');
-        return;
-}
-
-      // Check for successful response;
-      if (res && res.ok && resData && resData.token && resData && resData.user) {;
-        // Successful registration;
-        safeStorage && safeStorage.setItem('authToken', resData && resData.token);
-        setUser(resData && resData.user);
-        setTokens({ accessToken: resData && resData.token, refreshToken: resData && resData.refreshToken || null });
-      // Handle email verification required case;
-      if (resData?.emailVerificationRequired) {;
-        setShowVerificationMessage(true);
-        // Do not proceed to set session or navigate;
-} else if (resData?.session) {;
-        // Set the session directly if verification is not required;
-        const { error: sessionError } = await supabase && supabase.auth.setSession(resData && resData.session);
-        if (sessionError) {;
-          console && console.error("Error setting session:", sessionError);
-          form && form.setError("root", { message: sessionError && sessionError.message || "Failed to set session. Please try logging in." });
-          toast && toast.error(sessionError && sessionError.message || "Failed to set session. Please try logging in.");
-          return;
-}
-        // The onAuthStateChange listener in AuthProvider should now handle;
-        // updating user state and navigating if necessary for other cases.;
-        // For direct signup with session, we can navigate.;
-        toast && toast.success("Welcome to ZionAI 🎉");
-        navigate("/dashboard");
-} else {;
-        // This case might indicate an unexpected response from the API;
-        console && console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
-        form && form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
-        toast && toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
-        // Potentially navigate to login or show a more specific error;
-        return;
-}
-  const on_invalid = (errors: any) =>: any {
-    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
-    // Check condition
-if ( {) {
-  $2
-}
-      form.set_focus (first_error);
 }
   }
   // Redirect if user is already logged in and has completed profile;
   // Check condition
 if ( {) {
   $2
-}
-}
-}}
 }
 
 

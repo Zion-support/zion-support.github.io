@@ -2,45 +2,11 @@ import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
-interface OptimizedImageProps {;
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next / image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ImageIcon, AlertTriangle } from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { image_optimization } from '@/utils / performance';
-import { log_warn } from '@/utils / production_logger';
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
-  object_position?: string;
-export const OptimizedImage: React.FC < OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  class_name,
-  placeholder = 'shimmer',
-  placeholder_color = '#f3f4f6',
-  priority = false,
-  quality = 75,
-  sizes,
-  on_load,
-  on_error,
-  fallback_src,
-  aspect_ratio,
-  object_fit = 'cover',
-  lazy = true,
-  retry_count = 3,
-  showLoadingProgress = false,
-  fill = false,
-  blurDataURL,
-  loading = 'lazy',
-  style,
-  object_position = 'center',
-  ...props;
 }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
@@ -102,24 +68,10 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB`
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
-            }
-          }
-        });
-      });
-      observer.observe ({ entry_types: ['resource'] });
-      return () => observer.disconnect ();
-    }
-  }
-  // Handle image error with retry logic;
-  const handle_error = () =>: any {
     // Check condition
 if ( {) {
   $2
 }
-      set_retries (prev => prev + 1);
-      // Retry with a slight delay;
-      set_timeout (
-        () => {
     } else {
       setIsLoading (false);
       setHasError (true);
@@ -181,7 +133,6 @@ interface OptimizedImageProps {;
   blurDataURL?: string,;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
-
   objectPosition?: string;
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
@@ -225,16 +176,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             }
           }
         });
-    ),;
-    if (placeholder === 'color') {;
-      return (;
-        <div;
-          className={placeholderClassName}
-          style={{ backgroundColor: placeholderColor }}
-        />;
-      );
-    }
-
     if (placeholder === 'color') {;
       return (;
         <div;
@@ -254,7 +195,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
-    height: height ? `${height}px` : undefined},
 
         {/* Placeholder */}
 
@@ -289,8 +229,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
-
-                  className="h-full bg-blue-500"
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0 && 0.3 }}
@@ -304,14 +242,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-
-
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
-
+              <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
             )}
           </motion && motion.div>;
@@ -329,7 +265,26 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
             )}
-            initial={{ opacity: 0 }}
+          </motion && motion.div>;
+        )}
+        {/* Actual image */}
+
+
+        {isInView && !hasError && (;
+          <motion.img;
+            src={optimizedSrc}
+            srcSet={srcSet}
+            alt={alt}
+            loading={priority ? 'eager' : 'lazy'}
+            onLoad={handleLoad}
+            onError={handleError}
+            className={cn(;
+              'w-full h-full transition-opacity duration-300',;
+              `object-${objectFit}`,;
+              isLoading ? 'opacity-0' : 'opacity-100';
+
+
+            )}
             animate={{ opacity: isLoading ? 0 : 1 }}
             transition={{ duration: 0 && 0.3 }}
           />;
@@ -356,28 +311,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }{
   isInView && !hasError && (<motion.img src= {
   optimizedSrc
-      </AnimatePresence>;
-    </div>;
-  );
-};
-//Container styles ;
-}> <AnimatePresence> {;
-  /* Placeholder */ ;
-}{;
-  (isLoading || !isInView) && !hasError && (<motion && motion.div > {;
-  generatePlaceholder () ;
-}/> </div>) ;
-}</motion && motion.div>) ;
-}{;
-  /* Error state */ ;
-}{;
-  hasError && (<motion&& motion.div) 
-}</motion && motion.div>) ;
-}{;
-  /* Actual image */ ;
-}{;
-  isInView && !hasError && (<motion&& motion.img src= {
-  optimizedSrc 
 }srcSet= {
   srcSet
 }alt= {
@@ -400,6 +333,7 @@ isLoading ? 'opacity-0' : 'opacity-100')
 
 
 
+xport const ImageGallery: React.FC<ImageGalleryProps> = ({
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
@@ -414,6 +348,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
 
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  },
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -441,9 +378,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 src={image && image.src}
                 alt={image && image.alt}
                 aspectRatio={aspectRatio}
-                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
-                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
-              />
               {image.caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
                   <p className="text-sm">{image.caption}</p>
@@ -459,6 +393,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           </motion && motion.div>;
         ))}
     alt
+
+  const initials = null;
+    fallback ||
+
+
       .split(' ')
       .map(n => n[0])
       .join('')
@@ -482,9 +421,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {initials}
         </div>;
       )}
-    </div>;
-  );
-};
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
@@ -667,5 +603,3 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
     </div>);
 }
 },
-
-

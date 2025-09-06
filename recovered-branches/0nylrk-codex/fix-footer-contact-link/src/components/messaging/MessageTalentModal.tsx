@@ -8,11 +8,6 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 import React, { useState } from 'react',
 import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription;
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -42,8 +37,6 @@ export function MessageTalentModal({
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
-  );
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
@@ -54,18 +47,14 @@ export function MessageTalentModal({
       return;
     }
     try {
-        talent.user_id;
-
     try {;
       setIsSubmitting(true);
-
       // Create context data for the conversation;
       const contextData = {;
         title: jobTitle || `Discussion with ${talent && talent.full_name}`,;
         description: talent && talent.bio || talent && talent.professional_title || "",;
         image_url: talent && talent.profile_picture_url || "";
       };
-
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
@@ -73,7 +62,7 @@ export function MessageTalentModal({
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
-      console.error("Failed to send message:", error);
+      console.error("Failed to send message:", error),
       toast({
         title: "Message not sent"
         description: "There was an error sending your message. Please try again."
@@ -81,15 +70,11 @@ export function MessageTalentModal({
       })
     } finally {
       setIsSubmitting(false)
-  }
-
-  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
-              <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
@@ -116,25 +101,61 @@ export function MessageTalentModal({
             />;
           </div>;
         </div>;
-
-        <DialogFooter className="gap - 2 sm:gap - 0">;
           <Button;
             type="button";
             variant="outline";
-            on_click={on_close}
-            className="border - zion - purple / 30 text - white";
+            onClick={onClose}
+            className="border-zion-purple/30 text-white";
           >;
             Cancel;
           </Button>;
           <Button;
-            type="button";
-            on_click={handleSendMessage}
-            disabled={is_submitting}
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+            type="button" ;
+            onClick={handleSendMessage}
+            disabled={isSubmitting}
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
-            {is_submitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? 'Sending...' :'Send Message'}
           </Button>;
         </DialogFooter>;
       </DialogContent>;
-    </Dialog>);
+    </Dialog>;
+  ),; export interface MessageTalentModalProps {
+  talent: TalentProfile;
+isOpen: boolean;
+onClose: () => void;
+jobTitle?: string 
+}export function MessageTalentModal ({
+  talent;
+isOpen;
+onClose;
+jobTitle 
+}: MessageTalentModalProps) {
+  const {
+  createConversation 
+}= useMessaging ();
+const navigate = useNavigate ();
+const [message, setMessage] = useState (jobTitle ? `Hi $ {
+  talent.full name 
+}, I'd like to invite you to discuss a project: $ {
+  jobTitle 
+}` : `Hi $ {
+  talent.full name 
+}, I'm interested in your profile and would like to discuss a potential opportunity.`);
+const [isSubmitting, setIsSubmitting] = useState (false);
+if (!message.trim () ) {
+  toast ({
+  return;
+}//Create context data for the conversation const contextData = {
+  title: jobTitle || `Discussion with $ {
+  talent.full name 
+}`;
+//Create conversation with this talent await createConversation (talent.user id;
+message;
+jobTitle ? 'job' : 'talent';
+talent.id;
+contextData);
+//Navigate to messages inbox 
+}finally {
+  setIsSubmitting (false) 
 }

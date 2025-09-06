@@ -147,8 +147,6 @@ export function AIMilestoneGenerator({;
       return dateString;
     }
 
-  },
-
   return (
         <Button
           variant="outline"
@@ -265,12 +263,6 @@ export function AIMilestoneGenerator({;
                       </AccordionTrigger>
                     </div>
                     <Button
-                      variant='ghost'
-                      size='sm'
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
-                      className='mr-2'
 
                       variant="ghost"
                       size="sm"
@@ -279,7 +271,6 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-                    >
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
@@ -300,37 +291,3 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
-}
-
-                    <Button;
-                      variant='ghost';
-                      size='sm';
-                      on_click={e => {
-                        e.stop_propagation ();
-                        handleAddSingleMilestone (milestone) }}
-                      className='mr - 2';
-                    >;
-                      <Plus className='h - 4 w - 4' />;
-                    </Button>;
-                  </div>;
-                  <AccordionContent>;
-                    <div className='pl - 6 space - y-2'>;
-                      <p className='text - sm'>{milestone.description}</p>;
-                      <div className='flex items - center text - sm text - muted - foreground'>;
-                        <Calendar className='w - 4 h - 4 mr - 1' />;
-                        Due: {format_date (milestone.due_date)}
-                      </div>;
-                      <div className='text - sm text - muted - foreground'>;
-                        Estimated effort: {milestone.estimated_hours} hours;
-                      </div>;
-                    </div>;
-                  </AccordionContent>;
-                </AccordionItem>))}
-            </Accordion>;
-          </CardContent>;
-        </Card>)}
-    </div>);
-    </div>;
-  );
-}
-;

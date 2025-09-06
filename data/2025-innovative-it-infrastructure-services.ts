@@ -128,15 +128,6 @@ export const innovativeITInfrastructureServices2025 = [
     ],
     pricing: {
       starter: {
-        price: 299
-        period: 'month'
-        features: [
-          'Basic security'
-          'Standard encryption'
-          'Email support'
-          'Basic monitoring'
-        ]
-      }
       professional: {
         price: 799
         period: 'month'
@@ -330,8 +321,6 @@ export const innovativeITInfrastructureServices2025 = [
     features: [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols';
       'Scalable edge infrastructureEnergy-efficient quantum processing'
-    useCases: [
-      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     market_size: '$31.2B',
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
@@ -356,8 +345,6 @@ export const innovativeITInfrastructureServices2025 = [
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-      'Industry-specific regulations',
-    ],;
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
@@ -568,7 +555,3 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
-  }
-];
-
-;

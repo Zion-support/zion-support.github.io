@@ -1,56 +1,3 @@
-
-export interface EmptyStateProps {
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
-import React from 'react';
-import * as React from 'react';
-import {;
-  RefreshCw,;
-  Wifi,;
-  Server,;
-  ShoppingCart,;
-  Users,;
-  Wrench,;
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-export interface EmptyStateProps {;
-import * as React from 'react'
-import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
-export interface EmptyStateProps {
-  type:;
-    | 'products';
-    | 'categories';
-    | 'talent';
-    | 'equipment';
-    | 'search';
-    | 'error';
-    | 'network';
-    | 'loading';
-import * as React from 'react',;
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import Link from 'next/link',;
-import { useTranslation } from 'react-i18next',;
-export interface EmptyStateProps {;
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',;
-  title?: string,;
-  description?: string,;
-  action?: {;
-    label: string,;
-
 const defaultContent = {
   products: {
     icon: <ShoppingCart className='w-16 h-16 text-gray-400' />
@@ -129,29 +76,16 @@ const defaultContent = {
           className="flex items-center gap-2"
         >
           <RefreshCw className="w-4 h-4" />
-          {action.label}
-        </Button>
-      )}
-      {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-      {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>
 }: {
   on_retry?: () => void;
   onAddProduct?: () => void;
   is_authenticated?: boolean }) {
   const action = onAddProduct;
     ? {
-      ? { label: 'Try Again', onClick: onRetry }
-      : undefined
-  const customDescription = isAuthenticated
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
-      />
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -171,13 +105,10 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
-}
-}
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
-
             </Link>;
             .;
           </p>;
@@ -191,10 +122,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
         onClick: onAddProduct,;
       }
     : onRetry;
-      ? { label: 'Try Again', onClick: onRetry }
-
-      : undefined;
-
   return (
     <EmptyState
       type="categories"
@@ -203,13 +130,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
 
 
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
@@ -235,4 +155,3 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-

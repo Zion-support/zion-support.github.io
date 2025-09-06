@@ -1,17 +1,3 @@
-import fs from './fs';
-import path from './path';
-import { exec_sync, spawn } from './child_process';
-import { fileURLToPath } from './url';
-;
-const __filename = fileURLToPath (import.meta.url);
-const __dirname = path.dirname (__filename);
-;
-class ComprehensiveAutomationRunner { constructor () { this.log_file = path.join (__dirname, "logs", "comprehensive - automation.log"); this.results_file = path.join (__dirname, "reports", "comprehensive - results.json"); this.ensure_directories (); this.results = { timestamp: new Date ().toISOString (),
-    tests: {} builds: {} linting: {} performance: {} security: {} overall: { status: "unknown", score: 0 }}}})}
-; log (message, level = "INFO") { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] [${level}] ${message}\n`; console.log (`[${level}] ${message}`); fs.appendFileSync (this.log_file, log_message)}
-; async runBuildTests () { this.log (" = = = RUNNING BUILD TESTS = = = ");
-; const build_tests = [;
-    ; { cmd:"npm run build", desc: "Production build" } { cmd:"npm run lint", desc: "Linting check" } { cmd:"npm run type - check", desc: "TypeScript type checking" },
     { cmd:"npm run test: smoke", desc: "Smoke tests" }
   ];
 ; for (const test of build_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.builds[test.desc] = result}}
@@ -32,43 +18,6 @@ class ComprehensiveAutomationRunner { constructor () { this.log_file = path.join
     ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
     { cmd:"npm run test: coverage", desc: "Test coverage" }
   ];
-; for (const test of quality_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.tests[test.desc] = result}}
-; calculateOverallScore () { let total_score = 0; let max_score = 0;
-; // Build tests (40% weight); const build_score = this.calculateCategoryScore (this.results.builds); total_score + = build_score * 0.4; max_score + = 100 * 0.4;
-; // Performance tests (25% weight); const perf_score = this.calculateCategoryScore (this.results.performance); total_score + = perf_score * 0.25; max_score + = 100 * 0.25;
-; // Security tests (20% weight); const security_score = this.calculateCategoryScore (this.results.security); total_score + = security_score * 0.2; max_score + = 100 * 0.2;
-; // Quality tests (15% weight); const quality_score = this.calculateCategoryScore (this.results.tests); total_score + = quality_score * 0.15; max_score + = 100 * 0.15;
-; const final_score = Math.round ((total_score / max_score) * 100); this.results.overall.score = final_score; this.results.overall.status = final_score > = 80 ? "excellent": ; final_score > = 60 ? "good": ; final_score > = 40 ? "fair": "poor";
-; return final_score}
-; calculateCategoryScore (category) { if (.length = = = 0) return 0) {
-  $2
-} const results = Object.values (category); const success_count = results.filter (r = > r.success).length; return Math.round ((success_count / results.length) * 100)}
-; generate_recommendations () { const recommendations = [];
-; // Build recommendations; Object.entries (this.results.builds).for_each (([test, result]) = > { // Check condition
-if ( {) {
-  $2
-} recommendations.push (`Fix ${test}: ${result.error}`)}});
-; // Performance recommendations; Object.entries (this.results.performance).for_each (([test, result]) = > { // Check condition
-if ( {) {
-  $2
-} recommendations.push (`Optimize ${test}: ${result.error}`)}});
-; // Security recommendations; Object.entries (this.results.security).for_each (([test, result]) = > { // Check condition
-if ( {) {
-  $2
-} recommendations.push (`Address security issue in ${test}: ${result.error}`)}});
-; // Quality recommendations; Object.entries (this.results.tests).for_each (([test, result]) = > { // Check condition
-if ( {) {
-  $2
-} recommendations.push (`Improve ${test}: ${result.error}`)}});
-; return recommendations}
-; async save_results () { this.results.recommendations = this.generate_recommendations (); this.results.overall.score = this.calculateOverallScore ();
-; fs.writeFileSync (this.results_file, JSON.stringify (this.results, null, 2)); this.log (`Results saved to: ${this.results_file}`)}
-;
-// Main execution;
-// Check condition
-if ( {) {
-  $2
-} const runner = new ComprehensiveAutomationRunner (); runner.run_all ().catch (console.error)}
 ;
 export default ComprehensiveAutomationRunner;
 

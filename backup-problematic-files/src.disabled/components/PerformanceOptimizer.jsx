@@ -9,4 +9,3 @@ const PerformanceOptimizer = ({ className }) => {
   );
 };
 
-export default PerformanceOptimizer;

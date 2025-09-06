@@ -9,4 +9,3 @@ const CategoriesSection.js = ({ className }) => {
   );
 };
 
-export default CategoriesSection.js;

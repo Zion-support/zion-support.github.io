@@ -5,26 +5,6 @@ import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, Fil
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Building, ;
-  Shield, ;
-  Users, ;
-import {;
-  Building,;
-  Shield,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  BarChart3,;
-  FileText,;
-  Lock,;
-  Database,;
-  Phone,;
-  Mail;
-} from 'lucide-react';
-import Layout from '../../components/Layout';';
-const services = [;
-  {}
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -67,24 +47,12 @@ const services = [;
     ];
   },;
   {}
-      'Audit automation'';
-    ];
-  }
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',;
     description: 'Government-grade security measures protect sensitive citizen and government data.,',;
     icon: Shield;
-];
-const benefits = [;
-  {;
-    title: 'Enhanced Security',;
-    description: 'Government-grade security measures protect sensitive citizen and government data.',;
-    icon: Shield;
-  },;
-  {}
-  }
 ;];
 export default function GovernmentPage() {;
   return (
@@ -130,38 +98,6 @@ export default function GovernmentPage() {;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto">;
-              <div className="flex items-center justify-center mb-6">;
-                <Building className="w-12 h-12 text-indigo-400 mr-4" />;
-                <h1 className="text-5xl md:text-6xl font-bold">;
-                  Government;
-                  <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">;
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-                Transform government operations with secure, efficient, and citizen-centric technology solutions.;
-                Enhance service delivery, improve transparency, and ensure public safety.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Government Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
-                  View Government Case Studies;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py-20 bg-white">";
-          <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -1,31 +1,3 @@
-
-  return (
-    <Layout>
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
-;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
-
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'];
-
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -49,7 +21,6 @@ export default function EnterpriseITPage() {
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
-                </div>
                 </a>
               ))}
             </div>
@@ -121,7 +92,6 @@ function EnterpriseITPage() {
           </section>;
         </div>;
       </div>;
-
     </Layout>;
   );
   } catch (error) {

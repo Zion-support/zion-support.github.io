@@ -29,8 +29,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
         })
       });
     }
-    const db = admin && admin.firestore();
-    await db && db.collection("interaction_feedback").doc(doc && doc.id).set(doc);
     return true;
   } catch (e) {
     return false;
@@ -55,18 +53,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   return ok(res, { id: doc && doc.id });
 }
 
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return bad (res, "Method not allowed", 405)) {
-  $2
-}
-  const { rating, comment, kind, context } = req.body || {}
-  const r = Number (rating);
-  if (return bad (res, "rating must be 1 - 5")) {
-  $2
-}
   const key: FeedbackRecord["kind"] =;
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
 ;
@@ -76,8 +62,6 @@ function handler() {
     talent_slug: (req.headers["x - demo - talent - slug"] as string) || undefined,
   }
 ;
-  };
-
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({

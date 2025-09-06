@@ -22,9 +22,6 @@ export default function SearchPage() {
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
-
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -45,6 +42,9 @@ export default function SearchPage() {
 
 
 
+
+          />
+        </form>
 
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
@@ -98,8 +98,6 @@ export default function SearchPage() {;
                 <p className="text-zion-slate-light">{r && r.description}</p>;
               </div>;
             ))}
-          </div>;
-        )}
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';

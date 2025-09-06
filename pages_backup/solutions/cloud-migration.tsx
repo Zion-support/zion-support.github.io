@@ -44,6 +44,8 @@ import { Cloud,
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
       'Risk assessment'';
     ];

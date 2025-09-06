@@ -27,4 +27,3 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
-  if (!u) return res.status(404).json({ error: 'Not found' });

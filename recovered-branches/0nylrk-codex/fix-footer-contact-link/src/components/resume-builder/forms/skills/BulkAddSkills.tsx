@@ -1,4 +1,3 @@
-import React from 'react';
 
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -17,11 +16,6 @@ import {BulkAddSkillsProps} from './types';
         }
       }
     } catch (err: any) {
-        }
-      }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to categorize skills');
-    }
 
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
@@ -36,9 +30,6 @@ import {BulkAddSkillsProps} from './types';
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-        <Button 
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing |!bulkSkills.trim()}
           className="gap-2"
         >
           {isEnhancing ? (

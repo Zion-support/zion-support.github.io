@@ -354,12 +354,6 @@ export default function Industries() {;
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Industry-Specific{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Technology Solutions;
@@ -472,6 +466,8 @@ export default function Industries() {;
               </p>
             </motion.div>
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
@@ -489,58 +485,15 @@ export default function Industries() {;
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
-                    <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
-                        {industry && industry.features.map((feature, idx) => (,;
-                          <span}),
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"">;
-                            {feature}
-                          </span>;
-                        ))}
-                      </div>;
-                    </div>;
-                      </div>,;
-                    </div>;
-                    <Link
-                      href={industry && industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
                       <span>Learn More</span>;
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
                     </Link>;
                   </motion && motion.div>;
                 );
               })}
-            </div>;
-          </div>;
-        </section>;
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"";
-                    >;
-                      <span>Learn More</span>,;
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />", </Link>,;
-                  </motion && motion.div>;
-                    <div className="space-y-2 mb-6">;
-                      {industry && industry.features.map((feature, idx) => (;
-                        <div key={idx} className="flex items-center text-gray-300">;
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-                          <span className="text-sm">{feature}</span>;
-                        </div>;
-                      ))}
-                    </div>;
-                    <Link href={industry && industry.href}>;
-                      <a className="inline-flex items-center text-blue-400 hover: text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">;
-                        Learn More;
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
-                      </a>;
-                    </Link>;
-                  </motion && motion.div>;
-                ),;
-              })}
             </div>,;
           </div>;
         </section>;
-
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -562,6 +515,8 @@ export default function Industries() {;
               </p>;
             </motion.div>;
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -641,7 +596,10 @@ export default function Industries() {;
                   maintain the highest security standards.;
                 </p>;
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
@@ -752,23 +710,6 @@ export default function Industries() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Ready to Transform Your Industry?;
-              </h2>;
-              <p className="text-xl mb-8 max-w-2xl mx-auto">;
-                Let our industry experts help you leverage technology to solve your sector-specific challenges.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Industry Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  Explore Solutions;
-                </Link>;
-              </div>;
-            >,;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">";
                 Ready to Transform Your Industry?;
               </h2>;
@@ -788,8 +729,6 @@ export default function Industries() {;
         </section>;
       </div>;
     </Layout>;
-    </SimpleLayout>
-    </SimpleLayout>
     </Layout>
   );
             >;

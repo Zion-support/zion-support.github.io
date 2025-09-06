@@ -29,39 +29,6 @@ type Message = {
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-    }
-  }, [messages]);
-  // Focus input when component mounts
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, []);
-  const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
-    const userMessage: Message = {
-      id: `user-${Date.now()}`
-      content: text
-      sender: "user"
-      timestamp: new Date()}
-    setMessages((prev) => [...prev, userMessage]);
-    setInputValue("");
-    setIsLoading(true);
-    try {
-      // Call the OpenAI-powered support function
-      const response = await sendToAIAssistant(text);
-      const botMessage: Message = {
-        id: `bot-${Date.now()}`
-        content: response.message |"Sorry, I couldn't process your request. Please try again.";
-        sender: "bot"
-        timestamp: new Date()}
-      setMessages((prev) => [...prev, botMessage]);
-      // Check if the request was successful
-      if (!response.success) {
-        setFailedAttempts((prev) => prev + 1);
-        // After 3 failed attempts, suggest escalation
-        if (failedAttempts >= 2) {
-          suggestEscalation()
         }
       } else {;
         // Reset failed attempts if successful;
@@ -164,6 +131,14 @@ if ( {) {
 }
           suggest_escalation ();
 
+    }
+  }, [messages]);
+  // Focus input when component mounts
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, []);
 import React, { useState, useRef, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -215,7 +190,6 @@ export function ChatBotPanel() {;
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
-
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
@@ -278,7 +252,6 @@ export function ChatBotPanel() {;
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
-
         variant: "destructive",
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
@@ -317,6 +290,12 @@ export function ChatBotPanel() {;
           success: false
           message: "I'm having trouble connecting to my knowledge base right now."
         }
+
+      
+
+
+          message: "I'm having trouble connecting to my knowledge base right now."
+        };
       }
       const data = await response.json();
       return {
@@ -383,7 +362,6 @@ if ( {) {
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
-      console.log("Support escalation triggered", {
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
@@ -414,7 +392,6 @@ if ( {) {
     toast({
       title: "Support request submitted"
       description: "A support agent will be with you shortly."})
-  }
   const handleEmailSupport = () => {
     setMessages((prev) => [
       ...prev
@@ -423,7 +400,6 @@ if ( {) {
         content: "I'd like to email support"
         sender: "user"
         timestamp: new Date()
-      }
       {
         id: `bot-${Date.now()}`
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
@@ -431,13 +407,6 @@ if ( {) {
         timestamp: new Date()
       }
     ])
-            <ChatMessage
-              key={message && message.id}
-              message={message && message.content}
-              isUser={message && message.sender === "user"}
-              timestamp={message && message.timestamp}
-            />;
-
           {messages.map((message) => (;
             <ChatMessage;
               key={message.id}
@@ -526,7 +495,6 @@ if ( {) {
           <Input
             ref={inputRef}
             value={inputValue}
-
                 : "bg-white border-gray-200"
             )}
           />
@@ -587,21 +555,11 @@ if ( {) {
               "flex-1";
               theme === "dark";
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple";
-
-                : "bg-white border-gray-200";
-            )}
-          />;
-          <Button
-            type="submit"
-            size="icon"
-            disabled={isLoading || !inputValue && inputValue.trim()}
-            className="bg-zion-cyan hover: bg-zion-cyan/80 text-white">;
             <Send className="h-4 w-4" />;
           </Button>;
         </form>;
       </div>;
     </div>;
-  );
 }
 ;
   const handleQuickReply = (text: string) =>: any {
@@ -734,4 +692,12 @@ if ( {) {
         </form>;
       </div>;
     </div>);
+  ); type Message = {
+  id: string;
+content: string;
+export function ChatBotPanel () {
+  const [messages, setMessages] = useState<Message[]> ([ {
+  //Auto-scroll to bottom when messages change useEffect ( () => {
+  if (scrollAreaRef.current) {
+  scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight 
 }

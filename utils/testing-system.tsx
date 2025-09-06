@@ -1,7 +1,3 @@
-
-
-
-
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -72,7 +68,6 @@ export class TestingSystem {,
     };
   };
 };
-}
 }};
 },;
 // Testing system utilities

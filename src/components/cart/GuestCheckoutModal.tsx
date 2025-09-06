@@ -31,16 +31,9 @@ export default function GuestCheckoutModal({
     }
     setIsSubmitting(true)
     try {
-      on_submit ({ email, address });
-    } finally {
-      setIsSubmitting(false)
-      setIsSubmitting (false);
-    }
-  }
 
 
   return (
-            <Label
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
@@ -51,12 +44,6 @@ export default function GuestCheckoutModal({
               type='email'
           </div>;
 
-            <Label
-              htmlFor='guest-address'
-              className='text-white flex items-center gap-2'>;
-              <MapPin className='h-4 w-4 text-zion-cyan' />;
-              Shipping Address;
-            </Label>;
             <Textarea
               id='guest-address'
             <Button
@@ -73,6 +60,20 @@ export default function GuestCheckoutModal({
             />
           </div>
 
+          <div className="space-y-2">
+            <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-zion-cyan" />
+              Shipping Address
+            </Label>
+            <Textarea
+              id="guest-address"
+              value={address || ''}
+              onChange={(e) => setAddress(e.target.value || '')}
+              placeholder="Enter your full shipping address..."
+              required
+              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]"
+            />
+          </div>
 
 
           <DialogFooter className="space-x-2">
@@ -89,11 +90,15 @@ export default function GuestCheckoutModal({
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
-              {isSubmitting ? (
                 'Processing...'
               ) : (
                 <>
                   <CreditCard className='h-4 w-4 mr-2' />
+              {isSubmitting ? (
+                'Processing...'
+              ) : (
+                <>
+                  <CreditCard className="h-4 w-4 mr-2" />
                   Continue to Payment
                 </>
               )}
@@ -131,5 +136,3 @@ export default function GuestCheckoutModal({
 }
 }
 ;
-
-

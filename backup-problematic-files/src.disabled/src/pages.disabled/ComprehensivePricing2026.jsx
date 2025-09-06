@@ -9,4 +9,3 @@ const ComprehensivePricing2026 = ({ className }) => {
   );
 };
 
-export default ComprehensivePricing2026;

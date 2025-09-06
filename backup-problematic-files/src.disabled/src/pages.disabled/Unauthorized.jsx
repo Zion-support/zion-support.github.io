@@ -9,4 +9,3 @@ const Unauthorized = ({ className }) => {
   );
 };
 
-export default Unauthorized;

@@ -19,11 +19,8 @@
         .status(500)
         .json({ error: e?.message || "Failed to write changelog" });
     }
-    return;
   }
 
-  res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
     } catch (e: any) {
       res
         .status(500)
@@ -71,24 +68,3 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

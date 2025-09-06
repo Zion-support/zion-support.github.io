@@ -77,23 +77,6 @@ interface ClientBudgetRecommenderProps {;
     if (!jobTitle || !category) {;
       return;
     }
-    // Check condition
-if ( {) {
-  $2
-}
-      onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
-      // Track this suggestion application;
-      // Check condition
-if ( {) {
-  $2
-}
-        trackPricingSuggestion ({
-          user_id: user.id,
-          suggestion_type: 'client',
-          suggested_min: suggestion.min_rate,
-          suggested_max: suggestion.max_rate,
-          accepted: true,
-        });
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -117,8 +100,6 @@ if ( {) {
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
-          </Button>
-        ) : (
           <PricingSuggestionBox
     <div className='space - y-4'>;
       <div>;
@@ -145,9 +126,6 @@ if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
-
-
-},
             rateType="hourly"
           />
         )}
@@ -166,5 +144,3 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"  );
-
-

@@ -9,4 +9,3 @@ const ImageWithRetry = ({ className }) => {
   );
 };
 
-export default ImageWithRetry;

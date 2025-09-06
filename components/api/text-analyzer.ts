@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
-    bigrams: Array<{ phrase: string, count: number }>;
-    trigrams: Array<{ phrase: string, count: number }>;
   }
 }
 export default async function handler(
@@ -99,13 +97,6 @@ export default async function handler(
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([word, count]) => ({
-        word
-        count
-        frequency: Math.round((count / words) * 1000) / 10,      }));        word;
-        count;
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -117,7 +108,6 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     const trigrams = Array.from(trigramCounts.entries())
-
     for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1);
@@ -144,34 +134,6 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-    const result: TextAnalysisResult = {
-      text
-        characters
-        charactersNoSpaces
-        words
-        sentences
-        paragraphs
-        syllables
-        readingTime
-        speakingTime
-      }
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
-        gunningFog: Math.round(gunningFog * 100) / 100
-        smog: Math.round(smog * 100) / 100
-        colemanLiau: Math.round(colemanLiau * 100) / 100
-        automatedReadability: Math.round(automatedReadability * 100) / 100
-        averageGrade
-      }
-      sentiment: {
-        score: sentimentScore
-        label: sentimentLabel
-        positiveWords: textWords.filter(word => positiveWords.includes(word))
-        negativeWords: textWords.filter(word => negativeWords.includes(word))
-      }
-      language: {
-
         topWords,
         bigrams,
         trigrams,
@@ -210,13 +172,3 @@ export default async function handler(
       keywords: {
         top_words;
         bigrams;
-        trigrams}}
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Text analysis error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-
-
-
-

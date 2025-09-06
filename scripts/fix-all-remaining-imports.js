@@ -644,7 +644,6 @@ function findAllMissingImports(content, filePath) {
     }
   });
   return [...new Set(missingImports)]; // Remove duplicates
-}
 // Fix all missing imports in a file
 function fixAllMissingImports(content, filePath) {
   const missingImports = findAllMissingImports(content, filePath);
@@ -653,7 +652,6 @@ function fixAllMissingImports(content, filePath) {
   let fixedContent = content;
   let changes = 0;
   // Find existing lucide-react import
-  const existingImportRegex =
     /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
   const existingImport = fixedContent && fixedContent.match(existingImportRegex);
   if (existingImport) {

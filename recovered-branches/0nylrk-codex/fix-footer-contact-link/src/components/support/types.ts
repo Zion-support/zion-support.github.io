@@ -4,14 +4,6 @@ export interface HelpArticle {
   id: string;
   title: string;
   content: string;
-}
-export interface HelpCategory {
-
-  last_updated: string;
-  tags: string[];
-
-}
-export interface HelpCategory {
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -19,6 +11,10 @@ export interface HelpArticle {;
   content: string;
   lastUpdated: string,
   tags: string[]
+  lastUpdated: string;
+tags: string[]
+}
+export interface HelpCategory {
 }
 
 export interface HelpCategory {;
@@ -26,8 +22,6 @@ export interface HelpCategory {;
   name: string;
   description: string;
   icon: ReactNode;
-  articles: HelpArticle[]
-}
   id: string;
   user_id: string;
   subject: string;
@@ -80,6 +74,3 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
-
-  updatedAt: string;
-}

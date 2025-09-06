@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface MoreProductsPageProps {
   // Add props here as needed
-}
 export default function MoreProductsPage({ }: MoreProductsPageProps) {
   return (
     <div>

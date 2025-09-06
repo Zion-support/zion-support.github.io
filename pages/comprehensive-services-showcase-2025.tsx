@@ -1,10 +1,3 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
-} from 'lucide-react',;
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -18,8 +11,6 @@ const categories = [;
 const pricingRanges = [;
   'All PricesUnder $300$300 - $500$500 - $800$800+';
 ];
-export default function ComprehensiveServicesShowcase2025(req, res) {
-  try {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -297,7 +288,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
           </div>;
         </div>;
       </section>;
-
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
@@ -406,7 +396,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                           <span className='text - white font - semibold'>;
                             {service.rating}
-
                       {/* Price and Rating */}
                       <div className='text-right'>;
                         <div className='text-3xl font-bold text-cyan-400 mb-2'>;
@@ -429,7 +418,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                         </span>;
                       </div>;
                     </div>;
-
                     {/* CTA and Additional Info */}
                     <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>;
                       <div className='flex items-center gap-4 text-sm text-gray-400'>;
@@ -486,13 +474,11 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 {contactInfo && contactInfo.mobile}
               </a>;
               <a
-                <a
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </Link>
                     </div>
-
                   </motion.div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -683,52 +669,57 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
-                  {contactInfo.website}
-                </a>
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </>
-);
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
-                <Mail className='w-5 h-5 mr-2' />;
-                {contactInfo && contactInfo.email}
-              </a>;
-            </div>;
-
-          <div className="relative z-10 container mx-auto px-4 text-center">
+                  Clear All Filters
+                </button>
+              </div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </section>;
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="max-w-4xl mx-auto"
             >
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Comprehensive Services
+              <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Ready to Transform
                 </span>
                 <br />
-                <span className="text-white">Showcase 2025</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>;
-                cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
-                <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
+                <span className="text-white">Your Business?</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's discuss how our innovative services can help you achieve your business goals.
+                Get in touch with our experts today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-                <a
-                  href={`tel:${contactInfo.mobile}`}
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5 mr-2 inline" />
-                  {contactInfo.mobile}
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
   )
 },
 export default ComprehensiveServicesShowcase2025,

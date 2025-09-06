@@ -128,7 +128,6 @@ export function MilestoneCard({;
       case 'completed':;
 }: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
 
-      case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
@@ -167,51 +166,6 @@ interface MilestoneCardProps {
   description?: string,
   amount: number,
   status: string,
-  due_date?: string,
-  on_approve?: (id: string, ) => Promise < void>,
-  on_reject?: (id: string, ) => Promise < void>;
-}
-export /**
- * MilestoneCard - Function description
- */
-function MilestoneCard() {
-  const { isUnderDispute, dispute_status } = useDisputeCheck (project_id, id);
-  /**
- * getStatusBadgeColor - Function description
- */
-function getStatusBadgeColor() {
-    switch (status) {
-      case 'completed':;
-        return 'bg - green - 500';
-      case 'in_progress':;
-        return 'bg - blue - 500';
-      case 'pending':;
-        return 'bg - yellow - 500';
-      case 'rejected':;
-        return 'bg - red - 500';
-      default:;
-        return 'bg - gray - 500';
-    }
-  }
-  return (
-    <Card>;
-      <CardHeader className='pb-2'>;
-        <div className='flex justify-between items-start'>;
-          <div>;
-            <CardTitle className='text-xl'>{title}</CardTitle>;
-            {dueDate && (;
-              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
-              </p>;
-            )}
-          </div>  }
-  return (
-    <Card>;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-start">;
-          <div>;
-            <CardTitle className="text-xl">{title}</CardTitle>;
-            {dueDate && (;
-              <p className="text-sm text-muted-foreground">;
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
 import React from 'react',;
@@ -286,7 +240,6 @@ export function MilestoneCard({;
               {status.replace('_ ')}
             </Badge>
               <DisputeStatusBadge status={disputeStatus} />
-            )}
           </div>
         </div>
       </CardHeader>
@@ -294,18 +247,6 @@ export function MilestoneCard({;
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
-        </div>
-      </CardContent>
-      <CardFooter className='pt-2 flex justify-between'>
-        <div>
-          {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton
-              projectId={projectId}
-              milestoneId={id}
-              variant='ghost'
-              size='sm'            <RaiseDisputeButton 
-              projectId = {projectId,}
-              milestoneId = {id,}
       
       <CardContent className="pb-2">
         {description && (
@@ -319,39 +260,6 @@ export function MilestoneCard({;
       <CardFooter className="pt-2 flex justify-between">
         <div>
           {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton 
-              projectId={projectId} 
-              milestoneId={id} 
-              variant="ghost"
-              size="sm"
-            />;
-          )}
-          )}
-          {status === 'pending' && onApprove && !isUnderDispute && (
-          )}
-          {isUnderDispute && (
-            <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>
-              Actions frozen due to dispute
-            </Button>
-          )}
-        </div>
-      </CardFooter>
-        
-        <div className="flex gap-2">
-          {status === 'pending' && onReject && !isUnderDispute && (
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
-              <X className="h-4 w-4 mr-1" /> Reject
-            </Button>
-          )}
-          
-          {status === 'pending' && onApprove && !isUnderDispute && (
-
-
-
-
-          )}
-          
-          {isUnderDispute && (
             <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute
             </Button>
@@ -384,18 +292,6 @@ export function MilestoneCard({;
               size='sm'            <RaiseDisputeButton
               projectId = {projectId,}
               milestoneId = {id,}
-        </div>
-        <div className='flex gap-2'>
-          {status === 'pending' && onReject && !isUnderDispute && (
-            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
-              <X className='h-4 w-4 mr-1' /> Reject            </Button>
-          )}
-          {status === 'pending' && onApprove && !isUnderDispute && (
-            <Button variant='default' size='sm' onClick={() => onApprove(id)}>
-              <Check className='h-4 w-4 mr-1' /> Approve            </Button>
-          )}
-          {isUnderDispute && (
-            <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>
               variant="ghost"
               size="sm"
             />
@@ -416,7 +312,6 @@ export function MilestoneCard({;
           )}
           
           {isUnderDispute && (
-            <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute
             </Button>
           )}

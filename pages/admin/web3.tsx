@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
   useEffect(() => {
     const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
     setUsers(raw ? JSON.parse(raw) : [])
@@ -18,8 +17,6 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
 
-  };
-
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
@@ -31,7 +28,7 @@ export default function AdminWeb3Page() {
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
 
-
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -135,4 +132,3 @@ function AdminWeb3Page() {
           </ul>;
         </div>;
       </div>;
-}

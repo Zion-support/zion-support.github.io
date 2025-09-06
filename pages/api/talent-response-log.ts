@@ -54,5 +54,3 @@ if ( {) {
   }
   // Placeholder for persistence, echo the response for now;
 }
-;
-}

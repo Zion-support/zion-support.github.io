@@ -498,5 +498,3 @@ const allServices = [;
     </div>;
   );
 },;
-export default ComprehensiveServicesShowcase2025;
-}

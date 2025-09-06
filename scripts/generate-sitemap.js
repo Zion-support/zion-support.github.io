@@ -15,8 +15,6 @@ const pages = ['',
   '/services/it-services',
   '/contact',
 ];
-import { createWriteStream } from 'fs',
-import { join } from 'path',
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -30,7 +28,6 @@ const generateSitemap = () => {
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-generateSitemap();
     <priority>0.8</priority>
   </url>
   <url>
@@ -51,6 +48,14 @@ generateSitemap();
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
+  console.log('Sitemap generated successfully at:', sitemapPath)
+},
+generateSitemap(),
+
+const fs = require('fs');
+const path = require('path');
+// Base URL for the site
+const BASE_URL = 'https://zion.app';
 
   console.log('Sitemap generated successfully at:', sitemapPath)
 },
@@ -85,6 +90,10 @@ const generateSitemap = () => {;
     <changefreq>monthly</changefreq>;
     <priority>0.6</priority>;
   </url>;
+
+
+
+
 </urlset>`,;
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),;
   const writeStream = createWriteStream(sitemapPath),;
@@ -93,16 +102,7 @@ const generateSitemap = () => {;
   console.log('Sitemap generated successfully at:', sitemapPath);
 },;
 generateSitemap();
-
-
-
-
-
 };
 ,
 generateSitemap(),
-
-
-
-
 

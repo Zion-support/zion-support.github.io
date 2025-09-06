@@ -25,8 +25,6 @@ export interface TestWebhookResult {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null);
-  // Helper to get the base URL for webhook functions
-  const getWebhookUrl = () => {
     return `${url}/functions/v1/webhook-manager`
   }
   // Fetch user's webhooks
@@ -43,13 +41,6 @@ export interface TestWebhookResult {
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET'
         headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch webhooks')
-      }
     } catch (err) {
       console && console.error('Error fetching webhooks:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -118,18 +109,57 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch webhooks');
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch webhooks')
       }
-      setWebhooks(result.webhooks || [])
-    } catch (err) {
-      console.error ('Error fetching webhooks:', err);
-      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
-      toast ({
-        variant: "destructive";
-        title: "Error fetching webhooks",
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
+      setWebhooks(result.webhooks |[])
+
+;
+export function useWebhooks() {;
+  const { user } = useAuth(),;
+  const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
+  // Helper to get the base URL for webhook functions;
+  const getWebhookUrl = () => {;
+    // import.meta may be undefined when this hook is executed in a Node;
+    // environment (e.g. during server side rendering or tests). Using optional;
+    // chaining avoids a TypeError in those cases and falls back to process.env.;
+    const env = (import.meta as any)?.env ?? process.env,;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/webhook-manager`;
+  },;
+  // Fetch user's webhooks;
+  const fetchWebhooks = async () => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return;
+      }
+;
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {;
+        method: 'GET',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch webhooks');
+      }
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required"),
         return
           name;
           url;
@@ -137,58 +167,10 @@ if ( {) {
           secret
         })
       });
-      }
-    } catch (err) {
-      console && console.error('Error creating webhook:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-        variant: "destructive";
-;
-  // Create new webhook;
-  const create_webhook = async (name: string, url: string, event_types: WebhookEventType[], secret?: string) => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_loading (true);
-    set_error (null);
-;
-    try {
-      const { data: { session } } = await supabase.auth.get_session ();
-      // Check condition
-if ( {) {
-  $2
-}
-        set_error ("Authentication required");
-        return;
-      }
-      const response = await fetch (`${getWebhookUrl ()}/create`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`;
-          'Content - Type': 'application / json';
-        }
-        body: JSON.stringify ({
-          name;
-          url;
-          event_types,
-          secret;
-        });
-      });
-;
-      const result = await response.json ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (result.error || 'Failed to create webhook');
-      }
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
       toast({
-        title: "Webhook Created",
         description: "Your webhook has been created successfully."});
 ;
       return result.webhook;
@@ -203,10 +185,6 @@ if ( {) {
     setLoading(true),
     setError(null),
     
-    try {
-      if (!session) {
-        setError("Authentication required"),
-        return
 ;
       // Add the new webhook to the list;
       setWebhooks(prev => [result.webhook, ...prev]),;
@@ -257,11 +235,6 @@ if ( {) {
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
-      return result
-    } catch (err) {
-      console && console.error('Error toggling webhook:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
 ;
   // Toggle webhook active status;
   const toggle_webhook = async (webhook_id: string, is_active: boolean) => {
@@ -449,14 +422,12 @@ if ( {) {
     } finally {
       set_loading (false);
     }
-  }
     if (!user) return,
     
     setLoading(true),
     setError(null),
     setTestResult(null),
     
-    try {
       if (!session) {
         setError("Authentication required"),
         return
@@ -473,11 +444,6 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to test webhook')
       }
-
-        status: result && result.status;
-        statusText: result && result.statusText,
-        responseBody: result && result.responseBody
-
       });
 
 ;
@@ -638,6 +604,3 @@ if ( {) {
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
-  }
-}
-;

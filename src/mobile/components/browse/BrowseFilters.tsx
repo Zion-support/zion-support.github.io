@@ -3,19 +3,6 @@ import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
 import { Switch } from '@/components/ui/switch'
 import { Input } from '@/components/ui/input'
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-
-interface BrowseFiltersProps {
-  type: 'jobs' | 'talents'
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const addFilter = null;
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
         <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
@@ -30,9 +17,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SheetHeader>;
                 <SheetTitle>;
                   Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
-                </SheetTitle>
-              </SheetHeader>
-              <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
                   <>
                     <div className='space-y-2'>
@@ -197,10 +181,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-
-              
-              <div className="py-6 space-y-6">
-                {type === "jobs" ? (
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -211,9 +191,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-
-                    
-                    <div className="space-y-2">
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
@@ -233,18 +210,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-
-                    
-                    <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
                         aria-label='Years of experience'
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-                        className="my-4"
-                      />
-                      <div className="flex justify-between text-xs text-muted-foreground">
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
@@ -253,6 +224,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 )}
                 <div className='space-y-2'>
                   <Label>Location</Label>
+                <div className='space-y-2'>
+ursor/fix-website-loading-errors-and-merge-6662
                   <Select>
                     <SelectTrigger>
                       <SelectValue placeholder="Select location" />
@@ -264,13 +237,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                       <SelectItem value="asia">Asia</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
-                  <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
-                  </div>
                 </div>
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
@@ -428,5 +394,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     </div>);
 }
 ;
-
-

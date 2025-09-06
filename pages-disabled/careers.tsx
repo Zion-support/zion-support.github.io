@@ -4,21 +4,11 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-    {
-      location: "San Francisco, CA / Remote";
-        "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
       icon: Brain
       color: "from-purple-500 to-pink-500"
     }
-    {
-      title: "Quantum Computing Researcher"
-      department: "Quantum Computing"
-      location: "San Francisco, CA / Remote";
-      type: "Full-time"
-      experience: "3+ years"
-      salary: "$120,000 - $180,000";
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
@@ -128,17 +118,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Join our team of innovators and help build the future of technology
-            </p>
-          </motion.div>
-          <div className="space-y-6">
-            {openPositions.map((position, index) => (
-              <motion.div
-                key={position.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -254,50 +233,12 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                   </div>;
                   <div className="lg:flex - shrink - 0">;
                     <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105">;
-
                       Apply Now;
                     </button>;
                   </div>;
                 </div>;
-      {/* CTA Section */}
-      <section className="py-20 px-6">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
-                Send Resume;
-              </button>;
-              <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10">;
                 Contact Recruiting;
               </button>;
             </div>;
           </div>;
-        </motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-;
-      <EnhancedFooter />;
-    </div>);
 }

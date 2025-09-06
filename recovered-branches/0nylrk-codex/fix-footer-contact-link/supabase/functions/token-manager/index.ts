@@ -1,5 +1,3 @@
-
-
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 interface TokenRequest {
@@ -32,8 +30,6 @@ if ( {) {
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
   } else if (action === 'burn') {
-    return await changeBalance(userId, -Math && Math.abs(amount), 'burn', reason)
-  }
 });
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
@@ -58,67 +54,12 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
-    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
-  }
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
   userId: string,;
   amount: number,;
   reason?: string;
-
-}
-  const url = new URL (req.url);
-  const action = url.pathname.split ('/').pop ();
-  const { user_id, amount, reason } = await req.json () as TokenRequest;
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (JSON.stringify ({ error: 'Missing parameters' }), { status: 400 });
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return await change_balance (user_id, amount, 'earn', reason);
-  } else // Check condition
-if ( {) {
-  $2
-}
-    return await change_balance (user_id, -Math.abs (amount), 'burn', reason);
-  }
-  return new Response (JSON.stringify ({ error: 'Invalid action' }), { status: 400 });
-});
-;
-async /**
- * change_balance - Function description
- */
-function change_balance() {
-  const { data: wallet, error: wallet_error } = await supabase;
-    .from ('wallets');
-    .select ('*');
-    .eq ('user_id', user_id);
-    .single ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (JSON.stringify ({ error: wallet_error.message }), { status: 500 });
-  }
-  let balance = wallet?.balance || 0;
-  balance += delta;
-  // Check condition
-if (balance = 0) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    const { error } = await supabase;
 }
   } else {
     const { error } = await supabase;

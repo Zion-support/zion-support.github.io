@@ -1,6 +1,5 @@
 
 
-export interface SmartContractInfo {;
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -11,7 +10,6 @@ export interface SmartContractInfo {;
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
-}
 }
 
 

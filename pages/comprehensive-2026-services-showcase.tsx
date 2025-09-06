@@ -14,7 +14,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-
 import {;
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield,;
   Globe, Database, Cloud, Lock, Palette, Target, Layers,;
@@ -22,7 +21,6 @@ import {;
   ArrowRight, Phone, Mail, MapPin, Rocket, Users,;
   BarChart3, Award, Clock, DollarSign;
 } from 'lucide-react',;
-
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
@@ -38,84 +36,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     })
   const containerVariants = {
     hidden: { opacity: 0 }
-import React, { useState, useEffect } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion, AnimatePresence } from 'framer-motion',
-import {
-  Search, Filter, Star, TrendingUp, Zap, Brain, Shield,
-  Globe, Database, Cloud, Lock, Palette, Target, Layers,
-  Sparkles, Atom, Microscope, Satellite, CheckCircle,
-  ArrowRight, Phone, Mail, MapPin, Rocket, Users,
-  BarChart3, Award, Clock, DollarSign;
-} from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation',
-import { nextGenAIServices2026 } from '../data / next - gen - ai - services - 2026',
-import { revolutionaryITInfrastructure2026 } from '../data / revolutionary - it - infrastructure - 2026',
-import { innovativeMicroSaas2026 } from '../data / innovative - micro - saas - 2026',
-export default /**
- * Comprehensive2026ServicesShowcase - Function description
- */
-function Comprehensive2026ServicesShowcase() {
-  const [search_term, setSearchTerm] = useState (''),
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [sort_by, setSortBy] = useState ('popularity'),
-  const [view_mode, setViewMode] = useState ('grid'),
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  },
-  // Combine all services;
-  const all_services = [;
-    ...nextGenAIServices2026,
-    ...revolutionaryITInfrastructure2026,
-    ...innovativeMicroSaas2026;
-  ],
-  // Categories for filtering;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Globe, count: all_services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
-    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
-    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: all_services.filter (string => s.category.includes ('Quantum')).length },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: all_services.filter (string => s.category.includes ('Blockchain')).length },
-    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: all_services.filter (string => s.category.includes ('Emerging')).length }
-  ],
-  // Filter and sort services;
-  const filtered_services = all_services;
-    .filter (service => {
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
-      const matches_category = selected_category === 'all' ||;
-                            service.category.toLowerCase ().includes (selected_category),
-      return matches_search && matches_category;
-    });
-    .sort ((a, b) => {
-      switch (sort_by) {
-        case 'price - low':;
-          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
-        case 'price - high':;
-          return parse_float (b.price.replace ('$', '').replace (, '')) - parse_float (a.price.replace ('$', '').replace (, '')),
-        case 'rating':;
-          return b.rating - a.rating,
-        case 'customers':;
-          return b.customers - a.customers,
-        default: return a.popular ? -1 : 1;
-      }
-    }),
-  const container_variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1
-      transition: {
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
-    visible: {
       transition: {
         duration: 0.5;
       }
@@ -185,9 +105,6 @@ function Comprehensive2026ServicesShowcase() {
 }
   },
   return (
-    <UltraAdvancedFuturisticBackground
-      intensity="extreme"
-      colorScheme="quantum-fusion"
     >
       <Head>
         <title>Comprehensive 2026 Services Showcase | Zion Tech Group</title>
@@ -200,41 +117,6 @@ function Comprehensive2026ServicesShowcase() {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
       </Head>
       <UltraAdvancedNavigation />
-
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-      <div className="min-h-screen relative z-10">
-  },
-  return (
-    <UltraAdvancedFuturisticBackground;
-      intensity="extreme";
-      color_scheme="quantum - fusion";
-      particle_count={500}
-      animation_speed={2.5}
-    >;
-      <Head>;
-        <title > Comprehensive 2026 Services Showcase | Zion Tech Group</title>;
-        <meta name="description" content="Discover our comprehensive collection of cutting - edge AI, IT infrastructure, and micro SaaS services for 2026. Transform your business with innovative technology solutions." />;
-        <meta name="keywords" content="AI services, IT infrastructure, micro SaaS, quantum computing, blockchain, 2026 technology, Zion Tech Group" />;
-        <meta property="og:title" content="Comprehensive 2026 Services Showcase | Zion Tech Group" />;
-        <meta property="og:description" content="Discover our comprehensive collection of cutting - edge AI, IT infrastructure, and micro SaaS services for 2026." />;
-        <meta property="og:url" content="https://ziontechgroup.com / comprehensive - 2026 - services - showcase" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2026 - services - showcase" />;
-      </Head>;
-      <UltraAdvancedNavigation />;
-      <div className="min - h-screen relative z - 10">;
-        {/* Hero Section */}
-        <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -260,9 +142,6 @@ function Comprehensive2026ServicesShowcase() {
                 <span className="text-6xl md:text-8xl">Services Showcase</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover our revolutionary collection of AI, IT infrastructure, and micro SaaS services
-                designed to transform your business in 2026 and beyond.
-              </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -304,12 +183,6 @@ function Comprehensive2026ServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
-        {/* Search and Filter Section */}
-        <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <div className="bg - gradient - to - r from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl p - 8 border border - gray - 600 / 30">;
-              {/* Search Bar */}
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
                 <input
@@ -323,16 +196,6 @@ function Comprehensive2026ServicesShowcase() {
                 <div className="flex flex-wrap gap-3">
                   {categories.map((category) => (
                     <button
-                      key={category.id}
-                      on_click={() => setSelectedCategory (category.id)}
-                      className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl border transition - all duration - 300 ${
-                        selected_category === category.id;
-                          ? 'bg - cyan - 600 border - cyan - 500 text - white';
-                          : 'bg - gray - 800 / 50 border - gray - 600 / 30 text - gray - 300 hover:border - cyan - 500 / 50';
-                      }`}
-                    >
-                      <category.icon className="w-4 h-4" />
-                      {category.name}
                       <span className="bg-gray-700/50 px-2 py-1 rounded-lg text-xs">
                         {category.count}
                       </span>
@@ -352,9 +215,6 @@ function Comprehensive2026ServicesShowcase() {
                   </select>
                   <div className="flex bg-gray-800/50 rounded-xl p-1 border border-gray-600/30">
                     <button
-                      onClick={() => setViewMode('grid')}
-                      className={`p-2 rounded-lg transition-all duration-300 ${
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >;
                       <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
@@ -366,8 +226,6 @@ function Comprehensive2026ServicesShowcase() {
                       className={`p - 2 rounded - lg transition - all duration - 300 ${
                         view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
                       }`}
-                    key={service.id}
-                    variants={item_variants}
                     layout;
                     className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${;
                       viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
@@ -376,7 +234,6 @@ function Comprehensive2026ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  >;
                     <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -400,39 +257,6 @@ function Comprehensive2026ServicesShowcase() {
                         </div>
                       </div>
                     </div>
-                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 3 py - 1 rounded - full font - semibold flex items - center gap - 1">;
-                            <Star className="w - 3 h - 3" />;
-                            Popular;
-                          </div>)}
-                      </div>;
-                      <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
-                        {service.name}
-                      </h3>;
-                      <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-                        {service.tagline}
-                      </p>;
-                      <div className="flex items - center justify - between mb - 4">;
-                        <div className="text - 2xl font - bold text - cyan - 400">;
-                          {service.price}
-                          <span className="text - gray - 400 text - sm font - normal">{service.period}</span>;
-                        </div>;
-                        <div className="flex items - center gap - 1 text - yellow - 400">;
-                          <Star className="w - 4 h - 4 fill - current" />;
-                          <span className="text - white text - sm">{service.rating}</span>;
-                          <span className="text - gray - 400 text - sm">({service.reviews})</span>;
-                        </div>;
-                      </div>;
-                      <div className="flex items - center gap - 4 text - sm text - gray - 400 mb - 4">;
-                        <div className="flex items - center gap - 1">;
-                          <Users className="w - 4 h - 4" />;
-                          {service.customers.toLocaleString ()}
-                        </div>;
-                        <div className="flex items - center gap - 1">;
-                          <Clock className="w - 4 h - 4" />;
-                          {service.setup_time}
-                        </div>;
-                      </div>;
-                    </div>;
                     {/* Service Details */}
                     <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
                       <p className="text-gray-300 mb-4 leading-relaxed">
@@ -457,8 +281,6 @@ function Comprehensive2026ServicesShowcase() {
                               {feature}
                             </div>))}
                           {service.features.length > 3 && (
-
-
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -519,7 +341,6 @@ function Comprehensive2026ServicesShowcase() {
             )}
           </div>
         </section>
-
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -563,14 +384,12 @@ function Comprehensive2026ServicesShowcase() {
                 </Link>
               </div>
 
-              <div className="mt-8 text-gray-400">
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

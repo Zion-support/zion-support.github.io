@@ -36,8 +36,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   }, [key, debounceMs]);
   return { translations, loading, error }
 }
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils/translation';
   translations: Record<string, string>;
   loading: boolean;
   error?: string;

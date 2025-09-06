@@ -23,14 +23,8 @@ export interface Message {;
 export interface Recipient {;
   id: string,;
   name: string,;
-
   avatarUrl?: string;
 
-  role?: string;
-}
-
-
-  avatar_url?: string;
   role?: string;
 }
 

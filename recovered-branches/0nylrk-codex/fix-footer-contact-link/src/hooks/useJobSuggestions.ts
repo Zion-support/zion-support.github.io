@@ -17,63 +17,14 @@ export function useJobSuggestions(talentId?: string) {
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
-            *;
+
+            *,
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
-      } catch (error) {
-        console && console.error("Error fetching job matches:", error);
-        toast({
-          title: "Error";
-          description: "Failed to load job suggestions"
-          variant: "destructive"})
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { JobMatch } from '@/types / jobs';
-export /**
- * useJobSuggestions - Function description
- */
-function useJobSuggestions() {
-  const [job_matches, setJobMatches] = useState < JobMatch[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
-    const fetchSuggestedJobs = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      try {
-        setIsLoading (true);
-;
-        // Get job matches with job details;
-        const { data, error } = await supabase;
-          .from ("job_talent_matches");
-          .select (`;
-            *;
-            job:job_id (*);
-          `);
-          .eq ("talent_id", talent_id);
-          .order ("created_at", { ascending: false });
-;
-        // Check condition
-if (throw error) {
-  $2
-}
-        setJobMatches (data || []);
-      } catch (error) {
-        console.error ("Error fetching job matches:", error);
-        toast ({
-          title: "Error";
-          description: "Failed to load job suggestions",
-          variant: "destructive"});
-      } finally {
-        setIsLoading (false);
-      }
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
@@ -103,8 +54,6 @@ if (throw error) {
         })
       }
     } catch (error) {
-      console && console.error("Error updating job match status:", error);
-      toast({
     }
   }
   // Filter matches by status
@@ -122,17 +71,6 @@ if (throw error) {
       appliedMatches
 
       declinedMatches
-    }
-  }
-;
-    fetchSuggestedJobs ();
-  }, [talent_id]);
-;
-  const updateJobMatchStatus = async (match_id: string, status: 'viewed' | 'applied' | 'declined') => {
-    try {
-      const updates = {
-        status,
-        ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -164,6 +102,17 @@ export function useJobSuggestions(talentId?: string) {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
+    }
+  }
+;
+    fetchSuggestedJobs ();
+  }, [talent_id]);
+;
+  const updateJobMatchStatus = async (match_id: string, status: 'viewed' | 'applied' | 'declined') => {
+    try {
+      const updates = {
+        status,
+        ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
       }
 ;
       const { error } = await supabase;
@@ -210,6 +159,4 @@ if ( {) {
   }
 ;
   // Filter matches by status;
-    }
-  }
-}
+      }

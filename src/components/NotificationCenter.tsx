@@ -106,7 +106,8 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
-
+              {unreadCount > 9 ? '9+' : unreadCount}
+            </span>
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -118,12 +119,6 @@ export const NotificationCenter: React.FC = () => {;
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
-    setFilter(newFilter as any);
-  };
-      <PopoverTrigger asChild>;
-        <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">;
-          <Bell className="h-5 w-5 text-zion-slate-light" />;
-          {unreadCount > 0 && (;
           )}
         </Button>
       </PopoverTrigger>
@@ -195,8 +190,3 @@ export const NotificationCenter: React.FC = () => {;
           onRetry={fetchNotifications}
         />;
 
-        <NotificationFooter onClose={() => setOpen(false)} />;
-      </PopoverContent>;
-    </Popover>;
-  );
-};

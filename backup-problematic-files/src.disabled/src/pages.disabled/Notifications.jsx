@@ -9,4 +9,3 @@ const Notifications = ({ className }) => {
   );
 };
 
-export default Notifications;

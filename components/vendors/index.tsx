@@ -1,29 +1,3 @@
-import Link from 'next / link';
-import type { GetServerSideProps } from 'next';
-  return (
-    <div className='space-y-6'>;
-      <div className='flex items-center justify-between'>;
-        <h1 className='text-2xl font-semibold'>Vendors</h1>;
-        <Link href='/vendors/register'>;
-          <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-import type { Vendor } from '../../utils / vendor - types';
-;
-type Props = { vendors: Vendor[] }
-;
-export default /**
- * VendorsPage - Function description
- */
-function VendorsPage() {
-  return (
-    <div className='space - y-6'>;
-      <div className='flex items - center justify - between'>;
-        <h1 className='text - 2xl font - semibold'>Vendors</h1>;
-        <Link href='/vendors / register'>;
-          <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
-            Apply as Vendor;
-          </a>;
-        </Link>;
-      </div>;
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -47,15 +21,6 @@ function VendorsPage() {
         ))}
     </div>;
   );
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-    </div>
-  );
-}
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-  const { listVendors } = await import('../../utils/vendor-store');
-  const vendors = listVendors();
-  return { props: { vendors } };
-};  return { props: { vendors } }
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;

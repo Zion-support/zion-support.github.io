@@ -4,44 +4,11 @@ const PerformancePage: React.FC = () => {
     {
 
 
-
       category: 'System Performance',
       metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
         { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
-        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-    }
-    {
-        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-    }
-    {
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
-      ]
-    }
-  ];
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const recentReports = [
 
     {
@@ -64,13 +31,6 @@ const PerformancePage: React.FC = () => {
       date: '2025 - 01 - 15',
       summary: 'Stress testing results under high traffic conditions',
 
-      status: 'completed'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-400';
@@ -276,28 +236,6 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
         {/* Recent Reports */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Reports</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {recent_reports.map ((report) => (
-              <div key={report.id} className="bg - white / 10 rounded - xl p - 6 border border - white / 20 hover:border - cyan - 400 / 30 transition - all duration - 300">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{report.title}</h3>;
-                  <span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
-                    {report.status}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {performanceMetrics.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
-                <div className="space-y-4">
-                  {section.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-300">{metric.name}</span>
-                      <div className="flex items-center space-x-3">
-                        <span className={`font-semibold ${getStatusColor(metric.status)}`}>
-
                           {metric.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -340,7 +278,6 @@ const PerformancePage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{report.title}</h3>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-
                     {report.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -351,7 +288,6 @@ const PerformancePage: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
-                  <Link
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -372,9 +308,6 @@ const PerformancePage: React.FC = () => {
               <div className="text-6xl font-bold text-cyan-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
-                Our automated systems continuously monitor and optimize performance, 
-                Our automated systems continuously monitor and optimize performance,
-
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -403,7 +336,6 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/reports"

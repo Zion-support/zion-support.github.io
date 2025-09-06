@@ -8,15 +8,6 @@ export default function InteractiveCard({title;
   className = '';
   children;
 }: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
-  return (;
-    <Link;
-      href={href}
-      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
-      onMouseEnter={() => setIsHovered (true)}
-      onMouseLeave={() => setIsHovered (false)}
-      aria - label={`Navigate to ${title} page`}
->;
-      <div className=&quot;relative & quot;>;
 
 'use client',;
 import React, { useState } from 'react',;
@@ -45,11 +36,24 @@ export default function InteractiveCard({;
   return (;
     <Link;
       href={href}
+;
+export default function InteractiveCard({;
+  title,;
+  description,;
+  icon,;
+  href,;
+  color = 'from-purple-500 to-blue-500',;
+  className = '',;
+  children;
+}: InteractiveCardProps) {;
+  const [isHovered, setIsHovered] = useState(false),;
+  return (;
+    <Link;
+      href={href}
       className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
-
     >
       <div className="relative">
         {/* Animated background */}
@@ -57,16 +61,8 @@ export default function InteractiveCard({;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
-            {title}
-          </h3>;
-          <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
-            {description}
-          </p>;
-          {/* Custom children or default arrow */}
 {children || (
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
-          {children || (
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -110,12 +106,3 @@ export default function InteractiveCard({;
         ))}
       </div>;
       {/* Quote */}
-      </blockquote>
-      {/* Author info */}
-      <div className=&quot;border - t border - white / 10 pt - 4&quot;>;
-        <div className=&quot;font - semibold text - white & quot;>{author}</div>;
-        <div className=&quot;text - gray - 400 & quot;>{position}</div>;
-        <div className=&quot;text - purple - 400 text - sm & quot;>{company}</div>;
-      </div>;
-    </div>);
-}

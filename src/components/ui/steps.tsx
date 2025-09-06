@@ -1,5 +1,4 @@
 
-
 interface StepProps {
 
   status: "incomplete" | "current" | "complete"
@@ -23,7 +22,6 @@ export function Step({
 
       className={cn(
         "relative flex items-center"
-        {
         className
       )}>;
       <div
@@ -39,9 +37,6 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-              status === "complete",}
-        )}>;
-            "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
       >
@@ -49,7 +44,6 @@ export function Step({
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from 'lucide-react';
@@ -86,18 +80,21 @@ export function Step({;
               status === "complete"}
         )}
       >;
+            "text-white": status === "current" |status === "complete"})}
+          {label}
+        </h3>
+        {description && (
+          <p className="text-sm text-zion-slate-light">{description}</p>
+        )}
+      </div>
+    </li>
+  )
+}
+ursor/fix-website-loading-errors-and-merge-6662
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-            {/* Step number would go here */}
-          </span>;
-        )}
-      </div>
-      <div className="ml-4 min-w-0">
-            "text-zion-slate-light": status === "incomplete",
-            "text-zion-slate-light": status === "incomplete",
-            "text-white": status === "current" || status === "complete"})}
         >
           {label}
         </h3>
@@ -108,24 +105,6 @@ export function Step({;
     </li>
   )
 }
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete"
-            "text-white": status === "current" |status === "complete"})}
-        >
-          {label}
-        </h3>;
-        {description && (;
-          <p className="text-sm text-zion-slate-light">{description}</p>;
-        )}
-      </div>;
-    </li>;
-  );
-}
-
-
-
-
 
 interface StepsProps {
   currentStep: number
@@ -135,7 +114,6 @@ interface StepsProps {
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
   return (
-    <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
           if (!React.isValidElement(child)) return null
@@ -153,7 +131,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         })}
       </ol>
       <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
@@ -171,16 +148,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
-
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
           />;
         </div>;
       </div>;
     </div>;
   );
-
-
 
           // Check condition
 if (status = "complete") {

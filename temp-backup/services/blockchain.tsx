@@ -1,7 +1,3 @@
-interface BlockchainProps {;
-  // Add props here as needed;
-}
-export default function Blockchain(): any ({ }: BlockchainProps) {;
   return (
     <div>;
       <h1>Blockchain</h1>;

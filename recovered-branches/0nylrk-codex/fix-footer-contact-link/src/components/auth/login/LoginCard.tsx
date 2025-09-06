@@ -1,5 +1,3 @@
-
-import { Link } from "react-router-dom",
 export function LoginCard() {
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -31,18 +29,7 @@ export function LoginCard() {;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
-          <Link
-            to="/signup"
             Sign up;
           </Link>;
         </p>;
       </div>;
-
-    </div>;
-  );
-      <div className="bg - zion - blue - dark rounded - lg p - 6">;
-        <LoginForm />;
-        <SocialLogin />;
-      </div>;
-    </div>);
-}

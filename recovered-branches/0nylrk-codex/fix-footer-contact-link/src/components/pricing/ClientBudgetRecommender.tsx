@@ -1,7 +1,4 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -17,8 +14,6 @@ interface ClientBudgetRecommenderProps {
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
-}
   jobTitle;
   category;
   timeline;
@@ -91,7 +86,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
@@ -127,22 +121,12 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setIsLoading(false);
     }
   },;
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
-      // Track this suggestion application;
-      if (user) {;
-        trackPricingSuggestion({;
-          userId: user && user.id,;
-          suggestionType: 'client',;
-          suggestedMin: suggestion && suggestion.minRate,;
-          suggestedMax: suggestion && suggestion.maxRate,;
-          accepted: true;
-        });
-      }
-    }
 
+  return (
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
   },
 
   return (
@@ -153,26 +137,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { use_auth } from '@/hooks / use_auth';
-import { Sparkles } from './lucide-react';
-interface ClientBudgetRecommenderProps {
-  job_title: string,
-  category: string,
-  timeline?: string;
-  scope?: string;
-  experience_level?: string;
-  onSuggestionApplied: (min_value: number, max_value: number) => void;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly"
-      </div>;
-    </div>;
-  );
 };
             rate_type="hourly";
           />)}

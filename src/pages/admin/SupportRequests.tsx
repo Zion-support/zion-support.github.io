@@ -40,8 +40,6 @@ import { SEO } from "@/components/SEO",
 
 const MOCK_SUPPORT_REQUESTS = [
   {
-  },
-  {
 
 
 class ErrorBoundary extends React.Component {
@@ -205,7 +203,6 @@ export default function SupportRequests() {;
             </Button>
           </div>
         </div>
-        {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
             <CardHeader className="pb-2">
@@ -225,7 +222,6 @@ export default function SupportRequests() {;
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-          <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
               <CardDescription>Total Requests</CardDescription>
@@ -238,74 +234,6 @@ export default function SupportRequests() {;
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
-
-      />;
-      <div className='container mx-auto px-4 py-8'>;
-        <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>;
-          <div>;
-            <h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
-              Support Requests;
-            </h1>;
-            <p className='text-zion-slate-light mt-2'>;
-              Manage and respond to user support requests and issues;
-            </p>;
-          </div>;
-
-          <div className='mt-4 md:mt-0'>;
-            <Button className='bg-zion-purple hover:bg-zion-purple-light'>;
-              New Support Case;
-            </Button>;
-          </div>;
-        </div>;
-
-        {/* Status Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>;
-          <Card>;
-            <CardHeader className='pb-2'>;
-              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>;
-              <CardDescription>Open Requests</CardDescription>;
-            </CardHeader>;
-          </Card>;
-
-          <Card>;
-            <CardHeader className='pb-2'>;
-              <CardTitle className='text-2xl font-bold'>;
-                {inProgressCount}
-              </CardTitle>;
-              <CardDescription>In Progress</CardDescription>;
-            </CardHeader>;
-          </Card>;
-
-          <Card>;
-            <CardHeader className='pb-2'>;
-              <CardTitle className='text-2xl font-bold'>;
-                {resolvedCount}
-              </CardTitle>;
-              <CardDescription>Resolved</CardDescription>;
-            </CardHeader>;
-          </Card>;
-
-          <Card>;
-            <CardHeader className='pb-2'>;
-              <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>;
-              <CardDescription>Total Requests</CardDescription>;
-            </CardHeader>;
-          </Card>;
-        </div>;
-
-        <Tabs defaultValue='all' className='mb-8'>;
-          <TabsList>;
-            <TabsTrigger value='all'>All Requests</TabsTrigger>;
-            <TabsTrigger value='escalated'>Escalated</TabsTrigger>;
-            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>;
-            <TabsTrigger value='need-response'>Need Response</TabsTrigger>;
-          </TabsList>;
-
-          <TabsContent value='all' className='mt-6'>;
-
-
-          
-          <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
@@ -320,9 +248,6 @@ export default function SupportRequests() {;
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Status' />
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -333,14 +258,6 @@ export default function SupportRequests() {;
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">All Statuses</SelectItem>
-                  <SelectItem value="open">Open</SelectItem>
-                  <SelectItem value="in-progress">In Progress</SelectItem>
-                  <SelectItem value="resolved">Resolved</SelectItem>
-                </SelectContent>
-              </Select>
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -392,11 +309,6 @@ export default function SupportRequests() {;
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-
-                    {filteredRequests.map((request) => (
-                      <TableRow key={request.id}>
-                        <TableCell className="font-medium">{request.id}</TableCell>
-
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
@@ -425,21 +337,6 @@ export default function SupportRequests() {;
   return (;
     <>;
       <SEO;
-        title='Support Requests | Admin Dashboard';
-        description='Manage and track user support requests and issues';
-      />;
-      <div className='container mx - auto px - 4 py - 8'>;
-        <div className='flex flex - col md:flex - row items - start md:items - center justify - between mb - 8'>;
-          <div>;
-            <h1 className='text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent'>;
-              Support Requests;
-            </h1>;
-            <p className='text - zion - slate - light mt - 2'>;
-              Manage and respond to user support requests and issues;
-            </p>;
-          </div>;
-          <div className='mt - 4 md:mt - 0'>;
-            <Button className='bg - zion - purple hover:bg - zion - purple - light'>;
               New Support Case;
             </Button>;
           </div>;
@@ -454,19 +351,6 @@ export default function SupportRequests() {;
                   <SelectValue placeholder='Status' />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  <SelectItem value=''>All Statuses</SelectItem>;
-                  <SelectItem value='open'>Open</SelectItem>;
-                  <SelectItem value='in-progress'>In Progress</SelectItem>;
-                  <SelectItem value='resolved'>Resolved</SelectItem>;
-                </SelectContent>;
-              </Select>;
-
-              <Select
-                value={priorityFilter || ''}
-                onValueChange={value => setPriorityFilter(value || null)}
-              >;
-                <SelectTrigger className='w-[180px]'>;
-                  <SelectValue placeholder='Priority' />;
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Priorities</SelectItem>;
@@ -475,13 +359,6 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
-
-              <Select
-                value={categoryFilter || ''}
-                onValueChange={value => setCategoryFilter(value || null)}
-              >;
-                <SelectTrigger className='w-[180px]'>;
-                  <SelectValue placeholder='Category' />;
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Categories</SelectItem>;
@@ -493,18 +370,6 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
-
-              <Button
-                variant='outline'
-                onClick={resetFilters}
-                className='md:w-auto'>;
-                <Filter className='h-4 w-4 mr-2' /> Reset Filters;
-              </Button>;
-            </div>;
-
-            {/* Support Requests Table */}
-            <Card>;
-              <CardContent className='p-0'>;
                 <Table>;
                   <TableHeader>;
                     <TableRow>;
@@ -520,99 +385,10 @@ export default function SupportRequests() {;
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
-                    {filteredRequests && filteredRequests.map(request => (                      <TableRow key={request && request.id}>;
-                        <TableCell className='font-medium'>;
-                          {request && request.id}
-                        </TableCell>;
-                        <TableCell>{request && request.user}</TableCell>;
-                        <TableCell className='max-w-xs truncate'>;
-                          {request && request.issue}
-                        </TableCell>;
-                        <TableCell>;
-                          <Badge
-                            variant={
-                              request && request.status === 'open'
-                                ? 'default'
-                                : request && request.status === 'in-progress'
-                                  ? 'secondary'
-                                  : 'outline'
-                            }>;
-                            {request && request.status}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>;
-                          <Badge
-                            variant={
-                              request && request.priority === 'high'
-                                ? 'destructive'
-                                : request && request.priority === 'medium'
-                                  ? 'default'
-                                  : 'outline'
-                            }>;
-                            {request && request.priority}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>{request && request.category}</TableCell>;
-                        <TableCell>;
-                          {new Date(request && request.createdAt).toLocaleDateString()}
-                        </TableCell>;
-                        <TableCell>;
-                          {new Date(request && request.lastUpdated).toLocaleDateString()}
-              <Button;
-                variant='outline';
-                on_click={reset_filters}
-                className='md:w - auto';
-              >;
-                <Filter className='h - 4 w - 4 mr - 2' /> Reset Filters;
-              </Button>;
-            </div>;
-            {/* Support Requests Table */}
-            <Card>;
-              <CardContent className='p - 0'>;
-                <Table>;
-                  <TableHeader>;
-                    <TableRow>;
-                      <TableHead > ID</TableHead>;
-                      <TableHead > User</TableHead>;
-                      <TableHead > Issue</TableHead>;
-                      <TableHead > Status</TableHead>;
-                      <TableHead > Priority</TableHead>;
-                      <TableHead > Category</TableHead>;
-                      <TableHead > Created</TableHead>;
-                      <TableHead > Last Updated</TableHead>;
-                      <TableHead > Actions</TableHead>;
-                    </TableRow>;
-                  </TableHeader>;
-                  <TableBody>;
-                    {filtered_requests.map (request => (                      <TableRow key={request.id}>;
-                        <TableCell className='font - medium'>;
-                          {request.id}
-                        </TableCell>;
-                        <TableCell>{request.user}</TableCell>;
-                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
-                        <TableCell>;
                             {request.status}
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-                            {request.priority}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>{request.category}</TableCell>;
-                        <TableCell>;
-                          {new Date (request.created_at).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;
-                          {new Date (request.last_updated).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;
-                          <Button variant='ghost' size='sm'>;
-                            View;
-                          </Button>;
-                          <Button variant='ghost' size='sm'>;
-                            Assign;
-                          </Button>;
-                        </TableCell>;
               </p>
             </div>
           </TabsContent>
@@ -626,7 +402,6 @@ export default function SupportRequests() {;
             </div>
           </TabsContent>
               </p>
-            </div>
           </TabsContent>
         </Tabs>
       </div>
@@ -639,20 +414,6 @@ export default function SupportRequests() {;
 }<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   filteredRequests.map ( (request) => (<TableRow key= {
   request.id
-}> <TableCell> <Badge variant= {
-  request.status === 'open' ? 'default' : request.status === 'in-progress' ? 'secondary' : 'outline'
-}> {
-  request.status
-}</Badge> </TableCell> <TableCell> <Badge variant= {'
-  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline'
-}> {
-  request.priority
-}</Badge> </TableCell> <TableCell> {
-  request.category
-}</TableCell> <TableCell> {
-  new Date (request.createdAt) .toLocaleDateString ()
-}</TableCell> <TableCell> {
-  new Date (request.lastUpdated) .toLocaleDateString () "
                       </TableRow>))}
                   </TableBody>;
                 </Table>;
@@ -697,17 +458,17 @@ export default function SupportRequests() {;
   filtered_requests.map ( (request) => (<TableRow key= {
   request.id;
 }> <TableCell> <Badge variant= {
-  request.status === 'open' ? 'default' : request.status === 'in - progress' ? 'secondary' : 'outline';
+  request.status === 'open' ? 'default' : request.status === 'in-progress' ? 'secondary' : 'outline'
 }> {
-  request.status;
-}</Badge> </TableCell> <TableCell> <Badge variant= {';
-  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline';
+  request.status
+}</Badge> </TableCell> <TableCell> <Badge variant= {'
+  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline'
 }> {
-  request.priority;
+  request.priority
 }</Badge> </TableCell> <TableCell> {
-  request.category;
+  request.category
 }</TableCell> <TableCell> {
-  new Date (request.created_at) .toLocaleDateString ();
+  new Date (request.createdAt) .toLocaleDateString ()
 }</TableCell> <TableCell> {
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";

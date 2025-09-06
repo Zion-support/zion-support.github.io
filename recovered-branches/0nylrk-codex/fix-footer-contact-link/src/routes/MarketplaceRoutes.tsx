@@ -17,7 +17,6 @@ import AIMatcher from "@/pages/AIMatcher",
 import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
 import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
-const MarketplaceRoutes = () => {
 },
 
 export default MarketplaceRoutes,
@@ -41,32 +40,22 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
+
+
+
+const MarketplaceRoutes = () => {
 const MarketplaceRoutes = () => {;
   return (
     <Routes>;
       {/* Marketplace Routes */}
-      <Route path="/marketplace" element={<Marketplace />} />
-      <Route path="/categories" element={<Categories />} />
-      <Route path="/category/:slug" element={<CategoryDetail />} />
-      <Route path="/featured" element={<Featured />} />
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />
-      <Route path="/listing/:id" element={<ListingDetail />} />
-      {/* Equipment Routes */}
-      <Route path="/equipment" element={<EquipmentPage />} />
-      <Route path="/equipment/:id" element={<EquipmentDetail />} />
-      {/* Job Routes */}
-      <Route
-        path="/post-job"
-        element={
+
+const MarketplaceRoutes = () => {;
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
-  );
-export default MarketplaceRoutes;
-
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import Marketplace from "@/pages / Marketplace";

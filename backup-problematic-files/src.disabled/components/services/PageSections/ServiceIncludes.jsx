@@ -9,4 +9,3 @@ const ServiceIncludes = ({ className }) => {
   );
 };
 
-export default ServiceIncludes;

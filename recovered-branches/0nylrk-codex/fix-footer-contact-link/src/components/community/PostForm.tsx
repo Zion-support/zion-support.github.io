@@ -27,14 +27,6 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
-interface PostFormValues {
-interface PostFormValues {
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
 
   title: string
   content: string
@@ -83,6 +75,8 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues;
   onSubmit;
+  initialValues,
+  onSubmit,
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
@@ -98,30 +92,6 @@ export const PostForm = ({
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
-
-    }
-
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField
-              control={form && form.control}
-              name="title"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Title</FormLabel>;
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
         <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
       </CardHeader>;
       <CardContent>;
@@ -141,23 +111,14 @@ export const PostForm = ({
                 <FormItem>;
                   <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                    <select
-                      className="w-full p-2 border rounded-md"
-                      {...field}>;
-                      <option value="getting-hired">Getting Hired</option>;
-                      <option value="project-help">Project Help</option>;
-                      <option value="ai-tools">AI Tools Discussion</option>;
                       <option value="feedback">Feedback & Feature Requests</option>;
                     </select>;
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-
     </Card>);
 }
 ;

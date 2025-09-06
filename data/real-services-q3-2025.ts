@@ -12,9 +12,6 @@
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[],
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -34,29 +31,10 @@
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-
-const contact = {;
-  mobile: '+1 302 464 0950';
-}
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com',};
-
-export const realServicesQ32025: Q3Service[] = [
-  {  reviews?: number
-}
-const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
 };
 
 export const realServicesQ32025: Q3Service[] = [
@@ -122,8 +100,6 @@ export const realServicesQ32025: Q3Service[] = [
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
     customers: 24;
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
@@ -155,8 +131,6 @@ export const realServicesQ32025: Q3Service[] = [
     roi: '525% organic uplift in 812 weeks on content libraries.';
     competitors: ['Link WhisperInternal Link Juicer'];
     customers: 30;
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-    contactInfo: contact
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
@@ -198,37 +172,11 @@ export const realServicesQ32025: Q3Service[] = [
     description:
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
     features: [
-      'Reviews widget integration',
-      'Email / SMS post - purchase triggers',
-      'Photo / video UGC capture',
-      'Moderation and syndication',
-      'Conversion impact reporting',
-    ],
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   },];    contactInfo: contact
   }
 ];
-    color: 'from - amber - 600 to - rose - 600',
-    text_color: 'text - amber - 200',
-    link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation',
-    market_position:;
-      'Managed alternative to do - it - yourself Yotpo / Judge.me setups.',
-    target_audience: 'Shopify and custom ecommerce brands',
-    setup_time: '36 days',
-    category: 'Quality & Monitoring',
-    real_service: true,
-    technology: ['Shopify', 'Klaviyo', 'Next.js'],
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'],
-    use_cases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'],
-    roi: '210% CVR lift on PDPs post - deployment.',
-    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'],
-    customers: 10,
-    rating: 4.8,
-    reviews: 12,
-    // @ts - expect - error augment common shape for UI components that expect contact_info;
-    contact_info: contact,
-  }, ];    contact_info: contact;
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
@@ -242,7 +190,6 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -342,15 +289,8 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '3–6 days',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['ShopifyKlaviyo', 'Next.js'],
-    integrations: ['YotpoJudge.me', 'LooxStamped'],
-    useCases: ['Increase trustLift CVR', 'Collect UGC for ads'],
-    roi: '2–10% CVR lift on PDPs post-deployment.',
     competitors: ['YotpoJudge.me', 'LooxStamped.io'],
     customers: 10,
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-  }
-];
-;

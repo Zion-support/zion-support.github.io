@@ -1,10 +1,12 @@
 export interface Branding {;
-
+  logoUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+  subdomain?: string;
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
-}
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -16,19 +18,12 @@ export interface Branding {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-  globalMap?: boolean;
-  franchiseOnboarding?: boolean;
-  referralAmbassadors?: boolean;
-  grantPortal?: boolean;
-  trailer?: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
   grantPortal?: boolean,;
   trailer?: boolean,;
   bookStore?: boolean;
-}
-export interface DeployInput {instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
@@ -66,21 +61,12 @@ export interface DeployLogEntry {timestamp: string;
 export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
-}
-export interface DeployResult {success: boolean;
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

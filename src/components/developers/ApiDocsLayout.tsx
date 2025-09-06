@@ -12,13 +12,6 @@ import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
-import {;
- getDocsSearchPath;
- docsSearchSuggestions
-interface ApiDocsLayoutProps {
-  children: React.ReactNode;
-}
-export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
@@ -27,11 +20,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
-   { title: "Getting Started", path: "/developers/docs/getting-started" }
-    { title: "API Reference", path: "/developers/docs/reference" }
-    { title: "Webhooks", path: "/developers/docs/webhooks" }
-    { title: "Sample Code", path: "/docs/sample-code" }
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -52,8 +40,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     }
   }
   return (
-    <div className="flex min-h-screen bg-zinc-950">;
-     {/* Sidebar */}
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -63,8 +49,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-        <EnhancedSearchInput
-         placeholder="Search documentation"
         <Link
          key={item && item.path}
          href={item && item.path}
@@ -74,9 +58,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
          )}>;
          {item && item.title}
         </Link>;
-         {item.title}
-        </Link>
-       ))}
 }
 }
 /* Sidebar */ "

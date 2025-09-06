@@ -1,3 +1,4 @@
+  FormField,
 
 import {
   FormField
@@ -59,12 +60,6 @@ function PersonalInfoFields() {
         control={control}
         name="title";
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Professional Title</FormLabel>;
-            <FormControl>;
-              <Input placeholder="Senior Software Engineer" {...field} />;
-            </FormControl>;
-            <FormMessage />;
       <FormField
         control={control}
         name="email"
@@ -77,9 +72,6 @@ function PersonalInfoFields() {
             <FormMessage />;
           </FormItem>;
         )}
-          </FormItem>)}
-      />;
-      <FormField;
         control={control}
         name="email";
         render={({ field }) => (
@@ -101,12 +93,6 @@ function PersonalInfoFields() {
               <Input placeholder="+1 234 567 8900" {...field} />;
             </FormControl>;
             <FormMessage />;
-          </FormItem>;
-        )}
-      />
-    </div>
-  );
-}
           </FormItem>)}
       />;
     </div>);

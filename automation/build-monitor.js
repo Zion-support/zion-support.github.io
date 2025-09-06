@@ -24,7 +24,6 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
-
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -492,4 +491,3 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
-module.exports = BuildMonitor;

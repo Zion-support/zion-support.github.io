@@ -85,16 +85,6 @@ export default function HomePage() {
           <div className="text - center">;
             <h1 className="text - 4xl font - bold tracking - tight text - white sm:text - 6xl">;
               Leading the Future of{' '}
-              Join the revolution that's reshaping industries worldwide.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/contact"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-              >
-                Get Started
-              </a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
             </div>
           </div>
         </div>
@@ -107,7 +97,6 @@ export default function HomePage() {
             Everything you need to accelerate innovation
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results
             and maintain competitive advantage in the digital age.
           </p>
         </div>
@@ -175,37 +164,6 @@ export default function HomePage() {
                   <h3 className="mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration - 200">;
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
-      {/* Solutions showcase */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Flagship AI and Technology Platforms
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover how our innovative solutions are transforming industries and driving unprecedented growth.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {solutions.map((solution) => (
-              <article
-                key={solution.name}
-                className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime="2024" className="text-gray-400">
-                    2024
-                  </time>
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">
-                    AI Platform
-                  </span>
-                </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    <a href={solution.href}>
-                      <span className="absolute inset-0" />
-                      {solution.name}
                     </a>
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
@@ -222,14 +180,6 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
-          </div>;
-        </div>;
-      </div>;
-
-          </dl>;
-        </div>;
-      </div>;
-
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

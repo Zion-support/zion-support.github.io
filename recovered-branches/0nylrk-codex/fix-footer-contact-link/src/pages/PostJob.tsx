@@ -49,9 +49,6 @@ export default function PostJob() {;
   }
 ;
   return (;
-
-    <>;
-      <SEO
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;

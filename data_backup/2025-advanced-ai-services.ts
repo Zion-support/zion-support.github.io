@@ -448,5 +448,3 @@ phone:,
   $173.5B',
     "targetAudience": IT security teams, cybersecurity firms, enterprise businesses, government agencies,
   ,
-    "competitiveAdvantage": Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-]}

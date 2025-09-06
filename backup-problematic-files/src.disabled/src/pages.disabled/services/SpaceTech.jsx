@@ -9,4 +9,3 @@ const SpaceTech = ({ className }) => {
   );
 };
 
-export default SpaceTech;

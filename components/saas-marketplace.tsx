@@ -39,38 +39,11 @@ import {
   Code
   Database
 
-
-
-  Zap;
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
   Cloud;
   ArrowRight;
   Star;
   Check;
 
-export default function SaaSMarketplacePage() {
-  const microSaasServices = [
-    {
-      name: 'Zapier'
-      description:
-        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',      category: 'Automation'
-      pricing: 'Free - $19.99/month'
-      rating: 4.8
-      users: '2M+'
-      icon: <Zap className='w-8 h-8 text-orange-400' />,      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.'
-      category: 'Automation'
-      pricing: 'Free - $19.99/month'
-      rating: 4.8
-      users: '2M+'
-      icon: <Zap className='w-8 h-8 text-orange-400' />
-      features: [
       rating: 4.9
       users: '1M+'
       icon: <Shield className='w-8 h-8 text-blue-400' />
@@ -236,13 +209,6 @@ export default function SaaSMarketplacePage() {
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
-        'Lightning fast'
-        'Beautiful design'
-        'Great keyboard shortcuts'
-        'Git integration'
-      ]
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
-    }
   ];
   const categories = [
     'All'
@@ -277,16 +243,6 @@ export default function SaaSMarketplacePage() {
     'Hosting',;
     'Project Management',;
   ];
-  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
-
-  const filteredServices =;
-    selectedCategory === 'All';
-      ? microSaasServices;
-      : microSaasServices && microSaasServices.filter(;
-          service => service && service.category === selectedCategory;
-        );  const filteredServices = selectedCategory === 'All' ;
-    ? microSaasServices ;
-    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
 
   return (
     <>;
@@ -330,38 +286,6 @@ export default function SaaSMarketplacePage() {
               growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
-        <div className='absolute inset-0'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0 && 0.08),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]' />;
-        </div>;
-
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
-
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
-          <div className='mb-20 animate-fade-in'>;
-            <div className='mb-8'>;
-              <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in'>;
-                <Globe className='w-4 h-4 mr-2' />;
-                Curated SaaS Solutions;
-              </div>;
-            </div>;
-
-            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
-              SaaS Marketplace;
-            </h1>;
-            <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>;
-              Discover the best micro SaaS services that power modern;
-              businesses. Hand-picked tools for automation, productivity, and;
-              growth.;
-            </p>;
-
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               <Button
                 href='#services'
                 size='lg'
@@ -375,10 +299,6 @@ export default function SaaSMarketplacePage() {
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-                variant="outline"
-                size="lg"
-                variant="outline"
-                size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
               >
                 Get Recommendations
@@ -431,74 +351,14 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Recommendations;
               </Button>;
             </div>;
           </div>;
-
-          {/* Stats */}
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                {microSaasServices && microSaasServices.length}+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Curated Services</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
-                9;
-              </div>;
-              <div className='text-gray-400 text-sm'>Categories</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
-                4 && 4.7+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Avg Rating</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
-                100K+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices && microSaasServices.length}+;
-              </div>;
-              <div className="text-gray-400 text-sm">Curated Services</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
-                9;
-              </div>;
-              <div className="text-gray-400 text-sm">Categories</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
-                4 && 4.7+;
-              </div>;
-              <div className="text-gray-400 text-sm">Avg Rating</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
-                100K+;
-              </div>;
-              <div className="text-gray-400 text-sm">Total Users</div>;
             </div>;
           </div>;
         </div>;
       </section>;
-
-
-      {/* Category Filter */}
-      <section className='py-16 bg-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex flex-wrap justify-center gap-4'>;
-            {categories && categories.map(category => (              <button      <section className="py-16 bg-gray-900">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex flex-wrap justify-center gap-4">;
-            {categories && categories.map((category) => (;
-
 
               <button
 
@@ -511,8 +371,6 @@ export default function SaaSMarketplacePage() {
                 }`}
               >;
                 {category}
-              </button>;
-            ))}
 
           </div>;
         </div>;
@@ -531,13 +389,6 @@ export default function SaaSMarketplacePage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='flex items-start space-x-6'>;
-                  <div className='relative'>;
-                    <div
                       {service.icon}
                     </div>;
                   </div>;
@@ -550,14 +401,6 @@ export default function SaaSMarketplacePage() {
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - sm text - gray - 300'>;
                           {service.rating}
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>
-                        Key Features:
-                      </h4>
-                      <div className='grid grid-cols-2 gap-2'>
-                        {service.features
-                          .slice(0, 4)
-                          .map((feature, featureIndex) => (
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'>;
@@ -569,10 +412,6 @@ export default function SaaSMarketplacePage() {
                         href={service && service.website}
                         variant='outline'
                         size='sm'
-            Our team of experts can help you select the perfect SaaS tools for;
-            your business needs. Get personalized recommendations and;
-            implementation support.;
-          </p>;
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -592,25 +431,10 @@ export default function SaaSMarketplacePage() {
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'>;
-              Get Expert Advice;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/services'
               variant='outline'
               size='lg'
-}
-
-
-              View Our Services;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
-  );
-}
   );
 }
   );

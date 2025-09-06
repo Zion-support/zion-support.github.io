@@ -49,21 +49,6 @@ export function EducationFormFields({
       is_current: false
       description: ''
       location: ''
-    }
-  })
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true)
-      institution: '',
-      degree: '',
-      field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },;
-  });
-  const handleSubmit = async (data: EducationFormValues) => {;
-    setIsLoading(true);
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -129,11 +114,6 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
-
-
-
-
-
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -255,7 +235,6 @@ export function EducationFormFields({;
         </div>;
         <FormField;
           control={form.control}
-
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -282,15 +261,6 @@ export function EducationFormFields({;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-            )}
-          />
-
-
-
-            )}
-          />
-          <div className='space-y-4'>
-            <FormField
               name="is_current"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
@@ -305,8 +275,6 @@ export function EducationFormFields({;
                   </div>
                 </FormItem>
               )}
-
-
             />;
             {!form.watch('is_current') && (;
               <FormField;
@@ -330,50 +298,6 @@ export function EducationFormFields({;
         <FormField
           control={form && form.control}
           name='location'
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Location (Optional)</FormLabel>;
-            </FormItem>)}
-        />;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <FormField;
-            control={form.control}
-            name='start_date';
-            render={({ field }: { field: any }) => (
-              <FormItem>;
-                <FormLabel > Start Date</FormLabel>;
-                <FormControl>;
-                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <div className='space - y-4'>;
-            <FormField;
-              control={form.control}
-              name='is_current';
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
-                    <Checkbox;
-                      checked = {field.value, }
-                      onCheckedChange = {field.on_change, }
-                    />;
-                  </FormControl>;
-                  <div className='space - y-1 leading - none'>;
-                    <FormLabel > I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>)}
-            />;
-            {!form.watch ('is_current') && (
-              <FormField;
-                control={form.control}
-                name='end_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem>;
-                    <FormLabel > End Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />)}
           </div>;
         </div>;
         <FormField;
@@ -381,14 +305,6 @@ export function EducationFormFields({;
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
-              <FormLabel>Location (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="Cambridge, MA" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-
         />;
         <FormField;
           control={form.control}
@@ -418,9 +334,6 @@ export function EducationFormFields({;
           </Button>
           <Button type='submit' disabled={isLoading}>
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Education
@@ -431,6 +344,11 @@ export function EducationFormFields({;
   )
 }
 
+}
+}
+;
+;
+;
             </FormItem>)}
         />;
         {error && (

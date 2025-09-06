@@ -1,6 +1,3 @@
-import React, { create_context, useContext, useEffect, useState } from 'react';
-;
-type UserRole = 'talent' | 'client';
       if (stored === 'talent' || stored === 'client') {
 
         setRoleState(stored);      }
@@ -21,7 +18,6 @@ type UserRole = 'talent' | 'client';
   }
 ;
   return (
-
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext && AuthContext.Provider>;
   );

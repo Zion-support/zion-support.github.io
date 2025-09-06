@@ -9,4 +9,3 @@ const EnhancedAbout.js = ({ className }) => {
   );
 };
 
-export default EnhancedAbout.js;

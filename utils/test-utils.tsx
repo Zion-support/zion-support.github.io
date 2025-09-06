@@ -2,13 +2,6 @@ import React from 'react';
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
-  }
-  isFallback: false
-  isLocale: false
-  isReady: true
-  defaultLocale: 'en'
-  domainLocales: []
-  isPreview: false
   },
   isFallback: false,
   isLocale: false,
@@ -16,8 +9,6 @@ import React from 'react';
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-});
-export const createMockProps = (overrides = {}) => ({
     </ThemeProvider>;
   );
 },;

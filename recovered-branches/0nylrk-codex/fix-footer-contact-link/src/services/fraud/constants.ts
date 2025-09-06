@@ -28,17 +28,6 @@ export const suspiciousPhrases = [
   "fakeemail";
   "mailinator";
   "guerrillamail";
-  "10minutemail";
-];
-
-
-  "deal outside"
-
-],
-
-
-// Email domains often used for throwaway accounts
-
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -71,4 +60,3 @@ export const suspiciousEmailDomains = [;
   "mailinator",;
   "guerrillamail",;
   "10minutemail";
-];

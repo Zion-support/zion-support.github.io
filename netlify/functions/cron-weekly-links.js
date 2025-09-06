@@ -1,8 +1,3 @@
-
-async function fetchHtml(url) {
-  const resp = await fetch(url);
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -65,25 +60,3 @@ exports.handler = async function() {
     const broken = []
     for (const p of pages) {
       try {
-          try {
-            const resp = await fetch(l, { method: 'HEAD' })
-            checked.push({ url: l, status: resp.status })
-            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
-          } catch (e) {
-            broken.push({ url: l, status: 0, error: String(e.message |e) })
-
-          }
-        }
-      } catch (e) {
-        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message |e) })
-      }
-    }
-
-    const report = { updatedAt: Date.now(), checked: checked.length, broken }
-    const owner = process.env.GITHUB_OWNER
-    const repo = process.env.GITHUB_REPO
-    const token = process.env.GITHUB_TOKEN
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
-    }

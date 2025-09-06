@@ -18,7 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
-
       return res.status(200).json({ text })
     }
     // Fallback without API key
@@ -59,7 +58,6 @@ if ( {) {
     }
     // Fallback without API key;
     return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
-
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }

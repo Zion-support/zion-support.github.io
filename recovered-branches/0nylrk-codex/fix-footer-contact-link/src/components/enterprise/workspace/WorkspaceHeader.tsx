@@ -7,10 +7,6 @@ import {Bell, Users, Settings} from "lucide-react";
 interface WorkspaceHeaderProps {
   company: Company
 }
-
-
-export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
-  return (
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -18,10 +14,6 @@ import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
   company: Company;
 }
-            <img
-              src={company.logoUrl |"/placeholder.svg"}
-              alt={company.name}
-              className="max-h-10 max-w-10"
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
 import { Button } from '@/components / ui / button';

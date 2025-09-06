@@ -17,7 +17,6 @@
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
-                <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
@@ -47,6 +46,7 @@
                     placeholder="Description";
                   />;
                 </div>;
+                <div style={{ display:"grid", gap:6 }}>;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Suggested due date</label>;
                   <input;
@@ -70,6 +70,3 @@
               </div>)}
           </div>))}
       </div>;
-    </div>);
-}
-export default MilestoneAssistant;

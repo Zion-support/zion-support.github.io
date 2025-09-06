@@ -1,11 +1,4 @@
->(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("&quot;, className)} {...props} />
-))
-PaginationItem.displayName = &quot;PaginationItem&quot;
-type PaginationLinkProps = {
-  isActive?: boolean
 interface PaginationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
@@ -20,7 +13,6 @@ const PaginationLink = ({
 
         size}),
       className
-    )}
     {...props}
   />
 )
@@ -34,7 +26,6 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
         className;
-      )}
       {...props}
     >;
       {page}

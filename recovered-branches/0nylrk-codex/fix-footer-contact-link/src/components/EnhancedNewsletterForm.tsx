@@ -1,12 +1,3 @@
-import { useState } from "react";
-import { Mail } from "lucide-react";
-export function EnhancedNewsletterForm() {;
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
     setIsSubmitting(true);
     // Simulate API call
     setTimeout(() => {
@@ -14,15 +5,6 @@ export function EnhancedNewsletterForm() {;
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-
-  const handleSubmit = (e: React.FormEvent) => {
-
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -51,13 +33,11 @@ export function EnhancedNewsletterForm() {
           </p>;
         </div>;
       </div>;
-
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
@@ -123,4 +103,3 @@ export function EnhancedNewsletterForm() {;
           />;
           <Button;
             type="submit";
-}

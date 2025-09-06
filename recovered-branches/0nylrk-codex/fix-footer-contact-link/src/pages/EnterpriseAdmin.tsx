@@ -40,7 +40,6 @@ export default function EnterpriseAdmin() {;
   }
 ;
   return (;
-
     <ProtectedRoute>;
       <SEO
         title="Enterprise Admin - Zion AI Marketplace"
@@ -52,7 +51,6 @@ export default function EnterpriseAdmin() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
-  );
 }
 import React from './react';
 import { Header } from '@/components / Header';

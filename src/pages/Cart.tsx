@@ -23,9 +23,7 @@ import {
 import {logErrorToProduction} from '@/utils/productionLogger',
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem',
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
-
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
-// import { CartItem as CartItemType  } from '@/types/cart';
 // safeStorage is no longer needed here for reading
 // import { safeStorage  } from '@/utils/safeStorage';
 import { getStripe  } from '@/utils/getStripe';
@@ -108,4 +106,3 @@ if ( {}) {
 } return () <div className="container py - 10 text - center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx - auto mb - 4" / / />";" <p > Your cart is empty</p>""";" <Button as_child className="mt - 4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>)}" ";" return (""";" <div className="container max - w-2xl py - 10">""";" <h1 className="text - 3xl font - bold mb - 6">Shopping Cart</h1>""";" <ul className="space - y-4"> {items.map (item => ( <CartItemComponent key={item.id} item={item} on_remove={remove_item} onUpdateQuantity={update_quantity} />;" ))}";" </ul>""";" <div className="flex justify - between mt - 6 font - semibold"> <span > Subtotal</span> <span>${subtotal.to_fixed (2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger as_child>";" <Button""";" className="mt - 4 w - full"'; on_click={() => is_authenticated && navigate ('/checkout')} disabled={!is_authenticated} >; Checkout </Button> </TooltipTrigger> {!is_authenticated && <TooltipContent > Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";";
 }
 ;
-

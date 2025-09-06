@@ -109,7 +109,6 @@ import {
   Wrench,
   Smartphone,
   BarChart3,
-
   Eye,;
   Timer,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
@@ -120,7 +119,6 @@ import {
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
-
     services: [;
       {
         name: 'Mars Colonization Automation Platform',
@@ -146,9 +144,6 @@ import {
       { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
     ];
   }
-
-];
-
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -209,6 +204,7 @@ const mainNavItems = [;
   { name: 'Support', href: '/support', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
+];
 
 export default function UltraFuturisticNavigation2029() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -230,9 +226,6 @@ export default function UltraFuturisticNavigation2029() {;
   return (
     <>;
       {/* Top Contact Bar */}
-              <Phone size={14} />
-              <span>{contactInfo.mobile}</span>
-            </a>
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -251,79 +244,6 @@ export default function UltraFuturisticNavigation2029() {;
           </div>
         </div>
       </div>
-              className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
-            <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
-              {contactInfo && contactInfo.website.replace('https://', '')}
-  { name: 'Contact', href: '/contact', icon: Phone }, ];  { name: 'Contact', href: '/contact', icon: Phone }
-];
-;
-export default /**
- * UltraFuturisticNavigation2029 - Function description
- */
-function UltraFuturisticNavigation2029() {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_category, setActiveCategory] = useState < string | null>(null);
-  const [scrolled, set_scrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      set_scrolled (window.scroll_y > 50);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      set_scrolled (window.scroll_y > 50);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const toggle_menu = () =>: any setIsOpen (!is_open);
-  const close_menu = () =>: any setIsOpen (false);
-;
-  return (
-    <>;
-      {/* Top Contact Bar */}
-      <div className='bg - gradient - to - r from - cyan - 900 via - blue - 900 to - purple - 900 text - white text - sm py - 2 px - 4'>;
-        <div className='max - w-7xl mx - auto flex flex - wrap items - center justify - between'>;
-          <div className='flex items - center space - x-6'>;
-            <a;
-              href={`tel:${contact_info.mobile}`}
-              className='flex items - center space - x-2 hover:text - cyan - 300 transition - colors';
-            >;
-              <Phone size={14} />;
-              <span>{contact_info.mobile}</span>;
-            </a>;
-            <a;
-              href={`mailto:${contact_info.email}`}
-              className='flex items - center space - x-2 hover:text - cyan - 300 transition - colors';
-            >;
-              <Mail size={14} />;
-              <span>{contact_info.email}</span>;
-            </a>;
-            <div className='flex items - center space - x-2'>              <MapPin size={14} />;
-              <span>{contact_info.address}</span>;
-            </div>;
-          </div>              <Phone size={14} />;
-              <span>{contact_info.mobile}</span>;
-            </a>;
-            <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-2 hover:text - cyan - 300 transition - colors">;
-              <Mail size={14} />;
-              <span>{contact_info.email}</span>;
-            </a>;
-            <div className="flex items - center space - x-2">;
-              <MapPin size={14} />;
-              <span>{contact_info.address}</span>;
-            </div>;
-          </div>;
-          <div className='flex items - center space - x-4'>;
-            <a;
-              href={contact_info.website}
-              className='hover:text - cyan - 300 transition - colors';
-            >              {contact_info.website.replace ('https://', '')}          <div className="flex items - center space - x-4">;
-            <a href={contact_info.website} className="hover:text - cyan - 300 transition - colors">;
-              {contact_info.website.replace ('https://', '')}
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
@@ -423,17 +343,6 @@ function UltraFuturisticNavigation2029() {
             {/* Desktop Navigation */}
 
                 </Link>
-                {/* Mega Menu */}
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories && serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">;
-                    {serviceCategories && serviceCategories.map((category, index) => (;
-                      <motion&& motion.div
-                        key={category && category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0 && 0.1 }}
-                        className='group'>;
 
               </div>
             </motion.div>
@@ -443,6 +352,7 @@ function UltraFuturisticNavigation2029() {
 
                 </Link>
               ))}
+
               {/* Services Dropdown */}
 
 
@@ -455,8 +365,6 @@ function UltraFuturisticNavigation2029() {
                         className='group'
 
 
-
-                      >
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -529,33 +437,12 @@ function UltraFuturisticNavigation2029() {
                 Get Started
               </motion.button>
             </div>
-                  </div>;
-                </div>;
-              </div>;
-
-              {/* CTA Button */}
-              <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40";
-              >;
-                Get Started;
-              </motion && motion.button>;
-            </div>;
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors"
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </nav>
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </nav>;
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -612,15 +499,10 @@ function UltraFuturisticNavigation2029() {
                     <X size={24} />;
                   </button>;
                 </div>;
-
-                {/* Mobile Navigation Items */}
                     <Link
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
-                {/* Mobile Services */}
-
-
                             </Link>
                           ))}
                         </div>;
@@ -794,4 +676,3 @@ function UltraFuturisticNavigation2029() {
     </>);      <div className="h - 20" />;
     </>);
 }
-

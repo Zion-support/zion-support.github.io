@@ -1,9 +1,3 @@
-export function EnhancedNewsletterForm() {;
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const lastSubmit = useRef(0);
 
@@ -86,14 +80,10 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   },
-
-  return (
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
           <p className='text-zion-slate-light mt-1'>;
-      
-
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>

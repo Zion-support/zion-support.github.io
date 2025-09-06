@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
@@ -989,6 +998,48 @@ module.exports = HealthCheckMonitor;
 // Run health check
 const healthChecker = new HealthChecker();
 healthChecker.runHealthCheck().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/main
+=======
+=======
+=======
+
+module.exports = HealthChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+const { execSync } = require('child_process');
+console.log('🏥 Running Health Check...');
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+<<<<<<< HEAD
+});
+=======
+});
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

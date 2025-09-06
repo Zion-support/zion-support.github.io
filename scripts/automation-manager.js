@@ -444,16 +444,6 @@ class AutomationManager {;
         try {
           execSync(`pm2 stop ${processName}`, { "stdio": 'pipe})} "catch": (error) {';
           // Process: might not be running})
-      // // // // // // // console && console.log(
-   All automation processes stopped';)} "catch": (error) {';
-      // // // // // // // console && console.error(' Failed: to stop processes:  error && error.message)}';
-      console && console.log(
-   "All": automation processes stopped';)} "catch": (error) {';
-      console && console.error(' Failed: to stop processes:  error && error.message)}'}
-  "async": restartAll() {
-    // // // // // // // console && console.log(
-   Restarting all automation processes...';)';
-    try: {
   "async": restartProcess(processName) {
     if (!this && this.automationProcesses.includes(processName)) {
     // // // // // // // console && console.log(` Restarting ${processName}...`);

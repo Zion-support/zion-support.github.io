@@ -17,9 +17,6 @@ declare module 'path' {export function resolve(...paths: string[]): string;
   export function dirname(path: string): string;
 }
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
-  export function componentTagger(): Plugin;
-}
-// Add Node.js globals
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -34,5 +31,3 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
-  }
-}

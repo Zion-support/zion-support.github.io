@@ -1,13 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
-
-interface Props {;
-  children: ReactNode;
-}
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
@@ -28,36 +21,25 @@ interface Props {
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
 interface State {
+
+interface State {;
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
   }
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    return { hasError: true, error };
-    return { hasError: true, error }
   }
 
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
-    return { hasError: true, error };
-    return { hasError: true, error }
-  }
     // Log the error to console or error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
-    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
       error,
       error_info;
     });
@@ -67,9 +49,6 @@ class ErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-
-
-    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
       error
       errorInfo
     });
@@ -84,7 +63,6 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     console && console.error('Error caught by boundary:', error, errorInfo);    this && this.setState({;
       error,;
@@ -99,30 +77,12 @@ class ErrorBoundary extends Component<Props, State> {
     if (this && this.props.onError) {;
       this && this.props.onError(error, errorInfo);
     }
-    // Log to external service in production;
-    if (process && process.env.NODE_ENV === 'production') {;
-      // Here you would typically send to an error reporting service;
-      console && console.error('Production error:', error, errorInfo);
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-    // Log error to external service (e.g., Sentry)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-// Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
     }
   }
   handleReload = () => {
@@ -196,12 +156,6 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-  handleGoHome = () => {;
-    window && window.location.href = '/';  };
-
-  render() {;
-    if (this && this.state.hasError) {;
-      // Fallback UI;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">;
@@ -318,8 +272,6 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 }
                 className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                onClick={() => window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
               >
                 Reload Page
               </button>
@@ -357,9 +309,6 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 }
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
               >
                 Try Again
               </button>
@@ -396,29 +345,6 @@ export default class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                </pre>
-              </details>
-                onClick={() => this && this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors";
-              >;
-                Try Again;
-              </button>;
-            </div>;
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
-              <details className="mt-4 p-4 bg-gray-100 rounded-md">;
-                <summary className="cursor-pointer font-medium text-gray-700">;
-                  Error Details (Development);
-                </summary>;
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">;
-                  {this && this.state.error && error.toString()}
-                  {this && this.state.errorInfo?.componentStack}
-                </pre>;
-              </details>;
-            )}
-          </div>;
-    // Log the error to an error reporting service;
-    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this && this.setState({ error, errorInfo });
   }
 }
   } catch (error) {
@@ -478,21 +404,9 @@ export default class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-    super(props);
-    this.state = { hasError: false }
-}
-  static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
-}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
 }
   handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined });
 }
-  render() {if (this.state.hasError) {;
-      if (this.props.fallback) {;
-        return this.props.fallback;
-}
-      return (;
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -599,9 +513,6 @@ if ( {) {
             </div>;
           </div>;
         </div>);
-}
-    return this.props.children;
-}
 }
   } catch (error) {
     console.error("Error:", error);

@@ -1,6 +1,3 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -9,26 +6,6 @@ const TechnicalDocumentationChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <meta
-          name="description"
-          content="TechnicalDocumentationChat service"
-        />{" "}
-      </Head>
-      <main>
-        <h1>TechnicalDocumentationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-      <main>;
-        <h1>TechnicalDocumentationChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-  );
-}
-export default TechnicalDocumentationChat;
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -53,4 +30,3 @@ const TechnicalDocumentationChat: NextPage = () => {
 ;
 export default TechnicalDocumentationChat;
 ;
-        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>

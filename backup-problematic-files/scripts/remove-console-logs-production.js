@@ -27,12 +27,6 @@ class ConsoleLogRemover {
       "removed": 0,
       "errors": []
     };
-            results.removed++;
-            return ''}
-        );
-        // Also remove console.warn, console.error, console.info in production
-        newContent = newContent.replace(
-          /console\.(warn|error|info)\([^)]*\);?\s*/g,
           (match, offset, string) => {
             const beforeMatch = string.substring(0, offset);
             if (beforeMatch.includes('NODE_ENV === \'development\'') || 

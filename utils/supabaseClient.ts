@@ -40,5 +40,3 @@ export function getSupabaseClient(): ZionSupabase {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  }
-}

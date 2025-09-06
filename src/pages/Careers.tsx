@@ -3,15 +3,12 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-
   // Benefits list
   const benefits = [
     {
       title: 'Flexible Work'
       description:
         'Remote-first culture with flexible hours to support your productivity and work-life balance.'
-      icon: (
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -53,18 +50,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-    {
-      icon: (
-      )
-    }
 
   return (
     <>;
       <SEO
-        title='Careers at Zion - Join Our Team'
+        title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
-        keywords='Zion careers, AI jobs, tech careers, remote work, startup jobs'
-
 
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
@@ -77,10 +68,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
               </p>;
             </div>;
             <div className='rounded-lg overflow-hidden relative w-full h-full'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
+              <p className="text-zion-slate-light text-lg whitespace-pre-line">
+                {whyWork}
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden relative w-full h-full">
               <img
-                src='https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
-                alt='Team collaboration'
-                className='object-cover'
               />
             </div>
           </div>
@@ -165,7 +163,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
                         </div>
                       </CardContent>
                     </Card>
-
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -187,7 +184,6 @@ export default function Careers() {;
                           </Button>;
                         </div>;
                       </CardContent>;
-                    </Card>;
                   ))}
                 </TabsContent>;
               ))}
@@ -204,6 +200,20 @@ export default function Careers() {;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
 
+                    </Card>;
+                  ))}
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
+          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
+              Don't see the right position?
+            </h2>
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
+              We're always looking for talented individuals who are passionate
+              about AI and technology. Send us your resume and let's start a
+              conversation. You can also apply directly by emailing us at
 
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
@@ -287,4 +297,11 @@ const Careers: React.FC = () => {
       </div>;
     </>);
 }
+}
+;
+};
+export default Careers;
+};
+}
+;
 export default Careers;

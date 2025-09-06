@@ -79,8 +79,6 @@ export default function ServicesShowcase2027() {;
   const sortOptions = [
     { value: 'name', label: 'Sort by Name' }
     { value: 'price', label: 'Sort by Price' }
-    { value: 'name', label: 'Sort by Name' },
-    { value: 'price', label: 'Sort by Price' },
     { value: 'roi', label: 'Sort by ROI' }
   ];
   const allServices = [
@@ -137,8 +135,6 @@ export default function ServicesShowcase2027() {;
         return parseInt(a && a.roi.replace(/[^0-9]/g, '')) - parseInt(b && b.roi.replace(/[^0-9]/g, ''));
       default: return 0;
   });
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '', count: allServices.length }
     {
       id: 'AI Consciousness Evolution'
       name: 'AI Consciousness'
@@ -295,11 +291,6 @@ export default function ServicesShowcase2027() {;
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
-        />;
         <meta
           property='og:url'
           content='https://ziontechgroup.com/2027-services-showcase'
@@ -314,19 +305,10 @@ export default function ServicesShowcase2027() {;
         <meta
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
-        />;
         <meta
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
         />      </Head>        {/* Open Graph */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />;
-        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />;
-      </Head>;
-
-      <UltraFuturisticNavigation2027 />;
-
-      {/* Hero Section */}
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
@@ -359,45 +341,6 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-            <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                2027 Services Showcase;
-              </span>;
-            </h1>;
-            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;
-              Experience the future of technology with our revolutionary 2027;
-              services. From AI consciousness evolution to practical micro SAAS;
-              solutions.;
-            </p>;
-
-            {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
-                  {allServices && allServices.length}+;
-                </div>;
-                <div className='text-cyan-300'>Services</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
-                  15+;
-                </div>;
-                <div className='text-purple-300'>Categories</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>;
-                  1000+;
-                </div>;
-                <div className='text-pink-300'>Customers</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
-                  4 && 4.9;
-                </div>;
-                <div className='text-green-300'>Rating</div>              </div>;
-            </div>;
-
-            {/* CTA Buttons */}
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;
                 <Rocket className="w-5 h-5" />;
@@ -405,13 +348,6 @@ export default function ServicesShowcase2027() {;
               </Link>;
               <Link
                 href="/pricing"
-
-                <span>View Pricing</span>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -422,30 +358,16 @@ export default function ServicesShowcase2027() {;
       </section>;
 
 
-      {/* Search and Filters */}
-      <section className='px-4 sm:px-6 lg:px-8 mb-16'>;
-        <div className='max-w-7xl mx-auto'>;
-          <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>;
-            {/* Search Bar */}
-            <div className='mb-6'>;
-              <div className='relative'>;
-                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400' />;
                 <input
                   type='text'
                   placeholder='Search services...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20'                />            {/* Search Bar */}
-            <div className="mb-6">;
-              <div className="relative">;
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />;
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-
-            {/* Filters */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {/* Category Filter */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
@@ -453,11 +375,6 @@ export default function ServicesShowcase2027() {;
                 </label>;
                 <select
                   value={selectedCategory}
-
-                </select>;
-              </div>;
-
-
               {/* Price Range Filter */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
@@ -481,14 +398,6 @@ export default function ServicesShowcase2027() {;
                 </select>
               </div>
               {/* Sort By */}
-              <div>;
-                <label className='block text-cyan-400 font-medium mb-2'>;
-                  Sort By;
-                </label>;
-
-
-
-              {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
                 <select
@@ -510,8 +419,6 @@ export default function ServicesShowcase2027() {;
           </div>;
         </div>;
       </section>;
-
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -575,15 +482,6 @@ export default function ServicesShowcase2027() {;
                           </div>
 
                     {/* ROI */}
-
-                      </div>;
-                    </div>;
-                    <div className="mb-6 text-center">
-                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
-                      <div className="text-gray-400 text-xs">Return on Investment</div>
-                    </div>
-
-                    {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
                         ROI: {service && service.roi}
@@ -592,10 +490,6 @@ export default function ServicesShowcase2027() {;
                         Return on Investment;
                       </div>;
                     </div>;
-
-                    {/* Actions */}
-                    <div className='flex space-x-3'>;
-                      <Link
                     {/* Actions */}
                     <div className="flex space-x-3">;
                       <Link
@@ -607,9 +501,6 @@ export default function ServicesShowcase2027() {;
                         href='/contact'
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
 
-                        href={service.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
-
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
                       >
@@ -620,7 +511,6 @@ export default function ServicesShowcase2027() {;
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
                       >
                         Contact
-                      </Link>
                     </div>
 
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
@@ -636,24 +526,11 @@ export default function ServicesShowcase2027() {;
                     </div>;
                   </div>;
                 </motion && motion.div>;
-              ))}
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className='text-center py-20'>;
-              <div className='text-6xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-2'>;
-                No services found;
-              </h3>;
-              <p className='text-cyan-300 mb-6'>;
-                Try adjusting your search criteria or browse all services.;
-              </p>              <button
-                onClick={() => {;
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -662,27 +539,6 @@ export default function ServicesShowcase2027() {;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
                 }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20";
-            >;
-              <div className="text-6xl mb-4"></div>;
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-              <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>;
-                onClick={() => {;
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
-                }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
-
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
-              >;
-                Clear Filters;
-              </button>;
-            </motion && motion.div>;
-          )}
-      {/* Contact Section */}
-
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -784,274 +640,3 @@ export default function ServicesShowcase2027() {;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
             <p className="mt-2">;
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;
-              {'  '}
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>;
-              {'  '}
-              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>;
-            </p>;
-          </div>;
-        </div>;
-      </footer>;
-    </UltraFuturisticMatrixBackground2027>;
-  );  );
-              {'  '}
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>;
-              {'  '}
-              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </UltraFuturisticMatrixBackground2027>
-);  )
-}
-              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>;
-                    </p>;
-                    {/* Price */}
-                    <div className='mb - 4'>;
-                      <div className='text - 2xl font - bold text - white'>                    <div className="mb - 4">;
-                      <div className="text - 2xl font - bold text - white">;
-                        {service.price}
-                      </div>;
-                    </div>;
-                    {/* Features */}
-                    <div className='mb - 6'>;
-                      <h4 className='text - cyan - 400 font - semibold mb - 3'>;
-                        Key Features:;
-                      </h4>;
-                      <div className='space - y-2'>;
-                        {service.features.slice (0, 3).map ((feature, idx) => (
-                          <div;
-                            key={idx}
-                            className='flex items - center space - x-2';
-                          >;
-                            <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                            <span className='text - gray - 300 text - sm'>;
-                              {feature}
-                            </span>;
-                          </div>))}
-                        {service.features.length > 3 && (
-                          <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (
-                          <div key={idx} className="flex items - center space - x-2">;
-                            <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                            <span className="text - gray - 300 text - sm">{feature}</span>;
-                          </div>))}
-                        {service.features.length > 3 && (
-                          <div className="text - cyan - 400 text - sm">;
-                            +{service.features.length - 3} more features;
-                          </div>)}
-                      </div>;
-                    </div>;
-                    {/* ROI */}
-                    <div className='mb - 6 text - center'>;
-                      <div className='text - green - 400 font - semibold text - lg'>;
-                        ROI: {service.roi}
-                      </div>;
-                      <div className='text - gray - 400 text - xs'>;
-                        Return on Investment;
-                      </div>;
-                    </div>;
-                    {/* Actions */}
-                    <div className='flex space - x-3'>;
-                      <Link;
-                        href={service.link}
-                        className='flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text - center text - sm'                      >;
-                        Learn More;
-                      </Link>;
-                      <Link;
-                        href='/contact';
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                      >                    </div>;
-                    {/* Actions */}
-                    <div className="flex space - x-3">;
-                      <Link;
-                        href={service.link}
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text - center text - sm";
-                      >;
-                        Learn More;
-                      </Link>;
-                      <Link;
-                        href='/contact';
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm";
-                      >;
-                        Contact;
-                      </Link>;
-                    </div>;
-                    {/* Category Badge */}
-                    <div className='mt - 4'>;
-                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt - 4">;
-                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30">;
-                        {service.category}
-                      </span>;
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </AnimatePresence>;
-          </div>;
-          {/* No Results */}
-          {sorted_services.length === 0 && (
-            <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className='text - center py - 20';
-            >;
-              <div className='text - 6xl mb - 4'></div>;
-              <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                No services found;
-              </h3>;
-              <p className='text - cyan - 300 mb - 6'>;
-                Try adjusting your search criteria or browse all services.;
-              </p>              <button;
-                on_click={() => {
-                  setSearchTerm ('');
-                  setSelectedCategory ('all');
-                  setSelectedPriceRange ('all');
-                }}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text - center py - 20";
-            >;
-              <div className="text - 6xl mb - 4"></div>;
-              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-              <p className="text - cyan - 300 mb - 6">Try adjusting your search criteria or browse all services.</p>;
-                on_click={() => {
-                  setSearchTerm ('');
-                  setSelectedCategory ('all');
-                  setSelectedPriceRange ('all');
-                }}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all');
-                }}
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
-              >;
-                Clear Filters;
-              </button>;
-            </motion.div>)}
-        </div>;
-      </section>;
-      {/* Contact Section */}
-      <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
-        <div className='max - w-4xl mx - auto'>;
-          <div className='bg - gradient - to - r from - cyan - 900 / 40 via - purple - 900 / 40 to - pink - 900 / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 8 text - center shadow - 2xl shadow - cyan - 500 / 20'>;
-            <h2 className='text - 3xl font - bold text - white mb - 4'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - cyan - 300 mb - 8 text - lg'>;
-              Contact our team to discuss how our 2027 services can;
-              revolutionize your operations and drive unprecedented growth.;
-            </p>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-              <div className='flex items - center justify - center space - x-3'>;
-                <Phone className='w - 5 h - 5 text - cyan - 400' />;
-                <span className='text - white'>{contact_info.mobile}</span>;
-              </div>;
-              <div className='flex items - center justify - center space - x-3'>;
-                <Mail className='w - 5 h - 5 text - purple - 400' />;
-                <span className='text - white'>{contact_info.email}</span>;
-              </div>;
-              <div className='flex items - center justify - center space - x-3'>;
-                <MapPin className='w - 5 h - 5 text - pink - 400' />;
-                <span className='text - white'>{contact_info.address}</span>;
-              </div>;
-            </div>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25'              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/pricing';
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'              >              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - cyan - 300 mb - 8 text - lg">;
-              Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
-            </p>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
-              <div className="flex items - center justify - center space - x-3">;
-                <Phone className="w - 5 h - 5 text - cyan - 400" />;
-                <span className="text - white">{contact_info.mobile}</span>;
-              </div>;
-              <div className="flex items - center justify - center space - x-3">;
-                <Mail className="w - 5 h - 5 text - purple - 400" />;
-                <span className="text - white">{contact_info.email}</span>;
-              </div>;
-              <div className="flex items - center justify - center space - x-3">;
-                <MapPin className="w - 5 h - 5 text - pink - 400" />;
-                <span className="text - white">{contact_info.address}</span>;
-              </div>;
-            </div>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link;
-                href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25";
-              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/pricing';
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
-              >;
-                View Pricing Plans;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Footer */}
-      <footer className='px - 4 sm:px - 6 lg:px - 8 py - 12 border - t border - cyan - 500 / 30'>;
-        <div className='max - w-7xl mx - auto text - center'>;
-          <div className='mb - 8'>;
-            <div className='w - 16 h - 16 bg - gradient - to - br from - cyan - 400 via - purple - 500 to - pink - 500 rounded - xl flex items - center justify - center text - white text - 2xl font - bold mx - auto mb - 4 shadow - 2xl shadow - cyan - 500 / 50'>;
-              Z;
-            </div>;
-            <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 2'>;
-              Zion Tech Group;
-            </h3>;
-            <p className='text - cyan - 300'>2027 Innovation Hub</p>;
-          </div>;
-          <div className='text - cyan - 300 text - sm'>;
-            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className='mt - 2'>;
-              <Link;
-                href='/privacy';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
-                Privacy Policy;
-              </Link>;
-              {'  '}
-              <Link;
-                href='/terms';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
-                Terms of Service;
-              </Link>;
-              {'  '}
-              <Link;
-                href='/contact';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
-                Contact Us;
-              </Link>            </p>              Z;
-            </div>;
-            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 2">;
-              Zion Tech Group;
-            </h3>;
-            <p className="text - cyan - 300">2027 Innovation Hub</p>;
-          </div>;
-          <div className="text - cyan - 300 text - sm">;
-            <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt - 2">;
-              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300">Privacy Policy</Link>;
-              {'  '}
-              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">Terms of Service</Link>;
-              {'  '}
-              <Link href="/contact" className="hover: text - cyan - 400 transition - colors duration - 300">Contact Us</Link>;
-            </p>;
-          </div>;
-        </div>;
-      </footer>;
-    </UltraFuturisticMatrixBackground2027>;
-  );  );
-}
-  )
-}
-  );

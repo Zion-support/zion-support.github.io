@@ -701,5 +701,3 @@ export const onsiteServicePricing: CountryPricing[] = [;
   { country: "Western Sahara", pricePerIncident: 142.18 },;
   { country: "Yemen", pricePerIncident: 320.66 },;
   { country: "Zambia", pricePerIncident: 62.01 },;
-  { country: "Zimbabwe", pricePerIncident: 60.50 }
-];

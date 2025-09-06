@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -150,6 +157,7 @@ function fixSyntaxErrors(filePath) {
     // Fix unnecessary escape characters
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -176,6 +184,13 @@ function fixSyntaxErrors(filePath) {;
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -189,6 +204,11 @@ function fixSyntaxErrors(filePath) {;
 <<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -328,6 +348,7 @@ function fixSyntaxErrors(content, filePath) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -345,11 +366,15 @@ function fixSyntaxErrors(content, filePath) {
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 =======
 <<<<<<< HEAD
@@ -357,6 +382,19 @@ function fixSyntaxErrors(content, filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+}
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
     // Fix missing semicolons at end of statements
@@ -529,6 +567,7 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -538,6 +577,9 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -1218,6 +1260,7 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
@@ -1226,3 +1269,6 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

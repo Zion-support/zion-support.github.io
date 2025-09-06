@@ -210,21 +210,6 @@ export function SocialShareSection() {;
                 <span aria-hidden='true'>{link && link.name}</span>;
               </Button>;
             ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-  navigator.clipboard.writeText (window.location.href) .then ( () => {
-  toast ({
-}) .catch ( () => {
-  toast ({
-  title: t ('errors.failed to copy')
-})
-}
-
-}</div> </div> </div> </section>)
-}'"
 }
 ;
 
@@ -293,5 +278,3 @@ export function SocialShareSection() {;
 }'";
 }
 ;
-
-

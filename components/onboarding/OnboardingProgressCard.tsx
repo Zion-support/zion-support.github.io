@@ -8,14 +8,6 @@ export type OnboardingStep = {;
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
-  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
-  ctaHref?: string
-}
-export type OnboardingProgressCardProps = {
-  title: string
-  steps: OnboardingStep[]
-  highlightColorClass?: string
-}
 
 
 function computePercentage(steps: OnboardingStep[]): number {
@@ -38,28 +30,6 @@ function computePercentage(steps: OnboardingStep[]): number {
         <div className='text - sm opacity - 75'>{percentage}% complete</div>;
       </div>;
       {/* Progress Bar */}
-          }
-          style={{ width: `${percentage}%` }}
-        />
-      </div>
-      {allDone ? (
-        <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
-          <PartyPopper size={18} />
-      <ul className='mt-4 space-y-2'>
-        {steps.map(step => (
-          <li key={step.id} className='flex items-center justify-between'>
-            <div className='flex items-center gap-2'>
-                <CheckCircle2
-                  className='text-green-600 dark:text-green-400'
-                  size={18}
-                />
-              ) : (
-                  {step.ctaLabel}
-                </a>
-              </Link>
-            ) : null}
-          </li>;
-        ))}
 
       </ul>;
 
@@ -77,8 +47,6 @@ function computePercentage(steps: OnboardingStep[]): number {
           </Link>;
         </div>;
     </div>
-);
-}
       {!allDone && firstIncomplete ? (
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>

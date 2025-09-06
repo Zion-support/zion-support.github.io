@@ -16,16 +16,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
-
-}setIsMatchmaking (true)
-setHasSearched (true)
-serviceType
-3)
-}catch (error) {'
-  logErrorToProduction ('Error during AI matching:', {
-  data: error
-})
-toast ({
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
@@ -102,7 +92,6 @@ export function AIMatchmaker({
         variant: "destructive"}),
       // Set empty matches to show no results found UI
       setMatches([])
-
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -133,7 +122,6 @@ interface AIMatchmakerProps {;
   onMatchSelect?: (match: any,) => void,;
   className?: string;
 }
-
 export function AIMatchmaker(): any ({;
   serviceType = '',;
   onMatchSelect,;
@@ -143,7 +131,6 @@ export function AIMatchmaker(): any ({;
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-
   const handleSearch = async () => {;
     if (!query && query.trim()) {;
       toast({;
@@ -153,26 +140,6 @@ export function AIMatchmaker(): any ({;
       });
       return;
     }
-      }
-    }
-  }
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item)
-    >
-      <CardHeader className='pb-2'>
-        <CardTitle className='flex items-center text-white'>
-          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
-
-          AI Matchmaker
-        </CardTitle>
-        <p className='text-sm text-zion-slate-light'>
-          Describe what you&apos;re looking for and our AI will find the best
-          matches
-        </p>
-      </CardHeader>
-      <CardContent>
-        <div className='space-y-4'>
-          <div className='space-y-2'>
           matches;
         </p>;
       </CardHeader>;
@@ -181,7 +148,6 @@ export function AIMatchmaker(): any ({;
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
-
         </p>
       </CardHeader>
       <CardContent>
@@ -202,19 +168,10 @@ export function AIMatchmaker(): any ({;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
-                  <Search className='h-4 w-4 mr-2' />;
-                  Find Matches;
-                </>;
-              )}
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
-}
-}
-              projectDescription={query}
-            />;
-          )}
 
         <div className='space - y-4'>;
           <div className='space - y-2'>;
@@ -248,5 +205,3 @@ export function AIMatchmaker(): any ({;
         </div>;
       </CardContent>;
     </Card>);
-
-

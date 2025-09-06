@@ -19,7 +19,17 @@ interface SmartContractBuilderProps {
 
 }
 export function SmartContractBuilder({
+import React from 'react';
+interface SmartContractBuilderProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  talent: TalentProfile,;
+  clientName: string,;
+  onContractGenerated?: (contractContent: string,) => void;
+}
+export function SmartContractBuilder(): any ({;
   isOpen;
+isOpen;
   onClose;
   talent;
   clientName;
@@ -43,11 +53,6 @@ export function SmartContractBuilder({
     setFormValues(templateData)
   }
   // Convert ContractFormValues to contract content string
-  const handleDeployContract = async () => {
-    // Check condition
-if (return) {
-  $2
-}
     try {
       setDeployStatus ('deploying');
       const contract_info = await deploySmartContract (generated_contract, deploy_options);
@@ -103,45 +108,6 @@ interface SmartContractBuilderProps {
   on_deploy?: (contract_content: string) => void}
 // Helper to ensure milestones are always an array;
 }
-  const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
-  // States for on-chain agreement UI and deployment
-  const [enableOnChainAgreement, setEnableOnChainAgreement] = useState<boolean>(false)
-  const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>('')
-  // clientWalletAddress and talentWalletAddress might be part of formValues or separate state
-  // For now, let's assume they can be part of formValues or derived if prefilled.// We'll use formValues.clientWalletAddress and formValues.talentWalletAddress
-  const [onChainDeploymentStatus, setOnChainDeploymentStatus] = useState<'idle' | 'connecting' | 'fetching_code' | 'deploying' | 'success' | 'error'>('idle')
-  const [transactionHash, setTransactionHash] = useState<string | null>(null)
-  const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null)
-  const [deploymentError, setDeploymentError] = useState<string | null>(null)
-  const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null); // Bytecode from generate-smart-contract
-  const [contractAbi, setContractAbi] = useState<any | null>(null); // ABI based on contractType
-  // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts()
-  // Prefill form with talent and client name(existing useEffect)
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function;
-}
-}, []); [])
-    if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e.g., by a template)
-      setFormValues(prev => ({
-        ...prev
-        projectTitle: prev?.projectTitle |'', // Keep existing or empty
-        clientName: clientName
-        talentName: talent.full_name |talent.user_id, // Use full_name or fallback
-        deliverables: prev?.deliverables |''
-        paymentStructure: prev?.paymentStructure |''
-        milestones: ensureMilestonesArray(prev?.milestones), // Ensure milestones is an array
-        clientWalletAddress: prev?.clientWalletAddress |''
-        talentWalletAddress: prev?.talentWalletAddress |''
-        // Initialize other fields from ContractFormValues as needed
-        scopeSummary: prev?.scopeSummary |''
-        paymentAmount: prev?.paymentAmount |0
-        currency: prev?.currency |'USD'
-        deadline: prev?.deadline |''
-        governingLaw: prev?.governingLaw |''
-        disputeResolution: prev?.disputeResolution |'',
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -347,13 +313,11 @@ if ( {) {
     setGeneratedContract (contract);
     setActiveTab ("preview");
   }
-
   return (
                 Templates;
               </Button>;
             </div>;
           </div>;
-                <ContractPreview
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -372,7 +336,6 @@ if ( {) {
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
-                    <Button
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
@@ -453,7 +416,6 @@ if ( {) {
           on_close = {() => setTemplateManagerOpen (false), }
           onSelectTemplate = {handleLoadTemplate, }
           current_values = {form_values, }
-        />;
       </DialogContent>;
     </Dialog>);
 }

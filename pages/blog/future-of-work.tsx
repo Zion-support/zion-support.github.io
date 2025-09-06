@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Link from 'next/link';
 export default function FutureOfWork() {
   return (
     <>
@@ -510,7 +508,6 @@ export default function FutureOfWork(req, res) {
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
-
                     Explore Solutions;
                   </Link>;
                 </div>;

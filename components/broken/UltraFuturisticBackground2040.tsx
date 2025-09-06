@@ -1,29 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
       x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
@@ -98,8 +72,6 @@ if (return) {
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
-      const gridSize = 50;
-      const offset = (time * 20) % gridSize;
         { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
       ];
       shapes.forEach((shape, index) => {
@@ -239,13 +211,6 @@ if (return) {
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
           animate={{
-
-            duration: 10
-            repeat: Infinity
-            ease: 'linear'
-
-          }}
-
         />;
 
         <motion&& motion.div
@@ -254,7 +219,6 @@ if (return) {
             rotate: [45, 405],
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.2, 0 && 0.3, 0 && 0.2],          }}
-
           transition={{
             duration: 12
             repeat: Infinity
@@ -308,23 +272,11 @@ if (return) {
           transition={{
             duration: 12,
             repeat: Infinity,
-        {/* Additional Floating Elements */}
-        <motion&& motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
           }}
           transition={{
             duration: 15
             repeat: Infinity
             ease: 'linear'
-          }}
-        />;
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12';
-          animate={{
-            rotate: [12, 372],
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.25, 0.15],          }}
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -368,25 +320,16 @@ if (return) {
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
           animate={{
-            opacity: [0.4, 0.8, 0.4],          }}
           transition={{
             duration: 3
             repeat: Infinity
             ease: 'easeInOut',          }}
-        />;
-
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-        />
-        <motion.div
-          className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
-          animate={{
-            y: [0, -15, 0]
-            opacity: [0.4, 0.7, 0.4],          }}
           transition={{
             duration: 4
             repeat: Infinity
@@ -399,59 +342,24 @@ if (return) {
             ease: "easeInOut"
           }}
         />;
-
-        <motion&& motion.div
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 2
           }}
         />
             delay: 2
           }}
-        />
-      </div>
-            ease: "easeInOut"
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes gridMove {
-          0% {
-            ease: 'easeInOut',
-            delay: 2,
-          }}
-        />;
-      </div>;
-            ease: "easeInOut",;
-            delay: 2;
-          }}
-        />;
-      </div>;
-
-      <style jsx>{`;
-        @keyframes gridMove {;
-          0% {;
             transform: translate(0, 0);
           }
           100% {;
             transform: translate(50px, 50px);
           }
         }
-        @keyframes float {
-          0%,          100% {
         @keyframes pulse {
           0%
           100% {
             opacity: 0.2;
-        @keyframes pulse {;
-          0%,;
-          100% {;
-            opacity: 0 && 0.2;
       
       {/* CSS Animations */}
       <style jsx>{`
@@ -465,8 +373,6 @@ if (return) {
           50% {;
             opacity: 0 && 0.5;          }
         }
-};
-
 export default UltraFuturisticBackground2040;
 
       `}</style>;
@@ -482,7 +388,3 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
 
-export default UltraFuturisticBackground2040;
-
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;

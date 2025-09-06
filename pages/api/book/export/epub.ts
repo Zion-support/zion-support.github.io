@@ -138,6 +138,18 @@ export const config = {
       size_limit: "10mb",
     },
   },
+      sizeLimit: "10mb",
+    },
+  },;
+};
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 ;
 function escape_html (string: string): string {

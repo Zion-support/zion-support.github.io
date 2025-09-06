@@ -31,7 +31,6 @@ class TestRunner {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
-        console.log(' No test script found in package.json');
         return false;
       }
       console.log(' Test script found in package.json');

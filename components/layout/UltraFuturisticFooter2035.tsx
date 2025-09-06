@@ -1,7 +1,3 @@
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-
-import {
   Zap
   Globe
   Phone
@@ -110,22 +106,6 @@ import {
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
-  return (
-    <footer className="relative bg-black text-white overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
-        {/* Animated grid */}
-        <motion.div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
-              linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
-            `;
-
-      <div className="relative z-10">
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
@@ -155,34 +135,16 @@ import {
             repeat: Infinity,
             ease: 'linear',          }}
           }}
-        />
-      </div>
-      <div className='relative z-10'>            ease: 'linear'
-          }}
-        />
-      </div>
-      <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='container mx - auto px - 4 py - 20'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8'>;
             {/* Company Info */}
-                      {social.icon}
-                    </a>
-                  ))}
-
-                </div>;
-              </motion && motion.div>;
-            </div>;
-
-
-
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion&& motion.div
                 key={section && section.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-              >
                 <div className="flex items-center gap-2">
                   {section.icon}
                   <h4 className="font-semibold text-white">{section.title}</h4>
@@ -282,7 +244,6 @@ import {
                   Cookie Policy;
                 </Link>;
               </div>;
-
               <button
                 onClick={scrollToTop}
 
@@ -308,16 +269,6 @@ import {
 }> </li>) )
 }</ul> </motion.div>) )
 }</div> {
-};
-  /* Animated grid */ ;
-}<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
-  social && social.icon ;
-}</a>) ) ;
-}</div> </motion && motion.div> </div> {;
-  /* Footer Sections */ ;
-}{;
-  footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
-  section && section.title 
 }<li key= {
   link && link.name 
 }> <Linkhref= {

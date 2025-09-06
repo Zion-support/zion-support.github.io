@@ -1,10 +1,3 @@
-
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
 export default function APITestingSuitePage() {
 
   Clock,;
@@ -259,63 +252,6 @@ function APITestingSuitePage() {
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex API requirements',
-
-  const testTypes = [;
-    {;
-      name: 'Functional Testing',;
-      description:;
-        'Verify that your API endpoints work correctly and return expected responses.',;
-      tests: [;
-        'Request/response validation',;
-        'Status code verification',;
-        'Data format checking',;
-        'Error handling',;
-      ],;
-    },;
-    {;
-      name: 'Performance Testing',;
-      description:;
-        'Ensure your APIs can handle expected load and perform under pressure.',;
-      tests: [;
-        'Load testing',;
-        'Stress testing',;
-        'Response time analysis',;
-        'Throughput measurement',;
-      ],;
-    },;
-    {;
-      name: 'Security Testing',;
-      description:;
-        'Identify security vulnerabilities and ensure proper authentication and authorization.',;
-      tests: [;
-        'Authentication testing',;
-        'Authorization checks',;
-        'Input validation',;
-        'SQL injection testing',;
-      ],;
-    },;
-    {;
-      name: 'Integration Testing',;
-      description:;
-        'Test how your APIs integrate with other systems and services.',;
-      tests: [;
-        'End-to-end workflows',;
-        'Third-party integrations',;
-        'Data flow validation',;
-        'Error propagation',;
-      ],;
-    },  ];      description: 'Test how your APIs integrate with other systems and services.',;
-      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation'];
-    }
-  ];
-
-  const pricing = [;
-    {;
-      name: 'Starter',;
-      price: '$49',;
-      period: '/month',;
-      description: 'Perfect for developers and small teams',;
-      features: [;
     },  ];
 
   const handleTestAPI = async () => {;
@@ -380,23 +316,6 @@ function APITestingSuitePage() {
             threshold: 'Authenticated'
           }
           {
-
-
-            name: 'Rate Limiting',
-            status: 'pass',
-            value: 'Within limits',
-            threshold: 'No throttling',
-          },
-        ],
-
-        recommendations: [
-          'Consider implementing response caching for better performance'
-          'Monitor response times during peak usage'
-          'Implement rate limiting headers for better API documentation'
-        ]
-      });
-      setIsTesting(false);
-    }, 3000);  };        recommendations: [
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       });
@@ -409,12 +328,6 @@ function APITestingSuitePage() {
           API Testing Suite - Zion Tech Group | Comprehensive API Testing &;
           Monitoring Tool;
         </title>;
-        <meta
-          property='og:description'
-          content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
@@ -486,7 +399,6 @@ function APITestingSuitePage() {
               APIs are reliable, performant, and secure.;
             </p>;
           </div>;
-
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.
@@ -515,13 +427,6 @@ function APITestingSuitePage() {
                 className="card-hover group border-gradient-indigo"
 
 
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-      {/* Test Types Section */}
-
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -531,11 +436,6 @@ function APITestingSuitePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {testTypes.map((type, index) => (
-              We cover all aspects of API testing to ensure your APIs meet the;
-              highest standards of quality and reliability.;
-            </p>;
-          </div>;
-
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.
@@ -686,7 +586,6 @@ function APITestingSuitePage() {
                   </div>;
                 </div>;
               </Card>;
-
               {/* Test Results */}
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
@@ -700,8 +599,6 @@ function APITestingSuitePage() {
                         }`}>
                           {test.status}
                         </span>
-                        <span className="text-xs text-gray-400">{test.value}</span>
-                      </div>
                           }`}
                         >
                           {test.status}
@@ -709,15 +606,14 @@ function APITestingSuitePage() {
                         <span className='text-xs text-gray-400'>
                           {test.value}
 
+                        <span className="text-xs text-gray-400">{test.value}</span>
+                      </div>
                         </span>                      </div>
 
                       </div>
 
                     </div>
                   ))}
-
-              {/* Performance Metrics */}
-
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -745,15 +641,6 @@ function APITestingSuitePage() {
                 </div>
               </Card>
             </div>
-
-            <Card className="border-gradient-indigo">
-              <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {testResults.recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{rec}</span>
-                  </div>
             {/* Recommendations */}
             <Card className='border-gradient-indigo'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -769,11 +656,6 @@ function APITestingSuitePage() {
                   </div>
 
                 ))}
-              </div>;
-            </Card>;
-          </div>;
-        </section>;
-      )}
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1006,7 +888,6 @@ function APITestingSuitePage() {
               testing needs.;
             </p>;
           </div>;
-
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the API testing plan that best fits your development and testing needs.;
@@ -1051,14 +932,6 @@ function APITestingSuitePage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>;
-                      {feature}
-
-
-                    </li>
-                  ))}
-                </ul>
               </Card>
             ))}
           </div>
@@ -1081,10 +954,6 @@ function APITestingSuitePage() {
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/contact'
               variant='outline'
@@ -1099,7 +968,3 @@ function APITestingSuitePage() {
         </div>
       </section>
     </>
-}
-
-  );
-}

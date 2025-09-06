@@ -1,6 +1,3 @@
-
-const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false })
-
 const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false });
 export default function FounderJournalPage(req, res) {
   try {

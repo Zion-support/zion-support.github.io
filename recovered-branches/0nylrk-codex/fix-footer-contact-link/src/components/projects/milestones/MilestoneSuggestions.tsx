@@ -46,17 +46,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
-
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -65,7 +54,6 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
-
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
@@ -81,7 +69,6 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
-
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -89,14 +76,22 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;
       projectType: projectType || "Other";
     };
-
     const milestones = await generateMilestones(input);
       setShowSuggestions(true);
+  const handleGenerateMilestones = async () => {;
+    const input: MilestoneInput = {;
+      scope: `${projectName}: ${scopeSummary}`,;
+      startDate: startDate.toISOString(),;
+      endDate: endDate ? endDate.toISOString() : null,;
+      projectType: projectType || "Other";
+    },;
+    const milestones = await generateMilestones(input),;
+    if (milestones.length > 0) {;
+      setShowSuggestions(true),;
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
-  }
 
   return (
     <div className="space-y-4">;

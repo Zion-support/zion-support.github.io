@@ -9,4 +9,3 @@ const Advanced-cybersecurity-suite = ({ className }) => {
   );
 };
 
-export default Advanced-cybersecurity-suite;

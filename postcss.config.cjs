@@ -6,6 +6,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
@@ -19,3 +20,6 @@ module.exports = {
 }
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >>>>>>> origin/main
+=======
+};
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

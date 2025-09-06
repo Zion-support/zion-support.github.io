@@ -1,8 +1,3 @@
-
-
-}else {
-  console.warn ('Missing artifact for', name)
-}main ();
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -17,4 +12,3 @@
     }
   }
 }
-

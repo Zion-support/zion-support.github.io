@@ -25,7 +25,6 @@ export function FraudDetectionSettings() {
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const handleSavePreferences = null;
-  return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">

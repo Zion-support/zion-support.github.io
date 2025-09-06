@@ -39,49 +39,6 @@ export type WikiContent = {
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
-  }
-  if (wiki.references.length) {lines.push('## References');
-    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
-  }
-  return lines.join('\n');
-}
-export function buildWikitextFromWiki(wiki: WikiContent): string {const lines: string[] = [];
-  lines.push(`{{Infobox software`);
-  lines.push(`| name = ${wiki.title}`);
-  lines.push(`| developer = ${wiki.infobox.founder}`);
-  lines.push(`| released = ${wiki.infobox.launchYear}`);
-  lines.push(`| genre = ${wiki.infobox.protocolType}`);
-  lines.push(`| license = Open`);
-  lines.push(`}}`);
-  lines.push('');
-  lines.push(wiki.intro);
-  lines.push('');
-  for (const s of wiki.sections) {lines.push(`== ${s.title} ==`);
-    for (const p of s.paragraphs) lines.push(p);
-    lines.push('');
-  }
-  if (wiki.references.length) {lines.push('== References ==');
-    wiki.references.forEach((r) => lines.push(`* ${r}`));
-  }
-  return lines.join('\n');
-}
-export function buildNotionMarkdownFromDocs(docs: DocsContent): string {const sections = [;
-    docs.productOverview;
-    docs.developerApi;
-    docs.governanceGuide;
-    docs.tokenomics;
-    docs.team;
-    docs.publicRoadmap];
-  const lines: string[] = [];
-  lines.push('# Zion OS  Internal Documentation');
-  lines.push('');
-  for (const s of sections) {;
-    lines.push(`## ${s.title}`);
-    for (const p of s.paragraphs) lines.push(p);
-    lines.push('');
-  }
-  return lines.join ('\n');
-}
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
@@ -290,14 +247,11 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
 ;
 export function slugify(input: string): string {;
   return input;
-
     .toLowerCase();
     .replace(/[^a-z0-9\s-]/g, '');
     .trim();
     .replace(/\s+/g, '-');
     .replace(/-+/g, '-');
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

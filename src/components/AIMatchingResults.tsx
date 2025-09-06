@@ -20,6 +20,12 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
   projectDescription?: string
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+  isLoading?: boolean;
+  projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem,) => void
@@ -36,24 +42,6 @@ interface AIMatchingResultsProps {
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
-  const categories = {
-    all: matches
-    talent: matches.filter(match =>
-      match.category.toLowerCase().includes('talent')
-    )
-    services: matches.filter(match =>
-      match.category.toLowerCase().includes('service')
-    )
-    equipment: matches.filter(match =>
-      match.category.toLowerCase().includes('equipment')
-    )
-  }
-  // Get the icon for a category;
-  const getCategoryIcon = (category: string) =>: any {
-    const lower_category = category.toLowerCase ();
-    if () return User) {
-  $2
-}
     if () return Monitor) {
   $2
 }
@@ -73,88 +61,6 @@ if ( {) {
         </div>;
       </div>);
   }
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib/ai-matchmaking';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components/ui/skeleton';
-import { cn } from '@/lib/utils';
-
-interface AIMatchingResultsProps {;
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  isLoading?: boolean;
-  projectDescription?: string;
-  serviceType?: string;interface AIMatchingResultsProps {;
-  matches: MatchResultItem[],;
-  onSelectMatch?: (match: MatchResultItem,) => void,;
-  isLoading?: boolean,;
-  projectDescription?: string,;
-  serviceType?: string;
-}
-
-export function AIMatchingResults(): any ({;
-  matches,;
-  onSelectMatch,;
-  isLoading = false,;
-  projectDescription = '',;
-  serviceType: _serviceType = '',;
-}: AIMatchingResultsProps) {;
-  const [activeTab, setActiveTab] = useState('all');
-
-  // Group matches by category;
-  const categories = {;
-    all: matches,;
-    talent: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('talent');
-    ),;
-    services: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('service');
-    ),;
-    equipment: matches && matches.filter(match =>;
-      match && match.category.toLowerCase().includes('equipment');
-    ),;
-  };
-
-  // Get the icon for a category;
-  const getCategoryIcon = (category: string) => {;
-    const lowerCategory = category && category.toLowerCase();
-    if (lowerCategory && lowerCategory.includes('talent')) return User;
-    if (lowerCategory && lowerCategory.includes('equipment')) return Monitor;
-    return BriefcaseIcon;
-  };
-  if (isLoading) {;
-    return (
-      <div className='space-y-4'>;
-        <Skeleton className='h-10 w-full' />;
-        <div className='space-y-3'>;
-          <Skeleton className='h-[120px] w-full' />;
-          <Skeleton className='h-[120px] w-full' />;
-          <Skeleton className='h-[120px] w-full' />;
-        </div>;
-      </div>;
-    );
-  }
-
-  if (matches && matches.length === 0) {;
-    return (
-      <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
-        <CardContent className='pt-6'>;
-          <BarChart3 className='h-12 w-12 mx-auto text-zion-slate-light mb-3' />;
-          <p className='text-white font-medium mb-2'>No matches found</p>;
-          <p className='text-zion-slate-light text-sm mb-4'>;
-            Try adjusting your search criteria or description for better;
-            results.;
-          </p>;
-          {projectDescription && (;
-            <div className='bg-zion-blue-light/20 p-3 rounded-md text-left'>;
-              <p className='text-xs text-zion-slate-light'>Your search:</p>;
-              <p className='text-sm text-white'>{projectDescription}</p>;
-            </div>;
-          )}
   }
   return (
     <div className='space-y-4'>;
@@ -162,25 +68,6 @@ export function AIMatchingResults(): any ({;
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
-        className='w-full'>;
-        <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
-          <TabsTrigger
-            value='all'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            All ({categories && categories.all.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='talent'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Talent ({categories && categories.talent.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='services'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Services ({categories && categories.services.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='equipment'
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
@@ -195,16 +82,6 @@ export function AIMatchingResults(): any ({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
-                                  {match.title}
-                                </h3>;
-                                <p className='text - zion - slate - light text - sm'>;
-                                  {match.description}
-                                </p>;
-                              </div>;
-                              {match.price && (
-                                <div className='text - right ml - 2'>;
-                                  <div className='font - medium text - white'>;
-                                    ${match.price}
 
                                   </div>
                                 </div>
@@ -231,5 +108,3 @@ export function AIMatchingResults(): any ({;
           </TabsContent>))}
       </Tabs>;
     </div>);
-
-

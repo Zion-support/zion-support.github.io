@@ -1,27 +1,4 @@
 
-import React, {
-  createContext
-  useContext
-  useEffect
-  useMemo
-  useState;
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,;
-  useState,;
-} from 'react';
-export type UserRole = 'client' | 'talent';
-
-type RoleContextValue = {;
-  role: UserRole;
-  setRole: (role: UserRole) => void;}
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {  const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
@@ -42,26 +19,12 @@ const RoleContext = create_context < RoleContextValue | undefined>(undefined);
 ;
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
-}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-  const [role, setRole] = useState<UserRole>('client');
-  useEffect(() => {
-    try {
-
       }
     } catch {}
   }, []);
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-      }
-    } catch {}
-  }, []);
-
-
-
-
-        window.localStorage.setItem('zion_user_role', role);      }
-
       }
     } catch {}
   }, [role]);
@@ -72,9 +35,6 @@ export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
 const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
-  return ctx;  return ctx;
-}
-
   return ctx
 }
   const [role, set_role] = useState < UserRole>('client');

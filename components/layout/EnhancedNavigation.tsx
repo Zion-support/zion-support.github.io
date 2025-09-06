@@ -1,17 +1,4 @@
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Search, User, 
-  Settings, LogOut, Bell, Globe, Zap
-} from 'lucide-react';
-import Link from 'next/link';
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
   Menu
   X
   ChevronDown
@@ -188,7 +175,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items - center space - x-3";
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
               <div className="relative">;
@@ -226,14 +212,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </div>;
                 ) : (;
                   <Link
-                    href={item && item.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
-          </div>;
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
@@ -339,20 +323,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-          <motion&& motion.button
             initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
-          >;
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -393,18 +367,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-}
-export default EnhancedNavigation;
-
-      </AnimatePresence>
-    </nav>
-
-};
 
 export default EnhancedNavigation;
 );
 };
-
-
 export default EnhancedNavigation;
 
+export default EnhancedNavigation;

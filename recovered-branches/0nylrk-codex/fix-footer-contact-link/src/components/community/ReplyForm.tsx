@@ -1,9 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -76,39 +70,6 @@ interface ReplyFormValues {;
     } finally {;
       setIsSubmitting(false);
     }
-
-  },
-
-  return (
-    <Card>;
-      <CardContent className="pt-6">;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField
-              control={form && form.control}
-              name="content"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const form = use_form < ReplyFormValues>({
-    default_values: {
-      content: "",
-    },
-  });
-;
-  const handle_submit = async (values: ReplyFormValues) => {
-    setIsSubmitting (true);
-    try {
-      (await on_submit (values.content), form.reset ());
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-;
   return (
     <Card>;
       <CardContent className="pt - 6">;
@@ -118,24 +79,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
               control={form.control}
               name="content";
               render={({ field }) => (
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder={
-                        parent_id;
-                          ? "Write your reply...";
-                          : "Join the discussion...";
-                      }
-                      className="min - h-[100px] resize - y";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </CardContent>;
                       className="min-h-[100px] resize-y"
                       {...field}
                     />

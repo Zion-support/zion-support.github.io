@@ -33,6 +33,8 @@
     email: string;
     website: string;
 
+
+
     address: string;
   }
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
@@ -134,7 +136,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Quantum security experts',
       'Implementation team',
     ],
-    compliance: ['FIPS 140-2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise-grade, global deployment',    roi: '600% within 24 months',
     contact: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -384,18 +385,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     marketSize: '$42 && 42.3B by 2029',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
     technology: [
-      'Quantum Computing',
-      'Machine Learning',
-      'Financial Analytics',
-      'Trading',
-    ],
-    integration: ['Trading platforms', 'Market data feeds', 'Risk systems'],
-    support: [
-      '24/7 trading support',
-      'Financial experts',
-      'Implementation team',
-    ],
-    compliance: ['SEC', 'FINRA', 'SOX', 'SOC 2'],    scalability: 'Enterprise-grade, global trading',    roi: '1000% within 18 months',
     deployment: 'Cloud-native, low-latency infrastructure',
     market_size: '$42.3B by 2029',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -423,7 +412,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     monitoring: 'Trading performance monitoring',
     analytics: 'Trading analytics, performance reports',
     customization: 'Custom trading strategies, integration',
-
 
 
 export interface EmergingTechService2029V2 {;
@@ -658,4 +646,3 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     }
   }
 ];
-;

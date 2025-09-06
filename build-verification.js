@@ -1,4 +1,3 @@
-console.log(' Starting build verification...');
 try {
   console.log(' Testing component imports...');
   const React = require('react');

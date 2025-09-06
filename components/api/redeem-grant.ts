@@ -10,11 +10,6 @@ const REDEMPTIONS_FILE = path.join(
   'data'
   'partners'
   'grant-redemptions.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -28,7 +23,6 @@ import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -147,7 +141,6 @@ redeemed_at: now,
   await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 });
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now });
-}
     id: uuidv4(),
     partnerId: auth && auth.partner.id,
     studentEmail,
@@ -160,5 +153,4 @@ redeemed_at: now,
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
 
-}
 }

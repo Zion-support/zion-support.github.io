@@ -9,4 +9,3 @@ const AdvancedAnalytics.js = ({ className }) => {
   );
 };
 
-export default AdvancedAnalytics.js;

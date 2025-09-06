@@ -23,9 +23,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 export /**
  * useMessagingOperations - Function description
  */
-function useMessagingOperations() {
-  // State management;
-  const {
     messages;
     set_messages;
     active_messages;
@@ -36,7 +33,6 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-  const {
     fetch_conversations;
     create_conversation;
   } = use_conversations (

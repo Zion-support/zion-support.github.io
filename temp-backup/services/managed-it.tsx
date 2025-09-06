@@ -1,7 +1,3 @@
-import React from 'react';
-interface ManageditProps {
-  // Add props here as needed
-}
 export default function Managedit({ }: ManageditProps) {
 
 class ErrorBoundary extends React.Component {

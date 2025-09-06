@@ -9,8 +9,6 @@ import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-// Allow either UserProfile or UserDetails
-
 export function useMessagingRealtime(;
   user: UserWithProfile;
   active_conversation: Conversation | null;
@@ -85,6 +83,3 @@ if ( {) {
           });
         }
       );
-    }
-  }, [user, active_conversation, fetch_conversations, setActiveMessages]);
-}

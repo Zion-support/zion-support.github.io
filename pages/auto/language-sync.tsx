@@ -18,4 +18,3 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
-},

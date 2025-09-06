@@ -20,16 +20,9 @@ export default function ProductPage() {;
     if (id) {
       const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
         }
-      } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err });
       }
-    // Only fetch if id is available (from router)
-    if (id) {
-      fetchProduct();
-
-  if (!product && !id) {
-    // If no id from router yet, it might still be loading
     return <div className="p-6 text-white">Loading product details...</div>;
   }
   if (!product) {
@@ -40,20 +33,6 @@ export default function ProductPage() {;
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
-  if (!product && !id) { // If no id from router yet, it might still be loading;
-    return <div className="p-6 text-white">Loading product details...</div>;
-  }
-    return <div className="p-6 text-white">Product not found</div>;
-  }
-  const inCart = items.some(i => i.id === product.id);
-  const handleAdd = () => {
-    if (inCart) return;
-    setAdding(true);
-    dispatch({
-      type: 'ADD_ITEM'
-      payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
-    });
-    toast.success(`1 ${product.title} added`);
     setTimeout(() => setAdding(false), 500);
   };
     setTimeout(() => setAdding(false), 500)
@@ -61,7 +40,6 @@ export default function ProductPage() {;
 
   return (
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
@@ -72,23 +50,6 @@ export default function ProductPage() {;
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
-        title = {product && product.title,}
-        description = {product && product.description,}
-        ogImage = {product && product.images?.[0],}
-      />;
-      <div className="min-h-screen bg-zion-blue p-6 text-white">;
-        <h1 className="text-2xl font-bold mb-4">{product && product.title}</h1>;
-        {product && product.images?.length ? (;
-          <div className="mb-4 relative w-full h-64">;
-            <Image
-              src = {product && product.images[0] || '/placeholder && placeholder.svg',}
-              alt = {product && product.title,}
-              className="object-cover rounded-md"
-            />;
-          </div>;
-        ) : null}
-        <p className="mb-6">{product && product.description}</p>;
-        <Button onClick={handleAdd} disabled={adding || inCart}>;
         </Button>
       </div>
     </>
@@ -142,10 +103,6 @@ function ProductPage() {
 if ( {) {
   $2
 }
-      const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
-      set_product (found_product || null);
-    }
-  }, [id]);
 ;
         </Button>;
       </div>;

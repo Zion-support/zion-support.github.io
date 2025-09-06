@@ -17,17 +17,6 @@
   Shield,
   Zap,
   Globe,
-  BarChart3,
-  Search,;
-
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-  BarChart3
-} from 'lucide-react;
-
-
-
-
 
   Menu
   X
@@ -52,13 +41,6 @@ import SearchModal from "./SearchModal";
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-  BarChart3,
-  Search,
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-
-export default function Navigation() {
-export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -207,7 +189,6 @@ export default function Navigation() {;
           </div>;
         </div>;
       </div>;
-
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">;
         <div className="container mx-auto px-4">;
@@ -217,7 +198,6 @@ export default function Navigation() {;
                 </div>;
               </div>;
             </Link>;
-
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -428,23 +408,13 @@ export default function Navigation() {;
 
                 </AnimatePresence>;
               </div>;
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
-                aria-label="Search"
-              >
-                <Search className="w-5 h-5" />
-              </button>
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
@@ -454,9 +424,6 @@ export default function Navigation() {;
 
 
 
-              <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Get Started
               </Link>
@@ -476,7 +443,6 @@ export default function Navigation() {;
                 Call Now;
               </a>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"

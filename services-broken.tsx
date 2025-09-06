@@ -36,89 +36,6 @@ import { ;
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">;
 					<div className=\"grid gap-8 lg:grid-cols-2\">;
 						{/* AI Autonomous Systems */}
-							<div className=\"flex items-center gap-x-3 mb-6\">;
-								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors\">;
-									<Cloud className=\"h-7 w-7 text-white\" />;
-								</div>;
-								<div>;
-									<h2 className=\"text-xl font-semibold text-gray-900\">Cloud Platforms</h2>;
-									<p className=\"text-sm text-green-600 font-medium\">Scalable Infrastructure</p>;
-								</div>;
-							</div>;
-							<p className=\"text-gray-600 mb-6\">;
-								Build scalable, resilient cloud infrastructure that grows with your business.;
-							</p>;
-							<ul className=\"space-y-3 mb-6\">;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-green-600\" />;
-									<span className=\"text-sm text-gray-700\">Serverless and Kubernetes</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-green-600\" />;
-									<span className=\"text-sm text-gray-700\">Data pipelines and ML ops</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-green-600\" />;
-									<span className=\"text-sm text-gray-700\">FinOps and SRE practices</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-green-600\" />;
-									<span className=\"text-sm text-gray-700\">Multi-cloud architecture</span>;
-								</li>;
-							</ul>;
-							<div className=\"flex items-center justify-between\">;
-								<div className=\"flex items-center space-x-2 text-sm text-gray-500\">;
-									<Clock className=\"h-4 w-4\" />;
-									<span>4-8 weeks delivery</span>;
-								</div>;
-								<Link
-									href=\"/contact\"
-									className=\"inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group\"
-									aria-label=\"Get started with cloud services\">;
-									Get started with Cloud;
-									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />;
-								</Link>;
-							</div>;
-						</div>;
-						{/* Cybersecurity */}
-								<Link
-									href=\"/contact\"
-									className=\"inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group\"
-									aria-label=\"Get started with cybersecurity services\">;
-									Get started with Security;
-									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />;
-								</Link>;
-							</div>;
-						</div>;
-						{/* Micro SaaS */}
-								Custom software solutions tailored to your specific business needs and workflows.;
-							</p>;
-							<ul className=\"space-y-3 mb-6\">;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-orange-600\" />;
-									<span className=\"text-sm text-gray-700\">Custom web applications</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-orange-600\" />;
-									<span className=\"text-sm text-gray-700\">API development</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-orange-600\" />;
-									<span className=\"text-sm text-gray-700\">Integration services</span>;
-								</li>;
-								<li className=\"flex items-center gap-x-3\">;
-									<CheckCircle className=\"h-4 w-4 text-orange-600\" />;
-									<span className=\"text-sm text-gray-700\">Maintenance & support</span>;
-								</li>;
-							</ul>;
-							<div className=\"flex items-center justify-between\">;
-								<div className=\"flex items-center space-x-2 text-sm text-gray-500\">;
-									<Clock className=\"h-4 w-4\" />;
-									<span>6-12 weeks delivery</span>;
-								</div>;
-								<Link
-									href=\"/contact\"
-									className=\"inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group\"
 			{/* Process Section */}
 			<section className=\"py-24 sm:py-32 bg-gray-50\">;
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">;
@@ -126,9 +43,3 @@ import { ;
 						<h2 className=\"text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl\">Our Delivery Process</h2>;
 						<p className=\"mt-6 text-lg leading-8 text-gray-600\">;
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-	);
-}

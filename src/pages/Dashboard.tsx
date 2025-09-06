@@ -104,14 +104,34 @@ export default function Dashboard() {
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
   if (loading) {
+);
+// Lazy load notification functions;
+const loadNotificationFunctions = () =>: any import ('@/utils / notifications');
+export default /**
+ * Dashboard - Function description
+ */
+function Dashboard() {
+  const { logout } = use_auth ();
+  const { user, loading } = useRequireAuth (); // This will handle authentication and redirects;
+  const { toast } = use_toast ();
+  // Add safe checks for user ID to prevent premature API calls;
+  const user_id = user?.id;
+  const { data: orders = [], is_loading: orders_loading } =;
+    useGetOrdersQuery (user_id);
+  const { favorites } = use_favorites ();
+  // Type assertion to work around Supabase User type limitations;
+  const userWithExtendedProps = user as any;
+  const user_type =;
+    userWithExtendedProps?.user_type ||;
+    user?.user_metadata?.user_type ||;
+    'talent';
+  const roleForTour =;
+    user_type === 'client' || user_type === 'admin' ? 'client' : 'talent';
+  // Check condition
+if ( {) {
+  $2
+}
     return (
-      <div className='min - h-screen flex items - center justify - center'>;
-        <div className='text - center'>;
-          <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
-          <p className='text - gray - 600'>Loading dashboard...</p>;
-        </div>;
-      </div>);
-  }
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -253,72 +273,10 @@ export default function Dashboard() {;
       </div>;
     );
   }
-
-  // useRequireAuth will handle redirect if user is not authenticated;
-  if (!user) {;
-    return (
-      <div className='min-h-screen flex items-center justify-center'>;
-        <div className='text-center'>;
-          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4'></div>;
-          <p className='text-gray-600'>Redirecting to login...</p>;
         </div>;
       </div>;
     );
   }
-
-  const handleTestNotification = async () => {;
-    try {;
-      const { createTestNotification } = await loadNotificationFunctions();
-      const result = await createTestNotification(user?.id ?? '');
-      if (result && result.success) {;
-        toast({;
-          title: 'Test notification created',;
-          description: 'Check your notification center',;
-        });
-      } else {;
-        toast({;
-          title: 'Error creating test notification',;
-          description: 'Something went wrong',;
-          variant: 'destructive',;
-        });
-      }
-    } catch (error) {;
-      toast({;
-        title: 'Error loading notification system',;
-        description: 'Please try again',;
-        variant: 'destructive',;
-      });
-      const { createTestNotification } = await loadNotificationFunctions ();
-      const result = await createTestNotification (user?.id ?? '');
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Test notification created',
-          description: 'Check your notification center',
-        });
-      } else {
-        toast ({
-          title: 'Error creating test notification',
-          description: 'Something went wrong',
-          variant: 'destructive',
-        });
-      }
-    } catch (error) {
-      toast ({
-        title: 'Error loading notification system',
-        description: 'Please try again',
-        variant: 'destructive',
-      });
-    }
-  }
-  return (
-    <>;
-      <Header />;
-      <div className='min-h-screen bg-zion-blue'>;
-        <div className='container mx-auto px-4 py-8'>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {/* Left Sidebar - User Profile */}
             <div className='lg:col-span-1'>
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
@@ -341,7 +299,6 @@ if ( {) {
                   </Badge>
                   <Button
                     <UserCheck size={16} />
-                    Edit Profile
                   </Button>
                 </div>
               </div>
@@ -369,32 +326,12 @@ if ( {) {
                       style={{ width: '65%' }}
                     ></div>
                   </div>
-                    <PointsBadge />
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">ZION$ Balance</span>
-                    <span className="text-zion-cyan font-medium">
-                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
-                    </span>
-                  </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-zion-slate-light'>Badges Earned</span>
-                    <span className='text-zion-cyan font-medium'>3/12</span>
-                  </div>
                       <Link href='/wallet' className='hover:underline'>;
                         View Wallet;
                       </Link>;
                     </span>;
                   </div>;
 
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">Badges Earned</span>
-                    <span className="text-zion-cyan font-medium">3/12</span>
-                  </div>
-                  
-                  {/* Test notification buttons */}
-                  <div className='flex flex-col gap-2 mt-4'>;
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -407,9 +344,6 @@ if ( {) {
                       variant='outline'
                       onClick={async () => {
                         try {
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
                             userRole: roleForTour
                           })
                           toast({
@@ -419,21 +353,15 @@ if ( {) {
                         } catch (error) {
                           toast({
                         }
-                      }}
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-
-                        }
-                      }}
                       Send System Alert;
                     </Button>;
                   </div>;
                 </div>;
               </div>;
-
-              {/* Notifications */}
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -453,17 +381,6 @@ if ( {) {
               </div>;
             </div>;
 
-            {/* Main Content - Dashboard */}
-            <div className='lg:col-span-2'>;
-              <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>;
-                <div className='flex items-center justify-between mb-6'>;
-                  <h2
-                    className='text-2xl font-bold text-white'
-                    data-testid='dashboard-header'>;
-                    Dashboard;
-                  </h2>;
-                  <div className='flex items-center gap-2'>;
-                    <NotificationBell />;
                     <Button
                       variant='outline'
                       className='text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white'
@@ -502,42 +419,6 @@ if ( {) {
                     <div className='flex flex-col items-center'>
                       <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2'>
                         <UserCheck size={24} className='text-white' />
-                      </div>
-                      <span className='text-xs text-center text-zion-slate-light'>
-                        Newcomer
-                      </span>
-                    </div>
-                    <div className='flex flex-col items-center'>
-                      <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2'>
-                        <MessageSquare size={24} className='text-white' />
-                      </div>
-                      <span className='text-xs text-center text-zion-slate-light'>
-                        First Post
-                      </span>
-                    </div>
-                    <div className='flex flex-col items-center opacity-40'>
-                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>
-                        <Bell size={24} className='text-zion-slate-light' />
-                      </div>
-                      <span className='text-xs text-center text-zion-slate-light'>
-                        Locked
-                      </span>
-                    </div>
-                    <div className='flex flex-col items-center opacity-40'>
-                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>
-                        <span className='text-zion-slate-light text-xl'>?</span>
-                      </div>
-                      <span className='text-xs text-center text-zion-slate-light'>
-                        Locked
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                {/* Community Section */}
-                <div id='community-section'>
-                  <h3 className='text-lg font-bold text-white mb-4'>
-                    Community
-                  </h3>
                   <CommunityDiscussion />
                 </div>
                     Community;
@@ -560,11 +441,6 @@ if ( {) {
                         action={{
                           text: 'Visit Marketplace'
                           href: '/marketplace'
-                        title='No Orders'                        description="You haven't purchased anything yet.";
-                        action={{;
-                          text: 'Visit Marketplace',;
-                          href: '/marketplace',;
-                        }}
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
@@ -588,7 +464,6 @@ if ( {) {
                     </div>
                   </div>
                 </div>
-
                 
                 {/* Community Section */}
                 <div id="community-section">
@@ -605,89 +480,14 @@ if ( {) {
                       <p className="text-zion-slate-light">Loading...</p>
                     ) : orders.length === 0 ? (
                       <EmptyState
-
                         icon={<ShoppingBag className="h-8 w-8" />}
                         title="No Orders"
                         description="You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center";
-                      />;
-                    ) : (;
-                      <ul className="space-y-1">;
-                        {orders.slice(0, 3).map(o => (;
-                          <li key={o.orderId} className="flex justify-between">;
-                            <span>#{o.orderId}</span>;
-                            <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
-                          </li>;
                         ))}
                       </ul>;
                     )}
-                        View all;
-                      </Link>;
-                    </div>;
-                  </div>;
-
-                        ))}
-                      </ul>;
-                    )}
-
-                  <div className='bg - zion - blue - dark rounded - xl p - 6'>;
-                    <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
-                      <Key className='mr - 2' size={18} /> API Keys;
-                    </h3>;
-                    <ApiKeysManager />;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <GuidedTour role={roleForTour} />;
-    </>);
-}";
-return (<> <Header /> <div className="min - h-screen bg - zion - blue"> <div className="container mx - auto px - 4 py - 8"> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8"> {
-  /* Left Sidebar - User Profile */ ";
-}<div className="lg:col - span - 1"> <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6"> <div className="flex flex - col items - center text - center"> <div className="w - 24 h - 24 rounded - full bg - zion - purple flex items - center justify - center text - 2xl font - bold text - white mb - 4"> {';
-  userWithExtendedProps?.display_name?.split (' ') .map ( (name: string) => name[0]) .join ('') || userWithExtendedProps?.email?.char_at (0) .toUpperCase () ";
-}</div> <h2 className="text - xl font - bold text - white"> {
-  userWithExtendedProps?.display_name || userWithExtendedProps?.email ";
-}</h2> <p className="text - zion - slate - light mb - 2"> {
-  user?.email ";
-}</p> <Badge className="bg - zion - purple text - white mb - 4" > > <UserCheck size= {
-  16;
-}/> Edit Profile </Button> </div> </div> {
-  /* Stats & Metrics */ ";
-}<div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6"> <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3> <div className="space - y-4"> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Profile Completion</span> <span className="text - zion - cyan font - medium">65%</span> </div> <div className="w - full bg - zion - blue rounded - full h - 2"> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Points</span> <PointsBadge /> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">ZION$ Balance</span> <span className="text - zion - cyan font - medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Badges Earned</span> <span className="text - zion - cyan font - medium">3 / 12</span> </div> {
-  /* Test notification buttons */ ";
-}<div className="flex flex - col gap - 2 mt - 4"> <Button > <Send size= {
-  16 ";
-}className="text - zion - cyan" /> Send Test Notification </Button> <Button;
-
-}> <Settings size= {
-  16 ";
-}className="text - zion - purple" /> async () => {
-  try {
-  const {
-                    <div className="mt-2 text-right">;
-                      <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
-
-                    </div>;
-                  </div>;
-                  <div className='bg-zion-blue-dark rounded-xl p-6'>;
-                    <h3 className='text-lg font-bold text-white mb-4 flex items-center'>;
-                      <Heart className='mr-2' size={18} /> Wishlist;
-                    </h3>;
-                    {favorites && favorites.length === 0 ? (;
-                      <p className='text-zion-slate-light'>No items saved.</p>;
-                    ) : (;
-                      <ul className='space-y-1'>;
-                        {favorites && favorites.slice(0, 3).map(f => (;
-                          <li key={f && f.item_id}>{f && f.item_id}</li>;
-                        ))}
-                      </ul>;
-                    )}
-                    <div className='mt-2 text-right'>;
                       <Link
                         href='/wishlist'
                         className='text-zion-purple underline'
@@ -876,5 +676,3 @@ function Dashboard() { const stats = [{ name: 'Active Services', value: '12', ic
 ));
 }
 ;
-
-

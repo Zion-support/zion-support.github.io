@@ -37,52 +37,6 @@ export function MobileResumeBuilder() {
         return <BasicsStep />
     }
   }
-import {;
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { ChevronRight, Zap, Star } from 'lucide-react';
-
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Label } from "@/components/ui/label";
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-type ResumeStep = "basics" | "experience" | "education" | "skills",;
-
-export function MobileResumeBuilder() {;
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
-
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "basics": return <BasicsStep />,;
-      case "experience":;
-        return <ExperienceStep />,;
-      case "education":;
-        return <EducationStep />,;
-      case "skills":;
-        return <SkillsStep />,;
-      default:;
-        return <BasicsStep />;
-    }
-  },;
-
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -92,18 +46,37 @@ export function MobileResumeBuilder() {;
           Basics
         </Button>
         <Button
-          onClick={() => setCurrentStep("experience")}
-        >
-          Experience
-        </Button>
-        <Button
           onClick={() => setCurrentStep("education")}
         >
           Education
         </Button>
         <Button
         >
-          Skills
+          Experience
+        </Button>
+        <Button
+
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+        >
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("education")}
+
+        >
+          Education
+        </Button>
+        <Button
+
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+
+        >
         </Button>
       </div>
       {renderStepContent()}
@@ -111,7 +84,6 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
       <Button variant="default" className="w-full" size="lg">
-        Save & Preview
       </Button>
     </div>
   )
@@ -238,10 +210,6 @@ export function MobileResumeBuilder() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-            rows = {4,}
           />;
         </div>;
       </CardContent>;
@@ -250,14 +218,8 @@ export function MobileResumeBuilder() {;
 }
 
 
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
-
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString()
     setExperiences([...experiences, { id: newId }])
@@ -436,5 +398,3 @@ function ExperienceStep() {;
   );
 }
 ;
-
-

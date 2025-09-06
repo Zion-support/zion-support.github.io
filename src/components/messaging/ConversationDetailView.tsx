@@ -11,11 +11,11 @@ import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
 
-  const { user } = useAuth()
-  const {
-    activeConversation
-    activeMessages
-    sendMessage
+            </div>;
+</div>;
+          </div>;
+        </div>;
+      </div>;
 
     loadMessages
   } = useMessaging();
@@ -24,7 +24,6 @@ export function ConversationDetailView() {
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
             <AvatarImage
@@ -47,11 +46,6 @@ export function ConversationDetailView() {
           </div>
         </div>
       </div>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
                     className="object-cover"
                     loading="lazy"
       {/* Context information (if available) */}
@@ -96,6 +90,10 @@ export function ConversationDetailView() {
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
+                    alt = {activeConversation.context_data.title |"Context",}
+                    alt = {activeConversation.context_data.title || "Context",}
+                    src={activeConversation.context_data.image_url}
+                    alt={activeConversation.context_data.title || "Context"}
                     loading="lazy"
                   />
                 </AspectRatio>
@@ -129,8 +127,7 @@ export function ConversationDetailView() {
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
-
-                {group.messages.map((message) => (
+                {group.messages.map((message,) => (
                   <MessageBubble
                     key={message.id}
                     message={message}
@@ -139,10 +136,6 @@ export function ConversationDetailView() {
                 </AspectRatio>;
               </div>            )}
             <div>;
-              <div className="font-medium text-white mb-1">;
-                {activeConversation && activeConversation.context_type === 'job' ? 'Regarding Job:' :;
-                 activeConversation && activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
-                 'Regarding:'}
               </div>;
               <div className="text-zion-cyan font-medium">;
                 {activeConversation && activeConversation.context_data && activeConversation && activeConversation.context_data.title}
@@ -153,10 +146,6 @@ export function ConversationDetailView() {
                 </div>;
               )}
             </div>;
-          </div>;
-        </div>;
-      )}
-      {/* Messages */}
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -170,15 +159,11 @@ export function ConversationDetailView() {
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
-          />
-          <Button
             type="submit"
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
-
           />;
           <Button
             type="submit"
@@ -221,9 +206,6 @@ export function ConversationDetailView() {
     </div>;
   );
 };
-      </div>
-    </div>
-  )
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -238,7 +220,6 @@ export function ConversationDetailView() {
             type="submit";
             className="bg-zion-purple hover: bg-zion-purple-dark text-white";
           >;
-
             Send;
           </Button>;
         </form>;

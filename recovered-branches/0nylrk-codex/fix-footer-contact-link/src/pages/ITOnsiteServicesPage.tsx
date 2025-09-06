@@ -28,13 +28,11 @@ import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL
 
-  
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -42,9 +40,6 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
-  }, [success]);
-  // Popular countries for the featured cards
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>

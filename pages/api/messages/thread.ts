@@ -9,10 +9,6 @@ import {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
-  }
-}
-    res.status(405).json({ error: "Method not allowed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -21,8 +17,6 @@ import { getConversationById, getMessages, sendMessage } from '../../../utils/me
 export default function handler(req, res) {
   try {
   const user = requireUser(req, res);
-  if (!user) return,;
-  if (req.method === 'GET') {
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
   $2
@@ -67,6 +61,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }

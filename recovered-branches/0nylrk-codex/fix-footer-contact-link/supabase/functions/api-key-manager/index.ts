@@ -5,15 +5,12 @@ import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-
-
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
@@ -29,14 +26,6 @@ interface CreateKeyRequest {;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
-
-  expiresAt?: string | null
-import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
-import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
-interface CreateKeyRequest {
-  name: string;
-  scopes: string[],
-  expires_at?: string | null;
 }
 interface RegenerateKeyRequest {
   key_id: string;
@@ -85,10 +74,6 @@ if ( {) {
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
     // Generate prefix from name (first 4 chars of name + 4 random chars)
-    const namePrefix = name && name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
-    const randomChars = Math && Math.random().toString(36).substring(2, 6);
-    const prefix = `${namePrefix}${randomChars}`.substring(0, 8);
-    // Use database function to generate API key
         headers: { 'Content-Type': 'application/json' }})
     }
     // Insert the API key record
@@ -96,127 +81,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
-    // Extract auth token from request;
-    const auth_header = req.headers.get ('Authorization');
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ error: 'Missing authorization header' }), {
-        status: 401,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Verify the token with Supabase auth;
-    const token = auth_header.replace ('Bearer ', '');
-    const { data: { user }, error: auth_error } = await supabase.auth.get_user (token);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ error: 'Unauthorized' }), {
-        status: 401,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Parse URL to determine action;
-    const url = new URL (req.url);
-    const path = url.pathname.split ('/').pop ();
-;
-    // Handle different actions;
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        const { name, scopes, expires_at } = await req.json () as CreateKeyRequest;
-        return await createApiKey (user.id, name, scopes, expires_at);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const { key_id } = await req.json () as RegenerateKeyRequest;
-        return await regenerateApiKey (user.id, key_id);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const { key_id } = await req.json () as RegenerateKeyRequest;
-        return await revokeApiKey (user.id, key_id);
-      }
-    } else // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        return await getUserApiKeys (user.id);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        const limit = url.search_params.get ('limit') ? parse_int (url.search_params.get ('limit')!) : 50;
-        const offset = url.search_params.get ('offset') ? parse_int (url.search_params.get ('offset')!) : 0;
-        return await getApiLogs (user.id, limit, offset);
-      }
-    }
-    return new Response (JSON.stringify ({ error: 'Invalid action' }), {
-      status: 400,
-      headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error processing request:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content - Type': 'application / json' }});
-  }
-});
-;
-async /**
- * createApiKey - Function description
- */
-function createApiKey() {
-  try {
-    // Generate prefix from name (first 4 chars of name + 4 random chars);
-    const name_prefix = name.toLowerCase ().replace (/[^a - z0 - 9]/g, '').substring (0, 4);
-    const random_chars = Math.random ().to_string (36).substring (2, 6);
-    const prefix = `${name_prefix}${random_chars}`.substring (0, 8);
-;
-    // Use database function to generate API key;
-    const { data: key_data, error: keyGenError } = await supabase.rpc ('generate_api_key', { prefix });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error generating API key:', keyGenError);
-      return new Response (JSON.stringify ({ error: 'Failed to generate API key' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Store the key in the database (hash it first);
-    const { data: hash_data, error: hash_error } = await supabase.rpc ('hash_api_key', { api_key: key_data });
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error hashing API key:', hash_error);
-      return new Response (JSON.stringify ({ error: 'Failed to process API key' }), {
-        status: 500,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    // Insert the API key record;
-    const { data: insert_data, error: insert_error } = await supabase;
-      .from ('api_keys');
-      .insert ({
-        user_id: user_id;
-        key_prefix: prefix;
-        key_hash: hash_data;
-        name: name;
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the created key (only shown once)
@@ -284,10 +148,6 @@ async function revokeApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, is_active');
-        status: error ? 500 : 404,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -299,9 +159,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
-
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -662,5 +519,3 @@ if ( {) {
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-  }
-}

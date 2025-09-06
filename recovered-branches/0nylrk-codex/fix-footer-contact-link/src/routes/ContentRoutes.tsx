@@ -72,17 +72,3 @@ const ContentRoutes = () => {;
       <Route path="/blog" element={<Blog />} />;
       <Route path="/blog/:slug" element={<BlogPost />} />;
       {/* Green IT Route */}
-      <Route path="/green - it" element={<GreenIT />} />;
-      {/* Careers Route */}
-      <Route path="/careers" element={<Careers />} />;
-      {/* Account Settings */}
-      <Route path="/settings / account" element={<AccountSettings />} />;
-      {/* Project Room */}
-      <Route path="/project - room/:project_id" element={<ProjectRoom />} />;
-      {/* Video Call */}
-      <Route path="/video - call/:room_id" element={<VideoCall />} />;
-      {/* Global Search Route */}
-      <Route path="/search" element={<SearchPage />} />;
-      {/* Sitemap Page */}
-export default ContentRoutes;
-;

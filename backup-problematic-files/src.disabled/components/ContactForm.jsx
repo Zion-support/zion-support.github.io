@@ -9,4 +9,3 @@ const ContactForm = ({ className }) => {
   );
 };
 
-export default ContactForm;

@@ -1,4 +1,3 @@
-
 import { Star } from 'lucide-react'
 
 export const CommunityTrust: React.FC = () => {
@@ -64,13 +63,6 @@ export const CommunityTrust: React.FC = () => {
                 className='w - 6 h - 6 text - zion - cyan';
                 fill='current_color';
               />            ))}
-  ]
-import React from 'react'; import { Star } from 'lucide-react';
-import React from './react';
-import { Star } from 'lucide-react';
-export const CommunityTrust: React.FC = () => {
-  // Stats display with social proof;
-  const stats = [;
 
 
     { value: '4.8', label: 'App Store Rating' },
@@ -85,7 +77,6 @@ export const CommunityTrust: React.FC = () => {
   ],
 
   return (
-    <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white">

@@ -1,9 +1,3 @@
-  compress: true,;
-  poweredByHeader: false,;
-  eslint: { ignoreDuringBuilds: true },;
-  typescript: { ignoreBuildErrors: true },;
-  pageExtensions: ['tsxtsjsxjs'],;
-
   // Image optimization;
   images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
     formats: ['image/webpimage/avif'];

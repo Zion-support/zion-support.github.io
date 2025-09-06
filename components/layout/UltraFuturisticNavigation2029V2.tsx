@@ -1,7 +1,3 @@
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {
   Menu
   X
   Search
@@ -60,7 +56,6 @@ import {
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
-import {
   Menu,
   X,
   Search,
@@ -136,8 +131,6 @@ import {
       'AI Research Assistant',
       'Biotech Research Suite',
     ],
-
-const mainNavigation = [
   }, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
     ];
   }
@@ -164,12 +157,6 @@ const quick_links = [;
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: MessageCircle },]  { name: 'Support', href: '/support', icon: MessageCircle }
-]
-  { name: 'Support', href: '/support', icon: MessageCircle },]  { name: 'Support', href: '/support', icon: MessageCircle }
-]
-
-
 export default function UltraFuturisticNavigation2029V2() {
 export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -215,12 +202,6 @@ export default function UltraFuturisticNavigation2029V2() {;
             {mainNavigation && mainNavigation.map(item => (              <motion&& motion.div
                 key={item && item.name}
                 initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">;
-            {mainNavigation && mainNavigation.map((item) => (;
-              <motion&& motion.div
-                key={item && item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
                 }}
                 className='relative group';
                 <Link;
@@ -237,20 +218,10 @@ export default function UltraFuturisticNavigation2029V2() {;
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-            ))}
-          </div>
-          {/* Right side - Contact & Search */}
-            {/* Search */}
-            <div className='relative'>;
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
               <input
                 type='text'
                 placeholder='Search services...'
                 value={searchQuery}
-                onChange={e => setSearchQuery(e && e.target.value)}
-                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
-            <div className="relative">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
               <input
                 type="text"
                 placeholder="Search services..."
@@ -272,10 +243,6 @@ export default function UltraFuturisticNavigation2029V2() {;
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>;
-        </div>;
-      </div>;
 
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
@@ -286,9 +253,6 @@ export default function UltraFuturisticNavigation2029V2() {;
             exit={{ opacity: 0, height: 0 }}
           >
             <div className='px-4 py-6 space-y-4'>
-              {/* Mobile Search */}
-              <div className='relative'>;
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -308,34 +272,6 @@ export default function UltraFuturisticNavigation2029V2() {;
                     key={item && item.name}
                     href={item && item.href}
                     onClick={closeMenu}
-                ))}
-              </div>
-              {/* Quick Links */}
-              <div className='pt-4 border-t border-gray-700'>;
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
-                  Quick Links;
-                </h3>;
-                <div className='space-y-2'>;
-                  {quickLinks && quickLinks.map(item => (                    <Link
-                      key={item && item.name}
-                      href={item && item.href}
-                      onClick={closeMenu}
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
-                      <item && item.icon className='w-4 h-4' />;
-                      <span className='text-sm'>{item && item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">;
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>;
-                <div className="space-y-2">;
-                  {quickLinks && quickLinks.map((item) => (;
-                      key={item && item.name}
-                      href={item && item.href}
-                      onClick={closeMenu}
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300';
-                    >;
-                      <item && item.icon className='w-4 h-4' />;
-                      <span className='text-sm'>{item && item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300";
-                    >;
-                      <item && item.icon className="w-4 h-4" />;
-                      <span className="text-sm">{item && item.name}</span>;
                   ))}
                 </div>
               </div>
@@ -361,145 +297,6 @@ export default function UltraFuturisticNavigation2029V2() {;
                   </div>
                 </div>
               </div>
-              {/* Contact Info */}
-              <div className='pt-4 border-t border-gray-700'>;
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
-                  Contact Info;
-                </h3>;
-                <div className='space-y-2 px-4'>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <Phone className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.mobile}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <Mail className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.email}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <Mail className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo && contactInfo.email}</span>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <MapPin className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-      {/* Mobile Navigation Menu */}
-      <AnimatePresence>;
-        {is_open && (
-          <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
-          >;
-            <div className='px - 4 py - 6 space - y-4'>;
-              {/* Mobile Search */}
-              <div className='relative'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400' />;
-                <input;
-                  type='text';
-                  placeholder='Search services...';
-                  value={search_query}
-                  on_change={e => setSearchQuery (e.target.value)}
-                  className='w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 rounded - lg text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50'                />;
-              </div>;
-              {/* Mobile Navigation Links */}
-              <div className='space - y-2'>;
-                {main_navigation.map (item => (                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    on_click={close_menu}
-                    className='flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                  >;
-                    <item.icon className='w - 5 h - 5' />                    <span>{item.name}</span>          >;
-            <div className="px - 4 py - 6 space - y-4">;
-              {/* Mobile Search */}
-              <div className="relative">;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  value={search_query}
-                  on_change={(e) => setSearchQuery (e.target.value)}
-                  className="w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 rounded - lg text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50";
-                />;
-              </div>;
-              {/* Mobile Navigation Links */}
-              <div className='space - y-2'>;
-                {main_navigation.map (item => (              <div className="space - y-2">;
-                {main_navigation.map ((item) => (
-                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    on_click={close_menu}
-                    className='flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                  >;
-                    <item.icon className='w - 5 h - 5' />                    className="flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300";
-                  >;
-                    <item.icon className="w - 5 h - 5" />;
-                    <span>{item.name}</span>;
-                  </Link>))}
-              </div>;
-              {/* Quick Links */}
-              <div className='pt - 4 border - t border - gray - 700'>;
-                <h3 className='text - sm font - medium text - gray - 400 mb - 3 px - 4'>;
-                  Quick Links;
-                </h3>;
-                <div className='space - y-2'>;
-                  {quick_links.map (item => (                    <Link;
-                      key={item.name}
-                      href={item.href}
-                      on_click={close_menu}
-                      className='flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                    >;
-                      <item.icon className='w - 4 h - 4' />;
-                      <span className='text - sm'>{item.name}</span>                    </Link>              <div className="pt - 4 border - t border - gray - 700">;
-                <h3 className="text - sm font - medium text - gray - 400 mb - 3 px - 4">Quick Links</h3>;
-                <div className="space - y-2">;
-                  {quick_links.map ((item) => (
-                      key={item.name}
-                      href={item.href}
-                      on_click={close_menu}
-                      className='flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                    >;
-                      <item.icon className='w - 4 h - 4' />;
-                      <span className='text - sm'>{item.name}</span>                      className="flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300";
-                    >;
-                      <item.icon className="w - 4 h - 4" />;
-                      <span className="text - sm">{item.name}</span>))}
-                </div>;
-              </div>;
-              {/* Contact Info */}
-              <div className='pt - 4 border - t border - gray - 700'>;
-                <h3 className='text - sm font - medium text - gray - 400 mb - 3 px - 4'>;
-                  Contact Info;
-                </h3>;
-                <div className='space - y-2 px - 4'>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <Phone className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.mobile}</span>;
-                  </div>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <Mail className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.email}</span>;
-                  </div>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <MapPin className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.address}</span>                  </div>                  </div>;
-                  <div className="flex items - center space - x-3 text - gray - 400">;
-                    <Mail className="w - 4 h - 4" />;
-                    <span className="text - sm">{contact_info.email}</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3 text - gray - 400">;
-                    <MapPin className="w - 4 h - 4" />;
-                    <span className="text - sm">{contact_info.address}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
@@ -521,14 +318,6 @@ export default function UltraFuturisticNavigation2029V2() {;
                         </h3>;
                         <p className='text - sm text - gray - 400'>;
                           {category.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div className='space-y-3'>                      {category.services.map((service, index) => (
-                        <Link
-                          key={service.name}
-                          href={service.href}
-                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'          >
             <div className="max-w-7xl mx-auto px-4 py-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {serviceCategories.map((category) => (
@@ -579,7 +368,3 @@ export default function UltraFuturisticNavigation2029V2() {;
             </div>;
           </motion && motion.div>;
         )}
-      </AnimatePresence>
-    </nav>
-  );
-}

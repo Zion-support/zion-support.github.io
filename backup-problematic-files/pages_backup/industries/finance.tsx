@@ -328,4 +328,3 @@ export default function FinancePage() {
   );
 };
 
-export default Finance;

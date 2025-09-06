@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface CheckoutPageProps {
   // Add props here as needed
-}
 export default function CheckoutPage({ }: CheckoutPageProps) {
   return (
     <div>

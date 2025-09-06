@@ -34,6 +34,10 @@ interface EnhancedSearchInputProps {
 export function EnhancedSearchInput({ 
   value,
 
+export function EnhancedSearchInput({ ;
+  value;
+export function EnhancedSearchInput({ 
+  value,
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -48,7 +52,9 @@ export function EnhancedSearchInput({
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
+
+
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -116,51 +122,6 @@ export function EnhancedSearchInput({;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
-      setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
-      return;
-    }
-
-    const filtered = searchSuggestions && searchSuggestions.filter(suggestion => ;
-      suggestion && suggestion.text.toLowerCase().includes(value && value.toLowerCase());
-    );
-
-    // Sort suggestions to prioritize those that start with the search term;
-    filtered && filtered.sort((a, b) => {;
-      const aStartsWith = a && a.text.toLowerCase().startsWith(value && value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b && b.text.toLowerCase().startsWith(value && value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith;
-    });
-
-    setFilteredSuggestions(filtered && filtered.slice(0, 8)), // Limit to 8 suggestions;
-  }, [value, searchSuggestions]);
-
-  // Handle clicks outside the component to close suggestions;
-  useEffect(() => {;
-    function handleClickOutside(): any (event: MouseEvent) {;
-      if (containerRef && containerRef.current && !containerRef && containerRef.current.contains(event && event.target as Node)) {;
-        setIsFocused(false);
-      }
-    }
-
-    document && document.addEventListener("mousedown", handleClickOutside);
-    return () => document && document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleSelectSuggestion = (suggestion: string) => {;
-    onChange(suggestion);
-    setIsFocused(false),;
-    inputRef && inputRef.current?.blur();
-  };
-
-  return (
-    <div className="relative w-full" ref={containerRef}>;
-      <div className="relative">;
-        <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />;
-        <Input
-          ref={inputRef}
-          type="text"
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

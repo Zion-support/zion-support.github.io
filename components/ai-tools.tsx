@@ -1,51 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import {;
-  Brain,;
-  MessageSquare,;
-  Image,;
-  Video,;
-  Code,;
-  FileText,;
-  Zap,;
-  Star,;
-  ExternalLink,;
-  CheckCircle,;
-  TrendingUp,;
-  Shield,;} from 'lucide-react';import { ;
-  Brain;
-  MessageSquare, ;
-  Image, ;
-  Video, ;
-  Code, ;
-  FileText, ;
-  Zap, ;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
   Brain,
   MessageSquare,
   Image,
@@ -66,15 +18,6 @@ import {
   FileText
   Zap
 
-
-
-  Brain;
-  MessageSquare,
-  Image,
-  Video,
-  Code,
-  FileText,
-  Zap,
   Star;
   ExternalLink;
   CheckCircle;
@@ -230,27 +173,11 @@ import {
       category: 'Content Creation'
     },  ];      category: 'Content Creation'
     }
-      ];
-      pricing: '$12 - 76 / month',
-      market_price: '$15 - 100 / month',
-      website: 'https://runwayml.com',
-      color: 'bg - gradient - to - br from - blue - 500 to - indigo - 600',
-      text_color: 'text - blue - 400',
-      gradient: 'from - blue - 400 to - indigo - 500',
-      popular: false,
-      category: 'Video Generation'
-    };
-    {
-      icon: <MessageSquare className="w-8 h-8 text-white" />,
-      features: [;
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
-
-      {/* AI Tools Grid */}
-
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -297,10 +224,6 @@ import {
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-                        {tool.title}
-                      </h3>;
-                      <span className="text - xs bg - gray - 800 text - gray - 300 px - 2 py - 1 rounded - full">;
-                        {tool.category}
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -333,10 +256,6 @@ import {
                         </li>
                       ))}
                     </ul>
-
-                    <div className="flex items-center justify-between">
-                      <Button
-                        href={tool.website}
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -366,11 +285,6 @@ import {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
-              Understanding the different types of AI tools helps you build a;
-              comprehensive toolkit for your needs.;
-            </p>;
-          </div>;
-
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
@@ -383,9 +297,6 @@ import {
                   <div className='flex items-center justify-between text-sm'>;
                     <span className='text-gray-500'>;
                       Tools Available:{' '}
-
-      {/* AI Implementation Guide */}
-
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -443,60 +354,6 @@ import {
           </div>
         </div>
       </section>
-        </div>;
-      </section>;
-
-      {/* AI Implementation Guide */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Getting Started with AI Tools;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {ai_categories.map ((category, index) => (
-              <Card;
-                key={index}
-                className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='p - 6'>;
-                  <h3 className='text - xl font - semibold text - white mb - 3'>;
-                    {category.name}
-                  </h3>;
-                  <p className='text - gray - 400 mb - 4'>{category.description}</p>;
-                  <div className='flex items - center justify - between text - sm'>;
-                    <span className='text - gray - 500'>;
-                      Tools Available:{' '}
-                      <span className='text - white'>{category.tools}</span>;
-                    </span>;
-                    <span className='text - cursor - blue font - semibold'>;
-                      {category.avg_price}
-                    </span>                  </div>                <div className="p - 6">;
-                  <h3 className="text - xl font - semibold text - white mb - 3">{category.name}</h3>;
-                  <p className="text - gray - 400 mb - 4">{category.description}</p>;
-                  <div className="flex items - center justify - between text - sm">;
-                    <span className="text - gray - 500">Tools Available: <span className="text - white">{category.tools}</span></span>;
-                    <span className="text - cursor - blue font - semibold">{category.avg_price}</span>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* AI Implementation Guide */}
-      <section className='section - padding bg - gradient - cursor'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Getting Started with AI Tools;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              Practical advice for implementing AI tools in your workflow and;
-              maximizing their value.;
-            </p>;
-          </div>;
-
                 </div>;
                 <h3 className='text-xl font-semibold text-white mb-3'>;
                   Start Small;
@@ -522,10 +379,6 @@ import {
                 <p className="text-gray-400 mb-4">;
                   Begin with one AI tool that addresses your most immediate need. Master it before adding more.;
                 </p>;
-                </ul>;
-              </div>;
-            </Card>;
-
                 </div>;
                 <h3 className='text-xl font-semibold text-white mb-3'>;
                   Best Practices;
@@ -545,7 +398,6 @@ import {
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor text-center'>;
@@ -566,5 +418,3 @@ import {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
-
-            <Button

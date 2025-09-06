@@ -60,12 +60,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
       'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimization';
       'Market trend analysisCompetitive intelligence'
     ];
-    popular: true, icon: '🤖'
-    color: 'from-cyan-600 via-blue-600 to-indigo-600', textColor: 'text-cyan-400'
-    link: 'https://ziontechgroup.com/ai-autonomous-business-manager', marketPosition: 'First autonomous business management system. Revolutionary approach to business operations. Leading the autonomous business revolution.'
-    targetAudience: 'CEOs, Business owners, Executives, Management teams, Startups, Enterprises, Consulting firms'
-    trialDays: 45, setupTime: '3-6 weeks'
-    category: 'AI Autonomous Business Management', realService: true
     technology: ['Advanced AI, Machine learning, Business intelligence, Predictive analytics, Automation, Decision making'];
     integrations: ['ERP systems, CRM platforms, Financial software, Marketing tools, Analytics platforms, Communication tools'];
     useCases: ['Business strategy, Operations management, Financial planning, Marketing automation, Customer management, Risk management'];
@@ -556,4 +550,3 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     reviews: 12;
   }
 ];
-;

@@ -165,8 +165,6 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
-
-  useState
   useEffect
   useRef
   ReactNode
@@ -315,6 +313,7 @@ export function ChatAssistant({
   if (!isOpen) return null
   const isGuest = !auth?.isAuthenticated;
 
+  const isGuest = !auth?.isAuthenticated;
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
 import React, {;
@@ -338,7 +337,6 @@ export interface Message {;
   timestamp: Date,;
   read?: boolean;
 }
-
 export interface ChatAssistantProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -355,7 +353,6 @@ export interface ChatAssistantProps {;
   /** Optional canned questions shown when the chat is empty */;
   starterQuestions?: string[];
 }
-
 export function ChatAssistant(): any ({;
   isOpen,;
   onClose,;
@@ -367,7 +364,6 @@ export function ChatAssistant(): any ({;
   starterQuestions = []}: ChatAssistantProps) {;
   const auth = useContext(AuthContext),;
   const isGuest = !auth?.isAuthenticated,;
-
   // Hooks called unconditionally at the top;
   const localStorageKey = `chatHistory-${recipient && recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
@@ -377,7 +373,6 @@ export function ChatAssistant(): any ({;
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]),;
   const [loggedInMessages, setLoggedInMessages] =;
     useState<Message[]>(initialMessages),;
-
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
     message: string,;
@@ -385,7 +380,6 @@ export function ChatAssistant(): any ({;
   } | null>(null),;
   const [showGuestModal, setShowGuestModal] = useState(false),;
   const [guestMessage, setGuestMessage] = useState<string | null>(null),;
-
   // Effect for guest user messages;
   useEffect((,) => {;
     if (isGuest) {;
@@ -403,7 +397,6 @@ export function ChatAssistant(): any ({;
     storedGuestMessages,;
     setStoredGuestMessages,;
     recipient && recipient.id]),;
-
   // Effect for logged-in user messages;
   useEffect((,) => {;
     if (!isGuest) {;
@@ -411,7 +404,6 @@ export function ChatAssistant(): any ({;
       setLoggedInMessages(initialMessages);
     }
   }, [isGuest, initialMessages, recipient && recipient.id]),;
-
   // Determine currentMessages and setCurrentMessages based on isGuest;
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
   const setCurrentMessages = (;
@@ -430,27 +422,21 @@ export function ChatAssistant(): any ({;
       setLoggedInMessages(newMessages);
     }
   },;
-
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
-
   useEffect((,) => {;
     if (debouncedApiCallParams) {;
       onSendMessage(debouncedApiCallParams && debouncedApiCallParams.message,;
         debouncedApiCallParams && debouncedApiCallParams.conversationId);
     }
   }, [debouncedApiCallParams, onSendMessage]),;
-
   useEffect((,) => {;
     scrollToBottom();
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
-
   const scrollToBottom = () => {;
     messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   },;
-
   const handleSendMessage = async (messageContent: string,) => {;
     if (!messageContent && messageContent.trim()) return,;
-
     if (!isGuest) {;
       // Logged-in user;
       const newMessage: Message = {;
@@ -466,10 +452,8 @@ export function ChatAssistant(): any ({;
       setShowGuestModal(true);
     }
   },;
-
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
-
     const newMessage: Message = {;
       id: Date && Date.now().toString(),;
       role: 'user',;
@@ -477,16 +461,13 @@ export function ChatAssistant(): any ({;
       timestamp: new Date()},;
     setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
     setPendingApiCallParams({ message: guestMessage, conversationId }),;
-
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
-
   const handleModalCancel = () => {;
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
-
   useEffect((,) => {;
     if (!isOpen) return,;
     const handleKeyDown = (e: KeyboardEvent,) => {;
@@ -498,7 +479,6 @@ export function ChatAssistant(): any ({;
     document && document.addEventListener('keydown', handleKeyDown),;
     return () => document && document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]),;
-
   if (!isOpen) return null,;
 
   return (
@@ -506,8 +486,6 @@ export function ChatAssistant(): any ({;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="chat-assistant-title">;
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
           <div className="flex items-center space-x-3">;
@@ -559,8 +537,6 @@ export function ChatAssistant(): any ({;
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="confirm-message-title">;
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
             <h3
               id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4">;
@@ -779,12 +755,16 @@ if (return null, ) {
                 variant="outline";
                 on_click = {handleModalCancel, }
                 className="text - white border - zion - purple hover:bg - zion - purple / 10";
+              <Button;
+                variant="outline";
+                onClick={handleModalCancel}
+                className="text-white border-zion-purple hover:bg-zion-purple/10";
               >;
                 Cancel;
               </Button>;
               <Button;
-                on_click = {handleModalSendConfirm, }
-                className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+                onClick={handleModalSendConfirm}
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white";
               >;
                 Send;
               </Button>;
@@ -812,5 +792,3 @@ if (return null, ) {
         </div>)}
     </div>);
 }
-;
-;

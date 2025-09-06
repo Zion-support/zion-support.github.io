@@ -67,6 +67,30 @@ function useCarousel(): CarouselContextProps {;
   }
   return context as CarouselContextProps;
 }
+type CarouselPlugin = any;
+type CarouselProps = {;
+  opts?: CarouselOptions;
+  plugins?: CarouselPlugin;
+  orientation?: "horizontal" | "vertical";
+  setApi?: (api: CarouselApi) => void;
+}
+;
+type CarouselContextProps = {;
+  carouselRef: ReturnType<typeof useEmblaCarousel>[0];
+  api: ReturnType<typeof useEmblaCarousel>[1];
+  scrollPrev: () => void;
+  scrollNext: () => void;
+  canScrollPrev: boolean;
+  canScrollNext: boolean;
+  orientation: "horizontal" | "vertical";
+} & Omit<CarouselProps "orientation">;
+const CarouselContext = React.createContext<CarouselContextProps | null>(null);
+function useCarousel(): CarouselContextProps {;
+  const context = React.useContext(CarouselContext) as CarouselContextProps | null;
+  if (!context) {;
+    throw new Error("useCarousel must be used within a <Carousel />");
+;
+  return context as CarouselContextProps;
 const Carousel = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
@@ -79,14 +103,12 @@ const Carousel = React.forwardRef<
       className
       children
       orientation = "horizontal",
-
       opts,
       setApi,
       plugins,
       className,
       children,
       ...props
-    }
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
@@ -119,8 +141,6 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-      },;
-
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {if (!api |!setApi) {;
@@ -131,11 +151,6 @@ const Carousel = React.forwardRef<
     React.useEffect(() => {if (!api) {;
         return;
       }
-
-
-      return () => {
-        api?.off("select", onSelect)
-
       }
       set_api (api);
     }, [api, set_api]);
@@ -157,20 +172,17 @@ on_select (api);
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-className={cn(&quot;relative&quot; className)}
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
           {...props}
-        >;
           {children}
         </div>;
       </CarouselContext.Provider>);
   }
 )
-Carousel.displayName = &quot;Carousel&quot;
 const CarouselContent = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -182,7 +194,6 @@ const CarouselContent = React.forwardRef<
         ref={ref}
         className={cn(
           className
-        )}
         {...props}
       />
     </div>
@@ -197,19 +208,12 @@ const CarouselItem = React.forwardRef<
   return (
     <div;
       ref={ref}
-      className={cn(
         className
-      )}
       {...props}
     />
   )
 })
 CarouselItem.displayName = &quot;CarouselItem&quot;
-const CarouselPrevious = React.forwardRef<
-  HTMLButtonElement
-  React.ComponentProps<typeof Button>
->(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
   return (
     <Button;
       ref={ref}
@@ -221,29 +225,12 @@ const CarouselPrevious = React.forwardRef<
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-    >
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
-    </Button>
-  )
-})
-CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-const CarouselNext = React.forwardRef<
-  HTMLButtonElement
-  React.ComponentProps<typeof Button>
->(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
   return (
     <Button;
       ref={ref}
       variant={variant}
       size={size}
       className={cn(
-        className
-      )}
-    >
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
     </Button>
   )
 })

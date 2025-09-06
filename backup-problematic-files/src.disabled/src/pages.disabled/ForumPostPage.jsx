@@ -9,4 +9,3 @@ const ForumPostPage = ({ className }) => {
   );
 };
 
-export default ForumPostPage;

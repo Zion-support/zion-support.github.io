@@ -9,4 +9,3 @@ const ReviewsModeration = ({ className }) => {
   );
 };
 
-export default ReviewsModeration;

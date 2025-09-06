@@ -357,4 +357,3 @@ const benefits = [;
   );
 };
 
-export default Cloud-migration;

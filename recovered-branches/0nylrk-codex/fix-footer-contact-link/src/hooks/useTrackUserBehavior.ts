@@ -26,7 +26,6 @@
       component && component.removeEventListener('submit', trackFormSubmits, true)
     }
   }, [trackEvent, componentName]);
-
   return componentRef
 import {useRef, useEffect} from 'react';
 import {use_analytics} from '@/context / AnalyticsContext';
@@ -127,4 +126,3 @@ if ( {) {
   }, [track_event, component_name]);
 ;
   return component_ref;
-}

@@ -13,7 +13,6 @@ exports.handler = async function () {
     const byAuthor = {}
     const messages = [];
 
-    await upsertFile({
       owner,
       repo,
       path: 'data/reports/changelog/weekly-changelog && changelog.json',
@@ -36,7 +35,6 @@ exports.handler = async function () {
   }
 
 }
-
       path: 'data / reports / changelog / weekly - changelog.json',
       content: JSON.stringify (summary, null, 2),
       message: 'chore (automation): weekly changelog summary',
@@ -50,9 +48,5 @@ exports.handler = async function () {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
-    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
-    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },

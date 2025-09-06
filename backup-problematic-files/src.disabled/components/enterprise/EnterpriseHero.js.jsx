@@ -9,4 +9,3 @@ const EnterpriseHero.js = ({ className }) => {
   );
 };
 
-export default EnterpriseHero.js;

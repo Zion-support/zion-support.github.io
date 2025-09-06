@@ -9,4 +9,3 @@ const LinkHealthChecker.js = ({ className }) => {
   );
 };
 
-export default LinkHealthChecker.js;

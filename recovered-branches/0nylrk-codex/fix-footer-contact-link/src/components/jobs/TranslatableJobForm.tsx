@@ -115,84 +115,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Loader2, Globe } from "lucide-react",;
-import { useTranslation } from "react-i18next",;
-import { useTranslationService } from "@/hooks/useTranslationService",;
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
-import { toast } from "@/components/ui/use-toast",;
 
-interface TranslatableJobFormProps {;
-  onSubmit: (formData: any) => void,;
-  isSubmitting?: boolean;
+  onSubmit: (formData: any) => void
+  isSubmitting?: boolean
 }
 
-export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
 
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
 
-  // Form fields with translations;
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
-    en: "",;
-    es: "",;
-    pt: "",;
-    ar: ""}),;
 
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
-    en: "",;
-    es: "",;
-    pt: "",;
-    ar: ""}),;
 
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
-    en: "",;
-    es: "",;
-    pt: "",;
-    ar: ""}),;
+  // Auto translate content when language tab changes
+  const handleTabChange = async (tab: SupportedLanguage) => {
+    if (tab !== activeTab) {
+      setActiveTab(tab)
 
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
 
-  // Handle text changes;
-  const handleTitleChange = (value: string) => {;
-    setTitle({ ...title, [activeTab]: value });
-  };
 
-  const handleDescriptionChange = (value: string) => {;
-    setDescription({ ...description, [activeTab]: value });
-  };
-
-  const handleRequirementsChange = (value: string) => {;
-    setRequirements({ ...requirements, [activeTab]: value });
-  };
-
-  // Handle form submission;
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-
-    // Complete any missing translations with auto-translation;
-    await ensureAllTranslations();
-
-    onSubmit({;
-      title;
-      description;
-      requirements;
-      budget,;
-      deadline});
-  };
-
-  // Auto translate content when language tab changes;
-  const handleTabChange = async (tab: SupportedLanguage) => {;
-    if (tab !== activeTab) {;
-      setActiveTab(tab);
     }
   }
   // Auto translate function
@@ -220,7 +158,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       return
     }
     try {
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -239,7 +176,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
-      console.error(`Error translating ${field}:`, error);
+      console.error(`Error translating ${field}:`, error),
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
@@ -263,7 +200,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     if (promises.length) {
       await Promise.all(promises)
     }
-  
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -286,10 +222,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         variant: "destructive"}),;
       return;
     }
-
-    try {;
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
-
       if (error) {;
         toast({;
           title: t('translation && translation.translation_failed'),;
@@ -297,7 +229,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           variant: "destructive"}),;
         return;
       }
-
       if (field === 'title') {;
         setTitle(translations);
       } else if (field === 'description') {;
@@ -305,7 +236,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       } else if (field === 'requirements') {;
         setRequirements(translations);
       }
-
       toast({;
         title: t('translation && translation.translation_success'),;
         description: t('translation && translation.content_translated')});
@@ -317,34 +247,22 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         variant: "destructive"});
     }
   };
-
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {;
-    const promises = [];
-
-    if (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar) return;
-    if (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar) return;
-
     // Title translations;
     if (Object && Object.values(title).some(val => val) && Object && Object.values(title).some(val => !val)) {;
       promises && promises.push(autoTranslate('title'));
     }
-
     // Description translations;
     if (Object && Object.values(description).some(val => val) && Object && Object.values(description).some(val => !val)) {;
       promises && promises.push(autoTranslate('description'));
     }
-
     // Requirements translations;
     if (Object && Object.values(requirements).some(val => val) && Object && Object.values(requirements).some(val => !val)) {;
       promises && promises.push(autoTranslate('requirements'));
     }
-
     if (promises && promises.length) {;
       await Promise && Promise.all(promises);
     }
   };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">;
       <div>;
@@ -358,8 +276,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
-              {t('jobs && jobs.job_title')}
-            </label>;
             <Button
               type="button"
               size="sm"
@@ -395,25 +311,46 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           </div>;
         </div>;
       </div>;
-
         </Button>;
       </div>;
     </form>;
   );
 }
-      <div className="pt - 4">;
         <Button;
           type="submit";
-          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan";
-          disabled={is_submitting || is_translating}
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
+          disabled={isSubmitting || isTranslating}
         >;
-          {is_submitting ? (
+          {isSubmitting ? (;
             <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-              {t ('jobs.submitting')}
-            </>) : (
-            t ('jobs.post_job_button'))}
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}
+            </>;
+          ) :(;
+            t('jobs.post_job_button');
+          )}
         </Button>;
       </div>;
-    </form>);
+    </form>;
+  ),; interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void;
+isSubmitting?: boolean 
+}export function TranslatableJobForm ({
+  onSubmit, isSubmitting = false 
+}: TranslatableJobFormProps) {
+  const {
+  t 
+}= useTranslation ();
+const {
+  translateContent, isTranslating 
+}= useTranslationService ();
+const {
+  supportedLanguages, currentLanguage 
+}= useLanguage ();
+//Form fields with translations const [budget, setBudget] = useState ("");
+const [deadline, setDeadline] = useState ("");
+onSubmit ({
+  //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {
+  if (field === 'title' && title[lang]) {
+  return;
+}return;
 }

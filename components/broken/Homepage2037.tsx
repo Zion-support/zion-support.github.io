@@ -23,9 +23,6 @@ import {
   CheckCircle
   Sparkles;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock
-  CheckCircle,;
-  Sparkles,;} from 'lucide-react';import {
-  ArrowRight, Star, Users, Award, Clock, ;
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles;
@@ -79,20 +76,6 @@ const Homepage2037: React.FC = () => {;
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
-          <div className='absolute inset-0 overflow-hidden'>;
-            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
-            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
-            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
-          </div>;
-
-          <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion && motion.div        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative">;
-          {/* Animated background elements */}
-          <div className="absolute inset-0 overflow-hidden">;
-            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
-          </div>;
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -153,80 +136,6 @@ const Homepage2037: React.FC = () => {;
             </motion.div>
           </div>
         </section>
-              <div className='mb-8'>;
-                <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>;
-                  Zion Tech Group;
-                </h1>;
-                <div className='text-2xl md:text-3xl text-gray-300 mb-4 font-light'>;
-                  Pioneering the Future of Technology;
-                </div>;
-                <div className='text-xl md:text-2xl text-cyan-400 font-medium'>;
-                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
-                </div>;
-              </div>;
-
-              <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>;
-                Transform your business with cutting-edge AI, quantum computing,;
-                and enterprise solutions. We deliver innovative technology that;
-                drives business transformation and shapes the future.;
-              </p>;
-
-              {/* Enhanced CTA buttons */}
-              <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>;
-                <Link href='/contact'>;
-                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40'>;
-                    Start Your Transformation;
-                  </motion && motion.button>;
-                </Link>                  Zion Tech Group;
-                </h1>;
-                <div className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">;
-                  Pioneering the Future of Technology;
-                </div>;
-                <div className="text-xl md:text-2xl text-cyan-400 font-medium">;
-                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
-                </div>;
-              </div>;
-
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">;
-                Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. ;
-                We deliver innovative technology that drives business transformation and shapes the future.;
-              </p>;
-
-              {/* Enhanced CTA buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">;
-                <Link href="/contact">;
-                  <motion&& motion.button 
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40">;
-                    Start Your Transformation;
-                  </motion && motion.button>;
-                </Link>;
-                <Link href='/services'>;
-                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                <Link href="/services">;
-                  <motion&& motion.button 
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                    Explore Services
-                  </motion && motion.button>;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-        {/* Enhanced Company Stats */}
-        <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>;
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
         {/* Enhanced Company Stats */}
         <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
@@ -392,11 +301,6 @@ const Homepage2037: React.FC = () => {;
             </div>
           </div>
         </section>
-
-        {/* Featured AI Services */}
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -752,15 +656,12 @@ const Homepage2037: React.FC = () => {
                   viewport={{ once: true }}
                 >;
                   <UltraFuturisticServiceCard2026;
+
+
                     service={{
                     }}
                     variant='ai'                  />
                 </motion.div>
-              ))}
-                    }}
-                    variant="ai";
-                  />;
-                </motion && motion.div>;
               ))}
                       icon: service.icon
                     }}
@@ -771,7 +672,6 @@ const Homepage2037: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            
             <motion.div
             </div>;
 
@@ -815,7 +715,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
 
         {/* Featured Enterprise IT Services */}
         <section className="py-24 px-4 bg-black/20">
@@ -892,23 +791,6 @@ const Homepage2037: React.FC = () => {
                       category: service.category,
                       icon: service.icon,
                     }}
-                    }}
-                    variant='enterprise'                  />
-                </motion.div>
-              ))}
-                      icon: service.icon
-                    }}
-                    variant="enterprise"
-            </div>
-
-                  />
-                </motion.div>
-              ))}
-            </div>
-            
-            <motion.div
-            </div>;
-
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -948,7 +830,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
 
         {/* Featured Micro SAAS Services */}
         <section className="py-24 px-4">
@@ -1025,23 +906,6 @@ const Homepage2037: React.FC = () => {
                       category: service.category,
                       icon: service.icon,
                     }}
-                    }}
-                    variant='automation'                  />
-                </motion.div>
-              ))}
-                      icon: service.icon
-                    }}
-                    variant="automation"
-            </div>
-
-                  />
-                </motion.div>
-              ))}
-            </div>
-            
-            <motion.div
-            </div>;
-
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1081,7 +945,6 @@ const Homepage2037: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/30">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-
 
         {/* Enhanced Why Choose Us Section */}
         <section className="py-24 px-4 bg-black/30">
@@ -1290,32 +1153,6 @@ const Homepage2037: React.FC = () => {
             </div>
           </div>
         </section>
-                className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'>;
-                <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
-                  <Zap className='w-10 h-10 text-white' />;
-                </div>;
-                <h3 className='text-2xl font-bold text-white mb-4'>;
-                  Rapid Deployment;
-                </h3>;
-                <p className='text-gray-300 leading-relaxed'>;
-                  Fast implementation and continuous optimization to get you up;
-                  and running quickly;
-                </p>              </motion && motion.div>              >;
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">;
-                  <Zap className="w-10 h-10 text-white" />;
-                </div>;
-                <h3 className="text-2xl font-bold text-white mb-4">Rapid Deployment</h3>;
-                <p className="text-gray-300 leading-relaxed">Fast implementation and continuous optimization to get you up and running quickly</p>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Enhanced Call to Action */}
-        <section className='py-24 px-4'>;
-          <div className='max-w-5xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
-          <div className="max-w-5xl mx-auto text-center">;
-            <motion&& motion.div
         {/* Enhanced Call to Action */}
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
@@ -1384,10 +1221,6 @@ const Homepage2037: React.FC = () => {
         </section>
       </main>
     </Layout>
-export default Homepage2037;  )
-}
-export default Homepage2037;
-
                       features: service.features.slice (0, 5),
                       popular: service.popular,
                       category: service.category,
@@ -1645,5 +1478,4 @@ export default Homepage2037;
 export default Homepage2037);
 }
 ;
-export default Homepage2037;
 export default Homepage2037;

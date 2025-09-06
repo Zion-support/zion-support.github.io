@@ -9,4 +9,3 @@ const PostCard.js = ({ className }) => {
   );
 };
 
-export default PostCard.js;

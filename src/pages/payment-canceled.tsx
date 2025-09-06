@@ -1,12 +1,5 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { XCircle } from 'lucide-react'
-
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -19,6 +12,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
   return (
+ursor/fix-website-loading-errors-and-merge-6662
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
         <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
           <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
@@ -81,25 +75,7 @@ export default function PaymentCanceled() {
           </Button>
         </div>
       </div>
-  )
-      </div>
-  )
-}
-            Return to Dashboard;
-          </Button>;
-        </div>;
-      </div>;
-          >;
-            Return to Dashboard;
-          </Button>;
-        </div>;
-        </div>
-      </div>
-  );
-}
       </div>);
       </div>);
 }
 ;
-
-

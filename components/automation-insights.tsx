@@ -116,11 +116,6 @@ export default function AutomationInsightsPage() {
             </p>;
           </section>;
 
-          <section className='mx-auto max-w-7xl'>;
-            {/* Success Metrics */}
-
-                ))}
-
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -158,7 +153,6 @@ export default function AutomationInsightsPage() {
                     >
                       Read More <span className="ml-1"></span>
                     </Link>
-
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
@@ -187,8 +181,6 @@ export default function AutomationInsightsPage() {
               </div>;
             </div>;
 
-            {/* Automation Tools & Frameworks */}
-
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -198,8 +190,6 @@ export default function AutomationInsightsPage() {
                 Let our experts help you build the automation systems of the
                 future
 
-              </p>
-              <div className='flex flex-wrap justify-center gap-4'>
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
@@ -215,7 +205,3 @@ export default function AutomationInsightsPage() {
                 </Link>
                 <Link
                   href="/case-studies"
-}
-}
-  );
-}

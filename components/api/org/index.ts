@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  };
-  const data = readOrgData();
-
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;

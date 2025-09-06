@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom",
 import {
   MessageSquare;
   Briefcase;
@@ -45,7 +44,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
-  }
   {
 
     id: "announcements"
@@ -54,58 +52,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-import { Link } from './react-router-dom';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { use_auth } from '@/hooks / use_auth';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
-import { ForumCategory, ForumCategoryInfo } from '@/types / community';
-const categories: ForumCategoryInfo[] = [;
-  {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
-  }
-  {
-    id: "project - help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    admin_only: false,
-    icon: "MessageSquare";
-  }
-  {
-    id: "ai - tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
-    admin_only: false,
-    icon: "Code";
-  }
-  {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    admin_only: false,
-    icon: "FileText";
-  }
-  {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    admin_only: true,
-    icon: "Megaphone";
-  }
-];
-;
-const icon_map = {
-  Briefcase;
-  MessageSquare;
-  Code;
-  FileText;
-  Megaphone
-}
-export const ForumCategories = () => {
-  const { user } = useAuth();
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -122,8 +68,6 @@ export const ForumCategories = () => {
           </Link>;
         );
       })}
-export default ForumCategories;
-
   Megaphone;
 }
 ;

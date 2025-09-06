@@ -1,10 +1,4 @@
 
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview",
-import { format, parseISO } from "date-fns",
-
 interface InterviewResponseFormProps {
 
 interface InterviewResponseFormProps {;
@@ -16,7 +10,6 @@ interface InterviewResponseFormProps {;
   const endTime = new Date(interviewDate);
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
-
   return (
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
@@ -25,25 +18,24 @@ interface InterviewResponseFormProps {;
           </div>
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
-              {formattedTime} - {formattedEndTime}
-            </div>;
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
-            <div>{interview && interview.duration_minutes} minutes</div>;
+            <div>{interview.duration_minutes} minutes</div>;
           </div>;
-          {interview && interview.meeting_platform && (;
+          {interview.meeting_platform && (;
             <div className="flex items-center gap-3">;
-              <div className="w-24 text-sm text-zion-slate-light">;
-                Platform:;
-              </div>;
-              <div className="capitalize">{interview && interview.meeting_platform}</div>;
+              <div className="w-24 text-sm text-zion-slate-light">Platform:</div>;
+              <div className="capitalize">{interview.meeting_platform}</div>;
             </div>;
           )}
-          {interview && interview.notes && (;
+          {interview.notes && (;
             <div className="flex gap-3">;
               <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
-              <div className="text-sm">{interview && interview.notes}</div>;
+              <div className="text-sm">{interview.notes}</div>;
+        </div>;
+      </div>;
+;
             </div>;
           )}
           {isLoading ? "Confirming..." : "Confirm Interview"}

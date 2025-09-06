@@ -9,4 +9,3 @@ const AIAutonomousPrediction = ({ className }) => {
   );
 };
 
-export default AIAutonomousPrediction;

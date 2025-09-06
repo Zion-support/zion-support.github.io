@@ -1,7 +1,4 @@
 
-import React from "react",
-import { SearchSuggestion, SearchHighlight } from "@/types/search",
-
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -20,32 +17,6 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
-import React from './react';
-import { SearchSuggestion, SearchHighlight } from '@/types / search';
-interface AutocompleteSuggestionsProps {
-  suggestions: SearchSuggestion[],
-  search_term: string,
-  onSelectSuggestion: (suggestion: string) => void,
-  visible: boolean;
-}
-// Helper function to highlight matching text;
-const highlight_match = (text: string, search_term: string): SearchHighlight => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return { before: '', match: text, after: '' }
-  }
-  const lower_text = text.toLowerCase ();
-  const lowerSearchTerm = search_term.toLowerCase ();
-  const index = lower_text.index_of (lowerSearchTerm);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return { before: '', match: text, after: '' }
-  }
   return {
     before: text.substring (0, index);
     match: text.substring (index, index + search_term.length);
@@ -74,7 +45,7 @@ export function AutocompleteSuggestions({
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
-
+  
   visible 
 }: AutocompleteSuggestionsProps) {
   return (

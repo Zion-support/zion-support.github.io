@@ -44,21 +44,5 @@ export default async function handler(
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 
-    console.error('Token error', err);
-    return res.status(500).json({ error: 'Failed to create token' });
-  }
-  }
-}
-    console.error ("Token error", err);
-    return res.status (500).json ({ error: "Failed to create token" });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
   }
 }

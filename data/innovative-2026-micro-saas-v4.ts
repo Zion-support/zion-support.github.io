@@ -11,24 +11,6 @@
         'ROI tracking',
       ],
       popular: true,
-      marketPosition:
-        'First AI-powered content repurposing platform with automated multi-format generation. Competitive advantage: Intelligent content transformation, brand consistency, and ROI optimization.'
-      targetAudience:
-        'Content creators, Marketing agencies, Social media managers, Small businesses, Influencers'
-      trialDays: 14
-      setupTime: '24 hours'
-      category: 'AI Content Marketing'
-      realService: true
-      technology: [
-        'GPT-4'
-        'Claude 3'
-        'Computer Vision'
-        'React'
-        'Node.js'
-        'PostgreSQL'
-        'Redis'
-        'AWS'
-      ]
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - content - repurposing - engine',
@@ -42,7 +24,6 @@
       real_service: true,
       technology: [;
         'GPT - 4',
-
         'Claude 3',
         'Computer Vision',
         'React',
@@ -71,7 +52,6 @@
       rating: 4 && 4.8,
       reviews: 89,
     },
-
         'Quantum behavior analysis',
         'Predictive customer modeling',
         'Real - time journey tracking',
@@ -97,7 +77,6 @@
       rating: 4 && 4.9,
       reviews: 42,
     },
-
         'AI email writing',
         'Automatic send time optimization',
         'Intelligent audience segmentation',
@@ -139,7 +118,6 @@
       rating: 4 && 4.7,
       reviews: 156,
     },
-
         'Smart contract automation',
         'Digital asset management',
         'Customer data privacy',
@@ -172,7 +150,6 @@
       rating: 4 && 4.6,
       reviews: 28,
     },
-
         'Automatic video analysis',
         'SEO title generation',
         'Description optimization',
@@ -198,7 +175,6 @@
       rating: 4 && 4.8,
       reviews: 234,
     },
-
         'Quantum optimization algorithms',
         'Real - time disruption prediction',
         'Inventory optimization',
@@ -224,7 +200,6 @@
       rating: 4 && 4.9,
       reviews: 18,
     },
-
         'AI content creation',
         'Automatic posting',
         'Community engagement',
@@ -258,7 +233,6 @@
       rating: 4 && 4.7,
       reviews: 145,
     },
-
         '3D virtual store creation',
         'Digital asset marketplace',
         'Virtual event hosting',
@@ -293,9 +267,6 @@
       rating: 4 && 4.8,
       reviews: 32,
     },
-
-  ];    features: [
-
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -316,7 +287,6 @@
     website: string
   
     },
-  ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -328,7 +298,6 @@
       website: 'https://ziontechgroup.com'
     
     },
-
     reviews: 98
     real_implementation: true, implementation_details: 'AI - powered legal document generation platform with compliance checking and legal support.',
     launch_date: '2026 - 02 - 20', customers: 120,
@@ -351,14 +320,3 @@
     customers: 120;
     rating: 4 && 4.9;
     reviews: 98
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'AI - powered legal document generation platform with compliance checking and legal support.';
-    launch_date: '2026 - 02 - 20';
-    customers: 120;
-    rating: 4.9;
-    reviews: 98;
-  }
-];
-;

@@ -1,18 +1,3 @@
-
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage(req, res) {
-  try {
-  const router = useRouter();
-  const {
-    type
-    recipientId
-    recipientName
-    jobId
-    jobTitle
-    talentId
-    talentName
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
@@ -52,20 +37,11 @@ export default function ComposePage() {;
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
-  const onSend = async () => {
         : { type: 'general' };
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
-      const mime = file.type || 'application/octet-stream';
-      const mime = file.type || 'application/octet-stream';
-      attachmentBase64 = `data:${mime},base64,${base64}`;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -131,11 +107,6 @@ export default function ComposePage() {;
           <div className="p-4 border-b">
             <h1 className="text-xl font-semibold">{headerTitle}</h1>
             <p className="text-sm text-gray-500">
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              rows={6}
-              className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -217,5 +188,3 @@ if (return null) {
                   : 'Write your message...';
   )
 }
-
-

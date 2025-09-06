@@ -26,7 +26,6 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-    }
     try {
       const { error } = await supabase
         .from('work_history')
@@ -37,7 +36,6 @@ export function useWorkExperience() {;
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-          company_logo_url: work.company_logo_url,
           location: work.location;
         });
 ;
@@ -78,7 +76,6 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-    }
     try {
       const { error } = await supabase
         .from('work_history')
@@ -131,14 +128,12 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
-    }
     try {
       const { error } = await supabase
         .from('work_history')
         .delete()
         .eq('id', workId);
       if (error) throw error;
-      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
   return {
     is_loading;
     error;
@@ -167,5 +162,3 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
-  }
-}

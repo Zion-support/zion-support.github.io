@@ -5,19 +5,6 @@ import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@/lib/utils"
 
-const Drawer = ({
-  shouldScaleBackground = true
-  ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>) =></typeof> (
-  <DrawerPrimitive.Root
-
-const Drawer = ({;
-  shouldScaleBackground = true,;
-  ...props;
-}: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
-  <DrawerPrimitive&& DrawerPrimitive.Root
-    shouldScaleBackground={shouldScaleBackground}
-    {...props}
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -60,21 +47,16 @@ const DrawerContent = React.forwardRef<;
   <DrawerPortal>;
     <DrawerOverlay />;
     <DrawerPrimitive.Content;
-      ref={ref}
-      className={cn(
-        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
         className
       )}
-      {...props}>;
-      <div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />;
+      {...props}
+    >
+      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
       {children}
 const DrawerHeader = ({
   className
   ...props
 }: React.HTMLAtt</HTMLDivElement>ributes<HTMLDivElement>) => (
-}: React.HTMLAttributes<HTMLDivElement>) => (
-DrawerHeader && DrawerHeader.displayName = 'DrawerHeader';
-
 const DrawerFooter = ({;
   className,;
   ...props</HTMLDivElement>;
@@ -183,9 +165,6 @@ export {
   DrawerTitle
   DrawerDescription
 }
-  />));
-DrawerDescription.display_name = DrawerPrimitive.Description.display_name;
-;
 export {
   Drawer,
   DrawerPortal,

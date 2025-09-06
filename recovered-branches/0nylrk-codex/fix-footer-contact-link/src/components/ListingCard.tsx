@@ -10,11 +10,6 @@ interface ListingCardProps {
   image?: string;
   category: string
 
-  id?: string;
-  title: string,;
-  description: string,;
-  image?: string;
-  category: string,;
   tags?: string[];
   author?: string;
   authorImage?: string;
@@ -99,13 +94,6 @@ export function ListingCard({;
             src={image}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />;
-        </div>;
-      )}
-      <div className="flex flex-col p-4 flex-grow">;
-        <div className="mb-2">;
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
-            {category}
                 {tag}
               </Badge>;
             ))}

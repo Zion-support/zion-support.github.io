@@ -1,27 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
   if (!mock) {
     router.push('/checkout');
     return <div>Redirecting...</div>;
@@ -34,7 +10,6 @@ import React from 'react';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
       <div className="container mx-auto max-w-2xl">
@@ -83,8 +58,6 @@ import React from 'react';
                   ← Back to Cart
                 </Link>
               </Button>
-                  Continue Shopping
-                  <ArrowRight className='h-4 w-4 ml-2' />                </Link>
               </Button>
             </div>
           </div>
@@ -119,8 +92,3 @@ import React from 'react';
           </div>;
         </div>;
       </div>;
-    </div>);
-;
-} ;
-
-

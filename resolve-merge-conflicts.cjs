@@ -7,7 +7,11 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -21,6 +25,13 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 console.log('🔧 Resolving merge conflicts...');
 
 function resolveMergeConflicts(filePath) {
@@ -49,7 +60,10 @@ function resolveMergeConflicts(filePath) {
     return false;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -88,14 +102,20 @@ function findFilesWithConflicts(dir) {
   traverse(dir);
   return files;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 // Main execution
 const targetDir = process.cwd();
 console.log(`📁 Scanning ${targetDir} for files with merge conflicts`);
 
 const files = findFilesWithConflicts(targetDir);
 console.log(`📄 Found ${files.length} files with merge conflicts`);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 let resolvedCount = 0;
 let errorCount = 0;
 
@@ -114,6 +134,10 @@ for (const file of files) {
 console.log(`\n🎉 Merge conflict resolution complete!`);
 console.log(`✅ Resolved: ${resolvedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -161,6 +185,16 @@ function resolveConflicts(filePath) {
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 // Run linter to check if issues are resolved
 console.log('\n🔍 Running linter to check if issues are resolved...');

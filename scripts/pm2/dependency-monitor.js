@@ -1,10 +1,3 @@
-class DependencyMonitor {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
-    this.startTime = Date.now();
-};
 ;
   log(message) {;
     const timestamp = new Date().toISOString();

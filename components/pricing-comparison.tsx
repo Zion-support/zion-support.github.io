@@ -16,11 +16,6 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
-            'Higher pricing'
-            'Limited customization'
-            'No unlimited plan'
-          ]
-          savings: 'Save $20/month with Zion'
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -311,10 +306,6 @@ export default function PricingComparisonPage() {
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
-                  </div>
-                  <p className={`text-lg font-semibold ${insight.color}`}>
-                    {insight.insight}
-
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -334,10 +325,6 @@ export default function PricingComparisonPage() {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
-            </div>
-            {serviceComparisons.map((service, serviceIndex) => (
-              <div key={serviceIndex} className='mb-24'>
-                <div className='text-center mb-16'>
                   <div
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
                     {service && service.icon}
@@ -395,52 +382,14 @@ export default function PricingComparisonPage() {
                     </span>;
                     <span>;
                       Professional:{' '}
-                      <span className='text-blue-400 font-semibold'>;
-                        {service && service.zionPricing.professional}
                       </span>;
                     </span>;
                     <span>;
                       Enterprise:{' '}
-                      <span className='text-purple-400 font-semibold'>
-                        {service.zionPricing.enterprise}
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>
                       </span>;
                     </span>;
                   </div>;
                 </div>;
-
-                <div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>;
-                  {/* Zion Service */}
-                  <div className='lg:col-span-1'>;
-                    <Card className='h-full border-2 border-green-500 bg-green-500/5'>;
-                      <div className='text-center p-6'>;
-                        <div className='inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4'>;
-                          Zion {service && service.service}
-                        </div>;
-                        <h4 className='text-xl font-bold text-white mb-4'>;
-                          Best Value;
-                        </h4>;
-                        <div className='space-y-3 mb-6'>;
-                          {service && service.features.map((feature, featureIndex) => (;
-                            <div
-                              key={featureIndex}
-                              className='flex items-center text-gray-300'>;
-                              <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
-                              <span className='text-sm'>{feature}</span>;
-                            </div>;
-                          ))}
-                        </div>
-                        <div className='text-center'>
-                          <p className='text-green-400 font-semibold mb-2'>
-                            Starting at
-                          </p>
-                          <p className='text-2xl font-bold text-white'>
-                            {service.zionPricing.starter}
-                          </p>                        </div>                    {service.icon}
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-4">{service.service}</h3>
                   <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">
@@ -491,71 +440,6 @@ export default function PricingComparisonPage() {
                       </div>
                     </Card>
                   </div>
-                        </div>;
-                        <div className="text-center">;
-                          <p className="text-green-400 font-semibold mb-2">Starting at</p>;
-                          <p className="text-2xl font-bold text-white">{service && service.zionPricing.starter}</p>;
-                <div className='grid grid - cols - 1 lg:grid - cols - 4 gap - 8'>;
-                  {/* Zion Service */}
-                  <div className='lg:col - span - 1'>;
-                    <Card className='h - full border - 2 border - green - 500 bg - green - 500 / 5'>;
-                      <div className='text - center p - 6'>;
-                        <div className='inline - flex items - center px - 3 py - 1 rounded - full bg - green - 500 / 20 text - green - 400 text - sm font - medium mb - 4'>;
-                          Zion {service.service}
-                        </div>;
-                        <h4 className='text - xl font - bold text - white mb - 4'>;
-                          Best Value;
-                        </h4>;
-                        <div className='space - y-3 mb - 6'>;
-                          {service.features.map ((feature, feature_index) => (
-                            <div;
-                              key={feature_index}
-                              className='flex items - center text - gray - 300';
-                            >;
-                              <Check className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />;
-                              <span className='text - sm'>{feature}</span>;
-                            </div>))}
-                        </div>;
-                        <div className='text - center'>;
-                          <p className='text - green - 400 font - semibold mb - 2'>;
-                            Starting at;
-                          </p>;
-                          <p className='text - 2xl font - bold text - white'>;
-                            {service.zion_pricing.starter}
-                          </p>                        </div>                    {service.icon}
-                  </div>;
-                  <h3 className="text - 3xl font - bold text - white mb - 4">{service.service}</h3>;
-                  <div className="flex flex - wrap justify - center gap - 4 text - lg text - gray - 300">;
-                    <span > Starter: <span className="text - green - 400 font - semibold">{service.zion_pricing.starter}</span></span>;
-                    <span > Professional: <span className="text - blue - 400 font - semibold">{service.zion_pricing.professional}</span></span>;
-                    <span > Enterprise: <span className="text - purple - 400 font - semibold">{service.zion_pricing.enterprise}</span></span>;
-                  </div>;
-                </div>;
-                <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 8">;
-                  {/* Zion Service */}
-                  <div className="lg:col - span - 1">;
-                    <Card className="h - full border - 2 border - green - 500 bg - green - 500 / 5">;
-                      <div className="text - center p - 6">;
-                        <div className="inline - flex items - center px - 3 py - 1 rounded - full bg - green - 500 / 20 text - green - 400 text - sm font - medium mb - 4">;
-                          Zion {service.service}
-                        </div>;
-                        <h4 className="text - xl font - bold text - white mb - 4">Best Value</h4>;
-                        <div className="space - y-3 mb - 6">;
-                          {service.features.map ((feature, feature_index) => (
-                            <div key={feature_index} className="flex items - center text - gray - 300">;
-                              <Check className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
-                              <span className="text - sm">{feature}</span>;
-                            </div>))}
-                        </div>;
-                        <div className="text - center">;
-                          <p className="text - green - 400 font - semibold mb - 2">Starting at</p>;
-                          <p className="text - 2xl font - bold text - white">{service.zion_pricing.starter}</p>;
-                        </div>;
-                      </div>;
-                    </Card>;
-                  </div>;
-
-                  {/* Competitors */}
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -592,12 +476,6 @@ export default function PricingComparisonPage() {
                                 {competitor && competitor.pros.map((pro, proIndex) => (;
                                   <li key={proIndex} className="flex items-center">;
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
-                                    {pro}
-                                  </li>;
-                                ))}
-                                    {pro}
-                                  </li>;
-                                ))}
                                 ))}
                               </ul>;
                             </div>;
@@ -630,20 +508,12 @@ export default function PricingComparisonPage() {
                               </ul>
                             </div>
                           </div>
-                          <div className="text-center">
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
                           </div>
                         </div>
                       </Card>
                     </div>
 
-        {/* CTA Section */}
-        <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
-
-              Ready to Save Money and Get Better Features?
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -697,5 +567,4 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
-
               <Button

@@ -1,14 +1,3 @@
-/**;
-* Helper script to update icon imports across the codebase;
-*;
-* Usage: * 1. Run: node scripts / update - icon - imports.js;
-* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
-*/;
-const fs = require ('fs'),
-const path = require ('path'),
-const glob = require ('glob'),
-// Helper to replace imports in a file;
-/**
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
@@ -56,8 +45,6 @@ function updateIconImportsInFile(filePath) {;
     return false
   }
 }
-// Find all TypeScript/JavaScript/JSX/TSX files
-
   if (updated) updatedFiles++
 })
 console.log(`\n Updated icon imports in ${updatedFiles} files`)

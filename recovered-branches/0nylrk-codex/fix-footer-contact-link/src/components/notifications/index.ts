@@ -1,4 +1,3 @@
-
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -13,4 +12,3 @@ export * from './NotificationItem',;
 export * from './NotificationList',;
 export * from './NotificationFilter',;
 export * from './NotificationHeader',;
-export * from './NotificationFooter';

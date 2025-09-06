@@ -41,5 +41,3 @@ export async function sendWarningEmail(record: any): Promise<void> {
   // Implementation would send actual email
 }
 
-}
-}

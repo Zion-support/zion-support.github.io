@@ -33,22 +33,15 @@ merkleRoot}
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-    timestamp: Date.now(),
-    merkleRoot};
 
   upsertEvent(state, event);
   writeState(state);
 
-  const body = { ...event, propagate: false };
-  const headers: Record<string, string> = {};
-  const sig = signPayload(body);
-  if (sig) headers["x-zion-signature"] = sig;
 
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-}
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -114,25 +107,6 @@ export default async function handler(req, res) {
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-
-        try {
-          await axios.post (url, body, { headers, timeout: 5000 });
-        } catch {
-          // ignore;
-        }
-      })
-  )
-
-  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
-}
-      })),
-  return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
-}
-;
-          // ignore
-
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

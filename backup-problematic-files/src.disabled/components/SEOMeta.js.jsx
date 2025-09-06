@@ -9,4 +9,3 @@ const SEOMeta.js = ({ className }) => {
   );
 };
 
-export default SEOMeta.js;

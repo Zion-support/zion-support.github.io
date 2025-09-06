@@ -7,13 +7,6 @@ import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function EditJobPage(req, res) {
   try {
-  const router = useRouter();
-  const { id } = router && router.query;
-  const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-  const job = data?.job;
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
   useEffect(() => {
     if (job) {
       setTitle(job.title |'');

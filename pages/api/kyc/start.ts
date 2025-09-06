@@ -32,7 +32,6 @@ function save(db: Record<string, KycProfile>) {
     fullLegalName,
     business_name,
     businessRegistrationNumber,
-    userId?: string;
   } = req.body as {
     user_id?: string;
     role?: KycRole;
@@ -64,7 +63,6 @@ function save(db: Record<string, KycProfile>) {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-  });
 }
   } catch (error) {
     console.error("Error:", error);

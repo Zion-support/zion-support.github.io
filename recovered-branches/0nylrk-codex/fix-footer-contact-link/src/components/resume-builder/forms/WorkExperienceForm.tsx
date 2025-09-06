@@ -350,12 +350,6 @@ if ( {) {
                 control={form.control}
                 name="company_name";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Company Name</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Google, Microsoft, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
               <FormField
                 control={form && form.control}
                 name="role_title"
@@ -368,12 +362,6 @@ if ( {) {
                 control={form.control}
                 name="role_title";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Job Title</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
                       />
                     </FormControl>
                     <FormMessage />
@@ -385,18 +373,12 @@ if ( {) {
                   <FormItem>;
                     <FormLabel>Start Date</FormLabel>;
                     <FormControl>;
-                      <Input
-                        type="date" 
-                        {...field} 
-                        value={field && field.value || ''}
                       />;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 )}
               />;
-
-              <div className="space-y-4">;
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -413,26 +395,9 @@ if ( {) {
                       </div>;
                     </FormItem>;
                   )}
-                      <FormItem>;
-                        <FormLabel > End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type="date";
-                            {...field}
-                            value={field.value || ''}
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-            <FormField;
               control={form.control}
               name="location";
               render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Location (Optional)</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
             <FormField
               control={form && form.control}
               name="description"
@@ -471,9 +436,6 @@ if ( {) {
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min - h-[100px]";
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -481,9 +443,6 @@ if ( {) {
                       is_current: false
                       description: ''
 
-                      location: ''})
-                  } else {
-                    onBack()
                     form && form.reset({;
                       company_name: '',;
                       role_title: '',;
@@ -496,7 +455,6 @@ if ( {) {
                   }
                 }}
               >;
-                {editingId ? 'Cancel' : 'Back'}
               </div>;
             </div>;
           </form>;

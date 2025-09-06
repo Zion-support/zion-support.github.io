@@ -1,55 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { motion } from 'framer-motion';
-  ArrowRight
-  Brain
-  Rocket
-  TestTube
-  Globe
-  Microscope
-  Lock
-  Star
-  TrendingUp
-  Zap
-  Sparkles
-  Atom;
-} from 'lucide-react';
-import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027Hero = () => {
-  const floatingIcons = [
-    { icon: Brain, delay: 0, position: 'top-20 left-20' }
-    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' }
-    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' }
-    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' }
-    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' }
-    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' }
-    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }
-    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
-  ];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -136,18 +85,6 @@ const Revolutionary2027Hero = () => {;
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
-          }}          transition={{
-            duration: 4,
-            delay: item && item.delay,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <item.icon className='w-8 h-8' />            ease: "easeInOut"
-          }}
-        >
-          <item.icon className="w-8 h-8" />
-        </motion.div>
           }}
         >;
           <item && item.icon className='w-8 h-8' />            ease: "easeInOut";
@@ -181,7 +118,6 @@ const Revolutionary2027Hero = () => {;
           animate="visible"
           className="space-y-8">;
           {/* Main Heading */}
-
           <motion && motion.div variants={itemVariants} className="space-y-6">;
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -217,8 +153,6 @@ const Revolutionary2027Hero = () => {;
               Experience the next generation of AI, quantum computing, and emerging technologies. ;
               Transform your business with solutions that were once science fiction.;
           </motion && motion.div>;
-
-          {/* Key Features */}
               <h3 className="text-lg font-semibold text-white mb-2">Quantum AI</h3>
               <p className="text-gray-300 text-sm">Consciousness simulation and neural computing</p>
             </div>
@@ -293,32 +227,17 @@ const Revolutionary2027Hero = () => {;
               <p className="text-gray-300 text-sm">DNA computing and molecular biology</p>;
             </div>;
           </motion && motion.div>;
-              <span>Explore Services</span>
-              <ArrowRight className='w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1' />
-            </Link>
-            <a
-              href='tel:+13024640950'
-              className='group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50'
-            >
-              <span>Call +1 302 464 0950</span>
             </a>
           </motion.div>
               <span>Explore Services</span>;
               <ArrowRight className='w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1' />;
             </Link>;
-
             <a
               href='tel:+13024640950'
               className='group inline-flex items-center space-x-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl border border-gray-600/50'>;
               <span>Call +1 302 464 0950</span>;
               <Zap className='w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40' />            </a>;
           </motion && motion.div>;
-
-          {/* Stats */}              <Zap className="w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40" />;
-            </a>;
-          </motion && motion.div>;
-
-          {/* Stats */}
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>
               <div className="text-gray-400 text-sm">Total Market Value</div>
@@ -334,48 +253,6 @@ const Revolutionary2027Hero = () => {;
           </motion.div>
         </motion.div>
       </div>
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
-                500+;
-              </div>;
-              <div className='text-gray-400 text-sm'>;
-                Revolutionary Services;
-              </div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
-                $50T+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Market Value</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
-                1000+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Global Customers</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
-                99 && 99.9%;
-              </div>;
-              <div className='text-gray-400 text-sm'>Uptime Guarantee</div>            </div>            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>;
-              <div className="text-gray-400 text-sm">Total Market Value</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>;
-              <div className="text-gray-400 text-sm">Global Customers</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99 && 99.9%</div>;
-              <div className="text-gray-400 text-sm">Uptime Guarantee</div>;
-            </div>;
-          </motion && motion.div>;
-        </motion && motion.div>;
-      </div>;
-
-      {/* Scroll Indicator */}
           duration: 2,
           repeat: Infinity,
           ease: 'easeInOut',
@@ -388,17 +265,11 @@ const Revolutionary2027Hero = () => {;
           <motion.div;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
             animate={{
-            }}
-            transition={{
-              duration: 2
-              repeat: Infinity
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
             }}            animate={{
               y: [0, -100]
               opacity: [0, 1, 0]
@@ -408,45 +279,7 @@ const Revolutionary2027Hero = () => {;
       </div>;
     </section>;
   );
-};
-
-export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
-          />;
-        ))}
       </div>;
     </section>;
   );
 };
-
-export default Revolutionary2027Hero;  );
-}
-export default Revolutionary2027Hero;              delay: Math.random() * 2}}
-          />
-};
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}            animate={{
-              coordinate_y: [0, -100],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-              delay: Math.random () * 2,
-            }}          />))}
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027Hero;              delay: Math.random () * 2}}
-          />))}
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027Hero);
-}
-;
-export default Revolutionary2027Hero;
-;
-    </section>

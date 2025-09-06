@@ -1,8 +1,4 @@
 
-}let particles: Particle[] = [];
-let connections: Connection[] = [];
-// Initialize particles ctx.fill_style = colors.primary;
-ctx.font = `$ {
 }
 import React from 'react';
  const colorSchemes = {;
@@ -41,67 +37,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
-  children;
-  class_name = '';
-  intensity = 'medium';
-    };
-
-    resizeCanvas();
-    window && window.addEventListener('resize', resizeCanvas);
-
-    const colors = colorSchemes[colorScheme];
-    const settings = intensitySettings[intensity];
-
-      x: number;
-      y: number;
-      background: 'rgba (10, 10, 30, 0.9)',
-      particles: [;
-        '#ff6b6b',
-        '#4ecdc4',
-        '#45b7d1',
-        '#96ceb4',
-        '#feca57',
-        '#ff9ff3',
-      ],
-      glow: '#4ecdc4',
-    },  }      background: 'rgba (10, 10, 30, 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
-      glow: '#4ecdc4';
-    }
-  }
-;
-  const intensity_settings = {
-    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  }    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    const colors = color_schemes[color_scheme];
-    const settings = intensity_settings[intensity];
-;
-    // Enhanced particle system;
-    class Particle {
-      coordinate_x: number;
-      coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
@@ -125,11 +60,6 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-        }
-      }
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(
           this.x
@@ -148,97 +78,12 @@ if (return) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        ctx.restore()
-        return this.life <= 0 || this.opacity < 0.01;      }
-
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
-    // Connection lines between particles
-      max_life: number,
-        this.coordinate_x = Math.random () * canvas.width;
-        this.coordinate_y = Math.random () * canvas.height;
-        this.vx = (Math.random () - 0.5) * settings.speed * animation_speed;
-        this.vy = (Math.random () - 0.5) * settings.speed * animation_speed;
-        this.size = Math.random () * settings.size + 1;
-        this.color =;
-          colors.particles[Math.floor (Math.random () * colors.particles.length)];
-        this.opacity = Math.random () * settings.opacity;
-        this.life = Math.random () * 100;
-        this.max_life = 100;      }        this.color = colors.particles[Math.floor (Math.random () * colors.particles.length)];
-        this.opacity = Math.random () * settings.opacity;
-        this.life = Math.random () * 100;
-        this.max_life = 100;
-      update () {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-;
-        // Wrap around edges;
-        // Check condition
-if (this.coordinate_x = canvas.width) {
-  $2
-}
-        // Check condition
-if (this.coordinate_x = 0) {
-  $2
-}
-        // Check condition
-if (this.coordinate_y = canvas.height) {
-  $2
-}
-        // Check condition
-if (this.coordinate_y = 0) {
-  $2
-}
-        // Fade out near end of life;
-        // Check condition
-if ( {) {
-  $2
-}
-          this.opacity *= 0.95;        }          this.opacity *= 0.95;
-        }
       }
-      draw () {
-        ctx.save ();
-        ctx.global_alpha = this.opacity;
-;
-        // Create gradient for particle;
-        const gradient = ctx.createRadialGradient (
-          this.x,
-          this.y,
-          0,
-          this.x,
-          this.y,
-          this.size);
-        gradient.addColorStop (0, this.color);
-        gradient.addColorStop (1, 'transparent');        // Create gradient for particle;
-        const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop (0, this.color);
-        gradient.addColorStop (1, 'transparent');
-;
-        ctx.fill_style = gradient;
-        ctx.begin_path ();
-        ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill ();
-;
-        ctx.restore ();
-      }
-      is_dead () {
-        return this.life <= 0 || this.opacity < 0.01;      }
-        ctx.restore ();
-      }
-      is_dead () {
-        return this.life <= 0 || this.opacity < 0.01;
     }
-    // Connection lines between particles;
-    class Connection {
-        this.p1 = p1;
-        this.p2 = p2;
-        this.opacity = 0.1;      }
-      draw() {
-        const distance = Math.sqrt(
         );
         if (distance < 150) {
           ctx.save();
@@ -376,13 +221,9 @@ if (> 0.975) {) {
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
           }
         }
       }
-
-
 
       // Draw connections
       connections.forEach(connection => connection.draw());
@@ -416,38 +257,6 @@ if (> 0.975) {) {
 
         ctx && ctx.restore();
       }
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia(;
-        '(prefers-reduced-motion: reduce)';
-      ).matches;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);      }        } else {;
-          // Draw square;
-          ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-        }
-      }
-
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);
-      }
-    }
-    animate();
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
@@ -475,15 +284,3 @@ if (> 0.975) {) {
 }
 export default EnhancedFuturisticBackground;
 
-          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-    </div>);
-}
-;
-export default EnhancedFuturisticBackground;
-;
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;

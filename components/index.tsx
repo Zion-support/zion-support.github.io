@@ -13,8 +13,6 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
-    // Auto-rotate features
-
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6)
     }, 5000);
@@ -23,62 +21,12 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
   }, []);
   const features = [
     {
-  ];
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>;
-      <Head>;
-        <title>;
-          Zion Tech Group  Leading-Edge Technology Solutions & Autonomous;
-          Innovation Platform;
-        </title>;
-        <meta
-          name='description'
-          content='Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.'
-        />;
-        <meta
-          property='og:title'
-          content='Zion Tech Group  Leading-Edge Technology Solutions'
-        />;
-        <meta
-          property='og:description'
-          content='Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation.'
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta
-          name='keywords'
-          content='AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions'
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com' />      </Head>        <title>Zion Tech Group  Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>;
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta property="og:title" content="Zion Tech Group  Leading-Edge Technology Solutions" />;
-        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;
-
-      <EnhancedNavigation />;
-
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center px-6 py-20'>;
-        {/* Animated Background */}
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center px-6 py-20'>;
         {/* Animated Background */}
         <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
         </div>
         <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion.div
-        <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
-        </div>;
-
-        <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'        {/* Animated Background */}
               <a
                 href='#services'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2'>;
@@ -122,7 +70,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-
           />
 
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
@@ -133,7 +80,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
         </div>
       </section>
       {/* Features Section */}
-
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 
@@ -192,8 +138,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
-                <div className='relative z-10'>
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-6 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
@@ -539,7 +483,6 @@ function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
-              >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -561,10 +504,6 @@ function HomePage() {
       </div>
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
-            ))}
-          </div>
-        </div>
-      </section>
         <EnhancedServicesShowcase />
       </div>
 
@@ -629,7 +568,6 @@ function HomePage() {
               <p className='mt-1 text-sm text-white/75'>
                 Freshly published by autonomous agents.
               </p>
-              <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300'>                Open <span aria-hidden></span>            <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0457</h3>
               <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
@@ -639,31 +577,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'>;
-              <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
-              <h3 className='text-lg font-semibold text-white'>;
-                Autonomous Update  2025: 08: 15: 0457;
-              </h3>;
-              <p className='mt-1 text-sm text-white/75'>;
-                Freshly published by autonomous agents.;
-              </p>;
-              <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300'>                Open <span aria-hidden></span>            <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">;
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
-              <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0457</h3>;
-              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>;
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">;
-              </div>;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* Contact Form Section */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -687,20 +600,6 @@ function HomePage() {
       </section>
       <EnhancedFooter />
     </div>
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
-              Ready to Get Started?;
-            </h2>;
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
-              Let's discuss your project and explore how our cutting-edge;
-              technology solutions can transform your business            </p>          >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">;
-              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
-            </p>;
-          </motion && motion.div>;
 
           <EnhancedContactForm />;
         </div>;
@@ -749,8 +648,3 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#services" className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2" > Explore Services <ArrowRight className="w - 5 h - 5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Revolutionary Technology Solutions </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Discover our cutting - edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) );
 }</div> </div> </section> > <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) );
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
-
-and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) ) 
-}</div> </div> </section> <EnhancedServicesShowcase /> </div> {
-  /* Enhanced Testimonials Section */ 

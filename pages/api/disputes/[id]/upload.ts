@@ -7,13 +7,6 @@ import {
   upsertDispute,;
 } from "../../../../utils/fsdb";
 import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from "../../../../utils/auth";
-export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } }
-}
-export default async function handler(
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -36,9 +29,6 @@ export default async function handler(
     const { files } =
       req.body |
       ({} as {
-        files: { file_name: string; mime_type: string; base64: string }[];
-      });
-
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -86,7 +76,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-
-}
 }

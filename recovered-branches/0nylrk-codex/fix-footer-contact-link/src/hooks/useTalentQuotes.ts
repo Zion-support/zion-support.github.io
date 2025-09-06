@@ -9,7 +9,7 @@ import {useAuth} from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
-export const useTalentQuotes = () => {
+export const useTalentQuotes = () => {;
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -38,9 +38,6 @@ export const useTalentQuotes = () => {
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
-    onSuccess: (_, variables) => {
-      let message = "Status updated";
-      if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
         message = "Quote marked as responded"
@@ -60,7 +57,11 @@ export const useTalentQuotes = () => {
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
-      });
+
+    };
+
+
+      }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     onError: (error: Error) => {
       toast({
@@ -275,9 +276,6 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-      toggleArchiveMutation.mutate({ id, isArchived })}
-}
-
     archive_filter;
     setArchiveFilter,
     markAsViewed: (id: string) =>;

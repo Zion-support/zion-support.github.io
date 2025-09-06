@@ -31,7 +31,6 @@
 
     website: string;
   }
-
   customers: number;
   rating: number;
     {
@@ -47,42 +46,6 @@
         'Compliance tools',
       ],
       popular: true,
-      marketPosition:
-        'Leading AI supply chain optimization platform with advanced analytics'
-      targetAudience:
-        'Manufacturing companies, Retail chains, E-commerce platforms, Logistics providers, Distribution centers'
-      trialDays: 30
-      setupTime: '15-20 days'
-      category: 'Logistics & Supply Chain'
-      realService: true
-      technology: [
-        'Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'
-      ]
-      integrations: [
-        'ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'
-      ]
-      useCases: [
-        'Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'
-      ]
-      roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
-      competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis']
-      marketSize: '$45B supply chain management market'
-      growthRate: '28% annual growth'
-      variant: 'logistics'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-        'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.'
-      launchDate: '2025-01-26'
-      customers: 156
-      rating: 4.8
-      reviews: 98
-    }
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -109,7 +72,6 @@
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -221,8 +183,6 @@
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
-  ];    features: [
-
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -238,24 +198,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-  ];    features: [
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
-      'Custom algorithmsCompliance tools'
-    color: 'from-blue-600 via-indigo-600 to-purple-600', textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization', marketPosition: 'Leading AI supply chain optimization platform with advanced analytics'
-    targetAudience: 'Manufacturing companies, Retail chains, E-commerce platforms, Logistics providers, Distribution centers'
-    trialDays: 30, setupTime: '15-20 days'
-    category: 'Logistics & Supply Chain', realService: true
-    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
-    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
-    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
-    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'

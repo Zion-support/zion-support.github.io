@@ -20,19 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
-    eventId: uuidv4()
-    type: "dao_endorsement" as const
-    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp |Date.now() }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-
 
 
   upsertEvent(state, event);
@@ -42,7 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
-
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)

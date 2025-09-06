@@ -9,4 +9,3 @@ const Blockchain = ({ className }) => {
   );
 };
 
-export default Blockchain;

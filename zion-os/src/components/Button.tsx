@@ -5,7 +5,6 @@
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
-  return (;
     <button;
       ref={ref}
       type={type}

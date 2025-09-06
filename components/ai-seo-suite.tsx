@@ -1,23 +1,3 @@
-  Search
-  TrendingUp
-  Target
-  BarChart3
-  Globe
-  Zap
-  Users
-  CheckCircle
-  ArrowRight
-  Play
-  Star
-  Eye
-  Brain
-  Shield
-  Lock
-  Sparkles
-  ChartBar
-  Lightbulb
-  Rocket
-  Settings;
   Rocket,;
   Settings,;
 } from 'lucide-react';
@@ -181,103 +161,6 @@ export default function AISeosuitePage() {
 export default function AISeosuitePage() {
   const features = [
     {
-      category: 'Keyword Research'
-      icon: <Search className='w-6 h-6 text-blue-400' />
-      tools: [
-        'Long-tail keyword finder'
-        'Competitor keyword analysis'
-        'Search volume estimation'
-        'Keyword difficulty scoring'
-        'Trending keywords'
-      ]
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className='w-6 h-6 text-green-400' />
-      tools: [
-        'Content optimization'
-        'Meta tag generator'
-        'Schema markup builder'
-        'Internal linking suggestions'
-        'Image optimization'
-      ]
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className='w-6 h-6 text-purple-400' />
-      tools: [
-        'Site audit tool'
-        'Page speed analyzer'
-        'Mobile optimization'
-        'Core Web Vitals'
-        'XML sitemap generator'
-      ]
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
-      tools: [
-        'Ranking tracker'
-        'Traffic analysis'
-        'Conversion tracking'
-        'Competitor monitoring'
-        'Custom dashboards'
-      ]
-    },  ];      title: 'AI Keyword Research'
-      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'}
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />
-      title: 'Ranking Analytics'
-      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'}
-    {
-      icon: <Target className="w-8 h-8 text-white" />
-      title: 'Content Optimization'
-      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'}
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-      title: 'Technical SEO'
-      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'}
-    {
-      icon: <Globe className="w-8 h-8 text-white" />
-      title: 'Local SEO'
-      description: 'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'}
-    {
-      icon: <Zap className="w-8 h-8 text-white" />
-      title: 'Automated Reports'
-      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'}]
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className="w-6 h-6 text-blue-400" />
-      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className="w-6 h-6 text-green-400" />
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
   ];
   const pricingPlans = [
     {
@@ -286,7 +169,6 @@ export default function AISeosuitePage() {
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
-
   ];
 
   const integrations = [;
@@ -363,41 +245,6 @@ export default function AISeosuitePage() {
         'Reduced acquisition costs',;
         'Market expansion',;
       ],;
-    },;
-  ];
-
-  const successMetrics = [;
-    {;
-      metric: 'Organic Traffic',;
-      value: '+150%',;
-      description: 'Average increase in organic traffic',;
-    },;
-    {;
-      metric: 'Search Rankings',;
-      value: '+45%',;
-      description: 'Improvement in search rankings',;
-    },;
-    {;
-      metric: 'Conversion Rate',;
-      value: '+80%',;
-      description: 'Increase in conversion rates',;
-    },;
-    {;
-      metric: 'ROI',;
-      value: '400%',;
-      description: 'Average return on investment',;
-    },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },;
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },;
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },;
-    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-
-  return (
-    <>;
-      <Head>;
-        <title>;
-          AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools &;
-          Analytics;
-        </title>;
         <meta
           name='description'
           content='Comprehensive AI-powered SEO suite with keyword research, content optimization, technical SEO audits, and real-time analytics. Boost your search rankings and organic traffic.'
@@ -467,32 +314,6 @@ export default function AISeosuitePage() {
             Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
-        <div className="absolute inset-0">;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
-        </div>;
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <div className="mb-8">;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
-              <Sparkles className="w-4 h-4 mr-2" />;
-              AI-Powered Search Engine Optimization;
-            </div>;
-          </div>;
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">;
-            AI-Powered SEO Suite;
-          </h1>;
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">;
-            Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization;
-          </p>;
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
             <Button
               href="#pricing"
               size="lg"
@@ -551,210 +372,6 @@ export default function AISeosuitePage() {
         </div>
       </section>
       {/* Features Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Powerful SEO Features
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Everything you need to dominate search rankings and drive organic
-              traffic
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
-              className="border-white/20 hover:border-white/40 hover:bg-white/5">;
-              <Play className="w-5 h-5 mr-2" />;
-              Watch Demo;
-            </Button>;
-          </div>;
-
-          {/* Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>;
-                +150%;
-              </div>;
-              <div className='text-gray-400'>Organic Traffic</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'>;
-                +45%;
-              </div>;
-              <div className='text-gray-400'>Search Rankings</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'>;
-                +80%;
-              </div>;
-              <div className='text-gray-400'>Conversion Rate</div>;
-            </div>;
-            <div className='text-center'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>;
-                400%;
-              </div>;
-              <div className='text-gray-400'>ROI</div>            </div>            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">+45%</div>;
-              <div className="text-gray-400">Search Rankings</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400">+80%</div>;
-              <div className="text-gray-400">Conversion Rate</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">400%</div>;
-              <div className="text-gray-400">ROI</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Features Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              Powerful SEO Features;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          AI - Powered SEO Suite | Zion Tech Group - Advanced SEO Tools &;
-          Analytics;
-        </title>;
-        <meta;
-          name='description';
-          content='Comprehensive AI - powered SEO suite with keyword research, content optimization, technical SEO audits, and real - time analytics. Boost your search rankings and organic traffic.';
-        />;
-        <meta;
-          property='og:title';
-          content='AI - Powered SEO Suite | Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Advanced SEO tools with AI - powered optimization, keyword research, and comprehensive analytics.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      {/* Hero Section */}
-      <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - black'>;
-        <div className='absolute inset - 0'>;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (59, 130, 246, 0.1), transparent_50%)]' />;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (34, 197, 94, 0.08), transparent_50%)]' />;
-        </div>;
-        <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-          <div className='mb - 8'>;
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 6'>;
-              <Sparkles className='w - 4 h - 4 mr - 2' />;
-              AI - Powered Search Engine Optimization;
-            </div>;
-          </div>;
-          <h1 className='text - 4xl sm:text - 5xl md:text - 6xl font - black mb - 8 text - white leading - tight'>;
-            AI - Powered SEO Suite;
-          </h1>;
-          <p className='text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed'>;
-            Dominate search rankings with AI - powered SEO tools, comprehensive;
-            analytics, and intelligent optimization;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 20'>;
-            <Button;
-              href='#pricing';
-              size='lg';
-              className='bg - blue - 600 hover:bg - blue - 700 shadow - 2xl shadow - blue - 500 / 25';
-            >;
-              Start Free Trial;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='#demo';
-              variant='outline';
-              size='lg';
-              className='border - white / 20 hover:border - white / 40 hover:bg - white / 5';
-            >;
-              <Play className='w - 5 h - 5 mr - 2' />              Watch Demo      </Head>;
-      {/* Hero Section */}
-      <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - black">;
-        <div className="absolute inset - 0">;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (34, 197, 94, 0.08), transparent_50%)]" />;
-        </div>;
-        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-          <div className="mb - 8">;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 6">;
-              <Sparkles className="w - 4 h - 4 mr - 2" />;
-              AI - Powered Search Engine Optimization;
-            </div>;
-          </div>;
-          <h1 className="text - 4xl sm:text - 5xl md:text - 6xl font - black mb - 8 text - white leading - tight">;
-            AI - Powered SEO Suite;
-          </h1>;
-          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed">;
-            Dominate search rankings with AI - powered SEO tools, comprehensive analytics, and intelligent optimization;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 20">;
-            <Button;
-              href="#pricing";
-              size="lg";
-              className="bg - blue - 600 hover:bg - blue - 700 shadow - 2xl shadow - blue - 500 / 25";
-            >;
-              Start Free Trial;
-              <ArrowRight className="w - 5 h - 5 ml - 2" />;
-            </Button>;
-            <Button;
-              href="#demo";
-              variant="outline";
-              size="lg";
-              className="border - white / 20 hover:border - white / 40 hover:bg - white / 5";
-            >;
-              <Play className="w - 5 h - 5 mr - 2" />;
-              Watch Demo;
-            </Button>;
-          </div>;
-          {/* Stats */}
-          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 max - w-5xl mx - auto'>;
-            <div className='text - center'>;
-              <div className='text - 3xl md:text - 4xl font - bold mb - 3 text - blue - 400'>;
-                +150%;
-              </div>;
-              <div className='text - gray - 400'>Organic Traffic</div>;
-            </div>;
-            <div className='text - center'>;
-              <div className='text - 3xl md:text - 4xl font - bold mb - 3 text - green - 400'>;
-                +45%;
-              </div>;
-              <div className='text - gray - 400'>Search Rankings</div>;
-            </div>;
-            <div className='text - center'>;
-              <div className='text - 3xl md:text - 4xl font - bold mb - 3 text - purple - 400'>;
-                +80%;
-              </div>;
-              <div className='text - gray - 400'>Conversion Rate</div>;
-            </div>;
-            <div className='text - center'>;
-              <div className='text - 3xl md:text - 4xl font - bold mb - 3 text - orange - 400'>;
-                400%;
-              </div>;
-              <div className='text - gray - 400'>ROI</div>            </div>            </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - green - 400">+45%</div>;
-              <div className="text - gray - 400">Search Rankings</div>;
-            </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - purple - 400">+80%</div>;
-              <div className="text - gray - 400">Conversion Rate</div>;
-            </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - orange - 400">400%</div>;
-              <div className="text - gray - 400">ROI</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Features Section */}
       <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
           <div className='text - center mb - 20'>;
@@ -766,17 +383,10 @@ export default function AISeosuitePage() {
               traffic;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            {features && features.map((feature, index) => (;
-              <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
-                  <div
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                  >
                     {feature.icon}
                   </div>;
                 </div>;
@@ -810,9 +420,6 @@ export default function AISeosuitePage() {
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                </p>
-              </Card>
-            ))}
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -862,8 +469,6 @@ export default function AISeosuitePage() {
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-                          {toolName}
-                        </div>;
                         </div>
                       ))}
                     </div>;
@@ -911,10 +516,6 @@ export default function AISeosuitePage() {
                 <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -925,18 +526,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
             </p>
           </div>
-
-
-              </Card>
-
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Use Cases Section */}
-
-      <section className="py-24 bg-black relative overflow-hidden">
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -981,8 +570,6 @@ export default function AISeosuitePage() {
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-                          {benefit}
-                        </div>;
                         </div>
                       ))}
                     </div>;
@@ -1010,9 +597,6 @@ export default function AISeosuitePage() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -1045,18 +629,12 @@ export default function AISeosuitePage() {
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
-                className={`relative group ${plan && plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan && plan.color} hover:border-blue-500/50 transition-all duration-300`}>;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                    <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular;
                     </span>;
                   </div>;
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
                       Most Popular;
                     </span>;
-                  </div>;
-                )}
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -1083,7 +661,6 @@ export default function AISeosuitePage() {
                       {feature}
                     </li>;
                   ))}
-                </ul>
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -1096,7 +673,6 @@ export default function AISeosuitePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-                      {feature}
 
                     </li>
                   ))}
@@ -1112,7 +688,6 @@ export default function AISeosuitePage() {
                 </Button>
               </Card>
             ))}
-
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1159,10 +734,6 @@ export default function AISeosuitePage() {
 
               </Card>
 
-            ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1188,13 +759,6 @@ export default function AISeosuitePage() {
               href='#demo'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
-            Join thousands of businesses who are already ranking higher and driving more organic traffic.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">;
             <Button
               href="/contact"
               variant="secondary"
@@ -1216,13 +780,5 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-              Watch Demo;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-}
-
-}
   );
 }

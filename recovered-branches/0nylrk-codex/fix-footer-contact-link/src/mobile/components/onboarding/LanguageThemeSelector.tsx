@@ -1,7 +1,4 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme",
 interface Language {
 
   code: string
@@ -10,7 +7,6 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
-export function LanguageThemeSelector() {
 
   return (
     <div className="space-y-8 px-4">
@@ -26,7 +22,6 @@ export function LanguageThemeSelector() {
                   ? "border-primary bg-primary/5"
                   : "border-border hover:border-primary/40"
               }`}
-
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -45,6 +40,17 @@ export function LanguageThemeSelector() {
               theme === 'light'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
+;
+      <div className="space-y-2">;
+        <h2 className="text-xl font-medium">Choose theme</h2>;
+        <p className="text-muted-foreground">Select your preferred appearance</p>;
+        ;
+        <div className="flex gap-3 mt-4">;
+          <Card ;
+            className={`flex-1 cursor-pointer transition-all ${;
+              theme === 'light' ;
+                ? "border-primary bg-primary/5" ;
+                :"border-border hover:border-primary/40";
             }`}
             onClick={() => setTheme('light')}
           >;
@@ -54,13 +60,36 @@ export function LanguageThemeSelector() {
               {theme === 'light' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-          <Card
 
+            </CardContent>;
+          </Card>;
+
+
+            </CardContent>;
+          </Card>;
+
+          <Card 
+
+            }`}
+            onClick={() => setTheme('light')}
+          >;
+            <CardContent className="p-3 flex flex-col items-center justify-center">;
+              <Sun className="h-8 w-8 mb-2" />;
+              <span>Light</span>;
+              {theme === 'light' && (;
+                <Check className="h-4 w-4 text-primary mt-2" />;
+              )}
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
+          ;
+          <Card ;
+            className={`flex-1 cursor-pointer transition-all ${;
+              theme === 'dark' ;
+                ? "border-primary bg-primary/5" ;
+                :"border-border hover:border-primary/40";
             }`}
             onClick={() => setTheme('dark')}
           >;
@@ -70,12 +99,6 @@ export function LanguageThemeSelector() {
               {theme === 'dark' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -90,6 +113,3 @@ interface Language {
           </Card>;
         </div>;
       </div>;
-}
-    </div>);
-}

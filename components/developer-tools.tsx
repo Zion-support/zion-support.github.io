@@ -39,17 +39,6 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
-  Cpu,;
-  Globe,;} from 'lucide-react';import { ;
-  Code;
-  GitBranch
-  Database
-  Cloud
-  Shield
-  Zap
-
-
-
   Code;
   GitBranch,
   Database,
@@ -78,14 +67,6 @@ export default function DeveloperToolsPage() {
       gradient: 'from - black to - gray - 500',
       popular: false,
       ];
-      pricing: '$25 / month',
-      market_price: '$25 - 100 / month',
-      website: 'https://snyk.io / pricing',
-      color: 'bg - gradient - to - br from - red - 500 to - pink - 600',
-      text_color: 'text - red - 400',
-      gradient: 'from - red - 400 to - pink - 500',
-      popular: false,
-      ];
       pricing: '$12 / month',
       market_price: '$12 - 99 / month',
       website: 'https://www.postman.com / pricing',
@@ -93,92 +74,6 @@ export default function DeveloperToolsPage() {
       text_color: 'text - orange - 400',
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
-      description: 'Write and manage code with AI assistance'
-    }
-    {
-      phase: 'Testing'
-      tools: ['Jest', 'Cypress', 'Postman']
-      description: 'Test code quality and API functionality'
-    }
-    {
-      phase: 'Security'
-      tools: ['Snyk', 'GitHub Advanced Security']
-      description: 'Scan for vulnerabilities and security issues'
-    }
-    {
-      phase: 'Deployment'
-      tools: ['Vercel', 'GitHub Actions', 'Docker']
-      description: 'Deploy and host applications'
-    },  ];    {
-      phase: 'Testing'
-      tools: ['JestCypressPostman']
-      description: 'Test code quality and API functionality'
-    }
-    {
-      phase: 'Security'
-      tools: ['SnykGitHub Advanced Security']
-      description: 'Scan for vulnerabilities and security issues'
-    }
-    {
-      phase: 'Deployment'
-      tools: ['VercelGitHub ActionsDocker']
-      description: 'Deploy and host applications'
-
-    {;
-      title: 'Dev Tools Market',;
-      value: '$8 && 8.2B',;
-      growth: '+24% YoY',;
-      description: 'Global developer tools market size',;
-    },    {;
-      title: 'AI Code Tools',;
-      value: '$2 && 2.1B',;
-      growth: '+45% YoY',;
-      description: 'AI-powered development tools market',;
-    },    {;
-      title: 'Cloud Dev Tools',;
-      value: '$4 && 4.8B',;
-      growth: '+32% YoY',;
-      description: 'Cloud-based development platforms',;
-    },    {;
-      title: 'Dev Productivity',;
-      value: '35%',;
-      growth: '+18% YoY',;
-      description: 'Average productivity improvement',;
-    },  ];      description: 'Global developer tools market size';
-    };
-    {;
-      title: 'AI Code Tools',;
-      value: '$2 && 2.1B',;
-      growth: '+45% YoY',;
-      description: 'AI-powered development tools market',;
-    },      description: 'AI-powered development tools market';
-    };
-    {;
-      title: 'Cloud Dev Tools',;
-      value: '$4 && 4.8B',;
-      growth: '+32% YoY',;
-      description: 'Cloud-based development platforms',;
-    },      description: 'Cloud-based development platforms';
-    };
-    {;
-      title: 'Dev Productivity',;
-      value: '35%',;
-      growth: '+18% YoY',;
-      description: 'Average productivity improvement',;
-    },      description: 'Average productivity improvement';
-    }
-  ];
-
-    }
-  ];
-;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
-          Pricing;
-        </title>;
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -221,9 +116,6 @@ export default function DeveloperToolsPage() {
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-
-      {/* Developer Tools Grid */}
-
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -270,10 +162,6 @@ export default function DeveloperToolsPage() {
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-                        {tool.title}
-                      </h3>;
-                      <span className="text - xs bg - gray - 800 text - gray - 300 px - 2 py - 1 rounded - full">;
-                        {tool.category}
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -302,8 +190,6 @@ export default function DeveloperToolsPage() {
                   </div>;
                 </div>;
               </Card>;
-      {/* Developer Workflow */}
-
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -313,19 +199,6 @@ export default function DeveloperToolsPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
-              Build a complete development pipeline with these essential tools;
-              that work together seamlessly.;
-            </p>;
-          </div>;
-
-                  </h3>;
-                  <p className='text-gray-400 mb-4'>{phase && phase.description}</p>;
-                  <div className='space-y-1'>;
-                    {phase && phase.tools.map((tool, toolIndex) => (;
-                      <div
-                        key={toolIndex}
-                        className='text-sm text-cursor-blue font-medium'
-                      >                        {tool}              Complete Developer Workflow
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Build a complete development pipeline with these essential tools that work together seamlessly.
@@ -339,17 +212,11 @@ export default function DeveloperToolsPage() {
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
           </div>;
-          </div>
-        </div>
-      </section>
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-      {/* Tool Categories */}
-
-
 
               Developer Tool Categories
             </h2>
@@ -408,5 +275,3 @@ export default function DeveloperToolsPage() {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
-
-            <Button

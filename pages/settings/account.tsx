@@ -1,35 +1,7 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useMemo, useState } from 'react';
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-export default function AccountSettingsPage(req, res) {
-  try {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -166,8 +138,6 @@ if (return) {
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }
-  };
-
   const doBackup = async () => {;
     setStatus(null);
     try {;
@@ -258,7 +228,6 @@ if (return) {
               value={restoreCid}
   }
 }
-      setStatus('Profile restored from backup');
               Restore profile;
             </button>;
           </div>;
@@ -309,7 +278,6 @@ if (return) {
           <p className="text-sm text-gray-500 mb-3">Back up talent profiles, resume, and project reviews to IPFS/Arweave (via Web3.Storage). Opt-in only.</p>
           <div className="flex flex-wrap items-center gap-3">
             <button onClick={doBackup} className="rounded-md bg-emerald-600 text-white px-4 py-2">Create Backup</button>
-
             {backupCid && <span className="text-xs">CID: <code className="bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded">{backupCid}</code></span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -326,10 +294,11 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-

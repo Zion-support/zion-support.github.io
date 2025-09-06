@@ -23,8 +23,6 @@ async function optimizeImages() {
   const imageFiles = files && files.filter(file => 
     /.(jpg|jpeg|png|webp)$/i && i.test(file)
   ;);
-      console.log(`Optimized: ${file}`);} catch (error) {
-      console.log(`Optimized: ${file}`);} catch (error) {
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   for (const file of imageFiles) {

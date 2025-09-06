@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface EnterpriseITProps {
   // Add props here as needed
-}
 export default function EnterpriseIT({ }: EnterpriseITProps) {
   return (
     <div>
@@ -32,12 +31,6 @@ export default function EnterpriseIT({ }: EnterpriseITProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-
-
-:src.pages.disabled/EnterpriseIT.jsx
-}
 }
 }
 }

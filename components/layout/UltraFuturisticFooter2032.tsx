@@ -75,7 +75,6 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
-
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
@@ -719,9 +718,6 @@ const itemVariants = {;
 
 export default function UltraFuturisticFooter2032() {;
   return (
-  };
-};
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
@@ -739,14 +735,6 @@ export default function UltraFuturisticFooter2032() {
                   </p>;
                 </div>;
               </div>;
-
-              <p className='text-slate-300 mb-6 leading-relaxed'>;
-                Leading the future of technology with revolutionary AI, quantum;
-                computing, space technology, and autonomous systems. Empowering;
-                businesses with cutting-edge solutions for tomorrow's;
-                challenges.;
-              </p>;
-
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
@@ -795,32 +783,10 @@ const itemVariants = {
                     </h4>
                     <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
                         <li key={serviceIndex}>
-                          <Link
-                            href={service && service.href}
-                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
-              </h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {serviceCategories && serviceCategories.map((category, index) => (;
-                  <div key={index} className="space-y-4">;
-                    <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
-                    <ul className="space-y-2">;
-                      {category && category.services.map((service, serviceIndex) => (;
-                        <li key={serviceIndex}>;
-                          <Link
-                            href={service && service.href}
-                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
-                            {service && service.name}
-                          </Link>;
-                        </li>;
                       ))}
                     </ul>;
                   </div>;
                 ))}
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                Quick Access
-              </h3>
               {/* Quick Links */}
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -844,16 +810,6 @@ const itemVariants = {
                         <span>{link && link.name}</span>;
                       </Link>;
                     </li>;
-              {/* Company Info */}
-              <div className='mb-8'>
-                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
-                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
-
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -864,8 +820,6 @@ const itemVariants = {
                       </Link>
                     </li>
                   ))}
-                </ul>
-              </div>
               {/* Company Info */}
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>;
@@ -912,28 +866,6 @@ const itemVariants = {
               </div>
             </motion.div>
           </div>
-                  ))}
-
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-          {/* Newsletter Signup */}
-
-                Stay Ahead with Future Technology
-              </h3>
-              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
-                Get the latest insights on AI breakthroughs, quantum computing
-                advances, space technology innovations, and autonomous systems
-                development. Join our community of future technology pioneers.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
-                <input
-                  type='email'
-                  placeholder='Enter your email address'
-                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
-                />
-                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
@@ -951,10 +883,6 @@ const itemVariants = {
                   type="email"
                   placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                  Subscribe;
-                </button>;
-              </div>;
-            </div>;
                 <Link
                   href='/privacy'
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
@@ -967,26 +895,6 @@ const itemVariants = {
                 </Link>;
                 <Link
                   href='/cookies'
-                  Cookie Policy;
-                </Link>;
-              </div>;
-            </div>;
-
-      {/* Floating Action Button */}
-      <div className='fixed bottom-8 right-8 z-50'>;
-        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
-          className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white'
-          onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion && motion.button>;
-      </div>;
-    </footer>;
-  );
-}        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;

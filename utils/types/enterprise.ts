@@ -11,12 +11,15 @@ export interface CompanyMember {id: string;
   email: string;
   name: string;
   role: EnterpriseRole;
+
 }
-export interface CompanyActivityEvent {id: string;
+;
+export interface CompanyActivityEvent {;
+  id: string;
   timestampIso: string;
   actorEmail: string;
   action: string;
-  meta?: Record<string unknown>;
+
 }
 export interface InvoiceRecord {id: string;
   companyId: string;
@@ -25,21 +28,6 @@ export interface InvoiceRecord {id: string;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-export interface CompanyRecord {id: string;
-  name: string;
-  slug: string, // e.g. acme;
-  logoUrl?: string;
-  brandColor?: string;
-  plan: CompanyPlan;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

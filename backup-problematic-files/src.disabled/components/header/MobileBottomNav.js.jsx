@@ -9,4 +9,3 @@ const MobileBottomNav.js = ({ className }) => {
   );
 };
 
-export default MobileBottomNav.js;

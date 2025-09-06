@@ -2,21 +2,9 @@ import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-  talentSlug: string;
-  talentName: string;
-  averageRating: number;
-  totalReviews: number;
 };
 
 type Props = { items: TalentItem[] };
-
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
-type Props = { items: TalentItem[] },
-const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">;
       <h1 className="text-2xl font-semibold">Top Talents  Auto Generated</h1>;
@@ -38,7 +26,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
       </div>;
     </main>;
   );
-}
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(
     process.cwd()
@@ -57,9 +44,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
-    items = data.items |[];
-};
-
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
     process && process.cwd(),;
@@ -77,7 +61,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { items } }
 }
 export default TopTalentsPage;
-
 import type { NextPage, GetServerSideProps } from './next';
 import fs from './fs';
 import path from './path';
@@ -138,4 +121,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 };
 export default TopTalentsPage;
-;

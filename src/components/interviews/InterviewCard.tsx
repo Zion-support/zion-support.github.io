@@ -12,8 +12,6 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'impor
 import { InterviewResponseForm  } from './InterviewResponseForm';
 interface InterviewCardProps {
   interview: Interview,
-  on_refresh: () => Promise < void>;
-}
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -30,9 +28,3 @@ interface InterviewCardProps {
   interview: Interview
 
   onRefresh: () => Promise<void>
-      default:;
-        return <Badge>{interview.status}</Badge>;
-}
-  );
-
-

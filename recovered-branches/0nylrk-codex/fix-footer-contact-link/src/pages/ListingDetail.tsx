@@ -12,9 +12,6 @@ import {PaymentButton} from "@/components/transactions/PaymentButton";
 import {AppLayout} from "@/layout/AppLayout";
 import {ProfileContact} from "@/components/profile/ProfileContact";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-
-export default function ListingDetail() {;
-  // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -32,10 +29,6 @@ import { toast } from "@/hooks/use-toast",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { AppLayout } from "@/layout/AppLayout",
 import { ProfileContact } from "@/components/profile/ProfileContact",
-
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
-  if (!listing) {
-    return (
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
           <div className="container mx-auto">;
@@ -49,24 +42,27 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
           </div>;
         </div>;
       </AppLayout>;
+  return (
+    ),;
+  }
+;
+  const handleContact = () => {;
+    setIsContactDialogOpen(true),;
+  },;
+;
+  return (;
     );
   }
-  const handleContact = () => {
-    setIsContactDialogOpen(true)
-  }
-  return (
+;
+  const handleContact = () => {;
+    setIsContactDialogOpen(true);
+  },;
+  return (;
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
-            <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (
-                    <img
-                      src={listing.images[selectedImageIndex]}
-                      alt={listing.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
@@ -74,14 +70,26 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                       }}
                     />;
                   ) : (;
+                  {listing.images && listing.images.length > 0 ? (;
+                    <img ;
+            <div className="lg:col-span-2">;
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
+                <div className="aspect-[16/9] w-full relative">;
+                  {listing.images && listing.images.length > 0 ? (;
+                    <img;
+                      src={listing.images[selectedImageIndex]} ;
+                      alt={listing.title} ;
+                      className="w-full h-full object-cover";
+                      onError={(e) => {;
+                        const target = e.target as HTMLImageElement,;
+                        target.src = "/placeholder.svg";
+                      }}
+                    />;
+                  ) : (;
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">;
                       <span className="text-zion-slate-light">No image available</span>;
                     </div>;
                   )}
-                </div>
-                {listing.images && listing.images.length > 1 && (
-                  <div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -89,10 +97,6 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
-                      >
-                        <img
-                          src={image}
-                          alt={`${listing.title} - image ${index + 1}`}
                           className="w-full h-full object-cover"
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
@@ -136,12 +140,41 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                   </div>
                 </div>
               </div>;
-
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
-
+                ;
+                {listing.images && listing.images.length > 1 && (;
+                  <div className="flex p-4 gap-2 overflow-x-auto">;
+                    {listing.images.map((image, index) => (;
+                      <div ;
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={cn(;
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",;
+                          index === selectedImageIndex ? "border-zion-purple" :"border-transparent";
+                        )}
+                      >;
+                        <img ;
+                          src={image} ;
+                          alt={`${listing.title} - image ${index + 1}`} ;
+                          className="w-full h-full object-cover";
+                          onError={(e) => {;
+                            const target = e.target as HTMLImageElement,;
+                            target.src = "/placeholder.svg",;
+                          }}
+                        />;
+                      </div>;                    ))}
+                  </div>;
+                )}
+              </div>;
+;
+              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>;
+                ;
                 {/* Features */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -166,6 +199,33 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                     </div>;
                   </div>;
                 </div>;
+                ;
+                {/* Tags */}
+                <div className="mt-8">;
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {listing.tags.map((tag, i) => (;
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
+                        {tag}
+                      </Badge>;                    ))}
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+            ;
+            {/* Right Column - Details */}
+            <div className="lg:col-span-1">;
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
+                <div className="mb-2">;
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
+                    {listing.category}
+                  </Badge>;
+                  {listing.featured && (;
+                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">;
+                      Featured;
+                    </Badge>;
+                  )}
+                </div>;
 
                 {/* Tags */}
                 <div className="mt-8">;
@@ -188,8 +248,6 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                       Featured;
                     </Badge>;
                   )}
-
-
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
@@ -254,7 +312,6 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>;
                   )}
-
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />;
@@ -335,15 +392,10 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>;
                       </div>;
                     )}
-
-                    <div>;
-                      <p className="font-medium text-white">{listing && listing.author.name}</p>;
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>;
                     </div>;
                   </div>;
                 </div>;
-
-                {/* Additional Info */}
                   </div>;
                 </div>;
               </div>;
@@ -351,21 +403,7 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
           </div>;
         </div>;
       </div>;
-
-}
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
-        <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
-          <DialogHeader>;
-            <DialogTitle className="text - xl font - bold text - white">Contact Publisher</DialogTitle>;
-          </DialogHeader>;
-          <ProfileContact;
-            email={listing.author.email} // TypeScript now knows this might be undefined;
-            profile_name={listing.author.name}
-            profile_type="service";
           />;
         </DialogContent>;
       </Dialog>;
     </AppLayout>;
-  );
-}

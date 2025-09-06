@@ -23,6 +23,3 @@ export const supabase = {
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-
-  });
-};

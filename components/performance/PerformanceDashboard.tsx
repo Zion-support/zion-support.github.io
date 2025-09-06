@@ -1,4 +1,3 @@
-
   loadTime: number;
 import React, { useState, useEffect } from './react';
 ;

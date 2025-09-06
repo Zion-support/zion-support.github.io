@@ -17,7 +17,6 @@ export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
 
     brand_name: ""
     subdomain: ""
@@ -116,7 +115,6 @@ export default function TenantOnboarding() {
 
 
   return (
-    <>
       <SEO 
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
@@ -413,4 +411,3 @@ function TenantOnboarding() {
   );
 }
 ;
-

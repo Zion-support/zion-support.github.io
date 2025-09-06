@@ -9,4 +9,3 @@ const Affiliate-attribution-hub = ({ className }) => {
   );
 };
 
-export default Affiliate-attribution-hub;

@@ -208,7 +208,17 @@ className="space-y-20"
                   </h3>;
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
-
+:components/2025-comprehensive-services-showcase-v2.tsx
+                  </p>;
+                </div>;
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                  {category.services.map((service) => (;
+                    <motion.div;
+                      key={service.id}
+                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
+                      whileHover={{ y: -5 }}
+                    >;
+                      <h4 className="text-xl font-semibold text-white mb-3">;
                   </p>
                 </div>
                 
@@ -225,7 +235,6 @@ key={service.id}
                       <p className="text-gray-300 mb-4">;
                         {service.description}
                       </p>;
-
                       ;
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
@@ -235,7 +244,27 @@ key={service.id}
                         <div className="flex items-center text-sm text-green-400">;
                           <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
-
+:components/2025-comprehensive-services-showcase-v2.tsx
+                        </div>;
+                      </div>;
+                      <div className="mb-6">;
+                        <div className="text-2xl font-bold text-white mb-2">;
+                          Starting at {(service as any).pricing?.starter |service.price}
+                        </div>;
+                        <div className="text-sm text-gray-400">;
+                          {(service as any).pricing?.professional ?;
+                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
+                            `${service.price} ${service.period}`;
+                          }
+                        </div>;
+                      </div>;
+                      <a;
+                        href={`/services/${service.slug}`}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200";
+                      >;
+                        Learn More <ArrowRight className="w-4 h-4 ml-2" />;
+                      </a>;
+                    </motion.div>;
                         </div>
                       </div>
                       
@@ -262,58 +291,6 @@ href={_`/services/${service.slug}`}
                 </div>;
               </motion.div>;
             ))}
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  },
-  return (_<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO,
-title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
-        keywords={_["micro SAAS", _"IT infrastructure", _"AI services", _"industry solutions", _"emerging technology", _"Zion Tech Group"]}
-      />
-      
-      {_/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1,
-className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-            initial={_{ opacity: 0, y: 30}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8}}
-          >
-            2025 V2 Comprehensive
-            <br />
-            Services Showcase
-          </motion.h1>
-          <motion.p,
-className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={_{ opacity: 0, y: 20}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.2}}
-          >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
-          </motion.p>
-          <motion.div,
-className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, y: 20}}
-            animate={_{ opacity: 1, y: 0}}
-            transition={_{ duration: 0.8, delay: 0.4}}
-          >
-            <a,
-href="#services" 
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Explore Services
-            </a>
-            <a,
-href="#contact" 
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              Get Started
-            </a>
           </motion.div>
         </div>
       </section>

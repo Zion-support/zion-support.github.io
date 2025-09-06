@@ -1,7 +1,3 @@
-import React from 'react';
-interface AiemailresponderProps {
-  // Add props here as needed
-}
 export default function Aiemailresponder({ }: AiemailresponderProps) {
 
 class ErrorBoundary extends React.Component {

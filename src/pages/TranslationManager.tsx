@@ -1,11 +1,4 @@
 
-
-}
-;
-    let source_text = '';
-    for (const lang of supported_languages.map (l => l.code)) {
-}
-}
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -19,8 +12,6 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-
-}
 
 }
 

@@ -16,8 +16,6 @@ serve(async (req) => {
   }
   try {
     // Call the database function to schedule retention emails
-    const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
-      "schedule_retention_emails"
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
@@ -91,7 +89,6 @@ if ( {) {
               .from("scheduled_jobs")
               .update({
                 status: "failed"})
-              .eq("id", job && job.id)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
@@ -111,19 +108,16 @@ if ( {) {
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
-    console.error("Error in process-retention-emails function:", error);
     return new Response(
       JSON.stringify({
         error: "Internal server error"
         details: error.message
-      });
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   }
 });
-
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
@@ -143,57 +137,3 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            const error_text = await reminder_response.text ();
-            console.error (`Failed to process job ${job.id}: ${error_text}`);
-;
-            // Update job status to failed;
-            await supabase;
-              .from ("scheduled_jobs");
-              .update ({
-                status: "failed"});
-              .eq ("id", job.id);
-          } else {
-            processed_jobs.push (job.id);
-          }
-        } catch (error) {
-          console.error (`Error processing job ${job.id}:`, error);
-;
-          // Update job status to failed;
-          await supabase;
-            .from ("scheduled_jobs");
-            .update ({
-              status: "failed"});
-            .eq ("id", job.id);
-        }
-      }
-    }
-    return new Response (
-      JSON.stringify ({
-        message: "Retention emails processed successfully";
-        emails_scheduled: scheduled_count;
-        emails_processed: processed_jobs.length,
-        job_ids: processed_jobs});
-      {
-        status: 200,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  } catch (error) {
-    console.error ("Error in process - retention - emails function:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        error: "Internal server error",
-        details: error.message;
-      });
-      {
-        status: 500,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  }
-});
-;

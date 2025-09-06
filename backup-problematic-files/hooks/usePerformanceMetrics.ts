@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
 import { useEffect, useState } from 'react';
 import { PerformanceMetrics } from '../types';
 export function usePerformanceMetrics() {
@@ -31,7 +27,6 @@ export function usePerformanceMetrics() {
       const fid = performance.getEntriesByType(
         'first-input'
       )[0] as PerformanceEventTiming;
-export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {

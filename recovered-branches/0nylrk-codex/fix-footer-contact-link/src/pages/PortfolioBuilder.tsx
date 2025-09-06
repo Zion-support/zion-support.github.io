@@ -23,7 +23,6 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
-function PortfolioBuilderContent() {
   return (
     <>
       <SEO
@@ -60,8 +59,6 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
-
-;
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';

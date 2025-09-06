@@ -42,6 +42,10 @@ class ComprehensiveAutomationRunner {
       return { success: false, error: error.message };
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+=======
 =======
 console.log('🚀 Starting Comprehensive Automation Runner...');
 
@@ -80,6 +84,12 @@ class ComprehensiveAutomationRunner {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     }
   }
 
@@ -87,6 +97,10 @@ class ComprehensiveAutomationRunner {
 <<<<<<< HEAD
 this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
     this.log('🎯 Starting Comprehensive Automation Runner');
@@ -212,3 +226,9 @@ runner.runAllAutomations().catch(console.error);
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -1,29 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { motion } from 'framer-motion';
   Star
   Zap
   Shield
@@ -34,10 +8,6 @@ import { motion } from 'framer-motion';
   Users
   Clock
   DollarSign;
-} from 'lucide-react';
-
-interface QuantumHolographicCardProps {
-  service: {
 import {;
   Star,;
   Zap,;
@@ -169,8 +139,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       }
     })
   };
-
-
         {/* Header */}
         <div className='relative z-10'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -207,14 +175,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
               </motion && motion.div>;
-                <span>Popular</span>
-
               </motion.div>
             )}
           </div>
 
           {/* Price and trial */}
-          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
@@ -231,7 +196,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 {service.rating}/5.0
               </div>            </div>
           </div>
-
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -269,7 +233,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
               <TrendingUp className="w-4 h-4 text-green-400" />
             </div>
-          </div>
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -348,9 +311,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </div>
             </div>
           </div>
-            </div>;
-          </div>;
-
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
@@ -432,8 +392,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           </div>;
 
 
-          {/* CTA Button */}
-
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -449,8 +407,4 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
-export default QuantumHolographicCard;  )
-}
-export default QuantumHolographicCard;
-
 export default QuantumHolographicCard;

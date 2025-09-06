@@ -71,7 +71,6 @@ class DeploymentAutomation {;
       { "name": 'TypeScript', "command": 'npx tsc --noEmit' }
       { "name": 'Linting', "command": "npm run lint" }
     ];
-    ...`);"
         execSync(check.command, { "stdio": 'pipe' });
         this.deploymentSteps.push(" ${check.name} check passed")} catch (error) {"
         console.log(`   ${check.name} check "failed": `, error.message);"
@@ -260,7 +259,6 @@ Make sure to set the following environment variable
       { "name": 'Home page', "url": '/' }
       { "name": 'Services page', "url": "/services" }
     ];
-    ...`);
         // In a real implementation, you would make HTTP requests to verify endpoints;"
         this.deploymentSteps.push(" ${verification.name} verified")} catch (error) {"
         console.log(`   ${verification.name} verification failed`);"

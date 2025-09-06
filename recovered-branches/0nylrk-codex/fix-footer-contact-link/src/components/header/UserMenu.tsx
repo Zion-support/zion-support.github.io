@@ -21,7 +21,6 @@ import {
       </div>;
     );
   }
-  return (
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>

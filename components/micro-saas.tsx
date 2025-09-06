@@ -1,12 +1,3 @@
-
-SEO automation, chatbots, business intelligence, email marketing, social media management;
-customer feedback, billing, project management, API infrastructure, e - commerce analytics, legal document generation;
-HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
-market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards;
-meeting transcription, invoice automation, churn prediction, lead scoring, real - time analytics, content optimization;
-predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization;
-email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
-product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection;
 import Head from 'next/head';
 inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text - green - 400" > <Check className="w - 4 h - 4 mr - 2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap - 6 justify - center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700 shadow - 2xl" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green - 500 hover:text - white" > View All 75 Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
@@ -1333,10 +1324,6 @@ export default function MicroSaasPage() {;
                 href="/contact"
                 variant="secondary"
                 size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
-                Contact Sales;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Button>;
               <Button
                 href="/pricing"
                 variant="outline"
@@ -1356,15 +1343,6 @@ export default function MicroSaasPage() {;
             {competitiveAdvantages.map((advantage, index) => (
               <Card
                 key={index}
-                className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300">;
-                <h3 className="text-xl font-bold text-white mb-4">{advantage && advantage.advantage}</h3>;
-                <p className="text-gray-400 mb-6">{advantage && advantage.description}</p>;
-                <div className="space-y-2">;
-                  {advantage && advantage.examples.map((example, exampleIndex) => (;
-                    <div key={exampleIndex} className="flex items-center text-gray-300">;
-                      <Check className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />;
-                      <span className="text-sm">{example}</span>;
-                    </div>;
                   ))}
                 </div>;
               </Card>;
@@ -1387,27 +1365,6 @@ export default function MicroSaasPage() {;
                 <div className="flex items - start space - x-6 mb - 8">;
                   <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 4xl bg - gradient - to - br ${service.color}`}>;
                     {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold text-white mb-4">{service.title}</h3>
-                    <p className="text-xl text-gray-300 mb-4">{service.description}</p>
-                    <p className="text-gray-400 leading-relaxed">{service.longDescription}</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Features */}
-                  <div>;
-                    <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
-                      <Zap className="w-5 h-5 mr-2 text-blue-400" />;
-                      Key Features;
-                    </h4>;
-                    <ul className="space-y-3">;
-                      {service && service.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-start text-gray-300">;
-                          <Check className="w-4 h-4 text-blue-400 mr-3 mt-0 && 0.5 flex-shrink-0" />;
-                          <span className="text-sm">{feature}</span>;
-                        </li>;
-                      ))}
 
                     </ul>;
                   </div>;
@@ -1527,8 +1484,3 @@ export default function MicroSaasPage() {;
           </div>;
         </div>;
       </section>;
-}
-  );
-}
-    </>);
-}

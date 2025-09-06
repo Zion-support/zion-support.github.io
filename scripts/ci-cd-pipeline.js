@@ -246,7 +246,6 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
           "skip": this.pipelineLog.environment !== 'production'}
       ];
       // Execute each pipeline stage;
-      
       // Generate pipeline summary;
       this.generateSummary();
       // Save pipeline log;

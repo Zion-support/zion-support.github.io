@@ -75,7 +75,6 @@ interface InterviewRequestFormProps {;
   onClose: () => void;
   userDetails?: UserProfile
 
-
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -276,29 +275,6 @@ const formSchema = z.object({
       setIsSubmitting (false);
     }
   }
-    '09:00'
-    '09:30'
-    '10:00'
-    '10:30'
-    '11:00'
-    '11:30'
-    '12:00'
-    '12:30'
-    '13:00'
-    '13:30'
-    '14:00'
-    '14:30'
-    '15:00'
-    '15:30'
-    '16:00'
-    '16:30'
-    '17:00'
-    '17:30'
-    '18:00'
-    '18:30'
-    '19:00'
-    '19:30'
-    '20:00'
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-5'>;
@@ -309,6 +285,7 @@ const formSchema = z.object({
               alt={talent.full_name}
               className='h - full w - full object - cover';
 
+  ]
 
     '09:00',
     '09:30',
@@ -346,16 +323,12 @@ const formSchema = z.object({
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
-              alt={talent.full_name}
-              className='h-full w-full object-cover'
-              loading='lazy'            />
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
             />
           </div>
-          <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
@@ -382,13 +355,9 @@ const formSchema = z.object({
         </div>;
         <FormField;
           control={form.control}
-          name='title';
-          render={({
-            field
-          }: {
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder='Brief title for the interview' {...field} />
+                <Input placeholder="Brief title for the interview" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -420,7 +389,7 @@ const formSchema = z.object({
                         )}
                       >
                         {field.value ? (
-                          format(field.value, 'PPP')
+                          format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
                         )}
@@ -430,8 +399,6 @@ const formSchema = z.object({
                   </PopoverTrigger>;
                   <PopoverContent className='w-auto p-0' align='start'>;
                     <Calendar
-                      selected={field.value}
-                      onSelect={field.onChange}
                     />
                   </PopoverContent>
                 </Popover>
@@ -441,10 +408,6 @@ const formSchema = z.object({
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select time' />;
@@ -490,7 +453,11 @@ const formSchema = z.object({
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
-
+                  <SelectContent className='max-h-[300px]'>
+                    {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
+                        {time}
+                  <SelectContent className='max-h-[300px]'>
+                    {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
@@ -522,7 +489,6 @@ const formSchema = z.object({
                 'duration'
               >
             }) => (              <FormItem>
-                <FormLabel>Duration</FormLabel>
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
@@ -549,10 +515,6 @@ const formSchema = z.object({
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-              </FormItem>;
-            )}
-          />
-          <FormField
             control={form && form.control}
             name='platform'
               </FormItem>)}
@@ -560,10 +522,13 @@ const formSchema = z.object({
           <FormField;
             control={form.control}
             name='platform';
+          />
+          <FormField
+            control={form.control}
+            name='platform'
             render={({
               field
             }: {
-                <FormLabel>Platform</FormLabel>
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
@@ -590,12 +555,6 @@ const formSchema = z.object({
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-              </FormItem>;
-            )}
-          />
-        </div>
-        {form.watch('platform') !== 'in-app' && (
-          <FormField
             control={form && form.control}
             name='meetingLink'
               </FormItem>)}
@@ -605,6 +564,20 @@ const formSchema = z.object({
           <FormField;
             control={form.control}
             name='meeting_link';
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+          <FormField
+            control={form.control}
+            name='meetingLink'
+            render={({
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'meetingLink'
+              >
+            }) => (              <FormItem>
             render={({
               field
             }: {
@@ -680,12 +653,18 @@ const formSchema = z.object({
             </FormItem>;
           )}
         />
-        <div className='flex justify-end gap-4 pt-4'>
-          <Button variant='outline' onClick={onClose} type='button'>
-            Cancel
           </Button>
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
+        <div className='flex justify-end gap-4 pt-4'>
+          <Button variant='outline' onClick={onClose} type='button'>
+
+        <div className="flex justify-end gap-4 pt-4">
+          <Button variant="outline" onClick={onClose} type="button">
+            Cancel
+          </Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
       </form>

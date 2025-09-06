@@ -1,5 +1,3 @@
-
-
 export interface AdvancedCybersecurityService2027 { id: string, title: string, description: string, category: string, subcategory: string, pricing: {
        monthly: number, yearly: number, custom: string, currency: string,
     pricingModel: string
@@ -8,8 +6,6 @@ export interface AdvancedCybersecurityService2027 { id: string, title: string, d
        threatDetection: string, encryption: string, compliance: string[], monitoring: string, response: string
     },
     roi: string, estimatedDelivery: string, contactInfo: { phone: string, email: string, website: string,
-
-
 export interface AdvancedCybersecurityService2027 { id: string, title: string, description: string, category: string, subcategory: string, pricing: {
        monthly: number, yearly: number, custom: string, currency: string,
     pricingModel: string

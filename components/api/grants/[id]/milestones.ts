@@ -40,6 +40,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
-
-}
-  res.status(405).end('Method Not Allowed');

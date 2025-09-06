@@ -11,26 +11,15 @@ interface SortDropdownProps {
   sortOption: string
   setSortOption: (option: string,) => void
 }
-
-import {
-  DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-
 
   sortOption: string
 
   setSortOption: (option: string) => void
 }
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-interface SortDropdownProps {;
-  sortOption: string,;
-  setSortOption: (option: string) => void;
-}
-
-export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
-  return (
         >
           <div className='flex items-center gap-2'>
             <SortDesc className='h-4 w-4 text-zion-purple' />
@@ -51,11 +40,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
         align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
-          <DropdownMenuItem
-            key={option.value}
-            onClick={() => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-        {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
@@ -95,20 +79,12 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
         </Button>;
       </DropdownMenuTrigger>;
-
-
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
             }`}
           >;
             {option && option.label}
           </DropdownMenuItem>;
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
-  );
-}
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;

@@ -11,8 +11,6 @@ export type DisputeReason =;
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
-
-  | 'Other',;
 export type DisputeAttachment = {
   id: string;
   fileName: string;
@@ -60,4 +58,3 @@ export type UserSummary = {
   id: string;
   name: string;
   role: 'admin' | 'client' | 'talent';
-}

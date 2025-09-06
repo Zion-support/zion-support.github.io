@@ -11,8 +11,6 @@ export default function TestMinimal(req, res) {
       <p>If you can see this page, Next.js is working correctly.</p>;
     </div>;
   );
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -7,46 +7,6 @@ type ChatMessage = {
 }
 function generateSessionId(): string {
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
- useEffect ( () => {;
-  if (!isOpen && messages && messages.length === 0) {;
-  //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { X } from 'lucide-react';
-type ChatMessage = {;
-  role: 'user' | 'assistant' | 'system',;
-  content: string,;
-  timestamp?: number;
-};
-
-function generateSessionId(): any (): string {;
-  if (typeof window === 'undefined') return '';
-  const existing = window && window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
-  window && window.localStorage.setItem('zion_support_session_id', id);
-  return id;
-}
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -55,11 +15,6 @@ function generateSessionId(): any (): string {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-    } catch {}
-  }
-
-
-
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -130,18 +85,12 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-      ]);
-    } finally {;
-      setIsLoading(false);    }
-  }
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -151,15 +100,6 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-    }
-  }
-  return (
-    }
-  }
-
-  return (
-
-
                 <div
                   className={
                     m && m.role === 'assistant'
@@ -171,37 +111,6 @@ function generateSessionId(): any (): string {;
                 </div>
               </div>
             ))}
-            {isLoading && (;
-              <div className='text-sm'>;
-                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>;
-                  Thinking;
-                </div>              </div>              <div className="text-sm">;
-                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking</div>;
-              </div>;
-            )}
-
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
-
-                  >
-
-                    {q}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-                    {q}
-                  </button>;
-                ))}
-              </div>;
-            </div>;
-          )}
-                <input
-                  value={input}
-                  onChange={e => setInput(e && e.target.value)}
-                  onKeyDown={e => {;
-                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
-                      e && e.preventDefault();
                       onSend();
                     }
                   }}
@@ -222,8 +131,6 @@ function generateSessionId(): any (): string {;
                       onSend()
                     }
                   }}
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
-
                 />
                 <button
                   onClick={() => onSend()}
@@ -232,7 +139,3 @@ function generateSessionId(): any (): string {;
           </div>;
         </div>;
       )}
-}
-}
-  );
-}

@@ -1,8 +1,3 @@
-import React from 'react';
-interface IndustryProps {
-  // Add props here as needed
-}
-export default function Industry({ }: IndustryProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

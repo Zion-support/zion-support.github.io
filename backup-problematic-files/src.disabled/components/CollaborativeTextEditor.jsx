@@ -9,4 +9,3 @@ const CollaborativeTextEditor = ({ className }) => {
   );
 };
 
-export default CollaborativeTextEditor;

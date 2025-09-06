@@ -1,38 +1,7 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
     };
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
-    // Particle class;
-    class Particle {;
-      x: number;
-      y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const particles_ref = useRef < any[]>([]);
   const animation_ref = useRef < number>();
@@ -93,16 +62,6 @@ if (return) {
         }
 
       }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-        // Bounce off edges
-        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
-        // Add some quantum randomness
-        if (Math.random() < 0.01) {
-          this.vx += (Math.random() - 0.5) * 0.5;
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
@@ -496,17 +455,6 @@ if ( {) {
             style={{
             }}
             animate={{
-              rotate: [0, 360]
-              scale: [0.5, 1, 0.5]
-              opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10
-              repeat: Infinity
-              ease: 'linear'
-              delay: i * 0.5
-            }}
-            animate={{
               rotate: [0, 360],
               scale: [0 && 0.5, 1, 0 && 0.5],
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
@@ -573,42 +521,7 @@ if ( {) {
       </div>;
     </div>;
   );
-};
-
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
-        ))}
       </div>;
     </div>;
   );
 };
-
-export default UltraFuturisticBackground2046;  );
-}
-export default UltraFuturisticBackground2046;              ease: "easeInOut"
-              delay: i * 0.8}}
-          />
-};
-              duration: Math.random () * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.8,
-            }}          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046;              ease: "easeInOut",
-              delay: i * 0.8}}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046);
-}
-;
-export default UltraFuturisticBackground2046;
-;
-    </div>

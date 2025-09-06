@@ -1,40 +1,3 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Button from '../../components/ui/Button',
-
-import Card from '../../components/ui/Card';
-import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
-import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
-import {extraServices} from '../../data/extra-services';
-import {additionalEnhancedServices} from '../../data/additional-real-services';
-import {newRealServices} from '../../data/new-real-services';
-import {marketReadyServices} from '../../data/market-ready-services';
-type Service = (typeof enhancedRealMicroSaasServices)[number];
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices.concat(
-    extraServices as Service[]
-    additionalEnhancedServices as Service[]
-    newRealServices as Service[]
-    marketReadyServices as Service[]
-  );
-function toSlug(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-function extractServiceSlugFromLink(link: string): string | null {
-  try {
-    const url = new URL(link);
-    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    if (path && path.startsWith('services/')) {;
-      return path && path.substring('services/'.length);
 import Head from 'next / head';
 import UltraFuturisticBackground from '../../components / ui / UltraFuturisticBackground';
 import Button from '../../components / ui / Button';
@@ -148,13 +111,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
-                  </a>;
-                </div>;
-              </div>;
-            </Card>;
-          </div>;
-        </div>;
-      </div>;
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';

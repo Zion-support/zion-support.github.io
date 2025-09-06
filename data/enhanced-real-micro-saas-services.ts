@@ -1,5 +1,4 @@
 
-name: string;
 tagline: string;
 price: string;
 period: string;

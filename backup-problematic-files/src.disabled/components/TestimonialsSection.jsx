@@ -9,4 +9,3 @@ const TestimonialsSection = ({ className }) => {
   );
 };
 
-export default TestimonialsSection;

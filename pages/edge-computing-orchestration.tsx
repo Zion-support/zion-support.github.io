@@ -30,7 +30,6 @@ export default function EdgeComputingPage() {
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
-              Bring computing power to the edge of your network. Our edge computing platform reduces latency;
               cuts bandwidth costs, and enables real-time processing for mission-critical applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,13 +38,11 @@ export default function EdgeComputingPage() {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-              </a>
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-              </a>
             </div>
           </motion.div>
         </div>
@@ -79,24 +76,15 @@ export default function EdgeComputingPage() {
               infrastructure.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2'>;
-                <div
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature && feature.color} flex items-center justify-center mb-6`}>;
-                  <feature && feature.icon className='w-8 h-8 text-white' />;
                 </div>;
                 <h3 className='text-xl font-bold text-slate-900 mb-4'>;
                   {feature && feature.title}
                 </h3>;
-                <p className='text-slate-600 leading-relaxed'>;
-                  {feature && feature.description}
-                </p>              </motion && motion.div>;
             ))}
           </div>
         </div>
@@ -213,14 +201,6 @@ export default function EdgeComputingPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300'>;
-                <h3 className='text-2xl font-bold text-slate-900 mb-4'>;
-                  {useCase && useCase.industry}
                 </h3>;
                 <p className='text-slate-600 mb-4 leading-relaxed'>;
                   {useCase && useCase.description}
@@ -229,7 +209,6 @@ export default function EdgeComputingPage() {
                   <p className='text-green-800 font-medium'>;
                     Results: {useCase && useCase.results}
                   </p>                </div>;
-              </motion && motion.div>;
             ))}
           </div>
         </div>
@@ -371,11 +350,6 @@ export default function EdgeComputingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
-                  plan && plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}>;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular;
-                  </div>;
                 )}
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>
@@ -395,47 +369,6 @@ export default function EdgeComputingPage() {
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
-                </ul>
-                <a
-                  href='/contact'
-                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'>;
-                  Get Started;
-                </a>;
-              </motion && motion.div>;
-                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
-                </ul>
-
-                <a
-                  href='/contact'
-                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'>;
-                  Get Started;
-                </a>;
-              </motion && motion.div>;
-            ))}
-      {/* CTA */}
-      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Deploy Edge Computing?;
-            </h2>;
-            <p className='text-xl text-blue-100 mb-8'>;
-              Join the edge computing revolution and transform your business;
-              with real-time processing capabilities.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a
-                href='/contact'
-                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
-                Start Free Trial;
-              </a>;
-              <a
-                href='/contact'
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -452,13 +385,10 @@ export default function EdgeComputingPage() {
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-              </a>
             </div>
           </motion.div>
         </div>
       </section>
-      <EnhancedFooter />
-    </>
                     </span>;
                   </div>;
                   <p className='text - slate - 600'>{plan.description}</p>;
@@ -512,5 +442,3 @@ export default function EdgeComputingPage() {
 ;
   )
 }
-
-

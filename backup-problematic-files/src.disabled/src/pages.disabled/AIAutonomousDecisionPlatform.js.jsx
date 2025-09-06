@@ -9,4 +9,3 @@ const AIAutonomousDecisionPlatform.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousDecisionPlatform.js;

@@ -13,12 +13,6 @@ export default function CloudAutomationsPage() {
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
-
-  }, []);
-
-  const items = data?.data ? Object && Object.entries(data && data.data) : [];
-
-  return (
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;

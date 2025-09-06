@@ -12,21 +12,12 @@
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
-export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
-  // Neuromorphic Computing Platform
-  {
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299',
     period: '/month',
@@ -91,18 +82,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Production-ready neuromorphic platform with custom hardware, simulation tools, and research collaboration features.',
-    launchDate: '2026-04-01',
-    customers: 120,
-    rating: 4 && 4.9,
-    reviews: 85,
-  },
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -203,4 +182,3 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     reviews: 45;
   }
 ];
-;

@@ -26,22 +26,10 @@ interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
-interface TalentSearchResult extends BaseSearchResult {
-
-interface ProductSearchResult extends BaseSearchResult {;
-  type: 'product' | 'equipment';
-  price?: number;
-  rating?: number;
-
-interface TalentSearchResult extends BaseSearchResult {;
-  type: 'talent';
-  rating?: number;
-
 interface CategorySearchResult extends BaseSearchResult {
 
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
-
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
@@ -254,7 +242,6 @@ function offlineSearch(;
         break;
     }
   } else {;
-
           return aPrice - bPrice
         });
         break;
@@ -267,9 +254,6 @@ function offlineSearch(;
         break;
       case 'rating':
         all.sort((a, b) => {
-  }
-  const start = (page - 1) * limit;
-  }
   const start = (page - 1) * limit;
   const paginated = all.slice(start, start + limit);
   return { results: paginated, totalCount: all.length }
@@ -278,13 +262,6 @@ export default function SearchResultsPage({
   query
   slug
   totalCount
-  const paginated = all && all.slice(start, start + limit);
-  return { results: paginated, totalCount: all && all.length };
-
-export default function SearchResultsPage(): any ({;
-  initialResults,;
-  query,;
-  slug,;
   totalCount,;
 }: SearchResultsPageProps) {  const router = useRouter();
   return { results: paginated, totalCount: all.length   } catch (error) {
@@ -329,89 +306,19 @@ export default function SearchResultsPage(req, res) {
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
-      if (!response.ok) {
-        throw new Error(`Search API error: ${response.status}`);
       }
       const data = await response.json();
       logInfo('Search results received:', { data: data });
-      setTotalResults(data.totalCount |data.results?.length |0);
-      if (page === 1) {
-        setResults(data.results |[]);
-      } else {
-        setResults(prev => [...prev, ...(data.results |[])]);
-      }
-    } catch (error) {;
-      logErrorToProduction('Error fetching search results:', { data: error });
-      const offline = offlineSearch(searchTerm, page, 12, {
-        sortBy
-        category: categoryFilter !== 'all' ? categoryFilter : undefined
-        minPrice: minPrice ? Number(minPrice) : undefined
-        maxPrice: maxPrice ? Number(maxPrice) : undefined
-        minRating: minRating ? Number(minRating) : undefined
-      });
-      setTotalResults(offline && offline.totalCount);
-      if (page === 1) {;
-        setResults(offline && offline.results);
-      } else {;
-        setResults(prev => [...prev, ...offline && offline.results]);
-      }
-    } finally {;
-      setLoading(false);    }
-  };
-
-  // Handle search input change;
-  const handleSearch = (newQuery: string) => {;
-    setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
-      router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
-        shallow: true,;
-      });
-      setCurrentPage(1);    }
-  };
-
-  useEffect(() => {;
-    if (debouncedQuery && debouncedQuery.trim()) {;
-      fetchResults(debouncedQuery, 1);
-    } else {;
-      setResults([]);
-      setTotalResults(0);    }
-  }
   // Handle search input change
   const handleSearch = (newQuery: string) => {
     setSearchQuery(newQuery)
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
-        shallow: true
-      });
-      setCurrentPage(1);    }
-  }
-  useEffect(() => {
-    if (debouncedQuery.trim()) {
-  }, [debouncedQuery]);
-
-  // Handle search input change;
-  const handleSearch = (newQuery: string) => {;
-    setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
-      router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
-        shallow: true,;
-      });
-      setCurrentPage(1);    }
-  };
-
-  useEffect(() => {;
-    if (debouncedQuery && debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
     } else {;
       setResults([]);
       setTotalResults(0);    }
   }, [debouncedQuery]);
-  // Load more results
-  const loadMore = () => {
-    const nextPage = currentPage + 1;
-    setCurrentPage(nextPage);
-    fetchResults(searchQuery, nextPage);
-  }
   const categories = Array.from(
     new Set(results.map(r => r.category).filter(Boolean))
   );
@@ -420,48 +327,11 @@ export default function SearchResultsPage(req, res) {
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-      return false;
-  }
-}
-        return false;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    if (maxPrice && r.type === 'product') {;
-      if ((r.price ?? 0) > Number(maxPrice)) {;
-        return false;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    if (minRating && (r.type === 'product' || r.type === 'talent')) {;
-      if ((r.rating ?? 0) < Number(minRating)) {;
-        return false;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return true
-  }),
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -568,25 +438,12 @@ export default function SearchResultsPage(req, res) {
               {result && result.description}
             </p>;
           </div>;
-        );    }
-  };
-
-          >;
-            <h3 className='font-semibold'>{result && result.title}</h3>;
-            <p className='text-gray-600 dark:text-gray-200'>;
-              {result && result.description}
-            </p>;
-          </div>;
-        );    }
   return (
     <>;
       <SEO
         title={`Search Results for "${query}" - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
-        canonical={`https://app.ziontechgroup.com/search/${slug}`}
-      />
-      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
         <div
           className='container mx-auto px-4 py-8'
           data-testid='search-results'>;
@@ -625,77 +482,22 @@ export default function SearchResultsPage(req, res) {
                 <Input
                   type='text'
                   value={searchQuery}
-                  onChange={e => handleSearch(e.target.value)}
-                  placeholder='Search marketplace...'
-                  className='pl-10'                />
-              </div>
-            </div>
-                  onChange={e => handleSearch(e && e.target.value)}
-                  placeholder='Search marketplace...';
-                  className='pl-10'                />;
-              </div>;
-            </div>;
-
                 <Button
                   variant='outline'
                   size='sm'
                   className='flex items-center gap-2'
                   data-testid='filter-button'
                 >
-                  <option value='relevance'>Relevance</option>
-                  <option value='newest'>Newest</option>
-                  <option value='price_asc'>Price: Low to High</option>
-                  <option value='price_desc'>Price: High to Low</option>
-                  <option value='rating'>Highest Rated</option>                </select>
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
 
-                  <option value="relevance">Relevance</option>
-                  <option value="newest">Newest</option>
-                  <option value="price_asc">Price: Low to High</option>
-                  <option value="price_desc">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
-                </select>
-                <select
-                  value={sortBy}
-                  onChange={e => setSortBy(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-                  data-testid='sort-select';
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
                   <option value='price_asc'>Price: Low to High</option>;
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
-
-
-                <select
-                  value={categoryFilter}
-                  onChange={e => setCategoryFilter(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-                >;
-                  <option value='all'>All Categories</option>;
-                  {categories && categories.map(c => (                    <option key={c} value={c}>;
-                  <input
-                    type='number'
-                    placeholder='Min $'
-                    value={minPrice}
-                    onChange={e => setMinPrice(e && e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm';
-                  />;
-                  <span>-</span>;
-                  <input
-                    type='number'
-                    placeholder='Max $'
-                    value={maxPrice}
-                    onChange={e => setMaxPrice(e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
-                      {c}
-                    </option>
-                  ))}
-                </select>
-
                 <div className='flex items-center gap-1'>;
                   <input
                     type='number'
@@ -709,14 +511,6 @@ export default function SearchResultsPage(req, res) {
                     type='number'
                     placeholder='Max $'
                     value={maxPrice}
-                    onChange={e => setMaxPrice(e && e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
-                </div>;
-                </div>
-                <select
-                  value={minRating}
-                  onChange={e => setMinRating(e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
                 >
                   <option value=''>All Ratings</option>
                   <option value='4'>4 & up</option>
@@ -724,10 +518,6 @@ export default function SearchResultsPage(req, res) {
                   <option value='2'>2 & up</option>
                 </select>
               </div>
-                <select
-                  value={minRating}
-                  onChange={e => setMinRating(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
                 >;
                   <option value=''>All Ratings</option>;
                   <option value='4'>4 & up</option>;
@@ -736,24 +526,6 @@ export default function SearchResultsPage(req, res) {
                 </select>;
               </div>;
 
-              <div className='flex items-center gap-2'>;
-
-              <div className='flex items-center gap-2'>;
-                <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('grid')}
-                  data-testid='view-mode-grid';
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className='h-4 w-4' />;
-                </Button>;
-                <Button
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('list')}
-                  data-testid='view-mode-list';
-                  className={viewMode === 'list' ? 'active' : ''}
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -773,11 +545,6 @@ export default function SearchResultsPage(req, res) {
   }
 }
                 >
-                  <List className='h-4 w-4' />                </Button>
-              </div>
-            </div>
-          </div>
-                >;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
@@ -803,18 +570,10 @@ export default function SearchResultsPage(req, res) {
               </div>;
             </div>;
           </div>;
-          {/* Loading State */}
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
-                  </h2>
-          {filteredResults && filteredResults.length > 0 && (;
-            <div className='space-y-8'>;
-              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
-                <div key={type}>;
-                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
-                  </h2>;
                   <div
                     className={
                       viewMode === 'grid'
@@ -832,19 +591,11 @@ export default function SearchResultsPage(req, res) {
               )}
             </div>;
           )}
-
-
-      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
-
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
-
-
-    let results = [];
-    let totalCount = 0;
       const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
@@ -854,30 +605,6 @@ export default function SearchResultsPage(req, res) {
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
-};
-      total_count = offline.total_count;    }
-    return {
-      props: {
-        initial_results: results,
-        query,
-        slug,
-        total_count,
-      },
-    }
-  } catch (error) {
-    logErrorToProduction ('Error fetching search results:', { data: error });
-    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
-;
-    return {
-      props: {
-        initial_results: offline.results,
-        query,
-        slug,
-total_count: offline.total_count,
-      },
-    }  }
-}
-;
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

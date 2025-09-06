@@ -60,18 +60,6 @@
     growthRate: '25% annual growth',
     variant: 'ai-code-enterprise',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Cloud-native AI code generation platform with advanced language models, security scanning, and team collaboration features.',
-    launchDate: '2024-10-15',
-    customers: 78,
-    rating: 4 && 4.7,
-    reviews: 34,
-  },
-
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -173,4 +161,3 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 38;
   }
 ];
-;

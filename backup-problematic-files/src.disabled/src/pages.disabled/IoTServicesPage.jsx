@@ -9,4 +9,3 @@ const IoTServicesPage = ({ className }) => {
   );
 };
 
-export default IoTServicesPage;

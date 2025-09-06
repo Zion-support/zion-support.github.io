@@ -23,11 +23,6 @@ function getServerSideProps() {
   const file = path.join (process.cwd (), 'datanews - digest.json');
   let items: NewsItem[] = [];  let generated_at = '';
   try {
-  } catch {}
-  return { props: { items, generated_at } }
-}
-
-export default function NewsDigestPage(): any ({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {;
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
@@ -70,4 +65,3 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
-}

@@ -1,30 +1,9 @@
-};
-
-// Additional 2025 real micro-SaaS, AI and IT services
-export const new2025Services: EnhancedRealMicroSaasService[] = [
-  {
-      'Jailbreak and injection detection',
-      'PII redaction and audit trail',
-      'Hallucination and grounding score',
-      'Dashboards and CI quality gates',
-    ],
-    popular: true,
       'Prevent unsafe outputs',
       'Compliance readiness',
       'Model regression detection',
     ],
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
     competitors: ['Lakera', 'Guardrails AI', 'Azure AI Content Safety'],
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-rose-600 to-red-700';
-    textColor: 'text-rose-300';
-    link: 'https://ziontechgroup && ziontechgroup.com/services/llm-safety-observability-suite';
-    marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.';
-    targetAudience: 'Teams shipping AI copilots and assistants';
-    trialDays: 14;
-    setupTime: '30 minutes';
     market_size: '$3.5B+ AI safety & governance',
     growth_rate: '200% annual growth',
     variant: 'holographic - matrix',

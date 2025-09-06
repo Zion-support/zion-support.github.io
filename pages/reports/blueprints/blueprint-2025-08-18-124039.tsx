@@ -42,7 +42,6 @@ const Blueprint20250818124039: React.FC = () => {
 }
   ];
   const features = [
-
     {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',
@@ -58,12 +57,6 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Simulation of quantum systems and materials',
       benefit: 'Advanced scientific research capabilities',
 
-      status: 'development'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   ];
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -78,14 +71,6 @@ const Blueprint20250818124039: React.FC = () => {
   }
 }
   };
-  const getHealthColor = (health: string) => {
-    switch (health) {
-
-      case 'excellent': return 'bg-green-500/20 text-green-400';
-      case 'good': return 'bg-yellow-500/20 text-yellow-400';
-      case 'warning': return 'bg-orange-500/20 text-orange-400';
-      case 'critical': return 'bg-red-500/20 text-red-400';
-      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,13 +133,6 @@ const Blueprint20250818124039: React.FC = () => {
                 <p className="text - gray - 300 text - sm mb - 4">{component.description}</p>;
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (component.status)}`}>;
-                     {component.status}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;
@@ -165,15 +143,6 @@ const Blueprint20250818124039: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Quantum Computing Components</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quantumComponents.map((component, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
-
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

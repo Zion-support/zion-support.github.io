@@ -1,3 +1,14 @@
+export const checkSignupPatterns = async (
+
+
+export const checkSignupPatterns = async (;
+
+  email: string;
+  ip_address?: string): Promise < SignupCheckResult> => {
+  const reasons: string[] = [];
+  const emailCheck = analyzeEmail(email),
+  if (emailCheck && emailCheck.isSuspicious) {
+    reasons && reasons.push(...emailCheck && emailCheck.reasons)
 
 // Signup checking functionality
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,8 +19,6 @@ import { SignupCheckResult } from './types';
  */
 
 export const checkSignupPatterns = async (
-
-
 export const checkSignupPatterns = async (;
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
@@ -29,7 +38,6 @@ export const checkSignupPatterns = async (;
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
-
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
@@ -66,10 +74,6 @@ export const checkSignupPatterns = async (;
     }
   }
   return {
-    reasons
-  }
-}
-
 ;
   // Check email against suspicious patterns;
   const email_check = analyze_email (email),

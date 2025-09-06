@@ -1,22 +1,3 @@
-// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
-// Check condition
-if (strength = 'very - weak') {
-  $2
-}
-else // Check condition
-if (strength = 'weak') {
-  $2
-}
-else // Check condition
-if (strength = 'medium') {
-  $2
-}
-else // Check condition
-if (strength = 'strong') {
-  $2
-}
-else strength = 'very - strong';
-// Generate feedback const feedback: string[] = [];
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';

@@ -96,11 +96,6 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-export default function DigitalTransformation() {;
-import Layout from "../../components/Layout";";
-import {motion} from 'framer-motion';
-import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
-export default function DigitalTransformationPage() {;
   const transformationServices = [;
     {}
       title: "Process Automation",";
@@ -136,13 +131,6 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,;
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
-                Transform your business for the digital age with our comprehensive transformation solutions. ;
-                Modernize processes, enhance efficiency, and drive innovation.,;
               </p>;
             </motion && motion.div>;
           </div>;
@@ -364,156 +352,6 @@ export default function DigitalTransformationPage() {;
                   </motion && motion.div>;
                 );
               })}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl mb-8 max-w-2xl mx-auto">;
-                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Free Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  View All Solutions;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-            </div>;
-          </div>;
-        </section>;
-            </div>;
-          </div>;
-        </section>;
-            </div>,;
-          </div>;
-        </section>;
-            </div>;
-          </div>;
-        </section>;
-:pages/solutions/digital-transformation && transformation.tsx;
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Transformation Benefits;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                See the measurable impact of digital transformation on your business performance.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits && benefits.map((benefit, index) => {;
-                const IconComponent = benefit && benefit.icon;
-                return (
-                  <motion&& motion.div
-                    key={index}
-                    className="bg-white rounded-lg p-6 shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
-                    <div className="text-blue-600 mb-4">;
-                      <IconComponent className="w-12 h-12 mx-auto" />;
-                    </div>;
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit && benefit.metric}</div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit && benefit.title}</h3>;
-                    <p className="text-gray-600">{benefit && benefit.description}</p>;
-                  </motion && motion.div>;
-                );
-              })}
-            </div>;
-          </div>;
-        </section>;
-        {/* Industries Section */}
-        <section className="py-20 bg-white">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Industry Solutions;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                We have experience transforming businesses across various industries with tailored solutions.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {industries && industries.map((industry, index) => {;
-                const IconComponent = industry && industry.icon;
-                return (
-                  <motion&& motion.div
-                    key={index}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
-                    <div className="text-blue-600 mb-4">;
-                      <IconComponent className="w-8 h-8" />;
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry && industry.name}</h3>;
-                    <p className="text-gray-600">{industry && industry.description}</p>;
-                  </motion && motion.div>;
-                );
-              })}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl mb-8 max-w-2xl mx-auto">;
-                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Free Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  View All Solutions;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to transform your business? Let our experts guide you through your digital transformation journey.;

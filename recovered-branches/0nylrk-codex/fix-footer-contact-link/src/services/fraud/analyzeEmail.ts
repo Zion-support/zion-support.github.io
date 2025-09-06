@@ -18,14 +18,6 @@ import { EmailAnalysisResult } from './types';
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
-    }
-  }
-  return {
-    isSuspicious: reasons.length > 0
-    reasons
-  }
-}
-
 // Email analysis functionality;
 import {suspiciousEmailDomains} from './constants';
 import {EmailAnalysisResult} from './types';

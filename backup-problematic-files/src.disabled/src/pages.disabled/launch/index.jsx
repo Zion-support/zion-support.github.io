@@ -9,4 +9,3 @@ const Index = ({ className }) => {
   );
 };
 
-export default Index;

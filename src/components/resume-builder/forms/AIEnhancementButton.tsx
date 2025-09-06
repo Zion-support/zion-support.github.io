@@ -1,6 +1,3 @@
-
-
-
 export function AIEnhancementButton({
 
   currentContent
@@ -51,17 +48,7 @@ function AIEnhancementButton() {
 if (.length < 10) {) {
   $2
 }
-      set_error ('Please enter at least some basic content before enhancing');
-      return;
-    }
-    set_error (null);
-    const enhanced_content = await enhance_content (
-      current_content,
-      enhancement_type,
-      context);
-    // Check condition
-if ( {) {
-  $2
+;
 }
       on_enhanced (enhanced_content);
     }
@@ -77,18 +64,6 @@ if ( {) {
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-      )}
-  );      onClick={handleEnhance}
-      disabled={isEnhancing}
-    >
-      {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
-      ) : (
-        <Sparkles className="h-3 w-3" />
-      )}
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
     <Button;
       type="button";
       variant="ghost";
@@ -112,5 +87,4 @@ if ( {) {
 }
 }
 ;
-
 

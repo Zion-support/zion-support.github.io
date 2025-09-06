@@ -129,36 +129,7 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-// Define a common service interface;
-interface Service {;
-  id?: string,;
-  name: string;
-  description?: string,;
-  price?: string,;
-  category?: string,;
-  popular?: boolean,;
-  launchDate?: string,;
-  [key: string]: unknown, // Allow additional properties;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-// Define a unified service interface
-interface Service {
-
-  id: string
-  name: string
-  tagline: string
-  description: string
-  price: string
-  category: string
-  features: string[]
-  popular?: boolean
-  icon?: string
-
 export default function ServicesIndexPage() {
-
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[]
@@ -252,117 +223,6 @@ export default function ServicesIndexPage() {
               </h2>
               <div className="space-y-12">
                 {categories.map((category) => {
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
-import Card from '../../components / ui / Card',
-import Link from 'next / link',
-import { enhancedRealMicroSaasServices } from '../../data / enhanced - real - micro - saas - services',
-import { additionalEnhancedServices } from '../../data / additional - real - services',
-import { extra_services } from '../../data / extra - services',
-import { newlyAddedServices } from '../../data / newly - added - services',
-import { curatedMarketServices } from '../../data / curated - market - services',
-import { realMarketServices } from '../../data / real - market - services',
-import { new2025Services } from '../../data / new - 2025 - services',
-import { marketValidatedServices } from '../../data / market - validated - services',
-import { moreRealServices2025 } from '../../data / more - real - services - 2025',
-import { realOperationalServices } from '../../data / real - operational - services',
-import { verified2025Additions } from '../../data / verified - 2025 - additions',
-import { realServicesQ12025 } from '../../data / real - services - q1 - 2025';
-import { realEnterpriseServices2025 } from '../../data / real - enterprise - services - 2025',
-import { realMarketAugmentations2025 } from '../../data / real - market - augmentations - 2025',
-import { verifiedRealServices2025Batch2 } from '../../data / verified - real - services - 2025 - batch2',
-import { additionalLiveServices2025 } from '../../data / additional - live - services - 2025',
-import { real2025Q2Additions } from '../../data / real - 2025 - q2 - additions',
-import { augmentedServicesBatch3 } from '../../data / real - augmented - services - 2025 - batch3',
-import { realServicesQ22025 } from '../../data / real - services - q2 - 2025',
-import { realServicesQ32025 } from '../../data / real - services - q3 - 2025',
-import { realServicesQ42025 } from '../../data / real - services - q4 - 2025',
-// Define a common service interface;
-interface Service {
-  id?: string,
-  name: string,
-  description?: string,
-  price?: string,
-  category?: string,
-  popular?: boolean,
-  launch_date?: string,
-  [key: string]: unknown, // Allow additional properties;
-}
-// Define a unified service interface;
-interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  description: string,
-  price: string,
-  category: string,
-  features: string[],
-  popular?: boolean,
-  icon?: string,
-  link?: string;
-}
-// Sample services for now;
-const sample_services: Service[] = [;
-  {
-    id: 'ai - services',
-    name: 'AI & Machine Learning',
-    tagline: 'Advanced AI solutions for enterprise',
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2, 999 / month',
-    category: 'AI',
-    features: ['Custom AI ModelsMLOps PipelineReal - time Analytics24 / 7 Support'],
-    popular: true,
-    link: '/ai - services';
-  },
-  {
-    id: 'quantum - computing',
-    name: 'Quantum Computing',
-    tagline: 'Next - generation quantum solutions',
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
-    price: '$9, 999 / month',
-    category: 'Quantum',
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
-    link: '/quantum - computing';
-  },
-  {
-    id: 'cybersecurity',
-    name: 'Cybersecurity',
-    tagline: 'Enterprise security solutions',
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-    price: '$1, 999 / month',
-    category: 'Security',
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
-    link: '/cybersecurity';
-  },
-  {
-    id: 'cloud - platform',
-    name: 'Cloud Platform',
-    tagline: 'Scalable cloud infrastructure',
-    description: 'Multi - cloud platform services with automated scaling and global deployment capabilities.',
-    price: '$1, 499 / month',
-    category: 'Cloud',
-    features: ['Multi - CloudAuto - scaling_global CDNDevOps Tools'],
-    link: '/cloud - platform';
-  },
-  {
-    id: 'space - technology',
-    name: 'Space Technology',
-    tagline: 'Innovative space solutions',
-    description: 'Cutting - edge space technology services for satellite operations and space missions.',
-    price: '$24, 999 / month',
-    category: 'Space',
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
-    link: '/space - tech';
-  }
-],
-export default /**
- * ServicesIndexPage - Function description
- */
-function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[]);
-    .concat (
-      extra_services as unknown[],
       additionalEnhancedServices as unknown[],
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
@@ -381,7 +241,6 @@ function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
-      realServicesQ42025 as unknown[]),
     return acc;
   }, {} as Record < string, Service[]>),
   return (
@@ -451,11 +310,6 @@ if (return null, ) {
                     <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                       <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                         <span className="text - 3xl">;
-
-
-                  const categoryServices = servicesByCategory[category],
-                  if (!categoryServices || categoryServices.length === 0) return null,
-
                   return (
                     <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
                       <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
@@ -468,17 +322,6 @@ if (return null, ) {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
-                            service={service}
-                            key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                             variant="default"
                           />
                         ))  } catch (error) {
@@ -562,10 +405,6 @@ if (return null, ) {
                     <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline |service.description}</p>
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
                     <div className="flex gap-3">
-              })}
-            </div>
-          </div>
-          {/* Featured Services */}
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -586,11 +425,6 @@ if (return null, ) {
 }
                     variant="quantum"
                   />
-                ))}
-              </div>
-            </section>
-          )}
-          {/* Latest Services */}
           {latestServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -648,16 +482,10 @@ if (return null, ) {
                   <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                     <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                       <span className="text - 3xl">;
-
-
-                const categoryServices = servicesByCategory[category],
-                if (!categoryServices || categoryServices.length === 0) return null,
-
                 return (
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
                       <span className="text-3xl">
-
           <section className="mb-20">;
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
               Services by Category;
@@ -726,25 +554,6 @@ if (return null, ) {
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        </Link>
-                      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>;
-                  </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>
-            {filteredServices.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
-              </div>
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -921,4 +730,3 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;

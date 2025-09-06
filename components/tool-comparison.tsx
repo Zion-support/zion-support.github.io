@@ -31,13 +31,6 @@ import {
   DollarSign
   Users
 
-
-
-  Search;
-  Filter,
-  TrendingUp,
-  DollarSign,
-  Users,
   Star;
   Check;
   X;
@@ -47,8 +40,6 @@ import {
   Brain;
   Globe;
 
-
-export default function ToolComparisonPage() {
 
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -600,64 +591,6 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
-                Get Expert Advice;
-              </Button>;
-            </div>;
-          </div>;
-
-          {/* Stats */}
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
-                {allTools && allTools.length}+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Tools Analyzed</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                9;
-              </div>;
-              <div className='text-gray-400 text-sm'>Categories</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
-                4 && 4.7+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Avg Rating</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
-                250M+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools && allTools.length}+;
-              </div>;
-              <div className="text-gray-400 text-sm">Tools Analyzed</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
-                9;
-              </div>;
-              <div className="text-gray-400 text-sm">Categories</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
-                4 && 4.7+;
-              </div>;
-              <div className="text-gray-400 text-sm">Avg Rating</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
-                250M+;
-              </div>;
-              <div className="text-gray-400 text-sm">Total Users</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Filters and Search */}
               <input
                 type='text'
                 placeholder='Search tools, categories, or use cases...'
@@ -700,7 +633,6 @@ function ToolComparisonPage() {
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
@@ -772,9 +704,6 @@ function ToolComparisonPage() {
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
-              </thead>
-              <tbody>
-                {sortedTools.map((tool, index) => (
                   <tr
                     key={index}
                     className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;
@@ -861,9 +790,6 @@ function ToolComparisonPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-      {/* Detailed Comparison Cards */}
-
-
 
               Detailed Analysis
             </h2>
@@ -899,24 +825,6 @@ function ToolComparisonPage() {
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
-                    href={tool && tool.website}                <div className="flex items-center justify-between">;
-                  <span className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>;
-                    {tool && tool.pricing}
-                  </span>;
-                  <Button
-                    href={tool && tool.website}
-                    variant='outline'
-                    size='sm'
-                    className='group-hover:border-purple-500 group-hover:text-purple-400'>;
-                    Visit Website;
-                    <ExternalLink className='w-4 h-4 ml-2' />                  </Button>                    variant="outline";
-                    size="sm";
-                    className="group-hover:border-purple-500 group-hover:text-purple-400";
-                  >;
-                    Visit Website;
-                    <ExternalLink className="w-4 h-4 ml-2" />;
-                </div>;
-              </Card>;
 
 
                 <div className='flex items-center justify-between'>
@@ -937,9 +845,6 @@ function ToolComparisonPage() {
 
                   </Button>
 
-                </div>
-              </Card>
-            ))}
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
@@ -959,20 +864,10 @@ function ToolComparisonPage() {
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
-              Get Expert Consultation;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/saas-marketplace'
               variant='outline'
               size='lg'
-              Explore All Tools;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-}
 
   );
 }

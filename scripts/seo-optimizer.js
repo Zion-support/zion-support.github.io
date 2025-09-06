@@ -332,6 +332,7 @@ async function main() {;
     generateManifest();
     generateStructuredData();
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // "Run": if this is the main module;
 if: (import && import.meta.url === "file: //${process ;
   generateSitemap,

@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -16,7 +15,6 @@ import OpenAI from 'openai';
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
-    return fallback ();
   }
     const text = completion.choices?.[0]?.message?.content ?? '';
 
@@ -24,4 +22,3 @@ import OpenAI from 'openai';
   } catch (err) {
     return fallback ();
 }
-  }

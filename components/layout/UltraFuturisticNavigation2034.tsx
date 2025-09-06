@@ -211,7 +211,6 @@ import {
   Twitter,
   Facebook,
   Instagram,
-
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
@@ -224,10 +223,6 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
-
-
-  Laptop, Watch, Headphones, Speaker, Mic,
-  Keyboard, Mouse, CpuIcon, DatabaseIcon,
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -237,7 +232,6 @@ import {
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
-
     services: [;
       {
         name: 'Quantum Machine Learning',
@@ -448,10 +442,6 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
-          </div>
-        </div>
-      </div>
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
             <div className='flex items-center space-x-2'>;
@@ -826,7 +816,6 @@ function UltraFuturisticNavigation2034() {
                         <p className='text-xs text-gray-400 mb-2'>;
                           {category && category.description}
                         </p>;
-                            >
                               {service.name}
                             </Link>
                           ))}
@@ -841,7 +830,6 @@ function UltraFuturisticNavigation2034() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
                     <Link
-                      href="/services"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
@@ -851,10 +839,6 @@ function UltraFuturisticNavigation2034() {
                 Get Started;
               </Link>;
             </div>;
-
-            {/* Mobile Menu Button */}
-            <div className='lg:hidden'>;
-
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
@@ -870,12 +854,6 @@ function UltraFuturisticNavigation2034() {
                 className="text-gray-300 hover:text-cyan-400 transition-colors";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-
-
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -998,10 +976,6 @@ function UltraFuturisticNavigation2034() {
                   Get Started;
                 </Link>;
               </div>;
-    </>
-        </AnimatePresence>;
-      </nav>;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
@@ -1015,4 +989,3 @@ function UltraFuturisticNavigation2034() {
     </>);      <div className="h - 20"></div>;
     </>);
 }
-

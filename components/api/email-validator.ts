@@ -1,6 +1,3 @@
-interface EmailValidationResult {
-  email: string;
-  is_valid: boolean;
   score: number;
   suggestions: string[];
   details: {
@@ -10,7 +7,6 @@ interface EmailValidationResult {
   }
   try {
     const { email } = req && req.body;
-
     // Extract domain
     const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;

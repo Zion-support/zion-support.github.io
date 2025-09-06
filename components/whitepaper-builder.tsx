@@ -1,9 +1,3 @@
-import Link from 'next/link';
-
-import {
-} from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {;
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -26,16 +20,6 @@ export default function WhitepaperBuilderPage() {
         <label className='font-medium'>Edition</label>
         <select
           value={edition}
-          onChange={e => setEdition(e && e.target.value as WhitepaperEdition)}
-          className='border rounded px-3 py-2 bg-white dark:bg-black';
-        >;
-          <option value='full'>Full</option>;
-          <option value='investor'>Investor</option>;
-          <option value='developer'>Developer</option>;
-        </select>;
-        <Link href={downloadHref} legacyBehavior>;
-          <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
-
         {sections.map((s) => (
           <section key={s.id} className="space-y-2">
             <h2 className="text-2xl font-bold">{s.title}</h2>
@@ -50,7 +34,6 @@ export default function WhitepaperBuilderPage() {
           </a>;
         </Link>;
       </div>;
-
           </section>
         ))}
       </div>

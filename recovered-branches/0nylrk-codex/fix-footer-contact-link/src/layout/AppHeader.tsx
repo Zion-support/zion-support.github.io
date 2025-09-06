@@ -10,11 +10,6 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
 import {useState} from 'react';
-import {use_messaging} from '@/context / MessagingContext';
-import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components / header / Logo';
-import {ModeToggle} from '@/components / ModeToggle';
-import {Menu, X} from 'lucide-react';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -25,7 +20,6 @@ import {Menu, X} from 'lucide-react';
 
     unreadCount = count
   } catch (error) {
-    console.warn ('Messaging context not available');
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -45,8 +39,6 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
-  }
-  return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">

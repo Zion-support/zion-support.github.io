@@ -23,10 +23,6 @@ interface SmartContractBuilderProps {
   talent;
   clientName;
   onContractGenerated;
-  onDeploy;
-}: SmartContractBuilderProps) {;
-  const [activeTab, setActiveTab] = useState<string>("form");
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
 export function SmartContractBuilder({
   isOpen,
   onClose,
@@ -40,7 +36,6 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
     network: 'ethereum'
@@ -128,8 +123,8 @@ if ( {) {
       toast.error ("Failed to generate smart contract");
     }
       if (contractInfo) {
-        setDeploymentInfo(contractInfo);
-        setDeployStatus('deployed');
+        setDeploymentInfo(contractInfo),
+        setDeployStatus('deployed'),
         toast.success("Smart contract deployed successfully!")
 ;
   const handleDeployContract = async () => {
@@ -149,10 +144,6 @@ if ( {) {
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
       } else {
-        setDeployStatus ('error');
-        toast.error ("Failed to deploy smart contract");
-      }
-    } catch (error) {
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -252,7 +243,6 @@ export function SmartContractBuilder({;
     setGeneratedContract(contract);
     setActiveTab("preview");
   };
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -262,56 +252,15 @@ export function SmartContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-
-            <div className="flex gap-2">;
-              <Button
-                variant="outline" 
-                size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-;
-  // Modified to match the expected interface;
-  const handleFormSubmit = (contract: string) =>: any {
-    // This should be a function that takes a string (contract content);
-    // Since we need to adapt the interface, we'll implement the simplest solution that works;
-    // Check condition
-if ( {) {
-  $2
-}
-      onContractGenerated (contract);
-    }
-    setGeneratedContract (contract);
-    setActiveTab ("preview");
-  }
-;
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
-        <Tabs value={active_tab} onValueChange={setActiveTab} className="mt - 4">;
-          <div className="flex justify - between items - center">;
-            <TabsList className="grid grid - cols - 2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generated_contract}>Preview</TabsTrigger>;
-            </TabsList>;
-            <div className="flex gap - 2">;
-              <Button;
-                variant="outline";
-                size="sm";
-                on_click={() => setTemplateManagerOpen (true)}
-                className="flex gap - 1";
-              >;
-                <Save className="h - 4 w - 4" />;
-
                 Templates;
               </Button>;
             </div>;
           </div>;
 
-          <TabsContent value="form" className="pt-4">;
-            <ContractForm
-          <TabsContent value="form" className="pt - 4">;
             <ContractForm;
               talent={talent}
               client_name={client_name}
@@ -340,11 +289,6 @@ if ( {) {
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -378,4 +322,40 @@ if ( {) {
         />;
       </DialogContent>;
     </Dialog>);
+  ),; interface SmartContractBuilderProps {
+  isOpen: boolean;
+onClose: () => void;
+talent: TalentProfile;
+clientName: string;
+onContractGenerated?: (contractContent: string) => void;
+onDeploy?: (contractContent: string) => void 
+}export function SmartContractBuilder ({
+  isOpen;
+onClose;
+talent;
+clientName;
+onContractGenerated;
+onDeploy 
+}: SmartContractBuilderProps) {
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
+const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+const [deployOptions, setDeployOptions] = useState<DeploymentOptions> ({
+  network: 'ethereum';
+useEscrow: true;
+deployToChain: false 
+});
+const [deployStatus, setDeployStatus] = useState<string> ('');
+const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (null);
+const {
+  generateSolidityContract, deploySmartContract, deploymentStatus 
+}= useSmartContracts ();
+const handleLoadTemplate = (templateData: ContractFormValues) => {
+  setFormValues (templateData) 
+};
+//Convert ContractFormValues to contract content string const handleContractGenerated = async (formValues: ContractFormValues) => {
+  if (!formValues) return;
+try {
+  setGeneratedContract (generatedContractText);
+setActiveTab ("preview");
+  
 }

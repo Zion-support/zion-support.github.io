@@ -128,11 +128,6 @@ export default function AIServices () {
                   <motion&& motion.a
                     href={service && service.href}
                     whileHover={{ x: 5 }}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors">;
-                    Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
-                  </motion && motion.a>;
-                </motion && motion.div>;
-              ))}
 
             </div>;
           </div>;
@@ -143,8 +138,6 @@ export default function AIServices () {
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
 export default /**
  * AIServices - Function description
  */

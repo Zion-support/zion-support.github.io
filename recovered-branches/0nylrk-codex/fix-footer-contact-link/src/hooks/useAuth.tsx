@@ -8,8 +8,6 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
-import { supabase } from "@/integrations/supabase/client",
   id?: string;
   name?: string;
   email?: string;
@@ -45,27 +43,33 @@ export interface AuthContextType {
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<UserDetails | null>(null),
-  const [isLoading, setIsLoading] = useState(true);
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign in attempted with:", email);
-    // Mock successful sign-in
       permissions: ["billing_access", "admin_access", "team_management"];
       companyId: "company-123";
     });
     return { error: null }
-  const signOut = async () => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign out attempted");
-    setUser(null)
-  }
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign up attempted with:", email, userData);
+      companyId: "company-123"
+    }),
+    return { error: null }
+  }
+  },
+
+  const signOut = async () => {
+    // This would be replaced with actual Supabase auth
+    // // // console.log("Sign out attempted"),
+    setUser(null)
+  }
+  },
+
+  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
+    // This would be replaced with actual Supabase auth
+    // // // console.log("Sign up attempted with:", email, userData),
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -74,24 +78,39 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
-    });
-    return { error: null }
-  }
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
     return { error: null }
-  }
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     console.log("Profile update requested with:", data);
+    }),
+    return { error: null }
+  }
+  },
+
+  const resetPassword = async (email: string) => {
+    // Mock implementation
+    // // // console.log("Password reset requested for:", email),
+    return { error: null }
+  }
+  },
+
+  const updateProfile = async (data: Partial<UserDetails>) => {
+    // Mock implementation
+    // // // console.log("Profile update requested with:", data),
     if (user) {
       setUser({ ...user, ...data })
     }
     return { error: null }
-  }
   const loginWithGoogle = async () => {
     console.log("Google login requested");
+  }
+  },
+
+  const loginWithGoogle = async () => {
+    // // // console.log("Google login requested"),
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -100,9 +119,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Google User"
       profileComplete: true
     })
-  }
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
+  }
+  },
+
+  const loginWithFacebook = async () => {
+    // // // console.log("Facebook login requested"),
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -111,9 +134,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Facebook User"
       profileComplete: true
     })
-  }
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
+  }
+  },
+
+  const loginWithTwitter = async () => {
+    // // // console.log("Twitter login requested"),
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -122,7 +149,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Twitter User"
       profileComplete: true
     })
-  const loginWithWeb3 = async () => {
 
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
@@ -172,12 +198,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
-
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
-
+    });
+    return { error: null }
+  };
+  const resetPassword = async (email: string) => {;
+    // Mock implementation;
+    console && console.log("Password reset requested for:", email);
+    return { error: null }
+  };
+  const updateProfile = async (data: Partial<UserDetails>) => {;
+    // Mock implementation;
+    console && console.log("Profile update requested with:", data);
+    if (user) {;
+      setUser({ ...user, ...data });
   permissions?: string[];
   company_id?: string;
   bio?: string;
@@ -313,11 +350,9 @@ if ( {) {
 }
       console.warn ("No wallet detected");
       return;
-
     }
     return { error: null }
   };
-
   const loginWithGoogle = async () => {;
     console && console.log("Google login requested");
     // Mock implementation;
@@ -329,7 +364,6 @@ if ( {) {
       profileComplete: true;
     });
   };
-
   const loginWithFacebook = async () => {;
     console && console.log("Facebook login requested");
     // Mock implementation;
@@ -341,19 +375,16 @@ if ( {) {
       profileComplete: true;
     });
   };
-
   const loginWithTwitter = async () => {;
     console && console.log("Twitter login requested");
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
-      email: "twitter@example && example.com",;
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
   };
-
   const loginWithWeb3 = async () => {;
     console && console.log("Web3 login requested");
     const ethereum = (window as any).ethereum;
@@ -361,23 +392,11 @@ if ( {) {
       console && console.warn("No wallet detected");
       return;
     }
-    try {
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0];
-      await ethereum.request({
-        method: 'personal_sign'
-        params: [address, address]
       });
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
   }
-    setIsLoading(true);
-    setTimeout(() => {;
-      setUser(null);
-      setIsLoading(false);
-    }, 100);
-  }, []);
     isLoading;
     signIn;
     signOut;
@@ -391,13 +410,6 @@ if ( {) {
 ;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-
-    loginWithWeb3;
-  };
-
-  return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
-}
-
 // Custom hook to use the auth context;
 export function useAuth(): any (): AuthContextType {;
   const context = useContext(AuthContext);
@@ -416,4 +428,3 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
   }
   return context;
-}

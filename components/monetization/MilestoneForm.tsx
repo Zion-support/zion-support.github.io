@@ -1,38 +1,9 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-};
-
-export default function MilestoneForm(): any ({ onSubmit }: Props) {;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
@@ -85,6 +56,4 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>;
     </form>);
-}
-  );
 }

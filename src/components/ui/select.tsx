@@ -1,7 +1,6 @@
 import * as React from &quot;react&quot;
 import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
 import { Check, ChevronDown, ChevronUp } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -13,12 +12,10 @@ const SelectTrigger = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   >;
     {children}
     </SelectPrimitive.Icon>
-  </SelectPrimitive.Trigger>
 ))
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
 const SelectScrollUpButton = React.forwardRef<
@@ -29,7 +26,6 @@ const SelectScrollUpButton = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   >
     <ChevronUp className="h-4 w-4" />
@@ -44,7 +40,6 @@ const SelectScrollDownButton = React.forwardRef<
     ref={ref}
     className={cn(
       className
-    )}
     {...props}
   >
     <ChevronDown className="h-4 w-4" />
@@ -55,13 +50,11 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
->(({ className, children, position = &quot;popper&quot;, ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
         className
-      )}
       position={position}
       {...props}
     >
@@ -75,17 +68,14 @@ const SelectContent = React.forwardRef<
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
 
-
   React.ElementRef<typeof SelectPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
-  React.ElementRef<typeof SelectPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
       className
-    )}
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -102,6 +92,3 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-  SelectSeparator;
-  SelectScrollUpButton;
-  SelectScrollDownButton}

@@ -1,38 +1,4 @@
 
-function getUserId(cb) {
-  chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
-}
-function setUserId(id) {
-  chrome && chrome.storage.local && local.set({ user_id: id })
-}
-    body: JSON.stringify({ prompt })
-  })
-  const data = await res.json()
-  document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2)
-})
-
-document.getElementById('postJob').addEventListener('click', async () => {
-    body: JSON.stringify({ role: 'Cloud Engineer' })
-
-  })
-  const data = await res.json()
-  document.getElementById('result').textContent = data.description |'Draft saved.'
-})
-document.getElementById('resumeSearch').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r))
-  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.')
-  const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
-    headers: { ...(userId ? { 'x-user-id': userId } : {}) }
-  })
-  const data = await res.json()
-  document.getElementById('result').textContent = JSON.stringify(data.results |[], null, 2)
-})
-document.getElementById('viewNotifications').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r))
-  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.')
-  const res = await fetch(`${API_BASE}/notifications`, {
-    headers: { 'x-user-id': userId }
-
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 /**
  * getUserId - Function description

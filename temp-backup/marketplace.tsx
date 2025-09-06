@@ -1,7 +1,3 @@
-interface MarketplaceProps {;
-  // Add props here as needed;
-}
-export default function Marketplace(): any ({ }: MarketplaceProps) {;
   return (
     <div>;
       <h1>Marketplace</h1>;

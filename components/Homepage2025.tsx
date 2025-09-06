@@ -1,31 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect, Suspense } from 'react';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
-  innovativeRealMicroSaasServices2025
 } from '../data/2025-innovative-real-micro-saas-services';
 import {
   innovativeAIServicesEnhanced2025
@@ -54,20 +27,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
-  ArrowRight
-  Star
-  Brain
-  Atom
-  Shield
-  Zap
-  Users
-  Globe
-  TrendingUp
-  Rocket
-  Cpu
-  Lock
-  BarChart3
-  Cloud;
 import {;
   ArrowRight,;
   Star,;
@@ -105,55 +64,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
 interface Homepage2025Props { showInternalNav?: boolean }
-
-const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
-interface Homepage2025Props { showInternalNav?: boolean }
-const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {;
-      setCurrentServiceIndex(;
-        prev => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length;
-      );
-    }, 5000);
-    return () => clearInterval(interval);  }, []);      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setIsMobileMenuOpen(false);    }
-  }
-  const allServices = [      element.scrollIntoView({ behavior: 'smooth' })
-      setActiveSection(sectionId);
-      setIsMobileMenuOpen(false);
-    }
-  }
-  const allServices = [
-    ...innovativeRealMicroSaasServices2025
-    ...innovativeAIServicesEnhanced2025
-    ...innovativeITServicesEnhanced2025
-    ...emergingTechServicesEnhanced2025
-    ...advancedAIAutomationServices
-    ...quantumCybersecurityServices
-    ...innovativeMicroSaasServices2026
-    ...specializedITSolutions2026
-    ...emergingTechServices2026
-  ];
-  const featuredServices = allServices
-    .filter(service => service.popular)
-    .slice(0, 12);
-    }, 5000);
-    return () => clear_interval (interval);
-  }, []);
-
 ;
   const scrollToSection = (section_id: string) =>: any {
     const element = document.getElementById (section_id),
@@ -181,7 +91,6 @@ if ( {) {
     ...quantumCybersecurityServices,
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
-    ...emergingTechServices2026,
   ];
 ;
   const featured_services = all_services;
@@ -254,8 +163,6 @@ if ( {) {
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
-                    <button
-
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -263,39 +170,10 @@ if ( {) {
                           ? 'text - cyan - 400 border - b-2 border - cyan - 400';
                           : 'text - gray - 300 hover:text - cyan - 400';
                       }`}
-
                 {/* Contact Info */}
                 <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-
-                {/* Mobile Menu Button */}
-                <button
-                  className='lg:hidden text-white p-2'
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >;
-                  <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'>;
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M4 6h16M4 12h16M4 18h16'
-                    />                  </svg>                  className="lg:hidden text-white p-2";
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </button>
-              </div>
-                >;
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
-                </button>;
-              </div>;
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -321,17 +199,6 @@ if ( {) {
           </nav>;
         </>;
       )}
-      <section
-        id='hero'
-        className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>;
-        <div className='text-center z-10 max-w-6xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='text-center max-w-6xl mx-auto relative z-10'>;
-            <motion&& motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -342,113 +209,6 @@ if ( {) {
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
-                    >;
-                      <span>{section.icon}</span>;
-                      <span>{section.label}</span>;
-                    </button>))}
-                </div>;
-                {/* Contact Info */}
-                <motion.div;
-                  initial={{ opacity: 0, coordinate_x: 20 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
-                  className='hidden md:flex items - center space - x-4';
-                >;
-                  <a;
-                    href='tel:+13024640950';
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors text - sm'                  >;
-                    +1 302 464 0950;
-                  </a>;
-                  <a;
-                    href='mailto:kleber@ziontechgroup.com';
-                    className='bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 2 rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 text - sm'                  >                  className="hidden md:flex items - center space - x-4";
-                >;
-                  <a;
-                    href="tel:+13024640950";
-                    className="text - cyan - 400 hover:text - cyan - 300 transition - colors text - sm";
-                  >;
-                    +1 302 464 0950;
-                  </a>;
-                  <a;
-                    href='mailto:kleber@ziontechgroup.com';
-                    className='bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 2 rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 text - sm'                    href="mailto:kleber@ziontechgroup.com";
-                    className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 2 rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 text - sm";
-                  >;
-                    Contact Us;
-                  </a>;
-                </motion.div>;
-                {/* Mobile Menu Button */}
-                <button;
-                  className='lg:hidden text - white p - 2';
-                  on_click={() => setIsMobileMenuOpen (!isMobileMenuOpen)}
-                >;
-                  <svg;
-                    className='w - 6 h - 6';
-                    fill='none';
-                    stroke='current_color';
-                    view_box='0 0 24 24';
-                  >;
-                    <path;
-                      stroke_linecap='round';
-                      stroke_linejoin='round';
-                      stroke_width={2}
-                      d='M4 6h16M4 12h16M4 18h16';
-                    />                  </svg>                  className="lg:hidden text - white p - 2";
-                  on_click={() => setIsMobileMenuOpen (!isMobileMenuOpen)}
-                >;
-                  <svg className="w - 6 h - 6" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" />;
-                </button>;
-              </div>;
-              {/* Mobile Navigation Menu */}
-              <AnimatePresence>;
-                {isMobileMenuOpen && (
-                  <motion.div;
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className='lg:hidden border - t border - white / 10';
-                  >;
-                    <div className='py - 4 space - y-2'>;
-                      {navigation_sections.map (section => (                        <button                    className="lg:hidden border - t border - white / 10";
-                  >;
-                    <div className="py - 4 space - y-2">;
-                      {navigation_sections.map ((section) => (
-                          key={section.id}
-                          on_click={() => scrollToSection (section.id)}
-                          className={`flex items - center space - x-3 w - full text - left px - 4 py - 2 rounded - lg transition - all duration - 300 ${
-                            active_section === section.id;
-                              ? 'bg - cyan - 400 / 20 text - cyan - 400';
-                              : 'text - gray - 300 hover:bg - white / 10';
-                          }`}
-                        >;
-                          <span>{section.icon}</span>;
-                          <span>{section.label}</span>;
-                        </button>))}
-                      <div className='pt - 4 border - t border - white / 10'>;
-                        <a;
-                          href='tel:+13024640950';
-                          className='flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300'                        >                      <div className="pt - 4 border - t border - white / 10">;
-                        <a;
-                          href="tel:+13024640950";
-                          className="flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300";
-                          <span></span>;
-                          <span>+1 302 464 0950</span>;
-                        </a>;
-                        <a;
-                          href='mailto:kleber@ziontechgroup.com';
-                          className='flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300'                        >                          href="mailto:kleber@ziontechgroup.com";
-                          className="flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300";
-                        >;
-                          <span></span>;
-                          <span > kleber@ziontechgroup.com</span>;
-                        </a>;
-                      </div>;
-                    </div>;
-                  </motion.div>)}
-              </AnimatePresence>;
-            </div>;
-          </nav>;
-        </>)}
       {/* Hero Section */}
       <section;
         id='hero';
@@ -466,19 +226,15 @@ if ( {) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-6xl mx-auto relative z-10"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
-              >
 
               {/* Enhanced CTA Section */}
               <motion.div
@@ -570,40 +326,6 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-                className='flex items-center justify-center space-x-6 text-sm text-gray-400'>              >;
-                <div className="flex items-center space-x-2">;
-                  <Shield className="w-4 h-4 text-green-400" />;
-                  <span>Enterprise Security</span>;
-                </div>;
-                <div className="flex items-center space-x-2">;
-                  <Globe className="w-4 h-4 text-blue-400" />;
-                  <span>Global Reach</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Shield className='w-4 h-4 text-green-400' />;
-                  <span>Enterprise Security</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Globe className='w-4 h-4 text-blue-400' />;
-                  <span>Global Reach</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <TrendingUp className='w-4 h-4 text-purple-400' />                  <span>Proven Results</span>                <div className="flex items-center space-x-2">;
-                  <TrendingUp className="w-4 h-4 text-purple-400" />;
-                  <span>Proven Results</span>;
-                </div>;
-              </motion && motion.div>;
-            </motion && motion.div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-      {/* Features Section */}
-      <section className='py-20 px-4 relative'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-4 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
@@ -668,30 +390,21 @@ if ( {) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-      {/* Enhanced Services Preview */}
-      <section className='py-20 px-4'>;
-        <div className='max-w-6xl mx-auto'>;
-          <motion&& motion.div
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">;
-        <div className="max-w-6xl mx-auto">;
-          <motion&& motion.div
-            className="text-center mb-16"
-
-
-
 
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
 
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Our Revolutionary 2026 Services
@@ -888,19 +601,10 @@ if ( {) {
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                onClick={() => window.location.href = service.link}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                <div className="relative p-6">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}>
-                    <service.icon className="w-full h-full text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
                   <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Explore Service</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </a>
                 </div>
               </motion.div>
             ))}
@@ -925,20 +629,6 @@ if ( {) {
         </div>
       </section>
       {/* Contact Section */}
-      <section id='contact' className='py-20 px-4'>;
-        <div className='max-w-6xl mx-auto'>;
-          <motion&& motion.div
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">;
-        <div className="max-w-6xl mx-auto">;
-          <motion&& motion.div
-            className="text-center mb-16"
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -1043,7 +733,6 @@ if ( {) {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -1051,7 +740,6 @@ if ( {) {
                 Email Us
               </a>
               <a
-                href="tel:+13024640950"
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -1060,14 +748,6 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-                Call Us;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-      {/* Footer */}
             <p className="mt-2">
               Address: 364 E Main St STE 1008 Middletown DE 19709
               Phone: +1 302 464 0950
@@ -1088,16 +768,6 @@ if ( {) {
         </div>
       </footer>
     </UltraFuturisticBackground2026>
-  );
-              Website;
-            </a>;
-          </div>;
-        </div>;
-      </footer>;
-
-export default Homepage2025;  );
-    </UltraFuturisticBackground2026>;
-  );
 };
 
 export default Homepage2025;  );
@@ -1105,7 +775,6 @@ export default Homepage2025;  );
 };
 
 export default Homepage2025;
-
     </UltraFuturisticBackground2026>);
 }
 ;
@@ -1121,4 +790,3 @@ export default Homepage2025;  )
 }
 export default Homepage2025;
 
-export default Homepage2025;

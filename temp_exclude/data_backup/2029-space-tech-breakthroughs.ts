@@ -1,5 +1,3 @@
-
-
 export interface SpaceTechBreakthroughService2029 { id: string, name: string, tagline: string, price: string, description: string, features: string[], link: string, marketPosition: string, targetAudience: string, roi: string, competitors: string[], marketSize: string, growthRate: string, realImplementation: boolean, contactInfo: {
        mobile: string, email: string, address: string
     },

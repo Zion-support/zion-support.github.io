@@ -1,4 +1,3 @@
-  return (;
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;

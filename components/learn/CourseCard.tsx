@@ -1,5 +1,4 @@
 
-export type Course = {;
 import Link from 'next / link';
 export type Course = {
   id: string;
@@ -47,5 +46,3 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
-
-  );

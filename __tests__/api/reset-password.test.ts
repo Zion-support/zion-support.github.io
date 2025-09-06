@@ -5,4 +5,3 @@ import { describe, it, expect, vi } from 'vitest'
 describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
-      "body": { token: 'invalid', "newPassword"

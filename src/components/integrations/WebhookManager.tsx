@@ -84,9 +84,6 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
-export function WebhookManager() {
-  const { 
-    webhooks,
     loading,
     error,
 
@@ -289,7 +286,13 @@ export function WebhookManager() {;
             Define webhooks to notify external systems when events occur in Zion.
           </CardDescription>
         </CardHeader>
-
+        <CardContent className='space-y-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div className='space-y-2'>
+              <Label htmlFor='webhook-name'>Webhook Name</Label>
+              <Input
+                id='webhook-name'
+                placeholder='e.g., Job Postings Webhook'
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -301,19 +304,6 @@ export function WebhookManager() {;
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
                 }
-
-              />;
-            </div>;
-
-            <div className='space-y-2'>;
-              <Label htmlFor='webhook-name'>Webhook Name</Label>;
-              <Input
-                id='webhook-name'
-                placeholder='e && e.g., Job Postings Webhook'
-                value={newWebhook && newWebhook.name}
-                onChange={e =>;
-                  setNewWebhook({ ...newWebhook, name: e && e.target.value });
-                }
                 <ClickableBadge
                   key={event}                  onRemove={() => handleRemoveEvent(event)}
                 <ClickableBadge
@@ -322,8 +312,8 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
               ))}
-            </div>;
-            <div className='flex space-x-2'>;
+            </div>
+            <div className='flex space-x-2'>
               <Select
             
             <div className="space-y-2">
@@ -450,9 +440,6 @@ export function WebhookManager() {;
                   key={event} ;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
-                  {eventOptions.find(e => e.value === event)?.label || event}
-                </ClickableBadge>;
-              ))}
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -470,54 +457,11 @@ export function WebhookManager() {;
                   ))}
                 </SelectContent>
               </Select>
-              <Button type='button' onClick={handleAddEvent} variant='outline'>
-                <PlusCircle className='h-4 w-4 mr-2' /> Add
+              <Button type="button" onClick={handleAddEvent} variant="outline">
+                <PlusCircle className="h-4 w-4 mr-2" /> Add
               </Button>
             </div>
           </div>
-        {loading ? (
-          <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
-          <p > No webhooks configured yet.Create your first webhook above.</p>) : (
-          <div className="space - y-4">;
-            {webhooks.map (webhook => (
-              <Card key={webhook.id}>;
-                <CardHeader className="pb - 2">;
-                  <div className="flex justify - between items - start">;
-                    <div>;
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max - w-md">;
-                        {webhook.url}
-
-                value={newWebhook && newWebhook.selectedEvent}
-                onValueChange={value =>;
-                  setNewWebhook({;
-                    ...newWebhook,;
-                    selectedEvent: value as WebhookEventType,;
-                  });
-                }              >;
-                <SelectTrigger className='w-full'>;
-                  <SelectValue placeholder='Select event' />;
-                </SelectTrigger>;
-                <SelectContent>;
-                  {eventOptions && eventOptions.map(option => (;
-                    <SelectItem key={option && option.value} value={option && option.value}>;
-                      {option && option.label}
-                    </SelectItem>;
-                  ))}
-                </SelectContent>;
-              </Select>;
-              <Button type='button' onClick={handleAddEvent} variant='outline'>;
-                <PlusCircle className='h-4 w-4 mr-2' /> Add;
-              </Button>;
-            </div>;
-          </div>;
-
-          <div className='space-y-2'>;
-            <Label htmlFor='webhook-secret'>Secret (optional)</Label>;
-            <Input
-              id='webhook-secret'
-              placeholder='A secret key to verify the webhook source'
             <Input 
               id="webhook-secret" 
               placeholder="A secret key to verify the webhook source"
@@ -568,16 +512,6 @@ export function WebhookManager() {;
           <p>Loading webhooks...</p>;
         ) : error ? (;
           <p className="text-red-500">{error}</p>;
-        ) : webhooks && webhooks.length === 0 ? (;
-          <p>No webhooks configured yet && yet.Create your first webhook above.</p>;
-        ) : (;
-          <div className="space-y-4">;
-            {webhooks && webhooks.map(webhook => (;
-              <Card key={webhook && webhook.id}>;
-                <CardHeader className="pb-2">;
-                  <div className="flex justify-between items-start">;
-                    <div>;
-                      <CardTitle className="text-lg">{webhook && webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
                         {webhook.url}
                       </CardDescription>
@@ -587,7 +521,6 @@ export function WebhookManager() {;
                         <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
-
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 
@@ -600,8 +533,8 @@ export function WebhookManager() {;
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className='py-2'>
-                  <div className='flex flex-col space-y-2'>
+                <CardContent className="py-2">
+                  <div className="flex flex-col space-y-2">
                     <div>
                         </Button>;
                       </div>;
@@ -747,7 +680,6 @@ export function WebhookManager() {;
             </CardContent>
           </Card>
         )}
-}
 
 ;
 
@@ -788,7 +720,6 @@ export function WebhookManager() {;
               </div>;
             </CardContent>;
           </Card>)}
-      </div>;
     </div>);
 }setNewWebhook ({
   ...new_webhook;

@@ -20,13 +20,6 @@ export function addPortfolioSection(
     }
     yPos += 10, // Add space between projects
   }
-  // If there are more projects than we're displaying
-  if (projects.length > maxProjects) {
-    doc.setFontSize(10);
-    doc.setTextColor(colors.text);
-    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
-
-    yPos += 6
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -138,4 +131,3 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
-}

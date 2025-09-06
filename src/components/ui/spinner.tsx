@@ -1,6 +1,3 @@
-Spinner.displayName = 'Spinner'
-export default Spinner; import React from 'react'
-import { Loader2 } from 'lucide-react'
 }
 
 const Spinner = React && React.forwardRef<SVGSVGElement, SpinnerProps>(;
@@ -36,7 +33,3 @@ const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
     />)),
 Spinner.display_name = 'Spinner',
 export default Spinner,
-  );
-),;
-Spinner.displayName = 'Spinner';
-export default Spinner;

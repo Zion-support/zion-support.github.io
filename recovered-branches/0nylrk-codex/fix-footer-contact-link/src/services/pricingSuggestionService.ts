@@ -76,12 +76,24 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate = 45;
       maxRate = 90;
       confidence = "High"
+      confidence = "High"
+    } else if (category === "design") {
+      minRate = 35,
+      maxRate = 70,
+      confidence = "High"
+    } else if (category === "marketing") {
+      minRate = 30,
+      maxRate = 60,
+      confidence = "Medium"
+    } else if (category === "data") {
+      minRate = 45,
+      maxRate = 90,
+      confidence = "High"
     } else {
       min_rate = 25;
       max_rate = 50;
       confidence = "Low";
     }
-    // Adjust based on job title keywords
       minRate += 20;
       maxRate += 30
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
@@ -128,6 +140,33 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
 }
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {
+    
+    return {
+      minRate,
+      maxRate,
+      confidence,
+      explanation
+    }
+  } catch (error) {
+    console.error("Error generating budget suggestion:", error),
+    // Return a fallback suggestion
+    return {
+      minRate: 30;
+      maxRate: 60;
+      confidence: "Low"
+      minRate: 30,
+      maxRate: 60,
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    }
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    };
+  }
+}
+
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+  try {;
     const { skills, yearsExperience, location } = params;
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -173,8 +212,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 0.8;
       }
     }
-    const minRate = Math.round(baseRate * locationFactor * 0.9);
-    const maxRate = Math.round(baseRate * locationFactor * 1.2);
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium"
     if (yearsExperience > 3 && hasInDemandSkills && location) {
@@ -198,12 +235,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       max_rate: 60;
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.";
-    }
-  }
-}
-export async function getTalentRateSuggestion (params: TalentRateParams): Promise < PricingSuggestion> {
-  try {
-    const { skills, years_experience, location } = params;
 ;
     // Simulate API call delay;
     await new Promise (resolve => set_timeout (resolve, 1000));
@@ -286,6 +317,13 @@ if ( {) {
     return {
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
+    console.error("Error generating rate suggestion:", error);
+    return {
+      minRate: 25,
+      maxRate: 50,
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
+    };
   }
 }
 // Function to save pricing analytics data
@@ -316,15 +354,6 @@ export async function trackPricingSuggestion(data: {
     }
   }
 }
-// Function to save pricing analytics data;
-export async /**
- * trackPricingSuggestion - Function description
- */
-function trackPricingSuggestion() {
-  try {
-    // In a real implementation, this would save to the database;
-    // For now, we'll just log it;
-    console.log ("Tracking pricing suggestion:", data);
     console.error("Error tracking pricing suggestion:", error),
     return false
 ;
@@ -348,8 +377,6 @@ export async function trackPricingSuggestion(data: {;
   } catch (error) {;
     console.error("Error tracking pricing suggestion:", error);
     return false;
-  }
-}
 ;
     // In a real implementation with Supabase: // await supabase;
     //  .from ('pricing_suggestions');
@@ -358,5 +385,3 @@ export async function trackPricingSuggestion(data: {;
   } catch (error) {
     console.error ("Error tracking pricing suggestion:", error);
     return false;
-  }
-}

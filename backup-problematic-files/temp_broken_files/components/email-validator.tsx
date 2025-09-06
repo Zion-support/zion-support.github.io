@@ -222,9 +222,6 @@ if (email.length > 254) {
             Email Validator
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains
-            and ensure maximum deliverability for your email campaigns and user registrations.
-          </p>
         </div>
       </section>
       {/* Email Validation Tool */}
@@ -280,12 +277,11 @@ type=&quot;checkbox&quot;
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />
-                  Validation Results
+                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />                  Validation Results
                 </h3>
                 {validationResults.length > 0 && (
-                  <Button
-                    onClick={copyResults}
+                  <Button,
+onClick={copyResults}
                     variant=&quot;outline&quot;
                     size=&quot;sm&quot;
                     className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
@@ -295,38 +291,6 @@ type=&quot;checkbox&quot;
                   </Button>
                 )}
               </div>
-              {stats && (
-                <div className=&quot;mb - 6 p - 4 bg - gray - 900 rounded - lg border border - gray - 700 & quot;>;
-                  <div className=&quot;grid grid - cols - 2 gap - 4 text - sm & quot;>;
-                    <div>;
-                      <span className=&quot;text - gray - 400 & quot;>Total:</span>;
-                      <span className=&quot;ml - 2 text - white font - medium & quot;>{stats.total}</span>;
-                    </div>;
-                    <div>;
-                      <span className=&quot;text - gray - 400 & quot;>Valid:</span>;
-                      <span className=&quot;ml - 2 text - green - 400 font - medium & quot;>{stats.valid}</span>;
-                    </div>;
-                    <div>;
-                      <span className=&quot;text - gray - 400 & quot;>Invalid:</span>;
-                      <span className=&quot;ml - 2 text - red - 400 font - medium & quot;>{stats.invalid}</span>;
-                    </div>;
-                    <div>;
-                      <span className=&quot;text - gray - 400 & quot;>Avg Score:</span>;
-                      <span className={`ml - 2 font - medium ${getScoreColor (stats.avg_score)}`}>;
-                        {stats.avg_score.to_fixed (0)}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>)}
-{validation_results.length > 0 ? (
-                <div className=&quot;space - y-3 max - h-96 overflow - y-auto & quot;>;
-                  {validation_results.map ((result, index) => (
-                    <div;
-                      key={index}
-                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
-                        'border-red-500/30 bg-red-500/10';
                       }`}
 >;
                       <div className=&quot;flex items - center justify - between mb - 2&quot;>;
@@ -337,10 +301,6 @@ type=&quot;checkbox&quot;
                           </span>;
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
-              )}
-{validationResults.length > 0 ? (
-                <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-
                   {validationResults.map((result, index) => (                    <div,
 key={index}
                       className={_`p-4 rounded-lg border ${
@@ -364,18 +324,6 @@ key={index}
                         <span className=&quot;ml-2&quot;>{result.domain}</span>
                       </div>
                       {result.issues.length > 0 && (
-                            ))}
-                          </ul>;
-
-
-
-                      {result.isDisposable && (
-                        <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
-                        </div>
-                      )}
-                      {result.hasTypo && (
-                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>
-                           Possible typo detected in domain
                         </div>
                       )}
                     </div>;
@@ -389,6 +337,23 @@ key={index}
                   </p>
                 </div>
               )}
+                        </div>)}
+{result.is_disposable && (
+                        <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
+                          ⚠️ Disposable email domain detected;
+                        </div>)}
+                      {result.has_typo && (
+                        <div className=&quot;mt - 2 p - 2 bg - yellow - 500 / 20 border border - yellow - 500 / 30 rounded text - sm text - yellow - 300 & quot;>;
+                          💡 Possible typo detected in domain;
+                        </div>)}
+                    </div>))}
+</div>) : (
+                <div className=&quot;bg - gray - 900 p - 6 rounded - lg border border - gray - 700 text - center & quot;>;
+                  <div className=&quot;text - 6xl mb - 4&quot;>📧</div>;
+                  <p className=&quot;text - gray - 400 & quot;>;
+                    Validation results will appear here. Enter an email address and click validate to get started.;
+                  </p>;
+                </div>)}
             </Card>;
           </div>;
         </div>;

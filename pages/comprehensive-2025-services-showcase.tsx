@@ -1,16 +1,4 @@
 
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react'
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
@@ -171,6 +159,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
   ],;
   const filteredServices = innovative2025MicroSaasExpansionV3;
     .filter(service => {;
@@ -244,12 +234,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase  Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
       {/* Hero Section */}
-      <section className="relative py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -273,9 +257,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
-
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -293,12 +274,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* Search and Filter Section */}
-      <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
-            {/* Search Bar */}
-
-
       {/* Search and Filter Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,18 +292,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
               <input
                 type="text"
                 placeholder="Search services..."
-            {/* Category Filter */}
-            <div className="flex flex - wrap gap - 2">;
-              {categories.map ((category) => (
-                <button;
-                  key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
-                    selected_category === category.id;
-                      ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
-                  }`}
-
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -369,12 +332,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-                >;
-                  {category.name} ({category.count});
-                </button>))}
-            </div>;
-
             {/* View Mode and Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -396,8 +353,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
                 >
-                  {category.name} ({category.count})
-                </button>
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -415,20 +370,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py - 16 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            variants={container_variants}
-            initial="hidden";
-            animate="visible";
-            className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
-          >;
-            {filtered_services.map ((service, index) => (
-              <motion.div;
-                key={service.id}
-                variants={item_variants}
-                className={`group relative ${
-
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -483,9 +424,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 )}
                 {/* Service Header */}
-                <div className="flex items - start gap - 4 mb - 6">;
-                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>;
-                    {service.icon}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
                     {service.icon  } catch (error) {
@@ -510,16 +448,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                     <span className="text-white/60 text-sm">({service.reviews})</span>
                   </div>
                 </div>
-                {/* Key Features */}
-                <div className="mb - 6">;
-                  <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
-                  <div className="grid grid - cols - 1 gap - 2">;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center gap - 2 text - sm text - white / 70">;
-                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
-                        <span>{feature}</span>;
-                      </div>))}
-
                 {/* Description */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -545,8 +473,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
                     {service.features.length > 3 && (
-
-
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -580,8 +506,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 <div className="flex flex - col sm:flex - row gap - 3">;
                   <a;
                     href={service.link}
-
-
                 {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -634,14 +558,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 Clear Filters
               </button>
             </div>
-      {/* CTA Section */}
-      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -691,26 +607,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
       </section>
       <EnhancedFooter />
     </div>
-  )
-          >;
-            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              Our team of experts is ready to help you implement these cutting - edge solutions;
-              and drive innovation in your organization.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
-              >;
-                Schedule Consultation;
-                <ArrowRight className="w - 5 h - 5" />;
-              </a>;
-              <a;
-                href="tel:+13024640950";
-                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
                 Call Us Now;
               </a>;

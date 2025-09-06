@@ -105,15 +105,10 @@ import type { DateRange } from '@/types/dateRange';
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
-      });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
         variant: "destructive"
       })
     }
   });
-  // Delete mutation
-  const deleteMutation = useMutation({
-    mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
     onSuccess: () => {
       toast({
         title: "Quote deleted"

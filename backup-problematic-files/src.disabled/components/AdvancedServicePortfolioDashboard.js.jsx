@@ -9,4 +9,3 @@ const AdvancedServicePortfolioDashboard.js = ({ className }) => {
   );
 };
 
-export default AdvancedServicePortfolioDashboard.js;

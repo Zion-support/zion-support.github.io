@@ -2,11 +2,6 @@
 			slug="ai-consciousness-evolution-2025"
 			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
 			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
-			pricePerMonthUSD={4999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -19,9 +14,6 @@
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

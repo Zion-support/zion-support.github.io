@@ -1,9 +1,3 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
-import { createServerSideClient } from '../src / utils / supabase / server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
 
 import Link from 'next / link';
 import Head from 'next / head';
@@ -109,8 +103,6 @@ if ( {) {
   }
   return {
     props: {
-
-      user: data.user}}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -125,4 +117,3 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
         destination: '/auth/login';
         permanent: false}}
   }
-} ;

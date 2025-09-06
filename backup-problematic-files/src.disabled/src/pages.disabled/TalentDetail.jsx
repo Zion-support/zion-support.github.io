@@ -9,4 +9,3 @@ const TalentDetail = ({ className }) => {
   );
 };
 
-export default TalentDetail;

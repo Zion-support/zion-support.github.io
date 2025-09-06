@@ -1,5 +1,3 @@
-
-
   return (
     <Card>
       <CardHeader className='flex flex-row items-center justify-between pb-2'>
@@ -19,7 +17,6 @@
               convert to credits.
             </p>
               <Button variant="outline" size="sm">
-                View Wallet
               </Button>
             </div>
           </div>

@@ -9,14 +9,6 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
-import { CreditCard, Plus, Trash } from 'lucide-react'
-import React from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -52,8 +44,6 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-      isDefault: false}
-  ],
 
   return (
     <Card>
@@ -126,6 +116,8 @@ export function PaymentMethods() {;
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
               method.isDefault ? "bg-muted border-primary" : "border-border";
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+              method.isDefault ? "bg-muted border-primary" : "border-border"
             }`}
           >
             <div className="flex items-center space-x-4">
@@ -140,8 +132,7 @@ export function PaymentMethods() {;
                     </span>
                   )}
                 </p>
-
-
+                <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
                 <p className="text-sm text-muted-foreground">
                   Expires {method.expMonth}/{method.expYear}
                 </p>
@@ -357,5 +348,3 @@ function PaymentMethods() {
     </Card>);
 }
 ;
-
-

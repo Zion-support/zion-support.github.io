@@ -69,5 +69,3 @@ exports.handler = async () => {
 }
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
-
-}

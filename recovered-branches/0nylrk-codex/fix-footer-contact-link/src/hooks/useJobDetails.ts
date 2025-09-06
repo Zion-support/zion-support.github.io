@@ -18,8 +18,6 @@
       setJob(data);
       setError(null)
     } catch (err) {
-      console && console.error('Error loading job details:', err);
-      setError(err && err.message)
     } finally {
       setIsLoading (false);
     }
@@ -66,9 +64,7 @@ export function useJobDetails(jobId: string | undefined) {;
   return {;
     job,;
     isLoading,;
-
     error;
     loadJobDetails;
   }
 }
-export default useJobDetails;

@@ -14,7 +14,6 @@
   read_time: string;
   category: string;
   tags: string[];
-export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;

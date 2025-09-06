@@ -31,14 +31,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-  const value = {
-    highContrast
-    largeText
-    reducedMotion
-    toggleHighContrast
-    toggleLargeText
-    toggleReducedMotion
-  }
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -47,57 +39,3 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
-}
-export default AccessibilityProvider;
-const AccessibilityContext = create_context<;
-  AccessibilityContextType | undefined;
->(undefined);
-;
-export const use_accessibility = () =>: any {
-  const context = useContext (AccessibilityContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error (
-      "use_accessibility must be used within an AccessibilityProvider",
-    );
-  }
-  return context;
-}
-;
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
-  children,
-}) => {
-  const [high_contrast, setHighContrast] = useState (false);
-  const [large_text, setLargeText] = useState (false);
-  const [reduced_motion, setReducedMotion] = useState (false);
-;
-  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
-  const toggleLargeText = () =>: any setLargeText (!large_text);
-  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
-;
-  const value = {
-    high_contrast,
-    large_text,
-    reduced_motion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion,
-  }
-;
-  return (
-    <AccessibilityContext.Provider value={value}>;
-      <div;
-        className={`${high_contrast ? "high - contrast" : ""} ${large_text ? "large - text" : ""} ${reduced_motion ? "reduced - motion" : ""}`}
-      >;
-        {children}
-      </div>;
-    </AccessibilityContext.Provider>);
-}
-;
-export default AccessibilityProvider;
-;

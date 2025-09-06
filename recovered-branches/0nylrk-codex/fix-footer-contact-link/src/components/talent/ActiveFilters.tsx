@@ -3,20 +3,7 @@ import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-interface ActiveFiltersProps {
-
-  selectedSkills: string[]
-  toggleSkill: (skill: string) => void
-  selectedAvailability: string[]
-  toggleAvailability: (status: string) => void
-  selectedRegions: string[]
-  toggleRegion: (region: string) => void
   priceRange: [number, number];
-
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
@@ -31,9 +18,6 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
-
-  clearFilters: () => void
-}
   selectedSkills;
   toggleSkill;
   selectedAvailability;
@@ -97,7 +81,6 @@ export function ActiveFilters({
           key={region}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleRegion(region)}
-        >;
           {region}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -145,9 +128,6 @@ export function ActiveFilters({
       <Button;
         variant="ghost";
         size="sm";
-
-        onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent">;
         Clear All;
       </Button>;
     </div>;

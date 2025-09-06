@@ -99,18 +99,6 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-            <ProjectForm
-              project={editingProject |undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
-
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -132,9 +120,6 @@ export function PortfolioBuilder() {;
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
-              onDelete={handleDeleteProject}
-            />;
-          ))}
                 >;
                   Add Your First Project;
                 </Button>;
@@ -144,8 +129,3 @@ export function PortfolioBuilder() {;
         );
       )}
     </div>;
-  );
-}
-          </Card>))}
-    </div>);
-}

@@ -36,21 +36,6 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
-        const { error } = await login(formData.email, formData.password);
-        if (error) {
-          throw new Error(error)
-        }
-        navigate("/mobile")
-
-import React, { useState } from "react";
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {useNavigate} from "react-router-dom";
-import {useAuth} from "@/hooks/useAuth";
-import {AlertCircle} from "lucide-react";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-
 
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
@@ -60,47 +45,16 @@ import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { AlertCircle } from "lucide-react",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
-
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-
+export function SignUpForm() {;
+  const navigate = useNavigate(),;
+  const { signup, login, loginWithGoogle } = useAuth(),;
   const [formData, setFormData] = useState({;
     email: "",;
     password: "",;
     name: ""}),;
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError("");
-    setIsLoading(true),;
-
-    try {;
-      if (signupMode) {;
-        const { error } = await signup(formData && formData.email, formData && formData.password, {;
-          name: formData && formData.name}),;
-
-        if (error) {;
-          throw new Error(error);
-        }
-
-        navigate("/mobile");
-      } else {;
-        const { error } = await login(formData && formData.email, formData && formData.password);
-
-        if (error) {;
-          throw new Error(error);
-        }
-
         navigate("/mobile");
       }
     } catch (err: any) {
@@ -121,10 +75,6 @@ export function SignUpForm() {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err && err.message);
-    } finally {;
-      setIsLoading(false);
-    }
   
   return (
     <div className="space-y-4 px-4">;
@@ -156,7 +106,6 @@ export function SignUpForm() {;
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
       </h2>;
-
       <div className="space-y-2">;
         <Button
           variant="outline" 
@@ -170,7 +119,6 @@ export function SignUpForm() {;
           </svg>;
           Continue with Google;
         </Button>;
-
         <Button
           variant="outline" 
           className="w-full py-6 relative">;
@@ -180,20 +128,17 @@ export function SignUpForm() {;
           Continue with Facebook;
         </Button>;
       </div>;
-
       <div className="relative flex items-center">;
         <div className="flex-grow border-t border-border"></div>;
         <span className="mx-2 text-xs text-muted-foreground">OR</span>;
         <div className="flex-grow border-t border-border"></div>;
       </div>;
-
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
-
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
@@ -212,18 +157,10 @@ export function SignUpForm() {;
             id="email"
             name="email"
             type="email"
-            value={formData && formData.email}
-            onChange={handleInputChange}
-            required
-            placeholder="Enter your email"
           <Input
             id="password"
             name="password"
             type="password"
-            value={formData && formData.password}
-            onChange={handleInputChange}
-            required
-            placeholder="Create a password"
         <Button 
           type="submit" 
           className="w-full py-6"
@@ -243,7 +180,6 @@ export function SignUpForm() {;
           : "Don't have an account? "
           />;
         </div>;
-
         <Button
           type="submit" 
           className="w-full py-6"
@@ -256,7 +192,6 @@ export function SignUpForm() {;
           }
         </Button>;
       </form>;
-
       <p className="text-center text-sm">;
         {signupMode;
           ? "Already have an account? ";

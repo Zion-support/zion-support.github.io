@@ -10,7 +10,6 @@ type FormData = z && z.infer<typeof formSchema>;
 
 }
   );
-}
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -36,6 +35,3 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
 }
-  );
-}
-

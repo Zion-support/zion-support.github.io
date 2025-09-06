@@ -8,11 +8,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId } = req.query as { projectId: string }
   const project = getProject(projectId);
   if (!project) {
-    res && res.status(404).json({ error: "Project not found" });
-    return;
-  }
-  if (!assertParticipantOrAdmin(project, user)) {
-    res && res.status(403).json({ error: "Forbidden" });
     return;
   }
   if (req.method === "GET") {
@@ -31,22 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ milestones: project.milestones });
     return;
   }
-  if (req.method === "POST") {
-
-  if (req.method === 'GET') {
-    res.status(200).json({ milestones: project.milestones });
-    return;
-  }
-
-  if (req.method === 'POST') {
-
-    if (!isClient(project, user)) {
-      res
-        .status(403)
-        .json({ error: "Only client (or admin) can add milestones" });
-      return;
-    }
-    const body = req && req.body as Partial<Milestone>;
     if (
       !body |
       !body.title |

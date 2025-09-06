@@ -21,7 +21,9 @@ export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
     signature?: string;
   }
 }
-export type ProposalPayload = {title: string;
+},;
+export type ProposalPayload = {
+  title: string;
   targetInstitution: string;
   type: string;
   regionalScope: string;
@@ -30,13 +32,20 @@ export type ProposalPayload = {title: string;
   contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
-}
-const dataDir = path.join(process.cwd(), 'dataproposals');
-const publicDir = path.join(process.cwd(), 'publicproposals');
-function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+};
+const dataDir = path.join(process.cwd(), 'dataproposals'),;
+const publicDir = path.join(process.cwd(), 'publicproposals'),;
+function ensureDirs() {;
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs();
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs(),;
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -46,26 +55,32 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
-  const meta: ProposalMeta = {id;
+  const meta: ProposalMeta = {;
+    id;
     createdAt;
-    updatedAt;
-    title: payload.title;
-    targetInstitution: payload.targetInstitution;
-    type: payload.type;
-    regionalScope: payload.regionalScope;
-    budgetOrResolution: payload.budgetOrResolution;
-    supportingMultiverses: payload.supportingMultiverses |[];
-    languages: payload.language ? [payload.language] : ['en'];
-    status: 'Draft';
+    updatedAt,;
+    title: payload.title,;
+    targetInstitution: payload.targetInstitution,;
+    type: payload.type,;
+    regionalScope: payload.regionalScope,;
+    budgetOrResolution: payload.budgetOrResolution,;
+    supportingMultiverses: payload.supportingMultiverses || [],;
+    languages: payload.language ? [payload.language] : ['en'],;
+    status: 'Draft',;
     artifacts: {;
-      markdownPath: `/proposals/${id}/proposal.md`;
-      jsonPath: path.relative(process.cwd(), jsonPath)}}
+      markdownPath: `/proposals/${id}/proposal.md`,;
+      jsonPath: path.relative(process.cwd(), jsonPath)}},;
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
-  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8'),;
   const metaPath = path.join(proposalDir, 'meta.json');
-  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8'),;
   return meta;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
@@ -85,10 +100,6 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   } catch {return null;
   }
 }
-
-
-
-  artifacts: {;
 
     markdownPath?: string,;
     jsonPath?: string,;

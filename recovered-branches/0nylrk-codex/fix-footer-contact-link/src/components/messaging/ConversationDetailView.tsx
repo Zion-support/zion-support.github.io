@@ -45,31 +45,23 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
   }
-import {format} from 'date - fns';
-import {MessageSquare} from 'lucide-react';
-import {use_messaging} from '@/context / MessagingContext';
-import {Button} from '@/components / ui / button';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {AspectRatio} from '@/components / ui / aspect - ratio';
-import {use_auth} from '@/hooks / use_auth';
-import {MessageBubble} from './MessageBubble';
-import {DateDivider} from './DateDivider';
-export function ConversationDetailView() {;
-  const { user } = useAuth();
-  const { ;
-    activeConversation;
-    activeMessages, ;
-    sendMessage, ;
-    loadMessages;
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (!messageText.trim() || !activeConversation) return,
+    
+    await sendMessage(activeConversation.id, messageText),
+    setMessageText('')
+  },
   useEffect(() => {;
     scrollToBottom();
   }, [activeMessages]);
@@ -115,11 +107,6 @@ export function ConversationDetailView() {;
 
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
-
-  activeMessages && activeMessages.forEach(message => {;
-    const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages && groupedMessages.find(group => group && group.date === messageDate);
-
     if (existingGroup) {;
       existingGroup && existingGroup.messages.push(message);
     } else {;
@@ -146,7 +133,6 @@ export function ConversationDetailView() {;
           </div>;
         </div>;
       </div>;
-
                     className="object-cover"
                   />;
                 </AspectRatio>;
@@ -206,6 +192,3 @@ export function ConversationDetailView() {;
           </Button>;
         </form>;
       </div>;
-}
-    </div>);
-}

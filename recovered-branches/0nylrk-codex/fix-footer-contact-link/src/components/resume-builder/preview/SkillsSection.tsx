@@ -1,4 +1,3 @@
-
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -8,14 +7,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
       }
       acc[category].push (skill);
       return acc;
-
-
-  const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other';
-    if (!acc[category]) {
-      acc[category] = []
-    }
-    acc[category].push(skill);
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];

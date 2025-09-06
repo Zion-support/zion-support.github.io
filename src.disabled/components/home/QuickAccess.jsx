@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface QuickAccessProps {
   // Add props here as needed
-}
 export default function QuickAccess({ }: QuickAccessProps) {
   return (
     <div>

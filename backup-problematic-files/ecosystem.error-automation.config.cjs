@@ -6,6 +6,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,12 +41,16 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -73,6 +82,11 @@ module.exports = {
     // Syntax Error Fixer
     {
 <<<<<<< HEAD
+      "name": 'syntax-error-fixer';
+      "script": 'scripts/pm2/syntax-error-fixer.js';
+        "NODE_ENV": 'production';
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       "name": 'syntax-error-fixer';
@@ -112,10 +126,14 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "PORT": 3000
       };
       "env_production": {
@@ -227,6 +245,11 @@ module.exports = {
     // TypeScript Error Fixer
     {
 <<<<<<< HEAD
+      "name": 'typescript-error-fixer';
+      "script": 'scripts/pm2/typescript-error-fixer.js';
+        "NODE_ENV": 'production';
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       "name": 'typescript-error-fixer';
@@ -266,10 +289,14 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -303,8 +330,14 @@ module.exports = {
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'};
     // ESLint Error Fixer
 <<<<<<< HEAD
+        "NODE_ENV": 'production';
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "NODE_ENV": 'production';
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -330,10 +363,14 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -388,6 +425,11 @@ module.exports = {
     // File Extension Normalizer
     {
 <<<<<<< HEAD
+      "name": 'file-extension-normalizer';
+      "script": 'scripts/pm2/file-extension-normalizer.js';
+        "NODE_ENV": 'production';
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       "name": 'file-extension-normalizer';
@@ -427,10 +469,14 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -569,8 +615,14 @@ module.exports = {
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
 <<<<<<< HEAD
+        "NODE_ENV": 'production';
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "NODE_ENV": 'production';
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -596,10 +648,14 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -652,9 +708,13 @@ module.exports = {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 >>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

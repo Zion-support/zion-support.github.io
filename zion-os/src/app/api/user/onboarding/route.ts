@@ -46,10 +46,6 @@ export async function POST(request: NextRequest) {;
   }
 
 
-export async function POST(request: NextRequest) { try {
-    const body = await request.json();
-    const { userId, preferences  } = body;
-
     // Mock user update - replace with actual database operation
     const updatedUser = {
       id: userId,
@@ -59,7 +55,6 @@ export async function POST(request: NextRequest) { try {
       onboardingCompleted: true,
       preferences
     };
-
     return NextResponse.json({
       message: "Onboarding completed successfully",
       user: {
@@ -74,8 +69,6 @@ export async function POST(request: NextRequest) { try {
   } catch (error) {
     console.error('Onboarding completion error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' }
-      { error: 'Internal server error' },
       { status: 500 }
     );
   }

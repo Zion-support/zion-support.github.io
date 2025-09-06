@@ -9,4 +9,3 @@ const CommunityProfilePage = ({ className }) => {
   );
 };
 
-export default CommunityProfilePage;

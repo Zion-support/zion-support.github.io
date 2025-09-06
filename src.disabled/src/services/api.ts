@@ -10,9 +10,6 @@ export class apiService {;
       console && console.error("Error fetching "data": ", error)}
       throw error}
 }
-      throw error,
-}
-}
 export default new apiService(),
 
 }

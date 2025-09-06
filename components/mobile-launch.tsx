@@ -89,15 +89,6 @@ export default function MobileLaunchPage() {;
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
-
-  // Auto-rotate testimonial index
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {;
-    const t = setInterval(;
-      () => setIdx(i => (i + 1) % testimonials && testimonials.length),;
-      4000;
-    );
-    return () => clearInterval(t);
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
       ? `${SITE_BASE_URL}/download`;
@@ -124,6 +115,13 @@ export default function MobileLaunchPage() {;
       setStatus('error');
     }
   }
+
+
+    }
+  }
+
+
+
   return (
     <EnhancedLayout>;
       <Head>;
@@ -213,33 +211,6 @@ export default function MobileLaunchPage() {;
           <div className="text-sm opacity-90">
             Scan to open this page on your phone
             <div className="opacity-80">Or tap a store badge above</div>
-        </div>
-      </section>
-      {/* Key features */}
-      <section className='mt-10 grid md:grid-cols-3 gap-6'>
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
-          <div className='text-lg font-semibold'>Hire from anywhere</div>
-          <p className='mt-2 text-sm opacity-80'>
-            Global talent network with timezone-aware availability.
-          </p>
-          <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-emerald-100 to-cyan-100 dark:from-emerald-900/40 dark:to-cyan-900/40' />
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
-          <div className='text-lg font-semibold'>AI-match instantly</div>
-          <p className='mt-2 text-sm opacity-80'>
-            Smart matching surfaces top candidates in seconds.
-          </p>
-          <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40' />
-        </div>
-        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
-          <div className='text-lg font-semibold'>Track milestones</div>
-          <p className='mt-2 text-sm opacity-80'>
-            Manage deliverables, approvals, and progress on the go.
-          </p>
-          <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>
-      </section>
-      {/* Trust & Community */}
-      <section className='mt-12'>
-        <div className='flex items-center gap-2'>        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <div className="text-lg font-semibold">Track milestones</div>
           <p className="mt-2 text-sm opacity-80">Manage deliverables, approvals, and progress on the go.</p>
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
@@ -277,19 +248,13 @@ export default function MobileLaunchPage() {;
           </p>;
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>;
       </section>;
-
-      {/* Trust & Community */}
-      <section className='mt-12'>;
-        <div className='flex items-center gap-2'>        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
-          <div className="text-lg font-semibold">Track milestones</div>;
-          <p className="mt-2 text-sm opacity-80">Manage deliverables, approvals, and progress on the go.</p>;
-          <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />;
-      </section>;
-
       {/* Trust & Community */}
       <section className='mt-12'>;
         <div className='flex items-center gap-2'>;
             <StarIcon key={i} />;
+      <section className='mt-12'>
+        <div className='flex items-center gap-2'>
+            <StarIcon key={i} />
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -324,29 +289,6 @@ export default function MobileLaunchPage() {;
         </div>
       </section>
               transform: `translateX(-${idx * 100}%)`,
-              width: `${testimonials && testimonials.length * 100}%`,
-            }}>;
-            {testimonials && testimonials.map(t => (;
-              <div key={t && t.name} className='w-full md:w-1/3 flex-shrink-0 pr-4'>;
-                <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full'>;
-                  <p className='text-sm'>{t && t.quote}</p>;
-                  <div className='mt-3 text-xs opacity-80'>;
-                    {t && t.name}  {t && t.role}
-                  </div>                </div>        <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>;
-        <div className="relative mt-4 overflow-hidden">;
-          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials && testimonials.length * 100}%` }}>;
-            {testimonials && testimonials.map((t) => (;
-              <div key={t && t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">;
-                <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">;
-                  <p className="text-sm">{t && t.quote}</p>;
-                  <div className="mt-3 text-xs opacity-80">{t && t.name}  {t && t.role}</div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Email opt-in */}
             type="email"
             required
             value={email}
@@ -357,29 +299,6 @@ export default function MobileLaunchPage() {;
           <button
             type="submit"
             disabled={status === 'loading'}
-          </button>;
-        </form>;
-        {status === 'success' && (;
-          <div className='mt-2 text-sm text-emerald-600'>;
-            Thanks! Youre on the list.;
-          </div>;
-        )}
-        {status === 'error' && (
-          <div className='mt-2 text-sm text-rose-600'>
-            {error |'Please try again later.'}
-          </div>
-        )}
-      </section>
-      {/* Helper links */}
-      <section className='mt-10 text-sm opacity-80'>
-        <div className='flex flex-wrap items-center gap-4'>
-          <Link href='/open-app'>
-            <a className='underline'>Deep link: /open-app</a>
-          </Link>
-          <span></span>
-          <Link href='/download'>
-            <a className='underline'>Shareable link: /download</a>
-          </Link>        </div>
 
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
@@ -387,7 +306,6 @@ export default function MobileLaunchPage() {;
         </form>
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
-
       </section>
     </EnhancedLayout>
   );      </section>
@@ -413,5 +331,3 @@ export default function MobileLaunchPage() {;
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
-
-  );

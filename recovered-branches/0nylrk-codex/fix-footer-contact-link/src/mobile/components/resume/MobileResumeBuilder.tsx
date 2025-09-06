@@ -23,14 +23,67 @@ import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
-
-export function MobileResumeBuilder() {
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label",;
+import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
+;
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+;
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
+  ;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "basics":return <BasicsStep />,;
+      case "experience":;
+        return <ExperienceStep />,;
+      case "education":;
+        return <EducationStep />,;
+      case "skills":;
+        return <SkillsStep />,;
+      default:;
+        return <BasicsStep />;
+    }
+  },;
+  ;
+  return (;
+    <div className="space-y-6 px-4 pb-24">;
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
+        <Button;
+          variant={currentStep === "basics" ? "default" :"outline"}
+          className="flex-1 rounded-full";
+          onClick={() => setCurrentStep("basics")}
+        >;
+          Basics;
+        </Button>;
+        <Button;
+          variant={currentStep === "experience" ? "default" :"outline"}
+          className="flex-1 rounded-full";
+          onClick={() => setCurrentStep("experience")}
+        >;
+          Experience;
+        </Button>;
+        <Button;
+          variant={currentStep === "education" ? "default" :"outline"}
+          className="flex-1 rounded-full";
+          onClick={() => setCurrentStep("education")}
           onClick={() => setCurrentStep("basics")}
         >
           Basics
@@ -114,6 +167,68 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
+
+
+
+
+type ResumeStep = "basics" | "experience" | "education" | "skills",
+
+
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
+
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { Label } from '@/components / ui / label';
+import { ChevronRight, Plus, Zap, Trash2 } from './lucide-react';
+;
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+;
+export /**
+ * MobileResumeBuilder - Function description
+ */
+function MobileResumeBuilder() {
+  const [current_step, setCurrentStep] = useState < ResumeStep>("basics");
+;
+  const renderStepContent = () =>: any {
+    switch (current_step) {
+      case "basics": return <BasicsStep />;
+      case "experience":;
+        return <ExperienceStep />;
+      case "education":;
+        return <EducationStep />;
+      case "skills":;
+        return <SkillsStep />;
+      default:;
+        return <BasicsStep />;
+    }
+
+  };
+
+
+
+  },
+  
+
+  return (
+    <div className="space-y-6 px-4 pb-24">;
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
+        <Button
+          variant={currentStep === "basics" ? "default" : "outline"}
+          className="flex-1 rounded-full"
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -173,7 +288,6 @@ function MobileResumeBuilder() {
         >;
           Education;
         </Button>;
-        <Button
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
@@ -184,7 +298,6 @@ function MobileResumeBuilder() {
     </Card>;
   );
 }
-
 
           <Textarea 
             id="summary" 
@@ -197,13 +310,6 @@ function ExperienceStep() {
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
-    <div className="space - y-4">;
-      {experiences.map ((exp, index) => (
-        <Card key={exp.id}>;
-          <CardContent className="p - 4 space - y-4">;
-            <div className="flex justify - between items - center">;
-              <h3 className="font - medium">Work Experience {index + 1}</h3>;
-              {experiences.length > 1 && (
                   size="icon"
                   onClick={() => removeExperience(exp && exp.id)}
                 >;
@@ -255,7 +361,7 @@ function ExperienceStep() {
 function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }])
   const addEducation = () => {
-    const newId = (educations.length + 1).toString();
+    const newId = (educations.length + 1).toString(),
     setEducations([...educations, { id: newId }])
   return (
     <div className="space - y-4">;
@@ -265,12 +371,6 @@ function EducationStep() {
             <div className="flex justify - between items - center">;
               <h3 className="font - medium">Education {index + 1}</h3>;
               {educations.length > 1 && (
-                  size="icon"
-                  onClick={() => removeEducation(edu && edu.id)}
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
@@ -322,23 +422,6 @@ function EducationStep() {
                 <Input;
                   placeholder="Skill (e.g. JavaScript, Figma)";
                   value={skill.name}
-                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
-                  className="flex - 1";
-                />;
-                <Select;
-                  value={skill.proficiency}
-                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
-                >;
-                  <SelectTrigger className="w-[130px]">;
-                    <SelectValue placeholder="Level" />;
-                  </SelectTrigger>;
-                  <SelectContent>;
-                    <SelectItem value="beginner">Beginner</SelectItem>;
-                    <SelectItem value="intermediate">Intermediate</SelectItem>;
-                    <SelectItem value="advanced">Advanced</SelectItem>;
-                    <SelectItem value="expert">Expert</SelectItem>;
-                  </SelectContent>;
-                </Select>;
                 )}
               </div>;
             ))}
@@ -373,7 +456,7 @@ function EducationStep() {
           </div>;
         </CardContent>;
       </Card>;
-
+      ;
       <Card>;
             </div>;
           </div>;

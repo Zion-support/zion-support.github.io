@@ -9,4 +9,3 @@ const CategoryDetail = ({ className }) => {
   );
 };
 
-export default CategoryDetail;

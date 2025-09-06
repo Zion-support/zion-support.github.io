@@ -16,9 +16,6 @@ import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean
 }
     return (
       <Card>;
@@ -67,10 +64,66 @@ interface RewardsCardProps {;
   rewards: ReferralReward[],;
   isLoading: boolean;
 }
-
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+;
+interface RewardsCardProps {;
+  rewards:ReferralReward[],;
+  isLoading:boolean;
+}
+;
+export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
+  if (isLoading) {;
+    return (;
+}`}
+              }`}
+            >
+              <div>
+                <div className="flex items-center gap-2">
+                  {reward.reward_type === "credit" ? (
+                    <BadgeDollarSign className="h-4 w-4 text-green-600" />
+                  ) : (
+                    <Badge className="h-4 w-4 text-blue-600" />
+                  )}
+                  <p className="font-medium">
+                    {reward.reward_type === "credit"
+                      ? `$${reward.amount?.toFixed(2)} Credit`
+                      : "Visibility Boost"}
+                  </p>
+                </div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Earned on {formatDate(reward.created_at)}
+                </p>
+                {reward.expires_at && (
+                  <p className="text-xs text-muted-foreground">
+                    Expires on {formatDate(reward.expires_at)}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+interface RewardsCardProps {;
+  rewards: ReferralReward[];
+  isLoading: boolean;
+}
+;
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -85,11 +138,16 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
+    ),;
+  }
+;
+  if (rewards.length === 0) {;
+    return (;
     );
   }
-
-  if (rewards && rewards.length === 0) {;
-    return (
+;
+  if (rewards.length === 0) {;
+    return (;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -107,10 +165,6 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
-    );
-  }
-  return (
-
   // Check condition
 if ( {) {
   $2
@@ -151,7 +205,6 @@ if ( {) {
         <div className="space - y-4">;
           {rewards.map ((reward, index) => (
             <div;
-
               key={reward.id}
               className={`flex justify - between items - start ${
                 index !== rewards.length - 1 ? "border - b pb - 3" : "";

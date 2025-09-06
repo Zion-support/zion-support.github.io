@@ -1,5 +1,3 @@
-
-interface SearchResult {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -113,7 +111,6 @@ interface SearchResult {
   page: number;
   limit: number;
   query: string;
-
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
@@ -193,14 +190,12 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-        </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
           <div>
             <h3 className='font-semibold text-lg mb-1'>
-              <HighlightText text={result.title} searchTerm={searchTerm} />
             </h3>
             <Badge variant='secondary' className='text-xs'>
             </Badge>;
@@ -230,7 +225,6 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />;
-
         </div>;
         <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
           <HighlightText text={result.description} search_term={search_term} />;
@@ -240,34 +234,9 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
-                {result.category}
-              </Badge>
-            )}
-            {result && result.tags?.slice(0, 3).map((tag, index) => (;
-              <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />;
-              </Badge>;
-            ))}
-          </div>
-          {result.rating && (
-            <div className='flex items - center gap - 1'>;
-              <span className='text - yellow - 500'></span>;
-              <span className='text - sm'>{result.rating.to_fixed (1)}</span>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
 }
 // Filter Sidebar Component;
 const FilterSidebar: React.FC<{
-  }
-          </div>;
-
-          {result && result.rating && (;
-            <div className='flex items-center gap-1'>;
-              <span className='text-yellow-500'></span>;
-              <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
-            </div>;
-          )}
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -296,11 +265,12 @@ const FilterSidebar: React.FC<{
     })
   },
 
-  return (
-
                 id={option.id}
                 checked={filters.types.includes(option.id)}
-
+                onCheckedChange={checked =>
+                  handleTypeChange(option.id, !!checked)
+                }              />
+              <label htmlFor={option.id} className='text-sm'>
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
@@ -308,7 +278,6 @@ const FilterSidebar: React.FC<{
               </label>
             </div>
           ))}
-
         </div>;
       </div>;
 
@@ -359,11 +328,6 @@ const FilterSidebar: React.FC<{
               category: value === 'all' ? '' : value,
             });
           }
-        >          <SelectTrigger>;
-            <SelectValue placeholder='All Categories' />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value='all'>All Categories</SelectItem>;
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -372,32 +336,11 @@ const FilterSidebar: React.FC<{
                 {category}
               </SelectItem>;
             ))}
-          <Slider
-            value={[filters && filters.minPrice, filters && filters.maxPrice]}
-            {available_categories.map (category => (
-              <SelectItem key={category} value={category}>;
-                {category}
-              </SelectItem>))}
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className='font - semibold mb - 3'>Price Range</h3>;
-        <div className='px - 2'>;
-          <Slider;
-            value={[filters.min_price, filters.max_price]}
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
-
-
-            className="mb-2"
-          />
-          <div className="flex justify-between text-sm text-muted-foreground">
             <span>${filters.minPrice}</span>
-            <span>${filters.maxPrice}</span>
           </div>
         </div>
       </div>
@@ -408,15 +351,12 @@ const FilterSidebar: React.FC<{
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
-
-
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
             <SelectValue />
-          </SelectTrigger>
           <SelectContent>
             <SelectItem value="0">Any Rating</SelectItem>
             <SelectItem value="1">1+ Stars</SelectItem>
@@ -429,8 +369,6 @@ const FilterSidebar: React.FC<{
       </div>
     </div>
   )
-
-
 },
 
 // No Results Component
@@ -473,7 +411,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           onFiltersChange({ ...filters, minRating: parseFloat(value) });
         }>;
           <SelectTrigger>;
-
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
@@ -518,7 +455,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
             {suggestions && suggestions.map((suggestion, index) => (;
               <Button
                 key={index}
-
                 variant="outline";
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
@@ -533,7 +469,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
             <li>• Try different keywords</li>
-            <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
           </ul>
@@ -569,19 +504,6 @@ export const SearchResultsPage: React.FC = () => {
     sort: 'relevance'
   }),
 
-  const suggestions = generateSearchSuggestions(),
-
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
-    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    }),
-    return Array.from(categories).sort()
-  }, [results]),
-
-  // Sync search term with URL
-  useEffect(() => {
     if (router.isReady && router.query.q) {
       const urlTerm = router.query.q as string
       setSearchTerm(urlTerm)
@@ -608,68 +530,6 @@ export const SearchResultsPage: React.FC = () => {
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join(','))
       }
-      // Check condition
-if ( {) {
-  $2
-}
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('min_price', search_filters.min_price.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('max_price', search_filters.max_price.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('min_rating', search_filters.min_rating.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('sort', search_filters.sort);
-      }
-      } else {
-        set_results (prev => [...prev, ...data.results]);
-      }
-    } catch (error) {
-      logErrorToProduction ('Search failed', { data: error });
-      set_results ([]);
-      setTotalCount (0);
-    } finally {
-      set_loading (false);
-    }
-  }
-  // Search when term or filters change;
-  useEffect ((, ) => {
-    if () {) {
-  $2
-}
-      perform_search (search_term, 1, filters);
-      setCurrentPage (1);
-    }
-  }
-  // Handle filter changes;
-  const handleFiltersChange = (new_filters: SearchFilters) =>: any {
-    set_filters (new_filters);
-  }
-  // Load more results;
-  const load_more = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      perform_search (search_term, current_page + 1);
-    }
-  }
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
@@ -701,7 +561,6 @@ if ( {) {
     }
   return (
     <div className='container mx-auto px-4 py-6'>;
-      {/* Search Header */}
       <div className='mb-6'>;
         <div className='flex gap-4 mb-4'>;
           <div className='flex-1'>;
@@ -710,8 +569,6 @@ if ( {) {
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion && suggestion.text)}
               searchSuggestions={suggestions}
-
-
               placeholder="Search products, talent, services, and more..."
             />
           </div>
@@ -731,8 +588,6 @@ if ( {) {
               <Select
                 value={filters && filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
-
-
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -758,10 +613,6 @@ if ( {) {
                 </SelectContent>;
               </Select>;
 
-                <Button
-                  variant={viewMode === 'list' ? 'default' : 'ghost'}
-                </Button>
-              </div>
               {/* View Mode Toggle */}
               <div className='flex border rounded - md'>;
                 <Button;
@@ -826,8 +677,6 @@ if ( {) {
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
-              </div>;
-            ) : results && results.length === 0 && searchTerm ? (;
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />;
@@ -845,19 +694,6 @@ if ( {) {
                       result = {result,}
                       searchTerm = {searchTerm,}
                       viewMode = {viewMode,}
-                    />;
-                  ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (
-          <div className="flex-1">
-
-            {loading && results.length === 0 ? (
-              <div className="flex justify-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin" />
-              </div>
-            ) : results.length === 0 && searchTerm ? (
-
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
@@ -962,7 +798,6 @@ export default SearchResultsPage
     </div>;
   );
 };
-
 export default SearchResultsPage;
           </div>)}
       </div>;
@@ -1102,5 +937,3 @@ setHasMore (data.has_more);
 export default SearchResultsPage;
 '";
 export default SearchResultsPage,
-
-

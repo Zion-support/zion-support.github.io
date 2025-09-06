@@ -12,29 +12,19 @@ interface BundleInfo {
   chunkCount: number;
   loadTime: number;
   cacheHitRate: number
-interface ChunkInfo {
-  name: string;
-  size: number;
+totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
   loadTime: number;
-  cached: boolean
-export function BundleAnalyzer() {
 
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled
+
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
+
+
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
-    if (!show) return;
+    if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
@@ -55,21 +45,22 @@ interface BundleInfo {
 interface ChunkInfo {
   name: string;
   size: number;
-  load_time: number;
-  cached: boolean;
-export /**
- * BundleAnalyzer - Function description
- */
-function BundleAnalyzer() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
+  loadTime: number;
+  cached: boolean
+export function BundleAnalyzer() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
   }
+      localStorage.getItem('bundle-analyzer') === 'true'
+    setShouldShow(show)
+    if (!show) return;
+    setIsVisible(true)
+    collectBundleInfo()
+  }, [])
   const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
   const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
   const [is_visible, setIsVisible] = useState (false);
@@ -92,21 +83,6 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error })
-    } finally {
-      setIsCollecting (false);
-    }
-  }
-  const format_size = (bytes: number): string => {
-    // Check condition
-if (return '0 B') {
-  $2
-}
-    const key = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const index = Math.floor (Math.log (bytes) / Math.log (k));
-    return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
   }
   const getSizeColor = (size: number) =>: any {
     // Check condition
@@ -131,8 +107,6 @@ if ( {) {
     }
   }
 
-  if (!shouldShow) {
-    return null
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -146,7 +120,6 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
-
   cacheHitRate: number;
 }
 ;
@@ -250,9 +223,7 @@ export function BundleAnalyzer() {;
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
-          onClick={toggleAnalyzer}
           Bundle Analyzer
-        </Button>
       </div>
     )
                 onClick={collectBundleInfo}
@@ -265,7 +236,6 @@ export function BundleAnalyzer() {;
                 size='sm'
                 onClick={toggleAnalyzer}
                 ✕
-              </Button>
             </div>
           </div>
         </CardHeader>
@@ -315,52 +285,19 @@ export function BundleAnalyzer() {;
                           </Badge>
                         )}
                       </div>
+                      <Badge
+                        className={getSizeColor(chunk.size)}
+                        variant='outline'
+                      >
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
                         {formatSize(chunk.size)}
-                      </Badge>
                     </div>
                   ))}
 
                 </div>;
               </div>;
 
-              <div>;
-                <div className='flex justify-between items-center text-xs mb-1'>;
-                  <span>Cache Hit Rate</span>;
-                  <span>{bundleInfo && bundleInfo.cacheHitRate.toFixed(1)}%</span>;
-                </div>;
-                <Progress value={bundleInfo && bundleInfo.cacheHitRate} className='h-2' />;
-              </div>;
-
-              <div>;
-                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>;
-                <div className='space-y-1'>;
-                  {chunks && chunks.map((chunk, index) => (;
-                    <div
-                      key={chunk && chunk.name}
-                      className='flex justify-between items-center text-xs'>;
-                      <div className='flex items-center gap-2 flex-1 min-w-0'>;
-                        <span className='w-4 text-muted-foreground'>;
-                          {index + 1}.;
-                        </span>;
-                        <span className='truncate' title={chunk && chunk.name}>                          {chunk && chunk.name}
-                        </span>;
-                        {chunk && chunk.cached && (;
-                          <Badge
-                            variant='outline'
-                            className='text-xs px-1 py-0'>;
-                            cached;
-                          </Badge>;
-                        )}
-                      </div>;
-                      <Badge
-                        className={getSizeColor(chunk && chunk.size)}
-                        variant='outline'>;
-                        {formatSize(chunk && chunk.size)}
-                      </Badge>;
-                    </div>;
-                  ))}
           )}
         </CardContent>
       </Card>
@@ -458,5 +395,3 @@ export function BundleAnalyzer() {;
         </CardContent>;
       </Card>;
     </div>);
-
-

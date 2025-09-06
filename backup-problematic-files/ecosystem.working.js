@@ -107,48 +107,6 @@
   deploy: {
     production: {
       user: "ubuntu",
-      host: "your-server && server.com",
-      ref: "origin/main",
-      repo: "git@github && github.com:your-username/your-repo && repo.git",
-      path: "/var/www/zion-app",
-      "pre-deploy-local": "",
-      "post-deploy":
-        "npm install && npm run build && pm2 reload ecosystem && ecosystem.config.js --env production",
-      "pre-setup": "",
-    },
-    staging: {
-      user: "ubuntu",
-      host: "staging-server && server.com",
-      ref: "origin/develop",
-      repo: "git@github && github.com:your-username/your-repo && repo.git",
-      path: "/var/www/zion-app-staging",
-      "pre-deploy-local": "",
-      "post-deploy":
-        "npm install && npm run build && pm2 reload ecosystem && ecosystem.config.js --env staging",
-      "pre-setup": "",
-    },
-  },
-};
-module && module.exports = {
-  apps: [
-    // Main application
-    {
-      name: "zion-app"
-      script: "npm"
-      args: "start"
-      cwd: "./"
-      instances: 1
-      exec_mode: "fork"
-      host: "your - server.com",
-      ref: "origin / main",
-      repo: "git@github.com:your - username / your - repo.git",
-      path: "/var / www / zion - app",
-      "pre - deploy - local": "",
-      "post - deploy":;
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre - setup": "",
-    },
-    staging: {
 }
 module.exports = {
   apps: [;
@@ -196,4 +154,3 @@ module.exports = { apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: '
     },
   },
 }
-;

@@ -3,10 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
-    } catch (e) {
-      // attempt minimal static export
-      try {
-        execSync('next build && next export', { stdio: 'inherit' })
   }    return res.status(200).json({ cid, provider })
 
   } catch (error: any) {

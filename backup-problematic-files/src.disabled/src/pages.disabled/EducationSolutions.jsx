@@ -9,4 +9,3 @@ const EducationSolutions = ({ className }) => {
   );
 };
 
-export default EducationSolutions;

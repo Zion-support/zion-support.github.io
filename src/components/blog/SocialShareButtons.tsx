@@ -15,7 +15,6 @@ interface SocialShareButtonsProps {;
       ? encodeURIComponent(window.location.href)
       : ''
   const shareText = encodeURIComponent(title)
-  const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
@@ -81,6 +80,25 @@ if (return) {
 }
 }
   },
+  const copyLink = () => {
+    if (typeof window === 'undefined') return
+
+  }
+  const shareToFacebook = () => {
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
+      '_blank'
+    )
+  }
+  const shareToLinkedIn = () => {
+    window.open(
+      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
+      '_blank'
+    )
+  }
+  const copyLink = () => {
+    if (typeof window === 'undefined') return
+  },
 
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
@@ -96,6 +114,29 @@ if (return) {
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+  }
+  const buttons = [
+    {
+      icon: <Twitter className='h-4 w-4' />
+      label: 'Twitter'
+      onClick: shareToTwitter
+    }
+    {
+      icon: <Facebook className='h-4 w-4' />
+      label: 'Facebook'
+      onClick: shareToFacebook
+    }
+    {
+      icon: <Linkedin className='h-4 w-4' />
+      label: 'LinkedIn'
+      onClick: shareToLinkedIn
+    }
+    {
+      icon: <LinkIcon className='h-4 w-4' />
+      label: 'Copy Link'
+      onClick: copyLink
+    }
+  ]
 
     </div>;
   );

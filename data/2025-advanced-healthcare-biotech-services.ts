@@ -31,7 +31,6 @@
 
     website: string;
   }
-
         'Target identification and validation',
         'Drug repurposing and optimization',
         'Predictive toxicity and efficacy analysis',
@@ -64,7 +63,6 @@
       rating: 4 && 4.9,
       reviews: 12,
     },
-
         'Whole genome sequencing and analysis',
         'AI - powered disease risk assessment',
         'Personalized treatment recommendations',
@@ -98,7 +96,6 @@
       rating: 4 && 4.8,
       reviews: 23,
     },
-
         'Automated abnormality detection',
         'Clinical decision support tools',
         'Integration with PACS systems',
@@ -130,7 +127,6 @@
       rating: 4 && 4.7,
       reviews: 34,
     },
-
         'Remote patient monitoring',
         'Health data analytics and insights',
         'Patient engagement and education',
@@ -159,7 +155,6 @@
       rating: 4 && 4.6,
       reviews: 78,
     },
-
         'Intelligent patient recruitment and matching',
         'Real - time data collection and monitoring',
         'Predictive analytics and insights',
@@ -176,39 +171,6 @@
       ]
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
       competitors: [
-        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
-      launchDate: '2024-11-01'
-      customers: 34
-      rating: 4.8
-      reviews: 19
-    }
-      color: 'from - orange - 600 to - red - 600',
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
-      market_position:;
-        'Competes with Medidata ($500 / month), Veeva Vault ($1, 000 / month), Oracle Clinical ($2, 000 / month). Our advantage: AI - powered optimization, comprehensive features, and competitive pricing.',
-      target_audience:;
-        'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
-      trial_days: 30,
-      setup_time: '3 - 6 weeks',
-      category: 'Clinical Research & Trials',
-      real_service: true,
-      technology: [;
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
-      ],
-      integrations: ['EDC systems, CTMS, ePRO, e_consent, Regulatory databases'],
-      use_cases: [;
-        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management',
-      ],
-      roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
-      competitors: [;
-        'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
-      ],
-      market_size: '$67.2B clinical trial market',
-      growth_rate: '18% annual growth',
-      variant: 'clinical - trial - enterprise',
-      contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -218,9 +180,6 @@
       implementation_details:;
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
-
-    },;
-  ];    features: [
 
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
@@ -251,11 +210,6 @@ export interface AdvancedHealthcareBiotechService {
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
-    real_implementation: true,
-    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
-    launch_date: '2024 - 11 - 01', customers: 34,
-    rating: 4.8,
-    reviews: 19;
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -518,6 +472,3 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
-  }
-];
-;

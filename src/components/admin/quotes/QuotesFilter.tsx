@@ -1,5 +1,3 @@
-
-interface QuotesFilterProps {;
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -55,11 +53,6 @@ interface QuotesFilterProps {
             </Select>;
           </div>;
 
-          <div>;
-            <p className='text-zion-slate-light text-sm mb-2'>Date Range</p>;
-            <Popover>;
-              <PopoverTrigger asChild>;
-                <Button
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}

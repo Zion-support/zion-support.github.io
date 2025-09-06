@@ -79,11 +79,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      })),
-  return res.status (200).json ({ status: "created", version, event_id: event.event_id });
-}
-;
-
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })

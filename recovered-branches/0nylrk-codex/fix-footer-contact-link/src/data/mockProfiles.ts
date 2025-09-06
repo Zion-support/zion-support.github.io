@@ -92,14 +92,6 @@
         date: 'Dec 2022',
       },
     ],
-    experience: [
-      {
-        id: 'e1'
-        role: 'Senior AI Engineer'
-        company: 'Innovate AI'
-        description:
-          'Leading computer vision projects and mentoring junior engineers in deep learning techniques.',
-        startDate: 'Mar 2021',
         current: true
       }
       {

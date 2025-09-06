@@ -12,9 +12,6 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     align: 'left',
   });
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
@@ -33,31 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-  res && res.setHeader('Content-Type', 'application/pdf');
-  res && res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full';
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
-
-  res && res.setHeader('Content-Typeapplication/pdf');
-  res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });
-  doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-  doc && doc.info.Author = 'Zion Protocol';
-
-  doc && doc.pipe(res);
-
-  // Cover page
-
-  doc && doc.end();
-  // End
-  doc && doc.addPage();
-  doc && doc.fontSize(10).fillColor('#444444').text(' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
   doc.end()
 }

@@ -9,4 +9,3 @@ const AIAutonomousBusinessPlatform2029 = ({ className }) => {
   );
 };
 
-export default AIAutonomousBusinessPlatform2029;

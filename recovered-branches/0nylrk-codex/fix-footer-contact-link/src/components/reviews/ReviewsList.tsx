@@ -13,26 +13,11 @@ export function ReviewsList({
   reviews
   isLoading
   onReportReview
-}: ReviewsListProps) {
-  if (isLoading) {
-    return (
-      <div className="space - y-4">;
-        {Array (3);
-          .fill (0);
-          .map ((_, i) => (
-            <div;
-              key={i}
-import { Review } from "@/types/reviews",;
-import { ReviewCard } from "./ReviewCard",;
 interface ReviewsListProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
-
-export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
-  if (isLoading) {;
-    return (
       <div className="space-y-4">;
         {Array(3).fill(0).map((_, i) => (;
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">;
@@ -49,10 +34,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
-        ))}
-      </div>;
-    );
-  }
   // Check condition
 if ( {) {
   $2

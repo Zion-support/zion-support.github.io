@@ -36,11 +36,6 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
-          </form>;
-        )}
-      </EnhancedCard>;
-    </div>;
-  );
   )
 }
 import {useState} from 'react';

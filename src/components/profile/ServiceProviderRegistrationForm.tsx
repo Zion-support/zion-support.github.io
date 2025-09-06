@@ -301,80 +301,6 @@ export function ServiceProviderRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional services for your profile."})
-      }
-      
-    } catch (error: any) {
-        if (newServices.length > 0) {
-          setServiceTags([...serviceTags, ...newServices])
-        }
-      }
-    }
-  // Handle form submission
-  const onSubmit = async (values: ServiceFormValues,) => {
-    if (serviceTags.length === 0) {
-      toast({
-      })
-
-      return;
-    }
-  }
-  // Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {
-    const formData = form.getValues()
-    if (!formData.bio |formData.bio.length < 20) {
-      toast({
-        title: 'More information needed'
-        description:
-          'Please provide at least a detailed bio before generating enhanced content.'
-      })
-      return
-    }
-    try {
-      setIsGenerating(true)
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke(
-        'service-profile-enhancer'
-        {
-          body: {
-            providerData: {
-              name: formData.name
-              title: formData.title
-              bio: formData.bio
-              services: serviceTags
-              location: formData.location
-            }
-          }
-        }
-      );
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (error.message);
-      }
-      // Check if data exists before type assertion
-      if (data && typeof data === 'object') {
-        setGeneratedContent(data as { summary: string; services: string[] })
-        toast({
-          title: 'Enhanced Profile Generated'
-          description:
-            'AI has created a professional bio and suggested additional services for your profile.'
-        })
-      } else {
-        // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content')
-        setGeneratedContent({
-          summary:
-            'Professional service provider with expertise in delivering high-quality solutions.'
-          services: ['Consulting', 'Project Management', 'Technical Support']
-        })
-        toast({
-          title: 'Enhanced Profile Generated'
-          description:
-            'AI has created a professional bio and suggested additional services for your profile.'
-        })
-      }
-    } catch (error: any) {
       logErrorToProduction('Error generating enhanced profile:', {
         data: error
       })
@@ -389,15 +315,10 @@ if ( {) {
       setIsGenerating (false);
     }
   }
-  // Apply generated content to form;
-  const applyGeneratedContent = () =>: any {
     // Check condition
 if ( {) {
   $2
 }
-          }
-        } catch (error) {
-          logErrorToProduction ('Error enhancing profile:', { data: error });
           // Continue with submission even if enhancement fails;
         }
       const { data: userData } = await supabase.auth.getUser(),
@@ -416,18 +337,12 @@ if ( {) {
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
-        .select(),
-
-
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
-      */
-      // Send notification email if available
-      if (userEmail && values.enhancedProfile) {
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
@@ -589,7 +504,6 @@ if ( {) {
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
-
                       name="name"
                       render={({ field }: { field: any }) => (
                         <FormItem>
@@ -610,20 +524,9 @@ if ( {) {
                     />
                   </div>
 
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
-                      name="title"
-                      render={({ field }: { field: any }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
-                          <FormControl>
-                            <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input
-                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="e.g., Creative Design Studio"
                                 {...field}
                               />
                             </div>
@@ -633,7 +536,6 @@ if ( {) {
                       )}
                     />
                   </div>
-
 
                   <div className="col-span-1">
                     <FormField
@@ -658,7 +560,6 @@ if ( {) {
                     />
                   </div>
 
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -678,7 +579,6 @@ if ( {) {
                           </FormControl>
                           <FormMessage className="text-red-400" />
                         </FormItem>
-
 ;
       toast({;
         title: "Profile Created Successfully",;
@@ -701,41 +601,19 @@ if ( {) {
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-          <CardTitle className='text-2xl text-white'>;
-            Create Your Service Provider Profile;
-          </CardTitle>;
-          <CardDescription className='text-zion-slate'>;
-            Showcase your services and expertise to potential clients.;
-          </CardDescription>;
-        </CardHeader>;
-
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
-            <CardContent className='space-y-8'>;
-              {/* Basic Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
-                    <FormField
-                      control={form.control}
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1/1}>
                           <img
                             src={uploadedAvatar}
-
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-                        </AspectRatio>
-                      ) : (
                         <div className="flex items-center justify-center h-full">
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
                         </div>
                       )}
                     </div>
-
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -748,9 +626,8 @@ if ( {) {
                       />
                     </label>
                   </div>
-                  <p className='text-sm text-zion-slate'>
-                    For best results, use an image at least 400x400 pixels in
-                    JPG, PNG, or GIF format.
+                  <p className="text-sm text-zion-slate">
+                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
                   </p>
                 </div>
               </div>
@@ -768,11 +645,10 @@ if ( {) {
                 <h3 className='text-lg font-medium text-white'>;
                   Service Description;
                 </h3>;
-                <FormField
                       <FormControl>
                         <Textarea
-                          className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
-                          placeholder='Describe your services, expertise, and what sets you apart from others...'
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your services, expertise, and what sets you apart from others..."
                           {...field}
                         />
                       </FormControl>
@@ -809,12 +685,7 @@ if ( {) {
                         </FormDescription>;
                       </div>;
                       <FormControl>;
-                    <Button
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
+                        </FormLabel>
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -822,7 +693,6 @@ if ( {) {
                       </div>
                       <FormControl>
                         <Switch
-
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -848,8 +718,6 @@ if ( {) {
                   </div>
                 )}
                 {/* Generated Content Display */}
-                      </Button>
-                    </div>
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
@@ -863,20 +731,10 @@ if ( {) {
                               )}
                             </div>                          </div>;
                         )}
-                    </div>;
-                  </div>;
-                )}
-              {/* Services and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Services Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
-                  <FormField
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a service..."
-                              {...field}
                         {service}
                         <button
                           type='button'
@@ -1054,13 +912,11 @@ if ( {) {
                       </Badge>
                     ))}
                     {serviceTags.length === 0 && (
-
                       <p className="text-zion-slate text-sm italic">No services added yet</p>
                     )}
                   </div>;
                 </div>;
                 {/* Pricing and Availability Section */}
-
                     name="hourlyRate"
                     render={({ field }: { field: any }) => (
                       <FormItem>
@@ -1069,12 +925,6 @@ if ( {) {
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
                             <Input
-                              className='pl-8 bg-zion-blue border-zion-blue-light text-white'
-                              placeholder='e && e.g., 85'
-                              {...field}
-                            />;
-                          </div>;
-                        </FormControl>;
                   <FormField
                     control={form && form.control}
                     name='availability'
@@ -1144,7 +994,6 @@ if ( {) {
                 >
                   Save as Draft
                 </Button>
-
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -1152,7 +1001,6 @@ if ( {) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
                 </Button>
-              </div>
             </CardFooter>
           </form>
         </Form>
@@ -1160,9 +1008,6 @@ if ( {) {
     </div>
   )
 }
-}
-  const reader = new FileReader ();
-reader.onloadend = () => {
 setGeneratedContent ({
 }catch (error: any) {';
   logErrorToProduction ('Error generating enhanced profile:', {
@@ -1321,5 +1166,3 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
 ;
-
-

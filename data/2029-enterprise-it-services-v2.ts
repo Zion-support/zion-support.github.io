@@ -32,10 +32,6 @@
     mobile: string;
     email: string;
     website: string;
-];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
-
-    ];
-    marketSize: '$28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
     technology: ['AI/MLAutomationMonitoringITSM'];
     integration: ['ITSM platformsMonitoring toolsEnterprise systems'];
@@ -63,11 +59,6 @@
     exit: 'IPO or enterprise acquisition';
     contact: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-
-      website: 'https://ziontechgroup.com'
-
-      address: '364 E Main St STE 1008 Middletown DE 19709'
 export interface EnterpriseITService2029V2 {;
   id: string,;
   name: string,;

@@ -13,13 +13,6 @@ describe('AICodeGeneratortest', () => {
     render(<AICodeGeneratortest />);
     expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
   });
-  
-  test('displays correct content', () => {
-    render(<AICodeGeneratortest />);
-  });
-  test('handles user interactions', () => {
-    render(<AICodeGeneratortest />);
-  });
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });

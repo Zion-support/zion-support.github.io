@@ -1,4 +1,3 @@
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -18,8 +17,6 @@ export default async function handler(
     "signature:"
     signature.slice(0, 18) + ""
   );
-  return res.status(200).json({ ok: true });
-}
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 export default async /**

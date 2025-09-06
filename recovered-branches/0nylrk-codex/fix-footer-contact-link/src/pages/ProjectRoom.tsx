@@ -23,7 +23,6 @@
       isMuted: false
     }
   ]);
-  const startVideoCall = () => {
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
@@ -37,25 +36,16 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-  ]);
-
-  const startVideoCall = () => {;
-    setIsInCall(true);
-    toast && toast.success("Video call started", {;
-      description: "Others can join with the project room link";
-    });
-    // Switch to video tab if not already there;
-    if (activeTab !== 'video') {;
-      setActiveTab('video');
-    }
   const endVideoCall = () => {
     setIsInCall(false);
+  }
+  },
+  
+  const endVideoCall = () => {
+    setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -79,15 +69,11 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-  },
-  
-  return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
       <main className="container mx-auto py-8">;
         <div className="flex justify-between items-center mb-6">;
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>;
           <div className="flex gap-2">;
             {isInCall && (;
               <Button variant="destructive" className="flex items-center gap-2">;
@@ -102,7 +88,6 @@ import {toast} from 'sonner';
                       </Button>;
                     </div>;
                   </div>;
-                ) : (;
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
                     <p className="text-muted-foreground">Start a video call with your team</p>;
                     <div className="flex gap-2">;
@@ -117,10 +102,6 @@ import {toast} from 'sonner';
                     </div>;
                   </div>;
                 )}
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
           <TabsContent value="team" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -133,7 +114,6 @@ import {toast} from 'sonner';
               </CardContent>;
             </Card>;
           </TabsContent>;
-
           <TabsContent value="settings" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -151,7 +131,3 @@ import {toast} from 'sonner';
       </main>;
       <Footer />;
     </>;
-  );
-}
-    </>);
-}

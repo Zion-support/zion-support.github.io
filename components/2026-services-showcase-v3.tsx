@@ -1,15 +1,3 @@
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-export default function ServicesShowcase2026V3() {
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  }
 
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };
@@ -91,8 +79,6 @@ export default function ServicesShowcase2026V3() {
         {/* Services Showcase */}
         <div id='services'>          <Enhanced2026ServicesShowcaseV3 />;
         </div>;
-
-        {/* Contact Section */}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -130,30 +116,6 @@ export default function ServicesShowcase2026V3() {
                 revolutionary 2026 services to achieve unprecedented growth and;
                 innovation.;
               </p>;
-
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>                <motion&& motion.a
-                  href={`tel:${contactInfo && contactInfo.mobile}`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}                  Ready to Transform Your Business?
-                </span>;
-              </h2>;
-              <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">;
-                Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.;
-              </p>;
-
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
-                <motion&& motion.a
-                  href={`tel:${contactInfo && contactInfo.mobile}`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>;
-                  <span>Call {contactInfo && contactInfo.mobile}</span>;
-                </motion && motion.a>;
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
-                >;
-                  <span>Call {contactInfo && contactInfo.mobile}</span>;
-                </motion && motion.a>;
-
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
@@ -221,6 +183,4 @@ export default function ServicesShowcase2026V3() {
         </section>;
       </div>;
     </UltraQuantumHolographicBackground>);
-}
-  );
 }

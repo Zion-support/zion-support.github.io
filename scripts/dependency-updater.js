@@ -148,10 +148,6 @@ class DependencyUpdater {
   }
   generateRecommendations() {
     const recommendations = [];
-    }
-    return recommendations;
-  }
-}
 // Run the dependency updater
 const updater = new DependencyUpdater();
 updater && updater.updateDependencies().then(() => {

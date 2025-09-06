@@ -1,62 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import { motion } from 'framer-motion';
-
-  Brain
-  Atom
-  Shield
-  Rocket
-  Star
-  Award
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Zap
-  Target
-  Microscope
-  Lock
-  Cloud
-  BarChart3
-  Settings
-  Eye
-  Code
-  Palette
-  Search
-  Filter
-  Grid
-  List
-  ExternalLink
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';import {
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-  CheckCircle, ArrowRight, Zap, Target, Microscope;
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
-
-  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
   Brain,
   Atom,
   Shield,
@@ -86,15 +28,12 @@ import { motion } from 'framer-motion';
 
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
-  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
- } from 'lucide-react';
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
@@ -110,17 +49,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
-
-    count: cuttingEdgeMicroSaasServices2025.length,
-  },];
-
-];
-export default function CuttingEdgeServicesShowcase2025() {
-export default function CuttingEdgeServicesShowcase2025() {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const allServices = [
   const containerVariants = {
     hidden: { opacity: 0 }
 ;
@@ -277,74 +205,15 @@ export default function CuttingEdgeServicesShowcase2025() {;
       coordinate_y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
-  };
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-                  Showcase 2025
-                </span>
-              </motion.h1>
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion.p>
-              {/* Hero Stats */}
-              <motion.div
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center'>;
-              <motion&& motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
-              <motion&& motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
-                Cutting-Edge Services;
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-
-              <motion&& motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                Discover revolutionary technology solutions that are reshaping;
-                industries and defining the future. From AI consciousness to;
-                space mining, experience the cutting edge of innovation.;
-              </motion && motion.p>;
-
-              {/* Hero Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion && motion.p>;
-
-              {/* Hero Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
-
-              </motion && motion.div>;
-
-              {/* CTA Buttons */}
-
-                className="flex flex-col sm:flex-row gap-4 justify-center"
                   <div key={index} className='text-center'>
                     <div className='flex justify-center mb-2'>
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -399,7 +268,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
                   }`}
-                  <button
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -424,17 +292,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
-                >;
-                  <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />;
-                </button>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
                   variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
@@ -480,25 +337,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       </div>;
                     </div>;
 
-                    {/* Tags */}
-
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
-                  </div>
-                  {/* Service Details */}
-                  <div
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                  >                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
@@ -517,9 +363,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className="text-2xl font-bold text-white">
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                  >
-
 
                     </div>
                   </div>
@@ -541,44 +384,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
-                    {/* CTA */}
-                      <a
-                        href={service && service.website}
-                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
-                        Learn More;
-                        <ExternalLink className='ml-1 w-4 h-4' />;
-                      </a>;
-                      <a
-                        href='/contact'
-                        className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
-                        Get Started;
-                        <ArrowRight className='ml-2 w-4 h-4' />                      </a>                      <a
-                        href={service && service.website}
-                        className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors duration-300 text-sm font-medium">;
-                        Learn More;
-                        <ExternalLink className="ml-1 w-4 h-4" />;
-                      </a>;
-                      <a
-                        href="/contact"
-                      <a
-                        href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </a>
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                         Get Started;
                         <ArrowRight className="ml-2 w-4 h-4" />;
                       </a>;
                     </div>;
                   </div>;
-
-                  {/* Hover Effect Overlay */}
-                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
-                </motion && motion.div>;
-              ))}
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -593,14 +404,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Try adjusting your search terms or category filter
                 </p>
                 <button
-                  onClick={() => {;
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                  }}
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                >              >;
-                <div className="text-6xl mb-4"></div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -613,30 +416,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </button>;
               </motion && motion.div>;
             )}
-        {/* Contact CTA Section */}
-        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
-          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?
-              </h2>
-              <p className='text-xl text-white/80 mb-8 leading-relaxed'>
-                Our cutting-edge services are designed to give you a competitive
-                advantage in the rapidly evolving technology landscape. Let's
-                discuss how we can help you achieve your goals.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -916,6 +700,3 @@ const item_variants = {
   hidden: {
   coordinate_y: 20, opacity: 0;
 }
-
-  duration: 0.5 
-

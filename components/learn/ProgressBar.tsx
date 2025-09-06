@@ -1,18 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
 export default function ProgressBar({ value }: ProgressBarProps) {
 export default function ProgressBar({ value }: ProgressBarProps) {;
   const pct = Math.max(0, Math.min(100, value));
@@ -26,7 +12,3 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
     <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
-  return (
-  const pct = Math.max(0, Math.min(100, value));
-
-  return (

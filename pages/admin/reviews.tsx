@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
 const AdminReviewsPage: NextPage = () => {
   const [pending, setPending] = useState<Review[]>([])
@@ -53,11 +50,9 @@ const AdminReviewsPage: NextPage = () => {
 }
         </div>
       </section>
-
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
   )
-},

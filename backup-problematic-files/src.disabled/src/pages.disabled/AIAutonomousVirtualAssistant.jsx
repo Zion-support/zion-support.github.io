@@ -9,4 +9,3 @@ const AIAutonomousVirtualAssistant = ({ className }) => {
   );
 };
 
-export default AIAutonomousVirtualAssistant;

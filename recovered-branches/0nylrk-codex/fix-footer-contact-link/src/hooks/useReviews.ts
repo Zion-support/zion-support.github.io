@@ -32,11 +32,6 @@ export function useReviews(projectId?: string) {
         }
       }
     } catch (err: any) {
-      console && console.error("Error fetching reviews:", err);
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
-        variant: "destructive"})
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -82,11 +77,6 @@ if ( {) {
         .from ("reviews");
         .select (`;
           *;
-    } catch (err: any) {
-      console && console.error("Error fetching user reviews:", err);
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
         variant: "destructive"})
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
@@ -94,21 +84,6 @@ if ( {) {
         .eq ("is_visible", true);
         .eq ("status", "approved");
         .order ("created_at", { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_reviews (data || []);
-    } catch (err: any) {
-      console.error ("Error fetching user reviews:", err);
-      toast ({
-        title: "Error";
-        description: "Failed to load reviews",
-        variant: "destructive"});
-    } finally {
-      setIsLoading (false);
-    }
     project_id: string;
     reviewee_id: string;
     rating: number;
@@ -116,28 +91,6 @@ if (throw error) {
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
-  }) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Error";
-        description: "You must be logged in to submit a review"
-        variant: "destructive"});
-      return false;
-    }
-    try {
-      const { data, error } = await supabase;
-        .from ("reviews");
-        .insert ({
-          ...review;
-      // Check for unique constraint violation
-      if (err && err.code === "23505") {
-        toast({
-          title: "Error";
-          description: "You have already submitted a review for this project"
-          variant: "destructive"})
           reviewer_id: user.id});
         .select ();
         .single ();
@@ -297,9 +250,6 @@ export function useReviews(projectId?: string) {;
       setIsSubmitting(false);
     }
   },
-  
-  // Update a review
-  const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     try {
       const { error } = await supabase
         .from("reviews")
@@ -310,8 +260,6 @@ export function useReviews(projectId?: string) {;
       }
       return true
     } catch (err: any) {
-      console && console.error("Error updating review:", err);
-      toast({
         title: "Error";
         description: "Failed to update review"
         variant: "destructive"});
@@ -323,12 +271,6 @@ export function useReviews(projectId?: string) {;
       const { error } = await supabase
         .from("review_reports")
         .insert({
-      if (error) {
-        // Check for unique constraint violation
-        if (error && error.code === "23505") {
-          toast({
-            title: "Error";
-            description: "You have already reported this review"
             variant: "destructive"})
 ;
   // Report a review;

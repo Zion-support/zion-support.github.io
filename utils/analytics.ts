@@ -16,8 +16,6 @@ export async function trackEvent(payload: TrackEventPayload) {
     });
   } catch (e) {
     // swallow
-  }
-}
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;

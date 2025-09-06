@@ -69,5 +69,3 @@ const TalentRoutes = () =>: any {
     </Routes>);
 }
 ;
-export default TalentRoutes;
-;

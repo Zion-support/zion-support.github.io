@@ -1,11 +1,3 @@
-			title="AI-Powered Decision Engine"
-			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
-			subtitle="Make better decisions, continuously"
-			pricePerMonthUSD={279  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 25x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -20,9 +12,6 @@
 				"Versioned strategies with canary rollouts"
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-		/>
-	)
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

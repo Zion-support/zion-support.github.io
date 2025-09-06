@@ -1,10 +1,7 @@
-
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
   | 'in_progress'
-  | 'completed'
-  | 'canceled';
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -26,8 +23,6 @@ export interface Project {;
   created_at: string;
   updated_at: string;
   job?: {
-  }
-}
   id: string;
   project_id: string;
   user_id: string;

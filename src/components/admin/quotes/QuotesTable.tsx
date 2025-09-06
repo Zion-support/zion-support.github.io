@@ -54,9 +54,6 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void
 }
-
-}
-export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes
   isArchived = false
   isLoading
@@ -67,9 +64,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
-  deleteQuote,
   onViewDetails
 },) => {
+  deleteQuote,
+  onViewDetails
+}) => {
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -118,7 +117,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick = {(,) => toggleArchive(quote.id, false),}
+                          onClick={() => toggleArchive(quote.id, false)}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
@@ -184,7 +183,6 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
-
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
@@ -196,7 +194,6 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -226,7 +223,6 @@ interface QuotesTableProps {;
   deleteQuote: (id: string,) => void,;
   onViewDetails: (quote: QuoteRequest,) => void;
 }
-
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -306,42 +302,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
-
-                    {isArchived ? (;
-                      <>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          onClick = {(,) => toggleArchive(quote && quote.id, false),}
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          className="text-red-500"
-                          onClick = {() => {;
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote && quote.id);
-                            ,}
-                          }}
-                          <DropdownMenuItem
-                    )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-  )
-}
-'"
-
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
-};
 
                   </div>;
                 </TableCell>;
@@ -443,5 +412,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
-
-

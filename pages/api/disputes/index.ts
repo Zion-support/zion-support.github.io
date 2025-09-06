@@ -5,9 +5,6 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
   const user = parseUserFromRequest(req);
   if (req.method === "GET") {
     const all = await readAllDisputes();
@@ -17,65 +14,6 @@ export default async function handler(
         (d) => d.clientUserId === user.id |d.talentUserId === user.id
       );
     }
-      id,
-      projectId: String(projectId),
-      entityType,
-      entityId,
-      clientUserId: String(clientUserId),
-      talentUserId: String(talentUserId),
-      createdAt: now,
-      updatedAt: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reasonDetails,
-      description,
-    } = req.body || {}
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: "Missing required fields" });
-    }
-    const id = generateCaseId ();
-    const dispute: DisputeCase = {
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    }
-    await createDispute(dispute);
-    return res && res.status(201).json({ dispute });
-  }
-
-  res && res.setHeader("Allow", "GET,POST");
-  return res && res.status(405).end("Method Not Allowed");
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-      projectId: String(projectId), entityType,
-      entityId,
-      clientUserId: String(clientUserId), talentUserId: String(talentUserId),
-      createdAt: now, updatedAt: now,
-      status: 'Open', reason: reason as DisputeReason,
-      reasonDetails,
-      description,
-      attachments: [],
-      messages: []};
-
-  res && res.setHeader("Allow", "GET,POST");
-  return res && res.status(405).end("Method Not Allowed");
-}
-
       project_id: String (project_id),
       entity_type,
       entity_id,

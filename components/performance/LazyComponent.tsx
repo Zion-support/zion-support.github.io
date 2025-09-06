@@ -1,7 +1,3 @@
-};
-import React, { Suspense, lazy } from 'react';
-;
-
 
 import React from 'react'
 }
@@ -12,24 +8,11 @@ interface LazyComponentProps {
   fallback?: ReactNode;
   [key: string]: unknown
 }
-
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  component: Component
-  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
-
-    </Suspense>
   );
 }
 };
 
 export default LazyComponent;
-import React from 'react',;
-},
-
-
-import React from 'react';
-}
-
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
@@ -43,6 +26,5 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',
 },
-
 
 

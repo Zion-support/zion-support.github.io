@@ -1306,7 +1306,6 @@ export default function MicroSaaS() {;
       \"pricing\": \'$14 && 14.99 - $79 && 79.99/month\',;
       \"delivery\": \'3-5 weeks\',;
       \"category\": \'Pet Care SaaS\';
-
 }
   ];
   const technologies = [{ \"name\": \'Frontend\', \"icon\": Monito r, \"description\": \'React, Next && Next.js, Vue && Vue.js, Angular\' },;

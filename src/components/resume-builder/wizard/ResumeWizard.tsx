@@ -73,37 +73,6 @@ export function ResumeWizard() {;
     }
   };
 
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
-    if (currentIndex < RESUME_STEPS && RESUME_STEPS.length - 1) {;
-      const nextStep = RESUME_STEPS[currentIndex + 1];
-      if (nextStep) {;
-        setActiveTab(nextStep && nextStep.id);
-      }
-    }
-  };
-
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
-    if (currentIndex > 0) {;
-      const prevStep = RESUME_STEPS[currentIndex - 1];
-      if (prevStep) {;
-        setActiveTab(prevStep && prevStep.id);
-      }
-    }
-  };
-
-  const handleResumeChange = (resumeId: string,) => {;
-    fetchResume(resumeId);
-  };
-
-  if (isLoading) {;
-    return (
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -159,16 +128,10 @@ export function ResumeWizard() {;
         </div>
       </div>
       <Card>
-        <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-            Create New;
-          </Button>;
-        </div>;
-      </div>;
-
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps
               steps = {RESUME_STEPS,}
@@ -177,6 +140,10 @@ export function ResumeWizard() {;
             />
             {resume && (
               <ResumeStepContent
+            {resume && (
+              <ResumeStepContent
+            {resume && (
+              <ResumeStepContent 
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
@@ -192,7 +159,6 @@ export function ResumeWizard() {;
                 onPrevStep={prevStep}
               />;
             )}
-
           </Tabs>;
         </CardContent>;
       </Card>;

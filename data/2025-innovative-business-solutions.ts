@@ -31,7 +31,6 @@
 
     website: string;
   }
-
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -117,18 +116,6 @@ export interface InnovativeBusinessSolution {
     growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Comprehensive AI-powered business intelligence platform with advanced analytics, predictive insights, and seamless business system integration.',
-    launchDate: '2025-02-01',
-    customers: 73,
-    rating: 4 && 4.8,
-    reviews: 48,
-  },
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -229,4 +216,3 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     reviews: 26;
   }
 ];
-;

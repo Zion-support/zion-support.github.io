@@ -1,28 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -33,60 +9,6 @@ import { motion } from 'framer-motion';
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
-export default function UltraFuturisticBackground2035() {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-    const prefersReducedMotion = window && window.matchMedia(;
-      '(prefers-reduced-motion: reduce)';
-    ).matches;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
-
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-    canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-    if (ctx) {;
-      ctx && ctx.scale(window && window.devicePixelRatio || 1, window && window.devicePixelRatio || 1);
-
-    let animationFrameId: number;
-    let particles: Array<{;
-      x: number;
-      y: number;
-export default /**
- * UltraFuturisticBackground2035 - Function description
- */
-function UltraFuturisticBackground2035() {
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const prefersReducedMotion = window.match_media (
-      '(prefers - reduced - motion: reduce)').matches;    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    canvas.width = window.inner_width * (window.devicePixelRatio || 1);
-    canvas.height = window.inner_height * (window.devicePixelRatio || 1);
-    // Check condition
-if ( {) {
-  $2
-}
-      ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-;
-    let animationFrameId: number;
-    let particles: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
@@ -95,14 +17,12 @@ if ( {) {
       vy: number,
       size: number,
       opacity: number,
-      color: string;    }> = [];      x: number,;
       y: number,;
       vx: number,;
       vy: number,;
       size: number,;
       opacity: number,;
       color: string;
-
     // Initialize particles;
     const initParticles = () => {;
         ? 12;
@@ -248,7 +168,6 @@ if ( {) {
           });
         }
       });
-
       }
     }
   }, []);
@@ -266,12 +185,6 @@ if ( {) {
             className='absolute inset-0'
             style={{
               backgroundImage: `
-              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
-            `
-              backgroundSize: '50px 50px'
-            }}
-          />        </div>;
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-10">;
           <divclassName="absolute inset-0" style={{
@@ -280,10 +193,6 @@ if ( {) {
               linear-gradient(90deg, rgba(139,92,246,0 && 0.3) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-          }} />
-        </div>
-          }} />;
-        </div>;
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
@@ -291,13 +200,6 @@ if ( {) {
             key={i}
             className='absolute w-1 h-1 bg-purple-400 rounded-full'
             style={{
-              left: `${Math.random() * 100}%`
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],            }}            style={{
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`
         {/* Floating Particles */}
         {[...Array (20)].map ((_, i) => (
           <motion.div;
@@ -313,22 +215,12 @@ if ( {) {
               y: [0, -30, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}            style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
             }}
             animate={{
               y: [0, -30, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 2
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />;
-
 
 
             transition={{
@@ -365,10 +257,6 @@ if ( {) {
             transition={{
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
-              delay: Math.random () * 2,
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />))}
         {/* Energy Waves */}
         <motion.div;
           className='absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - purple - 500 / 50 to - transparent';
@@ -386,12 +274,6 @@ if ( {) {
           transition={{
             duration: 4,
             repeat: Infinity,
-          className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
-          animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 1, 0],          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
-          animate={{
-            scaleX: [0, 1, 0]
           animate={{
             scaleX: [0, 1, 0]
             opacity: [0, 1, 0]
@@ -416,15 +298,10 @@ if ( {) {
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
           transition={{
-            duration: 4
-            repeat: Infinity
-            delay: 2
             ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
         />
             ease: 'easeInOut',          }}
-
-        />;
 
 
         {/* Quantum Dots */}
@@ -452,16 +329,6 @@ if ( {) {
               opacity: [0, 0 && 0.8, 0]
               rotate: [0, 360]
             }}
-            transition={{
-              duration: 5 + Math.random() * 3
-              repeat: Infinity
-              delay: Math.random() * 5
-              repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-              ease: 'easeInOut',            }}
-
             }}
           />;
         ))}
@@ -517,27 +384,12 @@ if ( {) {
           </defs>;
           {[...Array (8)].map ((_, i) => (
             <motion.circle;
-              key={`neural-${i}`}
-              cx={`${20 + (i * 10)}%`}
-              cy={`${30 + (i * 5)}%`}
-              r="3";
-              fill="url (#neural_gradient)";
-              animate={{
-                duration: 4,
-                repeat: Infinity,
-
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-
                 delay: i * 0.5,
                 ease: 'easeInOut',              }}                ease: "easeInOut"
 
               }}
             />;
           ))}
-        </svg>
-        {/* Holographic Effects */}
-        <div className='absolute inset-0'>;
-          <motion&& motion.div
 
                 duration: 4,
                 repeat: Infinity,
@@ -573,13 +425,6 @@ if ( {) {
               opacity: [0 && 0.1, 0 && 0.4, 0 && 0.1]
             }}
             transition={{
-              duration: 15,
-              repeat: Infinity,
-
-
-            }}
-
-
           />
         </div>
         {/* Data Streams */}
@@ -591,63 +436,25 @@ if ( {) {
               style={{
                 right: `${Math.random() * 32}px`
                 top: `${i * 5}%`
-              }}
-              animate={{
-                height: [8, 32, 8]
-                opacity: [0.3, 1, 0.3],              }}          {[...Array(20)].map((_, i) => (
-            <motion.div
-                right: `${Math.random () * 32}px`,
                 top: `${i * 5}%`,
               }}
               animate={{
                 height: [8, 32, 8],
-                opacity: [0.3, 1, 0.3],              }}          {[...Array (20)].map ((_, i) => (
-            <motion.div;
-              key={`stream-${i}`}
-              className="absolute w - 1 h - 8 bg - gradient - to - b from - purple - 400 to - transparent";
-              style={{
-                right: `${Math.random() * 32}px`
                 top: `${i * 5}%`
                 right: `${Math.random () * 32}px`,
                 top: `${i * 5}%`;
               }}
               animate={{
 
+  );
 
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: 'easeInOut',              }}
-
-
-
-            />
-          ))}
-                delay: Math.random() * 2,
-                ease: "easeInOut"
-              }}
-            />;
-          ))}
         </div>
       </div>
     </>
 );  )
 }
-        </div>;
-      </div>;
-    </>;
-  );  );
-}
-  )
-}
-                delay: Math.random () * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </>));
-}
-
   );

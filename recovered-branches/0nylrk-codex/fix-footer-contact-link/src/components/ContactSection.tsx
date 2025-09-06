@@ -1,5 +1,4 @@
 
-import { GradientHeading } from "@/components/GradientHeading",
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -51,18 +50,11 @@ export function ContactSection() {
                     type="text"
                     id="subject"
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                  />;
-                </div>;
-                <div>;
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Message;
                   </label>;
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
                 </div>;
                 <div>;
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -162,4 +154,3 @@ export function ContactSection() {;
       </div>;
     </section>;
   );
-}

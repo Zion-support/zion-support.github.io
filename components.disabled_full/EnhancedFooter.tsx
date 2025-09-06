@@ -8,6 +8,12 @@ import {
   Linkedin,
   Github,
   FileText,;
+
+  FileText,;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+  FileText,;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {

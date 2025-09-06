@@ -11,7 +11,6 @@ import { DropdownMenu;
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react', // Assuming lucide-react is used
 
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">

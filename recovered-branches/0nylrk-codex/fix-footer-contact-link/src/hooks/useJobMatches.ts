@@ -9,20 +9,10 @@ export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
-
-  const fetchMatches = async () => {
-    setIsLoading(true);
             skills
           )
         `)
         .eq("job_id", jobId)
-        .order("match_score", { ascending: false });
-      if (error) throw error;
-      setMatches(data |[])
-    } catch (error) {
-      console && console.error("Error fetching job matches:", error);
-      toast({
-        title: "Error";
     } finally {
       setIsLoading (false);
     }
@@ -138,4 +128,3 @@ export function useJobMatches(jobId: string) {;
     }
   }
   }
-}

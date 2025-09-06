@@ -6,11 +6,6 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-};
-
-  return (
-    <button
-      className={clsx(
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -18,7 +13,6 @@ export type EnhancedButtonProps =;
         className
       )}
       {...props}
-
 }
 import React from './react';
 import clsx from './clsx';

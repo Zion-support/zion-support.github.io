@@ -1,14 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -34,12 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
-
-
-
-      const p = e.payload as any,
-
-    } else if (e.type === "proposal") {
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -53,32 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     totalVoteCount: globalVotes
 
     lastSyncedAt: state.lastSyncedAt})
-}
-    treasuryTotals: totalsByToken, topContributors,
-    totalVoteCount: globalVotes,
-    lastSyncedAt: state.lastSyncedAt})
-}
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
-  $2
-}
-  const state = read_state (),
-  const events = filterEventsByScope (state.events, state.config.scope),
-  const totalsByToken: Record < string, number> = {},
-  const contributionsBySubject: Record < string, number> = {},
-  let global_votes = 0,
-  for (const e of events) {
-    // Check condition
-if ( {) {
-  $2
-}
-      const p = e.payload as any,
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";

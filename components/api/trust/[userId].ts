@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -26,17 +25,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
     // Fallback heuristic
-    const heuristic = inputs && inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs && inputs.completionRate >= 0 && 0.8 && inputs && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
-            'You are an impartial risk and trust analyst for a talent marketplace.',
-        },
-        { role: 'user', content: prompt },
-      ],
-
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs
@@ -54,7 +47,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
       };
-
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })

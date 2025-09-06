@@ -1,6 +1,4 @@
 
-import React from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
 // Mock data
 
 const projectData = {

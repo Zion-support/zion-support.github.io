@@ -30,10 +30,6 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-  headers["Set-Cookie"] = cookies && cookies.join();
-  res && res.writeHead(302, { ...headers, Location: "/" });
-  res && res.end();
-  export default /**
  * handler - Function description
  */
 function handler() {

@@ -387,34 +387,6 @@ const EnhancedFooter2025: React.FC = () => {;
                 Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.
               </p>
               {/* Contact Info */}
-              <div className="space-y-3">;
-                <div className="flex items-center space-x-3 text-gray-300">;
-                  <Phone className="w-4 h-4 text-cyan-400" />;
-                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">;
-                    {contactInfo && contactInfo.mobile}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-gray-300">;
-                  <Mail className="w-4 h-4 text-purple-400" />;
-                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-purple-400 transition-colors">;
-                    {contactInfo && contactInfo.email}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-gray-300">;
-                  <MapPin className="w-4 h-4 text-pink-400" />;
-                  <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-
-              <p className="text-gray-400 mb-6 leading-relaxed">;
-                Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.;
-              </p>;
-
-            {/* Service Categories */}
-            {serviceCategories && serviceCategories.map((category, index) => (;
-              <motion&& motion.div
-                key={category && category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -475,18 +447,9 @@ const EnhancedFooter2025: React.FC = () => {;
                     </Link>;
                       key={service.name}
                       href={service.href}
-                      className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
-                    >;
-                      {service.name}
 
           </div>;
 
-
-            {/* Company Links */}
-            <div>;
-              <h4 className='text-white font-semibold mb-4'>Company</h4>;
-              <div className='space-y-2'>;
-                {companyLinks && companyLinks.map(link => (;
                   <Link
                     key={link && link.name}
                     href={link && link.href}
@@ -503,8 +466,6 @@ const EnhancedFooter2025: React.FC = () => {;
                   </Link>;
                     key={link.name}
                     href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                  >;
                     {link.name}
                   </Link>
                 ))}
@@ -516,39 +477,12 @@ const EnhancedFooter2025: React.FC = () => {;
               <div className='space-y-2'>;
                 {legalLinks && legalLinks.map(link => (;
                   <Link
-                    key={link && link.name}
-                    href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
-              <div className="space-y-2">;
-                {legalLinks && legalLinks.map((link) => (;
-                  <Link
-                    key={link && link.name}
-                    href={link && link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                    {link.name}
-                  </Link>
-                ))}
-
-              </div>;
-            </div>;
-
-
-
-            {/* Social Links */}
 
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
                     aria-label={social.name}
                   >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-
-                ))}
-
-        {/* Newsletter Section */}
-
-
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -581,18 +515,10 @@ const EnhancedFooter2025: React.FC = () => {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-              >
-                <input
-                  type='email'
-                  placeholder='Enter your email'
-                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                />;
-                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -613,19 +539,9 @@ const EnhancedFooter2025: React.FC = () => {;
         </div>
       </div>
     </footer>
-  );
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-export default EnhancedFooter2025;  );
 };
 
 export default EnhancedFooter2025;
-
     </footer>);
 }
 ;

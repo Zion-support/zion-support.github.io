@@ -18,10 +18,6 @@ export const SidebarInput = React.forward_ref<;
   React.ComponentProps < typeof Input>;
 >((props, ref) => {
   return (
-      ref={ref}
-      data-sidebar=&quot;input&quot;
-      className={cn(
-        &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
         props.className
       )}
       {...props}
@@ -42,24 +38,18 @@ export const SidebarInput = React.forward_ref<;
       data - sidebar=&quot;footer & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
-export const SidebarSeparator = React.forwardRef<
-  HTMLDivElement
-  React.ComponentProps<typeof Separator>
     />);
 });
 SidebarFooter.display_name = &quot;SidebarFooter & quot;
 ;
 export const SidebarSeparator = React.forward_ref<;
   HTMLDivElement,
-  React.ComponentProps < typeof Separator>;
 >((props, ref) => {
   return (
 >((props, ref) => {
   return (
     <div;
       ref={ref}
-      className={cn(
-        &quot;flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden&quot;
         props.className
       )}
       {...props}

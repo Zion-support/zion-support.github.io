@@ -28,15 +28,6 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
 
-  onViewDetails: (quote: QuoteRequest) => void
-}
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes;
-
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -64,9 +55,6 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void
-}
-export const QuotesTable: React.FC<QuotesTableProps> = ({
   onViewDetails
 }) => {
   return (
@@ -192,21 +180,11 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
-                      </DropdownMenu>;
-                    )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-        </TableBody>
-      </Table>
-    </div>
-  )
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
 };
                   </div>;
                 </TableCell>;

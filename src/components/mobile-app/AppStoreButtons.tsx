@@ -3,8 +3,6 @@
   onGooglePlayClick?: () => void;
 }
 
-import React from "react",
-import { Apple, GithubIcon } from 'lucide-react'
 interface AppStoreButtonsProps {
   className?: string,
   appStoreUrl?: string,
@@ -32,23 +30,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     }
   },
 
-    if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault(),
-      logInfo("Google Play download clicked"),
-
-      onGooglePlayClick?.()
-    }
-  }
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
-        href = {appStoreUrl,}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
-      <a
-        href = {googlePlayUrl,}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play">;
@@ -154,5 +138,3 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 },
 ;
 };
-
-

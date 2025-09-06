@@ -11,8 +11,6 @@ type ChangelogEntry = {
 }
     });
   }
-
-
   id: string,
   version: string,
   date: string,
@@ -60,7 +58,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   };
   );
 };  const handleRemoveEntry = (id: string,) => {
-    setEntries(entries.filter(entry => entry.id !== id))
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
     const { name, value } = e.target
@@ -78,7 +75,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
-
                 value={newEntry.version}
                 onChange={handleInputChange}
               />
@@ -95,17 +91,6 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
-
-type ChangelogEntry = {;
-  id: string;
-  version: string;
-  date: string;
-  changes: string,;
-};
-
-
-
-    });
   return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
@@ -115,7 +100,6 @@ type ChangelogEntry = {;
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-
               <Input;
                 type="date";
                 name="date";
@@ -127,22 +111,15 @@ type ChangelogEntry = {;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
             >
-              <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
-            {entries.map((entry) => (
-              <div 
-                key={entry.id}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
-              >
                 <div className="flex justify-between mb-2">
                   <div className="flex items-center gap-3">
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
-
-
                     onClick={() => handleRemoveEntry(entry.id)}
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
@@ -152,11 +129,6 @@ type ChangelogEntry = {;
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
           </div>;
         </div>;
       </CardContent>;
@@ -241,5 +213,3 @@ type ChangelogEntry = {;
 },
 ;
 };
-
-

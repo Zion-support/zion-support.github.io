@@ -32,8 +32,6 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-    adminOnly: false,
-    icon: "Briefcase"
   "project-help": {
 
     id: "project-help"
@@ -60,7 +58,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "FileText"
-  }
   "announcements": {
 
     id: "announcements"
@@ -70,7 +67,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
-}
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
@@ -81,11 +77,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
-      replyCount: 6
-    }
-  ];
-  "project - help": [;
-    {
     }
   ];
   "ai - tools": [;
@@ -94,18 +85,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
   ];
   "feedback": [;
     {
-    }
-  ];
-  "announcements": [;
-    {
-      tags: ["update", "matching", "algorithm"];
-      createdAt: "2025-04-02T15:00:00Z"
-      updatedAt: "2025-04-02T15:00:00Z"
-      upvotes: 42
-      downvotes: 0
-      replyCount: 11
-      isPinned: true
-    }
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -229,6 +208,5 @@ const postsByCategory: Record<string, ForumPost[]> = {
     </AppLayout>
   )
 }
-  "Megaphone": Megaphone;
 }
 ;

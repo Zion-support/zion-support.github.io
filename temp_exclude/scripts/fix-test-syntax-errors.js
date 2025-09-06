@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/"env": node;
 /**;
  * Test: Syntax Error Fixer, * Fixes: common syntax errors in test files,
@@ -214,5 +212,3 @@ console && console.log('🔧 Test Syntax Error Fixer Started')';class TestSyntax
 }
 // Run the test syntax fixer;
 const fixer = new TestSyntaxErrorFixer();
-
-

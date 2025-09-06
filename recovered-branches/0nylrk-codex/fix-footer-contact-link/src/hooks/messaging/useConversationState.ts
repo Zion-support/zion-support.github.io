@@ -29,7 +29,6 @@ function useConversationState() {
     set_conversations;
     unread_count;
     setUnreadCount;
-
     activeConversation;
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;

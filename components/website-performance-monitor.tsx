@@ -1,6 +1,3 @@
-import {
-} from 'lucide-react';
-
   Activity
   Zap
   TrendingUp
@@ -191,11 +188,6 @@ export default function WebsitePerformanceMonitorPage() {
       name: 'Enterprise'
       price: '$199'
       period: '/month'
-
-export default function WebsitePerformanceMonitorPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-
     };
       name: 'Enterprise',
       price: '$199',
@@ -338,8 +330,6 @@ export default function WebsitePerformanceMonitorPage() {;
                 </div>
               </Card>
             ))}
-      {/* Metrics Section */}
-
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -351,11 +341,6 @@ export default function WebsitePerformanceMonitorPage() {;
             {metrics.map((metric, index) => (
               <Card
                 key={index}
-                className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='text - 4xl mb - 4'>{metric.icon}</div>;
-                <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>;
                   {metric.name}
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
@@ -414,9 +399,6 @@ export default function WebsitePerformanceMonitorPage() {;
               </Card>
 
             ))}
-          </div>
-        </div>
-      </section>
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -528,11 +510,6 @@ export default function WebsitePerformanceMonitorPage() {;
                   </div>
 
                 ))}
-              </div>;
-            </Card>;
-          </div>;
-        </section>;
-      )}
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -744,7 +721,6 @@ export default function WebsitePerformanceMonitorPage() {;
               needs.;
             </p>;
           </div>;
-
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the monitoring plan that best fits your website performance needs.;
@@ -789,13 +765,6 @@ export default function WebsitePerformanceMonitorPage() {;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>;
-                      {feature}
-
-
-                    </li>
-                  ))}
               </Card>
             ))}
           </div>
@@ -818,10 +787,6 @@ export default function WebsitePerformanceMonitorPage() {;
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/contact'
               variant='outline'
@@ -836,7 +801,3 @@ export default function WebsitePerformanceMonitorPage() {;
         </div>
       </section>
     </>
-}
-}
-  );
-}

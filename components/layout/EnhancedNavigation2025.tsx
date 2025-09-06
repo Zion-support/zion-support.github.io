@@ -42,40 +42,6 @@
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
                               onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0";
-                            >;
-                              <div className="flex items-start space-x-3">;
-                                {subitem && subitem.icon && (;
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">;
-                                    <subitem && subitem.icon className="w-5 h-5 text-cyan-400" />;
-                                  </div>;
-                                )}
-                                <div className="flex-1">;
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">;
-                                    {subitem && subitem.name}
-                                  </h3>;
-                                  <p className="text-sm text-gray-400 mt-1">;
-                                    {subitem && subitem.description}
-                                  </p>;
-                                  {subitem && subitem.services && (;
-                                    <div className="mt-2 flex flex-wrap gap-1">;
-                                      {subitem && subitem.services.slice(0, 2).map((service) => (;
-                                        <span
-                                          key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
-                                          {service}
-                                        </span>;
-                                      ))}
-                                      {subitem && subitem.services.length > 2 && (;
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
-                                          +{subitem && subitem.services.length - 2} more;
-                                        </span>;
-                                      )}
-                                    </div>;
-                                  )}
-                                </div>;
-                              </div>;
-                            </Link>;
                           ))}
                         </div>;
                       </motion && motion.div>;
@@ -83,8 +49,6 @@
                   </AnimatePresence>;
                 </div>;
               ))}
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">;
               <Link
                 href="/pricing"
                 className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200">;
@@ -101,22 +65,6 @@
           </div>;
         </div>;
       </nav>;
-
-      {/* Mobile Menu */}
-      <AnimatePresence>;
-        {isOpen && (;
-          <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
-                      {item && item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
-                          {item && item.badge}
-                        </span>;
-                      )}
-                  {activeDropdown === item.name && (
-                    <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -128,20 +76,11 @@
                           href={child && child.href}
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm";
-                        >;
-                          <subItem && subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
-                            {subItem && subItem.name}
-                          </span>;
-                        </Link>;
                       ))}
                     </motion && motion.div>;
                   )}
                 </div>;
               ))}
-              {/* Mobile CTA */}
-              <div className="pt-4">;
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -339,20 +278,7 @@
                 </div>;
               </div>;
             </div>;
-          </motion && motion.div>;
-        )}
-      </AnimatePresence>
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
-  )
-}
-
-export default EnhancedNavigation2025;
-          </motion.div>)}
-      </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
 }
-;

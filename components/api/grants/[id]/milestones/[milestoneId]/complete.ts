@@ -31,12 +31,5 @@ function isAuthorized(req: NextApiRequest) {
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-writeGrant(existing);
-  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
-}
-
 }
 }
-}
-  writeGrant(existing);
-  res.status(200).json({ record: existing });

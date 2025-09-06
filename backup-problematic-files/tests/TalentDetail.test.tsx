@@ -13,4 +13,3 @@ const TalentDetail.test: React.FC<TalentDetail.testProps> = ({ className }) => {
   );
 };
 
-export default TalentDetail.test;

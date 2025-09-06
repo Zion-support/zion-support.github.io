@@ -27,14 +27,10 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
-  }
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-          article.content.toLowerCase().includes(searchQuery.toLowerCase())
-      )
   return (
     <div>
       <div className="mb-6">
@@ -56,9 +52,6 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
-  });
-}
-
 import React from './react';
 import {
   Card,
@@ -130,4 +123,12 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+                  {article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;          ))}
+        </div>;
+      )}
+    </div>;
+  ),;
 }

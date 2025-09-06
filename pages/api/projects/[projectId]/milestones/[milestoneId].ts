@@ -16,16 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
-  const project = getProject(projectId);
-  if (!project) {
-    res && res.status(404).json({ error: "Project not found" });
-    return;
-  }
-  if (!assertParticipantOrAdmin(project, user)) {
-    res && res.status(403).json({ error: "Forbidden" });
-    return;
-  }
-
   if (req && req.method === "PATCH") {
     const body = req && req.body as any;
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
@@ -38,20 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       const isTalentUser = isTalent(project, user);
       const status: string = body && body.status;
       const allowed =
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'PATCH') {
-    res.status(200).json({ message: 'Milestone updated' });
-  } else {
-    res.setHeader('Allow', ['PATCH']);
-    res.status(405).end('Method Not Allowed');
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
   } catch (error) {
     console.error("Error:", error);
@@ -136,11 +112,6 @@ if ( {) {
   res.set_header ("AllowPATCH");
   res.status (405).end ("Method Not Allowed");
 }
-      return;
-    }
-    res && res.status(200).json({ milestone: updated });
-    return;
-  }
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }

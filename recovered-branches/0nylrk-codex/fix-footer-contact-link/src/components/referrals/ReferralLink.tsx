@@ -31,11 +31,6 @@ export function ReferralLink({
   onCopy
   onShare
 }: ReferralLinkProps) {
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false),
-
-  
-  const handleCopy = () => {
 
   return (
     <Card className="mt-6">
@@ -87,9 +82,6 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
             <Input
-              value={referralLink}
-              readOnly
-              className="font-mono text-sm"
               LinkedIn;
             </Button>;
           </div>;

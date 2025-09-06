@@ -13,13 +13,6 @@ describe('AIChatbotSystemtest', () => {
     render(<AIChatbotSystemtest />);
     expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
   });
-  
-  test('displays correct content', () => {
-    render(<AIChatbotSystemtest />);
-  });
-  test('handles user interactions', () => {
-    render(<AIChatbotSystemtest />);
-  });
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });

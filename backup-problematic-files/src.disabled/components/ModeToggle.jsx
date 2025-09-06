@@ -9,4 +9,3 @@ const ModeToggle = ({ className }) => {
   );
 };
 
-export default ModeToggle;

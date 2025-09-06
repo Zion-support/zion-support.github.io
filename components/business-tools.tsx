@@ -1,6 +1,3 @@
-import {
-} from 'lucide-react';
-
   ExternalLink
   Check
   Star
@@ -495,7 +492,6 @@ export default function BusinessToolsPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.
-
           </p>
         </div>
       </section>
@@ -504,7 +500,6 @@ export default function BusinessToolsPage() {
               landscape and emerging opportunities.;
             </p>;
           </div>;
-
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
@@ -566,7 +561,6 @@ export default function BusinessToolsPage() {
                       </h4>;
                       <p className='text - gray - 400 text - sm leading - relaxed'>;
                         {tool.description}
-                      </div>
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
                     </div>
@@ -582,18 +576,11 @@ export default function BusinessToolsPage() {
               </div>;
             </div>;
           ))}
-        </div>
-      </section>
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-                    <Button
-
-      {/* Productivity Tips */}
-
-
 
               Productivity Tips & Best Practices
             </h2>
@@ -622,41 +609,10 @@ export default function BusinessToolsPage() {
 
               </Card>
 
-            ))}
-          </div>
-        </div>
-      </section>
             These business tools can streamline your operations, improve team;
             collaboration, and drive growth. Start with the essentials and build;
             your tech stack strategically.;
           </p>;
-      {/* CTA Section */}
-      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='container-cursor text-center relative z-10'>
-          <h2 className='text-responsive-lg font-bold text-white mb-8'>
-
-
-            Ready to Transform Your Business Operations?
-          </h2>
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
-            These business tools can streamline your operations, improve team
-            collaboration, and drive growth. Start with the essentials and build
-            your tech stack strategically.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-            <Button
-              href='/micro-saas'
-              variant='secondary'
-              size='lg'
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'>;
-              Explore Micro SaaS;
-            </Button>;
-            <Button
-              href='/contact'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'>              href="/micro-saas";
               variant="secondary";
               size="lg";
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
@@ -678,15 +634,4 @@ export default function BusinessToolsPage() {
     </>
 );
 }
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
-              Explore Micro SaaS
-            </Button>
-
             <Button

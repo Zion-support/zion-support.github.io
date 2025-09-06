@@ -83,15 +83,6 @@ if ( {) {
     } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
-import React from 'react';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger';import {;
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -177,11 +168,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
-  }
-
-  return (
-        <FormField
-          control={form && form.control}
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Project Description</FormLabel>;
@@ -197,8 +183,45 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
           control={form.control}
-          name='title';
+                  {...field}
+        />;
+        <FormField;
+          control={form.control}
+          name="description"
           render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea 
+                  placeholder="Describe what the project does and your role in it..."
+                  className="min-h-[100px]"
+                  {...field} 
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+          name='title'
+            <FormItem>
+              <FormLabel>Project Title</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder='E.g., AI Chatbot, E-commerce Website'
+                  {...field}                />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Describe what the project does and your role in it...'
+                  className='min-h-[100px]'
+                  {...field}
             <FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
@@ -267,11 +290,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
-
-        />;
-        <FormField;
-          control={form.control}
-          name="technologies"
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -310,7 +328,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
-
           />;
           <FormField;
             control={form.control}
@@ -328,9 +345,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormItem>
             )}
 
-          />;
-        </div>;
-
         <FormField
           control={form && form.control}
           name='image_url'
@@ -347,7 +361,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>;
         <FormField;
           control={form.control}
-
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -362,7 +375,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
-        {/* Future file upload field would go here */}
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
@@ -371,8 +383,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
-    </Form>
-  )
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -388,4 +398,3 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>;
     </Form>);
 }
-

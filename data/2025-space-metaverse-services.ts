@@ -124,56 +124,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     reviews: 120,
   },
   {
-    id: 'metaverse-development-platform'
-    name: 'Metaverse Development Platform'
-    tagline: 'Build immersive virtual worlds with AI-powered tools'
-    description:
-      'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.'
-    category: 'Metaverse & Virtual Reality'
-    price: {
-      monthly: 299
-      yearly: 2990
-      currency: 'USD'
-      trialDays: 21
-      setupTime: '1-2 weeks'
-      enterprise: 'Custom pricing'
-    }
-    features: [
-      'AI-powered world generation'
-      '3D modeling and animation tools'
-      'Virtual reality integration'
-      'Blockchain asset management'
-      'Multi-user collaboration'
-      'Real-time rendering engine'
-      'Custom scripting language'
-      'Asset marketplace'
-      'Analytics and insights'
-      'API for developers'
-    ]
-    benefits: [
-      'Reduce development time by 70%'
-      'Lower development costs by 60%'
-      'Enable rapid prototyping'
-      'Create immersive experiences'
-      'Monetize virtual assets'
-    ]
-    targetAudience: [
-      'Game developers'
-      'Virtual reality companies'
-      'Brands and marketers'
-      'Educational institutions'
-      'Real estate companies'
-      'Event organizers'
-    ]
-    marketPosition:
-      'Leading metaverse development platform. Competes with Unity ($399-1800/year), Unreal Engine (5% revenue), and Roblox Studio (free). Our advantage: AI-powered tools and blockchain integration.'
-    competitors: [
-      'Unity, Unreal Engine, Roblox Studio, Decentraland, The Sandbox'
-    ]
-    techStack: [
-      'Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis, Blockchain platforms'
-    ]
-    realImplementation: true
     implementationDetails:
       'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
@@ -252,14 +202,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
-    color: 'from-orange-500 to-red-600'
-    popular: true
-    launchDate: '2024-01-20'
-    customers: 1800
-    rating: 4.7
-    reviews: 1400
-  }
-];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
@@ -330,7 +272,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards',
     ],
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
-
     icon: '🥽',
     color: 'from - orange - 500 to - red - 600',
     popular: true,
@@ -343,7 +284,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -607,4 +547,3 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     reviews: 1400;
   }
 ];
-;

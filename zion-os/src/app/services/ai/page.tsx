@@ -4,7 +4,6 @@
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6"> AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
-            Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics;
             we deliver enterprise-grade AI solutions that drive real results.;
           </p>;
           <div className="mt - 8">;
@@ -68,7 +67,6 @@
               </a>;
             </div>;
             {/* AI Content Generation */}
-                SEO-optimized content for blogs, social media, and marketing materials.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -181,7 +179,6 @@
               </a>;
             </div>;
             {/* AI Process Automation */}
-                document processing, and AI-powered business process optimization.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;

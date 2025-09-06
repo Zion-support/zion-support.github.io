@@ -10,11 +10,6 @@ declare module "react" {
     key: React.Key | null;
   the code-base.  If you have `@types/react` available in `node_modules`,;
 
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `typeRoots` are merged with normal type resolution.;
-*/;
-declare module "react" {;
-  // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
   }
   // Function Component (very trimmed - down).;

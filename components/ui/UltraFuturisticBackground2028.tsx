@@ -1,13 +1,4 @@
 
-}
-animate ();
-// Handle resize window.addEventListener ('resize', handle_resize);
-/> {
-
-  children,;
-}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-
-
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
@@ -51,91 +42,6 @@ interface UltraFuturisticBackground2028Props {
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = particle.color;
-            ctx.stroke()
-
-    // Create particles;
-    for (let i = 0; i < 100; i++) {      particles && particles.push({      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
-      opacity: number;
-    }> = [];
-
-    // Create particles;
-    for (let i = 0, i < 100, i++) {;
-        x: Math && Math.random() * canvas && canvas.width,;
-        y: Math && Math.random() * canvas && canvas.height,;
-        vx: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
-        vy: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
-        size: Math && Math.random() * 2 + 1,;
-        color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][;
-          Math && Math.floor(Math && Math.random() * 4);
-        ],;
-        opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.3,;
-      });    }        color: ['#8b5cf6#3b82f6#06b6d4#10b981'][Math && Math.floor(Math && Math.random() * 4)],;
-        opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.3;
-      });
-    }
-
-    // Animation loop;
-    const animate = () => {;
-      ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
-      // Update and draw particles;
-      particles && particles.forEach(particle => {        particle && particle.x += particle && particle.vx;      particles && particles.forEach((particle) => {;
-        particle && particle.x += particle && particle.vx;
-        particle && particle.y += particle && particle.vy;
-
-        // Wrap around edges;
-        if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
-        if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
-        if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
-        if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-
-        // Draw particle;
-        ctx && ctx.beginPath();
-        ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
-        ctx && ctx.fillStyle = particle && particle.color;
-        ctx && ctx.globalAlpha = particle && particle.opacity;
-        ctx && ctx.fill();
-
-        // Draw connections;
-        particles && particles.forEach(otherParticle => {          const dx = particle && particle.x - otherParticle && otherParticle.x;        particles && particles.forEach((otherParticle) => {;
-          const dx = particle && particle.x - otherParticle && otherParticle.x;
-          const dy = particle && particle.y - otherParticle && otherParticle.y;
-          const distance = Math && Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {;
-            ctx && ctx.beginPath();
-            ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
-            ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y);
-            ctx && ctx.strokeStyle = particle && particle.color;
-            ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.1;
-            ctx && ctx.lineWidth = 1;
-            ctx && ctx.stroke();
-          }
-        });
-      });
-
-      requestAnimationFrame(animate);    };            ctx && ctx.lineWidth = 1;
-            ctx && ctx.stroke();
-          }
-        });
-      });
-    };
-
-    animate();
-
-    // Handle resize;
-    const handleResize = () => {;
-      canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-    };
-
-    window && window.addEventListener('resize', handleResize);
-
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
@@ -147,7 +53,6 @@ interface UltraFuturisticBackground2028Props {
       {/* Gradient Overlays */}  }, []);
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">;
       {/* Animated Background Canvas */}
       <canvas
         ref={canvasRef}
@@ -157,9 +62,6 @@ interface UltraFuturisticBackground2028Props {
       <div
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'
         style={{ zIndex: 1 }}
-      {/* Gradient Overlays */}
-
-        style={{ zIndex: 0 }}
       />
 
       {/* Gradient Overlays */}
@@ -167,15 +69,10 @@ interface UltraFuturisticBackground2028Props {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ zIndex: 1 }} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ zIndex: 1 }} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1 }} />
-
-
-      {/* Floating Geometric Shapes */}
-
       <div className="absolute inset - 0 pointer - events - none" style={{ z_index: 2 }}>;
         {/* Animated Hexagons */}
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - purple - 500 / 30 rotate - 45";
-
           animate={{
 
 
@@ -218,9 +115,6 @@ interface UltraFuturisticBackground2028Props {
             scale: [1, 1 && 1.15, 1]
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
           transition={{
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />
 
           }}
 
@@ -278,18 +172,14 @@ interface UltraFuturisticBackground2028Props {
           transition={{
             duration: 5,
             repeat: Infinity,
-
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
 
           }}
 
         />
       </div>
       {/* Energy Waves */}
-        <motion.div
-          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
-          animate={{
-            y: [0, 1000]
-            opacity: [0, 1, 0],          }}
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
             ease: 'easeInOut',            ease: "easeInOut";
@@ -344,16 +234,6 @@ interface UltraFuturisticBackground2028Props {
             opacity: [0, 1, 0];
           }}
           transition={{
-          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
-          animate={{
-            y: [0, 1000]
-            opacity: [0, 1, 0]
-            ease: "linear"
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'linear',          }}
             opacity: [0, 1, 0]
           }}
           transition={{
@@ -371,25 +251,10 @@ interface UltraFuturisticBackground2028Props {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'linear',
-            delay: 4,            ease: "linear",
-            delay: 4
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
 
 
           }}
 
-        />
-      </div>
-      {/* Quantum Particles */}
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{ zIndex: 4 }}>;
-        {[...Array(20)].map((_, i) => (;
-          <motion&& motion.div
             ease: 'linear',
             delay: 2,            ease: "linear",
             delay: 2;
@@ -453,10 +318,6 @@ interface UltraFuturisticBackground2028Props {
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />;
@@ -467,24 +328,6 @@ interface UltraFuturisticBackground2028Props {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
-              ease: 'easeInOut',            }}
-
-            }}
-          />
-        ))}
-
-      {/* Content */}
-      <div className='relative' style={{ zIndex: 10 }}>        {children}
-      </div>
-      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
-            }}
-          />))}
-      </div>;
-      {/* Content */}
-      <div className="relative" style={{ zIndex: 10 }}>
-        {children}
-      </div>
-      </div>;
 
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
@@ -497,5 +340,3 @@ interface UltraFuturisticBackground2028Props {
         {children}
       </div>;
       {/* Bottom Glow */}
-
-}

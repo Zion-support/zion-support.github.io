@@ -28,7 +28,6 @@
   contact_info: {
     mobile: string;
     email: string;
-
   customers: number;
   rating: number;
   reviews: number;
@@ -39,16 +38,6 @@
 }
 const contact = {
   mobile: '+1 302 464 0950';
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
-  // AI & Machine Learning Services
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-}
-;
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
-  {
-    id: 'ai - content - generation - platform';
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
@@ -379,5 +368,3 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
-export default comprehensiveInnovativeServices;
-;

@@ -52,7 +52,6 @@
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4"></span>;
                     <span className="truncate">;
-                      {inst.domain |inst.subdomain |inst.slug}
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
@@ -165,8 +164,6 @@
               {/* Instance Details */}
               <div className="space - y-3 mb - 4">;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                  <span></span>;
-                  <span>{inst.domain |inst.subdomain |inst.slug}</span>;
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                   <span></span>;

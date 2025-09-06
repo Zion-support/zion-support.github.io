@@ -1,5 +1,3 @@
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
-const generateId = () => Math.random().toString(36).slice(2, 10);
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -88,4 +86,3 @@ export const store = {;
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
-  }}

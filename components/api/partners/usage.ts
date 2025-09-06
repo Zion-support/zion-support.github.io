@@ -1,22 +1,8 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {
-} from '../../../utils/api/partnerAuth';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  const summary = await calculateUsageSummary(auth.partner.id);
-  return res.status(200).json({ summary });
-
-  const summary = await calculateUsageSummary(auth && auth.partner.id);
-  return res && res.status(200).json({ summary });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method Not Allowed" })
-  }
   authenticate_request,
   calculateUsageSummary,
 } from '../../../utils / api / partner_auth';

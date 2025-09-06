@@ -1,13 +1,4 @@
 
-import React from "react";
-import { Quote } from "lucide-react";
-
-
-
-import React from "react",
-import { Quote } from "lucide-react",
-import {
-
   Carousel
   CarouselContent
   CarouselItem
@@ -40,8 +31,6 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
-
-export function EnterpriseTestimonials() {;
   return (
     <section className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
@@ -68,11 +57,6 @@ export function EnterpriseTestimonials() {;
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -102,7 +86,6 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
-
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -113,18 +96,10 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
-
-        <Carousel className="w-full">;
-          <CarouselContent>;
-            {testimonials && testimonials.map((testimonial, index) => (;
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
-                    "{testimonial && testimonial.quote}";
-                  </blockquote>;
-                  <div className="flex items-center gap-4">;
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
 }
 ;
@@ -190,11 +165,6 @@ function EnterpriseTestimonials() {
                     <div>;
                       <p className="font - bold">{testimonial.author}</p>;
                       <p className="text - sm text - muted - foreground">;
-                        {testimonial.title}, {testimonial.company}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
               </CarouselItem>;
             ))}
           </CarouselContent>;
@@ -204,4 +174,3 @@ function EnterpriseTestimonials() {
           </div>;
         </Carousel>;
       </div>;
-}

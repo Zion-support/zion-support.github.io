@@ -5,7 +5,6 @@ import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
 
-
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -34,7 +33,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
       <p className="text-muted-foreground mb-6">;
         {hasFilters;
           ? "Try adjusting your filters";
-          : "You don't have any fraud flags yet"}
-      </p>;
-      {hasFilters && (;
 };

@@ -1,6 +1,4 @@
 
-
-
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -53,8 +51,6 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 
-
-// Mock Next.js Link component
 
 jest.mock('next/link', () => ({
   _esModule: true,

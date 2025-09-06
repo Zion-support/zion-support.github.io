@@ -9,4 +9,3 @@ const AIAutonomousScientificResearcher = ({ className }) => {
   );
 };
 
-export default AIAutonomousScientificResearcher;

@@ -9,4 +9,3 @@ const Solutions = ({ className }) => {
   );
 };
 
-export default Solutions;

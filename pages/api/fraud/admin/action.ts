@@ -9,9 +9,6 @@ export default async function handler(
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
-  const { fraudId, action, reason, adminId } = req && req.body || {};
-  if (!fraudId || !action) {
-    return res && res.status(400).json({ error: "Missing fraudId or action" });
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);

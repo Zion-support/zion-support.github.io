@@ -9,4 +9,3 @@ const MobileMenu.js = ({ className }) => {
   );
 };
 
-export default MobileMenu.js;

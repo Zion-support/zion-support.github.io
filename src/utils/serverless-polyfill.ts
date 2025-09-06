@@ -53,7 +53,6 @@ if ( {) {
     // Last resort - create minimal self object;
     (global_this as any).self = {}
   }
-
 // Ensure self is properly referenced
 const selfRef: any =
   typeof self !== 'undefined'
@@ -66,8 +65,6 @@ const selfRef: any =
           ? window
           : {}
 // CRITICAL: Webpack chunk array polyfill
-}
-
   selfRef.webpackChunk_N_E = []
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
@@ -106,9 +103,6 @@ if (typeof webpackChunk_N_E === 'undefined') {
         if ((d = decorators[i]))
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
-  },
-
-
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) {
       return value instanceof P
@@ -141,38 +135,28 @@ if (typeof webpackChunk_N_E === 'undefined') {
       }
     }
     return t;
-  },
-  __decorate: function (
-    decorators: any[],
-    target: any,
-    key?: string | symbol,
-    desc?: any) {
-    let c = arguments.length,
-      r =;
-        c < 3;
-          ? target;
-          : desc === null;
-            ? (desc = key;
-                ? Object.getOwnPropertyDescriptor (target, key);
-                : undefined);
-            : desc,
-      d;
-    // Check condition
-if (.decorate === 'function') {
-  $2
+  },;
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,;
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),;
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,;
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r;
+  },;
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {;
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {;
+      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
+      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
+      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 }
-      }
-    }
-  }
-} catch (e) {
       ) {
         return true; // Suppress error
       }
     }
     // Call original error handler for other errors
     if (originalOnError) {
-    }
-    return false;
   }
   window.onunhandledrejection = function (event) {
     // Suppress specific promise rejection errors
@@ -225,9 +209,6 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   if (typeof global && global.self === 'undefined') {
     global && global.self = global;
   }
-    if (typeof (global as any)[helper] === 'undefined') {
-      (global as any)[helper] = (tsHelpers as any)[helper]
-    }
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -237,13 +218,6 @@ export const verifyPolyfills = () => {
       (typeof self !== 'undefined' &&
         typeof self.webpackChunk_N_E !== 'undefined')
     tsHelpersDefined:
-      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window && window.onerror !== null,
-  };
-
-  console.log('Serverless polyfill verification:', checks);
-  return Object.values(checks).every(Boolean);
-};
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {'
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {
 export default {}; // Ensure this can be imported as a module
@@ -286,11 +260,6 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
     }
   });
 }
-
-// Export a verification function for testing
-export const verifyPolyfills = () => {
-  const checks = {
-    selfDefined: typeof self !== 'undefined',
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module

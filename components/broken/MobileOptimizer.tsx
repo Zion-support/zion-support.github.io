@@ -1,11 +1,4 @@
 
-setIsMobile (isMobileDevice);
-setIsMobile (isMobileDevice);
- setIsMobile (isMobileDevice);
-setIsTablet (isTabletDevice);
-//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {;
-  checkDevice ();
-window && window.addEventListener ('resize', checkDevice);
 }, [enableMobileLayout, enablePerformanceMode]);
 //Detect orientation changes checkOrientation ();
 window.addEventListener ('orientationchange', checkOrientation);
@@ -133,29 +126,6 @@ if (img.loading = 'lazy') {
 // Check condition
 if (img.decoding = 'async') {
   $2
-}
-});
-//Optimize fonts fonts.for_each (font => {
-  font.set_attribute ('crossoriginanonymous');
-});
-//Add mobile - specific event listeners document.addEventListener ('touchstart', () => {
-}, {
-  passive: true;
-});
-document.addEventListener ('touchmove', () => {
-}, {
-  passive: true;
-});
-}, [is_mobile]);
-useEffect ( () => {
-  optimizeForMobile ();
-}, [optimizeForMobile]);
-useEffect ( () => {
-  // Check condition
-if (return) {
-  $2
-}
-//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
 }
 // Check condition
 if (return null) {

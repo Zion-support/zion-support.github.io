@@ -5,7 +5,13 @@ export type NotificationType =
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
-  | 'onboarding'
+
+
+
+export interface Notification extends BaseNotification {;
+
+
+  | 'onboarding';
   | 'system';
   type: NotificationType;
   action_url?: string
@@ -15,8 +21,6 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
-  | 'onboarding'
-  | 'system';
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -28,7 +32,6 @@ export type FilterType =
   setFilter: (filter: FilterType) => void
 
   fetchNotifications: () => Promise<void>
-}
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;

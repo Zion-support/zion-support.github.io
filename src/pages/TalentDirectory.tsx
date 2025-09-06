@@ -159,6 +159,7 @@ export default function TalentDirectory() {;
 
 
                           }}
+}}
                         />
                       </PaginationItem>
                     </PaginationContent>

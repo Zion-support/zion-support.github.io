@@ -153,8 +153,16 @@ class AutoFixer {}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
+<<<<<<< HEAD
       importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
+=======
+<<<<<<< HEAD
+=======
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();

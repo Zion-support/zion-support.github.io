@@ -10,12 +10,6 @@ const TALENTS_FILE = path.join(
   'data'
   'talents'
   'talents.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-  const started = Date.now();
-  const auth = await authenticateRequest(req)
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -137,7 +131,6 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
-}
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);

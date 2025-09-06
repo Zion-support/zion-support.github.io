@@ -130,56 +130,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growthRate: '85% annually',
   },
   {
-    id: 'quantum-bio-computing-platform'
-    name: 'Quantum Bio-Computing Platform'
-    tagline: 'Quantum computing meets biological systems'
-    description:
-      'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.'
-    category: 'Quantum & Emerging Tech'
-    price: {
-      monthly: 599
-      yearly: 5990
-      currency: 'USD'
-      trialDays: 14
-      setupTime: '8 hours'
-      enterprise: 2499
-    }
-    features: [
-      'Quantum-biological hybrid processing'
-      'DNA sequence analysis'
-      'Protein folding simulation'
-      'Drug discovery algorithms'
-      'Genetic optimization'
-      'Biological data processing'
-      'Quantum molecular dynamics'
-      'Bioinformatics tools'
-      'Custom biological models'
-      'API for research'
-    ]
-    benefits: [
-      'Solve biological problems 1000x faster'
-      'Accelerate drug discovery'
-      'Improve genetic analysis'
-      'Enable new research capabilities'
-      'Reduce research costs'
-    ]
-    targetAudience: [
-      'Pharmaceutical companies'
-      'Research institutions'
-      'Biotechnology firms'
-      'Healthcare organizations'
-      'Universities'
-      'Government agencies'
-    ]
-    marketPosition:
-      'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.'
-    competitors: [
-      'IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'
-    ]
-    techStack: [
-      'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'
-    ]
-    realImplementation: true
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -287,17 +237,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
-];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI for self - driving vehicles and transportation',
-    description:;
-      'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision - making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech',
     price: {
       monthly: 799,
       yearly: 7990,
@@ -306,63 +245,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       setup_time: '12 hours',
       enterprise: 2999,
     },
-    features: [;
-      'Advanced computer vision',
-      'Real - time decision making',
-      'Safety systems',
-      'Path planning algorithms',
-      'Traffic prediction',
-      'Weather adaptation',
-      'Fleet management',
-      'Performance monitoring',
-      'Custom AI models',
-      'API for vehicles',
-    ],
-    benefits: [;
-      'Enable autonomous transportation',
-      'Improve road safety',
-      'Reduce transportation costs',
-      'Optimize fleet operations',
-      'Advance mobility technology',
-    ],
-    target_audience: [;
-      'Automotive manufacturers',
-      'Transportation companies',
-      'Logistics providers',
-      'Ride - sharing platforms',
-      'Government agencies',
-      'Technology companies',
-    ],
-    market_position:;
-      'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
-    competitors: [;
-      'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
-    ],
-    tech_stack: [;
-      'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',
-    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
-    use_cases: [;
-      'Autonomous driving',
-      'Fleet management',
-      'Safety systems',
-      'Traffic optimization',
-      'Transportation logistics',
-      'Research and development',
-    ],
-    integrations: [;
-      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications',
-    ],
-    support:;
-      '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
-    compliance: [;
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -379,10 +261,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
-
-  }
-];
-
 export interface EmergingTechService {;
   id: string,;
   name: string,;
@@ -658,4 +536,5 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
   }
+
 ];

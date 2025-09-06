@@ -5,21 +5,11 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
   const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{;
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-}
-}
 
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
 
-export default function Web3LoginButton() {;
-  const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  useEffect(() => {
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -41,10 +31,6 @@ export default function Web3LoginButton() {;
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
-  if (user) {
-    const base =
-      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -86,9 +72,6 @@ export default function Web3LoginButton() {;
           onLoggedIn={onLoggedIn}
         />;
       )}
-      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
-    </>
-);
 }
 import dynamic from 'next / dynamic';
 ;

@@ -1,50 +1,7 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-
-interface UltraFuturisticBackground2038Props {
-  intensity?: 'low' | 'medium' | 'high';
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
-  children?: React.ReactNode
-}
-import React, { useEffect, useRef } from 'react';
-
-import { motion } from 'framer-motion';
-  intensity?: 'low' | 'medium' | 'high';
-;
-  intensity?: 'low' | 'medium' | 'high';
-  theme?:;
-    | 'quantum';
-    | 'neon';
-    | 'holographic';
-    | 'cyberpunk';
-    | 'space';
-    | 'consciousness';
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
-
-
   intensity = 'medium',
   theme = 'consciousness',
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
@@ -71,225 +28,6 @@ export default function UltraFuturisticBackground2038(): any ({;
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
           }
-
-    resizeCanvas();
-    window && window.addEventListener('resize', resizeCanvas);
-
-    // Enhanced theme-based color schemes for 2038;
-    const getThemeColors = () => {;
-      switch (theme) {;
-        case 'consciousness':;
-          return {;
-            primary: [;
-              '#ff0080',;
-              '#00ffff',;
-              '#ffff00',;
-              '#ff00ff',;
-              '#8000ff',;
-              '#00ff80',;
-            ],;
-            secondary: [;
-              '#ff8000',;
-              '#0080ff',;
-              '#ff4080',;
-              '#40ffff',;
-              '#ffff40',;
-              '#ff40ff',;
-            ],;
-            accent: [;
-              '#ff6b6b',;
-              '#4ecdc4',;
-              '#45b7d1',;
-              '#96ceb4',;
-              '#feca57',;
-              '#ff9ff3',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-        case 'neon':;
-          return {;
-            primary: [;
-              '#ff0080',;
-              '#00ffff',;
-              '#ffff00',;
-              '#ff00ff',;
-              '#8000ff',;
-              '#00ff80',;
-            ],;
-            secondary: [;
-              '#ff8000',;
-              '#0080ff',;
-              '#ff4080',;
-              '#40ffff',;
-              '#ffff40',;
-              '#ff40ff',;
-            ],;
-            accent: [;
-              '#ff6b6b',;
-              '#4ecdc4',;
-              '#45b7d1',;
-              '#96ceb4',;
-              '#feca57',;
-              '#ff9ff3',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-          };
-        case 'holographic':;
-          return {;
-            primary: [;
-              '#ff6b6b',;
-              '#4ecdc4',;
-              '#45b7d1',;
-              '#96ceb4',;
-              '#feca57',;
-              '#ff9ff3',;
-            ],;
-            secondary: [;
-              '#54a0ff',;
-              '#5f27cd',;
-              '#ff9ff3',;
-              '#54a0ff',;
-              '#5f27cd',;
-              '#ff6b6b',;
-            ],;
-            accent: [;
-              '#4ecdc4',;
-              '#45b7d1',;
-              '#96ceb4',;
-              '#feca57',;
-              '#ff9ff3',;
-              '#54a0ff',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-          };
-        case 'cyberpunk':;
-          return {;
-            primary: [;
-              '#ff0055',;
-              '#00ffff',;
-              '#ffff00',;
-              '#ff00ff',;
-              '#8000ff',;
-              '#00ff80',;
-            ],;
-            secondary: [;
-              '#ff8000',;
-              '#0080ff',;
-              '#ff4080',;
-              '#40ffff',;
-              '#ffff40',;
-              '#ff40ff',;
-            ],;
-            accent: [;
-              '#ffff40',;
-              '#ff40ff',;
-              '#ff6b6b',;
-              '#4ecdc4',;
-              '#45b7d1',;
-              '#96ceb4',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-          };
-        case 'space':;
-          return {;
-            primary: [;
-              '#1e3a8a',;
-              '#7c3aed',;
-              '#059669',;
-              '#dc2626',;
-              '#ea580c',;
-              '#0891b2',;
-            ],;
-            secondary: [;
-              '#8b5cf6',;
-              '#ec4899',;
-              '#f59e0b',;
-              '#10b981',;
-              '#06b6d4',;
-              '#a855f7',;
-            ],;
-            accent: [;
-              '#f97316',;
-              '#ef4444',;
-              '#84cc16',;
-              '#06b6d4',;
-              '#a855f7',;
-              '#f97316',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-          };
-        default: // quantum;
-          return {;
-            primary: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-            secondary: [;
-              '#f59e0b',;
-              '#ef4444',;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-            ],;
-            accent: [;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-              '#8b5cf6',;
-              '#06b6d4',;
-            ],;
-            quantum: [;
-              '#8b5cf6',;
-              '#06b6d4',;
-              '#ec4899',;
-              '#10b981',;
-              '#f59e0b',;
-              '#ef4444',;
-            ],;
-          };      }            primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],;
-            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],;
-            accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],;
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
           }
     };
 
@@ -304,12 +42,6 @@ export default function UltraFuturisticBackground2038(): any ({;
       frequency: number;
       entanglement: number[];
       consciousness: number;
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'consciousness' | 'quantum - field',
       life: number,
       max_life: number,
       rotation: number,
@@ -484,13 +216,6 @@ if ( {) {
             0
             `rgba(139, 92, 246, ${particle.opacity * 0.8})`
           );
-          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
-          ctx.fillStyle = gradient;
-          ctx.fillRect(
-            particle.x - fieldSize / 2
-            particle.y - fieldSize / 2
-            fieldSize
-            fieldSize
           );        }
         // Standard particle rendering
         if (particle.type === 'particle') {
@@ -512,7 +237,6 @@ if ( {) {
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
           ctx && ctx.fill();
         }
-
             particle.x, particle.y, 0;
             particle.x, particle.y, fieldSize
           );
@@ -705,27 +429,6 @@ if (> 0.8) {) {
             particle.coordinate_x = Math.random () * canvas.width;
             particle.coordinate_y = Math.random () * canvas.height;
           } else {
-            particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
-            particle.coordinate_y = (particle.y + canvas.height) % canvas.height;          }          ctx.begin_path ();
-          ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill ();
-        }
-        // Boundary wrapping with quantum tunneling effect;
-        // Check condition
-if ( {) {
-  $2
-}
-          // Check condition
-if (> 0.8) { // Quantum tunneling) {
-  $2
-}
-            particle.coordinate_x = Math.random () * canvas.width;
-            particle.coordinate_y = Math.random () * canvas.height;
-          } else {
-            particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
-            particle.coordinate_y = (particle.y + canvas.height) % canvas.height;
-          }
-        }
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -735,10 +438,6 @@ if (> 0.8) { // Quantum tunneling) {
           particle.quantumState = Math.random() * Math.PI * 2;
         }
       });
-
-    initParticles();
-    animate();
-
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas
@@ -816,7 +515,6 @@ if ( {) {
                   height: [32, 64, 32];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
-                  top: `${(i * 3) % 100}%`,
 
                 }}
                 animate={{
@@ -826,46 +524,18 @@ if ( {) {
                 transition={{
                   duration: 3 + i * 0.2
                   repeat: Infinity
-                  ease: 'easeInOut',                }}
-              />;
-              />
-            ))}
-          </div>;
-        )}
-        {/* Holographic grid */}
-        {/* Holographic grid */}
-        {theme === 'holographic' && (
-          <div className='absolute inset - 0'>;
-            {[...Array (15)].map ((_, i) => (
-              <motion.div;
-                key={i}
-                className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-                style={{
-                  top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
-              <motion.div;
-                key={i}
-                className="absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30";
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
-
-
                   top: `${(i * 7) % 100}%`,
 
                 }}
                 animate={{
-                  opacity: [0.3, 0.8, 0.3]
-                }}
-                transition={{
-                  duration: 4 + i * 0.3
-                  repeat: Infinity
-        {/* Consciousness waves */}
-        {theme === 'consciousness' && (
-          <div className='absolute inset - 0'>;
-            {[...Array (8)].map ((_, i) => (
               <motion.div;
+                key={i}
+                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
                 style={{
@@ -875,18 +545,10 @@ if ( {) {
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
               <motion.div;
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
                 style={{
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
                 animate={{
-                  scale: [1, 1 && 1.5, 1]
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-                transition={{
-                  top: `${(i * 8) % 100}%`,
 
                 }}
                 animate={{
@@ -896,21 +558,6 @@ if ( {) {
                 transition={{
                   duration: 6 + i * 0.5
                   repeat: Infinity
-            ))}
-          </div>;
-        )}
-      </div>
-      {children}
-    </div>;
-  );
-}
-// Enhanced animation loop with consciousness and quantum effects
-}// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
-  particles.forEach ( (otherParticle, otherIndex) => {
-  if (index !== otherIndex && Math.random () > 0.99) {
-})
-}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
-particle.y - hologramSize / 2;
 hologramSize;
 hologramSize)
 }// Quantum field effects ctx.fillStyle = gradient;
@@ -923,15 +570,6 @@ fieldSize)
 }
 initParticles ();
 animate ();
-/>) )
-}</div>)
-}/>) )
-}</div>)
-}/>) )
-}</div>)
-}</div> {
-  children
-}</div>)   )
 }
       </div>
 

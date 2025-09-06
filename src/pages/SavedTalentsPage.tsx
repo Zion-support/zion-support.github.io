@@ -12,10 +12,6 @@ import { Heart } from 'lucide-react'
 import { logInfo, logWarn } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
 
-        // Check condition
-if ( {) {
-  $2
-}
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
@@ -36,6 +32,12 @@ if ( {) {
           .from('saved_talents')
           .select(
             `
+}
+
+        const { data, error } = await supabase;
+          .from ('saved_talents');
+          .select (
+            `;
             talent_profile (
               id
               user_id
@@ -75,9 +77,6 @@ if ( {) {
           variant: 'destructive'
         })
       } finally {
-        setIsLoading (false);
-      }
-    }
           .eq("user_id", user.id),
 
         if (error) {
@@ -166,31 +165,6 @@ export default function SavedTalentsPage() {;
   },
 
   const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent });    toast({
-    isCurrentlySaved: boolean
-  ) => {    try {
-      if (!user) {
-        logWarn('User not authenticated.')
-      }
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId)
-        if (error) {
-          throw error
-        }
-        setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        )
-        toast({
-          title: 'Talent Removed'
-          description: 'Talent removed from saved list.'
-        })
-      } else {
-        // Add to saved talents;
         const { error } = await supabase;
           .from ('saved_talents');
           .insert ([{ user_id: user.id, talent_id: talent_id }]);
@@ -213,8 +187,6 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-          .single(),
-  
         if (talentError) {
           logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
           toast({
@@ -373,34 +345,10 @@ if ( {) {
         description: 'Failed to update saved talents. Please try again later.',
         variant: 'destructive',
       });
-    }
-            <EmptyState
-              icon={<Heart className='h-8 w-8' />}
-              title='No Saved Talents'              description="You haven't saved any talents yet.";
-              action={{ text: 'Browse Talent', href: '/talent' }}
-            ))}
-          </div>;
-        )}
 }
 }, [user]);
 }
   try {
-  // Check condition
-if ( {) {
-  $2
-}
-}//Remove from saved talents const {
-  error ';
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talent_id);
-}else {
-  //Add to saved talents const {
-  error ';
-}= await supabase .from ('saved talents') .insert ([ {
-}talent= {
-  talent;
-}onViewProfile= {
-  handleViewProfile;
-}onRequestHire= {
 
   handleRequestHire;
 }is_authenticated= {

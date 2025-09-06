@@ -9,4 +9,3 @@ const About = ({ className }) => {
   );
 };
 
-export default About;

@@ -2,7 +2,6 @@ import { Award } from 'lucide-react'
 interface TalentCardBadgesProps {
   featured: boolean | undefined
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
-
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Award } from 'lucide-react'

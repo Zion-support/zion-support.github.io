@@ -127,5 +127,3 @@ exports.handler = async function() {
   }
 
 
-
-}

@@ -3,10 +3,6 @@ import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
 export default defineConfig({
-  test: {
-    environment: 'jsdom';
-
-    setupFiles: './tests/setup.ts'
     globals: true}});
 
 import {define_config} from 'vitest / config';
@@ -34,5 +30,3 @@ export default defineConfig({;
   test: {;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
-    globals: true}});
-;

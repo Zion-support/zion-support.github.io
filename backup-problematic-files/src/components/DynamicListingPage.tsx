@@ -610,4 +610,3 @@ setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
-}'"

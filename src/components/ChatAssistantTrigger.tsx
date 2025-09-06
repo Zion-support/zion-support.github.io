@@ -1,7 +1,3 @@
-import { useState } from "react",
-import { MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-  // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -62,11 +58,6 @@ export function ChatAssistantTrigger() {;
     }
   },
 
-
-  return (
-    <>;
-      <Button
-        onClick = {(,) => setIsOpen(true),}
       {isOpen && (
         <ChatAssistant
           isOpen = {isOpen,}
@@ -84,10 +75,6 @@ export function ChatAssistantTrigger() {;
             name: 'AI Assistant',;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
-          }}
-          onSendMessage = {handleSendMessage,}
-        />;
-      )}
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
@@ -141,7 +128,9 @@ if ( {) {
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
-          onSendMessage = {handleSendMessage, }
-        />)}
-    </>);
+          onSendMessage = {handleSendMessage,}
+        />
+      )}
+    </>
+  )
 }

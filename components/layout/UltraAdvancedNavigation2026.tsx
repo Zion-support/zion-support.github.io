@@ -347,7 +347,6 @@ const companyLinks = [;
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },;
   { name: 'Careers', href: '/careers', icon: Users },;
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-
 const UltraAdvancedNavigation2026 = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -527,9 +526,6 @@ const UltraAdvancedNavigation2026 = () => {;
       icon: Zap,
       color: 'from - green - 500 to - emerald - 500',
       description: 'Enterprise solutions and infrastructure',
-
-            {/* Logo */}
-
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -604,18 +600,9 @@ const UltraAdvancedNavigation2026 = () => {;
             </Link>;
 
             {/* Desktop Navigation */}
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
-                      <motion&& motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                              <Link
-                                key={subItem && subItem.name}
-                                href={subItem && subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
-                                onClick={() => setActiveDropdown(null)}
 
+              </div>
+            </Link>
 
             {/* Desktop Navigation */}
 
@@ -765,25 +752,6 @@ const UltraAdvancedNavigation2026 = () => {;
           </div>
         </div>
       </nav>
-            {/* Contact Info - Desktop */}
-            <div className='hidden lg:flex items - center space - x-4'>;
-              <div className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200'>;
-                <Phone className='w - 4 h - 4' />;
-                <span className='text - sm font - medium'>{contact_info.phone}</span>;
-              </div>;
-              <Link;
-                href='/contact';
-                className='px - 6 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - medium rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:scale - 105'              >            <div className="hidden lg:flex items - center space - x-4">;
-              <div className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200">;
-                <Phone className="w - 4 h - 4" />;
-                <span className="text - sm font - medium">{contact_info.phone}</span>;
-              </div>;
-              <Link;
-                href="/contact";
-                className="px - 6 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - medium rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:scale - 105";
-                Get Started;
-              </Link>;
-            </div>;
             {/* Mobile Menu Button */}
             <button;
               on_click={() => setIsOpen (!is_open)}
@@ -807,34 +775,11 @@ const UltraAdvancedNavigation2026 = () => {;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0 && 0.2 }}
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden";
-            transition={{ duration: 0 && 0.2 }}
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
-            onClick={() => setIsOpen(false)}
-          >;
-            <motion&& motion.div
           >
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0 && 0.3, ease: 'easeOut' }}
-              className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto'
-              onClick={e => e && e.stopPropagation()}
-            >;
-              {/* Mobile Menu Header */}
-              <div className='flex items-center justify-between mb-8'>;
-                <div className='flex items-center space-x-3'>;
-                  <div className='w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
-                    <Rocket className='w-5 h-5 text-white' />;
-                  </div>;
-                  <span className='text-white font-bold text-lg'>Menu</span>;
-                </div>;
                 <button
                   onClick={() => setIsOpen(false)}
                   className='p-2 text-gray-300 hover:text-white transition-colors duration-200'
@@ -842,18 +787,6 @@ const UltraAdvancedNavigation2026 = () => {;
                   <X className='w-6 h-6' />                </button>
               </div>
               {/* Mobile Navigation Items */}            >
-              transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">;
-                <div className="flex items-center space-x-3">;
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
-                    <Rocket className="w-5 h-5 text-white" />;
-                  </div>;
-                  <span className="text-white font-bold text-lg">Menu</span>;
-                </div>;
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
@@ -868,8 +801,6 @@ const UltraAdvancedNavigation2026 = () => {;
               </div>;
 
               {/* Mobile Navigation Items */}
-              <div className='space-y-4'>;
-                {navigationItems && navigationItems.map(item => (;
                   <div
                     key={item && item.name}
                     className='border-b border-gray-700/50 pb-4'>;
@@ -890,11 +821,6 @@ const UltraAdvancedNavigation2026 = () => {;
                           {subItem.name}
                         </Link>
                       ))}
-                    </div>;
-                  </div>;
-                ))}
-                {/* Quick Links */}
-                <div className='space-y-3 pt-4'>;
                   <Link
                     href='/services'
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">;
@@ -912,36 +838,10 @@ const UltraAdvancedNavigation2026 = () => {;
                     Pricing;
                   </Link>;
                   <Link
-                    href='/contact'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/contact";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium";
-                    href='/contact'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/contact";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium";
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-                {/* Contact Info - Mobile */}
-                <div className='pt-6 border-t border-gray-700/50 space-y-3'>
-                  <div className='flex items-center space-x-3 text-gray-300'>
-                    <Phone className='w-4 h-4' />
-                    <span className='text-sm'>{contactInfo.phone}</span>
-                  </div>
-                  <div className='flex items-center space-x-3 text-gray-300'>
-                    <Mail className='w-4 h-4' />
-                    <span className='text-sm'>{contactInfo.email}</span>
-                  </div>
-                  <div className='flex items-center space-x-3 text-gray-300'>
-                    <MapPin className='w-4 h-4' />
-                    <span className='text-sm'>{contactInfo.address}</span>                  </div>
-                </div>
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>;
                   <Link
                     href='/contact'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                    onClick={() => setIsOpen(false)}                  </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.email}</span>
@@ -961,35 +861,10 @@ const UltraAdvancedNavigation2026 = () => {;
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
-
-                {/* Get Started Button - Mobile */}
-                <div className='pt-4'>;
-                  <Link
-                    href='/contact'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                <div className="pt-4">;
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
                     Get Started Today;
                   </Link>;
                 </div>;
               </div>;
-  );
-}
-export default UltraAdvancedNavigation2026;
-
-            </motion.div>;
-          </motion.div>)}
-      </AnimatePresence>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);
-}
-;
-export default UltraAdvancedNavigation2026;    </>);
-}
-export default UltraAdvancedNavigation2026;
-;
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>

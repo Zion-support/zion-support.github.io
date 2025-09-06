@@ -83,10 +83,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
 
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-    { value: 'roi', label: 'Highest ROI' }
-  ];
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
@@ -101,76 +97,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
-  const allServices = [;
-    ...revolutionaryMicroSaasServices,;
-    ...enhancedMicroSaasServices,;
-  ];  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
-  const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-100', label: '$0 - $100' },;
-    { value: '101-500', label: '$101 - $500' },;
-    { value: '501-1000', label: '$501 - $1,000' },;
-    { value: '1001-2500', label: '$1,001 - $2,500' },;
-    { value: '2501-5000', label: '$2,501 - $5,000' },;
-    { value: '5001+', label: '$5,001+' },  ];    { value: '501-1000', label: '$501 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
-  const sortOptions = [;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'name', label: 'Name A-Z' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-  ];
-  // Category filter;
-  if (selectedCategory !== 'All') {;
-    filteredServices = filteredServices && filteredServices.filter(;
-      service => service && service.category === selectedCategory;
-    );  }
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(',', ''));
-      return price >= min && (max === Infinity || price <= max);
-    });  }
-  // Search filter;
-  if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(, ''));
-      return price >= min && (max === Infinity || price <= max);
-    });
-  // Search filter;
-  if (searchQuery) {;
-    filteredServices = filteredServices && filteredServices.filter(;
-      service =>;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );    filteredServices = filteredServices && filteredServices.filter(service =>;
-      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-  }
-  // Sort services;
-  filteredServices && filteredServices.sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
-        return (
-          parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
-          parseFloat(b && b.price.replace('$', '').replace(',', ''));
-        );      case 'popularity':        return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
-      case 'popularity':;
-        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
-      case 'category':;
-        return a && a.category.localeCompare(b && b.category);
-      case 'roi':;
-        const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
@@ -182,21 +108,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-    }
-  });
-;
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
-
-        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-600',
       popular: false
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
@@ -286,11 +197,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     },      icon: <Shield className="w-6 h-6" />
     }
     {
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },      icon: <TrendingUp className="w-6 h-6" />
       name: 'Professional',
       price: '$199',
       period: '/month',
@@ -333,13 +239,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     {
       metric: '99.99%',
       label: 'Uptime Guarantee',
-      description: 'Enterprise-grade reliability',
-      icon: <Shield className="w-6 h-6" />
-    };
-    {
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -585,59 +484,16 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               <motion.h1
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8 }}>;
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                  Comprehensive;
-                </span>;
-                <br />;
-                <span className='text-white'>Pricing & Plans</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                transition={{ duration: 0.8 }}
-              >
-
-
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-              <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
-                </span>;
-                <br />;
-                <span className="text-white">Pricing & Plans</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise-grade reliability.;
-              </motion && motion.p>;
-
-              {/* Market Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
-
-              {/* Market Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -654,7 +510,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
-
 
                   </div>
 
@@ -715,16 +570,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
-            </div>
-          </div>
-        </section>
-        {/* Pricing Tiers */}
-        <section id='pricing-tiers' className='py-20'>
-          <div className='container mx-auto px-4'>
-            <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 20 }}        <section id="pricing-tiers" className="py-20">
-          <div className="container mx-auto px-4">
-              className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -752,19 +597,12 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                     </div>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-        {/* Services Pricing Grid */}
-        <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
-        {/* Services Pricing Grid */}
-        <section id='services-pricing' className='py-20'>
-          <div className='container mx-auto px-4'>
-            {/* Filters and Controls */}
-            <motion.div
 
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
@@ -799,15 +637,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                     ))}
                   </select>
                   <select
-                    value={sortBy}
-                    onChange={e => setSortBy(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
-                  >;
-                    {sortOptions && sortOptions.map(option => (;
-                      <option key={option && option.value} value={option && option.value}>;
-                        {option && option.label}
-                      </option>;
-                    ))}
                     <input
                       type='text'
                       placeholder='Search services...'
@@ -821,17 +650,12 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
               </div>
             </motion.div>
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -996,7 +820,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
-                </div>
 
 
 

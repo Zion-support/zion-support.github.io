@@ -7,9 +7,6 @@ import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -18,11 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
-  doc.fontSize(14).text("KPIs");
-  doc.fontSize(12).text(u.kpis |"");
-  doc.end();
-  doc.end();
-}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -64,9 +56,3 @@ function handler() {
   doc.end ();
   doc.end ();
 }
-  doc.fontSize(14).text('KPIs');
-  doc.fontSize(12).text(u.kpis || '');
-  doc.end();
-  doc.end();
-
-

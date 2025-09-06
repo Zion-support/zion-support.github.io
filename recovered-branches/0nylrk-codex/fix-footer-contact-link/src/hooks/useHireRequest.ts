@@ -7,8 +7,14 @@ export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-
+    professional_title: string,
+    email?: string;
   }
+  requester: {
+    name: string;
+    email: string,
+    id?: string;
+
   project: {
     overview: string;
     timeline: string;
@@ -23,7 +29,6 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
-
     professional_title: string,
     email?: string
   },
@@ -47,53 +52,6 @@ export interface HireRequestData {
     setError(null)
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
-        body: requestData
-    budget_min: number,
-    budget_max: number;
-  }
-}
-export /**
- * useHireRequest - Function description
- */
-function useHireRequest() {
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const submitHireRequest = async (request_data: HireRequestData) => {
-    setIsSubmitting (true);
-    set_error (null),
-    try {
-      // Call the edge function to process the hire request;
-      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
-        body: request_data;
-      });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Show success message;
-      toast ({
-        title: "Request Submitted",
-        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
-;
-      return { success: true, request_id: response?.request_id }
-    } catch (error) {
-      console.error ("Error submitting hire request:", error);
-;
-      const error_message = error instanceof Error;
-        ? error.message;
-        : "There was a problem submitting your request. Please try again.";
-;
-      set_error (error_message);
-;
-      toast ({
-        title: "Error";
-        description: error_message,
-        variant: "destructive"});
-;
-      return { success: false, error: error_message }
     } finally {
       setIsSubmitting (false);
     }
@@ -102,11 +60,6 @@ if (throw error) {
     submitHireRequest;
     isSubmitting;
 
-      return { success: false, error: errorMessage }
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
@@ -171,6 +124,3 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
-  }
-}
-;

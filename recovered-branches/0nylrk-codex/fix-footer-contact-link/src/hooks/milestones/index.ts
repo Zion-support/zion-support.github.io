@@ -1,7 +1,3 @@
-
-export * from './use_milestones';
-;
-
 // Index utility
 export const Index = () => {
   // Implementation here

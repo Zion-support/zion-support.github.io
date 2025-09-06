@@ -3,8 +3,6 @@ export const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-  return (
-    <Button
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;

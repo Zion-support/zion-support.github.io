@@ -1,3 +1,6 @@
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
 
 
 
@@ -47,10 +50,6 @@ serve(async (req) => {;
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
     `;
-    // Call OpenAI API
-        model: 'gpt-4o-mini';
-        messages: [
-          {
             role: 'system'
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
@@ -125,11 +124,6 @@ if ( {) {
     console && console.error('Error generating milestones:', error);
     return new Response(
 
-      JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
-      { 
-        status: 500, 
-
-
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -148,54 +142,16 @@ if ( {) {
       const content = data.choices[0].message.content.trim(),;
       // Try to parse the response as JSON;
       const milestones = JSON.parse(content),;
+      ;
       return new Response(JSON.stringify({ milestones }), {;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+        headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;
     } catch (parseError) {;
       // If parsing fails, try to extract JSON from the text;
       console.error('Failed to parse AI response as JSON:', parseError),;
-      throw new Error('Failed to parse AI response');
+      throw new Error('Failed to parse AI response'),;
     }
   } catch (error) {;
     console.error('Error generating milestones:', error),;
     return new Response(;
-      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
-      {;
-        status: 500,;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-    )
-  }
-});
-
-;
-    const data = await response.json ();
-;
-    // Check condition
-if ( {) {
-  $2
 }
-      throw new Error (data.error?.message || 'Failed to generate milestones');
-    }
-    // Parse the AI - generated content to ensure it's valid JSON;
-    try {
-      const content = data.choices[0].message.content.trim ();
-      // Try to parse the response as JSON;
-      const milestones = JSON.parse (content);
-;
-      return new Response (JSON.stringify ({ milestones }), {
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-    } catch (parse_error) {
-      // If parsing fails, try to extract JSON from the text;
-      console.error ('Failed to parse AI response as JSON:', parse_error);
-      throw new Error ('Failed to parse AI response');
-    }
-  } catch (error) {
-    console.error ('Error generating milestones:', error);
-    return new Response (
-      JSON.stringify ({ error: error.message || 'Failed to generate milestones' });
-      {
-        status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
-    );
-  }
 });
-;

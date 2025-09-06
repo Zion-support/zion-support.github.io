@@ -1,4 +1,3 @@
-export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>;
       <Head>;

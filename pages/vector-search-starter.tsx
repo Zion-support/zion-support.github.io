@@ -15,8 +15,6 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function VectorSearchStarterPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/vector-search-starter'))
-  if (!service) return null
-
   return (
     <Layout>
       <Head>
@@ -54,4 +52,3 @@ export default function VectorSearchStarterPage() {
       </div>
     </Layout>
   )
-;

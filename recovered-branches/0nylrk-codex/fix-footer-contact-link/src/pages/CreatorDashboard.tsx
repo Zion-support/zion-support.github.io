@@ -49,7 +49,6 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
-  return (
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;
@@ -105,22 +104,9 @@ function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">;
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.;
               </p>;
-              {/* Placeholder for more creator-specific content */}
-            </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SidebarTrigger />
-    </SidebarProvider>
-  )
-}
             </div>;
           </main>;
           <Footer />;
         </div>;
       </div>;
       <SidebarTrigger />;
-    </SidebarProvider>;
-  );
-}

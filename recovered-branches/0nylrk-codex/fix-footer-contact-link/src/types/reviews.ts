@@ -1,8 +1,5 @@
 
 
-export interface Review {
-
-export interface Review {;
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -20,8 +17,6 @@ export interface Review {;
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-  }
-}
   id: string;
   review_id: string;
   reporter_id: string;

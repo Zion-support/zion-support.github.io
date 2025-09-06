@@ -288,7 +288,6 @@ class EnhancedAutomationOrchestrator {
         "error": error && error.message
       }}
   }
-}
 // Run if called directly
 if (require && require.main === module) {
   const orchestrator = new EnhancedAutomationOrchestrator();

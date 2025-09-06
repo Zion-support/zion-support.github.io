@@ -1,7 +1,3 @@
-
-export const SORT_OPTIONS = [
-// Sort options for talent directory;
-export const SORT_OPTIONS = [;
   { value: 'relevance', label: 'Relevance' },
   { value: 'rating', label: 'Highest Rating' },
   { value: 'experience', label: 'Most Experienced' },

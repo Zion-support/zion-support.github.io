@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ContactProps {
   // Add props here as needed
-}
 export default function Contact({ }: ContactProps) {
   return (
     <div>
@@ -32,12 +31,6 @@ export default function Contact({ }: ContactProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-
-
-:src.pages.disabled/Contact.jsx
-}
 }
 }
 }
