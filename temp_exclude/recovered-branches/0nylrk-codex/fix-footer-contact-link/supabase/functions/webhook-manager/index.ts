@@ -318,13 +318,15 @@ function createTestPayload(eventType: string) {
         event_type: 'quote_received', event_id: eventId,
         timestamp;
         data: {
+      
           quote_id: crypto.randomUUID(), talent_id: crypto.randomUUID(),
           client_id: crypto.randomUUID(),
           amount: {
             min: 1000, max: 2000,
             currency: 'USD'
-          };
-          created_at: timestamp
+          
+    },
+    created_at: timestamp
         }
       };
     

@@ -129,8 +129,10 @@ export default function MicroSaasServicesPage() {
         'Newsletter campaignsWelcome series automationAbandoned cart recoveryProduct announcementsCustomer onboardingLead nurturing'
       ];
       pricing: {
-        starter: { price: 29, features: ['1,000 subscribersBasic templatesSimple automationBasic analyticsEmail support'] };
-        professional: { price: 79, features: ['10,000 subscribersAdvanced templatesAdvanced automationAdvanced analyticsPriority supportAPI access'] };
+      
+        starter: { price: 29, features: ['1,000 subscribersBasic templatesSimple automationBasic analyticsEmail support'] 
+    },
+    professional: { price: 79, features: ['10,000 subscribersAdvanced templatesAdvanced automationAdvanced analyticsPriority supportAPI access'] };
         enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analyticsDedicated supportWhite-label options'] }
       };
       marketPrice: '$29-199/month',

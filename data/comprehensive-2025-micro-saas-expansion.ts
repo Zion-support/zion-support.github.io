@@ -14,11 +14,13 @@ export interface ComprehensiveMicroSaasService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
   benefits: string[], capabilities: string[],
@@ -197,7 +199,7 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     color: 'from-emerald-600 to-teal-600', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/blockchain-defi-intelligence',
     marketPosition: 'Advanced blockchain intelligence platform competing with Chainalysis ($25,000/year) and Elliptic ($50,000/year)',
-    targetAudience: 'Crypto exchanges, DeFi protocols, Investment firms, Regulatory bodies';
+    targetAudience: 'Crypto exchanges, DeFi protocols, Investment firms, Regulatory bodies',
     trialDays: 14, setupTime: '1 week',
     category: 'Blockchain & DeFi', realService: true,
     technology: ['Blockchain, AI/ML, Python, Solidity, Web3.js, React'];

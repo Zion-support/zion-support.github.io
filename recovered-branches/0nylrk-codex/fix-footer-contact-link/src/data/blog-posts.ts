@@ -23,9 +23,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
+      
       name: "Dr. Alicia Zhang", title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Apr 15, 2025";
     readTime: "5 min read", category: "Trends",
     tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
@@ -52,9 +54,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Leveraging Reviews and Testimonials</h2>
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
     author: {
+      
       name: "Marcus Johnson", title: "Marketing Strategist",
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Apr 10, 2025";
     readTime: "8 min read", category: "Marketing",
     tags: ["Marketing", "AI Services", "Visibility", "SEO"];
@@ -80,9 +84,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Measuring and Reporting Impact</h2>
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
     author: {
+      
       name: "Sophia Chen", title: "Sustainability Engineer",
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Apr 5, 2025";
     readTime: "6 min read", category: "Sustainability",
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
@@ -108,9 +114,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Continuous Ethical Evaluation</h2>
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
     author: {
+      
       name: "Dr. James Peterson", title: "AI Ethics Officer",
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Mar 30, 2025";
     readTime: "7 min read", category: "Ethics",
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
@@ -136,9 +144,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Retention Through Growth Paths</h2>
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;
     author: {
+      
       name: "Elena Rodriguez", title: "Head of AI Talent",
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Mar 22, 2025";
     readTime: "9 min read", category: "Recruitment",
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
@@ -164,9 +174,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Inference Serving Architecture</h2>
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
     author: {
+      
       name: "Michael Wong", title: "ML Infrastructure Architect",
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    };
+    
+    },
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read", category: "Infrastructure",
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];

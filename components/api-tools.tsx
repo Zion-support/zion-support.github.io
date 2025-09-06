@@ -31,11 +31,13 @@ export default function ApiToolsPage() {
         'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEsCode review and optimization suggestions'
       ];
       pricing: {
+      
         free: '100 requests/month',
         pro: '$49/month',
         enterprise: 'Custom'
-      };
-      category: 'Development',
+      
+    },
+    category: 'Development',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
       website: 'https://codegen.api',
@@ -54,11 +56,13 @@ export default function ApiToolsPage() {
         'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrationsComprehensive audit logging and monitoring'
       ];
       pricing: {
+      
         free: '1,000 syncs/month',
     pro: '$79/month',
         enterprise: 'Custom'
-      };
-      category: 'Data',
+      
+    },
+    category: 'Data',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
       website: 'https://datasync.api',
@@ -77,11 +81,13 @@ export default function ApiToolsPage() {
         'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customizationSpatial data analysis and clustering'
       ];
       pricing: {
+      
         free: '10,000 requests/month',
     pro: '$99/month',
         enterprise: 'Custom'
-      };
-      category: 'Location',
+      
+    },
+    category: 'Location',
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       website: 'https://geo.api',
@@ -100,11 +106,13 @@ export default function ApiToolsPage() {
         'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and preventionCompliance with SOC2, GDPR, and HIPAA'
       ];
       pricing: {
+      
         free: '1,000 users/month',
     pro: '$149/month',
         enterprise: 'Custom'
-      };
-      category: 'Security',
+      
+    },
+    category: 'Security',
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
       website: 'https://authguard.api',
@@ -123,11 +131,13 @@ export default function ApiToolsPage() {
         'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and securityIntegration with popular platforms'
       ];
       pricing: {
+      
         free: '5,000 webhooks/month',
     pro: '$39/month',
         enterprise: 'Custom'
-      };
-      category: 'Integration',
+      
+    },
+    category: 'Integration',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500',
       website: 'https://webhookhub.api',
@@ -146,11 +156,13 @@ export default function ApiToolsPage() {
         'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translationCustom model training and fine-tuning'
       ];
       pricing: {
+      
         free: '5,000 requests/month',
     pro: '$69/month',
         enterprise: 'Custom'
-      };
-      category: 'AI/ML',
+      
+    },
+    category: 'AI/ML',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
       website: 'https://nlp.api',
@@ -169,11 +181,13 @@ export default function ApiToolsPage() {
         'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)Scheduled reports and alerts'
       ];
       pricing: {
+      
         free: '10,000 events/month',
     pro: '$89/month',
         enterprise: 'Custom'
-      };
-      category: 'Analytics',
+      
+    },
+    category: 'Analytics',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500',
       website: 'https://analytics.api',
@@ -192,11 +206,13 @@ export default function ApiToolsPage() {
         'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standardsHardware security module (HSM) support'
       ];
       pricing: {
+      
         free: '1,000 operations/month',
     pro: '$119/month',
         enterprise: 'Custom'
-      };
-      category: 'Security',
+      
+    },
+    category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
       website: 'https://encrypt.api',

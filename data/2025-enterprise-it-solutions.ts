@@ -45,8 +45,8 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		color: 'from-green-600 to-emerald-700', textColor: 'text-green-300',
 		link: 'https://ziontechgroup.com/services/enterprise-api-governance-platform',
 		marketPosition: 'Enterprise API governance that ensures security, compliance, and operational excellence.',
-    targetAudience: 'Enterprise IT teams, API development teams, Security teams, Compliance officers';
-		trialDays: 30, setupTime: '7-10 days',
+    targetAudience: 'Enterprise IT teams, API development teams, Security teams, Compliance officers',
+    trialDays: 30, setupTime: '7-10 days',
 		category: 'Enterprise API Management', realService: true,
 		technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'];
 		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems'];
@@ -73,8 +73,8 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		color: 'from-purple-600 to-pink-700', textColor: 'text-purple-300',
 		link: 'https://ziontechgroup.com/services/enterprise-identity-access-management-suite',
 		marketPosition: 'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.',
-    targetAudience: 'Enterprise security teams, IT administrators, Compliance officers, HR teams';
-		trialDays: 30, setupTime: '10-15 days',
+    targetAudience: 'Enterprise security teams, IT administrators, Compliance officers, HR teams',
+    trialDays: 30, setupTime: '10-15 days',
 		category: 'Enterprise Security', realService: true,
 		technology: ['Java, Spring Security, React, Node.js, PostgreSQL, Redis, LDAP'];
 		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'];

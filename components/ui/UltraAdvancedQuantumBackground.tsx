@@ -22,9 +22,9 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     canvas.height = window.innerHeight;
 
     let animationFrameId: number,
-    let particles: Particle[] = [],
-    let quantumFields: QuantumField[] = [],
-    let neuralNetworks: NeuralNetwork[] = [],
+    let particles: Particle[] = [];
+    let quantumFields: QuantumField[] = [];
+    let neuralNetworks: NeuralNetwork[] = [];
     class Particle {
       x: number,
       y: number,

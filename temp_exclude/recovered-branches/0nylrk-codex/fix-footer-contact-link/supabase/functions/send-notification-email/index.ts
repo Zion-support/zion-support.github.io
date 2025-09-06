@@ -52,8 +52,10 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ success: true });
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 200}
+        headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200}
     )
     
   } catch (error) {
@@ -61,8 +63,10 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: error.message });
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 500}
+        headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500}
     )
   }
 });

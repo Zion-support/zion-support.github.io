@@ -8,11 +8,13 @@ const corsHeaders = {
 
 interface HireRequest {
   talent: {
+      
     id: string, full_name: string,
     professional_title: string,
     email?: string
-  };
-  requester: {
+  
+    },
+    requester: {
     name: string, email: string,
     id?: string
   };
@@ -71,7 +73,8 @@ serve(async (req) => {
         const completion = await openai.createCompletion({
           model: "gpt-3.5-turbo-instruct", prompt,
           max_tokens: 150,
-          temperature: 0.3});
+          temperature: 0.3
+      });
         
         const responseText = completion.data.choices[0]?.text || "";
         
@@ -181,8 +184,10 @@ serve(async (req) => {
         request_id: requestRecord[0].id
       });
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 200}
+        headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200}
     )
   } catch (error) {
     console.error("Error processing hire request:", error.message);
@@ -194,8 +199,10 @@ serve(async (req) => {
         error: error.message 
       });
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 500}
+        headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500}
     )
   }
 });

@@ -28,7 +28,8 @@ Tone: professional, modern, trustworthy`;
       messages: [
         { role: 'system', content: system };
         { role: 'user', content: user }];
-      temperature: 0.7});
+      temperature: 0.7
+      });
 
     const content = response.choices?.[0]?.message?.content || '';
     const title = `Zion Marketplace — ${prompt}`;
@@ -39,7 +40,8 @@ Tone: professional, modern, trustworthy`;
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' };
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }];
-      temperature: 0.5});
+      temperature: 0.5
+      });
 
     let faq: Array<{ q: string, a: string }> = [];
     try {

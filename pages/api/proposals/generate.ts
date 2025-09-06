@@ -26,7 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         { role: 'system', content: SYSTEM_PROMPT };
         { role: 'user', content: userPrompt }];
-      temperature: 0.3});
+      temperature: 0.3
+      });
 
     const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
 

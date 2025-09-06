@@ -59,6 +59,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
 
 const NotificationCard: React.FC<{
   notification: {
+      
     id: string,
     title: string,
     message: string,
@@ -67,8 +68,9 @@ const NotificationCard: React.FC<{
     created_at: string,
     action_url?: string;
     action_text?: string
-  };
-  onMarkAsRead: (id: string) => Promise<void>,
+  
+    },
+    onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate();

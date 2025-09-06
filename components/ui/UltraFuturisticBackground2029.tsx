@@ -52,7 +52,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 
     // Initialize particles with different types
     const initParticles = () => {
-      const particles: Particle[] = [],
+      const particles: Particle[] = [];
       const colors = {
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
@@ -81,7 +81,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 
     // Initialize energy fields
     const initEnergyFields = () => {
-      const fields: EnergyField[] = [],
+      const fields: EnergyField[] = [];
       const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'];
       
       for (let i = 0, i < 8, i++) {

@@ -24,13 +24,15 @@ export default function UltraQuantumHolographicBackground({
   // Color schemes
   const colorSchemes = {
     quantum: {
+      
       primary: '#00ffff',
       secondary: '#ff00ff',
       tertiary: '#ffff00',
       accent: '#00ff00',
       background: 'rgba(0, 0, 0, 0.95)',
     overlay: 'rgba(0, 0, 0, 0.3)'
-    };
+    
+    },
     holographic: {
       primary: '#ff0080',
       secondary: '#8000ff',
@@ -40,13 +42,15 @@ export default function UltraQuantumHolographicBackground({
     overlay: 'rgba(0, 0, 0, 0.25)'
     };
     cyberpunk: {
+      
       primary: '#ff0040',
       secondary: '#00ffff',
       tertiary: '#ffff00',
       accent: '#ff00ff',
       background: 'rgba(0, 0, 0, 0.94)',
     overlay: 'rgba(0, 0, 0, 0.35)'
-    };
+    
+    },
     neon: {
       primary: '#00ff00',
       secondary: '#ff00ff',
@@ -209,7 +213,7 @@ export default function UltraQuantumHolographicBackground({
     }
 
     // Create particles
-    const particles: Particle[] = [],
+    const particles: Particle[] = [];
     for (let i = 0, i < particleCount, i++) {
       particles.push(new Particle())
     }

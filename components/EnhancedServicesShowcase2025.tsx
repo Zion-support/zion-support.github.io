@@ -38,11 +38,13 @@ interface Service {
   category: string,
   features: string[],
   pricing: {
+      
     starter: number,
     professional: number,
     enterprise: number
-  };
-  technologies: string[],
+  
+    },
+    technologies: string[],
   benefits: string[]
 }
 
@@ -110,10 +112,12 @@ const services: Service[] = [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ];
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
-    };
+    
+    },
     technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
       'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
@@ -129,10 +133,12 @@ const services: Service[] = [
       'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
     ];
     pricing: {
+      
       starter: 999,
       professional: 2499,
       enterprise: 4999
-    };
+    
+    },
     technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
       'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
@@ -148,10 +154,12 @@ const services: Service[] = [
       'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
     ];
     pricing: {
+      
       starter: 199,
       professional: 599,
       enterprise: 1499
-    };
+    
+    },
     technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
       'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
@@ -167,10 +175,12 @@ const services: Service[] = [
       'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
     ];
     pricing: {
+      
       starter: 399,
       professional: 999,
       enterprise: 2499
-    };
+    
+    },
     technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
       'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
@@ -186,10 +196,12 @@ const services: Service[] = [
       'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
     ];
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
-    };
+    
+    },
     technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
       'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
@@ -205,10 +217,12 @@ const services: Service[] = [
       'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
     ];
     pricing: {
+      
       starter: 199,
       professional: 599,
       enterprise: 1499
-    };
+    
+    },
     technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'

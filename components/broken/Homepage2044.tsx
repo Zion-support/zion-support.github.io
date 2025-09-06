@@ -42,9 +42,11 @@ interface Service {
   type: string,
   category: string,
   pricing: {
+      
     starter: string
-  };
-  slug: string
+  
+    },
+    slug: string
 }
 
 const Homepage2044: React.FC = () => {

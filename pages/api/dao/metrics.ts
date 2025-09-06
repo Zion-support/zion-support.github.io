@@ -62,7 +62,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     }));
 
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
-    const activeProposals: any[] = [],
+    const activeProposals: any[] = [];
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
     const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;

@@ -39,7 +39,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];
-      temperature: 0.2});
+      temperature: 0.2
+      });
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {

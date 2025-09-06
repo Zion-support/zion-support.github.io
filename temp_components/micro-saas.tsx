@@ -23,8 +23,8 @@ export default function MicroSaasPage() {
       textColor: 'text-pink-400',
       link: 'https://contentgen.ziontechgroup.com',
       marketPosition: 'Competitive with Jasper ($39-99), Copy.ai ($36-186), and Writesonic ($12.67-100)',
-    targetAudience: 'Content marketers, agencies, e-commerce businesses, and content creators';
-      marketSize: '$15.8B content marketing industry',
+    targetAudience: 'Content marketers, agencies, e-commerce businesses, and content creators',
+    marketSize: '$15.8B content marketing industry',
       growthRate: '16.1% CAGR expected through 2030'
     };
     {
@@ -42,8 +42,8 @@ export default function MicroSaasPage() {
       textColor: 'text-violet-400',
       link: 'https://design.ziontechgroup.com',
       marketPosition: 'Competitive with Zeroheight ($0-200), Frontify ($0-200), and InVision DSM ($0-100)',
-    targetAudience: 'Design teams, product managers, and design system architects';
-      marketSize: '$8.2B design tools market',
+    targetAudience: 'Design teams, product managers, and design system architects',
+    marketSize: '$8.2B design tools market',
       growthRate: '12.3% CAGR expected through 2030'
     };
     {
@@ -61,8 +61,8 @@ export default function MicroSaasPage() {
       textColor: 'text-amber-400',
       link: 'https://monitor.ziontechgroup.com',
       marketPosition: 'Competitive with Sentry ($26-80), LogRocket ($99-199), and New Relic ($0-99)',
-    targetAudience: 'Developers, DevOps teams, and product managers';
-      trialDays: 14,
+    targetAudience: 'Developers, DevOps teams, and product managers',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Development & DevOps'
     };
@@ -81,8 +81,8 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-knowledge-base',
       marketPosition: 'Competitive with Notion ($0-20), Confluence ($0-7), and GitBook ($0-99)',
-    targetAudience: 'Businesses of all sizes, knowledge workers, and documentation teams';
-      trialDays: 14,
+    targetAudience: 'Businesses of all sizes, knowledge workers, and documentation teams',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Productivity & Collaboration'
     };
@@ -101,8 +101,8 @@ export default function MicroSaasPage() {
       textColor: 'text-indigo-400',
       link: 'https://ziontechgroup.com/ai-email-marketing-pro',
       marketPosition: 'Competitive with Klaviyo ($20-2000), ActiveCampaign ($9-49), and ConvertKit ($9-29)',
-    targetAudience: 'E-commerce businesses, marketers, and growth teams';
-      trialDays: 14,
+    targetAudience: 'E-commerce businesses, marketers, and growth teams',
+    trialDays: 14,
       setupTime: '15 minutes',
       category: 'Marketing & Automation'
     };
@@ -121,8 +121,8 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-seo-suite',
       marketPosition: 'Competitive with Ahrefs ($99-999), SEMrush ($119-449), and Moz ($99-599)',
-    targetAudience: 'SEO professionals, digital marketers, and website owners';
-      trialDays: 14,
+    targetAudience: 'SEO professionals, digital marketers, and website owners',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Marketing & SEO'
     };
@@ -141,8 +141,8 @@ export default function MicroSaasPage() {
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup.com/ai-social-media-manager',
       marketPosition: 'Competitive with Buffer ($6-99), Hootsuite ($29-599), and Later ($18-40)',
-    targetAudience: 'Social media managers, small businesses, and influencers';
-      trialDays: 14,
+    targetAudience: 'Social media managers, small businesses, and influencers',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Marketing & Social Media'
     };
@@ -161,8 +161,8 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-ecommerce-analytics',
       marketPosition: 'Competitive with Google Analytics 4 (Free), Mixpanel ($25-1000), and Amplitude ($0-995)',
-    targetAudience: 'E-commerce businesses, online retailers, and digital marketers';
-      trialDays: 14,
+    targetAudience: 'E-commerce businesses, online retailers, and digital marketers',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Analytics & E-commerce'
     };
@@ -181,8 +181,8 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-customer-support-bot',
       marketPosition: 'Competitive with Intercom ($39-499), Drift ($0-2500), and ManyChat ($0-15)',
-    targetAudience: 'Customer support teams, SaaS companies, and e-commerce businesses';
-      trialDays: 14,
+    targetAudience: 'Customer support teams, SaaS companies, and e-commerce businesses',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Customer Experience'
     };
@@ -201,8 +201,8 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-project-management',
       marketPosition: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-12)',
-    targetAudience: 'Project managers, development teams, and creative agencies';
-      trialDays: 14,
+    targetAudience: 'Project managers, development teams, and creative agencies',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Productivity & Collaboration'
     };
@@ -221,8 +221,8 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-financial-planning',
       marketPosition: 'Competitive with Mint (Free), YNAB ($8.25-14.99), and Personal Capital (Free)',
-    targetAudience: 'Small businesses, financial advisors, and individuals';
-      trialDays: 14,
+    targetAudience: 'Small businesses, financial advisors, and individuals',
+    trialDays: 14,
       setupTime: '30 minutes',
       category: 'Finance & Planning'
     };
@@ -241,8 +241,8 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-content-calendar',
       marketPosition: 'Competitive with CoSchedule ($29-99), Buffer ($6-99), and Hootsuite ($29-599)',
-    targetAudience: 'Content marketers, social media managers, and marketing teams';
-      trialDays: 14,
+    targetAudience: 'Content marketers, social media managers, and marketing teams',
+    trialDays: 14,
       setupTime: '15 minutes',
       category: 'Content & Marketing'
     };
@@ -261,8 +261,8 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-performance-monitoring',
       marketPosition: 'Competitive with New Relic ($0-99), Datadog ($15-23), and AppDynamics ($0-60)',
-    targetAudience: 'DevOps teams, system administrators, and developers';
-      trialDays: 14,
+    targetAudience: 'DevOps teams, system administrators, and developers',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Development & DevOps'
     };
@@ -281,8 +281,8 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-data-visualization',
       marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500-5000)',
-    targetAudience: 'Data analysts, business intelligence teams, and executives';
-      trialDays: 14,
+    targetAudience: 'Data analysts, business intelligence teams, and executives',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Analytics & Data'
     };
@@ -301,8 +301,8 @@ export default function MicroSaasPage() {
       textColor: 'text-emerald-400',
       link: 'https://ziontechgroup.com/ai-customer-onboarding',
       marketPosition: 'Competitive with Appcues ($249-2499), WalkMe ($0-10000), and Pendo ($0-2000)',
-    targetAudience: 'SaaS companies, product managers, and customer success teams';
-      trialDays: 14,
+    targetAudience: 'SaaS companies, product managers, and customer success teams',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Customer Experience'
     };
@@ -321,8 +321,8 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-ab-testing-platform',
       marketPosition: 'Competitive with Optimizely ($0-1000), VWO ($0-199), and Google Optimize (Free)',
-    targetAudience: 'Product managers, marketers, and UX researchers';
-      trialDays: 14,
+    targetAudience: 'Product managers, marketers, and UX researchers',
+    trialDays: 14,
       setupTime: '15 minutes',
       category: 'Analytics & Optimization'
     };
@@ -341,8 +341,8 @@ export default function MicroSaasPage() {
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup.com/ai-customer-feedback-hub',
       marketPosition: 'Competitive with UserVoice ($0-500), Productboard ($0-20000), and Canny ($0-400)',
-    targetAudience: 'Product managers, customer success teams, and UX researchers';
-      trialDays: 14,
+    targetAudience: 'Product managers, customer success teams, and UX researchers',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Customer Experience'
     };
@@ -361,8 +361,8 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',
       marketPosition: 'Competitive with TradeGecko ($0-100), Zoho Inventory ($0-239), and Fishbowl ($0-500)',
-    targetAudience: 'Retail businesses, e-commerce stores, and warehouse managers';
-      trialDays: 14,
+    targetAudience: 'Retail businesses, e-commerce stores, and warehouse managers',
+    trialDays: 14,
       setupTime: '30 minutes',
       category: 'Operations & Logistics'
     };
@@ -381,8 +381,8 @@ export default function MicroSaasPage() {
       textColor: 'text-emerald-400',
       link: 'https://ziontechgroup.com/ai-lead-generation',
       marketPosition: 'Competitive with Apollo ($0-1000), ZoomInfo ($0-10000), and Hunter ($0-499)',
-    targetAudience: 'Sales teams, B2B companies, and marketing agencies';
-      trialDays: 14,
+    targetAudience: 'Sales teams, B2B companies, and marketing agencies',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Sales & Marketing'
     };
@@ -742,8 +742,8 @@ export default function MicroSaasPage() {
       textColor: 'text-indigo-400',
       link: 'https://emailsignature.ziontechgroup.com',
       marketPosition: 'Competitive with WiseStamp ($5-15), Newoldstamp ($5-15), and Exclaimer ($2-5)',
-    targetAudience: 'Sales teams, marketing teams, and professional services';
-      trialDays: 14,
+    targetAudience: 'Sales teams, marketing teams, and professional services',
+    trialDays: 14,
       setupTime: '5 minutes',
       category: 'Marketing & Sales'
     };
@@ -762,8 +762,8 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400',
       link: 'https://meetings.ziontechgroup.com',
       marketPosition: 'Competitive with Otter.ai ($10-40), Rev ($0.25-1.50), and Fireflies ($10-19)',
-    targetAudience: 'Remote teams, consultants, and meeting-heavy professionals';
-      trialDays: 14,
+    targetAudience: 'Remote teams, consultants, and meeting-heavy professionals',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
     };
@@ -782,8 +782,8 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400',
       link: 'https://passwords.ziontechgroup.com',
       marketPosition: 'Competitive with 1Password ($7.99-19.99), LastPass ($3-4), and Dashlane ($3.33-5)',
-    targetAudience: 'Businesses, IT teams, and security-conscious organizations';
-      trialDays: 14,
+    targetAudience: 'Businesses, IT teams, and security-conscious organizations',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Security & Compliance'
     };
@@ -802,8 +802,8 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400',
       link: 'https://timetracking.ziontechgroup.com',
       marketPosition: 'Competitive with Toggl ($10-20), RescueTime ($12-12), and Time Doctor ($7-20)',
-    targetAudience: 'Freelancers, consultants, and project-based teams';
-      trialDays: 14,
+    targetAudience: 'Freelancers, consultants, and project-based teams',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
     };
@@ -822,8 +822,8 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400',
       link: 'https://forms.ziontechgroup.com',
       marketPosition: 'Competitive with Typeform ($0-70), JotForm ($0-99), and Google Forms (Free)',
-    targetAudience: 'Businesses, marketers, and data collection teams';
-      trialDays: 14,
+    targetAudience: 'Businesses, marketers, and data collection teams',
+    trialDays: 14,
       setupTime: '15 minutes',
       category: 'Marketing & Sales'
     };
@@ -842,8 +842,8 @@ export default function MicroSaasPage() {
       textColor: 'text-cyan-400',
       link: 'https://calendar.ziontechgroup.com',
       marketPosition: 'Competitive with Calendly ($8-16), Acuity ($15-45), and ScheduleOnce ($25-50)',
-    targetAudience: 'Professionals, consultants, and busy executives';
-      trialDays: 14,
+    targetAudience: 'Professionals, consultants, and busy executives',
+    trialDays: 14,
       setupTime: '10 minutes',
       category: 'Productivity & Collaboration'
     };
@@ -862,8 +862,8 @@ export default function MicroSaasPage() {
       textColor: 'text-pink-400',
       link: 'https://socialanalytics.ziontechgroup.com',
       marketPosition: 'Competitive with Sprout Social ($99-249), Hootsuite ($29-599), and Buffer ($6-99)',
-    targetAudience: 'Social media managers, marketers, and brands';
-      trialDays: 14,
+    targetAudience: 'Social media managers, marketers, and brands',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Marketing & Sales'
     };
@@ -882,8 +882,8 @@ export default function MicroSaasPage() {
       textColor: 'text-emerald-400',
       link: 'https://websitebuilder.ziontechgroup.com',
       marketPosition: 'Competitive with Wix ($16-45), Squarespace ($16-49), and Webflow ($14-39)',
-    targetAudience: 'Small businesses, entrepreneurs, and creative professionals';
-      trialDays: 14,
+    targetAudience: 'Small businesses, entrepreneurs, and creative professionals',
+    trialDays: 14,
       setupTime: '30 minutes',
       category: 'Web Development'
     };
@@ -902,8 +902,8 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400',
       link: 'https://chatbot.ziontechgroup.com',
       marketPosition: 'Competitive with Intercom ($39-499), Drift ($0-2500), and ManyChat ($0-15)',
-    targetAudience: 'E-commerce businesses, SaaS companies, and customer support teams';
-      trialDays: 14,
+    targetAudience: 'E-commerce businesses, SaaS companies, and customer support teams',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Customer Experience'
     };
@@ -922,8 +922,8 @@ export default function MicroSaasPage() {
       textColor: 'text-yellow-400',
       link: 'https://invoiceprocessing.ziontechgroup.com',
       marketPosition: 'Competitive with Bill.com ($39-69), AvidXchange ($0-500), and Tipalti ($0-500)',
-    targetAudience: 'Accounting teams, finance departments, and small businesses';
-      trialDays: 14,
+    targetAudience: 'Accounting teams, finance departments, and small businesses',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'Finance & Operations'
     };
@@ -942,8 +942,8 @@ export default function MicroSaasPage() {
       textColor: 'text-red-400',
       link: 'https://riskmanagement.ziontechgroup.com',
       marketPosition: 'Competitive with Riskonnect ($0-500), LogicManager ($0-500), and Resolver ($0-500)',
-    targetAudience: 'Project managers, risk managers, and enterprise teams';
-      trialDays: 14,
+    targetAudience: 'Project managers, risk managers, and enterprise teams',
+    trialDays: 14,
       setupTime: '30 minutes',
       category: 'Project Management'
     };
@@ -962,8 +962,8 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400',
       link: 'https://onboarding.ziontechgroup.com',
       marketPosition: 'Competitive with BambooHR ($6.19-8.75), Workday ($45-100), and Zenefits ($8-27)',
-    targetAudience: 'HR teams, growing companies, and remote-first organizations';
-      trialDays: 14,
+    targetAudience: 'HR teams, growing companies, and remote-first organizations',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'HR & Operations'
     };
@@ -982,8 +982,8 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400',
       link: 'https://customersegmentation.ziontechgroup.com',
       marketPosition: 'Competitive with Segment ($0-120), Mixpanel ($25-1000), and Amplitude ($0-995)',
-    targetAudience: 'Marketing teams, e-commerce businesses, and customer success teams';
-      trialDays: 14,
+    targetAudience: 'Marketing teams, e-commerce businesses, and customer success teams',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Marketing & Sales'
     };
@@ -1002,8 +1002,8 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400',
       link: 'https://supplychain.ziontechgroup.com',
       marketPosition: 'Competitive with SAP ($0-500), Oracle ($0-500), and Manhattan Associates ($0-500)',
-    targetAudience: 'Manufacturers, retailers, and logistics companies';
-      trialDays: 14,
+    targetAudience: 'Manufacturers, retailers, and logistics companies',
+    trialDays: 14,
       setupTime: '45 minutes',
       category: 'Operations & Logistics'
     };
@@ -1022,8 +1022,8 @@ export default function MicroSaasPage() {
       textColor: 'text-emerald-400',
       link: 'https://compliance.ziontechgroup.com',
       marketPosition: 'Competitive with LogicGate ($0-500), MetricStream ($0-500), and NAVEX ($0-500)',
-    targetAudience: 'Compliance officers, legal teams, and regulated industries';
-      trialDays: 14,
+    targetAudience: 'Compliance officers, legal teams, and regulated industries',
+    trialDays: 14,
       setupTime: '30 minutes',
       category: 'Legal & Compliance'
     };
@@ -1042,8 +1042,8 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400',
       link: 'https://performance.ziontechgroup.com',
       marketPosition: 'Competitive with 15Five ($4-14), Lattice ($4-11), and Culture Amp ($3-11)',
-    targetAudience: 'HR teams, managers, and performance-focused organizations';
-      trialDays: 14,
+    targetAudience: 'HR teams, managers, and performance-focused organizations',
+    trialDays: 14,
       setupTime: '20 minutes',
       category: 'HR & Operations'
     };
@@ -1062,8 +1062,8 @@ export default function MicroSaasPage() {
       textColor: 'text-yellow-400',
       link: 'https://clv.ziontechgroup.com',
       marketPosition: 'Competitive with Optimizely ($0-500), VWO ($0-500), and AB Tasty ($0-500)',
-    targetAudience: 'Marketing teams, e-commerce businesses, and subscription companies';
-      trialDays: 14,
+    targetAudience: 'Marketing teams, e-commerce businesses, and subscription companies',
+    trialDays: 14,
       setupTime: '25 minutes',
       category: 'Analytics & Data'
     };

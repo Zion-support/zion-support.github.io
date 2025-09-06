@@ -7,9 +7,11 @@ export const PROJECTS: Project[] = [
     payment_terms: "fixed", status: "in_progress",
     created_at: "2024-05-15", updated_at: "2024-05-20",
     job: {
+      
       title: "AI Dashboard Development",
       description: "Develop dashboards using React and integrate ML models"
-    };
+    
+    },
     talent_profile: {
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"

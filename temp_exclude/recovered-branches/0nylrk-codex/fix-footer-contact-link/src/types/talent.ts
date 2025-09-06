@@ -34,10 +34,12 @@ export interface HireRequest {
   talentId: string, projectTitle: string,
   projectDescription: string,
   budget: {
+      
     min: number, max: number,
     currency: string
-  };
-  timeline: {
+  
+    },
+    timeline: {
     startDate: string, endDate?: string,
     estimatedDuration?: string
   };

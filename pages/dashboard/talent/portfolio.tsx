@@ -9,7 +9,9 @@ export default function TalentPortfolio() {
 
   const data: ResumeData = {
     name: 'Your Name',
-    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' };
+    contact: {
+       email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
+    },
     summary: 'AI talent focused on LLM apps and marketplaces.',
     skills: ['AITypeScriptNext.js'],
     technologies: ['OpenAISupabase'],

@@ -46,12 +46,14 @@ export interface MarketResearchRequest {
 export interface MarketResearchResponse {
   success: boolean,
   data: {
+      
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
     segments?: MarketSegment[];
     report?: MarketReport
-  };
-  insights: string[], recommendations: string[],
+  
+    },
+    insights: string[], recommendations: string[],
   nextSteps: string[],
   estimatedROI: number
 }

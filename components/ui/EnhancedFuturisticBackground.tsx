@@ -22,13 +22,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
   const colorSchemes = {
     quantum: {
+      
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 0, 0, 0.85)',
     particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
       glow: '#00ffff'
-    };
+    
+    },
     cyberpunk: {
       primary: '#ff0080',
       secondary: '#00ffff',
@@ -38,13 +40,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       glow: '#ff0080'
     };
     holographic: {
+      
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 20, 40, 0.85)',
     particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
       glow: '#00ffff'
-    };
+    
+    },
     neural: {
       primary: '#00ff80',
       secondary: '#ff0080',
@@ -179,8 +183,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       }
     }
 
-    let particles: Particle[] = [],
-    let connections: Connection[] = [],
+    let particles: Particle[] = [];
+    let connections: Connection[] = [];
     // Initialize particles
     for (let i = 0, i < settings.particleCount, i++) {
       particles.push(new Particle())
@@ -191,7 +195,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
-      const drops: number[] = [],
+      const drops: number[] = [];
 
       for (let i = 0, i < columns, i++) {
         drops[i] = 1

@@ -34,12 +34,14 @@ interface Service {
   growthRate: string,
   variant: string,
   contactInfo: {
+      
     mobile: string,
     email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean,
+  
+    },
+    realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,

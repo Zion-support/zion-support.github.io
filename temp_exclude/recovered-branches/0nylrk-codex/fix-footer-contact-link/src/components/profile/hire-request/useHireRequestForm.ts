@@ -56,9 +56,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     try {
       const requestData = {
         talent: {
+      
           id: talent.id || "", full_name: talent.full_name,
-          professional_title: talent.professional_title};
-        requester: {
+          professional_title: talent.professional_title
+    },
+    requester: {
           name: values.requesterName, email: values.requesterEmail,
           id: userDetails?.id
         };

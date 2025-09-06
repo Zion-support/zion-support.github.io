@@ -52,7 +52,8 @@ Requirements:
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
       model: 'gpt-4o-mini', input: prompt,
-      temperature: 0.7});
+      temperature: 0.7
+      });
 
     let description = '';
     const output = response.output?.[0];

@@ -4,6 +4,7 @@ import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap }
 
 interface EnhancedServiceCardProps {
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -35,7 +36,8 @@ interface EnhancedServiceCardProps {
       email: string,
       address: string,
       website: string
-    };
+    
+    },
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,

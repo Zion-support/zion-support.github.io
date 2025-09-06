@@ -3,12 +3,14 @@ export interface SpaceMetaverseService {
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
-  };
-  features: string[], benefits: string[],
+  
+    },
+    features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
@@ -28,11 +30,13 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',
     category: 'Space Technology & Resource Intelligence',
     price: {
+      
       monthly: 799, yearly: 7990,
       currency: 'USD', trialDays: 30,
       setupTime: '2-4 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'AI-powered resource detectionMulti-spectral data analysis3D mapping and visualizationResource optimization algorithmsReal-time satellite data processingPredictive resource modelingMining operation planningCost-benefit analysis';
       'Regulatory compliance monitoringAPI for space agencies'
@@ -67,11 +71,13 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.',
     category: 'Metaverse & Virtual Reality',
     price: {
+      
       monthly: 299, yearly: 2990,
       currency: 'USD', trialDays: 21,
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'AI-powered world generation3D modeling and animation toolsVirtual reality integrationBlockchain asset managementMulti-user collaborationReal-time rendering engineCustom scripting languageAsset marketplace';
       'Analytics and insightsAPI for developers'
@@ -106,11 +112,13 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.',
     category: 'Quantum Space Communications',
     price: {
+      
       monthly: 1299, yearly: 12990,
       currency: 'USD', trialDays: 30,
       setupTime: '4-6 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Quantum entanglement communicationsSatellite quantum networksGround station integrationReal-time quantum key distributionMulti-node quantum routingAdvanced quantum protocolsNetwork monitoringSecurity analytics';
       'API for space agenciesCustom quantum protocols'
@@ -145,11 +153,13 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',
     category: 'Space Traffic Management & Safety',
     price: {
+      
       monthly: 599, yearly: 5990,
       currency: 'USD', trialDays: 21,
       setupTime: '2-3 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Real-time space traffic monitoringAI-powered collision predictionAutomated collision avoidanceOrbital path optimizationSatellite trackingDebris monitoringRegulatory complianceAdvanced analytics';
       'API for space agenciesMobile monitoring app'
@@ -184,11 +194,13 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
     category: 'Enterprise VR & Immersive Technology',
     price: {
+      
       monthly: 199, yearly: 1990,
       currency: 'USD', trialDays: 14,
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'VR training simulationsVirtual collaboration spaces3D visualization toolsCustom VR applicationsMulti-user VR experiencesAnalytics and reportingMobile VR supportAPI for integration';
       'Content management systemEnterprise security features'

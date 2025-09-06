@@ -20,11 +20,13 @@ export interface PerformanceAlert {
 export interface MonitoringConfig {
   urls: string[], frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',
   thresholds: {
+      
     loadTime: number, firstContentfulPaint: number,
     largestContentfulPaint: number,
     cumulativeLayoutShift: number
-  };
-  notifications: {
+  
+    },
+    notifications: {
     email: boolean, slack: boolean,
     webhook: boolean
   }
@@ -114,10 +116,12 @@ export class PerformanceMonitorService {
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
+      
       averageLoadTime: number, averagePerformanceScore: number,
       uptime: number,
       alertsCount: number
-    };
+    
+    },
     trends: {
       loadTime: number[], performanceScore: number[],
       dates: string[]
@@ -132,12 +136,14 @@ export class PerformanceMonitorService {
 
     return {
       summary: {
+      
         averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length;
         averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length;
         uptime: 99.8,
         alertsCount: Math.floor(Math.random() * 5)
-      };
-      trends: {
+      
+    },
+    trends: {
         loadTime: loadTimes, performanceScore: performanceScores,
         dates
       };
@@ -161,7 +167,7 @@ export class PerformanceMonitorService {
   }
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
-    const data: PerformanceMetrics[] = [], const now = new Date(),
+    const data: PerformanceMetrics[] = []; const now = new Date(),
 
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
@@ -207,13 +213,15 @@ export class PerformanceMonitorService {
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
+      
     name: 'Starter', price: 19,
     period: '/month',
     features: [
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
-  };
-  professional: {
+  
+    },
+    professional: {
     name: 'Professional', price: 49,
     period: '/month',
     features: [

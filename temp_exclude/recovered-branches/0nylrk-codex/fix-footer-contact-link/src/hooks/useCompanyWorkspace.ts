@@ -17,9 +17,11 @@ export function useCompanyWorkspace(companySlug?: string) {
           id: "company-123", name: "Acme Corporation",
           logoUrl: "/placeholder.svg",
           theme: {
+      
             primaryColor: "#4f46e5", backgroundColor: "#ffffff",
-            textColor: "#1f2937"};
-          plan: "Business", teamSize: 12,
+            textColor: "#1f2937"
+    },
+    plan: "Business", teamSize: 12,
           teamLimit: 50, billingCycle: "Annual",
           workspaceUrl: "acme.zion-ai.com"});
         setError(null)
@@ -30,9 +32,11 @@ export function useCompanyWorkspace(companySlug?: string) {
           id: `company-${companySlug}`;
           name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1), logoUrl: "/placeholder.svg",
           theme: {
+      
             primaryColor: "#4f46e5", backgroundColor: "#ffffff",
-            textColor: "#1f2937"};
-          plan: "Teams", teamSize: 5,
+            textColor: "#1f2937"
+    },
+    plan: "Teams", teamSize: 5,
           teamLimit: 10, billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)

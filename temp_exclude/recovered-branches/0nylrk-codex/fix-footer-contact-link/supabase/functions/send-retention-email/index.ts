@@ -97,9 +97,11 @@ serve(async (req) => {
         email: emailResponse});
       {
         headers: {
+      
           ...corsHeaders;
-          "Content-Type": "application/json"};
-        status: 200}
+          "Content-Type": "application/json"
+    },
+    status: 200}
     )
   } catch (error) {
     console.error("Error in send-retention-email function:", error);
@@ -110,9 +112,11 @@ serve(async (req) => {
         error: error.message});
       {
         headers: {
+      
           ...corsHeaders;
-          "Content-Type": "application/json"};
-        status: 500}
+          "Content-Type": "application/json"
+    },
+    status: 500}
     )
   }
 });

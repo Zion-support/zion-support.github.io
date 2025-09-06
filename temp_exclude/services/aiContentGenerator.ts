@@ -132,13 +132,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
+      
     name: 'Starter', price: 29,
     period: '/month',
     features: [
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
-  };
-  professional: {
+  
+    },
+    professional: {
     name: 'Professional', price: 99,
     period: '/month',
     features: [

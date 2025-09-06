@@ -14,11 +14,13 @@ export interface AdvancedCybersecurityService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -39,7 +41,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     color: 'from-red-600 to-pink-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-platform',
     marketPosition: 'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation, real-time monitoring, and adaptive controls.',
-    targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure';
+    targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
     trialDays: 14, setupTime: '1-2 weeks',
     category: 'Cybersecurity & Zero Trust', realService: true,
     technology: ['Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'];
@@ -50,10 +52,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$31.2B zero trust security market', growthRate: '28% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade zero trust security platform with continuous verification, micro-segmentation, and adaptive access controls.',
     launchDate: '2024-09-15', customers: 34,
@@ -75,7 +79,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-threat-intelligence',
     marketPosition: 'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction, automated response, and comprehensive coverage.',
-    targetAudience: 'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams';
+    targetAudience: 'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',
     trialDays: 21, setupTime: '3-5 days',
     category: 'Threat Intelligence & AI', realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'];
@@ -86,10 +90,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$15.8B threat intelligence market', growthRate: '26% annual growth',
     variant: 'ai-threat-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered threat intelligence platform with real-time detection, predictive analytics, and automated response capabilities.',
     launchDate: '2024-10-20', customers: 67,
@@ -111,7 +117,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/cloud-security-posture',
     marketPosition: 'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support, automated remediation, and comprehensive compliance.',
-    targetAudience: 'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies';
+    targetAudience: 'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',
     trialDays: 14, setupTime: '2-4 days',
     category: 'Cloud Security & Compliance', realService: true,
     technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'];
@@ -122,10 +128,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$22.4B cloud security market', growthRate: '24% annual growth',
     variant: 'cloud-security-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',
     launchDate: '2024-08-10', customers: 89,
@@ -147,7 +155,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/devsecops-security-platform',
     marketPosition: 'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',
-    targetAudience: 'DevOps teams, Security teams, Development teams, Software companies, IT organizations';
+    targetAudience: 'DevOps teams, Security teams, Development teams, Software companies, IT organizations',
     trialDays: 21, setupTime: '3-5 days',
     category: 'DevSecOps & Application Security', realService: true,
     technology: ['Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'];
@@ -158,10 +166,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$18.7B application security market', growthRate: '22% annual growth',
     variant: 'devsecops-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
     launchDate: '2024-11-05', customers: 56,
@@ -183,7 +193,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/iot-security-platform',
     marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
-    targetAudience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies';
+    targetAudience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
     trialDays: 14, setupTime: '1-2 weeks',
     category: 'IoT Security & Protection', realService: true,
     technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
@@ -194,10 +204,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
     launchDate: '2024-09-25', customers: 43,

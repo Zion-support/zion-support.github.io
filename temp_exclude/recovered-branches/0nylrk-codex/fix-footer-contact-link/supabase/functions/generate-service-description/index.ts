@@ -44,7 +44,8 @@ The description should: 1. Be approximately 200-300 words
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
-      temperature: 0.7});
+      temperature: 0.7
+      });
 
     const generatedDescription = completion.choices[0].message.content;
     

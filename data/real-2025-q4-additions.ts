@@ -50,8 +50,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
 		marketPosition: 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',
-    targetAudience: 'E-commerce stores, marketplaces, media sites';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'E-commerce stores, marketplaces, media sites',
+    trialDays: 14, setupTime: '1 day',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsNode.jsPostgreSQLRedis'], integrations: ['ShopifyWooCommerceStripePayPal'],
 		useCases: ['Affiliate programsInfluencer trackingPartnership analytics'], roi: 'Increase attributed sales 10–25% with optimized partnerships.',
@@ -74,8 +74,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
 		marketPosition: 'Competitive with Otter and Descript, better show notes and SEO summary pipeline.',
-    targetAudience: 'Podcasters, media teams, agencies';
-		trialDays: 7, setupTime: '10 minutes',
+    targetAudience: 'Podcasters, media teams, agencies',
+    trialDays: 7, setupTime: '10 minutes',
 		category: 'AI & Data', realService: true,
 		technology: ['Whisper Large v3Next.jsNode.js'], integrations: ['SpotifyApple PodcastsYouTube'],
 		useCases: ['TranscriptsSEO summariesEpisode search'], roi: 'Save 4–8 hours per episode and improve SEO traffic.',
@@ -99,8 +99,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
 		link: 'https://ziontechgroup.com/services/micro-crm-local-business',
 		marketPosition: 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
-    targetAudience: 'Local businesses, consultants, freelancers';
-		trialDays: 14, setupTime: '15 minutes',
+    targetAudience: 'Local businesses, consultants, freelancers',
+    trialDays: 14, setupTime: '15 minutes',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsSQLite/PostgresTwilio'], integrations: ['GmailOutlookStripe'],
 		useCases: ['LeadsFollow-upsDeal tracking'], roi: 'Increase follow-through and close rates 10–20% via reminders.',
@@ -124,8 +124,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
 		link: 'https://ziontechgroup.com/services/returns-automation-saas',
 		marketPosition: 'Competes with Returnly/Loop, quick setup for SMBs.',
-    targetAudience: 'DTC brands, Shopify/WooCommerce stores';
-		trialDays: 14, setupTime: '2 hours',
+    targetAudience: 'DTC brands, Shopify/WooCommerce stores',
+    trialDays: 14, setupTime: '2 hours',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsNode.jsStripeShippo'], integrations: ['ShopifyWooCommerceShippoStripe'],
 		useCases: ['Returns portalExchange workflowsRefund automation'], roi: 'Reduce support tickets ~30% and speed refunds.',
@@ -149,8 +149,8 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
 		marketPosition: 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
-    targetAudience: 'Managed service providers, internal IT teams';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'Managed service providers, internal IT teams',
+    trialDays: 14, setupTime: '1 day',
 		category: 'Quality & Monitoring', realService: true,
 		technology: ['Next.jsNode.jsPostgreSQL'], integrations: ['ZendeskFreshdeskDatadogGrafana'],
 		useCases: ['IT supportSLA managementClient reporting'],
@@ -177,7 +177,7 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`;
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
-    targetAudience: 'Platform, data, and compliance teams';
+    targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14, setupTime: '1–2 days',
     category: 'AI & Data', realService: true,
     technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'];
@@ -362,7 +362,7 @@ export const real2025Q4Additions = [
   {
     id: 'managed-sso-fast-track', name: 'Managed SSO Fast Track',
     tagline: 'IdP mappings, SCIM, SAML/OIDC with enterprise checklist',
-    price: '$4,500';
+    price: '$4,500',
     period: '/fixed',
     description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
     features: [

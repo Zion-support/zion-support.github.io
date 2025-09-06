@@ -14,11 +14,13 @@ export interface Innovative2026AIService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -39,7 +41,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence',
     marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500+). Our advantage: AI-powered insights, predictive analytics, and natural language queries.',
-    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers';
+    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',
     trialDays: 21, setupTime: '2 hours',
     category: 'AI & Business Intelligence', realService: true,
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'],
@@ -47,10 +49,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.',
     launchDate: '2025-03-15', customers: 1800,
@@ -72,7 +76,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     color: 'from-green-500 to-teal-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-experience',
     marketPosition: 'Competitive with Optimizely ($200+), Adobe Target ($1000+), and Dynamic Yield ($1000+). Our advantage: AI-first approach, comprehensive CX management, and affordable pricing.',
-    targetAudience: 'E-commerce businesses, SaaS companies, Digital agencies, Retail brands, Hospitality businesses, Financial services';
+    targetAudience: 'E-commerce businesses, SaaS companies, Digital agencies, Retail brands, Hospitality businesses, Financial services',
     trialDays: 14, setupTime: '1 day',
     category: 'AI & Customer Experience', realService: true,
     technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes'], integrations: ['ShopifyWooCommerceMagentoSalesforceHubSpotZendeskIntercom'],
@@ -80,10 +84,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['OptimizelyAdobe TargetDynamic YieldEvergageMaxymiser'], marketSize: '$15.8B market',
     growthRate: '180% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.',
     launchDate: '2025-04-20', customers: 2200,
@@ -105,7 +111,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     color: 'from-red-600 to-orange-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity',
     marketPosition: 'Competitive with CrowdStrike ($8.92+), SentinelOne ($2.99+), and Darktrace ($1000+). Our advantage: AI-first approach, comprehensive coverage, and competitive pricing.',
-    targetAudience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies';
+    targetAudience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies',
     trialDays: 30, setupTime: '1 week',
     category: 'AI & Cybersecurity', realService: true,
     technology: ['PythonTensorFlowReactNode.jsElasticsearchKafkaAWSDocker'], integrations: ['Active DirectoryOffice 365SlackJiraServiceNowSplunkQRadar'],
@@ -113,10 +119,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['CrowdStrikeSentinelOneDarktraceCylanceCarbon Black'], marketSize: '$173.5B market',
     growthRate: '250% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.',
     launchDate: '2025-02-10', customers: 1500,
@@ -138,7 +146,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     color: 'from-purple-500 to-pink-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-marketing-automation',
     marketPosition: 'Competitive with HubSpot ($45-3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first approach, comprehensive automation, and affordable pricing.',
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2B companies, Real estate agencies';
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2B companies, Real estate agencies',
     trialDays: 21, setupTime: '3 days',
     category: 'AI & Marketing', realService: true,
     technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes'], integrations: ['SalesforceHubSpotMailchimpFacebook AdsGoogle AdsLinkedIn AdsShopify'],
@@ -146,10 +154,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['HubSpotMarketoPardotActiveCampaignConvertKit'], marketSize: '$25.1B market',
     growthRate: '200% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.',
     launchDate: '2025-05-15', customers: 2800,
@@ -171,7 +181,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     color: 'from-yellow-500 to-orange-600', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence',
     marketPosition: 'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.',
-    targetAudience: 'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms';
+    targetAudience: 'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms',
     trialDays: 14, setupTime: '2 days',
     category: 'AI & Sales', realService: true,
     technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSElasticsearch'], integrations: ['SalesforceHubSpotPipedriveZoho CRMMicrosoft DynamicsSlackMicrosoft Teams'],
@@ -179,10 +189,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     competitors: ['ZoomInfoLinkedIn Sales NavigatorDiscoverOrgClearbitRocketReach'], marketSize: '$18.2B market',
     growthRate: '190% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
     launchDate: '2025-06-20', customers: 1900,

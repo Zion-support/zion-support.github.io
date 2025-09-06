@@ -14,11 +14,13 @@ export interface AdvancedHealthcareBiotechService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -40,7 +42,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
     marketPosition: 'Competes with Schrödinger ($50,000/year), Atomwise ($100,000/year), Insilico Medicine ($500,000/year). Our advantage: Affordable pricing, comprehensive features, and AI-powered insights.',
-    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs';
+    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
     trialDays: 30, setupTime: '2-4 weeks',
     category: 'AI Drug Discovery & Biotech', realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics'];
@@ -51,10 +53,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$45.8B AI drug discovery market', growthRate: '35% annual growth',
     variant: 'ai-drug-discovery-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
     launchDate: '2024-08-15', customers: 23,
@@ -77,7 +81,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/precision-medicine-genomics',
     marketPosition: 'Competes with 23andMe ($199/kit), AncestryDNA ($99/kit), Color Genomics ($249/test). Our advantage: Comprehensive platform, AI-powered insights, and healthcare integration.',
-    targetAudience: 'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies';
+    targetAudience: 'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
     trialDays: 21, setupTime: '3-5 weeks',
     category: 'Precision Medicine & Genomics', realService: true,
     technology: ['Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing'];
@@ -88,10 +92,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$78.6B precision medicine market', growthRate: '28% annual growth',
     variant: 'precision-medicine-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
     launchDate: '2024-09-20', customers: 45,
@@ -113,7 +119,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     color: 'from-purple-600 to-pink-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-medical-imaging-analysis',
     marketPosition: 'Competes with Aidoc ($500/month), Zebra Medical ($200/month), Arterys ($300/month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
-    targetAudience: 'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies';
+    targetAudience: 'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
     trialDays: 14, setupTime: '2-3 weeks',
     category: 'AI Medical Imaging & Diagnostics', realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries'];
@@ -124,10 +130,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$32.1B AI medical imaging market', growthRate: '42% annual growth',
     variant: 'ai-imaging-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
     launchDate: '2024-10-10', customers: 67,
@@ -149,7 +157,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     color: 'from-teal-600 to-cyan-600', textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/digital-health-telemedicine',
     marketPosition: 'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
-    targetAudience: 'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems';
+    targetAudience: 'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
     trialDays: 21, setupTime: '1-2 weeks',
     category: 'Digital Health & Telemedicine', realService: true,
     technology: ['React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'];
@@ -160,10 +168,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$185.6B digital health market', growthRate: '25% annual growth',
     variant: 'digital-health-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
     launchDate: '2024-07-15', customers: 156,
@@ -186,7 +196,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/clinical-trial-management-optimization',
     marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
-    targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams';
+    targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
     trialDays: 30, setupTime: '3-6 weeks',
     category: 'Clinical Research & Trials', realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software'];
@@ -197,10 +207,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     marketSize: '$67.2B clinical trial market', growthRate: '18% annual growth',
     variant: 'clinical-trial-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
     launchDate: '2024-11-01', customers: 34,

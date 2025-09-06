@@ -193,11 +193,13 @@ export const MOCK_TALENTS: ProfileData[] = [
       }
     ];
     availability: {
+      
       status: "unavailable",
       nextAvailable: "June 15, 2025";
       message: "Currently committed to a long-term project until mid-June 2025.",
       availableHours: []
-    };
+    
+    },
     hourlyRate: 145,
     contactEmail: "priya.sharma@example.com"
   };

@@ -34,10 +34,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     if (!ctx) return;
 
     let animationFrameId: number,
-    let particles: Particle[] = [],
-    let neuralNodes: NeuralNode[] = [],
-    let quantumFields: QuantumField[] = [],
-    let holographicLayers: HolographicLayer[] = [],
+    let particles: Particle[] = [];
+    let neuralNodes: NeuralNode[] = [];
+    let quantumFields: QuantumField[] = [];
+    let holographicLayers: HolographicLayer[] = [];
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {

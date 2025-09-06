@@ -9,11 +9,13 @@ export default function PricingComparisonPage() {
     {
       service: 'AI Content Generator',
       zionPricing: {
+      
         starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month'
-      };
-      competitors: [
+      
+    },
+    competitors: [
         {
           name: 'Jasper AI',
           pricing: '$39/month',
@@ -48,11 +50,13 @@ export default function PricingComparisonPage() {
     {
       service: 'Cloud Monitoring',
       zionPricing: {
+      
         starter: '$29/month',
         professional: '$99/month',
         enterprise: '$299/month'
-      };
-      competitors: [
+      
+    },
+    competitors: [
         {
           name: 'Datadog',
           pricing: '$15/host/month',
@@ -87,11 +91,13 @@ export default function PricingComparisonPage() {
     {
       service: 'DevOps Automation',
       zionPricing: {
+      
         starter: '$39/month',
         professional: '$129/month',
         enterprise: '$399/month'
-      };
-      competitors: [
+      
+    },
+    competitors: [
         {
           name: 'GitHub Actions',
           pricing: 'Free + $0.008/min',

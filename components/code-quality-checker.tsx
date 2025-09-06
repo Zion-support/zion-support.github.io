@@ -91,12 +91,14 @@ export default function CodeQualityCheckerPage() {
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
         ];
         metrics: {
+      
           complexity: 'Medium',
           maintainability: 'Good',
           testCoverage: '85%',
           securityScore: '92%'
-        };
-        recommendations: [
+        
+    },
+    recommendations: [
           'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
         ]
       });

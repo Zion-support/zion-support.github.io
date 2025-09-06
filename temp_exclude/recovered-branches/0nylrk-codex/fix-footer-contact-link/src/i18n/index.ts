@@ -12,24 +12,30 @@ i18n
   .use(initReactI18next) // Initialize react-i18next
   .init({
     resources: {
+      
       en: {
         translation: enTranslation
-      };
-      es: {
+      
+    },
+    es: {
         translation: esTranslation
       };
       pt: {
+      
         translation: ptTranslation
-      };
-      ar: {
+      
+    },
+    ar: {
         translation: arTranslation
       }
     };
     fallbackLng: 'en', // Default language
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
+      
       escapeValue: false, // React already escapes by default
-    };
+    
+    },
     detection: {
       order: ['localStoragenavigator'], lookupLocalStorage: 'zion_language',
       caches: ['localStorage']

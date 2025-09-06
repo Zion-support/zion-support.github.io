@@ -30,7 +30,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
 
     // create local tracks per start mode
-    let localTracks: any[] = [],
+    let localTracks: any[] = [];
     if (startMode === 'video') {
       localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
     } else {

@@ -3,12 +3,14 @@ interface PasswordStrengthResult {
   password: string, strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong',
   score: number, feedback: string[],
   details: {
+      
     length: number, hasUppercase: boolean,
     hasLowercase: boolean, hasNumbers: boolean,
     hasSymbols: boolean, hasCommonPatterns: boolean,
     entropy: number
-  };
-  suggestions: string[]
+  
+    },
+    suggestions: string[]
 }
 
 export default async function handler(
@@ -64,7 +66,7 @@ export default async function handler(
     else strength = 'very-strong';
 
     // Generate feedback
-    const feedback: string[] = [], if (length < 8) feedback.push('Password is too short (minimum 8 characters)'),
+    const feedback: string[] = []; if (length < 8) feedback.push('Password is too short (minimum 8 characters)'),
     if (!hasUppercase) feedback.push('Add uppercase letters');
     if (!hasLowercase) feedback.push('Add lowercase letters');
     if (!hasNumbers) feedback.push('Add numbers');
@@ -73,7 +75,7 @@ export default async function handler(
     if (entropy < 30) feedback.push('Password is too predictable');
 
     // Generate suggestions
-    const suggestions: string[] = [],
+    const suggestions: string[] = [];
     if (score < 50) {
       suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols');
       suggestions.push('Make it at least 12 characters long');

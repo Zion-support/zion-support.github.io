@@ -39,11 +39,13 @@ export function useConversations(
         return {
           id: conv.id, user_id: otherUserId,
           other_user: {
+      
             id: otherUserId, name: isUserOne ? conv.user_two_name : conv.user_one_name,
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type
-          };
-          name: isUserOne ? conv.user_two_name : conv.user_one_name, avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
+          
+    },
+    name: isUserOne ? conv.user_two_name : conv.user_one_name, avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
           last_message: conv.last_message ? {
             content: conv.last_message,
             created_at: conv.last_message_time

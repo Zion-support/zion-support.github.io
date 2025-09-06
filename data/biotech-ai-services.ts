@@ -13,11 +13,13 @@ export interface BiotechAIService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -44,10 +46,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['InsitroRecursionBasic research tools'], marketSize: '$150B AI in healthcare market',
     growthRate: '250% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.',
     launchDate: '2024-01-15', customers: 120,
@@ -75,10 +79,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Manual methodsBasic tools'], marketSize: '$50B genetic engineering market',
     growthRate: '300% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete genetic engineering platform with AI algorithms, synthetic biology tools, and comprehensive safety features. Includes mobile app and lab integration.',
     launchDate: '2024-02-01', customers: 80,
@@ -106,10 +112,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Basic toolsManual design'], marketSize: '$30B protein engineering market',
     growthRate: '280% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete protein design platform with AI algorithms, comprehensive tools, and collaboration features. Includes mobile app and lab integration.',
     launchDate: '2024-02-10', customers: 150,
@@ -137,10 +145,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Basic toolsManual management'], marketSize: '$45B clinical trial market',
     growthRate: '220% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete clinical trial platform with AI optimization, comprehensive analytics, and regulatory tools. Includes mobile app and system integration.',
     launchDate: '2024-02-15', customers: 200,
@@ -168,10 +178,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Manual methodsBasic tools'], marketSize: '$25B biomarker market',
     growthRate: '240% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete biomarker discovery platform with AI algorithms, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.',
     launchDate: '2024-02-20', customers: 180,
@@ -199,10 +211,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Basic analysisLimited tools'], marketSize: '$60B personalized medicine market',
     growthRate: '260% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete personalized medicine platform with AI genomics, clinical decision support, and healthcare integration. Includes mobile app and comprehensive analytics.',
     launchDate: '2024-02-25', customers: 120,
@@ -229,10 +243,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Manual researchBasic tools'], marketSize: '$20B drug repurposing market',
     growthRate: '200% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete drug repurposing platform with AI discovery, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.',
     launchDate: '2024-03-01', customers: 160,
@@ -260,10 +276,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Basic toolsManual analysis'], marketSize: '$35B bioinformatics market',
     growthRate: '230% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete bioinformatics platform with AI analysis, multi-omics tools, and comprehensive research features. Includes mobile app and cloud computing.',
     launchDate: '2024-03-05', customers: 300,
@@ -291,10 +309,12 @@ export const biotechAIServices: BiotechAIService[] = [
     competitors: ['Basic optimizationManual processes'], marketSize: '$40B biomanufacturing market',
     growthRate: '210% annual growth', variant: 'biotech-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',
     launchDate: '2024-03-10', customers: 90,

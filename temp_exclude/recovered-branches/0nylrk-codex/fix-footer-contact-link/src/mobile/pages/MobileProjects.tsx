@@ -8,10 +8,12 @@ const projectData = {
   id: "project-123",
   title: "Website Redesign",
   client: {
+      
     name: "TechCorp Inc.",
     avatar: ""
-  };
-  startDate: "Oct 15, 2023";
+  
+    },
+    startDate: "Oct 15, 2023";
   endDate: "Jan 15, 2024";
   status: "in_progress",
   totalAmount: "$12,000";

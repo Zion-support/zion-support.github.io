@@ -96,7 +96,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setLastUpdate(new Date());
       
       // Check for performance issues and add alerts
-      const newAlerts: string[] = [],
+      const newAlerts: string[] = [];
       if (newMetrics.loadTime > 3000) {
         newAlerts.push('Page load time is slow (>3s)')
       }

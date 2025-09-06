@@ -35,8 +35,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '💸', color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300', link: 'https://ziontechgroup.com/services/finops-scheduler-optimizer',
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.',
-    targetAudience: 'Platform, SRE, Finance';
-		trialDays: 14, setupTime: '2 hours',
+    targetAudience: 'Platform, SRE, Finance',
+    trialDays: 14, setupTime: '2 hours',
 		category: 'Cloud & FinOps', realService: true,
 		technology: ['AWS/GCP/Azure APIsTerraform'], integrations: ['DatadogSlack'],
 		useCases: ['Cost reductionBudget governance'], roi: '10–35% cloud savings in 3 months',

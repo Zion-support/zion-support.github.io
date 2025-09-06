@@ -20,12 +20,14 @@ interface Milestone {
 
 interface ProjectViewProps {
   project: {
+      
     id: string,
     title: string,
     client: {
       name: string,
       avatar?: string
-    };
+    
+    },
     startDate: string,
     endDate?: string;
     status: string,

@@ -57,7 +57,7 @@ serve(async (req) => {
 
     // 2. Fetch resume details if a resume_id is provided
     let resumeContent = "";
-    let resumeSkills: string[] = [],
+    let resumeSkills: string[] = [];
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")

@@ -5,7 +5,9 @@ export const JOB_POSTS: Job[] = [
     title: "React Developer Needed", description: "Seeking a React developer for a 3 month contract building dashboards.",
     category: "development",
     skills: ["React", "TypeScript"];
-    budget: { min: 40, max: 50, currency: "USD" };
+    budget: {
+       min: 40, max: 50, currency: "USD" 
+    },
     deadline: "2024-07-01", status: "new",
     created_at: "2024-05-10",
     updated_at: "2024-05-10"};
@@ -14,7 +16,9 @@ export const JOB_POSTS: Job[] = [
     title: "Part-time DevOps Engineer", description: "Looking for a DevOps expert to maintain CI/CD pipelines.",
     category: "development",
     skills: ["DevOps", "AWS", "Terraform"];
-    budget: { min: 30, max: 60, currency: "USD" };
+    budget: {
+       min: 30, max: 60, currency: "USD" 
+    },
     deadline: "2024-06-15", status: "new",
     created_at: "2024-05-05",
     updated_at: "2024-05-05"}

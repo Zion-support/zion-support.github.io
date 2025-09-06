@@ -3,8 +3,10 @@ import v1 from '../../../data/api-docs/v1';
 function toPostman() {
   return {
     info: {
+      
       name: 'Zion OS API',
-      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'};
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    },
     item: v1.sections.flatMap((section) =>
       section.endpoints.map((ep) => ({
         name: `${section.title} - ${ep.title}`;

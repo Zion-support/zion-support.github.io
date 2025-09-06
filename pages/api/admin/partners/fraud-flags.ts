@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       counts.set(key, (counts.get(key) || 0) + 1)
     }
 
-    const flags: any[] = [],
+    const flags: any[] = [];
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
         flags.push({ type: 'suspicious_ip', severity: 'medium', ip, count, note: 'High number of events from a single IP in 7 days' })

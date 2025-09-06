@@ -204,13 +204,15 @@ class ChunkErrorMonitor {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
+      
         totalIssues: buildIssues.length + configIssues.length, buildIssues: buildIssues.length,
         configIssues: configIssues.length,
         highSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'high').length;
         mediumSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'medium').length;
         lowSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'low').length
-      };
-      buildAnalysis: {
+      
+    },
+    buildAnalysis: {
         issues: buildIssues,
         summary: `Analyzed build output and found ${buildIssues.length} potential chunk-related issues`
       };

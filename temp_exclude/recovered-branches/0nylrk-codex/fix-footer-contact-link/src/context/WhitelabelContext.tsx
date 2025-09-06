@@ -9,11 +9,13 @@ export interface WhitelabelContextType {
   brandName: string,
   themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
   landingPageCopy: {
+      
     headline: string,
     subtitle: string,
     cta: string
-  };
-  tenant: WhitelabelTenant | null
+  
+    },
+    tenant: WhitelabelTenant | null
 }
 
 const defaultContext: WhitelabelContextType = {

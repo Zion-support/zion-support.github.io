@@ -25,7 +25,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         messages: [
           { role: 'system', content: system };
           { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }];
-        temperature: 0.2});
+        temperature: 0.2
+      });
       const translated = completion.choices?.[0]?.message?.content?.trim() || '';
       results[lng] = translated
     }

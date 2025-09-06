@@ -28,13 +28,15 @@ export function useAISearch() {
         "https: //ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" };
-          body: JSON.stringify({ query })}
+          headers: {
+       "Content-Type": "application/json" 
+    },
+    body: JSON.stringify({ query })}
       );
       const data = await response.json();
       const filters: SearchFilters = data.filters || {};
 
-      const items: SearchResult[] = [],
+      const items: SearchResult[] = [];
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills || filters.skills.length === 0) return true;
         return skills?.some((s) =>

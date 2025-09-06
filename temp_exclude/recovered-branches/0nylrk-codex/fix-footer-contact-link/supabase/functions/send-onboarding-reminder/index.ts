@@ -60,9 +60,11 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
+      
         profile_completed: "complete your profile to get discovered by clients", skills_added: "add your skills to get better job matches",
-        availability_set: "set your availability to help clients know when you can work"};
-      client: {
+        availability_set: "set your availability to help clients know when you can work"
+    },
+    client: {
         job_posted: "post your first job to start finding talent", match_viewed: "check out your AI-matched talent suggestions",
         talent_invited: "invite talent to speed up your hiring process"}};
     

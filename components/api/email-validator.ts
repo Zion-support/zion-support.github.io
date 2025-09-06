@@ -61,7 +61,7 @@ export default async function handler(
     if (isFreeProvider) score -= 10;
 
     // Generate suggestions
-    const suggestions: string[] = [],
+    const suggestions: string[] = [];
     if (!hasValidFormat) {
       suggestions.push('Check email format (should be user@domain.com)')
     }

@@ -13,11 +13,13 @@ export interface InnovativeITService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -37,7 +39,7 @@ export const innovativeITServices: InnovativeITService[] = [
     color: 'from-red-500 to-pink-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-platform',
     marketPosition: 'Competitive with Palo Alto Networks ($50,000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure';
+    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
     trialDays: 30, setupTime: '2 hours',
     category: 'IT & Cybersecurity', realService: true,
     technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'], integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'],
@@ -45,10 +47,12 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.',
     launchDate: '2024-01-01', customers: 800,
@@ -68,7 +72,7 @@ export const innovativeITServices: InnovativeITService[] = [
     color: 'from-blue-500 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/edge-computing-platform',
     marketPosition: 'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our advantage: Better performance, lower costs, and comprehensive features.',
-    targetAudience: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications';
+    targetAudience: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications',
     trialDays: 14, setupTime: '1 hour',
     category: 'IT & Edge Computing', realService: true,
     technology: ['Edge ComputingIoT5GKubernetesDockerReactNode.jsPython', 'AWS'];
@@ -77,10 +81,12 @@ export const innovativeITServices: InnovativeITService[] = [
     marketSize: '$15B edge computing market', growthRate: '180% annual growth',
     variant: 'quantum',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete edge computing platform with distributed nodes, real-time processing, and IoT integration capabilities.',
     launchDate: '2024-01-10', customers: 1500,
@@ -100,7 +106,7 @@ export const innovativeITServices: InnovativeITService[] = [
     color: 'from-purple-500 to-indigo-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-computing-as-a-service',
     marketPosition: 'Competitive with IBM Quantum ($0.10-1.60), AWS Braket ($0.30-1.00), and Google Quantum ($0.50-1.00). Our advantage: Better algorithms, lower costs, and comprehensive support.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities';
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities',
     trialDays: 7, setupTime: '30 minutes',
     category: 'IT & Quantum Computing', realService: true,
     technology: ['Quantum ComputingQuantum AlgorithmsPythonQiskitCirqReactNode.jsAWS'], integrations: ['Jupyter NotebooksPythonMATLABRJuliaAPIWebhooksSDK'],
@@ -108,10 +114,12 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['IBM QuantumAWS BraketGoogle QuantumRigettiD-Wave'], marketSize: '$8B quantum computing market',
     growthRate: '250% annual growth', variant: 'quantum-advanced',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum computing platform with multiple quantum processors, hybrid computing, and comprehensive development tools.',
     launchDate: '2024-01-05', customers: 300,
@@ -131,7 +139,7 @@ export const innovativeITServices: InnovativeITService[] = [
     color: 'from-green-500 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/blockchain-enterprise-platform',
     marketPosition: 'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.',
-    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate';
+    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate',
     trialDays: 21, setupTime: '4 hours',
     category: 'IT & Blockchain', realService: true,
     technology: ['BlockchainSmart ContractsSolidityGoReactNode.jsDockerKubernetes', 'AWS'];
@@ -140,10 +148,12 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['Hyperledger FabricEthereum EnterpriseCordaQuorumMultichain'], marketSize: '$19B blockchain market',
     growthRate: '160% annual growth', variant: 'quantum-blockchain',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise blockchain platform with multiple consensus mechanisms, smart contract support, and comprehensive enterprise features.',
     launchDate: '2024-01-15', customers: 600,
@@ -163,7 +173,7 @@ export const innovativeITServices: InnovativeITService[] = [
     color: 'from-orange-500 to-yellow-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/devops-automation-platform',
     marketPosition: 'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.',
-    targetAudience: 'Development teams, DevOps engineers, IT operations, Software companies, Startups, Enterprises';
+    targetAudience: 'Development teams, DevOps engineers, IT operations, Software companies, Startups, Enterprises',
     trialDays: 30, setupTime: '1 hour',
     category: 'IT & DevOps', realService: true,
     technology: ['CI/CDKubernetesDockerTerraformAnsibleReactNode.jsPython', 'AWS'];
@@ -172,10 +182,12 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['GitLabJenkinsCircleCIGitHub ActionsAzure DevOps'], marketSize: '$12B DevOps market',
     growthRate: '130% annual growth', variant: 'cyberpunk',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20', customers: 2500,

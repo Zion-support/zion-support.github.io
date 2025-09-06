@@ -42,8 +42,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',
 		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.',
-    targetAudience: 'E-commerce, SaaS, Media';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'E-commerce, SaaS, Media',
+    trialDays: 14, setupTime: '1 day',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsPostgreSQLWorkers/Edge'], integrations: ['StripeShopifyWooCommerce'],
 		useCases: ['Partner programsInfluencer payouts'], roi: 'Grow partner-attributed revenue by 10–30%',
@@ -67,8 +67,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		color: 'from-orange-600 to-red-600', textColor: 'text-orange-200',
 		link: 'https://ziontechgroup.com/services/return-management-saas',
 		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.',
-    targetAudience: 'DTC brands, Marketplaces';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'DTC brands, Marketplaces',
+    trialDays: 14, setupTime: '1 day',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsStripeShippo'], integrations: ['ShopifyKlaviyoGorgias'],
 		useCases: ['Returns and exchangesWarehouse ops'], roi: 'Cut support tickets by 35% and improve retention',
@@ -114,8 +114,8 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		color: 'from-indigo-600 to-blue-700', textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup.com/services/website-analytics-lite',
 		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.',
-    targetAudience: 'Agencies, SMBs, Creators';
-		trialDays: 7, setupTime: '30 minutes',
+    targetAudience: 'Agencies, SMBs, Creators',
+    trialDays: 7, setupTime: '30 minutes',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsPostgreSQLClickHouse (optional)'], integrations: ['ShopifyWordPressWebflow'],
 		useCases: ['Funnel analysisCampaign attribution'], roi: 'Faster insights with low overhead',

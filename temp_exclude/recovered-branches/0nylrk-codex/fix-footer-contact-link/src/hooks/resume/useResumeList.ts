@@ -38,11 +38,13 @@ export function useResumeList() {
       const transformedResumes: Resume[] = resumeData.map(resume => ({
         id: resume.id, user_id: resume.user_id,
         basic_info: {
+      
           id: resume.id, title: resume.title,
           headline: resume.headline,
           summary: resume.summary
-        };
-        work_experience: [], education: [],
+        
+    },
+    work_experience: [], education: [],
         skills: [], certifications: [],
         is_active: resume.is_active
       }));

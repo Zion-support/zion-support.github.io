@@ -36,11 +36,13 @@ export interface InvestmentRecommendation {
   id: string, userId: string,
   type: 'buy' | 'sell' | 'hold' | 'rebalance',
   asset: {
+      
     symbol: string, name: string,
     type: string,
     currentPrice: number
-  };
-  confidence: number, reasoning: string[],
+  
+    },
+    confidence: number, reasoning: string[],
   expectedReturn: number, riskLevel: 'low' | 'medium' | 'high',
   timeHorizon: number, // in months
   alternatives: string[], createdAt: Date,
@@ -74,30 +76,36 @@ export interface FinancialPlan {
   name: string, summary: string,
   goals: FinancialGoal[],
   investmentStrategy: {
+      
     assetAllocation: Record<string, number>;
     rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     riskManagement: string[]
-  };
-  cashFlow: {
+  
+    },
+    cashFlow: {
     monthlyIncome: number, monthlyExpenses: number,
     savingsRate: number,
     emergencyFund: number
   };
   insurance: {
+      
     life: boolean, health: boolean,
     disability: boolean, property: boolean,
     recommendations: string[]
-  };
-  tax: {
+  
+    },
+    tax: {
     estimatedTaxLiability: number, taxOptimizationStrategies: string[],
     deductions: string[]
   };
   retirement: {
+      
     targetAge: number, estimatedNeeds: number,
     currentSavings: number, monthlyContribution: number,
     projectedValue: number
-  };
-  createdAt: Date,
+  
+    },
+    createdAt: Date,
   updatedAt: Date
 }
 
@@ -110,13 +118,15 @@ export interface FinancialRequest {
 export interface FinancialResponse {
   success: boolean,
   data: {
+      
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
     analysis?: MarketAnalysis;
     goals?: FinancialGoal[]
-  };
-  insights: string[], nextSteps: string[],
+  
+    },
+    insights: string[], nextSteps: string[],
   riskWarnings: string[],
   estimatedFees: number
 }

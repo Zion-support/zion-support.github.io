@@ -34,8 +34,10 @@ serve(async (req) => {
         text: previewText});
 
       return new Response(JSON.stringify(emailResponse), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" };
-        status: 200})
+        headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
     } 
     
     // In production, we would fetch subscriber emails from the database
@@ -47,13 +49,17 @@ serve(async (req) => {
     };
 
     return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
   } catch (error) {
     console.error("Error in send-newsletter function:", error);
     
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500})
   }
 });

@@ -82,8 +82,10 @@ export default function ContractBuilderPage() {
       const res = await fetch('/api/ai-contract', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
-        body: JSON.stringify(body)}),
+      
+          'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)}),
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.error || `Request failed: ${res.status}`)

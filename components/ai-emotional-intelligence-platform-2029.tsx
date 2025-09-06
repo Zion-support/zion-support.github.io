@@ -102,6 +102,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
   const pricing = {
     basic: {
+      
       name: 'Starter',
       price: '$1,999',
     period: '/month',
@@ -110,7 +111,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
       ];
       popular: false
-    };
+    
+    },
     professional: {
       name: 'Professional',
       price: '$3,999',

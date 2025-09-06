@@ -14,11 +14,13 @@ export interface Message {
 export interface Conversation {
   id: string, user_id: string,
   other_user: {
+      
     id: string, name: string,
     avatar_url?: string;
     user_type?: string
-  };
-  name: string, avatar_url?: string,
+  
+    },
+    name: string, avatar_url?: string,
   last_message?: {
     content: string,
     created_at: string

@@ -11,8 +11,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["GPT-4", "API Integration", "NLP"];
     author: {
+      
       name: "AI Solutions Inc.", id: "ai-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-01-10T12:30:00.000Z",
     rating: 4.9, reviewCount: 58,
     featured: true, location: "Global",
@@ -25,8 +27,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     price: 5999, currency: "$",
     tags: ["Machine Learning", "Custom Development", "Data Science"];
     author: {
+      
       name: "DataMinds", id: "dataminds",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-02-15T10:45:00.000Z",
     rating: 4.8, reviewCount: 32,
     location: "North America", availability: "4-6 Weeks",
@@ -39,8 +43,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Hardware", "Deep Learning", "GPU"];
     author: {
+      
       name: "TechGear Pro",
-      id: "techgear"};
+      id: "techgear"
+    },
     images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-03-05T09:15:00.000Z",
     rating: 4.7, reviewCount: 18,
     featured: true, location: "Global",
@@ -54,8 +60,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Content Generation", "Copywriting", "Marketing"];
     author: {
+      
       name: "ContentGenius", id: "contentgenius",
-      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-01-28T14:20:00.000Z",
     rating: 4.6, reviewCount: 124,
     location: "Global", availability: "Immediate",
@@ -68,8 +76,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Analytics", "Business Intelligence", "Dashboard"];
     author: {
+      
       name: "InsightAnalytica",
-      id: "insightanalytica"};
+      id: "insightanalytica"
+    },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-02-02T11:30:00.000Z",
     rating: 4.5, reviewCount: 47,
     location: "North America", availability: "1-2 Weeks",
@@ -82,8 +92,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Computer Vision", "Object Detection", "Image Recognition"];
     author: {
+      
       name: "VisionTech AI", id: "visiontech",
-      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-10T16:45:00.000Z",
     rating: 4.8, reviewCount: 36,
     featured: true, location: "Global",
@@ -96,8 +108,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     price: 3499, currency: "$",
     tags: ["Chatbot", "Voice Assistant", "Conversational AI"];
     author: {
+      
       name: "AssistantCraft",
-      id: "assistantcraft"};
+      id: "assistantcraft"
+    },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-03-12T13:10:00.000Z",
     rating: 4.7, reviewCount: 29,
     location: "Europe", availability: "3-4 Weeks",
@@ -110,8 +124,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Speech Recognition", "Voice Processing", "Transcription"];
     author: {
+      
       name: "VoiceIntelligence", id: "voiceintelligence",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1590742084231-a778c92b8842?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-01-05T10:20:00.000Z",
     rating: 4.6, reviewCount: 41,
     location: "Global", availability: "1-2 Weeks",
@@ -124,8 +140,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Code Generation", "Developer Tools", "Automation"];
     author: {
+      
       name: "CodeGenius",
-      id: "codegenius"};
+      id: "codegenius"
+    },
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-02-20T09:45:00.000Z",
     rating: 4.9, reviewCount: 89,
     featured: true, location: "Global",
@@ -139,8 +157,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Enterprise", "Digital Transformation", "AI Strategy"];
     author: {
+      
       name: "BusinessAI Consultants", id: "businessai",
-      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-03-01T11:00:00.000Z",
     rating: 4.8, reviewCount: 22,
     location: "North America", availability: "4-6 Weeks",
@@ -153,8 +173,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Research", "Academic", "Machine Learning"];
     author: {
+      
       name: "AI Research Hub",
-      id: "airesearch"};
+      id: "airesearch"
+    },
     images: ["https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-01-15T15:30:00.000Z",
     rating: 4.7, reviewCount: 65,
     location: "Global", availability: "Immediate",
@@ -167,8 +189,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Robotics", "Automation", "Control Systems"];
     author: {
+      
       name: "RoboticsMind", id: "roboticsmind",
-      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-02-25T12:15:00.000Z",
     rating: 4.8, reviewCount: 19,
     featured: true, location: "Asia",
@@ -182,8 +206,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     price: 4999, currency: "$",
     tags: ["GPU", "Machine Learning", "Workstation"];
     author: {
+      
       name: "TechGear Solutions", id: "techgear",
-      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100"};
+      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100"
+    },
     images: ["https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-11-10T12:30:00.000Z",
     rating: 4.8, reviewCount: 32,
     featured: true, location: "Global",
@@ -195,8 +221,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     price: 24999, currency: "$",
     tags: ["Server", "Enterprise", "GPU Cluster"];
     author: {
+      
       name: "ServerPro Systems",
-      id: "serverpro"};
+      id: "serverpro"
+    },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
     rating: 4.9, reviewCount: 18,
     featured: true, location: "North America",

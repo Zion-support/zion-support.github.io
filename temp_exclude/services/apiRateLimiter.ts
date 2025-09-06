@@ -89,22 +89,26 @@ export class APIRateLimiterService {
           id: 'rule_1', name: 'API Endpoints',
           pattern: '/api/**', method: 'ALL',
           config: {
+      
             requestsPerMinute: 100, requestsPerHour: 1000,
             requestsPerDay: 10000, burstLimit: 50,
             windowSize: 60
-          };
-          enabled: true, createdAt: new Date(),
+          
+    },
+    enabled: true, createdAt: new Date(),
           updatedAt: new Date()
         };
         {
           id: 'rule_2', name: 'Authentication',
           pattern: '/auth/**', method: 'POST',
           config: {
+      
             requestsPerMinute: 10, requestsPerHour: 100,
             requestsPerDay: 1000, burstLimit: 5,
             windowSize: 60
-          };
-          enabled: true, createdAt: new Date(),
+          
+    },
+    enabled: true, createdAt: new Date(),
           updatedAt: new Date()
         }
       ]
@@ -239,22 +243,26 @@ export class APIRateLimiterService {
           id: 'key_1', name: 'Web Application',
           key: 'zion_web123', permissions: ['readwrite'],
           rateLimit: {
+      
             requestsPerMinute: 100, requestsPerHour: 1000,
             requestsPerDay: 10000, burstLimit: 50,
             windowSize: 60
-          };
-          createdAt: new Date(), lastUsed: new Date(),
+          
+    },
+    createdAt: new Date(), lastUsed: new Date(),
           isActive: true
         };
         {
           id: 'key_2', name: 'Mobile App',
           key: 'zion_mobile456', permissions: ['read'],
           rateLimit: {
+      
             requestsPerMinute: 50, requestsPerHour: 500,
             requestsPerDay: 5000, burstLimit: 25,
             windowSize: 60
-          };
-          createdAt: new Date(), lastUsed: new Date(),
+          
+    },
+    createdAt: new Date(), lastUsed: new Date(),
           isActive: true
         }
       ]
@@ -295,10 +303,12 @@ export class APIRateLimiterService {
 
   async generateReport(): Promise<{
     overview: {
+      
       totalRequests: number, blockedRequests: number,
       activeRules: number,
       activeAPIKeys: number
-    };
+    
+    },
     topEndpoints: {
       endpoint: string, requests: number,
       blocked: number,
@@ -325,12 +335,14 @@ export class APIRateLimiterService {
 
     return {
       overview: {
+      
         totalRequests;
         blockedRequests;
         activeRules: rules.filter(r => r.enabled).length,
         activeAPIKeys: apiKeys.filter(k => k.isActive).length
-      };
-      topEndpoints: stats
+      
+    },
+    topEndpoints: stats
         .sort((a, b) => b.totalRequests - a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
@@ -349,13 +361,15 @@ export class APIRateLimiterService {
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
   starter: {
+      
     name: 'Starter', price: 25,
     period: '/month',
     features: [
       'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics'
     ]
-  };
-  professional: {
+  
+    },
+    professional: {
     name: 'Professional', price: 79,
     period: '/month',
     features: [

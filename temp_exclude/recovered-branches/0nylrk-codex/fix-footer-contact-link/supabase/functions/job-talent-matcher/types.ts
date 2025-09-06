@@ -4,10 +4,12 @@ export interface JobData {
   description: string, skills: string[],
   category: string,
   budget: {
+      
     min: number,
     max: number
-  };
-  deadline: string
+  
+    },
+    deadline: string
 }
 
 export interface TalentProfile {

@@ -39,8 +39,10 @@ export default function ProjectPage() {
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers };
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
+      headers: {
+       "Content-Type": "application/json", ...headers 
+    },
+    body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
     const json = await res.json();
     if (json.ok) {
       setProject(json.project);
@@ -52,8 +54,10 @@ export default function ProjectPage() {
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers };
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
+      headers: {
+       "Content-Type": "application/json", ...headers 
+    },
+    body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
     const json = await res.json();
     if (json.ok) {
       setProject(json.project);

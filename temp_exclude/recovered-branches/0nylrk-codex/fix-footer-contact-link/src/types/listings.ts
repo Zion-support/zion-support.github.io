@@ -12,11 +12,13 @@ export interface ProductListing {
   price: number | null, currency: string,
   tags: string[],
   author: {
+      
     name: string, id: string,
     avatarUrl?: string;
     email?: string, // Added optional email property
-  };
-  images: string[], createdAt: string,
+  
+    },
+    images: string[], createdAt: string,
   rating?: number;
   reviewCount?: number;
   featured?: boolean;

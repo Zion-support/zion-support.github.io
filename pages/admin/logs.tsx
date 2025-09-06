@@ -374,7 +374,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
-    const logs: LogEntry[] = [],
+    const logs: LogEntry[] = [];
     // Read all log files
     if (fs.existsSync(logsDir)) {
       const files = fs.readdirSync(logsDir);

@@ -31,8 +31,10 @@ app.command('/zion', async ({ command, ack, respond }) => {
       const role = rest.join(' ') || 'Cloud Engineer';
       const res = await fetch(`${apiBase}/jobs/generate`, {
         method: 'POST',
-        headers: { 'content-type': 'application/jsonx-user-id': userId };
-        body: JSON.stringify({ role })
+        headers: {
+       'content-type': 'application/jsonx-user-id': userId 
+    },
+    body: JSON.stringify({ role })
       });
       const data = (await res.json()) as any;
       await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });

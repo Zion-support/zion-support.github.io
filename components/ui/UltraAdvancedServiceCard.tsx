@@ -8,6 +8,7 @@ import {
 
 interface UltraAdvancedServiceCardProps {
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -39,7 +40,8 @@ interface UltraAdvancedServiceCardProps {
       email: string,
       address: string,
       website: string
-    };
+    
+    },
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,

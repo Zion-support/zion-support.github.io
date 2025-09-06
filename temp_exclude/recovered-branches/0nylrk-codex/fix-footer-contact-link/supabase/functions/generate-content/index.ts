@@ -147,10 +147,12 @@ serve(async (req) => {
           title: generatedContent.title, slug: slug,
           excerpt: generatedContent.metaDescription, content: generatedContent.body,
           author: {
+      
             name: "Zion AI Team", title: "Content Team",
             avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-          };
-          published_date: publishedDate, read_time: readTime,
+          
+    },
+    published_date: publishedDate, read_time: readTime,
           category: "AI Insights", tags: generatedContent.tags,
           featured_image: "", // To be updated if image is generated
           is_featured: false, is_published: true,
@@ -181,13 +183,17 @@ serve(async (req) => {
     }
 
     return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
   } catch (error) {
     console.error("Error in generate-content function:", error);
     
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500})
   }
 });

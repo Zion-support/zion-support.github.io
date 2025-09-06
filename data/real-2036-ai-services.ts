@@ -3,7 +3,7 @@ export const real2036AIServices = [
     id: 'ai-emotion-intelligence-platform', name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
-    price: '$3,999';
+    price: '$3,999',
     period: 'month',
     features: [
       'Emotion recognitionSentiment analysisEmotional response generationEmotional intelligence trainingMulti-modal emotion detectionEmotional pattern analysis'
@@ -22,7 +22,7 @@ export const real2036AIServices = [
     id: 'ai-creativity-orchestrator', name: 'AI Creativity Orchestrator',
     tagline: 'Intelligent creative collaboration',
     description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
-    price: '$2,999';
+    price: '$2,999',
     period: 'month',
     features: [
       'Creative idea generationWorkflow orchestrationArtistic collaboration toolsCreative process optimizationInnovation managementCreative analytics'
@@ -41,7 +41,7 @@ export const real2036AIServices = [
     id: 'ai-dream-interpreter-platform', name: 'AI Dream Interpreter Platform',
     tagline: 'Intelligent dream analysis',
     description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
-    price: '$1,999';
+    price: '$1,999',
     period: 'month',
     features: [
       'Dream pattern analysisPsychological interpretationSymbolic analysisDream journalingPattern recognitionPsychological insights'
@@ -60,7 +60,7 @@ export const real2036AIServices = [
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Professional content generation',
     description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',
-    price: '$4,999';
+    price: '$4,999',
     period: 'month',
     features: [
       'Multi-format content creationBrand voice consistencyContent optimizationSEO integrationContent analyticsAutomated publishing'
@@ -79,7 +79,7 @@ export const real2036AIServices = [
     id: 'ai-customer-intelligence-platform', name: 'AI Customer Intelligence Platform',
     tagline: 'Deep customer understanding',
     description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
-    price: '$5,999';
+    price: '$5,999',
     period: 'month',
     features: [
       'Customer journey mappingPredictive analyticsPersonalized recommendationsBehavior analysisCustomer segmentationPredictive modeling'
@@ -98,7 +98,7 @@ export const real2036AIServices = [
     id: 'ai-autonomous-marketing-platform', name: 'AI Autonomous Marketing Platform',
     tagline: 'Self-optimizing marketing',
     description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',
-    price: '$6,999';
+    price: '$6,999',
     period: 'month',
     features: [
       'Autonomous campaign managementReal-time optimizationPredictive marketing strategiesPerformance maximizationAutomated A/B testingROI optimization'
@@ -117,7 +117,7 @@ export const real2036AIServices = [
     id: 'ai-autonomous-research-assistant', name: 'AI Autonomous Research Assistant',
     tagline: 'Intelligent research automation',
     description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
-    price: '$3,499';
+    price: '$3,499',
     period: 'month',
     features: [
       'Automated research workflowsData analysisInsight generationResearch automationData synthesisReport generation'
@@ -136,7 +136,7 @@ export const real2036AIServices = [
     id: 'ai-autonomous-decision-engine', name: 'AI Autonomous Decision Engine',
     tagline: 'Intelligent decision automation',
     description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
-    price: '$7,999';
+    price: '$7,999',
     period: 'month',
     features: [
       'Decision automationRisk assessmentOutcome predictionBusiness rule enginePredictive modelingDecision analytics'
@@ -155,7 +155,7 @@ export const real2036AIServices = [
     id: 'ai-autonomous-ecosystem-manager', name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Intelligent ecosystem orchestration',
     description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
-    price: '$8,999';
+    price: '$8,999',
     period: 'month',
     features: [
       'Ecosystem mappingRelationship managementAutonomous optimizationPartnership orchestrationIntegration managementEcosystem analytics'
@@ -174,7 +174,7 @@ export const real2036AIServices = [
     id: 'ai-autonomous-vehicle-ai', name: 'AI Autonomous Vehicle AI',
     tagline: 'Next-generation vehicle intelligence',
     description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',
-    price: '$9,999';
+    price: '$9,999',
     period: 'month',
     features: [
       'Autonomous navigationSafety monitoringTraffic managementVehicle optimizationPredictive maintenanceSafety systems'

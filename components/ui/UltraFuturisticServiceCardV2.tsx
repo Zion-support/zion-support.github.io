@@ -4,6 +4,7 @@ import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 
 
 interface ServiceCardProps {
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -16,7 +17,8 @@ interface ServiceCardProps {
       trialDays: number,
       setupTime: string,
       enterprise?: number
-    };
+    
+    },
     features: string[],
     benefits: string[],
     targetAudience: string[],

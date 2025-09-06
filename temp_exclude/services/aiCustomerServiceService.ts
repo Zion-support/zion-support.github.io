@@ -27,10 +27,12 @@ export interface CustomerProfile {
   resolvedTickets: number, averageResolutionTime: number,
   customerSatisfaction: number, lastContact: Date,
   preferences: {
+      
     communicationChannel: 'email' | 'chat' | 'phone', language: string,
     timezone: string
-  };
-  tags: string[]
+  
+    },
+    tags: string[]
 }
 
 export interface AIResponse {

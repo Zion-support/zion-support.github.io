@@ -15,7 +15,7 @@ export interface ModerationAction {
 }
 
 // Mock database - in production, this would connect to a real database
-const flags: ModerationFlag[] = [], const actions: ModerationAction[] = [],
+const flags: ModerationFlag[] = []; const actions: ModerationAction[] = [];
 
 export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' | 'updatedAt'>): Promise<ModerationFlag> {
   const newFlag: ModerationFlag = {

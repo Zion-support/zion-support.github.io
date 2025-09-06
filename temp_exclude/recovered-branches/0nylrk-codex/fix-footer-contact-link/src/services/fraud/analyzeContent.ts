@@ -7,7 +7,7 @@ import { AnalysisResult } from './types';
  */
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
-  const reasons: string[] = [],
+  const reasons: string[] = [];
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {

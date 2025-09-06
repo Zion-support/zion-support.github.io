@@ -5,11 +5,13 @@ import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
 export interface HireRequestData {
   talent: {
+      
     id: string, full_name: string,
     professional_title: string,
     email?: string
-  };
-  requester: {
+  
+    },
+    requester: {
     name: string, email: string,
     id?: string
   };

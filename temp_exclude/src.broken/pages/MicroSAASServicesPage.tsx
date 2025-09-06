@@ -36,10 +36,12 @@ features: [ "Drag-and-drop email builder", "Email automation workflows",
 "Integration with popular tools";
 "Compliance and deliverability" ];
 pricing: {
+      
   starter: "$69/month", professional: "$139/month",
 enterprise: "$249/month" 
-};
-marketPrice: "$120-250/month",
+
+    },
+    marketPrice: "$120-250/month",
 useCases: ["E-commerce", "Marketing teams", "Small businesses", "Newsletters", "Online courses" ];
 Higher open and click rates";
 " Automated customer journeys";

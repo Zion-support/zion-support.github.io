@@ -49,8 +49,10 @@ export async function trackReferral(userId: string, email: string) {
     const response = await fetch('/api/track-referral', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'};
-      body: JSON.stringify({
+      
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
         refCode;
         userId;
         email;

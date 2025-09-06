@@ -37,20 +37,24 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Describe the talent you need for your project",
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
+      
         text: "Post a Job",
         url: "/post-job"
-      };
-      skipText: "I'll do this later"
+      
+    },
+    skipText: "I'll do this later"
     };
     {
       title: "View suggested matches",
       description: "Our AI system will find the best talent matches",
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
       action: {
+      
         text: "View Matches",
         url: "/talent"
-      };
-      skipText: "Skip for now"
+      
+    },
+    skipText: "Skip for now"
     };
     {
       title: "Contact talent",
@@ -69,20 +73,24 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
+      
         text: "Edit Profile",
         url: "/profile"
-      };
-      skipText: "I'll do this later"
+      
+    },
+    skipText: "I'll do this later"
     };
     {
       title: "Define skills & availability",
       description: "Let clients know when you're available and what you can do",
       icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
       action: {
+      
         text: "Set Availability",
         url: "/profile?tab=skills"
-      };
-      skipText: "Skip for now"
+      
+    },
+    skipText: "Skip for now"
     };
     {
       title: "Preview your profile",

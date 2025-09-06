@@ -141,7 +141,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Tags
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
-  const tags: string[] = [], if (remote) tags.push('Remote Premium'),
+  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill');
 
   const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });

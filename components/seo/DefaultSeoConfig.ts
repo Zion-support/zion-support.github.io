@@ -3,10 +3,12 @@ const config: DefaultSeoProps = {
   defaultTitle: 'Zion Tech Solutions', titleTemplate: '%s | Zion Tech Solutions',
   description: 'Engineering services, AI/ML, DevOps, and product development by Zion.',
     openGraph: {
+      
     type: 'website', locale: 'en_US',
     url: 'https://ziontechgroup.netlify.app',
-    siteName: 'Zion Tech Solutions'};
-  twitter: {
+    siteName: 'Zion Tech Solutions'
+    },
+    twitter: {
     handle: '@ziontech', site: '@ziontech',
     cardType: 'summary_large_image'};
   additionalMetaTags: [

@@ -41,7 +41,8 @@ async function summarizeAndTag(input: {
       messages: [
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
-      temperature: 0.4});
+      temperature: 0.4
+      });
 
     const content = response.choices?.[0]?.message?.content || '';
     try {
@@ -136,9 +137,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       timezone;
       hourlyRate: hourlyRate ? Number(hourlyRate) : null, portfolioLinks,
       assets: {
+      
         profileImage: savedProfileImagePath,
-        cv: savedCvPath};
-      ai: {
+        cv: savedCvPath
+    },
+    ai: {
         summary;
         tags}};
 
@@ -146,7 +149,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
-    let aggregate: any[] = [],
+    let aggregate: any[] = [];
     if (fs.existsSync(aggregatePath)) {
       try {
         const content = await fse.readJSON(aggregatePath);

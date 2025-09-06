@@ -29,7 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [sysMessage, ...messages];
-      temperature: 0.2});
+      temperature: 0.2
+      });
 
     const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
 

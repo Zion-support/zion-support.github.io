@@ -25,8 +25,11 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 ; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
 ; return {; success: true,
     output: typeResult}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
-; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(), summary: {, tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed',
-    overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'}; details: {, tests: testResults, lint: lintResults,
+; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed',
+    overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'
+    },
+    details: {, tests: testResults, lint: lintResults,
     typeCheck: typeResults}; recommendations: []};
 ; // Generate recommendations; if (!testResults.success) {; report.recommendations.push({; priority: 'high', message: 'Tests are failing', action: 'Fix failing tests before deployment'})};
 ; if (!lintResults.success) {; report.recommendations.push({; priority: 'medium', message: 'Lint issues detected', action: 'Run npm run lint: fix to auto-fix issues'})};

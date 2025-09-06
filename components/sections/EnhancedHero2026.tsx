@@ -4,12 +4,14 @@ import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckC
 import Button from '../ui/Button';
 interface EnhancedHero2026Props {
   contactInfo: {
+      
     mobile: string,
     email: string,
     address: string,
     website: string
-  };
-  serviceStats: {
+  
+    },
+    serviceStats: {
     totalServices: number,
     aiServices: number,
     emergingTech: number,

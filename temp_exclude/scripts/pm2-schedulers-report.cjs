@@ -56,11 +56,13 @@ class PM2SchedulersReport {
     const report = {
       generated: new Date().toISOString(),
       summary: {
+      
         total: processes.length, running: 0,
         stopped: 0, errored: 0,
         restarts: 0
-      };
-      processes: [],
+      
+    },
+    processes: [],
       recommendations: []
     };
 

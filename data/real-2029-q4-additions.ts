@@ -18,8 +18,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.',
-    targetAudience: 'Support teams, sales ops, founders';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'Support teams, sales ops, founders',
+    trialDays: 14, setupTime: '1 day',
 		category: 'AI & Data', realService: true,
 		technology: ['Next.jsTypeScriptOpenAIPostgreSQL'], integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'],
 		useCases: ['Customer support triageLead routingInternal helpdesk'], roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.',
@@ -43,8 +43,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.',
-    targetAudience: 'Growth teams, product managers, agencies';
-		trialDays: 7, setupTime: 'Same day',
+    targetAudience: 'Growth teams, product managers, agencies',
+    trialDays: 7, setupTime: 'Same day',
 		category: 'Developer Tools', realService: true,
 		technology: ['Next.jsPostgreSQLTailwindVercel Edge'], integrations: ['Google SheetsZapierSegmentBigQuery'],
 		useCases: ['Landing page surveysIn-product pollsExit intent feedback'], roi: 'Increase response rates 2–5x and de-risk product decisions.',
@@ -90,8 +90,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-indigo-600 to-blue-700', textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup.com/services/oncall-scheduler-pro',
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.',
-    targetAudience: 'SRE teams, startups, agencies';
-		trialDays: 14, setupTime: '1 day',
+    targetAudience: 'SRE teams, startups, agencies',
+    trialDays: 14, setupTime: '1 day',
 		category: 'Observability', realService: true,
 		technology: ['Next.jsPostgreSQLTwilio'], integrations: ['SlackMicrosoft TeamsTwilio'],
 		useCases: ['On-call managementIncident response'], roi: 'Reduce paging confusion and missed alerts by 30–50%.',

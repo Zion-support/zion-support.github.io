@@ -48,7 +48,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
 
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
-    const recs: PerformanceRecommendation[] = [],
+    const recs: PerformanceRecommendation[] = [];
     // FCP recommendations
     if (metrics.fcp > 2000) {
       recs.push({

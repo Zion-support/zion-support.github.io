@@ -23,8 +23,10 @@ const AdminReviewsPage: NextPage = () => {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'};
-      body: JSON.stringify({ action, reviewId })});
+      
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
+    },
+    body: JSON.stringify({ action, reviewId })});
     if (res.ok) refresh()
   }
 

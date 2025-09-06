@@ -3,12 +3,14 @@ export interface BlockchainWeb3Service {
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
-  };
-  features: string[], benefits: string[],
+  
+    },
+    features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
@@ -27,11 +29,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     tagline: 'Self-sovereign identity with zero-knowledge proof verification', description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.',
     category: 'Blockchain & Web3',
     price: {
+      
       monthly: 99, yearly: 990,
       currency: 'USD', trialDays: 30,
       setupTime: '1-2 days',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards';
       'Compliance with W3C standardsAPI for enterprise integration'
@@ -47,7 +51,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis'];
     realImplementation: true,
     implementationDetails: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.',
-    roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.';
+    roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.',
     useCases: [
       'KYC/AML complianceHealthcare patient identityEducational credentialsProfessional certificationsFinancial services authenticationGovernment digital identity'
     ];
@@ -66,11 +70,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',
     category: 'DeFi & Yield Optimization',
     price: {
+      
       monthly: 199, yearly: 1990,
       currency: 'USD', trialDays: 14,
       setupTime: '1-3 days',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'AI-powered yield strategy optimizationMulti-chain protocol supportReal-time risk assessmentAutomated portfolio rebalancingGas fee optimizationImpermanent loss protectionAdvanced analytics dashboardMobile app for monitoring';
       'API for institutional clientsCustom strategy development'
@@ -102,14 +108,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
   {
     id: 'nft-marketplace-intelligence-platform', name: 'NFT Marketplace Intelligence Platform',
     tagline: 'AI-powered NFT analytics, valuation, and trading insights',
-    description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.';
+    description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.',
     category: 'NFT & Digital Assets',
     price: {
+      
       monthly: 149, yearly: 1490,
       currency: 'USD', trialDays: 7,
       setupTime: 'Immediate',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'AI-powered NFT valuation modelsReal-time market analyticsTrend prediction algorithmsPortfolio tracking and managementRarity scoring and analysisMarket sentiment analysisTrading signal generationMulti-chain NFT support';
       'Advanced filtering and searchAPI for developers'
@@ -144,11 +152,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real-time tracking, compliance monitoring, and sustainability verification.',
     category: 'Supply Chain & Traceability',
     price: {
+      
       monthly: 299, yearly: 2990,
       currency: 'USD', trialDays: 30,
       setupTime: '2-4 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'End-to-end supply chain trackingReal-time transparency monitoringSmart contract automationIoT sensor integrationCompliance verificationSustainability certificationMulti-stakeholder accessAdvanced analytics dashboard';
       'Mobile app for field workersAPI for system integration'
@@ -164,7 +174,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms'];
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
-    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.';
+    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
     useCases: [
       'Food safety trackingPharmaceutical authenticityLuxury goods verificationSustainable sourcing verificationCompliance monitoringQuality assurance'
     ];
@@ -183,11 +193,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     description: 'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',
     category: 'Web3 & Social Media',
     price: {
+      
       monthly: 0, yearly: 0,
       currency: 'USD', trialDays: 0,
       setupTime: 'Immediate',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Decentralized content ownershipToken-based reward systemPrivacy-first designContent monetizationDecentralized governanceCross-platform content portabilityAI-powered content discoveryNFT integration';
       'Mobile and web appsAPI for developers'

@@ -18,8 +18,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup.com/services/ai-email-responder',
 		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs',
-    targetAudience: 'Sales, support, founder-led teams';
-		trialDays: 14, setupTime: '30 minutes',
+    targetAudience: 'Sales, support, founder-led teams',
+    trialDays: 14, setupTime: '30 minutes',
 		category: 'Developer Tools', realService: true,
 		technology: ['Gmail/Outlook APIsLLMWebhook'], integrations: ['GmailOutlookHubSpotPipedriveSlack'],
 		useCases: ['Inbound triageNurture sequencesSLA reporting'], roi: 'Cuts manual email time by 60–80%',
@@ -42,8 +42,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
 		marketPosition: 'Faster than legacy survey tools, better mobile UX',
-    targetAudience: 'Product, CX, research teams';
-		trialDays: 7, setupTime: '15 minutes',
+    targetAudience: 'Product, CX, research teams',
+    trialDays: 7, setupTime: '15 minutes',
 		category: 'Developer Tools', realService: true,
 		technology: ['TwilioNext.jsVercel/Netlify'], integrations: ['HubSpotSheetsSlack'],
 		useCases: ['NPSFeature feedbackOnboarding'], roi: '2–4x higher completion on mobile',
@@ -296,8 +296,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		icon: '✅', color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300', link: 'https://ziontechgroup.com/services/consent-management-cmp',
 		marketPosition: 'Fast to implement, compliant defaults',
-    targetAudience: 'Websites, SaaS apps';
-		trialDays: 14, setupTime: '1 hour',
+    targetAudience: 'Websites, SaaS apps',
+    trialDays: 14, setupTime: '1 hour',
 		category: 'Quality & Monitoring', realService: true,
 		technology: ['JS widgetAPI'], integrations: ['SegmentGA4'],
 		useCases: ['ComplianceUser trust'],

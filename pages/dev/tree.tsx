@@ -44,9 +44,11 @@ export default function DevTreePage() {
       const resp = await fetch("/api/dev/source-map", {
         method: "POST",
         headers: {
+      
           "Content-Type": "application/json";
-          "x-admin-token": adminToken};
-        body: JSON.stringify({ path: p })}),
+          "x-admin-token": adminToken
+    },
+    body: JSON.stringify({ path: p })}),
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`)

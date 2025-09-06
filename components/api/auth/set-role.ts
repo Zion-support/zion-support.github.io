@@ -3,7 +3,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { role = 'guest', talent } = req.query as { role?: string, talent?: string };
 
   const headers: Record<string, string> = {};
-  const cookies: string[] = [],
+  const cookies: string[] = [];
   const set = (k: string, v: string, days = 7) => {
     const expires = new Date(Date.now() + days * 864e5).toUTCString();
     cookies.push(`${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires=${expires}`)

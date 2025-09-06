@@ -57,12 +57,14 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?How does Zion practically onboard talent and organizations?What are the core protocol primitives (identity, reputation, incentives)?How does governance work and how do contributors participate?What challenges have you faced scaling globally?How does Zion interoperate with existing web2 hiring systems?What does success look like in 3-5 years?'];
         timeMarkers: {
+      
           intro: '00:00', segments: ['03:0008:0012:00'],
-          closing: '14:30'};
-        transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
+          closing: '14:30'
+    },
+    transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
         youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.',
-    spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.';
-        bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.'})
+    spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.',
+    bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.'})
     }
 
     try {

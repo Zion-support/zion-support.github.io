@@ -19,9 +19,11 @@ interface Activity {
   comment: string | null,
   created_at: string,
   milestone: {
+      
     title: string
-  };
-  created_by_profile: {
+  
+    },
+    created_by_profile: {
     display_name: string,
     avatar_url: string | null
   }

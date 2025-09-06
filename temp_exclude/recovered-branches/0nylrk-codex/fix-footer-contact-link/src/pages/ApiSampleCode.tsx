@@ -63,11 +63,13 @@ async function main() {
       description: 'We need a skilled frontend developer...',
       category: 'development',
       budget: {
+      
         min: 5000,
         max: 7500,
         currency: 'USD'
-      };
-      skills: ['ReactTypeScriptTailwind CSS']
+      
+    },
+    skills: ['ReactTypeScriptTailwind CSS']
     });
     console.log('New job created:', newJob);
     
@@ -217,11 +219,13 @@ async function main() {
       description: 'We need a skilled backend developer...',
       category: 'development',
       budget: {
+      
         min: 6000,
         max: 8000,
         currency: 'USD'
-      };
-      skills: ['Node.jsExpressMongoDB']
+      
+    },
+    skills: ['Node.jsExpressMongoDB']
     });
     console.log('New job created:', newJob);
     

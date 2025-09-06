@@ -26,7 +26,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, txId);
   const event = {
     eventId: uuidv4(), type: "token_transfer" as const,
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() };
+    payload: {
+       id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() 
+    },
     originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 

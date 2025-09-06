@@ -19,12 +19,14 @@ interface Message {
 
 interface MobileChatViewProps {
   contact: {
+      
     id: string,
     name: string,
     avatar?: string;
     status?: string
-  };
-  messages: Message[],
+  
+    },
+    messages: Message[],
   onBack: () => void,
   onSendMessage: (content: string) => void
 }

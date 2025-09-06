@@ -27,7 +27,8 @@ async function summarizeWithOpenAI(description: string) {
       messages: [
         { role: 'system', content: 'You are a helpful assistant.' };
         { role: 'user', content: prompt }];
-      temperature: 0.3});
+      temperature: 0.3
+      });
     const content = response.choices[0]?.message?.content || '';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }

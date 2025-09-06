@@ -46,8 +46,8 @@ export default function InnovativeServicesShowcase() {
       title: '🔐 Quantum Internet Security Platform',
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
-    marketData: '$150B cybersecurity market, 300% annual growth';
-      competitors: 'Traditional cybersecurity solutions',
+    marketData: '$150B cybersecurity market, 300% annual growth',
+    competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
       features: ['Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant VPN tunnelsReal-time threat detectionZero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
@@ -57,8 +57,8 @@ export default function InnovativeServicesShowcase() {
       title: '🧬 AI-Powered Quantum Drug Discovery',
       description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.',
       price: '$12,999/month',
-    marketData: '$150B AI in healthcare, 400% annual growth';
-      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
+    marketData: '$150B AI in healthcare, 400% annual growth',
+    competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
     savings: '100x faster drug discovery vs. traditional methods',
       features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
@@ -68,8 +68,8 @@ export default function InnovativeServicesShowcase() {
       title: '💰 Autonomous Quantum Trading System',
       description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.',
       price: '$15,999/month',
-    marketData: '$15T algorithmic trading, 200% annual growth';
-      competitors: 'Renaissance Technologies, Two Sigma, Citadel',
+    marketData: '$15T algorithmic trading, 200% annual growth',
+    competitors: 'Renaissance Technologies, Two Sigma, Citadel',
     savings: 'Accessible quantum AI for smaller firms',
       features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
@@ -79,8 +79,8 @@ export default function InnovativeServicesShowcase() {
       title: '🧠 Neural Interface Development Platform',
       description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.',
       price: '$19,999/month',
-    marketData: '$5B neural interface market, 500% annual growth';
-      competitors: 'Basic research tools, Traditional medical devices',
+    marketData: '$5B neural interface market, 500% annual growth',
+    competitors: 'Basic research tools, Traditional medical devices',
     savings: 'First comprehensive neural interface platform',
       features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',

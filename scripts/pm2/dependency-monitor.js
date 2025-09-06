@@ -31,10 +31,16 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 ; if (!fs.existsSync(hooksDir)) {; return { exists: false, message: 'No git hooks directory found' }};
 ; const hooks = fs.readdirSync(hooksDir); const activeHooks = hooks.filter(hook = > {; const hookPath = path.join(hooksDir, hook); const stats = fs.statSync(hookPath); return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111)});
 ; return { exists: true, hooks: activeHooks }} catch (error) {; return { error: error.message }}};
-; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {, vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
-    low: 0}; outdatedPackages: Object.keys(outdatedResult).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', nodeVersion: nodeInfo.nodeVersion,
-    npmVersion: nodeInfo.npmVersion}; details: {, audit: auditResult, outdated: outdatedResult, packageLock: packageLockInfo, node: nodeInfo,
-    gitHooks: gitHooksInfo}; recommendations: []};
+; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
+    low: 0
+    },
+    outdatedPackages: Object.keys(outdatedResult).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', nodeVersion: nodeInfo.nodeVersion,
+    npmVersion: nodeInfo.npmVersion}; details: {
+      , audit: auditResult, outdated: outdatedResult, packageLock: packageLockInfo, node: nodeInfo,
+    gitHooks: gitHooksInfo
+    },
+    recommendations: []};
 ; // Count vulnerabilities by severity; if (auditResult.vulnerabilities) {; Object.values(auditResult.vulnerabilities).forEach(vuln = > {; report.summary.vulnerabilities.total++; const severity = vuln.severity?.toLowerCase() || 'unknown'; if (severity = = = 'critical') report.summary.vulnerabilities.critical++; else if (severity = = = 'high') report.summary.vulnerabilities.high++; else if (severity = = = 'moderate') report.summary.vulnerabilities.moderate++; else if (severity = = = 'low') report.summary.vulnerabilities.low++})};
 ; // Generate recommendations; if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {; report.recommendations.push({; priority: 'critical', message: 'Critical or high security vulnerabilities detected', action: 'Run npm audit fix immediately'})};
 ; if (report.summary.vulnerabilities.moderate > 0) {; report.recommendations.push({; priority: 'high', message: 'Moderate security vulnerabilities detected', action: 'Review and fix moderate vulnerabilities'})};

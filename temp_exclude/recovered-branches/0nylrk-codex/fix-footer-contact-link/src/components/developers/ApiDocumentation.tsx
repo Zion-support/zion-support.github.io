@@ -198,18 +198,22 @@ print(data)`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST',
   headers: {
+      
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  };
-  body: JSON.stringify({
+  
+    },
+    body: JSON.stringify({
     title: 'Senior React Developer',
     description: 'We need an experienced React developer...',
     category: 'development',
     skills: ['reacttypescriptnode.js'],
     budget: {
+      
       min: 5000,
       max: 10000,
       currency: 'USD'
-    };
+    
+    },
     deadline: '2025-06-30T23:59:59Z'
   })
 });
@@ -432,9 +436,11 @@ print(data)`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'POST',
   headers: {
+      
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  };
-  body: JSON.stringify({
+  
+    },
+    body: JSON.stringify({
     talent_id: 'talent_abc123',
     project_name: 'E-commerce Website Redesign',
     project_summary: 'Redesign our outdated e-commerce website with modern UI',

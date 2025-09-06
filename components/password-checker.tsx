@@ -94,7 +94,7 @@ export default function PasswordCheckerPage() {
   };
 
   const generateSuggestions = (checks: any, pass: string) => {
-    const suggestions: string[] = [],
+    const suggestions: string[] = [];
     
     if (!checks.length) suggestions.push('Make your password at least 8 characters long');
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');

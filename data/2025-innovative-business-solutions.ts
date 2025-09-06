@@ -14,11 +14,13 @@ export interface InnovativeBusinessSolution {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -48,10 +50,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$7.8B business intelligence market', growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered business intelligence platform with advanced analytics, predictive insights, and seamless business system integration.',
     launchDate: '2025-02-01', customers: 73,
@@ -82,10 +86,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$6.5B marketing automation market', growthRate: '25% annual growth',
     variant: 'ai-marketing',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.',
     launchDate: '2025-02-15', customers: 89,
@@ -116,10 +122,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$5.2B sales intelligence market', growthRate: '30% annual growth',
     variant: 'ai-sales',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.',
     launchDate: '2025-03-01', customers: 67,
@@ -150,10 +158,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$4.8B customer service market', growthRate: '22% annual growth',
     variant: 'ai-customer-service',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.',
     launchDate: '2025-03-15', customers: 54,
@@ -184,10 +194,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$6.2B HR technology market', growthRate: '26% annual growth',
     variant: 'ai-hr',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.',
     launchDate: '2025-04-01', customers: 42,
@@ -218,10 +230,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$8.5B financial analytics market', growthRate: '32% annual growth',
     variant: 'ai-financial',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.',
     launchDate: '2025-04-15', customers: 28,
@@ -252,10 +266,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$5.5B project management market', growthRate: '24% annual growth',
     variant: 'ai-project-management',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01', customers: 38,

@@ -3,11 +3,13 @@ export interface EmergingTechService {
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  };
-  features: string[], benefits: string[],
+  
+    },
+    features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
@@ -27,10 +29,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, enabling edge computing with minimal power consumption and maximum performance.';
     category: 'Emerging Technology',
     price: {
+      
       monthly: 3499, yearly: 34990,
       currency: 'USD', trialDays: 45,
       setupTime: '2 weeks'
-    };
+    
+    },
     features: [
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesEdge computing optimizationNeuromorphic chip integrationAdaptive neural networksEnergy-efficient AI processingHardware-software co-design';
       'Scalable neuromorphic systemsResearch collaboration tools'
@@ -64,10 +68,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     tagline: 'Unbreakable quantum encryption for the post-quantum era', description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.',
     category: 'Cybersecurity',
     price: {
+      
       monthly: 1899, yearly: 18990,
       currency: 'USD', trialDays: 30,
       setupTime: '1 week'
-    };
+    
+    },
     features: [
       'Quantum-resistant algorithmsQuantum key distributionPost-quantum cryptographyReal-time encryptionMulti-layer securityCompliance automationPerformance monitoringAPI integration';
       'Mobile securityCloud security'
@@ -99,13 +105,15 @@ export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: 'synthetic-biology-platform', name: 'Synthetic Biology Platform',
     tagline: 'Design, build, and test synthetic biological systems with AI',
-    description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.';
+    description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',
     category: 'Biotechnology',
     price: {
+      
       monthly: 2799, yearly: 27990,
       currency: 'USD', trialDays: 60,
       setupTime: '1 month'
-    };
+    
+    },
     features: [
       'AI-powered DNA designSynthetic organism creationBiological system testingGene editing toolsMetabolic pathway designBiological circuit designSafety assessment toolsRegulatory compliance';
       'Research collaborationCommercialization support'
@@ -140,10 +148,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, control plasma stability, and accelerate the development of commercial fusion power.',
     category: 'Energy Technology',
     price: {
+      
       monthly: 5999, yearly: 59990,
       currency: 'USD', trialDays: 90,
       setupTime: '2 months'
-    };
+    
+    },
     features: [
       'AI-powered plasma controlFusion reaction optimizationReal-time monitoring systemsPredictive maintenanceEnergy output optimizationSafety systems integrationPerformance analyticsResearch collaboration';
       'Commercial deploymentRegulatory compliance'
@@ -177,10 +187,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum key distribution, and ultra-secure quantum communication networks.',
     category: 'Quantum Technology',
     price: {
+      
       monthly: 3999, yearly: 39990,
       currency: 'USD', trialDays: 60,
       setupTime: '1 month'
-    };
+    
+    },
     features: [
       'Quantum network infrastructureQuantum entanglement networksQuantum key distributionQuantum routing systemsQuantum network securityQuantum internet protocolsNetwork management toolsPerformance monitoring';
       'API integrationCommercial deployment'
@@ -214,10 +226,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that enables direct communication between the human brain and computers, opening new possibilities for human-computer interaction, medical applications, and cognitive enhancement.',
     category: 'Human-Computer Interaction',
     price: {
+      
       monthly: 4499, yearly: 44990,
       currency: 'USD', trialDays: 90,
       setupTime: '2 months'
-    };
+    
+    },
     features: [
       'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical applicationsResearch collaborationSafety monitoringPerformance analyticsUser interface design';
       'API integrationCommercial applications'
@@ -252,10 +266,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, detection, and monitoring across various applications.',
     category: 'Quantum Technology',
     price: {
+      
       monthly: 1999, yearly: 19990,
       currency: 'USD', trialDays: 45,
       setupTime: '2 weeks'
-    };
+    
+    },
     features: [
       'Quantum sensor arraysUltra-sensitive detectionPrecision measurementReal-time monitoringData analysis toolsIntegration APIsPerformance optimizationCalibration tools';
       'Research collaborationCommercial applications'
@@ -290,10 +306,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.',
     category: 'Robotics & Automation',
     price: {
+      
       monthly: 1299, yearly: 12990,
       currency: 'USD', trialDays: 30,
       setupTime: '1 week'
-    };
+    
+    },
     features: [
       'Autonomous robot controlAI-powered decision makingMulti-robot coordinationSafety systems integrationPerformance optimizationRemote monitoringIntegration APIsCustom robot development';
       'Deployment toolsAnalytics dashboard'
@@ -328,10 +346,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.',
     category: 'Materials Science',
     price: {
+      
       monthly: 2499, yearly: 24990,
       currency: 'USD', trialDays: 60,
       setupTime: '1 month'
-    };
+    
+    },
     features: [
       'AI-powered material discoveryQuantum material designProperty predictionSynthesis optimizationPerformance testingResearch collaborationCommercialization supportPatent assistance';
       'Market analysisIntegration support'
@@ -366,10 +386,12 @@ export const emergingTechServices2025: EmergingTechService[] = [
     description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
     category: 'Quantum Technology',
     price: {
+      
       monthly: 2999, yearly: 29990,
       currency: 'USD', trialDays: 45,
       setupTime: '2 weeks'
-    };
+    
+    },
     features: [
       'Quantum key distributionQuantum entanglement networksSecure communication protocolsNetwork infrastructurePerformance monitoringSecurity validationIntegration APIsCommercial deployment';
       'Research collaborationRegulatory compliance'

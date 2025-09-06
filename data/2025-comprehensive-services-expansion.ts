@@ -14,11 +14,13 @@ export interface ComprehensiveService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -44,7 +46,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',
-    targetAudience: 'Development teams, DevOps engineers, CTOs';
+    targetAudience: 'Development teams, DevOps engineers, CTOs',
     trialDays: 14, setupTime: '2 hours',
     category: 'Development & DevOps', realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'];
@@ -72,7 +74,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/intelligent-incident-response',
     marketPosition: 'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',
-    targetAudience: 'SRE teams, DevOps engineers, IT operations';
+    targetAudience: 'SRE teams, DevOps engineers, IT operations',
     trialDays: 14, setupTime: '1 day',
     category: 'Monitoring & Operations', realService: true,
     technology: ['AI/ML, Real-time Processing, Automation'];
@@ -100,7 +102,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-purple-600 to-violet-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography',
     marketPosition: 'Early mover in post-quantum cryptography, specialized security solution.',
-    targetAudience: 'Financial institutions, government agencies, healthcare';
+    targetAudience: 'Financial institutions, government agencies, healthcare',
     trialDays: 30, setupTime: '1-2 weeks',
     category: 'Security & Compliance', realService: true,
     technology: ['Post-Quantum Cryptography, QKD, Hybrid Systems'];
@@ -128,7 +130,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',
     marketPosition: 'Next-generation DevOps automation, competes with traditional CI/CD tools.',
-    targetAudience: 'DevOps teams, Platform engineers, SREs';
+    targetAudience: 'DevOps teams, Platform engineers, SREs',
     trialDays: 21, setupTime: '3-5 days',
     category: 'DevOps & Automation', realService: true,
     technology: ['AI/ML, Kubernetes, Terraform, Ansible'];
@@ -156,7 +158,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-ai-inference-platform',
     marketPosition: 'Specialized edge AI platform, complements cloud AI services.',
-    targetAudience: 'IoT developers, Edge computing teams, AI engineers';
+    targetAudience: 'IoT developers, Edge computing teams, AI engineers',
     trialDays: 14, setupTime: '2-3 days',
     category: 'AI & Edge Computing', realService: true,
     technology: ['Edge Computing, AI/ML, IoT, 5G'];
@@ -184,7 +186,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-governance-automation',
     marketPosition: 'Specialized blockchain governance, addresses regulatory compliance needs.',
-    targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams';
+    targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',
     trialDays: 21, setupTime: '1 week',
     category: 'Blockchain & DeFi', realService: true,
     technology: ['Blockchain, Smart Contracts, AI/ML, Compliance'];
@@ -212,7 +214,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-customer-success-platform',
     marketPosition: 'AI-enhanced customer success, competes with Gainsight, Totango.',
-    targetAudience: 'Customer success teams, Account managers, Growth teams';
+    targetAudience: 'Customer success teams, Account managers, Growth teams',
     trialDays: 14, setupTime: '1 week',
     category: 'Customer Success & Growth', realService: true,
     technology: ['AI/ML, Predictive Analytics, Automation'];
@@ -240,7 +242,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-violet-600 to-purple-700', textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
     marketPosition: 'Cutting-edge quantum ML, specialized for complex computational problems.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services';
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',
     trialDays: 30, setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI', realService: true,
     technology: ['Quantum Computing, Machine Learning, Optimization'];
@@ -268,7 +270,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',
     marketPosition: 'AI-powered supply chain, competes with SAP, Oracle, Blue Yonder.',
-    targetAudience: 'Manufacturing, Retail, Logistics companies';
+    targetAudience: 'Manufacturing, Retail, Logistics companies',
     trialDays: 21, setupTime: '2-3 weeks',
     category: 'Supply Chain & Logistics', realService: true,
     technology: ['AI/ML, IoT, Blockchain, Analytics'];
@@ -296,7 +298,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence',
     marketPosition: 'Comprehensive threat intelligence, competes with CrowdStrike, Palo Alto Networks.',
-    targetAudience: 'Security teams, CISOs, IT security professionals';
+    targetAudience: 'Security teams, CISOs, IT security professionals',
     trialDays: 14, setupTime: '1 week',
     category: 'Cybersecurity', realService: true,
     technology: ['AI/ML, Threat Intelligence, Automation'];
@@ -324,7 +326,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-content-creation-suite',
     marketPosition: 'AI-powered content creation, competes with Jasper, Copy.ai, Grammarly.',
-    targetAudience: 'Marketing teams, Content creators, Small businesses';
+    targetAudience: 'Marketing teams, Content creators, Small businesses',
     trialDays: 7, setupTime: '1 day',
     category: 'Content & Marketing', realService: true,
     technology: ['AI/ML, NLP, Content Generation'];
@@ -352,7 +354,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-teal-600 to-cyan-700', textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/intelligent-data-governance',
     marketPosition: 'AI-powered data governance, competes with Collibra, Alation, Informatica.',
-    targetAudience: 'Data teams, Compliance officers, Data stewards';
+    targetAudience: 'Data teams, Compliance officers, Data stewards',
     trialDays: 21, setupTime: '2-3 weeks',
     category: 'Data & Analytics', realService: true,
     technology: ['AI/ML, Data Quality, Compliance Automation'];
@@ -381,7 +383,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-yellow-600 to-amber-700', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-engine',
     marketPosition: 'Cutting-edge quantum trading, specialized for institutional investors.',
-    targetAudience: 'Hedge funds, Investment banks, Institutional investors';
+    targetAudience: 'Hedge funds, Investment banks, Institutional investors',
     trialDays: 45, setupTime: '1 month',
     category: 'Quantum Computing & Finance', realService: true,
     technology: ['Quantum Computing, Financial Algorithms, Risk Management'];
@@ -409,7 +411,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-hr-automation-suite',
     marketPosition: 'AI-enhanced HR automation, competes with Workday, BambooHR, Greenhouse.',
-    targetAudience: 'HR teams, Recruiters, People operations';
+    targetAudience: 'HR teams, Recruiters, People operations',
     trialDays: 14, setupTime: '1-2 weeks',
     category: 'HR & People Operations', realService: true,
     technology: ['AI/ML, HR Automation, Analytics'];
@@ -437,7 +439,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-iot-platform',
     marketPosition: 'AI-powered IoT platform, competes with AWS IoT, Azure IoT, Google Cloud IoT.',
-    targetAudience: 'IoT developers, Manufacturing, Smart cities';
+    targetAudience: 'IoT developers, Manufacturing, Smart cities',
     trialDays: 21, setupTime: '2-3 weeks',
     category: 'IoT & Edge Computing', realService: true,
     technology: ['IoT, AI/ML, Edge Computing, Cloud Platforms'];
@@ -465,7 +467,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-violet-600 to-purple-700', textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
     marketPosition: 'Future-proof quantum security, specialized for high-security environments.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations';
+    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30, setupTime: '1 month',
     category: 'Quantum Computing & Security', realService: true,
     technology: ['Quantum Computing, Post-Quantum Cryptography, QKD'];
@@ -493,7 +495,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.',
-    targetAudience: 'Sales teams, Sales managers, Revenue operations';
+    targetAudience: 'Sales teams, Sales managers, Revenue operations',
     trialDays: 14, setupTime: '1 week',
     category: 'Sales & Revenue', realService: true,
     technology: ['AI/ML, Predictive Analytics, Sales Automation'];

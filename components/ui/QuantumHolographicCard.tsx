@@ -4,6 +4,7 @@ import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, 
 
 interface QuantumHolographicCardProps {
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -35,7 +36,8 @@ interface QuantumHolographicCardProps {
       email: string,
       address: string,
       website: string
-    };
+    
+    },
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,

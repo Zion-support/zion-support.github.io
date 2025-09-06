@@ -13,11 +13,13 @@ export interface ComprehensiveITService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -49,10 +51,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$1.2T IT services market, 8% annual growth',
     growthRate: '8% annual growth', variant: 'enterprise-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.',
     launchDate: '2024-01-01', customers: 25,
@@ -83,10 +87,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$400B cloud services market, 20% annual growth',
     growthRate: '20% annual growth', variant: 'cloud-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.',
     launchDate: '2024-02-01', customers: 18,
@@ -118,10 +124,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$200B cybersecurity market, 15% annual growth',
     growthRate: '15% annual growth', variant: 'cybersecurity-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.',
     launchDate: '2024-01-15', customers: 32,
@@ -154,10 +162,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$200B data center market, 12% annual growth',
     growthRate: '12% annual growth', variant: 'datacenter-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.',
     launchDate: '2024-01-20', customers: 15,
     rating: 4.7,
@@ -188,10 +198,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$8B SD-WAN market, 35% annual growth',
     growthRate: '35% annual growth', variant: 'network-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.',
     launchDate: '2024-02-15', customers: 28,
     rating: 4.6,
@@ -222,10 +234,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$50B IT consulting market, 10% annual growth',
     growthRate: '10% annual growth', variant: 'consulting-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',
     launchDate: '2024-01-10', customers: 45,
     rating: 4.7,
@@ -256,10 +270,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$15B IT training market, 12% annual growth',
     growthRate: '12% annual growth', variant: 'training-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.',
     launchDate: '2024-01-05', customers: 120,
     rating: 4.8,
@@ -279,7 +295,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     marketPosition: 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure, GCP) lack quantum capabilities.',
-    targetAudience: 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies';
+    targetAudience: 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies',
     trialDays: 30, setupTime: '2 weeks',
     category: 'Quantum IT Infrastructure', realService: true,
     technology: ['Quantum computingQuantum networkingReactNode.jsPostgreSQLRedisAWSCustom quantum hardware'], integrations: ['Enterprise systemsLegacy applicationsCloud platformsSecurity toolsMonitoring systems'],
@@ -288,10 +304,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$400B cloud market, quantum segment growing 400% annually',
     growthRate: '400% annual growth', variant: 'quantum-advanced',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.',
     launchDate: '2024-11-15', customers: 45,
@@ -321,10 +339,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$8B DevOps market, AI segment growing 350% annually',
     growthRate: '350% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',
     launchDate: '2024-10-01', customers: 320,
@@ -344,7 +364,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-suite',
     marketPosition: 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto, CrowdStrike) lack quantum capabilities.',
-    targetAudience: 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies';
+    targetAudience: 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies',
     trialDays: 30, setupTime: '1 week',
     category: 'Quantum Cybersecurity', realService: true,
     technology: ['Quantum encryptionAI algorithmsReactNode.jsPostgreSQLRedisAWSCustom quantum hardware'], integrations: ['SIEM systemsFirewallsEndpoint protectionIdentity managementCompliance tools'],
@@ -353,10 +373,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth', variant: 'quantum-cyberpunk',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15', customers: 180,

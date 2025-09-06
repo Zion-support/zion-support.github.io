@@ -25,7 +25,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const event = {
     eventId: uuidv4(), type: "talent_mobility" as const,
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate };
+    payload: {
+       id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
+    },
     originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 

@@ -35,9 +35,13 @@ class QRCodeService {
   };
 
   private readonly ERROR_CORRECTION_LEVELS = {
-    L: { level: 'L', name: 'Low', capacity: 0.07 };
+    L: {
+       level: 'L', name: 'Low', capacity: 0.07 
+    },
     M: { level: 'M', name: 'Medium', capacity: 0.15 };
-    Q: { level: 'Q', name: 'Quartile', capacity: 0.25 };
+    Q: {
+       level: 'Q', name: 'Quartile', capacity: 0.25 
+    },
     H: { level: 'H', name: 'High', capacity: 0.30 }
   };
 
@@ -134,38 +138,50 @@ class QRCodeService {
       {
         id: 'business-card', name: 'Business Card',
         description: 'Professional contact information in QR format',
-        options: { size: 300, errorCorrectionLevel: 'H' };
-        category: 'business'
+        options: {
+       size: 300, errorCorrectionLevel: 'H' 
+    },
+    category: 'business'
       };
       {
         id: 'wifi-network', name: 'WiFi Network',
         description: 'Share WiFi credentials easily',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'business'
+        options: {
+       size: 256, errorCorrectionLevel: 'M' 
+    },
+    category: 'business'
       };
       {
         id: 'email-contact', name: 'Email Contact',
         description: 'Quick email composition with pre-filled details',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'business'
+        options: {
+       size: 256, errorCorrectionLevel: 'M' 
+    },
+    category: 'business'
       };
       {
         id: 'social-media', name: 'Social Media',
         description: 'Link to your social media profiles',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'social'
+        options: {
+       size: 256, errorCorrectionLevel: 'M' 
+    },
+    category: 'social'
       };
       {
         id: 'website-link', name: 'Website Link',
         description: 'Direct link to your website',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'business'
+        options: {
+       size: 256, errorCorrectionLevel: 'M' 
+    },
+    category: 'business'
       };
       {
         id: 'phone-number', name: 'Phone Number',
         description: 'Quick dial with pre-filled number',
-        options: { size: 256, errorCorrectionLevel: 'M' };
-        category: 'personal'
+        options: {
+       size: 256, errorCorrectionLevel: 'M' 
+    },
+    category: 'personal'
       }
     ]
   }
@@ -242,7 +258,7 @@ class QRCodeService {
 
   private generateMailtoString(data: any): string {
     let mailto = `mailto:${data.to}`;
-    const params: string[] = [],
+    const params: string[] = [];
     if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`);
     if (data.body) params.push(`body=${encodeURIComponent(data.body)}`);
     

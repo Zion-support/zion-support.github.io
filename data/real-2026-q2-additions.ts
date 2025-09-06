@@ -3,7 +3,7 @@ export const real2026Q2Additions = [
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
     features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
     ];
@@ -21,7 +21,7 @@ export const real2026Q2Additions = [
     id: 'ai-synthetic-data-factory', name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',
-    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',
     features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
     ];
@@ -37,7 +37,7 @@ export const real2026Q2Additions = [
     id: 'ecommerce-returns-orchestrator', name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.';
+    description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
     features: [
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores'
     ];
@@ -52,7 +52,7 @@ export const real2026Q2Additions = [
     id: 'ai-analytics-observability-kit', name: 'AI Analytics Observability Kit',
     category: 'Observability',
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
-    description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.';
+    description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',
     features: [
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
     ];
@@ -67,7 +67,7 @@ export const real2026Q2Additions = [
     id: 'cloud-cost-anomaly-guard', name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',
-    description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.';
+    description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',
     features: [
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
     ];
@@ -96,7 +96,7 @@ export const real2026Q2Additions = [
     id: 'status-slo-plus', name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',
-    description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.';
+    description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',
     features: [
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
     ];
@@ -111,7 +111,7 @@ export const real2026Q2Additions = [
     id: 'vendor-risk-automation-pro', name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',
-    description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.';
+    description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',
     features: [
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports'
     ];

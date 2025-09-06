@@ -4,14 +4,16 @@ export interface PasswordStrengthResult {
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong', feedback: string[],
   suggestions: string[],
   details: {
+      
     length: number, hasUppercase: boolean,
     hasLowercase: boolean, hasNumbers: boolean,
     hasSymbols: boolean, hasCommonWords: boolean,
     hasSequentialChars: boolean, hasRepeatingChars: boolean,
     entropy: number,
     crackTime: string
-  };
-  warnings: string[]
+  
+    },
+    warnings: string[]
 }
 
 export interface CommonPasswordData {
@@ -183,7 +185,7 @@ class PasswordStrengthService {
    * Generate feedback based on password analysis
    */
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
-    const feedback: string[] = [],
+    const feedback: string[] = [];
     if (details.length < 8) {
       feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details.length < 12) {
@@ -225,7 +227,7 @@ class PasswordStrengthService {
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
-    const suggestions: string[] = [],
+    const suggestions: string[] = [];
     if (details.length < 12) {
       suggestions.push('Use at least 12 characters for strong passwords')
     }
@@ -253,7 +255,7 @@ class PasswordStrengthService {
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
-    const warnings: string[] = [],
+    const warnings: string[] = [];
     if (details.length < 8) {
       warnings.push('CRITICAL: Password is extremely weak and easily crackable')
     }

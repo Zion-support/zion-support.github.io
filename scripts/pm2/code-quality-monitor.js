@@ -24,7 +24,10 @@
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 ; analyses.forEach(analysis = > {; analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue.severity]++})});
-; const report = {; timestamp: new Date().toISOString(), summary: {, totalFiles; totalIssues; issuesByType; issuesBySeverity}; files: analyses.filter(analysis = > analysis.issues.length > 0),
+; const report = {; timestamp: new Date().toISOString(), summary: {
+      , totalFiles; totalIssues; issuesByType; issuesBySeverity
+    },
+    files: analyses.filter(analysis = > analysis.issues.length > 0),
     recommendations: this.generateRecommendations(issuesByType, totalIssues)};
 ; return report};
 ; generateRecommendations(issuesByType, totalIssues) {; const recommendations = [];
@@ -190,13 +193,15 @@ monitor.run().catch(error = > {; process.exit(1)});
     });
 ;
     const report = {;
-      timestamp: new Date().toISOString(), summary: {,
+      timestamp: new Date().toISOString(), summary: {
+      ,
         totalFiles;
         totalIssues;
         issuesByType;
         issuesBySeverity;
-      };
-      files: analyses.filter(analysis => analysis.issues.length > 0),
+      
+    },
+    files: analyses.filter(analysis => analysis.issues.length > 0),
       recommendations: this.generateRecommendations(issuesByType, totalIssues);
 };
 ;

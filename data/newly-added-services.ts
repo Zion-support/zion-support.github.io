@@ -153,7 +153,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-indigo-600 to-blue-700', textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/browser-automation-copilot',
     marketPosition: 'Cheaper than bespoke Playwright farms, with managed reliability',
-    targetAudience: 'Ops, growth, QA teams';
+    targetAudience: 'Ops, growth, QA teams',
     trialDays: 14, setupTime: '2 hours',
     category: 'Developer Tools', realService: true,
     technology: ['Playwright, Chromium, Workers'];
@@ -261,7 +261,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/services/gdpr-cookie-consent-manager-pro',
     marketPosition: 'Simple, developer-centric CMP for SMEs.',
-    targetAudience: 'Legal, growth, web teams';
+    targetAudience: 'Legal, growth, web teams',
     trialDays: 14, setupTime: '1 hour',
     category: 'Security', realService: true,
     technology: ['Edge Functions, KV store, Next.js'];
@@ -288,7 +288,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-fuchsia-600 to-pink-700', textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-summarizer-pro',
     marketPosition: 'Lightweight, privacy-first alternative to heavy meeting bots.',
-    targetAudience: 'Sales, success, product, ops';
+    targetAudience: 'Sales, success, product, ops',
     trialDays: 14, setupTime: '15 minutes',
     category: 'AI & Machine Learning', realService: true,
     technology: ['Whisper/ASR, LLM, Vector DB'];
@@ -505,7 +505,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-emerald-600 to-green-700', textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/finops-cost-anomaly-guard',
     marketPosition: 'Alternative to building internal FinOps bots and dashboards, quick ROI.',
-    targetAudience: 'FinOps, platform and SRE teams';
+    targetAudience: 'FinOps, platform and SRE teams',
     trialDays: 14, setupTime: '1 day',
     category: 'Cloud & FinOps', realService: true,
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'];
@@ -533,7 +533,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-sky-600 to-blue-700', textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/gdpr-dsar-automation-suite',
     marketPosition: 'Comparable to Transcend and OneTrust modules, simpler setup for SMBs.',
-    targetAudience: 'Legal, security, and data teams';
+    targetAudience: 'Legal, security, and data teams',
     trialDays: 14, setupTime: '3 days',
     category: 'Security & Compliance', realService: true,
     technology: ['Next.js, Node.js, PostgreSQL, S3'];
@@ -644,7 +644,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-powered-email-responder',
     marketPosition: 'Lightweight vs. heavy helpdesk suites, faster time-to-value.',
-    targetAudience: 'Support, sales, ops, founders';
+    targetAudience: 'Support, sales, ops, founders',
     trialDays: 14, setupTime: '30 minutes',
     category: 'AI & Data', realService: true,
     technology: ['Next.jsOpenAIPGVector'], integrations: ['GmailOutlookSlack'],
@@ -669,7 +669,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-first-survey-tool',
     marketPosition: 'Affordable, modern UX vs. legacy survey tools.',
-    targetAudience: 'Research, product, marketing';
+    targetAudience: 'Research, product, marketing',
     trialDays: 14, setupTime: '20 minutes',
     category: 'Developer Tools', realService: true,
     technology: ['Next.jsServerlessPostgreSQL'], integrations: ['ZapierSlackHubSpot'],
@@ -718,7 +718,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: '/services/ai-email-responder-pro',
     marketPosition: 'Faster setup than bespoke Gmail/Outlook add-ins, safer defaults for SMBs.',
-    targetAudience: 'Support, sales, operations, founders';
+    targetAudience: 'Support, sales, operations, founders',
     trialDays: 14, setupTime: '30 minutes',
     category: 'AI & Data', realService: true,
     technology: ['IMAP/Graph API, OpenAI-compatible, Next.js'];
@@ -746,7 +746,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-300',
     link: '/services/mobile-first-survey-studio',
     marketPosition: 'Simpler UX than complex enterprise form builders, great defaults.',
-    targetAudience: 'Marketing, CX, product research';
+    targetAudience: 'Marketing, CX, product research',
     trialDays: 14, setupTime: '20 minutes',
     category: 'Developer Tools', realService: true,
     technology: ['Next.js, Serverless functions, ClickHouse'];
@@ -801,7 +801,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-300',
     link: '/services/podcast-transcription-studio',
     marketPosition: 'Cheaper than fully managed agencies, better tooling than DIY.',
-    targetAudience: 'Podcasters, media teams, agencies';
+    targetAudience: 'Podcasters, media teams, agencies',
     trialDays: 7, setupTime: '10 minutes',
     category: 'AI & Data', realService: true,
     technology: ['Whisper/Deepgram, Next.js, Workers'];
@@ -1048,7 +1048,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-purple-700 to-indigo-800', textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/ai-legal-clause-recommender',
     marketPosition: 'Focused legal assistant for faster reviews, not a replacement.',
-    targetAudience: 'In-house legal, procurement';
+    targetAudience: 'In-house legal, procurement',
     trialDays: 7, setupTime: '1–2 days',
     category: 'AI & Data', realService: true,
     technology: ['LLMVector DBTemplate engine'], integrations: ['SharePointGoogle Drive'],

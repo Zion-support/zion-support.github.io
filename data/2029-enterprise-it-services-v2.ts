@@ -44,15 +44,15 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     scalability: 'Enterprise-grade, multi-cloud support',
     roi: '500% within 12 months',
     deployment: 'Cloud-native, hybrid options',
-    maintenance: 'Fully autonomous, continuous optimization';
+    maintenance: 'Fully autonomous, continuous optimization',
     training: 'DevOps training, certification program',
-    documentation: 'DevOps guides, best practices';
+    documentation: 'DevOps guides, best practices',
     api: 'Full REST API, webhook support',
     mobile: 'Mobile management apps',
     security: 'Enterprise security, compliance automation',
-    backup: 'Automated backup, disaster recovery';
+    backup: 'Automated backup, disaster recovery',
     monitoring: 'Autonomous monitoring, self-healing',
-    analytics: 'DevOps insights, performance metrics';
+    analytics: 'DevOps insights, performance metrics',
     customization: 'Custom workflows, integration templates',
     whiteLabel: 'Available for enterprise clients', affiliate: '20% commission for referrals',
     referral: '$20,000 bonus for partnerships',
@@ -87,13 +87,13 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     deployment: 'Cloud-native, quantum-ready',
     maintenance: 'Continuous quantum optimization',
     training: 'Quantum computing training, certification',
-    documentation: 'Quantum guides, best practices';
+    documentation: 'Quantum guides, best practices',
     api: 'Quantum computing APIs', mobile: 'Mobile quantum management',
     security: 'Quantum-safe encryption, zero-trust',
-    backup: 'Quantum backup, disaster recovery';
+    backup: 'Quantum backup, disaster recovery',
     monitoring: 'Quantum performance monitoring',
     analytics: 'Quantum insights, performance metrics',
-    customization: 'Custom quantum workflows, integration';
+    customization: 'Custom quantum workflows, integration',
     whiteLabel: 'Available for cloud providers', affiliate: '15% commission for referrals',
     referral: '$75,000 bonus for partnerships',
     partnership: 'Strategic cloud partnerships',
@@ -125,15 +125,15 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     scalability: 'Enterprise-grade, global deployment',
     roi: '600% within 15 months',
     deployment: 'Cloud-native, on-premise options',
-    maintenance: 'Continuous AI learning, threat updates';
+    maintenance: 'Continuous AI learning, threat updates',
     training: 'Security training, certification program',
-    documentation: 'Security guides, best practices';
+    documentation: 'Security guides, best practices',
     api: 'Security management APIs', mobile: 'Mobile security apps',
     security: 'Enterprise-grade security, encryption',
-    backup: 'Secure backup, disaster recovery';
+    backup: 'Secure backup, disaster recovery',
     monitoring: 'Real-time security monitoring',
     analytics: 'Security insights, threat intelligence',
-    customization: 'Custom security policies, integration';
+    customization: 'Custom security policies, integration',
     whiteLabel: 'Available for security providers', affiliate: '20% commission for referrals',
     referral: '$30,000 bonus for partnerships',
     partnership: 'Strategic security partnerships',
@@ -165,14 +165,14 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     scalability: 'Enterprise-grade, multi-tenant support',
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options',
-    maintenance: 'Fully autonomous, continuous optimization';
+    maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
-    documentation: 'Operations guides, best practices';
+    documentation: 'Operations guides, best practices',
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
     security: 'Enterprise security, access controls',
-    backup: 'Automated backup, disaster recovery';
+    backup: 'Automated backup, disaster recovery',
     monitoring: 'Autonomous monitoring, self-healing',
-    analytics: 'Operations insights, performance metrics';
+    analytics: 'Operations insights, performance metrics',
     customization: 'Custom workflows, integration templates',
     whiteLabel: 'Available for enterprise clients', affiliate: '20% commission for referrals',
     referral: '$40,000 bonus for partnerships',

@@ -5,7 +5,7 @@ type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
-  let summaries: TalentSummary[] = [],
+  let summaries: TalentSummary[] = [];
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);

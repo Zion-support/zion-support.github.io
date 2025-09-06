@@ -48,8 +48,11 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 ; if (daysSinceLastCommit > 30) {; staleBranches.push({; name: branchName, lastCommit: lastCommit, daysSinceLastCommit: Math.floor(daysSinceLastCommit)})}} catch (error) {; // Skip if can't access branch}}};
 ; return {; success: true,
     staleBranches: staleBranches}} catch (error) {; return {; success: false, error: error.message, staleBranches: []}}};
-; async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {, hasChanges: statusInfo.hasChanges, currentBranch: statusInfo.currentBranch, totalBranches: branchInfo.branches?.length || 0, hasConflicts: conflictInfo.hasConflicts, staleBranches: staleInfo.staleBranches?.length || 0,
-    healthScore: 0}; details: {, status: statusInfo, branches: branchInfo, conflicts: conflictInfo, stale: staleInfo}; recommendations: []};
+; async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , hasChanges: statusInfo.hasChanges, currentBranch: statusInfo.currentBranch, totalBranches: branchInfo.branches?.length || 0, hasConflicts: conflictInfo.hasConflicts, staleBranches: staleInfo.staleBranches?.length || 0,
+    healthScore: 0
+    },
+    details: {, status: statusInfo, branches: branchInfo, conflicts: conflictInfo, stale: staleInfo}; recommendations: []};
 ; // Calculate health score; let score = 100; if (statusInfo.hasChanges) score - = 10; if (conflictInfo.hasConflicts) score - = 30; if (staleInfo.staleBranches?.length > 0) score - = 20; if (branchInfo.branches?.length > 10) score - = 10;
 ; report.summary.healthScore = Math.max(score, 0);
 ; // Generate recommendations; if (statusInfo.hasChanges) {; report.recommendations.push({; priority: 'medium', message: 'Uncommitted changes detected', action: 'Commit or stash changes before switching branches'})};

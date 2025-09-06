@@ -53,7 +53,8 @@ Format the response as a JSON object with the following structure:
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
-      temperature: 0.7});
+      temperature: 0.7
+      });
 
     const responseText = completion.choices[0].message.content;
     
@@ -74,8 +75,10 @@ Format the response as a JSON object with the following structure:
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.", tags: [],
-        suggestedPrice: { min: 0, max: 0 };
-        keyPoints: []
+        suggestedPrice: {
+       min: 0, max: 0 
+    },
+    keyPoints: []
       }
     }
 

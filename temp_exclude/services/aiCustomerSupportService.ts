@@ -94,9 +94,9 @@ export interface AIRecommendation {
 }
 
 class AICustomerSupportService {
-  private tickets: SupportTicket[] = [], private customers: Customer[] = [],
-  private agents: SupportAgent[] = [], private chatbotSessions: ChatbotSession[] = [],
-  private knowledgeBase: KnowledgeBaseArticle[] = [], private analytics: SupportAnalytics,
+  private tickets: SupportTicket[] = []; private customers: Customer[] = [];
+  private agents: SupportAgent[] = []; private chatbotSessions: ChatbotSession[] = [];
+  private knowledgeBase: KnowledgeBaseArticle[] = []; private analytics: SupportAnalytics,
 
   constructor() {
     this.initializeSampleData();
@@ -345,7 +345,7 @@ class AICustomerSupportService {
   }
 
   async getAIRecommendations(): Promise<AIRecommendation[]> {
-    const recommendations: AIRecommendation[] = [],
+    const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
     const highPriorityOpenTickets = this.tickets.filter(t => 
       t.priority === 'high' && t.status === 'open'

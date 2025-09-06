@@ -12,10 +12,12 @@ interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+      
     min: number,
     max: number
-  };
-  keyPoints: string[]
+  
+    },
+    keyPoints: string[]
 }
 
 interface AIListingGeneratorProps {

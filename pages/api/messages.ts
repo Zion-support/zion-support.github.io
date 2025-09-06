@@ -25,8 +25,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const now = new Date().toISOString();
     const msg: Message = {
       id: uuidv4(), conversationId: String(conversationId),
-      sender: { type: sender.type, id: String(sender.id) };
-      text: text ? String(text) : undefined, attachments: Array.isArray(attachments) ? attachments : undefined,
+      sender: {
+       type: sender.type, id: String(sender.id) 
+    },
+    text: text ? String(text) : undefined, attachments: Array.isArray(attachments) ? attachments : undefined,
       createdAtIso: now,
       readBy: [{ participantId: String(sender.id), readAtIso: now }]};
 

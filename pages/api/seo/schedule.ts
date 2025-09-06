@@ -26,8 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const genReq = await fetch(`${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ prompt, region, service })});
+        headers: {
+       'Content-Type': 'application/json' 
+    },
+    body: JSON.stringify({ prompt, region, service })});
       const gen = await genReq.json();
       if (gen?.slug && gen?.payload) {
         fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2))

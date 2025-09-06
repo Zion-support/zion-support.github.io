@@ -8,7 +8,7 @@ export default function CaseStudyPage() {
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
-    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization';
+    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
     ];

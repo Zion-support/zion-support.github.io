@@ -25,6 +25,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema),
     defaultValues: {
+      
       title: '', company: '',
       location: '', job_type: '',
       salary_range: '', description: '',
@@ -33,7 +34,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       contact_email: '', published_date: '',
       expiry_date: '', is_remote: false,
       category: '', status: '',
-      external_apply_link: ''};
+      external_apply_link: ''
+    },
     mode: "onChange"});
 
   // Function to create/update jobs that will be implemented by parent component

@@ -193,10 +193,12 @@ class ContinuousCloudAgents {
     const health = {
       status: 'healthy',
       checks: {
+      
         running: status.isRunning, agents: status.agents.length > 0,
         memory: true
-      };
-      issues: [],
+      
+    },
+    issues: [],
       timestamp: new Date().toISOString()
     };
 

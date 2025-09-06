@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const state = readState();
   const atsProviders = state.connections.filter(c => c.providerId === 'greenhouse' || c.providerId === 'lever' || c.providerId === 'workable' || c.providerId === 'bamboohr');
-  const results: any[] = [],
+  const results: any[] = [];
   for (const conn of atsProviders) {
     const { log } = await ats.updateStatus(conn, { applicantId: talent.id, status: 'hired' });
     writeState(s => s.logs.push(log));

@@ -142,8 +142,8 @@ export default function CaseStudyResourcePage() {
       company: 'E-commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
-    description: 'Building self-healing, auto-scaling cloud infrastructure.';
-      fullContent: `
+    description: 'Building self-healing, auto-scaling cloud infrastructure.',
+    fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
         reduce costs while improving performance and reliability for high-traffic applications.</p>

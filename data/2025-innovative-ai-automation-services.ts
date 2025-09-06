@@ -14,11 +14,13 @@ export interface InnovativeAIAutomationService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -44,7 +46,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-autonomous-code-review',
     marketPosition: 'Competes with SonarQube, CodeClimate, and Snyk, offers AI-powered insights and automation.',
-    targetAudience: 'Development teams, DevOps engineers, Security teams';
+    targetAudience: 'Development teams, DevOps engineers, Security teams',
     trialDays: 14, setupTime: '2 hours',
     category: 'AI & Development', realService: true,
     technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'], integrations: ['GitHubGitLabBitbucketJiraSlackTeams'],
@@ -69,7 +71,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-autonomous-testing-orchestrator',
     marketPosition: 'Advanced alternative to Selenium, Cypress, and Playwright with AI automation.',
-    targetAudience: 'QA teams, DevOps engineers, Development teams';
+    targetAudience: 'QA teams, DevOps engineers, Development teams',
     trialDays: 21, setupTime: '4 hours',
     category: 'AI & Testing', realService: true,
     technology: ['OpenAI GPT-4, React, Node.js, Python, PostgreSQL, Redis, AWS'];
@@ -97,7 +99,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator',
     marketPosition: 'Competes with Terraform, Ansible, and Pulumi, adds AI-powered automation and prediction.',
-    targetAudience: 'DevOps engineers, SRE teams, Platform engineers';
+    targetAudience: 'DevOps engineers, SRE teams, Platform engineers',
     trialDays: 30, setupTime: '1 day',
     category: 'AI & DevOps', realService: true,
     technology: ['Python, Terraform, Kubernetes, OpenAI, TensorFlow, Prometheus'];
@@ -125,7 +127,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-autonomous-data-pipeline',
     marketPosition: 'Advanced alternative to Apache Airflow, Prefect, and Dagster with AI automation.',
-    targetAudience: 'Data engineers, Data scientists, Analytics teams';
+    targetAudience: 'Data engineers, Data scientists, Analytics teams',
     trialDays: 14, setupTime: '6 hours',
     category: 'AI & Data', realService: true,
     technology: ['Python, Apache Airflow, Apache Spark, OpenAI, TensorFlow, PostgreSQL'];
@@ -153,7 +155,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
     marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar, offers AI-powered automation.',
-    targetAudience: 'Security teams, SOC analysts, IT administrators';
+    targetAudience: 'Security teams, SOC analysts, IT administrators',
     trialDays: 21, setupTime: '8 hours',
     category: 'AI & Security', realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
@@ -164,10 +166,12 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$30B business intelligence market', growthRate: '26% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.',
     launchDate: '2025-01-25', customers: 156,
@@ -190,7 +194,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-teal-600 to-cyan-700', textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/autonomous-data-analytics',
     marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
-    targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams';
+    targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',
     trialDays: 30, setupTime: '2 weeks',
     category: 'AI & Analytics', realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
@@ -213,7 +217,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/ai-hr-management-system',
     marketPosition: 'Competes with Workday ($99/month), BambooHR ($6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.',
-    targetAudience: 'HR departments, Recruiting agencies, Small businesses, Enterprise companies, Non-profits';
+    targetAudience: 'HR departments, Recruiting agencies, Small businesses, Enterprise companies, Non-profits',
     trialDays: 14, setupTime: '1-3 weeks',
     category: 'HR AI', realService: true,
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
@@ -224,10 +228,12 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$20B HR software market', growthRate: '20% annual growth',
     variant: 'ai-hr', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.',
     launchDate: '2025-01-28', customers: 234,

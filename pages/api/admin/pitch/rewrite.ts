@@ -22,7 +22,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' };
+          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
           { role: 'user', content: prompt }];
         temperature: 0.6,
         response_format: { type: 'json_object' } as any});

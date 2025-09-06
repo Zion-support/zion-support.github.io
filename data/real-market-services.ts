@@ -14,11 +14,13 @@ export interface RealMarketService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -44,7 +46,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
     marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI, adds enterprise guardrails and governance.',
-    targetAudience: 'Product teams, platform engineering, data/AI teams';
+    targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14, setupTime: '1 day',
     category: 'AI & Data', realService: true,
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'];
@@ -72,7 +74,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/api-observability-starter',
     marketPosition: 'Alternative to building in-house, complements Datadog and Grafana Cloud.',
-    targetAudience: 'Backend engineers, SREs, platform teams';
+    targetAudience: 'Backend engineers, SREs, platform teams',
     trialDays: 7, setupTime: '1 day',
     category: 'Observability', realService: true,
     technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki'];
@@ -100,7 +102,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
     marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks, alternatives include Mailgun, SendGrid add-ons.',
-    targetAudience: 'Growth, marketing ops, and platform teams';
+    targetAudience: 'Growth, marketing ops, and platform teams',
     trialDays: 7, setupTime: '30 minutes',
     category: 'Quality & Monitoring', realService: true,
     technology: ['Next.js, DNS, TLS'];
@@ -111,10 +113,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B+ deliverability tooling', growthRate: '15% YoY',
     variant: 'monitoring-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'DNS checks, seed-list tests, blacklist APIs, and scheduled warmup orchestration.',
     launchDate: '2025-02-01', customers: 120,
@@ -144,10 +148,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$5B affiliate platforms', growthRate: '12% YoY',
     variant: 'growth-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Attribution pipelines, event deduplication, and payout batch jobs.',
     launchDate: '2025-01-15', customers: 65,
@@ -176,10 +182,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$10B+ AI support', growthRate: '30% YoY',
     variant: 'ai-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Knowledge sync, embeddings, intent detection, and action tools.',
     launchDate: '2025-02-05', customers: 42,
@@ -209,10 +217,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B SMB analytics', growthRate: '14% YoY',
     variant: 'analytics-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Snippet-based analytics with server-side aggregation and privacy safeguards.',
     launchDate: '2025-02-10', customers: 33,
     rating: 4.5,
@@ -230,7 +240,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
     marketPosition: 'Competitor to CloudZero, ProsperOps, and native cloud tools, simpler onboarding.',
-    targetAudience: 'FinOps, platform engineering, engineering leadership';
+    targetAudience: 'FinOps, platform engineering, engineering leadership',
     trialDays: 14, setupTime: '3 days',
     category: 'Cloud & FinOps', realService: true,
     technology: ['AWS, GCP, Azure, BQ/Redshift'];
@@ -285,7 +295,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-sky-600 to-indigo-700', textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
     marketPosition: 'Accelerator vs DIY, complements vendor docs with turnkey wiring.',
-    targetAudience: 'Data engineers, ML engineers, startups';
+    targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7, setupTime: '1–2 days',
     category: 'AI & Data', realService: true,
     technology: ['Pinecone, Weaviate, Elastic, OpenAI'];
@@ -340,7 +350,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-rose-600 to-orange-700', textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/api-security-scanner',
     marketPosition: 'Competes with Salt Security and Noname (enterprise pricing $3k–$10k+/mo). Lightweight, developer-first and CI-friendly.',
-    targetAudience: 'Platform and app security teams, backend engineers';
+    targetAudience: 'Platform and app security teams, backend engineers',
     trialDays: 14, setupTime: '1–3 days',
     category: 'Security & Compliance', realService: true,
     technology: ['Node.js, Python, OpenAPI, GraphQL'];
@@ -422,7 +432,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/uptime-slo-monitor',
     marketPosition: 'Alternatives include Better Uptime and UptimeRobot ($8–$49/mo), SLO-first design and budgets included.',
-    targetAudience: 'SREs, platform and product teams';
+    targetAudience: 'SREs, platform and product teams',
     trialDays: 14, setupTime: '1 hour',
     category: 'Observability', realService: true,
     technology: ['Node.js, Grafana, Prometheus'];
@@ -449,7 +459,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-fuchsia-600 to-pink-700', textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/status-pages-slo',
     marketPosition: 'Competes with Atlassian Statuspage ($29–$1200/mo), simpler SLO-native approach.',
-    targetAudience: 'SaaS, infra and platform teams';
+    targetAudience: 'SaaS, infra and platform teams',
     trialDays: 14, setupTime: '1 hour',
     category: 'Observability', realService: true,
     technology: ['Next.js, Node.js'];
@@ -477,7 +487,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
     marketPosition: 'Comparable to EasyCron and CloudWatch Events, adds portable templates and alerts.',
-    targetAudience: 'Developers, data engineers, SREs';
+    targetAudience: 'Developers, data engineers, SREs',
     trialDays: 14, setupTime: '1 hour',
     category: 'Developer Tools', realService: true,
     technology: ['Node.js, Queues, Serverless'];
@@ -505,7 +515,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-slate-600 to-slate-800', textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/pdf-render-api',
     marketPosition: 'Competes with PDFMonkey/DocRaptor ($29–$99/mo). Simple pricing, great output quality.',
-    targetAudience: 'Developers, ops, finance';
+    targetAudience: 'Developers, ops, finance',
     trialDays: 7, setupTime: '30 minutes',
     category: 'Developer Tools', realService: true,
     technology: ['Puppeteer, Node.js'];
@@ -560,7 +570,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-teal-600 to-emerald-700', textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/vendor-risk-automation',
     marketPosition: 'Alternatives: Whistic, OneTrust Vendor Risk ($300–$2k/mo). We focus on speed and automation.',
-    targetAudience: 'Security, procurement and legal';
+    targetAudience: 'Security, procurement and legal',
     trialDays: 14, setupTime: '1–2 weeks',
     category: 'Security & Compliance', realService: true,
     technology: ['Next.js, Workflows'];
@@ -632,7 +642,7 @@ export const realMarketServices: RealMarketService[] = [
   {
     id: 'cloud-platform-managed-kubernetes', name: 'Managed Kubernetes Platform',
     tagline: 'Production EKS/GKE/AKS with GitOps, SSO and guardrails',
-    price: '$1,999';
+    price: '$1,999',
     period: '/month',
     description: 'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',
     features: [
@@ -670,7 +680,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/rum-analytics-starter',
     marketPosition: 'Comparable to SpeedCurve RUM, Raygun RUM, and New Relic Browser, focused SMB starter with clear insights.',
-    targetAudience: 'Growth, product, and web teams';
+    targetAudience: 'Growth, product, and web teams',
     trialDays: 7, setupTime: '15 minutes',
     category: 'Analytics', realService: true,
     technology: ['Edge analytics, JS snippet'];
@@ -697,7 +707,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/accessibility-compliance-auditor',
     marketPosition: 'Alternative to manual audits, complements Deque axe and Pa11y in CI/CD.',
-    targetAudience: 'Web, product, and compliance teams';
+    targetAudience: 'Web, product, and compliance teams',
     trialDays: 7, setupTime: '1 hour',
     category: 'Quality & Monitoring', realService: true,
     technology: ['Node.js, Playwright, axe-core'];
@@ -725,7 +735,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/api-latency-budget-enforcer',
     marketPosition: 'Bridges observability and execution, complements Datadog SLO and Grafana.',
-    targetAudience: 'SREs, platform and backend teams';
+    targetAudience: 'SREs, platform and backend teams',
     trialDays: 14, setupTime: '1 day',
     category: 'Observability', realService: true,
     technology: ['OpenTelemetry, Prometheus, Grafana'];
@@ -780,7 +790,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-amber-600 to-orange-700', textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/cookie-consent-manager',
     marketPosition: 'Simple alternative to complex CMPs, transparent pricing for SMBs.',
-    targetAudience: 'Marketing, legal, and web teams';
+    targetAudience: 'Marketing, legal, and web teams',
     trialDays: 7, setupTime: '30 minutes',
     category: 'Security & Compliance', realService: true,
     technology: ['Next.js, Edge middleware'];
@@ -807,7 +817,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/backup-policy-auditor',
     marketPosition: 'Brings reliability SRE rigor to backups, complements cloud-native backup tools.',
-    targetAudience: 'SREs, platform and data teams';
+    targetAudience: 'SREs, platform and data teams',
     trialDays: 14, setupTime: '2 days',
     category: 'Cloud & FinOps', realService: true,
     technology: ['AWS, GCP, Azure, Postgres, MySQL'];
@@ -835,7 +845,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/consent-compliance-kit',
     marketPosition: 'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
-    targetAudience: 'Marketing ops, legal/compliance, web teams';
+    targetAudience: 'Marketing ops, legal/compliance, web teams',
     trialDays: 7, setupTime: '1 day',
     category: 'Privacy & Compliance', realService: true,
     technology: ['Next.js, Tag Manager, IAB TCF v2'];
@@ -971,7 +981,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-teal-600 to-emerald-700', textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/soc2-readiness-scanner',
     marketPosition: 'Faster SOC 2 preparation for startups, complements evidence automation.',
-    targetAudience: 'Founders, security leads, compliance managers';
+    targetAudience: 'Founders, security leads, compliance managers',
     trialDays: 7, setupTime: '1 day',
     category: 'Security & Compliance', realService: true,
     technology: ['Node.js, OAuth integrations, Evidence store'];
@@ -1026,7 +1036,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-rose-600 to-pink-700', textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/llm-red-team-simulator',
     marketPosition: 'Proactive LLM safety for production apps, complements guardrails.',
-    targetAudience: 'AI platform teams, security engineers';
+    targetAudience: 'AI platform teams, security engineers',
     trialDays: 7, setupTime: '1 day',
     category: 'AI Safety', realService: true,
     technology: ['OpenAI, Anthropic, Garak, OWASP Top 10 for LLMs'];
@@ -1184,10 +1194,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$2B bot mitigation', growthRate: '16% YoY',
     variant: 'security-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',
     launchDate: '2025-02-25', customers: 19,
@@ -1206,7 +1218,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/reverse-etl-lite',
     marketPosition: 'Affordable, focused alternative to heavy Reverse ETL suites.',
-    targetAudience: 'Growth, data engineering, RevOps';
+    targetAudience: 'Growth, data engineering, RevOps',
     trialDays: 14, setupTime: '1 hour',
     category: 'Data & Analytics', realService: true,
     technology: ['Node.js, Airflow/dbt optional, OAuth'];
@@ -1217,10 +1229,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B reverse ETL', growthRate: '30% YoY',
     variant: 'data-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Connectors, incremental keys, idempotent upserts, error DLQ.',
     launchDate: '2025-02-26', customers: 12,
@@ -1239,7 +1253,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-violet-600 to-fuchsia-700', textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
     marketPosition: 'Purpose-built for proposal teams, governance and citations built-in.',
-    targetAudience: 'Sales engineering, proposal teams, compliance';
+    targetAudience: 'Sales engineering, proposal teams, compliance',
     trialDays: 14, setupTime: '1 day',
     category: 'AI & Data', realService: true,
     technology: ['Embeddings, Vector DB, OpenAI-compatible'];
@@ -1250,10 +1264,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B RFP tooling', growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Document loaders, chunking, topic maps, structured draft generator.',
     launchDate: '2025-02-20', customers: 14,
@@ -1282,10 +1298,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B eval tooling', growthRate: '35% YoY',
     variant: 'ai-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',
     launchDate: '2025-02-12', customers: 16,
@@ -1314,10 +1332,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$2B privacy tooling', growthRate: '18% YoY',
     variant: 'security-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Banner + middleware policy, receipts store, export jobs.',
     launchDate: '2025-02-18', customers: 27,
@@ -1346,10 +1366,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1.5B data collection', growthRate: '20% YoY',
     variant: 'data-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',
     launchDate: '2025-02-22', customers: 10,
@@ -1376,10 +1398,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$9B returns tech', growthRate: '18% YoY',
     variant: 'growth-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Embedded portal, label API wiring, policy engine and analytics.',
     launchDate: '2025-02-08', customers: 52,
@@ -1405,10 +1429,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$6B sales engagement', growthRate: '20% YoY',
     variant: 'growth-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Sequence engine, deliverability checks, reply webhooks.',
     launchDate: '2025-02-06', customers: 78,
@@ -1435,10 +1461,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$2B podcast tooling', growthRate: '19% YoY',
     variant: 'ai-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Batch ASR, diarization, topic modeling, clip renderers.',
     launchDate: '2025-02-02', customers: 140,
@@ -1465,10 +1493,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$4B creator sites', growthRate: '11% YoY',
     variant: 'growth-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Template presets, CMS‑like editing, lead capture widgets.',
     launchDate: '2025-02-04', customers: 210,
@@ -1495,10 +1525,12 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['HubSpot StarterPipedrive Essentials'], marketSize: '$20B SMB CRM',
     growthRate: '10% YoY', variant: 'analytics-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Minimal CRM with reminders and basic pipeline views.',
     launchDate: '2025-02-03', customers: 320,
     rating: 4.5,
@@ -1524,10 +1556,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$3B marketing AI', growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Prompting templates, scoring heuristics, and ESP exports.',
     launchDate: '2025-02-07', customers: 95,
@@ -1554,10 +1588,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$5B dev analytics', growthRate: '21% YoY',
     variant: 'analytics-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',
     launchDate: '2025-02-09', customers: 44,
@@ -1584,10 +1620,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$3B privacy tech', growthRate: '16% YoY',
     variant: 'security-futuristic' as any,
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',
     launchDate: '2025-02-01', customers: 88,

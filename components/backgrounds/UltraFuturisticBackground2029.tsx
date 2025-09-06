@@ -33,7 +33,7 @@ export default function UltraFuturisticBackground2029() {
 
     // Initialize particles
     const initParticles = () => {
-      const particles: Particle[] = [],
+      const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 
       for (let i = 0, i < particleCount, i++) {

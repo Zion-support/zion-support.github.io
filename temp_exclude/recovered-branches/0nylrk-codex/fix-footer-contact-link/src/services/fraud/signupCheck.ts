@@ -10,7 +10,7 @@ export const checkSignupPatterns = async (
   email: string,
   ipAddress?: string
 ): Promise<SignupCheckResult> => {
-  const reasons: string[] = [],
+  const reasons: string[] = [];
   // Check email against suspicious patterns
   const emailCheck = analyzeEmail(email);
   if (emailCheck.isSuspicious) {

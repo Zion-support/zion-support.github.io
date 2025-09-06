@@ -161,7 +161,7 @@ export function TalentRegistrationForm() {
       
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills;
-      const newSkills: string[] = [],
+      const newSkills: string[] = [];
       
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
@@ -255,7 +255,7 @@ export function TalentRegistrationForm() {
             finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
-            const aiSkills: string[] = [],
+            const aiSkills: string[] = [];
             
             // Extract skills from each category and ensure they're strings
             Object.values(categorizedSkills).forEach(categorySkills => {

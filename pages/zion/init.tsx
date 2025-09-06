@@ -9,12 +9,14 @@ type DeployFormState = {
   tokenActivation: boolean,
   governanceMode: GovernanceMode,
   branding: {
+      
     logoUrl: string,
     primaryColor: string,
     secondaryColor: string,
     subdomain: string
-  };
-  modules: Record<string, boolean>;
+  
+    },
+    modules: Record<string, boolean>;
   bonusModules: Record<string, boolean>
 };
 

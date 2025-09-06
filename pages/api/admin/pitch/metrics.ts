@@ -10,10 +10,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     mrr: 82000, yoyGrowth: 1.85,
     completedProjects: 3275, globalReach: ['USEUAPACLATAM'],
     funnel: [
-      { stage: 'Visitors', value: 250000 };
-      { stage: 'Leads', value: 38000 };
-      { stage: 'Opportunities', value: 8200 };
-      { stage: 'Conversions', value: 1650 }];
+      
+      { stage: 'Visitors', value: 250000 },
+      { stage: 'Leads', value: 38000 },
+      { stage: 'Opportunities', value: 8200 },
+      { stage: 'Conversions', value: 1650 }
+    ],
     clients: [
       { name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' };
       { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }]};

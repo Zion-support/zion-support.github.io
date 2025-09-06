@@ -77,7 +77,7 @@ export default function TranslationManager() {
     }
     
     const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = [],
+    const filtered: string[] = [];
     
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {

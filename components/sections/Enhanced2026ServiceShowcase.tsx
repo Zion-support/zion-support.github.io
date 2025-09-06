@@ -17,11 +17,13 @@ export default function Enhanced2026ServiceShowcase() {
   };
 
   const itemVariants = {
-    hidden: { 
+    hidden: {
+       
       opacity: 0,
       y: 50,
       scale: 0.9
-    };
+    
+    },
     visible: { 
       opacity: 1,
       y: 0,

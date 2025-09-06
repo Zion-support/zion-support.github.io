@@ -57,7 +57,7 @@ export const realServicesQ32025: Q3Service[] = [
   {
     id: 'digital-product-commerce-stack', name: 'Digital Product Commerce Stack',
     tagline: 'End-to-end setup for selling downloads, licenses, and subscriptions',
-    price: '$1,200';
+    price: '$1,200',
     period: '/project',
     description: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
     features: [

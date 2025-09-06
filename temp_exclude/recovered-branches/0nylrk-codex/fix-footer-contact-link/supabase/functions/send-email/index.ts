@@ -21,11 +21,15 @@ serve(async (req) => {
       html});
 
     return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500})
   }
 });

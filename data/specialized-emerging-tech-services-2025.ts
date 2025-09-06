@@ -14,11 +14,13 @@ export interface SpecializedEmergingTechService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
   benefits: string[], capabilities: string[],
@@ -46,7 +48,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     color: 'from-purple-600 to-pink-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ar-vr-metaverse-platform',
     marketPosition: 'Advanced AR/VR platform competing with Unity ($40/month) and Unreal Engine ($1,850/year)',
-    targetAudience: 'Gaming companies, E-commerce businesses, Educational institutions, Real estate companies';
+    targetAudience: 'Gaming companies, E-commerce businesses, Educational institutions, Real estate companies',
     trialDays: 14, setupTime: '1 week',
     category: 'AR/VR & Metaverse', realService: true,
     technology: ['Unity, Unreal Engine, WebXR, Three.js, React, Node.js'];
@@ -194,7 +196,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     color: 'from-violet-600 to-purple-600', textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-internet-platform',
     marketPosition: 'Advanced quantum internet platform competing with ID Quantique ($50,000/year) and Toshiba ($100,000/year)',
-    targetAudience: 'Government agencies, Financial institutions, Defense contractors, Research institutions';
+    targetAudience: 'Government agencies, Financial institutions, Defense contractors, Research institutions',
     trialDays: 30, setupTime: '4 weeks',
     category: 'Quantum Internet', realService: true,
     technology: ['Quantum Computing, Quantum Cryptography, Python, Qiskit, Quantum protocols'];

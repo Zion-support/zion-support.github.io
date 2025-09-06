@@ -33,9 +33,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       author: body.author!, publishDate: body.publishDate!,
       tags: body.tags || [], topics: body.topics || [],
       seo: {
+      
         metaTitle: body.seo?.metaTitle || body.title!, metaDescription: body.seo?.metaDescription || '',
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''};
-      body: body.body || '', status: body.status || 'draft',
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''
+    },
+    body: body.body || '', status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 }};
     posts.unshift(post);
     writePosts(posts);

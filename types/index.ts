@@ -163,9 +163,11 @@ export interface FooterSection {
 export interface HeroSection {
   title: string, subtitle: string,
   cta: {
+      
     primary: {
       text: string, href: string,
-    };
+    
+    },
     secondary: {
       text: string, href: string,
     };

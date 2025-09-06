@@ -14,11 +14,13 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -29,7 +31,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   {
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
-    price: '$1,199';
+    price: '$1,199',
     period: '/month',
     description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
     features: [
@@ -40,7 +42,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-network-architecture',
     marketPosition: 'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies';
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
     trialDays: 21, setupTime: '2 weeks',
     category: 'Cybersecurity & Networking', realService: true,
     technology: ['Zero TrustNetwork SecurityReactNode.jsPostgreSQLAWS'], integrations: ['Active DirectoryLDAPSAMLOAuthCustom identity systems'],
@@ -48,10 +50,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready zero trust platform with comprehensive security controls, monitoring, and enterprise deployment.',
     launchDate: '2026-01-10', customers: 850,
@@ -73,7 +77,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/multi-cloud-orchestration',
     marketPosition: 'Competitive with HashiCorp ($0-1000), Terraform Cloud ($0-500), and CloudBolt ($0-1000). Our advantage: Multi-cloud focus, better pricing, and comprehensive orchestration.',
-    targetAudience: 'Enterprises, Cloud architects, DevOps teams, IT managers, Technology companies, Multi-cloud organizations';
+    targetAudience: 'Enterprises, Cloud architects, DevOps teams, IT managers, Technology companies, Multi-cloud organizations',
     trialDays: 30, setupTime: '1 week',
     category: 'Cloud & DevOps', realService: true,
     technology: ['Multi-CloudKubernetesReactNode.jsPostgreSQLAWS'], integrations: ['AWSAzureGoogle CloudKubernetesTerraformAnsible'],
@@ -81,10 +85,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['HashiCorpTerraform CloudCloudBoltRightScaleScalr'], marketSize: '$28.9B market',
     growthRate: '280% annual growth', variant: 'cloud-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready multi-cloud platform with orchestration, monitoring, and optimization capabilities.',
     launchDate: '2026-01-20', customers: 1200,
@@ -107,7 +113,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-it-operations-center',
     marketPosition: 'Competitive with ServiceNow ($1000+/month), BMC Helix ($800+/month), and Micro Focus ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive automation.',
-    targetAudience: 'Large enterprises, MSPs, IT service providers, Technology companies, Government agencies, Fortune 500 companies';
+    targetAudience: 'Large enterprises, MSPs, IT service providers, Technology companies, Government agencies, Fortune 500 companies',
     trialDays: 21, setupTime: '2 weeks',
     category: 'IT Operations & AI', realService: true,
     technology: ['AI/MLIT OperationsReactNode.jsPostgreSQLAWS'], integrations: ['ServiceNowBMCMicro FocusCustom IT systemsMonitoring tools'],
@@ -115,10 +121,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['ServiceNowBMC HelixMicro FocusBMC SoftwareCA Technologies'], marketSize: '$35.2B market',
     growthRate: '240% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready AI operations platform with intelligent monitoring, automation, and enterprise features.',
     launchDate: '2026-02-01', customers: 680,
@@ -141,7 +149,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-ready-infrastructure',
     marketPosition: 'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/month), and Amazon Braket ($0-1000). Our advantage: Infrastructure focus, quantum preparation, and enterprise features.',
-    targetAudience: 'Forward-thinking enterprises, Research institutions, Government agencies, Technology companies, Universities, Quantum computing companies';
+    targetAudience: 'Forward-thinking enterprises, Research institutions, Government agencies, Technology companies, Universities, Quantum computing companies',
     trialDays: 14, setupTime: '1 month',
     category: 'Quantum & Infrastructure', realService: true,
     technology: ['Quantum ComputingInfrastructureReactNode.jsPostgreSQLQuantum Simulators'], integrations: ['IBM QuantumGoogle QuantumAmazon BraketCustom infrastructureQuantum hardware'],
@@ -149,10 +157,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['IBM QuantumGoogle QuantumAmazon BraketMicrosoft Azure QuantumRigetti'], marketSize: '$12.8B market',
     growthRate: '380% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready quantum infrastructure platform with hybrid computing, security features, and enterprise deployment.',
     launchDate: '2026-02-15', customers: 320,
@@ -174,7 +184,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration',
     marketPosition: 'Competitive with AWS Greengrass ($0-500), Azure IoT Edge ($0-300), and Google Cloud IoT ($0-400). Our advantage: Multi-cloud edge, better pricing, and comprehensive orchestration.',
-    targetAudience: 'IoT companies, Edge computing initiatives, Manufacturing companies, Smart cities, Transportation companies, Technology companies';
+    targetAudience: 'IoT companies, Edge computing initiatives, Manufacturing companies, Smart cities, Transportation companies, Technology companies',
     trialDays: 30, setupTime: '1 week',
     category: 'Edge Computing & IoT', realService: true,
     technology: ['Edge ComputingIoTReactNode.jsPostgreSQLAWS'], integrations: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoTCustom edge devicesIoT platforms'],
@@ -182,10 +192,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoTFogHornClearBlade'], marketSize: '$15.7B market',
     growthRate: '320% annual growth', variant: 'edge-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready edge platform with orchestration, monitoring, and enterprise deployment capabilities.',
     launchDate: '2026-03-01', customers: 580,
@@ -208,7 +220,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-powered-data-governance',
     marketPosition: 'Competitive with Collibra ($1000+/month), Informatica ($800+/month), and Alation ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive governance.',
-    targetAudience: 'Enterprises, Data teams, Compliance officers, IT managers, Financial institutions, Healthcare organizations';
+    targetAudience: 'Enterprises, Data teams, Compliance officers, IT managers, Financial institutions, Healthcare organizations',
     trialDays: 21, setupTime: '2 weeks',
     category: 'Data Governance & AI', realService: true,
     technology: ['AI/MLData GovernanceReactNode.jsPostgreSQLAWS'], integrations: ['CollibraInformaticaAlationCustom data systemsCompliance platforms'],
@@ -216,10 +228,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['CollibraInformaticaAlationData.WorldAtlan'], marketSize: '$23.4B market',
     growthRate: '260% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready data governance platform with AI capabilities, compliance monitoring, and enterprise features.',
     launchDate: '2026-03-15', customers: 420,
@@ -241,7 +255,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-enterprise-platform',
     marketPosition: 'Competitive with IBM Blockchain ($1000+/month), Microsoft Azure Blockchain ($500+/month), and Amazon Managed Blockchain ($0-1000). Our advantage: Multi-blockchain support, better pricing, and comprehensive tools.',
-    targetAudience: 'Enterprises, Supply chain companies, Financial institutions, Technology companies, Consulting firms, Blockchain startups';
+    targetAudience: 'Enterprises, Supply chain companies, Financial institutions, Technology companies, Consulting firms, Blockchain startups',
     trialDays: 30, setupTime: '2 weeks',
     category: 'Blockchain & Enterprise', realService: true,
     technology: ['BlockchainSmart ContractsReactNode.jsPostgreSQLAWS'], integrations: ['IBM BlockchainMicrosoft AzureAmazon Managed BlockchainCustom systemsEnterprise platforms'],
@@ -249,10 +263,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['IBM BlockchainMicrosoft Azure BlockchainAmazon Managed BlockchainR3 CordaHyperledger'], marketSize: '$19.9B market',
     growthRate: '280% annual growth', variant: 'blockchain-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain platform with multi-chain support, smart contracts, and enterprise features.',
     launchDate: '2026-04-01', customers: 680,
@@ -275,7 +291,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-powered-devops-platform',
     marketPosition: 'Competitive with GitLab ($0-1000), GitHub Actions ($0-500), and Azure DevOps ($0-1000). Our advantage: AI-first approach, better pricing, and comprehensive automation.',
-    targetAudience: 'Development teams, DevOps engineers, Technology companies, Startups, Enterprises, IT organizations';
+    targetAudience: 'Development teams, DevOps engineers, Technology companies, Startups, Enterprises, IT organizations',
     trialDays: 30, setupTime: '1 week',
     category: 'DevOps & AI', realService: true,
     technology: ['AI/MLDevOpsReactNode.jsPostgreSQLAWS'], integrations: ['GitLabGitHubAzure DevOpsJenkinsCustom CI/CDMonitoring tools'],
@@ -283,10 +299,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['GitLabGitHub ActionsAzure DevOpsJenkinsCircleCI'], marketSize: '$18.7B market',
     growthRate: '300% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready DevOps platform with AI automation, monitoring, and enterprise deployment capabilities.',
     launchDate: '2026-04-15', customers: 950,
@@ -309,7 +327,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     color: 'from-yellow-600 to-orange-700', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
     marketPosition: 'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform, better pricing, and quantum expertise.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies';
+    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies',
     trialDays: 14, setupTime: '1 month',
     category: 'Quantum & Cybersecurity', realService: true,
     technology: ['Post-Quantum CryptographyQuantum AlgorithmsReactNode.jsPostgreSQLAWS'], integrations: ['Security systemsCompliance platformsCustom security toolsEnterprise platforms'],
@@ -317,10 +335,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Specialized quantum security companiesGovernment initiativesResearch projects'], marketSize: '$8.9B market',
     growthRate: '450% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01', customers: 280,

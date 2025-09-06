@@ -14,11 +14,13 @@ export interface ComprehensiveInnovativeService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
   benefits: string[], capabilities: string[],
@@ -71,7 +73,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   {
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security architecture',
-    price: '$1,299';
+    price: '$1,299',
     period: '/month',
     description: 'Comprehensive zero-trust security platform that implements continuous verification and least-privilege access across all users, devices, and applications.',
     features: [

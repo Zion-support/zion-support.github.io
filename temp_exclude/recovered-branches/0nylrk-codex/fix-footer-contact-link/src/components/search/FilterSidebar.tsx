@@ -6,12 +6,14 @@ import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 interface FilterSidebarProps {
   filters: {
+      
     selectedProductTypes: string[],
     selectedLocations: string[],
     selectedAvailability: string[],
     selectedRating: number | null
-  };
-  filterOptions: FilterOptions,
+  
+    },
+    filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void

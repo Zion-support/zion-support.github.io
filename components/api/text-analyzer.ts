@@ -3,24 +3,28 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
   text: string,
   statistics: {
+      
     characters: number, charactersNoSpaces: number,
     words: number, sentences: number,
     paragraphs: number, syllables: number,
     readingTime: number,
     speakingTime: number
-  };
-  readability: {
+  
+    },
+    readability: {
     fleschReadingEase: number, fleschKincaidGrade: number,
     gunningFog: number, smog: number,
     colemanLiau: number, automatedReadability: number,
     averageGrade: number
   };
   sentiment: {
+      
     score: number, label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
     positiveWords: string[],
     negativeWords: string[]
-  };
-  language: {
+  
+    },
+    language: {
     detectedLanguage: string, confidence: number,
     isEnglish: boolean
   };
@@ -151,6 +155,7 @@ export default async function handler(
     const result: TextAnalysisResult = {
       text;
       statistics: {
+      
         characters;
         charactersNoSpaces;
         words;
@@ -158,17 +163,20 @@ export default async function handler(
         paragraphs;
         syllables;
         readingTime;
-        speakingTime};
-      readability: {
+        speakingTime
+    },
+    readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
         gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
         colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
         averageGrade};
       sentiment: {
+      
         score: sentimentScore, label: sentimentLabel,
         positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word))};
-      language: {
+        negativeWords: textWords.filter(word => negativeWords.includes(word))
+    },
+    language: {
         detectedLanguage;
         confidence;
         isEnglish};

@@ -44,15 +44,15 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     scalability: 'Research-grade, multi-discipline support',
     roi: '400% within 15 months',
     deployment: 'Cloud-based, research infrastructure',
-    maintenance: 'Continuous updates, research optimization';
+    maintenance: 'Continuous updates, research optimization',
     training: 'Research training, certification program',
-    documentation: 'Research guides, best practices';
+    documentation: 'Research guides, best practices',
     api: 'Research integration APIs', mobile: 'Mobile research apps',
     security: 'Research data security, access controls',
-    backup: 'Research data backup, redundancy';
+    backup: 'Research data backup, redundancy',
     monitoring: 'Research progress monitoring',
     analytics: 'Research insights, performance metrics',
-    customization: 'Custom research workflows, integration';
+    customization: 'Custom research workflows, integration',
     whiteLabel: 'Available for research institutions', affiliate: '25% commission for referrals',
     referral: '$15,000 bonus for partnerships',
     partnership: 'Research institution partnerships',
@@ -84,15 +84,15 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     scalability: 'Quantum-grade, global research network',
     roi: '600% within 24 months',
     deployment: 'Quantum infrastructure, research platform',
-    maintenance: 'Quantum optimization, research updates';
+    maintenance: 'Quantum optimization, research updates',
     training: 'Quantum training, research certification',
-    documentation: 'Quantum research guides, best practices';
+    documentation: 'Quantum research guides, best practices',
     api: 'Quantum research APIs', mobile: 'Mobile research apps',
     security: 'Quantum security, research protection',
-    backup: 'Research backup, quantum redundancy';
+    backup: 'Research backup, quantum redundancy',
     monitoring: 'Quantum performance monitoring',
     analytics: 'Quantum research analytics, insights',
-    customization: 'Custom quantum research, integration';
+    customization: 'Custom quantum research, integration',
     whiteLabel: 'Available for research institutions', affiliate: '20% commission for referrals',
     referral: '$25,000 bonus for partnerships',
     partnership: 'Quantum research partnerships',
@@ -124,15 +124,15 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     scalability: 'AI-powered, multi-domain support',
     roi: '350% within 12 months',
     deployment: 'Cloud-based, AI infrastructure',
-    maintenance: 'Continuous AI learning, research updates';
+    maintenance: 'Continuous AI learning, research updates',
     training: 'AI research training, certification',
-    documentation: 'AI research guides, best practices';
+    documentation: 'AI research guides, best practices',
     api: 'AI research APIs', mobile: 'Mobile AI research apps',
     security: 'AI security, research protection',
-    backup: 'Research backup, AI redundancy';
+    backup: 'Research backup, AI redundancy',
     monitoring: 'AI performance monitoring',
     analytics: 'AI research analytics, insights',
-    customization: 'Custom AI research, integration';
+    customization: 'Custom AI research, integration',
     whiteLabel: 'Available for research institutions', affiliate: '30% commission for referrals',
     referral: '$10,000 bonus for partnerships',
     partnership: 'AI research partnerships',
@@ -164,15 +164,15 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     scalability: 'Biotech-grade, multi-institution support',
     roi: '500% within 20 months',
     deployment: 'Cloud-based, biotech infrastructure',
-    maintenance: 'Continuous updates, biotech optimization';
+    maintenance: 'Continuous updates, biotech optimization',
     training: 'Biotech training, research certification',
-    documentation: 'Biotech research guides, best practices';
+    documentation: 'Biotech research guides, best practices',
     api: 'Biotech research APIs', mobile: 'Mobile biotech apps',
     security: 'Biotech security, data protection',
-    backup: 'Research backup, biotech redundancy';
+    backup: 'Research backup, biotech redundancy',
     monitoring: 'Biotech research monitoring',
     analytics: 'Biotech analytics, research insights',
-    customization: 'Custom biotech research, integration';
+    customization: 'Custom biotech research, integration',
     whiteLabel: 'Available for biotech institutions', affiliate: '25% commission for referrals',
     referral: '$20,000 bonus for partnerships',
     partnership: 'Biotech research partnerships',

@@ -7,12 +7,14 @@ export const cuttingEdgeITServices2025 = [
       'Quantum-enhanced data processingAutomated infrastructure management'
     ];
     pricing: {
+      
       starter: { 
         price: 399, 
         period: 'month', 
         features: ['Basic quantum infrastructureStandard security protocolsEmail support'] 
-      };
-      professional: { 
+      
+    },
+    professional: { 
         price: 999, 
         period: 'month', 
         features: ['Advanced quantum featuresEnhanced security protocolsPriority supportPerformance optimization'] 
@@ -26,12 +28,14 @@ export const cuttingEdgeITServices2025 = [
     category: 'Quantum IT', tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
+      
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    };
+    
+    },
     marketSize: '$22.1B',
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions',
-    competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
+    competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization',
     useCases: [
       'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platformsEnterprise cloud migration'
     ];
@@ -46,12 +50,14 @@ export const cuttingEdgeITServices2025 = [
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
     ];
     pricing: {
+      
       starter: { 
         price: 299, 
         period: 'month', 
         features: ['Basic edge orchestrationStandard monitoringEmail support'] 
-      };
-      professional: { 
+      
+    },
+    professional: { 
         price: 799, 
         period: 'month', 
         features: ['Advanced orchestrationAI model deploymentPriority supportPerformance optimization'] 
@@ -65,12 +71,14 @@ export const cuttingEdgeITServices2025 = [
     category: 'Edge Computing', tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'],
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
     contact: {
+      
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    };
+    
+    },
     marketSize: '$18.7B',
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers',
-    competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization';
+    competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization',
     useCases: [
       'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systemsReal-time analytics platforms'
     ];
@@ -85,12 +93,14 @@ export const cuttingEdgeITServices2025 = [
       'Automated security responsesComprehensive audit logging'
     ];
     pricing: {
+      
       starter: { 
         price: 499, 
         period: 'month', 
         features: ['Basic zero-trust featuresStandard authenticationEmail support'] 
-      };
-      professional: { 
+      
+    },
+    professional: { 
         price: 1299, 
         period: 'month', 
         features: ['Advanced security featuresBehavioral analyticsPriority supportCustom policies'] 
@@ -104,12 +114,14 @@ export const cuttingEdgeITServices2025 = [
     category: 'Cybersecurity', tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
+      
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    };
+    
+    },
     marketSize: '$31.2B',
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',
-    competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
+    competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response',
     useCases: [
       'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protectionRemote workforce security'
     ];
@@ -124,12 +136,14 @@ export const cuttingEdgeITServices2025 = [
       'Multi-party workflow automationComprehensive reporting and analytics'
     ];
     pricing: {
+      
       starter: { 
         price: 599, 
         period: 'month', 
         features: ['Basic blockchain featuresStandard smart contractsEmail support'] 
-      };
-      professional: { 
+      
+    },
+    professional: { 
         price: 1499, 
         period: 'month', 
         features: ['Advanced blockchain featuresCustom smart contractsPriority supportPerformance optimization'] 
@@ -143,12 +157,14 @@ export const cuttingEdgeITServices2025 = [
     category: 'Blockchain', tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'],
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
     contact: {
+      
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    };
+    
+    },
     marketSize: '$19.9B',
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',
-    competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
+    competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration',
     useCases: [
       'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keepingManufacturing process tracking'
     ];
@@ -163,12 +179,14 @@ export const cuttingEdgeITServices2025 = [
       'Automated security scanningComprehensive analytics and reporting'
     ];
     pricing: {
+      
       starter: { 
         price: 399, 
         period: 'month', 
         features: ['Basic AI DevOps featuresStandard automationEmail support'] 
-      };
-      professional: { 
+      
+    },
+    professional: { 
         price: 999, 
         period: 'month', 
         features: ['Advanced AI featuresCustom automationPriority supportPerformance optimization'] 
@@ -182,12 +200,14 @@ export const cuttingEdgeITServices2025 = [
     category: 'DevOps', tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
+      
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    };
+    
+    },
     marketSize: '$25.6B',
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
+    competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response',
     useCases: [
       'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];

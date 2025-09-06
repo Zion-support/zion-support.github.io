@@ -181,7 +181,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     color: 'from-amber-600 to-yellow-700', textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/cloud-cost-autopilot',
     marketPosition: 'Actionable savings, not just dashboards.',
-    targetAudience: 'FinOps teams, platform and SRE';
+    targetAudience: 'FinOps teams, platform and SRE',
     trialDays: 21, setupTime: '2–5 days',
     category: 'Cloud & Infrastructure', realService: true,
     technology: ['AWS Cost ExplorerAzure CostGCP Billing'], integrations: ['AWSAzureGCP'],
@@ -273,7 +273,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     color: 'from-amber-600 to-yellow-700', textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/browser-performance-monitor',
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.',
-    targetAudience: 'Frontend, growth, product';
+    targetAudience: 'Frontend, growth, product',
     trialDays: 14, setupTime: '30 minutes',
     category: 'Quality & Monitoring', realService: true,
     technology: ['JS SDKClickHouse'], integrations: ['PostHogSegment'],

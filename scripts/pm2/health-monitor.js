@@ -5,8 +5,11 @@
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
 ; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
-; return {; success: true, memory: {, total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree),
-    usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)}; disk: {,
+; return {; success: true, memory: {
+      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree),
+    usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
+    },
+    disk: {,
     usagePercent: parseInt(diskUsage)}; cpu: {,
     usagePercent: Math.round(cpuUsage)}}} catch (error) {; return {; success: false, error: error.message, memory: null, disk: null, cpu: null}}};
 ; async checkProcessHealth() {; try {; this.log('🔄 Checking process health...');
@@ -30,8 +33,11 @@
     lastModified: stats.mtime})}})};
 ; return {; success: true, logFiles: logFiles, totalSize: logFiles.reduce((sum, file) = > sum + file.size, 0)}} catch (error) {; return {; success: false, error: error.message, logFiles: [],
     totalSize: 0}}};
-; async generateReport(systemInfo, processInfo, appInfo, logInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {, systemHealth: 'unknown', processHealth: 'unknown', applicationHealth: 'unknown', logHealth: 'unknown', overallHealth: 'unknown',
-    healthScore: 0}; details: {, system: systemInfo, processes: processInfo, application: appInfo, logs: logInfo}; recommendations: []};
+; async generateReport(systemInfo, processInfo, appInfo, logInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , systemHealth: 'unknown', processHealth: 'unknown', applicationHealth: 'unknown', logHealth: 'unknown', overallHealth: 'unknown',
+    healthScore: 0
+    },
+    details: {, system: systemInfo, processes: processInfo, application: appInfo, logs: logInfo}; recommendations: []};
 ; // Calculate health scores; let totalScore = 0; let maxScore = 0;
 ; // System health; if (systemInfo.success) {; const memUsage = systemInfo.memory?.usagePercent || 0; const diskUsage = systemInfo.disk?.usagePercent || 0; const cpuUsage = systemInfo.cpu?.usagePercent || 0;
 ; if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {; report.summary.systemHealth = 'healthy'; totalScore + = 25} else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {; report.summary.systemHealth = 'warning'; totalScore + = 15} else {; report.summary.systemHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25;

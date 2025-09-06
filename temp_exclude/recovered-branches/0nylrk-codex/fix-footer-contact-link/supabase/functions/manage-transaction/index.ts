@@ -137,12 +137,16 @@ serve(async (req) => {
     }
 
     return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500})
   }
 });

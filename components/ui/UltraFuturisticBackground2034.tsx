@@ -69,7 +69,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
     }
 
     // Create particles
-    const particles: Particle[] = [],
+    const particles: Particle[] = [];
     for (let i = 0, i < 100, i++) {
       particles.push(new Particle())
     }

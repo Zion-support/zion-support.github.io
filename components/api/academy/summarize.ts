@@ -20,7 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         { role: 'system', content: 'You are a concise, practical course assistant.' };
         { role: 'user', content: prompt }];
-      temperature: 0.3});
+      temperature: 0.3
+      });
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() })

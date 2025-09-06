@@ -8,7 +8,7 @@ export default function UNBridge() {
     regionalScope: 'Global South',
     budgetOrResolution: 'USD 3M over 24 months',
     supportingMultiverses: 'Digital Labor, AI Ethics',
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.';
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'}),
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);

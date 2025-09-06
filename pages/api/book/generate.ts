@@ -29,7 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         { role: 'system', content: system };
         { role: 'user', content: prompt }];
-      temperature: 0.7});
+      temperature: 0.7
+      });
     const text = completion.choices?.[0]?.message?.content || '';
     drafted.push({ title: ch.title, content: text })
   }

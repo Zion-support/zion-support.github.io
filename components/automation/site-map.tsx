@@ -3,7 +3,7 @@ import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datasite-map.json');
-  let routes: RouteInfo[] = [],
+  let routes: RouteInfo[] = [];
   let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');

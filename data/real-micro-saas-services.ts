@@ -293,7 +293,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Auto-triage and reply to routine emails with guardrails',
     description: 'Autonomously classifies, drafts, and sends compliant replies to routine inbound emails. Escalates complex cases with context packs and suggested responses.',
     category: 'Productivity & Automation',
-    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14, setupTime: '15 minutes' };
+    price: {
+       monthly: 79, yearly: 790, currency: 'USD', trialDays: 14, setupTime: '15 minutes' 
+    },
     features: [
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail integrationMetrics: FRT/ART, deflection rate'
     ];
@@ -315,9 +317,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'mobile-conversational-surveys', name: 'Mobile Conversational Surveys',
     tagline: 'Adaptive, chat-style surveys with higher completion rates',
-    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.';
+    description: 'Create mobile-first, conversational surveys that adapt based on answers. Real-time analytics and webhook exports.',
     category: 'Marketing & Research',
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7, setupTime: '10 minutes' };
+    price: {
+       monthly: 49, yearly: 490, currency: 'USD', trialDays: 7, setupTime: '10 minutes' 
+    },
     features: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'],
     benefits: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];
     targetAudience: ['Product teamsMarketersUX researchers'], marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
@@ -336,9 +340,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'niche-productivity-planner', name: 'Niche Productivity Planner',
     tagline: 'Opinionated project boards, tailored to your industry',
-    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.';
+    description: 'Pre-built workflows, dashboards, and automations tailored per industry vertical with exportable templates.',
     category: 'Operations',
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 14, setupTime: '5 minutes' };
+    price: {
+       monthly: 39, yearly: 390, currency: 'USD', trialDays: 14, setupTime: '5 minutes' 
+    },
     features: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'], benefits: ['Reduce setup time by 80%Consistency across teams'],
     targetAudience: ['AgenciesStudiosSMBs'], marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
     competitors: ['AsanaClickUpNotion'], techStack: ['Next.jsPrismaPostgreSQL'],
@@ -355,9 +361,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'event-management-dashboard', name: 'Event Management Dashboard',
     tagline: 'Tickets, scheduling, engagement analytics in one place',
-    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.';
+    description: 'Plan and manage events end-to-end. Handle ticketing, agenda, speaker management, sponsor pages, and live engagement.',
     category: 'Media & Events',
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7, setupTime: '1 day' };
+    price: {
+       monthly: 129, yearly: 1290, currency: 'USD', trialDays: 7, setupTime: '1 day' 
+    },
     features: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'], benefits: ['Launch events fasterBetter attendee engagement'],
     targetAudience: ['ConferencesMeetupsCommunities'], marketPosition: 'Lean alternative to Hopin and Eventbrite with richer analytics.',
     competitors: ['HopinEventbrite'], techStack: ['Next.jsStripeSupabase'],
@@ -374,9 +382,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'affiliate-tracking-suite', name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commissions, payouts—no spreadsheet required',
-    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.';
+    description: 'Manage affiliates with custom links, multi-touch attribution, fraud checks, and automated commission payouts.',
     category: 'Growth',
-    price: { monthly: 99, yearly: 990, currency: 'USD', trialDays: 14, setupTime: '1 hour' };
+    price: {
+       monthly: 99, yearly: 990, currency: 'USD', trialDays: 14, setupTime: '1 hour' 
+    },
     features: ['Custom linksAttribution windowsCoupon attributionPayout exports'], benefits: ['Grow revenue via affiliatesReduce fraud'],
     targetAudience: ['E‑commerceSaaS'], marketPosition: 'Simpler than Impact and PartnerStack with transparent pricing.',
     competitors: ['PartnerStackImpact'], techStack: ['Next.jsPostgreSQLStripe'],
@@ -395,7 +405,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Privacy-friendly analytics with actionable insights',
     description: 'Simple dashboards for traffic, engagement, and conversions—no cookies by default. Alerts for anomalies and goals.',
     category: 'Analytics',
-    price: { monthly: 29, yearly: 290, currency: 'USD', trialDays: 14, setupTime: '5 minutes' };
+    price: {
+       monthly: 29, yearly: 290, currency: 'USD', trialDays: 14, setupTime: '5 minutes' 
+    },
     features: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'], benefits: ['Know what worksFocus on actions'],
     targetAudience: ['FoundersMarketersAgencies'], marketPosition: 'Alternative to Plausible and Fathom with built-in insights.',
     competitors: ['PlausibleFathom'], techStack: ['Next.jsEdge AnalyticsPostgreSQL'],
@@ -412,9 +424,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'it-helpdesk-lite', name: 'IT Helpdesk Lite',
     tagline: 'Tickets, SLA timers, knowledge base, portal—ready day one',
-    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.';
+    description: 'Streamlined helpdesk for MSPs and internal IT with email-to-ticket, SLA rules, automations, and a searchable KB.',
     category: 'IT & Operations',
-    price: { monthly: 59, yearly: 590, currency: 'USD', trialDays: 14, setupTime: '2 hours' };
+    price: {
+       monthly: 59, yearly: 590, currency: 'USD', trialDays: 14, setupTime: '2 hours' 
+    },
     features: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'], benefits: ['Shorter MTTRFewer escalations'],
     targetAudience: ['MSPsIT teams'], marketPosition: 'Lightweight alternative to Zendesk and Freshservice.',
     competitors: ['ZendeskFreshservice'], techStack: ['Next.jsPostgreSQLNode.js'],
@@ -433,7 +447,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Customer-friendly returns with labels and status tracking',
     description: 'Automate RMA creation, generate labels, track statuses, and sync inventory updates to your store.',
     category: 'E‑commerce',
-    price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14, setupTime: '1 hour' };
+    price: {
+       monthly: 79, yearly: 790, currency: 'USD', trialDays: 14, setupTime: '1 hour' 
+    },
     features: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'], benefits: ['Higher retentionLower support load'],
     targetAudience: ['D2C brandsMarketplaces'], marketPosition: 'Competitive with Loop and Returnly at simpler pricing.',
     competitors: ['LoopReturnly'], techStack: ['Next.jsStripeShopify API'],
@@ -451,7 +467,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     id: 'auto-email-followups', name: 'Automated Email Follow‑ups',
     tagline: 'Cadence sequences for leads with AI personalization', description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.',
     category: 'Sales',
-    price: { monthly: 49, yearly: 490, currency: 'USD', trialDays: 7, setupTime: '20 minutes' };
+    price: {
+       monthly: 49, yearly: 490, currency: 'USD', trialDays: 7, setupTime: '20 minutes' 
+    },
     features: ['SequencesRules & triggersOpen/click trackingAI snippets'], benefits: ['Higher reply rateFewer manual tasks'],
     targetAudience: ['SMB sales teamsAgencies'], marketPosition: 'Alternative to Lemlist and Mailshake with stricter safety.',
     competitors: ['LemlistMailshake'], techStack: ['Next.jsPostgreSQLOpenAI'],
@@ -468,9 +486,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'podcast-transcription-studio', name: 'Podcast Transcription Studio',
     tagline: 'Accurate transcripts, show notes, and highlights',
-    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.';
+    description: 'Upload your episodes and receive transcripts, summaries, chapters, and social-ready highlights in minutes.',
     category: 'Media & Content',
-    price: { monthly: 39, yearly: 390, currency: 'USD', trialDays: 7, setupTime: '5 minutes' };
+    price: {
+       monthly: 39, yearly: 390, currency: 'USD', trialDays: 7, setupTime: '5 minutes' 
+    },
     features: ['Speaker diarizationTimecodesChaptersShow notes drafts'], benefits: ['AccessibilitySEO-ready content'],
     targetAudience: ['PodcastersAgencies'], marketPosition: 'Alternative to Descript transcripts with simpler pricing.',
     competitors: ['DescriptRev'], techStack: ['WhisperNext.jsS3'],
@@ -489,7 +509,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Build semantic graphs for RAG and lineage in minutes',
     description: 'Auto-extract entities and relationships from docs to construct a knowledge graph with search, lineage, and governance.',
     category: 'AI & Data',
-    price: { monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14, setupTime: '1 day' };
+    price: {
+       monthly: 199, yearly: 1990, currency: 'USD', trialDays: 14, setupTime: '1 day' 
+    },
     features: ['Entity/relation extractionSchema editorVector + graph searchLineage view'], benefits: ['Higher RAG precisionGovernance & explainability'],
     targetAudience: ['Data teamsPlatform engineeringCompliance'], marketPosition: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',
     competitors: ['Neo4jMemgraph'], techStack: ['TypeScriptNeo4jpgvectorOpenAI'],
@@ -506,9 +528,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'llm-guarded-api-gateway', name: 'LLM Guarded API Gateway',
     tagline: 'Policy, safety, metering and routing for GenAI apps',
-    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.';
+    description: 'A hardened gateway with prompt filtering, PII redaction, usage caps, and multi-provider routing.',
     category: 'AI & Platform',
-    price: { monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14, setupTime: '1 day' };
+    price: {
+       monthly: 299, yearly: 2990, currency: 'USD', trialDays: 14, setupTime: '1 day' 
+    },
     features: ['Provider adaptersPolicy enginePII redactionRate limits'], benefits: ['Control spendReduce risk'],
     targetAudience: ['Platform teamsAI product'],
     marketPosition: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',
@@ -528,13 +552,15 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Spin up ELT + dbt + dashboards in a day',
     description: 'Opinionated stack for event collection, ELT pipelines, dbt models, and BI dashboards with infra as code.',
     category: 'Data & Analytics',
-    price: { monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7, setupTime: '1 day' };
+    price: {
+       monthly: 249, yearly: 2490, currency: 'USD', trialDays: 7, setupTime: '1 day' 
+    },
     features: ['Event collectorConnector librarydbt modelsGrafana dashboards'], benefits: ['Faster analytics ROILower platform toil'],
     targetAudience: ['Data teamsOps'], marketPosition: 'Starter alternative to building bespoke stacks.',
     competitors: ['AirbyteFivetran (partial)'], techStack: ['TerraformdbtClickHouse/BigQuery'],
     realImplementation: true,
     implementationDetails: 'Templates, IaC modules, CI gates.',
-    roi: 'Deliver insights in days, not months.';
+    roi: 'Deliver insights in days, not months.',
     useCases: ['Product analyticsFinance BI'], integrations: ['S3BigQuerySnowflake'],
     support: 'Email support', compliance: ['GDPR'],
     link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter', icon: '🏗️',
@@ -546,9 +572,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'data-contracts-hub', name: 'Data Contracts Hub',
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes',
-    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.',
     category: 'Data & Platform',
-    price: { monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14, setupTime: '2 hours' };
+    price: {
+       monthly: 129, yearly: 1290, currency: 'USD', trialDays: 14, setupTime: '2 hours' 
+    },
     features: ['Schema registryDiff viewerCI gatesBackfill helpers'], benefits: ['Fewer incidentsFaster changes'],
     targetAudience: ['Data platformAnalytics engineers'], marketPosition: 'Complements dbt and warehouse-native governance.',
     competitors: ['OpenMetadataGreat Expectations'], techStack: ['TypeScriptPostgreSQLdbt'],

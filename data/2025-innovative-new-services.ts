@@ -14,11 +14,13 @@ export interface InnovativeNewService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -50,10 +52,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$15.2B legal tech market', growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
     launchDate: '2025-01-15', customers: 28,
@@ -85,10 +89,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$8.7B quantum security market', growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10', customers: 15,
     rating: 4.8,
@@ -120,10 +126,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$45.8B AI healthcare market', growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05', customers: 22,
     rating: 4.9,
@@ -155,10 +163,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$19.2B supply chain software market', growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12', customers: 35,
     rating: 4.7,
@@ -190,10 +200,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,

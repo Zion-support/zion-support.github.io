@@ -30,7 +30,8 @@ serve(async (req) => {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
-      temperature: 0.1});
+      temperature: 0.1
+      });
 
     const responseText = completion.choices[0].message.content || "";
     let filters;

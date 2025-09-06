@@ -221,16 +221,20 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       const response = await fetch('/api/error-report', {
         method: 'POST',
         headers: {
+      
           'Content-Type': 'application/json'
-        };
-        body: JSON.stringify({
+        
+    },
+    body: JSON.stringify({
           errorId: this.state.errorId,
           error: {
+      
             message: this.state.error.message,
             stack: this.state.error.stack,
             name: this.state.error.name
-          };
-          errorInfo: this.state.errorInfo,
+          
+    },
+    errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
           context: this.props.context,
           timestamp: new Date().toISOString()

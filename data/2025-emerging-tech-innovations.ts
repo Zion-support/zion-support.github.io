@@ -14,11 +14,13 @@ export interface EmergingTechInnovation {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
   benefits: string[], capabilities: string[],
@@ -72,7 +74,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
   {
     id: 'autonomous-vehicle-ai-platform', name: 'Autonomous Vehicle AI Platform',
     tagline: 'Advanced AI for autonomous vehicle perception, decision-making, and control',
-    price: '$4,499';
+    price: '$4,499',
     period: '/month',
     description: 'Comprehensive AI platform for autonomous vehicles that provides advanced perception, decision-making, and control systems for safe and efficient autonomous operation.',
     features: [

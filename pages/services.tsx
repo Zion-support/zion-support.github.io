@@ -55,13 +55,15 @@ export default function Services() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
+      
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
         ring: 'focus:ring-blue-500'
-      };
-      purple: {
+      
+    },
+    purple: {
         bg: 'bg-purple-600',
         hover: 'hover:bg-purple-700',
         text: 'text-purple-400',

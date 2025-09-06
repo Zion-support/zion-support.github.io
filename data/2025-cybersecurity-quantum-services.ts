@@ -3,12 +3,14 @@ export interface CybersecurityQuantumService {
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
-  };
-  features: string[], benefits: string[],
+  
+    },
+    features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
@@ -28,11 +30,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',
     category: 'Quantum Security & Cryptography',
     price: {
+      
       monthly: 499, yearly: 4990,
       currency: 'USD', trialDays: 30,
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring';
       'API for integrationMobile SDK support'
@@ -67,11 +71,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.',
     category: 'AI Cybersecurity & Threat Intelligence',
     price: {
+      
       monthly: 399, yearly: 3990,
       currency: 'USD', trialDays: 21,
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation';
       'Custom threat hunting rulesAPI for security tools integration'
@@ -106,11 +112,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.',
     category: 'Zero-Trust Security & Access Control',
     price: {
+      
       monthly: 299, yearly: 2990,
       currency: 'USD', trialDays: 21,
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration';
       'Advanced analyticsAPI for enterprise systems'
@@ -145,11 +153,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
     category: 'Quantum Communications & Security',
     price: {
+      
       monthly: 999, yearly: 9990,
       currency: 'USD', trialDays: 30,
       setupTime: '2-4 weeks',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system';
       'API for integrationCustom quantum protocols'
@@ -184,11 +194,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
     category: 'Vulnerability Management & Security Testing',
     price: {
+      
       monthly: 199, yearly: 1990,
       currency: 'USD', trialDays: 14,
       setupTime: '1-3 days',
       enterprise: 'Custom pricing'
-    };
+    
+    },
     features: [
       'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support';
       'API for automationCompliance reporting'

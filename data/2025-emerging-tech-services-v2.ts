@@ -3,12 +3,14 @@ export interface EmergingTechService {
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: number
-  };
-  features: string[], benefits: string[],
+  
+    },
+    features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
@@ -29,11 +31,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
     category: 'Space & Emerging Tech',
     price: {
+      
       monthly: 999, yearly: 9990,
       currency: 'USD', trialDays: 7,
       setupTime: '24 hours',
       enterprise: 4999
-    };
+    
+    },
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'
@@ -69,11 +73,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech',
     price: {
+      
       monthly: 599, yearly: 5990,
       currency: 'USD', trialDays: 14,
       setupTime: '8 hours',
       enterprise: 2499
-    };
+    
+    },
     features: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
       'Custom biological modelsAPI for research'
@@ -109,11 +115,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
     category: 'Emerging Tech',
     price: {
+      
       monthly: 399, yearly: 3990,
       currency: 'USD', trialDays: 21,
       setupTime: '6 hours',
       enterprise: 1599
-    };
+    
+    },
     features: [
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';
       'Custom neural modelsAPI for developers'
@@ -149,11 +157,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
     category: 'Quantum & Emerging Tech',
     price: {
+      
       monthly: 499, yearly: 4990,
       currency: 'USD', trialDays: 14,
       setupTime: '6 hours',
       enterprise: 1999
-    };
+    
+    },
     features: [
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';
       'Custom energy modelsAPI for energy systems'
@@ -189,11 +199,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.',
     category: 'Emerging Tech',
     price: {
+      
       monthly: 799, yearly: 7990,
       currency: 'USD', trialDays: 14,
       setupTime: '12 hours',
       enterprise: 2999
-    };
+    
+    },
     features: [
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';
       'Custom AI modelsAPI for vehicles'

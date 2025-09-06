@@ -13,11 +13,13 @@ export interface SpecializedITSolution2026 {
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number

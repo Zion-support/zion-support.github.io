@@ -14,11 +14,13 @@ export interface SpaceColonization2029Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -47,10 +49,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Space infrastructure platformsSpace research toolsGovernment space programs'], marketSize: '$100B space economy market',
     growthRate: '500% annual growth', variant: 'space-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced Mars colonization platform with autonomous systems, AI-powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real-time communication and emergency response.',
     launchDate: '2029-01-01', customers: 8,
@@ -78,10 +82,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Satellite communication networksSpace communication platformsGovernment space networks'], marketSize: '$80B satellite communication market',
     growthRate: '400% annual growth', variant: 'space-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.',
     launchDate: '2029-01-15', customers: 15,
@@ -109,10 +115,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Terrestrial mining platformsSpace research toolsResource extraction platforms'], marketSize: '$60B space mining market',
     growthRate: '600% annual growth', variant: 'space-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.',
     launchDate: '2029-02-01', customers: 12,
@@ -141,10 +149,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Architectural design platformsEngineering design toolsSpace research platforms'], marketSize: '$45B architectural design market',
     growthRate: '300% annual growth', variant: 'space-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.',
     launchDate: '2029-02-15', customers: 25,
@@ -172,10 +182,12 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Renewable energy platformsPower management systemsSpace research platforms'], marketSize: '$70B renewable energy market',
     growthRate: '350% annual growth', variant: 'space-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01', customers: 18,

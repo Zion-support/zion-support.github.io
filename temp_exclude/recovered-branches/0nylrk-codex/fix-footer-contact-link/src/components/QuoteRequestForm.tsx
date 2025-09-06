@@ -31,9 +31,11 @@ export function QuoteRequestForm() {
     endDate: undefined,
     timeline: "flexible",
     budget: {
+      
       amount: 0,
       type: "fixed"
-    };
+    
+    },
     contactInfo: {
       name: "",
       email: "",

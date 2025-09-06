@@ -83,11 +83,13 @@ export function useFetchResume() {
       const fullResume: Resume = {
         id: resumeData.id, user_id: resumeData.user_id,
         basic_info: {
+      
           id: resumeData.id, title: resumeData.title,
           headline: resumeData.headline,
           summary: resumeData.summary
-        };
-        work_experience: workData || [], education: educationData || [],
+        
+    },
+    work_experience: workData || [], education: educationData || [],
         skills: skillsData || [], certifications: certData || [],
         is_active: resumeData.is_active
       };

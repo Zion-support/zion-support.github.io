@@ -57,7 +57,7 @@ const sampleServices: Service[] = [
     name: 'AI & Machine Learning',
     tagline: 'Advanced AI solutions for enterprise',
     description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2,999/month';
+    price: '$2,999/month',
     category: 'AI',
     features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
     popular: true,

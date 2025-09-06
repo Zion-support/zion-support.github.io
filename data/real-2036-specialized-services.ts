@@ -29,7 +29,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform', launchDate: '2036-04-01',
     rating: 4.9, marketSize: '$1.8B',
     targetAudience: 'Research institutions, AI companies, Semiconductor firms',
-    competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning';
+    competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning',
     integration: ['AI frameworksEdge devicesIoT platformsCloud services'], useCases: ['Edge AI processingAutonomous systemsCognitive computingEnergy-efficient AI'],
     technology: ['Neuromorphic chipsSpiking neural networksAnalog computingBio-inspired algorithms']
   };
@@ -48,7 +48,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform', launchDate: '2036-04-05',
     rating: 4.8, marketSize: '$3.2B',
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions',
-    competitiveAdvantage: 'AI integration, Automated protocols, Safety focus';
+    competitiveAdvantage: 'AI integration, Automated protocols, Safety focus',
     integration: ['Lab automation systemsDNA synthesis platformsSequencing servicesCloud platforms'], useCases: ['Drug discoveryBiofuel productionEnvironmental remediationAgricultural optimization'],
     technology: ['CRISPRGene editingDNA synthesisBioinformatics']
   };
@@ -67,7 +67,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/quantum-internet-protocol-suite', launchDate: '2036-04-10',
     rating: 4.9, marketSize: '$2.1B',
     targetAudience: 'Internet service providers, Government agencies, Research institutions',
-    competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus';
+    competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus',
     integration: ['Quantum networksInternet infrastructureSecurity systemsCloud platforms'], useCases: ['Quantum networksSecure communicationsInternet infrastructureGovernment networks'],
     technology: ['Quantum protocolsNetwork standardsSecurity frameworksInteroperability']
   };
@@ -86,7 +86,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/brain-computer-interface-platform', launchDate: '2036-04-15',
     rating: 4.7, marketSize: '$2.8B',
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies',
-    competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus';
+    competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus',
     integration: ['Medical devicesAccessibility toolsGaming platformsResearch systems'], useCases: ['Assistive technologyMedical researchGaming and entertainmentHuman augmentation'],
     technology: ['EEGNeural implantsSignal processingMachine learning']
   };
@@ -105,7 +105,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/metaverse-development-studio-pro', launchDate: '2036-04-20',
     rating: 4.6, marketSize: '$8.9B',
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions',
-    competitiveAdvantage: '3D tools, AI integration, Blockchain support';
+    competitiveAdvantage: '3D tools, AI integration, Blockchain support',
     integration: ['VR headsetsAR devicesBlockchain platforms3D engines'], useCases: ['Virtual worldsDigital real estateEducational experiencesSocial platforms'],
     technology: ['3D graphicsVirtual realityAugmented realityBlockchain']
   };
@@ -124,7 +124,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform', launchDate: '2036-04-25',
     rating: 4.8, marketSize: '$12.4B',
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers',
-    competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing';
+    competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing',
     integration: ['Vehicle systemsSensor arraysNavigation systemsCloud platforms'], useCases: ['Self-driving carsAutonomous trucksDelivery robotsPublic transportation'],
     technology: ['Computer visionMachine learningSensor fusionControl systems']
   };
@@ -142,7 +142,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform', launchDate: '2036-04-30',
     rating: 4.9, marketSize: '$1.6B',
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms',
-    competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design';
+    competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design',
     integration: ['Quantum computersAI platformsLab systemsResearch databases'], useCases: ['New materialsEnergy storageElectronicsManufacturing'],
     technology: ['Quantum computingMachine learningMaterials scienceSimulation']
   };
@@ -161,7 +161,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/ai-climate-modeling-platform', launchDate: '2036-05-05',
     rating: 4.7, marketSize: '$3.8B',
     targetAudience: 'Government agencies, Research institutions, Environmental organizations',
-    competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities';
+    competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities',
     integration: ['Climate sensorsSatellite dataWeather servicesResearch databases'], useCases: ['Climate predictionPolicy planningEnvironmental researchRisk assessment'],
     technology: ['Machine learningClimate modelsData analysisSimulation']
   };
@@ -179,7 +179,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/quantum-neural-network-platform', launchDate: '2036-05-10',
     rating: 4.8, marketSize: '$2.2B',
     targetAudience: 'AI companies, Research institutions, Technology firms',
-    competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization';
+    competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization',
     integration: ['Quantum computersAI frameworksCloud platformsResearch tools'], useCases: ['Advanced AIResearch applicationsCommercial AIScientific computing'],
     technology: ['Quantum computingNeural networksMachine learningOptimization']
   };
@@ -198,7 +198,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     link: 'https://ziontechgroup.com/services/space-tourism-platform', launchDate: '2036-05-15',
     rating: 4.6, marketSize: '$1.2B',
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',
-    competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management';
+    competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'], useCases: ['Space tourismTraining programsSafety managementCustomer experience'],
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
   }

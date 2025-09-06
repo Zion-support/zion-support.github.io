@@ -14,11 +14,13 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
-  };
-  realImplementation: boolean, implementationDetails: string,
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
@@ -49,10 +51,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth',
     variant: 'logistics',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
     launchDate: '2025-01-26', customers: 156,
     rating: 4.8,
@@ -82,10 +86,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$8B quantum computing market', growthRate: '65% annual growth',
     variant: 'quantum-logistics',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',
     launchDate: '2025-02-02', customers: 34,
     rating: 4.9,
@@ -114,10 +120,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$30B fleet management market', growthRate: '32% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
     launchDate: '2025-02-07', customers: 234,
     rating: 4.7,
@@ -146,10 +154,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$22B blockchain supply chain market', growthRate: '45% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',
     launchDate: '2025-02-12', customers: 89,
     rating: 4.6,
@@ -179,10 +189,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth',
     variant: 'ai-supply-chain-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    };
+    
+    },
     realImplementation: true, implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
     launchDate: '2025-02-18', customers: 178,
     rating: 4.8,

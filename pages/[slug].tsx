@@ -182,11 +182,13 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								description: service.tagline || service.description,
 								url: canonical,
 								provider: {
+      
 									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
-								};
-								offers: {
+								
+    },
+    offers: {
 									"@type": "Offer";
 									price: (service.price || '').replace(/[^0-9.]/g, '');
 									priceCurrency: "USD",

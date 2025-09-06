@@ -73,12 +73,14 @@ serve(async (req) => {
       line_items: [
         {
           price_data: {
+      
             currency: currency,
             product_data: { 
               name: productName,
               description: productDescription
-            };
-            unit_amount: amount * 100, // Convert to cents
+            
+    },
+    unit_amount: amount * 100, // Convert to cents
             ...(productType === "subscription" ? { recurring: { interval: "month" } } : {})
           };
           quantity: 1}];
@@ -104,12 +106,16 @@ serve(async (req) => {
     }
 
     return new Response(JSON.stringify({ url: session.url }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 200})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 200})
   } catch (error) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+      headers: {
+       ...corsHeaders, "Content-Type": "application/json" 
+    },
+    status: 500})
   }
 });

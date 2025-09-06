@@ -27,7 +27,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
     .split('\n')
     .flatMap((line) => {
       const words = line.split(' ');
-      const wrapped: string[] = [], let current = '',
+      const wrapped: string[] = []; let current = '',
       for (const word of words) {
         const test = current.length ? current + ' ' + word : word;
         const width = font.widthOfTextAtSize(test, fontSize);

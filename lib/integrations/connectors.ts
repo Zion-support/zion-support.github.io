@@ -20,23 +20,24 @@ export async function simulateAction<T = any>(
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
-    return simulateAction(connection, 'crm.syncContact', { contact })
-  };
+    return simulateAction(connection, 'crm.syncContact', { contact });
+  },
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note })
-  };
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
-  }};
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  }
+};
 
 // ATS actions
 export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
-    return simulateAction(connection, 'ats.pushApplicant', { applicant })
-  };
-  async uploadResume(connection: ProviderConnection, resume: Record<string, any>) {
-    return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume?.name } })
-  };
+  async pushApplicant($2) {
+    return simulateAction($3);
+  },
+  async uploadResume($2) {
+    return simulateAction($3);
+  },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};

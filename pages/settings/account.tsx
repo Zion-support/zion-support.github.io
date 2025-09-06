@@ -68,8 +68,10 @@ export default function AccountSettingsPage() {
       const profile = {
         user;
         preferences: { displayWeb3 },
-        did: { ens, lens, ceramic, farcaster };
-        resume: {},
+        did: {
+       ens, lens, ceramic, farcaster 
+    },
+    resume: {},
         projects: [],
         reviews: []},
       const res = await fetch('/api/backup/upload', {

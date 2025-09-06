@@ -9,11 +9,13 @@ export interface FilterSidebarProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
   expandedSections: {
+      
     skills: boolean, availability: boolean,
     region: boolean, experience: boolean,
     price: boolean
-  };
-  toggleSection: (sectionName: string) => void, sortOption: string,
+  
+    },
+    toggleSection: (sectionName: string) => void, sortOption: string,
   setSortOption: (option: string) => void, clearFilters: () => void,
   isMobileFilterOpen?: boolean
 }

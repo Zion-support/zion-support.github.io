@@ -136,11 +136,13 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
+      
 									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
-								};
-								offers: {
+								
+    },
+    offers: {
 									"@type": "Offer";
 									        price: "99",
 									priceCurrency: "USD",

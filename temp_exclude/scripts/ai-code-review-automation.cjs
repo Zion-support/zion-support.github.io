@@ -8,8 +8,10 @@ const logger = winston.createLogger({
     winston.format.errors({ stack: true });
     winston.format.json()
   );
-  defaultMeta: { service: 'automation-script' };
-  transports: [
+  defaultMeta: {
+       service: 'automation-script' 
+    },
+    transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
     new winston.transports.File({ filename: 'logs/combined.log' })
   ]
@@ -94,11 +96,13 @@ class AICodeReviewAgent extends EventEmitter {
       
       const results = {
         summary: {
+      
           filesAnalyzed: 0, issuesFound: 0,
           improvementsApplied: 0,
           executionTime: 0
-        };
-        files: [], improvements: [],
+        
+    },
+    files: [], improvements: [],
         recommendations: []
       };
       

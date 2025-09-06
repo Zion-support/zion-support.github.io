@@ -39,19 +39,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const outputActions = {
       zionGPT: {
+      
         initialized: true, routes: ['/gpt/gpt/router'],
-        agents: ['proposal-writerresume-generator']};
-      daoAndToken: {
+        agents: ['proposal-writerresume-generator']
+    },
+    daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled',
         treasury: tokenActivation ? `${provisionId}-treasury` : null;
         governanceMode;
         votingDashboard: '/dao'};
       assets: {
+      
         whitepaper: '/whitepaper', roadmap: '/roadmap',
         book: {
           pdf: '/book/manifesto.pdf',
-          trailerScript: '/trailer/script'};
-        summit: '/summit'};
+          trailerScript: '/trailer/script'
+    },
+    summit: '/summit'};
       publicPages: [
         '/about/manifesto/constitution/partners/academy/marketplace/dao';
         `/nation/${defaultLanguage || 'en'}`]};

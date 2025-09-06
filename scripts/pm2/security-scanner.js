@@ -34,8 +34,11 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
     message: 'Debug mode enabled in production configuration'})}}});
 ; return {; success: true,
     issues: configIssues}} catch (error) {; return {; success: false, error: error.message, issues: []}}};
-; async generateReport(depResults, codeResults, configResults) {; const report = {; timestamp: new Date().toISOString(), summary: {, dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found',
-    overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found'}; details: {, dependencies: depResults, code: codeResults,
+; async generateReport(depResults, codeResults, configResults) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found',
+    overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found'
+    },
+    details: {, dependencies: depResults, code: codeResults,
     configs: configResults}; recommendations: []};
 ; // Generate recommendations; if (!depResults.success) {; report.recommendations.push({; priority: 'critical', message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'})};
 ; if (codeResults.issues.length > 0) {; const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {; report.recommendations.push({; priority: 'high',

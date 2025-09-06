@@ -18,10 +18,12 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+      
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
-    };
+    
+    },
     md: {
       container: "text-sm",
       icon: "w-4 h-4",

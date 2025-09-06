@@ -27,8 +27,11 @@
 ; settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'); settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode');
 ; return {; success: true,
     settings: settings}} catch (error) {; return {; success: false, error: error.message, settings: null}}};
-; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {, buildSize: buildStats?.stats?.totalSizeMB || 0, fileCount: buildStats?.stats?.fileCount || 0, optimizationScore: 0,
-    recommendations: []}; details: {, build: buildStats, analyzer: analyzerInfo,
+; async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
+      , buildSize: buildStats?.stats?.totalSizeMB || 0, fileCount: buildStats?.stats?.fileCount || 0, optimizationScore: 0,
+    recommendations: []
+    },
+    details: {, build: buildStats, analyzer: analyzerInfo,
     settings: settingsInfo}; optimizations: []};
 ; // Calculate optimization score; let score = 0; const maxScore = 100;
 ; if (buildStats?.stats?.totalSizeMB < 2) score + = 30; else if (buildStats?.stats?.totalSizeMB < 5) score + = 20; else if (buildStats?.stats?.totalSizeMB < 10) score + = 10;
