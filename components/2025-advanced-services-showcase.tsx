@@ -53,7 +53,7 @@ import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Zap, Shield, Building, Globe,
+  Brain, Zap, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 
