@@ -13,6 +13,7 @@ import {
   Users,
   Settings
 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Services = () => {
   const services = [
@@ -136,7 +137,13 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead 
+        title="Our Services - AI, Cybersecurity & Cloud Solutions | Zion Tech Group"
+        description="Comprehensive technology services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, Software Development, Data Solutions, and Mobile Development."
+        keywords="AI services, cybersecurity, cloud infrastructure, software development, data solutions, mobile development, technology consulting"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -238,6 +245,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

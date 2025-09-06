@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
+import LoadingSpinner from './components/LoadingSpinner';
+import ScrollToTop from './components/ScrollToTop';
+import SEOHead from './components/SEOHead';
 import Pricing from './pages/Pricing';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
 const Home = () => (
-  <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  <>
+    <SEOHead 
+      title="Zion Tech Group - Leading AI & Technology Solutions"
+      description="Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Expert technology services for modern enterprises."
+      keywords="AI services, cybersecurity, cloud infrastructure, technology solutions, machine learning, automation"
+    />
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
@@ -100,7 +110,8 @@ const Home = () => (
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </>
 );
 
 const About = () => (
@@ -129,23 +140,28 @@ function App() {
   };
 
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen flex flex-col">
-          <Header onMenuClick={handleMenuClick} />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen flex flex-col">
+            <Header onMenuClick={handleMenuClick} />
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <ScrollToTop />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

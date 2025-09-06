@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +76,13 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead 
+        title="Contact Us - Get Your Free Consultation | Zion Tech Group"
+        description="Ready to transform your business? Contact our expert team for a free consultation on AI services, cybersecurity, cloud solutions, and custom software development."
+        keywords="contact, consultation, AI services, cybersecurity, cloud solutions, software development, technology consulting"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -253,6 +260,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
