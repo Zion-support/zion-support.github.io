@@ -1,27 +1,29 @@
-// Mock database utility
+import fs from 'fs';
+import path from 'path';
+
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
-    const fs = require('fs');
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+    const fullPath = path.join(process.cwd(), filePath);
+    if (!fs.existsSync(fullPath)) {
+      return defaultValue;
     }
+    const data = fs.readFileSync(fullPath, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error(`Error reading ${filePath}:`, error);
+    return defaultValue;
   }
-  return defaultValue;
 }
 
-export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  const fs = require('fs');
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
-}
-
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
-  writeJsonFile<T[]>(fileName, items);
+export function writeJsonFile<T>(filePath: string, data: T): void {
+  try {
+    const fullPath = path.join(process.cwd(), filePath);
+    const dir = path.dirname(fullPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error(`Error writing ${filePath}:`, error);
+  }
 }
