@@ -1,6 +1,0 @@
-  return (
-    <EnhancedLayout>
-      <Component {...pageProps} />
-    </EnhancedLayout>
-  );
-}

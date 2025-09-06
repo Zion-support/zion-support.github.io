@@ -1,9 +1,0 @@
-
-  return (
-    <motion.div
-      ref={cardRef}
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </div>
