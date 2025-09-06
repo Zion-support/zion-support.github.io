@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from '@/components/GradientHeading';
 import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
 
@@ -19,3 +20,7 @@ export function NewsletterSection() {
     </section>
   );
 }
+=======
+ export function NewsletterSection () {
+  return (<section className="py-20 bg-zion-blue-dark" id="newsletter" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="max-w-4xl mx-auto text-center" > <GradientHeading>Stay Informed</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl mb-8" > Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities. max-w-md mx-auto" > <EnhancedNewsletterForm /> </div> </div> </div> </section> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

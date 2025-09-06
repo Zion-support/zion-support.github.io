@@ -1,0 +1,640 @@
+{
+  "timestamp": "2025-09-04T02:27:57.912Z",
+  "phases": [
+    {
+      "name": "Code Quality and Fixes",
+      "status": "success",
+      "duration": 2889,
+      "result": {
+        "status": "completed"
+      }
+    },
+    {
+      "name": "Testing",
+      "status": "error",
+      "duration": 5903,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+    },
+    {
+      "name": "App Optimization",
+      "status": "success",
+      "duration": 5782,
+      "result": {
+        "timestamp": "2025-09-04T02:28:06.710Z",
+        "optimizations": [],
+        "performance": {
+          "optimizations": [
+            {
+              "type": "image-optimization",
+              "status": "completed",
+              "count": 3
+            },
+            {
+              "type": "css-optimization",
+              "status": "completed"
+            }
+          ]
+        },
+        "security": {
+          "optimizations": [
+            {
+              "type": "security-audit",
+              "status": "completed"
+            },
+            {
+              "type": "security-headers",
+              "status": "needs-configuration"
+            }
+          ]
+        },
+        "seo": {
+          "optimizations": [
+            {
+              "type": "sitemap-generation",
+              "status": "completed"
+            },
+            {
+              "type": "robots-txt-generation",
+              "status": "completed"
+            },
+            {
+              "type": "meta-tags-check",
+              "status": "completed",
+              "pages": 44
+            }
+          ]
+        },
+        "accessibility": {
+          "optimizations": [
+            {
+              "type": "alt-text-check",
+              "status": "completed",
+              "images": 0,
+              "altTexts": 0,
+              "coverage": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Comprehensive Testing",
+      "status": "success",
+      "duration": 13759,
+      "result": {
+        "timestamp": "2025-09-04T02:28:12.492Z",
+        "tests": [
+          {
+            "type": "type-checking",
+            "status": "failed",
+            "error": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+          },
+          {
+            "type": "linting",
+            "status": "passed"
+          },
+          {
+            "type": "build-test",
+            "status": "failed",
+            "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+          },
+          {
+            "type": "performance-tests",
+            "status": "failed",
+            "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+          },
+          {
+            "type": "accessibility-tests",
+            "status": "passed"
+          },
+          {
+            "type": "security-tests",
+            "status": "passed"
+          }
+        ],
+        "coverage": {},
+        "performance": {},
+        "accessibility": {
+          "totalImages": 0,
+          "imagesWithAlt": 0,
+          "altTextCoverage": 100,
+          "headingStructure": [
+            "<h1 className=\"text-9xl font-bold text-blue-600 mb-4\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-800 mb-4\">",
+            "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+            "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+            "<h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h2 className=\"text-3xl font-bold mb-6 text-blue-400\">",
+            "<h2 className=\"text-3xl font-bold mb-6 text-purple-400\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+            "<h3 className=\"text-4xl font-bold text-blue-400 mb-2\">",
+            "<h3 className=\"text-4xl font-bold text-purple-400 mb-2\">",
+            "<h3 className=\"text-4xl font-bold text-green-400 mb-2\">",
+            "<h3 className=\"text-4xl font-bold text-yellow-400 mb-2\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+            "<h2 className=\"text-2xl font-bold mb-2\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+            "<h2 className=\"text-3xl font-bold mb-6\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h2 className=\"text-3xl font-bold mb-8\">",
+            "<h3 className=\"text-xl font-semibold mb-2 text-blue-400\">",
+            "<h3 className=\"text-xl font-semibold mb-2 text-purple-400\">",
+            "<h3 className=\"text-xl font-semibold mb-2 text-green-400\">",
+            "<h3 className=\"text-xl font-semibold mb-2 text-yellow-400\">",
+            "<h2 className=\"text-3xl font-bold mb-8\">",
+            "<h3 className=\"text-xl font-semibold mb-3 text-blue-400\">",
+            "<h3 className=\"text-xl font-semibold mb-3 text-purple-400\">",
+            "<h3 className=\"text-xl font-semibold mb-3 text-green-400\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold mb-6\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>",
+            "<h3 style={{ \n                    fontSize: '1.5rem', \n                    fontWeight: 700, \n                    marginBottom: 15,\n                    color: '#3b82f6'\n                  }}>",
+            "<h4 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>",
+            "<h4 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>",
+            "<h4 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>",
+            "<h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>",
+            "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+            "<h1 className=\"text-4xl font-bold text-gray-900 mb-4\">",
+            "<h2 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-4\">",
+            "<h1 className=\"text-4xl font-bold text-gray-900 mb-4\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-xl font-semibold text-gray-900 mb-4\">",
+            "<h3 className=\"font-semibold text-gray-900 mb-2\">",
+            "<h3 className=\"font-semibold text-gray-900 mb-2\">",
+            "<h3 className=\"font-semibold text-gray-900 mb-2\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-4\">",
+            "<h1 className=\"text-4xl font-bold text-gray-900 mb-4\">",
+            "<h2 className=\"text-2xl font-semibold mb-4\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-4\">",
+            "<h4 className=\"font-medium text-gray-900\">",
+            "<h4 className=\"font-medium text-gray-900\">",
+            "<h4 className=\"font-medium text-gray-900\">",
+            "<h4 className=\"font-medium text-gray-900\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-4\">",
+            "<h1 className=\"text-4xl font-bold text-gray-900 mb-4\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-6 flex items-center\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-2\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-2\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900 mb-3\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900 mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+            "<h2 className=\"text-2xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h3 className=\"text-lg font-semibold text-gray-900 mb-3\">",
+            "<h1 className=\"text-5xl md:text-6xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-8\">",
+            "<h3 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h3 className=\"text-xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-lg font-bold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ fontSize: '1.8rem', fontWeight: 700 }}>",
+            "<h4 style={{ \n                          fontSize: '1.1rem', \n                          fontWeight: 600, \n                          marginBottom: 10,\n                          color: '#3b82f6'\n                        }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ \n                    fontSize: '1.2rem', \n                    fontWeight: 700, \n                    marginBottom: 15,\n                    color: '#3b82f6'\n                  }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 10 }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h1 className=\"text-5xl md:text-6xl font-extrabold tracking-tight mb-6\">",
+            "<h3 className=\"text-2xl font-bold text-blue-400 mb-2\">",
+            "<h3 className=\"text-2xl font-bold text-purple-400 mb-2\">",
+            "<h3 className=\"text-2xl font-bold text-green-400 mb-2\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold mb-8\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+            "<h2 className=\"text-2xl font-bold mb-6 text-center\">",
+            "<h2 className=\"text-2xl font-bold\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+            "<h2 className=\"text-3xl font-bold mb-4\">",
+            "<h1 style={{ \n              fontSize: '2.5rem', \n              fontWeight: 800, \n              marginBottom: 10,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ \n                    fontSize: '1.4rem', \n                    fontWeight: 700, \n                    marginBottom: 15,\n                    lineHeight: 1.3\n                  }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 10 }}>",
+            "<h3 style={{ \n                        fontSize: '1.2rem', \n                        fontWeight: 700, \n                        marginBottom: 10,\n                        lineHeight: 1.3\n                      }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-4\">",
+            "<h2 className=\"text-2xl font-bold mb-6 text-center\">",
+            "<h2 className=\"text-2xl font-bold\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-blue-400\">",
+            "<h3 className=\"text-lg font-semibold mb-3 text-green-400\">",
+            "<h2 className=\"text-3xl font-bold mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-2xl font-bold text-white mb-8\">",
+            "<h3 className=\"text-3xl font-bold text-white mb-4 hover:text-blue-400 transition-colors\">",
+            "<h2 className=\"text-2xl font-bold text-white mb-8\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-4\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-3\">",
+            "<h4 className=\"text-lg font-semibold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h4 className=\"text-lg font-bold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-yellow-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-blue-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-purple-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-green-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-yellow-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-red-400\">",
+            "<h3 className=\"text-xl font-semibold mb-4 text-indigo-400\">",
+            "<h2 className=\"text-3xl font-bold mb-4\">",
+            "<h1 className=\"text-3xl md: text-4xl font-bold text-gray-900 mb-6\">",
+            "<h2>",
+            "<h2>",
+            "<h2>",
+            "<h2>",
+            "<h2>",
+            "<h2>",
+            "<h1 className=\"text-4xl md:text-6xl font-bold mb-6\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-6\">",
+            "<h1 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h3 className=\"text-lg font-semibold text-white mb-2\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-2xl font-bold text-white mb-8 text-center\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+            "<h4 className=\"text-lg font-bold text-white\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-lg font-bold text-white\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 className=\"text-5xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-bold text-white mb-4\">",
+            "<h2 className=\"text-2xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-4\">",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #ef4444, #dc2626)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 10 }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h1 className=\"text-5xl md:text-6xl font-bold text-white mb-6\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors\">",
+            "<h4 className=\"text-sm font-semibold text-white mb-2\">",
+            "<h3 className=\"text-xl font-semibold text-white mb-2\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-6\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+            "<h2 className=\"text-3xl font-bold mb-6\">",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-6\">",
+            "<h2 className=\"text-3xl md:text-4xl font-bold text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-purple-400\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-green-400\">",
+            "<h2 className=\"text-3xl font-bold text-center mb-12\">",
+            "<h3 className=\"font-semibold\">",
+            "<h2 className=\"text-3xl font-bold mb-6\">",
+            "<h2 style={{ \n          fontSize: 28, fontWeight: 800, margin: 0,\n          background: `linear-gradient(135deg, ${color}, ${color}80)`,\n          WebkitBackgroundClip: 'text',\n          WebkitTextFillColor: 'transparent',\n          backgroundClip: 'text'\n        }}>",
+            "<h1 style={{ \n            fontSize: 48, fontWeight: 800, marginBottom: 16,\n            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n            WebkitBackgroundClip: 'text',\n            WebkitTextFillColor: 'transparent',\n            backgroundClip: 'text'\n          }}>",
+            "<h2 style={{ \n          fontSize: 32, fontWeight: 700, marginBottom: 16,\n          color: '#1e293b'\n        }}>",
+            "<h1 style={{ \n              fontSize: '2.5rem', \n              fontWeight: 800, \n              marginBottom: 10,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h1 className=\"text-4xl md:text-5xl font-bold mb-4\">",
+            "<h2 className=\"text-2xl font-bold mb-6 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-6 text-purple-400\">",
+            "<h2 className=\"text-2xl font-bold mb-6 text-green-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4\">",
+            "<h1 className=\"text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">",
+            "<h2 className=\"text-4xl font-bold text-center mb-16\">",
+            "<h3 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-4xl font-bold text-center mb-16\">",
+            "<h3 className=\"text-xl font-bold mb-2\">",
+            "<h3 className=\"text-xl font-bold mb-2\">",
+            "<h3 className=\"text-xl font-bold mb-2\">",
+            "<h3 className=\"text-xl font-bold mb-2\">",
+            "<h2 className=\"text-4xl font-bold mb-6\">",
+            "<h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-2xl font-bold text-white mb-2\">",
+            "<h4 className=\"text-lg font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white text-center mb-12\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h3 className=\"text-xl font-bold text-white mb-3\">",
+            "<h2 className=\"text-3xl font-bold text-white mb-4\">",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #10b981, #059669)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700 }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>",
+            "<h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 5 }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>",
+            "<h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 8 }}>",
+            "<h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 10 }}>",
+            "<h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>",
+            "<h1 style={{ \n              fontSize: '3rem', \n              fontWeight: 800, \n              marginBottom: 20,\n              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',\n              WebkitBackgroundClip: 'text',\n              WebkitTextFillColor: 'transparent',\n              backgroundClip: 'text'\n            }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 5 }}>",
+            "<h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>",
+            "<h3 style={{ fontSize: '1.3rem', fontWeight: 700 }}>",
+            "<h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>",
+            "<h1 className=\"text-4xl md:text-5xl font-extrabold tracking-tight mb-8\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h2 className=\"text-2xl font-bold mb-4 text-blue-400\">",
+            "<h1 className=\"text-2xl font-bold text-white mb-4\">",
+            "<h3 className=\"text-white font-medium\">",
+            "<h3 className=\"text-xl font-semibold text-white\">",
+            "<h3 className=\"text-lg font-semibold mb-4\">",
+            "<h3 className=\"text-lg font-semibold mb-4\">",
+            "<h3 className=\"text-lg font-semibold mb-4\">",
+            "<h2 className=\"text-3xl sm:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-2xl font-semibold text-gray-900 mb-8\">",
+            "<h4 className=\"text-lg font-medium text-gray-900\">",
+            "<h3 className=\"text-2xl font-semibold text-gray-900 mb-6\">",
+            "<h1 className=\"text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight\">",
+            "<h2 className=\"text-3xl sm:text-4xl font-bold text-gray-900 mb-4\">",
+            "<h3 className=\"text-xl font-semibold text-gray-900 mb-3\">",
+            "<h1 className=\"text-2xl font-bold text-gray-900 mb-2\">"
+          ]
+        },
+        "security": {
+          "auditStatus": "clean",
+          "hasSecurityHeaders": false
+        },
+        "summary": {
+          "totalTests": 6,
+          "passedTests": 3,
+          "failedTests": 3,
+          "successRate": 50,
+          "timestamp": "2025-09-04T02:28:26.249Z"
+        }
+      }
+    },
+    {
+      "name": "Deployment",
+      "status": "success",
+      "duration": 13845,
+      "result": {
+        "timestamp": "2025-09-04T02:28:26.251Z",
+        "steps": [
+          {
+            "name": "Pre-deployment Checks",
+            "status": "success",
+            "duration": 6354,
+            "result": [
+              {
+                "type": "git-status",
+                "status": "uncommitted-changes",
+                "message": "Working directory has uncommitted changes"
+              },
+              {
+                "type": "tests",
+                "status": "passed",
+                "message": "All tests passed"
+              },
+              {
+                "type": "build",
+                "status": "failed",
+                "message": "Build failed"
+              }
+            ]
+          },
+          {
+            "name": "Build Application",
+            "status": "error",
+            "duration": 5476,
+            "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+          },
+          {
+            "name": "Run Tests",
+            "status": "success",
+            "duration": 769,
+            "result": {
+              "status": "success",
+              "output": "\n> ziontechgroup.com@0.1.0 test\n> jest --coverage --watchAll=false\n\n----------|---------|----------|---------|---------|-------------------\nFile      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s \n----------|---------|----------|---------|---------|-------------------\nAll files |       0 |        0 |       0 |       0 |                   \n----------|---------|----------|---------|---------|-------------------\n",
+              "timestamp": "2025-09-04T02:28:38.850Z"
+            }
+          },
+          {
+            "name": "Commit Changes",
+            "status": "success",
+            "duration": 117,
+            "result": {
+              "message": "feat: automated deployment - 2025-09-04T02:28:38.910Z",
+              "timestamp": "2025-09-04T02:28:38.967Z"
+            }
+          },
+          {
+            "name": "Push to Repository",
+            "status": "success",
+            "duration": 1122,
+            "result": {
+              "branch": "main",
+              "timestamp": "2025-09-04T02:28:40.089Z"
+            }
+          },
+          {
+            "name": "Merge to Main",
+            "status": "success",
+            "duration": 3,
+            "result": {
+              "merged": true,
+              "alreadyOnMain": true
+            }
+          },
+          {
+            "name": "Create Deployment Tag",
+            "status": "error",
+            "duration": 2,
+            "error": "Command failed: git tag -a deployment-2025-09-04 -m \"Deployment tag deployment-2025-09-04\"\nfatal: tag 'deployment-2025-09-04' already exists\n"
+          }
+        ],
+        "deployment": {
+          "preDeploymentChecks": [
+            {
+              "type": "git-status",
+              "status": "uncommitted-changes",
+              "message": "Working directory has uncommitted changes"
+            },
+            {
+              "type": "tests",
+              "status": "passed",
+              "message": "All tests passed"
+            },
+            {
+              "type": "build",
+              "status": "failed",
+              "message": "Build failed"
+            }
+          ]
+        },
+        "git": {
+          "commit": {
+            "message": "feat: automated deployment - 2025-09-04T02:28:38.910Z",
+            "timestamp": "2025-09-04T02:28:38.967Z"
+          },
+          "push": {
+            "branch": "main",
+            "timestamp": "2025-09-04T02:28:40.089Z"
+          }
+        },
+        "build": {},
+        "summary": {
+          "totalSteps": 7,
+          "successfulSteps": 5,
+          "failedSteps": 2,
+          "successRate": 71,
+          "deploymentStatus": "failed",
+          "timestamp": "2025-09-04T02:28:40.094Z"
+        }
+      }
+    },
+    {
+      "name": "Final Validation",
+      "status": "error",
+      "duration": 5542,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+    }
+  ],
+  "summary": {
+    "totalPhases": 6,
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "successRate": 67,
+    "overallStatus": "partial",
+    "timestamp": "2025-09-04T02:28:45.637Z"
+  },
+  "reports": {}
+}

@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import StarRating from './StarRating';
-
-export type ReviewFormValues = {
-  projectId: string;
-  fromRole: 'client' | 'talent';
-  fromId: string;
-  rating: number;
-  text: string;
-  categories?: {
-    communication?: number;
-    qualityOfWork?: number;
-    timeliness?: number;
-    wouldWorkWithAgain?: boolean;
-  };
-  anonymous?: boolean;
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
+  submitting ? 'Submitting...' : 'Submit Review' 
+}</button> </form>) 
 };
+<<<<<<< HEAD
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
@@ -149,4 +137,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   );
 };
 
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewForm;

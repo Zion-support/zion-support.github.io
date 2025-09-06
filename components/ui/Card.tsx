@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CardProps {
@@ -42,4 +43,15 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
+=======
+ return (<div className= {
+  classes 
+}style= {
+  style 
+}onClick= {
+  onClick 
+}>) 
+}</div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default Card;

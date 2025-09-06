@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
@@ -102,3 +103,30 @@ export const SidebarGroup = React.forwardRef<
   );
 });
 SidebarGroup.displayName = 'SidebarGroup';
+=======
+ export const SidebarInput = React.forwardRef< React.ElementRef<typeof Input>;
+React.ComponentProps<typeof Input> > ( (props, ref) => {
+  return (<Input ref= {
+  ref 
+}) 
+}{
+  ...props 
+}/>) 
+}) SidebarInput.displayName = "SidebarInput" export const SidebarHeader = React.forwardRef< HTMLDivElement;
+/>) 
+}) SidebarHeader.displayName = "SidebarHeader" export const SidebarFooter = React.forwardRef< HTMLDivElement;
+/>) 
+}) SidebarFooter.displayName = "SidebarFooter" export const SidebarSeparator = React.forwardRef< HTMLDivElement;
+React.ComponentProps<typeof Separator> > ( (props, ref) => {
+  return (<Separator ref= {
+  ref 
+}/>) 
+}) SidebarSeparator.displayName = "SidebarSeparator" export const SidebarContent = React.forwardRef< HTMLDivElement;
+) 
+}{
+  ...props 
+}/>) 
+}) SidebarContent.displayName = "SidebarContent" export const SidebarGroup = React.forwardRef< HTMLDivElement;
+/>) 
+}) SidebarGroup.displayName = "SidebarGroup" 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

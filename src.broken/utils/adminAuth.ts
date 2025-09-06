@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type AdminSession = {
   username: string;
   issuedAt: number;
@@ -81,3 +82,6 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   if (!key || Array.isArray(key)) return false;
   return crypto.timingSafeEqual(Buffer.from(key), Buffer.from(expected));
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

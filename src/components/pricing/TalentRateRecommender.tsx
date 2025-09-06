@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -100,4 +101,36 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       </div>
     </div>
   );
+=======
+ import {;
+  getTalentRateSuggestion;
+PricingSuggestion;
+TalentRateParams;
+trackPricingSuggestion interface TalentRateRecommenderProps {;
+  skills: string[];
+yearsExperience: number;
+location?: string;
+const handleApplySuggestion = () => {;
+  if (suggestion) {;
+  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user && user.id) {;
+  trackPricingSuggestion ({;
+  ;
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
+return (<div className="space-y-4" > <div> {";
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
+  generateSuggestion ";
+}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
+  suggestion ;
+}isLoading= {;
+  isLoading ;
+}onApplySuggestion= {;
+  handleApplySuggestion ;
+}rateType= {;
+  rateType ;
+}/>) ;
+}</div> </div>) ;
+};
+'"

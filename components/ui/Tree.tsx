@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export interface TreeNode {
@@ -112,3 +113,40 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
 }
 
 export default Tree;
+=======
+ export interface TreeNode {
+  name: string;
+path: string;
+type: "folder" | "file";
+exists?: boolean;
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<div className="ml-2"> <div className="flex items-center gap-2 py-1"> </button>) : (<span className="inline-block w-4" />) 
+}</div> </div> {
+  hasChildren && open && (<div className="ml-4 border-l pl-2"> {
+  node.children!.map ( (child) => (<NodeItem key= {
+  child.path 
+}node= {
+  child 
+}depth= {
+  depth + 1 
+}onDeploy= {
+  onDeploy 
+}/>) ) 
+}</div>) 
+}</div>) 
+}export function Tree ({
+  nodes, onDeploy 
+}: TreeProps) {
+  return (<div className="w-full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path 
+}node= {
+  n 
+}depth= {
+  0 
+}onDeploy= {
+  onDeploy 
+}/>) ) 
+}</div>) 
+}export default Tree;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

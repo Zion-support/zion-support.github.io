@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder } from '@/components/contracts/ContractBuilder';
@@ -87,3 +88,42 @@ export function ContractBuilderContent() {
     </>
   );
 }
+=======
+ //Future implementation: View specific contract details 
+};
+() => setShowBuilderType ('smart') 
+}/> <ContractTypeCards onStandardClick= {
+  () => setShowBuilderType ('standard') 
+}onSmartClick= {
+  () => setShowBuilderType ('smart') 
+}/> <RecentContractsTable contracts= {
+  recentContracts 
+}onViewContract= {
+  handleViewContract 
+}/> {
+  showBuilderType === 'standard' && (<ContractBuilder isOpen= {
+  true 
+}onClose= {
+  () => setShowBuilderType ('none') 
+}talent= {
+  mockTalent 
+}clientName= {
+  user?.displayName || 'Client' 
+}onContractGenerated= {
+  handleContractGenerated 
+}/>) 
+}{
+  showBuilderType === 'smart' && (<SmartContractBuilder isOpen= {
+  true 
+}onClose= {
+  () => setShowBuilderType ('none') 
+}talent= {
+  mockTalent 
+}clientName= {
+  user?.displayName || 'Client' 
+}onContractGenerated= {
+  handleContractGenerated 
+}/>) 
+}</>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const OPENAI_API_KEY = '';
 // Base URL for opening Zion pages in a new tab
 const BASE_URL = 'https://zionai.com';
@@ -45,4 +46,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'view-notifications') {
     chrome.tabs.create({ url: `${BASE_URL}/notifications` });
   }
+=======
+ 
+};
+body: JSON.stringify ({
+  model: 'gpt-3.5-turbo', messages: [ {
+  role: 'user', content: prompt 
+}] 
+}) 
+});
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

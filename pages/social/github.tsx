@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -29,3 +30,7 @@ export default function GitHubRedirect() {
     </>
   );
 }
+=======
+ return (<> <Head> <title>GitHub | Zion Tech Group</title> Continue to GitHub </Link> </div> </>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

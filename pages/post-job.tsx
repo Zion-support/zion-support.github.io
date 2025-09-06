@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -154,3 +155,7 @@ export default function PostJobPage() {
     </div>
   );
 }
+=======
+ </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </button> </div> </form> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
@@ -92,3 +93,8 @@ export default async function handler(
       .json({ error: 'Internal server error', details: error?.message });
   }
 }
+=======
+ x.projectId === r.projectId && x.fromRole !== r.fromRole && x.toRole !== r.toRole && x.approved && (targetType === 'talent' && p.talentSlug === targetId) || (targetType === 'client' && p.clientId === targetId) ) ) .length;
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

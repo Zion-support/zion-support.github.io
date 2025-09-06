@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -77,3 +78,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
+=======
+ interface MainNavigationProps {
+  className?: string 
+}export function MainNavigation ({
+  className 
+}: MainNavigationProps) {
+  return (<nav className= {
+  cn ("hidden md:flex items-center space-x-6", className) 
+}> <NavLink to="/" className= {
+  ({
+  isActive 
+}) => text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground") 
+}> Home </NavLink> <Link to=" /talent"className=" text-zion-slate-light hover:text-white transition-colors"> Find Talent </Link> <Link to=" /services"className=" text-zion-slate-light hover:text-white transition-colors"> Services </Link> <Link to=" /equipment"className=" text-zion-slate-light hover:text-white transition-colors"> Equipment </Link> <Link to=" /blog"className=" text-zion-slate-light hover:text-white transition-colors"> Blog </Link> <Link to=" /categories"className=" text-zion-slate-light hover:text-white transition-colors"> Categories </Link> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground") 
+}> Partner Program </NavLink> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground";
+" bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
+}> Register </NavLink> </nav>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

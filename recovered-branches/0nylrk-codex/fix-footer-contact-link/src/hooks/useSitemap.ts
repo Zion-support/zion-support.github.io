@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useAuth } from './useAuth';
 import { getAccessibleRoutes } from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
@@ -55,3 +56,13 @@ export function useSitemap() {
     canAccessRoute,
   };
 }
+=======
+ // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+if (!route) return false;
+// If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
+// If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {
+  return true 
+};
+// Helper function to check if userType is valid 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

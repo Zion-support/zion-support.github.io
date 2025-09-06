@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Job } from '@/types/jobs';
 
 export const JOB_POSTS: Job[] = [
@@ -29,3 +30,10 @@ export const JOB_POSTS: Job[] = [
     updated_at: '2024-05-05',
   },
 ];
+=======
+ >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 export const JOB POSTS: Job[] = [ deadline: "2024-06-15";
+status: "new";
+created at: "2024-05-05";
+updated at: "2024-05-05" 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

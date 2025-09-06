@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -43,3 +44,16 @@ export default function ZeroTrustSecurityPlatformPage() {
     </>
   );
 }
+=======
+ pricePerMonthUSD= {
+  3499 
+}features= {
+  [ "Policy-as-code and enforcement";
+"Identity-aware proxies and device posture";
+"Microsegmentation and service mesh integration";
+"Continuous authentication and authorization";
+"Visibility and audit for compliance";
+"Rollout playbooks and migration kits" ] 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

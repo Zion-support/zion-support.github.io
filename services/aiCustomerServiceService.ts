@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface CustomerTicket {
   id: string;
   customerId: string;
@@ -410,3 +411,6 @@ export class AICustomerServiceService {
 export const aiCustomerServiceService = new AICustomerServiceService(
   process.env.CUSTOMER_SERVICE_API_KEY || ''
 );
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

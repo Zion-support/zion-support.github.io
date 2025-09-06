@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ResumeBasicInfo {
   id?: string;
   title: string;
@@ -70,3 +71,6 @@ export interface Resume {
   portfolio_projects?: PortfolioProject[];
   is_active: boolean;
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

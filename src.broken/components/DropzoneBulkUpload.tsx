@@ -1,12 +1,8 @@
-import { useCallback, useState } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { Button } from './ui/button';
-import { Progress } from './ui/progress';
-
-interface UploadError {
-  row: number;
-  error: string;
+ const onDrop = useCallback ( (accepted: File[]) => {
+  if (accepted.length) {
+  
 }
+<<<<<<< HEAD
 
 interface UploadReport {
   created: number;
@@ -97,4 +93,24 @@ export function DropzoneBulkUpload() {
       )}
     </div>
   );
+=======
+}catch (err) {
+  console.error (err) 
+}finally {
+  setProgress (100) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+};
+space-y-4" > <div {
+  ...getRootProps ({
+  className: 'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer' 
+}) 
+}> <input {
+  ...getInputProps () 
+}/> {
+  isDragActive ? (<p>Drop the CSV here...</p>) : (<p>Drag and drop CSV file here, or click to select file</p>) 
+}</div> Download error CSV </Link>) 
+}</div>) 
+}</div>) 
+}</div>) 
 }

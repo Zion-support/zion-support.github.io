@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -55,3 +56,14 @@ export function NewsletterForm() {
     </div>
   );
 }
+=======
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault ();
+setIsSubmitting (true);
+//Simulate API call setTimeout ( () => {
+  
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (</Button> </form>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

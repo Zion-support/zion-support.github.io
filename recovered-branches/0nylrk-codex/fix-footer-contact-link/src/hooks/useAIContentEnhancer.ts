@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -67,4 +68,16 @@ export function useAIContentEnhancer() {
     isEnhancing,
     error,
   };
+=======
+ type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
+}finally {
+  setIsEnhancing (false) 
+}
+};
+return {
+  enhanceContent;
+isEnhancing;
+error 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

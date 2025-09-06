@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import {
@@ -104,4 +105,25 @@ export function IntegrationsSyncLog() {
       </div>
     </Card>
   );
+=======
+ import {
+  Table;
+TableBody;
+TableCell;
+TableHead;
+TableHeader;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample data for integration sync logs export function IntegrationsSyncLog () {
+  const getStatusBadge = (status: string) => {
+  switch (status) {
+  
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+};
+return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {
+  syncLogs.map ( (log) => (<TableRow key= {
+  log.id 
+}> <TableCell> {
+  log.event.replace (/ /g, ' ') .replace (/\b\w/g, l => l.toUpperCase () ) 
+}</TableCell> </TableRow>) ) 
+}</TableBody> </Table> </div> </Card>) 
 }

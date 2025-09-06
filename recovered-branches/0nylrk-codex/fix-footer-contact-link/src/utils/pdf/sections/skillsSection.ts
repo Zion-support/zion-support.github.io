@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf';
 import { Skill } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
@@ -51,3 +52,9 @@ export function addSkillsSection(
 
   return yPos + 5;
 }
+=======
+ doc.setFontSize (11);
+doc.setTextColor (colors.text);
+return yPos + 5 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

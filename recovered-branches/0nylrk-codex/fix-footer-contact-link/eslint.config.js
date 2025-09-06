@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -27,3 +28,8 @@ export default tseslint.config(
     },
   }
 );
+=======
+ export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
+}
+});
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

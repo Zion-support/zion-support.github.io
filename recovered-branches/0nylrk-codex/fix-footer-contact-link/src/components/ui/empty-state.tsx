@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -83,3 +84,33 @@ export function EmptyState({
     </div>
   );
 }
+=======
+ interface EmptyStateProps {
+  icon: React.ReactNode;
+title: string;
+description: string;
+action?: {
+  text: string;
+href?: string;
+onClick?: () => void 
+};
+secondaryAction?: {
+  text: string;
+href?: string;
+onClick?: () => void 
+};
+className?: string 
+}export function EmptyState ({
+  icon, title, description, action, secondaryAction, className 
+}: EmptyStateProps) {
+  return (<div className= {
+  cn (> {
+  action.text 
+}</Button>) ) 
+}{
+  secondaryAction && (secondaryAction.href ? (> {
+  secondaryAction.text 
+}</Button>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

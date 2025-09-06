@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useTheme } from 'next-themes';
 import { Toaster as Sonner, toast } from 'sonner';
 
@@ -27,3 +28,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
 };
 
 export { Toaster, toast };
+=======
+ />) 
+}export {
+  Toaster, toast 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

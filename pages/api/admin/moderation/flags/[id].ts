@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { getFlagById } from '../../../../../utils/moderationDb';
+import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -26,3 +25,13 @@ export default async function handler(
   res.setHeader('Allow', 'GET');
   return res.status(405).end('Method Not Allowed');
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Flag details' });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

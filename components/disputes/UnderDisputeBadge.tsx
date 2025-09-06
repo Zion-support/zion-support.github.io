@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
@@ -28,3 +29,8 @@ export default function UnderDisputeBadge({
     </span>
   );
 }
+=======
+const fetcher = (url: string) => fetch (url) .then (r => r.json () );
+return (<span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs" > Under Dispute </span>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

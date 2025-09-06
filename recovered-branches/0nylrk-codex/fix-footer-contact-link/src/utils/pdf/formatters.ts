@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 
 /**
@@ -12,3 +13,7 @@ export function formatDate(date: Date | string | undefined): string {
   }
   return format(date, 'MMM yyyy');
 }
+=======
+ /** * Formats a date for PDF display * @param date Date or string to format * @returns Formatted date string */ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

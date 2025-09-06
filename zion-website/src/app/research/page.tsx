@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import {
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
   GlobeAltIcon,
+=======
+import { 
+  LightBulbIcon,
+  CpuChipIcon, 
+  AcademicCapIcon,
+  GlobeAltIcon, 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   ChartBarIcon,
   UserGroupIcon,
   RocketLaunchIcon,
@@ -17,9 +25,8 @@ const researchAreas = [
     icon: LightBulbIcon,
     topics: [
       'Deep Learning & Neural Networks',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
       'Reinforcement Learning',
+<<<<<<< HEAD
       'Federated Learning',
       'Explainable AI',
     ],
@@ -28,12 +35,25 @@ const researchAreas = [
     name: 'Quantum Computing & AI',
     description:
       'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
+=======
+      'Natural Language Processing',
+      'Computer Vision',
+      'Generative AI & Large Language Models',
+      'AI Ethics & Responsible AI'
+    ]
+  },
+  {
+    name: 'Quantum Computing',
+    description: 'Developing quantum algorithms and hardware for solving complex optimization and simulation problems.',
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     icon: CpuChipIcon,
     topics: [
-      'Quantum Neural Networks',
+      'Quantum Algorithms',
       'Quantum Machine Learning',
-      'Quantum-Classical Hybrid Systems',
+      'Quantum Cryptography',
+      'Quantum Simulation',
       'Quantum Error Correction',
+<<<<<<< HEAD
       'Quantum Algorithms for AI',
       'Quantum Supremacy Applications',
     ],
@@ -42,9 +62,21 @@ const researchAreas = [
     name: 'Autonomous Systems & Robotics',
     description:
       'Developing intelligent systems that can operate independently and adapt to changing environments.',
+=======
+      'Quantum Hardware Development'
+    ]
+  },
+  {
+    name: 'Autonomous Systems',
+    description: 'Creating intelligent systems that can operate independently and adapt to changing environments.',
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     icon: RocketLaunchIcon,
     topics: [
+      'Autonomous Vehicles',
+      'Robotic Process Automation',
+      'Smart Infrastructure',
       'Autonomous Decision Making',
+<<<<<<< HEAD
       'Multi-Agent Systems',
       'Robotic Learning & Adaptation',
       'Human-Robot Interaction',
@@ -56,6 +88,15 @@ const researchAreas = [
     name: 'AI Ethics & Governance',
     description:
       'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
+=======
+      'Human-AI Collaboration',
+      'Edge AI & IoT Integration'
+    ]
+  },
+  {
+    name: 'Cybersecurity & Privacy',
+    description: 'Protecting digital assets and ensuring privacy in an increasingly connected world.',
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     icon: ShieldCheckIcon,
     topics: [
       'AI Bias & Fairness',
@@ -63,6 +104,7 @@ const researchAreas = [
       'AI Safety & Alignment',
       'Ethical AI Guidelines',
       'AI Regulation & Policy',
+<<<<<<< HEAD
       'Human-AI Collaboration',
     ],
   },
@@ -162,6 +204,12 @@ const academicPartners = [
     collaboration: 'Robotic learning and human-robot interaction',
   },
 ];
+=======
+      'Human-AI Collaboration'
+    ]
+  }
+]
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 export default function ResearchPage() {
   return (
@@ -172,6 +220,7 @@ export default function ResearchPage() {
           <div className='text-center'>
             <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
               Research &{' '}
+<<<<<<< HEAD
               <span className='bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent'>
                 Innovation
               </span>
@@ -180,11 +229,21 @@ export default function ResearchPage() {
               Pushing the boundaries of artificial intelligence through
               groundbreaking research, innovative discoveries, and academic
               collaboration.
+=======
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Development
+              </span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              At Zion Tech Group, we are at the forefront of technological innovation, 
+              conducting groundbreaking research that shapes the future of AI and computing.
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             </p>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Research Focus Areas */}
       <div className='mx-auto max-w-7xl px-6 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:text-center'>
@@ -218,9 +277,35 @@ export default function ResearchPage() {
                     <div key={topic} className='flex items-center gap-2'>
                       <div className='h-1.5 w-1.5 bg-blue-400 rounded-full'></div>
                       <span className='text-sm text-gray-400'>{topic}</span>
+=======
+      {/* Research areas */}
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Research Areas
+            </h2>
+            <div className="mt-16 space-y-16">
+              {researchAreas.map((area) => (
+                <div key={area.name} className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-blue-600 flex-shrink-0">
+                    <area.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white">{area.name}</h3>
+                    <p className="mt-2 text-base text-gray-300">{area.description}</p>
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-white mb-2">Key Research Topics:</h4>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {area.topics.map((topic) => (
+                          <li key={topic} className="text-sm text-gray-300">• {topic}</li>
+                        ))}
+                      </ul>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                     </div>
-                  ))}
+                  </div>
                 </div>
+<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -396,6 +481,10 @@ export default function ResearchPage() {
             >
               Research Careers <span aria-hidden='true'>→</span>
             </a>
+=======
+              ))}
+            </div>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
       </div>

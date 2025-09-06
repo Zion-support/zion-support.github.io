@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { JobData, MatchResult } from './types.ts';
 import { normalizeSkillsWithAI, findBestMatches } from './ai-matcher.ts';
@@ -78,4 +79,14 @@ export async function storeMatchResults(
   });
 
   await Promise.all(matchInsertPromises);
+=======
+ try {
+  //Normalize job skills and generate embeddings via OpenAI 
+}
+}/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId 
+}) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+});
+await Promise.all (matchInsertPromises) 
 }

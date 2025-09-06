@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
@@ -63,3 +64,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendors = listVendors();
   return { props: { vendors } };
 };
+=======
+ </div> {
+  vendors.length === 0 && (<p className="text-gray-500" >No vendors yet. Be the first to apply.</p>) 
+}) : (<div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />) 
+}<div> 
+}</div> <div className="text-center text-xs text-gray-500" >Powered by Zion • Co-brand available</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

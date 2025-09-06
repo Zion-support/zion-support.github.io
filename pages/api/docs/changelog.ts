@@ -1,11 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const filePath = path.join(process.cwd(), 'data', 'api-docs', 'changelog.json');
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+ export default function handler (req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
+<<<<<<< HEAD
     try {
       const content = fs.existsSync(filePath)
         ? JSON.parse(fs.readFileSync(filePath, 'utf8'))
@@ -36,3 +31,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
+=======
+  try {
+  
+}return 
+}
+}return 
+}res.setHeader ('AllowGET, POST');
+res.status (405) .end ('Method Not Allowed') 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

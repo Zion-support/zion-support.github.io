@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -50,3 +51,21 @@ export function useRole(): RoleContextValue {
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;
 }
+=======
+ export type UserRole = 'client' | 'talent';
+useEffect ( () => {
+  try {
+  
+}catch {
+  
+}
+}, []);
+useEffect ( () => {
+  try {
+  if (typeof window !== 'undefined') {
+  
+}catch {
+  
+}
+}, [role]);
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

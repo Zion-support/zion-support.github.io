@@ -1,15 +1,14 @@
-import { serve } from 'https://deno.land/std@0.208.0/http/server.ts';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7';
-
-interface TenantInfo {
-  id: string;
-  brand_name: string;
-  subdomain: string;
-  custom_domain: string | null;
-  primary_color: string;
-  logo_url: string | null;
-  theme_preset: string;
+ serve (async (req) => {
+  // Handle CORS preflight requests if (req.method === 'OPTIONS') {
+  // Extract tenant info let tenantInfo: TenantInfo | null = null;
+if (subdomainParam) {
+  // Direct subdomain lookup const {
+  data, error 
+}= await supabase .from ('whitelabel tenants') .select ('id, brand name, subdomain, custom domain, primary color, logo url, theme preset') .eq ('subdomain', subdomainParam) .eq ('is active', true) .single ();
+.from ('whitelabel tenants') .select ('id, brand name, subdomain, custom domain, primary color, logo url, theme preset') .eq ('custom domain', hostname) .eq ('is active', true) .single ();
+// If no match on custom domain, try subdomain 
 }
+<<<<<<< HEAD
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -139,4 +138,6 @@ serve(async req => {
       }
     );
   }
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import {
@@ -35,3 +36,14 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
     />
   );
 }
+=======
+ interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues> 
+}form 
+}: ProjectDetailsFieldProps) {
+  return (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel className="text-white" >Project Overview</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+}/>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

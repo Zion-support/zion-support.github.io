@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
@@ -165,3 +166,16 @@ export default async function handler(
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+ const resp = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' 
+};
+{
+  role: 'user', content: prompt 
+}];
+temperature: 0.2;
+max tokens: 200 
+});
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

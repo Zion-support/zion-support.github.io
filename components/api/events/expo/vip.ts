@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const allowlist = new Set<string>(
@@ -12,3 +13,7 @@ export default async function handler(
   if (!address) return res.status(400).json({ allowed: false });
   res.status(200).json({ allowed: allowlist.has(address) });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

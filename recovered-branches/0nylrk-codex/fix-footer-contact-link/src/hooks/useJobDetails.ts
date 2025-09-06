@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -45,3 +46,7 @@ export function useJobDetails(jobId: string | undefined) {
 }
 
 export default useJobDetails;
+=======
+ .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+}export default useJobDetails;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

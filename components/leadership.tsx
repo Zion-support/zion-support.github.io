@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -51,3 +52,6 @@ export default function LeadershipPage() {
     </div>
   );
 }
+=======
+ <Head> <title>Leadership | Zion Tech Group</title> <meta name="description" content="Meet the leadership team guiding Zion Tech Group's vision and execution." /> <link rel="canonical" href="https://ziontechgroup.com/leadership" /> </Head> </div> </div> <div className="mt-10 text-slate-300" >Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950" >+1 302 464 0950</a></div> </div> </div> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

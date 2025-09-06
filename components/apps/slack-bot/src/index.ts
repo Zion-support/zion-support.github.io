@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -107,3 +108,8 @@ app.command('/zion', async ({ command, ack, respond }) => {
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
+=======
+ 
+}
+});
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -215,8 +215,8 @@ class DeploymentAutomation {
         ).length,
         monitorin: g: this.deploymentSteps.filter(s =>
           s.description.includes('monitor')
-        ).length,
-      },
+        ).length;
+      };
     };
 
     // Ensure logs directory exists
@@ -226,7 +226,7 @@ class DeploymentAutomation {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `deployment-automation-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

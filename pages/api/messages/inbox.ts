@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';
@@ -10,3 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const items = listConversations(user.id);
   res.status(200).json({ items });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

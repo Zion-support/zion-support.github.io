@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
@@ -115,3 +116,11 @@ export default async function handler(
 
   res.status(200).json({ ok: true, profile, aml: amlResult });
 }
+=======
+ profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
+// Flags and risk scoring profile.flags = Array.from (flags);
+profile.riskScore = riskScore;
+db[userId] = profile;
+save (db);
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

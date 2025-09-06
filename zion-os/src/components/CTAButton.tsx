@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import Link from 'next/link';
@@ -51,3 +52,17 @@ export function CTAButton({
     </Link>
   );
 }
+=======
+ return (<Link href= {
+  href 
+}className= {
+  classes 
+}onClick= {
+  onClick 
+}role="button" tabIndex= {
+  0 
+}> {
+  children 
+}</Link>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

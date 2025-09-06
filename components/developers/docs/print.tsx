@@ -1,25 +1,6 @@
-import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-
-export type Section = {
-  id: string;
-  title: string;
-  html?: string;
-  code?: { language?: string; content: string }[];
-};
-
-type DocsContent = {
-  title: string;
-  sections: Section[];
-};
-
-type PageProps = {
-  docs: DocsContent;
-};
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
+<<<<<<< HEAD
     props: {
       docs: content as DocsContent,
     },
@@ -55,3 +36,14 @@ export default function PrintDocs({ docs }: PageProps) {
     </div>
   );
 }
+=======
+  props: {
+  docs: content as DocsContent 
+}
+}
+};
+) ) 
+}</section>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

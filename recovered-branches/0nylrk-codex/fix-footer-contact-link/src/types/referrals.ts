@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 
 export interface ReferralCode {
@@ -40,3 +41,6 @@ export interface ReferralStats {
   completedReferrals: number;
   totalRewards: number;
 }
+=======
+ export type ReferralStatus = 'pending' | 'completed' | 'expired';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

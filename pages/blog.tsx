@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -20,3 +21,6 @@ export default function BlogPage() {
     </Layout>
   );
 }
+=======
+ <Layout> <Head> <title>Blog | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/blog" /> </Head> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

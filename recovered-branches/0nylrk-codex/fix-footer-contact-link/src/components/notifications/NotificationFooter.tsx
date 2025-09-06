@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -28,4 +29,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
       </Button>
     </div>
   );
+=======
+ return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications </Button> </div>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

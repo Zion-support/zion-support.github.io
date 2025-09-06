@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useEffect } from 'react';
@@ -60,3 +61,19 @@ export function Analytics() {
 
   return null; // This component doesn't render anything
 }
+=======
+ export function Analytics () {
+  useEffect ( () => {
+  // Performance monitoring if (typeof window !== "undefined") {
+  // Core Web Vitals monitoring const observer = new PerformanceObserver ( (list) => {
+  for (const entry of list.getEntries () ) {
+  
+}
+});
+}
+});
+}
+}, []);
+return null, // This component doesn't render anything 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

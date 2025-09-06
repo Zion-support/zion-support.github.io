@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 
 export interface Branding {
@@ -66,3 +67,6 @@ export interface AccessControlConfig {
   allowedRoles: ('Founder' | 'Superadmin' | 'DAOMultisig')[];
   adminKeyConfigured: boolean;
 }
+=======
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

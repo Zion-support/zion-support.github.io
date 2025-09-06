@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -96,3 +97,8 @@ export default async function handler(
       .json({ error: 'Internal server error', details: error?.message });
   }
 }
+=======
+ await upsertReview (review);
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

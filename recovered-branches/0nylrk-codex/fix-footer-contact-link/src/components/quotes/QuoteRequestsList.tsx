@@ -1,16 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
 import { QuoteRequestCard } from './QuoteRequestCard';
 import { EmptyStateCard } from './EmptyStateCard';
 import type { QuoteRequest } from '@/types/quotes';
 
 type QuoteRequestsListProps = {
+=======
+ type QuoteRequestsListProps = {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   quotes: QuoteRequest[];
-  isLoading: boolean;
-  isArchived: boolean;
-  onViewDetails: (quote: QuoteRequest) => void;
-  onMarkAsResponded: (id: string) => void;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
+isLoading: boolean;
+isArchived: boolean;
+onViewDetails: (quote: QuoteRequest) => void;
+onMarkAsResponded: (id: string) => void;
+onToggleArchive: (id: string, isArchived: boolean) => void 
 };
+<<<<<<< HEAD
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   quotes,
@@ -47,4 +52,24 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
       ))}
     </div>
   );
+=======
+quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive 
+}) => {
+  if (isLoading) {
+  return (<div className="text-center py-20" > <p className="text-zion-slate-light" >Loading {
+  isArchived ? 'archived' : 'your' 
+}hire requests...</p> </div>) 
+}<QuoteRequestCard key= {
+  quote.id 
+}quote= {
+  quote 
+}onViewDetails= {
+  onViewDetails 
+}onMarkAsResponded= {
+  !isArchived ? onMarkAsResponded : undefined 
+}onToggleArchive= {
+  onToggleArchive 
+}/>) ) 
+}</div>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

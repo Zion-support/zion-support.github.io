@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 
@@ -24,3 +25,6 @@ export default async function handler(
 export function getShared(id: string) {
   return store[id];
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

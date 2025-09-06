@@ -1,25 +1,7 @@
 export type IntegrationCategory = 'crm' | 'ats';
-
-export type IntegrationProviderId =
-  | 'salesforce'
-  | 'hubspot'
-  | 'zoho'
-  | 'pipedrive'
-  | 'greenhouse'
-  | 'lever'
-  | 'workable'
-  | 'bamboohr';
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
-  icon?: string;
-}
-
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+<<<<<<< HEAD
 
 export interface SyncRules {
   // CRM rules
@@ -70,3 +52,5 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
 }
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

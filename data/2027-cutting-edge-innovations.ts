@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface CuttingEdgeInnovation2027 {
   id: string;
   name: string;
@@ -40,3 +41,7 @@ export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
     },
   },
 ];
+=======
+ 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

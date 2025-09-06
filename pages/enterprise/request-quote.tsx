@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function RequestQuote() {
   return (
     <main style={{ padding: '3rem', maxWidth: 800, margin: '0 auto' }}>
@@ -23,3 +24,12 @@ export default function RequestQuote() {
     </main>
   );
 }
+=======
+export default function RequestQuote () {
+  return (<main style= {
+  {
+  padding: '3rem', maxWidth: 800, margin: '0 auto' 
+}
+}> <h1>Request a Quote</h1> <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p> </form> </main>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

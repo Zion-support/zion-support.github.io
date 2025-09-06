@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { UserProfile, UserDetails } from '@/types/auth';
 import {
   Message,
@@ -73,3 +74,26 @@ export function useMessagingOperations(user: UserWithProfile) {
     loadMessages,
   };
 }
+=======
+ // Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
+/** * Hook that combines all messaging operations */ export function useMessagingOperations (user: UserWithProfile) {
+  // State management const {
+  // Conversations management const {
+  fetchConversations, createConversation 
+}= useConversations (user;
+setConversations;
+setUnreadCount;
+setIsLoading);
+// Messages management const {
+  loadMessages, sendMessage, markAsRead 
+}= useMessages (user;
+activeConversation;
+activeMessages;
+setActiveMessages;
+conversations;
+setConversations;
+setUnreadCount;
+setIsLoading;
+fetchConversations);
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

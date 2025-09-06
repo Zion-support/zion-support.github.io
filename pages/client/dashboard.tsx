@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import useSWR from 'swr';
 import Link from 'next/link';
 
@@ -81,3 +82,10 @@ export default function ClientDashboard() {
     </div>
   );
 }
+=======
+) ) 
+}</div>) 
+}</div> </div> </div> </div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

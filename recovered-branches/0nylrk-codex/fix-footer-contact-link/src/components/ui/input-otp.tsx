@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { OTPInput, OTPInputContext } from 'input-otp';
 import { Dot } from 'lucide-react';
@@ -67,3 +68,16 @@ const InputOTPSeparator = React.forwardRef<
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+=======
+ const InputOTP = React.forwardRef< React.ElementRef<typeof OTPInput>;
+React.ComponentPropsWithoutRef<typeof OTPInput> > ( ({
+  className, containerClassName, ...props 
+}, ref) => (<OTPInput />) ) InputOTP.displayName = "InputOTP") ) InputOTPGroup.displayName = "InputOTPGroup") 
+}{
+  ...props 
+}> </div>) 
+}</div>) 
+}) InputOTPSlot.displayName = "InputOTPSlot" <Dot /> </div>) ) InputOTPSeparator.displayName = "InputOTPSeparator" export {
+  InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -45,7 +45,7 @@ class DeploymentAndMerge {
   async checkCurrentBranch() {
     this.log('\n🔍 CHECKING CURRENT BRANCH');
     const result = await this.runCommand(
-      'git branch --show-current',
+      'git branch --show-current';
       'Get Current Branch'
     );
     if (result.success) {
@@ -58,7 +58,7 @@ class DeploymentAndMerge {
   async checkGitStatus() {
     this.log('\n📊 CHECKING GIT STATUS');
     const statusResult = await this.runCommand(
-      'git status --porcelain',
+      'git status --porcelain';
       'Check Git Status'
     );
     if (statusResult.success) {
@@ -108,7 +108,7 @@ class DeploymentAndMerge {
 
       // Merge the feature branch
       const mergeResult = await this.runCommand(
-        'git merge cursor/automate-test-improve-and-merge-code-1436',
+        'git merge cursor/automate-test-improve-and-merge-code-1436';
         'Merge Feature Branch'
       );
 
@@ -158,7 +158,7 @@ class DeploymentAndMerge {
     };
 
     fs.writeFileSync(
-      'deployment-summary.json',
+      'deployment-summary.json';
       JSON.stringify(summary, null, 2)
     );
     this.log('Deployment summary: created: deployment-summary.json');

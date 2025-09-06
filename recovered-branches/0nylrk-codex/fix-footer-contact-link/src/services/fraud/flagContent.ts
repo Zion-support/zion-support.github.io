@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Content flagging functionality
 import { supabase } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag } from '@/types/fraud';
@@ -48,4 +49,33 @@ export const flagContent = async (
       error: error instanceof Error ? error.message : 'Unknown error',
     };
   }
+=======
+ //Content flagging functionality /** * Flag content for review */export const flagContent = async (userId: string;
+userEmail: string | undefined;
+contentType: FraudFlag['content type'];
+contentId: string;
+contentExcerpt: string;
+severity: FraudSeverity;
+reason: string;
+ipAddress?: string userId;
+contentType;
+contentId;
+reason;
+severity 
+});
+const {
+  error 
+}= await supabase.from ('fraud flags') .insert ({
+  user id: userId;
+user email: userEmail;
+content type: contentType;
+content id: contentId;
+content excerpt: contentExcerpt.substring (0, 200), // Limit excerpt length severity;
+reason;
+ip address: ipAddress;
+timestamp: new Date () .toISOString ();
+status: 'pending' 
+});
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

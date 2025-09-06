@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { AdminHeader } from './AdminHeader';
 import { TeamManagement } from './TeamManagement';
@@ -38,3 +39,10 @@ export function AdminDashboard() {
     </div>
   );
 }
+=======
+ import {
+  Tabs;
+TabsContent;
+TabsList;
+team"className=" mt-8"> <TabsList className=" grid w-full grid-cols-4 mb-8"> <TabsTrigger value=" team">Team Management</TabsTrigger> <TabsTrigger value=" roles">Role Assignment</TabsTrigger> <TabsTrigger value=" usage">Usage Limits</TabsTrigger> <TabsTrigger value=" activity">Team Activity</TabsTrigger> </TabsList> <TabsContent value=" team"className=" space-y-8"> <TeamManagement /> </TabsContent> <TabsContent value=" roles"className=" space-y-8"> <RoleManagement /> </TabsContent> <TabsContent value=" usage"className=" space-y-8"> <UsageStats /> </TabsContent> <TabsContent value=" activity"className=" space-y-8" > <TeamActivity /> </TabsContent> </Tabs> </div> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

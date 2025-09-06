@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const EquipmentPage = () => {
@@ -18,4 +19,10 @@ const EquipmentPage = () => {
   );
 };
 
+=======
+ {
+  /* Equipment listing placeholder */ 
+}<div className="bg-white rounded-lg shadow p-6" > <h2 className="text-xl font-semibold mb-2" >Coming Soon</h2> <p className="text-gray-600" > Our equipment listing section is currently under development. Check back soon for available equipment. </p> </div> </div> </div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default EquipmentPage;

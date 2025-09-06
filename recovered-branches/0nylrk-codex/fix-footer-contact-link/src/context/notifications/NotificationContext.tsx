@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -77,4 +78,36 @@ export const NotificationProvider = ({
       {children}
     </NotificationContext.Provider>
   );
+=======
+ //Default context used when React type definitions are missing. Providing a //fully-typed object here avoids TypeScript errors that occur when an untyped //`createContext` call returns ` {
+  
+}` instead of the expected shape. const defaultContext: NotificationContextType = {
+  notifications: [], filteredNotifications: [], unreadCount: 0, loading: false, filter: 'all', markAsRead: async () => {
+  
+};
+markAllAsRead: async () => {
+  
+};
+dismissNotification: async () => {
+  
+};
+setFilter: () => {
+  
+};
+fetchNotifications: async () => {
+  
+}
+};
+//Cast the default context value to avoid issues when React types are missing. const NotificationContext = createContext (defaultContext as NotificationContextType);
+//Set up real-time subscription for new notifications if (user) {
+  const channel = supabase .channel ('notifications-changes') 
+}
+}
+}, [user]);
+return (<NotificationContext.Provider value= {
+  notificationOps 
+}> {
+  children 
+}</NotificationContext.Provider>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

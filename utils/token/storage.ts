@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { TokenConfig, TokenTransaction, Wallet } from './types';
@@ -10,13 +11,17 @@ export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
+=======
+ this.data = fromDisk ?? {
+  wallets: {
+  
+};
+transactions: [];
+config: DEFAULT TOKEN CONFIG 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-function ensureDataDir(): void {
-  try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  } catch {}
 }
+<<<<<<< HEAD
 
 function readFromDisk(): TokenStoreData | null {
   try {
@@ -91,4 +96,7 @@ export const tokenStore = {
     if (!userId) return txs;
     return txs.filter(t => t.userId === userId);
   },
+=======
+}return wallets[userId] 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

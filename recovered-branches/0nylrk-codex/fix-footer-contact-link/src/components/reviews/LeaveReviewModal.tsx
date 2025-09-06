@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import {
   Dialog,
@@ -12,13 +13,40 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ReviewForm } from './ReviewForm';
 import { useReviews } from '@/hooks/useReviews';
 
+=======
+ import {
+  Dialog;
+DialogContent;
+DialogDescription;
+DialogHeader;
+DialogTitle;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 interface LeaveReviewModalProps {
   projectId: string;
-  revieweeId: string;
-  revieweeName: string;
-  isOpen: boolean;
-  onClose: () => void;
+revieweeId: string;
+revieweeName: string;
+isOpen: boolean;
+onClose: () => void 
+}export function LeaveReviewModal ({
+  projectId;
+revieweeId;
+revieweeName;
+isOpen;
+onClose 
+}: LeaveReviewModalProps) {
+  const {
+  userReview, submitReview, updateReview, isSubmitting 
+}= useReviews (projectId);
+const [open, setOpen] = useState (isOpen);
+useEffect ( () => {
+  setOpen (isOpen) 
+}, [isOpen]);
+const handleOpenChange = (open: boolean) => {
+  setOpen (open);
+if (!open) {
+  onClose () 
 }
+<<<<<<< HEAD
 
 export function LeaveReviewModal({
   projectId,
@@ -87,4 +115,24 @@ export function LeaveReviewModal({
       </DialogContent>
     </Dialog>
   );
+=======
+};
+if (userReview) {
+  //Update existing review 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+};
+return (</DialogTitle> <DialogDescription> Your feedback helps build a trustworthy community. It will be visible after moderation. </DialogDescription> </DialogHeader> <ReviewForm projectId= {
+  projectId 
+}revieweeId= {
+  revieweeId 
+}revieweeName= {
+  revieweeName 
+}onSubmit= {
+  handleSubmit 
+}defaultValues= {
+  userReview || undefined 
+}isSubmitting= {
+  isSubmitting 
+}/> </DialogContent> </Dialog>) 
 }

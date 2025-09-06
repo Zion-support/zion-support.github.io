@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -55,4 +56,9 @@ const Onboarding: NextPage = () => {
   );
 };
 
+=======
+ <Head> <title>Onboarding - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Get Started</h1> </div>) ) 
+}</div> </div> </div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default Onboarding;

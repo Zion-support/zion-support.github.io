@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ProjectMedia = {
   imageUrl?: string;
   pdfUrl?: string;
@@ -71,3 +72,15 @@ export type AiAssistResponse = {
   result?: string | string[];
   error?: string;
 };
+=======
+ createdAt: string;
+updatedAt: string;
+talentSlug?: string;
+personalSummary: string;
+skills: string[];
+technologies: string[];
+certifications: string[];
+workHistory: WorkExperience[];
+education: EducationItem[];
+export type AiAssistAction = | 'improve-summary' | 'format-description' | 'suggest-bullets';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

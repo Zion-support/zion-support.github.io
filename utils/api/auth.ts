@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export type CurrentUser = {
@@ -34,3 +35,9 @@ export function requireUser(
   }
   return user;
 }
+=======
+ if (!userId || !role) return null;
+if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+}return user 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RealMicroSaasService {
   id: string;
   name: string;
@@ -1369,18 +1370,70 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 // Helper functions
 export const getServicesByCategory = (category: string) => {
   return realMicroSaasServices.filter(service => service.category === category);
+=======
+ 
+}export const realMicroSaasServices: RealMicroSaasService[] = [ // AI-Powered Business Solutions features: [ 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail integrationMetrics: FRT/ART, deflection rate' ];
+benefits: [ 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];
+targetAudience: ['Support teamsSales opsFoundersAgencies'];
+marketPosition: 'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.';
+competitors: ['SuperhumanFrontZendesk AI'];
+techStack: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API'];
+realImplementation: true;
+implementationDetails: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.';
+roi: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.';
+useCases: ['Support autorepliesSales follow-upsVendor coordination'];
+integrations: ['GmailOutlookHubSpotZendeskSlack'];
+support: 'Email and chat support with onboarding concierge for teams';
+compliance: ['GDPRCCPASOC 2 Type II'];
+link: 'https://ziontechgroup.com/ai-email-responder';
+icon: '📧';
+color: 'from-cyan-600 to-blue-700';
+popular: true;
+launchDate: '2025-02-01';
+customers: 180;
+rating: 4.7;
+reviews: 46 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
-export const getServicesByPriceRange = (min: number, max: number) => {
-  return realMicroSaasServices.filter(service => {
-    const price = parseFloat(service.price.replace('$', '').replace(',', ''));
-    return price >= min && (max === Infinity || price <= max);
-  });
+marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
+competitors: ['TypeformSurveySparrowTally'];
+techStack: ['Next.jsSupabaseVercel EdgeOpenAI'];
+realImplementation: true;
+implementationDetails: 'Template gallery, response store, analytics, export jobs.';
+roi: 'Improves feedback volume 20–50%.';
+useCases: ['NPSBeta feedbackLead qual'];
+integrations: ['HubSpotSegmentZapier'];
+support: 'Email support, templates library';
+compliance: ['GDPRCCPA'];
+link: 'https://ziontechgroup.com/mobile-surveys';
+icon: '📱';
+color: 'from-emerald-600 to-teal-700';
+popular: false;
+launchDate: '2024-12-10';
+customers: 95;
+rating: 4.6;
+reviews: 22 
 };
-
-export const getPopularServices = () => {
-  return realMicroSaasServices.filter(service => service.popular);
+marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
+competitors: ['AsanaClickUpNotion'];
+techStack: ['Next.jsPrismaPostgreSQL'];
+realImplementation: true;
+implementationDetails: 'Template JSON schemas, rules engine, import/export.';
+roi: 'Deliverables throughput +15–25%.';
+useCases: ['Client deliveryEditorial calendarSprints'];
+integrations: ['Google CalendarSlackLinear'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/productivity-planner';
+icon: '🗓️';
+color: 'from-purple-600 to-pink-600';
+popular: false;
+launchDate: '2025-01-20';
+customers: 60;
+rating: 4.5;
+reviews: 14 
 };
+<<<<<<< HEAD
 
 export const serviceCategories = [
   'Legal Technology',
@@ -1409,3 +1462,212 @@ export const serviceCategories = [
   'Education Technology',
   'Enterprise IT',
 ];
+=======
+marketPosition: 'Lean alternative to Hopin and Eventbrite with richer analytics.';
+competitors: ['HopinEventbrite'];
+techStack: ['Next.jsStripeSupabase'];
+realImplementation: true;
+implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.';
+roi: 'Increase sponsorship revenue 10–20%.';
+useCases: ['WebinarsSummitsWorkshops'];
+integrations: ['StripeMailchimpZapier'];
+support: 'Priority email support';
+compliance: ['GDPRPCI'];
+link: 'https://ziontechgroup.com/event-management';
+icon: '🎫';
+color: 'from-indigo-600 to-blue-700';
+popular: false;
+launchDate: '2024-11-18';
+customers: 70;
+rating: 4.6;
+reviews: 18 
+};
+marketPosition: 'Simpler than Impact and PartnerStack with transparent pricing.';
+competitors: ['PartnerStackImpact'];
+techStack: ['Next.jsPostgreSQLStripe'];
+realImplementation: true;
+implementationDetails: 'Link generation, tracking pixels, payout ledger.';
+roi: 'Affiliate channel +10–30% revenue.';
+useCases: ['Influencer programsPartner marketplaces'];
+integrations: ['ShopifyWooCommerceStripe'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/affiliate-tracking';
+icon: '🔗';
+color: 'from-rose-600 to-red-700';
+popular: false;
+launchDate: '2024-10-12';
+customers: 55;
+rating: 4.4;
+reviews: 12 
+};
+marketPosition: 'Alternative to Plausible and Fathom with built-in insights.';
+competitors: ['PlausibleFathom'];
+techStack: ['Next.jsEdge AnalyticsPostgreSQL'];
+realImplementation: true;
+implementationDetails: 'Script tag, event API, insights jobs.';
+roi: 'Improve conversion 5–15% via insights.';
+useCases: ['Landing pagesCampaign tracking'];
+integrations: ['ShopifyWebflowZapier'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/website-analytics';
+icon: '📊';
+color: 'from-sky-600 to-cyan-700';
+popular: true;
+launchDate: '2025-02-05';
+customers: 140;
+rating: 4.7;
+reviews: 28 
+};
+marketPosition: 'Lightweight alternative to Zendesk and Freshservice.';
+competitors: ['ZendeskFreshservice'];
+techStack: ['Next.jsPostgreSQLNode.js'];
+realImplementation: true;
+implementationDetails: 'Inbound parser, workflow builder, KB CMS.';
+roi: 'Reduce ticket volume 15–25% via KB.';
+useCases: ['IT requestsAccess provisioning'];
+integrations: ['OktaGoogle WorkspaceSlack'];
+support: 'Email support';
+compliance: ['GDPRSOC 2'];
+link: 'https://ziontechgroup.com/it-helpdesk';
+icon: '🛠️';
+color: 'from-slate-600 to-gray-700';
+popular: false;
+launchDate: '2024-09-22';
+customers: 120;
+rating: 4.5;
+reviews: 31 
+};
+marketPosition: 'Competitive with Loop and Returnly at simpler pricing.';
+competitors: ['LoopReturnly'];
+techStack: ['Next.jsStripeShopify API'];
+realImplementation: true;
+implementationDetails: 'Webhook integrations, label providers, RMA workflows.';
+roi: 'Reduce refund losses via exchanges.';
+useCases: ['ReturnsExchangesWarranties'];
+integrations: ['ShopifyShippoEasyPost'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/return-manager';
+icon: '📦';
+color: 'from-amber-600 to-orange-700';
+popular: false;
+launchDate: '2024-08-30';
+customers: 75;
+rating: 4.4;
+reviews: 19 
+};
+marketPosition: 'Alternative to Lemlist and Mailshake with stricter safety.';
+competitors: ['LemlistMailshake'];
+techStack: ['Next.jsPostgreSQLOpenAI'];
+realImplementation: true;
+implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.';
+roi: '+10–20% conversion uplift.';
+useCases: ['ProspectingRenewals'];
+integrations: ['HubSpotPipedriveGmail'];
+support: 'Email support';
+compliance: ['GDPRCAN-SPAM'];
+link: 'https://ziontechgroup.com/email-followups';
+icon: '📨';
+color: 'from-blue-600 to-indigo-700';
+popular: false;
+launchDate: '2025-01-25';
+customers: 90;
+rating: 4.5;
+reviews: 17 
+};
+marketPosition: 'Alternative to Descript transcripts with simpler pricing.';
+competitors: ['DescriptRev'];
+techStack: ['WhisperNext.jsS3'];
+realImplementation: true;
+implementationDetails: 'Batch jobs, cloud storage, editor UI.';
+roi: 'Cut post-production hours by 60–80%.';
+useCases: ['TranscriptsRepurposing'];
+integrations: ['RSSYouTubeAnchor'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/podcast-transcription';
+icon: '🎙️';
+color: 'from-fuchsia-600 to-violet-700';
+popular: true;
+launchDate: '2024-12-02';
+customers: 210;
+rating: 4.7;
+reviews: 52 
+};
+marketPosition: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.';
+competitors: ['Neo4jMemgraph'];
+techStack: ['TypeScriptNeo4jpgvectorOpenAI'];
+realImplementation: true;
+implementationDetails: 'ETL connectors, graph builder UI, API for queries.';
+roi: 'Reduce discovery time 30–50%.';
+useCases: ['RAG graphsData lineageGlossaries'];
+integrations: ['S3GCSDatabricks'];
+support: 'Priority support';
+compliance: ['GDPRSOC 2'];
+link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio';
+icon: '🕸️';
+color: 'from-teal-600 to-emerald-700';
+popular: true;
+launchDate: '2025-02-08';
+customers: 35;
+rating: 4.8;
+reviews: 11 
+};
+realImplementation: true;
+implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.';
+roi: 'Cut model costs by 20–40%.';
+useCases: ['Central model accessSafety'];
+integrations: ['OpenAIAnthropicAzure'];
+support: 'Priority support';
+compliance: ['GDPRSOC 2'];
+link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway';
+icon: '🛡️';
+color: 'from-cyan-700 to-blue-800';
+popular: true;
+launchDate: '2025-02-08';
+customers: 42;
+rating: 4.8;
+reviews: 13 
+};
+marketPosition: 'Starter alternative to building bespoke stacks.';
+competitors: ['AirbyteFivetran (partial) '];
+techStack: ['TerraformdbtClickHouse/BigQuery'];
+realImplementation: true;
+implementationDetails: 'Templates, IaC modules, CI gates.';
+roi: 'Deliver insights in days, not months.';
+useCases: ['Product analyticsFinance BI'];
+integrations: ['S3BigQuerySnowflake'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter';
+icon: '🏗️';
+color: 'from-stone-600 to-zinc-700';
+popular: false;
+launchDate: '2025-02-08';
+customers: 24;
+rating: 4.6;
+reviews: 7 
+};
+marketPosition: 'Complements dbt and warehouse-native governance.';
+competitors: ['OpenMetadataGreat Expectations'];
+techStack: ['TypeScriptPostgreSQLdbt'];
+realImplementation: true;
+implementationDetails: 'Contracts as code, PR checks, lineage view.';
+roi: 'Reduce data breakage incidents by 50–70%.';
+useCases: ['Warehouse governanceAnalytics contracts'];
+integrations: ['dbtGitHubBigQuery'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/services/data-contracts-hub';
+icon: '📜';
+color: 'from-lime-600 to-green-700';
+popular: false;
+launchDate: '2025-02-08';
+customers: 19;
+rating: 4.6;
+reviews: 6 
+}];
+// Helper functions 'Enterprise IT' ];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

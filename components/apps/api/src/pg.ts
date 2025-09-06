@@ -1,13 +1,7 @@
-import { Pool, PoolClient } from 'pg';
-
-let pool: Pool | null = null;
-
-export function getPool(): Pool {
-  if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL });
-  }
-  return pool;
+ let pool: Pool | null = null;
+}return pool 
 }
+<<<<<<< HEAD
 
 export async function withUser<T>(
   userId: string,
@@ -29,3 +23,6 @@ export async function withUser<T>(
     client.release();
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

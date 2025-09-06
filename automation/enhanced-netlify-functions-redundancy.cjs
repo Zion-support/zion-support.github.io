@@ -14,12 +14,12 @@ class EnhancedNetlifyFunctionsRedundancy {
     this.ensureLogDir();
     this.config = this.loadConfig();
     this.healthMetrics = {
-      totalChecks: 0,
-      successfulChecks: 0,
-      failedChecks: 0,
-      functionsRegenerated: 0,
-      deploymentsTriggered: 0,
-      lastCheck: null,
+      totalChecks: 0;
+      successfulChecks: 0;
+      failedChecks: 0;
+      functionsRegenerated: 0;
+      deploymentsTriggered: 0;
+      lastCheck: null;
       uptime: Date.now()
     };
     this.functionCache = new Map();
@@ -43,18 +43,18 @@ class EnhancedNetlifyFunctionsRedundancy {
     
     return {
       netlify: {
-        enabled: true,
-        checkInterval: 120000,
-        maxFailures: 3,
-        healthCheckTimeout: 15000,
-        autoDeploy: true,
-        deployTimeout: 300000,
+        enabled: true;
+        checkInterval: 120000;
+        maxFailures: 3;
+        healthCheckTimeout: 15000;
+        autoDeploy: true;
+        deployTimeout: 300000;
         functions: {
-          autoRegenerate: true,
-          healthCheck: true,
-          deploymentCheck: true,
-          validateSyntax: true,
-          checkDependencies: true,
+          autoRegenerate: true;
+          healthCheck: true;
+          deploymentCheck: true;
+          validateSyntax: true;
+          checkDependencies: true;
           monitorPerformance: true
         }
       }
@@ -85,19 +85,19 @@ class EnhancedNetlifyFunctionsRedundancy {
   async runCommand(command, args = [], options = {}) {
     return new Promise((resolve) => {
       const result = spawnSync(command, args, {
-        cwd: this.workspace,
-        env: process.env,
-        shell: false,
-        encoding: "utf8",
-        maxBuffer: 1024 * 1024 * 10,
-        timeout: options.timeout || 30000,
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 30000;
         ...options
       });
       
       resolve({
-        status: result.status,
-        stdout: result.stdout || "",
-        stderr: result.stderr || "",
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
         error: result.error
       });
     });
@@ -556,12 +556,12 @@ class EnhancedNetlifyFunctionsRedundancy {
 
         // Check for security vulnerabilities
         const securityPatterns = [
-          { pattern: /eval\s*\(/, description: "eval() usage" },
-          { pattern: /Function\s*\(/, description: "Function constructor usage" },
-          { pattern: /process\.env\.\w+/, description: "Environment variable access" },
-          { pattern: /require\s*\(/, description: "Dynamic require (potential security risk)" },
-          { pattern: /child_process/, description: "Child process execution" },
-          { pattern: /exec\s*\(/, description: "Command execution" },
+          { pattern: /eval\s*\(/, description: "eval() usage" };
+          { pattern: /Function\s*\(/, description: "Function constructor usage" };
+          { pattern: /process\.env\.\w+/, description: "Environment variable access" };
+          { pattern: /require\s*\(/, description: "Dynamic require (potential security risk)" };
+          { pattern: /child_process/, description: "Child process execution" };
+          { pattern: /exec\s*\(/, description: "Command execution" };
           { pattern: /spawn\s*\(/, description: "Process spawning" }
         ];
 
@@ -616,13 +616,13 @@ class EnhancedNetlifyFunctionsRedundancy {
     try {
       // Create function issues report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "function_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "function_issues";
+        issues: health.issues;
         recommendations: [
-          "Check function file existence",
-          "Validate function exports",
-          "Review function permissions",
+          "Check function file existence";
+          "Validate function exports";
+          "Review function permissions";
           "Check function content"
         ]
       };
@@ -641,13 +641,13 @@ class EnhancedNetlifyFunctionsRedundancy {
     try {
       // Create syntax validation report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "syntax_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "syntax_issues";
+        issues: health.issues;
         recommendations: [
-          "Fix JavaScript syntax errors",
-          "Check async/await usage",
-          "Validate function exports",
+          "Fix JavaScript syntax errors";
+          "Check async/await usage";
+          "Validate function exports";
           "Review error handling"
         ]
       };
@@ -703,13 +703,13 @@ class EnhancedNetlifyFunctionsRedundancy {
     try {
       // Create performance report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "performance_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "performance_issues";
+        issues: health.issues;
         recommendations: [
-          "Optimize function file sizes",
-          "Review synchronous operations",
-          "Check for memory leaks",
+          "Optimize function file sizes";
+          "Review synchronous operations";
+          "Check for memory leaks";
           "Optimize imports"
         ]
       };
@@ -728,13 +728,13 @@ class EnhancedNetlifyFunctionsRedundancy {
     try {
       // Create security audit report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "security_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "security_issues";
+        issues: health.issues;
         recommendations: [
-          "Review eval() usage",
-          "Validate input data",
-          "Check environment variable access",
+          "Review eval() usage";
+          "Validate input data";
+          "Check environment variable access";
           "Review error logging"
         ]
       };
@@ -819,12 +819,12 @@ class EnhancedNetlifyFunctionsRedundancy {
     const netlifyDir = await this.checkNetlifyDirectory();
     const functions = await this.loadFunctionsManifest();
     const report = {
-      timestamp: new Date().toISOString(),
-      netlifyDirectory: netlifyDir.exists,
-      functionsDirectory: netlifyDir.functions,
-      totalFunctions: functions.length,
-      functionHealth: {},
-      issues: [],
+      timestamp: new Date().toISOString();
+      netlifyDirectory: netlifyDir.exists;
+      functionsDirectory: netlifyDir.functions;
+      totalFunctions: functions.length;
+      functionHealth: {};
+      issues: [];
       recommendations: []
     };
 
@@ -833,10 +833,10 @@ class EnhancedNetlifyFunctionsRedundancy {
       const dependencies = await this.checkFunctionDependencies(functionName);
       
       report.functionHealth[functionName] = {
-        healthy: health.healthy,
-        reason: health.reason || null,
-        dependencies: dependencies.dependencies,
-        lastExecution: this.lastExecutionTimes.get(functionName) || null,
+        healthy: health.healthy;
+        reason: health.reason || null;
+        dependencies: dependencies.dependencies;
+        lastExecution: this.lastExecutionTimes.get(functionName) || null;
         failureCount: this.failureCounts.get(functionName) || 0
       };
 
@@ -880,9 +880,9 @@ class EnhancedNetlifyFunctionsRedundancy {
       : 0;
     
     return {
-      ...this.healthMetrics,
-      uptime,
-      successRate: successRate.toFixed(2),
+      ...this.healthMetrics;
+      uptime;
+      successRate: successRate.toFixed(2);
       healthStatus: successRate > 80 ? "HEALTHY" : successRate > 60 ? "DEGRADED" : "CRITICAL"
     };
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import type {
   RemoteParticipant,
@@ -70,3 +71,12 @@ export default function ParticipantTile({
     </div>
   );
 }
+=======
+ useEffect ( () => {
+  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+  if (track.kind === 'video' && videoRef.current) {
+  participant.on ('trackSubscribed', handleTrackSubscribed);
+participant.on ('trackUnsubscribed', handleTrackUnsubscribed);
+</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

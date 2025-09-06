@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { z } from 'zod';
 
 // Define schema for form validation
@@ -11,3 +12,6 @@ export const certificationSchema = z.object({
 });
 
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
+=======
+ export type CertificationFormValues = z.infer<typeof certificationSchema>;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

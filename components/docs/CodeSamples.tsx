@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 interface Props {
@@ -36,3 +37,18 @@ export default function CodeSamples({ samples }: Props) {
     </div>
   );
 }
+=======
+ key= {
+  t.key 
+}className= {
+  `px-3 py-1 rounded border $ {
+  active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary' 
+}` 
+}onClick= {
+  () => setActive (t.key) 
+}> {
+  t.label 
+}</button>) ) 
+}</div> </pre> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

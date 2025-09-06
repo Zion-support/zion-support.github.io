@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -149,3 +150,9 @@ export default function ApiPerformanceTestingPage() {
     </div>
   );
 }
+=======
+ <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+  [ </div>) ) 
+}</div> <div className="mt-14" > <h2 className="text-2xl font-semibold" >Pricing</h2> <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6" > <div className="rounded-2xl border border-cyan-400/30 p-6" > <h3 className="text-xl font-bold" >Starter</h3> <p className="mt-2 text-gray-300" >Up to 250 RPS, 1 region, CI integration.</p> <p className="mt-4 text-3xl font-bold" >$149<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-fuchsia-400/30 p-6" > <h3 className="text-xl font-bold" >Growth</h3> <p className="mt-2 text-gray-300" >Up to 2k RPS, 3 regions, regression gates.</p> <p className="mt-4 text-3xl font-bold" >$590<span className="text-base font-normal text-gray-300" >/mo</span></p> </div> <div className="rounded-2xl border border-emerald-400/30 p-6" > <h3 className="text-xl font-bold" >Enterprise</h3> <p className="mt-2 text-gray-300" >Unlimited scale, private agents, SSO, and SRE support.</p> <p className="mt-4 text-3xl font-bold" >Custom</p> </div> </div> </div> <div className="mt-14 flex flex-wrap items-center gap-4" > <Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold" >Talk to Sales</Link> <a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20" >Email: kleber@ziontechgroup.com</Link> <span className="text-gray-400" >Call: +1 302 464 0950</span> </div> </div> </section> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

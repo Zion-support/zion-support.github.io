@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 
@@ -65,4 +66,11 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   );
+=======
+ const features = [ {
+  Everything You Need On The Go </h2> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto" > The Zion mobile app brings the power of our AI marketplace to your pocket with these key features </p> </div> <div key= {
+  index 
+}className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300" > </div>) ) 
+}</div> </div> </section>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

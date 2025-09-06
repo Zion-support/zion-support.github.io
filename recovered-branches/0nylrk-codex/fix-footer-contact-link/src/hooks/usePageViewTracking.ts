@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -30,3 +31,7 @@ export function usePageViewTracking() {
     console.log('Page view:', location.pathname);
   }, [location.pathname]);
 }
+=======
+ /** * Custom hook to track page views for analytics purposes * Attaches event listeners to track route changes and logs page views */ // Initial page load handleRouteChange ();
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

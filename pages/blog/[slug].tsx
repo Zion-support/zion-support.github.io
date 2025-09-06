@@ -1,28 +1,8 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { useRouter } from 'next/router';
-import AdvancedSEO from '@/components/seo/AdvancedSEO';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import { AuthorBio } from '@/components/blog/AuthorBio';
-import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
-import { CommentsSection } from '@/components/blog/CommentsSection';
-import type { BlogPost } from '@/types/blog';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-function parseMarkdown(filePath: string): BlogPost | null {
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const match = raw.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/);
-  if (!match || !match[1] || !match[2]) return null;
-  const meta = JSON.parse(match[1]);
-  const content = match[2].trim();
-  const slug = path.basename(filePath).replace(/\.md$/, '');
-  return { ...meta, id: slug, slug, content } as BlogPost;
+ 
+}interface BlogPostPageProps {
+  /** * Preloaded blog post for static generation. Can be null if not found. */ 
 }
+<<<<<<< HEAD
 
 interface BlogPostPageProps {
   /**
@@ -124,9 +104,25 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       </main>
     </>
   );
+=======
+}, [slug, initialPost]);
+{
+  post.author.title 
+}</p>) 
+}</div> </div> /> </div>) 
+}<ReactMarkdown> {
+  body 
+}</ReactMarkdown> <AuthorBio author= {
+  post.author 
+}/> <SocialShareButtons title= {
+  post.title 
+}/> <CommentsSection slug= {
+  post.slug 
+}/> </main> </>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default BlogPostPage;
+<<<<<<< HEAD
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), 'content', 'blog');
@@ -155,3 +151,5 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   }
   return { props: { initialPost: post }, revalidate: 60 };
 };
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

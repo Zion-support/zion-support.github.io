@@ -1,6 +1,6 @@
 export type MediaBundle = 'general' | 'web3' | 'institutional';
-
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+<<<<<<< HEAD
 
 export type MediaAsset = {
   path: string; // public-relative path for fetch
@@ -170,3 +170,23 @@ function titleCase(s: string) {
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );
 }
+=======
+return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]] 
+}export function buildColorsAndTypography () {
+  return {
+  colors: {
+  primary: '#0A84FF', secondary: '#0B1220', accent: '#C3F53C', neutral: '#9CA3AF' 
+};
+typography: {
+  heading: {
+  family: 'Inter', weight: 700 
+};
+body: {
+  family: 'Inter', weight: 400 
+}
+}
+}
+}if (kind === 'web3') return [...base, ...web3Extras];
+return base 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

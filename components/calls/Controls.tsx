@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { Room } from 'livekit-client';
 
@@ -67,3 +68,15 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     </div>
   );
 }
+=======
+ </button> <button onClick= {
+  toggleCam 
+}className= {
+  `px-4 py-2 rounded $ {
+  accentClass 
+}text-white` 
+}> {
+  camEnabled ? 'Stop Video' : 'Start Video' 
+}</button> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

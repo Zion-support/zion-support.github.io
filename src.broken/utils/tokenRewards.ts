@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { apiClient } from './apiClient';
 
 export async function rewardOnboarding(userId: string) {
@@ -27,3 +28,7 @@ export async function rewardFiveStarReview(userId: string) {
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
   });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

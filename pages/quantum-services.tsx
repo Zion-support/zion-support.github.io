@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -115,3 +116,9 @@ export default function QuantumServicesPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+=======
+ </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto space-y-12" > <header className="text-center" > <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4" > <Atom className="w-8 h-8 text-white" /> </div> </div> </header> <section> </div>) ) 
+}</div> </section> <section>) ) 
+}</div> </section> <section className="text-center" > <div className="inline-flex items-center justify-center gap-3 text-gray-300" > <Shield className="w-5 h-5 text-purple-400" /> <span>Post-quantum readiness assessments and migration planning</span> </div> </section> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

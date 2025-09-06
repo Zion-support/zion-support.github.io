@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -136,3 +137,26 @@ export function ProductGallery({
     </Dialog>
   );
 }
+=======
+ images"className=" pt-4"> <div className=" aspect-video w-full relative" > <DialogTrigger asChild> <img key= {;
+  idx ;
+}onClick={;
+  () => setSelected (idx) ;
+}className= {;
+  `relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 $ {;
+  idx === selected ? 'border-zion-purple' : 'border-transparent' ;
+}` ;
+}> <img /> </div>) ) ;
+}</div>) ;
+}</TabsContent> </Suspense> </AspectRatio> </TabsContent>) ;
+}</Suspense> </AspectRatio> </TabsContent>) ;
+}</Tabs> <div className= {;
+  `w-full h-full overflow-auto $ {';
+  zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in' ;
+}` ;
+}onClick={;
+  () => setZoomed (!zoomed) ;
+}> <img /> </div> </DialogContent>) ;
+}</Dialog>) ;
+}'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -34,15 +35,23 @@ const formSchema = z.object({
   additionalClauses: z.array(z.string()).optional(),
 });
 
+=======
+ const formSchema = z.object ({;
+  projectName: z.string () .min (1,  "Project name is required");";
+scopeSummary: z.string () .min (10, "Scope summary should be at least 10 characters");
+startDate: z.date ({";
+  required error: "Start date is required" ;
+});
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export type ContractFormValues = z.infer<typeof formSchema>;
-
-interface ContractFormProps {
-  talent: TalentProfile;
-  clientName: string;
-  initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void;
-  onContractGenerated: (contractContent: string) => void;
+//Update form when initialValues change useEffect ( () => {;
+  if (initialValues) {;
+  Object.keys (initialValues) .forEach ( (key) => {;
+  const typedKey = key as keyof ContractFormValues;
+form.setValue (typedKey, initialValues[typedKey]) ;
+}) ;
 }
+<<<<<<< HEAD
 
 export function ContractForm({
   talent,
@@ -180,4 +189,30 @@ export function ContractForm({
       </DialogFooter>
     </>
   );
+=======
+}, [initialValues, form]);
+//Track form values for template saving return () => subscription.unsubscribe () ;
+}return undefined;
+}, [form, onFormValuesChange]);
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+}finally {;
+  setIsGenerating (false) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
+};
+talent.full name ;
+}</DialogDescription> </DialogHeader> <ProjectDetailsFields form= {;
+  form ;
+}/> <PaymentTermsFields form= {;
+  form ;
+}handleMilestonesGenerated= {;
+  handleMilestonesGenerated ;
+}/> <AdditionalClausesFields form= {;
+  form ";
+}/> <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark" disabled= {;
+  isGenerating ;
+}> {";
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
+}</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
+}"

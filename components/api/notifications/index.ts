@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 import {
@@ -105,3 +106,18 @@ export default async function handler(
     return res.status(500).json({ error: 'Unexpected error' });
   }
 }
+=======
+ // If countOnly, return unread count quickly if (countOnly === 'true') {
+  const {
+  data, error 
+}= await supabase .from ('notifications') .select ('id', {
+  count: 'exact', head: true 
+}) .eq ('user id', userId) .eq ('read status', false);
+.from ('notifications') .select ('id', {
+  count: 'exact' 
+}) .eq ('user id', userId) if (error) {
+  // Fallback seed data for local/dev if table is missing const fallback: NotificationItem[] = [ {
+  
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

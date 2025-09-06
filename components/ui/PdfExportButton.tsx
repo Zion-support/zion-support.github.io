@@ -1,10 +1,6 @@
-import React from 'react';
-
-export type PdfExportButtonProps = {
-  targetRef: React.RefObject<HTMLDivElement>;
-  fileName?: string;
-  theme?: 'light' | 'dark';
+ html2pdf () .set (opt) .from (element) .save () 
 };
+<<<<<<< HEAD
 
 export default function PdfExportButton({
   targetRef,
@@ -37,3 +33,7 @@ export default function PdfExportButton({
     </button>
   );
 }
+=======
+return (<button aria-label="Download as PDF" 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   FormField,
   FormItem,
@@ -61,3 +62,28 @@ export function TimelineField({ form }: TimelineFieldProps) {
     />
   );
 }
+=======
+ interface TimelineFieldProps {
+  form: UseFormReturn<FormValues> 
+}export function TimelineField ({
+  form 
+}: TimelineFieldProps) {
+  const timelineOptions = [ ];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <FormControl> <Select onValueChange= {
+  field.onChange 
+}value= {
+  field.value 
+}defaultValue= {
+  field.value 
+}> <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white" > <SelectValue placeholder="Select estimated timeline" /> </SelectTrigger> <SelectContent> {
+  timelineOptions.map ( (option) => (<SelectItem key= {
+  option.value 
+}value= {
+  option.value 
+}> {
+  option.label 
+}</SelectItem>) ) 
+}</SelectContent> </Select> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

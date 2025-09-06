@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -92,3 +93,6 @@ export default function CommunityPage() {
     </div>
   );
 }
+=======
+ <Head> <title>Community | Zion Tech Group</title> <meta name="description" content="Community forum and resources for Zion Tech Group users" /> <link rel="canonical" href="https://ziontechgroup.com/community" /> <meta name="description" content="Join the Zion Tech Group community and stay updated." /> </Head> <div className="p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className="text-white text-xl font-semibold mb-2">Get Help</h2> <p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p> p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className=" text-white text-xl font-semibold mb-2">Follow Us</h2> <ul className=" text-slate-300 space-y-1"> <li><a className=" text-cyan-400"href=" https://linkedin.com/company/ziontechgroup"target=" blank"rel=" noopener noreferrer">LinkedIn</Link></li> <li><a className=" text-cyan-400"href=" https://github.com/Zion-Holdings"target=" blank"rel=" noopener noreferrer">GitHub</Link></li> <li><a className=" text-cyan-400"href=" https://instagram.com/ziontechgroup"target=" blank"rel=" noopener noreferrer">Instagram</Link></li> <li><a className=" text-cyan-400"href=" https://youtube.com/@ziontechgroup"target=" blank"rel=" noopener noreferrer" >YouTube</Link></li> </ul> </div> </div> </div> </div> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface PartnerProfile {
   id: string;
   user_id: string;
@@ -47,3 +48,6 @@ export interface PartnerPayout {
   created_at: string;
   completed_at?: string;
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

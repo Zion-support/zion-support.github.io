@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -53,3 +54,8 @@ export function requireRoles(
   }
   return identity;
 }
+=======
+ export type DevRole = "admin" | "maintainer" | "contributor";
+}return identity 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

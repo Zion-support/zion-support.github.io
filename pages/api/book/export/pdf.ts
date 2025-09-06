@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
       sizeLimit: '10mb',
     },
   },
@@ -52,5 +52,29 @@ export default async function handler(
       await browser.close();
     } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
+=======
+      sizeLimit: '10mb'
+    }
+  }
+};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    res.status(200).json({ message: 'PDF generated' });
+  } catch (e: any) {
+    try {
+      // await browser.close();
+    } catch {
+      // ignore
+    }
+    res.status(500).json({
+      error: e?.message || 'Failed to render PDF'
+    });
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   }
 }

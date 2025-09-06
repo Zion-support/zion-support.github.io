@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Education } from '@/types/resume';
@@ -104,3 +105,20 @@ export function EducationForm({
     </div>
   );
 }
+=======
+ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Education</h2> <p className="text-muted-foreground" > Add your educational background and academic achievements. </p> </div> <EducationList educationEntries= {
+  educationEntries 
+}onEdit= {
+  handleEdit 
+}onDelete= {
+  handleDelete 
+}/> </h3> <EducationFormFields isEditing= {
+  !!editingId 
+}onSubmit= {
+  handleAddOrUpdate 
+}onCancel= {
+  handleCancel 
+}/> </div> Next </Button> </div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

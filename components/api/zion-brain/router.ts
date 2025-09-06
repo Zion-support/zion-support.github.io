@@ -1,11 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
-
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'] || req.query.token;
-  const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken || token === superToken;
+ 
 }
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -44,3 +39,6 @@ export default async function handler(
     return res.status(500).json({ error: 'Router failure' });
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

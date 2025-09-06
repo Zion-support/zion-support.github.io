@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InvestmentPortfolio {
   id: string;
   userId: string;
@@ -465,3 +466,30 @@ export class AIFinancialAdvisorService {
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(
   process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'
 );
+=======
+ 
+}async getInvestmentRecommendations (userId: string, riskTolerance: string, investmentHorizon: number) : Promise<InvestmentRecommendation[]> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/financial/recommendations`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+}async createFinancialPlan (request: FinancialRequest) : Promise<FinancialPlan> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/financial/plan`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (request) 
+});
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

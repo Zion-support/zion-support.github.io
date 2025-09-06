@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasService2026 {
@@ -712,3 +713,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

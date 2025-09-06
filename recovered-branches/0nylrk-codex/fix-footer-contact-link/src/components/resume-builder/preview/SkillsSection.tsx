@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Skill } from '@/types/resume';
 
 interface SkillsSectionProps {
@@ -36,3 +37,9 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     </div>
   );
 }
+=======
+ if (skills.length === 0) return null;
+return (</p> </div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

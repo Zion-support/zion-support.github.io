@@ -1,30 +1,12 @@
 export type KycRole = 'client' | 'talent' | 'enterprise';
-
-export type KycStatus =
-  | 'not_started'
-  | 'in_progress'
-  | 'submitted'
-  | 'approved'
-  | 'rejected'
-  | 'needs_more_info';
-
+export type KycStatus = | 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-
-export interface KycDocumentMeta {
-  id: string;
-  kind:
-    | 'government_id_front'
-    | 'government_id_back'
-    | 'selfie'
-    | 'business_registration'
-    | 'tax_certificate'
-    | 'proof_of_address'
-    | 'academic_certificate';
-  filename: string;
-  url?: string;
-  checksumSha256?: string;
-  uploadedAt: string; // ISO
+kind: | 'government id front' | 'government id back' | 'selfie' | 'business registration' | 'tax certificate' | 'proof of address' for (const req of required) {
+  if (!uploadedKinds.has (req) ) missing.push (`document:$ {
+  req 
+}`) 
 }
+<<<<<<< HEAD
 
 export interface KycProfile {
   userId: string;
@@ -113,3 +95,6 @@ export function validateKycSubmission(profile: Partial<KycProfile>): {
   }
   return { ok: missing.length === 0, missing };
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { Configuration, OpenAIApi } from 'npm:openai@4.28.0';
 
@@ -60,4 +61,41 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
+=======
+ 
+}try {
+  const {
+  query 
+}= await req.json ();
+if (!query) {
+  return new Response (const configuration = new Configuration ({
+  apiKey: openAiKey 
+});
+const openai = new OpenAIApi (configuration);
+try {
+  const match = responseText.match (/\ {
+  [\s\S]*\ 
+}/);
+filters = match ? JSON.parse (match[0]) : JSON.parse (responseText) 
+}catch () {
+  filters = {
+  type: null, skills: null, location: null, budget: null, availability: null 
+}
+}return new Response (JSON.stringify ({
+  filters 
+});
+);
+}catch (error) {
+  console.error ("ai-search error", error);
+return new Response (JSON.stringify ({
+  error: error.message 
+});
+{
+  status: 500, headers: {
+  ...corsHeaders, "Content-Type" : "application/json" 
+}
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

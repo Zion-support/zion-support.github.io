@@ -1,48 +1,48 @@
           {/* Backdrop */};
-          <motion.div;
-            initial={{ opacit: y: 0 }};
-            animate={{ opacit: y: 1 }};
-            exit={{ opacit: y: 0 }};
-            className="fixed inset-0 bg-blackbg-opacity-50z-40";
+          <motion.div,
+            initial={{ opacity: 0 }};
+            animate={{ opacity: 1 }};
+            exit={{ opacity: 0 }};
+            className="fixed inset-0 bg-black bg-opacity-50 z-40",
             onClick={onClose};
-          />;
+          />,
           {/* Sidebar */};
               {/* Header */};
-              <div className="flex items-centerjustify-betweenmb-8">;
-                <div className="flexitems-centerspace-x-2">;
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600p-2rounded-lg">;
-                    <Building2 className="w-8h-8text-white" />;
-                  </div>;
-                  <span className="text-xlfont-boldtext-gray-900">Zion Tech Group</span>;
-                </div>;
-                <button;
+              <div className="flex items-center justify-between mb-8">,
+                <div className="flex items-center space-x-2">,
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">,
+                    <Building2 className="w-8 h-8 text-white" />,
+                  </div>,
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>,
+                </div>,
+                <button,
                   onClick={onClose};
               {/* Navigation */};
-              <nav className="space-y-4">;
-                {Object.entries(navigation).map(([title, links]) => (;
-                  <div key={title}>;
-                    <button;
+              <nav className="space-y-4">,
+                {Object.entries(navigation).map(([title, links]) => (,
+                  <div key={title}>,
+                    <button,
                       onClick={() => handleDropdownToggle(title)};
                             key={link.name};
                             href={link.href};
-                            className="block text-gray-600: hover:text-blue-600transition-colorspy-1";
+                            className="block text-gray-600 hover: text-blue-600 transition-colors py-1",
                             onClick={onClose};
-                          >;
+                          >,
                             {link.name};
                           </Link>))};
               {/* Quick Links */};
-              <div className="mt-8 pt-8border-tborder-gray-200">;
-                <h3 className="text-lg font-semiboldtext-gray-900mb-4">Quick Links</h3>;
-                <div className="space-y-2">;
-                  {quickLinks.map((link) => (;
-                    <Link;
+              <div className="mt-8 pt-8 border-t border-gray-200">,
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>,
+                <div className="space-y-2">,
+                  {quickLinks.map((link) => (,
+                    <Link,
                       key={link.name};
                       href={link.href};
-                      className="block text-gray-600: hover:text-blue-600transition-colorspy-1";
+                      className="block text-gray-600 hover: text-blue-600 transition-colors py-1",
                       onClick={onClose};
-                    >;
+                    >,
                       {link.name};
                     </Link>))};
-                </div>;
-              </div>;
+                </div>,
+              </div>,
               {/* Contact Info */};

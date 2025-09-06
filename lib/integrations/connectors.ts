@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -63,3 +64,6 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

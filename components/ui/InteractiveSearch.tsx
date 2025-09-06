@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -30,3 +31,11 @@ export default function InteractiveSearch({
     </motion.div>
   );
 }
+=======
+ /> {
+  value && (<button onClick= {
+  () => setValue ('') 
+}className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" > ✕ </button>) 
+}</motion.div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

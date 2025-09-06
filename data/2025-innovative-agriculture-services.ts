@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeAgricultureService {
@@ -329,3 +330,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 89,
   },
 ];
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

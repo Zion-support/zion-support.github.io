@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
@@ -30,8 +31,13 @@ export default async function handler(
     'Token Strategy',
     'Ask & Call to Action',
   ];
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
 Company Mission: ${inputs?.mission}
@@ -86,3 +92,19 @@ function extractSection(body: string, title: string): string {
   }
   return '';
 }
+=======
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    const { operatorPrompt, inputs, metrics } = req.body;
+    
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch. Operator Prompt: ${operatorPrompt} Company Mission: ${inputs?.mission} Funding Stage: ${inputs?.fundingStage} Vision/Goals: ${inputs?.vision} Round Type: ${inputs?.roundType} Target Raise: ${inputs?.targetRaise} Key Metrics: ${JSON.stringify(metrics)} Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
+    
+    res.status(200).json({ prompt, message: 'Pitch generated' });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

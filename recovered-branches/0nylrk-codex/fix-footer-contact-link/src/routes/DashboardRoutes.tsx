@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
@@ -195,6 +196,33 @@ const DashboardRoutes = () => {
       />
     </Routes>
   );
+=======
+ const DashboardRoutes = () => {
+  return (<Routes> {
+  /* Dashboard Routes */ 
+}<Route path="/dashboard" element= {
+  <ProtectedRoute> 
+}/> <Route <ClientDashboard /> </ProtectedRoute> 
+}/> <Route <TalentDashboard /> </ProtectedRoute> 
+}/> <Route <CreatorDashboard /> </ProtectedRoute> 
+}/> <Route <Analytics /> </ProtectedRoute> 
+}/> <Route <ProjectMilestones /> </ProtectedRoute> 
+}/> <Route <ProjectDetails /> </ProtectedRoute> 
+}/> <Route <ProjectRoom /> </ProtectedRoute> 
+}/> <Route <MessagingInbox /> </ProtectedRoute> 
+}/> <Route <MessagingInbox /> </ProtectedRoute> 
+}/> <Route <Payments /> </ProtectedRoute> 
+}/> <Route <Interviews /> </ProtectedRoute> 
+}/> <Route <Notifications /> </ProtectedRoute> 
+}/> <Route <ApplicationStatusTracker /> </ProtectedRoute> 
+}/> <Route <HiringTracker /> </ProtectedRoute> 
+}/> <Route <PortfolioBuilder /> </ProtectedRoute> 
+}/> <Route <Referrals /> </ProtectedRoute> 
+}/> <Route <DeveloperPortal /> </ProtectedRoute> 
+}/> <Route <WalletPage /> </ProtectedRoute> 
+}/> <Route <DeveloperPortal /> </ProtectedRoute> 
+}/> <Route <ContractBuilder /> </ProtectedRoute> 
+}/> </Routes>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default DashboardRoutes;

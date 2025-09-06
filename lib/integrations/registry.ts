@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -51,3 +52,6 @@ export function getProviderById(
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

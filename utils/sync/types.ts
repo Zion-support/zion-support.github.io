@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type SyncScope = 'full' | 'dao' | 'marketplace';
 
 export interface Peer {
@@ -98,3 +99,8 @@ export interface MultiverseState {
   proposalMerkleById: Record<string, string>;
   events: SyncEvent[];
 }
+=======
+export type SyncScope = "full" | "dao" | "marketplace";
+export type SyncEventType = | "proposal" | "token transfer" | "talent mobility" | "dao endorsement" | "leaderboard entry";
+export type SyncEventPayload = | ProposalPayload | TokenTransferPayload | TalentMobilityPayload | DaoEndorsementPayload | LeaderboardEntryPayload;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

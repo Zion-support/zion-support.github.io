@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type TokenSymbol = 'ZION$';
 
 export type TokenTransactionType =
@@ -34,3 +35,7 @@ export interface WalletSummary {
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
+=======
+export type TokenSymbol = "ZION$";
+export type TokenTransactionType = | "earn" | "burn" | "issue" | "revoke" | "redeem";
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   getSessionFromReq,
@@ -13,3 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json({ message: 'OK' });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

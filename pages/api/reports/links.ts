@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -20,3 +21,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       .json({ error: e?.message || 'Failed to read links report' });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

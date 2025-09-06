@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { checkOnline, safeFetch } from '@/integrations/supabase/client';
 import { vi } from 'vitest';
 
@@ -22,3 +23,6 @@ it('safeFetch throws when fetch rejects', async () => {
     'Failed to connect to Supabase'
   );
 });
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

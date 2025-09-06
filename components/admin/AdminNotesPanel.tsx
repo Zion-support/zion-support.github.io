@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 
 export type AdminNotesPanelProps = {
@@ -153,3 +154,10 @@ export default function AdminNotesPanel({
     </div>
   );
 }
+=======
+ </div> <div className="text-xs opacity-60 mt-2" >Admin-only notes hidden.</div> </div>) 
+}</li>) ) 
+}</ul>) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

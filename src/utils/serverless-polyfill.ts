@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-this-alias */
@@ -177,17 +178,27 @@ const tsHelpers = {
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
   },
+=======
+/* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation ;
+}
+}//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {;
+  ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
-// Inject TypeScript helpers into global scope
-Object.keys(tsHelpers).forEach(helper => {
-  if (typeof (globalThis as any)[helper] === 'undefined') {
-    (globalThis as any)[helper] = (tsHelpers as any)[helper];
-  }
-  if (typeof (selfRef as any)[helper] === 'undefined') {
-    (selfRef as any)[helper] = (tsHelpers as any)[helper];
-  }
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null");
+}
+}return t;
+};
+};
+awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
+  function adopt (value: any) {;
+  return value instanceof P ? value : new P (function (resolve: any) {;
+  resolve (value) ;
+}) ;
+}return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
+  step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
+<<<<<<< HEAD
 
 // Error prevention for common webpack issues
 try {
@@ -293,11 +304,31 @@ export const verifyPolyfills = () => {
 
   console.log('Serverless polyfill verification:', checks);
   return Object.values(checks).every(Boolean);
-};
-
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100);
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+};
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+  ;
+}
+<<<<<<< HEAD
 
 export default {}; // Ensure this can be imported as a module
+=======
+}catch (e) {;
+  //Silently handle any errors in error prevention setup ';
+}//Global error suppression for common serverless issues //Suppress specific known errors that don't affect functionality if (typeof message === 'string') {';
+  if (message.includes ('Cannot read properties of undefined (reading \'env\') ') || message.includes ('Cannot destructure property') || message.includes ('self is not defined') || message.includes (' extends') || message.includes ('getInitialProps') ) {';
+  if (event.reason && typeof event.reason.message === 'string') {';
+  if (event.reason.message.includes ('Cannot read properties of undefined (reading \'env\') ') || event.reason.message.includes ('Cannot destructure property') || event.reason.message.includes ('self is not defined') ) {;
+  ';
+}//Node.js environment polyfills (for SSR/build time) if (typeof global !== 'undefined'&& typeof window === 'undefined') {';
+  //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
+  return Object.values (checks) .every (Boolean);
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Auto-verify in development export default {;
+  ;
+}, // Ensure this can be imported as a module'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

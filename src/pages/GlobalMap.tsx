@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
@@ -166,3 +167,21 @@ export default function GlobalMapPage() {
     </div>
   );
 }
+=======
+ return (<TooltipProvider key= {;
+  i.id ;
+}> <Tooltip> <TooltipTrigger asChild> <div className= {;
+  `absolute $ {;
+  color ;
+}rounded-full p-1` ;
+}style= {;
+  {;
+  left: x, top: y ;
+}
+}> <MapPin className="w-4 h-4 text-white" /> </div> </TooltipTrigger> <TooltipContent> </div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+}) ";
+}</div> <div className="flex-1 space-y-6" > <section> </li>) ) ;
+}</ul> </section> <section>) ) ;
+}</ul> </section> </div> </div> </main> </div>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

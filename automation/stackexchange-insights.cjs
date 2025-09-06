@@ -21,25 +21,25 @@ async function run() {
   try {
     const data = await fetchJson(url);
     items = (data.items || []).map((q) => ({
-      question_id: q.question_id,
-      title: q.title,
-      link: q.link,
-      score: q.score,
-      creation_date: q.creation_date,
-      tags: q.tags,
-      owner: q.owner?.display_name,
-      is_answered: q.is_answered,
-      answer_count: q.answer_count,
+      question_id: q.question_id;
+      title: q.title;
+      link: q.link;
+      score: q.score;
+      creation_date: q.creation_date;
+      tags: q.tags;
+      owner: q.owner?.display_name;
+      is_answered: q.is_answered;
+      answer_count: q.answer_count;
     }));
   } catch (e) {
     console.warn('StackExchange fetch failed:', e.message);
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Latest StackOverflow questions for AI/Blockchain/DAO tags',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Latest StackOverflow questions for AI/Blockchain/DAO tags';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

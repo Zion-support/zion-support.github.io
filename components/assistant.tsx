@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 
 interface Message {
@@ -106,3 +107,12 @@ export default function Assistant() {
     </div>
   );
 }
+=======
+ </div>) ) 
+}</div> <form > <input className="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask about the role..." value= {
+  input 
+}onChange= {
+  (e) => setInput (e.target.value) 
+}submit"className=" bg-gray-900 text-white text-sm rounded px-3 py-2" >Send</button> </form> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

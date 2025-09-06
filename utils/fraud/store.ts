@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -23,11 +24,23 @@ function ensureFiles() {
   if (!fs.existsSync(actionsPath)) fs.writeFileSync(actionsPath, '');
   if (!fs.existsSync(privacyPath))
     fs.writeFileSync(privacyPath, JSON.stringify({}));
+=======
+ .from ('fraud events') .select ('id, createdAt') .eq ('ipAddress', ip) .eq ('source', source) .gte ('createdAt', new Date (since) .toISOString () );
+return (data?.length ?? 0) 
+}let events: StoredFraudRecord[] = [];
+if (isSupabaseConfigured () ) {
+  return text .split ('\n') .filter (Boolean) .map ( (line) => {
+  try {
+  
+}) .filter (Boolean) as StoredFraudRecord[] 
+}return text .split ('\n') .filter (Boolean) .map ( (line) => {
+  try {
+  
+}) .filter (Boolean) as AdminActionRecord[] 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-function isSupabaseConfigured() {
-  return !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE);
 }
+<<<<<<< HEAD
 
 function getSupabaseAdmin() {
   const url = process.env.SUPABASE_URL!;
@@ -344,3 +357,6 @@ export function newEvent(
     createdAt: partial.createdAt ?? new Date().toISOString(),
   };
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

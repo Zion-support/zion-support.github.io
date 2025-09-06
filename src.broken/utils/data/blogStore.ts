@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { BlogPost } from '@/utils/types/blog';
@@ -86,4 +87,10 @@ export function incrementMetric(
   posts[idx].metrics[metric] += 1;
   writePosts(posts);
   return posts[idx];
+=======
+ 
+}if (!fs.existsSync (POSTS PATH) ) {
+  fs.writeFileSync (POSTS PATH, JSON.stringify ([], null, 2), 'utf8');
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -202,3 +203,15 @@ export default async function handler(
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+ 
+}
+}catch () {
+  // fall through to heuristic 
+}
+}catch (err) {
+  // ignore and fallback 
+}// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup) // For now, just return success with AI data 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

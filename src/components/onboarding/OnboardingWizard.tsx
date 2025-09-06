@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -216,3 +217,24 @@ export function OnboardingWizard({
     </Card>
   );
 }
+=======
+ ;
+}];
+const talentSteps: WizardStep[] = [ ;
+};
+skipText: "Skip for now" ;
+};
+}];";
+: index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light") ;
+}/>) ) ";
+}</div> </div> </div> </CardContent> <CardFooter className="flex flex-col space-y-2" > <Button > {;
+  steps[currentStep]?.action.text ;
+}</Button> {";
+  steps[currentStep]?.skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick={;
+  handleSkip ;
+}> {;
+  steps[currentStep]?.skipText ;
+}</Button>) ;
+}</CardFooter> </Card>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import {
@@ -86,3 +87,23 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     );
   });
 }
+=======
+ dispute.attachments.push ({
+  id: `$ {
+  Date.now () 
+}-$ {
+  safeName 
+}`;
+fileName: safeName;
+fileSize: buffer.length;
+mimeType: f.mimeType || 'application/octet-stream';
+path: filePath;
+uploadedAt: now;
+uploadedByUserId: user.id 
+}) 
+}
+}res.setHeader ('AllowPOST');
+return res.status (405) .end ('Method Not Allowed') 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type CuttingEdgeAIService = {
   id: string;
   name: string;
@@ -77,3 +78,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     realService: true,
   },
 ];
+=======
+ category: | 'AI Consciousness' | 'AI Emotional Intelligence' | 'AI Creativity' | 'AI Psychology' | 'AI Business Management' | 'AI Healthcare' | 'AI Neural Interfaces' link: 'https://ziontechgroup.com/services/ai-creative-studio';
+realService: true 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

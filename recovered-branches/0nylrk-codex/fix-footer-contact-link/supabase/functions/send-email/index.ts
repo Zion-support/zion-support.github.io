@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { Resend } from 'npm:resend@2.0.0';
 
@@ -34,4 +35,22 @@ serve(async req => {
       status: 500,
     });
   }
+=======
+ 
+}try {
+  const {
+  to, subject, html 
+}= await req.json ();
+const emailResponse = await resend.emails.send ({
+  from: "Lovable <onboarding@resend.dev>";
+to: [to];
+subject;
+html 
+});
+return new Response (JSON.stringify (emailResponse), {
+  status: 500 
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

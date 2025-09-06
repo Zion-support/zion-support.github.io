@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ShortUrl {
   id: string;
   originalUrl: string;
@@ -186,3 +187,19 @@ class UrlShortenerService {
 }
 
 export const urlShortenerService = new UrlShortenerService();
+=======
+ const shortUrl: ShortUrl = {
+  id: this.generateId (), originalUrl: request.originalUrl, shortCode, shortUrl: `$ {
+  process.env.NEXT PUBLIC BASE URL || 'https://zion.app' 
+}/s/$ {
+  shortCode 
+}`;
+createdAt: new Date ();
+expiresAt: request.expiresAt;
+isActive: true;
+userId: request.userId 
+};
+return shortUrl 
+}return url 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

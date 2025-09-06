@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -45,3 +46,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
     </div>
   );
 }
+=======
+ </Button> </div> </div>) ;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

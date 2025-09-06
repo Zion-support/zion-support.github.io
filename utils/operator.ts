@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type OperatorEvent = {
   type: string;
   sessionId: string;
@@ -18,3 +19,6 @@ export async function tagOperatorSession(
 ): Promise<void> {
   return Promise.resolve();
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

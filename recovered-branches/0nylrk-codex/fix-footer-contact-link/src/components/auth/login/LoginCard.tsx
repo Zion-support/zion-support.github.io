@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { LoginForm } from './LoginForm';
 import { SocialLogin } from './SocialLogin';
@@ -27,3 +28,8 @@ export function LoginCard() {
     </div>
   );
 }
+=======
+ export function LoginCard () {
+  return (<div className="mx-auto w-full max-w-sm lg:w-96" > <div className="text-center mb-10" > <h2 className="text-3xl font-bold tracking-tight text-white" > bg-zion-blue-dark rounded-lg p-6" > <LoginForm /> <SocialLogin /> </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

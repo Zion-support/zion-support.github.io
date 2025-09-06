@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type MonitoredSource =
   | 'signup'
   | 'job_post'
@@ -5,40 +6,13 @@ export type MonitoredSource =
   | 'quote'
   | 'review';
 
+=======
+export type MonitoredSource = 'signup' | 'job post' | 'message' | 'quote' | 'review';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-
-export interface FraudEvent {
-  id: string;
-  userId: string | null;
-  source: MonitoredSource;
-  content: string | null;
-  metadata: Record<string, unknown> | null;
-  ipAddress: string | null;
-  createdAt: string; // ISO string
-}
-
-export interface HeuristicEvaluation {
-  flagged: boolean;
-  reasons: string[];
-  severity: 'low' | 'medium' | 'high';
-}
-
-export interface GptClassification {
-  label: GptClassificationLabel;
-  reason: string;
-  confidence: number; // 0..1
-}
-
 export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-
-export interface StoredFraudRecord extends FraudEvent {
-  heuristic: HeuristicEvaluation;
-  gpt?: GptClassification;
-  autoHidden: boolean;
-  status: FraudReviewStatus;
-}
-
 export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
+<<<<<<< HEAD
 
 export interface AdminActionRecord {
   id: string;
@@ -74,3 +48,6 @@ export interface MonthlyReport {
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

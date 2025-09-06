@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 
@@ -149,3 +150,15 @@ export default async function handler(
     });
   }
 }
+=======
+ res.status (200) .json ({
+  totals: {
+  totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+};
+topCategories: Object.entries (categoryCounts) .sort ( (a, b) => b[1] - a[1]) .slice (0, 5) .map ( ([label, value]) => ({
+  label, value 
+}) );
+referralConversions;
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

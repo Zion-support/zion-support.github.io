@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -18,3 +19,7 @@ export async function sendWarningEmail(
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

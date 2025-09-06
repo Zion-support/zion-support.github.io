@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const memoryStore: { q: string; ts: number }[] = [];
@@ -21,3 +22,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(405).end();
 }
+=======
+ 
+}return res.status (204) .end () 
+}
+}return res.status (405) .end () 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

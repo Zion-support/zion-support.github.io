@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -509,3 +510,28 @@ export default function AIContentGeneratorPage() {
     </>
   );
 }
+=======
+ export default function AIContentGeneratorPage () {
+  const features = [ {
+  return (<> <Head> <title>AI Content Generator | Zion Tech Group - Advanced AI-Powered Content Creation</title> <meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." /> <meta property="og:title" content="AI Content Generator | Zion Tech Group" /> <meta property="og:description" content="Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support." /> <meta name="twitter:card" content="summary large image" /> </Head> </div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="mb-8" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6" > <Sparkles className="w-4 h-4 mr-2" /> AI-Powered Content Generation </div> </div> <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight" > AI Content Generator </h1> <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed" > Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20" > <Button href="#pricing" size="lg" className="bg-purple-600 hover:bg-purple-700 shadow-2xl shadow-purple-500/25" > Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="#demo" variant="outline" size="lg" className="border-white/20 hover:border-white/40 hover:bg-white/5" > <Play className="w-5 h-5 mr-2" /> Watch Demo </Button> </div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400" >10M+</div> <div className="text-gray-400" >Words Generated</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400" >99.9%</div> <div className="text-gray-400" >Uptime</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400" >24/7</div> <div className="text-gray-400" >Support</div> </div> </div> </div> </section> Powerful Features </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Everything you need to create exceptional content at scale </p> </div> </p> </Card>) ) 
+}</div> </div> </section> Use Cases </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Versatile content creation for every industry and purpose </p> </div> key= {
+  index 
+}className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300" > </div>) ) 
+}</div> </div> </div> </Card>) ) 
+}</div> </div> </section> Simple, Transparent Pricing </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Choose the plan that fits your content creation needs </p> </div> <Card key= {
+  index 
+}className= {
+  `relative group $ {
+  plan.popular ? 'ring-2 ring-purple-500 scale-105': '' 
+}border $ {
+  plan.color 
+}hover:border-purple-500/50 transition-all duration-300` 
+}> Most Popular </span> </div>) 
+}</li>) ) 
+}</ul> <Button > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </Button> </Card>) ) 
+}</div> </div> </section> Seamless Integrations </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Connect with your favorite tools and platforms </p> </div> <Card key= {
+  index 
+}className="text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300" > </Card>) ) 
+}</div> </div> </section> <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Join thousands of content creators who are already saving hours every day with AI-powered content generation. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /contact"variant=" secondary"size=" lg"className=" bg-white text-purple-600 hover:bg-gray-100 shadow-2xl"> Start Free Trial <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" #demo"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"> <Play className=" w-5 h-5 mr-2" /> Watch Demo </Button> </div> </div> </section> </>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -33,3 +34,12 @@ export default async function handler(
     return res.status(500).json({ error: 'Unexpected error' });
   }
 }
+=======
+ const {
+  error 
+}= await supabase .from ('notifications') .update ({
+  read status: true 
+}) .eq ('user id', userId) .eq ('read status', false);
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

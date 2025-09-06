@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import {
   DropdownMenu,
@@ -109,4 +110,13 @@ export function ResumeVersionSelector({
       </Dialog>
     </div>
   );
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+};
+> {
+  resume.basic info.title 
+}</DropdownMenuItem>) ) 
+}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
 }

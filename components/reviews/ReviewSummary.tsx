@@ -1,10 +1,6 @@
-import React from 'react';
-import type { ReviewsSummary } from '../../types/reviews';
-import StarRating from './StarRating';
-
-type Props = {
-  summary: ReviewsSummary;
+ </div> </div> </div>) 
 };
+<<<<<<< HEAD
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -29,4 +25,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
   );
 };
 
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewSummary;

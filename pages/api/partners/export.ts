@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
@@ -50,3 +51,14 @@ export default async function handler(
     return res.status(500).json({ error: e?.message });
   }
 }
+=======
+ return res.status (200) .send (csv);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}
+}catch (e: any) {
+  return res.status (500) .json ({
+  error: e?.message 
+}) 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
 import { parseUserFromRequest } from '../../../utils/auth';
@@ -69,3 +70,9 @@ export default async function handler(
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 }
+=======
+ 
+}res.setHeader ('AllowGET, POST');
+return res.status (405) .end ('Method Not Allowed') 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

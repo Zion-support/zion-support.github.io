@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,10 +11,16 @@ interface ScreenshotManagerProps {
 }
 
 type Screenshot = {
+=======
+ interface ScreenshotManagerProps {
+  platform: AppPlatform 
+}type Screenshot = {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
-  url: string;
-  file: File;
+url: string;
+file: File 
 };
+<<<<<<< HEAD
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
   platform,
@@ -159,4 +166,25 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
       </CardContent>
     </Card>
   );
+=======
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
+  platform 
+}) => {
+  const [screenshots, setScreenshots] = useState<Screenshot[]> ([]);
+const [isDragging, setIsDragging] = useState (false);
+const fileInputRef = useRef<HTMLInputElement> (null);
+if (e.target.files) {
+  return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}setScreenshots (prev => [...prev, ...newScreenshots]);
+}
+};
+return filtered;
+}) 
+};
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {
+  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {
+  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) 
+}</div> </CardContent> </Card>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

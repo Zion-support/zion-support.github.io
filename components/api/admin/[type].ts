@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types';
 import { v4 as uuidv4 } from 'uuid';
@@ -179,3 +180,13 @@ export default async function handler(
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+ return lines.join ('\n');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}return res.status (200) .send (toCsv (data || []) );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}return res.status (200) .send (toCsv (pageItems) );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

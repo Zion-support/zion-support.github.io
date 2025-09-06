@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 
@@ -40,3 +41,8 @@ export default function Certifications() {
     </div>
   );
 }
+=======
+ return (<div className="space-y-6" > <div> <h1 className="text-2xl font-semibold" >Certifications</h1> <div className="text-gray-500 text-sm" >Your achievements and top learners</div> </div> <div> </div> </div> <div>) ) 
+}</ol> </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType =
   | 'client_favor'
@@ -76,3 +77,8 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   contract_terms: 'Contract Terms Disagreement',
   other: 'Other Issue',
 };
+=======
+ export type DisputeStatus = 'open' | 'under review' | 'resolved' | 'closed';
+export type ResolutionType = 'client favor' | 'talent favor' | 'compromise' | 'dismissed' | null;
+export type DisputeReason = | 'milestone quality' | 'delayed delivery' | 'scope change' | 'communication' | 'payment' | 'contract terms' | 'other';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

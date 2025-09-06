@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { incrementMetric } from '@/utils/data/blogStore';
 
@@ -12,3 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!post) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ ok: true, metrics: post.metrics });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

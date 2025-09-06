@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export default function Reports() {
@@ -98,3 +99,8 @@ export default function Reports() {
     </div>
   );
 }
+=======
+ return (<div className="space-y-6" > <div> <h1 className="text-2xl font-semibold" >Automation Reports</h1> <div className="text-sm text-gray-500" >Autonomously generated and synced</div> </div>) : (<div className="text-sm text-gray-500" >No data</div>) 
+}</div> </div> </section> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

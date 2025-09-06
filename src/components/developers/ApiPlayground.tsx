@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -5,13 +6,15 @@ import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
 interface Param {
+=======
+ interface Param {;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   name: string;
-  type: string;
-  required?: boolean;
-}
-
-interface ApiPlaygroundProps {
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
   method: string;
+<<<<<<< HEAD
   path: string;
   params?: Param[];
 }
@@ -138,3 +141,40 @@ export function ApiPlayground({
 }
 
 export default ApiPlayground;
+=======
+path: string;
+params?: Param[] ;
+}export function ApiPlayground ({;
+  method,  path, params = [] ;
+}: ApiPlaygroundProps) {;
+  const [response, setResponse] = useState<string | null> (null);
+const [loading,  setLoading] = useState (false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 params.forEach ( (p) => {;
+  const val = paramValues[p.name];
+if (val) searchParams.append (p.name, val) ;
+});
+const query = searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params.map ( (p) => (<Input key= {;
+  p.name ;
+}</div>) ;
+}export default ApiPlayground;
+'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

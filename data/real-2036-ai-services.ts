@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform',
@@ -330,3 +331,6 @@ export const real2036AIServices = [
     ],
   },
 ];
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

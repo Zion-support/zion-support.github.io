@@ -1,12 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
-
-function readUsers() {
-  return JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+ 
 }
+<<<<<<< HEAD
 
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
@@ -64,3 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .json({ error: e?.message ?? 'Failed to handle progress' });
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

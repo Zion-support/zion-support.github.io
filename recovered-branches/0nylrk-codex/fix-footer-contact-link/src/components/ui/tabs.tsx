@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 
@@ -51,3 +52,26 @@ const TabsContent = React.forwardRef<
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
+=======
+import * as React from "react" import * as TabsPrimitive from "@radix-ui/react-tabs" const Tabs = TabsPrimitive.Root const TabsList = React.forwardRef< React.ElementRef<typeof TabsPrimitive.List>;
+React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> > ( ({
+  className, ...props 
+}, ref) => (<TabsPrimitive.List) 
+}{
+  ...props 
+}/>) ) TabsList.displayName = TabsPrimitive.List.displayName const TabsTrigger = React.forwardRef< React.ElementRef<typeof TabsPrimitive.Trigger>;
+React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> > ( ({
+  className, ...props 
+}, ref) => (<TabsPrimitive.Trigger) 
+}{
+  ...props 
+}/>) ) TabsTrigger.displayName = TabsPrimitive.Trigger.displayName const TabsContent = React.forwardRef< React.ElementRef<typeof TabsPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> > ( ({
+  className, ...props 
+}, ref) => (<TabsPrimitive.Content) 
+}{
+  ...props 
+}/>) ) TabsContent.displayName = TabsPrimitive.Content.displayName export {
+  Tabs, TabsList, TabsTrigger, TabsContent 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

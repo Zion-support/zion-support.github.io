@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Resume } from '@/types/resume';
 
@@ -41,4 +42,10 @@ export const useResumeProgress = (resume: Resume | null) => {
   }, [resume]);
 
   return progress;
+=======
+ useEffect ( () => {
+  // Calculate progress based on completed sections if (!resume) {
+  // Basic info is always considered (1 point) completed += 1;
+// Work experience (1 point if at least one entry) return progress 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

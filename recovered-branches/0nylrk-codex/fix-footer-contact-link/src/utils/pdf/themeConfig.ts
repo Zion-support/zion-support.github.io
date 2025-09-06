@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Theme configuration for PDF export
  */
@@ -26,3 +27,9 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         accent: '#9b87f5',
       };
 }
+=======
+ /** * Theme configuration for PDF export */ export function getPdfThemeColors (theme: 'light' | 'dark') : PdfThemeColors {
+  return theme === 'light' ? {
+  
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

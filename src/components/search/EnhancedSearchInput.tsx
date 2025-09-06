@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X } from 'lucide-react';
@@ -11,20 +12,23 @@ import { debounce } from 'lodash';
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
 interface EnhancedSearchInputProps {
+=======
+ interface EnhancedSearchInputProps {;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   value: string;
-  onChange: (value: string) => void;
-  /**
-   * Optional callback when a suggestion is selected. This allows parent
-   * components to perform actions such as navigation.
-   */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
-  placeholder?: string;
-  /**
-   * Optional list of fallback suggestions (e.g. recent searches).
-   * If provided, these will be shown when the input is empty.
-   */
-  searchSuggestions?: SearchSuggestion[];
+onChange: (value: string) => void;
+}, 300);
+[]);
+//Fetch suggestions from API when input value changes useEffect ( () => {;
+  if (!debounced) {;
+  //Show recent suggestions provided via props when no query entered setFilteredSuggestions ( (searchSuggestions || []) .filter (s => s.type === 'recent') return () => controller.abort () ;
+}, [debounced, searchSuggestions]);
+//Handle clicks outside the component to close suggestions useEffect ( () => {;
+  function handleClickOutside (event: MouseEvent) {;
+  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {;
+  ;
 }
+<<<<<<< HEAD
 
 export function EnhancedSearchInput({
   value,
@@ -293,4 +297,28 @@ export function EnhancedSearchInput({
       />
     </div>
   );
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
+}setIsFocused (false);
+inputRef.current?.blur ();
+setHighlightedIndex (-1) ;
+};
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  switch (e.key) {';
+  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
+  case 'Escape': e.preventDefault ();
+setIsFocused (false);
+setHighlightedIndex (-1);
+setValueOnFocus (null);
+inputRef.current?.blur ();
+break;
+default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
+break ;
+}
+};
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestions /> </div>) ;
+}'"

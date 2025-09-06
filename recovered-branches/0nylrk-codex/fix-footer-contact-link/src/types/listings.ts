@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ListingCategory {
   id: string;
   name: string;
@@ -39,3 +40,6 @@ export interface ListingItem {
 }
 
 export type ListingView = 'grid' | 'list';
+=======
+ export type ListingView = 'grid' | 'list';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

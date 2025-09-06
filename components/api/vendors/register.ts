@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 
@@ -32,3 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e.message });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

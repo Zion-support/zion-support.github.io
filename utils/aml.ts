@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
@@ -74,3 +75,14 @@ export function setAmlProvider(custom: AmlProvider) {
 export function getAmlProvider(): AmlProvider {
   return provider;
 }
+=======
+ return {
+  status: isSanction ? 'review' : 'clear', matches: isSanction ? [ {
+  list: 'Sanctions', name: businessName, score: 0.8 
+}] : [];
+checkedAt: new Date () .toISOString ();
+provider: 'mock' 
+}
+}
+}let provider: AmlProvider = new MockAmlProvider ();
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

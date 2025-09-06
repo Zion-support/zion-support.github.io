@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Availability } from '@/types/profile';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Check } from 'lucide-react';
@@ -84,3 +85,20 @@ export function ProfileAvailability({
     </div>
   );
 }
+=======
+ interface ProfileAvailabilityProps {
+  availability: Availability 
+}availability 
+}: ProfileAvailabilityProps) {
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
+  switch (status) {
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge > {
+  getStatusText (availability.status) 
+}</Badge> <span>Next available: {
+  availability.nextAvailable 
+}</span> </div>) 
+}</div> </div> </div>) ) 
+}</div> </div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

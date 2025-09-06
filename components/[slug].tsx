@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -216,20 +217,35 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
+=======
+ if (!service) {
+  return (<UltraAdvancedFuturisticBackground> </div> </div> </UltraAdvancedFuturisticBackground> return (<UltraAdvancedFuturisticBackground> <Head>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}//Static export support: generate root-level pages for service slugs type Svc = typeof enhancedRealMicroSaasServices[number];
+function collectAllServices () : Svc[] {
+  return enhancedRealMicroSaasServices .concat (
+}catch {
+  return null;
 }
-
-function extractRootSlugFromLink(link?: string): string | null {
-  if (!link) return null;
-  try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management"; ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
-    return null;
-  } catch {
-    return null;
-  }
+}export const getStaticPaths: GetStaticPaths = async () => {
+  const services = collectAllServices ();
+const candidateSlugs = new Set<string> ();
+//Gather existing root-level page slugs to avoid conflicts const pagesDir = path.join (process.cwd (), 'pages');
+const staticSlugs = new Set<string> ();
+try {
+  const entries = fs.readdirSync (pagesDir, {
+  withFileTypes: true 
+});
+for (const entry of entries) {
+  if (entry.isFile () && /\.tsx?$/.test (entry.name) ) {
+  const base = entry.name.replace (/\. (tsx|ts|jsx|js) $/i, '');
+if (base !== 'index'&& base !== '[slug]'&& !base.startsWith (' ') ) {
+  staticSlugs.add (base.toLowerCase () ) 
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+}
+<<<<<<< HEAD
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
@@ -274,4 +290,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
+=======
+}catch {
+  
+}return {
+  paths: uniqueNonConflicting.map ( (slug) => ({
+  params: {
+  slug 
+}
+}) );
+fallback: true 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

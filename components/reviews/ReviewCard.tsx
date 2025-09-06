@@ -1,11 +1,7 @@
-import React from 'react';
-import StarRating from './StarRating';
-import type { PublicReview } from '../../types/reviews';
-
-type Props = {
-  review: PublicReview;
-  onReport?: (id: string) => void;
+ > Report abuse </button> </div>) 
+}</div> </div>) 
 };
+<<<<<<< HEAD
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
@@ -58,4 +54,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   );
 };
 
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewCard;

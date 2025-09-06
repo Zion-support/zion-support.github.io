@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -215,3 +216,18 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
     </UltraFuturisticBackground>
   );
 }
+=======
+ function getAllServices () : Service[] {
+  return enhancedRealMicroSaasServices .concat (
+}return {
+  paths: Array.from (slugs) .map ( (slug) => ({
+  params: {
+  slug 
+}
+}) );
+fallback: false 
+}
+}</li>) ) 
+}</ul> </Card> </div> </div> </Card> </div> </div> </div> </UltraFuturisticBackground>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

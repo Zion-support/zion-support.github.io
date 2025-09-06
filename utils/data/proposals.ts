@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -30,27 +31,19 @@ export type ProposalMeta = {
     ensRecordHash?: string;
     signature?: string;
   };
-};
-
-export type ProposalPayload = {
-  title: string;
-  targetInstitution: string;
-  type: string;
-  regionalScope: string;
-  budgetOrResolution: string;
-  supportingMultiverses: string[];
-  contentMarkdown: string;
-  language?: string;
-  metadata?: Record<string, any>;
-};
-
-const dataDir = path.join(process.cwd(), 'data', 'proposals');
-const publicDir = path.join(process.cwd(), 'public', 'proposals');
-
-function ensureDirs() {
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+=======
+ const meta: ProposalMeta = {
+  id, createdAt, updatedAt, title: payload.title, targetInstitution: payload.targetInstitution, type: payload.type, regionalScope: payload.regionalScope, budgetOrResolution: payload.budgetOrResolution, supportingMultiverses: payload.supportingMultiverses || [], languages: payload.language ? [payload.language] : ['en'], status: 'Draft', artifacts: {
+  markdownPath: `/proposals/$ {
+  id 
+}/proposal.md`;
+jsonPath: path.relative (process.cwd (), jsonPath) 
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+};
+return meta 
+}
+<<<<<<< HEAD
 
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs();
@@ -149,3 +142,6 @@ export function updateArtifacts(
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

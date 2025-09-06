@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Certification } from '@/types/resume';
@@ -126,4 +127,56 @@ export function useCertifications() {
     updateCertification,
     deleteCertification,
   };
+=======
+ setIsLoading (true);
+setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not add certification') 
+}finally {
+  setIsLoading (false) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+};
+const updateCertification = async (certId: string, cert: Certification) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update certification') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const deleteCertification = async (certId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') .delete () .eq ('id', certId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete certification') 
+}finally {
+  setIsLoading (false) 
+}
+};
+return {
+  isLoading;
+error;
+addCertification;
+updateCertification;
+deleteCertification 
+}
 }

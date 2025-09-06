@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
@@ -70,3 +71,8 @@ export default async function handler(
       .json({ error: error?.message || 'Submission failed' });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

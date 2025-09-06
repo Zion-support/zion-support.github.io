@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
@@ -41,3 +42,8 @@ export default async function handler(
     return res.status(200).json({ saved: false, error: e?.message });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

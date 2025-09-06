@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
@@ -46,4 +47,28 @@ const Jobs: NextPage = () => {
   );
 };
 
+=======
+ return (<div> <Seo title="Jobs" description="Open roles at Zion Tech Solutions." /> <JobPostingJsonLd datePosted= {
+  job.datePosted 
+}description= {
+  job.description 
+}employmentType= {
+  job.employmentType 
+}hiringOrganization= {
+  job.hiringOrganization 
+}jobLocationType= {
+  job.jobLocationType 
+}title= {
+  job.title 
+}validThrough= {
+  job.validThrough 
+}baseSalary= {
+  job.baseSalary 
+}/> <main> <h1>Jobs</h1> <p> {
+  job.title 
+}</p> <p> {
+  job.description 
+}</p> </main> </div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default Jobs;

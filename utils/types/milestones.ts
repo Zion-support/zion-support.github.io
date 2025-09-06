@@ -1,35 +1,6 @@
-export type MilestoneStatus =
-  | 'Pending'
-  | 'In Progress'
-  | 'Submitted'
-  | 'Approved'
-  | 'Paid';
-
-export type MilestoneAttachment = {
-  id: string;
-  type: 'link' | 'file';
-  url: string;
-  label?: string;
-  uploadedByUserId: string;
-  uploadedAt: string; // ISO date
-};
-
-export type Milestone = {
-  id: string;
-  title: string;
-  description?: string;
-  dueDate: string; // ISO date
-  amountUsd: number;
-  status: MilestoneStatus;
-  attachments?: MilestoneAttachment[];
-  submittedByUserId?: string;
-  approvedByUserId?: string;
-  paidAt?: string; // ISO date
-  createdAt: string; // ISO date
-  updatedAt: string; // ISO date
-};
-
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
+<<<<<<< HEAD
 
 export type ProjectParticipants = {
   clientUserId: string;
@@ -54,3 +25,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid'
   );
 }
+=======
+export function isMilestoneStatus (value: string) : value is MilestoneStatus {
+  return (value === 'Pending' || value === 'In Progress' || value === 'Submitted' || value === 'Approved' || value === 'Paid' 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

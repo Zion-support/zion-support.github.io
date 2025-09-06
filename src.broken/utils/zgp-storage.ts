@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -193,3 +194,9 @@ export function updateProposal(
   saveProposals(proposals);
   return next;
 }
+=======
+ proposals[index] = next;
+saveProposals (proposals);
+return next 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

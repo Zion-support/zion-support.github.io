@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -37,3 +38,29 @@ export function ProjectActions({
     </div>
   );
 }
+=======
+ interface ProjectActionsProps {
+  projectId: string;
+isUnderDispute: boolean;
+disputeId?: string;
+isTalent: boolean;
+onAddMilestone: () => void 
+}export function ProjectActions ({
+  projectId;
+isUnderDispute;
+disputeId;
+isTalent;
+onAddMilestone 
+}: ProjectActionsProps) {
+  return (<div className="flex gap-2" > isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link to= {
+  `/dashboard/disputes/$ {
+  disputeId 
+}` 
+}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) 
+}{
+  isTalent && !isUnderDispute && (<Button onClick= {
+  onAddMilestone 
+}> Add Milestone </Button>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

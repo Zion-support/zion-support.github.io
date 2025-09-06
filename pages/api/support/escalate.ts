@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -32,3 +33,7 @@ export default async function handler(
 
   return res.status(200).json({ ok: true, id });
 }
+=======
+ await tagOperatorSession (sessionId, tag ?? 'escalate');
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

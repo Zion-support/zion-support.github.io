@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let DIDKit: any;
 let ethers: any;
 
@@ -55,3 +56,7 @@ export async function buildIdentityProfile(
   const lens = address ? await resolveLens(address) : null;
   return { did: did || undefined, ens, lens, address: address || null };
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

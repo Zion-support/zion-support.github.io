@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -86,3 +87,9 @@ export default function Ecommerce() {
     </>
   );
 }
+=======
+ E-commerce Platform"description=" Buy and sell hardware, software and services in the Zion marketplace."keywords=" tech marketplace, buy IT hardware, sell AI solutions"canonical=" https://app.ziontechgroup.com/features/e-commerce"/> {;
+  /* Use a normal script tag so JSON-LD is correctly parsed */ ";
+}<script ></script> <Header /> Showcase your products with rich media listings and accept payments with Stripe-powered checkout. </p> <div className=" relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"> <img src=" https://placehold.co/800x400"alt=" Screenshot of marketplace interface"className=" object-cover"/> </div> <li>Support for videos and 3D models to highlight your offerings.</li> <li>Secure transactions with Stripe and fraud protection.</li> <li>Reach new customers around the world via our global platform.</li> </ul> <h2 className=" text-2xl font-bold mb-4">Frequently Asked Questions</h2> <div className=" space-y-4 mb-12"> <div> <p className=" font-semibold">How do I list a new product?</p> <p className=" text-zion-slate-light">Sign in and click " Publish Product"from your dashboard to add pricing, images and details.</p> </div> <div> <p className=" font-semibold">Do you support international shipping?</p> <p className=" text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p> </div> </div> <div className=" text-center"> <Button size=" lg"className=" bg-zion-purple text-white"asChild> <Link href=" /marketplace" >Start Shopping</Link> </Button> </div> </div> </main> </>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

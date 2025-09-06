@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -31,3 +32,6 @@ const LanguageSync: NextPage = () => {
 };
 
 export default LanguageSync;
+=======
+ <div> <Head> <title>Global Language Sync Agent</title> <meta name="description" content="AI-powered translation backfill for locale files." /> </Head> export default LanguageSync;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

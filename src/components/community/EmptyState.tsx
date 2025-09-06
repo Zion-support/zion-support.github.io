@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -47,6 +48,18 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </TooltipProvider>
     </div>
   );
+=======
+ <TooltipProvider> <Tooltip> <TooltipTrigger asChild> {;
+  hasSession ? (<Button asChild> <Link href= {;
+  href ;
+}> {;
+  cta ;
+}</Link> </Button>) : (<Button disabled> {;
+  cta ;
+}</Button>) ;
+}</TooltipTrigger> {;
+  !hasSession && <TooltipContent>Login required</TooltipContent> ;
+}</Tooltip> </TooltipProvider> </div>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default EmptyState;

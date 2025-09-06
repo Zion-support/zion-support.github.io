@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -31,3 +32,12 @@ export default function EnterpriseAdmin() {
     </ProtectedRoute>
   );
 }
+=======
+ export default function EnterpriseAdmin () {
+  const {
+  user 
+}= useAuth ();
+//Check if user has enterprise admin role 
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

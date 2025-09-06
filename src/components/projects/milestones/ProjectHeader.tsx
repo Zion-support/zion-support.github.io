@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -29,3 +30,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
     </div>
   );
 }
+=======
+ <Button variant="ghost" size="sm" className="mr-2" onClick={;
+  () => router.back () ";
+}//Changed to router.back () > <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

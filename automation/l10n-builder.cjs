@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const codeMap = {
-  esperanto: 'eo',
-  latin: 'la',
+  esperanto: 'eo';
+  latin: 'la';
   zlingua: 'zl'
 };
 

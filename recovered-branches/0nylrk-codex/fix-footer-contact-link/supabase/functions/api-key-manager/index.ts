@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
 
 interface CreateKeyRequest {
+=======
+ interface CreateKeyRequest {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   name: string;
-  scopes: string[];
-  expiresAt?: string | null;
+scopes: string[];
+expiresAt?: string | null 
+}interface RegenerateKeyRequest {
+  keyId: string 
+}//Create a Supabase client //Handle CORS for browser requests if (req.method === 'OPTIONS') {
+  return new Response ('ok', {
+  headers: {
+  
 }
+<<<<<<< HEAD
 
 interface RegenerateKeyRequest {
   keyId: string;
@@ -192,10 +203,19 @@ async function createApiKey(
       headers: { 'Content-Type': 'application/json' },
     });
   }
-}
-
-async function getUserApiKeys(userId: string) {
+=======
+});
+async function createApiKey (userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
+  //Generate prefix from name (first 4 chars of name + 4 random chars) 
+}//Insert the API key record const {
+  data: insertData, error: insertError 
+}= await supabase .from ('api keys') 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+}async function getUserApiKeys (userId: string) {
+  try {
+<<<<<<< HEAD
     const { data, error } = await supabase
       .from('api_keys')
       .select(
@@ -226,10 +246,15 @@ async function getUserApiKeys(userId: string) {
       headers: { 'Content-Type': 'application/json' },
     });
   }
+=======
+  const {
+  data, error 
+}= await supabase .from ('api keys') .select ('id, name, key prefix, scopes, created at, last used at, expires at, is active') .eq ('user id', userId) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-async function regenerateApiKey(userId: string, keyId: string) {
+}async function regenerateApiKey (userId: string, keyId: string) {
   try {
+<<<<<<< HEAD
     // First, verify that the key belongs to the user
     const { data: keyData, error: keyError } = await supabase
       .from('api_keys')
@@ -326,10 +351,20 @@ async function regenerateApiKey(userId: string, keyId: string) {
       headers: { 'Content-Type': 'application/json' },
     });
   }
+=======
+  //First, verify that the key belongs to the user const {
+  data: keyData, error: keyError 
+}= await supabase .from ('api keys') .select ('name, key prefix, scopes, expires at') .eq ('id', keyId) .eq ('user id', userId) .single ();
+}//Update the key record with new hash const {
+  data: updateData, error: updateError 
+}= await supabase .from ('api keys') .update ({
+  key hash: hashData, updated at: new Date () .toISOString () 
+}) .eq ('id', keyId) .eq ('user id', userId) .select ('id, name, key prefix, scopes, created at, expires at, is active');
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-async function revokeApiKey(userId: string, keyId: string) {
+}async function revokeApiKey (userId: string, keyId: string) {
   try {
+<<<<<<< HEAD
     const { data, error } = await supabase
       .from('api_keys')
       .update({ is_active: false })
@@ -365,10 +400,17 @@ async function revokeApiKey(userId: string, keyId: string) {
       headers: { 'Content-Type': 'application/json' },
     });
   }
+=======
+  const {
+  data, error 
+}= await supabase .from ('api keys') .update ({
+  is active: false 
+}) .eq ('id', keyId) .eq ('user id', userId) .select ('id, name, is active');
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-async function getApiLogs(userId: string, limit = 50, offset = 0) {
+}async function getApiLogs (userId: string, limit = 50, offset = 0) {
   try {
+<<<<<<< HEAD
     // Get the user's API key IDs
     const { data: keyIds, error: keyError } = await supabase
       .from('api_keys')
@@ -428,4 +470,13 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       headers: { 'Content-Type': 'application/json' },
     });
   }
+=======
+  // Get the user's API key IDs const {
+  data: keyIds, error: keyError 
+}= await supabase .from ('api keys') .select ('id') .eq ('user id', userId);
+.from ('api logs') .select ('*', {
+  count: 'exact' 
+}) .in ('api key id', ids) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
 export function getRequestUserEmail(req: NextApiRequest): string | null {
@@ -14,3 +15,6 @@ export function isAdminEmail(email: string | null | undefined): boolean {
     .filter(Boolean);
   return admins.includes(email.toLowerCase());
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

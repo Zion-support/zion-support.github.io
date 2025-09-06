@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Fragment } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from '@/pages/Home';
@@ -51,6 +52,57 @@ const ContentRoutes = () => {
       <Route path='/sitemap-page' element={<SitemapPage />} />
     </Routes>
   );
+=======
+ const ContentRoutes = () => {
+  return (<Routes> {
+  /* Content Routes */ 
+}<Route path="/" element= {
+  <Home /> 
+}/> <Route path="/home" element= {
+  <Home /> 
+}/> <Route path="/about" element= {
+  <About /> 
+}/> {
+  /* Help Center Routes */ 
+}<Route path="/help" element= {
+  <HelpCenterPage /> 
+}/> <Route path="/support" element= {
+  <HelpCenterPage /> 
+}/> {
+  /* Blog Routes */ 
+}<Route path="/blog" element= {
+  <Blog /> 
+}/> <Route path="/blog/:slug" element= {
+  <BlogPost /> 
+}/> {
+  /* Green IT Route */ 
+}<Route path="/green-it" element= {
+  <GreenIT /> 
+}/> {
+  /* Careers Route */ 
+}<Route path="/careers" element= {
+  <Careers /> 
+}/> {
+  /* Account Settings */ 
+}<Route path="/settings/account" element= {
+  <AccountSettings /> 
+}/> {
+  /* Project Room */ 
+}<Route path="/project-room/:projectId" element= {
+  <ProjectRoom /> 
+}/> {
+  /* Video Call */ 
+}<Route path="/video-call/:roomId" element= {
+  <VideoCall /> 
+}/> {
+  /* Global Search Route */ 
+}<Route path="/search" element= {
+  <SearchPage /> 
+}/> {
+  /* Sitemap Page */ 
+}<Route path="/sitemap-page" element= {
+  <SitemapPage /> 
+}/> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default ContentRoutes;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import TalentDirectory from '../pages/TalentDirectory';
@@ -35,4 +36,20 @@ const TalentRoutes = () => {
   );
 };
 
+=======
+ const TalentRoutes = () => {
+  return (<Routes> {
+  /* Talent Routes */ 
+}<Route path="/talent" element= {
+  <TalentDirectory /> 
+}/> <Route path="/talents" element= {
+  <TalentsPage /> 
+}/> <Route path="/talent/:id" element= {
+  <TalentProfilePage /> 
+}/> <Route path="/saved-talents" element= {
+  <ProtectedRoute> 
+}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
+}/> </Routes>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default TalentRoutes;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechInnovation {
@@ -725,3 +726,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },
 ];
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

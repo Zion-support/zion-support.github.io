@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById } from '../../../utils/fsdb';
 import {
@@ -28,3 +29,9 @@ export default async function handler(
   res.setHeader('Allow', 'GET');
   return res.status(405).end('Method Not Allowed');
 }
+=======
+ 
+}res.setHeader ('AllowGET');
+return res.status (405) .end ('Method Not Allowed') 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

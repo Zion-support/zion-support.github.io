@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
@@ -38,3 +39,14 @@ export function CartDrawer() {
     </>
   );
 }
+=======
+ {;
+  count ;
+}</span>) ;
+}</Link> <LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

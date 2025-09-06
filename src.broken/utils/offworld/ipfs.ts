@@ -1,35 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import { Readable } from 'stream';
-
-// Lazy imports to keep optional deps optional
-let Web3Storage: any;
-let getFilesFromPath: any;
-let createIpfsClient: any;
-let PinataSDK: any;
-
-async function lazyLoadDeps() {
-  try {
-    const web3 = await import('web3.storage');
-    Web3Storage = web3.Web3Storage;
-    getFilesFromPath = (web3 as any).getFilesFromPath;
-  } catch {}
-  try {
-    const ipfsHttp = await import('ipfs-http-client');
-    createIpfsClient = (ipfsHttp as any).create || ipfsHttp;
-  } catch {}
-  try {
-    const pinata = await import('@pinata/sdk');
-    PinataSDK = (pinata as any).default || pinata;
-  } catch {}
+ 
+}export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
 }
-
-export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
-
-export interface IpfsResult {
-  cid: string;
-  provider: IpfsClientChoice | 'none';
 }
+<<<<<<< HEAD
 
 function env(name: string): string | undefined {
   return process.env[name] || process.env[name.toLowerCase()];
@@ -177,3 +150,6 @@ export const OFFWORLD_TOPICS = {
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes',
 };
+=======
+}for (const f of walk (dirPath) ) files.push (f);
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

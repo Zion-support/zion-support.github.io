@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Content analysis functionality
 import { suspiciousPhrases } from './constants';
 import { AnalysisResult } from './types';
@@ -43,3 +44,10 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons,
   };
 };
+=======
+ // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
+  if (contentLower.includes (phrase.toLowerCase () ) ) {
+  
+}
+}// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

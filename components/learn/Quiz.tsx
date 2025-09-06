@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 type Question = {
@@ -71,3 +72,14 @@ export default function Quiz({ questions, onComplete }: Props) {
     </div>
   );
 }
+=======
+ /> <span> {
+  opt 
+}</span> </label>) ) 
+}</div> {
+  answers[q.id] === q.answerIndex ? (<span className="text-green-600" >Correct</span>) : (<span className="text-red-600" >Incorrect</span>) 
+}</div>) 
+}</div>) ) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

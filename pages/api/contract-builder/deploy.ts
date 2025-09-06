@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Interface } from 'ethers';
+import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 // Simple ABI for demonstration (release/refund)
 const abi = [
   'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)',
@@ -41,3 +41,13 @@ export default async function handler(
       .json({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Contract deployed' });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

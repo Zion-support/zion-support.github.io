@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -74,3 +75,32 @@ export function RaiseDisputeButton({
     </>
   );
 }
+=======
+ import {
+  Dialog;
+DialogContent;
+DialogHeader;
+DialogTitle;
+DialogDescription;
+DialogOverlay interface RaiseDisputeButtonProps {
+  projectId: string;
+milestoneId?: string;
+return (<> <Button variant= {
+  variant 
+}size= {
+  size 
+}className= {
+  className 
+}onClick= {
+  () => setIsDialogOpen (true) 
+}> <ShieldAlert className="h-4 w-4 mr-2" /> Raise Dispute </Button> <DialogHeader> <DialogTitle>Raise a Dispute</DialogTitle> <DialogDescription> Please provide details about the issue you're experiencing with this project. </DialogDescription> </DialogHeader> <DisputeForm projectId= {
+  projectId 
+}milestoneId= {
+  milestoneId 
+}onDisputeCreated= {
+  handleDisputeCreated 
+}onCancel= {
+  () => setIsDialogOpen (false) 
+}/> </DialogContent> </Dialog> </>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

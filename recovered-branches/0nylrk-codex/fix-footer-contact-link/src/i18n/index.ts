@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -53,3 +54,23 @@ i18n.on('languageChanged', lng => {
 });
 
 export default i18n;
+=======
+ // Initialize i18next i18n .use (LanguageDetector) // Detect user language .use (initReactI18next) // Initialize react-i18next .init ({
+  resources: {
+  en: {
+  translation: enTranslation 
+};
+es: {
+  translation: esTranslation 
+};
+pt: {
+  translation: ptTranslation 
+};
+ar: {
+  translation: arTranslation 
+}
+};
+fallbackLng: 'en', // Default language debug: process.env.NODE ENV === 'development';
+// For RTL language support document.documentElement.dir = i18n.dir ();
+// Listen for language changes to update RTL/LTR direction export default i18n;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

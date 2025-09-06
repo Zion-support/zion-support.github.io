@@ -1,4 +1,5 @@
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+<<<<<<< HEAD
 
 export interface CompanyUsageLimits {
   monthlyJobPosts: number;
@@ -48,3 +49,5 @@ export interface CompanyRecord {
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 }
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

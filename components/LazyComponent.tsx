@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
@@ -20,4 +21,12 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   );
 };
 
+=======
+ return (<Suspense fallback= {
+  fallback 
+}> <LazyLoadedComponent {
+  ...props 
+}/> </Suspense>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default LazyComponent;

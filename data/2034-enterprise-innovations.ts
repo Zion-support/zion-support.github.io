@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EnterpriseService2034 {
   id: string;
   name: string;
@@ -439,3 +440,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
   },
 ];
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

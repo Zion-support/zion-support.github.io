@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ProjectType =
   | 'Web Dev'
   | 'AI/ML'
@@ -24,3 +25,6 @@ export interface SuggestedMilestoneItem {
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
 }
+=======
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

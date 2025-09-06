@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
@@ -34,3 +35,15 @@ export function ApplyToJobModal({
     </Dialog>
   );
 }
+=======
+ <DialogHeader> <DialogTitle>Apply to Job: {
+  job.title 
+}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
+  job 
+}onClose= {
+  onClose 
+}onApplySuccess= {
+  onApplySuccess 
+}/> </DialogContent> </Dialog>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

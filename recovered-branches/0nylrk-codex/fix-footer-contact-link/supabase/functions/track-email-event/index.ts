@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.0';
 
@@ -79,4 +80,27 @@ serve(async req => {
 
     return new Response('Error processing event', { status: 500 });
   }
+=======
+ 
+}try {
+  // Update the email campaign record based on event type if (type === "open") {
+  await supabase .from ("email campaigns") .update ({
+  opened at: new Date () .toISOString () 
+}) .eq ("id", campaignId) .eq ("user id", userId);
+0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
+0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
+0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
+await supabase .from ("email campaigns") .update ({
+  clicked at: new Date () .toISOString () 
+}) .eq ("id", campaignId) .eq ("user id", userId);
+click" && redirectUrl) {
+  return new Response (null, {
+  status: 302;
+headers: {
+  Location: redirectUrl 
+}
+}) 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

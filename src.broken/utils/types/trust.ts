@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type TrustMetricInputs = {
   completionRate: number; // 0-1
   onboardingCompletionRate?: number; // 0-1
@@ -54,3 +55,6 @@ export type TrustAppeal = {
   contactEmail?: string;
   createdAt: string;
 };
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-09-05T22:25:18.004Z",
-  "securityScore": 90,
-  "vulnerabilities": [],
+  "timestamp": "2025-09-06T00:32:21.706Z",
+  "vulnerabilities": 11,
   "recommendations": [
+<<<<<<< HEAD
     {
       "type": "file_permissions",
       "message": "package.json is world-readable",
@@ -21,3 +21,12 @@
     "status": "good"
   }
 }
+=======
+    "Run \"npm audit fix\" to resolve dependency vulnerabilities",
+    "Review and remove any hardcoded secrets",
+    "Update outdated dependencies",
+    "Implement proper environment variable management",
+    "Add security headers to Next.js configuration"
+  ]
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

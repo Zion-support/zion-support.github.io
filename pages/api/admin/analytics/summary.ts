@@ -1,16 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { ensureAdminFromApi } from '../../../../utils/auth';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-type EventRow = {
-  name: string;
-  page?: string;
-  userType?: string;
-  properties?: Record<string, any>;
-  at: string;
+const byFeature: Record<string, number> = {
+  
+};
+const byEvent: Record<string, number> = {
+  
+};
+const byDay: Record<string, number> = {
+  
 };
 
+<<<<<<< HEAD
 const LOG_FILE = path.join(
   process.cwd(),
   'data',
@@ -104,3 +104,8 @@ export default async function handler(
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ byFeature, byEvent, byDay });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

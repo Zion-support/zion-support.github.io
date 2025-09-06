@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { UserProfile } from '@/types/auth';
 
 // We cannot rely on the Supabase SDK types here because the project
@@ -38,3 +39,7 @@ export function mapProfileToUser(
     role: profile.user_type, // Map user_type to role for backward compatibility
   };
 }
+=======
+ >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //We cannot rely on the Supabase SDK types here because the project //declares `@supabase/supabase-js` as an untyped external module. Define //a minimal user shape that includes only the properties we actually use //in this file. /** * Maps Supabase profile data to our app's user model */ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

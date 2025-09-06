@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
@@ -46,3 +47,17 @@ export function AIEnhancementDialog({
     </Dialog>
   );
 }
+=======
+ <DialogHeader> <DialogTitle> {
+  title 
+}</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
+  title 
+}defaultOptions= {
+  defaultOptions 
+}onApply= {
+  handleApply 
+}initialContent= {
+  initialContent 
+}/> </DialogContent> </Dialog>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

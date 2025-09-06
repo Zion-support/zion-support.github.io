@@ -1,37 +1,14 @@
-import { supabase } from './client';
-
-export type TalentOnboarding = {
-  profile_complete: boolean;
-  skills_added: boolean;
-  availability_set: boolean;
-  first_job_applied: boolean;
-};
-
-export type ClientOnboarding = {
-  job_posted: boolean;
-  talent_invited: boolean;
-  quote_received: boolean;
-  first_hire_complete: boolean;
-};
-
-export type OnboardingRecord = {
-  user_id: string;
-  role: 'talent' | 'client';
-  // talent fields
-  profile_complete?: boolean;
-  skills_added?: boolean;
-  availability_set?: boolean;
-  first_job_applied?: boolean;
-  // client fields
-  job_posted?: boolean;
-  talent_invited?: boolean;
-  quote_received?: boolean;
-  first_hire_complete?: boolean;
-  updated_at?: string;
-};
-
-export async function getCurrentUserId(): Promise<string | null> {
+ // talent fields profile complete?: boolean;
+skills added?: boolean;
+availability set?: boolean;
+first job applied?: boolean;
+// client fields 
+}catch {
+  
+}return null 
+}export async function fetchOnboardingProgress (userId: string, role: 'talent' | 'client') : Promise<OnboardingRecord | null> {
   try {
+<<<<<<< HEAD
     const { data } = await supabase.auth.getUser();
     if (data && (data as any).user?.id) return (data as any).user.id as string;
   } catch {}
@@ -95,3 +72,9 @@ export function fallbackClientProgress(): ClientOnboarding {
     first_hire_complete: false,
   };
 }
+=======
+  const {
+  data, error 
+}= await supabase .from ('onboarding progress') .select ('*') .eq ('user id', userId) .eq ('role', role) .maybeSingle ();
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

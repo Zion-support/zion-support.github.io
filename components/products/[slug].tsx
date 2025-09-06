@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -69,6 +70,11 @@ const EquipmentDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   );
+=======
+ if (!item) {
+  return (<EnhancedLayout> <Head> <title>Equipment Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+  item.name 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default EquipmentDetail;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
@@ -39,4 +40,12 @@ declare var process: {
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
   };
+=======
+ declare let process: {
+  env: {
+  [key: string]: string | undefined;
+NODE ENV: 'development' | 'production' | 'test';
+PORT?: string 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

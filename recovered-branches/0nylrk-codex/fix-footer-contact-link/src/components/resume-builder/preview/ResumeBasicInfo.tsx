@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume';
 
 interface ResumeBasicInfoSectionProps {
@@ -16,3 +17,8 @@ export function ResumeBasicInfoSection({
     </div>
   );
 }
+=======
+) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -10,14 +11,19 @@ import Cookies from 'js-cookie';
 export type ConsentState = {
   analytics: boolean;
   ads: boolean;
+=======
+ const ConsentContext = createContext<ConsentContextValue> ({
+  consent: defaultState, acceptAll: () => {
+  
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
-interface ConsentContextValue {
-  consent: ConsentState;
-  acceptAll: () => void;
-  rejectNonEssential: () => void;
-  updateConsent: (state: ConsentState) => void;
+rejectNonEssential: () => {
+  
+};
+updateConsent: () => {
+  
 }
+<<<<<<< HEAD
 
 const defaultState: ConsentState = { analytics: false, ads: false };
 
@@ -80,3 +86,14 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
 }
 
 export const useConsent = () => useContext(ConsentContext);
+=======
+});
+return (<ConsentContext.Provider value= {
+  {
+  consent, acceptAll, rejectNonEssential, updateConsent 
+}
+}> {
+  children 
+}</ConsentContext.Provider>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -74,6 +75,15 @@ export const PwaInstallButton: React.FC = () => {
       </Button>
     </div>
   );
+=======
+ if (recentlyDismissed || inStandalone) return;
+window.addEventListener ('beforeinstallprompt', handler);';
+return () => window.removeEventListener ('beforeinstallprompt', handler) ;
+}, []);
+}
 };
-
+return (Install App </Button> </div>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+};
 export default PwaInstallButton;
+'

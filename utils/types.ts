@@ -1,21 +1,6 @@
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
-
-export type Job = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  requiredSkills: string[];
-  budgetMinUsd?: number;
-  budgetMaxUsd?: number;
-  deliveryDeadlineIso?: string; // ISO string
-  clientEmail: string;
-  status: JobStatus;
-  createdAtIso: string;
-  updatedAtIso: string;
-};
-
 export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
+<<<<<<< HEAD
 
 export type Application = {
   id: string;
@@ -51,3 +36,5 @@ export type Conversation = {
   updatedAtIso: string;
   messages: Message[];
 };
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

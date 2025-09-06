@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Innovative2026MicroSaasV2 {
   id: string;
   name: string;
@@ -40,3 +41,7 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     },
   },
 ];
+=======
+ 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

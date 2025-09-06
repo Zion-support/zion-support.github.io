@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import crypto from 'crypto';
 
 export function getSyncSecret(): string | null {
@@ -34,3 +35,7 @@ export function verifySignature(
     return false;
   }
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

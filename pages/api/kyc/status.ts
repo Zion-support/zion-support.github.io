@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
@@ -31,3 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role),
   });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

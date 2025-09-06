@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -66,3 +67,11 @@ export function useMilestoneGenerator() {
     clearGeneratedMilestones,
   };
 }
+=======
+ const generateMilestones = async (input: MilestoneInput) : Promise<GeneratedMilestone[]> => {
+  try {
+  setIsGenerating (true);
+if (error) throw error;
+// Mark each milestone as AI generated 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

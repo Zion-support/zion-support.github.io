@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -142,6 +143,20 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       </Button>
     </div>
   );
+=======
+ label: 'Type';
+value: labels[type] || type ;
+}) ;
+});
+//Add category filter ;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
+{;
+  activeFilters.map (filter => (<Badge key= {;
+  filter.key ;
+}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
+}<Button > Clear all </Button> </div>) ;
+};
 export default ActiveFiltersBar;
+'"

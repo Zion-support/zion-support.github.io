@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -58,4 +59,23 @@ export const useCreateMilestone = (projectId?: string) => {
     createMilestone,
     isSubmitting,
   };
+=======
+ try {
+  setIsSubmitting (true);
+const {
+  data, error 
+}= await supabase .from ('project milestones') .insert ({
+  ...milestoneData, project id: projectId, created by: user.id 
+}) .select () .single ();
+if (error) throw error;
+// Create activity record await recordMilestoneActivity (data.id, 'created', null, 'pendingMilestone created');
+}finally {
+  setIsSubmitting (false) 
+}
+};
+return {
+  createMilestone;
+isSubmitting 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

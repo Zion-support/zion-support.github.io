@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 function summarizeModules(
   modules: Record<string, boolean>,
   bonus: Record<string, boolean>
@@ -31,6 +32,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -39,42 +43,61 @@ export default async function handler(
     const body = req.body || {};
     const {
       instanceName,
-      defaultLanguage,
+      defaultLanguage = 'en',
       deploymentRegion,
-      tokenActivation,
-      governanceMode,
-      branding,
+      tokenActivation = false,
+      governanceMode = 'democratic',
+      branding = {},
       modules = {},
+<<<<<<< HEAD
       bonusModules = {},
     } = body;
 
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
         error: 'Missing required fields: instanceName, deploymentRegion',
+=======
+      bonusModules = {}
+    } = body;
+
+    if (!instanceName || !deploymentRegion) {
+      return res.status(400).json({ 
+        error: 'Missing required fields: instanceName, deploymentRegion' 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       });
     }
 
-    // Simulated provisioning operations – replace with real infra hooks later
+    // Simulated provisioning operations
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-
+    
     const outputActions = {
       zionGPT: {
         initialized: true,
+<<<<<<< HEAD
         routes: ['/gpt', '/gpt/router'],
         agents: ['proposal-writer', 'resume-generator'],
+=======
+        routes: ['/gpt/gpt/router'],
+        agents: ['proposal-writer', 'resume-generator']
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       },
       daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled',
         treasury: tokenActivation ? `${provisionId}-treasury` : null,
+<<<<<<< HEAD
         governanceMode,
         votingDashboard: '/dao',
+=======
+        votingDashboard: '/dao'
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       },
       assets: {
         whitepaper: '/whitepaper',
         roadmap: '/roadmap',
         book: {
           pdf: '/book/manifesto.pdf',
+<<<<<<< HEAD
           trailerScript: '/trailer/script',
         },
         summit: '/summit',
@@ -89,10 +112,19 @@ export default async function handler(
         '/dao',
         `/nation/${defaultLanguage || 'en'}`,
       ],
+=======
+          trailerScript: '/trailer/script'
+        },
+        summit: '/summit'
+      },
+      publicPages: []
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     };
 
-    const deployLog = {
+    res.status(200).json({
+      success: true,
       provisionId,
+<<<<<<< HEAD
       instanceName,
       region: deploymentRegion,
       language: defaultLanguage || 'en',
@@ -126,5 +158,14 @@ export default async function handler(
     return res.status(200).json({ outputActions, deployLog, access, operator });
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' });
+=======
+      timestamp: now,
+      actions: outputActions
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      error: 'Genesis provisioning failed' 
+    });
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   }
 }

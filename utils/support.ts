@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type HelpArticle = {
   id: string;
   slug: string;
@@ -65,3 +66,15 @@ export function matchIntent(
     matchedArticleIds: matchedIds.slice(0, 3),
   };
 }
+=======
+ 
+}// Simple heuristics const heuristics: Array<[RegExp, string[]]> = [ [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []];
+[/hire|post job|find talent|contract/i, []];
+[/match|matching|get matched/i, []];
+[/bill|invoice|payment|refund|charge|card/i, []];
+[/dispute|issue|complaint|chargeback/i, []];
+[/profile|setup|verification|kyc|tax/i, []]];
+}
+}// Keyword fallback 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

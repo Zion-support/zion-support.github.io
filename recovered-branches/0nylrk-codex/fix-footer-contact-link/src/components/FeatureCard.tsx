@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import React from 'react';
 
@@ -30,3 +31,16 @@ export function FeatureCard({
     </div>
   );
 }
+=======
+ interface FeatureCardProps {
+  title: string;
+description: string;
+icon: React.ReactNode;
+className?: string;
+key?: string | number, //Added key prop 
+}title, description, icon, className 
+}: FeatureCardProps) {
+  return (<div className= {
+  cn (</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

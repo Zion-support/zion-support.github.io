@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
@@ -65,3 +66,20 @@ export function ConversationItem({
     </div>
   );
 }
+=======
+ export function ConversationItem ({
+  conversation, isActive, onClick 
+}: ConversationItemProps) {
+  return (<div className= {
+  cn () 
+}onClick= {
+  onClick 
+}> Re: {
+  conversation.context data.title 
+}</div>) 
+}</div> {
+  conversation.unread count 
+}</div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

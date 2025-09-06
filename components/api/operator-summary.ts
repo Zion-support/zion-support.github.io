@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -35,3 +36,8 @@ export default async function handler(
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

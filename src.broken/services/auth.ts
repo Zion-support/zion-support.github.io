@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { apiClient } from '@/utils/apiClient';
 
 export async function register(name: string, email: string, password: string) {
@@ -11,3 +12,7 @@ export async function register(name: string, email: string, password: string) {
   const data = await res.json().catch(() => ({}));
   return { res, data };
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

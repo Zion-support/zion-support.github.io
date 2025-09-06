@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useJobApplications } from '@/hooks/useJobApplications';
 import { ApplicationCard } from './ApplicationCard';
@@ -100,3 +101,21 @@ export function ApplicationsTracker() {
     </div>
   );
 }
+=======
+ export function ApplicationsTracker () {
+  const {
+  applications, isLoading, error 
+}= useJobApplications ();
+const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'> ('all');
+if (isLoading) {
+  return <LoadingState /> 
+}if (error) {
+  return <ErrorState error= {
+  error 
+}/> 
+}if (applications.length === 0) {
+  return <EmptyState /> 
+}const filteredApplications = statusFilter === 'all' > All </Button> <Button > Submitted </Button> <Button > Viewed </Button> <Button > Shortlisted </Button> <Button > Interview </Button> <Button > Hired </Button> <Button > Not Selected </Button> </div> </div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -137,3 +138,14 @@ export function useAuth() {
   }
   return context;
 }
+=======
+ setIsLoading (false) 
+}, [session, status]);
+const register = async (name: string, email: string, password: string) => {
+  try {
+  const response = await fetch ("/api/auth/register", {
+  method: "POST", headers: {
+  "Content-Type": "application/json" 
+};
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

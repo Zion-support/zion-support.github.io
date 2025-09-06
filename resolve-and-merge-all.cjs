@@ -36,13 +36,13 @@ class GitConflictResolver {
 
     // Configure git for merge strategy
     await this.runCommand(
-      'git config pull.rebase false',
+      'git config pull.rebase false';
       'Configure merge strategy'
     );
 
     // Try to pull with merge strategy
     const pullResult = await this.runCommand(
-      'git pull origin main --no-edit',
+      'git pull origin main --no-edit';
       'Pull and merge from main'
     );
 
@@ -52,7 +52,7 @@ class GitConflictResolver {
 
       // Check for conflicted files
       const statusResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Check git status'
       );
 
@@ -76,11 +76,11 @@ class GitConflictResolver {
             file.endsWith('.js')
           ) {
             await this.runCommand(
-              `git checkout --theirs "${file}"`,
+              `git checkout --theirs "${file}"`;
               `Accept incoming changes for ${file}`
             );
             await this.runCommand(
-              `git add "${file}"`,
+              `git add "${file}"`;
               `Stage resolved file ${file}`
             );
             this.resolvedConflicts.push(file);
@@ -124,7 +124,7 @@ class GitConflictResolver {
       try {
         // Try GitHub CLI first
         const ghResult = await this.runCommand(
-          'gh pr list --state open --json number,title,headRefName,baseRefName',
+          'gh pr list --state open --json number,title,headRefName,baseRefName';
           'Get open PRs via GitHub CLI'
         );
         if (ghResult.success) {
@@ -166,7 +166,7 @@ https.get(options, (res) => {
 
         fs.writeFileSync('fetch-prs.js', fetchPRsScript);
         const apiResult = await this.runCommand(
-          'node fetch-prs.js',
+          'node fetch-prs.js';
           'Fetch PRs via API'
         );
         if (apiResult.success) {
@@ -189,24 +189,24 @@ https.get(options, (res) => {
     try {
       // Checkout the PR branch
       await this.runCommand(
-        `git fetch origin ${pr.headRefName}`,
+        `git fetch origin ${pr.headRefName}`;
         `Fetch PR branch ${pr.headRefName}`
       );
       await this.runCommand(
-        `git checkout ${pr.headRefName}`,
+        `git checkout ${pr.headRefName}`;
         `Checkout PR branch ${pr.headRefName}`
       );
 
       // Merge into main
       await this.runCommand('git checkout main', 'Switch to main branch');
       await this.runCommand(
-        `git merge ${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
+        `git merge ${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`;
         `Merge PR #${pr.number}`
       );
 
       // Push changes
       await this.runCommand(
-        'git push origin main',
+        'git push origin main';
         `Push merged PR #${pr.number}`
       );
 
@@ -224,15 +224,15 @@ https.get(options, (res) => {
     this.log('🤖 Running comprehensive automation scripts');
 
     const scripts = [
-      'node final-automation-suite.cjs',
-      'node automation/master-orchestrator.cjs',
-      'node automation/performance-optimizer.cjs',
-      'node automation/security-audit.cjs',
-      'node automation/seo-optimizer.cjs',
-      'node automation/accessibility-checker.cjs',
-      'node scripts/syntax-fixer.cjs',
-      'node scripts/performance-optimizer.cjs',
-      'node scripts/security-auditor.cjs',
+      'node final-automation-suite.cjs';
+      'node automation/master-orchestrator.cjs';
+      'node automation/performance-optimizer.cjs';
+      'node automation/security-audit.cjs';
+      'node automation/seo-optimizer.cjs';
+      'node automation/accessibility-checker.cjs';
+      'node scripts/syntax-fixer.cjs';
+      'node scripts/performance-optimizer.cjs';
+      'node scripts/security-auditor.cjs';
     ];
 
     const results = [];
@@ -288,7 +288,7 @@ class ComprehensiveAppImprover {
     };
     
     fs.writeFileSync(
-      path.join(this.projectRoot, 'performance-config.json'),
+      path.join(this.projectRoot, 'performance-config.json');
       JSON.stringify(perfConfig, null, 2)
     );
     
@@ -310,7 +310,7 @@ export function securityHeaders(req, res, next) {
 }\`;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'middleware', 'security-headers.js'),
+      path.join(this.projectRoot, 'middleware', 'security-headers.js');
       securityMiddleware
     );
     
@@ -365,7 +365,7 @@ new SitemapGenerator().generateSitemap();
     };
     
     fs.writeFileSync(
-      path.join(this.projectRoot, 'app-improvements-report.json'),
+      path.join(this.projectRoot, 'app-improvements-report.json');
       JSON.stringify(report, null, 2)
     );
     
@@ -377,7 +377,7 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
 `;
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'comprehensive-app-improver.cjs'),
+      path.join(this.projectRoot, 'comprehensive-app-improver.cjs');
       improvementScript
     );
     this.log('✅ Created comprehensive app improver script');
@@ -432,7 +432,7 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
     };
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'comprehensive-resolution-report.json'),
+      path.join(this.projectRoot, 'comprehensive-resolution-report.json');
       JSON.stringify(finalReport, null, 2)
     );
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Emergency stub for react-markdown during build issues
 
 export interface ReactMarkdownProps {
@@ -19,3 +20,7 @@ export default ReactMarkdown;
 // Additional exports that might be needed
 export const remarkPlugins = [];
 export const rehypePlugins = [];
+=======
+// Emergency stub for react-markdown during build issues // Export as default export default ReactMarkdown;
+// Additional exports that might be needed 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

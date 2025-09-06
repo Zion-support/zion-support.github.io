@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -20,9 +21,11 @@ import {
   BarChart3,
   Settings,
 } from 'lucide-react';
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -187,8 +190,24 @@ export default function AIAutomationServices() {
           content='364 E Main St STE 1008 Middletown DE 19709'
         />
         <meta name='contact:website' content='https://ziontechgroup.com' />
+=======
+const AIAutomationServices: React.FC = () => {
+  return (
+    <Layout>
+      <Head>
+        <title>AI Automation Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered automation solutions for modern businesses" />
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Automation Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our advanced AI automation solutions designed to streamline operations and boost productivity.
+          </p>
+        </div>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
@@ -319,10 +338,50 @@ export default function AIAutomationServices() {
                 </ul>
               </motion.div>
             ))}
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Process Automation</h3>
+            <p className="text-gray-600 mb-4">
+              Automate complex business processes with AI-powered decision making and workflow optimization.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Document processing</li>
+              <li>• Workflow optimization</li>
+              <li>• Decision automation</li>
+              <li>• Exception handling</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Customer Service</h3>
+            <p className="text-gray-600 mb-4">
+              Deploy intelligent chatbots and virtual assistants for enhanced customer experience.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Chatbot integration</li>
+              <li>• Natural language processing</li>
+              <li>• Multi-channel support</li>
+              <li>• 24/7 availability</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Data Intelligence</h3>
+            <p className="text-gray-600 mb-4">
+              Leverage AI to extract insights from your data and make informed decisions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Predictive analytics</li>
+              <li>• Pattern recognition</li>
+              <li>• Anomaly detection</li>
+              <li>• Trend analysis</li>
+            </ul>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
-      </section>
 
+<<<<<<< HEAD
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>
@@ -569,3 +628,25 @@ export default function AIAutomationServices() {
     </Layout>
   );
 }
+=======
+        <div className="bg-green-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Automate?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Let our AI experts help you identify automation opportunities and implement solutions that drive real results.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+};
+
+export default AIAutomationServices;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type CandidateStatus =
   | 'applied'
   | 'shortlisted'
@@ -33,3 +34,7 @@ export interface ApplicationFilters {
   fromDate?: Date | null;
   toDate?: Date | null;
 }
+=======
+export type CandidateStatus = 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

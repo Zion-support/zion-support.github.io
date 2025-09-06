@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useUser } from '../../providers/UserProvider';
@@ -48,3 +49,13 @@ export default function AvatarDropdown() {
     </div>
   );
 }
+=======
+import React, {
+  useState 
+}from 'react' import Link from 'next/link' export default function AvatarDropdown () {
+  const {
+  user, logout 
+}= useUser () const [open, setOpen] = useState (false) if (!user) return null </div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

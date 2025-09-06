@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -216,3 +217,12 @@ export function sendMessage(input: NewMessageInput): {
 
   return { conversation, message };
 }
+=======
+ return items 
+}
+}if (changed) writeJson (MESSAGES FILE, messages);
+// Update conversation unreadBy let conversation: Conversation | undefined;
+if (input.conversationId) {
+  
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

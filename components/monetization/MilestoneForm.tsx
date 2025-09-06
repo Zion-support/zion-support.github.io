@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 type Props = {
@@ -102,3 +103,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
     </form>
   );
 }
+=======
+ <div> <label className="block text-sm font-medium" >Title</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Description</label> <textarea /> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> <label className="block text-sm font-medium" >Due Date</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Amount (USD) </label> <input required /> </div> </div> <button > {
+  loading ? 'Adding...' : 'Add Milestone' 
+}</button> </form>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

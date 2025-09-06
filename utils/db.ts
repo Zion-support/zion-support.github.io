@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -39,3 +40,6 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

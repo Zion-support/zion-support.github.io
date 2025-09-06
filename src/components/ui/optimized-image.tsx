@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -30,14 +31,12 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   style?: React.CSSProperties;
   objectPosition?: string;
+=======
+ ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-interface ImageMetrics {
-  loadTime: number;
-  fileSize: number;
-  format: string;
-  wasOptimized: boolean;
 }
+<<<<<<< HEAD
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -317,20 +316,73 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </AnimatePresence>
     </div>
   );
-};
-
-// Gallery component with optimized loading
-interface ImageGalleryProps {
-  images: Array<{
-    src: string;
-    alt: string;
-    caption?: string;
-  }>;
-  columns?: number;
-  aspectRatio?: string;
-  className?: string;
-  onImageClick?: (index: number) => void;
+=======
+}) ;
+});
+return () => observer.disconnect () ;
+}return () => {;
+  ;
+}, //Return empty cleanup function for the else case ;
+}, [src]);
+//Generate optimized URLs const interval = setInterval ( () => {;
+  setLoadProgress (prev => {;
+  if (prev >= 90) {;
+  return () => clearInterval (interval) ;
+}, [isLoading, showLoadingProgress]);
+//Generate placeholder based on type if (placeholder === 'color') {;
+  return (<div className= {;
+  placeholderClassName ;
+}style= {;
+  {;
+  backgroundColor: placeholderColor ;
 }
+}/>) ;
+}return (</div>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+};
+//Container styles return (<div ref= {;
+  imgRef ;
+}className= {';
+  cn ('relative overflow-hidden', className) ;
+}style= {;
+  containerStyle ;
+}> <AnimatePresence> {;
+  /* Placeholder */ ;
+}{;
+  (isLoading || !isInView) && !hasError && (<motion.div > {;
+  generatePlaceholder () ;
+}/> </div>) ;
+}</motion.div>) ;
+}{;
+  /* Error state */ ;
+}{;
+  hasError && (<motion.div) ;
+}</motion.div>) ;
+}{;
+  /* Actual image */ ;
+}{;
+  isInView && !hasError && (<motion.img src= {;
+  optimizedSrc ;
+}srcSet= {;
+  srcSet ;
+}alt= {;
+  alt ;
+}loading= {';
+  priority ? 'eager' : 'lazy' ;
+}onLoad= {;
+  handleLoad ;
+}onError= {;
+  handleError ;
+}className= {';
+  cn ('w-full h-full transition-opacity duration-300', `object-$ {;
+  objectFit ;
+}`;';
+isLoading ? 'opacity-0' : 'opacity-100') ;
+}initial= {;
+  {;
+  opacity: 0 ;
+}
+<<<<<<< HEAD
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
@@ -390,16 +442,28 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       </div>
     </div>
   );
-};
-
-// Avatar component with optimized loading
-interface OptimizedAvatarProps {
-  src?: string;
-  alt: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  fallback?: string;
-  className?: string;
+=======
+}animate= {;
+  {;
+  opacity: isLoading ? 0 : 1 ;
 }
+}transition= {;
+  {;
+  duration: 0.3 ;
+}
+}/>) ;
+}</AnimatePresence> </div>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+};
+//Gallery component with optimized loading </span> </div> <div className= {;
+  `grid gap-4` ;
+}style= {;
+  {;
+  gridTemplateColumns: `repeat ($ {;
+  columns ;
+}, 1fr) ` ;
+}
+<<<<<<< HEAD
 
 export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   src,
@@ -452,3 +516,21 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   );
 };
+=======
+}> {;
+  images.map ( (image, index) => (<motion.div key= {;
+  index ;
+}> <div className="relative" > <OptimizedImage </div>) ;
+}</div> </motion.div>) ) ;
+}</div> </div>) ;
+};
+//Avatar component with optimized loading return (<div className= {';
+  cn ('relative rounded-full overflow-hidden',  sizeClasses[size], className) ;
+}> {;
+  src ? (<OptimizedImage src= {;
+  src ;
+}</div>) ;
+}</div>) ;
+};
+'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

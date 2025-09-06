@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
 
@@ -100,3 +101,21 @@ async function changeBalance(
     status: 200,
   });
 }
+=======
+ interface TokenRequest {
+  userId: string;
+amount: number;
+reason?: string 
+}if (req.method === 'OPTIONS') {
+  return new Response ('ok', {
+  headers: {
+  async function changeBalance (userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
+  const {
+  data: wallet, error: walletError 
+}= await supabase .from ('wallets') .select ('*') .eq ('user id', userId) .single ();
+if (wallet) {
+  const {
+  error 
+}= await supabase .from ('wallets') 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

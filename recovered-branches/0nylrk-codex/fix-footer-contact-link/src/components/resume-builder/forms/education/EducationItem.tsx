@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -67,3 +68,12 @@ export function EducationItem({
     </Card>
   );
 }
+=======
+ ? education.start date : format (education.start date, 'MMM yyyy') 
+}- {
+  education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') 
+}</p>) 
+}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) 
+}</CardContent> </Card>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

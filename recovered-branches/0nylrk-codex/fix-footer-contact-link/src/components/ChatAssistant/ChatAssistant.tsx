@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -6,15 +7,17 @@ import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
 export interface Message {
+=======
+ export interface Message {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean;
-}
-
-export interface ChatAssistantProps {
+role: 'user' | 'assistant';
+message: string;
+timestamp: Date;
+read?: boolean 
+}export interface ChatAssistantProps {
   isOpen: boolean;
+<<<<<<< HEAD
   onClose: () => void;
   recipient: {
     id: string;
@@ -131,3 +134,48 @@ export function ChatAssistant({
     </div>
   );
 }
+=======
+onClose: () => void;
+recipient: {
+  id: string;
+name: string;
+avatarUrl?: string;
+role?: string 
+};
+conversationId?: string;
+initialMessages?: Message[];
+onSendMessage: (message: string, conversationId?: string) => Promise<void>;
+contextHeader?: ReactNode 
+}export function ChatAssistant ({
+  isOpen;
+onClose;
+recipient;
+conversationId;
+initialMessages = [];
+onSendMessage;
+contextHeader 
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]> (initialMessages);
+const messagesEndRef = useRef<HTMLDivElement | null> (null);
+if (initialMessages.length > 0) {
+  //Send message to recipient via the provided handler await onSendMessage (message, conversationId) 
+};
+if (!isOpen) return null;
+return () 
+}</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {
+  contextHeader 
+}</div>) 
+}<p>Start a conversation with {
+  recipient.name 
+}</p> </div>) : (messages.map ( (msg) => (<ChatMessage key= {
+  msg.id 
+}role= {
+  msg.role 
+}message= {
+  msg.message 
+}/>) ) ) 
+}<div ref= {
+  messagesEndRef 
+}/> </div> </div> </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

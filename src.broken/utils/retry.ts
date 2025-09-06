@@ -1,7 +1,6 @@
-export interface RetryOptions {
-  retries?: number;
-  minTimeout?: number;
+ 
 }
+<<<<<<< HEAD
 
 export async function retry<T>(
   fn: () => Promise<T>,
@@ -22,3 +21,6 @@ export async function retry<T>(
 }
 
 export default retry;
+=======
+}export default retry;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

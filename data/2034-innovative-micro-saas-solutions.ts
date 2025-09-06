@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {
   id: string;
   name: string;
@@ -95,3 +96,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     realService: true,
   },
 ];
+=======
+ category: | 'Content Marketing' | 'Business Operations' | 'Marketing Automation' | 'Customer Success' | 'Sales Automation' | 'Financial Technology' | 'Human Resources' | 'Supply Chain Management' link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite';
+realService: true;
+rating: 4.7;
+launchDate: '2025-12-01' 
+};
+link: 'https://ziontechgroup.com/services/candidate-screening-copilot';
+realService: true 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

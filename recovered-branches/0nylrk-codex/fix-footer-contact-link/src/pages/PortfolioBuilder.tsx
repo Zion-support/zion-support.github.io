@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -61,3 +62,8 @@ export default function PortfolioBuilder() {
     </ProtectedRoute>
   );
 }
+=======
+ return (<> <SEO title="Portfolio Builder | Zion AI Marketplace" description="Create and customize your resume and portfolio to showcase your skills and experience." /> <AppHeader /> <main className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-8" >Resume & Portfolio Builder</h1> </TabsList> <TabsContent value="resume" className="space-y-6" > <ResumeWizard /> </TabsContent> <TabsContent value="portfolio" className="space-y-6" > <PortfolioSection /> </TabsContent> </Tabs> </main> <Footer /> </>) 
+}export default function PortfolioBuilder () {
+  return (<ProtectedRoute> <PortfolioBuilderContent /> </ProtectedRoute> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

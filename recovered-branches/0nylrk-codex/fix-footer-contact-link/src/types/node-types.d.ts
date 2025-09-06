@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Add basic type definitions for Node.js globals used in the project
 interface Process {
   env: {
@@ -13,3 +14,7 @@ interface Process {
 declare var process: Process;
 declare var console: Console;
 declare var __dirname: string;
+=======
+ // Add basic type definitions for Node.js globals used in the project 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

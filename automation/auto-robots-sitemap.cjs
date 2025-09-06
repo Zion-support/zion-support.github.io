@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
+ 
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -17,7 +17,7 @@ if (!content.includes('Sitemap:')) content += sitemapLine
 else content = content.replace(/Sitemap:[^\n]*\n?/g, sitemapLine)
 
 if (content !== before) {
-  fs.mkdirSync(path.dirname(robotsPath), { recursive: true })
+  fs.mkdirSync(path.dirname(robotsPath) { recursive: true })
   fs.writeFileSync(robotsPath, content)
   try {
     execSync('git add -A')

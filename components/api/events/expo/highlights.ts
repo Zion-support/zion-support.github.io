@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { agendaItems } from '../../../../data/expo/agenda';
 
@@ -30,3 +31,8 @@ export default async function handler(
       .json({ error: e.message || 'Failed to generate highlights' });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

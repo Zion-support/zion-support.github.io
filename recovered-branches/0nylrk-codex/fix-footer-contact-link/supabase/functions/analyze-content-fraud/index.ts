@@ -1,18 +1,26 @@
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.4';
 import { corsHeaders } from '../_shared/cors.ts';
 
 interface AnalyzeRequest {
+=======
+ interface AnalyzeRequest {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   content: string;
-  contentType: string;
-  flagId?: string;
-}
-
-interface AnalysisResult {
+contentType: string;
+flagId?: string 
+}interface AnalysisResult {
   classification: string;
-  explanation: string;
-  success: boolean;
+explanation: string;
+success: boolean 
+}//Initialize environment and clients const initializeServices = () => {
+  
+}return {
+  supabase: createClient (supabaseUrl, supabaseServiceKey);
+openaiApiKey 
 }
+<<<<<<< HEAD
 
 // Initialize environment and clients
 const initializeServices = () => {
@@ -28,11 +36,12 @@ const initializeServices = () => {
     supabase: createClient(supabaseUrl, supabaseServiceKey),
     openaiApiKey,
   };
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
-// Validate request content
-const validateRequest = (data: unknown): AnalyzeRequest => {
+//Validate request content const validateRequest = (data: unknown) : AnalyzeRequest => {
   if (!data || typeof data !== 'object') {
+<<<<<<< HEAD
     throw new Error('Invalid request body');
   }
 
@@ -219,4 +228,59 @@ serve(async req => {
       }
     );
   }
+=======
+  
+}const request = data as AnalyzeRequest;
+if (!request.content) {
+  if (!request.contentType) {
+  throw new Error ("No content type provided");
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+}return request;
+};
+//Create prompt for OpenAI const createAnalysisPrompt = (contentType: string, content: string) : string => {
+  return ` You are an AI fraud detection assistant for the Zion AI Marketplace. Analyze this $ {
+  contentType 
+}for signs of fraud, spam, phishing, or abuse. Content to analyze: Respond with one of these classifications: SAFE / SUSPICIOUS /DANGEROUS followed by a brief explanation (max 1-2 sentences) of your reasoning. //Call OpenAI API for content analysis ];
+temperature: 0.3;
+max tokens: 150 
+}) 
+});
+}return {
+  classification, explanation 
+}
+}catch (error) {
+  
+}
+};
+flagId: string;
+classification: string;
+explanation: string 
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Main request handler //Initialize services const {
+  supabase, openaiApiKey 
+}= initializeServices ();
+//Parse and validate request const requestData = await req.json () .catch (err => {
+  //Create prompt and analyze with OpenAI const prompt = createAnalysisPrompt (contentType, content);
+const {
+  classification, explanation 
+}= await analyzeWithOpenAI (prompt, openaiApiKey);
+//Update flag if flagId was provided if (flagId) {
+  await updateFraudFlag (supabase, flagId, classification, explanation) 
+}//Return the analysis result const result: AnalysisResult = {
+  classification: classification.toLowerCase ();
+explanation;
+success: true 
+};
+return new Response (JSON.stringify ({
+  error: error.message || "An unexpected error occurred";
+success: false 
+});
+{
+  status: statusCode;
+headers: {
+  ...corsHeaders, "Content-Type" : "application/json" 
+}
+}) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

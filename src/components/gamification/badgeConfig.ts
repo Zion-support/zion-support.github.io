@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -78,3 +79,6 @@ export const badgeList: BadgeMeta[] = [
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key);
+=======
+ export type BadgeKey = export const getBadgeMeta = (key: BadgeKey) => badgeList.find ( (b) => b.key === key);
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

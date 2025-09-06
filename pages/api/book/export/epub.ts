@@ -1,11 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-import { promises as fs } from 'fs';
-const Epub = require('epub-gen');
+ import { NextApiRequest, NextApiResponse } from 'next';
 
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
       sizeLimit: '10mb',
     },
   },
@@ -52,11 +50,31 @@ export default async function handler(
     try {
       await fs.unlink(tmpPath);
     } catch {}
+=======
+      sizeLimit: '10mb'
+    }
+  }
+};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    res.status(200).json({ message: 'EPUB generated' });
+  } catch (e: any) {
+    res.status(500).json({
+      error: e?.message || 'Failed to build EPUB'
+    });
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   }
 }
 
 function chapterToHtml(text: string): string {
   if (!text) return '';
+<<<<<<< HEAD
   return text
     .split(/\n\n+/)
     .map(p => `<p>${escapeHtml(p)}</p>`)
@@ -71,3 +89,11 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
+=======
+  return text.split(/\n\n+/).map((p) => `<p>${escapeHtml(p)}</p>`).join('\n');
+}
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

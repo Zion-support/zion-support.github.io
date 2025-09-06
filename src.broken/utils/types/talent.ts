@@ -1,4 +1,5 @@
 export type AvailabilityStatus = 'Open' | 'Part-time' | 'Booked';
+<<<<<<< HEAD
 
 export type PortfolioItem = {
   title: string;
@@ -51,3 +52,5 @@ export type TalentFilters = {
   region?: string[];
   minRating?: number;
 };
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

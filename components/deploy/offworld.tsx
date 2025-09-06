@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -56,3 +57,15 @@ export default function OffworldDeploy() {
     </div>
   );
 }
+=======
+ async function handleDeploy () {
+  setStatus ('Exporting and deploying to IPFS...');
+setError ('');
+setCid (null);
+setProvider ('');
+try {
+  
+}return (<div className="min-h-screen p-8" > <Head> <title>Zion Offworld Deploy</title> </Head> </div>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

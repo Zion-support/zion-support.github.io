@@ -1,39 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-
-type EpisodeListItem = {
-  id: string;
-  title: string;
-  inviteeName: string;
-  createdAt: string;
-  summary: string;
-  audio?: {
-    mp3Url?: string;
-    wavUrl?: string;
-    mp4Url?: string;
-  };
-};
-
-export default function PodcastIndexPage() {
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const res = await fetch('/api/podcast/list');
-        const data = await res.json();
-        setEpisodes(data.episodes || []);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    load();
-  }, []);
-
+ useEffect ( () => {
+  const load = async () => {
+  try {
   if (loading) return <div>Loading episodes…</div>;
+<<<<<<< HEAD
 
   return (
     <div className='space-y-6'>
@@ -102,3 +71,9 @@ export default function PodcastIndexPage() {
     </div>
   );
 }
+=======
+MP4 </a>) 
+}</div> </div> </div> </li>) ) 
+}</ul> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

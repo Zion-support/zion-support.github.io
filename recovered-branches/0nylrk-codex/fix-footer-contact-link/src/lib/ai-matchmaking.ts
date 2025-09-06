@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // AI Matchmaking utility functions
 
 export interface MatchResultItem {
@@ -83,4 +84,9 @@ export async function findMatches(
     console.error('Error in matchmaking:', error);
     return [];
   }
+=======
+ // AI Matchmaking utility functions if (type && type !== "all") {
+  
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

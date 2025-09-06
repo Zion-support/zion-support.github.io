@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -158,3 +159,32 @@ export default function ProjectMilestonesPage() {
     </div>
   );
 }
+=======
+ 
+}catch {
+  
+}
+}, [role]);
+return (<div> <Head> <title>Project Milestones</title> <meta name="description" content="Track project deliverables and milestone payments" /> </Head> </div> <MilestoneForm onSubmit= {
+  handleCreate 
+}/> </div>) 
+}{
+  milestones.length === 0 && (<div className="text-gray-600" >No milestones yet. {
+  role !== 'talent' ? 'Create the first one.' : '' 
+}</div>) 
+}{
+  milestones.map ( (m) => (<MilestoneCard key= {
+  m.id 
+}milestone= {
+  m 
+}projectId= {
+  String (projectId) 
+}role= {
+  role 
+}onAction= {
+  handleAction 
+}/>) ) 
+}</div>) 
+}</div> </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -210,3 +211,24 @@ export function FeatureCTAs() {
     </section>
   );
 }
+=======
+ import {
+  ArrowRight;
+Users;
+Zap;
+Settings;
+Search;
+MessageSquare;
+Smartphone;
+Calendar;
+BookOpen;
+Code;
+Building;
+Clock const features = [ {
+  {
+  feature.badge 
+}</Badge>) 
+}</div> </Link> </Button> </CardFooter> </Card>) ) 
+}</div> </div> </section>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

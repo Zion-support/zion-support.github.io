@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/Header';
@@ -32,3 +33,7 @@ export default function SellerDashboard() {
     </div>
   );
 }
+=======
+ return (<div className="min-h-screen flex flex-col bg-zion-blue" > <SEO title="Seller Dashboard" description="Manage your listings" /> <Header /> </TabsList> <TabsContent value="products" > <ProductSubmissionForm /> </TabsContent> <TabsContent value="bulk" > <DropzoneBulkUpload /> </TabsContent> </Tabs> </main> <Footer /> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

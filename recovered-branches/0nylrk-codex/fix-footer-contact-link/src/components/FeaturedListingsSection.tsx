@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -130,3 +131,14 @@ export function FeaturedListingsSection({
     </section>
   );
 }
+=======
+ interface FeaturedListingsSectionProps {
+  showTitle?: boolean 
+}showTitle = true 
+}: FeaturedListingsSectionProps) {
+  const featuredListings = [ {
+  Featured Listings </GradientHeading> <p className="text-zion-slate-light max-w-3xl mx-auto" > Discover our handpicked selection of top AI products and services </p> </div>) 
+}/>) ) 
+}</div> <div className="mt-10 text-center" > <Button asChild > <Link to="/marketplace" >View All Listings</Link> </Button> </div> </div> </section>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

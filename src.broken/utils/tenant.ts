@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import crypto from 'crypto';
 import { readJsonFile, writeJsonFile, updateJsonFile } from './fileDb';
 
@@ -114,3 +115,7 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   );
   return result;
 }
+=======
+ export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

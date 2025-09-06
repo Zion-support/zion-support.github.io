@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -66,3 +67,6 @@ export default function QuantumCloudInfrastructurePage() {
     </Layout>
   );
 }
+=======
+ </div> </div> </div> </div> </div> </Layout> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

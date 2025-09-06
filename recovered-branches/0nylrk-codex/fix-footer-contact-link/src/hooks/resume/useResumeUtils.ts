@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 
@@ -25,4 +26,9 @@ export const showSuccessToast = (title: string, description: string) => {
     description,
   });
   return true;
+=======
+ variant: "destructive" 
+});
+return false;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

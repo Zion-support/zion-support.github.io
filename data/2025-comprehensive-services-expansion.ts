@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface ComprehensiveService {
@@ -885,3 +886,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 178,
   },
 ];
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -79,3 +80,9 @@ export default function RAGEvaluationLabPage() {
     </>
   );
 }
+=======
+ </p> <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+  [ </div>) ) 
+}</div> </div> </div> </section> </>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

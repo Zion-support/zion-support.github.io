@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTechService2026 {
   id: string;
   name: string;
@@ -583,3 +584,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

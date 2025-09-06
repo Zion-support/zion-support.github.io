@@ -1,15 +1,25 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  threshold?: number;
-  width?: number;
-  height?: number;
+ useEffect ( () => {
+  const observer = new IntersectionObserver ( ([entry]) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect () 
+}, [threshold]);
+return (<div className= {
+  `relative overflow-hidden $ {
+  className 
+}` 
+}> {
+  /* Placeholder */ 
+}<img src= {
+  placeholder 
+}alt="" className= {
+  `absolute inset-0 w-full h-full object-cover transition-opacity duration-500 $ {
+  isLoaded ? 'opacity-0' : 'opacity-100' 
+}` 
+}style= {
+  {
+  width, height 
 }
+<<<<<<< HEAD
 
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
@@ -77,4 +87,14 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
+=======
+}/> {
+  /* Actual Image */ 
+}{
+  isInView && (<motion.img ref= {
+  imgRef 
+}/>) 
+}</div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default LazyImage;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createPartner } from '../../../utils/api/partnerAuth';
 
@@ -44,3 +45,41 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to create partner' });
   }
 }
+=======
+ 
+}const {
+  name, entityType, pointOfContact, useCaseType, brand 
+}= req.body || {
+  
+};
+if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
+  
+}try {
+  const {
+  partner, apiKey 
+}= await createPartner ({
+  name;
+entityType;
+pointOfContact;
+useCaseType;
+brand 
+});
+return res.status (201) .json ({
+  partner: {
+  id: partner.id;
+name: partner.name;
+status: partner.status;
+entityType: partner.entityType;
+useCaseType: partner.useCaseType;
+createdAt: partner.createdAt 
+};
+apiKey: apiKey.key;
+dashboardUrl: `/partners/dashboard?pid=$ {
+  partner.id 
+}` 
+}) 
+}catch (e) {
+  
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

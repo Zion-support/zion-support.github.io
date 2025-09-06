@@ -1,14 +1,7 @@
 import React from 'react';
-
-export default function SEOIndex() {
-  const [slugs, setSlugs] = React.useState<string[]>([]);
-
-  React.useEffect(() => {
-    // In a real app, list from API or build-time; here we rely on directory hint not available at runtime.
-    setSlugs([]);
-  }, []);
-
+export default function Page() {
   return (
+<<<<<<< HEAD
     <div>
       <h1 className='text-2xl font-semibold mb-4'>SEO Landing Pages</h1>
       {slugs.length === 0 ? (
@@ -27,5 +20,13 @@ export default function SEOIndex() {
         </ul>
       )}
     </div>
+=======
+    <main className="min-h-screen bg-black text-zinc-100 p-8">
+      <section className="prose prose-invert max-w-3xl mx-auto">
+        <h1>seo index</h1>
+        <p>Auto-healed placeholder. Replace with real content.</p>
+      </section>
+    </main>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   );
 }

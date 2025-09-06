@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ZionChain =
   | 'resumeBuilder'
   | 'daoExplainer'
@@ -253,3 +254,19 @@ export function writeState<T = unknown>(state: T): void {
     // ignore
   }
 }
+=======
+export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant';
+const triggers: ReflexTrigger[] = [];
+if ( (metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
+  
+}return triggers 
+}const resp = await openai.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: system 
+};
+{
+  role: 'user', content: user 
+}];
+temperature: 0.2;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

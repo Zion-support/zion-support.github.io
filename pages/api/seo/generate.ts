@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
@@ -85,3 +86,14 @@ Tone: professional, modern, trustworthy`;
     return res.status(500).json({ error: 'Failed to generate landing page' });
   }
 }
+=======
+ - A compelling H1 - 2-3 subsections with H2/H3 - Short paragraphs, bullet lists - Strong call-to-action for Zion Marketplace const user = `Topic: $ {
+  prompt 
+}Region: $ {
+  region || 'global' 
+}Service focus: $ {
+  service || 'general' 
+}Audience: buyers looking to hire talent or rent equipment Tone: professional, modern, trustworthy`;
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

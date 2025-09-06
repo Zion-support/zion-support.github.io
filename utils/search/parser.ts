@@ -1,4 +1,5 @@
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
+<<<<<<< HEAD
 
 export type ParsedFilters = {
   type: SearchType;
@@ -193,3 +194,17 @@ export async function parseQueryToFilters(
     return base;
   }
 }
+=======
+}return {
+  
+}
+}
+}function extractKeywords (text: string) : string[] {
+  return text .toLowerCase () .replace (/[^a-z0-9\s]/g, ' ') .split (/\s+/) .filter (Boolean) ];
+temperature: 0.1;
+response format: {
+  type: 'json object' 
+}
+}) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

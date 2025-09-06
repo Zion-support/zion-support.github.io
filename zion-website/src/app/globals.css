@@ -17,6 +17,7 @@
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent;
   }
+<<<<<<< HEAD
 
   .glass-effect {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
@@ -36,3 +37,6 @@
     scroll-behavior: smooth;
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

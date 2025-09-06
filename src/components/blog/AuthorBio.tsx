@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 
@@ -27,4 +28,20 @@ export function AuthorBio({ author }: AuthorBioProps) {
       </div>
     </div>
   );
+=======
+ onError= {;
+  (e) => {;
+  const target = e.currentTarget as HTMLImageElement;
+target.src = '/images/blog-placeholder.svg' ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
+}/> <div> <p className="font-medium text-lg" > {;
+  author.name ;
+}</p> {";
+  author.title && <p className="text-sm text-muted-foreground mb-2" > {;
+  author.title ;
+}</p> ;
+}<p> {;
+  author.bio ;
+}</p> ;
+}'"

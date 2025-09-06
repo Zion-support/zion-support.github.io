@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Select,
   SelectContent,
@@ -28,3 +29,14 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
     </div>
   );
 }
+=======
+ export function SortFilter ({
+  sortOption, setSortOption 
+}: SortFilterProps) {
+  return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {
+  sortOption 
+}onValueChange= {
+  setSortOption 
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

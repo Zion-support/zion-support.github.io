@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -28,3 +29,19 @@ export function SidebarItem({
     </div>
   );
 }
+=======
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode;
+active?: boolean 
+}className, children, active, ...props 
+}: SidebarItemProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

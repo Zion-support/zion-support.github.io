@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
@@ -45,3 +46,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     connection: updated.connections.find(c => c.providerId === providerId),
   });
 }
+=======
+ const connection: ProviderConnection = {
+  providerId: providerId as any, status: 'connected', accessToken: 'mock access token', refreshToken: 'mock refresh token', expiresAt: now + 1000 * 60 * 60, connectedAt: now, syncRules: syncRules || {
+  
+};
+lastSyncAt: undefined;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

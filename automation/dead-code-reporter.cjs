@@ -63,9 +63,9 @@ async function main() {
   const compUnused = detectUnusedComponents(index);
   const pageUnused = detectUnusedPages(index);
   const report = {
-    generatedAt: new Date().toISOString(),
-    unusedComponents: compUnused,
-    unusedPages: pageUnused,
+    generatedAt: new Date().toISOString();
+    unusedComponents: compUnused;
+    unusedPages: pageUnused;
   };
   const outDir = path.join(process.cwd(), 'public', 'automation-reports');
   await fs.promises.mkdir(outDir, { recursive: true });

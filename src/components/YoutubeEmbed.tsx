@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
@@ -43,3 +44,8 @@ export default function YoutubeEmbed({
     </div>
   );
 }
+=======
+ </div> </>) ;
+}<iframe ;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

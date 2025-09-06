@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
@@ -30,3 +31,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
+=======
+ return (<div className="min-h-screen flex flex-col" > <header> <EnhancedNavigation /> <LanguageSwitchPrompt /> </header> <footer> <EnhancedFooter /> </footer> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,17 +1,11 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
-export type SupportedCurrency = 'USD' | 'EUR' | 'GBP';
-
-interface CurrencyInfo {
-  code: SupportedCurrency;
-  symbol: string;
-  fx_rate: number;
+ export type SupportedCurrency = 'USD' | 'EUR' | 'GBP';
 }
-
-interface CurrencyContextType {
-  currency: CurrencyInfo;
-  setCurrency: (code: SupportedCurrency) => void;
+}, []);
+return (<CurrencyContext.Provider value= {
+  {
+  currency, setCurrency 
 }
+<<<<<<< HEAD
 
 const DEFAULT_CURRENCY: CurrencyInfo = {
   code: 'USD',
@@ -57,6 +51,9 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({
       {children}
     </CurrencyContext.Provider>
   );
+=======
+}> {
+  children 
+}</CurrencyContext.Provider>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
-export const useCurrency = () => useContext(CurrencyContext);

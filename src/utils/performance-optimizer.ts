@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -31,3 +32,13 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
+=======
+// Performance optimizer utilities;
+export const optimizeImages = () => {;
+  console.log('Optimizing images...');
+};
+;
+export const lazyLoadComponents = () => {';
+  console.log('Lazy loading components...');
+};'
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type PaymentTermsType = 'hourly' | 'fixed' | 'milestone';
 
 export type Milestone = {
@@ -67,3 +68,8 @@ export type MarketplaceDb = {
   offers: Offer[];
   projects: Project[];
 };
+=======
+export type PaymentTermsType = "hourly" | "fixed" | "milestone";
+export type OfferStatus = | "SENT" | "CONFIRMED" | "CHANGES REQUESTED" | "DECLINED";
+export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

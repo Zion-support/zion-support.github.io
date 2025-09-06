@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 
 type DemoUser = { id: string; role: 'client' | 'talent'; talentSlug?: string };
@@ -40,3 +41,6 @@ export function assertTalentOrClientForOffer(
   err.statusCode = 403;
   throw err;
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

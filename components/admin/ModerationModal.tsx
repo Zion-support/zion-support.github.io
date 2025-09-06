@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export type ModerationModalProps = {
@@ -115,3 +116,7 @@ export default function ModerationModal({
     </div>
   );
 }
+=======
+ </div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

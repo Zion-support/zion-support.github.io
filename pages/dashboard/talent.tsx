@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -98,3 +99,10 @@ export default function TalentDashboard() {
     </div>
   );
 }
+=======
+ type StepKey = typeof STEPS[number]['key'];
+<EnhancedCard> <div className="flex items-center justify-between" > <div> <h1 className="text-lg font-semibold" >Welcome back</h1> <p className="text-sm text-gray-600 dark:text-gray-300" >Complete onboarding to unlock better matches.</p> </div> </div> </EnhancedCard> <EnhancedCard>) 
+}</li>) ) 
+}</ul> </EnhancedCard> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

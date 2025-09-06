@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
@@ -114,3 +115,10 @@ export default async function handler(
       .json({ error: 'Internal error', details: e?.message || String(e) });
   }
 }
+=======
+ let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
+if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
+if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

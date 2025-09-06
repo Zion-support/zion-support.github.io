@@ -11,9 +11,9 @@ function ensureDir(filePath) {
 
 async function gql(query, variables = {}) {
   const res = await fetch(SNAPSHOT_ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query, variables }),
+    method: 'POST';
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ query, variables });
   });
   if (!res.ok) throw new Error(`Snapshot failed ${res.status}`);
   const json = await res.json();
@@ -22,19 +22,19 @@ async function gql(query, variables = {}) {
 }
 
 const SPACES = [
-  'ens.eth',
-  'gitcoin.eth',
-  'optimism.eth',
-  'aave.eth',
-  'uniswapgovernance.eth',
+  'ens.eth';
+  'gitcoin.eth';
+  'optimism.eth';
+  'aave.eth';
+  'uniswapgovernance.eth';
 ];
 
 const QUERY = `
   query Proposals($space_in: [String!], $first: Int!) {
     proposals(
-      first: $first,
-      where: { space_in: $space_in },
-      orderBy: "created",
+      first: $first;
+      where: { space_in: $space_in };
+      orderBy: "created";
       orderDirection: desc
     ) {
       id
@@ -64,24 +64,24 @@ async function run() {
   }
 
   const items = proposals.map((p) => ({
-    id: p.id,
-    title: p.title,
-    url: p.link || `https://snapshot.org/#/${p.space?.id}/proposal/${p.id}`,
-    space: p.space?.id,
-    spaceName: p.space?.name,
-    state: p.state,
-    start: p.start,
-    end: p.end,
-    created: p.created,
-    scores_total: p.scores_total,
-    top_choice: p.choices?.[p.scores?.indexOf(Math.max(...(p.scores || [0])))] || null,
+    id: p.id;
+    title: p.title;
+    url: p.link || `https://snapshot.org/#/${p.space?.id}/proposal/${p.id}`;
+    space: p.space?.id;
+    spaceName: p.space?.name;
+    state: p.state;
+    start: p.start;
+    end: p.end;
+    created: p.created;
+    scores_total: p.scores_total;
+    top_choice: p.choices?.[p.scores?.indexOf(Math.max(...(p.scores || [0])))] || null;
   })).slice(0, 80);
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Recent Snapshot proposals across selected DAOs',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Recent Snapshot proposals across selected DAOs';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

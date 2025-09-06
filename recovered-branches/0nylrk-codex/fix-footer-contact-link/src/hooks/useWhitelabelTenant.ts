@@ -1,26 +1,18 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-
-export interface WhitelabelTenant {
-  id: string;
-  brand_name: string;
-  subdomain: string;
-  custom_domain: string | null;
-  primary_color: string;
-  logo_url: string | null;
-  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-  landing_page_copy: {
-    headline: string;
-    subtitle: string;
-    cta: string;
-  };
-  is_active: boolean;
-  created_at: string;
-  updated_at: string;
-  account_manager_id: string | null;
-  dns_verified: boolean;
-  email_template_override: Record<string, any> | null;
+ // If running in the browser, bail out early when offline if (typeof navigator !== 'undefined' && !navigator.onLine) {
+  // Build the query parameters const params = externalSubdomain ? `?subdomain=$ {
+  encodeURIComponent (externalSubdomain) 
+}` const {
+  data, error: functionError 
+}= await supabase.functions.invoke (`$ {
+  functionName 
+}$ {
+  params 
+}`;
+{
+  headers: {
+  'Content-Type': 'application/json' 
 }
+<<<<<<< HEAD
 
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
@@ -148,3 +140,16 @@ export function useTenantAdminStatus(tenantId?: string) {
 
   return { isAdmin, isLoading };
 }
+=======
+});
+if (message.includes ('Failed to send a request to the Edge Function') || message.includes ('Failed to connect to Supabase') || message.includes ('No internet connection') ) {
+  loadTenant () 
+}, [externalSubdomain]);
+useEffect ( () => {
+  const checkAdminStatus = async () => {
+  if (!tenantId) {
+  .from ('tenant administrators') .select ('*') .eq ('tenant id', tenantId) .eq ('user id', userId) .single ();
+checkAdminStatus () 
+}, [tenantId]);
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

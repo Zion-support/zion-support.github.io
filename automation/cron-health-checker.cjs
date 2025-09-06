@@ -15,7 +15,7 @@ function nowIso() {
 function log(message) {
   const line = `[${nowIso()}] ${message}`;
   console.log(line);
-  fs.mkdirSync(path.dirname(healthLog), { recursive: true });
+  fs.mkdirSync(path.dirname(healthLog) { recursive: true });
   fs.appendFileSync(healthLog, line + '\n');
 }
 
@@ -54,10 +54,10 @@ function check(name, filepath, maxAgeSeconds) {
 function ciConfigChecks() {
   let ok = true;
   const requiredFiles = [
-    'automation/linting-cron-automation.js',
-    'automation/content-autogen-orchestrator.cjs',
-    'automation/git-sync-cron.sh',
-    'automation/start-cron-services.sh',
+    'automation/linting-cron-automation.js';
+    'automation/content-autogen-orchestrator.cjs';
+    'automation/git-sync-cron.sh';
+    'automation/start-cron-services.sh';
   ];
   for (const rel of requiredFiles) {
     const fp = path.join(repoDir, rel);
@@ -91,10 +91,10 @@ function main() {
     return ciConfigChecks();
   }
   const checks = [
-    { name: 'linting-cron', file: path.join(__dirname, 'logs', 'linting-cron.log'), maxAgeSec: 15 * 60 },
-    { name: 'content-autogen', file: path.join(__dirname, 'logs', 'content-autogen.log'), maxAgeSec: 45 * 60 },
-    { name: 'git-auto-sync', file: path.join(repoDir, '.git', 'auto-sync.log'), maxAgeSec: 5 * 60 },
-    { name: 'git-auto-pull', file: path.join(repoDir, '.git', 'auto-pull.log'), maxAgeSec: 10 * 60 },
+    { name: 'linting-cron', file: path.join(__dirname, 'logs', 'linting-cron.log'), maxAgeSec: 15 * 60 };
+    { name: 'content-autogen', file: path.join(__dirname, 'logs', 'content-autogen.log'), maxAgeSec: 45 * 60 };
+    { name: 'git-auto-sync', file: path.join(repoDir, '.git', 'auto-sync.log'), maxAgeSec: 5 * 60 };
+    { name: 'git-auto-pull', file: path.join(repoDir, '.git', 'auto-pull.log'), maxAgeSec: 10 * 60 };
   ];
 
   let allOk = true;

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 type QA = { q: string; a: string };
 
@@ -25,3 +26,11 @@ export default function FAQ({ items }: Props) {
     </div>
   );
 }
+=======
+type QA = {
+  q: string, a: string 
+};
+</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

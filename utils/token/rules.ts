@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { TokenConfig } from './types';
 
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
@@ -17,3 +18,6 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
     featured_badge: 200,
   },
 };
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

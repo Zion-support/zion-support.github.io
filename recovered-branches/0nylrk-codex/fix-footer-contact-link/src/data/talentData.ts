@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { TalentProfile } from '@/types/talent';
 
 // Sample talent profiles with realistic data for the talent directory
@@ -459,3 +460,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 ];
+=======
+ >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 // Sample talent profiles with realistic data for the talent directory export const TALENT PROFILES: TalentProfile[] = [ ] 
+}];
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

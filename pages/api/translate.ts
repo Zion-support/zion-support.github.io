@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
@@ -49,3 +50,9 @@ export default async function handler(
     return res.status(500).json({ error: 'Translation failed' });
   }
 }
+=======
+ for (const lng of targets) {
+  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

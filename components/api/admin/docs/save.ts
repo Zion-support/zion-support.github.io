@@ -1,16 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const DOCS_DIR = path.join(process.cwd(), 'data', 'docs');
-const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
-const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
-
-function ensureDir(dir: string) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+ const ts = new Date () .toISOString () 
 }
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -44,3 +34,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to save content' });
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

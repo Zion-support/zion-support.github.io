@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ProjectStatus =
   | 'offer_sent'
   | 'offer_accepted'
@@ -44,3 +45,7 @@ export interface ProjectNote {
     avatar_url?: string;
   };
 }
+=======
+ export type ProjectStatus = | 'offer sent' | 'offer accepted' | 'changes requested' | 'in progress' | 'completed' | 'canceled';
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

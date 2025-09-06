@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
@@ -149,6 +150,46 @@ const WhitepaperViewPage: React.FC = () => {
       />
     </div>
   );
+=======
+ useEffect ( () => {;
+  const fetchWhitepaper = async () => {;
+  if (!id) {;
+  ;
+}setLoading (true);
+setError (null);
+try {;
+  const {;
+  data: responseData, error: funcError ;
+}= await supabase.functions.invoke ('get-shared-whitepaper', {;
+  body: {;
+  id ;
+}
+});
+if (funcError) throw new Error (`Supabase function error: $ {;
+  funcError.message ;
+}`);
+if (responseData && (responseData as any) .error) throw new Error ( (responseData as any) .error);
+if (!responseData || ! (responseData as any) .whitepaper data) {';
+  throw new Error ('Shared whitepaper not found or data is invalid.') ;
+}
+}if (error) {;
+  return (<div className="flex flex-col justify-center items-center h-screen text-red-600" > error ";
+}</p> <Button asChild variant="link" className="mt-4" > <Link href="/" ><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link> </Button> </div>) ;
+}if (!sharedData) {";
+  //Check sharedData which includes the is public flag return (<div className="flex flex-col justify-center items-center h-screen" > <p>Whitepaper not found.</p> {;
+  /* This can be a generic message */ ";
+}<Button asChild variant="link" className="mt-4" > <Link href="/" ><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link> </Button> </div>) ;
+}//Access control based on is public and admin role Private (Admin View) </span>) ;
+}</div> <WhitepaperPreviewPanel sections= {;
+  whitepaper.sections ;
+}distributionChartData= {;
+  whitepaper.distributionChartData ;
+}tokenName= {;
+  whitepaper.tokenName ;
+}tokenSupply= {;
+  whitepaper.tokenSupply ;
+}/> </div>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default WhitepaperViewPage;
+'"

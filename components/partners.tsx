@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -36,3 +37,6 @@ export default function PartnersPage() {
     </div>
   );
 }
+=======
+ <Head> <title>Partners | Zion Tech Group</title> <meta name="description" content="Technology and go-to-market partners powering our customer outcomes." /> <link rel="canonical" href="https://ziontechgroup.com/partners" /> </Head> </ul> <div className="pt-4 text-slate-300" >Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a></div> </div> </div> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

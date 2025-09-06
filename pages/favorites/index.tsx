@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components/ui/EmptyState';
 
@@ -30,3 +31,10 @@ export default function FavoritesPage() {
     </div>
   );
 }
+=======
+import EmptyState from '../../components/ui/EmptyState' export default function FavoritesPage () {
+  const [favorites, setFavorites] = useState<string[]> ([]) useEffect ( () => {
+  const raw = localStorage.getItem ('zion.favorites') setFavorites (raw ? JSON.parse (raw) : []) 
+}, []) </ul> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

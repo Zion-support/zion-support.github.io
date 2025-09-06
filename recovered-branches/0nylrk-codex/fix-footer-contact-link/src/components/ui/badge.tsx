@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -21,3 +22,18 @@ function Badge({ className, variant, ...props }: BadgeProps) {
 }
 
 export { Badge, badgeVariants };
+=======
+ function Badge ({
+  className, variant, ...props 
+}: BadgeProps) {
+  return (<span className= {
+  cn (badgeVariants ({
+  variant 
+}), className) 
+}{
+  ...props 
+}/>) 
+}export {
+  Badge, badgeVariants 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

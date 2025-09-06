@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import ErrorBoundary from '../components/ErrorBoundary';
-export default function Blockchain() {
+
+const BlockchainPage: React.FC = () => {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Blockchain Services - Zion Tech Group</title>
         <meta
           name='description'
@@ -20,10 +21,29 @@ export default function Blockchain() {
             </h1>
             <p className='text-xl text-slate-300 text-center'>
               Cutting-edge blockchain and Web3 solutions for the future.
+=======
+        <title>Blockchain Solutions - Zion Tech Group</title>
+        <meta name="description" content="Blockchain technology solutions and services" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Blockchain Solutions
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our cutting-edge blockchain technology solutions and services.
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             </p>
           </div>
-        </main>
-      </ErrorBoundary>
+        </div>
+      </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default BlockchainPage;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

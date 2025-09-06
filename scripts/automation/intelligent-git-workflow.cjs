@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+/**
+ * Intelligent Git Workflow Automation;
+ * Advanced Git automation with intelligent conflict resolution, auto-merge, and code review;
+ * Features: Smart branching, conflict resolution, PR automation, code quality checks;
+ */
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    this.logFile = path.join(this.projectRoot, 'logs', 'git-workflow.log')
+    this.configFile = path.join(this.projectRoot, 'logs', 'git-workflow-config.json')
+    this.workflowHistoryFile = path.join(this.projectRoot, 'logs', 'git-workflow-history.json')
+      autoMerge: process.env.AUTO_MERGE === 'true'
+      conflictResolution: process.env.CONFLICT_RESOLUTION === 'intelligent'
+      branchCleanup: process.env.BRANCH_CLEANUP === 'true'
+      prAutomation: process.env.PR_AUTOMATION === 'true'
+      codeReviewAI: process.env.CODE_REVIEW_AI === 'true'
+      branchStrategy: process.env.BRANCH_STRATEGY || 'gitflow'
+      protectedBranches: ['main', 'master', 'develop']
+      autoCommit: process.env.AUTO_COMMIT === 'true'
+      commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
+      mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
+<<<<<<< HEAD
+          conflictType = 'separator';
+          continue;
+        } else if (line.startsWith('>>>>>>')) {
+          inConflict = false;
+          conflictType = 'end';
+          continue;
+        }
+        
+        if (!inConflict) {
+          resolvedLines.push(line);
+        } else if (conflictType === 'separator') {
+          // Use the version after the separator (incoming changes)
+          resolvedLines.push(line);
+=======
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -20,8 +62,8 @@ class IntelligentGitWorkflow {
 
   loadWorkflowData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-data.json'
     );
     try {
@@ -42,8 +84,8 @@ class IntelligentGitWorkflow {
 
   saveWorkflowData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-data.json'
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
@@ -65,6 +107,7 @@ class IntelligentGitWorkflow {
         // Determine if auto-commit should happen
         if (this.shouldAutoCommit(changes)) {
           await this.intelligentCommit(changes);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         }
       }
 
@@ -273,7 +316,7 @@ class IntelligentGitWorkflow {
 
       // Find mergeable branches
       const mergeableBranches = await this.findMergeableBranches(
-        currentBranch,
+        currentBranch;
         branches
       );
 
@@ -388,7 +431,7 @@ class IntelligentGitWorkflow {
       console.log(`✅ AI resolved conflicts for ${branch}`);
     } catch (error) {
       console.log(
-        `❌ AI conflict resolution failed for ${branch}:`,
+        `❌ AI conflict resolution failed for ${branch}:`;
         error.message
       );
 
@@ -414,9 +457,11 @@ class IntelligentGitWorkflow {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
+=======
         } else if (line.startsWith('')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           conflictType = 'theirs';
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           conflictType = '';
         } else if (!inConflict) {
@@ -437,7 +482,7 @@ class IntelligentGitWorkflow {
       console.log(`✅ Resolved conflict in ${filePath}`);
     } catch (error) {
       console.log(
-        `❌ Failed to resolve conflict in ${filePath}:`,
+        `❌ Failed to resolve conflict in ${filePath}:`;
         error.message
       );
     }
@@ -466,8 +511,8 @@ class IntelligentGitWorkflow {
     };
 
     const errorFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'git-workflow-errors.json'
     );
     let errors = [];
@@ -485,6 +530,40 @@ class IntelligentGitWorkflow {
   }
 }
 
+<<<<<<< HEAD
+// Run the git workflow
+if (require.main === module) {
+  const gitWorkflow = new IntelligentGitWorkflow();
+  gitWorkflow.run();
+}
+
+module.exports = IntelligentGitWorkflow;
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+      console.log('Logs directory already exists')
+  log(message, level = 'INFO')
+    fs.appendFile(this.logFile, logMessage + '\n')
+      const config = await fs.readFile(this.configFile, 'utf8')
+      this.log(' Git workflow configuration loaded')
+      this.log('� Using default Git workflow configuration')
+      this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
+      const history = await fs.readFile(this.workflowHistoryFile, 'utf8')
+      this.log('� No workflow history found, starting fresh')
+      this.log(` Failed to save workflow history: ${error.message}`, 'ERROR'`)
+    this.log(' Initializing Intelligent Git Workflow...')
+      // Check if we'
+      await this.runGitCommand('git rev-parse --git-dir')
+      this.log(' Git repository detected')
+      this.log(' Intelligent Git Workflow is ready')
+      this.log(` Git workflow initialization failed: ${error.message}`, 'ERROR'`)
+      const userName = await this.runGitCommand('git config user.name').catch(() => ''
+      const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
+        await this.runGitCommand('git config user.name "AI Git Workflow")
+        await this.runGitCommand('git config user.email "ai-workflow@example.com")
+=======
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -83,3 +84,27 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     </div>
   );
 }
+=======
+ const shareToTwitter = () => {;
+  window.open (`https://twitter.com/intent/tweet?url=$ {;
+  shareUrl ;
+}&text=$ {;
+  shareText ;
+}`;
+'blank') ;
+};
+return (<div className="mt-12 flex flex-wrap gap-2" > {;
+  buttons.map ( (btn) => (<Button key= {;
+  btn.label ";
+}variant="outline" size="sm" onClick={;
+  btn.onClick ;
+}aria-label= {;
+  btn.label ;
+}> {;
+  btn.icon ;
+}<span> {;
+  btn.label ;
+}</span> ;
+}</div>) ;
+}'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

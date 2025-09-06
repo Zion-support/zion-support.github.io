@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 
@@ -37,3 +38,8 @@ export default async function handler(
       .json({ error: error?.message || 'Translation failed' });
   }
 }
+=======
+ 
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -20,7 +20,7 @@ function listWorkflows() {
   const workflows = fs.readdirSync(WORKFLOWS_DIR)
     .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'))
     .map(file => ({
-      name: file,
+      name: file;
       path: path.join(WORKFLOWS_DIR, file)
     }));
 
@@ -111,7 +111,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-  listWorkflows,
-  triggerWorkflow,
+  listWorkflows;
+  triggerWorkflow;
   showWorkflowStatus
 };

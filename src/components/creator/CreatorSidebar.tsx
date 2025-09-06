@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Bell,
   FileText,
@@ -55,3 +56,11 @@ export function AppSidebar() {
     </Sidebar>
   );
 }
+=======
+ return (<Sidebar> <SidebarContent> <SidebarGroup title="Dashboard" > <SidebarMenuItem href="/creator-dashboard" icon= {;
+  <Home size= {;
+  16 ;
+}/> ;
+}> <span>Home</span> </SidebarMenuItem> <span>Notifications</span> </SidebarMenuItem> </SidebarGroup> <span>Analytics</span> </SidebarMenuItem> </SidebarGroup> <span>Settings</span> </SidebarMenuItem> </SidebarGroup> </SidebarContent> </Sidebar>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 import { getTenantByApiKey, getTenantById } from './tenant';
 
@@ -32,3 +33,7 @@ export function authenticateRequest(
 
   return { ok: true, tenantId: tenant.id };
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

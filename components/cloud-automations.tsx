@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 export default function CloudAutomationsPage() {
@@ -47,3 +48,9 @@ export default function CloudAutomationsPage() {
     </div>
   );
 }
+=======
+ fetch ('/api/cloud-automations-status') .then ( (r) => r.json () ) .then (setData) ) : null 
+}</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

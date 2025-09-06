@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { JobApplication } from '@/types/jobs';
 
 interface ScoreBadgeProps {
@@ -19,4 +20,21 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
       {score ? `${score}%` : 'Not scored'}
     </span>
   );
+=======
+ interface ScoreBadgeProps {
+  application: JobApplication 
+}export function ScoreBadge ({
+  application 
+}: ScoreBadgeProps) {
+  const score = application.match score || 0;
+// Determine color based on score return (<span className= {
+  `rounded-full px-2 py-1 text-xs font-medium $ {
+  className 
+}` 
+}> {
+  score ? `$ {
+  score 
+}%` : "Not scored" 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

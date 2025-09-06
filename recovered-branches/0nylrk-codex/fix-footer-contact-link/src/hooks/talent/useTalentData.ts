@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { TALENT_PROFILES } from '@/data/talentData';
 import { TalentProfile } from '@/types/talent';
@@ -14,3 +15,8 @@ export function useTalentData() {
     isLoading,
   };
 }
+=======
+ // In a real app, we would fetch data from an API here // For now, we'll just return our mock data return {
+  
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

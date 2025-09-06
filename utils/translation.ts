@@ -1,4 +1,5 @@
 import i18n from './i18n';
+<<<<<<< HEAD
 
 export type TranslationMap = Record<string, string | undefined>;
 
@@ -27,3 +28,6 @@ export async function translateTextViaAI(
 export function getSelectedLanguage(): string {
   return i18n.resolvedLanguage || i18n.language || 'en';
 }
+=======
+export type TranslationMap = Record<string string | undefined>;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

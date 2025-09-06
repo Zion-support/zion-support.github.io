@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
@@ -34,3 +35,9 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
     </div>
   );
 }
+=======
+ </Link>) ) 
+}</div> </div>) ) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

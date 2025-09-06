@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -23,3 +24,6 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 }
+=======
+ <div className="container mx-auto px-4 py-16 text-white"> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1> <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

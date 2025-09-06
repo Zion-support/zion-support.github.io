@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Resume } from '@/types/resume';
 import {
   PreviewHeader,
@@ -29,3 +30,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
     </div>
   );
 }
+=======
+ </div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,15 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
-import OpenAI from 'openai';
-
-type RequestBody = {
-  roleTitle: string;
-  skills: string[];
-  region: string;
-  experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead';
-  remote: boolean;
-  employmentType: 'contract' | 'freelance' | 'full-time';
+ 
+}
+}const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
 };
+<<<<<<< HEAD
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -244,3 +239,11 @@ export default async function handler(
 
   return res.status(200).json(response);
 }
+=======
+{
+  role: 'user', content: prompt 
+}];
+temperature: 0.2;
+return res.status (200) .json (response) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

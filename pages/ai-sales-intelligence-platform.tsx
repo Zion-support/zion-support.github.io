@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, {
   getStaticProps as getSlugStaticProps,
 } from './services/[slug]';
@@ -25,3 +26,8 @@ export default function AISalesIntelligencePlatform() {
     />
   );
 }
+=======
+ export default function AISalesIntelligencePlatform () {
+  return (<ServiceLanding 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

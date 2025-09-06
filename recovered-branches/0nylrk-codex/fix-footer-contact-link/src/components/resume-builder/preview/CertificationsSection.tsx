@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Certification } from '@/types/resume';
 import { format } from 'date-fns';
 
@@ -53,3 +54,17 @@ export function CertificationsSection({
     </div>
   );
 }
+=======
+ if (certifications.length === 0) return null;
+{
+  formatDate (cert.issue date) 
+}{
+  cert.expiration date && ` - $ {
+  formatDate (cert.expiration date) 
+}` 
+}</span>) 
+}</div> View Credential </Link> </p>) 
+}</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

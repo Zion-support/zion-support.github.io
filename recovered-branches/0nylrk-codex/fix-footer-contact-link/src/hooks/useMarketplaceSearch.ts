@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
@@ -132,4 +133,32 @@ export function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions,
   };
+=======
+ //Filter states const [selectedProductTypes, setSelectedProductTypes] = useState<string[]> ([]);
+const [selectedLocations, setSelectedLocations] = useState<string[]> ([]);
+const [selectedAvailability, setSelectedAvailability] = useState<string[]> ([]);
+const [selectedRating, setSelectedRating] = useState<number | null> (null);
+//Generate search suggestions and filter options const searchSuggestions: SearchSuggestion[] = useMemo ( () => generateSearchSuggestions ();
+[]);
+const filterOptions: FilterOptions = useMemo ( () => generateFilterOptions ();
+[]);
+return MARKETPLACE LISTINGS.filter (listing => {
+  //Search query filter const matchesSearch = !searchQuery || listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) );
+//Product type filter return matchesSearch && matchesProductType && matchesLocation && matchesAvailability && // Handle filter changes const handleFilterChange = (filterType: string, value: string) => {
+  switch (filterType) {
+  case 'productTypes': return {
+  searchQuery;
+setSearchQuery;
+searchSuggestions;
+selectedProductTypes;
+selectedLocations;
+selectedAvailability;
+selectedRating;
+setSelectedRating;
+filteredListings;
+handleFilterChange;
+clearAllFilters;
+filterOptions 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
 }

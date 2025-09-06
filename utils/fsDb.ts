@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -24,3 +25,6 @@ export function writeJson<T>(relativePath: string, value: T): void {
   ensureDir(path.dirname(full));
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

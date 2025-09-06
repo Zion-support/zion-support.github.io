@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 
@@ -50,3 +51,13 @@ export default async function handler(
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
 }
+=======
+ 
+}
+}catch () {
+  // fall through to template 
+}
+}
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

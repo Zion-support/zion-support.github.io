@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -22,3 +23,18 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
     </Button>
   );
 }
+=======
+ interface QuickReplyButtonProps {
+  text: string;
+onClick: () => void 
+}text, onClick 
+}: QuickReplyButtonProps) {
+  return (<Button variant="outline" size="sm" className= {
+  cn () 
+}onClick= {
+  onClick 
+}> {
+  text 
+}</Button>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

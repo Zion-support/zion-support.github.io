@@ -1,19 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-interface EmailValidationResult {
-  email: string;
-  isValid: boolean;
-  score: number;
-  suggestions: string[];
-  details: {
-    hasValidFormat: boolean;
-    hasValidDomain: boolean;
-    hasValidMX: boolean;
-    isDisposable: boolean;
-    isRoleBased: boolean;
-    isFreeProvider: boolean;
-  };
+ 
 }
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -126,3 +113,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

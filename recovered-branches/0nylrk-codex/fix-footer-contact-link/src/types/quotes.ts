@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ServiceType = 'service' | 'talent' | 'equipment' | '';
 export type ServiceCategory = string;
 export type TimelineType = 'fixed' | 'flexible';
@@ -66,3 +67,6 @@ export interface QuoteRequest {
   created_at: string;
   updated_at: string;
 }
+=======
+ export type QuoteStatus = 'new' | 'in review' | 'accepted' | 'responded' | 'closed' | 'archived';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

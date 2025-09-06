@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // In-memory demo store per process
@@ -13,3 +14,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   store[key] = { payload, message, signature, updatedAt: Date.now() };
   return res.status(200).json({ ok: true });
 }
+=======
+ // In-memory demo store per process const store: Record<string any> = (global as any) . ZION DID STORE || {
+  
+};
+(global as any) . ZION DID STORE = store;
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

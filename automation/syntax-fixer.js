@@ -1,7 +1,5 @@
-
       };
-
-    }),
+    })
   };
 ,
   async fixImportIssues() {,
@@ -11,23 +9,23 @@
         let content = fs.readFileSync(file, "utf8"),
         let modified = false,
 ,
-        // Fix import statements,
+        // Fix import statements;
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
 ,
         if (content !== fs.readFileSync(file, "utf8")) {,
-          modified = true,
+          modified = true
         };
 ,
         if (modified) {,
           fs.writeFileSync(file, content),
           this.fixesApplied++,
-          this.log(`Fixed import issues in ${file}`),
+          this.log(`Fixed import issues in ${file}`);
         };
       } catch (error) {,
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN"),
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       };
-    }),
+    })
   };
 ,
   async fixExportIssues() {,
@@ -41,18 +39,18 @@
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
 ,
         if (content !== fs.readFileSync(file, "utf8")) {,
-          modified = true,
+          modified = true
         };
 ,
         if (modified) {,
           fs.writeFileSync(file, content),
           this.fixesApplied++,
-          this.log(`Fixed export issues in ${file}`),
+          this.log(`Fixed export issues in ${file}`)
         };
       } catch (error) {,
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN"),
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       };
-    }),
+    })
   };
 ,
   getSourceFiles() {,
@@ -67,17 +65,17 @@
           const stat = fs.statSync(fullPath),
 ,
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-            walkDir(fullPath),
+            walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
-            files.push(fullPath),
+            files.push(fullPath)
           };
-        }),
+        })
       };
 ,
-      walkDir(srcDir),
+      walkDir(srcDir)
     };
 ,
-    return files,
+    return files
   };
 ,
   async run() {,
@@ -87,19 +85,18 @@
       await this.fixSyntaxErrors(),
 ,
       this.log("=" * 50),
-      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`),
-,
+      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`),
+
     } catch (error) {,
-      this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR"),
+      this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")
     };
   };
 };
 ,
 // Main execution,
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
+if (import.meta.url === `file: //${process.argv[1]}`) {,
   const fixer = new SyntaxFixer(),
-  fixer.run().catch(console.error),
+  fixer.run().catch(console.error)
 };
 ,
 export default SyntaxFixer,
-

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Education } from '@/types/resume';
 import { format } from 'date-fns';
 
@@ -57,3 +58,10 @@ export function EducationSection({ education }: EducationSectionProps) {
     </div>
   );
 }
+=======
+ if (sortedEducation.length === 0) return null;
+) 
+}</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

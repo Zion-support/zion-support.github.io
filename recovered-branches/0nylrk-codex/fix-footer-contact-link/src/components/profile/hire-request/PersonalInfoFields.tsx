@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   FormField,
   FormItem,
@@ -55,3 +56,15 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
     </>
   );
 }
+=======
+ interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues> 
+}form 
+}: PersonalInfoFieldsProps) {
+  return (<> <FormField control= {
+  form.control 
+}<FormItem> <FormLabel className="text-white" >Your Name</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel className="text-white" >Your Email</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

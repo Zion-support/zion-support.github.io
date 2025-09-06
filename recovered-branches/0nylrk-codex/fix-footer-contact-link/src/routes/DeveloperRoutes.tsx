@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import DeveloperPortal from '../pages/DeveloperPortal';
@@ -22,3 +23,24 @@ export default function DeveloperRoutes() {
     </Routes>
   );
 }
+=======
+ export default function DeveloperRoutes () {
+  return (<Routes> <Route path="/" element= {
+  <Navigate to="/developers/portal" /> 
+}/> <Route path="/portal" element= {
+  <DeveloperPortal /> 
+}/> <Route path="/docs" element= {
+  <ApiDocsHub /> 
+}/> <Route path="/docs/getting-started" element= {
+  <ApiGettingStarted /> 
+}/> <Route path="/docs/reference" element= {
+  <ApiReference /> 
+}/> <Route path="/docs/webhooks" element= {
+  <ApiWebhooks /> 
+}/> <Route path="/docs/samples" element= {
+  <ApiSampleCode /> 
+}/> <Route path="/docs/errors" element= {
+  <ApiErrorCodes /> 
+}/> 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

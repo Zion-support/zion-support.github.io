@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -96,4 +97,11 @@ const PostJob: NextPage = () => {
   );
 };
 
+=======
+ <Head> <title>Post a Job - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Post a Job</h1> <div className="grid md:grid-cols-2 gap-6" > <form className="space-y-4" > <div> </EnhancedButton> <EnhancedButton type="submit" >Post Job</EnhancedButton> </div> </form> <div> <div className="text-sm opacity-70" >Title</div> <div className="font-medium" > {
+  title || 'Untitled job' 
+}</div> </div> <div> </div> </div>) : (<p className="text-sm opacity-80" >Click Preview to see how your job will appear to talent.</p>) 
+}</aside> </div> </div>) 
+};
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default PostJob;

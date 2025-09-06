@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 declare module 'react' {
   const React: any;
   export default React;
@@ -57,3 +58,6 @@ declare module 'react/jsx-runtime' {
   export const jsxs: any;
   export const Fragment: any;
 }
+=======
+ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

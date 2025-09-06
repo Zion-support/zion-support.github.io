@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -52,3 +53,6 @@ const AutoIndex: NextPage = () => {
 };
 
 export default AutoIndex;
+=======
+ </Head> </li> <li className="border rounded p-4" > <h2 className="font-semibold text-lg" ><Link href="/auto/market-signals" >AI Market Signals Agent</Link></h2> <p className="text-sm text-gray-600" >Collects relevant AI/tech signals and saves curated insights daily.</p> </li> <li className="border rounded p-4" > <h2 className="font-semibold text-lg" ><Link href="/auto/seo-audit" >Autonomous SEO Auditor</Link></h2> <p className="text-sm text-gray-600" >Scans pages for SEO gaps and commits a report for fixes.</p> </li> </ul> </main> </div> export default AutoIndex;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

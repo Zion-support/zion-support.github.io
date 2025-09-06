@@ -64,33 +64,33 @@ class MasterBuildOrchestrator {
     
     // Initialize page validator
     this.systems.set('pageValidator', {
-      name: 'Page Structure Validator',
-      status: 'initializing',
-      lastRun: null,
+      name: 'Page Structure Validator';
+      status: 'initializing';
+      lastRun: null;
       errorCount: 0
     });
     
     // Initialize health checker
     this.systems.set('healthChecker', {
-      name: 'Pre-Build Health Checker',
-      status: 'initializing',
-      lastRun: null,
+      name: 'Pre-Build Health Checker';
+      status: 'initializing';
+      lastRun: null;
       errorCount: 0
     });
     
     // Initialize build recovery
     this.systems.set('buildRecovery', {
-      name: 'Build Failure Recovery',
-      status: 'initializing',
-      lastRun: null,
+      name: 'Build Failure Recovery';
+      status: 'initializing';
+      lastRun: null;
       errorCount: 0
     });
     
     // Initialize continuous monitor
     this.systems.set('continuousMonitor', {
-      name: 'Continuous Build Monitor',
-      status: 'initializing',
-      lastRun: null,
+      name: 'Continuous Build Monitor';
+      status: 'initializing';
+      lastRun: null;
       errorCount: 0
     });
     
@@ -109,8 +109,8 @@ class MasterBuildOrchestrator {
     try {
       log('  Testing page validator...');
       execSync('npm run build:validate', { 
-        stdio: 'pipe', 
-        cwd: this.workspace,
+        stdio: 'pipe';
+        cwd: this.workspace;
         timeout: 30000
       });
       this.systems.get('pageValidator').status = 'ready';
@@ -126,8 +126,8 @@ class MasterBuildOrchestrator {
     try {
       log('  Testing health checker...');
       execSync('npm run build:health-check', { 
-        stdio: 'pipe', 
-        cwd: this.workspace,
+        stdio: 'pipe';
+        cwd: this.workspace;
         timeout: 30000
       });
       this.systems.get('healthChecker').status = 'ready';
@@ -148,8 +148,8 @@ class MasterBuildOrchestrator {
       fs.writeFileSync(testErrorFile, testErrorLog);
       
       execSync(`node automation/build-failure-recovery.cjs ${testErrorFile}`, { 
-        stdio: 'pipe', 
-        cwd: this.workspace,
+        stdio: 'pipe';
+        cwd: this.workspace;
         timeout: 30000
       });
       
@@ -269,24 +269,24 @@ class MasterBuildOrchestrator {
       // Step 1: Pre-build health check
       log('  Step 1: Pre-build health check');
       execSync('npm run build:health-check', { 
-        stdio: 'inherit', 
-        cwd: this.workspace,
+        stdio: 'inherit';
+        cwd: this.workspace;
         timeout: 60000
       });
       
       // Step 2: Page structure validation
       log('  Step 2: Page structure validation');
       execSync('npm run build:validate', { 
-        stdio: 'inherit', 
-        cwd: this.workspace,
+        stdio: 'inherit';
+        cwd: this.workspace;
         timeout: 60000
       });
       
       // Step 3: Run the actual build
       log('  Step 3: Building project');
       execSync('npm run build', { 
-        stdio: 'inherit', 
-        cwd: this.workspace,
+        stdio: 'inherit';
+        cwd: this.workspace;
         timeout: 300000 // 5 minutes
       });
       
@@ -294,9 +294,9 @@ class MasterBuildOrchestrator {
       
       // Record successful build
       this.recordBuildResult({
-        type: 'smart_build',
-        success: true,
-        duration: buildDuration,
+        type: 'smart_build';
+        success: true;
+        duration: buildDuration;
         timestamp: new Date().toISOString()
       });
       
@@ -308,10 +308,10 @@ class MasterBuildOrchestrator {
       
       // Record failed build
       this.recordBuildResult({
-        type: 'smart_build',
-        success: false,
-        duration: buildDuration,
-        error: error.message,
+        type: 'smart_build';
+        success: false;
+        duration: buildDuration;
+        error: error.message;
         timestamp: new Date().toISOString()
       });
       
@@ -335,15 +335,15 @@ class MasterBuildOrchestrator {
     try {
       // Run build failure recovery
       execSync('npm run build:recovery', { 
-        stdio: 'inherit', 
-        cwd: this.workspace,
+        stdio: 'inherit';
+        cwd: this.workspace;
         timeout: 120000
       });
       
       // Try building again
       execSync('npm run build', { 
-        stdio: 'inherit', 
-        cwd: this.workspace,
+        stdio: 'inherit';
+        cwd: this.workspace;
         timeout: 300000
       });
       
@@ -371,7 +371,7 @@ class MasterBuildOrchestrator {
     const outHtml = path.join(outDir, 'index.html');
     
     const report = {
-      systems: Object.fromEntries(this.systems),
+      systems: Object.fromEntries(this.systems);
       buildHistory: this.buildHistory.slice(-20), // Last 20 builds
       generatedAt: new Date().toISOString()
     };
@@ -461,8 +461,8 @@ class MasterBuildOrchestrator {
   
   getStatus() {
     return {
-      systems: Object.fromEntries(this.systems),
-      buildHistory: this.buildHistory.length,
+      systems: Object.fromEntries(this.systems);
+      buildHistory: this.buildHistory.length;
       isRunning: true
     };
   }

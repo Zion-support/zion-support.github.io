@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface TalentProfile {
   id: string;
   user_id: string;
@@ -49,3 +50,7 @@ export interface HireRequest {
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

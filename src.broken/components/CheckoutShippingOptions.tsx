@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
@@ -107,3 +108,26 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
 }
 
 export type { ShippingRate };
+=======
+ useEffect ( () => {
+  if (!toAddress || !toAddress.address || !toAddress.city || !toAddress.country) if (!toAddress) return null;
+return (<span> {
+  `$ {
+  rate.carrier 
+}$ {
+  rate.service 
+}- $ {
+  rate.rate 
+}$ {
+  rate.currency 
+}` 
+}{
+  rate.delivery days && ` ($ {
+  rate.delivery days 
+}d) ` 
+}</span>) 
+}</label>) ) 
+}</RadioGroup>) 
+}</div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

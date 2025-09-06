@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from '@/pages/Login';
@@ -45,6 +46,23 @@ const AuthRoutes = () => {
       />
     </Routes>
   );
+=======
+ const AuthRoutes = () => {
+  return (<Routes> {
+  /* Auth Routes */ 
+}<Route path="/login" element= {
+  <Login /> 
+}/> <Route path="/signup" element= {
+  <Signup /> 
+}/> <Route path="/forgot-password" element= {
+  <ForgotPassword /> 
+}/> <Route path="/update-password" element= {
+  <UpdatePassword /> 
+}/> /* Onboarding Routes */ 
+}<Route <Onboarding /> </ProtectedRoute> 
+}/> <Route <TalentOnboarding /> </ProtectedRoute> 
+}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
+}/> </Routes>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default AuthRoutes;

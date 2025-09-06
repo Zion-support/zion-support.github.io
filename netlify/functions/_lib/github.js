@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const GITHUB_API = 'https://api.github.com';
 
 async function getFile(owner, repo, path, token) {
@@ -39,3 +40,14 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 }
 
 module.exports = { upsertFile };
+=======
+const GITHUB API = 'https: //api.github.com';
+'Authorization': `token $ {
+  token 
+}`;
+'Accept': 'application/vnd.github+jsonContent-Type': 'application/json' 
+};
+body: JSON.stringify (body) 
+}return resp.json () 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

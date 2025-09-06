@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -142,3 +143,23 @@ export function TemplateSaveForm({
     </Form>
   );
 }
+=======
+ const formSchema = z.object ({;
+  title: z.string () .min (1, "Title is required");
+isDefault: z.boolean () ;
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 type FormValues = z.infer<typeof formSchema>;
+setSaving (true);
+try {;
+  if (editTemplate) {;
+  await updateTemplate.mutateAsync ({;
+  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
+  ...field ";
+}placeholder="Enter template name" /> ;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
+  editTemplate ? "Update" : "Save" ;
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

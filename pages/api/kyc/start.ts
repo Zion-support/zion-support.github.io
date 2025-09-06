@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
@@ -75,3 +76,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(role),
   });
 }
+=======
+ profile.role = role;
+if (fullLegalName) profile.fullLegalName = fullLegalName;
+if (businessName) profile.businessName = businessName;
+if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
+profile.lastUpdatedAt = now;
+db[userId] = profile;
+save (db);
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

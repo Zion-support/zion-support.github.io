@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
-
 export type SupportedProvider = 'openai' | 'deepl' | 'none';
+<<<<<<< HEAD
 
 const provider: SupportedProvider =
   (process.env.TRANSLATION_PROVIDER as SupportedProvider) ||
@@ -79,3 +79,6 @@ export function detectLanguageSimple(text: string): string {
   // Default to 'en'
   return 'en';
 }
+=======
+const provider: SupportedProvider = (process.env.TRANSLATION PROVIDER as SupportedProvider) || (process.env.OPENAI API KEY ? 'openai' : process.env.DEEPL API KEY ? 'deepl' : 'none');
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+ import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json');
 const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json');
 
@@ -106,3 +105,14 @@ export default async function handler(
       .json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited, use rich list approximation via token transactions + unique addresses) // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
+  res.status(200).json({ metrics: {} });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

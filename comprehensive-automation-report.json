@@ -1,76 +1,76 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T22:04:15.746Z",
   "totalDuration": 16690,
+=======
+  "timestamp": "2025-09-05T22:21:49.673Z",
+  "totalDuration": 11633,
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   "successfulTasks": 4,
-
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-
-      "duration": 4619,
-
+      "duration": 4789,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-
-      "duration": 2125,
+      "duration": 1996,
       "errors": [
         "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+<<<<<<< HEAD
         "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:7711) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+=======
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3809) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       ],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-
-      "duration": 1759,
-
+      "duration": 1462,
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": false,
-      "duration": 3535,
+      "duration": 518,
       "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/ai-services.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/blockchain.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/blockchain.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/blockchain.tsx\n\n./pages/contact.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import Head from 'next/head',;\n   : \u001b[31;1m                            ^\u001b[0m\n \u001b[2m2\u001b[0m | import Link from 'next/link',;\n \u001b[2m3\u001b[0m | import ContactForm from '../components/ContactForm',;\n \u001b[2m4\u001b[0m | ,;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/contact.tsx\n\n./pages/404.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/404.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Home, ArrowLeft, Search } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/404.tsx\n\n./middleware.ts\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/middleware.ts\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import { NextResponse } from \"next/server\",;\n   : \u001b[31;1m                                          ^\u001b[0m\n \u001b[2m2\u001b[0m | import type { NextRequest } from \"next/server\",;\n \u001b[2m3\u001b[0m | ,;\n \u001b[2m4\u001b[0m | export function middleware(request: NextRequest) {,;\n   `----\n\nCaused by:\n    Syntax Error\n\n\n> Build failed because of webpack errors\n"
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
-
       "warnings": []
     },
     "seoOptimization": {
       "success": true,
-
-      "duration": 47,
-
+      "duration": 41,
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-
-      "duration": 569,
+      "duration": 568,
       "errors": [
+<<<<<<< HEAD
         "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:7894) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+=======
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3939) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       ],
       "warnings": []
     },
     "performanceOptimization": {
       "success": false,
-      "duration": 2560,
+      "duration": 891,
       "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/ai-services.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/blockchain.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/blockchain.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/blockchain.tsx\n\n./pages/contact.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import Head from 'next/head',;\n   : \u001b[31;1m                            ^\u001b[0m\n \u001b[2m2\u001b[0m | import Link from 'next/link',;\n \u001b[2m3\u001b[0m | import ContactForm from '../components/ContactForm',;\n \u001b[2m4\u001b[0m | ,;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/contact.tsx\n\n./pages/404.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/pages/404.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react',;\n   : \u001b[31;1m                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from 'next/head',;\n \u001b[2m3\u001b[0m | import Link from 'next/link',;\n \u001b[2m4\u001b[0m | import { Home, ArrowLeft, Search } from 'lucide-react',;\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/404.tsx\n\n./middleware.ts\nError: \n  \u001b[31mx\u001b[0m Expected ';', got ','\n   ,-[\u001b[36;1;4m/workspace/middleware.ts\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import { NextResponse } from \"next/server\",;\n   : \u001b[31;1m                                          ^\u001b[0m\n \u001b[2m2\u001b[0m | import type { NextRequest } from \"next/server\",;\n \u001b[2m3\u001b[0m | ,;\n \u001b[2m4\u001b[0m | export function middleware(request: NextRequest) {,;\n   `----\n\nCaused by:\n    Syntax Error\n\n\n> Build failed because of webpack errors\n"
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
-
       "warnings": []
     },
     "deployment": {
       "success": true,
-
-      "duration": 1473,
-
+      "duration": 1366,
       "errors": [],
       "warnings": []
     }

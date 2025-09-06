@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
@@ -64,3 +65,10 @@ export default async function handler(
     return res.status(500).json({ error: e?.message });
   }
 }
+=======
+ const {
+  data: existing, error: existingErr 
+}= await supabase .from ('partners') .select ('code') .eq ('code', code) .maybeSingle ();
+}
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

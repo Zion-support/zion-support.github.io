@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { IPFS } from 'ipfs-core-types';
 
 let createIpfsClient: any;
@@ -77,3 +78,7 @@ export async function editConstitution(
   });
   return true;
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

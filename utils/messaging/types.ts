@@ -1,4 +1,5 @@
 export type UserRole = 'client' | 'talent' | 'admin';
+<<<<<<< HEAD
 
 export interface UserSummary {
   id: string;
@@ -62,3 +63,7 @@ export interface NewMessageInput {
   attachmentName?: string; // optional filename
   context?: ConversationContext;
 }
+=======
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';
+export type MessageStatus = 'sent' | 'delivered' | 'read';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
@@ -16,12 +17,29 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+=======
+ const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a $ {
+  persona?.voice || 'Visionary' 
+}tone, speak in $ {
+  persona?.language || 'English' 
+}. If a style sample is provided, align tone and phrasing to it. Produce: 1) 7-10 concise interview questions mixing visionary and technical angles 2) Time markers for: Intro, segment transitions, Closing CTA for Zion 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest 4) YouTube and Spotify descriptions 5) A single-sentence Best Quote transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.';
+youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.';
+spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.';
+bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.' 
+}) 
+}transcript: generated.transcript;
+youtubeDescription: generated.youtubeDescription || '';
+spotifyDescription: generated.spotifyDescription || '';
+bestQuote: generated.bestQuote || '';
+audio: {
+  
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-function readEpisodes(): any[] {
-  ensureStorage();
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'));
+};
+episodes.unshift (episode);
+writeEpisodes (episodes);
 }
+<<<<<<< HEAD
 
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
@@ -135,3 +153,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

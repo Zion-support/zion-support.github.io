@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -72,3 +73,11 @@ export default function EditJobPage() {
     </div>
   );
 }
+=======
+ const [title, setTitle] = useState ('');
+const [description, setDescription] = useState ('');
+const [category, setCategory] = useState ('');
+}if (!job) return <div>Loading…</div>;
+</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

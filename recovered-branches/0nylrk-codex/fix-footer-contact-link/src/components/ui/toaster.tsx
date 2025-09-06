@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { Toaster as SonnerToaster } from 'sonner';
 
@@ -18,4 +19,13 @@ export function Toaster() {
       }}
     />
   );
+=======
+ export function Toaster () {
+  return (top-right"toastOptions= {
+  {
+  duration: 4000;
+descriptionClassName: " text-zion-slate-light" 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+}
+}/>) 
 }

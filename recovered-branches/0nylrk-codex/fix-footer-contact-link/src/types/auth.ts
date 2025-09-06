@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface UserDetails {
   id?: string;
   name?: string;
@@ -61,3 +62,7 @@ export interface AuthContextType {
     userData?: Partial<UserDetails>
   ) => Promise<{ error: any }>;
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

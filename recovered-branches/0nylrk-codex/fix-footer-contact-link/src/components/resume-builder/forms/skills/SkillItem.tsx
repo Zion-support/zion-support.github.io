@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
@@ -24,4 +25,9 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   );
+=======
+ <Badge key= {
+  skill.id 
+}variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

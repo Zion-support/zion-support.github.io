@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function Page() {
@@ -37,3 +38,7 @@ export default function Page() {
     </div>
   );
 }
+=======
+ <Head> <title>Pattern — Cloud Improving Continuously</title> <meta name="description" content="Actionable architectural pattern synthesized from live site signals." /> <meta property="og:title" content="Pattern — Cloud Improving Continuously" /> <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,13 +1,21 @@
-import { GetServerSideProps } from 'next';
-import React, { useMemo, useRef, useState } from 'react';
-import PdfExportButton from '../../components/ui/PdfExportButton';
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
-
-export type ResumePreviewPageProps = {
-  initialData: ResumeData;
-  versions?: Array<{ id: string; label: string; data: ResumeData }>;
+ > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+}</select> </>) 
+}</div> </div> <PdfExportButton targetRef= {
+  targetRef 
+}fileName= {
+  `resume-$ {
+  activeData.name.replace (/\s+/g, '-') .toLowerCase () 
+}.pdf` 
+}/> </div> </div>) 
+}if (!user) {
+  return {
+  redirect: {
+  
+}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
 };
+<<<<<<< HEAD
 
 export default function ResumePreviewPage({
   initialData,
@@ -147,3 +155,9 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
   return { props: { initialData, versions } };
 };
+=======
+summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
+skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'];
+technologies: ['OpenAISupabasePostgresVercelDocker'];
+experience: [ 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -45,3 +46,12 @@ it('treats underscores as spaces in slug', () => {
   const link = screen.getByRole('link', { name: /ai_tools/i });
   expect(link).toHaveAttribute('href', '/category/ai-tools');
 });
+=======
+ <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> </MemoryRouter>);
+it ('normalizes slug with special characters', () => {
+  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> </MemoryRouter>);
+it ('removes accents from slug', () => {
+  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);
+it ('treats underscores as spaces in slug', () => {
+  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

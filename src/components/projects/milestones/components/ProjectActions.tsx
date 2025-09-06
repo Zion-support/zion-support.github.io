@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -37,3 +38,17 @@ export function ProjectActions({
     </div>
   );
 }
+=======
+ {;
+  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
+  `/dashboard/disputes/$ {;
+  disputeId ;
+}` ";
+}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
+}{;
+  isTalent && !isUnderDispute && (<Button onClick={;
+  onAddMilestone ;
+}> Add Milestone </Button>) ;
+}</div>) ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -123,3 +124,7 @@ export function setConfig(
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

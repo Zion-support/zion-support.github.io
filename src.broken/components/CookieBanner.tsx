@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { Link } from 'react-router-dom';
@@ -29,3 +30,7 @@ export function CookieBanner() {
     </CookieConsent>
   );
 }
+=======
+ return (<CookieConsent location="bottom" cookieName="zion consent banner" declineButtonText="Reject Non-Essential" buttonText="Accept All" enableDeclineButton disableStyles > <span className="mr-2" >We use cookies to personalize content and ads.</span> <Link to="/privacy-settings" className="underline text-white" >Settings</Link> </CookieConsent>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ProposalStatus =
   | 'Draft'
   | 'Submitted'
@@ -13,3 +14,6 @@ export type ProposalIndexItem = {
   status: ProposalStatus;
   createdAt: string;
 };
+=======
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

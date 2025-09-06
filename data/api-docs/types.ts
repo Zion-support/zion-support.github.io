@@ -1,6 +1,6 @@
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-
 export type Visibility = 'public' | 'partner' | 'internal';
+<<<<<<< HEAD
 
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python';
@@ -52,3 +52,5 @@ export interface ApiDocsSpec {
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
+=======
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

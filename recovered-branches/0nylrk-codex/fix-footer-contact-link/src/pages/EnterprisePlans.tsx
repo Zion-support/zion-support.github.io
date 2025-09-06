@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -29,3 +30,7 @@ export default function EnterprisePlans() {
     </>
   );
 }
+=======
+ export default function EnterprisePlans () {
+  return (<> <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools." min-h-screen bg-background" > <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> </main> <Footer /> </> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

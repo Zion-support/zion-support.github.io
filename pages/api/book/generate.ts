@@ -1,14 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
+import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
 
   const { meta, chapters } = req.body as {
     meta: any;
@@ -46,3 +50,8 @@ export default async function handler(
 
   res.status(200).json({ chapters: drafted });
 }
+=======
+  
+  res.status(200).json({ message: 'Book generated' });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

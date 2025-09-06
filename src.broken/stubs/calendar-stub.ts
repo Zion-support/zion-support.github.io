@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Emergency stub for react-day-picker during build issues
 
 export interface CalendarProps {
@@ -32,3 +33,7 @@ export const format = (date: Date, formatStr: string) => {
 export const isValid = (date: any): date is Date => {
   return date instanceof Date && !isNaN(date.getTime());
 };
+=======
+// Emergency stub for react-day-picker during build issues // Export as default export default DayPicker;
+// Additional exports that might be needed 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

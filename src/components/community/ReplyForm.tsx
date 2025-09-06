@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -70,6 +71,25 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
       </CardContent>
     </Card>
   );
+=======
+ import {;
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormMessage interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>;
+parentId?: string ;
+}interface ReplyFormValues {;
+  content: string ;
+}export const ReplyForm = ({;
+  onSubmit, parentId ;
+}: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState (false);
+defaultValues: {;
+  ...field ;
+}/> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </Button> </div> </form> </Form> </CardContent> </Card>) ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default ReplyForm;

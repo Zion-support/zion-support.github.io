@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { TalentProfile } from '@/types/talent';
 
@@ -43,3 +44,7 @@ export function useUIState() {
     closeMobileFilter,
   };
 }
+=======
+ // Effect to listen for the custom event to close mobile filter // This would typically be in a useEffect hook, but we'll handle it via the button's onClick 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

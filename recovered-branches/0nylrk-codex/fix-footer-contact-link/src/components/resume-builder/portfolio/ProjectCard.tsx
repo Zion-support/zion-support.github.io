@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -133,3 +134,18 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   );
 }
+=======
+ const handleDelete = () => {
+  if (project.id) {
+  />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) 
+}</div> </Badge>) ) 
+}</div>) 
+}</div> </CardContent> </Button> </Link>) 
+}</Button> </Link>) 
+}</div> </Button> </div> </CardFooter> <AlertDialog open= {
+  deleteDialogOpen 
+}onOpenChange= {
+  setDeleteDialogOpen 
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

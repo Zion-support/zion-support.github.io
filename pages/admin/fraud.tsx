@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 
 interface FraudItem {
@@ -64,8 +65,14 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
+const FraudPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className='p-6 max-w-7xl mx-auto'>
       <h1 className='text-2xl font-bold mb-4'>
         Fraud Monitoring - Admin Review
@@ -94,6 +101,26 @@ export default function FraudAdminPage() {
 
       <div className='overflow-x-auto'>
         <table className='min-w-full border'>
+=======
+    <div className="p-6 max-w-7xl mx-auto">
+      <Head>
+        <title>Fraud Monitoring - Admin Review</title>
+        <meta name="description" content="Fraud monitoring and detection system" />
+      </Head>
+      
+      <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
+      
+      <div className="flex items-center gap-2 mb-4">
+        <input
+          type="text"
+          placeholder="Search fraud reports..."
+          className="px-3 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      
+      <div className="overflow-x-auto">
+        <table className="min-w-full border">
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           <thead>
             <tr className='bg-gray-50 text-left'>
               <th className='p-2 border'>User</th>
@@ -106,6 +133,7 @@ export default function FraudAdminPage() {
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
             {items.map(it => (
               <tr key={it.id} className='border-t'>
                 <td className='p-2 border'>{it.userId || '—'}</td>
@@ -153,9 +181,20 @@ export default function FraudAdminPage() {
                 </td>
               </tr>
             ))}
+=======
+            <tr>
+              <td className="p-2 border">No data available</td>
+            </tr>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </tbody>
         </table>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default FraudPage;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

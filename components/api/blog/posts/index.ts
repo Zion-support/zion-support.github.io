@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils/types/blog';
@@ -62,3 +63,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
+=======
+ 
+}const post: BlogPost = {
+  id: uuidv4 (), title: body.title!, slug: body.slug!, coverImageUrl: body.coverImageUrl || '', author: body.author!, publishDate: body.publishDate!, tags: body.tags || [], topics: body.topics || [], seo: {
+  metaTitle: body.seo?.metaTitle || body.title!, metaDescription: body.seo?.metaDescription || '', ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '' 
+};
+body: body.body || '';
+status: body.status || 'draft';
+}return res.status (405) .end () 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

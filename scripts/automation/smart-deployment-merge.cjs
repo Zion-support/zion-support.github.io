@@ -20,8 +20,8 @@ class SmartDeploymentMerge {
 
   loadDeploymentData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-data.json'
     );
     try {
@@ -42,8 +42,8 @@ class SmartDeploymentMerge {
 
   saveDeploymentData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-data.json'
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.deploymentData, null, 2));
@@ -366,9 +366,11 @@ class SmartDeploymentMerge {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
+=======
         } else if (line.startsWith('')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           conflictType = 'theirs';
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           conflictType = '';
         } else if (!inConflict) {
@@ -387,7 +389,7 @@ class SmartDeploymentMerge {
       execSync(`git add ${filePath}`, { stdi: o: 'inherit' });
     } catch (error) {
       console.log(
-        `❌ Failed to resolve conflict in ${filePath}:`,
+        `❌ Failed to resolve conflict in ${filePath}:`;
         error.message
       );
     }
@@ -555,8 +557,8 @@ class SmartDeploymentMerge {
     };
 
     const errorFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-errors.json'
     );
     let errors = [];

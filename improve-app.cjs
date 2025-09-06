@@ -332,7 +332,7 @@ module.exports = SecurityAuditor;`;
     };
 
     fs.writeFileSync(
-      'app-analysis-report.json',
+      'app-analysis-report.json';
       JSON.stringify(report, null, 2)
     );
 

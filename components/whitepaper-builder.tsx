@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
@@ -63,3 +64,8 @@ export default function WhitepaperBuilderPage() {
     </div>
   );
 }
+=======
+ </div> <div className="flex flex-wrap gap-3 items-center" > <label className="font-medium" >Edition</label> <select > <option value="full" >Full</option> <option value="investor" >Investor</option> <option value="developer" >Developer</option> </select> Download PDF </a> </a> </div> </section>) ) 
+}</div> </div>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

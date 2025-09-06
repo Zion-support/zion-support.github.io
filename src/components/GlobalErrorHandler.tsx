@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -17,13 +18,18 @@ interface ErrorContextType {
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void;
+=======
+ const reportError = useCallback ( (error: Error, context?: unknown) => {;
+  //Log to console for development if (process.env.NODE ENV === 'development') {';
+  //Report to Sentry for production if (process.env.NODE ENV === 'production') {;
+  Sentry.withScope ( (scope) => {;
+  if (context) {;
+  ;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
-
-const ErrorContext = createContext<ErrorContextType | null>(null);
-
-interface GlobalErrorHandlerProps {
-  children: ReactNode;
+}, []);
 }
+<<<<<<< HEAD
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
@@ -240,3 +246,28 @@ export function useErrorHandler() {
     handleAsyncOperation,
   };
 }
+=======
+}: undefined ;
+}) ;
+}, [retryCount, reportError]);
+//Clear any active toasts would go here if the toast system supports it ;
+}, []);
+return (<ErrorContext.Provider value= {;
+  contextValue ;
+}> {;
+  children ;
+}</ErrorContext.Provider>) ;
+}//Fallback for unknown errors return "An unexpected error occurred. Please try again." ;
+}// Utility hook for common error scenarios ;
+}return result;
+}catch (error: any) {;
+  reportError (error);
+if (options?.onError) {;
+  options.onError (error) ;
+}else {;
+  handleApiError (error, options?.retryAction) ;
+}
+}
+}, [reportError, handleApiError]);
+}'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

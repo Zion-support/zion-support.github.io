@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -53,3 +54,17 @@ export const OfflineIndicator = () => {
     </div>
   );
 };
+=======
+ ;
+}
+};
+//Listen for online/offline events window.addEventListener ('online', updateOnlineStatus);';
+window.addEventListener ('offline', updateOnlineStatus);
+if (!showOfflineAlert) return null;
+return () : (<WifiOff className="h-4 w-4" />) ;
+}<AlertDescription> {';
+  isOnline ? ('Connection restored') : ('You are offline. Some features may not work.') ;
+}</AlertDescription> </div> </Alert> </div>) ;
+};
+'"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

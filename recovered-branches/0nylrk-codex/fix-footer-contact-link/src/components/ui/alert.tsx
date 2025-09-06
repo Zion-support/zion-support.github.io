@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
@@ -57,3 +58,17 @@ const AlertDescription = React.forwardRef<
 AlertDescription.displayName = 'AlertDescription';
 
 export { Alert, AlertTitle, AlertDescription };
+=======
+) const Alert = React.forwardRef< HTMLDivElement;
+React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants> > ( ({
+  className, variant, ...props 
+}, ref) => (<div />) ) Alert.displayName = "Alert" const AlertTitle = React.forwardRef< HTMLParagraphElement;
+React.HTMLAttributes<HTMLHeadingElement> > ( ({
+  className, ...props 
+}, ref) => (<h5 />) ) AlertTitle.displayName = "AlertTitle" const AlertDescription = React.forwardRef< HTMLParagraphElement;
+React.HTMLAttributes<HTMLParagraphElement> > ( ({
+  className, ...props 
+}, ref) => (<div />) ) AlertDescription.displayName = "AlertDescription" export {
+  Alert, AlertTitle, AlertDescription 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

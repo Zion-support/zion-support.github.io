@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
 export default function LinksReportRedirect() {
@@ -8,3 +9,7 @@ export default function LinksReportRedirect() {
   }, []);
   return null;
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

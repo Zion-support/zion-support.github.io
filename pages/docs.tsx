@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -20,3 +21,6 @@ export default function DocsPage() {
     </Layout>
   );
 }
+=======
+ <Layout> <Head> <title>Documentation | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/docs" /> </Head> 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

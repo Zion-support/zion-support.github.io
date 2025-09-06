@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
-
 type OpenAIClient = OpenAI;
+<<<<<<< HEAD
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });
@@ -22,3 +22,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
+=======
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

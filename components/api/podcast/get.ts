@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -24,3 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });
 }
+=======
+ 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

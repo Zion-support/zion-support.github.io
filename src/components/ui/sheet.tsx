@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as SheetPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { X } from 'lucide-react';
@@ -136,3 +137,44 @@ export {
   SheetTitle,
   SheetTrigger,
 };
+=======
+ const Sheet = SheetPrimitive.Root const SheetTrigger = SheetPrimitive.Trigger const SheetClose = SheetPrimitive.Close const SheetPortal = SheetPrimitive.Portal const SheetOverlay = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Overlay>;
+React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay> > ( ({;
+  className, ...props ;
+}, ref) => (<SheetPrimitive.Overlay) ;
+}{;
+  ...props ;
+}ref= {;
+  ref ;
+}/>) ) SheetOverlay.displayName = SheetPrimitive.Overlay.displayName) interface SheetContentProps extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>;
+VariantProps<typeof sheetVariants> {;
+  ;
+}const SheetContent = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Content>;
+SheetContentProps <SheetPortal> <SheetOverlay /> <SheetPrimitive.Content ref= {;
+  ref ;
+}className= {;
+  cn (sheetVariants ({;
+  side ;
+}), className) ;
+}{;
+  ...props ;
+}> </SheetPrimitive.Close> </SheetPrimitive.Content> </SheetPortal>) ) SheetContent.displayName = SheetPrimitive.Content.displayName const SheetHeader = ({;
+  className, ...props ;
+}: React.HTMLAttributes<HTMLDivElement>) => (<div) ;
+}{;
+  ...props ;
+}/>) SheetHeader.displayName = "SheetHeader" const SheetFooter = ({;
+  className, ...props ;
+}: React.HTMLAttributes<HTMLDivElement>) => (<div) ;
+}{;
+  ...props ";
+}/>) SheetFooter.displayName = "SheetFooter" const SheetTitle = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Title>;
+React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title> > ( ({;
+  className, ...props ;
+}, ref) => (<SheetPrimitive.Title />) ) SheetTitle.displayName = SheetPrimitive.Title.displayName const SheetDescription = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Description>;
+React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description> > ( ({;
+  className, ...props ;
+}, ref) => (<SheetPrimitive.Description />) ) SheetDescription.displayName = SheetPrimitive.Description.displayName export {;
+  Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal,  SheetTitle, SheetTrigger ;
+}"
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

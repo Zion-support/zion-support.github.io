@@ -1,5 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,3 +17,13 @@ export default async function handler(
     return res.status(500).json({ error: e?.message || 'Restore failed' });
   }
 }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Backup restored' });
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

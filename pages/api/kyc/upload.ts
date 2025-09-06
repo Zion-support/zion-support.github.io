@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
@@ -65,3 +66,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ ok: true, profile });
 }
+=======
+ db[userId] = profile;
+save (db);
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

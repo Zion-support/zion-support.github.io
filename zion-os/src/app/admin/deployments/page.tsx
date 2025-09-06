@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -108,9 +109,58 @@ export default function DeploymentsPage() {
         return 'text-orange-400';
       default:
         return 'text-gray-400';
-    }
-  };
+=======
+"use client";
+import { Rocket, Clock, XCircle, AlertCircle, Activity } from 'lucide-react';
 
+const getStatusColor = (status: string) => {
+  switch (status) {
+    case 'active':
+      return 'text-green-400';
+    case 'pending':
+      return 'text-yellow-400';
+    case 'failed':
+      return 'text-red-400';
+    case 'stopped':
+      return 'text-gray-400';
+    default:
+      return 'text-gray-400';
+  }
+};
+
+export default function DeploymentsPage() {
+  const deployments = [
+    {
+      id: '1',
+      name: 'Zion OS Main Instance',
+      status: 'active',
+      region: 'us-east-1',
+      createdAt: '2024-01-15',
+      lastDeployed: '2024-01-20',
+      version: 'v2.1.0'
+    },
+    {
+      id: '2',
+      name: 'AI Research Lab',
+      status: 'pending',
+      region: 'eu-west-1',
+      createdAt: '2024-01-18',
+      lastDeployed: '2024-01-19',
+      version: 'v2.0.5'
+    },
+    {
+      id: '3',
+      name: 'Quantum Computing Hub',
+      status: 'failed',
+      region: 'ap-southeast-1',
+      createdAt: '2024-01-20',
+      lastDeployed: '2024-01-20',
+      version: 'v2.1.1'
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+    }
+  ];
+
+<<<<<<< HEAD
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
@@ -168,6 +218,10 @@ export default function DeploymentsPage() {
   const filteredDeployments = deployments.filter(
     deployment => filter === 'all' || deployment.status === filter
   );
+=======
+  const filter = 'all';
+  const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
   const getStatusCount = (status: string) => {
     return deployments.filter(d => d.status === status).length;
@@ -217,6 +271,7 @@ export default function DeploymentsPage() {
               <Activity className='w-5 h-5 text-blue-400' />
             </div>
             <div>
+<<<<<<< HEAD
               <p className='text-2xl font-bold'>
                 {getStatusCount('deploying')}
               </p>
@@ -243,6 +298,18 @@ export default function DeploymentsPage() {
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-red-500/20 rounded-lg'>
               <AlertCircle className='w-5 h-5 text-red-400' />
+=======
+              <p className="text-2xl font-bold">{getStatusCount('active')}</p>
+              <p className="text-sm text-white/60">Active</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-red-500/20 rounded-lg">
+              <XCircle className="w-5 h-5 text-red-400" />
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             </div>
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
@@ -250,6 +317,7 @@ export default function DeploymentsPage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Filter Tabs */}
@@ -474,8 +542,65 @@ export default function DeploymentsPage() {
               Deploy First Instance
             </a>
           )}
+=======
+        
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-gray-500/20 rounded-lg">
+              <AlertCircle className="w-5 h-5 text-gray-400" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{getStatusCount('stopped')}</p>
+              <p className="text-sm text-white/60">Stopped</p>
+            </div>
+          </div>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
-      )}
+      </div>
+
+      {/* Deployments Table */}
+      <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
+        <div className="p-6 border-b border-white/10">
+          <h2 className="text-xl font-semibold">Deployments</h2>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="bg-white/5">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Name</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Status</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Region</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Version</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Last Deployed</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/10">
+              {filteredDeployments.map((deployment) => (
+                <tr key={deployment.id} className="hover:bg-white/5">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm font-medium text-white">{deployment.name}</div>
+                    <div className="text-sm text-white/60">ID: {deployment.id}</div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(deployment.status)}`}>
+                      {deployment.status}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.region}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.version}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.lastDeployed}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button className="text-blue-400 hover:text-blue-300 mr-4">View</button>
+                    <button className="text-green-400 hover:text-green-300 mr-4">Deploy</button>
+                    <button className="text-red-400 hover:text-red-300">Stop</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -36,4 +37,20 @@ export const useDeleteMilestone = () => {
     deleteMilestone,
     isSubmitting,
   };
+=======
+ try {
+  setIsSubmitting (true);
+const {
+  error 
+}= await supabase .from ('project milestones') .delete () .eq ('id', milestoneId);
+if (error) throw error;
+}finally {
+  setIsSubmitting (false) 
+}
+};
+return {
+  deleteMilestone;
+isSubmitting 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

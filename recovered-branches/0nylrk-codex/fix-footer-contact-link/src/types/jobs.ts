@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
 export type JobCategory =
@@ -128,3 +129,9 @@ export interface JobApplication {
   scored_at?: string;
   notes?: string; // New field for client notes
 }
+=======
+ export type JobStatus = 'new' | 'in progress' | 'filled' | 'closed';
+export type JobCategory = | 'development' | 'design' | 'marketing' | 'content' | 'data' | 'business' | 'other';
+export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

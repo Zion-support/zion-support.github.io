@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import React from 'react';
 
@@ -25,3 +26,14 @@ export function GradientHeading({
     </Tag>
   );
 }
+=======
+ interface GradientHeadingProps {
+  children: React.ReactNode;
+className?: string;
+return (<Tag className= {
+  cn () 
+}> {
+  children 
+}</Tag>) 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

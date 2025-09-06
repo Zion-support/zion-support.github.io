@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -21,14 +22,27 @@ import { Textarea } from '@/components/ui/textarea';
 import { ForumCategory } from '@/types/community';
 
 interface PostFormValues {
+=======
+ import {
+  Card;
+CardContent;
+CardFooter;
+CardHeader;
+CardTitle import {
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+FormMessage interface PostFormValues {
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
-}
-
-interface PostFormProps {
+content: string;
+categoryId: ForumCategory;
+tags: string 
+}interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
+<<<<<<< HEAD
   onSubmit: (values: PostFormValues) => void;
   isEditing?: boolean;
 }
@@ -151,6 +165,19 @@ export const PostForm = ({
       </CardContent>
     </Card>
   );
+=======
+onSubmit: (values: PostFormValues) => void;
+isEditing?: boolean 
+}initialValues, onSubmit, isEditing = false 
+}: PostFormProps) => {
+  const form = useForm<PostFormValues> ({
+  defaultValues: {
+  const [isSubmitting, setIsSubmitting] = useState (false);
+return (<Card> <CardHeader> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Content</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Tags (comma-separated) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </form> </Form> </CardContent> </Card>) 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-
 export default PostForm;

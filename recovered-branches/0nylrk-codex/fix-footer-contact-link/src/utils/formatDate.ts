@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
@@ -88,4 +89,15 @@ export const timeAgo = (date: Date | string | number): string => {
   }
 
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
+=======
+ /** * Format a date string or timestamp into a readable format * @param date Date to format * @param format Optional format specification * @returns Formatted date string */ switch (format) {
+  case 'short': return dateObj.toLocaleDateString ();
+case 'medium': 
+}
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
+/** * Format a date to show how long ago it was * @param date Date to format * @returns Time ago string (e.g., "2 hours ago") */ if (interval >= 1) {
+  return interval === 1 ? '1 year ago' : `$ {
+  interval 
+}years ago` 
+}
