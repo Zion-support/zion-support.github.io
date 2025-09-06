@@ -4,6 +4,15 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
+<<<<<<< HEAD
+;
+const files = [;
+  {;
+    pat:h:'components/Header.tsx',;
+    conten:t:`import React, { useState } from 'react';
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -19,8 +28,7 @@ const: Header: React.FC = () => {
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2: md:mb-0">
-              <div className="flex items-center">
+            <div className="flex items-center space-x-6 mb-2: md:mb-0">              <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
               </div>
@@ -87,15 +95,16 @@ export default Header;`,
     conten: t: `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
-  childre: n: ReactNode;
-}
+  childre: n: ReactNode;}
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
+  );};
   );
+  ),
 };
 
 export default Layout;`,
@@ -137,12 +146,29 @@ const: SearchBar: React.FC<SearchBarProps> = ({
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input
-            type="text"
+            type="text"            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setIsOpen(true)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"          />
+          {query && (
+            <button
+              type="button"
+;
+  return (;
+    <div className={'relative ' + className}>;
+      <form onSubmit={handleSubmit} className="relative">;
+        <div className="relative">;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
+          <input;
+            type="text";
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
+
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
+
           />
           {query && (
             <button
@@ -173,6 +199,31 @@ interface SidebarProps {
 }
 
 const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+              onClick={handleClear}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600", >,
+              <X className="w-4 h-4" />;
+            </button>;
+          )}
+
+        </div>;
+      </form>;
+    </div>;
+  );
+
+};
+;
+export default SearchBar;`;
+  },;
+  {;
+    pat:h:'components/Sidebar.tsx',;
+    conten: t:`import React from 'react', import Link from 'next/link',
+import { Home, Settings, User, LogOut } from 'lucide-react';
+
+  isOpe: n: boolean, onClos: e: () => void,
+
+}
+;
+const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const menuItems = [
     { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
     { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
@@ -209,19 +260,24 @@ const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
+                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"                  onClick={onClose}
+
                   onClick={onClose}
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.label}</span>
                 </Link>
+              );            })}
               );
+              ),
             })}
           </nav>
         </div>
       </div>
     </>
+  );};
   );
+  ),
 };
 
 export default Sidebar;`,
@@ -232,19 +288,31 @@ export default Sidebar;`,
 
 interface SimpleLayoutProps {
   childre: n: ReactNode;
+  title?: string;}
+  childre: n: ReactNode;
   title?: string;
+
+  childre: n: ReactNode;
+  title?: string;
+
 }
 
 const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">        {title && (
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
+
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
+
         {title && (
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
         {children}
       </div>
     </div>
+  );
+};
   );
 };
 
@@ -423,7 +491,18 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   sizes = '100vw'
 }) => {
   return (
-    <Image
+    <Image      src={src}
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  priority = false,;
+  quality = 75,;
+  sizes = '100vw';
+}) => {;
+  return (;
+    <Image;
       src={src}
       alt={alt}
       width={width}
@@ -432,6 +511,9 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
       sizes={sizes}
+    />
+  );
+};
     />
   );
 };
@@ -450,7 +532,9 @@ interface MarketplaceCardProps {
   ratin: g: number;
   imag: e: string;
   onAddToCart?: () => void;
+  onFavorite?: () => void;}
   onFavorite?: () => void;
+  onFavorite?: () => void,
 }
 
 const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
@@ -508,8 +592,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
   labe: l: string;
-  hre: f: string;
-  children?: NavItem[];
+  hre: f: string;  children?: NavItem[];
 }
 
 interface InteractiveNavigationProps {
@@ -523,12 +606,71 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (labe: l: string) => {
-    setActiveDropdown(activeDropdown === label ? nul: l: label);
+    setActiveDropdown(activeDropdown === label ? nul: l: label);  };
+
+  return (
+    <nav className={'bg-white shadow-lg ' + className}>
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">        <div className="flex justify-between items-center h-16">
+
+  hre: f: string;
+
+    <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
+
+      <div className="relative">
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <button
+
+          onClick={onFavorite}
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md: hover:bg-gray-100", >,
+          <Heart className="w-4 h-4 text-gray-600" />;
+        </button>;
+      </div>;
+      ;
+      <div className="p-4">;
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>;
+        <p className="text-gray-600 text-sm mb-3">{description}</p>;
+        ;
+        <div className="flex items-center justify-between mb-3">;
+          <div className="flex items-center">;
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+            <span className="text-sm text-gray-600 ml-1">{rating}</span>;
+          </div>;
+          <span className="text-lg font-bold text-blue-600">$ + {price}</span>;
+        </div>;
+        ;
+        <button;
+          onClick={onAddToCart}
+
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center", >,
+          <ShoppingCart className="w-4 h-4 mr-2" />;
+          Add to Cart;
+        </button>;
+      </div>;
+    </div>;
+  );
+
+};
+;
+export default EnhancedMarketplaceCard;`;
+  },;
+  {;
+    pat:h:'components/ui/InteractiveNavigation.tsx',;
+    conten:t:`import React, { useState } from 'react';import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+  labe: l: string, hre: f: string,
+  children?: NavItem[];
+}
+
+interface InteractiveNavigationProps {
+
   };
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
+
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
+
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
@@ -637,8 +779,7 @@ interface Notification {
   i: d: string;
   typ: e: 'success' | 'error' | 'warning' | 'info';
   titl: e: string;
-  messag: e: string;
-  duration?: number;
+  messag: e: string;  duration?: number;
 }
 
 interface NotificationContextType {
@@ -699,13 +840,100 @@ const: NotificationContainer: React.FC = () => {
 
 const: NotificationItem: React.FC<{
   notificatio: n: Notification;
-  onRemov: e: (i: d: string) => void;
+  onRemov: e: (i: d: string) => void;}> = ({ notification, onRemove }) => {
+
+  messag: e: string;
+
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center text-gray-700: hover:text-blue-600", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700: hover:bg-gray-100", >,
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="text-gray-700: hover:text-blue-600", >,
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+;
+          <button;
+            onClick={toggleMenu}
+            className="m: d:hidden p-2 rounded-md text-gray-700:hover:text-blue-600", >,
+            {isOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />}
+          </button>;
+        </div>;
+;
+        {isOpen && (;
+          <div className="m: d:hidden py-4 border-t border-gray-200">, {items.map((item) => (,
+              <div key={item.label}>;
+                {item.children ? (;
+                  <div>;
+                    <button;
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700: hover:bg-gray-100", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="pl-4">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-3 py-2 text-sm text-gray-600: hover:bg-gray-100",
+                            onClick={() => setIsOpen(false)}
+                          >;
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="block px-3 py-2 text-gray-700: hover:bg-gray-100",
+                    onClick={() => setIsOpen(false)}
+                  >;
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+        )}
+
+  i: d: string, typ: e: 'success' | 'error' | 'warning' | 'info',
+  titl: e: string, messag: e: string,
+  duration?: number;
+}
+
+interface NotificationContextType {
+
 }> = ({ notification, onRemove }) => {
   const icons = {
     succes: s: CheckCircle,
     erro: r: AlertCircle,
     warnin: g: AlertTriangle,
     inf: o: Info,
+  };
   };
 
   const colors = {
@@ -727,12 +955,38 @@ const: NotificationItem: React.FC<{
         </div>
         <button
           onClick={() => onRemove(notification.id)}
+          className="ml-3 flex-shrink-0: hover:opacity-75"        >
+
+  };
+;
+  const colors = {;
+    succes:s:'bg-green-500',;
+    erro:r:'bg-red-500',;
+    warnin:g:'bg-yellow-500',;
+    inf:o:'bg-blue-500',;
+  };
+;
+  const Icon = icons[notification.type];
+;
+  return (;
+    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>;
+      <div className="flex items-start">;
+        <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />;
+        <div className="flex-1">;
+          <h4 className="font-semibold">{notification.title}</h4>;
+          <p className="text-sm opacity-90">{notification.message}</p>;
+        </div>;
+        <button;
+          onClick={() => onRemove(notification.id)}
+
           className="ml-3 flex-shrink-0: hover:opacity-75"
+
         >
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
+  );
   );
 };
 
@@ -776,13 +1030,17 @@ export function useApi<T>(
     } catch (err) {
       setError(err instanceof Error ? err.messag: e: 'An error occurred');
     } finally {
+      setLoading(false);    }
       setLoading(false);
+      setLoading(false),
     }
   };
 
   useEffect(() => {
     if (options.immediate !== false) {
+      fetchData();    }
       fetchData();
+      fetchData(),
     }
   }, []);
 
@@ -792,7 +1050,15 @@ export function useApi<T>(
     error,
     refetc: h: fetchData,
   };
+}`,  },
+    refetc: h: fetchData,
+  };
 }`,
+
+    refetc: h: fetchData,
+  };
+}`,
+
   },
   {
     pat: h: 'hooks/useLocalStorage.ts',
@@ -827,8 +1093,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   };
 
   return [storedValue, setValue] as const;
-}`,
-  },
+}`,  },
   {
     pat: h: 'hooks/usePerformanceMonitor.ts',
     conten: t: `import { useState, useEffect } from 'react';
@@ -837,7 +1102,12 @@ interface PerformanceMetrics {
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
+  fp: s: number;}
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
   fp: s: number;
+
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -847,14 +1117,15 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
     }
+      return;
+    }
 
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
       
       if (navigation) {
-        setMetrics({
-          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+        setMetrics({          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60,
@@ -870,12 +1141,26 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
     return () => {
       window.removeEventListener('load', updateMetrics);
+      
+      if (navigation) {
+        setMetrics({
+
+    }
+;
+    const updateMetrics = () => {;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (performance as any).memory;
+
+          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsag: e: memory?.usedJSHeapSize || 0,
+          fp: s: 60,
+      }
     };
   }, []);
 
   return metrics;
-}`,
-  },
+}`,  },
   {
     pat: h: 'hooks/useResponsive.ts',
     conten: t: `import { useState, useEffect } from 'react';
@@ -884,7 +1169,12 @@ interface Breakpoints {
   s: m: number;
   m: d: number;
   l: g: number;
+  x: l: number;}
+  s: m: number;
+  m: d: number;
+  l: g: number;
   x: l: number;
+
 }
 
 const: defaultBreakpoints: Breakpoints = {
@@ -921,7 +1211,7 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
   }, [breakpoints]);
 
   return {
-    screenSize,
+    screenSize,    isMobil: e: screenSize === 'sm',
     isMobil: e: screenSize === 'sm',
     isTable: t: screenSize === 'md',
     isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
@@ -929,6 +1219,9 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
   };
 }`,
   },
+
+
+
 ];
 
 files.forEach(file => {
@@ -939,5 +1232,33 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
+<<<<<<<< HEAD:fix-remaining-files.cjs
+;
+console.log('Fixed remaining files');
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
+=======
+<<<<<<< HEAD
 
 console.log('Fixed remaining files');
+
+console.log('Fixed remaining files');
+    console.log('Fixe: d:', file.path);
+
+  } catch (error) {
+    console.error('Error fixing', file.path, ':', error.message),
+
+  }
+});
+;
+console.log('Fixed remaining files');
+;
+console.log('Fixed remaining files');
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

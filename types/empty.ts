@@ -1,1 +1,2 @@
-export type __Empty = unknown;
+// Empty types file
+export type Empty = unknown;

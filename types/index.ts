@@ -1,3 +1,4 @@
+// Core Types
 export interface ContactInfo {
   phone: string;
   email: string;
@@ -6,38 +7,108 @@ export interface ContactInfo {
 }
 
 export interface Service {
-  title: string;
+  id: string;
+  name: string;
   description: string;
+  category: string;
+  price: number;
   features: string[];
-  href: string;
-  icon: string;
-  color: string;
+  popular?: boolean;
 }
 
-export interface ServiceCategory {
-  title: string;
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Project {
+  id: string;
+  name: string;
   description: string;
-  count: number;
-  features: string[];
-  href: string;
-  color: string;
+  status: 'active' | 'completed' | 'paused';
+  startDate: Date;
+  endDate?: Date;
+  team: User[];
 }
 
-export interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  noindex?: boolean;
-}
-
-export interface LoadingState {
-  isLoading: boolean;
+// API Response Types
+export interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+  message?: string;
   error?: string;
 }
 
-export interface AnimationState {
-  isLoaded: boolean;
-  hasError: boolean;
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
 }
+
+// Form Types
+export interface ContactForm {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+export interface QuoteRequest {
+  serviceType: string;
+  budget: string;
+  timeline: string;
+  description: string;
+  contactInfo: ContactInfo;
+}
+
+// Navigation Types
+export interface NavItem {
+  label: string;
+  href: string;
+  children?: NavItem[];
+}
+
+export interface Breadcrumb {
+  label: string;
+  href: string;
+}
+
+// SEO Types
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogImage?: string;
+}
+
+// Error Types
+export interface AppError {
+  code: string;
+  message: string;
+  details?: any;
+}
+
+// Theme Types
+export interface Theme {
+  name: string;
+  colors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+    foreground: string;
+  };
+}
+
+// Utility Types
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;

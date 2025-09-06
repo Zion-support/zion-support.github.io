@@ -1,9 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+interface Health.testProps {
+  // Add props here as needed
+=======
 
 interface Health.testProps {
   // Add props here as needed
 }
 
+>>>>>>> main
 export default function Health.test({ }: Health.testProps) {
   return (
     <div>
@@ -12,12 +17,9 @@ export default function Health.test({ }: Health.testProps) {
     </div>
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
+
+
+
 =======
 }
-=======
-}
-=======
-}
+>>>>>>> main

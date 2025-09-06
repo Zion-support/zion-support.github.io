@@ -1,15 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
+  robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -17,7 +24,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI and Technology Solutions',
+        alt: 'Zion Tech Group',
       },
     ],
     locale: 'en_US',
@@ -26,23 +33,25 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions.',
     images: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }

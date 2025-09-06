@@ -1,2 +1,8 @@
-declare module "date-fns" {
-  // Minimal typing for the `format` helper we use in the codebase. The real // package provides far richer typings – this is only a safety-net so that // isolated compilation doesn't fail if `@types/date-fns` isn't installed. 
+declare module 'date-fns' {
+  export function format(date: Date | number, formatStr: string): string;
+  export function parseISO(dateString: string): Date;
+  export function isValid(date: any): boolean;
+  export function addDays(date: Date | number, amount: number): Date;
+  export function subDays(date: Date | number, amount: number): Date;
+  export function differenceInDays(dateLeft: Date | number, dateRight: Date | number): number;
+}

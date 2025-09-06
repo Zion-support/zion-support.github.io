@@ -1,107 +1,58 @@
-import { 
-  UserGroupIcon,
-  LightBulbIcon, 
-  CogIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  AcademicCapIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline'
+import React from 'react';
 
-const professionalServices = [
+const services = [
   {
-    name: 'AI Strategy & Consulting',
-    description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
-    icon: LightBulbIcon,
-    features: [
-      'Technology Assessment',
-      'ROI Analysis',
-      'Implementation Roadmap',
-      'Change Management Planning'
-    ],
-    duration: '4-8 weeks'
+    title: 'AI Development',
+    description: 'Custom AI solutions tailored to your business needs',
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
   },
   {
-    name: 'Custom AI Development',
-    description: 'Tailored AI solutions built specifically for your business needs and objectives.',
-    icon: CogIcon,
-    features: [
-      'Custom Algorithm Development',
-      'Integration Services',
-      'Testing & Validation',
-      'Documentation & Training'
-    ],
-    duration: '8-16 weeks'
+    title: 'Quantum Computing',
+    description: 'Next-generation quantum solutions for complex problems',
+    features: ['Quantum Algorithms', 'Quantum Simulation', 'Optimization', 'Cryptography']
   },
   {
-    name: 'Cybersecurity & Compliance',
-    description: 'Enterprise-grade security solutions and compliance management for AI systems.',
-    icon: ShieldCheckIcon,
-    features: [
-      'Security Architecture Design',
-      'Compliance Assessment',
-      'Ethical AI Review',
-      'Security Audits',
-      'Risk Mitigation'
-    ],
-    duration: '2-6 weeks'
+    title: 'Autonomous Systems',
+    description: 'Self-managing systems that adapt and optimize',
+    features: ['Process Automation', 'Intelligent Monitoring', 'Self-Healing', 'Adaptive Learning']
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'Complete business transformation through technology',
+    features: ['Cloud Migration', 'Data Strategy', 'Process Optimization', 'Change Management']
   }
-]
+];
 
 export default function ServicesPage() {
   return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Our{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Comprehensive AI and technology solutions designed to transform your business 
-              and accelerate innovation across all industries.
-            </p>
-          </div>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive growth.
+          </p>
         </div>
-      </div>
-
-      {/* Services section */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Professional Services
-            </h2>
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {professionalServices.map((service) => (
-                <div key={service.name} className="flex flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                    <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-6 text-lg font-semibold text-white">{service.name}</h3>
-                  <p className="mt-2 text-base text-gray-300">{service.description}</p>
-                  <div className="mt-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      {service.features.map((feature) => (
-                        <li key={feature}>• {feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-4 text-sm text-blue-400">
-                    Duration: {service.duration}
-                  </div>
-                </div>
-              ))}
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <span className="text-blue-600 mr-3">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

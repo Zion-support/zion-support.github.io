@@ -1,9 +1,15 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+>>>>>>> main
 class FinalAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -11,7 +17,6 @@ class FinalAutomationOrchestrator {
     this.results = [];
     this.startTime = Date.now();
   }
-
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -166,4 +171,8 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
 module.exports = FinalAutomationOrchestrator;
+=======
+module.exports = FinalAutomationOrchestrator;
+>>>>>>> main

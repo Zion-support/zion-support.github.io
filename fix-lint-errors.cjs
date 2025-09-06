@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
+=======
 [\s\S]*?
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     
     // Clean up any remaining conflict markers
     content = content.replace(/^.*$/gm, "");
@@ -131,6 +135,9 @@ try {
   process.exit(1)}
 =======
 <<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 =======
@@ -250,6 +257,7 @@ try {
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

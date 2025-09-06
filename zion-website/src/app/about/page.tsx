@@ -1,91 +1,51 @@
-import { 
-  UserGroupIcon,
-  LightBulbIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  AcademicCapIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline'
-
-const values = [
-  {name: 'Innovation First', description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.', icon: LightBulbIcon},
-  {name: 'Global Impact', description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.', icon: GlobeAltIcon},
-  {name: 'Trust & Security', description: 'We maintain the highest standards of security and ethical AI development.', icon: ShieldCheckIcon},
-  {name: 'Research Excellence', description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.', icon: AcademicCapIcon}
-]
-
-const team = [
-  {name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.', image: '/images/team/sarah-chen.jpg'},
-  {name: 'Dr. Marcus Rodriguez', role: 'Chief Technology Officer', bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.', image: '/images/team/marcus-rodriguez.jpg'},
-  {name: 'Dr. Elena Petrov', role: 'Head of Research', bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.', image: '/images/team/elena-petrov.jpg'},
-  {name: 'James Kim', role: 'Chief Operations Officer', bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.', image: '/images/team/james-kim.jpg'}
-]
+import React from 'react';
 
 export default function AboutPage() {
   return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              About{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
-              dedicated to transforming industries and advancing human potential through technology.
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              To transform businesses through cutting-edge AI and technology solutions that drive innovation, efficiency, and growth.
+            </p>
+            <p className="text-lg text-gray-600">
+              We believe in the power of technology to solve complex problems and create opportunities for our clients to thrive in the digital age.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* Values section */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Our Values
-            </h2>
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {values.map((value) => (
-                <div key={value.name} className="flex flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                    <value.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-6 text-lg font-semibold text-white">{value.name}</h3>
-                  <p className="mt-2 text-base text-gray-300">{value.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Team section */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Meet Our Team
-            </h2>
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {team.map((person) => (
-                <div key={person.name} className="text-center">
-                  <div className="mx-auto h-32 w-32 rounded-full bg-gray-800 flex items-center justify-center">
-                    <UserGroupIcon className="h-16 w-16 text-gray-400" />
-                  </div>
-                  <h3 className="mt-6 text-lg font-semibold text-white">{person.name}</h3>
-                  <p className="mt-2 text-base text-blue-400">{person.role}</p>
-                  <p className="mt-2 text-sm text-gray-300">{person.bio}</p>
-                </div>
-              ))}
-            </div>
+          <div className="bg-gray-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center">
+                <span className="text-blue-600 mr-3">✓</span>
+                Innovation and Excellence
+              </li>
+              <li className="flex items-center">
+                <span className="text-blue-600 mr-3">✓</span>
+                Client Success
+              </li>
+              <li className="flex items-center">
+                <span className="text-blue-600 mr-3">✓</span>
+                Ethical Technology
+              </li>
+              <li className="flex items-center">
+                <span className="text-blue-600 mr-3">✓</span>
+                Continuous Learning
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

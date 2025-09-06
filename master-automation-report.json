@@ -1,5 +1,21 @@
 {
 <<<<<<< HEAD
+  "timestamp": "2025-09-05T15:58:44.701Z",
+  "totalDuration": "130s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 52674,
+      "errors": []
+    },
+    "typescriptFix": {
+      "success": true,
+      "duration": 12508,
+      "errors": []
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "timestamp": "2025-09-05T01:24:11.708Z",
   "totalDuration": "61s",
   "results": {
@@ -8,6 +24,7 @@
       "duration": 60590,
 =======
 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   "timestamp": "2025-09-05T15:05:30.907Z",
   "totalDuration": "86s",
   "results": {
@@ -23,28 +40,38 @@
       "duration": 19,
 =======
       "duration": 25,
+<<<<<<< HEAD
+      "errors": ["Command failed: node automation/typescript-fixer.cjs"]
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       "errors": [
         "Command failed: node automation/typescript-fixer.cjs"
       ]
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     },
     "healthCheck": {
 <<<<<<< HEAD
       "success": true,
-      "duration": 25,
+      "duration": 21039,
       "errors": []
     },
     "securityScan": {
       "success": true,
-      "duration": 581,
+      "duration": 2557,
       "errors": []
     },
     "performanceOptimize": {
       "success": true,
-      "duration": 23,
+      "duration": 20709,
       "errors": []
     },
     "buildTest": {
+<<<<<<< HEAD
+      "success": true,
+      "duration": 20538,
+      "errors": []
+=======
       "success": false,
       "duration": 103,
       "errors": [
@@ -53,36 +80,40 @@
 =======
       "success": false,
       "duration": 26,
-      "errors": [
-        "Command failed: node automation/health-check.cjs"
-      ]
+      "errors": ["Command failed: node automation/health-check.cjs"]
     },
     "securityScan": {
       "success": false,
       "duration": 24,
-      "errors": [
-        "Command failed: node automation/security-scanner.cjs"
-      ]
+      "errors": ["Command failed: node automation/security-scanner.cjs"]
     },
     "performanceOptimize": {
       "success": false,
       "duration": 23,
-      "errors": [
-        "Command failed: node automation/performance-optimizer.cjs"
-      ]
+      "errors": ["Command failed: node automation/performance-optimizer.cjs"]
     },
     "buildTest": {
       "success": false,
       "duration": 6106,
+<<<<<<< HEAD
+      "errors": ["Command failed: npm run build"]
+=======
       "errors": [
         "Command failed: npm run build"
       ]
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     }
   },
   "summary": {
     "totalPhases": 6,
+<<<<<<< HEAD
+    "successfulPhases": 6,
+    "failedPhases": 0,
+    "overallSuccess": true
+=======
 <<<<<<< HEAD
     "successfulPhases": 4,
     "failedPhases": 2,
@@ -92,7 +123,11 @@
     "successfulPhases": 1,
     "failedPhases": 5,
     "overallSuccess": false
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   }
 }

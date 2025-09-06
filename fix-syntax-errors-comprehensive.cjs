@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+/**
+ * Comprehensive Syntax Error Fixer for Zion Tech Group
+ * Fixes all known syntax errors in the codebase
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Comprehensive Syntax Error Fixer');
+console.log('====================================');
+
+const fixes = [];
+
+function fixFile(filePath, description, fixFunction) {
+    console.log(`\n🔍 Checking: ${filePath}`);
+    
+    if (!fs.existsSync(filePath)) {
+        console.log(`⚠️  File not found: ${filePath}`);
+        return;
+    }
+    
+console.log('🔧 Starting comprehensive syntax error fixing...');
+
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -20,6 +47,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\)/g, ')');
 
 <<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
@@ -76,9 +104,15 @@ function fixSyntaxErrors(content, filePath) {
     );`;
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -90,6 +124,46 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
+<<<<<<< HEAD
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+
+    // Fix malformed object destructuring
+    content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
+        fixes++;
+        return `const { ${user} } = useAuth();
+    const [${savedTalents}] = useState([]);
+    const [${isLoading}] = useState(true);
+    const navigate = useNavigate();
+    
+    try {
+        const originalContent = fs.readFileSync(filePath, 'utf8');
+        const fixedContent = fixFunction(originalContent);
+        
+        if (originalContent !== fixedContent) {
+            fs.writeFileSync(filePath, fixedContent, 'utf8');
+            console.log(`✅ Fixed: ${description}`);
+            fixes.push({ file: filePath, description });
+        } else {
+            console.log(`✅ No issues found: ${description}`);
+        }
+    } catch (error) {
+        console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    }
+}
+
+// Fix _app.tsx button syntax
+fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
+    return content.replace(
+        /style=\{\{\s*background:\s*'none',\s*border:\s*'none',\s*color:\s*'white',\s*fontSize:\s*'1\.2rem',\s*cursor:\s*'pointer',\s*padding:\s*'6px',\s*borderRadius:\s*4\s*\}\s*onClick/g,
+        'style={{\n              background: \'none\', border: \'none\', color: \'white\', fontSize: \'1.2rem\',\n              cursor: \'pointer\', padding: \'6px\', borderRadius: 4\n            }}\n            onClick'
+    );
+});
+
+=======
 =======
     // Fix missing semicolons at end of statements
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
@@ -107,6 +181,7 @@ function fixSyntaxErrors(content, filePath) {
     const closeBraces = (content.match(/\}/g) || []).length;
 
 <<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 // Fix index.tsx JSON-LD syntax
 fixFile('pages/index.tsx', 'JSON-LD script syntax', (content) => {
     return content.replace(
@@ -211,7 +286,11 @@ async function main() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -219,6 +298,97 @@ async function main() {
     
     return fixed;
 });
+<<<<<<< HEAD
+
+// Fix PerformanceMonitor syntax
+fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
+    // Replace the entire file with correct syntax
+    return `import { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+      
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        // Fallback for browsers that don't support LCP
+      }
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        // Fallback for browsers that don't support FID
+      }
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // Fallback for browsers that don't support CLS
+      }
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+  }, []);
+
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;`;
+});
+
+console.log('\n📊 Fix Summary');
+console.log('===============');
+console.log(`Total fixes applied: ${fixes.length}`);
+
+if (fixes.length > 0) {
+    console.log('\nFixed files:');
+    fixes.forEach(fix => {
+        console.log(`  ✅ ${fix.file}: ${fix.description}`);
+    });
+} else {
+    console.log('\n✅ No syntax errors found - all files are clean!');
+}
+
+console.log('\n🎯 Syntax error fixing completed!');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
 =======
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
@@ -329,3 +499,4 @@ console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
