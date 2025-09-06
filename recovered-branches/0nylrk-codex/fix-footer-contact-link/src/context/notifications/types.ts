@@ -1,4 +1,3 @@
-
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -407,4 +406,3 @@ export function ApiReference() {;
   )
 }
 export default ApiReference;
-

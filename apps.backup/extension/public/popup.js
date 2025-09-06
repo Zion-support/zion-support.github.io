@@ -66,4 +66,3 @@ document.getElementById('signIn').addEventListener('click', async () => {
 
   document.getElementById('result').textContent = 'Signed in (local).';
 });
-

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",
@@ -17,7 +16,6 @@ const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-
 
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }

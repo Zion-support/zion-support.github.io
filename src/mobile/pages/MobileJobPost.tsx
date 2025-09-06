@@ -1,7 +1,5 @@
-
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
-
 
 import React, { useState } from "react"
 import {MobileHeader} from "@/mobile/components/common/MobileHeader"

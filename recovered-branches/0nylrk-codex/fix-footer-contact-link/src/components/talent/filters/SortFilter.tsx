@@ -1,4 +1,4 @@
-  Select;
+Select;
   SelectContent;
   SelectItem;
   SelectTrigger;

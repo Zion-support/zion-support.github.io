@@ -1,4 +1,3 @@
-
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';

@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -32,7 +30,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
-
 
   return (
     <div className={cn(

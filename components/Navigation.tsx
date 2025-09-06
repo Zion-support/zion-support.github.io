@@ -26,7 +26,6 @@ import {
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
-
   Menu
   X
   ChevronDown
@@ -473,7 +472,6 @@ export default function Navigation() {
                 Pricing
               </Link>
             </div>
-
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">

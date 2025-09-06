@@ -1,4 +1,3 @@
-
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer'

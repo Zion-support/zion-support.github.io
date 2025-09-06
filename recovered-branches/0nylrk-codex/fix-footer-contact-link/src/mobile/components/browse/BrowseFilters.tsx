@@ -23,7 +23,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
 
-  
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },

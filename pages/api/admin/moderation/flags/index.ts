@@ -1,4 +1,4 @@
-  }
+}
 
   if (req.method === 'GET') {
     const flags = await readAllFlags();

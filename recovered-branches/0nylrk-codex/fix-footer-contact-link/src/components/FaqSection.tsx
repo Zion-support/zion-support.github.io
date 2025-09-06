@@ -1,5 +1,3 @@
-
-
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";

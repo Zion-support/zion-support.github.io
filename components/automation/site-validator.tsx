@@ -3,7 +3,6 @@ import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = any;
 
-
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {

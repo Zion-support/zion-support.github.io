@@ -1,5 +1,3 @@
-
-
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
@@ -35,7 +33,6 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
-  
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }

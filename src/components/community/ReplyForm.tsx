@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button";
@@ -85,4 +84,3 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   )
 }
 export default ReplyForm
-

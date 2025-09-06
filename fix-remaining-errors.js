@@ -1,5 +1,4 @@
-
-        modified = true}
+modified = true}
     }
     if (modified) {fs.writeFileSync(filePath, content, "utf8");
       console.log("Fixed parsing errors "in":${filePath}");

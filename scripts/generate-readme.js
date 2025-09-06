@@ -1,4 +1,4 @@
-    }
+}
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),

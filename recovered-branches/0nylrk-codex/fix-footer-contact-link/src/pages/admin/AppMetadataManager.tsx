@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";

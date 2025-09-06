@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 export function useAuthStatus() {
   // Mock authenticated status;

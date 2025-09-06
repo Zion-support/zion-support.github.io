@@ -1,4 +1,3 @@
-
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {
   application: JobApplication;

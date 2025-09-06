@@ -54,9 +54,7 @@ export function formatDate(date: Date | string | number): string {
 
 },
 
-
 }
 }
 
 };
-

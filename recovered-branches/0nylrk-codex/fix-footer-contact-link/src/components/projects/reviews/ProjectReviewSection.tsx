@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,7 +39,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 
-  
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,

@@ -1,4 +1,3 @@
-
 // Signup checking functionality
 import { supabase  } from '@/integrations/supabase/client';
 import { analyzeEmail  } from './analyzeEmail';
@@ -38,4 +37,3 @@ export const checkSignupPatterns = async (
     reasons
   }
 }
-

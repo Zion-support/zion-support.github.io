@@ -10,4 +10,3 @@ export interface Application {
 }
 
 export type UserRole = 'admin' | 'user' | 'guest';
-

@@ -1,4 +1,3 @@
-
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';

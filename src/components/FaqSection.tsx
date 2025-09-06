@@ -1,4 +1,3 @@
-
 import { GradientHeading } from './GradientHeading'
   Accordion
   AccordionContent

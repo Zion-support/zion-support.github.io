@@ -1,4 +1,3 @@
-
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';

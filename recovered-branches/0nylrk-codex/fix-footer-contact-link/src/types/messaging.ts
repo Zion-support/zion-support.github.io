@@ -1,4 +1,3 @@
-
 // Define the shape of a message
 export interface Message {;
   id: string;

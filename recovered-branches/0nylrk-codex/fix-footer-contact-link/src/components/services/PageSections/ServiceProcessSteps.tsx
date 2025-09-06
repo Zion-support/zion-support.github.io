@@ -1,4 +1,3 @@
-
 export function ServiceProcessSteps() {
   return (
     <div className="my-20">

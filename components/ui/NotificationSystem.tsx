@@ -13,7 +13,6 @@ interface NotificationSystemProps {
 
           key;
 
-
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {

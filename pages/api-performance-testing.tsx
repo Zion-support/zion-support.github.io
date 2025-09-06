@@ -11,7 +11,6 @@ export default function ApiPerformanceTestingPage() {
 						))}
 					</div>
 
-
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'

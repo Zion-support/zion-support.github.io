@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",

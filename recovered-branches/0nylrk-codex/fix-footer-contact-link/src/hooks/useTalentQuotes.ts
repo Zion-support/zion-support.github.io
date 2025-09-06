@@ -102,4 +102,3 @@ export const useTalentQuotes = () => {
     toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
-

@@ -360,8 +360,6 @@ function EquipmentPageContent() {
     )
   }
 
-
-
 }
 // Main export with error boundary
 export default function EquipmentPage() {

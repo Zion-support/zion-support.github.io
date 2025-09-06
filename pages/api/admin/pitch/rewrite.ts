@@ -33,7 +33,6 @@ res.status(200).json({ title, content })
   } catch (e: any) {
     res.status(500).json({ error: e?.message |'Rewrite failed' })
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';

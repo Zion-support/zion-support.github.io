@@ -14,7 +14,6 @@ interface ModelVersionData extends ModelConfig {
 
 }
 
-
         .order('createdAt', { ascending: false })
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {

@@ -64,7 +64,6 @@ import {
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
 
-
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';

@@ -1,4 +1,3 @@
-
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';

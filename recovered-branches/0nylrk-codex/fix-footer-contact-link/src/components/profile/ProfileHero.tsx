@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",

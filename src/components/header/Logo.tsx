@@ -1,4 +1,3 @@
-
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
@@ -11,7 +10,6 @@ export function Logo({ customLogo }: LogoProps) {
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null)
   // Use the white-label color if available and no specific _customColor is provided
   // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
-
 
 import React from 'react',;
 import Link from 'next/link',;

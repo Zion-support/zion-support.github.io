@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 export default function CreateTalentProfile() {

@@ -74,7 +74,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       // Create automation instance
       const automation = new CursorInterfaceAutomation();
 
-
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n');

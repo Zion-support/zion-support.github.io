@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import {
   Dialog;
@@ -120,7 +119,6 @@ export function LeaveReviewModal({;
     }
   }
 
-  
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-md">

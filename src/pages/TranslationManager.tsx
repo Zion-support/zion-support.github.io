@@ -15,7 +15,6 @@ import { useTranslationService } from "@/hooks/useTranslationService";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function TranslationManager() {
 
-
     let sourceText = ''
     for (const lang of supportedLanguages.map(l => l.code)) {
 

@@ -1,4 +1,4 @@
-  date: Date;
+date: Date;
 }
 
 import React from 'react';

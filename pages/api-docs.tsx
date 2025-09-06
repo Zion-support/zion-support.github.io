@@ -41,7 +41,6 @@ const apiEndpoints = [
   }
 ];
 
-
 export default function APIDocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -50,7 +49,6 @@ export default function APIDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
-
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">

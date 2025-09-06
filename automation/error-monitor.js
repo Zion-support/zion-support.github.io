@@ -276,7 +276,6 @@ class ErrorMonitor {
       await automation.run();
       console.log('✅ Error fixer completed');
 
-
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);

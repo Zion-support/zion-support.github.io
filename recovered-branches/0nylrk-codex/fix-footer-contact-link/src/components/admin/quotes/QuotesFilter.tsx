@@ -142,4 +142,3 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
     </Card>
   )
 }
-

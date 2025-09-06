@@ -29,4 +29,3 @@ export const MyBadgesPreview: React.FC = () => {
     </div>
   );
 }
-

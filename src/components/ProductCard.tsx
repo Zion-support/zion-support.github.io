@@ -26,7 +26,6 @@ interface ProductCardProps {
   buyDisabled?: boolean
 }
 
-
   const stockStatus = null;
     product.stock === undefined
       : 'In stock'

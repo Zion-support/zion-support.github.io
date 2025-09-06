@@ -31,4 +31,3 @@ export default function handler(req, res) {
   if (!company) return res.status(404).json({ error: "company_not_found" });
   return res.status(200).json(company.activity);
 }
-

@@ -12,4 +12,3 @@ export interface Recipient {
 
   role?: string;
 }
-

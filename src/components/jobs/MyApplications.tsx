@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",

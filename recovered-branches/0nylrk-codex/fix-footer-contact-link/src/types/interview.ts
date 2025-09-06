@@ -1,5 +1,3 @@
-
-
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'

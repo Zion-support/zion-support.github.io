@@ -9,7 +9,6 @@ interface Report {
   stalePages: { file: string, lastCommitAt: string }[]
 }
 
-
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {

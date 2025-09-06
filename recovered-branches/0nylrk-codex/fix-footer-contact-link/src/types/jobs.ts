@@ -1,5 +1,3 @@
-
-
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 export type JobCategory =
   | 'development'

@@ -1,4 +1,3 @@
-
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 }

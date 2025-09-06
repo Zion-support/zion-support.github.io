@@ -6,33 +6,68 @@ export default function PerformanceMonitor() {
     </div>
   );
 }
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enabled = process.env.NODE_ENV === 'development',
+  logToConsole = true,
+  sendToAnalytics = false
+}) => {
+  const { measurePerformance, logPerformance } = usePerformance();
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        // Re-measure performance when page becomes visible
+        setTimeout(logPerformance, 1000);
+      }
+    };
+
+    const handleBeforeUnload = () => {
+      // Log final performance metrics before page unload
+      logPerformance();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [enabled, logPerformance]);
+
+  // Monitor Core Web Vitals
+  useEffect(() => {
+    if (!enabled || typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (logToConsole) {
+          console.log(`Performance Entry: ${entry.name}`, {
+            duration: entry.duration,
+            startTime: entry.startTime,
+            entryType: entry.entryType
+          });
+        }
+
+        if (sendToAnalytics) {
+          // Send to analytics service
+          // analytics.track('performance_entry', {
+          //   name: entry.name,
+          //   duration: entry.duration,
+          //   startTime: entry.startTime,
+          //   entryType: entry.entryType
+          // });
         }
       }
-;
-    },;
-,;
-    // Initial tracking,;
-    trackPageLoad(),;
-    trackMemory(),;
-    trackNetwork(),;
-,;
-    // Set up periodic tracking,;
-    const interval = setInterval(() => {,;
-      trackMemory(),;
-      trackNetwork();
-    }, 10000),;
-,;
-    // Track online/offline status,;
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnlin: e: true })),;
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnlin: e: false })),;
-,;
-    window.addEventListener('online', handleOnline),;
-    window.addEventListener('offline', handleOffline),;
-,;
-    return () => {,;
-      clearInterval(interval),;
-      window.removeEventListener('online', handleOnline),;
-      window.removeEventListener('offline', handleOffline);
+    });
+
+    try {
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint', 'largest-contentful-paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
   }, [location.pathname]),;
 ,;

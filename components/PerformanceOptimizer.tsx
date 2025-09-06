@@ -592,4 +592,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null;
 }
 export default PerformanceOptimizer;
-

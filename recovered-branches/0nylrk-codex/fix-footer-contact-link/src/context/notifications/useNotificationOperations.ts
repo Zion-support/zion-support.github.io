@@ -94,4 +94,3 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     setFilter;
     fetchNotifications}
 }
-

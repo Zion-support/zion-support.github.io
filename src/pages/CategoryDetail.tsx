@@ -314,7 +314,6 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   const seoDescription =
     category.description || 'Explore listings in this category.',
 
-
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'

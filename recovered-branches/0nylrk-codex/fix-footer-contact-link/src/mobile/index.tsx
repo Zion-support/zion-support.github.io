@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import {MobileApp} from './MobileApp';
@@ -24,4 +23,3 @@ export * from './pages/MobileProjects';
 export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
-

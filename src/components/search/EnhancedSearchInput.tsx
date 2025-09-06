@@ -13,7 +13,6 @@ interface EnhancedSearchInputProps {
   value: string;
   onChange: (value: string) => void;
 
-
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,

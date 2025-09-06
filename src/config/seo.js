@@ -48,4 +48,3 @@ export const defaultSEO = {
   ]
 }
 export default defaultSEO
-

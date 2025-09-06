@@ -1,5 +1,4 @@
-
- </div> </div> </div>) }
+</div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
@@ -45,4 +44,3 @@ export default ReviewSummary;      <div>
 export default ReviewSummary;  )
 }
 export default ReviewSummary;
-

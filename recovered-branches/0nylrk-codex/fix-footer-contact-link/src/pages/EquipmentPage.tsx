@@ -17,4 +17,3 @@ const EquipmentPage = () => {
   )
 }
 export default EquipmentPage;
-

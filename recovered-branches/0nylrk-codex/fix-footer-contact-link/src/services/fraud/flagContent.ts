@@ -1,4 +1,3 @@
-
 // Content flagging functionality
 import { supabase  } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag  } from '@/types/fraud';

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -204,7 +203,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     }
   }
 
-  
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

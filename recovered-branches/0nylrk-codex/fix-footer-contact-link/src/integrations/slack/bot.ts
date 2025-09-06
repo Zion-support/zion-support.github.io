@@ -1,4 +1,3 @@
-
 // Mock implementation of Slack bot that doesn't require external dependencies
 // This replaces the original implementation which had dependency issues
 interface SlackCommand {

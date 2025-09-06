@@ -1,4 +1,3 @@
-
 import { Resume } from "@/types/resume";
 export interface StepProps {
   id: string;

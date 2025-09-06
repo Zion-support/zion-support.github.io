@@ -1,4 +1,3 @@
-
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';

@@ -1,4 +1,3 @@
-
 ;
 export const validators = {
   email: (email: string): boolean => {

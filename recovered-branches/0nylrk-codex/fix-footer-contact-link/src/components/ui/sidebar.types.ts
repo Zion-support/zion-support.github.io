@@ -1,4 +1,3 @@
-
 import React from 'react';
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
@@ -34,7 +33,6 @@ export type SidebarContext = {
   isMobile: boolean;
   toggleSidebar: () => void;
 }
-
 
 // Safe ref casting helper type - this is the key to fixing our issues
 // We need to use a type that is compatible with both Slot's ref and React's ref handling

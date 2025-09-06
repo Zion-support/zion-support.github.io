@@ -13,4 +13,3 @@ export interface ApplyToJobModalProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-

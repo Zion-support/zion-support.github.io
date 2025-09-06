@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessagingContextType  } from '@/types/messaging';

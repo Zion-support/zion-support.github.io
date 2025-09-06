@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client";
 /**
  * Checks if the profiles table exists and creates it if it doesn't

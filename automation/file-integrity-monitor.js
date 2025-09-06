@@ -530,7 +530,6 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
-
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -678,7 +677,7 @@ switch (command) {}
     break;
 }
 module.exports = FileIntegrityMonitor;
-=======;
+;
 
 module.exports = FileIntegrityMonitor;
 ;
@@ -1108,9 +1107,7 @@ switch (command) {
     monitor.generateReport();
     break;
   "default": 
-    
-    
-    
+
     break;
 
 module.exports = FileIntegrityMonitor;

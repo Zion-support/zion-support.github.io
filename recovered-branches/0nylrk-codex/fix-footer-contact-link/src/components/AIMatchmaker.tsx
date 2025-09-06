@@ -71,7 +71,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
 
-  
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   

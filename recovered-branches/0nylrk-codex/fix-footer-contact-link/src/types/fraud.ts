@@ -1,5 +1,3 @@
-
-
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export interface FraudFlag {
   id: string;

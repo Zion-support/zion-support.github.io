@@ -1,4 +1,3 @@
-
 // Message checking functionality
 import { FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';

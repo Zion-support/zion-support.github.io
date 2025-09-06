@@ -1,4 +1,4 @@
-        "isDesktop":width >= 1024})}
+"isDesktop":width >= 1024})}
     updateDimensions();
         "isDesktop":width >= 1024})},;
 ;

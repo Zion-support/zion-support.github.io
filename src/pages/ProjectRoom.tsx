@@ -11,7 +11,6 @@ import { toast } from 'sonner';
 export default function ProjectRoom() {
   const router = null;
 
-
 }
 }
   return (

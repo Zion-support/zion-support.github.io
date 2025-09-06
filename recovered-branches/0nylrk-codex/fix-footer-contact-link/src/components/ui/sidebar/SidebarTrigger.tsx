@@ -1,5 +1,3 @@
-
-
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }

@@ -42,4 +42,3 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
-

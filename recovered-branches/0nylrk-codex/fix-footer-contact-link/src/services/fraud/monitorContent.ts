@@ -1,4 +1,3 @@
-
 // Content monitoring functionality
 import { FraudFlag, FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';

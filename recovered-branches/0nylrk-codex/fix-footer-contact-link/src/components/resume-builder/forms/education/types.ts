@@ -1,4 +1,3 @@
-
 import { Education } from '@/types/resume';
 export interface EducationFormProps {
   resumeId: string;
@@ -17,4 +16,3 @@ export interface EducationFormFieldsProps {
 
   onCancel: () => void;
 }
-

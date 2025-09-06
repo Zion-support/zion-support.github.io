@@ -73,7 +73,6 @@ const fetcher = null;
     </>
   )
 
-
       logErrorToProduction('Categories API error:', { data: response.statusText })
       return CATEGORIES as CategoryType[]
     fallbackData: initialCategories})

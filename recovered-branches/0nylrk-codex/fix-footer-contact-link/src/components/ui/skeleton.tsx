@@ -1,4 +1,3 @@
-
 import { cn } from &quot;@/lib/utils&quot;
 function Skeleton({
   className

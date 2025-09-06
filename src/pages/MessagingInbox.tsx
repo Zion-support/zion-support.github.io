@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -71,7 +69,6 @@ export default function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   }
 
-    
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."

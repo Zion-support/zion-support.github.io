@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",

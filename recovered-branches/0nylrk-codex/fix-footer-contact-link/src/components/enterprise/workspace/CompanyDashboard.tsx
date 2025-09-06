@@ -1,4 +1,3 @@
-
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",

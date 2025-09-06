@@ -104,4 +104,3 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
     </form>
   )
 }
-

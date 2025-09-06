@@ -1,5 +1,3 @@
-
-
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   className;
   appStoreUrl = "#";

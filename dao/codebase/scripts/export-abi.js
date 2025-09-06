@@ -18,7 +18,6 @@ function main() {
       const json = JSON.parse(fs.readFileSync(p, 'utf8')),
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
 
-
 }else {
   console.warn ('Missing artifact for', name)
 }main ();

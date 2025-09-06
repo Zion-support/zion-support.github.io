@@ -1,4 +1,3 @@
-
 import { supabase } from '@/integrations/supabase/client';
 export async function ensureAnalyticsTablesExist() {
   try {

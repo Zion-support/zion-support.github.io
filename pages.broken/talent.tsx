@@ -236,7 +236,6 @@ const values = [
 }
 
 export default function TalentPage() {
-  
 
 const benefits = [{
     "title": "Competitive Compensation"

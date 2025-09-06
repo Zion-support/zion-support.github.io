@@ -6,7 +6,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       return initialValue;
     }
 
-
 interface UseLocalStorageProps {
   // Add props here as needed
 }

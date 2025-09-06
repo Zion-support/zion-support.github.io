@@ -3,7 +3,6 @@ import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = any;
 
-
 }
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
 export const getStaticProps: GetStaticProps<Props> = async () => {

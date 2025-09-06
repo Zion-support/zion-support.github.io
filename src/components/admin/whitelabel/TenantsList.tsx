@@ -25,7 +25,6 @@ export function TenantsList() {
     loadTenants()
   }, []),
 
-
         .order('created_at', { ascending: false })
 
 }

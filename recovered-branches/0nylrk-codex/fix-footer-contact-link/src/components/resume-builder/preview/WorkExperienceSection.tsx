@@ -1,4 +1,3 @@
-
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 interface WorkExperienceSectionProps {

@@ -1,4 +1,3 @@
-
 import { format } from 'date-fns';
 /**
  * Formats a date for PDF display

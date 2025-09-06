@@ -1,4 +1,3 @@
-
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",

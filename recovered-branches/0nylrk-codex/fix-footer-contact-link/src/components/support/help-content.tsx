@@ -1,4 +1,3 @@
-
 import { HelpCategory } from "./types";
 import { 
   HelpCircle;

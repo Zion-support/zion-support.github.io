@@ -1,4 +1,3 @@
-
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {

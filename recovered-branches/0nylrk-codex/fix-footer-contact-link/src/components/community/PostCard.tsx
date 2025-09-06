@@ -1,4 +1,3 @@
-
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",

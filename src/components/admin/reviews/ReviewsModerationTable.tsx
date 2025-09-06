@@ -185,7 +185,6 @@ export function ReviewsModerationTable({
         variant: "destructive"})
     }}),
 
-
   const getInitials = (name: string) => {
     return name
       .split(" ")

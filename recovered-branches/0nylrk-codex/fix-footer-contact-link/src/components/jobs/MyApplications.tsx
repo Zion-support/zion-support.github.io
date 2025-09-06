@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -11,7 +10,6 @@ import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
 
-  
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,

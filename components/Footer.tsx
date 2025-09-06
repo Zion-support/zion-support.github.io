@@ -104,7 +104,6 @@ export default function Footer() {
             </ul>
           </div>
 
-
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -121,7 +120,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
 
           {/* Company & Resources */}
           <div>

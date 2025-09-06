@@ -6,7 +6,6 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-
 interface MainLayoutProps {
   children: ReactNode, title?: string,  description?: string;
   keywords?: string;
@@ -65,7 +64,6 @@ export default function MainLayout({ title, description, children, keywords, can
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
 
-        
         {/* Open Graph */}
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title} />
@@ -79,7 +77,6 @@ export default function MainLayout({ title, description, children, keywords, can
         <meta name="twitter:description" content={description} />
         {image && <meta name="twitter:image" content={image} />}
       </Head>
-      
 
       <div className="min-h-screen bg-gray-50">
         <Header />

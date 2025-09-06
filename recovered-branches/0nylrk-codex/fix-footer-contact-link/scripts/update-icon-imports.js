@@ -1,4 +1,3 @@
-
 /**
  * Helper script to update icon imports across the codebase
  *
@@ -66,4 +65,3 @@ files.forEach(file => {
 })
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
-

@@ -1,4 +1,3 @@
-
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
@@ -81,7 +80,6 @@ export const timeAgo = (date: Date | string | number): string => {
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
 }
 
-  
   const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
   
   let interval = Math.floor(seconds / 31536000),

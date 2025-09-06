@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",

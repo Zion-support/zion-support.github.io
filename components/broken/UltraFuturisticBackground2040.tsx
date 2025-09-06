@@ -532,4 +532,3 @@ const UltraFuturisticBackground2040: React.FC = () => {
 };  )
 }
 export default UltraFuturisticBackground2040;
-

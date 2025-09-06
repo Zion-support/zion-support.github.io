@@ -1,4 +1,3 @@
-
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';

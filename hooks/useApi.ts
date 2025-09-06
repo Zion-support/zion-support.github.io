@@ -1,4 +1,4 @@
-      setLoading(false)};
+setLoading(false)};
 ;
   return { data, loading, error, execute }};
 };
@@ -148,7 +148,6 @@ export function useApi<T>(
       fetchData();
     }
   }, [fetchData, options.immediate]);
-
 
     fetchData();
   }, [url, options]);

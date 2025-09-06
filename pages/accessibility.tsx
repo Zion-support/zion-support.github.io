@@ -161,7 +161,6 @@ const accessibilityGuidelines = [
   }
 ];
 
-
 export default function AccessibilityPage() {
   return (
     <MainLayout

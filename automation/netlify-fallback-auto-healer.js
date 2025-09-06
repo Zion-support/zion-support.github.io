@@ -21,7 +21,6 @@ message: error.message
 };exports.handler = async (_event, _context) => {
     console.log('auto-healer fallback executed locally')
 
-
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
 

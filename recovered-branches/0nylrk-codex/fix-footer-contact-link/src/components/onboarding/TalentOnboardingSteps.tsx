@@ -1,4 +1,3 @@
-
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
@@ -74,4 +73,3 @@ export function TalentOnboardingSteps() {;
       action: "View Matches"}];
   return <OnboardingTracker steps={steps} />;
 }
-

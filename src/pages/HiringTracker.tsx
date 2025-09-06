@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",

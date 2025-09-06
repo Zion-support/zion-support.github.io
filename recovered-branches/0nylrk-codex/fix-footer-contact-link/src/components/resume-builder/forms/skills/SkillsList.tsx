@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';

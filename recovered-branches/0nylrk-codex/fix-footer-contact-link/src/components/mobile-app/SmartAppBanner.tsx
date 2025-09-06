@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom";
@@ -84,4 +83,3 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   )
 }
-

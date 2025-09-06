@@ -26,12 +26,13 @@ export default defineConfig({
     exclude: []
   }
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
-
+      jsxRuntime: 'automatic',
     }),
     splitVendorChunkPlugin(),
   ],
@@ -40,9 +41,9 @@ export default defineConfig({
 
   },
   build: {
-    target: 'esnext'
-    minify: 'terser'
-    sourcemap: false
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -54,7 +55,6 @@ export default defineConfig({
           const name = assetInfo.name |'';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
         }
       }

@@ -1,5 +1,4 @@
-
-  const [user, setUser] = useState<UserProfile | null>(null);
+const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
 import React, { useState } from "react",

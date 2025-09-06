@@ -1,4 +1,3 @@
-
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';

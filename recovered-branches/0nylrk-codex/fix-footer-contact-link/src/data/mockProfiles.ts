@@ -1,4 +1,3 @@
-
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {

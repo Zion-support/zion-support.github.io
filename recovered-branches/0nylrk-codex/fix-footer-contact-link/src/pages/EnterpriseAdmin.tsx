@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -13,7 +12,6 @@ export default function EnterpriseAdmin() {
 
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 
-  
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin",
   

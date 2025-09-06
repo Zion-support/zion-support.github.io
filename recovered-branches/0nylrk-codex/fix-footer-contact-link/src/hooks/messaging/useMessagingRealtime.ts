@@ -1,4 +1,3 @@
-
 import { useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails  } from '@/types/auth';

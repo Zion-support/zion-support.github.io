@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -7,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { Mail } from 'lucide-react'
-
 
 export function ContactSection() {
   const [formData, setFormData] = useState({

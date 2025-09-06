@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -67,4 +66,3 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     </WhitelabelContext.Provider>
   )
 }
-

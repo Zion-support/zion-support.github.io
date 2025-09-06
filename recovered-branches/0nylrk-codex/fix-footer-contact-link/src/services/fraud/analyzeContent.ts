@@ -1,4 +1,3 @@
-
 // Content analysis functionality
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
@@ -40,4 +39,3 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons
   }
 }
-

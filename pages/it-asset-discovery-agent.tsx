@@ -38,7 +38,6 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
-
 export default function ITAssetDiscoveryAgentPage() {
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>

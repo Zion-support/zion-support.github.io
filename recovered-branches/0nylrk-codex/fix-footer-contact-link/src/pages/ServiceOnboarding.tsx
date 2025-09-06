@@ -1,4 +1,3 @@
-
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",

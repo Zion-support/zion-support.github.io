@@ -1,4 +1,3 @@
-
 import { Skill } from '@/types/resume';
 export interface SkillsFormProps {
   resumeId: string;
@@ -26,4 +25,3 @@ export interface BulkAddSkillsProps {
 
   onSuccess: () => Promise<void>;
 }
-

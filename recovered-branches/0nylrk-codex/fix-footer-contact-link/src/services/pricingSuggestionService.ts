@@ -1,4 +1,3 @@
-
 // Define types for the pricing recommendation
 export interface PricingSuggestion {
   minRate: number;

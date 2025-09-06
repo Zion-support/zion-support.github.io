@@ -54,8 +54,6 @@ exports.handler = async function () {
       });
     }
 
-
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }

@@ -9,7 +9,6 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } f
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }

@@ -1,6 +1,3 @@
-
-
-
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void

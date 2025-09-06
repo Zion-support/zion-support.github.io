@@ -90,7 +90,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     return null;
   }
 
-
 export default ActiveFiltersBar; import React from 'react'
 
 import { X } from 'lucide-react'

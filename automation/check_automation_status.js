@@ -78,7 +78,7 @@ if (require.main === module) {}
   checkAutomationStatus();
 }
 module.exports = { checkAutomationStatus };,
-=======;
+;
 
 // Run if called directly;
 if (require.main === module) {}

@@ -1,4 +1,3 @@
-
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'

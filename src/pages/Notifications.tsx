@@ -6,8 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
-
-
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -17,7 +15,6 @@ interface Notification {
   read: boolean;
   actionUrl?: string;
 }
-
 
           </div>
         </div>

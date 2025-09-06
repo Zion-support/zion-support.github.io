@@ -1,4 +1,4 @@
- export function FraudDetectionSettings () {;
+export function FraudDetectionSettings () {;
   const { ;
   user ;
  } = useAuth ();

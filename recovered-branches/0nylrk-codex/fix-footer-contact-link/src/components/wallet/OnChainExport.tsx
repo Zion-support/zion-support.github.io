@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,6 @@ export function OnChainExport() {
   const { toast } = useToast();
   const { user } = useAuth();
 
-  
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available

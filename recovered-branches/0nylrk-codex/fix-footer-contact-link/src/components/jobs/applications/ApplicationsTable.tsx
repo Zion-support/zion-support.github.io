@@ -1,4 +1,3 @@
-
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",

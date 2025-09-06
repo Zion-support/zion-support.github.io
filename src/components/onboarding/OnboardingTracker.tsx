@@ -1,5 +1,4 @@
-
-  title = "Complete Your Profile"
+title = "Complete Your Profile"
 import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"

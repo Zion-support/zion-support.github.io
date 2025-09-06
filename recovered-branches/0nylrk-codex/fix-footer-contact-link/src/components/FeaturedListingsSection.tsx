@@ -1,4 +1,3 @@
-
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";

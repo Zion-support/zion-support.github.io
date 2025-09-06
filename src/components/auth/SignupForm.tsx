@@ -55,7 +55,6 @@ const signupSchema = null;
         )}
       </div>
 
-
   path: ["confirmPassword"]})
 type SignupFormData = z.infer<typeof signupSchema>
         setFieldStates(prev => ({

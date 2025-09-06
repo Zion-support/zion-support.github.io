@@ -21,7 +21,6 @@ message: error.message
 };exports.handler = async (_event, _context) => {
     console.log('site-monitor fallback executed locally')
 
-
 // Netlify Function Fallback: site-monitor
 // This is a local fallback when the main function is unavailable
 

@@ -1,4 +1,3 @@
-
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;

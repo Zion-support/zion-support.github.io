@@ -7,7 +7,6 @@ async function fetchJson(url, token) {
   return resp.json()
 }
 
-
   const resp = await fetch(url, {
     headers: token
       ? {

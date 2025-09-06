@@ -142,4 +142,3 @@ export const useAdminQuotes = () => {
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
-

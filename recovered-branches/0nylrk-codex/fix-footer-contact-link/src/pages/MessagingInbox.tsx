@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';

@@ -23,7 +23,6 @@ class ComprehensiveAutomationRunner {constructor() {; this.logFile = path.join(_
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)}
 export default ComprehensiveAutomationRunner;
 
-
 #!/usr/bin/env node,
 import fs from "fs",
 import path from "path",

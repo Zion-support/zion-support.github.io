@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,7 +13,6 @@ export default function EnterpriseBilling() {
   const hasBillingAccess = user?.role === "enterprise_admin" |
                           (user?.permissions && user.permissions.includes('billing_access'));
 
-  
   // Check if user has billing permissions
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),

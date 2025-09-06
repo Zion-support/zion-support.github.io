@@ -230,7 +230,6 @@ export default function MicroSaaS() {
     return () => clearTimeout(timer);  }, []);
   }, []);
 
-
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MilestonesList  } from '../MilestonesList';
 import { PaymentSummary  } from '../PaymentSummary';

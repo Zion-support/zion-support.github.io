@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -81,4 +80,3 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-

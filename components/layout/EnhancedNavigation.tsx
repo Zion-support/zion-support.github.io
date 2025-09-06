@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -362,4 +361,3 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   );
 }
 export default EnhancedNavigation;
-

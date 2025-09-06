@@ -1,4 +1,3 @@
-
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -10,7 +9,6 @@ export function MobileHome() {
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
 
-  
   return (
     <div className="min-h-screen">
       <MobileHeader

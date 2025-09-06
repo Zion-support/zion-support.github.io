@@ -1,4 +1,3 @@
-
 import type { UserProfile } from "@/types/auth";
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define

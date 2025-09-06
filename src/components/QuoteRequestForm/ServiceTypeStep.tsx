@@ -43,7 +43,6 @@ interface ServiceTypeStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
-
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
@@ -190,7 +189,6 @@ const fetchServices = async () => {
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
-
 
 const listingSchema = z.object({
   id: z.string()

@@ -1,4 +1,3 @@
-
 import { MapPin } from "lucide-react",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -17,7 +16,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     });
   }
 
-  
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>

@@ -1,4 +1,3 @@
-
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';

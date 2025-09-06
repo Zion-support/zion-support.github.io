@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
 
@@ -82,7 +83,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Industry Solutions */}
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="text-center">

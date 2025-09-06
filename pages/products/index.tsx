@@ -95,7 +95,6 @@ const ProductsIndex: NextPage = () => {
     return matchesCategory && matchesSearch;
   });
 
-
   return (
     <Layout
       title="Products - Zion Tech Group"

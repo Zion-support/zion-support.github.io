@@ -139,4 +139,3 @@ import { defineConfig, devices } from '@playwright/test';
     ['list']
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
-

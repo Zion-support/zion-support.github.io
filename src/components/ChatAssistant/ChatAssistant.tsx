@@ -1,4 +1,4 @@
-  const isGuest = !auth?.isAuthenticated
+const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return
 import React, {

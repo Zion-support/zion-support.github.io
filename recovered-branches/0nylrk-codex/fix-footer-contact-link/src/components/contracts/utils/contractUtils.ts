@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";

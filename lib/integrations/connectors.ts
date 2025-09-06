@@ -58,7 +58,6 @@ export const ats = {
   }
 }
 
-
 // Email actions
 export const email = {
   async sendNotification(

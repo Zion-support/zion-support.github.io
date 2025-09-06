@@ -75,4 +75,3 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>
   )
 }
-

@@ -277,12 +277,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
-    
-    
-    
+
     return { "exists": false }}
 
-    
     return { exists: false ;}}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -299,13 +296,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack;
       projectRoot: this.projectRoot;
    };
-    
-    
-    
-    
-    
-    
-    
+
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (!fs.existsSync(configPath)) {
         return {
@@ -540,7 +531,7 @@ automation.start().catch(error => {}),
 ;
 ;
 ;
-=======;
+;
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {

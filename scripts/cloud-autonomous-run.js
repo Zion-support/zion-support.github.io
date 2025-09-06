@@ -1,4 +1,3 @@
-
 const fs = require('fs')
 const path = require('path')
 const { OpenAI } = require('openai')
@@ -85,7 +84,6 @@ async function main() {
 }
 
 main().catch((e) => { console.error(e), process.exit(1) });
-
 
   // // // console.log('Cloud autonomous run complete:', status.updatedAt)
 ;

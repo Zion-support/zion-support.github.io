@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
 import { JOB_POSTS } from "@/data/jobsData";

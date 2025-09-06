@@ -16,7 +16,6 @@ type Props = {
   value: number
   onChange: (val: number) => void
 
-
 type Props = {
   value: number,
   onChange: (val: number) => void,
@@ -78,4 +77,3 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
   )
 }
 export default StarRating;
-

@@ -1,4 +1,3 @@
-
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {

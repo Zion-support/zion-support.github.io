@@ -30,4 +30,3 @@ export default function handler(req, res) {
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
 }
-

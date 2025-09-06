@@ -1,4 +1,4 @@
- password.toLowerCase () .includes (pattern) );
+password.toLowerCase () .includes (pattern) );
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';

@@ -1,5 +1,3 @@
-
-
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";

@@ -137,4 +137,3 @@ app.log.error(err);
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
-

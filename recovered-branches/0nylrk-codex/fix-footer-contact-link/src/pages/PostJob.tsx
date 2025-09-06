@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -12,7 +11,6 @@ export default function PostJob() {
 
   const isMobile = useIsMobile();
 
-  
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">

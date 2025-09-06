@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react';

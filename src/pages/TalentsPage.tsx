@@ -381,7 +381,6 @@ export default function TalentsPage() {
     )
   }
 
-
     let filteredTalents = allTalents
     }
 }

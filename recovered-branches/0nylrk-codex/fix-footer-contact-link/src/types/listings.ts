@@ -1,4 +1,3 @@
-
 export interface ListingCategory {
   id: string;
   name: string;

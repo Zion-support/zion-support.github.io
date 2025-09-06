@@ -1,4 +1,3 @@
-
 import React from "react",
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
 import { Header } from "@/components/Header",

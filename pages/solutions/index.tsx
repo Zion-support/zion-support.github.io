@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-
 const solutions = [
   {
     title: "Enterprise Solutions"

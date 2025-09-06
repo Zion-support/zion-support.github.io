@@ -1,4 +1,3 @@
-
 async function ask() {
   const prompt = document.getElementById('prompt').value
   if (!prompt.trim()) {
@@ -26,4 +25,3 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 });
-

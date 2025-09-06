@@ -1,4 +1,3 @@
-
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -150,4 +149,3 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 }
-

@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Apple, GithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -92,4 +91,3 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 }
-

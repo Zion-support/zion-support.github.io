@@ -1,4 +1,3 @@
-
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
