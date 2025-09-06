@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 ;
@@ -99,26 +98,13 @@ export default function AdminTokens() {;
       </div>;
     </EnhancedLayout>;
   ),;
-=======
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]),
-  const [userId, setUserId] = useState(""),
-  const [amount, setAmount] = useState(100),
-  const [reason, setReason] = useState("adminaction"),
-  const [config, setConfig] = useState<any>(null),
-
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json()),
-      fetch("/api/admin/tokens/config").then((r) => r.json())]),
-    setTransactions(txRes.transactions || []),
-    setConfig(cfgRes)  }
-
   useEffect(() => {
-    load()
-  }, []),
+    // Simulate loading data
+    setTimeout(() => {
+      setTransactions(mockTransactions);
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   async function issue() {
     const res = await fetch("/api/admin/tokens/issue", {
@@ -129,16 +115,13 @@ export default function AdminTokens() {
     if (data.error) alert(data.error),
     await load()
   }
-
-  async function revoke() {
-    const res = await fetch("/api/admin/tokens/revoke", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount, reason })}),
-    const data = await res.json(),
-    if (data.error) alert(data.error),
-    await load()
-  }
+  const handleIssueTokens = async () => {
+    if (config.conversionRate <= 0) {
+      window.alert('Conversion rate must be greater than 0');
+      return;
+    }
+    await handleConfigUpdate(config);
+  };
 
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
@@ -189,10 +172,7 @@ export default function AdminTokens() {
                 <label className="w-40&quot;>USD per Token</label>
                 <input type=&quot;number&quot; step=&quot;0.01" className="border rounded px-2 py-1&quot; value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || &quot;0") })} />
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>              </div>
-              <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
-            </div>
-          )}
-        </div>
+              <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>            </div>
 
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
@@ -212,5 +192,4 @@ export default function AdminTokens() {
       </div>
     </EnhancedLayout>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

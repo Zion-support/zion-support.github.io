@@ -21,7 +21,6 @@ class DeploymentAndMerge {;
             :'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
-<<<<<<< HEAD
 ;
   async runCommand(command, description) {;
     this.log(`Runnin:g:${description}`);
@@ -38,76 +37,30 @@ class DeploymentAndMerge {;
       return {;
         succes:s:false,;
         erro:r:error.message,;
-        outpu:t:error.stdout || error.stderr,;
-=======
-
-  async runCommand(command, description) {
-    this.log(`Running: ${description}`);
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      };
+        outpu:t:error.stdout || error.stderr,;      };
     }
   }
 ;
   async checkCurrentBranch() {;
     this.log('\n🔍 CHECKING CURRENT BRANCH');
-<<<<<<< HEAD
     const result = await this.runCommand(;
       'git branch --show-current',;
-      'Get Current Branch';
-=======
-    const result = await this.runCommand(
-      'git branch --show-current',
-      'Get Current Branch'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
-<<<<<<< HEAD
+      'Get Current Branch';    );
     if (result.success) {;
-      this.log(`Current:branch:${result.output.trim()}`);
-=======
-    if (result.success) {
-      this.log(`Current branch: ${result.output.trim()}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return result.output.trim();
+      this.log(`Current:branch:${result.output.trim()}`);      return result.output.trim();
     }
     return null;
   }
 ;
   async checkGitStatus() {;
     this.log('\n📊 CHECKING GIT STATUS');
-<<<<<<< HEAD
     const statusResult = await this.runCommand(;
       'git status --porcelain',;
-      'Check Git Status';
-=======
-    const statusResult = await this.runCommand(
-      'git status --porcelain',
-      'Check Git Status'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'Check Git Status';    );
     if (statusResult.success) {;
       const changes = statusResult.output.trim();
-<<<<<<< HEAD
       if (changes) {;
-        this.log('Uncommitted changes:detected:');
-=======
-      if (changes) {
-        this.log('Uncommitted changes detected:');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        console.log(changes);
+        this.log('Uncommitted changes:detected:');        console.log(changes);
         return false;
       } else {;
         this.log('No uncommitted changes');
@@ -119,20 +72,11 @@ class DeploymentAndMerge {;
 ;
   async runFinalTests() {;
     this.log('\n🧪 RUNNING FINAL TESTS');
-<<<<<<< HEAD
 ;
     // Run smoke tests;
     const smokeTests = await this.runCommand(;
       'npm run:test:smoke',;
-      'Smoke Tests';
-=======
-
-    // Run smoke tests
-    const smokeTests = await this.runCommand(
-      'npm run test:smoke',
-      'Smoke Tests'
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    );
+      'Smoke Tests';    );
 ;
     // Run build test;
     const buildTest = await this.runCommand('npm run build', 'Build Test');
@@ -155,20 +99,11 @@ class DeploymentAndMerge {;
       if (currentBranch !== 'main') {;
         await this.runCommand('git checkout main', 'Ensure on Main Branch');
       }
-<<<<<<< HEAD
 ;
       // Merge the feature branch;
       const mergeResult = await this.runCommand(;
         'git merge cursor/automate-test-improve-and-merge-code-1436',;
-        'Merge Feature Branch';
-=======
-
-      // Merge the feature branch
-      const mergeResult = await this.runCommand(
-        'git merge cursor/automate-test-improve-and-merge-code-1436',
-        'Merge Feature Branch'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        'Merge Feature Branch';      );
 ;
       if (mergeResult.success) {;
         // Push merged changes;
@@ -177,20 +112,13 @@ class DeploymentAndMerge {;
       }
 ;
       return false;
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Merge:failed:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Merge failed: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return false;
+      this.log(`Merge:failed:${error.message}`, 'ERROR');      return false;
     }
   }
 ;
   async createDeploymentSummary() {;
     this.log('\n📄 CREATING DEPLOYMENT SUMMARY');
-<<<<<<< HEAD
 ;
     const summary = {;
       deploymentDat:e:new Date().toISOString(),;
@@ -218,56 +146,12 @@ class DeploymentAndMerge {;
         'Address remaining linting warnings',;
         'Implement continuous integration',;
         'Add more comprehensive testing',;
-      ],;
-=======
-
-    const summary = {
-      deploymentDate: new Date().toISOString(),
-      branch: await this.checkCurrentBranch(),
-      changes: {
-        buildFixed: true,
-        testsPassing: true,
-        syntaxErrorsFixed: true,
-        automationScriptsCreated: true,
-        codeQualityImproved: true,
-      },
-      filesModified: [
-        'pages/index.tsx',
-        'components/PerformanceMonitor.tsx',
-        'eslint.config.js',
-        'jest.config.smoke.cjs',
-        'jest.setup.js',
-        'comprehensive-automation-runner.cjs',
-        'enhanced-automation-suite.cjs',
-        'deployment-and-merge.cjs',
-      ],
-      status: 'Ready for Production',
-      nextSteps: [
-        'Monitor application performance',
-        'Address remaining linting warnings',
-        'Implement continuous integration',
-        'Add more comprehensive testing',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
-<<<<<<< HEAD
+      ],;    };
 ;
     fs.writeFileSync(;
       'deployment-summary.json',;
-      JSON.stringify(summary, null, 2);
-=======
-
-    fs.writeFileSync(
-      'deployment-summary.json',
-      JSON.stringify(summary, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
-<<<<<<< HEAD
-    this.log('Deployment summary:created:deployment-summary.json');
-=======
-    this.log('Deployment summary created: deployment-summary.json');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  }
+      JSON.stringify(summary, null, 2);    );
+    this.log('Deployment summary:created:deployment-summary.json');  }
 ;
   async run() {;
     this.log('🚀 STARTING DEPLOYMENT AND MERGE PROCESS');
@@ -308,14 +192,8 @@ class DeploymentAndMerge {;
 ;
       const totalDuration = Date.now() - this.startTime;
       this.log(`\n🎉 DEPLOYMENT PROCESS COMPLETED in ${totalDuration}ms`);
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Deployment process:failed:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Deployment process failed: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.log(`Deployment process:failed:${error.message}`, 'ERROR');    }
   }
 }
 ;

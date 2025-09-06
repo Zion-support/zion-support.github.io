@@ -16,22 +16,12 @@ function listWorkflows() {;
     console.log('❌ .github/workflows directory not found');
     return [];
   }
-<<<<<<< HEAD
 ;
   const workflows = fs.readdirSync(WORKFLOWS_DIR);
     .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'));
     .map(file => ({;
       name:file,;
-      path:path.join(WORKFLOWS_DIR, file);
-=======
-
-  const workflows = fs.readdirSync(WORKFLOWS_DIR)
-    .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'))
-    .map(file => ({
-      name: file;
-      path: path.join(WORKFLOWS_DIR, file)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }));
+      path:path.join(WORKFLOWS_DIR, file);    }));
 ;
   return workflows;
 }
@@ -100,7 +90,7 @@ function main() {;
       ;
     default:;
       console.log('GitHub Workflows Trigger Tool');
-      console.log('=============================');
+      console.log('=');
       console.log('');
       console.log('Usage:');
       console.log('  node trigger-workflows.cjs list                    - List available workflows');
@@ -118,17 +108,8 @@ function main() {;
 if (require.main === module) {;
   main();
 }
-<<<<<<< HEAD
 ;
 module.exports = {;
   listWorkflows,;
   triggerWorkflow,;
-  showWorkflowStatus;
-=======
-
-module.exports = {
-  listWorkflows;
-  triggerWorkflow;
-  showWorkflowStatus
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  showWorkflowStatus;};

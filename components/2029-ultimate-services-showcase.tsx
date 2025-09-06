@@ -409,5 +409,4 @@ href="/contact"
 
       <UltraFuturisticFooter2029 />
     </>
-  )
-}
+  )}

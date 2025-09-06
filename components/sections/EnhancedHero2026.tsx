@@ -206,5 +206,4 @@ variants={itemVariants}
         </motion.div>
       </div>
     </section>
-  )
-}
+  )}

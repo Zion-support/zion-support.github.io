@@ -195,5 +195,4 @@ onClick={() => onSend()}
         </div>;
       )}
     </div>
-  )
-}
+  )}

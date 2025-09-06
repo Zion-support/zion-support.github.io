@@ -335,5 +335,4 @@ type=&quot;email&quot;
         </div>
       </motion.div>
     </footer>
-  )
-}
+  )}

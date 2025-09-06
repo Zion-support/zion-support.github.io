@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import dynamic from 'next/dynamic',;
 ;
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr:false }),;
@@ -8,16 +7,15 @@ export default function TranslationsAdminPage() {;
     <div className="container mx-auto px-4 py-8">;
       <TranslationPreview />;
     </div>;
-  ),;
-=======
-import dynamic from 'next/dynamic',
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
-
-export default function TranslationsAdminPage() {
+  ),;}
+import React from 'react';
+export default function Page() {
   return (
-    <div className=&quot;container mx-auto px-4 py-8&quot;>
-      <TranslationPreview />
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+    <main className="min-h-screen bg-black text-zinc-100 p-8">
+      <section className="prose prose-invert max-w-3xl mx-auto">
+        <h1>admin translations</h1>
+        <p>Auto-healed placeholder. Replace with real content.</p>
+      </section>
+    </main>
+  );
 }

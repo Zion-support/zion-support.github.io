@@ -423,5 +423,4 @@ export default function BusinessToolsPage() {_const _businessTools = [
         </div>
       </section>
     </>
-  )
-}
+  )}

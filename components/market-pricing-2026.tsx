@@ -430,5 +430,4 @@ href=&quot;/2026-services-showcase&quot;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
-}
+  )}

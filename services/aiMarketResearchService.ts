@@ -81,7 +81,6 @@ export class AIMarketResearchService {;
     this.apiKey = apiKey,;
     this.baseUrl = baseUrl;
   }
-<<<<<<< HEAD
 ;
   async analyzeMarketTrends(request:MarketResearchRequest):Promise<MarketTrend[]> {;
     try {;
@@ -228,129 +227,79 @@ export class AIMarketResearchService {;
   }
 }
 ;
-export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),;
-=======
-  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/trends`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.trends || []
-    } catch (error) {
-      console.error('Error analyzing market trends:', error),
-      throw error
-    }  }
-
-  async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/competitors`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.competitors || []
-    } catch (error) {
-      console.error('Error analyzing competitors:', error),
-      throw error
-    }  }
-
-  async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/segments`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.segments || []
-    } catch (error) {
-      console.error('Error segmenting market:', error),
-      throw error
-    }  }
-
-  async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/comprehensive`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.report
-    } catch (error) {
-      console.error('Error generating comprehensive report:', error),
-      throw error
-    }
-  }
-
-  async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
-    try {
-      const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.trends || []
-    } catch (error) {
-      console.error('Error getting real-time insights:', error),
-      throw error
-    }  }
-
-  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/export/${_reportId}`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ format })}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.downloadUrl
-    } catch (error) {
-      console.error('Error exporting report:', error),
-      throw error
-    }  }
-
-  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {_try {
-      const _response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {_method: 'POST', _headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ ...request, schedule })}),
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json(),
-      return data.scheduleId
-    } catch (error) {
-      console.error('Error scheduling report:', error),
-      throw error
-    }
-  }
-}
-
-export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),; async analyzeMarketTrends (request: MarketResearchRequest) : Promise<MarketTrend[]> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/trends`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (request) 
+});
+}async analyzeCompetitors (request: MarketResearchRequest) : Promise<CompetitorAnalysis[]> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/competitors`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (request) 
+});
+}async segmentMarket (request: MarketResearchRequest) : Promise<MarketSegment[]> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/segments`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (request) 
+});
+}async generateComprehensiveReport (request: MarketResearchRequest) : Promise<MarketReport> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/comprehensive`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+body: JSON.stringify (request) 
+});
+}async exportReport (reportId: string, format: 'pdf' | 'csv' | 'excel') : Promise<string> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/export/$ {
+  reportId 
+}`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+}async scheduleReport (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly') : Promise<string> {
+  try {
+  const response = await fetch (`$ {
+  this.baseUrl 
+}/api/market-research/schedule`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  this.apiKey 
+}`;
+'Content-Type': 'application/json' 
+};

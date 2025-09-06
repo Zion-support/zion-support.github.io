@@ -27,5 +27,4 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
-  )
-}
+  )}

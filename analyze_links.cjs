@@ -3,24 +3,13 @@ const path = require('path');
 ;
 // Read the header navigation;
 const headerContent = fs.readFileSync('pages/components/Header.tsx', 'utf8');
-<<<<<<< HEAD
 ;
 // Extract all href values from the navigation;
 const hrefMatches = headerContent.match(/href:\s*['"]([^'"]+)['"]/g);
 const navigationLinks = hrefMatches;
   ? hrefMatches.map(match => match.match(/href:\s*['"]([^'"]+)['"]/)[1]);
   :[];
-;
-=======
-
-// Extract all href values from the navigation
-const hrefMatches = headerContent.match(/href:\s*['"]([^'"]+)['"]/g);
-const navigationLinks = hrefMatches
-  ? hrefMatches.map(match => match.match(/href:\s*['"]([^'"]+)['"]/)[1])
-  : [];
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-console.log('=== NAVIGATION LINKS ANALYSIS ===');
+;console.log('=== NAVIGATION LINKS ANALYSIS ===');
 console.log('Navigation links found:');
 navigationLinks.forEach(link => console.log('  -', link));
 ;
@@ -56,18 +45,12 @@ function scanDirectory(dir, prefix = '') {;
 }
 ;
 scanDirectory(pagesDir);
-<<<<<<< HEAD
-;
-=======
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-console.log('\nExisting pages:');
+;console.log('\nExisting pages:');
 existingPages.forEach(page => console.log('  -', page));
 ;
 console.log('\n=== BROKEN LINKS ANALYSIS ===');
 const brokenLinks = [];
 const workingLinks = [];
-<<<<<<< HEAD
 ;
 navigationLinks.forEach(link => {;
   if (;
@@ -98,41 +81,7 @@ workingLinks.forEach(({ link, reason }) =>;
 ;
 console.log('\nBroken links:');
 brokenLinks.forEach(({ link, reason }) =>;
-  console.log(`  ✗ ${link} (${reason})`);
-=======
-
-navigationLinks.forEach(link => {
-  if (
-    link.startsWith('http') ||
-    link.startsWith('mailto:') ||
-    link.startsWith('tel:')
-  ) {
-    workingLinks.push({ link, reason: 'External link' });
-    return;
-  }
-
-  if (link === '/') {
-    workingLinks.push({ link, reason: 'Home page' });
-    return;
-  }
-
-  if (existingPages.includes(link)) {
-    workingLinks.push({ link, reason: 'Page exists' });
-  } else {
-    brokenLinks.push({ link, reason: 'Page missing' });
-  }
-});
-
-console.log('\nWorking links:');
-workingLinks.forEach(({ link, reason }) =>
-  console.log(`  ✓ ${link} (${reason})`)
-);
-
-console.log('\nBroken links:');
-brokenLinks.forEach(({ link, reason }) =>
-  console.log(`  ✗ ${link} (${reason})`)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-);
+  console.log(`  ✗ ${link} (${reason})`););
 ;
 // Check for missing pages that should exist based on navigation;
 console.log('\n=== MISSING PAGES TO CREATE ===');

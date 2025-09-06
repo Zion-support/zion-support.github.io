@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useMemo } from 'react';
 import { TalentProfile } from '@/types/talent';
@@ -140,10 +139,3 @@ export function useFilterTalents(talents: TalentProfile[] = []) {
     clearFilters,
   };
 }
-=======
-// Hook for useFilterTalents;
-export const useUseFilterTalents: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
->>>>>>> origin/automation-error-fixes

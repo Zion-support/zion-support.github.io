@@ -8,11 +8,13 @@ interface PerformanceMetrics {;
   largestContentfulPaint:number,;
   cumulativeLayoutShift:number,;
   firstInputDelay:number,;
-  timeToInteractive:number;
-}
-
-interface PerformanceOptimizerProps {
-  className?: string
+  timeToInteractive:number;}
+}, []);
+//Optimize images for (const img of Array.from (images) ) {
+  if (img.complete && img.naturalWidth > 0) {
+  //Add lazy loading img.loading = 'lazy';
+//Add responsive sizes if not present if (!img.sizes) {
+  optimizedCount++ 
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {

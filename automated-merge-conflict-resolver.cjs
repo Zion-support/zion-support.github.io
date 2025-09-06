@@ -3,10 +3,7 @@
 const { execSync } = require('child_process');
 ;
 console.log('🔧 Automated Merge Conflict Resolver');
-<<<<<<< HEAD
-=======
 console.log('==');
-<<<<<<< HEAD
 ;
 // Strategy for resolving conflicts;
 const conflictResolutionStrategy = {;
@@ -52,57 +49,7 @@ const conflictResolutionStrategy = {;
   '.json':'HEAD',;
   '.txt':'HEAD',;
   '.log':'HEAD',;
-  // Default to HEAD for everything else:default:'HEAD',;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
-// Strategy for resolving conflicts
-const conflictResolutionStrategy = {
-  // For pages, prefer the newer version (HEAD)
-  'pages/': 'HEAD';
-  // For components, prefer the newer version (HEAD)
-  'components/': 'HEAD';
-  'src/components/': 'HEAD';
-  // For automation scripts, prefer the newer version (HEAD)
-  'automation/': 'HEAD';
-  'scripts/': 'HEAD';
-  // For configuration files, prefer the newer version (HEAD)
-  'package.json': 'HEAD';
-  'tsconfig.json': 'HEAD';
-  'tailwind.config.js': 'HEAD';
-  'vite.config.js': 'HEAD';
-  // For data files, prefer the newer version (HEAD)
-  'src/data/': 'HEAD';
-  // For utility files, prefer the newer version (HEAD)
-  'src/utils/': 'HEAD';
-  'src/lib/': 'HEAD';
-  // For hooks, prefer the newer version (HEAD)
-  'src/hooks/': 'HEAD';
-  // For store files, prefer the newer version (HEAD)
-  'src/store/': 'HEAD';
-  // For UI components, prefer the newer version (HEAD)
-  'src/components/ui/': 'HEAD';
-  // For main files, prefer the newer version (HEAD)
-  'src/main.jsx': 'HEAD';
-  'src/App.jsx': 'HEAD';
-  'src/App.tsx': 'HEAD';
-  // For test files, prefer the newer version (HEAD)
-  '__tests__/': 'HEAD';
-  'tests/': 'HEAD';
-  // For disabled files, prefer the newer version (HEAD)
-  '.disabled': 'HEAD';
-  '.quarantine': 'HEAD';
-  // For backup files, prefer the newer version (HEAD)
-  'temp-backup/': 'HEAD';
-  'temp_backup/': 'HEAD';
-  'backup/': 'HEAD';
-  // For reports and logs, prefer the newer version (HEAD)
-  '.json': 'HEAD',
-  '.txt': 'HEAD',
-  '.log': 'HEAD',
-  // Default to HEAD for everything else: default: 'HEAD',
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  // Default to HEAD for everything else:default:'HEAD',;};
 ;
 function getResolutionStrategy(filePath) {;
   for (const [pattern, strategy] of Object.entries(;

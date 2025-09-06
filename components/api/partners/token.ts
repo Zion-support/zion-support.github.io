@@ -36,5 +36,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
     {_sub: partner.id, _apiKeyId: key.id, _name: partner.name, _entityType: partner.entityType, _useCaseType: partner.useCaseType} as any,
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   ),
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })  return res.status(200).json({_token, _partner: { id: partner.id, _name: partner.name} });
-}
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })  return res.status(200).json({_token, _partner: { id: partner.id, _name: partner.name} });}

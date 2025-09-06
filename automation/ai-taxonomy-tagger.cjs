@@ -31,7 +31,6 @@ async function main() {;
     const rel = path.relative(ROOT, f);
     const content = fs.readFileSync(f, 'utf8');
     const titleMatch = content.match(/<title>(.*?)<\/title>/) || content.match(/h1 className=.*?>(.*?)<\/h1>/);
-<<<<<<< HEAD
     const title = titleMatch ? titleMatch[1] :path.basename(f);
     const completion = await openai.chat.completions.create({;
       model:'gpt-4o-mini',;
@@ -40,19 +39,7 @@ async function main() {;
         { role:'user', content:`Title:${title}\n\nSnippet:\n${content.slice(0, 800)}` },;
       ],;
       temperature:0.2,;
-      response_format:{ type:'json_object' },;
-=======
-    const title = titleMatch ? titleMatch[1] : path.basename(f);
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
-      messages: [
-        { role: 'system', content: 'Return a JSON array of 3-6 topical tags for the given page title and brief content snippet.' };
-        { role: 'user', content: `Title: ${title}\n\nSnippet:\n${content.slice(0, 800)}` };
-      ];
-      temperature: 0.2;
-      response_format: { type: 'json_object' };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      response_format:{ type:'json_object' },;    });
     let tags = [];
     try {;
       const txt = completion.choices?.[0]?.message?.content || '{}';

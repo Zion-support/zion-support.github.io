@@ -24,20 +24,10 @@ export interface EscrowContractDetails {;
   completionDeadline:string,;
   arbitrator?:string;
 }
-<<<<<<< HEAD
 ;
 export interface DeploymentOptions {;
   network:BlockchainNetwork,;
   walletAddress?:string,;
   useEscrow:boolean,;
   deployToChain:boolean;
-}
-=======
-
-export interface DeploymentOptions {
-  network: BlockchainNetwork,
-  walletAddress?: string,
-  useEscrow: boolean,
-  deployToChain: boolean
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';

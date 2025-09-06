@@ -16,20 +16,11 @@ function listFiles(dir) {;
   }
   return out;
 }
-<<<<<<< HEAD
 ;
 function main() {;
   const targets = [;
     path.join(NEXT_DIR, 'static'),;
-    path.join(NEXT_DIR, 'server'),;
-=======
-
-function main() {
-  const targets = [
-    path.join(NEXT_DIR, 'static');
-    path.join(NEXT_DIR, 'server');
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  ];
+    path.join(NEXT_DIR, 'server'),;  ];
   const files = targets.flatMap(listFiles);
   const entries = files.map((f) => ({ file:f.replace(ROOT + path.sep, ''), size:fs.statSync(f).size }));
     .filter((e) => /\.(js|css|json|html)$/.test(e.file));

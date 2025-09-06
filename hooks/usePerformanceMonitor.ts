@@ -1,59 +1,7 @@
 import { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 },;
-export default usePerformanceMonitor,;
-=======
-// Type definitions for performance APIs,
-declare global {interface PerformanceEntry {
-    name: string,
-    entryType: string,
-    startTime: number,
-    duration: number}
-
-  interface PerformanceNavigationTiming extends PerformanceEntry {loadEventEnd: number,
-    loadEventStart: number}
-
-  interface PerformancePaintTiming extends PerformanceEntry {name: string}
-
-  interface PerformanceEventTiming extends PerformanceEntry {processingStart: number}
-}
-
-interface PerformanceMetrics {loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-  fps: number}
-
-export function usePerformanceMonitor(): PerformanceMetrics | null {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect_(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return}
-
-    const updateMetrics = () => {const navigation = window.performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const memory = (window.performance as any).memory;
-
-      if (navigation) {
-        setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart, renderTime:
-            navigation.domContentLoadedEventEnd -
-            navigation.domContentLoadedEventStart, memoryUsage: memory?.usedJSHeapSize || 0, fps: 60 })
-      }
-    };
-
-    if (document.readyState === 'complete') {updateMetrics()} else {window.addEventListener('load', updateMetrics)}
-
-    return () => {window.removeEventListener('load', updateMetrics)}
-  }, []);
-
-  return metrics
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-interface PerformanceMetrics {
+export default usePerformanceMonitor,;interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -138,4 +86,32 @@ export function usePerformanceMonitor() {
 
   return { metrics, isSupported };
 }
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+import { useEffect } from 'react;
+;
+export const usePerformanceMonitor = () => {,
+  useEffect(() => {;
+    // Monitor Core Web Vitals,
+    if (typeof window !== 'undefined' && web-vitals' in window) {,
+      import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
+        getCLS(console.log),
+        getFID(console.log),
+        getFCP(console.log),
+        getLCP(console.log),
+        getTTFB(console.log)
+      })
+    };
+    // Monitor bundle size,
+    const observer = new PerformanceObserver((list) => {,
+      for (const entry of list.getEntries()) {,
+        if (entry.entryType === 'navigation') {
+        };
+      };
+    }),
+,
+    observer.observe({ entryTypes: [navigation'] }),
+,
+    return () => observer.disconnect()
+  }, [])
+};
+,
+export default usePerformanceMonitor,

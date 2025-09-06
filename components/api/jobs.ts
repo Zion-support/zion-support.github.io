@@ -24,5 +24,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   try {_const _jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : [];
     return res.status(200).json({ jobs});
   } catch (e) {_return res.status(500).json({ error: "Failed to load jobs"});
-  }
-}
+  }}

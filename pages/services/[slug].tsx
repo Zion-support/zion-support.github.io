@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',;
@@ -152,38 +151,9 @@ export default function ServiceDetailPage({ service } { service:Service }) {;
 				</div>;
 			</div>;
 		</UltraFuturisticBackground>;
-	),;
-=======
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Button from '../../components/ui/Button',
-import Card from '../../components/ui/Card',
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
-import { extraServices } from '../../data/extra-services',
-import { additionalEnhancedServices } from '../../data/additional-real-services',
-import { newRealServices } from '../../data/new-real-services',
-import { marketReadyServices } from '../../data/market-ready-services',
-type Service = typeof enhancedRealMicroSaasServices[number],
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
-},
-function getAllServices(): Service[] {return enhancedRealMicroSaasServices
-		.concat(
-			extraServices as Service[],
-			additionalEnhancedServices as Service[],
-			newRealServices as Service[],
-			marketReadyServices as Service[]
-		)
-}
-
-function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+	),;}
+}) );
+fallback: false 
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
@@ -301,5 +271,3 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}

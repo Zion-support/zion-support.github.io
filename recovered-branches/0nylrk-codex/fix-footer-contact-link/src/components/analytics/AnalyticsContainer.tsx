@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -55,22 +54,8 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
       </main>;
       <Footer />;
     </div>;
-  ),;
-=======
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",interface AnalyticsContainerProps {
-  children: React.ReactNode
-}
-
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-  const { isAuthenticated, isLoading, user } = useAuth(),
-  
-  // Check if user is admin (using either role or userType)
-  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
+  ),;  
+}//If not admin, redirect if (!isAdmin) {
   
   // If still loading auth status, show loading
   if (isLoading) {
@@ -131,5 +116,4 @@ export function AnalyticsContainer(_{_children}: AnalyticsContainerProps) {_cons
       <Footer />
     </div>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

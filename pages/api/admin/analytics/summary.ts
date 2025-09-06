@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -83,20 +82,15 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 ;
   res.status(200).json({ pagesMostUsed, events, line, funnel }),;
 }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { ensureAdminFromApi } from '../../../../utils/auth',
-type EventRow = {
-  name: string,
-  page?: string,
-  userType?: string,
-  properties?: Record<string any>,
-  at: string
-},
-
-const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
+const byFeature: Record<string, number> = {
+  
+};
+const byEvent: Record<string, number> = {
+  
+};
+const byDay: Record<string, number> = {
+  
+};
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
@@ -165,4 +159,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 
   res.status(200).json({ pagesMostUsed, events, line, funnel })}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

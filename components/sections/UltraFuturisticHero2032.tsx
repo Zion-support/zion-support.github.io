@@ -21,15 +21,10 @@ const heroStats = [
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 ],
 
-const featuredServices = [
-  {
-    name: 'AI Consciousness Evolution',
-    description: 'Develop genuine AI consciousness',
-    price: '$19,999/month',
-    icon: Brain,
-    color: 'from-violet-600 to-purple-600',
-    href: '/ai-consciousness-evolution-platform'
-  },
+const featuredServices = [  {
+  y: [0, -20, 0], opacity: [0.3, 0.8, 0.3] 
+}
+}transition= {
   {
     name: 'Space Mining Automation',
     description: 'Automated asteroid mining',
@@ -267,5 +262,4 @@ href={_`tel:${contactInfo.mobile}`}
         </a>
       </motion.div>
     </section>
-  )
-}
+  )}

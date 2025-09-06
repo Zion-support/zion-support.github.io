@@ -14,16 +14,8 @@ export interface TenantInfo {;
   },;
   is_active:boolean;
 }
-<<<<<<< HEAD
 ;
 export interface TenantResponse {;
   tenant:TenantInfo | null,;
   error?:string;
-}
-=======
-
-export interface TenantResponse {
-  tenant: TenantInfo | null,
-  error?: string
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} 

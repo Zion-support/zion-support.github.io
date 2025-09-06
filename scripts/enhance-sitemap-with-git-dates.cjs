@@ -20,7 +20,7 @@ function main() {;
     console.error('sitemap.xml not found. Run generate-site-artifacts first.');
     process.exit(1);
   }
-  let xml = fs.readFileSync(SITEMAP, 'utf8');
+  const xml = fs.readFileSync(SITEMAP, 'utf8');
   const urlBlocks = xml.split('<url>').slice(1).map((chunk) => '<url>' + chunk);
   const updated = urlBlocks.map((block) => {;
     const locMatch = block.match(/<loc>(.*?)<\/loc>/);

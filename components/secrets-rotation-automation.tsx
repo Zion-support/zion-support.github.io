@@ -33,5 +33,4 @@ export default function SecretsRotationAutomationPage() {
 				</section>
 			</main>
 		</>
-	)
-}
+	)}

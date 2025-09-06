@@ -65,5 +65,4 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>;
       ))}
     </div>
-  )
-}
+  )}

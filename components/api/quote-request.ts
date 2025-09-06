@@ -50,5 +50,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
   } catch (e: any) {
     console.error('quote-request error', e),
-    return res.status(500).json({ message: 'Server error' })  }
-}
+    return res.status(500).json({ message: 'Server error' })  }}

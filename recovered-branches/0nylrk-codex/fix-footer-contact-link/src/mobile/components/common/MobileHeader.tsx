@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -72,99 +71,37 @@ export function MobileHeader({;
         </div>;
       </div>;
     </header>;
-  ),;
-=======
-import React from "react",
-import { useNavigate } from "react-router-dom",
-import { ChevronLeft, Bell, Settings } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",interface MobileHeaderProps {
-  title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,
-  onSettingsClick?: () => void
-}
-
-export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate(),
-
-  return (
-    <header className={cn(
-      &quot;sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border&quot;,
-      className
-    )}>
-      <div className=&quot;flex items-center justify-between h-14 px-4&quot;>
-        <div className=&quot;flex items-center&quot;>
-          {showBack && (
-            <Button 
-              variant=&quot;ghost&quot; 
-              size=&quot;icon&quot; 
-              className=&quot;mr-2&quot; 
-import React from "react";
-
-interface MobileHeaderProps {_title: string;
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;}
-
-export function MobileHeader(_{_title, _showBack = false, _showNotifications = false, _showSettings = false, _className, _onNotificationsClick, _onSettingsClick}: MobileHeaderProps) {_const _navigate = useNavigate();
-
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border", _className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {_showBack && (_<Button 
-              variant="ghost" 
-              size="icon" 
-              className="mr-2" 
-              onClick={() => navigate(-1)}
-            >
-              <ChevronLeft className=&quot;h-5 w-5&quot; />
-              <span className=&quot;sr-only&quot;>Back</span>
-            </Button>
-          )}
-          <h1 className=&quot;text-lg font-medium leading-none truncate&quot;>
-            {title}
-          </h1>
-        </div>
-        <div className=&quot;flex items-center space-x-2&quot;>
-          {showNotifications && (            <Button 
-              variant=&quot;ghost&quot; 
-              size=&quot;icon&quot;
-              onClick={onNotificationsClick}
-            >
-              <Bell className=&quot;h-5 w-5&quot; />
-              <span className=&quot;sr-only&quot;>Notifications</span>
-            </Button>
-          )}
-          {_showSettings && (
-            <Button 
-              variant=&quot;ghost&quot; 
-              size=&quot;icon&quot;
-              onClick={onSettingsClick}
-            >
-              <Settings className=&quot;h-5 w-5&quot; />
-              <span className=&quot;sr-only&quot;>Settings</span>
-            </Button>
-          )}
-        </div>
-      </div>
-    </header>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ interface MobileHeaderProps {
+  title: string;
+showBack?: boolean;
+showNotifications?: boolean;
+showSettings?: boolean;
+className?: string;
+onNotificationsClick?: () => void;
+onSettingsClick?: () => void 
+}export function MobileHeader ({
+  title;
+showBack = false;
+showNotifications = false;
+showSettings = false;
+className;
+onNotificationsClick;
+onSettingsClick 
+}: MobileHeaderProps) {
+  const navigate = useNavigate ();
+return (<header className= {
+  cn ("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
+className) 
+}> <div className="flex items-center justify-between h-14 px-4" > <div className="flex items-center" > {
+  showBack && (<Button variant="ghost" size="icon" className="mr-2" () => navigate (-1) 
+}> <ChevronLeft className="h-5 w-5" /> <span className="sr-only" >Back</span> </Button>) 
+}<Button variant="ghost" size="icon" onClick= {
+  onNotificationsClick 
+}> <Bell className="h-5 w-5" /> <span className="sr-only" >Notifications</span> </Button>) 
+}{
+  showSettings && (<Button variant="ghost" size="icon" onClick= {
+  onSettingsClick 
+}> <Settings className="h-5 w-5" /> <span className="sr-only" >Settings</span> </Button>) 
+}</div> </div> </header>) 
 }

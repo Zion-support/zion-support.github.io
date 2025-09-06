@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import { ;
@@ -155,172 +154,32 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
       />;
     </div>;
   ),;
-},;
-=======
-import React, { useState } from "react",
-import { Control } from "react-hook-form",import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-interface BasicInfoFieldsProps {
-  control: Control<any>
-}
-
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>(""),
-  const [maxBudget, setMaxBudget] = useState<string>(""),
+},; import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormMessage interface BasicInfoFieldsProps {
+  control: Control<any> 
+}export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
+  control 
+}) => {
   const handleSuggestionApplied = (min: number, max: number) => {
-    setMinBudget(min.toString()),
-    setMaxBudget(max.toString())
-  },
-
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <FormField,
-control={control}
-        name=&quot;title&quot;
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Title</FormLabel>
-            <FormControl>
-              <Input placeholder=&quot;e.g. Senior React Developer&quot; {...field} />
-import React, {useState} from "react";
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-
-interface BasicInfoFieldsProps {control: Control<any>}
-
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = (_{control}) => {const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-
-  const handleSuggestionApplied = (min: number, max: number) => {
-    setMinBudget(min.toString());
-    setMaxBudget(max.toString())};
-
-  return (_<div className="space-y-4">
-      <FormField,
-control={control}
-        name="title"
-        render={_({ field}) => (
-          <FormItem>
-            <FormLabel>Job Title</FormLabel>
-            <FormControl>
-              <Input placeholder="e.g. Senior React Developer" {_...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField,
-control={control}
-        name=&quot;company&quot;
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Company</FormLabel>
-            <FormControl>
-              <Input placeholder=&quot;e.g. Acme Corporation&quot; {...field} />            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      
-      <FormField,
-control={control}
-        name=&quot;category&quot;
-        render={({ field }) => (          <FormItem>
-            <FormLabel>Job Category</FormLabel>
-            <FormControl>
-              <select,
-className=&quot;flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm&quot;
-                {...field}              >
-                <option value="&quot;>Select a category</option>
-                <option value=&quot;development&quot;>Development</option>
-                <option value=&quot;design&quot;>Design</option>
-                <option value=&quot;marketing&quot;>Marketing</option>
-                <option value=&quot;content&quot;>Content</option>
-                <option value=&quot;data&quot;>Data</option>
-                <option value=&quot;business&quot;>Business</option>
-                <option value=&quot;other">Other</option>
-              </select>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-        <FormField,
-control={control}
-          name=&quot;budgetMin&quot;
-          render={({ field: { onChange, ...rest } }) => (            <FormItem>
-              <FormLabel>Budget (Min)</FormLabel>
-              <FormControl>
-                <Input,
-type=&quot;number&quot;
-                  placeholder=&quot;e.g. 30&quot;
-                  value={minBudget || rest.value}
-                  onChange={e => {
-                    setMinBudget(e.target.value),
-                    onChange(e)
-                  }}
-                  {...rest}                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField,
-control={control}
-          name=&quot;budgetMax&quot;
-          render={({ field: { onChange, ...rest } }) => (            <FormItem>
-              <FormLabel>Budget (Max)</FormLabel>
-              <FormControl>
-                <Input,
-type=&quot;number&quot;
-                  placeholder=&quot;e.g. 60"
-                  value={maxBudget || rest.value}
-                  onChange={e => {
-                    setMaxBudget(e.target.value),
-                    onChange(e)
-                  }}
-                  {...rest}                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-      
-      <Card>
-        <CardContent className="pt-4&quot;>
-          <ClientBudgetRecommender,
-jobTitle={control.formValues.title || "&quot}
-            category={control.formValues.category || "&quot}
-            experienceLevel={control.formValues.experienceLevel || "&quot}
-            onSuggestionApplied={handleSuggestionApplied}          />
-        </CardContent>
-      </Card>
-
-      <FormField,
-control={control}
-        name=&quot;location&quot;
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Location</FormLabel>
-            <FormControl>
-              <Input placeholder=&quot;e.g. Remote, San Francisco, etc.&quot; {...field} />            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-    </div>
-  )
-},
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  setMinBudget (min.toString () );
+setMaxBudget (max.toString () ) 
+};
+return (<div className="space-y-4" > <FormField control= {
+  control 
+}name="title" render= {
+  ({
+  field 
+}) => (<FormItem> <FormLabel>Job Title</FormLabel> <FormControl> <Input placeholder="e.g. Senior React Developer" {
+  ...field 
+}/> 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Job Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" development">Development</option> <option value=" design">Design</option> <option value=" marketing">Marketing</option> <option value=" content">Content</option> <option value=" data">Data</option> <option value=" business">Business</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Budget (Min) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Budget (Max) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div>) 
+};

@@ -108,5 +108,4 @@ export default function ApplyGrantPage() {
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>        </div>
       </div>
     </EnhancedLayout>
-  )
-}
+  )}

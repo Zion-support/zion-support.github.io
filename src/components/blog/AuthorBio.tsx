@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 ;
@@ -25,51 +24,18 @@ export function AuthorBio({ author } AuthorBioProps) {;
         <p>{author.bio}</p>;
       </div>;
     </div>;
-  ),;
-=======
-import React from 'react',
-import type { BlogAuthor } from '@/types/blog',
-interface AuthorBioProps {
-  author: BlogAuthor
+  ),; onError= {;
+  (e) => {;
+  const target = e.currentTarget as HTMLImageElement;
+target.src = '/images/blog-placeholder.svg' ;
 }
-
-export function AuthorBio({ author }: AuthorBioProps) {
-  if (!author.bio) return null,
-  return (
-    <div className=&quot;mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6&quot;>
-      <img,
-src={author.avatarUrl}
-        alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"        onError={(e) => {
-          const target = e.currentTarget as HTMLImageElement,
-          target.src = '/images/blog-placeholder.svg'
-        }}
-      />
-      <div>
-        <p className=&quot;font-medium text-lg&quot;>{author.name}</p>
-        {author.title && <p className=&quot;text-sm text-muted-foreground mb-2&quot;>{author.title}</p>}
-        <p>{author.bio}</p>
-import React from 'react';
-import type {BlogAuthor} from '@/types/blog';
-
-interface AuthorBioProps {author: BlogAuthor}
-
-export function AuthorBio(_{author}: AuthorBioProps) {if (!author.bio) return null;
-  return (_<div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">
-      <img,
-src={author.avatarUrl}
-        alt={author.name}
-        className="w-16 h-16 rounded-full mr-4 mb-4 md:mb-0"
-        onError={_(e) => {
-          const target = e.currentTarget as HTMLImageElement;
-          target.src = '/images/blog-placeholder.svg'}}
-      />
-      <div>
-        <p className="font-medium text-lg">{author.name}</p>
-        {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
-        <p>{author.bio}</p>
-      </div>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+}/> <div> <p className="font-medium text-lg" > {;
+  author.name ;
+}</p> {";
+  author.title && <p className="text-sm text-muted-foreground mb-2" > {;
+  author.title ;
+}</p> ;
+}<p> {;
+  author.bio ;
+}</p> ;
+}'"

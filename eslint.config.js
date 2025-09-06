@@ -4,7 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
-<<<<<<< HEAD
 ;
 export default [;
   js.configs.recommended,;
@@ -299,8 +298,6 @@ export default [;
       '*.temp.*';
     ];
   }
-=======
-
 export default [
   js.configs.recommended,
   {
@@ -465,8 +462,7 @@ export default [
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
+        sourceType: 'module',        ecmaFeatures: {
           jsx: true,
         },
       },
@@ -526,8 +522,7 @@ export default [
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
-    },
+      '@next/next': next,    },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -544,8 +539,7 @@ export default [
     },
     settings: {
       react: {
-        version: 'detect',
-      },
+        version: 'detect',      },
     },
   },
   {
@@ -569,8 +563,7 @@ export default [
         clearInterval: 'readonly',
         setImmediate: 'readonly',
         clearImmediate: 'readonly',
-      },
-    },
+      },    },
   },
   {
     ignores: [
@@ -607,12 +600,10 @@ export default [
       'supabase/**',
       'types/**',
       'types.disabled/**',
-      'utils/**',
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
+      'utils/**',      // Tests and mocks
+      "__tests__/**tests/**",
+      "tests.disabled/***.test.*",
+
       // Temp and backups
       'backup/**',
       'backup-pages/**',
@@ -634,15 +625,12 @@ export default [
       'deployments/**',
       'deployment/**',
       'server/**',
-      'services/**',
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'netlify/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '**/*.cjs',
+      'services/**',      // Scripts/configs and CJS files not intended for lint
+      "scripts/**automation/**",
+      "netlify/***.config.js",
+      "*.config.cjs*.config.mjs",
+      "**/*.cjs",
+
       // Public assets/scripts
       'public/**',
       // Root-level noisy files
@@ -653,17 +641,14 @@ export default [
       '*.jsx',
       'jest.config.*',
       'fix-*.js',
-      'fix-*.jsx',
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
+      'fix-*.jsx',      // Misc root configs that were being linted
+      ".eslintrc.js.eslintrc.cjs",
+      ".eslintrc.disabled.js.prettierrc.js",
+
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
       'pages.disabled_auto/**',
     ],
   },
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 ];

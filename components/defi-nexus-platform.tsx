@@ -18,21 +18,14 @@ const features = [
   'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
 ],
 
-const pricingPlans = [
+const pricingPlans = [  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    name: 'Starter',
-    price: 29,
-    period: 'month',
-    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',
-    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],
-    popular: true
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
     name: 'Enterprise',
     price: 299,
@@ -260,5 +253,4 @@ export default function DeFiNexusPlatform() {_return (_<Layout>
         </div>
       </section>
     </Layout>
-  )
-}
+  )}

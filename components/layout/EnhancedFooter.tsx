@@ -288,6 +288,8 @@ type=&quot;email&quot;
           </div>
         </div>
       </div>
-    </footer>
-  )
-}
+    </footer>  )
+};
+,
+export default EnhancedFooter
+],

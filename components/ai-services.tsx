@@ -172,5 +172,14 @@ export default function AIServices() {_return (_<QuantumHolographicMatrixBackgro
         </section>
       </div>
     </>
-  )
+  )}
+}animate= {
+  {
+  opacity: 1, y: 0 
+}
+}transition= {
+  {
+  duration: 0.8, delay: 0.4 
+}
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button 
 }

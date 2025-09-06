@@ -44,5 +44,4 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
         </div>;
       )}
     </div>
-  )
-}
+  )}

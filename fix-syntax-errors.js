@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   },;
 }},;
 // Run all fixes,;
@@ -8,11 +6,7 @@ fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),
-=======
-  },
-}},
-,
+// // // console.log('🎉 Syntax error fixes completed'),,
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -21,8 +15,6 @@ fixApiDocs(),
 fixCareers(),
 ,
 console.log('🎉 Syntax error fixes completed'),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -131,4 +123,3 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

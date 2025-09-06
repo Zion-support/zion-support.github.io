@@ -8,28 +8,17 @@ function ensureDir(filePath) {;
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive:true });
 }
-<<<<<<< HEAD
 ;
 async function gql(query, variables = {}) {;
   const res = await fetch(SNAPSHOT_ENDPOINT, {;
     method:'POST',;
     headers:{ 'Content-Type':'application/json' },;
-    body:JSON.stringify({ query, variables }),;
-=======
-
-async function gql(query, variables = {}) {
-  const res = await fetch(SNAPSHOT_ENDPOINT, {
-    method: 'POST';
-    headers: { 'Content-Type': 'application/json' };
-    body: JSON.stringify({ query, variables });
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  });
+    body:JSON.stringify({ query, variables }),;  });
   if (!res.ok) throw new Error(`Snapshot failed ${res.status}`);
   const json = await res.json();
   if (json.errors) throw new Error(JSON.stringify(json.errors));
   return json.data;
 }
-<<<<<<< HEAD
 ;
 const SPACES = [;
   'ens.eth',;
@@ -55,36 +44,7 @@ const QUERY = `;
       end;
       state;
       scores;
-      scores_total;
-=======
-
-const SPACES = [
-  'ens.eth';
-  'gitcoin.eth';
-  'optimism.eth';
-  'aave.eth';
-  'uniswapgovernance.eth';
-];
-
-const QUERY = `
-  query Proposals($space_in: [String!], $first: Int!) {
-    proposals(
-      first: $first;
-      where: { space_in: $space_in };
-      orderBy: "created";
-      orderDirection: desc
-    ) {
-      id
-      title
-      body
-      choices
-      start
-      end
-      state
-      scores
-      scores_total
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      space { id name }
+      scores_total;      space { id name }
       author;
       created;
       link;
@@ -100,7 +60,6 @@ async function run() {;
   } catch (e) {;
     console.warn('Snapshot query failed:', e.message);
   }
-<<<<<<< HEAD
 ;
   const items = proposals.map((p) => ({;
     id:p.id,;
@@ -120,30 +79,7 @@ async function run() {;
     generatedAt:new Date().toISOString(),;
     description:'Recent Snapshot proposals across selected DAOs',;
     total:items.length,;
-    items,;
-=======
-
-  const items = proposals.map((p) => ({
-    id: p.id;
-    title: p.title;
-    url: p.link || `https://snapshot.org/#/${p.space?.id}/proposal/${p.id}`;
-    space: p.space?.id;
-    spaceName: p.space?.name;
-    state: p.state;
-    start: p.start;
-    end: p.end;
-    created: p.created;
-    scores_total: p.scores_total;
-    top_choice: p.choices?.[p.scores?.indexOf(Math.max(...(p.scores || [0])))] || null;
-  })).slice(0, 80);
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'Recent Snapshot proposals across selected DAOs';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

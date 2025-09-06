@@ -1,14 +1,17 @@
 # Zion Tech Group - Site Structure Documentation
 
 ## 🌐 Overview
+## Technology Stack
 
-**Zion Tech Group** is a comprehensive technology solutions platform offering AI, cybersecurity, cloud, and digital transformation services. This document outlines the complete structure and architecture of the website.
+### Frontend Framework
+- **React 18+** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and development server
 
-**Live Site**: https://ziontechgroup.com  
-**Repository**: Zion Tech Group GitHub Repository  
-**Technology Stack**: React + Vite + TypeScript + Tailwind CSS
-
----
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library for smooth interactions
+- **CSS Modules** - Component-scoped styling
 
 ## 🏗️ **Technology Stack**
 
@@ -650,7 +653,6 @@ Solutions
 ## 🔧 **Development Workflow**
 
 ### **Scripts**
-
 ```json
 {
   "dev": "vite",

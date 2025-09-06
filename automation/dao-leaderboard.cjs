@@ -34,22 +34,12 @@ async function run() {;
     bySpace.set(key, current);
   }
   const rows = Array.from(bySpace.values()).sort((a, b) => b.totalScore - a.totalScore).slice(0, 25);
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'DAO leaderboard derived from recent Snapshot proposals',;
     total:rows.length,;
-    items:rows,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'DAO leaderboard derived from recent Snapshot proposals';
-    total: rows.length;
-    items: rows;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items:rows,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

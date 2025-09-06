@@ -1,6 +1,2 @@
 
-<<<<<<< HEAD
-export { CertificationsForm } from './certifications',;
-=======
-export { CertificationsForm } from './certifications',
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+export { CertificationsForm } from './certifications',; 

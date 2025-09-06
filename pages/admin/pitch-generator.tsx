@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useCallback, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -194,205 +193,9 @@ export default function PitchGenerator() {;
                 <div key={d.label} className="border p-1 rounded">;
                   <div className="font-medium">{d.label}</div>;
                   <div>{d.value}</div>;
-                </div>;
-=======
-import React, { useCallback, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { GetServerSideProps } from 'next',
-import { requireAdminRole } from '../../utils/auth',
-export type Slide = {
-  id: string,
-  title: string,
-  content: string,
-  chart?: {
-    type: 'bar' | 'funnel' | 'timeline',
-    data: Array<{ label: string, value: number }>
-  }
-},
-
-type BuilderState = {
-  mission: string,
-  fundingStage: string,
-  vision: string,
-  roundType: 'Seed' | 'Series A' | 'Token Sale' | '',
-  targetRaise: string,
-  assets: File[]
-},
-
-function uid() {
-  return Math.random().toString(36).slice(2)
-}
-
-function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
-  return (
-    <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
-      <div className=&quot;font-semibold text-sm line-clamp-2&quot;>{slide.title || 'Untitled'}</div>
-      <div className=&quot;text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap&quot;>{slide.content || '—'}</div>    </button>
-  )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const result = await requireAdminRole(ctx),
-  // @ts-ignore,
-if ('redirect' in result) return result,
-  return result
-},
-
-export default function PitchGenerator() {
-  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
-  const [slides, setSlides] = useState<Slide[]>([]),
-  const [activeIndex, setActiveIndex] = useState(0),
-  const [loading, setLoading] = useState(false),
-  const [versionTag, setVersionTag] = useState<string | null>(null),
-  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
-
-  const activeSlide = slides[activeIndex],
-
-  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault(),
-    const files = Array.from(e.dataTransfer.files || []),
-    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
-  }, []),
-
-  const prevent = (e: React.DragEvent) => {
-    e.preventDefault(),
-    e.stopPropagation()
-  },
-
-  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),
-
-  const autoFetchMetrics = useCallback(async () => {
-    setLoading(true),
-    try {
-      const res = await fetch('/api/admin/pitch/metrics'),
-      const data = await res.json(),
-      return data
-    } catch (e) {
-      return {}
-    } finally {
-      setLoading(false)
-    }
-  }, []),
-
-  const buildDeck = useCallback(async () => {
-    setLoading(true),
-    try {
-      const metrics = await autoFetchMetrics(),
-      const res = await fetch('/api/admin/pitch/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          operatorPrompt,
-          inputs: builder,
-          metrics})}),
-      const json = await res.json(),
-      const newSlides: Slide[] = json.slides || [],
-      setSlides(newSlides),
-      setActiveIndex(0),
-      const v = json.version || `v${new Date().toISOString()}`,
-      setVersionTag(v),
-      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
-    } catch (e) {
-      // noop
-    } finally {
-      setLoading(false)
-    }
-  }, [autoFetchMetrics, builder, operatorPrompt]),
-
-  const rephraseSlide = useCallback(async (idx: number) => {
-    if (!slides[idx]) return,
-    setLoading(true),
-    try {
-      const res = await fetch('/api/admin/pitch/rewrite', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slide: slides[idx] })}),
-      const json = await res.json(),
-      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
-    } catch (e) {
-    } finally {
-      setLoading(false)
-    }
-  }, [slides]),
-
-  const addSlide = useCallback(async () => {
-    setLoading(true),
-    try {
-      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
-      const json = await res.json(),
-      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
-      setActiveIndex(slides.length)
-    } catch (e) {
-    } finally {
-      setLoading(false)
-    }
-  }, [slides.length]),
-
-  const exportPdf = useCallback(async () => {
-    setLoading(true),
-    try {
-      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
-      const blob = await res.blob(),
-      const url = URL.createObjectURL(blob),
-      const a = document.createElement('a'),
-      a.href = url,
-      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`,
-      a.click(),
-      URL.revokeObjectURL(url)
-    } catch (e) {
-    } finally {
-      setLoading(false)
-    }
-  }, [slides, versionTag]),
-
-  const exportGoogleSlides = useCallback(async () => {
-    setLoading(true),
-    try {
-      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
-      const json = await res.json(),
-      if (json && json.url) {
-        window.open(json.url, 'blank')
-      }
-    } catch (e) {
-    } finally {
-      setLoading(false)
-    }
-  }, [slides, versionTag]),
-
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
-  },
-
-  const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null,
-    const { type, data } = slide.chart,
-    return (
-      <div className=&quot;mt-3&quot;>
-        <div className=&quot;text-xs text-gray-500 dark:text-gray-400&quot;>Chart preview: {type}</div>
-        <div className=&quot;flex gap-2 items-end h-24 mt-2&quot;>
-          {type === 'bar' && data.map((d) => (
-            <div key={d.label} className=&quot;bg-blue-500 w-6&quot; style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
-          ))}
-          {type === 'funnel' && (
-            <div className=&quot;w-full&quot;>
-              <div className=&quot;flex flex-col gap-1&quot;>
-                {data.map((d, idx) => (
-                  <div key={d.label} className=&quot;bg-purple-500 text-white text-xs px-2 py-1&quot; style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>                ))}
-              </div>
-            </div>
-          )}
-          {type === 'timeline' && (
-            <div className=&quot;text-xs grid grid-cols-4 gap-2 w-full&quot;>
-              {data.map((d) => (
-                <div key={d.label} className=&quot;border p-1 rounded&quot;>
-                  <div className=&quot;font-medium&quot;>{d.label}</div>
-                  <div>{d.value}</div>                </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-              ))}
+                </div>;              ))}
             </div>;
           )}
-<<<<<<< HEAD
         </div>;
       </div>;
     ),;
@@ -496,15 +299,13 @@ export default function PitchGenerator() {
                   <button onClick={() => updateActiveSlide({ chart:{ type:'timeline', data:[{ label:'MVP', value:2023 }, { label:'Seed', value:2024 }, { label:'Series A', value:2025 }] } })} className="border rounded px-2 py-1">Timeline</button>;
                 </div>;
 ;
-=======
-        </div>
-      </div>
-    )
-  },
+  const activeSlide = slides[activeIndex];
 
-  return (_<EnhancedLayout>
+  return (
+    <>
       <Head>
         <title>Pitch Generator - Admin</title>
+        <meta name="description" content="Generate pitch decks and presentations" />
       </Head>
       <div className=&quot;space-y-6&quot;>
         <div className=&quot;flex items-center justify-between&quot;>
@@ -564,10 +365,10 @@ export default function PitchGenerator() {
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
                 ))}
-              </ul>
-            </div>
+              </ul>            </div>
           </div>
 
+          {/* Slides Panel */}
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
@@ -596,21 +397,16 @@ export default function PitchGenerator() {
                   <button onClick={_() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023}, {label: 'Seed', value: 2024}, {label: 'Series A', value: 2025}] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                 {renderChartPreview(activeSlide)}
-              </div>;
-            )}
-<<<<<<< HEAD
+              </div>;            )}
           </div>;
         </div>;
       </div>;
     </EnhancedLayout>;
-  ),;
-=======
-          </div>
-        </div>
-      </div>
-    </EnhancedLayout>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  ),;}
+      </main>
+    </>
+  );
+};
+
+export default AdminPitchGeneratorPage;

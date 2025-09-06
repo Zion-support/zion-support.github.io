@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -18,24 +17,5 @@ const TaxonomyAgent:NextPage = () => {;
     </div>;
   );
 },;
-;
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-const TaxonomyAgent: NextPage = () => {
-  return (    <div>
-      <Head>
-        <title>AI Taxonomy Tagger Agent</title>
-        <meta name=&quot;description&quot; content=&quot;Daily AI-generated page tags.&quot; />
-      </Head>
-      <main className=&quot;space-y-4&quot;>
-        <h1 className=&quot;text-2xl font-bold&quot;>AI Taxonomy Tagger Agent</h1>
-        <p>Suggests topic tags for each page to improve discovery and navigation.</p>
-        <Link href=&quot;/data/reports/taxonomy/latest.json&quot;><a className=&quot;text-blue-600 underline&quot;>Latest Taxonomy Report (JSON)</Link></Link>
-      </main>
-    </div>
-  )
-},
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-export default TaxonomyAgent,
+;export default TaxonomyAgent,
+ <div> <Head> <title>AI Taxonomy Tagger Agent</title> <meta name="description" content="Daily AI-generated page tags." /> </Head> <main className="space-y-4" > <h1 className="text-2xl font-bold" >AI Taxonomy Tagger Agent</h1> <p>Suggests topic tags for each page to improve discovery and navigation.</p> <Link href="/data/reports/taxonomy/latest.json" ><a className="text-blue-600 underline" >Latest Taxonomy Report (JSON) </Link></Link> </main> </div> export default TaxonomyAgent;

@@ -20,7 +20,6 @@ async function run() {;
   let items = [];
   try {;
     const data = await fetchJson(url);
-<<<<<<< HEAD
     items = (data.objects || []).map((o) => ({;
       name:o.package?.name,;
       version:o.package?.version,;
@@ -29,38 +28,16 @@ async function run() {;
       links:o.package?.links,;
       publisher:o.package?.publisher?.username,;
       maintainers:(o.package?.maintainers || []).map((m) => m.username),;
-      score:o.score?.final,;
-=======
-    items = (data.objects || []).map((o) => ({
-      name: o.package?.name;
-      version: o.package?.version;
-      description: o.package?.description;
-      date: o.package?.date;
-      links: o.package?.links;
-      publisher: o.package?.publisher?.username;
-      maintainers: (o.package?.maintainers || []).map((m) => m.username);
-      score: o.score?.final;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }));
+      score:o.score?.final,;    }));
   } catch (e) {;
     console.warn('npm search failed:', e.message);
   }
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'npm package search for AI Agents / Web3 / DAO keywords',;
     total:items.length,;
-    items,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'npm package search for AI Agents / Web3 / DAO keywords';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

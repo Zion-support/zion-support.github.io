@@ -107,5 +107,4 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
-  )
-}
+  )}

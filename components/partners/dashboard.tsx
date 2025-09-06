@@ -101,5 +101,4 @@ export default function PartnerDashboard() {
         </div>
       </div>
     </div>
-  )
-}
+  )}

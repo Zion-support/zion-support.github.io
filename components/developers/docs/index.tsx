@@ -45,5 +45,4 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>;
       ))}
     </DocsLayout>
-  )
-}
+  )}

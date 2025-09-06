@@ -13,20 +13,11 @@ async function fetchJson(url, opts = {}) {;
   if (!res.ok) throw new Error(`Request failed ${res.status} ${url}`);
   return res.json();
 }
-<<<<<<< HEAD
 ;
 async function queryOsv(name, version) {;
   const body = {;
     package:{ name, ecosystem:'npm' },;
-    version,;
-=======
-
-async function queryOsv(name, version) {
-  const body = {
-    package: { name, ecosystem: 'npm' };
-    version;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    version,;  };
   try {;
     const data = await fetchJson('https://api.osv.dev/v1/query', { method:'POST', body:JSON.stringify(body) });
     return data.vulns || [];
@@ -49,22 +40,12 @@ async function run() {;
       results.push({ name, versionRange, vulns });
     }
   }
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'OSV vulnerability report for npm dependencies',;
     totalAffected:results.length,;
-    results,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'OSV vulnerability report for npm dependencies';
-    totalAffected: results.length;
-    results;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    results,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

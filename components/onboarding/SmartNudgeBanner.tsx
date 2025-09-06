@@ -33,5 +33,4 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       <div className=&quot;text-sm&quot;>
         {message}      </div>
     </div>
-  )
-}
+  )}

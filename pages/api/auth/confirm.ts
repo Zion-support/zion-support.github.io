@@ -5,13 +5,16 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {;
     res.status(405).end(),;
     return;
   }
-<<<<<<< HEAD
   ;
   // TODO:Implement confirmation logic here;
   res.status(200).json({ message:'Confirm endpoint placeholder' }),;
-} 
-=======
+} import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
   
-  // TODO: Implement confirmation logic here
-  res.status(200).json({ message: 'Confirm endpoint placeholder' })} 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  res.status(200).json({ message: 'Email confirmed' });
+}

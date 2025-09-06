@@ -81,20 +81,11 @@ class AccessibilityChecker {;
         report.summary.failedChecks++;
       }
     });
-<<<<<<< HEAD
 ;
     // Save report;
     const reportFile = path.join(;
       this.logsDir,;
-      `accessibility-report-${Date.now()}.json`;
-=======
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      `accessibility-report-${Date.now()}.json`;    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`📄 Report saved:to:${reportFile}`);
@@ -123,5 +114,14 @@ if (require.main === module) {;
       process.exit(1);
     });
 }
-;
+;#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('♿ Accessibility Checker Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
 module.exports = AccessibilityChecker;

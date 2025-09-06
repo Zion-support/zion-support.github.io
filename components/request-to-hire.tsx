@@ -84,5 +84,4 @@ export default function RequestToHirePage() {
           {submitting ? 'Submitting…' : 'Submit Request'}        </button>
       </form>
     </div>
-  )
-}
+  )}

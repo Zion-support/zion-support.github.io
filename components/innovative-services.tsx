@@ -389,5 +389,4 @@ href={`mailto:${contactInfo.email}`}
         </div>
       </QuantumHolographicBackground>
     </>
-  )
-}
+  )}

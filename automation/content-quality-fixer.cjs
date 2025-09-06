@@ -39,8 +39,7 @@ class ContentQualityFixer {;
         let content = fs.readFileSync(file, 'utf8');
         let originalContent = content;
         ;
-        // Fix common markdown issues;
-        content = this.fixMarkdownContent(content);
+        // Fix common markdown issues;        content = this.fixMarkdownContent(content);
         ;
         if (content !== originalContent) {;
           fs.writeFileSync(file, content, 'utf8');
@@ -60,8 +59,7 @@ class ContentQualityFixer {;
         let content = fs.readFileSync(file, 'utf8');
         let originalContent = content;
         ;
-        // Fix common HTML issues;
-        content = this.fixHTMLContent(content);
+        // Fix common HTML issues;        content = this.fixHTMLContent(content);
         ;
         if (content !== originalContent) {;
           fs.writeFileSync(file, content, 'utf8');
@@ -81,8 +79,7 @@ class ContentQualityFixer {;
         let content = fs.readFileSync(file, 'utf8');
         let originalContent = content;
         ;
-        // Fix common text issues;
-        content = this.fixTextContent(content);
+        // Fix common text issues;        content = this.fixTextContent(content);
         ;
         if (content !== originalContent) {;
           fs.writeFileSync(file, content, 'utf8');
@@ -93,7 +90,6 @@ class ContentQualityFixer {;
       }
     }
   }
-<<<<<<< HEAD
 ;
   fixMarkdownContent(content) {;
     // Fix multiple spaces;
@@ -102,19 +98,7 @@ class ContentQualityFixer {;
     // Fix line breaks;
     content = content.replace(/\n{3,}/g, '\n\n');
     ;
-    // Fix list formatting;
-=======
-
-  fixMarkdownContent(content) {
-    // Fix multiple spaces
-    content = content.replace(/[ ]{2}/g, ' ');
-    
-    // Fix line breaks
-    content = content.replace(/\n{3}/g, '\n\n');
-    
-    // Fix list formatting
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    content = content.replace(/^\s*[-*+]\s+/gm, '- ');
+    // Fix list formatting;    content = content.replace(/^\s*[-*+]\s+/gm, '- ');
     ;
     return content;
   }
@@ -131,7 +115,6 @@ class ContentQualityFixer {;
     ;
     return content;
   }
-<<<<<<< HEAD
 ;
   fixTextContent(content) {;
     // Fix multiple spaces;
@@ -139,18 +122,7 @@ class ContentQualityFixer {;
     ;
     // Fix line breaks;
     content = content.replace(/\n{3,}/g, '\n\n');
-    ;
-=======
-
-  fixTextContent(content) {
-    // Fix multiple spaces
-    content = content.replace(/[ ]{2}/g, ' ');
-    
-    // Fix line breaks
-    content = content.replace(/\n{3}/g, '\n\n');
-    
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    return content;
+    ;    return content;
   }
 ;
   findFiles(extension) {;

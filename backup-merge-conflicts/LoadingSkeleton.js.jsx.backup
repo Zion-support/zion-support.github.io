@@ -1,7 +1,22 @@
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+import {cn} from '@/lib/utils';
+export function Skeleton("props": "any) {;
+    const roundedClasses = {;
+  "none": ''",;
+        "sm": 'rounded-sm',;
+        "md": 'rounded-md',;
+        "lg": 'rounded-lg',;
+  "full": 'rounded-full';
+    ;
 
 };
-
+    return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',;
+  className)} style="{{{;
+            "width": "width; "height": height"}}"} />)}
+export function CardSkeleton("props": "any) {;
+    return (<div className = {;
+  cn('space-y-4'",;
+  className);
     return (
         <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
@@ -11,6 +26,8 @@ export function CardSkeleton(props: any) {
         <div className = {
   cn('space-y-4',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 }>;
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
@@ -29,12 +46,18 @@ export function CardSkeleton(props: any) {
           </div>)}
       </div>;
     </div>)}
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+export function ListSkeleton("props": "any) {;
+    return (<div className = {;
+  cn('space-y-4'",;
+  className);
 export function ListSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-4',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 }>;
       {Array.from({ "length": "items "}).map((_, i) => (<div key={i} className="flex gap-4 items-start">;
@@ -52,12 +75,18 @@ export function ListSkeleton(props: any) {
           </div>;
         </div>))}
     </div>)}
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+export function TableSkeleton("props": "any) {;
+    return (<div className = {;
+  cn('space-y-3'",;
+  className);
 export function TableSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-3',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 }>;
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">;
@@ -71,12 +100,18 @@ export function TableSkeleton(props: any) {
           </div>))}
       </div>;
     </div>)}
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+export function GridSkeleton("props": "any) {;
+    return (<div className = {;
+  cn('grid gap-4'",;
+  className);
 export function GridSkeleton(props: any) {
     return (
         <div className = {
   cn('grid gap-4',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 } style="{{{;
             "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`,;
@@ -84,12 +119,18 @@ export function GridSkeleton(props: any) {
         }}>;
       {Array.from({ "length": "items "}).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
     </div>)}
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+export function HeroSkeleton("props": "any) {;
+    return (<div className = {;
+  cn('flex flex-col "lg":flex-row gap-8 items-center'",;
+  className);
 export function HeroSkeleton(props: any) {
     return (
         <div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 }>;
       {showImage && (<div className=""lg": "w-1/2">;
@@ -114,13 +155,20 @@ export function HeroSkeleton(props: any) {
           </div>)"}
       </div>;
     </div>)}
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+// Shimmer effect component;
+export function Shimmer("props": "any) {;
+    return (<div className = {;
+  cn('relative overflow-hidden'",;
+  className);
 // Shimmer effect component
 export function Shimmer(props: any) {
     return (
         <div className = {
   cn('relative overflow-hidden',
   className)
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 
 }>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />;
@@ -133,7 +181,15 @@ export const shimmerAnimation = `;
     100% {"transform": "translateX(100%)"}
   }
 `;
-
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+;
+</Skeleton>;
+</Skeleton>;
+</div>
+:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
+</Skeleton>
+</Skeleton>
+</div>
 </Skeleton>
 </Skeleton>
 </div>

@@ -36,5 +36,4 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
     <div className=&quot;p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur&quot;>
       <div className=&quot;text-3xl font-bold&quot;>{value}{suffix}</div>
       <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{label}</div>    </div>
-  )
-}
+  )}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 import React from 'react',;
@@ -14,8 +12,7 @@ import HomePage from '../pages/index',;
 import AboutPage from '../pages/about',;
 import ContactPage from '../pages/contact',;
 import ServicesPage from '../pages/services',;
-import PricingPage from '../pages/pricing',;
-,;
+import PricingPage from '../pages/pricing',;,;
 export default function App() {,;
   return (,;
     <ErrorBoundary>,;
@@ -28,8 +25,7 @@ export default function App() {,;
               <Route path="/" element={<HomePage />} />,;
               <Route path="/about" element={<AboutPage />} />,;
               <Route path="/contact" element={<ContactPage />} />,;
-              <Route path="/services" element={<ServicesPage />} />,;
-              <Route path="/pricing" element={<PricingPage />} />,;
+              <Route path="/services" element={<ServicesPage />} />,;              <Route path="/pricing" element={<PricingPage />} />,;
             </Routes>,;
           </main>,;
           <Footer />,;
@@ -39,24 +35,7 @@ export default function App() {,;
   ),;
 ;
 };
-;
-=======
-import React from 'react',
-
-export default function App() {
-  return (
-    <div className="App">
-      <h1>App Component</h1>
-    </div>
-  );
-}export default function App() {_return (
-    <div className="App">
-      <h1>App Component</h1>
-    </div>
-  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-import React from 'react';
+;import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/layout/Footer';
@@ -92,4 +71,5 @@ export default function App() {;
     </ErrorBoundary>;
   );
 };
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+    </ErrorBoundary>);'";
+};'"'"

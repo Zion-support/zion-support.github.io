@@ -189,7 +189,6 @@ class DeploymentAutomation {;
   async generateDeploymentReport() {;
     const endTime = Date.now();
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
 ;
     const report = {;
       timestam:p:new Date().toISOString(),;
@@ -217,56 +216,17 @@ class DeploymentAutomation {;
         monitorin:g:this.deploymentSteps.filter(s =>;
           s.description.includes('monitor');
         ).length,;
-      },;
-=======
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      duratio: n: `${duration}ms`,
-      totalStep: s: this.deploymentSteps.length,
-      step: s: this.deploymentSteps,
-      summar: y: {
-        preDeploymen: t: this.deploymentSteps.filter(s =>
-          s.description.includes('pre-deployment')
-        ).length,
-        buil: d: this.deploymentSteps.filter(s => s.description.includes('build'))
-          .length,
-        securit: y: this.deploymentSteps.filter(s =>
-          s.description.includes('security')
-        ).length,
-        performanc: e: this.deploymentSteps.filter(s =>
-          s.description.includes('performance')
-        ).length,
-        deploymen: t: this.deploymentSteps.filter(s =>
-          s.description.includes('deploy')
-        ).length,
-        testin: g: this.deploymentSteps.filter(s =>
-          s.description.includes('test')
-        ).length,
-        monitorin: g: this.deploymentSteps.filter(s =>
-          s.description.includes('monitor')
-        ).length;
-      };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      },;    };
 ;
     // Ensure logs directory exists;
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursiv:e:true });
     }
-<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       logsDir,;
-      `deployment-automation-${Date.now()}.json`;
-=======
-
-    const reportPath = path.join(
-      logsDir;
-      `deployment-automation-${Date.now()}.json`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      `deployment-automation-${Date.now()}.json`;    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
     console.log(`📊 Deployment report saved:to:${reportPath}`);

@@ -8,7 +8,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class BuildGuardian {;
   constructor() {;
@@ -17,19 +16,7 @@ class BuildGuardian {;
       lastCheck:null,;
       issues:[],;
       warnings:[],;
-      recommendations:[];
-=======
-
-class BuildGuardian {
-  constructor() {
-    this.status = {
-      isHealthy: true;
-      lastCheck: null;
-      issues: [];
-      warnings: [];
-      recommendations: []
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      recommendations:[];    };
   }
 ;
   async guard() {;
@@ -120,7 +107,6 @@ class BuildGuardian {
 ;
   async checkConfiguration() {;
     console.log('  ⚙️  Checking configuration...');
-<<<<<<< HEAD
     ;
     try {;
       // Check essential config files;
@@ -129,19 +115,7 @@ class BuildGuardian {
         'tsconfig.json',;
         'next.config.js',;
         'postcss.config.js',;
-        'tailwind.config.js';
-=======
-    
-    try {
-      // Check essential config files
-      const requiredFiles = [
-        'package.json';
-        'tsconfig.json';
-        'next.config.js';
-        'postcss.config.js';
-        'tailwind.config.js'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      ];
+        'tailwind.config.js';      ];
       ;
       for (const file of requiredFiles) {;
         if (!fs.existsSync(file)) {;
@@ -171,7 +145,6 @@ class BuildGuardian {
 ;
   async checkFileSystem() {;
     console.log('  💾 Checking file system...');
-<<<<<<< HEAD
     ;
     try {;
       // Check for common problematic files;
@@ -179,18 +152,7 @@ class BuildGuardian {
         '*.log',;
         '*.tmp',;
         '*.pid',;
-        '.DS_Store';
-=======
-    
-    try {
-      // Check for common problematic files
-      const problematicPatterns = [
-        '*.log';
-        '*.tmp';
-        '*.pid';
-        '.DS_Store'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      ];
+        '.DS_Store';      ];
       ;
       // Check automation logs directory;
       const logsDir = 'automation/logs';
@@ -256,7 +218,7 @@ class BuildGuardian {
 ;
   printStatus() {;
     console.log('\n🛡️  Build Guardian Status Report');
-    console.log('===================================');
+    console.log('');
     console.log(`Status:${this.status.isHealthy ? '✅ Healthy' :'❌ Issues Detected'}`);
     console.log(`Last Check:${this.status.lastCheck}`);
     ;

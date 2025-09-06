@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 ;
@@ -27,17 +26,10 @@ const PopoverContent = React.forwardRef<;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 ;
-export { Popover, PopoverTrigger, PopoverContent }
-=======
-import * as React from &quot;react&quot;
-import * as PopoverPrimitive from &quot;@radix-ui/react-popover&quot;
-
-import { cn } from &quot;@/lib/utils&quot;      )}
-      {_...props}
-    />
-  </PopoverPrimitive.Portal>
-))
-PopoverContent.displayName = PopoverPrimitive.Content.displayName
-
-export {_Popover, _PopoverTrigger, _PopoverContent}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+export { Popover, PopoverTrigger, PopoverContent }import * as React from "react" import * as PopoverPrimitive from "@radix-ui/react-popover" const Popover = PopoverPrimitive.Root const PopoverTrigger = PopoverPrimitive.Trigger const PopoverContent = React.forwardRef< React.ElementRef<typeof PopoverPrimitive.Content>;
+React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>) 
+}{
+  ...props 
+}/> </PopoverPrimitive.Portal>) ) PopoverContent.displayName = PopoverPrimitive.Content.displayName export {
+  Popover, PopoverTrigger, PopoverContent 
+}

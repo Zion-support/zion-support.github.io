@@ -26,5 +26,4 @@ const _sizes = [16, 32, 48, 128];
 for (const size of sizes) {_const _out = resolve(outDir, _`icon-${size}.png`);
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console
-  
-}
+  }

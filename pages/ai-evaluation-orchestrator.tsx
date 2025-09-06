@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Button from '../components/ui/Button',;
@@ -32,36 +31,75 @@ export default function AIEvaluationOrchestratorPage() {;
         </div>;
       </div>;
     </>;
-  ),;
-=======
-import React from 'react',
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-export default function AIEvaluationOrchestratorPage() {
+  ),;}
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+const AIEvaluationOrchestrator: React.FC = () => {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>AI Evaluation Orchestrator | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Define evals, run batch tests, score prompts and models, and prevent regressions.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-evaluation-orchestrator&quot; />
+        <title>AI Evaluation Orchestrator - Zion Tech Group</title>
+        <meta name="description" content="Orchestrate AI model evaluations and testing workflows" />
       </Head>
-      <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white&quot;>
-        <div className=&quot;max-w-6xl mx-auto space-y-10&quot;>
-          <header className=&quot;text-center&quot;>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4&quot;>AI Evaluation Orchestrator</h1>
-            <p className=&quot;text-gray-300 text-lg&quot;>Automated LLM and prompt evaluations with dashboards, baselines, and CI gates.</p>          </header>
-          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {[
-              'Create datasets and scoring functionsBatch runs across models and versionsTrack regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, LangfuseExport reports, share baselines, and diff resultsFrom $199/mo'
-            ].map((f) => (
-              <div key={f} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200&quot;>{f}</div>            ))}
-          </section>
-          <div className=&quot;text-center&quot;>
-            <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Talk to Sales</Button>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Evaluation Orchestrator</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Orchestrate comprehensive AI model evaluations and testing workflows with our advanced platform.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Test Orchestration</h3>
+            <p className="text-gray-600 mb-4">
+              Coordinate and manage complex AI evaluation workflows across multiple models and datasets.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Workflow automation</li>
+              <li>• Parallel testing</li>
+              <li>• Resource management</li>
+              <li>• Progress tracking</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Result Analysis</h3>
+            <p className="text-gray-600 mb-4">
+              Analyze evaluation results and generate comprehensive reports with insights.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Performance comparison</li>
+              <li>• Statistical analysis</li>
+              <li>• Visualization tools</li>
+              <li>• Report generation</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Quality Assurance</h3>
+            <p className="text-gray-600 mb-4">
+              Ensure evaluation quality and consistency across all testing scenarios.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Quality checks</li>
+              <li>• Validation rules</li>
+              <li>• Error handling</li>
+              <li>• Compliance monitoring</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+
+        <div className="text-center">
+          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:opacity-90">
+            Talk to Sales
+          </a>
+        </div>
+      </main>
+    </Layout>
+  );
+};
+
+export default AIEvaluationOrchestrator;

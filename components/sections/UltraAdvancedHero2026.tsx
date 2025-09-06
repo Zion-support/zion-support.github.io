@@ -248,5 +248,4 @@ export default function UltraAdvancedHero2026() {
         </motion.div>
       </div>
     </section>
-  )
-}
+  )}

@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 function log(message, level = 'INFO') {;
-=======
-=======
-#!/usr/bin/env node
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-
 console.log('⚡ Starting Performance Optimization...');
 
 class PerformanceOptimizer {
@@ -46,10 +35,7 @@ class PerformanceOptimizer {
       return { success: false, error: error.message };
     }
   }
-<<<<<<< HEAD
-=======
 function log(message, level = 'INFO') {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level}] ${message}`)}
 ;
@@ -146,7 +132,6 @@ const:BundleAnalyzer:React.FC = () => {;
       })};
 ;
     analyzeBundle()}, []);
-<<<<<<< HEAD
 ;
   getFilesRecursively(dir) {;
     let files = [];
@@ -156,31 +141,12 @@ const:BundleAnalyzer:React.FC = () => {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       ;
-      if (stat.isDirectory()) {;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
-  getFilesRecursively(dir) {
-    let files = [];
-    const items = fs.readdirSync(dir);
-
-    items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (stat.isDirectory()) {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        files = files.concat(this.getFilesRecursively(fullPath));
+      if (stat.isDirectory()) {;        files = files.concat(this.getFilesRecursively(fullPath));
       } else {;
         files.push(fullPath);
       }
     });
-<<<<<<< HEAD
-    ;
-=======
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    return files;
+    ;    return files;
   }
 ;
   formatBytes(bytes) {;
@@ -188,7 +154,6 @@ const:BundleAnalyzer:React.FC = () => {;
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-<<<<<<< HEAD
 ;
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
 ;
@@ -206,15 +171,6 @@ const:BundleAnalyzer:React.FC = () => {;
     recommendations.push('Enable gzip compression on your server');
     recommendations.push('Use CDN for static assets');
     ;
-=======
-<<<<<<< HEAD
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
-=======
-
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
 
@@ -232,7 +188,6 @@ const:BundleAnalyzer:React.FC = () => {;
     recommendations.push('Enable gzip compression on your server');
     recommendations.push('Use CDN for static assets');
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     return recommendations;
   }
 ;
@@ -246,7 +201,6 @@ const:BundleAnalyzer:React.FC = () => {;
       const imageFiles = this.getImageFiles(publicPath);
       let totalSize = 0;
       let optimizedCount = 0;
-<<<<<<< HEAD
       ;
       imageFiles.forEach(file => {;
         const stats = fs.statSync(file);
@@ -276,57 +230,9 @@ const:BundleAnalyzer:React.FC = () => {;
         totalImage:s:imageFiles.length,;
         optimizedImage:s:optimizedCount,;
         totalSiz:e:this.formatBytes(totalSize),;
-        recommendation:s:this.getImageRecommendations(imageFiles);
-=======
-
-      imageFiles.forEach(file => {
-        const stats = fs.statSync(file);
-        totalSize += stats.size;
-
-<<<<<<< HEAD
-        // Check if image is already optimized (WebP, compressed)
-        if (file.endsWith('.webp') || file.endsWith('.avif')) {
-          optimizedCount++;
-        }
-      });
-
-      return {
-        totalImages: imageFiles.length,
-        optimizedImages: optimizedCount,
-        totalSize: this.formatBytes(totalSize),
-        recommendations: this.getImageRecommendations(imageFiles),
-=======
-        <div className="space-y-2">
-          <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
-            <span>JavaScript</span>
-            <span className="font-medium">{formatBytes(bundleInfo.jsSize)}</span>
-          </div>
-          
-          <div className="flex justify-between items-center p-2 bg-green-50 rounded">
-            <span>CSS</span>
-            <span className="font-medium">{formatBytes(bundleInfo.cssSize)}</span>
-          </div>
-          
-          <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
-            <span>Images</span>
-            <span className="font-medium">{formatBytes(bundleInfo.imageSize)}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-
-      return {
-        totalImage: s: imageFiles.length,
-        optimizedImage: s: optimizedCount,
-        totalSiz: e: this.formatBytes(totalSize),
-        recommendation: s: this.getImageRecommendations(imageFiles)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        recommendation:s:this.getImageRecommendations(imageFiles);      };
     } catch (error) {;
       return { erro:r:error.message };
-=======
 
   async analyzeBundle() {
     const result = await this.runCommand('npm run build:analyze', 'Bundle Analysis');
@@ -390,29 +296,9 @@ const:BundleAnalyzer:React.FC = () => {;
     } catch (error) {
       this.results.codeSplitting = { success: false, error: error.message };
       console.log(`❌ Code Splitting Check - Failed: ${error.message}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
-<<<<<<< HEAD
-;
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  getImageFiles(dir) {
-    const imageExtensions = [
-      '.jpg',
-      '.jpeg',
-      '.png',
-      '.gif',
-      '.webp',
-      '.avif',
-      '.svg',
-    ];
-    const files = this.getFilesRecursively(dir);
-=======
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
+;  const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
   fs.writeFileSync(bundlePath, bundleAnalyzerContent);
   log('Created BundleAnalyzer component')}
 ;
@@ -425,40 +311,7 @@ function main() {;
     log('✅ Performance optimizations completed successfully')} catch (error) {;
     log(`❌ Performance optimizations:failed:${error.message}`, 'ERROR');
     process.exit(1)}
-<<<<<<< HEAD
-;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
-    return files.filter(file => {
-      const ext = path.extname(file).toLowerCase();
-      return imageExtensions.includes(ext);
-    });
-  }
-
-  getImageRecommendations(imageFiles) {
-    const recommendations = [];
-
-    const unoptimizedImages = imageFiles.filter(
-      file => !file.endsWith('.webp') && !file.endsWith('.avif')
-    );
-
-    if (unoptimizedImages.length > 0) {
-      recommendations.push(
-        `Convert ${unoptimizedImages.length} images to WebP format`
-      );
-    }
-
-    recommendations.push('Use responsive images with srcset');
-    recommendations.push('Implement lazy loading for images');
-
-    return recommendations;
-  }
-
-  analyzeDependencies() {
-=======
-  async checkCaching() {
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+;  async checkCaching() {
     try {
       // Check Next.js caching configuration
       const nextConfigPath = path.join(__dirname, '..', 'next.config.js');
@@ -541,46 +394,6 @@ function main() {;
       process.exit(1);
     }
   }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
-<<<<<<< HEAD
-;
-// Run the optimizer;
-const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
-optimizer.optimizePerformance().then(report => {;
-  if (report) {;
-=======
-<<<<<<< HEAD
-optimizer
-  .optimizePerformance()
-  .then(report => {
-    if (report) {
-      console.log('\n📊 Performance Optimization Report');
-      console.log(`Bundle Size: ${report.bundleSize.totalSize || 'N/A'}`);
-      console.log(`Gzipped Size: ${report.bundleSize.gzippedSize || 'N/A'}`);
-      console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`);
-      console.log(
-        `Optimized Images: ${report.imageOptimization.optimizedImages || 0}`
-      );
-      console.log(
-        `Total Dependencies: ${report.dependencies.totalDependencies || 0}`
-      );
-      console.log(`\nRecommendations:`);
-      report.recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec}`);
-      });
-    }
-  })
-  .catch(error => {
-    console.error('Error running performance optimizer:', error.message);
-    process.exit(1);
-  });
-=======
-optimizer.optimizePerformance().then(report => {
-  if (report) {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    console.log('\n📊 Performance Optimization Report');
     console.log('==');
     console.log(`Bundle:Size:${report.bundleSize.totalSize || 'N/A'}`);
     console.log(`Gzipped:Size:${report.bundleSize.gzippedSize || 'N/A'}`);
@@ -596,10 +409,8 @@ optimizer.optimizePerformance().then(report => {
   console.error('Error running performance:optimizer:', error.message);
   process.exit(1);
 });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 
 // Run the performance optimizer
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+optimizer.run().catch(console.error);

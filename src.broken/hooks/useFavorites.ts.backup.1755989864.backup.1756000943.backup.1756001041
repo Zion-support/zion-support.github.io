@@ -2,40 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from './useAuth';
 import { safeFetch } from '@/integrations/supabase/client';
 import { getWishlist, saveWishlist } from '@/lib/db';
-<<<<<<< HEAD
-import {logErrorToProduction} from "@/utils/productionLogger";
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
-
-export interface Favorite {
-  item_type: string;
-  item_id: string;
-  created_at?: string;
-}
-
-export function useFavorites() {
-  const { user } = useAuth();
-  const [favorites, setFavorites] = useState<Favorite[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  const fetchFavorites = async () => {
-    if (!user) {
-      setFavorites([]);
-      setLoading(false);
-      return;
-    }
-    try {
-      const res = await safeFetch(`/api/favorites?userId=${user.id}`);
-      const data = await res.json();
-      setFavorites(data || []);
-      await saveWishlist(data || []);
-    } catch (err) {
-<<<<<<< HEAD
-      logErrorToProduction('Failed to fetch favorites', { data: err });
-=======
-      console.error('Failed to fetch favorites', err);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
-      const local = await getWishlist();
+import {logErrorToProduction} from "@/utils/productionLogger";      const local = await getWishlist();
       setFavorites(local as Favorite[]);
     } finally {
       setLoading(false);

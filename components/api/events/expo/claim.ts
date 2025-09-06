@@ -13,5 +13,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   if (!address || !signature) return res.status(400).json({_error: 'Missing address or signature'});
   // In production: verify signature, mint or issue POAP
    + '…');
-  return res.status(200).json({_ok: true});
-}
+  return res.status(200).json({_ok: true});}

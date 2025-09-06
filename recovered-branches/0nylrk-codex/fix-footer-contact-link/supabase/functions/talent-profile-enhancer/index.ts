@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1',;
@@ -114,21 +113,20 @@ serve(async (req) => {;
     return new Response(;
       JSON.stringify({ error:error.message }),;
       { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    ),;
-=======
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
-
-interface TalentProfileData {
-  name: string,
-  title: string,
-  bio: string,
-  skills: string[],
-  location?: string
+    ),;interface TalentProfileData {
+  name: string;
+title: string;
+bio: string;
+skills: string[];
+location?: string 
+}interface EnhancedProfile {
+  summary: string;
+categorizedSkills: {
+  programming: string[];
+devops: string[];
+platforms: string[];
+softSkills: string[];
+other: string[] 
 }
 
 interface EnhancedProfile {
@@ -254,6 +252,27 @@ serve(_async (req) => {_// Handle CORS preflight requests
       JSON.stringify({ error: error.message}),
       {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'} }
     );
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
-}),;
+}),;}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
+//Parse the JSON response let enhancedProfile: EnhancedProfile;
+try {
+  enhancedProfile = JSON.parse (responseContent) 
+}catch (e) {
+  
+}return new Response (JSON.stringify (enhancedProfile);
+{
+  headers: {
+  ...corsHeaders, 'Content-Type': 'application/json' 
+}
+}) 
+}catch (error) {
+  return new Response (JSON.stringify ({
+  error: error.message 
+});
+{
+  status: 500, headers: {
+  ...corsHeaders, 'Content-Type': 'application/json' 
+}
+}) 
+}
+});

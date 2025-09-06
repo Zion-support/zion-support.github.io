@@ -2,8 +2,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 ;
 class AllAutomationsRunner {;
-  constructor() {;
-    this.results = [];
+  constructor() {;    this.results = [];
     this.startTime = Date.now();
   }
 ;

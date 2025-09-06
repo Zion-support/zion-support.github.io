@@ -34,5 +34,4 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
     </div>
-  )
-}
+  )}

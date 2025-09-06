@@ -28,5 +28,4 @@ export default function CodeSamples({ samples }: Props) {
       <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
         <code>{sampleMap[active] || ''}</code>      </pre>
     </div>
-  )
-}
+  )}

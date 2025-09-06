@@ -698,7 +698,6 @@
 [2025-08-23T22:23:30.351Z]    Failed: 0
 [2025-08-23T22:23:30.351Z]    Build status: ✅ READY
 [2025-08-23T22:23:30.351Z] ✅ All pre-build health checks passed
-<<<<<<< HEAD
 [2025-08-23T23:38:32.922Z] 🔍 Starting pre-build health checks...
 [2025-08-23T23:38:32.922Z]   Running: Page Structure Validation
 [2025-08-23T23:38:33.166Z]     ❌ Page Structure Validation: FAIL - 404 critical issues found in pages
@@ -714,15 +713,3 @@
 [2025-08-23T23:44:31.943Z]     ❌ Page Structure Validation: FAIL - 390 critical issues found in pages
 [2025-08-23T23:44:31.943Z] 🚨 Critical check failed: Page Structure Validation
 [2025-08-23T23:44:31.943Z] ❌ Pre-build health check failed: 390 critical issues found in pages
-=======
-[2025-08-23T23:43:39.480Z] 🔍 Starting pre-build health checks...
-[2025-08-23T23:43:39.480Z]   Running: Page Structure Validation
-[2025-08-23T23:43:39.818Z]     ❌ Page Structure Validation: FAIL - 402 critical issues found in pages
-[2025-08-23T23:43:39.818Z] 🚨 Critical check failed: Page Structure Validation
-[2025-08-23T23:43:39.818Z] ❌ Pre-build health check failed: 402 critical issues found in pages
-[2025-08-23T23:43:44.047Z] 🔍 Starting pre-build health checks...
-[2025-08-23T23:43:44.047Z]   Running: Page Structure Validation
-[2025-08-23T23:43:44.265Z]     ❌ Page Structure Validation: FAIL - 402 critical issues found in pages
-[2025-08-23T23:43:44.266Z] 🚨 Critical check failed: Page Structure Validation
-[2025-08-23T23:43:44.266Z] ❌ Pre-build health check failed: 402 critical issues found in pages
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6

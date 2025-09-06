@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs",;
 import path from "path",;
 import { TokenConfig, TokenTransaction, Wallet } from "./types",;
@@ -90,25 +89,7 @@ export const tokenStore = {;
   getTransactions(userId?:string):TokenTransaction[] {;
     const txs = store.getData().transactions,;
     if (!userId) return txs,;
-    return txs.filter((t) => t.userId === userId),;
-=======
-import fs from "fs",
-import path from "path",
-import { TokenConfig, TokenTransaction, Wallet } from "./types",
-import { DEFAULT_TOKEN_CONFIG } from "./rules",
-const DATA_DIR = path.join(process.cwd(), "data"),
-const STORE_FILE = path.join(DATA_DIR, "token_store.json"),
-
-export interface TokenStoreData {
-  wallets: Record<string Wallet>,
-  transactions: TokenTransaction[],
-  config: TokenConfig
-}
-
-function ensureDataDir(): void {
-  try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-  } catch {}
+    return txs.filter((t) => t.userId === userId),;}
 }
 
 function readFromDisk(): TokenStoreData | null {
@@ -181,5 +162,4 @@ export const tokenStore = {
     const txs = store.getData().transactions,
     if (!userId) return txs,
     return txs.filter((t) => t.userId === userId)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }},

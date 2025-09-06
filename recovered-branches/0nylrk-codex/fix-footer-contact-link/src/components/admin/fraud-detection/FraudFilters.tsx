@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -84,103 +83,28 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       </Button>;
     </div>;
   );
-},;
-=======
-import React from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Search, Filter } from "lucide-react",
-interface FraudFiltersProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
-  severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
-  resetFilters: () => void
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-  setContentTypeFilter,
-  resetFilters}) => {
-  return (
-    <div className=&quot;flex flex-col md:flex-row gap-4 mb-6&quot;>
-      <div className=&quot;relative flex-1&quot;>
-        <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
-import React from "react";
-
-interface FraudFiltersProps {_searchQuery: string;
-  setSearchQuery: (_value: string) => void;
-  statusFilter: string | null;
-  setStatusFilter: (_value: string | null) => void;
-  severityFilter: string | null;
-  setSeverityFilter: (_value: string | null) => void;
-  contentTypeFilter: string | null;
-  setContentTypeFilter: (_value: string | null) => void;
-  resetFilters: () => void;}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = (_{_searchQuery, _setSearchQuery, _statusFilter, _setStatusFilter, _severityFilter, _setSeverityFilter, _contentTypeFilter, _setContentTypeFilter, _resetFilters}) => {_return (_<div className="flex flex-col md:flex-row gap-4 mb-6">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-        <Input
-          placeholder=&quot;Search by user or content...&quot;
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className=&quot;pl-10&quot;
-        />
-      </div>
-      
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-        <SelectTrigger className="w-[180px]&quot;>
-          <SelectValue placeholder=&quot;Status&quot; />        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="&quot;>All Statuses</SelectItem>
-          <SelectItem value=&quot;pending&quot;>Pending</SelectItem>
-          <SelectItem value=&quot;reviewed&quot;>Reviewed</SelectItem>
-          <SelectItem value=&quot;ignored&quot;>Ignored</SelectItem>
-          <SelectItem value=&quot;actioned&quot;>Actioned</SelectItem>
-        </SelectContent>
-      </Select>
-      
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-        <SelectTrigger className="w-[180px]&quot;>
-          <SelectValue placeholder=&quot;Severity&quot; />        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="&quot;>All Severities</SelectItem>
-          <SelectItem value=&quot;safe&quot;>Safe</SelectItem>
-          <SelectItem value=&quot;suspicious&quot;>Suspicious</SelectItem>
-          <SelectItem value=&quot;dangerous&quot;>Dangerous</SelectItem>
-        </SelectContent>
-      </Select>
-      
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-        <SelectTrigger className="w-[180px]&quot;>
-          <SelectValue placeholder=&quot;Content Type&quot; />        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="&quot;>All Types</SelectItem>
-          <SelectItem value=&quot;signup&quot;>Signups</SelectItem>
-          <SelectItem value=&quot;job&quot;>Jobs</SelectItem>
-          <SelectItem value=&quot;message&quot;>Messages</SelectItem>
-          <SelectItem value=&quot;quote&quot;>Quotes</SelectItem>
-          <SelectItem value=&quot;review&quot;>Reviews</SelectItem>
-        </SelectContent>
-      </Select>
-      
-      <Button variant="outline" onClick={resetFilters} className="md: w-auto">        <Filter className="h-4 w-4 mr-2" /> Reset Filters
-      <Button variant=&quot;outline&quot; onClick={resetFilters} className=&quot;md:w-auto&quot;>
-        <Filter className=&quot;h-4 w-4 mr-2&quot; /> Reset Filters
-      </Button>
-    </div>
-  )
-},
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+},; interface FraudFiltersProps {
+  searchQuery: string;
+setSearchQuery: (value: string) => void;
+statusFilter: string | null;
+setStatusFilter: (value: string | null) => void;
+severityFilter: string | null;
+setSeverityFilter: (value: string | null) => void;
+contentTypeFilter: string | null;
+setContentTypeFilter: (value: string | null) => void;
+resetFilters: () => void 
+}export const FraudFilters: React.FC<FraudFiltersProps> = ({
+  searchQuery;
+setSearchQuery;
+statusFilter;
+setStatusFilter;
+severityFilter;
+setSeverityFilter;
+contentTypeFilter;
+setContentTypeFilter;
+resetFilters 
+}) => {
+  return (<div className="flex flex-col md:flex-row gap-4 mb-6" > <div className="relative flex-1" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" /> Search by user or content..."value= {
+  searchQuery 
+}</SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" pending">Pending</SelectItem> <SelectItem value=" reviewed">Reviewed</SelectItem> <SelectItem value=" ignored">Ignored</SelectItem> <SelectItem value=" actioned">Actioned</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Severities</SelectItem> <SelectItem value=" safe">Safe</SelectItem> <SelectItem value=" suspicious">Suspicious</SelectItem> <SelectItem value=" dangerous">Dangerous</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Types</SelectItem> <SelectItem value=" signup">Signups</SelectItem> <SelectItem value=" job">Jobs</SelectItem> <SelectItem value=" message">Messages</SelectItem> <SelectItem value=" quote">Quotes</SelectItem> <SelectItem value=" review">Reviews</SelectItem> </SelectContent> </Select> <Filter className="h-4 w-4 mr-2" /> Reset Filters 
+};

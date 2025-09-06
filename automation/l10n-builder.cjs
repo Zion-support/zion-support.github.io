@@ -2,20 +2,11 @@
 ;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 const codeMap = {;
   esperanto:'eo',;
   latin:'la',;
-  zlingua:'zl';
-=======
-
-const codeMap = {
-  esperanto: 'eo';
-  latin: 'la';
-  zlingua: 'zl'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  zlingua:'zl';};
 ;
 function main() {;
   const packsDir = path.join(process.cwd(), 'data', 'language-packs');

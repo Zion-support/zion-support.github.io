@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -90,64 +89,13 @@ export const ForumCategories = () => {;
   ),;
 },;
 ;
-export default ForumCategories,;
-=======
-import { Link } from "react-router-dom",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",import {
-  MessageSquare,
-  Briefcase,
-  Code,
-  FileText,
-  Megaphone
-} from "@/components/icons",
-import { ForumCategory, ForumCategoryInfo } from "@/types/community",
-const categories: ForumCategoryInfo[] = [
-  {
-    id: &quot;getting-hired&quot;,
-    name: &quot;Getting Hired&quot;,
-    description: &quot;Tips, strategies, and questions about getting hired on the platform.&quot;,
-    adminOnly: false,
-    icon: &quot;Briefcase&quot;
-  },
-  {
-    id: &quot;project-help&quot;,
-    name: &quot;Project Help&quot;,
-    description: &quot;Get help with your ongoing projects and collaboration.&quot;,
-    adminOnly: false,
-    icon: &quot;MessageSquare&quot;
-  },
-  {
-    id: &quot;ai-tools&quot;,
-    name: &quot;AI Tools Discussion&quot;,
-    description: &quot;Discuss AI tools, frameworks, and best practices.&quot;,
-    adminOnly: false,
-    icon: &quot;Code&quot;
-  },
-  {
-    id: &quot;feedback&quot;,
-    name: &quot;Feedback & Feature Requests&quot;,
-    description: &quot;Share your feedback and suggest new features.&quot;,
-    adminOnly: false,
-    icon: &quot;FileText&quot;
-  },
-  {
-    id: &quot;announcements&quot;,
-    name: &quot;Announcements&quot;,
-    description: &quot;Official announcements from the Zion team.&quot;,
-    adminOnly: true,
-    icon: &quot;Megaphone&quot;
-  }
-],
-
-const iconMap = {
-  Briefcase,
-  MessageSquare,
-  Code,
-  FileText,
-  Megaphone
-},
-
+export default ForumCategories,;const iconMap = {
+  Briefcase;
+MessageSquare;
+Code;
+FileText;
+Megaphone 
+};
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
@@ -208,4 +156,3 @@ export const _ForumCategories = () => {_const { user} = useAuth();
 },
 
 export default ForumCategories,
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

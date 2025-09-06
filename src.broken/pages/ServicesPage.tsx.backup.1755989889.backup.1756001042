@@ -9,28 +9,9 @@ import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import apiClient from "@/services/apiClient";
-<<<<<<< HEAD
 import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
-=======
-<<<<<<< HEAD
-import retry from "@/utils/retry";
-import { toast } from "@/hooks/use-toast";
-
-=======
-import { captureException } from "@/utils/sentry";
-import { Skeleton } from "@/components/ui/skeleton";
-import { toast } from "@/hooks/use-toast";
->>>>>>> origin/8axt14-codex/add-error-handling-and-fallback-data
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
-
-
-
-
-
-
 
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import type { ProductListing } from '@/types/listings';
@@ -187,9 +168,6 @@ export default function ServicesPage() {
   );
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     async function load() {
       try {
         // apiClient prepends '/api', so this requests '/api/services'
@@ -202,21 +180,7 @@ export default function ServicesPage() {
         console.error('Failed to fetch services', err);
         toast.error('Failed to load services. Showing sample data.');
         setListings(SERVICES);
-      }
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    if (data) setListings(data);
-  }, [data]);
-
-  useEffect(() => {
-    if (error) {
-      toast.error("Failed to load services. Showing sample data.");
-      setListings(SERVICES);
-<<<<<<< HEAD
-=======
->>>>>>> origin/8axt14-codex/add-error-handling-and-fallback-data
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    }
+      }    }
   }, [error]);
 
   useEffect(() => {
@@ -259,9 +223,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </div>
       <div className="mt-4 text-center text-sm text-muted-foreground">
         Premium Services ({stats.premiumServices}) • AI Score Avg: {stats.averageAIScore}
@@ -600,25 +561,6 @@ export default function ServicesPage() {
           </motion.button>
         )}
       </AnimatePresence>
-    </main>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-        <DynamicListingPage
-          title="IT & AI Services"
-          description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-          categorySlug="services"
-          listings={listings}
-          categoryFilters={SERVICE_FILTERS}
-          initialPrice={{ min: 3000, max: 10000 }}
-          itemsPerPage={10}
-        />
-        <TrustedBySection />
-      </>
-    </ErrorBoundary>
-<<<<<<< HEAD
-=======
->>>>>>> origin/8axt14-codex/add-error-handling-and-fallback-data
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
+    </main>  );
 }
 

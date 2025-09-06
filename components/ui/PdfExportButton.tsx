@@ -31,5 +31,4 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     >
       Download as PDF
     </button>
-  )
-}
+  )}

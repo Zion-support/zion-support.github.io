@@ -254,5 +254,4 @@ className=&quot;border rounded px-2 py-1&quot;
         </div>
       </section>
     </div>
-  )
-}
+  )}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */;
 module.exports = {;
   darkMode:"class",;
@@ -547,11 +546,7 @@ module.exports = {;
   theme:{;
     extend:{}},;
   plugins:[]}
-;
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: &quot;class&quot;,
+;module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -1039,4 +1034,3 @@ module.exports = {
   theme: {
     extend: {}},  plugins: []}
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

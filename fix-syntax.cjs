@@ -19,20 +19,11 @@ function fixFile(filePath) {;
     content = content.replace(/function\s+[^{]+{\s*$/gm, match => {;
       return match.replace(/,\s*$/, '');
     });
-<<<<<<< HEAD
 ;
     // Fix const/let/var declarations;
     content = content.replace(;
       /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,;
-      match => {;
-=======
-
-    // Fix const/let/var declarations
-    content = content.replace(
-      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,
-      match => {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        return match.replace(/,\s*$/, ';');
+      match => {;        return match.replace(/,\s*$/, ';');
       }
     );
 ;
@@ -45,19 +36,9 @@ function fixFile(filePath) {;
     content = content.replace(/<\/[^>]+>,\s*$/gm, match => {;
       return match.replace(/,\s*$/, '');
     });
-<<<<<<< HEAD
 ;
     // Fix object properties;
-    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {;
-=======
-
-    // Fix object properties
-<<<<<<< HEAD
-    content = content.replace(/(\w+):\s*[^}]+,\s*$/gm, match => {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {;    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {
       return match.replace(/,\s*$/, '');
     });
 ;
@@ -70,16 +51,9 @@ function fixFile(filePath) {;
     });
 ;
     fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
     console.log(`Fixe:d:${filePath}`);
   } catch (error) {;
-    console.error(`Error fixing ${filePath} `, error.message);
-=======
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  }
+    console.error(`Error fixing ${filePath} `, error.message);  }
 }
 ;
 function walkDir(dir) {;

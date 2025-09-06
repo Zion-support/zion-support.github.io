@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -21,30 +20,18 @@ export function SidebarItem({ className, children, active, ...props } SidebarIte
     >;
       {children}
     </div>;
-  ),;
-=======
-import React from "react",
-import { cn } from "@/lib/utils",interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode,
-  active?: boolean
-}
-import React from "react";
-
-interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {_className?: string;
-  children?: React.ReactNode;
-  active?: boolean;}
-
-export function SidebarItem(_{_className, _children, _active, _...props}: SidebarItemProps) {_return (
-    <div
-      className={cn(
-        &quot;flex items-center px-3 py-2 text-sm font-medium rounded-md&quot;,
-        active ? &quot;bg-primary/10 text-primary&quot; : &quot;text-muted-foreground hover:bg-accent hover:text-accent-foreground&quot;,
-        className      )}
-      {_...props}
-    >
-      {_children}
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode;
+active?: boolean 
+}className, children, active, ...props 
+}: SidebarItemProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
 }

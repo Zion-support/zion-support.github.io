@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -71,96 +70,11 @@ export function ProjectReviewSection({ project } ProjectReviewSectionProps) {;
                     {userReview.status === "pending" && (;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
-                      </Button>;
-=======
-import { useState } from "react",
-import { Star } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews",
-import { Project } from "@/types/projects",
-import { useAuth } from "@/hooks/useAuth",interface ProjectReviewSectionProps {
-  project: Project
-}
-
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  
-  const isCompleted = project.status === "completed",
-  const isClient = user?.id === project.clientid,
-  const isTalent = user?.id === project.talentid,  
-  const clientProfile = project.clientprofile,
-  const talentProfile = project.talentprofile,
-  
-  // Determine who the current user needs to review,
-const revieweeId = isClient ? project.talentid : project.clientid,
-  const revieweeName = isClient,
-interface ProjectReviewSectionProps {project: Project}
-
-export function ProjectReviewSection(_{project}: ProjectReviewSectionProps) {const { user} = useAuth();
-  const {reviews, userReview, isLoading, reportReview} = useReviews(project.id);
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  
-  const isCompleted = project.status === "completed";
-  const isClient = user?.id === project.clientid;
-  const isTalent = user?.id === project.talentid;
-  
-  const clientProfile = project.clientprofile;
-  const talentProfile = project.talentprofile;
-  
-  // Determine who the current user needs to review,
-const revieweeId = isClient ? project.talentid : project.clientid;
-  const revieweeName = isClient 
-    ? talentProfile?.fullname || "Talent" 
-    : clientProfile?.displayname || "Client",  
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,  
-  return (
-    <Card className=&quot;mt-6&quot;>
-      <CardHeader>
-        <CardTitle className=&quot;flex items-center gap-2&quot;>
-          <Star className=&quot;h-5 w-5 text-yellow-400&quot; />
-          Reviews
-        </CardTitle>
-        <CardDescription>
-          Reviews are visible once the project is completed and both parties submit feedback
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent>
-        {isCompleted ? (
-          <div className=&quot;space-y-6&quot;>
-            {(isClient || isTalent) && (
-              <div className=&quot;border-b pb-4 mb-4&quot;>                {canLeaveReview ? (
-                  <div className=&quot;bg-muted/20 rounded-lg p-4 text-center&quot;>
-                    <h3 className=&quot;font-medium mb-2&quot;>Share your experience</h3>
-                    <p className=&quot;text-sm text-muted-foreground mb-3&quot;>
-                      Your review will help build a trustworthy community
-                    </p>
-                    <Button onClick={() => setIsReviewModalOpen(true)}>
-                      Leave Review
-                    </Button>
-                  </div>
-                ) : hasLeftReview ? (
-                  <div className=&quot;bg-muted/20 rounded-lg p-4 text-center&quot;>
-                    <h3 className=&quot;font-medium mb-2&quot;>Thank you for your review!</h3>
-                    <p className=&quot;text-sm text-muted-foreground mb-3&quot;>
-                      Your review is {userReview.status === &quot;approved&quot; ? &quot;published&quot; : &quot;pending approval&quot}
-                    </p>
-                    {userReview.status === &quot;pending&quot; && (
-                      <Button variant=&quot;outline&quot; onClick={() => setIsReviewModalOpen(true)}>                        Edit Review
-                      </Button>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                    )}
+                      </Button>;                    )}
                   </div>;
                 ) :null}
               </div>;
             )}
-<<<<<<< HEAD
             ;
             <ReviewsList;
               reviews={reviews}
@@ -189,35 +103,49 @@ const revieweeId = isClient ? project.talentid : project.clientid;
         />;
       )}
     </Card>;
-  ),;
-=======
-            
-            <ReviewsList,
-reviews={reviews}
-              isLoading={isLoading}
-              onReportReview={reportReview}
-            />
-          </div>
-        ) : (
-          <div className=&quot;bg-muted/20 rounded-lg p-6 text-center&quot;>
-            <h3 className=&quot;font-medium mb-2&quot;>Reviews will be available once the project is completed</h3>
-            <p className=&quot;text-sm text-muted-foreground&quot;>
-              After the project is marked as completed, both parties will be able to leave reviews
-            </p>
-          </div>
-        )}
-      </CardContent>
-      
-      {_/* Review Modal */}
-      {_(isClient || isTalent) && (_<LeaveReviewModal,
-projectId={project.id}
-          revieweeId={revieweeId}
-          revieweeName={revieweeName}
-          isOpen={isReviewModalOpen}
-          onClose={_() => setIsReviewModalOpen(false)}
-        />
-      )}
-    </Card>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ interface ProjectReviewSectionProps {
+  project: Project 
+}export function ProjectReviewSection ({
+  project 
+}: ProjectReviewSectionProps) {
+  const {
+  user 
+}= useAuth ();
+const {
+  reviews, userReview, isLoading, reportReview 
+}= useReviews (project.id);
+const [isReviewModalOpen, setIsReviewModalOpen] = useState (false);
+const clientProfile = project.client profile;
+const talentProfile = project.talent profile;
+//Determine who the current user needs to review const revieweeId = isClient ? project.talent id : project.client id;
+const revieweeName = isClient ? talentProfile?.full name || "Talent" : clientProfile?.display name || "Client";
+mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Star className=" h-5 w-5 text-yellow-400"/> Reviews </CardTitle> <CardDescription> Reviews are visible once the project is completed and both parties submit feedback </CardDescription> </CardHeader> <CardContent> {
+  canLeaveReview ? (<div className=" bg-muted/20 rounded-lg p-4 text-center"> <h3 className=" font-medium mb-2">Share your experience</h3> <p className=" text-sm text-muted-foreground mb-3"> Your review will help build a trustworthy community </p> <Button onClick= {
+  () => setIsReviewModalOpen (true) 
+}> Leave Review </Button> </div> Edit Review </Button>) 
+}</div>) : null 
+}</div>) 
+}<ReviewsList reviews= {
+  reviews 
+}isLoading= {
+  isLoading 
+}onReportReview= {
+  reportReview 
+}/> </div>) : (<div className=" bg-muted/20 rounded-lg p-6 text-center"> <h3 className=" font-medium mb-2">Reviews will be available once the project is completed</h3> <p className=" text-sm text-muted-foreground" > After the project is marked as completed, both parties will be able to leave reviews </p> </div>) 
+}</CardContent> {
+  /* Review Modal */ 
+}{
+  (isClient || isTalent) && (<LeaveReviewModal projectId= {
+  project.id 
+}revieweeId= {
+  revieweeId 
+}revieweeName= {
+  revieweeName 
+}isOpen= {
+  isReviewModalOpen 
+}onClose= {
+  () => setIsReviewModalOpen (false) 
+}/>) 
+}</Card>) 
 }

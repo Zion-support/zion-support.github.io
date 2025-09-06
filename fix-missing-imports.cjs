@@ -16,7 +16,6 @@ class ImportFixer {;
   log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
-<<<<<<< HEAD
 ;
   // Get all Lucide React icons from the file;
   findLucideIcons(content) {;
@@ -24,18 +23,7 @@ class ImportFixer {;
     if (!iconMatches) return [];
 ;
     return iconMatches.map(match => {;
-      const iconName = match.replace('ico:n:', '').trim();
-=======
-
-  // Get all Lucide React icons from the file
-  findLucideIcons(content) {
-    const iconMatches = content.match(/icon:\s*([A-Z][a-zA-Z0-9]+)/g);
-    if (!iconMatches) return [];
-
-    return iconMatches.map(match => {
-      const iconName = match.replace('icon:', '').trim();
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return iconName;
+      const iconName = match.replace('ico:n:', '').trim();      return iconName;
     });
   }
 ;
@@ -59,16 +47,9 @@ class ImportFixer {;
       }
 ;
       let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
 ;
       // Skip if not a React component file;
-      if (!content.includes('lucide-react') && !content.includes('ico:n:')) {;
-=======
-
-      // Skip if not a React component file
-      if (!content.includes('lucide-react') && !content.includes('icon:')) {
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        return true;
+      if (!content.includes('lucide-react') && !content.includes('ico:n:')) {;        return true;
       }
 ;
       const iconsInFile = this.findLucideIcons(content);
@@ -95,18 +76,10 @@ class ImportFixer {;
         const importStatement = `import { ;
   ${allIcons.join(',\n  ')}
 } from 'lucide-react';`;
-<<<<<<< HEAD
 ;
         content = content.replace(;
           /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,;
-          importStatement;
-=======
-
-        content = content.replace(
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
-          importStatement
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        );
+          importStatement;        );
       } else {;
         // Create new import statement;
         const importStatement = `import { ;
@@ -128,12 +101,7 @@ class ImportFixer {;
       }
 ;
       fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-      this.fixedFiles.push({ fil:e:filePath, addedIcon:s:missingIcons });
-=======
-      this.fixedFiles.push({ file: filePath, addedIcons: missingIcons });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return true;
+      this.fixedFiles.push({ fil:e:filePath, addedIcon:s:missingIcons });      return true;
     } catch (error) {;
       this.log(`❌ Failed to fix ${filePath} ${error.message}`);
       return false;
@@ -142,27 +110,14 @@ class ImportFixer {;
 ;
   async fixAllFiles() {;
     this.log('🚀 Starting import fixing...');
-<<<<<<< HEAD
 ;
     // Find all React component files;
     const filesToCheck = [;
       'pages/components/Footer.tsx',;
       'pages/components/Navigation.tsx',;
-      'pages/components/Layout.tsx',;
-=======
-
-    // Find all React component files
-    const filesToCheck = [
-<<<<<<< HEAD
-      'pages/components/Footer.tsx';
-      'pages/components/Navigation.tsx';
-      'pages/components/Layout.tsx';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-      'pages/components/Footer.tsx',
+      'pages/components/Layout.tsx',;      'pages/components/Footer.tsx',
       'pages/components/Navigation.tsx',
       'pages/components/Layout.tsx',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const file of filesToCheck) {;
@@ -177,22 +132,12 @@ class ImportFixer {;
         this.fixFile(file);
       }
     }
-<<<<<<< HEAD
 ;
     this.log('\n📊 Import Fixing:Summary:');
     this.log(`- Files:fixed:${this.fixedFiles.length}`);
 ;
     this.fixedFiles.forEach(fix => {;
-      this.log(`  - ${fix.file} Added ${fix.addedIcons.join(', ')}`);
-=======
-
-    this.log('\n📊 Import Fixing Summary:');
-    this.log(`- Files fixed: ${this.fixedFiles.length}`);
-
-    this.fixedFiles.forEach(fix => {
-      this.log(`  - ${fix.file}: Added ${fix.addedIcons.join(', ')}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    });
+      this.log(`  - ${fix.file} Added ${fix.addedIcons.join(', ')}`);    });
 ;
     return this.fixedFiles;
   }

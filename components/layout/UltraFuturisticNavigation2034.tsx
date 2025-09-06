@@ -334,5 +334,4 @@ export default function UltraFuturisticNavigation2034() {
 ;
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-20&quot;></div>    </>
-  )
-}
+  )}

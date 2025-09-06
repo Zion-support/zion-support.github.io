@@ -112,5 +112,4 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error),
-    res.status(500).json({ error: 'Internal server error' })  }
-}
+    res.status(500).json({ error: 'Internal server error' })  }}

@@ -72,5 +72,4 @@ export default function VendorRegisterPage() {
       </form>
       {message && <div className=&quot;text-sm&quot;>{message}</div>}
       <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>    </div>
-  )
-}
+  )}

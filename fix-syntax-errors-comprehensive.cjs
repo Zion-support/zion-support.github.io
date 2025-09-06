@@ -21,23 +21,87 @@ function fixSyntaxErrors(filePath) {;
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
-<<<<<<< HEAD
 ;
     // Fix missing commas in objects;
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
 ;
     // Fix missing closing braces;
-=======
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+    // Fix malformed function declarations
+    content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
+    
+    // Fix malformed return statements in functions
+    content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
+    // Fix missing semicolons
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
 
     // Fix missing closing braces
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 ;
-    if (openBraces > closeBraces) {;
+    if (openBraces > closeBraces) {;}
+
+// Function to process a single file
+function processFile(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const { "content": fixedContent, fixes } = fixSyntaxErrors(content, filePath);
+        
+        if (fixes > 0) {
+            fs.writeFileSync(filePath, fixedContent, 'utf8');
+            
+            return fixes;
+        }
+        return 0;
+    } catch (error) {
+        console.error("❌ Error processing ${filePath}:", error.message);
+        return 0;
+    }
+}
+
+// Main execution
+async function main() {
+    const patterns = ['src/**/*.tsx',
+        'src/**/*.ts',
+        'src/**/*.jsx',
+        'src/**/*.js',
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'pages/**/*.tsx',
+        'pages/**/*.ts',
+        'pages/**/*.jsx',
+        'pages/**/*.js'
+    ];
+
+    let totalFixes = 0;
+    let filesProcessed = 0;
+
+    for (const pattern of patterns) {
+        const files = glob.sync(pattern, { "ignore": ['node_modules/**', '.next/**', 'dist/**'] });
+        
+        for (const file of files) {
+            if (fs.existsSync(file)) {
+                const fixes = processFile(file);
+                totalFixes += fixes;
+                filesProcessed++;
+            }
+        }
+    }
+
+    
+    
+    
+    
+    if (totalFixes > 0) {
+        
+    } else {
+        
       const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
@@ -47,8 +111,7 @@ function fixSyntaxErrors(filePath) {;
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 ;
-    if (openParens > closeParens) {;
-      const missingParens = openParens - closeParens;
+    if (openParens > closeParens) {;      const missingParens = openParens - closeParens;
       content += ')'.repeat(missingParens);
       modified = true;
     }
@@ -81,7 +144,6 @@ function fixSyntaxErrors(filePath) {;
       content = "import React from 'react';\n" + content;
       modified = true;
     }
-<<<<<<< HEAD
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
@@ -89,18 +151,7 @@ function fixSyntaxErrors(filePath) {;
     // Fix semicolons in array elements;
     content = content.replace(/([^,}]);/g, '$1,');
 ;
-    // Fix semicolons in function parameters;
-=======
-
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
-
-    // Fix semicolons in array elements
-    content = content.replace(/([^,}]);/g, '$1,');
-
-    // Fix semicolons in function parameters
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
+    // Fix semicolons in function parameters;    content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
 ;
     // Fix semicolons in JSX;
     content = content.replace(/<(\w+)\s*;\s*>/g, '<$1>');
@@ -118,7 +169,7 @@ function fixSyntaxErrors(filePath) {;
   }
 }
 ;
-function processDirectory(dirPath) {;
+function processDirectory(dirPath) {;function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
 ;

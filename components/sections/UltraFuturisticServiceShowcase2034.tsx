@@ -15,34 +15,18 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 
-const serviceCategories = [
+const serviceCategories = [  {
+  opacity: 0, y: 20 
+}
+}whileInView= {
   {
-    id: 'ai-services',
-    title: '🧠 Revolutionary AI Services',
-    description: 'Next-generation AI consciousness and creativity',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20'
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
-    id: 'quantum-tech',
-    title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing and beyond',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
-    gradient: 'from-indigo-500/20 to-cyan-500/20'
-  },
-  {
-    id: 'enterprise-it',
-    title: '🏙️ Enterprise IT Solutions',
-    description: 'Autonomous operations and zero-trust security',
-    icon: Cpu,
-    color: 'from-blue-500 to-cyan-500',
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
-    gradient: 'from-blue-500/20 to-teal-500/20'
-  },
+  duration: 0.5, delay: index * 0.1 
+}
+}viewport= {
   {
     id: 'business-automation',
     title: '🛒 Business Automation',
@@ -363,5 +347,4 @@ href=&quot;/pricing-2034&quot;
         </motion.div>
       </div>
     </section>
-  )
-}
+  )}

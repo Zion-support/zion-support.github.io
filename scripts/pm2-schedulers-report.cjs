@@ -53,7 +53,6 @@ class PM2SchedulersReport {;
     console.log('📊 Generating PM2 Schedulers Report...');
     ;
     const processes = await this.getPM2Status();
-<<<<<<< HEAD
     const report = {;
       generated:new Date().toISOString(),;
       summary:{;
@@ -81,38 +80,7 @@ class PM2SchedulersReport {;
           instances:process.pm2_env.instances,;
           exec_mode:process.pm2_env.exec_mode,;
           node_version:process.pm2_env.node_version,;
-          pm_cwd:process.pm2_env.pm_cwd;
-=======
-    const report = {
-      generated: new Date().toISOString();
-      summary: {
-        total: processes.length;
-        running: 0;
-        stopped: 0;
-        errored: 0;
-        restarts: 0
-      };
-      processes: [];
-      recommendations: []
-    };
-
-    for (const process of processes) {
-      const processInfo = {
-        name: process.name;
-        id: process.pm_id;
-        status: process.pm2_env.status;
-        uptime: process.pm2_env.pm_uptime;
-        restarts: process.pm2_env.restart_time;
-        memory: process.monit.memory;
-        cpu: process.monit.cpu;
-        pid: process.pid;
-        pm2_env: {
-          instances: process.pm2_env.instances;
-          exec_mode: process.pm2_env.exec_mode;
-          node_version: process.pm2_env.node_version;
-          pm_cwd: process.pm2_env.pm_cwd
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        }
+          pm_cwd:process.pm2_env.pm_cwd;        }
       };
 ;
       // Update summary;
@@ -128,7 +96,6 @@ class PM2SchedulersReport {;
 ;
       // Add process info;
       report.processes.push(processInfo);
-<<<<<<< HEAD
 ;
       // Generate recommendations;
       if (process.pm2_env.restart_time > 10) {;
@@ -169,51 +136,7 @@ class PM2SchedulersReport {;
       report.recommendations.push({;
         process:'System',;
         issue:'High restart frequency',;
-        recommendation:'Review process stability and error handling';
-=======
-
-      // Generate recommendations
-      if (process.pm2_env.restart_time > 10) {
-        report.recommendations.push({
-          process: process.name;
-          issue: 'High restart count';
-          recommendation: 'Investigate why this process keeps restarting'
-        });
-      }
-
-      if (process.monit.memory > 500 * 1024 * 1024) { // 500MB
-        report.recommendations.push({
-          process: process.name;
-          issue: 'High memory usage';
-          recommendation: 'Consider memory optimization or increase memory limit'
-        });
-      }
-
-      if (process.monit.cpu > 80) {
-        report.recommendations.push({
-          process: process.name;
-          issue: 'High CPU usage';
-          recommendation: 'Investigate CPU-intensive operations'
-        });
-      }
-    }
-
-    // Add general recommendations
-    if (report.summary.errored > 0) {
-      report.recommendations.push({
-        process: 'System';
-        issue: 'Processes in error state';
-        recommendation: 'Check PM2 logs and restart failed processes'
-      });
-    }
-
-    if (report.summary.restarts > 50) {
-      report.recommendations.push({
-        process: 'System';
-        issue: 'High restart frequency';
-        recommendation: 'Review process stability and error handling'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        recommendation:'Review process stability and error handling';      });
     }
 ;
     return report;

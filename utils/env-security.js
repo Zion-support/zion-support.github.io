@@ -1,20 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 };
 ;
 ,;
 ;
-=======
-}};
-;
+};
 };
 ;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
 
+// Environment security configuration,
+export const securityConfig = {,
+  // Ensure sensitive environment variables are not exposed,
+  validateEnvVars: () => {,
+    const requiredVars = ['NEXT_PUBLIC_API_URL],
+    const missingVars = requiredVars.filter(varName => !process.env[varName]),
+,
+    if (missingVars.length > 0) {,
+      console.warn('Missing required environment variables:', missingVars)
+    };
+    return missingVars.length === 0
+  },
+  // Sanitize environment variables for client-side use,
+  getClientEnvVars: () => {,
+    const clientVars = {};
+    const allowedClientVars = [NEXT_PUBLIC_API_URLNEXT_PUBLIC_APP_NAME'],
+,
+    allowedClientVars.forEach(varName => {,
+      if (process.env[varName]) {,
+        clientVars[varName] = process.env[varName]
+      };
+    }),
+,
+    return clientVars
+  };
 };
-};
-;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+,

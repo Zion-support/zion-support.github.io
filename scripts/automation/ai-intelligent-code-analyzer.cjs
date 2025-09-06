@@ -9,42 +9,21 @@ console.log('🤖 Starting AI Intelligent Code Analyzer...');
 class AIIntelligentCodeAnalyzer {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.analysisResults = {;
       timestam:p:new Date().toISOString(),;
       codeQualit:y:{},;
       pattern:s:{},;
       recommendation:s:[],;
       issue:s:[],;
-      metric:s:{},;
-=======
-    this.analysisResults = {
-      timestamp: new Date().toISOString(),
-      codeQuality: {},
-      patterns: {},
-      recommendations: [],
-      issues: [],
-      metrics: {},
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      metric:s:{},;    };
     this.learningData = this.loadLearningData();
   }
-<<<<<<< HEAD
 ;
   loadLearningData() {;
     const learningFile = path.join(;
       this.projectRoot,;
       'logs',;
-      'ai-learning-data.json';
-=======
-
-  loadLearningData() {
-    const learningFile = path.join(
-      this.projectRoot,
-      'logs',
-      'ai-learning-data.json'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'ai-learning-data.json';    );
     try {;
       if (fs.existsSync(learningFile)) {;
         return JSON.parse(fs.readFileSync(learningFile, 'utf8'));
@@ -52,37 +31,18 @@ class AIIntelligentCodeAnalyzer {;
     } catch (error) {;
       console.log('📚 Creating new learning data file...');
     }
-<<<<<<< HEAD
     return {;
       pattern:s:{},;
       fixe:s:{},;
       performanc:e:{},;
-      lastUpdate:d:new Date().toISOString(),;
-=======
-    return {
-      patterns: {},
-      fixes: {},
-      performance: {},
-      lastUpdated: new Date().toISOString(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      lastUpdate:d:new Date().toISOString(),;    };
   }
-<<<<<<< HEAD
 ;
   saveLearningData() {;
     const learningFile = path.join(;
       this.projectRoot,;
       'logs',;
-      'ai-learning-data.json';
-=======
-
-  saveLearningData() {
-    const learningFile = path.join(
-      this.projectRoot,
-      'logs',
-      'ai-learning-data.json'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'ai-learning-data.json';    );
     fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
   }
 ;
@@ -115,22 +75,12 @@ class AIIntelligentCodeAnalyzer {;
 ;
   async analyzeFileStructure() {;
     console.log('📁 Analyzing file structure...');
-<<<<<<< HEAD
 ;
     const structure = {;
       totalFile:s:0,;
       fileType:s:{},;
       directoryDept:h:0,;
-      complexit:y:'low',;
-=======
-
-    const structure = {
-      totalFiles: 0,
-      fileTypes: {},
-      directoryDepth: 0,
-      complexity: 'low',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      complexit:y:'low',;    };
 ;
     const analyzeDirectory = (dir, depth = 0) => {;
       const files = fs.readdirSync(dir);
@@ -168,22 +118,12 @@ class AIIntelligentCodeAnalyzer {;
 ;
   async analyzeCodeQuality() {;
     console.log('🎯 Analyzing code quality patterns...');
-<<<<<<< HEAD
 ;
     const qualityMetrics = {;
       maintainabilit:y:0,;
       readabilit:y:0,;
       testabilit:y:0,;
-      performanc:e:0,;
-=======
-
-    const qualityMetrics = {
-      maintainability: 0,
-      readability: 0,
-      testability: 0,
-      performance: 0,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      performanc:e:0,;    };
 ;
     // Analyze JavaScript/TypeScript files;
     const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
@@ -198,14 +138,8 @@ class AIIntelligentCodeAnalyzer {;
         qualityMetrics.readability += metrics.readability;
         qualityMetrics.testability += metrics.testability;
         qualityMetrics.performance += metrics.performance;
-<<<<<<< HEAD
       } catch (error) {;
-        console.log(`⚠️  Could not analyze:file:${file}`);
-=======
-      } catch (error) {
-        console.log(`⚠️  Could not analyze file: ${file}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      }
+        console.log(`⚠️  Could not analyze:file:${file}`);      }
     }
 ;
     // Calculate averages;
@@ -217,24 +151,13 @@ class AIIntelligentCodeAnalyzer {;
 ;
     this.analysisResults.codeQuality.metrics = qualityMetrics;
   }
-<<<<<<< HEAD
 ;
   analyzeFileQuality(content, filePath) {;
     const metrics = {;
       maintainabilit:y:0,;
       readabilit:y:0,;
       testabilit:y:0,;
-      performanc:e:0,;
-=======
-
-  analyzeFileQuality(content, filePath) {
-    const metrics = {
-      maintainability: 0,
-      readability: 0,
-      testability: 0,
-      performance: 0,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      performanc:e:0,;    };
 ;
     const lines = content.split('\n');
     const totalLines = lines.length;
@@ -244,16 +167,9 @@ class AIIntelligentCodeAnalyzer {;
       content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || [];
     ).length;
     const classCount = (content.match(/class\s+\w+/g) || []).length;
-<<<<<<< HEAD
     metrics.maintainability = Math.max(;
       0,;
-      100 - functionCount * 2 - classCount * 5;
-=======
-    metrics.maintainability = Math.max(
-      0,
-      100 - functionCount * 2 - classCount * 5
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      100 - functionCount * 2 - classCount * 5;    );
 ;
     // Readability metrics;
     const commentLines = lines.filter(;
@@ -266,27 +182,13 @@ class AIIntelligentCodeAnalyzer {;
     const testFiles = filePath.includes('test') || filePath.includes('spec');
     const hasExports =;
       content.includes('export') || content.includes('module.exports');
-<<<<<<< HEAD
     metrics.testability = (testFiles ? 5:0:0) + (hasExports ? 5:0:0);
 ;
-    // Performance metrics;
-=======
-    metrics.testability = (testFiles ? 50 : 0) + (hasExports ? 50 : 0);
-
-    // Performance metrics
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
+    // Performance metrics;    const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
     const forEachCount = (content.match(/\.forEach\(/g) || []).length;
-<<<<<<< HEAD
     metrics.performance = Math.max(;
       0,;
-      100 - asyncAwaitCount * 3 - forEachCount * 2;
-=======
-    metrics.performance = Math.max(
-      0,
-      100 - asyncAwaitCount * 3 - forEachCount * 2
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      100 - asyncAwaitCount * 3 - forEachCount * 2;    );
 ;
     return metrics;
   }
@@ -313,7 +215,6 @@ class AIIntelligentCodeAnalyzer {;
   detectFileAntiPatterns(content, filePath) {;
     const patterns = [];
     const lines = content.split('\n');
-<<<<<<< HEAD
 ;
     lines.forEach((line, index) => {;
       // Detect console.log in production code;
@@ -356,53 +257,7 @@ class AIIntelligentCodeAnalyzer {;
           severit:y:'high',;
           fil:e:filePath,;
           lin:e:index + 1,;
-          descriptio:n:'Potential callback hell detected',;
-=======
-
-    lines.forEach((line, index) => {
-      // Detect console.log in production code
-      if (line.includes('console.log') && !filePath.includes('test')) {
-        patterns.push({
-          type: 'console-log',
-          severity: 'medium',
-          file: filePath,
-          line: index + 1,
-          description: 'Console.log found in production code',
-        });
-      }
-
-      // Detect TODO comments
-      if (line.includes('TODO') || line.includes('FIXME')) {
-        patterns.push({
-          type: 'todo',
-          severity: 'low',
-          file: filePath,
-          line: index + 1,
-          description: 'TODO or FIXME comment found',
-        });
-      }
-
-      // Detect long functions
-      if (line.includes('function') && lines.length > 50) {
-        patterns.push({
-          type: 'long-function',
-          severity: 'medium',
-          file: filePath,
-          line: index + 1,
-          description: 'Function might be too long',
-        });
-      }
-
-      // Detect nested callbacks
-      if ((line.match(/\.then\(/g) || []).length > 2) {
-        patterns.push({
-          type: 'callback-hell',
-          severity: 'high',
-          file: filePath,
-          line: index + 1,
-          description: 'Potential callback hell detected',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        });
+          descriptio:n:'Potential callback hell detected',;        });
       }
     });
 ;
@@ -424,24 +279,15 @@ class AIIntelligentCodeAnalyzer {;
         // Skip files that can't be read;
       }
     }
-<<<<<<< HEAD
 ;
     this.analysisResults.performance = {;
       issue:s:performanceIssues,;
-      scor:e:Math.max(0, 100 - performanceIssues.length * 5),;
-=======
-
-    this.analysisResults.performance = {
-      issues: performanceIssues,
-      score: Math.max(0, 100 - performanceIssues.length * 5),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      scor:e:Math.max(0, 100 - performanceIssues.length * 5),;    };
   }
 ;
   detectPerformanceIssues(content, filePath) {;
     const issues = [];
     const lines = content.split('\n');
-<<<<<<< HEAD
 ;
     lines.forEach((line, index) => {;
       // Detect inefficient loops;
@@ -470,39 +316,7 @@ class AIIntelligentCodeAnalyzer {;
           typ:e:'object-creation',;
           fil:e:filePath,;
           lin:e:index + 1,;
-          descriptio:n:'Consider object pooling for large objects',;
-=======
-
-    lines.forEach((line, index) => {
-      // Detect inefficient loops
-      if (line.includes('for (') && line.includes('length')) {
-        issues.push({
-          type: 'inefficient-loop',
-          file: filePath,
-          line: index + 1,
-          description: 'Consider caching array length',
-        });
-      }
-
-      // Detect DOM queries in loops
-      if (line.includes('document.') && lines[index - 1]?.includes('for')) {
-        issues.push({
-          type: 'dom-in-loop',
-          file: filePath,
-          line: index + 1,
-          description: 'DOM query inside loop detected',
-        });
-      }
-
-      // Detect large object creation
-      if (line.includes('new Object()') || line.includes('{}')) {
-        issues.push({
-          type: 'object-creation',
-          file: filePath,
-          line: index + 1,
-          description: 'Consider object pooling for large objects',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        });
+          descriptio:n:'Consider object pooling for large objects',;        });
       }
     });
 ;
@@ -516,7 +330,6 @@ class AIIntelligentCodeAnalyzer {;
 ;
     // Based on code quality metrics;
     const metrics = this.analysisResults.codeQuality.metrics;
-<<<<<<< HEAD
     if (metrics.maintainability < 70) {;
       recommendations.push({;
         typ:e:'maintainability',;
@@ -541,77 +354,29 @@ class AIIntelligentCodeAnalyzer {;
         typ:e:'testability',;
         priorit:y:'high',;
         descriptio:n:'Improve code testability',;
-        actio:n:'Add unit tests and improve function modularity',;
-=======
-    if (metrics.maintainability < 70) {
-      recommendations.push({
-        type: 'maintainability',
-        priority: 'high',
-        description:
-          'Improve code maintainability by reducing function complexity',
-        action: 'Refactor large functions into smaller, focused functions',
-      });
-    }
-
-    if (metrics.readability < 60) {
-      recommendations.push({
-        type: 'readability',
-        priority: 'medium',
-        description: 'Add more comments and improve code documentation',
-        action: 'Add JSDoc comments and inline documentation',
-      });
-    }
-
-    if (metrics.testability < 50) {
-      recommendations.push({
-        type: 'testability',
-        priority: 'high',
-        description: 'Improve code testability',
-        action: 'Add unit tests and improve function modularity',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        actio:n:'Add unit tests and improve function modularity',;      });
     }
 ;
     // Based on anti-patterns;
     const consoleLogs = this.analysisResults.issues.filter(;
       issue => issue.type === 'console-log';
     );
-<<<<<<< HEAD
     if (consoleLogs.length > 0) {;
       recommendations.push({;
         typ:e:'logging',;
         priorit:y:'medium',;
         descriptio:n:`Remove ${consoleLogs.length} console.log statements from production code`,;
-        actio:n:'Replace with proper logging library or remove',;
-=======
-    if (consoleLogs.length > 0) {
-      recommendations.push({
-        type: 'logging',
-        priority: 'medium',
-        description: `Remove ${consoleLogs.length} console.log statements from production code`,
-        action: 'Replace with proper logging library or remove',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        actio:n:'Replace with proper logging library or remove',;      });
     }
 ;
     // Based on performance issues;
     const perfIssues = this.analysisResults.performance.issues;
-<<<<<<< HEAD
     if (perfIssues.length > 0) {;
       recommendations.push({;
         typ:e:'performance',;
         priorit:y:'high',;
         descriptio:n:`Address ${perfIssues.length} performance issues`,;
-        actio:n:'Optimize loops, DOM queries, and object creation',;
-=======
-    if (perfIssues.length > 0) {
-      recommendations.push({
-        type: 'performance',
-        priority: 'high',
-        description: `Address ${perfIssues.length} performance issues`,
-        action: 'Optimize loops, DOM queries, and object creation',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        actio:n:'Optimize loops, DOM queries, and object creation',;      });
     }
 ;
     this.analysisResults.recommendations = recommendations;
@@ -627,20 +392,11 @@ class AIIntelligentCodeAnalyzer {;
       }
       this.learningData.patterns[issue.type]++;
     });
-<<<<<<< HEAD
 ;
     // Update performance data;
     this.learningData.performance[new Date().toISOString()] = {;
       scor:e:this.analysisResults.performance.score,;
-      issue:s:this.analysisResults.performance.issues.length,;
-=======
-
-    // Update performance data
-    this.learningData.performance[new Date().toISOString()] = {
-      score: this.analysisResults.performance.score,
-      issues: this.analysisResults.performance.issues.length,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      issue:s:this.analysisResults.performance.issues.length,;    };
 ;
     this.learningData.lastUpdated = new Date().toISOString();
     this.saveLearningData();
@@ -674,24 +430,13 @@ class AIIntelligentCodeAnalyzer {;
     findInDirectory(this.projectRoot);
     return files;
   }
-<<<<<<< HEAD
 ;
   saveResults() {;
     const reportFile = path.join(;
       this.projectRoot,;
       'logs',;
-      `ai-code-analysis-${Date.now()}.json`;
-=======
-
-  saveResults() {
-    const reportFile = path.join(
-      this.projectRoot,
-      'logs',
-      `ai-code-analysis-${Date.now()}.json`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      `ai-code-analysis-${Date.now()}.json`;    );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
-<<<<<<< HEAD
 ;
     console.log('📊 Analysis:Results:');
     console.log(;
@@ -704,23 +449,7 @@ class AIIntelligentCodeAnalyzer {;
     console.log(;
       `- Recommendation:s:${this.analysisResults.recommendations.length}`;
     );
-    console.log(`- Report saved:to:${reportFile}`);
-=======
-
-    console.log('📊 Analysis Results:');
-    console.log(
-      `- Code Quality Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`
-    );
-    console.log(
-      `- Performance Score: ${this.analysisResults.performance.score}/100`
-    );
-    console.log(`- Issues Found: ${this.analysisResults.issues.length}`);
-    console.log(
-      `- Recommendations: ${this.analysisResults.recommendations.length}`
-    );
-    console.log(`- Report saved to: ${reportFile}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  }
+    console.log(`- Report saved:to:${reportFile}`);  }
 }
 ;
 // Run the analyzer;

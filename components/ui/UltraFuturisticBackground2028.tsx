@@ -273,5 +273,4 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 ;
       {/* Bottom Glow */}
       <div className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none&quot; style={{ zIndex: 5 }} />    </div>
-  )
-}
+  )}

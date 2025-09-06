@@ -20,33 +20,14 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 
-const pricingTiers = [
+const pricingTiers = [  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    name: 'Starter',
-    price: '$299',
-    period: '/month',
-    description: 'Perfect for small businesses and startups',
-    features: [
-      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
-    ],
-    popular: false,
-    color: 'from-blue-600 to-cyan-600',
-    cta: 'Get Started',
-    href: '/contact'
-  },
-  {
-    name: 'Professional',
-    price: '$999',
-    period: '/month',
-    description: 'Ideal for growing businesses and enterprises',
-    features: [
-      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
-    ],
-    popular: true,
-    color: 'from-purple-600 to-pink-600',
-    cta: 'Start Free Trial',
-    href: '/contact'
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
     name: 'Enterprise',
     price: 'Custom',
@@ -416,5 +397,4 @@ export default function Revolutionary2028Pricing() {_return (_<>
 
       <UltraFuturisticFooter2028 />
     </>
-  )
-}
+  )}

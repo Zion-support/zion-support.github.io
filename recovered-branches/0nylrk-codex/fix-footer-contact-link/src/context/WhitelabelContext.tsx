@@ -15,7 +15,6 @@ export interface WhitelabelContextType {;
   },;
   tenant:WhitelabelTenant | null;
 }
-<<<<<<< HEAD
 ;
 const defaultContext:WhitelabelContextType = {;
   isWhitelabel:false,;
@@ -73,59 +72,14 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   ),;
 },;
-;
-=======
-
-const defaultContext: WhitelabelContextType = {
-  isWhitelabel: false,
-  primaryColor: '#9b87f5', // Default Zion purple,
-logoUrl: null,
-  brandName: 'Zion AI Marketplace',
-  themePreset: 'light',
-  landingPageCopy: {
-    headline: 'AI Talent Marketplace',
-    subtitle: 'Find the best AI talent for your projects',
-    cta: 'Get Started'},
-  tenant: null},
-// The context may be undefined if the provider is not mounted.  By declaring
-// the generic as `WhitelabelContextType | null` we get proper type checking
-// without falling back to an empty object which triggers TS2740 errors.
-const WhitelabelContext = createContext<WhitelabelContextType | null>(null),
-
-export const useWhitelabel = (): WhitelabelContextType => {
-  const context = useContext(WhitelabelContext),
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
-  }  // Cast is used here because the context default is `null` until provided by
-  // `WhitelabelProvider`. The runtime check above guarantees it's defined.
-  return context as WhitelabelContextType
-},
-
-interface WhitelabelProviderProps {
-  children: ReactNode
-}
-
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
-  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),
-  const { tenant, isLoading } = useWhitelabelTenant(),
-  useEffect_(() => {if (!isLoading && tenant) {
-      setContextValue({
-        isWhitelabel: true,
-        primaryColor: tenant.primarycolor,
-        logoUrl: tenant.logourl,
-        brandName: tenant.brandname,
-        themePreset: tenant.themepreset,
-        landingPageCopy: tenant.landingpage_copy,
-        tenant: tenant})
-    } else if (!isLoading) {
-      setContextValue(defaultContext)
-    }
-  }, [tenant, isLoading]),
-  return (
-    <WhitelabelContext.Provider value={contextValue}>
-      {children}
-    </WhitelabelContext.Provider>
-  )
-},
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+; // The context may be undefined if the provider is not mounted. By declaring // the generic as `WhitelabelContextType | null` we get proper type checking // without falling back to an empty object which triggers TS2740 errors. // Cast is used here because the context default is `null` until provided by // `WhitelabelProvider`. The runtime check above guarantees it's defined. return context as WhitelabelContextType 
+};
+useEffect ( () => {
+  if (!isLoading && tenant) {
+  setContextValue ({
+  return (<WhitelabelContext.Provider value= {
+  contextValue 
+}> {
+  children 
+}</WhitelabelContext.Provider>) 
+};

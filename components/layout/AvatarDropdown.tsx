@@ -19,5 +19,4 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
           <button onClick={logout} className=&quot;w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Logout</button>        </div>
       )}
     </div>;
-  );
-}
+  );}

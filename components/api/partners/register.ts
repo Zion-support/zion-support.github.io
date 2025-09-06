@@ -40,5 +40,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
-  }
-}
+  }}

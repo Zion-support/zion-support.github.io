@@ -422,5 +422,4 @@ href="/pricing"
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-  )
-}
+  )}

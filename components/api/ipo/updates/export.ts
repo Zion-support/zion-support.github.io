@@ -31,5 +31,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.moveDown();
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
-  doc.end();
-}
+  doc.end();}

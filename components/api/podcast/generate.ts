@@ -8,12 +8,10 @@ const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH),
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
-
-function readEpisodes(): any[] {
-  ensureStorage(),
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')}
+};
+episodes.unshift (episode);
+writeEpisodes (episodes);
 }
 
 function writeEpisodes(episodes: any[]) {

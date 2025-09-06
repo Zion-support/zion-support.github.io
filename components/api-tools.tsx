@@ -442,5 +442,4 @@ href=&quot;/docs&quot;
         </div>
       </section>
     </>
-  )
-}
+  )}

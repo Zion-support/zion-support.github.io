@@ -49,5 +49,4 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
-}
+  )}

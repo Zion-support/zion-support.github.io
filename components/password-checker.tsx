@@ -526,5 +526,4 @@ href="/pricing&quot;
         </div>
       </section>
     </>
-  )
-}
+  )}

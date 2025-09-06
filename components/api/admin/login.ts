@@ -14,5 +14,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     setSessionCookie(res, { username, issuedAt: Date.now() }),
     res.status(200).json({ ok: true })
   } else {
-    res.status(401).json({ error: 'Invalid credentials' })  }
-}
+    res.status(401).json({ error: 'Invalid credentials' })  }}

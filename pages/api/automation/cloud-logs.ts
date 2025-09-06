@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -58,39 +57,10 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 ;
   const remote = await fetchFromGitHub(),;
   return res.status(200).json({ logs:remote }),;
-}
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-async function fetchFromGitHub(): Promise<any[]> {
-  try {
-    const repoUrl = require('../../../package.json').repository?.url || '',
-    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i),
-    const owner = process.env.GITHUBOWNER || (match ? match[1] : ''),
-    const repo = process.env.GITHUBREPO || (match ? match[2] : ''),
-    if (!owner || !repo) return [],
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/automationlogs`,
-    const headers: Record<string string> = { 'User-Agent': 'zion-autonomy' },
-    if (process.env.GITHUBTOKEN) headers['Authorization'] = `token ${process.env.GITHUBTOKEN}`,
-    const resp = await fetch(apiUrl, { headers }),
-    if (!resp.ok) return [],
-    const files = (await resp.json()) as Array<{ name: string, downloadurl: string, type: string }>,
-    const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json')),
-    const results: any[] = [],
-    for (const f of jsonFiles.slice(-50).reverse()) {
-      try {
-        const r = await fetch(f.downloadurl, { headers }),
-        if (!r.ok) continue,
-        const j = await r.json(),
-        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
-      } catch {
-        // ignore
-      }
-    }
-    return results
+}    }
   } catch {
-    return []
+    // fall through to GitHub
+    res.status(200).json({ logs: [] });
   }
 }
 
@@ -114,4 +84,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const remote = await fetchFromGitHub(),
   return res.status(200).json({ logs: remote })}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

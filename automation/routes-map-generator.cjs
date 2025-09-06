@@ -61,18 +61,10 @@ function listPublicReports(publicRoot) {;
     if (!ent.isDirectory()) continue;
     const dir = ent.name;
     const indexHtml = path.join(reportsRoot, dir, 'index.html');
-<<<<<<< HEAD
     items.push({;
       name:dir,;
       path:`/reports/${dir}${fs.existsSync(indexHtml) ? '' :'/'}`,;
-      hasIndex:fs.existsSync(indexHtml);
-=======
-    items.push({
-      name: dir;
-      path: `/reports/${dir}${fs.existsSync(indexHtml) ? '' : '/'}`;
-      hasIndex: fs.existsSync(indexHtml)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      hasIndex:fs.existsSync(indexHtml);    });
   }
   return items.sort((a, b) => a.name.localeCompare(b.name));
 }
@@ -130,16 +122,9 @@ function main() {;
   const reports = listPublicReports(publicRoot);
 ;
   const outDir = path.join(publicRoot, 'reports', 'routes');
-<<<<<<< HEAD
   writeJson(path.join(outDir, 'routes.json'), { routes, reports, generatedAt:new Date().toISOString() });
   writeHtml(path.join(outDir, 'index.html'), { routes, reports });
-;
-=======
-  writeJson(path.join(outDir 'routes.json'), { routes, reports, generatedAt: new Date().toISOString() });
-  writeHtml(path.join(outDir 'index.html'), { routes, reports });
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  console.log(`[routes-map-generator] Generated ${routes.length} routes and ${reports.length} report entries.`);
+;  console.log(`[routes-map-generator] Generated ${routes.length} routes and ${reports.length} report entries.`);
 }
 ;
 if (require.main === module) {;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
         "isDesktop":width >= 1024})},;
 ;
     updateDimensions(),;
@@ -8,19 +6,7 @@
     return () => window.removeEventListener(;
   'resize', updateDimensions)}, []),;
   return state},;
-export default useResponsive,;
-=======
-import { useState, useEffect } from 'react';
-    updateDimensions(),
-    window.addEventListener(
-  'resize', updateDimensions),
-    return () => window.removeEventListener(
-  'resize', updateDimensions)}, []),
-  return state},
-export default useResponsive,
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-import { useState, useEffect } from 'react';
+export default useResponsive,;import { useState, useEffect } from 'react';
 
 interface Breakpoints {
   sm: number;
@@ -82,4 +68,12 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
     breakpoints,
   };
 }
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+        "isDesktop": width >= 1024})};
+    updateDimensions(),
+    window.addEventListener(,
+  'resize', updateDimensions),
+    return () => window.removeEventListener(,
+  'resize', updateDimensions)}, []),
+  return state};
+export default useResponsive,
+,

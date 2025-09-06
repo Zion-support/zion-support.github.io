@@ -43,5 +43,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       topTags: [
         { label: 'react', value: 2 },
         { label: 'node', value: 1 },
-        { label: 'ai', value: 1 }]})  }
-}
+        { label: 'ai', value: 1 }]})  }}

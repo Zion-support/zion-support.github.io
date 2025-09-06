@@ -480,5 +480,4 @@ href=&quot;/contact&quot;
         </div>
       </section>
     </>
-  )
-}
+  )}

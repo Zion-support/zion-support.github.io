@@ -1,82 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-;
-// List of corrupted files that need to be completely rewritten;
-const corruptedFiles = {;
-  'components/AccessibilityEnhancer.tsx':`import React, { useEffect } from 'react';
-;
-const:AccessibilityEnhancer:React.FC = () => {;
-  useEffect(() => {;
-    // Add skip link for keyboard navigation;
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only:focus:not-sr-only:focus:absolute:focus:top-0:focus:left-0:focus:z-50:focus:p-4:focus:bg-blue-600:focus:text-white';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-;
-    // Add ARIA live region for announcements;
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-;
-    // Announce page changes;
-    const announcePageChange = (messag:e:string) => {;
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {;
-        liveRegion.textContent = message;
-      }
-    };
-;
-    // Listen for route changes (Next.js specific);
-    const handleRouteChange = () => {;
-      announcePageChange('Page loaded');
-    };
-;
-    // Add route change listener if available;
-    if (typeof window !== 'undefined' && window.history) {;
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
-;
-      window.history.pushState = function(...args) {;
-        originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-;
-      window.history.replaceState = function(...args) {;
-        originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-;
-      window.addEventListener('popstate', handleRouteChange);
-    }
-;
-    // Cleanup;
-    return () => {;
-      if (skipLink.parentNode) {;
-        skipLink.parentNode.removeChild(skipLink);
-      }
-      if (liveRegion.parentNode) {;
-        liveRegion.parentNode.removeChild(liveRegion);
-      }
-    };
-  }, []);
-;
-  return null;
-};
-<<<<<<< HEAD
-;
-export default AccessibilityEnhancer;`,;
-;
-  'components/OptimizedImage.tsx':`import React from 'react';
-=======
-
-export default AccessibilityEnhancer;`;
-  'components/OptimizedImage.tsx': `import React from 'react';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-import Image from 'next/image';
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    const content = fs.readFileSync(filePath, 'utf8')
+    const corruptionPatterns = [/import.*from.*['']
+      /import.*\{.*\}.*from.*['']
+      /['"]"use"
+    .replace(/import.*from.*['"]react;['"]/g, ")
+    .replace(/import.*\{.*\}.*from.*['')]
+      return match.replace(/['"]react;['"]/, ")
+    .replace(/['"]"use": client['"]/, '"use client")
+    .replace(/"declare")
+    .replace(/script1\."async")
+    .replace(/script1\."src")
+    .replace(/['"]react;['"]/g, ")
+    .replace(/['"]framer-motion;['"]/g, ")
+    .replace(/['"]lucide-react;['"]/g, ")import Image from 'next/image';
 ;
 interface OptimizedImageProps {;
   sr:c:string;
@@ -109,17 +47,10 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
     />;
   );
 };
-<<<<<<< HEAD
 ;
 export default OptimizedImage;`,;
 ;
-  'components/ContactForm.tsx':`import React, { useState } from 'react';
-=======
-
-export default OptimizedImage;`;
-  'components/ContactForm.tsx': `import React, { useState } from 'react';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-import LoadingSpinner from './LoadingSpinner';
+  'components/ContactForm.tsx':`import React, { useState } from 'react';import LoadingSpinner from './LoadingSpinner';
 ;
 interface FormData {;
   nam:e:string;
@@ -145,16 +76,9 @@ const:ContactForm:React.FC = () => {;
 ;
   const handleInputChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-<<<<<<< HEAD
     setFormData(prev => ({;
       ...prev,;
-      [name]:value,;
-=======
-    setFormData(prev => ({
-      ...prev;
-      [name]: value;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }));
+      [name]:value,;    }));
   };
 ;
   const handleSubmit = async (e:React.FormEvent) => {;
@@ -300,14 +224,8 @@ const:ContactForm:React.FC = () => {;
     </form>;
   );
 };
-<<<<<<< HEAD
 ;
-export default ContactForm;`;
-=======
-
-export default ContactForm;`,
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+export default ContactForm;`;};
 ;
 // Write the fixed files;
 Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
@@ -318,10 +236,5 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
     console.error(`Error fixing ${filePath} `, error.message);
   }
 });
-<<<<<<< HEAD
 ;
 console.log('Fixed corrupted files');
-=======
-
-console.log('Fixed corrupted files');
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -177,116 +176,22 @@ export default function Services() {;
                         </svg>;
                       </Link>;
                     </div>;
-                  );
-=======
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner',
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
-    return () => clearTimeout(timer)
-  }, []),
-
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  },
-
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses',
-      count: '150+',
-      color: 'blue',
-      services: [
-        'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website Translator',
-        'Predictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
-      ],
-      href: '/micro-saas'
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions for enterprise needs',
-      count: '100+',
-      color: 'purple',
-      services: [
-        'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice Analytics',
-        'AI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
-      ],
-      href: '/ai-services'
-    },
-    {
-      title: 'IT & Cloud Services',
-      description: 'Comprehensive IT solutions for enterprise-grade operations',
-      count: '100+',
-      color: 'green',
-      services: [
-        'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data Platform',
-        'High-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
-      ],
-      href: '/it-services'
-    }
-  ],
-  const _getColorClasses = (_color: string) => {_const _colors = {
-      blue: {
-        bg: 'bg-blue-600',
-        hover: 'hover:bg-blue-700',
-        text: 'text-blue-400',
-        border: 'border-blue-500/40',
-        ring: 'focus:ring-blue-500'
-      },
-      purple: {
-        bg: 'bg-purple-600',
-        hover: 'hover:bg-purple-700',
-        text: 'text-purple-400',
-        border: 'border-purple-500/40',
-        ring: 'focus:ring-purple-500'
-      },
-      green: {
-        bg: 'bg-green-600',
-        hover: 'hover:bg-green-700',
-        text: 'text-green-400',
-        border: 'border-green-500/40',
-        ring: 'focus:ring-green-500'
-      }
-    },
-    return colors[color as keyof typeof colors] || colors.blue
-  },
-  return (_<>
-      <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity&quot; />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
-        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-        <link rel=&quot;canonical&quot; href={`${contact.site}/services`} />
-      </Head>
-      
-      <ErrorBoundary level=&quot;page&quot;>
-        <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
-          {/* Hero Section */}
-          <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot;>
-            <div className=&quot;max-w-4xl mx-auto&quot;>              <h1 
-                className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Our Services
+                  );                Our Services
               </h1>
-              <p className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                350+ Innovative Solutions for Modern Businesses
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+                Comprehensive technology solutions designed to transform your business and drive growth.
               </p>
-              <p className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, _we provide everything your business needs to thrive in the digital age.
-              </p>
-            </div>
-          </section>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Pricing
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
           {/* Service Categories */}
           <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
@@ -329,14 +234,12 @@ export default function Services() {
                       </Link>
                     </div>
                   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                 })}
               </div>;
             </div>;
           </section>;
 ;
           {/* Why Choose Us */}
-<<<<<<< HEAD
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -423,68 +326,17 @@ export default function Services() {
         </main>;
       </ErrorBoundary>;
     </>;
-  );
-=======
-          <section className=&quot;py-16 px-4 bg-slate-900/40&quot;>
-            <div className=&quot;max-w-6xl mx-auto&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-center mb-12&quot;>
-                Why Choose Zion Tech Group?
-              </h2>
-              
-              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 10V3L4 14h7v7l9-11h-7z&quot; />                    </svg>
-                  </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Lightning Fast</h3>
-                  <p className=&quot;text-slate-400&quot;>Rapid deployment and implementation of solutions</p>
-                </div>
-                
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z&quot; />                    </svg>
-                  </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Enterprise Grade</h3>
-                  <p className=&quot;text-slate-400&quot;>Scalable solutions for businesses of all sizes</p>
-                </div>
-                
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z&quot; />                    </svg>
-                  </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Secure & Reliable</h3>
-                  <p className=&quot;text-slate-400&quot;>Bank-level security and 99.9% uptime guarantee</p>
-                </div>
-                
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z&quot; />                    </svg>
-                  </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>24/7 Support</h3>
-                  <p className=&quot;text-slate-400&quot;>Round-the-clock technical support and maintenance</p>
-                </div>
-              </div>
-            </div>
-          </section>
+  );              </p>
+            </motion.div>
 
-          {/* CTA Section */}
-          <section className=&quot;py-16 px-4&quot;>
-            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-8&quot;>                Ready to Get Started?
-              </h2>
-              <p className=&quot;text-lg text-slate-300 mb-8&quot;>
-                Contact our experts today to discuss your project requirements and discover 
-                how our innovative solutions can transform your business.
-              </p>
-              
-              <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
-                <Link 
-                  href=&quot;/contact&quot; 
-                  className=&quot;px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors&quot;
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6"
                 >
                   Get a Quote
                 </Link>
@@ -507,12 +359,56 @@ export default function Services() {
                 >
                   Email Us
                 </Link>
+              </div>            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's discuss your project and find the perfect solution for your business needs.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Portfolio
+                </button>
               </div>
-            </div>
-          </section>
-        </main>
-      </ErrorBoundary>
+            </motion.div>
+          </div>
+        </section>
     </>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-slate-300 mb-8">
+              Contact our experts to discuss your project requirements and discover 
+              how our solutions can drive your business forward.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact" className="btn-primary">
+                Get a Quote
+              </Link>
+              <Link href="/contact" className="btn-secondary">
+                Schedule Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 }

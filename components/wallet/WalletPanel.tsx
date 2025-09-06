@@ -178,5 +178,4 @@ export default function WalletPanel() {
         )}
       </div>
     </div>
-  )
-}
+  )}

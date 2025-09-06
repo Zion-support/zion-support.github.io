@@ -28,5 +28,4 @@ export default function CoachWidget() {
         <button onClick={ask} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; disabled={loading}>{loading ? '...' : 'Ask'}</button>
       </div>
       {reply && <div className=&quot;mt-2 text-sm text-gray-800 dark:text-gray-200&quot;>{reply}</div>}    </div>
-  )
-}
+  )}

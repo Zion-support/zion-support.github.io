@@ -11,8 +11,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
+  const [formData, setFormData] = useState<FormData>({    name: '',
     email: '',
     company: '',
     phone: '',
@@ -40,8 +39,7 @@ const ContactForm: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({
-        name: '',
+      setFormData({        name: '',
         email: '',
         company: '',
         phone: '',

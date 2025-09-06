@@ -3,5 +3,4 @@ export default function EnhancedCard({ children, className = '' }: { children: R
   return (
     <div className={[&quot;card-base p-4&quot;, className].join(' ')}>
       {children}    </div>
-  )
-}
+  )}

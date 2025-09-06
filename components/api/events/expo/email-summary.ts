@@ -22,5 +22,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
     // TODO: Integrate with actual provider
     return res.status(200).json({_status: 'queued', _provider});
   } catch (e: unknown) {_return res.status(500).json({ error: e.message || 'Failed to queue emails'});
-  }
-}
+  }}

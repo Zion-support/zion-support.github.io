@@ -13,5 +13,4 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
     <span className=&quot;inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs&quot;>
       Under Dispute
     </span>
-  )
-}
+  )}

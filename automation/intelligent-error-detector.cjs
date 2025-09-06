@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class IntelligentErrorDetector {;
   constructor() {;
@@ -13,34 +12,15 @@ class IntelligentErrorDetector {;
       modul:e:/Cannot find module|Module not found/gi,;
       impor:t:/Cannot resolve module|Import error/gi,;
       buil:d:/Build failed|Compilation error/gi,;
-      runtim:e:/Runtime error|Uncaught exception/gi,;
-=======
-
-class IntelligentErrorDetector {
-  constructor() {
-    this.errorPatterns = {
-      syntax: /SyntaxError|ParseError|Unexpected token/gi,
-      type: /TypeError|ReferenceError/gi,
-      module: /Cannot find module|Module not found/gi,
-      import: /Cannot resolve module|Import error/gi,
-      build: /Build failed|Compilation error/gi,
-      runtime: /Runtime error|Uncaught exception/gi,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      runtim:e:/Runtime error|Uncaught exception/gi,;    };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
     this.ensureLogDirectory();
   }
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
-<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursiv:e:true });
-=======
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      fs.mkdirSync(logDir, { recursiv:e:true });    }
   }
 ;
   log(message, level = 'INFO') {;
@@ -52,7 +32,6 @@ class IntelligentErrorDetector {
 ;
   async detectErrors() {;
     this.log('🔍 Starting intelligent error detection...');
-<<<<<<< HEAD
 ;
     const errors = {;
       synta:x:await this.detectSyntaxErrors(),;
@@ -60,30 +39,11 @@ class IntelligentErrorDetector {
       modul:e:await this.detectModuleErrors(),;
       impor:t:await this.detectImportErrors(),;
       buil:d:await this.detectBuildErrors(),;
-      runtim:e:await this.detectRuntimeErrors(),;
-=======
-
-    const errors = {
-      syntax: await this.detectSyntaxErrors(),
-      type: await this.detectTypeErrors(),
-      module: await this.detectModuleErrors(),
-      import: await this.detectImportErrors(),
-      build: await this.detectBuildErrors(),
-      runtime: await this.detectRuntimeErrors(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
-<<<<<<< HEAD
+      runtim:e:await this.detectRuntimeErrors(),;    };
 ;
     const totalErrors = Object.values(errors).reduce(;
       (sum, arr) => sum + arr.length,;
-      0;
-=======
-
-    const totalErrors = Object.values(errors).reduce(
-      (sum, arr) => sum + arr.length,
-      0
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      0;    );
     this.log(`Found ${totalErrors} total errors across all categories`);
 ;
     if (totalErrors > 0) {;
@@ -93,22 +53,12 @@ class IntelligentErrorDetector {
 ;
     return errors;
   }
-<<<<<<< HEAD
 ;
   async detectSyntaxErrors() {;
     try {;
       const result = execSync('npx eslint . --format json', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-  async detectSyntaxErrors() {
-    try {
-      const result = execSync('npx eslint . --format json', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue =>;
         issue.messages.some(msg => this.errorPatterns.syntax.test(msg.message));
@@ -117,51 +67,30 @@ class IntelligentErrorDetector {
       return [];
     }
   }
-<<<<<<< HEAD
 ;
   async detectTypeErrors() {;
     try {;
       const result = execSync('npx tsc --noEmit --skipLibCheck', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-  async detectTypeErrors() {
-    try {
-      const result = execSync('npx tsc --noEmit --skipLibCheck', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
       return [];
     } catch (error) {;
       const lines = error.stdout.split('\n');
       return lines.filter(line => this.errorPatterns.type.test(line));
     }
   }
-<<<<<<< HEAD
 ;
   async detectModuleErrors() {;
     try {;
       const result = execSync('npm run build', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-  async detectModuleErrors() {
-    try {
-      const result = execSync('npm run build', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
       return [];
     } catch (error) {;
       const lines = (error.stdout || error.stderr || '').split('\n');
       return lines.filter(line => this.errorPatterns.module.test(line));
     }
   }
-<<<<<<< HEAD
 ;
   async detectImportErrors() {;
     try {;
@@ -169,18 +98,7 @@ class IntelligentErrorDetector {
         'npx eslint . --rule "import/no-unresolve:d:error"',;
         {;
           stdi:o:'pipe',;
-          cw:d:process.cwd(),;
-=======
-
-  async detectImportErrors() {
-    try {
-      const result = execSync(
-        'npx eslint . --rule "import/no-unresolved: error"',
-        {
-          stdio: 'pipe',
-          cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        }
+          cw:d:process.cwd(),;        }
       );
       return [];
     } catch (error) {;
@@ -188,22 +106,12 @@ class IntelligentErrorDetector {
       return lines.filter(line => this.errorPatterns.import.test(line));
     }
   }
-<<<<<<< HEAD
 ;
   async detectBuildErrors() {;
     try {;
       const result = execSync('npm run build', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-  async detectBuildErrors() {
-    try {
-      const result = execSync('npm run build', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
       return [];
     } catch (error) {;
       const lines = (error.stdout || error.stderr || '').split('\n');
@@ -220,27 +128,13 @@ class IntelligentErrorDetector {
     files.forEach(file => {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
         if (this.errorPatterns.runtime.test(content)) {;
           runtimeErrors.push({;
             file,;
             lin:e:;
               content;
                 .split('\n');
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,;
-=======
-        if (this.errorPatterns.runtime.test(content)) {
-          runtimeErrors.push({
-            file,
-            line:
-              content
-                .split('\n')
-<<<<<<< HEAD
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,;                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
           });
         }
       } catch (error) {;
@@ -283,7 +177,6 @@ class IntelligentErrorDetector {
     walkDir(process.cwd());
     return files;
   }
-<<<<<<< HEAD
 ;
   async generateErrorReport(errors) {;
     const report = {;
@@ -296,15 +189,9 @@ class IntelligentErrorDetector {
         (acc, [category, errorList]) => {;
           acc[category] = errorList.length;
           return acc;
-<<<<<<< HEAD
-        },;
-=======
-        };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        {}
+        },;        {}
       ),;
       detail:s:errors,;
-=======
 
   async generateErrorReport(errors) {
     const report = {
@@ -321,34 +208,16 @@ class IntelligentErrorDetector {
         {}
       ),
       details: errors,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
-<<<<<<< HEAD
 ;
     const reportFile = path.join(;
       __dirname,;
       'reports',;
-      'error-detection-report.json';
-=======
-
-    const reportFile = path.join(
-      __dirname,
-      'reports',
-      'error-detection-report.json'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
-<<<<<<< HEAD
+      'error-detection-report.json';    );
     fs.mkdirSync(path.dirname(reportFile), { recursiv:e:true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
-    this.log(`Error report:generated:${reportFile}`);
-=======
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`Error report generated: ${reportFile}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  }
+    this.log(`Error report:generated:${reportFile}`);  }
 ;
   async suggestFixes(errors) {;
     const suggestions = [];
@@ -378,18 +247,10 @@ class IntelligentErrorDetector {
     if (errors.runtime.length > 0) {;
       suggestions.push('Add proper error handling and validation');
     }
-<<<<<<< HEAD
 ;
     if (suggestions.length > 0) {;
       this.log('💡 Suggested:fixes:');
-      suggestions.forEach((suggestion, index) => {;
-=======
-
-    if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes:');
-      suggestions.forEach((suggestion, index) => {
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        this.log(`   ${index + 1}. ${suggestion}`);
+      suggestions.forEach((suggestion, index) => {;        this.log(`   ${index + 1}. ${suggestion}`);
       });
     }
   }

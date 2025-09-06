@@ -65,5 +65,4 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         <label className=&quot;block text-sm mb-1&quot;>Response</label>
         <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>      </div>
     </div>
-  )
-}
+  )}

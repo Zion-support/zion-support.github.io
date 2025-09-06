@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
 import FeedbackModal from "../../components/ui/FeedbackModal",;
@@ -30,57 +29,13 @@ export default function ProjectPage() {;
       } catch (e:any) {;
         setError(e.message);
       } finally {;
-        setLoading(false),;
-=======
-import { useEffect, useState } from "react",
-import { useRouter } from "next/router",
-import FeedbackModal from "../../components/ui/FeedbackModal",
-export default function ProjectPage() {
-  const router = useRouter(),
-  const { projectId } = router.query as { projectId?: string },
-  const [project, setProject] = useState<any | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [note, setNote] = useState(""),
-export default function ProjectPage() {const router = useRouter();
-  const { projectId} = router.query as {projectId?: string};
-  const [project, setProject] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [note, setNote] = useState("&quot;);
-
-  const headers = {
-    &quot;x-demo-user-role&quot;: &quot;client&quot;,
-    &quot;x-demo-user-id&quot;: &quot;client-1&quot;,
-    // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent",
-    // "x-demo-talent-slug": "ava-chen"} as Record<string string>,
-  useEffect(() => {
-    async function load() {
-      if (!projectId) return,
-  const headers = {_"x-demo-user-role": "client", _"x-demo-user-id": "client-1", _// For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent", _// "x-demo-talent-slug": "ava-chen"} as Record<string, string>;
-
-  useEffect_(() => {async function load() {
-      if (!projectId) return;
-      try {
-        setLoading(true),
-        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
-        const json = await res.json(),
-        if (!json.ok) throw new Error(json.error || "Failed to load project"),
-        setProject(json.project)      } catch (e: any) {
-        setError(e.message)
-      } finally {
-        setLoading(false)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
+        setLoading(false),;      }
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, {headers});
         const json = await res.json();
         if (!json.ok) throw new Error(json.error || "Failed to load project");
         setProject(json.project)
       } catch (e: unknown) {setError(e.message)} finally {setLoading(false)}
     }
-<<<<<<< HEAD
     load(),;
   }, [projectId]),;
 ;
@@ -112,90 +67,7 @@ export default function ProjectPage() {const router = useRouter();
   }
 ;
   return (;
-    <div className="max-w-4xl mx-auto p-6 space-y-6">;
-=======
-    load()
-  }, [projectId]),
-
-  const [showFeedback, setShowFeedback] = useState(false),
-
-  async function addNote() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "addnote", content: note })}),
-    const json = await res.json(),
-    if (json.ok) {
-      setProject(json.project),
-      setNote(""),
-      setShowFeedback(true)    }
-  }
-
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "markcompleted" })}),
-    const json = await res.json(),    if (json.ok) {
-      setProject(json.project),
-      setShowFeedback(true)
-    }
-  }
-
-  return (
-    <div className=&quot;max-w-4xl mx-auto p-6 space-y-6&quot;>
-      {loading && <div>Loading…</div>}
-      {error && <div className=&quot;text-red-600&quot;>{error}</div>}
-      {project && (
-        <div className=&quot;space-y-6&quot;>
-          <div className=&quot;flex items-center gap-3&quot;>
-            <h1 className=&quot;text-2xl font-semibold&quot;>Project Kickoff</h1>
-            <span className={`px-2 py-0.5 rounded text-xs ${project.status === &quot;ACTIVE&quot; ? &quot;bg-emerald-100 text-emerald-700&quot; : &quot;bg-gray-200&quot}`}>
-              {project.status}
-            </span>
-          </div>
-
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Project Summary</h2>
-            <div className=&quot;text-sm&quot;>
-              <div><b>Client</b>: {project.clientId}</div>
-              <div><b>Talent</b>: {project.talentSlug}</div>
-              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
-              <div className=&quot;mt-2&quot;>{project.summary}</div>
-            </div>
-          </section>
-
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Timeline</h2>
-            <ul className=&quot;list-disc pl-6 space-y-1 text-sm&quot;>
-              {project.timeline?.length ? (
-                project.timeline.map((m: any) => (
-                  <li key={m.id}>
-                    <span className=&quot;font-medium&quot;>{m.title}</span>
-                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
-                    {m.amountUsd && <span> • ${m.amountUsd}</span>}
-                    {m.status && <span> • {m.status}</span>}
-  async function addNote() {const res = await fetch(`/api/marketplace/projects`, _{
-      method: "PATCH", headers: { "Content-Type": "application/json", _...headers},
-      body: JSON.stringify({id: projectId, action: "addnote", content: note})});
-    const json = await res.json();
-    if (json.ok) {setProject(json.project);
-      setNote("");
-      setShowFeedback(true)}
-  }
-
-  async function markCompleted() {const res = await fetch(`/api/marketplace/projects`, _{
-      method: "PATCH", headers: { "Content-Type": "application/json", _...headers},
-      body: JSON.stringify({id: projectId, action: "markcompleted"})});
-    const json = await res.json();
-    if (json.ok) {setProject(json.project);
-      setShowFeedback(true)}
-  }
-
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      {loading && <div>Loading…</div>}
+    <div className="max-w-4xl mx-auto p-6 space-y-6">;      {loading && <div>Loading…</div>}
       {error && <div className="text-red-600">{error}</div>}
       {project && (;
         <div className="space-y-6">;
@@ -203,7 +75,6 @@ export default function ProjectPage() {const router = useRouter();
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>;
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" :"bg-gray-200"}`}>;
               {project.status}
-<<<<<<< HEAD
             </span>;
           </div>;
 ;
@@ -223,29 +94,7 @@ export default function ProjectPage() {const router = useRouter();
               {project.timeline?.length ? (;
                 project.timeline.map((m:any) => (;
                   <li key={m.id}>;
-                    <span className="font-medium">{m.title}</span>;
-=======
-            </span>
-          </div>
-
-          <section className="rounded border p-4">
-            <h2 className="font-medium mb-2">Project Summary</h2>
-            <div className="text-sm">
-              <div><b>Client</b>: {project.clientId}</div>
-              <div><b>Talent</b>: {project.talentSlug}</div>
-              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
-              <div className="mt-2">{project.summary}</div>
-            </div>
-          </section>
-
-          <section className="rounded border p-4">
-            <h2 className="font-medium mb-2">Timeline</h2>
-            <ul className="list-disc pl-6 space-y-1 text-sm">
-              {project.timeline?.length ? (project.timeline.map((m: unknown) => (
-                  <li key={m.id}>
-                    <span className="font-medium">{m.title}</span>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
+                    <span className="font-medium">{m.title}</span>;                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
                     {m.amountUsd && <span> • ${m.amountUsd}</span>}
                     {m.status && <span> • {m.status}</span>}
                   </li>;
@@ -253,7 +102,6 @@ export default function ProjectPage() {const router = useRouter();
               ) :(;
                 <li>No timeline defined</li>;
               )}
-<<<<<<< HEAD
             </ul>;
           </section>;
 ;
@@ -311,61 +159,91 @@ export default function ProjectPage() {const router = useRouter();
         userHeaders={headers}
       />;
     </div>;
-  ),;
-=======
-            </ul>
-          </section>
-
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Documents</h2>
-            <ul className=&quot;list-disc pl-6 space-y-1 text-sm&quot;>
-              {project.documents?.length ? (
-                project.documents.map((d: any) => (
-                  <li key={d.id}>
-                    {d.url ? (
-                      <a href={d.url} className=&quot;text-indigo-600 underline&quot; target=&quot;blank&quot; rel=&quot;noreferrer&quot;>{d.name}</Link>                    ) : (
-                      <span>{d.name}</span>
-                    )}
-                    <span className=&quot;text-gray-500&quot;> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>                  </li>
-                ))
-              ) : (
-                <li>No documents</li>
-              )}
-            </ul>
-          </section>
-
-          <section className=&quot;rounded border p-4 space-y-3&quot;>
-            <h2 className=&quot;font-medium&quot;>Shared notes/messages</h2>
-            <div className=&quot;space-y-2&quot;>
-              {project.notes?.length ? (
-                project.notes.map((n: any) => (
-                  <div key={n.id} className=&quot;text-sm&quot;>
-                    <span className=&quot;font-medium&quot;>{n.authorRole}</span>: {n.content}
-                    <span className=&quot;text-gray-500&quot;> • {new Date(n.createdAtIso).toLocaleString()}</span>                  </div>
-                ))
-              ) : (
-                <div className=&quot;text-sm text-gray-600&quot;>No notes yet.</div>
-              )}
-            </div>
-            <div className=&quot;flex gap-2&quot;>
-              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder=&quot;Add a note&quot; className=&quot;flex-1 border rounded px-3 py-2&quot; />
-              <button onClick={addNote} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>Add</button>
-            </div>
-          </section>
-
-          <div className=&quot;flex justify-end&quot;>
-            {project.status !== &quot;COMPLETED&quot; && (
-              <button onClick={markCompleted} className=&quot;px-4 py-2 rounded bg-emerald-600 text-white&quot;>Mark as Completed</button>            )}
-          </div>
-        </div>
-      )}
-      <FeedbackModal,
-isOpen={showFeedback}
-        onClose={_() => setShowFeedback(false)}
-        defaultContext={_{ actionType: 'chatbotuse', metadata: { projectId} }}
-        userHeaders={headers}
-      />
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),; export default function ProjectPage () {
+  const router = useRouter ();
+const {
+  projectId 
+}= router.query as {
+  projectId?: string 
+};
+const [project, setProject] = useState<any | null> (null);
+const [loading, setLoading] = useState (true);
+const [error, setError] = useState<string | null> (null);
+const [note, setNote] = useState ("");
+  async function load () {
+  if (!projectId) return;
+}catch (e: any) {
+  setError (e.message) 
+}finally {
+  setLoading (false) 
+}
+}load () 
+}, [projectId]);
+const [showFeedback, setShowFeedback] = useState (false);
+}
+}async function markCompleted () {
+  const res = await fetch (`/api/marketplace/projects`, {
+  if (json.ok) {
+  setProject (json.project);
+setShowFeedback (true) 
+}
+}return (<div className=" max-w-4xl mx-auto p-6 space-y-6"> {
+  loading && <div>Loading…</div> 
+}{
+  error && <div className=" text-red-600"> {
+  error 
+}</div> 
+}{
+  project && (<div className=" space-y-6"> <div className=" flex items-center gap-3"> <h1 className=" text-2xl font-semibold">Project Kickoff</h1> <span className= {
+  `px-2 py-0.5 rounded text-xs $ {
+  project.status === " ACTIVE"? " bg-emerald-100 text-emerald-700": " bg-gray-200" 
+}` 
+}> {
+  project.status 
+}</span> </div> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Project Summary</h2> <div className=" text-sm"> <div><b>Client</b>: {
+  project.clientId 
+}</div> <div><b>Talent</b>: {
+  project.talentSlug 
+}</div> <div><b>Start</b>: {
+  new Date (project.startDateIso) .toLocaleDateString () 
+}</div> <div className=" mt-2"> {
+  project.summary 
+}</div> </div> </section> <section className=" rounded border p-4"> <h2 className=" font-medium mb-2">Timeline</h2> <ul className=" list-disc pl-6 space-y-1 text-sm"> {
+  project.timeline?.length ? (project.timeline.map ( (m: any) => (<li key= {
+  m.id 
+}> <span className=" font-medium"> {
+  m.title 
+}</span> {
+  m.dueDateIso && <span> • due {
+  new Date (m.dueDateIso) .toLocaleDateString () 
+}</span> 
+}{
+  m.amountUsd && <span> • $ {
+  m.amountUsd 
+}</span> 
+}{
+  m.status && <span> • {
+  m.status 
+}</span> 
+}
+}</ul> </section>) : (<span> {
+  d.name 
+}</span>) 
+}</li>) ) ) : (<li>No documents</li>) 
+}</ul> </section> </div>) ) ) : (<div className=" text-sm text-gray-600" >No notes yet.</div>) 
+}</div>) 
+}</div> </div>) 
+}<FeedbackModal isOpen= {
+  showFeedback 
+}onClose= {
+  () => setShowFeedback (false) 
+}defaultContext= {
+  {
+  actionType: 'chatbot use', metadata: {
+  projectId 
+}
+}
+}userHeaders= {
+  headers 
+}/> </div>) 
 }

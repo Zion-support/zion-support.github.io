@@ -15,20 +15,11 @@ class DeploymentOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.buildDir = path.join(this.projectRoot, '.next');
-<<<<<<< HEAD
     this.optimizationResults = {;
       bundleSize:0,;
       optimizationsApplied:[],;
       warnings:[],;
-      performance:{},;
-=======
-    this.optimizationResults = {
-      bundleSize: 0;
-      optimizationsApplied: [];
-      warnings: [];
-      performance: {};
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      performance:{},;    };
   }
 ;
   async optimize(isStandalone = true) {;
@@ -54,20 +45,11 @@ class DeploymentOptimizer {;
 ;
   async runPreDeployChecks() {;
     console.log('🔍 Running pre-deployment checks...');
-<<<<<<< HEAD
     ;
     // Check if required environment variables are set;
     const requiredEnvVars = [;
       'NEXT_PUBLIC_SUPABASE_URL',;
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY',;
-=======
-    
-    // Check if required environment variables are set
-    const requiredEnvVars = [
-      'NEXT_PUBLIC_SUPABASE_URL';
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    ];
+      'NEXT_PUBLIC_SUPABASE_ANON_KEY',;    ];
 ;
     const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
     ;
@@ -173,7 +155,6 @@ class DeploymentOptimizer {;
 ;
   async generateOptimizationReport() {;
     console.log('\n📄 Generating optimization report...');
-<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -184,21 +165,7 @@ class DeploymentOptimizer {;
       bundleSizeFormatted:this.formatBytes(this.optimizationResults.bundleSize),;
       warnings:this.optimizationResults.warnings,;
       recommendations:this.generateRecommendations(),;
-      deploymentChecklist:this.generateDeploymentChecklist(),;
-=======
-    
-    const report = {
-      timestamp: new Date().toISOString();
-      version: this.getPackageVersion();
-      environment: 'production';
-      optimizations: this.optimizationResults.optimizationsApplied;
-      bundleSize: this.optimizationResults.bundleSize;
-      bundleSizeFormatted: this.formatBytes(this.optimizationResults.bundleSize);
-      warnings: this.optimizationResults.warnings;
-      recommendations: this.generateRecommendations();
-      deploymentChecklist: this.generateDeploymentChecklist();
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      deploymentChecklist:this.generateDeploymentChecklist(),;    };
 ;
     // Save report;
     const reportPath = path.join(this.projectRoot, 'deployment-report.json');
@@ -210,7 +177,6 @@ class DeploymentOptimizer {;
 ;
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
     ;
     if (this.optimizationResults.bundleSize > 3 * 1024 * 1024) {;
       recommendations.push({;
@@ -237,41 +203,10 @@ class DeploymentOptimizer {;
       priority:'medium',;
       title:'Setup production monitoring',;
       description:'Enable performance monitoring in production.',;
-      action:'Configure Sentry alerts and performance budgets';
-=======
-    
-    if (this.optimizationResults.bundleSize > 3 * 1024 * 1024) {
-      recommendations.push({
-        type: 'performance';
-        priority: 'high';
-        title: 'Consider code splitting';
-        description: 'Bundle size is large. Implement dynamic imports for heavy components.';
-        action: 'Use React.lazy() and dynamic imports'
-      });
-    }
-
-    if (this.optimizationResults.warnings.length > 0) {
-      recommendations.push({
-        type: 'security';
-        priority: 'medium';
-        title: 'Address warnings';
-        description: 'Several warnings were detected during optimization.';
-        action: 'Review and resolve warnings before deployment'
-      });
-    }
-
-    recommendations.push({
-      type: 'monitoring';
-      priority: 'medium';
-      title: 'Setup production monitoring';
-      description: 'Enable performance monitoring in production.';
-      action: 'Configure Sentry alerts and performance budgets'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      action:'Configure Sentry alerts and performance budgets';    });
 ;
     return recommendations;
   }
-<<<<<<< HEAD
 ;
   generateDeploymentChecklist() {;
     return [;
@@ -298,43 +233,13 @@ class DeploymentOptimizer {;
       {;
         item:'Performance monitoring ready',;
         status:'manual-check',;
-        required:false;
-=======
-
-  generateDeploymentChecklist() {
-    return [
-      {
-        item: 'Environment variables configured';
-        status: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'complete' : 'pending';
-        required: true
-      };
-      {
-        item: 'Production build successful';
-        status: fs.existsSync(this.buildDir) ? 'complete' : 'pending';
-        required: true
-      };
-      {
-        item: 'Bundle size optimized';
-        status: this.optimizationResults.bundleSize < 5 * 1024 * 1024 ? 'complete' : 'warning';
-        required: false
-      };
-      {
-        item: 'Security audit passed';
-        status: this.optimizationResults.warnings.some(w => w.includes('Security')) ? 'warning' : 'complete';
-        required: false
-      };
-      {
-        item: 'Performance monitoring ready';
-        status: 'manual-check';
-        required: false
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
+        required:false;      }
     ];
   }
 ;
   printSummary() {;
     console.log('\n📊 DEPLOYMENT OPTIMIZATION SUMMARY');
-    console.log('=====================================');
+    console.log('==');
     console.log(`Bundle Size:${this.formatBytes(this.optimizationResults.bundleSize)}`);
     console.log(`Optimizations Applied:${this.optimizationResults.optimizationsApplied.length}`);
     console.log(`Warnings:${this.optimizationResults.warnings.length}`);
@@ -382,7 +287,6 @@ if (require.main === module) {;
   const optimizer = new DeploymentOptimizer();
   optimizer.optimize(true).catch(console.error); // Pass true for standalone;
 }
-<<<<<<< HEAD
 ;
 // Export methods for use in other scripts;
 module.exports = {;
@@ -392,20 +296,7 @@ module.exports = {;
     await optimizer.runPreDeployChecks();
     return optimizer.optimizationResults; // Return results for inspection if needed;
   },;
-  analyzeAndReport:async () => {;
-=======
-
-// Export methods for use in other scripts
-module.exports = {
-  DeploymentOptimizer;
-  runPreDeployChecks: async () => {
-    const optimizer = new DeploymentOptimizer();
-    await optimizer.runPreDeployChecks();
-    return optimizer.optimizationResults; // Return results for inspection if needed
-  };
-  analyzeAndReport: async () => {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    const optimizer = new DeploymentOptimizer();
+  analyzeAndReport:async () => {;    const optimizer = new DeploymentOptimizer();
     // Ensure buildDir is set if not running the full optimize sequence;
     optimizer.buildDir = path.join(process.cwd(), '.next');
     await optimizer.analyzeBundle();

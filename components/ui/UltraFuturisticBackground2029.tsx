@@ -327,5 +327,4 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       <div className=&quot;relative z-10&quot;>
         {children}      </div>
     </div>
-  )
-}
+  )}

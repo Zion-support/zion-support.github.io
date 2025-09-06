@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
     };
@@ -131,38 +129,39 @@ if (import.meta.url === `fil:e://${process.argv[1]}`) {,;
 };
 ,;
 export default SecurityScanner,;
-;
-=======
-}};
-; log(message, level = "INFO") {_; const _timestamp = new Date().toISOString(); const _logMessage = `[${timestamp}] [${_level}] ${_message}\n`;  fs.appendFileSync(this.logFile, logMessage)};
-; async runSecurityAudit() {_; try {; this.log("Running security audit..."); const _output = execSync("npm audit --json", _{ stdio: 'pipe'}); const _auditResult = JSON.parse(output.toString());
-; if (auditResult.vulnerabilities) {_; const _vulnCount = Object.keys(auditResult.vulnerabilities).length; this.vulnerabilities.push(`${vulnCount} vulnerabilities found`); this.log(`Found ${_vulnCount} vulnerabilities`, "WARN")} else {_; this.log("✓ No vulnerabilities found")}} catch (error) {_; this.log(`Security audit failed: ${error.message}`, "ERROR")}};
-; async checkSecrets() {_; try {; this.log("Checking for exposed secrets..."); const _files = this.getSourceFiles(); let _secretCount = 0;
-; files.forEach(file = > {; const _content = fs.readFileSync(file, _"utf8"); const _secretPatterns = [; /api[_-]?key\s*[: = ]\s*["'][^"']+["']/gi; /secret\s*[: = ]\s*["'][^"']+["']/gi; /password\s*[: = ]\s*["'][^"']+["']/gi; /token\s*[: = ]\s*["'][^"']+["']/gi; ];
-; secretPatterns.forEach(pattern = > {; if (pattern.test(content)) {; secretCount++}})});
-; if (secretCount > 0) {_; this.vulnerabilities.push(`${secretCount} potential secrets found`); this.log(`Found ${_secretCount} potential secrets`, "WARN")} else {_; this.log("✓ No exposed secrets found")}} catch (error) {_; this.log(`Secret check failed: ${error.message}`, "ERROR")}};
-; getSourceFiles() {_; const _files = []; const _srcDir = path.join(process.cwd(), _"src");
-; if (fs.existsSync(srcDir)) {; const _walkDir = (dir) = > {; const _items = fs.readdirSync(dir); items.forEach(item = > {; const _fullPath = path.join(dir, _item); const _stat = fs.statSync(fullPath);
-; if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {_; files.push(fullPath)}})};
-; walkDir(srcDir)};
-; return files};
-; async generateReport() {_; const _report = {; timestamp: new Date().toISOString(); vulnerabilities: this.vulnerabilities; recommendations: [; "Run npm audit fix to address vulnerabilities"; "Review and remove any hardcoded secrets"; "Use environment variables for sensitive data"; "Implement proper authentication and authorization"; "Regularly update dependencies"; ]};
-; const _reportFile = path.join(__dirname, "reports", "security-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`Security report saved to: ${_reportFile}`)};
-; async run() {_; this.log("🔒 Starting Security Scanner");
-; try {; await this.runSecurityAudit(); await this.checkSecrets(); await this.generateReport();
-; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${_vuln}`));
-} catch (error) {_; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
-;
-// Main execution;
-if (import.meta.url = = = `file: //${_process.argv[1]}`) {_; const _scanner = new SecurityScanner(); scanner.run().catch(console.error)};
-;
-export default SecurityScanner;
-=======
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-};
+;};
 };
 ;
   log(message, level = "INFO") {;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class SecurityScanner {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'security-scan.log');
+    this.resultsFile = path.join(__dirname, 'reports', 'security-results.json');
+    this.ensureDirectories();
+    this.vulnerabilities = [];
+    this.results = {
+      timestamp: new Date().toISOString(),
+      vulnerabilities: [],
+      status: 'pending'
+    };
+  }
+
+  ensureDirectories() {
+    const dirs = ['logs', 'reports'];
+    dirs.forEach(dir => {
+      const dirPath = path.join(__dirname, dir);
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+      }
+    });
+  }
+
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
@@ -235,13 +234,12 @@ export default SecurityScanner;
             walkDir(fullPath);
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {;
             files.push(fullPath);
-          };
-        });
-      };
-;
-      walkDir(srcDir);
-};
-;
+          };        });
+      } catch (error) {
+        // Skip directories we can't read
+      }
+    };
+    walkDir(process.cwd());
     return files;
 };
 ;
@@ -282,7 +280,6 @@ export default SecurityScanner;
 };
 ;
 // Main execution;
-<<<<<<< HEAD
 if (import.meta.url === `file: //${_process.argv[1]}`) {_;
   const _scanner = new SecurityScanner();
   scanner.run().catch(console.error);};
@@ -399,12 +396,45 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default SecurityScanner,
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-if (import.meta.url === `file: //${process.argv[1]}`) {;
+  saveResults() {
+    try {
+      this.results.vulnerabilities = this.vulnerabilities;
+      this.results.timestamp = new Date().toISOString();
+      fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));
+      this.log(`Security scan results saved to ${this.resultsFile}`);
+    } catch (error) {
+      this.log(`Error saving results: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async run() {
+    try {
+      this.log('Starting security scan...');
+      
+      await this.runSecurityAudit();
+      await this.scanDependencies();
+      await this.scanFiles();
+      
+      this.saveResults();
+      
+      const vulnCount = this.vulnerabilities.length;
+      if (vulnCount > 0) {
+        this.log(`Security scan completed with ${vulnCount} issues found`, 'WARN');
+      } else {
+        this.log('Security scan completed - no issues found');
+      }
+      
+    } catch (error) {
+      this.log(`Security scan failed: ${error.message}`, 'ERROR');
+      this.results.status = 'failed';
+      this.saveResults();
+    }
+  }
+}
+
+if (require.main === module) {
   const scanner = new SecurityScanner();
-  scanner.run().catch(console.error);
-};
-;
-export default SecurityScanner;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+  scanner.run();
+}
+
+module.exports = SecurityScanner;

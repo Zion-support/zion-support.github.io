@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
         };
       };
-;
-    };
+;    };
 ,;
     // Initial tracking,;
     trackPageLoad(),;
@@ -28,8 +25,7 @@ import React from 'react';
     return () => {,;
       clearInterval(interval),;
       window.removeEventListener('online', handleOnline),;
-      window.removeEventListener('offline', handleOffline),;
-    };
+      window.removeEventListener('offline', handleOffline),;    };
   }, [location.pathname]),;
 ,;
   // Show performance issues,;
@@ -43,8 +39,7 @@ import React from 'react';
       setIsVisible(true),;
       // Auto-hide after 10 seconds,;
       const timer = setTimeout(() => setIsVisible(false), 10000),;
-      return () => clearTimeout(timer),;
-    };
+      return () => clearTimeout(timer),;    };
   }, [metrics]),;
 ,;
   if (!isVisible) return null,;
@@ -58,17 +53,7 @@ import React from 'react';
           <button,;
 ;
             onClick={() => setIsVisible(false)};
-;
-=======
-export default function PerformanceMonitor() {_return (
-    <div className="performance-monitor">
-      <p>Performance Monitor</p>
-    </div>
-  );
-}  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-        };
+;        };
       };
 };
 ;
@@ -122,4 +107,11 @@ export default function PerformanceMonitor() {_return (
           <span className="text-sm font-medium text-white">Performance Monitor</span>;
           <button;
             onClick={() => setIsVisible(false)};
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+    <div className="fixed bottom-4 right-4 z-50">,";
+      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,";
+        <div className="flex items-center gap-3 mb-3">,";
+          <BarChart3 className="w-5 h-5 text-blue-400" />,";
+          <span className="text-sm font-medium text-white">Performance Monitor</span>,;
+          <button,;
+            onClick={() => setIsVisible(false)};
+'"

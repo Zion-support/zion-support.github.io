@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-<<<<<<< HEAD
 export default function Blockchain() {;
   return (;
     <>;
@@ -23,28 +22,27 @@ export default function Blockchain() {;
     </>;
   );
 }
-=======
-export default function Blockchain() {_return (
+const BlockchainPage: React.FC = () => {
+  return (
     <>
       <Head>
-        <title>Blockchain Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
-        />
-        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+        <title>Blockchain Solutions - Zion Tech Group</title>
+        <meta name="description" content="Blockchain technology solutions and services" />
       </Head>
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-8">
-              Blockchain Services
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Blockchain Solutions
             </h1>
-            <p className="text-xl text-slate-300 text-center">              Cutting-edge blockchain and Web3 solutions for the future.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our cutting-edge blockchain technology solutions and services.
             </p>
           </div>
-        </main>
-      </ErrorBoundary>
+        </div>
+      </div>
     </>
-  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  );
+};
+
+export default BlockchainPage;

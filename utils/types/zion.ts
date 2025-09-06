@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",;
 ;
 export interface Branding {;
   logoUrl?:string,;
   primaryColor?:string,;
   secondaryColor?:string,;
-  subdomain?:string,;
-=======
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
-
-export interface Branding {
-  logoUrl?: string,
-  primaryColor?: string,
-  secondaryColor?: string,
-  subdomain?: string
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  subdomain?:string,;}
 ;
 export interface DeployModules {;
   marketplace:boolean,;
@@ -76,3 +65,4 @@ export interface AccessControlConfig {;
   allowedRoles:("Founder" | "Superadmin" | "DAOMultisig")[],;
   adminKeyConfigured:boolean;
 }
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid";

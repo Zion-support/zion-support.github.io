@@ -20,7 +20,6 @@ async function run() {;
   let items = [];
   try {;
     const data = await fetchJson(url);
-<<<<<<< HEAD
     items = (data.items || []).map((q) => ({;
       question_id:q.question_id,;
       title:q.title,;
@@ -30,39 +29,16 @@ async function run() {;
       tags:q.tags,;
       owner:q.owner?.display_name,;
       is_answered:q.is_answered,;
-      answer_count:q.answer_count,;
-=======
-    items = (data.items || []).map((q) => ({
-      question_id: q.question_id;
-      title: q.title;
-      link: q.link;
-      score: q.score;
-      creation_date: q.creation_date;
-      tags: q.tags;
-      owner: q.owner?.display_name;
-      is_answered: q.is_answered;
-      answer_count: q.answer_count;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }));
+      answer_count:q.answer_count,;    }));
   } catch (e) {;
     console.warn('StackExchange fetch failed:', e.message);
   }
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'Latest StackOverflow questions for AI/Blockchain/DAO tags',;
     total:items.length,;
-    items,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'Latest StackOverflow questions for AI/Blockchain/DAO tags';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

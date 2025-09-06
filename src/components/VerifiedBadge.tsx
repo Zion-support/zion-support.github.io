@@ -9,7 +9,6 @@ interface VerifiedBadgeProps {;
   /** Optional tooltip label to display */;
   label?:string;
 }
-<<<<<<< HEAD
 ;
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' } VerifiedBadgeProps) {;
   if (!verified) return null,;
@@ -33,29 +32,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;
-  ),;
-=======
-
-export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
-  if (!verified) return null,
-  
-  const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5'
-  },  
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <span className=&quot;inline-flex text-blue-500&quot;>
-            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          </span>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{_label}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> </span> </TooltipTrigger> <TooltipContent> <p> {;
+  label ;
+}</p> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }

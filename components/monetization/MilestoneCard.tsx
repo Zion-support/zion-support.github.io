@@ -97,5 +97,4 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  )
-}
+  )}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import SEO from '../components/SEO',;
 ;
@@ -11,19 +10,15 @@ export default function AISustainabilityPlatformPage() {;
         <p className="text-gray-300">Measure and optimize sustainability metrics with AI. Details coming soon.</p>;
       </div>;
     </div>;
-  ),;
-=======
-import React from 'react',
-import SEO from '../components/SEO',
-export default function AISustainabilityPlatformPage() {
+  ),;}
+import React from 'react';
+export default function Page() {
   return (
-    <div className=&quot;min-h-[60vh] px-6 py-24&quot;>
-      <SEO title=&quot;AI Sustainability Platform | Zion Tech Group&quot; description=&quot;Sustainability analytics and optimization&quot; />
-      <div className=&quot;max-w-3xl mx-auto&quot;>
-        <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>AI Sustainability Platform</h1>
-        <p className=&quot;text-gray-300&quot;>Measure and optimize sustainability metrics with AI. Details coming soon.</p>
-      </div>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+    <main className="min-h-screen bg-black text-zinc-100 p-8">
+      <section className="prose prose-invert max-w-3xl mx-auto">
+        <h1>ai-sustainability-platform</h1>
+        <p>Auto-healed placeholder. Replace with real content.</p>
+      </section>
+    </main>
+  );
 }

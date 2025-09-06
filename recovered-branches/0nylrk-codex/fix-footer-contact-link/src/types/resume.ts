@@ -59,7 +59,6 @@ export interface PortfolioProject {;
   demo_url?:string,;
   pdf_url?:string;
 }
-<<<<<<< HEAD
 ;
 export interface Resume {;
   id?:string,;
@@ -71,18 +70,4 @@ export interface Resume {;
   certifications:Certification[],;
   portfolio_projects?:PortfolioProject[],;
   is_active:boolean;
-}
-=======
-
-export interface Resume {
-  id?: string,
-  user_id?: string,
-  basic_info: ResumeBasicInfo,
-  work_experience: WorkExperience[],
-  education: Education[],
-  skills: Skill[],
-  certifications: Certification[],
-  portfolio_projects?: PortfolioProject[],
-  is_active: boolean
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} 

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 ;
@@ -137,17 +136,34 @@ serve(async (req) => {;
         headers:{ ...corsHeaders, 'Content-Type':'application/json' }}
     ),;
   }
-}),;
-=======
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
-
-interface Milestone {
-  title: string,
-  description: string,
-  dueDate: string,
-  estimatedHours: number
+}),;interface Milestone {
+  title: string;
+description: string;
+dueDate: string;
+estimatedHours: number 
+}//Handle CORS preflight requests if (req.method === 'OPTIONS') {
+  //Create the contract prompt for OpenAI let prompt = `Please generate a professional contractual agreement between $ {
+  clientName 
+}(Client) and $ {
+  talentName 
+}(Talent) for the following project: Project Name: $ {
+  projectName 
+}Project Scope: $ {
+  scopeSummary 
+}Start Date: $ {
+  new Date (startDate) .toLocaleDateString () 
+}$ {
+  endDate ? `End Date: $ {
+  new Date (endDate) .toLocaleDateString () 
+}`: 'End Date: To be determined based on project completion' 
+}Payment Terms: $ {
+  paymentTerms 
+}Payment Amount: $ {
+  paymentAmount 
+}The contract should include standard sections like: - Parties involved - Project scope - Timeline - Payment terms - Deliverables `;
+if (additionalClauses && additionalClauses.length > 0) {
+  prompt += `Please also include the following additional clauses: $ {
+  additionalClauses.includes ('nda') ? '- Confidentiality/Non-disclosure agreement' : '' 
 }
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
@@ -276,4 +292,3 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )  }
 }),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

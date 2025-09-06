@@ -9,22 +9,12 @@ console.log('⚡ Starting Advanced Performance Optimizer...');
 class AdvancedPerformanceOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.optimizationResults = {;
       timestam:p:new Date().toISOString(),;
       bundleAnalysi:s:{},;
       performanceMetric:s:{},;
       optimization:s:[],;
-      recommendation:s:[],;
-=======
-    this.optimizationResults = {
-      timestamp: new Date().toISOString(),
-      bundleAnalysis: {},
-      performanceMetrics: {},
-      optimizations: [],
-      recommendations: [],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      recommendation:s:[],;    };
   }
 ;
   async runOptimization() {;
@@ -50,14 +40,8 @@ class AdvancedPerformanceOptimizer {;
       this.saveResults();
 ;
       console.log('✅ Advanced performance optimization completed!');
-<<<<<<< HEAD
     } catch (error) {;
-      console.error('❌ Performance optimization:failed:', error.message);
-=======
-    } catch (error) {
-      console.error('❌ Performance optimization failed:', error.message);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      console.error('❌ Performance optimization:failed:', error.message);    }
   }
 ;
   async analyzeBundleSize() {;
@@ -66,7 +50,6 @@ class AdvancedPerformanceOptimizer {;
     try {;
       // Build the project to analyze bundle;
       console.log('🔨 Building project for analysis...');
-<<<<<<< HEAD
       execSync('npm run build', { stdi:o:'pipe' });
 ;
       // Analyze bundle size;
@@ -74,18 +57,7 @@ class AdvancedPerformanceOptimizer {;
         totalSiz:e:0,;
         file:s:[],;
         largestFile:s:[],;
-        optimizationOpportunitie:s:[],;
-=======
-      execSync('npm run build', { stdio: 'pipe' });
-
-      // Analyze bundle size
-      const bundleAnalysis = {
-        totalSize: 0,
-        files: [],
-        largestFiles: [],
-        optimizationOpportunities: [],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      };
+        optimizationOpportunitie:s:[],;      };
 ;
       // Check .next directory for build files;
       const nextDir = path.join(this.projectRoot, '.next');
@@ -103,7 +75,6 @@ class AdvancedPerformanceOptimizer {;
         this.identifyOptimizationOpportunities(bundleAnalysis.files);
 ;
       this.optimizationResults.bundleAnalysis = bundleAnalysis;
-<<<<<<< HEAD
 ;
       console.log(`📊 Bundle Analysis:Complete:`);
       console.log(`  - Total:files:${bundleAnalysis.files.length}`);
@@ -114,21 +85,7 @@ class AdvancedPerformanceOptimizer {;
         `  - Largest:file:${bundleAnalysis.largestFiles[0]?.name || 'N/A'}`;
       );
     } catch (error) {;
-      console.log('⚠️  Bundle analysis:failed:', error.message);
-=======
-
-      console.log(`📊 Bundle Analysis Complete:`);
-      console.log(`  - Total files: ${bundleAnalysis.files.length}`);
-      console.log(
-        `  - Total size: ${this.formatBytes(bundleAnalysis.totalSize)}`
-      );
-      console.log(
-        `  - Largest file: ${bundleAnalysis.largestFiles[0]?.name || 'N/A'}`
-      );
-    } catch (error) {
-      console.log('⚠️  Bundle analysis failed:', error.message);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      console.log('⚠️  Bundle analysis:failed:', error.message);    }
   }
 ;
   analyzeDirectory(dir, analysis) {;
@@ -144,18 +101,10 @@ class AdvancedPerformanceOptimizer {;
         } else if (stat.isFile()) {;
           const size = stat.size;
           analysis.totalSize += size;
-<<<<<<< HEAD
           analysis.files.push({;
             nam:e:filePath.replace(this.projectRoot, ''),;
             siz:e:size,;
-            typ:e:path.extname(file),;
-=======
-          analysis.files.push({
-            name: filePath.replace(this.projectRoot, ''),
-            size: size,
-            type: path.extname(file),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-          });
+            typ:e:path.extname(file),;          });
         }
       });
     } catch (error) {;
@@ -165,7 +114,6 @@ class AdvancedPerformanceOptimizer {;
 ;
   identifyOptimizationOpportunities(files) {;
     const opportunities = [];
-<<<<<<< HEAD
 ;
     files.forEach(file => {;
       // Large JavaScript files;
@@ -194,39 +142,7 @@ class AdvancedPerformanceOptimizer {;
           typ:e:'large-image',;
           fil:e:file.name,;
           siz:e:file.size,;
-          recommendatio:n:'Optimize image or convert to WebP format',;
-=======
-
-    files.forEach(file => {
-      // Large JavaScript files
-      if (file.type === '.js' && file.size > 100000) {
-        opportunities.push({
-          type: 'large-js-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider code splitting or lazy loading',
-        });
-      }
-
-      // Large CSS files
-      if (file.type === '.css' && file.size > 50000) {
-        opportunities.push({
-          type: 'large-css-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider CSS optimization or splitting',
-        });
-      }
-
-      // Unoptimized images
-      if (['.png', '.jpg', '.jpeg'].includes(file.type) && file.size > 100000) {
-        opportunities.push({
-          type: 'large-image',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Optimize image or convert to WebP format',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        });
+          recommendatio:n:'Optimize image or convert to WebP format',;        });
       }
     });
 ;
@@ -235,34 +151,18 @@ class AdvancedPerformanceOptimizer {;
 ;
   async analyzePerformanceMetrics() {;
     console.log('📊 Analyzing performance metrics...');
-<<<<<<< HEAD
 ;
     const metrics = {;
       buildTim:e:0,;
       bundleSiz:e:0,;
       fileCoun:t:0,;
       dependencie:s:0,;
-      scor:e:0,;
-=======
-
-    const metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      fileCount: 0,
-      dependencies: 0,
-      score: 0,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      scor:e:0,;    };
 ;
     try {;
       // Measure build time;
       const startTime = Date.now();
-<<<<<<< HEAD
-      execSync('npm run build', { stdi:o:'pipe' });
-=======
-      execSync('npm run build', { stdio: 'pipe' });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      metrics.buildTime = Date.now() - startTime;
+      execSync('npm run build', { stdi:o:'pipe' });      metrics.buildTime = Date.now() - startTime;
 ;
       // Count dependencies;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -272,24 +172,13 @@ class AdvancedPerformanceOptimizer {;
       metrics.score = this.calculatePerformanceScore(metrics);
 ;
       this.optimizationResults.performanceMetrics = metrics;
-<<<<<<< HEAD
 ;
       console.log(`📈 Performance:Metrics:`);
       console.log(`  - Build:time:${metrics.buildTime}ms`);
       console.log(`  - Dependencie:s:${metrics.dependencies}`);
       console.log(`  - Performance:score:${metrics.score}/100`);
     } catch (error) {;
-      console.log('⚠️  Performance metrics analysis:failed:', error.message);
-=======
-
-      console.log(`📈 Performance Metrics:`);
-      console.log(`  - Build time: ${metrics.buildTime}ms`);
-      console.log(`  - Dependencies: ${metrics.dependencies}`);
-      console.log(`  - Performance score: ${metrics.score}/100`);
-    } catch (error) {
-      console.log('⚠️  Performance metrics analysis failed:', error.message);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      console.log('⚠️  Performance metrics analysis:failed:', error.message);    }
   }
 ;
   calculatePerformanceScore(metrics) {;
@@ -325,7 +214,6 @@ class AdvancedPerformanceOptimizer {;
     if (fs.existsSync(srcDir)) {;
       this.optimizeImagesInDirectory(srcDir, imageOptimizations);
     }
-<<<<<<< HEAD
 ;
     this.optimizationResults.optimizations.push({;
       typ:e:'image-optimization',;
@@ -334,19 +222,7 @@ class AdvancedPerformanceOptimizer {;
     });
 ;
     console.log(;
-      `✅ Image optimization:completed:${imageOptimizations.length} optimizations`;
-=======
-
-    this.optimizationResults.optimizations.push({
-      type: 'image-optimization',
-      optimizations: imageOptimizations,
-      timestamp: new Date().toISOString(),
-    });
-
-    console.log(
-      `✅ Image optimization completed: ${imageOptimizations.length} optimizations`
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    );
+      `✅ Image optimization:completed:${imageOptimizations.length} optimizations`;    );
   }
 ;
   optimizeImagesInDirectory(dir, optimizations) {;
@@ -363,7 +239,6 @@ class AdvancedPerformanceOptimizer {;
           const ext = path.extname(file).toLowerCase();
           if (['.png', '.jpg', '.jpeg', '.gif'].includes(ext)) {;
             const size = stat.size;
-<<<<<<< HEAD
 ;
             // Suggest optimization for large images;
             if (size > 100000) {;
@@ -371,18 +246,7 @@ class AdvancedPerformanceOptimizer {;
                 fil:e:filePath.replace(this.projectRoot, ''),;
                 currentSiz:e:size,;
                 recommendatio:n:'Consider compressing or converting to WebP',;
-                potentialSaving:s:Math.round(size * 0.3),;
-=======
-
-            // Suggest optimization for large images
-            if (size > 100000) {
-              optimizations.push({
-                file: filePath.replace(this.projectRoot, ''),
-                currentSize: size,
-                recommendation: 'Consider compressing or converting to WebP',
-                potentialSavings: Math.round(size * 0.3),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-              });
+                potentialSaving:s:Math.round(size * 0.3),;              });
             }
           }
         }
@@ -410,7 +274,6 @@ class AdvancedPerformanceOptimizer {;
         // Skip files that can't be read;
       }
     }
-<<<<<<< HEAD
 ;
     this.optimizationResults.optimizations.push({;
       typ:e:'code-optimization',;
@@ -419,25 +282,12 @@ class AdvancedPerformanceOptimizer {;
     });
 ;
     console.log(;
-      `✅ Code optimization analysis:completed:${codeOptimizations.length} opportunities`;
-=======
-
-    this.optimizationResults.optimizations.push({
-      type: 'code-optimization',
-      optimizations: codeOptimizations,
-      timestamp: new Date().toISOString(),
-    });
-
-    console.log(
-      `✅ Code optimization analysis completed: ${codeOptimizations.length} opportunities`
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    );
+      `✅ Code optimization analysis:completed:${codeOptimizations.length} opportunities`;    );
   }
 ;
   analyzeCodeOptimizations(content, filePath) {;
     const optimizations = [];
     const lines = content.split('\n');
-<<<<<<< HEAD
 ;
     lines.forEach((line, index) => {;
       // Detect inefficient imports;
@@ -480,53 +330,7 @@ class AdvancedPerformanceOptimizer {;
           fil:e:filePath,;
           lin:e:index + 1,;
           descriptio:n:'Consider caching array length',;
-          impac:t:'low',;
-=======
-
-    lines.forEach((line, index) => {
-      // Detect inefficient imports
-      if (line.includes('import') && line.includes('*')) {
-        optimizations.push({
-          type: 'wildcard-import',
-          file: filePath,
-          line: index + 1,
-          description: 'Wildcard import detected - consider specific imports',
-          impact: 'medium',
-        });
-      }
-
-      // Detect console.log in production
-      if (line.includes('console.log') && !filePath.includes('test')) {
-        optimizations.push({
-          type: 'console-log',
-          file: filePath,
-          line: index + 1,
-          description: 'Console.log in production code',
-          impact: 'low',
-        });
-      }
-
-      // Detect large objects
-      if (line.includes('const') && line.includes('{') && line.length > 200) {
-        optimizations.push({
-          type: 'large-object',
-          file: filePath,
-          line: index + 1,
-          description: 'Large object definition - consider splitting',
-          impact: 'medium',
-        });
-      }
-
-      // Detect inefficient loops
-      if (line.includes('for (') && line.includes('length')) {
-        optimizations.push({
-          type: 'inefficient-loop',
-          file: filePath,
-          line: index + 1,
-          description: 'Consider caching array length',
-          impact: 'low',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        });
+          impac:t:'low',;        });
       }
     });
 ;
@@ -540,7 +344,6 @@ class AdvancedPerformanceOptimizer {;
 ;
     // Bundle size recommendations;
     const bundleAnalysis = this.optimizationResults.bundleAnalysis;
-<<<<<<< HEAD
     if (bundleAnalysis.optimizationOpportunities.length > 0) {;
       recommendations.push({;
         typ:e:'bundle-optimization',;
@@ -548,27 +351,12 @@ class AdvancedPerformanceOptimizer {;
         descriptio:n:`Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,;
         action:s:bundleAnalysis.optimizationOpportunities.map(;
           opp => opp.recommendation;
-        ),;
-=======
-    if (bundleAnalysis.optimizationOpportunities.length > 0) {
-      recommendations.push({
-        type: 'bundle-optimization',
-        priority: 'high',
-        description: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
-        actions: bundleAnalysis.optimizationOpportunities.map(
-          opp => opp.recommendation
-<<<<<<< HEAD
-        );
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-        ),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+        ),;        ),
       });
     }
 ;
     // Performance recommendations;
     const metrics = this.optimizationResults.performanceMetrics;
-<<<<<<< HEAD
     if (metrics.score < 80) {;
       recommendations.push({;
         typ:e:'performance-improvement',;
@@ -579,21 +367,7 @@ class AdvancedPerformanceOptimizer {;
           'Reduce bundle size',;
           'Implement code splitting',;
           'Optimize images',;
-        ],;
-=======
-    if (metrics.score < 80) {
-      recommendations.push({
-        type: 'performance-improvement',
-        priority: 'high',
-        description: `Performance score is ${metrics.score}/100 - needs improvement`,
-        actions: [
-          'Optimize build process',
-          'Reduce bundle size',
-          'Implement code splitting',
-          'Optimize images',
-        ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        ],;      });
     }
 ;
     // Code optimization recommendations;
@@ -608,7 +382,6 @@ class AdvancedPerformanceOptimizer {;
       const mediumImpact = codeOptimizations.filter(;
         opt => opt.impact === 'medium';
       ).length;
-<<<<<<< HEAD
 ;
       recommendations.push({;
         typ:e:'code-optimization',;
@@ -618,20 +391,7 @@ class AdvancedPerformanceOptimizer {;
           `${highImpact} high-impact optimizations`,;
           `${mediumImpact} medium-impact optimizations`,;
           'Review and implement suggested changes',;
-        ],;
-=======
-
-      recommendations.push({
-        type: 'code-optimization',
-        priority: highImpact > 0 ? 'high' : 'medium',
-        description: `Found ${codeOptimizations.length} code optimization opportunities`,
-        actions: [
-          `${highImpact} high-impact optimizations`,
-          `${mediumImpact} medium-impact optimizations`,
-          'Review and implement suggested changes',
-        ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        ],;      });
     }
 ;
     this.optimizationResults.recommendations = recommendations;
@@ -673,7 +433,6 @@ class AdvancedPerformanceOptimizer {;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
-<<<<<<< HEAD
 ;
   saveResults() {;
     const reportFile = path.join(;
@@ -683,21 +442,7 @@ class AdvancedPerformanceOptimizer {;
     );
     fs.writeFileSync(;
       reportFile,;
-      JSON.stringify(this.optimizationResults, null, 2);
-=======
-
-  saveResults() {
-    const reportFile = path.join(
-      this.projectRoot,
-      'logs',
-      `performance-optimization-${Date.now()}.json`
-    );
-    fs.writeFileSync(
-      reportFile,
-      JSON.stringify(this.optimizationResults, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
-<<<<<<< HEAD
+      JSON.stringify(this.optimizationResults, null, 2);    );
 ;
     console.log('📊 Optimization:Results:');
     console.log(;
@@ -712,25 +457,7 @@ class AdvancedPerformanceOptimizer {;
     console.log(;
       `- Recommendation:s:${this.optimizationResults.recommendations.length}`;
     );
-    console.log(`- Report saved:to:${reportFile}`);
-=======
-
-    console.log('📊 Optimization Results:');
-    console.log(
-      `- Bundle size: ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`
-    );
-    console.log(
-      `- Performance score: ${this.optimizationResults.performanceMetrics.score}/100`
-    );
-    console.log(
-      `- Optimizations found: ${this.optimizationResults.optimizations.length}`
-    );
-    console.log(
-      `- Recommendations: ${this.optimizationResults.recommendations.length}`
-    );
-    console.log(`- Report saved to: ${reportFile}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  }
+    console.log(`- Report saved:to:${reportFile}`);  }
 }
 ;
 // Run the optimizer;

@@ -1,216 +1,91 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
-  Brain, 
-  Bot, 
   Eye, 
   MessageSquare, 
   BarChart3, 
-  Zap, 
-  Shield, 
-  ArrowRight, 
   CheckCircle, 
-  Star,
-  Clock,
-  Users,
-  Award,
-  TrendingUp,
-  Database,
-  Cpu,
-  Network,
-  Target,
-  Rocket
+  FileText,
+  Cog,
+  Shield
 } from 'lucide-react';
 
 const aiServices = [
   {
-    title: "Machine Learning Models",
-    description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
-    icon: Brain,
-    features: ["Predictive Analytics", "Pattern Recognition", "Real-time Processing", "Model Optimization"],
-    pricing: "Starting at $3,000/month"
-  },
-  {
-    title: "Computer Vision",
-    description: "Advanced image and video analysis solutions for automation and quality control",
-    icon: Eye,
-    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
-    pricing: "Starting at $2,500/month"
-  },
-  {
-    title: "Natural Language Processing",
-    description: "Intelligent text analysis and language understanding for chatbots and content processing",
-    icon: MessageSquare,
-    features: ["Sentiment Analysis", "Text Classification", "Language Translation", "Content Generation"],
-    pricing: "Starting at $2,200/month"
-  },
-  {
-    title: "Predictive Analytics",
-    description: "Data-driven insights and forecasting to optimize business decisions and outcomes",
-    icon: BarChart3,
-    features: ["Demand Forecasting", "Risk Assessment", "Performance Prediction", "Trend Analysis"],
-    pricing: "Starting at $2,800/month"
-  },
-  {
-    title: "AI Automation",
-    description: "Intelligent process automation to streamline workflows and reduce manual tasks",
-    icon: Zap,
-    features: ["Workflow Automation", "Document Processing", "Data Entry", "Task Scheduling"],
-    pricing: "Starting at $1,800/month"
+    title: "AI Content Generation",
+    description: "Automated content creation for blogs, social media, and marketing materials",
+    icon: FileText,
+    category: "Content",
+    features: ["Natural Language Processing", "SEO Optimization", "Multi-language Support", "Brand Voice Consistency"],
+    pricing: "Starting at $299/month",
+    setupTime: "1-2 weeks",
+    targetUsers: "Content Teams, Marketing Agencies, Bloggers"
   },
   {
     title: "AI Security",
     description: "Advanced threat detection and security solutions powered by artificial intelligence",
     icon: Shield,
-    features: [
-      'Threat detection and analysis',
-      'Automated incident response',
-      'Behavioral analytics',
-      'Vulnerability assessment',
-      'Security monitoring'
-    ],
-    price: '$4,000 - $15,000/month',
-    benefits: [
-      'Enhanced security posture',
-      'Reduced false positives',
-      'Faster threat response',
-      'Compliance automation'
-    ],
-    marketPrice: '$7,000 - $25,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'Financial Services, Healthcare, Government, Enterprise'
+    category: "Security",
+    features: ["Threat Detection", "Anomaly Detection", "Fraud Prevention", "Security Monitoring"],
+    pricing: "Starting at $3,200/month",
+    setupTime: "2-4 weeks",
+    targetUsers: "Enterprises, Security Teams, IT Departments"
   },
   {
-    id: 6,
-    name: 'Conversational AI & Chatbots',
-    description: 'Intelligent virtual assistants and customer service automation',
+    title: "Computer Vision",
+    description: "Image and video analysis solutions for various business applications",
+    icon: Eye,
+    category: "Vision",
+    features: ["Object Detection", "Facial Recognition", "Quality Control", "Automated Inspection"],
+    pricing: "Starting at $1,500/month",
+    setupTime: "3-6 weeks",
+    targetUsers: "Manufacturing, Retail, Healthcare, Security"
+  },
+  {
+    title: "Natural Language Processing",
+    description: "Text analysis and language understanding for business intelligence",
     icon: MessageSquare,
-    features: [
-      'Natural language understanding',
-      'Multi-channel deployment',
-      'Context-aware conversations',
-      'Integration with CRM systems',
-      'Analytics and reporting'
-    ],
-    price: '$1,500 - $5,000/month',
-    benefits: [
-      '24/7 customer support',
-      'Reduced support costs',
-      'Improved customer satisfaction',
-      'Scalable customer service'
-    ],
-    marketPrice: '$2,500 - $8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
+    category: "NLP",
+    features: ["Sentiment Analysis", "Text Classification", "Language Translation", "Chatbot Development"],
+    pricing: "Starting at $2,000/month",
+    setupTime: "2-4 weeks",
+    targetUsers: "Customer Service, Marketing, Research, E-commerce"
   },
   {
-    id: 7,
-    name: 'Quantum AI & Machine Learning',
-    description: 'Next-generation AI powered by quantum computing principles',
-    icon: Cpu,
-    features: [
-      'Quantum machine learning algorithms',
-      'Quantum neural networks',
-      'Optimization problems solving',
-      'Quantum data processing',
-      'Hybrid classical-quantum systems'
-    ],
-    price: '$5,500 - $15,000/month',
-    benefits: [
-      'Exponential processing power',
-      'Complex problem solving',
-      'Advanced optimization',
-      'Future-proof technology'
-    ],
-    marketPrice: '$8,000 - $25,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Research Institutions, Pharmaceutical, Financial Services'
+    title: "Predictive Analytics",
+    description: "Data-driven insights and forecasting for business optimization",
+    icon: BarChart3,
+    category: "Analytics",
+    features: ["Demand Forecasting", "Risk Assessment", "Customer Behavior Analysis", "Performance Optimization"],
+    pricing: "Starting at $2,500/month",
+    setupTime: "4-8 weeks",
+    targetUsers: "Finance, Retail, Healthcare, Supply Chain"
   },
   {
-    id: 8,
-    name: 'AI Drug Discovery & Development',
-    description: 'Accelerated pharmaceutical research using AI and machine learning',
-    icon: Brain,
-    features: [
-      'Molecular property prediction',
-      'Drug-target interaction modeling',
-      'Clinical trial optimization',
-      'Side effect prediction',
-      'Drug repurposing analysis'
-    ],
-    price: '$4,500 - $20,000/month',
-    benefits: [
-      'Faster drug development',
-      'Reduced R&D costs',
-      'Improved success rates',
-      'Personalized medicine'
-    ],
-    marketPrice: '$7,000 - $35,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Pharmaceutical Companies, Research Labs, Biotech'
-  },
-  {
-    id: 9,
-    name: 'AI Climate & Environmental Solutions',
-    description: 'Environmental monitoring and climate change mitigation using AI',
-    icon: TrendingUp,
-    features: [
-      'Climate data analysis',
-      'Environmental monitoring',
-      'Carbon footprint optimization',
-      'Renewable energy forecasting',
-      'Sustainability reporting'
-    ],
-    price: '$2,200 - $7,000/month',
-    benefits: [
-      'Environmental compliance',
-      'Cost savings on energy',
-      'Sustainability goals achievement',
-      'Risk mitigation'
-    ],
-    marketPrice: '$3,500 - $12,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Energy Companies, Government, Environmental Organizations'
-  },
-  {
-    id: 10,
-    name: 'AI Space Technology & Research',
-    description: 'Space exploration and satellite data analysis using advanced AI',
-    icon: Rocket,
-    features: [
-      'Satellite data processing',
-      'Space mission optimization',
-      'Astronomical data analysis',
-      'Space weather prediction',
-      'Autonomous space systems'
-    ],
-    price: '$3,500 - $12,000/month',
-    benefits: [
-      'Enhanced space missions',
-      'Improved data accuracy',
-      'Cost-effective operations',
-      'Scientific breakthroughs'
-    ],
-    marketPrice: '$5,500 - $20,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
+    title: "AI Automation",
+    description: "Intelligent process automation for repetitive business tasks",
+    icon: Cog,
+    category: "Automation",
+    features: ["Workflow Automation", "Document Processing", "Data Entry", "Task Scheduling"],
+    pricing: "Starting at $1,800/month",
+    setupTime: "2-6 weeks",
+    targetUsers: "Operations, HR, Finance, Customer Service"
   }
 ];
 
 const stats = [
-  { number: "500+", label: "AI Models Deployed" },
-  { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "AI Monitoring" },
-  { number: "48hrs", label: "Average Response Time" }
+  { number: "48hrs", label: "Average Response Time" },
+  { number: "99.9%", label: "Uptime Guarantee" },
+  { number: "500+", label: "AI Models Deployed" }
 ];
 
 export default function AIServices() {
   return (
-    <Layout
+    <Layout 
       title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
+      description="Comprehensive AI solutions for modern businesses"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -222,25 +97,25 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                AI Services That Transform Businesses
+                AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Harness the power of artificial intelligence to drive innovation and growth
+              <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence solutions
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get AI Consultation
+                  Get Started
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
-                  View AI Portfolio
+                  View Portfolio
                 </motion.button>
               </div>
             </motion.div>
@@ -352,7 +227,7 @@ export default function AIServices() {
                 Ready to Harness AI Power?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss how AI can transform your business and give you a competitive edge.
+                Let&apos;s discuss how AI can transform your business and give you a competitive edge.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button

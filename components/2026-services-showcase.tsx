@@ -323,5 +323,4 @@ href="/pricing"
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
-}
+  )}

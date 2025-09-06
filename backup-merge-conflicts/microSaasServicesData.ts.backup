@@ -1,4 +1,6 @@
-
+:backup-merge-conflicts/microSaasServicesData.ts.backup
+:src/data/microSaasServicesData.ts
+:backup-merge-conflicts/microSaasServicesData.ts.backup
 
 export interface MicroSaasService {;
   "id": "string;
@@ -1838,7 +1840,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     },
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],",
     marketSize: "$5.9 billion by 2025";,",
-
 export interface MicroSaasService {
   id: string;
   title: string;
@@ -2973,9 +2974,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;Data encryption&quot;, &quot;Access control&quot;, &quot;Audit logging&quot;, &quot;Privacy protection&quot;]
     },
-
-    competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
+:backup-merge-conflicts/microSaasServicesData.ts.backup
+    competitors: [&quot;BambooHR&quot;, &quot;Workday&quot;, &quot;ADP&quot;, &quot;Zenefits&quot;, &quot;Gusto&quot;],
+    marketSize: &quot;$5.9 billion by 2025&quot;    competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
   }
 ];
-
+:backup-merge-conflicts/microSaasServicesData.ts.backup

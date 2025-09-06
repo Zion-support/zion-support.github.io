@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD;
+;
 module.exports = [;
   {;
     file:s:['automation/**/*.{js,jsx,ts,tsx}'],;
@@ -47,7 +45,7 @@ module.exports = [;
     ],;
   },;
 ];
-=======;
+;
 const js = require('@eslint/js');
 const reactHooks = require('eslint-plugin-react-hooks');
 const reactRefresh = require('eslint-plugin-react-refresh');
@@ -106,15 +104,6 @@ module.exports = [;
     },;
   },;
 ];
->>>>>>> 4d15aa1ac9d (Fix project errors and implement PM2 automation system);
-=======
-const js = require('@eslint/js');
-const reactHooks = require('eslint-plugin-react-hooks');
-const reactRefresh = require('eslint-plugin-react-refresh');
-
-=======
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-module.exports = [
   {
     files: ['automation/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -161,7 +150,3 @@ module.exports = [
     ],
   },
 ];
-<<<<<<< HEAD
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

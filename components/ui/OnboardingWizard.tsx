@@ -66,5 +66,4 @@ export default function OnboardingWizard() {
           <button onClick={completeOnboarding} className=&quot;px-3 py-1.5 rounded-md border&quot;>Done</button>        </div>
       </div>
     </div>
-  )
-}
+  )}

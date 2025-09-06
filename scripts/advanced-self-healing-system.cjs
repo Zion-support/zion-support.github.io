@@ -1,6 +1,5 @@
 
 const winston = require('winston');
-<<<<<<< HEAD
 ;
 const logger = winston.createLogger({;
   level:'info',;
@@ -13,30 +12,13 @@ const logger = winston.createLogger({;
   transports:[;
     new winston.transports.File({ filename:'logs/error.log', level:'error' }),;
     new winston.transports.File({ filename:'logs/combined.log' });
-  ];
-=======
-
-const logger = winston.createLogger({
-  level: 'info';
-  format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json()
-  );
-  defaultMeta: { service: 'automation-script' };
-  transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-});
+  ];});
 ;
 if (process.env.NODE_ENV !== 'production') {;
   logger.add(new winston.transports.Console({;
     format:winston.format.simple();
   }));
 }
-<<<<<<< HEAD
 ;
 ;
 /**;
@@ -179,148 +161,7 @@ const CONFIG = {;
     'src/utils/supabase/client.ts',;
     'src/utils/supabase/server.ts',;
     'middleware.ts',;
-  ],;
-=======
-
-
-/**
- * Advanced Self-Healing System
- * Automatically fixes app errors and warnings, triggers new Cursor chats with detailed information;
- * and continuously improves the app with automatic commits and pushes to the main branch
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process')
-const crypto = require('crypto')
-const https = require('https')
-const http = require('http');
-
-// Configuration
-const CONFIG = {
-  // System settings
-  maxRetries: 5;
-  buildTimeout: 1800000, // 30 minutes
-  cursorChatTimeout: 60000, // 1 minute
-  healthCheckInterval: 300000, // 5 minutes
-  autoCommitInterval: 300000, // 5 minutes
-
-  // Logging
-  logFile: 'logs/advanced-self-healing.log';
-  errorLogFile: 'logs/advanced-self-healing-errors.log';
-  cursorChatLogFile: 'logs/cursor-chat-triggers.log';
-  // Git settings
-  gitBranch: 'main';
-  gitUserName: process.env.GIT_AUTHOR_NAME || 'Advanced Self-Healing Bot';
-  gitUserEmail:
-    process.env.GIT_AUTHOR_EMAIL || 'advanced-self-healing@zion.app';
-  // Cursor API settings
-  cursorApiUrl: process.env.CURSOR_API_URL || 'https://api.cursor.sh';
-  cursorApiKey: process.env.CURSOR_API_KEY;
-  cursorWorkspaceId: process.env.CURSOR_WORKSPACE_ID;
-  // Error patterns and their fixes
-  errorPatterns: {
-    // Build errors
-    'Module not found': {
-      type: 'dependency';
-      fix: 'npm install';
-      severity: 'high';
-      cursorPrompt: 'Fix missing module dependency issue';
-    };
-    'Cannot resolve module': {
-      type: 'import';
-      fix: 'check_imports';
-      severity: 'medium';
-      cursorPrompt: 'Resolve module import path issues';
-    };
-    'TypeScript error': {
-      type: 'typescript';
-      fix: 'fix_typescript';
-      severity: 'medium';
-      cursorPrompt: 'Fix TypeScript type errors and type definitions';
-    };
-    'ESLint error': {
-      type: 'linting';
-      fix: 'npm run lint:fix';
-      severity: 'low';
-      cursorPrompt: 'Fix ESLint code style and quality issues';
-    };
-    'Tailwind CSS': {
-      type: 'styling';
-      fix: 'fix_tailwind';
-      severity: 'medium';
-      cursorPrompt: 'Fix Tailwind CSS class and styling issues';
-    };
-    'Wallet connection': {
-      type: 'wallet';
-      fix: 'fix_wallet_context';
-      severity: 'high';
-      cursorPrompt: 'Fix wallet connection and context issues';
-    };
-    'Supabase connection': {
-      type: 'database';
-      fix: 'fix_supabase';
-      severity: 'high';
-      cursorPrompt:
-        'Fix Supabase database connection and authentication issues';
-    };
-    'Environment variable': {
-      type: 'env';
-      fix: 'fix_environment';
-      severity: 'high';
-      cursorPrompt:
-        'Fix missing or incorrect environment variable configuration';
-    };
-    'Memory heap': {
-      type: 'memory';
-      fix: 'increase_memory';
-      severity: 'high';
-      cursorPrompt: 'Fix JavaScript heap out of memory issues';
-    };
-    'Build timeout': {
-      type: 'timeout';
-      fix: 'increase_timeout';
-      severity: 'medium';
-      cursorPrompt: 'Fix build timeout and performance issues';
-    };
-    'Network error': {
-      type: 'network';
-      fix: 'retry_network';
-      severity: 'medium';
-      cursorPrompt: 'Fix network connectivity and API call issues';
-    };
-    'Permission denied': {
-      type: 'permission';
-      fix: 'fix_permissions';
-      severity: 'high';
-      cursorPrompt: 'Fix file and directory permission issues';
-    };
-  };
-  // File patterns to monitor
-  monitoredFiles: [
-    'src/**/*.{js,jsx,ts,tsx}';
-    'pages/**/*.{js,jsx,ts,tsx}';
-    'components/**/*.{js,jsx,ts,tsx}';
-    'utils/**/*.{js,jsx,ts,tsx}';
-    'hooks/**/*.{js,jsx,ts,tsx}';
-    'context/**/*.{js,jsx,ts,tsx}';
-    'api/**/*.{js,jsx,ts,tsx}';
-    '*.{js,jsx,ts,tsx,json,md}';
-  ];
-  // Critical files that require immediate attention
-  criticalFiles: [
-    'package.json';
-    'next.config.js';
-    'tailwind.config.js';
-    'tsconfig.json';
-    '.env.local';
-    'src/context/WalletContext.tsx';
-    'src/utils/supabase/client.ts';
-    'src/utils/supabase/server.ts';
-    'middleware.ts';
-  ];
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  ],;}
 class AdvancedSelfHealingSystem {;
   constructor() {;
     this.isRunning = false;
@@ -458,7 +299,6 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
 ;
   async checkBuildIssues() {;
     const issues = [];
-<<<<<<< HEAD
 ;
     try {;
       // Run a quick build check;
@@ -475,33 +315,12 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
             pattern,;
             severity:config.severity,;
             cursorPrompt:config.cursorPrompt,;
-            output:buildOutput,;
-=======
-
-    try {
-      // Run a quick build check
-      const buildOutput = execSync('npm run build 2>&1', {
-        encoding: 'utf8';
-        timeout: 300000, // 5 minutes
-      });
-
-      // Parse build output for issues
-      for (const [pattern, config] of Object.entries(CONFIG.errorPatterns)) {
-        if (buildOutput.includes(pattern)) {
-          issues.push({
-            type: config.type;
-            pattern;
-            severity: config.severity;
-            cursorPrompt: config.cursorPrompt;
-            output: buildOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          });
+            output:buildOutput,;          });
         }
       }
     } catch (error) {;
       // Build failed, extract error information;
       const errorOutput = error.stdout || error.stderr || error.message;
-<<<<<<< HEAD
 ;
       for (const [pattern, config] of Object.entries(CONFIG.errorPatterns)) {;
         if (errorOutput.includes(pattern)) {;
@@ -510,19 +329,7 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
             pattern,;
             severity:config.severity,;
             cursorPrompt:config.cursorPrompt,;
-            output:errorOutput,;
-=======
-
-      for (const [pattern, config] of Object.entries(CONFIG.errorPatterns)) {
-        if (errorOutput.includes(pattern)) {
-          issues.push({
-            type: config.type;
-            pattern;
-            severity: config.severity;
-            cursorPrompt: config.cursorPrompt;
-            output: errorOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          });
+            output:errorOutput,;          });
         }
       }
     }
@@ -532,7 +339,6 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
 ;
   async checkLintIssues() {;
     const issues = [];
-<<<<<<< HEAD
 ;
     try {;
       const lintOutput = execSync('npm run lint 2>&1', {;
@@ -546,43 +352,16 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
           pattern:'ESLint error',;
           severity:'low',;
           cursorPrompt:'Fix ESLint code style and quality issues',;
-          output:lintOutput,;
-=======
-
-    try {
-      const lintOutput = execSync('npm run lint 2>&1', {
-        encoding: 'utf8';
-        timeout: 120000, // 2 minutes
-      });
-
-      if (lintOutput.includes('error') || lintOutput.includes('Error')) {
-        issues.push({
-          type: 'linting';
-          pattern: 'ESLint error';
-          severity: 'low';
-          cursorPrompt: 'Fix ESLint code style and quality issues';
-          output: lintOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          output:lintOutput,;        });
       }
     } catch (error) {;
       const errorOutput = error.stdout || error.stderr || error.message;
-<<<<<<< HEAD
       issues.push({;
         type:'linting',;
         pattern:'ESLint error',;
         severity:'low',;
         cursorPrompt:'Fix ESLint code style and quality issues',;
-        output:errorOutput,;
-=======
-      issues.push({
-        type: 'linting';
-        pattern: 'ESLint error';
-        severity: 'low';
-        cursorPrompt: 'Fix ESLint code style and quality issues';
-        output: errorOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        output:errorOutput,;      });
     }
 ;
     return issues;
@@ -590,7 +369,6 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
 ;
   async checkTypeIssues() {;
     const issues = [];
-<<<<<<< HEAD
 ;
     try {;
       const typeOutput = execSync('npm run typecheck 2>&1', {;
@@ -604,43 +382,16 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
           pattern:'TypeScript error',;
           severity:'medium',;
           cursorPrompt:'Fix TypeScript type errors and type definitions',;
-          output:typeOutput,;
-=======
-
-    try {
-      const typeOutput = execSync('npm run typecheck 2>&1', {
-        encoding: 'utf8';
-        timeout: 120000, // 2 minutes
-      });
-
-      if (typeOutput.includes('error') || typeOutput.includes('Error')) {
-        issues.push({
-          type: 'typescript';
-          pattern: 'TypeScript error';
-          severity: 'medium';
-          cursorPrompt: 'Fix TypeScript type errors and type definitions';
-          output: typeOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          output:typeOutput,;        });
       }
     } catch (error) {;
       const errorOutput = error.stdout || error.stderr || error.message;
-<<<<<<< HEAD
       issues.push({;
         type:'typescript',;
         pattern:'TypeScript error',;
         severity:'medium',;
         cursorPrompt:'Fix TypeScript type errors and type definitions',;
-        output:errorOutput,;
-=======
-      issues.push({
-        type: 'typescript';
-        pattern: 'TypeScript error';
-        severity: 'medium';
-        cursorPrompt: 'Fix TypeScript type errors and type definitions';
-        output: errorOutput;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        output:errorOutput,;      });
     }
 ;
     return issues;
@@ -648,7 +399,6 @@ const logEntry = `[${timestamp}] CURSOR_CHAT:${message}`;
 ;
   async checkRuntimeIssues() {;
     const issues = [];
-<<<<<<< HEAD
 ;
     // Check for runtime error logs;
     const logFiles = [;
@@ -673,35 +423,7 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines;
                 severity:config.severity,;
                 cursorPrompt:config.cursorPrompt,;
                 output:line,;
-                source:logFile,;
-=======
-
-    // Check for runtime error logs
-    const logFiles = [
-      'logs/error.log';
-      'logs/build.log';
-      'logs/self-healing.log';
-    ];
-
-    for (const logFile of logFiles) {
-      if (fs.existsSync(logFile)) {
-        const logContent = fs.readFileSync(logFile, 'utf8')
-const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
-
-        for (const line of recentLines) {
-          for (const [pattern, config] of Object.entries(
-            CONFIG.errorPatterns;
-          )) {
-            if (line.includes(pattern)) {
-              issues.push({
-                type: config.type;
-                pattern;
-                severity: config.severity;
-                cursorPrompt: config.cursorPrompt;
-                output: line;
-                source: logFile;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-              });
+                source:logFile,;              });
             }
           }
         }
@@ -724,7 +446,6 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
       }
     }
   }
-<<<<<<< HEAD
 ;
   async fixLintIssues(issues) {;
     for (const issue of issues) {;
@@ -734,20 +455,7 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
         // Try auto-fix first;
         execSync('npm run lint:fix', {;
           stdio:'inherit',;
-          timeout:120000,;
-=======
-
-  async fixLintIssues(issues) {
-    for (const issue of issues) {
-      this.log(`Fixing lint issue: ${issue.pattern}`);
-
-      try {
-        // Try auto-fix first
-        execSync('npm run lint:fix', {
-          stdio: 'inherit';
-          timeout: 120000;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          timeout:120000,;        });
 ;
         await this.triggerCursorChat(issue);
         this.fixesApplied.push(issue);
@@ -789,19 +497,11 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
     const fixStrategies = {;
       dependency:async () => {;
         this.log('Applying dependency fix...');
-<<<<<<< HEAD
         execSync('npm install', { stdio:'inherit' });
       },;
-      import:async () => {;
-=======
-        execSync('npm install', { stdio: 'inherit' });
-      };
-      import: async () => {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        this.log('Applying import fix...');
+      import:async () => {;        this.log('Applying import fix...');
         // This would require more sophisticated analysis;
         await this.analyzeAndFixImports();
-<<<<<<< HEAD
       },;
       typescript:async () => {;
         this.log('Applying TypeScript fix...');
@@ -842,51 +542,7 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
       permission:async () => {;
         this.log('Applying permission fix...');
         await this.fixPermissions();
-      },;
-=======
-      };
-      typescript: async () => {
-        this.log('Applying TypeScript fix...');
-        execSync('npm run typecheck', { stdio: 'inherit' });
-      };
-      linting: async () => {
-        this.log('Applying linting fix...');
-        execSync('npm run lint:fix', { stdio: 'inherit' });
-      };
-      styling: async () => {
-        this.log('Applying styling fix...');
-        await this.fixTailwindIssues();
-      };
-      wallet: async () => {
-        this.log('Applying wallet fix...');
-        await this.fixWalletContext();
-      };
-      database: async () => {
-        this.log('Applying database fix...');
-        await this.fixSupabaseIssues();
-      };
-      env: async () => {
-        this.log('Applying environment fix...');
-        await this.fixEnvironmentIssues();
-      };
-      memory: async () => {
-        this.log('Applying memory fix...');
-        await this.increaseMemoryLimit();
-      };
-      timeout: async () => {
-        this.log('Applying timeout fix...');
-        await this.increaseTimeout();
-      };
-      network: async () => {
-        this.log('Applying network fix...');
-        await this.retryNetworkCalls();
-      };
-      permission: async () => {
-        this.log('Applying permission fix...');
-        await this.fixPermissions();
-      };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }
+      },;    }
 const fixStrategy = fixStrategies[issue.type];
     if (fixStrategy) {;
       await fixStrategy();
@@ -908,7 +564,6 @@ const fixStrategy = fixStrategies[issue.type];
 ;
   async fixTailwindIssues() {;
     this.log('Fixing Tailwind CSS issues...');
-<<<<<<< HEAD
 ;
     try {;
       // Regenerate Tailwind CSS;
@@ -916,18 +571,7 @@ const fixStrategy = fixStrategies[issue.type];
         'npx tailwindcss -i ./src/styles/globals.css -o ./public/styles.css',;
         {;
           stdio:'inherit',;
-        },;
-=======
-
-    try {
-      // Regenerate Tailwind CSS
-      execSync(
-        'npx tailwindcss -i ./src/styles/globals.css -o ./public/styles.css';
-        {
-          stdio: 'inherit';
-        };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        },;      );
     } catch (error) {;
       this.log(`Tailwind fix failed:${error.message}`, 'ERROR');
     }
@@ -994,7 +638,6 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
     const packageJsonPath = 'package.json';
     if (fs.existsSync(packageJsonPath)) {;
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-<<<<<<< HEAD
 ;
       if (packageJson.scripts && packageJson.scripts.build) {;
         if (!packageJson.scripts.build.includes('--max-old-space-size')) {;
@@ -1005,21 +648,7 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
 ;
           fs.writeFileSync(;
             packageJsonPath,;
-            JSON.stringify(packageJson, null, 2),;
-=======
-
-      if (packageJson.scripts && packageJson.scripts.build) {
-        if (!packageJson.scripts.build.includes('--max-old-space-size')) {
-          packageJson.scripts.build = packageJson.scripts.build.replace(
-            'next build';
-            'NODE_OPTIONS="--max-old-space-size=8192" next build';
-          );
-
-          fs.writeFileSync(
-            packageJsonPath;
-            JSON.stringify(packageJson, null, 2);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          );
+            JSON.stringify(packageJson, null, 2),;          );
           this.log('Updated build script with increased memory limit');
         }
       }
@@ -1059,7 +688,6 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
       this.log('Cursor API key not configured, skipping chat trigger');
       return;
     }
-<<<<<<< HEAD
 ;
     this.log(`Triggering Cursor chat for issue:${issue.pattern}`);
 ;
@@ -1071,25 +699,9 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
           issue:issue,;
           timestamp:new Date().toISOString(),;
           system:'advanced-self-healing',;
-        },;
-=======
-
-    this.log(`Triggering Cursor chat for issue: ${issue.pattern}`);
-
-    try {
-      const chatData = {
-        workspaceId: CONFIG.cursorWorkspaceId;
-        message: this.generateCursorPrompt(issue);
-        context: {
-          issue: issue;
-          timestamp: new Date().toISOString();
-          system: 'advanced-self-healing';
-        };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        },;      };
 ;
       await this.sendCursorChat(chatData);
-<<<<<<< HEAD
 ;
       this.cursorChatsTriggered.push({;
         issue:issue.pattern,;
@@ -1098,19 +710,7 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
       });
 ;
       this.logCursorChat(;
-        `Triggered chat for ${issue.pattern} ${chatData.message}`,;
-=======
-
-      this.cursorChatsTriggered.push({
-        issue: issue.pattern;
-        timestamp: new Date().toISOString();
-        prompt: chatData.message;
-      });
-
-      this.logCursorChat(
-        `Triggered chat for ${issue.pattern}: ${chatData.message}`;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        `Triggered chat for ${issue.pattern} ${chatData.message}`,;      );
     } catch (error) {;
       this.log(`Failed to trigger Cursor chat:${error.message}`, 'ERROR');
     }
@@ -1136,7 +736,6 @@ Please analyze this issue and provide a comprehensive fix. Include:;
 ;
 Context:This is an automated fix request from the Advanced Self-Healing System.`;
   }
-<<<<<<< HEAD
 ;
   async sendCursorChat(chatData) {;
     return new Promise((resolve, reject) => {;
@@ -1150,24 +749,7 @@ const options = {;
           'Content-Type':'application/json',;
           'Content-Length':Buffer.byteLength(postData),;
           Authorization:`Bearer ${CONFIG.cursorApiKey}`,;
-        },;
-=======
-
-  async sendCursorChat(chatData) {
-    return new Promise((resolve, reject) => {
-      const postData = JSON.stringify(chatData)
-const options = {
-        hostname: new URL(CONFIG.cursorApiUrl).hostname;
-        port: 443;
-        path: '/api/chat';
-        method: 'POST';
-        headers: {
-          'Content-Type': 'application/json';
-          'Content-Length': Buffer.byteLength(postData);
-          Authorization: `Bearer ${CONFIG.cursorApiKey}`;
-        };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
+        },;      }
 const req = https.request(options, (res) => {;
         let data = '';
 ;
@@ -1192,7 +774,6 @@ const req = https.request(options, (res) => {;
       req.end();
     });
   }
-<<<<<<< HEAD
 ;
   async performHealthCheck() {;
     this.log('Performing health check...');
@@ -1201,19 +782,7 @@ const healthChecks = [;
       this.checkLintHealth(),;
       this.checkTypeHealth(),;
       this.checkRuntimeHealth(),;
-    ];
-=======
-
-  async performHealthCheck() {
-    this.log('Performing health check...')
-const healthChecks = [
-      this.checkBuildHealth();
-      this.checkLintHealth();
-      this.checkTypeHealth();
-      this.checkRuntimeHealth();
-    ]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-const results = await Promise.allSettled(healthChecks);
+    ];const results = await Promise.allSettled(healthChecks);
 ;
     let healthy = true;
     for (const result of results) {;
@@ -1230,64 +799,34 @@ const results = await Promise.allSettled(healthChecks);
       await this.monitorAndFix();
     }
   }
-<<<<<<< HEAD
 ;
   async checkBuildHealth() {;
     try {;
       execSync('npm run build --dry-run', {;
         stdio:'pipe',;
-        timeout:60000,;
-=======
-
-  async checkBuildHealth() {
-    try {
-      execSync('npm run build --dry-run', {
-        stdio: 'pipe';
-        timeout: 60000;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        timeout:60000,;      });
       return true;
     } catch (error) {;
       throw new Error(`Build health check failed:${error.message}`);
     }
   }
-<<<<<<< HEAD
 ;
   async checkLintHealth() {;
     try {;
       execSync('npm run lint --dry-run', {;
         stdio:'pipe',;
-        timeout:30000,;
-=======
-
-  async checkLintHealth() {
-    try {
-      execSync('npm run lint --dry-run', {
-        stdio: 'pipe';
-        timeout: 30000;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        timeout:30000,;      });
       return true;
     } catch (error) {;
       throw new Error(`Lint health check failed:${error.message}`);
     }
   }
-<<<<<<< HEAD
 ;
   async checkTypeHealth() {;
     try {;
       execSync('npm run typecheck', {;
         stdio:'pipe',;
-        timeout:30000,;
-=======
-
-  async checkTypeHealth() {
-    try {
-      execSync('npm run typecheck', {
-        stdio: 'pipe';
-        timeout: 30000;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        timeout:30000,;      });
       return true;
     } catch (error) {;
       throw new Error(`Type health check failed:${error.message}`);
@@ -1321,7 +860,6 @@ const results = await Promise.allSettled(healthChecks);
 ;
         // Create commit message;
         const commitMessage = this.generateCommitMessage();
-<<<<<<< HEAD
 ;
         // Commit changes;
         execSync(`git commit -m "${commitMessage}"`, {;
@@ -1330,19 +868,7 @@ const results = await Promise.allSettled(healthChecks);
             ...process.env,;
             GIT_AUTHOR_NAME:CONFIG.gitUserName,;
             GIT_AUTHOR_EMAIL:CONFIG.gitUserEmail,;
-          },;
-=======
-
-        // Commit changes
-        execSync(`git commit -m "${commitMessage}"`, {
-          stdio: 'inherit';
-          env: {
-            ...process.env;
-            GIT_AUTHOR_NAME: CONFIG.gitUserName;
-            GIT_AUTHOR_EMAIL: CONFIG.gitUserEmail;
-          };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          },;        });
 ;
         // Push to main branch;
         execSync(`git push origin ${CONFIG.gitBranch}`, { stdio:'inherit' });
@@ -1370,7 +896,6 @@ const chatCount = this.cursorChatsTriggered.length;
 ;
 Automated by Advanced Self-Healing System`;
   }
-<<<<<<< HEAD
 ;
   async getStatus() {;
     return {;
@@ -1392,32 +917,7 @@ Automated by Advanced Self-Healing System`;
       cursorChatsTriggered:this.cursorChatsTriggered,;
       buildHistory:this.buildHistory.slice(-10), // Last 10 builds;
       errorHistory:this.errorHistory.slice(-10), // Last 10 errors;
-      recommendations:this.generateRecommendations(),;
-=======
-
-  async getStatus() {
-    return {
-      isRunning: this.isRunning;
-      currentRetry: this.currentRetry;
-      fixesApplied: this.fixesApplied.length;
-      cursorChatsTriggered: this.cursorChatsTriggered.length;
-      lastCommitTime: this.lastCommitTime;
-      buildHistory: this.buildHistory.length;
-      errorHistory: this.errorHistory.length;
-    };
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString();
-      status: await this.getStatus();
-      fixesApplied: this.fixesApplied;
-      cursorChatsTriggered: this.cursorChatsTriggered;
-      buildHistory: this.buildHistory.slice(-10), // Last 10 builds
-      errorHistory: this.errorHistory.slice(-10), // Last 10 errors
-      recommendations: this.generateRecommendations();
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }
+      recommendations:this.generateRecommendations(),;    }
 const reportPath = 'logs/advanced-self-healing-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
@@ -1427,7 +927,6 @@ const reportPath = 'logs/advanced-self-healing-report.json';
 ;
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
 ;
     if (this.fixesApplied.length > 10) {;
       recommendations.push(;
@@ -1437,20 +936,7 @@ const reportPath = 'logs/advanced-self-healing-report.json';
 ;
     if (this.cursorChatsTriggered.length > 5) {;
       recommendations.push(;
-        'Review common issues and implement automated fixes',;
-=======
-
-    if (this.fixesApplied.length > 10) {
-      recommendations.push(
-        'Consider implementing more robust error prevention strategies';
-      );
-    }
-
-    if (this.cursorChatsTriggered.length > 5) {
-      recommendations.push(
-        'Review common issues and implement automated fixes';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        'Review common issues and implement automated fixes',;      );
     }
 ;
     if (this.errorHistory.length > 20) {;
@@ -1516,8 +1002,6 @@ Environment Variables:;
 }
 ;
 module.exports = AdvancedSelfHealingSystem;
-;
-;
 // Graceful shutdown handling;
 process.on('SIGINT', () => {;
   console.log('\n🛑 Received SIGINT, shutting down gracefully...');

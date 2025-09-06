@@ -25,49 +25,77 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 
-const serviceCategories = [
+const serviceCategories = [  {
+  opacity: 0, y: 30 
+}
+}animate= {
   {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    count: 3
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    count: 4
-  },
+  duration: 0.8 
+}
+}> <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ultimate Futuristic </span> <br /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent" > Services 2025 </span> </h1> </div> </motion.div>) ) 
+}</div> </motion.div> </div> </section> </option>) ) 
+}</select> {
+  /* Sort Options */ 
+}<select > <option value="popular" >Most Popular</option> <option value="price-low" >Price: Low to High</option> <option value="price-high" >Price: High to Low</option> <option value="rating" >Highest Rated</option> <option value="customers" >Most Customers</option> </select> <button onClick= {
+  () => setViewMode ('grid') 
+}className= {
+  `p-2 rounded $ {
+  viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400' 
+}` 
+}> <div className="grid grid-cols-2 gap-1 w-4 h-4" > <div className="bg-current rounded-sm" ></div> <div className="bg-current rounded-sm" ></div> <div className="bg-current rounded-sm" ></div> <div className="bg-current rounded-sm" ></div> </div> </button> <button onClick= {
+  () => setViewMode ('list') 
+}className= {
+  `p-2 rounded $ {
+  viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400' 
+}` 
+}> <div className="space-y-1 w-4 h-4" > <div className="bg-current rounded-sm h-0.5" ></div> <div className="bg-current rounded-sm h-0.5" ></div> <div className="bg-current rounded-sm h-0.5" ></div> </div> </button> </div> </div> </div> </div> </section> > {
+  sortedServices.map ( (service, index) => (<motion.div key= {
+  service.id 
+}variants= {
+  itemVariants 
+}className= {
+  `group relative $ {
+  viewMode === 'grid' ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105' : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300' 
+}` 
+}> Popular </div>) 
+}{
+  /* Service Header */ 
+}<div className= {
+  `$ {
+  viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center' 
+}` 
+}> <div className= {
+  `$ {
+  viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4' 
+}` 
+}> <div className= {
+  `w-16 h-16 rounded-2xl bg-gradient-to-br $ {
+  service.color 
+}flex items-center justify-center text-3xl` 
+}> {
+  service.icon 
+}</div> </div> </div> </div> </div> + {
+  service.features.length - 4 
+}more features </div>) 
+}</div> </div> </div> </div> </div> > Get Started </a> <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors" > <Eye className="w-5 h-5" /> </button> </div> </a> </div> </div> </div> </motion.div>) ) 
+}</motion.div> > Clear Filters </button> </div>) 
+}</div> </section> <motion.div initial= {
   {
-    title: 'Space Technology',
-    description: 'AI-powered space exploration and resource extraction',
-    icon: Rocket,
-    color: 'from-blue-500 to-cyan-600',
-    count: 1
-  },
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    title: 'Financial Technology',
-    description: 'Quantum AI-powered financial trading and analytics',
-    icon: DollarSign,
-    color: 'from-green-500 to-emerald-600',
-    count: 1
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
-    title: 'Content Automation',
-    description: 'Autonomous AI content creation and management',
-    icon: BookOpen,
-    color: 'from-purple-500 to-pink-600',
-    count: 1
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Quantum encryption and advanced threat detection',
-    icon: Shield,
-    color: 'from-red-500 to-orange-600',
-    count: 1
-  },
+  duration: 0.8 
+}
+}viewport= {
   {
     title: 'Healthcare Technology',
     description: 'AI-powered medical diagnostics and treatment',
@@ -446,5 +474,4 @@ href=&quot;/pricing&quot;
         </div>
       </section>
     </Layout>
-  )
-}
+  )}

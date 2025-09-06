@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -8,8 +7,6 @@ import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-;
-;
 interface GeneratedContent {;
   description:string,;
   tags:string[],;
@@ -115,34 +112,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
     </div>;
-  ),;
-=======
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-}
-
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {
-    title?: string,
-    category?: string,
-    keyFeatures?: string,
-    targetAudience?: string
-  }
+  ),;}
+}export function AIListingGenerator ({;
+  onApplyGenerated, initialValues = {;
+  ;
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
@@ -204,15 +177,23 @@ interface GeneratedContent {_description: string;
   suggestedPrice: {
     min: number;
     max: number;};
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {_onApplyGenerated?: (_content: GeneratedContent) => void;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string;};
+  keyPoints: string[];}
+});
+if (error) {;
+  throw new Error (error.message) ;
+}if (data && (data as any) .error) {;
+  throw new Error ( (data as any) .error) ;
+}setGeneratedContent ( (data as any) ?.generated || null);
+toast ({;
+  ;
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsLoading (false) ;
 }
 
 export function AIListingGenerator(_{_onApplyGenerated, _initialValues = {} }: AIListingGeneratorProps) {_const { toast} = useToast();
@@ -274,5 +255,20 @@ export function AIListingGenerator(_{_onApplyGenerated, _initialValues = {} }: A
       )}
     </div>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+};
+return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {;
+  handleGenerate ;
+}isLoading= {;
+  isLoading ;
+}initialValues= {;
+  initialValues ;
+}/> </CardContent> </Card> {;
+  isLoading && <LoadingContentSkeleton /> ;
+}{;
+  generatedContent && !isLoading && (<GeneratedContentDisplay content= {;
+  generatedContent ;
+}onApply= {;
+  handleApply ;
+}/>) ;
+}</div>) ;
+}'"

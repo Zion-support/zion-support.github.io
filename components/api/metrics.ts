@@ -72,5 +72,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}  }
 
-  res.status(200).json(response)
-}
+  res.status(200).json(response)}

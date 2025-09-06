@@ -667,4 +667,102 @@ onClick={() => setShowMobilePanel(!showMobilePanel)}
   )
 },
 
-export default MobileOptimizer,
+export default MobileOptimizer,}
+};
+if (viewport) {
+  viewport.setAttribute ('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no') 
+}//Add touch-action CSS const style = document.createElement ('style');
+style.textContent = `.mobile-optimized * {
+  touch-action: manipulation;
+-webkit-tap-highlight-color: transparent 
+}.mobile-optimized button;
+.mobile-optimized a {
+  min-height: 44px;
+min-width: 44px 
+}.mobile-optimized input;
+.mobile-optimized select;
+.mobile-optimized textarea {
+  font-size: 16px, /* Prevents zoom on iOS */ 
+}`;
+document.head.appendChild (style) 
+};
+const enableMobilePerformanceMode = () => {
+  //Reduce animations on mobile document.documentElement.classList.add ('mobile-performance-mode');
+//Optimize images const images = document.querySelectorAll ('img');
+images.forEach (img => {
+  img.loading = 'lazy';
+img.decoding = 'async' 
+});
+//Reduce motion for better performance if (window.matchMedia (' (prefers-reduced-motion: reduce) ') .matches) {
+  document.documentElement.classList.add ('reduced-motion') 
+}
+};
+const applyLandscapeOptimizations = () => {
+  //Landscape-specific optimizations document.documentElement.classList.add ('landscape-mode');
+//Adjust layout for landscape const style = document.createElement ('style');
+style.textContent = `.landscape-mode .mobile-panel {
+  width: 300px;
+height: 100vh 
+}`;
+document.head.appendChild (style) 
+};
+const applyPortraitOptimizations = () => {
+  //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode') 
+};
+const optimizeForMobile = useCallback ( () => {
+  if (!isMobile) return;
+//Optimize images const images = document.querySelectorAll ('img');
+images.forEach (img => {
+  if (!img.loading) img.loading = 'lazy';
+if (!img.decoding) img.decoding = 'async' 
+});
+//Optimize fonts fonts.forEach (font => {
+  font.setAttribute ('crossoriginanonymous') 
+});
+//Add mobile-specific event listeners document.addEventListener ('touchstart', () => {
+  
+}, {
+  passive: true 
+});
+document.addEventListener ('touchmove', () => {
+  
+}, {
+  passive: true 
+}) 
+}, [isMobile]);
+useEffect ( () => {
+  optimizeForMobile () 
+}, [optimizeForMobile]);
+useEffect ( () => {
+  if (typeof window === 'undefined') return;
+//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
+window.addEventListener ('resize', handleResize);
+//Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
+const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+  setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
+};
+if (!showPanel || !isVisible) return null;
+}
+};
+const getStatusIcon = (status: string) => {
+  switch (status) {
+  
+}
+};
+children 
+}{
+  /* Mobile Optimization Panel */ 
+}<AnimatePresence> {
+  showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) ) 
+}</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> {
+  /* Mobile Toggle Button */ 
+}<button </svg> </button> {
+  /* Global Mobile Styles */ 
+}<style jsx global> {
+  `.mobile-optimized * {
+  
+}` 
+}</style> </>) 
+};
+export default MobileOptimizer;

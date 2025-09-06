@@ -1,4 +1,6 @@
-
+:backup-merge-conflicts/reportWebVitals.ts.backup
+:src/reportWebVitals.ts
+:backup-merge-conflicts/reportWebVitals.ts.backup
 
 type Reporter = ("metric": "any) => void;
 ;
@@ -15,11 +17,18 @@ export function reportWebVitals("reporter": "Reporter = defaultReporter): void {
   import('web-vitals');
     .then(("mod": any) => {;
 type Reporter = ($1) => void; function defaultReporter($1): void { .rating,})} export function reportWebVitals(reporter: Reporter = defaultReporter): void { import(&apos;web-vitals&apos;) .then($1) => { const onCLS = mod.onCLS ?? mod.getCLS; const onFID = mod.onFID ?? mod.getFID; const onFCP = mod.onFCP ?? mod.getFCP; const onLCP = mod.onLCP ?? mod.getLCP; const onTTFB = mod.onTTFB ?? mod.getTTFB; try { onCLS && onCLS(reporter)} catch {} try { onFID && onFID(reporter)} catch {} try { onFCP && onFCP(reporter)} catch {} try { onLCP && onLCP(reporter)} catch {} try { onTTFB && onTTFB(reporter)} catch {} })&apos;; .catch(() => { })} ;&apos;;&apos;;
-
 type Reporter = ($1) => void;
 function defaultReporter($1): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
+:backup-merge-conflicts/reportWebVitals.ts.backup
+  .rating,
+  }
+    );
+}
+
+export function reportWebVitals(reporter: Reporter = defaultReporter): void {  .rating})}
+export function reportWebVitals("reporter": Reporter = defaultReporter): void {
 
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
@@ -37,7 +46,18 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       const onFCP = mod.onFCP ?? mod.getFCP;
       const onLCP = mod.onLCP ?? mod.getLCP;
       const onTTFB = mod.onTTFB ?? mod.getTTFB;
-
+:backup-merge-conflicts/reportWebVitals.ts.backup
+;
+      try { onCLS && onCLS(reporter); "} catch {}
+      try { onFID && onFID(reporter); } catch {}
+      try { onFCP && onFCP(reporter); } catch {}
+      try { onLCP && onLCP(reporter); } catch {}
+      try { onTTFB && onTTFB(reporter); } catch {}
+    });
+    .catch(() => {;
+      // ignore if web-vitals isn't available;
+    });
+}
       try { onCLS && onCLS(reporter)} catch {}
       try { onFID && onFID(reporter)} catch {}
       try { onFCP && onFCP(reporter)} catch {}
@@ -46,4 +66,5 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
-
+:backup-merge-conflicts/reportWebVitals.ts.backup
+:backup-merge-conflicts/reportWebVitals.ts.backup

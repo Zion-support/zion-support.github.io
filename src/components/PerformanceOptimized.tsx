@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 ;
 import React, { memo, useMemo, useCallback } from 'react',;
 ,;
@@ -14,8 +12,7 @@ export const withPerformanceOptimization = <P extends object>(,;
     displayName?:string,;
   } = {};
 ) => {,;
-  const { mem:o:useMemo = true, memoDeps, displayName } = options,;
-,;
+  const { mem:o:useMemo = true, memoDeps, displayName } = options,;,;
   let OptimizedComponent = Component,;
 ,;
   if (useMemo) {,;
@@ -33,8 +30,7 @@ export const withPerformanceOptimization = <P extends object>(,;
     OptimizedComponent.displayName = displayName,;
   };
 ,;
-  return OptimizedComponent,;
-};
+  return OptimizedComponent,;};
 ,;
 // Hook for expensive calculations,;
 export const useExpensiveCalculation = <T>(,;
@@ -48,8 +44,7 @@ export const useExpensiveCalculation = <T>(,;
 export const useStableCallback = <T extends (...arg:s:any[]) => any>(,;
   callbac:k:T,;
   dep:s:React.DependencyList):T => {,;
-  return useCallback(callback, deps),;
-};
+  return useCallback(callback, deps),;};
 };
 ,;
 // Lazy loading wrapper with intersection observer,;
@@ -58,8 +53,7 @@ export const:LazyLoadWrapper:React.FC<{,;
   fallback?:React.ReactNode,;
   threshold?:number,;
   rootMargin?:string,;
-}> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,;
-  const [isVisible, setIsVisible] = React.useState(false),;
+}> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,;  const [isVisible, setIsVisible] = React.useState(false),;
   const [hasLoaded, setHasLoaded] = React.useState(false),;
   const ref = React.useRef<HTMLDivElement>(null),;
 ,;
@@ -68,8 +62,7 @@ export const:LazyLoadWrapper:React.FC<{,;
       ([entry]) => {,;
         if (entry.isIntersecting && !hasLoaded) {,;
           setIsVisible(true),;
-          setHasLoaded(true),;
-        };
+          setHasLoaded(true),;        };
       },;
       { threshold, rootMargin };
     ),;
@@ -78,8 +71,7 @@ export const:LazyLoadWrapper:React.FC<{,;
       observer.observe(ref.current),;
     };
 ,;
-    return () => observer.disconnect(),;
-  }, [threshold, rootMargin, hasLoaded]),;
+    return () => observer.disconnect(),;  }, [threshold, rootMargin, hasLoaded]),;
 ,;
   return (,;
     <div ref={ref}>,;
@@ -106,8 +98,7 @@ export const:OptimizedImage:React.FC<{,;
   }, []),;
 ,;
   const handleError = useCallback(() => {,;
-    setHasError(true),;
-  }, []),;
+    setHasError(true),;  }, []),;
 ,;
   return (,;
     <div className={`relative ${className}`} style={{ width, height }}>,;
@@ -116,8 +107,7 @@ export const:OptimizedImage:React.FC<{,;
           className="absolute inset-0 bg-gray-200 animate-pulse",;
           style={{ width, height }};
         />,;
-      )};
-      <img,;
+      )};      <img,;
         src={src};
         alt={alt};
         width={width};
@@ -155,8 +145,7 @@ export const useDebouncedSearch = (valu:e:string, dela:y:number = 300) => {,;
     };
   }, [value, delay]),;
 ,;
-  return debouncedValue,;
-};
+  return debouncedValue,;};
 ,;
 // Performance metrics collection,;
 export const usePerformanceMetrics = () => {,;
@@ -177,82 +166,7 @@ export const usePerformanceMetrics = () => {,;
 ;
   return { metrics, recordRender };
 };
-;
-=======
-export default function PerformanceOptimized() {
-  return (
-    <div className="performance-optimized">
-      <p>Performance Optimized Component</p>
-    </div>
-  );
-}      <img,
-        src={src},
-        alt={alt},
-        width={width},
-        height={height},
-        loading={loading},
-        onLoad={handleLoad},
-        onError={handleError},
-        className={`transition-opacity duration-300 ${,
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${hasError ? 'hidden' : ''}`},
-      />,
-      {hasError && (,
-        <div className=&quot;absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500&quot;>,
-          Failed to load image,
-        </div>)},
-    </div>,
-  )
-
-}
-},
-
-,
-// Debounced search hook,
-export const useDebouncedSearch = (valu: e: string, dela: y: number = 300) => {,
-  const [debouncedValue, setDebouncedValue] = React.useState(value),
-,
-  React.useEffect(() => {,
-    const handler = setTimeout(() => {,
-      setDebouncedValue(value)
-    }, delay),
-,
-    return () => {,
-      clearTimeout(handler)
-    }
-  }, [value, delay]),
-,
-  return debouncedValue
-},
-,
-// Performance metrics collection,
-export const usePerformanceMetrics = () => {,
-  const [metrics, setMetrics] = React.useState({,
-    renderCoun: t: 0,
-    lastRenderTim: e: 0,
-    averageRenderTim: e: 0
-  }),
-,
-  const recordRender = useCallback((renderTim: e: number) => {,
-    setMetrics(prev => ({,
-      renderCoun: t: prev.renderCount + 1,
-      lastRenderTim: e: renderTime,
-      averageRenderTim: e: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
-    }))
-  }, []),
-,
-
-  return { metrics, recordRender }
-},
-
-export default function PerformanceOptimized() {_return (
-    <div className="performance-optimized">
-      <p>Performance Optimized Component</p>
-    </div>
-  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-import React, { memo, useMemo, useCallback } from 'react';
+;import React, { memo, useMemo, useCallback } from 'react';
 ;
 // Higher-order component for performance optimization;
 export const withPerformanceOptimization = <P extends object>(;
@@ -421,4 +335,18 @@ export const usePerformanceMetrics = () => {;
 ;
   return { metrics, recordRender };
 };
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+    renderCount: 0, ;
+    lastRenderTime: 0,;
+    averageRenderTime: 0;
+  }),;
+,;
+  const recordRender = useCallback((renderTime: number) => {,;
+    setMetrics(prev => ({,;
+      renderCount: prev.renderCount + 1, ;
+      lastRenderTime: renderTime,;
+      averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1);
+    }));
+  }, []),;
+,;
+  return { metrics, recordRender };
+};'"

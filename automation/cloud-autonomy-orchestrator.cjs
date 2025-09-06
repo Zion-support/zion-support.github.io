@@ -10,20 +10,11 @@ function run(cmd, args, cwd = process.cwd()) {;
     process.exit(res.status || 1);
   }
 }
-<<<<<<< HEAD
 ;
 const scripts = [;
   ['node', [path.join('automation', 'docs-intelligence.cjs')]],;
   ['node', [path.join('automation', 'api-openapi-generator.cjs')]],;
-  ['node', [path.join('automation', 'governance-insights.cjs')]],;
-=======
-
-const scripts = [
-  ['node', [path.join('automation', 'docs-intelligence.cjs')]];
-  ['node', [path.join('automation', 'api-openapi-generator.cjs')]];
-  ['node', [path.join('automation', 'governance-insights.cjs')]];
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-];
+  ['node', [path.join('automation', 'governance-insights.cjs')]],;];
 ;
 for (const [cmd, args] of scripts) run(cmd, args);
 ;

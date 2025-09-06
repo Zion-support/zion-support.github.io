@@ -203,5 +203,4 @@ className=&quot;w-full border rounded px-3 py-2 min-h-[520px] font-mono&quot;
         </div>
       </div>
     </div>
-  )
-}
+  )}

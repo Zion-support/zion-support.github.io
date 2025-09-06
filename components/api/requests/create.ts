@@ -9,12 +9,10 @@ async function loadRequests(): Promise<any[]> {
     return JSON.parse(raw)
   } catch {
     return []
-  }
-}
-
-async function saveRequests(requests: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
+  }}
+}catch (err) {
+  return {
+  summary: description.slice (0, 280), type: 'unknown' 
 }
 
 async function summarizeWithOpenAI(description: string) {
@@ -115,5 +113,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({_id, _status: 'ok'});
-}
+  return res.status(200).json({_id, _status: 'ok'});}

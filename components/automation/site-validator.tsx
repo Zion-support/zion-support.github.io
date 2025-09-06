@@ -46,5 +46,4 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  )
-}
+  )}

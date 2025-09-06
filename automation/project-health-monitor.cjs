@@ -44,7 +44,6 @@ class ProjectHealthMonitor {;
       try {;
         log(`  Running:${check.name}`);
         const result = await check.checkFn();
-<<<<<<< HEAD
         this.results.push({;
           name:check.name,;
           status:'PASS',;
@@ -59,25 +58,7 @@ class ProjectHealthMonitor {;
           status:'FAIL',;
           error:error.message,;
           weight:check.weight,;
-          score:0;
-=======
-        this.results.push({
-          name: check.name;
-          status: 'PASS';
-          result;
-          weight: check.weight;
-          score: 100
-        });
-        log(`    ✅ ${check.name}: PASS`);
-      } catch (error) {
-        this.results.push({
-          name: check.name;
-          status: 'FAIL';
-          error: error.message;
-          weight: check.weight;
-          score: 0
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          score:0;        });
         log(`    ❌ ${check.name} FAIL - ${error.message}`);
       }
     }
@@ -117,7 +98,6 @@ class ProjectHealthMonitor {;
     const totalChecks = this.checks.length;
     const passedChecks = this.results.filter(r => r.status === 'PASS').length;
     const failedChecks = this.results.filter(r => r.status === 'FAIL').length;
-<<<<<<< HEAD
     ;
     return {;
       summary:{;
@@ -130,30 +110,13 @@ class ProjectHealthMonitor {;
       },;
       results:this.results,;
       recommendations:this.generateRecommendations(),;
-      metrics:this.generateMetrics();
-=======
-    
-    return {
-      summary: {
-        totalChecks;
-        passedChecks;
-        failedChecks;
-        overallHealth: this.overallHealth;
-        score: this.score;
-        timestamp: new Date().toISOString()
-      };
-      results: this.results;
-      recommendations: this.generateRecommendations();
-      metrics: this.generateMetrics()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      metrics:this.generateMetrics();    };
   }
   ;
   generateRecommendations() {;
     const recommendations = [];
     ;
     const failedChecks = this.results.filter(r => r.status === 'FAIL');
-<<<<<<< HEAD
     ;
     failedChecks.forEach(check => {;
       switch (check.name) {;
@@ -189,72 +152,21 @@ class ProjectHealthMonitor {;
           recommendations.push({;
             priority:'MEDIUM',;
             action:'Optimize performance',;
-            description:'Performance issues detected';
-=======
-    
-    failedChecks.forEach(check => {
-      switch (check.name) {
-        case 'Build System':
-          recommendations.push({
-            priority: 'HIGH';
-            action: 'Fix build issues';
-            description: 'Build system is not functioning properly'
-          });
-          break;
-        case 'Dependencies':
-          recommendations.push({
-            priority: 'MEDIUM';
-            action: 'Update dependencies';
-            description: 'Some dependencies may be outdated or have security issues'
-          });
-          break;
-        case 'Code Quality':
-          recommendations.push({
-            priority: 'MEDIUM';
-            action: 'Improve code quality';
-            description: 'Code quality checks are failing'
-          });
-          break;
-        case 'Security':
-          recommendations.push({
-            priority: 'HIGH';
-            action: 'Address security issues';
-            description: 'Security vulnerabilities detected'
-          });
-          break;
-        case 'Performance':
-          recommendations.push({
-            priority: 'MEDIUM';
-            action: 'Optimize performance';
-            description: 'Performance issues detected'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          });
+            description:'Performance issues detected';          });
           break;
       }
     });
-<<<<<<< HEAD
     ;
     // Add general recommendations based on score;
     if (this.score < 80) {;
       recommendations.push({;
         priority:'MEDIUM',;
         action:'General project review',;
-        description:'Project health score is below optimal levels';
-=======
-    
-    // Add general recommendations based on score
-    if (this.score < 80) {
-      recommendations.push({
-        priority: 'MEDIUM';
-        action: 'General project review';
-        description: 'Project health score is below optimal levels'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        description:'Project health score is below optimal levels';      });
     }
     ;
     return recommendations;
   }
-<<<<<<< HEAD
   ;
   generateMetrics() {;
     const metrics = {;
@@ -263,19 +175,7 @@ class ProjectHealthMonitor {;
       codeQuality:0,;
       securityHealth:0,;
       performanceHealth:0,;
-      automationHealth:0;
-=======
-  
-  generateMetrics() {
-    const metrics = {
-      buildHealth: 0;
-      dependencyHealth: 0;
-      codeQuality: 0;
-      securityHealth: 0;
-      performanceHealth: 0;
-      automationHealth: 0
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      automationHealth:0;    };
     ;
     this.results.forEach(result => {;
       if (result.name.includes('Build')) {;
@@ -311,7 +211,6 @@ class ProjectHealthMonitor {;
     ;
     log(`📊 Project health report saved to ${reportFile} and ${htmlFile}`);
   }
-<<<<<<< HEAD
   ;
   generateHTMLReport(report) {;
     const healthColor = {;
@@ -319,18 +218,7 @@ class ProjectHealthMonitor {;
       'GOOD':'#20c997',;
       'FAIR':'#ffc107',;
       'POOR':'#fd7e14',;
-      'CRITICAL':'#dc3545';
-=======
-  
-  generateHTMLReport(report) {
-    const healthColor = {
-      'EXCELLENT': '#28a745';
-      'GOOD': '#20c997';
-      'FAIR': '#ffc107';
-      'POOR': '#fd7e14';
-      'CRITICAL': '#dc3545'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      'CRITICAL':'#dc3545';    };
     ;
     return `<!DOCTYPE html>;
 <html lang="en">;

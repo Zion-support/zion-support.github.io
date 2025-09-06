@@ -1,9 +1,6 @@
 #!/usr/bin/env node;
-;
-const fs = require('fs');
+;const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 ;
 console.log('🔧 Starting comprehensive syntax fixes...');
@@ -96,11 +93,6 @@ try {;
 } catch (error) {;
   console.log('⚠️ ESLint fix failed, continuing...');
 }
-=======
-=======
-const { execSync } = require('child_process');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-
 console.log('🔧 Starting comprehensive syntax fixes...');
 
 // Get all TypeScript and JavaScript files
@@ -126,79 +118,4 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-<<<<<<< HEAD
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-// Advanced syntax fixes
-function fixAdvancedSyntax(content, filePath) {
-  let fixed = content;
-
-  // Fix import statements
-  fixed = fixed.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-  fixed = fixed.replace(/import\s+([^,]+),\s*import/gm, 'import $1;\nimport');
-
-  // Fix object syntax
-  fixed = fixed.replace(/"([^"]+)":\s*([^,}]+),;/g, '"$1": $2,');
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-
-  // Fix array syntax
-  fixed = fixed.replace(/\[([^\]]+),\]/g, '[$1]');
-
-  // Fix function parameters
-  fixed = fixed.replace(/\(\s*([^)]+),\s*\)/g, '($1)');
-
-  // Fix trailing commas in objects and arrays
-  fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
-
-  // Fix semicolons after commas
-  fixed = fixed.replace(/,;/g, ',');
-
-  // Fix double commas
-  fixed = fixed.replace(/,+/g, ',');
-
-  // Fix malformed JSX
-  fixed = fixed.replace(/<(\w+)([^>]*),>/g, '<$1$2>');
-
-  // Fix string concatenation
-  fixed = fixed.replace(/'([^']+)',\s*'([^']+)'/g, "'$1$2'");
-
-  return fixed;
-}
-
-// Process files
-const files = getAllFiles(__dirname);
-let fixedCount = 0;
-let errorCount = 0;
-
-files.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    const fixed = fixAdvancedSyntax(content, file);
-
-    if (content !== fixed) {
-      fs.writeFileSync(file, fixed);
-      console.log(`✅ Fixed: ${path.relative(__dirname, file)}`);
-      fixedCount++;
-    }
-  } catch (error) {
-    console.log(
-      `❌ Error fixing ${path.relative(__dirname, file)}: ${error.message}`
-    );
-    errorCount++;
-  }
-});
-
-console.log(`\n🎉 Comprehensive syntax fixes completed!`);
-console.log(`📊 Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-// Try to run lint fix
-try {
-  console.log('\n🔧 Running ESLint fix...');
-  execSync('npm run lint:fix', { stdio: 'inherit' });
-  console.log('✅ ESLint fix completed');
-} catch (error) {
-  console.log('⚠️ ESLint fix failed, continuing...');
-}
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

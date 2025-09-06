@@ -29,16 +29,11 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-<<<<<<< HEAD
 import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3';
 import { real2025Q3Additions } from '../data/real-2025-q3-additions';
 import { realQ4Services2025 } from '../data/real-2025-q4-additions';
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-=======
-import { realImplementationServices2025 } from '../data/real-implementation-services-2025';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
-
 export default function ServiceFallbackPage() {
   const router = useRouter();
   const slug = (router.query.slug as string) || '';
@@ -174,7 +169,6 @@ function collectAllServices(): Svc[] {
       emergingTechnologyServices as unknown as Svc[],
       comprehensiveITSolutions as Svc[],
       marketValidatedServices as Svc[],
-<<<<<<< HEAD
       curatedMarketServices as Svc[],
       cuttingEdgeITServices as Svc[],
       nextGenerationAIServices as Svc[],
@@ -186,13 +180,7 @@ function collectAllServices(): Svc[] {
       real2025Q3Additions as Svc[],
       realQ4Services2025 as Svc[],
       real2026Q1Additions as Svc[],
-      ultimateFuturisticServices2025 as unknown as Svc[]
-=======
-      newRealInnovations as Svc[],
-      realMarketServices as Svc[],
-      realImplementationServices2025 as unknown as Svc[]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
-    );
+      ultimateFuturisticServices2025 as unknown as Svc[]    );
 }
 
 function normalizeSlug(value: string): string {

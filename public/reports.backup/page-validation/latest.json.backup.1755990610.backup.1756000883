@@ -7,7 +7,6 @@
     "buildBreakingFiles": 0,
     "canBuild": true
   },
-=======
   "results": [
     {
       "file": "pages/_app.tsx",

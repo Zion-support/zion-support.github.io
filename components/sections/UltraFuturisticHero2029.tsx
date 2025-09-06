@@ -187,5 +187,4 @@ animate={{ rotate: -360 }}
         transition={{ duration: 25, repeat: Infinity, ease: &quot;linear&quot }}
         className=&quot;absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full&quot;      />
     </section>
-  )
-}
+  )}

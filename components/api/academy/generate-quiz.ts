@@ -61,5 +61,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const _text = completion.choices?.[0]?.message?.content ?? '';
     try {_const _json = JSON.parse(text);
       return res.status(200).json(json);} catch {_return fallback();}
-  } catch (err) {_return fallback();}
-}
+  } catch (err) {_return fallback();}}

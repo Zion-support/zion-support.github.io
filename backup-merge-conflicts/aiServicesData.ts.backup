@@ -1,4 +1,6 @@
-
+:backup-merge-conflicts/aiServicesData.ts.backup
+:src/data/aiServicesData.ts
+:backup-merge-conflicts/aiServicesData.ts.backup
 
 export interface AIService {;
   "id": "string;
@@ -1706,7 +1708,6 @@ export const AI_SERVICES: AIService[] = [;,
     },
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],",
     marketSize: "$22.1 billion by 2025";,",
-
 export interface AIService {
   id: string;
   title: string;
@@ -2711,9 +2712,10 @@ export const AI_SERVICES: AIService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;SOC 2&quot;, &quot;ISO 27001&quot;, &quot;Data encryption&quot;, &quot;Secure communications&quot;]
     },
-
-    competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
+:backup-merge-conflicts/aiServicesData.ts.backup
+    competitors: [&quot;CrowdStrike&quot;, &quot;Palo Alto Networks&quot;, &quot;IBM Security&quot;, &quot;Microsoft Sentinel&quot;],
+    marketSize: &quot;$22.1 billion by 2025&quot;    competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
   }
 ];
-
+:backup-merge-conflicts/aiServicesData.ts.backup

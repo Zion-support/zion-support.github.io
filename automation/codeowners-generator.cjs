@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 ;
 const ROOT = process.cwd();
-<<<<<<< HEAD
 const DEFAULT_OWNERS = {;
   '/core/':['@zion-holdings/core-team'],;
   '/ai/':['@zion-holdings/ai-team'],;
@@ -13,19 +12,7 @@ const DEFAULT_OWNERS = {;
   '/academy/':['@zion-holdings/academy-team'],;
   '/governance/':['@zion-holdings/governance-team'],;
   '/deployments/':['@zion-holdings/devops-team'],;
-  '/api/':['@zion-holdings/platform-team'],;
-=======
-const DEFAULT_OWNERS = {
-  '/core/': ['@zion-holdings/core-team'];
-  '/ai/': ['@zion-holdings/ai-team'];
-  '/dao/': ['@zion-holdings/dao-team'];
-  '/token/': ['@zion-holdings/token-team'];
-  '/academy/': ['@zion-holdings/academy-team'];
-  '/governance/': ['@zion-holdings/governance-team'];
-  '/deployments/': ['@zion-holdings/devops-team'];
-  '/api/': ['@zion-holdings/platform-team'];
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  '/api/':['@zion-holdings/platform-team'],;};
 ;
 function renderCodeowners(map) {;
   const lines = ['# Auto-generated CODEOWNERS', ''];

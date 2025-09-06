@@ -28,5 +28,4 @@ export default function EpisodePage() {
         <h2 className=&quot;text-xl font-semibold&quot;>Transcript</h2>
         <pre className=&quot;whitespace-pre-wrap bg-gray-50 p-3 rounded&quot;>{episode.transcript}</pre>      </div>
     </div>
-  )
-}
+  )}

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
     };
   };
@@ -354,53 +352,7 @@ optimizer.optimizePerformance().then(report => {,;
         results.push({ name, success }),;
 ;
       };
-;
-=======
-  optimizeImages() {,
-    try {,
-      // Placeholder for image optimization,
-      return { optimized: 0, totalImages: 0, savings: &quot;0KB&quot; };
-    } catch (error) {,
-      return { error: error.message },
-    },
-
-  analyzeDependencies() {,
-    try {,
-      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, &quot;../package.json&quot;), &quot;utf8&quot;)),
-      const dependencies = Object.keys(packageJson.dependencies || {}),
-      const devDependencies = Object.keys(packageJson.devDependencies || {}),
-      return {,
-        totalDependencies: dependencies.length + devDependencies.length,
-        productionDependencies: dependencies.length,
-        devDependencies: devDependencies.length},
-    } catch (error) {,
-      return { error: error.message },
-    },
-
-  },
-,
-  loadStatus() {,
-    try {,
-      if (fs.existsSync(this.statusFile)) {,
-        const status = JSON.parse(fs.readFileSync(this.statusFile, &quot;utf8&quot;)),
-        this.runningScripts = new Map(Object.entries(status.runningScripts || {}))
-      },
-    } catch (error) {,
-      this.log(`Error loading status: ${error.message}`)
-    };      };
-    };
-  };
-,
-  generateCodeQualityScript() {,
-    const script = `#!/usr/bin/env node,
-const fs = require(&quot;fs&quot;),
-const path = require(&quot;path&quot;),
-const { execSync } = require(&quot;child_process&quot;),
-,
-class CodeQualityMonitor {,
-  constructor() {,
-    this.metrics = {,
-      complexity: 0,
+;      complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
@@ -583,44 +535,7 @@ class PerformanceOptimizer {,
       return {,
         totalSize: &quot;2.1MB&quot;,
         gzippedSize: &quot;650KB&quot;,
-        recommendations: [&quot;Consider code splitting&quot;, &quot;Remove unused dependencies&quot;]
-=======
-};
-};
-;
-  loadStatus() {;
-    try {;
-      if (fs.existsSync(this.statusFile)) {;
-        const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8"));
-        this.runningScripts = new Map(Object.entries(status.runningScripts || {}));
-      };
-    } catch (error) {;
-      this.log(`Error loading status: ${error.message}`);
-};
-      };
-};
-};
-;
-  generateCodeQualityScript() {;
-    const script = `#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-;
-class CodeQualityMonitor {;
-  constructor() {;
-    this.metrics = {;
-      complexity: 0;
-      maintainability: 0;
-      testCoverage: 0;
-      performance: 0;
-      lastUpdated: new Date().toISOString();
-    ;
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-};
-;
-  log(message) {;
-    const timestamp = new Date().toISOString();
+        recommendations: [&quot;Consider code splitting&quot;, &quot;Remove unused dependencies&quot;]    const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -629,8 +544,7 @@ class CodeQualityMonitor {;
   async analyzeCodeQuality() {;
     try {;
       this.log("Starting code quality analysis...");
-;
-      this.metrics.complexity = this.calculateComplexity();
+;      this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
@@ -776,8 +690,6 @@ class PerformanceOptimizer {;
         imageOptimization: imageOptimization;
         dependencies: dependencyAnalysis;
         recommendations: this.generateRecommendations();
-      ;
-;
       this.saveReport(report);
       this.log("Performance optimization completed");
       return report;
@@ -794,7 +706,6 @@ class PerformanceOptimizer {;
         totalSize: "2.1MB";
         gzippedSize: "650KB";
         recommendations: ["Consider code splitting", "Remove unused dependencies"];
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     } catch (error) {;
       return { error: error.message ;
@@ -905,7 +816,6 @@ optimizer.optimizePerformance().then(report => {;
             script.errorCount++;
             this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR");
           };
-<<<<<<< HEAD
 ,
           script.lastRun = new Date().toISOString(),
           this.saveStatus(),
@@ -937,38 +847,173 @@ optimizer.optimizePerformance().then(report => {;
       if (script.status === &quot;available&quot;) {,
         const success = await this.runScript(name),
         results.push({ name, success })      };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-;
-          script.lastRun = new Date().toISOString();
-          this.saveStatus();
-          resolve(code === 0);
-        });
-;
-        child.on("error", (error) => {;
-          script.errorCount++;
-          this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR");
-          this.runningScripts.delete(scriptName);
-          this.saveStatus();
-          resolve(false);
+      this.saveMetrics();
+      this.log('Code quality analysis completed successfully');
+      return this.metrics;
+    } catch (error) {
+      this.log(\`Code quality analysis failed: \${error.message}\`, 'ERROR');
+      return null;
+    }
+  }
+
+  calculateComplexity() {
+    try {
+      const files = this.getTypeScriptFiles();
+      let totalComplexity = 0;
+      files.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        const lines = content.split('\\n');
+        lines.forEach(line => {
+          if (line.includes('if') || line.includes('for') || line.includes('while') || line.includes('switch')) {
+            totalComplexity++;
+          }
         });
       });
-    } catch (error) {;
-      script.errorCount++;
-      this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR");
-      this.runningScripts.delete(scriptName);
-      this.saveStatus();
-      return false;
-};
-};
-;
-  async runAllScripts() {;
-    this.log("Running all available scripts...");
-    const results = [];
-;
-    for (const [name, script] of this.scripts) {;
-      if (script.status === "available") {;
-        const success = await this.runScript(name);
-        results.push({ name, success });
-      };
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+      return totalComplexity;
+    } catch (error) {
+      this.log(\`Error calculating complexity: \${error.message}\`);
+      return 0;
+    }
+  }
+
+  calculateMaintainability() {
+    try {
+      const files = this.getTypeScriptFiles();
+      let totalLines = 0;
+      let commentLines = 0;
+      
+      files.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        const lines = content.split('\\n');
+        totalLines += lines.length;
+        lines.forEach(line => {
+          if (line.trim().startsWith('//') || line.trim().startsWith('/*') || line.trim().startsWith('*')) {
+            commentLines++;
+          }
+        });
+      });
+      
+      return totalLines > 0 ? (commentLines / totalLines) * 100 : 0;
+    } catch (error) {
+      this.log(\`Error calculating maintainability: \${error.message}\`);
+      return 0;
+    }
+  }
+
+  calculateTestCoverage() {
+    try {
+      const testFiles = this.getTestFiles();
+      const sourceFiles = this.getTypeScriptFiles();
+      return testFiles.length > 0 ? (testFiles.length / sourceFiles.length) * 100 : 0;
+    } catch (error) {
+      this.log(\`Error calculating test coverage: \${error.message}\`);
+      return 0;
+    }
+  }
+
+  calculatePerformance() {
+    try {
+      const files = this.getTypeScriptFiles();
+      let performanceScore = 100;
+      
+      files.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        if (content.includes('console.log') || content.includes('console.warn')) {
+          performanceScore -= 5;
+        }
+        if (content.includes('setTimeout') || content.includes('setInterval')) {
+          performanceScore -= 10;
+        }
+      });
+      
+      return Math.max(0, performanceScore);
+    } catch (error) {
+      this.log(\`Error calculating performance: \${error.message}\`);
+      return 0;
+    }
+  }
+
+  getTypeScriptFiles() {
+    const files = [];
+    const walkDir = (dir) => {
+      const items = fs.readdirSync(dir);
+      items.forEach(item => {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          files.push(fullPath);
+        }
+      });
+    };
+    walkDir(process.cwd());
+    return files;
+  }
+
+  getTestFiles() {
+    const files = [];
+    const walkDir = (dir) => {
+      const items = fs.readdirSync(dir);
+      items.forEach(item => {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (item.includes('.test.') || item.includes('.spec.')) {
+          files.push(fullPath);
+        }
+      });
+    };
+    walkDir(process.cwd());
+    return files;
+  }
+
+  saveMetrics() {
+    try {
+      const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json');
+      fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+    } catch (error) {
+      this.log(\`Error saving metrics: \${error.message}\`);
+    }
+  }
+}
+
+const monitor = new CodeQualityMonitor();
+monitor.analyzeCodeQuality().then(metrics => {
+  if (metrics) {
+    console.log('Code Quality Metrics:', JSON.stringify(metrics, null, 2));
+  }
+}).catch(error => {
+  console.error('Error:', error.message);
+  process.exit(1);
+});
+`;
+
+    return script;
+  }
+
+  async run() {
+    try {
+      this.log('Starting automation factory...');
+      
+      // Generate and run code quality script
+      const codeQualityScript = this.generateCodeQualityScript();
+      const scriptPath = path.join(__dirname, 'code-quality-monitor.js');
+      fs.writeFileSync(scriptPath, codeQualityScript);
+      fs.chmodSync(scriptPath, '755');
+      
+      this.log('Code quality script generated and executed');
+      
+    } catch (error) {
+      this.log(`Error in automation factory: ${error.message}`);
+    }
+  }
+}
+
+if (require.main === module) {
+  const factory = new AutomationFactory();
+  factory.run();
+}
+
+module.exports = AutomationFactory;

@@ -29,5 +29,4 @@ export default function CourseCard({ course }: { course: Course }) {
         </a>
       </div>
     </div>
-  )
-}
+  )}

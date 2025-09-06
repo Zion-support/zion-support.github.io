@@ -1,6 +1,6 @@
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
-<<<<<<< HEAD
 ;
 export default defineConfig({;
   plugins:[;
@@ -159,16 +159,10 @@ export default defineConfig({;
       if (hostType === 'js') {;
         return { js:`__ASSET__${filename}__` };
       } else {;
-        return { relative:true };
-=======
-
-export default defineConfig({_plugins: [
-    react({
-      include: '**/*.{jsx, _js, _ts, _tsx}',
-      fastRefresh: true,
-      jsxRuntime: 'automatic',
+        return { relative:true };      fastRefresh: true,
+      jsxRuntime: 'automatic'
     }),
-    splitVendorChunkPlugin(),
+    splitVendorChunkPlugin()
   ],
   resolve: {_alias: {
       '@': path.resolve(__dirname, _'./src'), },
@@ -189,8 +183,7 @@ export default defineConfig({_plugins: [
           if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || ''))
             return 'fonts/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';},
-      },
-    },
+      },    },
     terserOptions: {
       compress: {
         drop_console: true,
@@ -200,27 +193,25 @@ export default defineConfig({_plugins: [
           'console.info',
           'console.debug',
           'console.warn',
-        ],
-        passes: 2,
+        ],        passes: 2,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
         unsafe_proto: true,
         unsafe_regexp: true,
-        unsafe_undefined: true,
+        unsafe_undefined: true
       },
       mangle: {
         safari10: true,
         properties: {
           regex: /^_/,
-        },      },
-        }
+        },      },        }
       }
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 4096
   },
   optimizeDeps: {
     include: [
@@ -253,12 +244,11 @@ export default defineConfig({_plugins: [
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext',
-    },  },
-  css: {
-    devSourcemap: false,
+    },  },  css: {
+    devSourcemap: false
   },
   esbuild: {
-    jsx: 'automatic',
+    jsx: 'automatic'
   },
   server: {
     port: 3000,
@@ -266,15 +256,14 @@ export default defineConfig({_plugins: [
     open: true,
     cors: true,
     hmr: {
-      overlay: false,
+      overlay: false
     },
     fs: {
       allow: ['..'],
-    },  },
-  preview: {
+    },  },  preview: {
     port: 4173,
     host: true,
-    open: true,
+    open: true
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
@@ -296,8 +285,6 @@ export default defineConfig({_plugins: [
   experimental: {_renderBuiltUrl(filename, _{ hostType}) {_if (hostType === 'js') {
         return { js: `__ASSET__${filename}__` };
       } else {_return { relative: true};
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
-    },
-  },
+    }
+  }
 });

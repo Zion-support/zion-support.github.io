@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 ;
 import React, { useEffect, useState } from 'react';
@@ -116,104 +115,42 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         </Button>;
       </CardContent>;
     </Card>;
-  );
-=======
-'use client'
-
-import React, {useEffect, useState} from 'react'
-import type {User as SupabaseUser, AuthChangeEvent, Session} from '@supabase/supabase-js'
-
-interface UserProfileProps {onUserChange?: (user: SupabaseUser | null) => void}
-
-export default function UserProfile(_{onUserChange}: UserProfileProps) {const [user, setUser] = useState<SupabaseUser | null>(null)
-  const [loading, setLoading] = useState(true)
-  const router = useRouter()
-
-  useEffect_(() => {
-    // Get initial session,
-const getInitialSession = async () => {
-      const { data: { session} } = await supabase.auth.getSession()
-      setUser(session?.user ?? null)
-      setLoading(false)
-      onUserChange?.(session?.user ?? null)
-    }
-
-    getInitialSession()
-
-    // Listen for auth changes,
-const {data: { subscription} } = supabase.auth.onAuthStateChange(_(event: AuthChangeEvent, session: Session | null) => {setUser(session?.user ?? null)
-        setLoading(false)
-        onUserChange?.(session?.user ?? null)}
-    )
-
-    return () => subscription.unsubscribe()
-  }, [onUserChange])
-
-  const handleSignOut = async () => {await supabase.auth.signOut()}
-
-  const handleSignIn = () => {router.push('/auth/login')}
-
-  if (loading) {
-    return (
-      <Card className=&quot;w-full max-w-sm&quot;>
-        <CardContent className=&quot;p-6&quot;>
-          <div className=&quot;animate-pulse space-y-4&quot;>
-            <div className=&quot;h-4 bg-muted rounded&quot;></div>
-            <div className=&quot;h-4 bg-muted rounded w-3/4&quot;></div>          </div>
-        </CardContent>
-      </Card>
-    )}
-
-  if (!user) {
-    return (
-      <Card className=&quot;w-full max-w-sm&quot;>        <CardHeader>
-          <CardTitle className=&quot;flex items-center gap-2&quot;>
-            <User className=&quot;h-5 w-5&quot; />
-            Not Signed In
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Button onClick={handleSignIn} className=&quot;w-full&quot;>
-            <LogIn className=&quot;h-4 w-4 mr-2&quot; />
-            Sign In
-          </Button>
-        </CardContent>
-      </Card>
-    )
-  }
-
-  return (
-    <Card className=&quot;w-full max-w-sm&quot;>
-      <CardHeader>
-        <CardTitle className=&quot;flex items-center gap-2&quot;>
-          <User className=&quot;h-5 w-5&quot; />
-          User Profile
-        </CardTitle>
-      </CardHeader>
-      <CardContent className=&quot;space-y-4&quot;>
-        <div className=&quot;space-y-2&quot;>
-          <div className=&quot;flex items-center gap-2&quot;>
-            <span className=&quot;text-sm font-medium&quot;>Email:</span>
-            <span className=&quot;text-sm&quot;>{user.email}</span>
-          </div>
-          <div className=&quot;flex items-center gap-2&quot;>
-            <span className=&quot;text-sm font-medium&quot;>Status:</span>
-            <Badge variant={user.emailconfirmed_at ? &quot;default&quot; : &quot;secondary&quot}>
-              {user.emailconfirmed_at ? &quot;Verified&quot; : &quot;Unverified&quot}
-            </Badge>
-          </div>
-          <div className=&quot;flex items-center gap-2&quot;>
-            <span className=&quot;text-sm font-medium&quot;>Joined:</span>
-            <span className=&quot;text-sm&quot;>
-              {new Date(user.createdat).toLocaleDateString()}            </span>
-          </div>
-        </div>
-        
-        <Button onClick={handleSignOut} variant=&quot;outline&quot; className=&quot;w-full&quot;>
-          <LogOut className=&quot;h-4 w-4 mr-2&quot; />          Sign Out
-        </Button>
-      </CardContent>
-    </Card>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-} 
+  );} 
+'use client' import { ;
+  {;
+  React,  {;
+  useEffect, useState ';
+ } from "react";
+import {;
+  {;
+  type {;
+  User as SupabaseUser,  AuthChangeEvent, Session ';
+}from '@supabase/supabase-js' interface UserProfileProps {;
+  onUserChange?: (user: SupabaseUser | null) => void ;
+}export default function UserProfile ({;
+  onUserChange ;
+}: UserProfileProps) {;
+  const [user,  setUser] = useState<SupabaseUser | null> (null) const [loading, setLoading] = useState (true) const router = useRouter () useEffect ( () => {;
+  //Get initial session const getInitialSession = async () => {;
+  const {;
+  data: {;
+  session ;
+}
+}= await supabase.auth.getSession () setUser (session?.user ?? null) setLoading (false) onUserChange?. (session?.user ?? null) ;
+}getInitialSession () //Listen for auth changes const {;
+  data: {;
+  subscription ;
+}
+}= supabase.auth.onAuthStateChange ( (event: AuthChangeEvent, session: Session | null) => {;
+  setUser (session?.user ?? null) setLoading (false) onUserChange?. (session?.user ?? null) ;
+}) return () => subscription.unsubscribe () ;
+}, [onUserChange]) const handleSignOut = async () => {;
+  await supabase.auth.signOut () ;
+}const handleSignIn = () => {';
+  router.push ('/auth/login') ;
+}</div> </CardContent> </Card>) ;
+}<CardHeader> <CardTitle className="flex items-center gap-2" > <User className="h-5 w-5" /> Not Signed In </CardTitle> </CardHeader> <CardContent> <Button onClick={;
+  handleSignIn ";
+}className="w-full" > <LogIn className="h-4 w-4 mr-2" /> Sign In </Button> </CardContent> </Card>) ";
+}return (<Card className="w-full max-w-sm" > <CardHeader> <CardTitle className="flex items-center gap-2" > <User className="h-5 w-5" /> User Profile </CardTitle> </CardHeader> </span> </div> </div> Sign Out </Button> </CardContent> </Card>) ;
+}'"

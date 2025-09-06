@@ -17,18 +17,10 @@ function getCommits() {;
     return [];
   }
 }
-<<<<<<< HEAD
 ;
 function formatChangelog(commits) {;
   const sections = {;
-    feat:[], fix:[], chore:[], docs:[], refactor:[], perf:[], test:[], ci:[], other:[],;
-=======
-
-function formatChangelog(commits) {
-  const sections = {
-    feat: [], fix: [], chore: [], docs: [], refactor: [], perf: [], test: [], ci: [], other: [];
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    feat:[], fix:[], chore:[], docs:[], refactor:[], perf:[], test:[], ci:[], other:[],;  };
   for (const c of commits) {;
     const m = c.subject.match(/^(\w+)(\(.*\))?!?:\s*(.*)$/);
     if (m) {;
@@ -49,7 +41,6 @@ function formatChangelog(commits) {
     out.push('');
     return out;
   }
-<<<<<<< HEAD
   const content = [;
     '# Changelog',;
     '',;
@@ -63,24 +54,7 @@ function formatChangelog(commits) {
     ...linesFor('Performance', sections.perf),;
     ...linesFor('Tests', sections.test),;
     ...linesFor('CI', sections.ci),;
-    ...linesFor('Other', sections.other),;
-=======
-  const content = [
-    '# Changelog';
-    '';
-    'Auto-generated from recent commits.';
-    '';
-    ...linesFor('Features', sections.feat);
-    ...linesFor('Fixes', sections.fix);
-    ...linesFor('Chores', sections.chore);
-    ...linesFor('Docs', sections.docs);
-    ...linesFor('Refactors', sections.refactor);
-    ...linesFor('Performance', sections.perf);
-    ...linesFor('Tests', sections.test);
-    ...linesFor('CI', sections.ci);
-    ...linesFor('Other', sections.other);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  ];
+    ...linesFor('Other', sections.other),;  ];
   return content.join('\n');
 }
 ;

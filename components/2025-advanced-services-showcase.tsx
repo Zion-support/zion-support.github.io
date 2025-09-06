@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
-import { motion, AnimatePresence } from 'framer-motion',
-import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Atom, Shield, Building, Globe,
-  Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react',
+import { motion, AnimatePresence } from 'framer-motion',import {
+  Search,
+  LayoutGrid,
+  List,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Check,
+  Brain,
+  Zap,
+  Shield,
+  Building,
+  Globe,
+  Users,
+  TrendingUp,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 // Import our new service data,
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',
@@ -23,13 +37,16 @@ const allServices = [
   ...cuttingEdgeITInfrastructureServices
 ],
 
-const categories = [
-  {
-    id: 'all',
-    name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services'
+const categories = [  {
+    id: "enterprise-1",
+    title: "Enterprise AI Solutions",
+    description: "Comprehensive AI implementation for large enterprises",
+    category: "enterprise",
+    price: "$50,000+",
+    rating: 4.9,
+    tags: ["AI", "Machine Learning", "Enterprise"],
+    color: "from-blue-500 to-purple-500",
+    icon: "🤖",
   },
   {
     id: 'enterprise',
@@ -451,17 +468,42 @@ onClick={_() => setViewMode('grid')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}                >
+                  <div className="flex items-center space-x-3">
+                    {category.icon}
+                    <div className="text-left">
+                      <div className="font-semibold">{category.name}</div>
+                      <div className="text-sm opacity-80">
+                        {category.description}
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* View Mode Toggle */}
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-gray-600">
+                Showing {filteredServices.length} services
+              </div>
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setViewMode("grid")}
+                  className={`p-2 rounded-lg ${
+                    viewMode === "grid"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-200 text-gray-600"
+                  }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <LayoutGrid className="w-5 h-5" />
                 </button>
                 <button,
 onClick={_() => setViewMode('list')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'list' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
-                >
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}                >
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -482,10 +524,8 @@ key={category.id}
                   {category.icon}
                   {category.name}
                 </button>;
-              ))}
-            </div>
+              ))}            </div>
           </div>
-        </div>
 
         {_/* Results Summary */}
         <div className="mb-8">
@@ -570,8 +610,7 @@ href={`tel:${contactInfo.mobile}`}
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </div>      </div>
     </div>
-  )
+  );
 }

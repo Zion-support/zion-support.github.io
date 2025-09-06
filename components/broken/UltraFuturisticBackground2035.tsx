@@ -353,5 +353,4 @@ className=&quot;absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transpa
       {_/* Render children */}
       {children}
     </>
-  )
-}
+  )}

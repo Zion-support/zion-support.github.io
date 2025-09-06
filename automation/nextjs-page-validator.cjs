@@ -55,7 +55,6 @@ function validatePageStructure(filePath, content) {;
   const lines = content.split(/\r?\n/);
   const issues = [];
   const warnings = [];
-<<<<<<< HEAD
   ;
   // Critical issues that will break builds;
   if (!content.includes('export default')) {;
@@ -106,61 +105,7 @@ function validatePageStructure(filePath, content) {;
       code:'PAGE_TOO_SHORT',;
       message:'Page content seems too short, may be incomplete',;
       line:0,;
-      severity:'warning';
-=======
-  
-  // Critical issues that will break builds
-  if (!content.includes('export default')) {
-    issues.push({
-      type: 'CRITICAL';
-      code: 'MISSING_EXPORT_DEFAULT';
-      message: 'Missing export default statement';
-      line: findLineWithPattern(lines, 'export');
-      severity: 'error'
-    });
-  }
-  
-  if (!content.includes('function') && !content.includes('const') && !content.includes('class')) {
-    issues.push({
-      type: 'CRITICAL';
-      code: 'MISSING_COMPONENT_DECLARATION';
-      message: 'Missing component function/class declaration';
-      line: findLineWithPattern(lines, 'function|const|class');
-      severity: 'error'
-    });
-  }
-  
-  if (!content.includes('return') && !content.includes('React.createElement')) {
-    issues.push({
-      type: 'CRITICAL';
-      code: 'MISSING_RETURN_STATEMENT';
-      message: 'Missing return statement or JSX';
-      line: findLineWithPattern(lines, 'return|React\\.createElement');
-      severity: 'error'
-    });
-  }
-  
-  // Warnings that might cause issues
-  if (content.includes('jsx') && !content.includes('import React') && !content.includes('from "react"')) {
-    warnings.push({
-      type: 'WARNING';
-      code: 'MISSING_REACT_IMPORT';
-      message: 'JSX detected but React import may be missing';
-      line: findLineWithPattern(lines, 'import.*react|from.*react');
-      severity: 'warning'
-    });
-  }
-  
-  // Check for common patterns that indicate incomplete pages
-  if (content.trim().length < 100) {
-    warnings.push({
-      type: 'WARNING';
-      code: 'PAGE_TOO_SHORT';
-      message: 'Page content seems too short, may be incomplete';
-      line: 0;
-      severity: 'warning'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      severity:'warning';    });
   }
   ;
   // Check for proper HTML structure (only for files that should contain HTML);
@@ -168,7 +113,6 @@ function validatePageStructure(filePath, content) {;
   const isJsxFile = filePath.endsWith('.jsx') || filePath.endsWith('.tsx');
   const hasJsxContent = content.includes('jsx') || content.includes('Component') || ;
                         content.includes('React.createElement') || content.includes('export default');
-<<<<<<< HEAD
   ;
   if (!isJsxFile && !hasJsxContent && content.includes('<') && !content.includes('</')) {;
     warnings.push({;
@@ -176,18 +120,7 @@ function validatePageStructure(filePath, content) {;
       code:'INCOMPLETE_HTML',;
       message:'Incomplete HTML tags detected',;
       line:findLineWithPattern(lines, '<[^>]*$'),;
-      severity:'warning';
-=======
-  
-  if (!isJsxFile && !hasJsxContent && content.includes('<') && !content.includes('</')) {
-    warnings.push({
-      type: 'WARNING';
-      code: 'INCOMPLETE_HTML';
-      message: 'Incomplete HTML tags detected';
-      line: findLineWithPattern(lines, '<[^>]*$');
-      severity: 'warning'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      severity:'warning';    });
   }
   ;
   return { file:filePath, issues, warnings };
@@ -210,7 +143,6 @@ function generateReport(results) {;
   ;
   const criticalIssues = results.filter(r => r.issues.some(i => i.severity === 'error'));
   const buildBreakingFiles = criticalIssues.map(r => r.file);
-<<<<<<< HEAD
   ;
   return {;
     summary:{;
@@ -223,23 +155,7 @@ function generateReport(results) {;
     },;
     results,;
     buildBreakingFiles,;
-    generatedAt:new Date().toISOString();
-=======
-  
-  return {
-    summary: {
-      totalFiles;
-      filesWithIssues;
-      totalIssues;
-      totalWarnings;
-      buildBreakingFiles: buildBreakingFiles.length;
-      canBuild: buildBreakingFiles.length === 0
-    };
-    results;
-    buildBreakingFiles;
-    generatedAt: new Date().toISOString()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    generatedAt:new Date().toISOString();  };
 }
 ;
 function saveReport(report) {;
@@ -388,17 +304,8 @@ function main() {;
 if (require.main === module) {;
   main();
 }
-<<<<<<< HEAD
 ;
 module.exports = {;
   validatePageStructure,;
   generateReport,;
-  saveReport;
-=======
-
-module.exports = {
-  validatePageStructure;
-  generateReport;
-  saveReport
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  saveReport;};

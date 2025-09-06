@@ -394,5 +394,4 @@ href=&quot;tel:+13024640950&quot;
         </motion.div>
       </div>
     </section>
-  )
-}
+  )}

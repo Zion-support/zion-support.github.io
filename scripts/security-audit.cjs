@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -7,25 +5,13 @@ const { execSync } = require('child_process');
 class SecurityAuditor {;
   constructor() {;
     this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-=======
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
-
-class SecurityAuditor {
-  constructor() {
-    this.logsDir = path.join(__dirname, '../logs'),
-    this.ensureLogsDir(),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  }
+    this.ensureLogsDir();  }
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
       fs.mkdirSync(this.logsDir, { recursiv:e:true });
     }
   }
-<<<<<<< HEAD
 ;
   log(message, type = 'info') {;
     const timestamp = new Date().toISOString();
@@ -33,18 +19,7 @@ class SecurityAuditor {
     console.log(logMessage);
 ;
     const logFile = path.join(this.logsDir, 'security-audit.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-=======
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`,
-    console.log(logMessage),
-
-    const logFile = path.join(this.logsDir, 'security-audit.log'),
-    fs.appendFileSync(logFile, logMessage + '\n'),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  }
+    fs.appendFileSync(logFile, logMessage + '\n');  }
 ;
   async runCommand(command, description) {;
     try {;
@@ -59,7 +34,6 @@ class SecurityAuditor {
     } catch (error) {;
       this.log(`❌ ${description} faile:d:${error.message}`, 'error');
       return { succes:s:false, erro:r:error.message };
-=======
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -94,10 +68,8 @@ class SecurityAuditor {
     } catch (error) {
       console.log(`❌ ${description} - Failed: ${error.message}`);
       return { success: false, error: error.message };
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
-<<<<<<< HEAD
 ;
   async runSecurityAudit() {;
     this.log('🔒 Starting security audit...');
@@ -117,30 +89,10 @@ class SecurityAuditor {
     const results = [];
     for (const audit of audits) {;
       const result = await this.runCommand(audit.command, audit.description);
-      results.push({ ...audit, result });
-=======
-
-  async runNpmAudit() {
-    const result = await this.runCommand('npm audit --json', 'NPM Security Audit');
-    this.results.npmAudit = result;
-  }
-
-  async checkDependencies() {
-    const result = await this.runCommand('npm ls --depth=0', 'Dependency Check');
-    this.results.dependencyCheck = result;
-  }
-
-<<<<<<< HEAD
-    const results = [],
-    for (const audit of audits) {
-      const result = await this.runCommand(audit.command, audit.description),
-      results.push({ ...audit, result }),
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }
+      results.push({ ...audit, result });    }
 ;
     this.log('✅ Security audit completed');
     return { succes:s:true, results };
-=======
   async checkFilePermissions() {
     try {
       const criticalFiles = [
@@ -228,9 +180,7 @@ class SecurityAuditor {
                                  finalScore >= 40 ? 'fair' : 'poor';
     
     return finalScore;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
-<<<<<<< HEAD
 ;
   async generateReport() {;
     this.log('📊 Generating security audit report...');
@@ -279,39 +229,10 @@ if (require.main === module) {;
   auditor;
     .start();
     .then(report => {;
-      console.log('Security audit:completed:', report.summary);
-=======
-
-  async generateReport() {
-    const score = this.calculateOverallScore();
-    
-    fs.writeFileSync(this.reportFile, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Security audit report saved to: ${this.reportFile}`);
-    console.log(`🎯 Overall Security Score: ${score}/100 (${this.results.overall.status})`);
-  }
-
-<<<<<<< HEAD
-  async start() {
-    this.log('🎯 Starting Security Auditor...'),
-    const report = await this.generateReport(),
-    this.log('🏁 Security Auditor completed'),
-    return report,
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const auditor = new SecurityAuditor(),
-  auditor
-    .start()
-    .then(report => {
-      console.log('Security audit: completed:', report.summary);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      process.exit(0);
+      console.log('Security audit:completed:', report.summary);      process.exit(0);
     });
     .catch(error => {;
       console.error('Security audit:failed:', error);
-=======
   async run() {
     try {
       console.log('🚀 Starting comprehensive security audit...');
@@ -325,21 +246,9 @@ if (require.main === module) {
       console.log('🎉 Security audit completed successfully!');
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      process.exit(1);
-    }
-  }
-}
-<<<<<<< HEAD
-;
-module.exports = SecurityAuditor;
-=======
+const auditor = new SecurityAuditor();
+auditor.run().catch(console.error);
 
-<<<<<<< HEAD
-module.exports = SecurityAuditor,
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

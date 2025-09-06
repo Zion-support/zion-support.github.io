@@ -272,7 +272,7 @@ display_system_info() {
     log "INFO" "Node.js: $(node --version)"
     log "INFO" "npm: $(npm --version)"
     log "INFO" "PM2: $(pm2 --version)"
-    log "INFO" "================================================"
+    log "INFO" "======"
 }
 
 # Main execution

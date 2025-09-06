@@ -54,5 +54,4 @@ export default function Badges(_{_balance}: {_balance: number}) {_const _active 
       {active && (
         <span className=&quot;ml-2 text-xs text-green-600&quot;>Current: {active.label}</span>      )}
     </div>
-  )
-}
+  )}

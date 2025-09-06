@@ -140,5 +140,4 @@ export default function ServicesShowcase2026V3() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  )
-}
+  )}

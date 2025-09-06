@@ -64,5 +64,4 @@ key={n}
           <button onClick={submit} disabled={loading || rating<1} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>{loading? 'Submitting…' : 'Submit'}</button>        </div>
       </div>
     </div>
-  )
-}
+  )}

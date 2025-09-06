@@ -47,16 +47,11 @@ const Header = () => {
       icon: <Zap className="w-5 h-5" />,
       children: [
         { name: 'All Services', href: '/services' },
-<<<<<<< HEAD
         { name: 'AI & Consciousness', href: '/ai-services' },
         { name: 'Quantum Computing', href: '/quantum-services' },
         { name: 'Space Technology', href: '/space-technology' },
         { name: 'IT Solutions', href: '/it-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' }
-=======
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
-      ]
+        { name: 'Cybersecurity', href: '/cybersecurity' }      ]
     },
     {
       name: 'Solutions',
@@ -64,7 +59,6 @@ const Header = () => {
       description: 'Industry-Specific Solutions',
       icon: <Sparkles className="w-5 h-5" />,
       children: [
-<<<<<<< HEAD
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Industry Solutions', href: '/solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
@@ -85,14 +79,7 @@ const Header = () => {
         { name: 'Training', href: '/training' }
       ]
     },
-    { name: 'About', href: '/about' },
-=======
-        { name: 'Case Studies', href: '/case-studies' }
-      ]
-    },
-    { name: 'Market Pricing', href: '/market-pricing' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
 

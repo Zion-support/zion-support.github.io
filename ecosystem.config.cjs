@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 module.exports = {;
   apps:[;
     {;
-<<<<<<< HEAD;
+;
       name:'ci-cd-pipeline',;
       script:'npm',;
       args:'run build',;
@@ -126,13 +125,11 @@ module.exports = {;
       error_file:'./logs/lint-checker-error.log',;
       out_file:'./logs/lint-checker-out.log',;
       log_file:'./logs/lint-checker-combined.log',;
-<<<<<<< HEAD;
+;
       time:true,;
     },;
   ],;
 };
-=======;
-=======;
       name:"zion-app",;
       script:"npm",;
       args:"start",;
@@ -187,29 +184,12 @@ module.exports = {;
       log_date_format:"YYYY-MM-DD HH:mm:ss Z",;
       error_file:"automation/logs/build-monitor-error.log",;
       out_file:"automation/logs/build-monitor-out.log",;
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z;
-      time:true;
-=======
-module.exports = {
-  apps: [
-    {
-      name: 'ci-cd-pipeline',
-      script: 'npm',
-      args: 'run build',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-      },
+      time:true;      },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
       log_file: './logs/ci-cd-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'continuous-automation',
       script: 'node',
@@ -220,14 +200,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'comprehensive-automation',
       script: 'node',
@@ -238,14 +216,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'marketing-automation',
       script: 'node',
@@ -256,14 +232,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'security-audit',
       script: 'npm',
@@ -274,14 +248,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 2 * * *', // Daily at 2 AM
       error_file: './logs/security-audit-error.log',
       out_file: './logs/security-audit-out.log',
       log_file: './logs/security-audit-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'test-runner',
       script: 'npm',
@@ -292,14 +264,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 */4 * * *', // Every 4 hours
       error_file: './logs/test-runner-error.log',
       out_file: './logs/test-runner-out.log',
       log_file: './logs/test-runner-combined.log',
-      time: true,
-    },
+      time: true,    },
     {
       name: 'lint-checker',
       script: 'npm',
@@ -310,15 +280,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',
-      },
+        NODE_ENV: 'production',      },
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
-      time: true,
+      time: true
     },
-<<<<<<< HEAD
     {
       name: "zion-app",
       script: "npm",
@@ -330,44 +298,44 @@ module.exports = {
       max_restarts: 10,
       exp_backoff_restart_delay: 500,
       env: {
-        NODE_ENV: "production";
+        NODE_ENV: "production",
         PORT: process.env.PORT || 3000
-      };
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z";
-      error_file: "automation/logs/zion-app-error.log";
-      out_file: "automation/logs/zion-app-out.log";
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-app-error.log",
+      out_file: "automation/logs/zion-app-out.log",
       time: true
-    };
+    },
     {
-      name: "zion-auto-sync";
-      script: "automation/pm2-auto-sync.js";
-      interpreter: "node";
-      cwd: __dirname;
-      watch: false;
-      autorestart: true;
-      max_restarts: 10;
-      exp_backoff_restart_delay: 500;
+      name: "zion-auto-sync",
+      script: "automation/pm2-auto-sync.js",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 10,
+      exp_backoff_restart_delay: 500,
       env: {
-        NODE_ENV: "production";
-        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin";
-        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main";
-        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset";
-        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1";
+        NODE_ENV: "production",
+        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
+        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
+        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
+        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
         AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
-      };
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z";
-      error_file: "automation/logs/zion-auto-sync-error.log";
-      out_file: "automation/logs/zion-auto-sync-out.log";
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-auto-sync-error.log",
+      out_file: "automation/logs/zion-auto-sync-out.log",
       time: true
-    };
+    },
     {
-      name: "zion-build-monitor";
-      script: "automation/continuous-build-monitor.cjs";
-      interpreter: "node";
-      cwd: __dirname;
-      watch: false;
-      autorestart: true;
-      max_restarts: 5;
+      name: "zion-build-monitor",
+      script: "automation/continuous-build-monitor.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
       env: {
         NODE_ENV: "production"
       },
@@ -375,14 +343,5 @@ module.exports = {
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     }
-  ];
-=======
-  ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-};
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4;
-=======
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ];};

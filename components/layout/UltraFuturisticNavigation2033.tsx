@@ -287,5 +287,16 @@ href=&quot;/contact&quot;
         </AnimatePresence>
       </nav>
     </>
-  )
+  )}
+}whileTap= {
+  {
+  scale: 0.95 
+}
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+  /* Mobile Menu */ 
+}<AnimatePresence>) ) 
+}</div> </div>) ) 
+}</div>) ) 
+}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+}</AnimatePresence> </nav> </>) 
 }

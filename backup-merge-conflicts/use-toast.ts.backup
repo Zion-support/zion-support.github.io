@@ -1,12 +1,13 @@
+:backup-merge-conflicts/use-toast.ts.backup
+:src/components/ui/use-toast.tsimport { toast } from 'react-hot-toast'
 
+import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
 
-import { toast   } from 'react-hot-toast';
+:backup-merge-conflicts/use-toast.ts.backupimport { toast } from 'react-hot-toast'
+
 import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
 
 import { toast } from 'react-hot-toast'
-
-import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
-
 import { toast } from 'react-hot-toast'
 
 interface ToastOptions {
@@ -19,4 +20,5 @@ export function useToast() {
   };
   return { showToast };
 };
-
+:backup-merge-conflicts/use-toast.ts.backup
+:backup-merge-conflicts/use-toast.ts.backup

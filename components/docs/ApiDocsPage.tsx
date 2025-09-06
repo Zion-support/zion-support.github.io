@@ -77,5 +77,4 @@ function ChangelogWidget() {
         {message && <span className=&quot;text-xs text-high-contrast-muted&quot;>{message}</span>}
       </div>
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )
-}
+  )}

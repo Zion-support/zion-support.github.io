@@ -454,5 +454,4 @@ export default function MicroSaasServicesPage() {_const _microSaasServices = [
         </div>
       </section>
     </>
-  )
-}
+  )}

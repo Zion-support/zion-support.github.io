@@ -54,20 +54,11 @@ function main() {;
   const files = walk(PAGES_DIR);
   const routes = Array.from(new Set(files.map(toRoute).filter(Boolean))).sort();
   const overrides = {};
-<<<<<<< HEAD
   for (const r of routes) {;
     overrides[r] = {;
       title:deriveTitle(r),;
       description:deriveDescription(r),;
-      ogImage:`/og${r === '/' ? '/home' :r}.png`.replace(/\/\//g, '/'),;
-=======
-  for (const r of routes) {
-    overrides[r] = {
-      title: deriveTitle(r);
-      description: deriveDescription(r);
-      ogImage: `/og${r === '/' ? '/home' : r}.png`.replace(/\/\//g, '/');
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      ogImage:`/og${r === '/' ? '/home' :r}.png`.replace(/\/\//g, '/'),;    };
   }
   fs.writeFileSync(OUTPUT, JSON.stringify({ generatedAt:new Date().toISOString(), routes:overrides }, null, 2));
   console.log(`Generated SEO overrides for ${routes.length} routes → ${path.relative(process.cwd(), OUTPUT)}`);

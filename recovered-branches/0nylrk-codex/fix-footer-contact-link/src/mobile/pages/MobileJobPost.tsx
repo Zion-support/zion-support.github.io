@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -384,378 +383,48 @@ function PreviewStep() {;
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
   ),;
-}
-=======
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue 
-} from "@/components/ui/select",
-import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-type JobPostStep = "details" | "requirements" | "budget" | "preview",
-
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),  
-  const _goToNextStep = () => {
-    if (currentStep === "details") {
-      setCurrentStep("requirements")
-    } else if (currentStep === "requirements") {
-      setCurrentStep("budget")
-    } else if (currentStep === "budget") {
-      setCurrentStep("preview")    }
-  },
+} import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+SelectValue type JobPostStep = "details" | "requirements" | "budget" | "preview";
+const goToNextStep = () => {
+  if (currentStep === "details") {
   
-  const goToPrevStep = () => {
-    if (currentStep === "requirements") {
-      setCurrentStep("details")
-    } else if (currentStep === "budget") {
-      setCurrentStep("requirements")
-    } else if (currentStep === "preview") {
-      setCurrentStep("budget")    }
-  },
-  
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "details": return <DetailsStep />,      case "requirements":
-        return <RequirementsStep />,
-      case "budget":
-        return <BudgetStep />,
-      case "preview":
-        return <PreviewStep />,      default:
-        return <DetailsStep />
-    }
-  },
-        return <PreviewStep />;
-      default:
-        return <DetailsStep />;}
-  };
-  
-  return (
-    <div className=&quot;min-h-screen flex flex-col&quot;>
-      <MobileHeader
-        title={`Post a Job (${currentStep === &quot;preview&quot; ? 4 : currentStep === &quot;budget&quot; ? 3 : currentStep === &quot;requirements&quot; ? 2 : 1}/4)`}
-        showBack
-      />
-      
-      <main className=&quot;flex-1 py-4 pb-24 px-4&quot;>
-        <div className=&quot;mb-6 flex justify-between&quot;>
-          <div className=&quot;flex space-x-1&quot;>
-            <Badge variant={currentStep === &quot;details&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>1</Badge>
-            <Badge variant={currentStep === &quot;requirements&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>2</Badge>
-            <Badge variant={currentStep === &quot;budget&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>3</Badge>
-            <Badge variant={currentStep === &quot;preview&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>4</Badge>          </div>
-          
-          <Button variant=&quot;outline&quot; className=&quot;flex gap-1&quot;>
-            <Zap className=&quot;h-4 w-4&quot; /> AI Assist
-          </Button>
-        </div>
-        
-        {_renderStepContent()}
-        
-        <div className=&quot;flex gap-2 mt-6&quot;>
-          {currentStep !== &quot;details&quot; && (            <Button 
-              variant=&quot;outline&quot; 
-              className=&quot;flex-1 gap-1&quot; 
-              onClick={goToPrevStep}
-            >
-              <ChevronLeft className=&quot;h-4 w-4&quot; /> Back
-            </Button>
-          )}
-          
-          <Button 
-            className=&quot;flex-1 gap-1&quot;
-            onClick={goToNextStep}
-          >
-            {currentStep === &quot;preview&quot; ? &quot;Publish Job&quot; : &quot;Continue&quot;}
-            {currentStep !== &quot;preview&quot; && <ChevronRight className=&quot;h-4 w-4&quot; />}          </Button>
-        </div>
-      </main>
-      
-      <BottomNavigation />
-    </div>
-  )
 }
-
-function DetailsStep() {
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <h2 className=&quot;text-lg font-medium&quot;>Job Details</h2>      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;title&quot;>Job Title</Label>
-        <Input id=&quot;title&quot; placeholder=&quot;e.g. Senior React Developer&quot; />
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;company&quot;>Company Name</Label>
-        <Input id=&quot;company&quot; placeholder=&quot;Your company name&quot; />
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;location&quot;>Location</Label>
-        <Select defaultValue=&quot;remote&quot;>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select location type&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;remote&quot;>Remote</SelectItem>
-            <SelectItem value=&quot;onsite&quot;>On-site</SelectItem>
-            <SelectItem value=&quot;hybrid&quot;>Hybrid</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;jobType&quot;>Job Type</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select job type&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;fulltime&quot;>Full-time</SelectItem>
-            <SelectItem value=&quot;parttime&quot;>Part-time</SelectItem>
-            <SelectItem value=&quot;contract&quot;>Contract</SelectItem>
-            <SelectItem value=&quot;freelance&quot;>Freelance</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;description&quot;>Job Description</Label>
-        <Textarea 
-          id=&quot;description&quot; 
-          placeholder=&quot;Describe the job role and responsibilities&quot; 
-          rows={5}
-        />
-      </div>
-    </div>
-  )
-}
-
-function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
-  ]),
-  const [newSkill, setNewSkill] = useState(""),
+};
+const goToPrevStep = () => {
   
-  const addSkill = () => {
-    if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]),
-      setNewSkill("")  
-  const _addSkill = () => {
-    if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
-      setNewSkill("&quot;);
-    }
-  },
-  
-  const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill))
-  },
-  
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <h2 className=&quot;text-lg font-medium&quot;>Job Requirements</h2>      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;experience&quot;>Experience Level</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select experience level&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;entry&quot;>Entry Level</SelectItem>
-            <SelectItem value=&quot;mid&quot;>Mid Level</SelectItem>
-            <SelectItem value=&quot;senior&quot;>Senior</SelectItem>
-            <SelectItem value=&quot;expert&quot;>Expert</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;education&quot;>Education</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select required education&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;high_school&quot;>High School</SelectItem>
-            <SelectItem value=&quot;associate&quot;>Associate Degree</SelectItem>
-            <SelectItem value=&quot;bachelor&quot;>Bachelor's Degree</SelectItem>
-            <SelectItem value=&quot;master&quot;>Master's Degree</SelectItem>
-            <SelectItem value=&quot;phd&quot;>PhD</SelectItem>
-            <SelectItem value=&quot;none&quot;>No Specific Requirement</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label>Required Skills</Label>
-        <div className=&quot;flex flex-wrap gap-2 mb-3&quot;>
-          {skills.map((skill) => (
-            <Badge               key={skill} 
-              variant=&quot;secondary&quot;
-              className=&quot;flex items-center gap-1 px-3 py-1&quot;
-            >
-              {_skill}
-              <button 
-                className=&quot;ml-1 rounded-full hover:bg-background/20 p-1&quot;
-                onClick={() => removeSkill(skill)}              >
-                ×
-              </button>
-            </Badge>
-          ))}
-        </div>
-        <div className=&quot;flex gap-2&quot;>
-          <Input 
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
-            placeholder=&quot;Add a skill&quot;
-            onKeyDown={(e) => e.key === 'Enter' && addSkill()}          />
-          <Button onClick={_addSkill}>Add</Button>
-        </div>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;requirements&quot;>Specific Requirements</Label>
-        <Textarea 
-          id=&quot;requirements&quot; 
-          placeholder=&quot;List any specific requirements or qualifications&quot; 
-          rows={4}        />
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;responsibilities&quot;>Key Responsibilities</Label>
-        <Textarea 
-          id=&quot;responsibilities&quot; 
-          placeholder=&quot;List the key responsibilities for this role&quot; 
-          rows={4}        />
-      </div>
-    </div>
-  )
 }
-
-function BudgetStep() {
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <h2 className=&quot;text-lg font-medium&quot;>Budget & Timeline</h2>      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;paymentType&quot;>Payment Type</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select payment type&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;hourly&quot;>Hourly Rate</SelectItem>
-            <SelectItem value=&quot;fixed&quot;>Fixed Price</SelectItem>
-            <SelectItem value=&quot;salary&quot;>Salary</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label>Salary Range</Label>
-        <div className=&quot;flex gap-4 items-center&quot;>
-          <Input placeholder=&quot;Min&quot; type=&quot;number&quot; className=&quot;w-full&quot; />
-          <span>to</span>
-          <Input placeholder=&quot;Max&quot; type=&quot;number&quot; className=&quot;w-full&quot; />
-          <Select defaultValue=&quot;usd&quot;>
-            <SelectTrigger className=&quot;w-24&quot;>
-              <SelectValue placeholder=&quot;Currency&quot; />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value=&quot;usd&quot;>USD</SelectItem>
-              <SelectItem value=&quot;eur&quot;>EUR</SelectItem>
-              <SelectItem value=&quot;gbp&quot;>GBP</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;deadline&quot;>Application Deadline</Label>
-        <Input type=&quot;date&quot; id=&quot;deadline&quot; />
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;startDate&quot;>Expected Start Date</Label>
-        <Input type=&quot;date&quot; id=&quot;startDate&quot; />
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;duration&quot;>Project Duration</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;Select project duration&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;ltw&quot;>Less than a week</SelectItem>
-            <SelectItem value=&quot;ltm&quot;>Less than a month</SelectItem>
-            <SelectItem value=&quot;1-3m&quot;>1-3 months</SelectItem>
-            <SelectItem value=&quot;3-6m&quot;>3-6 months</SelectItem>
-            <SelectItem value=&quot;6m+&quot;>6+ months</SelectItem>
-            <SelectItem value=&quot;ongoing&quot;>Ongoing</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div className=&quot;space-y-2&quot;>
-        <Label htmlFor=&quot;additionalInfo&quot;>Additional Budget Information</Label>
-        <Textarea 
-          id=&quot;additionalInfo&quot; 
-          placeholder=&quot;Any additional information about budget or payment&quot; 
-          rows={3}
-        />
-      </div>
-    </div>
-  )
+};
+const renderStepContent = () => {
+  switch (currentStep) {
+  case "requirements": return <RequirementsStep />;
+case "budget": return <BudgetStep />;
+case "preview": default: return <DetailsStep /> 
 }
-
-function PreviewStep() {
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <h2 className=&quot;text-lg font-medium mb-2&quot;>Job Preview</h2>      
-      <Card>
-        <CardContent className=&quot;p-4&quot;>
-          <h3 className=&quot;font-bold text-lg&quot;>Senior React Developer</h3>
-          <p className=&quot;text-muted-foreground&quot;>TechCorp Inc. • Remote • Full-time</p>
-          
-          <div className=&quot;flex gap-2 my-3&quot;>
-            <Badge variant=&quot;outline&quot;>React</Badge>
-            <Badge variant=&quot;outline&quot;>TypeScript</Badge>
-            <Badge variant=&quot;outline&quot;>Node.js</Badge>
-          </div>
-          
-          <div className=&quot;space-y-1 text-sm mt-4&quot;>
-            <p className=&quot;font-medium&quot;>Salary Range:</p>
-            <p>$80,000 - $120,000 USD / year</p>          </div>
-          
-          <div className=&quot;space-y-1 text-sm mt-3&quot;>
-            <p className=&quot;font-medium&quot;>Experience Level:</p>
-            <p>Senior</p>
-          </div>
-          
-          <div className=&quot;space-y-1 text-sm mt-3&quot;>
-            <p className=&quot;font-medium&quot;>Application Deadline:</p>
-            <p>December 15, 2023</p>          </div>
-          
-          <div className=&quot;mt-4 pt-3 border-t border-border&quot;>
-            <h4 className=&quot;font-medium mb-2&quot;>Description</h4>
-            <p className=&quot;text-sm&quot;>We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
-          </div>
-        </CardContent>
-      </Card>
-      
-      <Button variant=&quot;outline&quot; className=&quot;w-full&quot;>Edit Job Post</Button>
-    </div>
-  )
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+};
+min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
+  renderStepContent () 
+}<Button variant=" outline"className=" flex-1 gap-1"onClick= {
+  goToPrevStep 
+}> <ChevronLeft className=" h-4 w-4"/> Back </Button>) 
+}<Button </Button> </div> </main> <BottomNavigation /> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" title">Job Title</Label> <Input id=" title"placeholder=" e.g. Senior React Developer"/> </div> <div className=" space-y-2"> <Label htmlFor=" company">Company Name</Label> <Input id=" company"placeholder=" Your company name"/> </div> <div className=" space-y-2"> <Label htmlFor=" location">Location</Label> <Select defaultValue=" remote"> <SelectTrigger> <SelectValue placeholder=" Select location type"/> </SelectTrigger> <SelectContent> <SelectItem value=" remote">Remote</SelectItem> <SelectItem value=" onsite">On-site</SelectItem> <SelectItem value=" hybrid">Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" jobType">Job Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select job type"/> </SelectTrigger> <SelectContent> <SelectItem value=" fulltime">Full-time</SelectItem> <SelectItem value=" parttime">Part-time</SelectItem> <SelectItem value=" contract">Contract</SelectItem> <SelectItem value=" freelance">Freelance</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" description">Job Description</Label> <Textarea id=" description"placeholder=" Describe the job role and responsibilities"rows= {
+  5 
+}/> </div> </div>) 
+}const addSkill = () => {
+  if (newSkill && !skills.includes (newSkill) ) {
+  <div className=" space-y-2"> <Label htmlFor=" experience">Experience Level</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select experience level"/> </SelectTrigger> <SelectContent> <SelectItem value=" entry">Entry Level</SelectItem> <SelectItem value=" mid">Mid Level</SelectItem> <SelectItem value=" senior">Senior</SelectItem> <SelectItem value=" expert">Expert</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" education">Education</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select required education"/> </SelectTrigger> <SelectContent> <SelectItem value=" high school">High School</SelectItem> <SelectItem value=" associate">Associate Degree</SelectItem> <SelectItem value=" bachelor">Bachelor's Degree</SelectItem> <SelectItem value=" master">Master's Degree</SelectItem> <SelectItem value=" phd">PhD</SelectItem> <SelectItem value=" none">No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Required Skills</Label> key= {
+  skill 
+}variant=" secondary"className=" flex items-center gap-1 px-3 py-1"> {
+  skill 
+}<button > × </button> </Badge>) ) 
+}</div> <div className=" flex gap-2"> <Input /> <Button onClick= {
+  addSkill 
+}>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
+  3 
+}/> </div> </div>) 
+}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> 

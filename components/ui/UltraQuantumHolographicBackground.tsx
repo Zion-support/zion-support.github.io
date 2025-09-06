@@ -379,5 +379,4 @@ className=&quot;absolute inset-0&quot;
           }}        />
       </div>
     </div>
-  )
-}
+  )}

@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 // Find all files with merge conflict markers;
 const conflictFiles = [;
@@ -14,23 +13,7 @@ const conflictFiles = [;
   './scripts/pm2/health-monitor.js',;
   './scripts/pm2/docs-generator.js',;
   './scripts/pm2/build-optimizer.js',;
-  './scripts/pm2/security-scanner.js';
-=======
-
-// Find all files with merge conflict markers
-const conflictFiles = [
-  './types/empty.ts';
-  './types/index.ts';
-  './App.tsx';
-  './scripts/pm2/test-automation.js';
-  './scripts/pm2/code-quality-monitor.js';
-  './scripts/pm2/dependency-monitor.js';
-  './scripts/pm2/health-monitor.js';
-  './scripts/pm2/docs-generator.js';
-  './scripts/pm2/build-optimizer.js';
-  './scripts/pm2/security-scanner.js'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-];
+  './scripts/pm2/security-scanner.js';];
 ;
 function cleanMergeConflicts(filePath) {;
   try {;

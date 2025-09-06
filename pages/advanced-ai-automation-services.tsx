@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -67,78 +66,7 @@ const serviceCategories = [;
     services:advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),;
     icon:Database,;
     color:'from-cyan-500 to-blue-600',;
-    features:['Pipeline ManagementQuality Assurance', 'Governance Automation'];
-=======
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const heroStats = [
-  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
-  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
-  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
-  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
-],];
-
-const serviceCategories = [
-  {
-    title: 'AI Development Tools',
-    description: 'Advanced AI-powered development and testing automation',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
-    icon: Code,
-    color: 'from-emerald-500 to-teal-600',
-    features: ['Code Review AutomationAI TestingDevOps Intelligence']
-  },
-  {
-    title: 'AI Testing & Quality Assurance',
-    description: 'Intelligent testing automation with AI-driven insights',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
-    icon: TestTube,
-    color: 'from-purple-500 to-indigo-600',
-    features: ['Test GenerationPerformance TestingQuality Assurance']
-  },
-  {
-    title: 'AI DevOps & Infrastructure',
-    description: 'Self-managing infrastructure with AI optimization',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
-    icon: Server,
-    color: 'from-blue-500 to-indigo-600',
-    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring']
-  },
-  {
-    title: 'AI Cybersecurity',
-    description: 'Proactive threat detection and response with AI',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity'),
-    icon: SecurityIcon,
-    color: 'from-red-500 to-pink-600',
-    features: ['Threat DetectionIncident ResponseSecurity Automation']
-  },
-  {
-    title: 'AI Data Management',
-    description: 'Intelligent data infrastructure with AI automation',
-    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
-    icon: Database,
-    color: 'from-cyan-500 to-blue-600',
-    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  }
+    features:['Pipeline ManagementQuality Assurance', 'Governance Automation'];  }
 ],;
 ;
 const heroFeatures = [;
@@ -193,7 +121,6 @@ const testimonials = [;
     rating:5,;
     avatar:'👨‍🔒';
   }
-<<<<<<< HEAD
 ],;
 ;
 export default function AdvancedAIAutomationServices() {;
@@ -293,61 +220,7 @@ export default function AdvancedAIAutomationServices() {;
                     </div>;
                   </div>;
                 </div>;
-              </motion.div>;
-=======
-],
-export default function AdvancedAIAutomationServices() {_return (_<Layout>
-      <Head>
-        <title>Advanced AI Automation Services - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI automation, development automation, testing automation, DevOps automation, security automation, data automation&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Advanced AI Automation Services - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Revolutionary AI automation services for development, testing, DevOps, security, and data management.&quot; />
-        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/advanced-ai-automation-services&quot; />
-        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/advanced-ai-automation-services&quot; />      </Head>
-
-      {/* Hero Section */}
-      <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20&quot;></div>
-        <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-          >
-            <h1 className=&quot;text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
-              Advanced AI Automation Services
-            </h1>
-            <p className=&quot;text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
-              Transform your development, testing, DevOps, and security operations with revolutionary AI automation that works 24/7
-            </p>
-            <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>
-              {heroStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className=&quot;flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30&quot;
-                >
-                  {stat.icon}
-                  <span className=&quot;text-cyan-400 font-semibold&quot;>{stat.value}</span>
-                  <span className=&quot;text-gray-300 text-sm&quot;>{stat.label}</span>                </motion.div>
-              ))}
-            </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <Link href=&quot;#services&quot; className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;>
-                Explore Services
-                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
-              </Link>
-              <Link href={`tel:${contactInfo.mobile}`} className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300&quot;>
-                <Phone className=&quot;mr-2 w-5 h-5&quot; />                Get Started
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              </motion.div>;        </div>
 
       {/* Features Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
@@ -387,14 +260,12 @@ export default function AdvancedAIAutomationServices() {_return (_<Layout>
                   </div>
                 </div>
               </motion.div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             ))}
           </div>;
         </div>;
       </section>;
 ;
       {/* Services Section */}
-<<<<<<< HEAD
       <section id="services" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
@@ -482,93 +353,7 @@ export default function AdvancedAIAutomationServices() {_return (_<Layout>
                           </div>;
                         </div>;
                       </div>;
-                    </motion.div>;
-=======
-      <section id=&quot;services&quot; className=&quot;py-20 bg-black&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;          >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
-              AI Automation Service Categories
-            </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-              Comprehensive AI automation solutions covering every aspect of modern technology operations
-            </p>
-          </motion.div>
-
-          <div className=&quot;space-y-16&quot;>
-            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-                className=&quot;relative&quot;
-              >
-                <div className=&quot;text-center mb-12&quot;>
-                  <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-                    <category.icon className=&quot;w-10 h-10 text-white&quot; />
-                  </div>
-                  <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>{category.title}</h3>
-                  <p className=&quot;text-xl text-gray-300 max-w-2xl mx-auto&quot;>{category.description}</p>
-                </div>
-
-                <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8&quot;>
-                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
-                      key={service.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className=&quot;relative group&quot;
-                    >
-                      <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className=&quot;bg-gray-900 rounded-xl p-6 h-full&quot;>
-                          <div className=&quot;flex items-center justify-between mb-4&quot;>
-                            <span className=&quot;text-3xl&quot;>{service.icon}</span>
-                            {service.popular && (
-                              <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full&quot;>                                Popular
-                              </span>
-                            )}
-                          </div>
-                          <h4 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h4>
-                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.tagline}</p>
-                          <div className=&quot;flex items-center justify-between mb-4&quot;>
-                            <span className=&quot;text-2xl font-bold text-white&quot;>{service.price}</span>
-                            <span className=&quot;text-gray-400&quot;>{service.period}</span>
-                          </div>
-                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.description}</p>
-                          <div className=&quot;space-y-2 mb-6&quot;>
-                            {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                                <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-                                {feature}                              </div>
-                            ))}
-                          </div>
-                          <div className=&quot;flex items-center justify-between&quot;>
-                            <Link
-                              href={service.link}
-                              className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300&quot;                            >
-                              Learn More
-                              <ArrowRight className=&quot;ml-1 w-4 h-4&quot; />
-                            </Link>
-                            <Link
-                              href={`tel:${contactInfo.mobile}`}
-                              className=&quot;inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300&quot;                            >
-                              Get Started
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                  ))}
+                    </motion.div>;                  ))}
                 </div>;
               </motion.div>;
             ))}
@@ -577,7 +362,6 @@ export default function AdvancedAIAutomationServices() {_return (_<Layout>
       </section>;
 ;
       {/* Testimonials Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
@@ -621,58 +405,12 @@ export default function AdvancedAIAutomationServices() {_return (_<Layout>
                     ))}
                   </div>;
                 </div>;
-              </motion.div>;
-=======
-      <section className=&quot;py-20 bg-gradient-to-b from-gray-900 to-black&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;          >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
-              What Our Clients Say
-            </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-              Real feedback from organizations that have transformed their operations with our AI automation services
-            </p>
-          </motion.div>
-
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20&quot;
-              >
-                <div className=&quot;flex items-center mb-4&quot;>
-                  <span className=&quot;text-3xl mr-3&quot;>{testimonial.avatar}</span>
-                  <div>
-                    <h4 className=&quot;text-white font-semibold&quot;>{testimonial.name}</h4>
-                    <p className=&quot;text-cyan-400 text-sm&quot;>{testimonial.role}</p>
-                    <p className=&quot;text-gray-400 text-sm&quot;>{testimonial.company}</p>
-                  </div>
-                </div>
-                <p className=&quot;text-gray-300 mb-4&quot;>{testimonial.content}</p>
-                <div className=&quot;flex items-center&quot;>
-                  <div className=&quot;flex text-yellow-400&quot;>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-4 h-4 fill-current&quot; />                    ))}
-                  </div>
-                </div>
-              </motion.div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            ))}
+              </motion.div>;            ))}
           </div>;
         </div>;
       </section>;
 ;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
@@ -711,43 +449,104 @@ export default function AdvancedAIAutomationServices() {_return (_<Layout>
         </div>;
       </section>;
     </Layout>;
-  ),;
-=======
-      <section className=&quot;py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-          >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
-              Ready to Transform Your Operations with AI Automation?
-            </h2>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-              Join hundreds of organizations that have already revolutionized their technology operations with our AI automation services
+  ),;}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Intelligent Process Automation</h3>
+            <p className="text-gray-600 mb-4">
+              Automate complex business processes with AI-powered decision making and workflow optimization.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <Link
-                href={`tel:${contactInfo.mobile}`}
-                className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
-              >
-                <Phone className=&quot;mr-2 w-5 h-5&quot; />
-                Call Now: {contactInfo.mobile}
-              </Link>
-              <Link
-                href={`mailto:${contactInfo.email}`}
-                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300&quot;              >
-                <Mail className=&quot;mr-2 w-5 h-5&quot; />
-                Email Us
-              </Link>
-            </div>
-            <div className=&quot;mt-8 text-center&quot;>
-              <p className=&quot;text-gray-300 mb-2&quot;>📍 {contactInfo.address}</p>
-              <p className=&quot;text-gray-300&quot;>🌐 {contactInfo.website}</p>            </div>
-          </motion.div>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Document processing and analysis</li>
+              <li>• Automated decision trees</li>
+              <li>• Workflow optimization</li>
+              <li>• Exception handling</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Conversational AI</h3>
+            <p className="text-gray-600 mb-4">
+              Deploy intelligent chatbots and virtual assistants that understand context and provide meaningful interactions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Natural language processing</li>
+              <li>• Multi-language support</li>
+              <li>• Context-aware responses</li>
+              <li>• Integration with existing systems</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Predictive Analytics</h3>
+            <p className="text-gray-600 mb-4">
+              Leverage machine learning to predict trends, identify opportunities, and make data-driven decisions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Trend forecasting</li>
+              <li>• Anomaly detection</li>
+              <li>• Customer behavior analysis</li>
+              <li>• Risk assessment</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>
+            <p className="text-gray-600 mb-4">
+              Implement visual recognition systems for quality control, security, and automated monitoring.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Object detection and recognition</li>
+              <li>• Quality control automation</li>
+              <li>• Security monitoring</li>
+              <li>• Image and video analysis</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Natural Language Processing</h3>
+            <p className="text-gray-600 mb-4">
+              Extract insights from text data, automate content generation, and improve communication efficiency.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Text analysis and sentiment</li>
+              <li>• Automated content generation</li>
+              <li>• Language translation</li>
+              <li>• Document summarization</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Robotic Process Automation</h3>
+            <p className="text-gray-600 mb-4">
+              Automate repetitive tasks and integrate disparate systems for seamless operations.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Task automation</li>
+              <li>• System integration</li>
+              <li>• Data migration</li>
+              <li>• Process monitoring</li>
+            </ul>
+          </div>
         </div>
-      </section>
+
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Let our AI experts help you identify automation opportunities and implement solutions that drive real results.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
     </Layout>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  );
+};
+
+export default AdvancedAIAutomationServices;

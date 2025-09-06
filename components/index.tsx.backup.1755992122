@@ -186,7 +186,6 @@ export default function HomePage() {
 
         {/* Enhanced Hero Section 2026 */}
         <UltraAdvancedHero2026V2 />
-=======
     <UltraFuturisticBackground2029>
       <Head>
         <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>

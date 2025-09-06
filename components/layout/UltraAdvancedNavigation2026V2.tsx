@@ -291,5 +291,4 @@ export default function UltraAdvancedNavigation2026V2() {
 ;
       {/* Spacer for fixed navigation */}
       <div className=&quot;h-32&quot;></div>    </>
-  )
-}
+  )}

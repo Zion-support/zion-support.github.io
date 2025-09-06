@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import axios from 'axios',;
 import { safeStorage } from '@/utils/safeStorage',;
 ;
@@ -82,25 +81,7 @@ export function create(config:{ baseURL?:string, withCredentials?:boolean } = {}
 },;
 ;
 // Export the function instead of calling it immediately to avoid temporal dead zone issues;
-export default createAxiosInstance,;
-=======
-import axios from 'axios',
-import { safeStorage } from '@/utils/safeStorage',
-type FulfilledFn = (value: any) => any | Promise<any>,
-type RejectedFn = (error: any) => any | Promise<any>,
-
-class InterceptorManager {
-  handlers: { fulfilled?: FulfilledFn, rejected?: RejectedFn }[] = [],
-  use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
-    this.handlers.push({ fulfilled, rejected })
-  }
-}
-
-export interface AxiosInstance {
-  defaults: { headers: { common: Record<string string> } },
-  interceptors: { response: InterceptorManager },
-  get(url: string, config?: { params?: Record<string any> } & RequestInit): Promise<any>,
-  post(url: string, data?: any, config?: RequestInit): Promise<any>
+export default createAxiosInstance,;}
 }
 
 export function create(config: { baseURL?: string, withCredentials?: boolean } = {}): AxiosInstance {
@@ -157,4 +138,3 @@ export function create(config: { baseURL?: string, withCredentials?: boolean } =
 
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
 export default createAxiosInstance,
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -247,5 +247,4 @@ href=&quot;/contact&quot;
         )}
       </AnimatePresence>
     </nav>
-  )
-}
+  )}

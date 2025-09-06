@@ -5,8 +5,7 @@ interface Props {;
   children:ReactNode;
   level?:string;
   fallback?:ReactNode;
-  onError?:(error:Error, errorInfo:ErrorInfo) => void;
-}
+  onError?:(error:Error, errorInfo:ErrorInfo) => void;}
 
 interface State {
   hasError: boolean,
@@ -15,10 +14,10 @@ interface State {
 }
 class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) {
     super(props);
-    this.state = { hasError: false};
-  }
+    this.state = { hasError: false};  }
 
-  static getDerivedStateFromError(error: Error): State {_return { hasError: true, _error};
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -39,8 +38,7 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo }),
-    }
-  }
+    }  }
 
   render() {
     if (this.state.hasError) {
@@ -87,12 +85,11 @@ class ErrorBoundary extends Component<Props, State> {_constructor(props: Props) 
                 <Home className="w-4 h-4" />
                 Go Home
               </button>
-            </div>          </div>
-        </div>
-      )
+            </div>          </div>        </div>
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 

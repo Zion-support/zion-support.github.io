@@ -48,5 +48,4 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       <div className=&quot;absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white&quot;>
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}      </div>
     </div>
-  )
-}
+  )}

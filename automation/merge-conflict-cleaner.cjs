@@ -113,8 +113,7 @@ class MergeConflictCleaner {;
           if (extensions.includes(ext)) {;
             try {;
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {;
-                files.push(fullPath);
+              if (content.includes('') || content.includes('') || content.includes('                files.push(fullPath);
               }
             } catch (error) {;
               // Skip files that can't be read;
@@ -133,26 +132,15 @@ class MergeConflictCleaner {;
     ;
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-<<<<<<< HEAD
     ;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(;
-      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,;
-      '$1';
-=======
-    
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g;
-      '$1'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      /\n(.*?)\n\n(.*?)\n      '$1';    );
     ;
     // Clean up any remaining markers;
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-    ;
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/    ;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8');
       this.log(`✅ Cleaned conflicts in ${filePath}`);
@@ -248,7 +236,6 @@ class MergeConflictCleaner {;
 ;
   async generateReport() {;
     this.log('📊 Generating cleanup report...');
-<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -257,19 +244,7 @@ class MergeConflictCleaner {;
       summary:{;
         totalFilesCleaned:this.cleanedFiles.length,;
         totalErrors:this.errors.length,;
-        successRate:this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100;
-=======
-    
-    const report = {
-      timestamp: new Date().toISOString();
-      cleanedFiles: this.cleanedFiles;
-      errors: this.errors;
-      summary: {
-        totalFilesCleaned: this.cleanedFiles.length;
-        totalErrors: this.errors.length;
-        successRate: this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
+        successRate:this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100;      }
     };
 ;
     const reportPath = path.join(this.reportsDir, 'merge-conflict-cleanup-report.json');

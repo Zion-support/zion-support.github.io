@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link',;
 ;
 export default function AdminIndex() {;
@@ -9,17 +8,15 @@ export default function AdminIndex() {;
         <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>;
       </ul>;
     </div>;
-  ),;
-=======
-import Link from 'next/link',
-export default function AdminIndex() {
+  ),;}
+import React from 'react';
+export default function Page() {
   return (
-    <div className=&quot;space-y-2&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Admin</h1>
-      <ul className=&quot;list-disc pl-6&quot;>
-        <li><Link href=&quot;/admin/partners&quot;><a className=&quot;text-blue-600 underline&quot;>Partners</Link></Link></li>
-      </ul>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+    <main className="min-h-screen bg-black text-zinc-100 p-8">
+      <section className="prose prose-invert max-w-3xl mx-auto">
+        <h1>admin index</h1>
+        <p>Auto-healed placeholder. Replace with real content.</p>
+      </section>
+    </main>
+  );
 }

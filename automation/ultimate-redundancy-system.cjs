@@ -11,7 +11,6 @@ class UltimateRedundancySystem {;
     this.workspace = process.cwd();
     this.logDir = path.join(this.workspace, "automation/logs");
     this.ensureLogDirectory();
-<<<<<<< HEAD
     ;
     this.config = {;
       pm2:{;
@@ -152,151 +151,7 @@ class UltimateRedundancySystem {;
       githubActions:{ healthy:false, workflows:[], lastCheck:null },;
       netlifyFunctions:{ healthy:false, functions:[], lastCheck:null },;
       npmScripts:{ healthy:false, scripts:[], lastCheck:null },;
-      overall:{ healthy:false, lastCheck:null }
-=======
-    
-    this.config = {
-      pm2: {
-        ecosystemFiles: [
-          "ecosystem.pm2.cjs";
-          "ecosystem.redundancy.cjs";
-          "ecosystem.comprehensive-redundancy.cjs"
-        ];
-        processes: [
-          "zion-auto-sync";
-          "zion-auto-sync-cron";
-          "redundancy-automation-system";
-          "redundancy-health-monitor";
-          "redundancy-git-sync";
-          "redundancy-build-monitor";
-          "comprehensive-redundancy-orchestrator";
-          "enhanced-pm2-redundancy";
-          "enhanced-github-actions-redundancy";
-          "enhanced-netlify-functions-redundancy"
-        ];
-        healthCheckInterval: 30000;
-        maxRestartAttempts: 5;
-        restartDelay: 5000;
-        autoRecovery: true;
-        logRotation: true
-      };
-      githubActions: {
-        workflows: [
-          ".github/workflows/marketing-sync.yml";
-          ".github/workflows/sync-health.yml";
-          ".github/workflows/marketing-sync-backup.yml";
-          ".github/workflows/sync-health-backup.yml"
-        ];
-        healthCheckInterval: 60000;
-        maxFailureThreshold: 3;
-        autoTrigger: true;
-        fallbackScripts: [
-          "automation/marketing-sync.js";
-          "automation/git-sync.cjs";
-          "automation/pm2-auto-sync.js";
-          "automation/redundancy-automation-system.cjs"
-        ];
-        backupTriggers: true
-      };
-      netlifyFunctions: {
-        manifestFile: "netlify/functions/functions-manifest.json";
-        healthCheckInterval: 120000;
-        maxFailureThreshold: 2;
-        autoRegenerate: true;
-        deploymentCheck: true;
-        functions: [
-          "a11y-alt-text-runner";
-          "adaptive-orchestrator";
-          "ai-changelog-runner";
-          "ai-trends-radar-runner";
-          "anchor-links-auto-fixer";
-          "auto-discovery-runner";
-          "auto-scheduler";
-          "automation-matrix";
-          "autonomous-invention-orchestrator";
-          "autonomous-meta-orchestrator";
-          "broken-image-scanner";
-          "broken-image-scanner-runner";
-          "canonical-auditor";
-          "cloud_deep_research";
-          "cloud_orchestrator";
-          "code-smell-audit-runner";
-          "component-coupling-graph-runner";
-          "component-props-docs-runner";
-          "component-size-report";
-          "content-freshness-score-runner";
-          "continuous-front-runner";
-          "continuous-orchestrator";
-          "dead-code-audit";
-          "dead-code-report";
-          "deps-auto-upgrade-runner";
-          "docs-index-runner";
-          "docs-search-index-runner";
-          "duplicate-media-finder-runner";
-          "external-link-check-runner";
-          "fast-front-promoter";
-          "fast-orchestrator";
-          "feature-advertiser";
-          "features-capabilities-benefits-advertiser";
-          "front-ads-promoter";
-          "front-enhancer";
-          "front-index-futurizer";
-          "front-index-orchestrator";
-          "front-index-scheduler";
-          "front-maximizer";
-          "front-visionary-expander";
-          "frontpage-enhancer";
-          "frontpage-scheduler";
-          "headers-enforcer";
-          "home-visionary-expander";
-          "homepage-advertiser-scheduler";
-          "homepage-enhancer";
-          "homepage-updater";
-          "homepage-updater-scheduler";
-          "homepage_advertiser";
-          "hyper-front-index-accelerator";
-          "image-optimizer-runner";
-          "innovation-lab";
-          "innovations-promoter";
-          "intelligent-meta-orchestrator";
-          "internal-link-graph-runner";
-          "knowledge-pack-runner";
-          "license-compliance-auditor"
-        ]
-      };
-      npmScripts: {
-        critical: [
-          "build";
-          "build:health-check";
-          "build:validate";
-          "build:recovery";
-          "build:smart";
-          "build:orchestrator"
-        ];
-        automation: [
-          "redundancy:start";
-          "redundancy:pm2";
-          "redundancy:github";
-          "redundancy:netlify";
-          "automation:pm2";
-          "automation:git-sync"
-        ];
-        monitoring: [
-          "redundancy:status";
-          "redundancy:health";
-          "redundancy:logs"
-        ]
-      }
-    };
-    
-    this.status = {
-      pm2: { healthy: false, processes: [], lastCheck: null };
-      githubActions: { healthy: false, workflows: [], lastCheck: null };
-      netlifyFunctions: { healthy: false, functions: [], lastCheck: null };
-      npmScripts: { healthy: false, scripts: [], lastCheck: null };
-      overall: { healthy: false, lastCheck: null }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      overall:{ healthy:false, lastCheck:null }    };
     ;
     this.monitoring = false;
     this.recoveryMode = false;
@@ -333,20 +188,11 @@ class UltimateRedundancySystem {;
   async executeCommand(command, options = {}) {;
     return new Promise((resolve, reject) => {;
       const { timeout = 30000, cwd = this.workspace } = options;
-<<<<<<< HEAD
       ;
       const child = spawn(command, [], {;
         shell:true,;
         cwd,;
-        stdio:['pipe', 'pipe', 'pipe'];
-=======
-      
-      const child = spawn(command, [], {
-        shell: true;
-        cwd;
-        stdio: ['pipe', 'pipe', 'pipe']
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        stdio:['pipe', 'pipe', 'pipe'];      });
 ;
       let stdout = '';
       let stderr = '';
@@ -400,18 +246,10 @@ class UltimateRedundancySystem {;
       for (const line of lines) {;
         if (line.includes('│') && !line.includes('App name')) {;
           const parts = line.split('│').map(p => p.trim()).filter(p => p);
-<<<<<<< HEAD
           if (parts.length >= 4) {;
             processes.push({;
               name:parts[1],;
-              pm2_env:{ status:parts[4] }
-=======
-          if (parts.length >= 4) {
-            processes.push({
-              name: parts[1];
-              pm2_env: { status: parts[4] }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            });
+              pm2_env:{ status:parts[4] }            });
           }
         }
       }
@@ -429,22 +267,12 @@ class UltimateRedundancySystem {;
           this.log(`Process ${processName} is unhealthy:${process?.pm2_env?.status || 'not found'}`, "WARN");
         }
       }
-<<<<<<< HEAD
       ;
       this.status.pm2 = {;
         healthy:unhealthyProcesses.length === 0,;
         processes:healthyProcesses,;
         unhealthy:unhealthyProcesses,;
-        lastCheck:new Date();
-=======
-      
-      this.status.pm2 = {
-        healthy: unhealthyProcesses.length === 0;
-        processes: healthyProcesses;
-        unhealthy: unhealthyProcesses;
-        lastCheck: new Date()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        lastCheck:new Date();      };
       ;
       this.log(`PM2 Health:${this.status.pm2.healthy ? 'HEALTHY' :'UNHEALTHY'} - ${healthyProcesses.length}/${this.config.pm2.processes.length} processes healthy`);
       ;
@@ -481,24 +309,13 @@ class UltimateRedundancySystem {;
       } catch (error) {;
         this.log("Cannot access GitHub remote", "WARN");
       }
-<<<<<<< HEAD
       ;
       this.status.githubActions = {;
         healthy:missingWorkflows.length === 0 && canAccessGitHub,;
         workflows,;
         missing:missingWorkflows,;
         canAccessGitHub,;
-        lastCheck:new Date();
-=======
-      
-      this.status.githubActions = {
-        healthy: missingWorkflows.length === 0 && canAccessGitHub;
-        workflows;
-        missing: missingWorkflows;
-        canAccessGitHub;
-        lastCheck: new Date()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        lastCheck:new Date();      };
       ;
       this.log(`GitHub Actions Health:${this.status.githubActions.healthy ? 'HEALTHY' :'UNHEALTHY'} - ${workflows.length}/${this.config.githubActions.workflows.length} workflows found`);
       ;
@@ -530,24 +347,13 @@ class UltimateRedundancySystem {;
       // Check if functions directory exists;
       const functionsDir = path.dirname(this.config.netlifyFunctions.manifestFile);
       const functionsDirExists = fs.existsSync(functionsDir);
-<<<<<<< HEAD
       ;
       this.status.netlifyFunctions = {;
         healthy:manifestExists && functionsDirExists,;
         manifestExists,;
         functionsDirExists,;
         manifestData,;
-        lastCheck:new Date();
-=======
-      
-      this.status.netlifyFunctions = {
-        healthy: manifestExists && functionsDirExists;
-        manifestExists;
-        functionsDirExists;
-        manifestData;
-        lastCheck: new Date()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        lastCheck:new Date();      };
       ;
       this.log(`Netlify Functions Health:${this.status.netlifyFunctions.healthy ? 'HEALTHY' :'UNHEALTHY'} - Manifest:${manifestExists}, Directory:${functionsDirExists}`);
       ;
@@ -582,22 +388,12 @@ class UltimateRedundancySystem {;
           missingScripts.push(processName);
         }
       }
-<<<<<<< HEAD
       ;
       this.status.npmScripts = {;
         healthy:missingScripts.length === 0,;
         scripts:availableScripts,;
         missing:missingScripts,;
-        lastCheck:new Date();
-=======
-      
-      this.status.npmScripts = {
-        healthy: missingScripts.length === 0;
-        scripts: availableScripts;
-        missing: missingScripts;
-        lastCheck: new Date()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      };
+        lastCheck:new Date();      };
       ;
       this.log(`NPM Scripts Health:${this.status.npmScripts.healthy ? 'HEALTHY' :'UNHEALTHY'} - ${availableScripts.length}/${this.config.npmScripts.critical.length} scripts available`);
       ;
@@ -616,7 +412,6 @@ class UltimateRedundancySystem {;
     const githubActionsHealthy = await this.checkGitHubActionsHealth();
     const netlifyFunctionsHealthy = await this.checkNetlifyFunctionsHealth();
     const npmScriptsHealthy = await this.checkNPMScriptsHealth();
-<<<<<<< HEAD
     ;
     this.status.overall = {;
       healthy:pm2Healthy && githubActionsHealthy && netlifyFunctionsHealthy && npmScriptsHealthy,;
@@ -625,19 +420,7 @@ class UltimateRedundancySystem {;
         pm2:pm2Healthy,;
         githubActions:githubActionsHealthy,;
         netlifyFunctions:netlifyFunctionsHealthy,;
-        npmScripts:npmScriptsHealthy;
-=======
-    
-    this.status.overall = {
-      healthy: pm2Healthy && githubActionsHealthy && netlifyFunctionsHealthy && npmScriptsHealthy;
-      lastCheck: new Date();
-      components: {
-        pm2: pm2Healthy;
-        githubActions: githubActionsHealthy;
-        netlifyFunctions: netlifyFunctionsHealthy;
-        npmScripts: npmScriptsHealthy
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      }
+        npmScripts:npmScriptsHealthy;      }
     };
     ;
     this.log(`Overall Health:${this.status.overall.healthy ? 'HEALTHY' :'UNHEALTHY'}`);
@@ -828,7 +611,6 @@ class UltimateRedundancySystem {;
     this.monitoring = false;
     this.log("Monitoring mode stopped");
   }
-<<<<<<< HEAD
 ;
   getStatus() {;
     return {;
@@ -837,19 +619,7 @@ class UltimateRedundancySystem {;
       recoveryMode:this.recoveryMode,;
       uptime:process.uptime(),;
       memory:process.memoryUsage(),;
-      timestamp:new Date().toISOString();
-=======
-
-  getStatus() {
-    return {
-      ...this.status;
-      monitoring: this.monitoring;
-      recoveryMode: this.recoveryMode;
-      uptime: process.uptime();
-      memory: process.memoryUsage();
-      timestamp: new Date().toISOString()
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      timestamp:new Date().toISOString();    };
   }
 ;
   async runCommand(command) {;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
@@ -63,53 +62,15 @@ function extractSection(body:string, title:string):string {;
     return snippet.trim(),;
   }
   return '',;
-}
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdminFromApi } from '../../../../utils/auth',
-import OpenAI from 'openai',
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req),
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' }),
-
-  const { operatorPrompt, inputs, metrics } = req.body || {},
-
-  const seed = [
-    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap',
-    'Token StrategyAsk & Call to Action'],
-  try {_const _prompt = `You are a venture analyst generating a concise, _investor-ready pitch.
-Operator Prompt: ${operatorPrompt}
-Company Mission: ${_inputs?.mission}
-Funding Stage: ${_inputs?.fundingStage}
-Vision/Goals: ${_inputs?.vision}
-Round Type: ${_inputs?.roundType}
-Target Raise: ${_inputs?.targetRaise}
-Key Metrics: ${_JSON.stringify(metrics)}
-
-Return 10 sections with title and 120-180 words per section, markdown-friendly.`,
-
-    let content = '',
-    try {
-      const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini',
-        messages: [
-          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
-          { role: 'user', content: prompt }],
-        temperature: 0.5}),
-      content = chat.choices?.[0]?.message?.content || ''
-    } catch (err) {
-      content = ''
-    }
-
-    const slides = seed.map((title, idx) => ({ id: `${idx + 1}`, title, content: extractSection(content, title) })),
-    const version = `v${new Date().toISOString()}`,
-    res.status(200).json({ slides, version })
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Generation failed' })
+}    }
+    
+    const { operatorPrompt, inputs, metrics } = req.body;
+    
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch. Operator Prompt: ${operatorPrompt} Company Mission: ${inputs?.mission} Funding Stage: ${inputs?.fundingStage} Vision/Goals: ${inputs?.vision} Round Type: ${inputs?.roundType} Target Raise: ${inputs?.targetRaise} Key Metrics: ${JSON.stringify(metrics)} Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
+    
+    res.status(200).json({ prompt, message: 'Pitch generated' });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
 
@@ -123,4 +84,3 @@ function extractSection(body: string, title: string): string {
     return snippet.trim()
   }
   return ''}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

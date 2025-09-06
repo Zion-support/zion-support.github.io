@@ -36,23 +36,14 @@ const integrations = [
   'Fitness trackersMeditation apps'
 ],
 
-const testimonials = [
+const testimonials = [  {
+  opacity: 0, y: 30 
+}
+}animate= {
   {
-    name: 'Dr. Sarah Chen',
-    role: 'Clinical Psychologist',
-    company: 'Mindful Wellness Center',
-    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',
-    rating: 5,
-    avatar: '👩‍⚕️'
-  },
-  {
-    name: 'Michael Rodriguez',
-    role: 'CEO',
-    company: 'InnovateTech Solutions',
-    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',
-    rating: 5,
-    avatar: '👨‍💼'
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
     name: 'Dr. Emily Watson',
     role: 'Research Director',
@@ -551,5 +542,4 @@ export default function AIConsciousnessEvolution2025() {_return (
         </div>
       </section>
     </Layout>
-  )
-}
+  )}

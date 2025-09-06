@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
 ;
@@ -21,32 +20,7 @@ function main() {;
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),;
       // // // console.log('Exported ABI for', name),;
     } else {;
-      console.warn('Missing artifact for', name),;
-=======
-const fs = require('fs'),
-const path = require('path'),
-
-function main() {
-  const outDir = path.join(__dirname, '../abi'),
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir),
-  const artifactsDir = path.join(__dirname, '../artifacts/contracts'),
-  const abis = [
-    ['VoteToken.solVoteToken'],
-    ['ZionDAO.solZionDAO'],
-    ['QuorumEngine.solQuorumEngine'],
-    ['DelegateRegistry.solDelegateRegistry'],
-    ['ConstitutionStorage.solConstitutionStorage'],
-    ['Treasure/Disbursements.solDisbursements'],
-    ['Treasure/EpochManager.solEpochManager']],
-  for (const [rel, name] of abis) {
-    const p = path.join(artifactsDir, rel, `${name}.json`),
-    if (fs.existsSync(p)) {
-      const json = JSON.parse(fs.readFileSync(p, 'utf8')),
-      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-      // // // console.log('Exported ABI for', name)    } else {
-      console.warn('Missing artifact for', name)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }
+      console.warn('Missing artifact for', name),;    }
 const fs = require('fs');
 const _path = require('path');
 
@@ -65,3 +39,9 @@ function main() {_const _outDir = path.join(__dirname, _'../abi');
 }
 ;
 main(),
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
+}
+}
+}main ();

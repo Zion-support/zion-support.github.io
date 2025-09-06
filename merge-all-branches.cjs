@@ -16,7 +16,6 @@ class BranchMerger {;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
-<<<<<<< HEAD
 ;
   async runCommand(command, description) {;
     this.log(`🚀 Startin:g:${description}`);
@@ -29,41 +28,15 @@ class BranchMerger {;
       this.log(`✅ Complete:d:${description}`);
       return result;
     } catch (error) {;
-      this.log(`❌ Faile:d:${description} - ${error.message}`, 'ERROR');
-=======
-
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
-    try {
-      const result = execSync(command, {
-        stdio: 'pipe',
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-      });
-      this.log(`✅ Completed: ${description}`);
-      return result;
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      throw error;
+      this.log(`❌ Faile:d:${description} - ${error.message}`, 'ERROR');      throw error;
     }
   }
-<<<<<<< HEAD
 ;
   async getRemoteBranches() {;
     try {;
       const result = await this.runCommand(;
         'git branch -r',;
-        'Get remote branches';
-=======
-
-  async getRemoteBranches() {
-    try {
-      const result = await this.runCommand(
-        'git branch -r',
-        'Get remote branches'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        'Get remote branches';      );
       const branches = result;
         .split('\n');
         .map(branch => branch.trim());
@@ -86,17 +59,10 @@ class BranchMerger {;
 ;
       this.log(`Found ${importantBranches.length} important branches to merge`);
       return importantBranches;
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Error getting remote:branches:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Error getting remote branches: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return [];
+      this.log(`Error getting remote:branches:${error.message}`, 'ERROR');      return [];
     }
   }
-<<<<<<< HEAD
 ;
   async mergeBranch(branchName) {;
     try {;
@@ -111,40 +77,16 @@ class BranchMerger {;
       // Try to merge;
       await this.runCommand(;
         `git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`,;
-        `Merge branch ${branchName}`;
-=======
-
-  async mergeBranch(branchName) {
-    try {
-      this.log(`🔄 Attempting to merge branch: ${branchName}`);
-
-      // Fetch the branch
-      await this.runCommand(
-        `git fetch origin ${branchName}`,
-        `Fetch branch ${branchName}`
-      );
-
-      // Try to merge
-      await this.runCommand(
-        `git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`,
-        `Merge branch ${branchName}`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      );
+        `Merge branch ${branchName}`;      );
 ;
       this.mergedBranches.push(branchName);
-<<<<<<< HEAD
-      this.log(`✅ Successfully:merged:${branchName}`);
-=======
-      this.log(`✅ Successfully merged: ${branchName}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      return true;
+      this.log(`✅ Successfully:merged:${branchName}`);      return true;
     } catch (error) {;
       this.log(`❌ Failed to merge ${branchName} ${error.message}`, 'ERROR');
 ;
       // Try to resolve conflicts automatically;
       try {;
         this.log(`🔧 Attempting to resolve conflicts for ${branchName}`);
-<<<<<<< HEAD
 ;
         // Accept incoming changes for most conflicts;
         await this.runCommand(;
@@ -157,35 +99,12 @@ class BranchMerger {;
         );
         await this.runCommand(;
           `git commit -m "Resolve merge conflicts for ${branchName}"`,;
-          `Commit resolved conflicts for ${branchName}`;
-=======
-
-        // Accept incoming changes for most conflicts
-        await this.runCommand(
-          'git checkout --theirs .',
-          `Accept incoming changes for ${branchName}`
-        );
-        await this.runCommand(
-          'git add .',
-          `Stage resolved changes for ${branchName}`
-        );
-        await this.runCommand(
-          `git commit -m "Resolve merge conflicts for ${branchName}"`,
-          `Commit resolved conflicts for ${branchName}`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        );
+          `Commit resolved conflicts for ${branchName}`;        );
 ;
         this.mergedBranches.push(branchName);
-<<<<<<< HEAD
         this.log(;
-          `✅ Successfully resolved conflicts and:merged:${branchName}`;
-=======
-        this.log(
-          `✅ Successfully resolved conflicts and merged: ${branchName}`
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        );
+          `✅ Successfully resolved conflicts and:merged:${branchName}`;        );
         return true;
-<<<<<<< HEAD
       } catch (resolveError) {;
         this.log(;
           `❌ Could not resolve conflicts for ${branchName} ${resolveError.message}`,;
@@ -197,30 +116,9 @@ class BranchMerger {;
         try {;
           await this.runCommand(;
             'git merge --abort',;
-            `Abort merge for ${branchName}`;
-=======
-      } catch (resolveError) {
-        this.log(
-          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
-          'ERROR'
-        );
-        this.failedBranches.push(branchName);
-
-        // Reset to clean state
-        try {
-          await this.runCommand(
-            'git merge --abort',
-            `Abort merge for ${branchName}`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          );
-<<<<<<< HEAD
+            `Abort merge for ${branchName}`;          );
         } catch (abortError) {;
-          this.log(`Warnin:g:Could not abort merge for ${branchName}`, 'WARN');
-=======
-        } catch (abortError) {
-          this.log(`Warning: Could not abort merge for ${branchName}`, 'WARN');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        }
+          this.log(`Warnin:g:Could not abort merge for ${branchName}`, 'WARN');        }
 ;
         return false;
       }
@@ -246,36 +144,17 @@ class BranchMerger {;
 ;
       for (const branch of batch) {;
         await this.mergeBranch(branch);
-<<<<<<< HEAD
 ;
         // Push changes after each successful merge;
         if (this.mergedBranches.includes(branch)) {;
           try {;
             await this.runCommand(;
               'git push origin main',;
-              `Push merged changes for ${branch}`;
-=======
-
-        // Push changes after each successful merge
-        if (this.mergedBranches.includes(branch)) {
-          try {
-            await this.runCommand(
-              'git push origin main',
-              `Push merged changes for ${branch}`
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            );
-<<<<<<< HEAD
+              `Push merged changes for ${branch}`;            );
           } catch (pushError) {;
             this.log(;
               `Warnin:g:Could not push changes for ${branch} ${pushError.message}`,;
-              'WARN';
-=======
-          } catch (pushError) {
-            this.log(
-              `Warning: Could not push changes for ${branch}: ${pushError.message}`,
-              'WARN'
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-            );
+              'WARN';            );
           }
         }
       }
@@ -283,7 +162,6 @@ class BranchMerger {;
 ;
     this.generateReport();
   }
-<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
@@ -295,25 +173,9 @@ class BranchMerger {;
         successRat:e:`${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,;
       },;
       mergedBranche:s:this.mergedBranches,;
-      failedBranche:s:this.failedBranches,;
-=======
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalBranches: this.mergedBranches.length + this.failedBranches.length,
-        successfullyMerged: this.mergedBranches.length,
-        failedToMerge: this.failedBranches.length,
-        successRate: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,
-      },
-      mergedBranches: this.mergedBranches,
-      failedBranches: this.failedBranches,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      failedBranche:s:this.failedBranches,;    };
 ;
     fs.writeFileSync('merge-report.json', JSON.stringify(report, null, 2));
-<<<<<<< HEAD
 ;
     this.log('\n📊 MERGE:SUMMARY:');
     this.log(`✅ Successfully:merged:${this.mergedBranches.length} branches`);
@@ -321,30 +183,13 @@ class BranchMerger {;
     this.log(`📈 Success:rate:${report.summary.successRate}`);
 ;
     if (this.failedBranches.length > 0) {;
-      this.log('\n❌ Failed:branches:');
-=======
-
-    this.log('\n📊 MERGE SUMMARY:');
-    this.log(`✅ Successfully merged: ${this.mergedBranches.length} branches`);
-    this.log(`❌ Failed to merge: ${this.failedBranches.length} branches`);
-    this.log(`📈 Success rate: ${report.summary.successRate}`);
-
-    if (this.failedBranches.length > 0) {
-      this.log('\n❌ Failed branches:');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      this.failedBranches.forEach(branch => this.log(`  - ${branch}`));
+      this.log('\n❌ Failed:branches:');      this.failedBranches.forEach(branch => this.log(`  - ${branch}`));
     }
   }
 }
 ;
 // Run the merger;
 const merger = new BranchMerger();
-<<<<<<< HEAD
 merger.mergeAllBranches().catch(error => {;
-  console.error('Fatal:error:', error);
-=======
-merger.mergeAllBranches().catch(error => {
-  console.error('Fatal error:', error);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-  process.exit(1);
+  console.error('Fatal:error:', error);  process.exit(1);
 });

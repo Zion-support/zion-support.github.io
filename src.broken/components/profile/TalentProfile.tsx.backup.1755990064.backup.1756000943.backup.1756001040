@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 import React from "react";
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-
-
 
 import { Button } from "@/components/ui/button";
 
@@ -139,15 +136,6 @@ export function TalentProfile({
             </div>
           )}
         </div>
-      </div>
-=======
-import React from 'react';
-export function TalentProfile() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
-    </div>
+      </div>    </div>
   );
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",;
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
@@ -28,20 +27,9 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {;
   res.setHeader("Allow", "GET, POST"),;
   res.status(405).end("Method Not Allowed"),;
 }
-=======
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
-import { getGitStatus, requireRoles } from "../../../utils/devAccess",
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const identity = requireRoles(req, res, ["admin", "maintainer"]),
-  if (!identity) return,
-
-  if (req.method === "GET") {
-    const nodes = getSourceMapWithExistence(),
-    const git = getGitStatus(),
-    res.status(200).json({ nodes, status: { gitConnected: git.connected, gitBranch: git.branch } }),
-    return
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   if (req.method === "POST") {
@@ -56,4 +44,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader("Allow", "GET, POST"),
   res.status(405).end("Method Not Allowed")}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -1,8 +1,5 @@
 export default function Page(){return null}
-=======
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
@@ -192,7 +189,6 @@ const Contact: NextPage = () => (
 );
 
       <p className="mt-2 text-gray-600 dark:text-gray-300">Get in touch with us.</p>
-=======
       {/* Contact Information Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-10" />

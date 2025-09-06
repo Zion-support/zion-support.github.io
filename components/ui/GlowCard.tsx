@@ -7,5 +7,4 @@ export default function GlowCard({ title, children }: { title: string, children:
         <h3 className=&quot;text-lg font-semibold mb-2 tracking-wide&quot;>{title}</h3>
         <div className=&quot;text-sm text-gray-300 leading-relaxed&quot;>{children}</div>      </div>
     </div>
-  )
-}
+  )}

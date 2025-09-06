@@ -612,5 +612,4 @@ variant="futuristic"
         </section>
       </div>
     </UltraFuturisticBackground>
-  )
-}
+  )}

@@ -18,21 +18,14 @@ const features = [
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
 ],
 
-const pricingPlans = [
+const pricingPlans = [  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    name: 'Starter',
-    price: 299,
-    period: 'month',
-    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: 799,
-    period: 'month',
-    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
-    popular: true
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
     name: 'Enterprise',
     price: 1999,
@@ -261,5 +254,4 @@ export default function AIDiagnosticPlatform() {_return (_<Layout>
         </div>
       </section>
     </Layout>
-  )
-}
+  )}

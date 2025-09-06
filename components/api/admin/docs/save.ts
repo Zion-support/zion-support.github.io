@@ -38,5 +38,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ ok: true, version: ts })
   } catch (e) {
-    res.status(500).json({ error: 'Failed to save content' })  }
-}
+    res.status(500).json({ error: 'Failed to save content' })  }}

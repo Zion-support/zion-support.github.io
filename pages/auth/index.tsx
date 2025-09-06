@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import { useState } from 'react',;
@@ -28,41 +27,10 @@ const Onboarding:NextPage = () => {;
         ))}
       </div>;
 ;
-      <div className="border rounded-md p-4 min-h-[200px]">;
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-const steps = ['AccountProfilePreferencesPreview'],
-
-const Onboarding: NextPage = () => {
-  const [step, setStep] = useState(0),
-
-  const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
-  const prev = () => setStep((s) => Math.max(s - 1, 0)),
-
-  return (
-    <div className=&quot;space-y-6&quot;>      <Head>
-        <title>Onboarding - Zion</title>
-      </Head>
-
-      <h1 className=&quot;text-2xl font-semibold&quot;>Get Started</h1>
-
-      <div className=&quot;flex items-center gap-2 text-sm flex-wrap&quot;>
-        {steps.map((label, i) => (
-          <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
-            {i + 1}. {label}          </div>
-        ))}
-      </div>
-
-      <div className=&quot;border rounded-md p-4 min-h-[200px]&quot;>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        {step === 0 && <div>Account setup fields…</div>}
+      <div className="border rounded-md p-4 min-h-[200px]">;        {step === 0 && <div>Account setup fields…</div>}
         {step === 1 && <div>Profile details fields…</div>}
         {step === 2 && <div>Preferences selection…</div>}
         {step === 3 && <div>Preview your profile/listing before going live.</div>}
-<<<<<<< HEAD
       </div>;
 ;
       <div className="flex gap-2">;
@@ -72,16 +40,8 @@ const Onboarding: NextPage = () => {
     </div>;
   ),;
 },;
-;
-=======
-      </div>
-
-      <div className=&quot;flex gap-2&quot;>
-        <EnhancedButton variant=&quot;secondary&quot; onClick={prev} disabled={step === 0}>Back</EnhancedButton>
-        <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>      </div>
-    </div>
-  )
-},
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-export default Onboarding,
+;export default Onboarding,
+ <Head> <title>Onboarding - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Get Started</h1> </div>) ) 
+}</div> </div> </div>) 
+};
+export default Onboarding;

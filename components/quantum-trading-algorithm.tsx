@@ -18,21 +18,14 @@ const features = [
   'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimizationRegulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
 ],
 
-const pricingPlans = [
+const pricingPlans = [  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    name: 'Starter',
-    price: 199,
-    period: 'month',
-    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    price: 499,
-    period: 'month',
-    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support'],
-    popular: true
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
     name: 'Enterprise',
     price: 1299,
@@ -261,5 +254,4 @@ export default function QuantumTradingAlgorithm() {_return (_<Layout>
         </div>
       </section>
     </Layout>
-  )
-}
+  )}

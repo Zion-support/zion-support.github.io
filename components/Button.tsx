@@ -44,5 +44,4 @@ export default function Button({
     >
       {_children}
     </button>
-  )
-}
+  )}

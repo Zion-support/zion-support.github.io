@@ -126,5 +126,4 @@ className=&quot;px-3 py-2 rounded border border-gray-300 dark:border-gray-700&qu
         <h2 className=&quot;text-lg font-semibold mb-2&quot;>Generated Charter Preview</h2>
         <textarea className=&quot;w-full h-96 rounded border border-gray-300 dark:border-gray-700 bg-transparent p-3 font-mono text-sm&quot; value={charterText} readOnly />      </div>
     </div>
-  )
-}
+  )}

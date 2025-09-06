@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type UseCaseType =;
   | "Education Partnership";
   | "Workforce Development";
@@ -15,26 +14,7 @@ export interface PartnerPointOfContact {;
 ;
 export interface PartnerBrand {;
   primaryColorHex?:string,;
-  logoUrl?:string,;
-=======
-export type UseCaseType =
-  | "Education Partnership"
-  | "Workforce Development"
-  | "Token Integration"
-  | "Custom Marketplace Instance",
-
-export type PartnerStatus = "pending" | "approved" | "rejected",
-export interface PartnerPointOfContact {
-  name: string,
-  email: string,
-  phone?: string
-}
-
-export interface PartnerBrand {
-  primaryColorHex?: string,
-  logoUrl?: string
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  logoUrl?:string,;}
 ;
 export interface PartnerRecord {;
   id:string,;
@@ -84,3 +64,4 @@ export interface JwtPayload {;
   iat:number,;
   exp:number;
 }
+export type UseCaseType = 

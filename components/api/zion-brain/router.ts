@@ -24,5 +24,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     const latencyMs = Date.now() - started,
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } }),
-    return res.status(500).json({ error: 'Router failure' })  }
-}
+    return res.status(500).json({ error: 'Router failure' })  }}

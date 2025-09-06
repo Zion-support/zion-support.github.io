@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { ;
@@ -76,30 +75,12 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
       </div>;
     </div>;
   ),;
-},;
-=======
-import React from "react",
-import { Badge } from "@/components/ui/badge",import { 
-  Select,
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select",
-import type { QuoteStatus } from "@/types/quotes",type RequestsHeaderProps = {
-  unreadCount: number,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-},
-
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
-  unreadCount,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter
+},;export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+  unreadCount;
+statusFilter;
+setStatusFilter;
+archiveFilter;
+setArchiveFilter 
 }) => {
   return (
     <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
@@ -164,4 +145,3 @@ value={archiveFilter}
     </div>
   )
 },
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

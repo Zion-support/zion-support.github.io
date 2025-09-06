@@ -71,7 +71,6 @@ function getAllServices(): Service[] {
 		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
 		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
 		.concat(real2032AdditionalServices as unknown as Service[]);
-=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[]);
@@ -338,5 +337,4 @@ const ServiceDetail: NextPage = () => {
 };
 
 export default ServiceDetail;
-=======
 }

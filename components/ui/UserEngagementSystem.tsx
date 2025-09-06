@@ -15,5 +15,4 @@ export default function EmptyState({ emoji = '✨', title, message, action }: Em
       <h2 className=&quot;mt-4 text-lg font-semibold&quot;>{title}</h2>
       <p className=&quot;mt-1 text-sm text-gray-600 dark:text-gray-300&quot;>{message}</p>
       {action && <div className=&quot;mt-3&quot;>{action}</div>}    </div>
-  )
-}
+  )}

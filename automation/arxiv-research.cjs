@@ -42,22 +42,12 @@ async function run() {;
   } catch (e) {;
     console.warn('arXiv fetch failed:', e.message);
   }
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'arXiv AI governance/agents research feed',;
     total:items.length,;
-    items,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'arXiv AI governance/agents research feed';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

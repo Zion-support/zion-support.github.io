@@ -65,5 +65,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, {_spaces: 2});
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({_id: record.id, _redeemedAt: now});
-}
+  return res.status(201).json({_id: record.id, _redeemedAt: now});}

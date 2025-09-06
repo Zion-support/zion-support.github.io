@@ -45,7 +45,6 @@ interface SearchResponse {;
   query:string,;
   hasMore:boolean;
 }
-<<<<<<< HEAD
 ;
 // Highlight search terms in text;
 const HighlightText:React.FC<{ text:string, searchTerm:string, className?:string }> = ({ ;
@@ -97,77 +96,11 @@ const SearchResultCard:React.FC<{ ;
       {result.image && (;
         <div className={viewMode === 'grid' ? "mb-3" :"flex-shrink-0"}>;
           <img ;
-            src={result.image} ;
-=======
-
-// Highlight search terms in text,
-const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({ 
-  text, 
-  searchTerm, 
-  className = '' 
-}) => {
-  if (!searchTerm.trim()) {
-    return <span className={className}>{text}</span>
-  }
-
-  const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),  
-  return (_<span className={className}>
-      {parts.map((part, index) => 
-        part.toLowerCase() === searchTerm.toLowerCase() ? (
-          <mark key={index} className=&quot;bg-yellow-200 text-black px-1 rounded&quot;>
-            {part}          </mark>
-        ) : (
-          part
-        )
-      )}
-    </span>
-  )
-},
-
-// Search Result Card Component,
-const SearchResultCard: React.FC<{ 
-  result: SearchResult, 
-  searchTerm: string, 
-  viewMode: 'grid' | 'list' 
-}> = ({ result, searchTerm, viewMode }) => {
-  const router = useRouter(),
-  const handleClick = () => {
-    if (result.url) {
-      router.push(result.url)
-    }
-  },
-
-  const cardClass = viewMode === 'grid' 
-    ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
-    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
-  return (
-    <div onClick={handleClick} className={cardClass}>
-      {result.image && (
-        <div className={viewMode === 'grid' ? &quot;mb-3&quot; : &quot;flex-shrink-0&quot}>
-          <img,
-src={result.image} 
-            alt={result.title}
-            className={viewMode === 'grid' ? &quot;w-full h-48 object-cover rounded&quot; : &quot;w-20 h-20 object-cover rounded&quot}
-      router.push(result.url)}
-  };
-
-  const cardClass = viewMode === 'grid' 
-    ? "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer"
-    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4";
-
-  return (
-    <div onClick={handleClick} className={cardClass}>
-      {result.image && (
-        <div className={viewMode === 'grid' ? "mb-3" : "flex-shrink-0"}>
-          <img,
-src={result.image} 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            alt={result.title}
+            src={result.image} ;            alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" :"w-20 h-20 object-cover rounded"}
           />;
         </div>;
       )}
-<<<<<<< HEAD
       ;
       <div className="flex-1">;
         <div className="flex items-start justify-between mb-2">;
@@ -196,41 +129,9 @@ src={result.image}
         <div className="flex items-center justify-between">;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
-              <Badge variant="outline" className="text-xs">;
-=======
-      
-      <div className=&quot;flex-1&quot;>
-        <div className=&quot;flex items-start justify-between mb-2&quot;>
-          <div>
-            <h3 className=&quot;font-semibold text-lg mb-1&quot;>
-              <HighlightText text={result.title} searchTerm={searchTerm} />
-            </h3>
-            <Badge variant=&quot;secondary&quot; className=&quot;text-xs&quot;>
-              {result.type}
-            </Badge>
-          </div>
-          {result.price && (
-            <div className=&quot;text-right&quot;>
-              <span className=&quot;font-bold text-primary&quot;>
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>
-              {result.type === 'talent' && <span className=&quot;text-sm text-muted-foreground&quot;>/hr</span>}            </div>
-          )}
-        </div>
-
-        <p className=&quot;text-muted-foreground mb-3 line-clamp-2&quot;>
-          <HighlightText text={result.description} searchTerm={searchTerm} />
-        </p>
-
-        <div className=&quot;flex items-center justify-between&quot;>
-          <div className=&quot;flex gap-2 flex-wrap&quot;>
-            {result.category && (
-              <Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                {result.category}
+              <Badge variant="outline" className="text-xs">;                {result.category}
               </Badge>;
             )}
-<<<<<<< HEAD
             {result.tags?.slice(0, 3).map((tag, index) => (;
               <Badge key={index} variant="outline" className="text-xs">;
                 <HighlightText text={tag} searchTerm={searchTerm} />;
@@ -326,103 +227,10 @@ const FilterSidebar:React.FC<{;
         <h3 className="font-semibold mb-3">Price Range</h3>;
         <div className="px-2">;
           <Slider;
-            value={[filters.minPrice, filters.maxPrice]}
-=======
-            {result.tags?.slice(0, 3).map((tag, index) => (
-              <Badge key={index} variant=&quot;outline&quot; className=&quot;text-xs&quot;>
-                <HighlightText text={tag} searchTerm={searchTerm} />              </Badge>
-            ))}
-          </div>
-          
-          {result.rating && (
-            <div className=&quot;flex items-center gap-1&quot;>
-              <span className=&quot;text-yellow-500&quot;>★</span>
-              <span className=&quot;text-sm&quot;>{result.rating.toFixed(1)}</span>            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  )
-},
-
-// Filter Sidebar Component,
-const FilterSidebar: React.FC<{
-  filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
-  availableCategories: string[]
-}> = ({ filters, onFiltersChange, availableCategories }) => {
-  const typeOptions = [
-    { id: 'product', label: 'Products' },
-    { id: 'talent', label: 'Talent' },
-    { id: 'service', label: 'Services' },
-    { id: 'blog', label: 'Blog Posts' }
-  ],
-
-  const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked 
-      ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId),
-    
-    onFiltersChange({ ...filters, types: newTypes })
-  },
-
-  const handlePriceChange = (values: number[]) => {
-    onFiltersChange({ 
-      ...filters,
-      minPrice: values[0] ?? 0,
-      maxPrice: values[1] ?? 10000 
-    })
-  },
-  return (
-    <div className=&quot;space-y-6&quot;>
-      <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Content Type</h3>
-        <div className=&quot;space-y-2&quot;>
-          {typeOptions.map(option => (
-            <div key={option.id} className=&quot;flex items-center space-x-2&quot;>              <Checkbox,
-id={option.id}
-                checked={filters.types.includes(option.id)}
-                onCheckedChange={_(checked) => handleTypeChange(option.id, _!!checked)}
-              />
-              <label htmlFor={option.id} className=&quot;text-sm&quot;>
-                {option.label}              </label>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <Separator />
-
-      <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Category</h3>
-        <Select value={filters.category} onValueChange={(value) => 
-          onFiltersChange({ ...filters, category: value === 'all' ? '' : value })        }>
-          <SelectTrigger>
-            <SelectValue placeholder=&quot;All Categories&quot; />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;all&quot;>All Categories</SelectItem>
-            {availableCategories.map(category => (
-              <SelectItem key={category} value={category}>
-                {category}              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      <Separator />
-
-      <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Price Range</h3>
-        <div className=&quot;px-2&quot;>
-          <Slider,
-value={[filters.minPrice, filters.maxPrice]}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            onValueChange={handlePriceChange}
+            value={[filters.minPrice, filters.maxPrice]}            onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
             className="mb-2";
           />;
           <div className="flex justify-between text-sm text-muted-foreground">;
@@ -490,77 +298,9 @@ const NoResultsState:React.FC<{ searchTerm:string, onNewSearch:(term:string) => 
                 variant="outline";
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
-              >;
-=======
-            className=&quot;mb-2&quot;
-          />
-          <div className=&quot;flex justify-between text-sm text-muted-foreground&quot;>
-            <span>${filters.minPrice}</span>
-            <span>${filters.maxPrice}</span>          </div>
-        </div>
-      </div>
-
-      <Separator />
-
-      <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Minimum Rating</h3>
-        <Select value={filters.minRating.toString()} onValueChange={(value) => 
-          onFiltersChange({ ...filters, minRating: parseFloat(value) })        }>
-          <SelectTrigger>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value=&quot;0&quot;>Any Rating</SelectItem>
-            <SelectItem value=&quot;1&quot;>1+ Stars</SelectItem>
-            <SelectItem value=&quot;2&quot;>2+ Stars</SelectItem>
-            <SelectItem value=&quot;3&quot;>3+ Stars</SelectItem>
-            <SelectItem value=&quot;4&quot;>4+ Stars</SelectItem>
-            <SelectItem value=&quot;4.5&quot;>4.5+ Stars</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-    </div>
-  )
-},
-
-// No Results Component,
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm, 
-  onNewSearch 
-}) => {
-  const suggestions = [
-    "AI & Machine Learning",
-    "Web Development",
-    "Mobile App Development",
-    "Data Analysis",
-    "UI/UX Design",
-    "Blockchain Development"
-  ]  ];
-
-  return (
-    <div className=&quot;text-center py-12&quot;>
-      <div className=&quot;mb-6&quot;>
-        <Search className=&quot;mx-auto h-16 w-16 text-muted-foreground mb-4&quot; />
-        <h2 className=&quot;text-2xl font-semibold mb-2&quot;>No results found</h2>
-        <p className=&quot;text-muted-foreground mb-6&quot;>
-          We couldn't find anything matching &quot;{searchTerm}&quot;. Try adjusting your search or filters.        </p>
-      </div>
-
-      <div className=&quot;max-w-md mx-auto space-y-4&quot;>
-        <div>
-          <h3 className=&quot;font-semibold mb-3&quot;>Search Suggestions:</h3>
-          <div className=&quot;flex flex-wrap gap-2 justify-center&quot;>
-            {suggestions.map((suggestion, index) => (
-              <Button,
-key={index}
-                variant=&quot;outline&quot;
-                size=&quot;sm&quot;
-                onClick={() => onNewSearch(suggestion)}              >
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                {suggestion}
+              >;                {suggestion}
               </Button>;
             ))}
-<<<<<<< HEAD
           </div>;
         </div>;
 ;
@@ -789,232 +529,7 @@ export const SearchResultsPage:React.FC = () => {;
                   </SheetHeader>;
                   <div className="mt-6">;
                     <FilterSidebar;
-                      filters={filters}
-=======
-          </div>
-        </div>
-
-        <div className="text-sm text-muted-foreground">
-          <p>Tips for better results: </p>
-          <ul className="mt-2 space-y-1">            <li>• Try different keywords</li>
-            <li>• Check your spelling</li>
-            <li>• Use fewer filters</li>
-            <li>• Search for broader terms</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  )
-},
-
-// Main Search Results Page Component,
-export const SearchResultsPage: React.FC = () => {
-  const router = useRouter(),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [totalCount, setTotalCount] = useState(0),
-  const [currentPage, setCurrentPage] = useState(1),
-  const [hasMore, setHasMore] = useState(false),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [showFilters, setShowFilters] = useState(false),
-  
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: [],
-    category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    minRating: 0,
-    sort: 'relevance'
-  }),
-
-  const suggestions = generateSearchSuggestions(),
-
-  // Extract available categories from results for filter,
-const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
-    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    }),
-    return Array.from(categories).sort()
-  }, [results]),
-
-  // Sync search term with URL,
-useEffect(() => {
-    if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string,
-      setSearchTerm(urlTerm)
-    }
-  }, [router.isReady, router.query.q]),
-
-  // Search function,
-const performSearch = async (term: string, page: number = 1, newFilters?: SearchFilters) => {
-    if (!term.trim()) {
-      setResults([]),
-      setTotalCount(0),
-      return
-    }
-
-    setLoading(true),
-    try {
-      const searchFilters = newFilters || filters,
-      const params = new URLSearchParams({
-        query: term,
-        page: page.toString(),
-        limit: '20'
-      }),
-
-      if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join())
-      }
-      if (searchFilters.category) {
-        params.append('category', searchFilters.category)
-      }
-      if (searchFilters.minPrice > 0) {
-        params.append('minPrice', searchFilters.minPrice.toString())
-      }
-      if (searchFilters.maxPrice < 10000) {
-        params.append('maxPrice', searchFilters.maxPrice.toString())
-      }
-      if (searchFilters.minRating > 0) {
-        params.append('minRating', searchFilters.minRating.toString())
-      }
-      if (searchFilters.sort !== 'relevance') {
-        params.append('sort', searchFilters.sort)
-      }
-
-      const response = await fetch(`/api/search?${params}`),
-      const data: SearchResponse = await response.json(),
-
-      if (page === 1) {
-        setResults(data.results)
-      } else {
-        setResults(prev => [...prev, ...data.results])
-      }      
-      setTotalCount(data.totalCount),
-      setCurrentPage(data.page),
-      setHasMore(data.hasMore),
-
-      logInfo('Search completed', { 
-        term,
-        resultCount: data.results.length,
-        totalCount: data.totalCount 
-      })
-    } catch (error) {
-      logErrorToProduction('Search failed', { data: error }),
-      setResults([]),
-      setTotalCount(0)
-    } finally {
-      setLoading(false)
-    }
-  },
-
-  // Search when term or filters change,
-useEffect(() => {
-    if (searchTerm.trim()) {
-      performSearch(searchTerm, 1, filters),
-      setCurrentPage(1)
-    }
-  }, [searchTerm, filters]),
-
-  // Handle search input,
-const handleSearch = (term: string) => {
-    setSearchTerm(term),
-    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })
-  },
-
-  // Handle filter changes,
-const handleFiltersChange = (newFilters: SearchFilters) => {
-    setFilters(newFilters)
-  },
-
-  // Load more results,
-const loadMore = () => {
-    if (hasMore && !loading) {
-      performSearch(searchTerm, currentPage + 1)
-    }
-  },
-  // Active filters count,
-const activeFiltersCount = filters.types.length + 
-    (filters.category ? 1 : 0) + 
-    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
-    (filters.minRating > 0 ? 1 : 0),
-
-  return (
-    <div className=&quot;container mx-auto px-4 py-6&quot;>
-      {/* Search Header */}
-      <div className=&quot;mb-6&quot;>
-        <div className=&quot;flex gap-4 mb-4&quot;>
-          <div className=&quot;flex-1&quot;>
-            <EnhancedSearchInput,
-value={searchTerm}
-              onChange={setSearchTerm}
-              onSelectSuggestion={(suggestion) => handleSearch(suggestion.text)}
-              searchSuggestions={suggestions}
-              placeholder=&quot;Search products, talent, services, and more...&quot;
-            />
-          </div>
-          <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
-            <Search className=&quot;h-4 w-4&quot; />
-          </Button>
-        </div>
-
-        {searchTerm && (
-          <div className=&quot;flex items-center justify-between&quot;>
-            <div>
-              <h1 className=&quot;text-2xl font-bold&quot;>Search Results</h1>
-              <p className=&quot;text-muted-foreground&quot;>
-                {loading ? 'Searching...' : `${totalCount} results for &quot;${searchTerm}&quot;`}
-              </p>
-            </div>
-
-            <div className=&quot;flex items-center gap-2&quot;>
-              {/* Sort Options */}
-              <Select value={filters.sort} onValueChange={(value) => 
-                setFilters({ ...filters, sort: value })              }>
-                <SelectTrigger className=&quot;w-40&quot;>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=&quot;relevance&quot;>Relevance</SelectItem>
-                  <SelectItem value=&quot;priceasc&quot;>Price: Low to High</SelectItem>
-                  <SelectItem value=&quot;pricedesc&quot;>Price: High to Low</SelectItem>
-                  <SelectItem value=&quot;rating&quot;>Highest Rated</SelectItem>
-                </SelectContent>
-              </Select>
-
-              {/* View Mode Toggle */}
-              <div className=&quot;flex border rounded-md&quot;>
-                <Button,
-variant={viewMode === 'grid' ? 'default' : 'ghost'}
-                  size=&quot;sm&quot;
-                  onClick={() => setViewMode('grid')}                >
-                  <GridIcon className=&quot;h-4 w-4&quot; />
-                </Button>
-                <Button,
-variant={viewMode === 'list' ? 'default' : 'ghost'}
-                  size=&quot;sm&quot;
-                  onClick={() => setViewMode('list')}                >
-                  <List className=&quot;h-4 w-4&quot; />
-                </Button>
-              </div>
-
-              {_/* Mobile Filter Toggle */}
-              <Sheet open={showFilters} onOpenChange={setShowFilters}>
-                <SheetTrigger asChild>
-                  <Button variant=&quot;outline&quot; className=&quot;lg:hidden&quot;>
-                    <Filter className=&quot;h-4 w-4 mr-2&quot; />
-                    Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}                  </Button>
-                </SheetTrigger>
-                <SheetContent side=&quot;left&quot; className=&quot;w-80&quot;>
-                  <SheetHeader>
-                    <SheetTitle>Search Filters</SheetTitle>
-                  </SheetHeader>
-                  <div className=&quot;mt-6&quot;>
-                    <FilterSidebar,
-filters={filters}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                      onFiltersChange={handleFiltersChange}
+                      filters={filters}                      onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
                     />;
                   </div>;
@@ -1023,7 +538,6 @@ filters={filters}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
       </div>;
 ;
       {searchTerm && (;
@@ -1051,38 +565,13 @@ filters={filters}
                 )}
               </div>;
               <FilterSidebar;
-                filters={filters}
-=======
-      </div>
-
-      {searchTerm && (
-        <div className=&quot;flex gap-6&quot;>
-          {/* Desktop Filters Sidebar */}
-          <div className=&quot;hidden lg:block w-64 flex-shrink-0&quot;>
-            <div className=&quot;bg-card border rounded-lg p-4 sticky top-4&quot;>
-              <div className=&quot;flex items-center justify-between mb-4&quot;>
-                <h2 className=&quot;font-semibold&quot;>Filters</h2>
-                {activeFiltersCount > 0 && (                  <Button,
-variant=&quot;ghost&quot;
-                    size=&quot;sm&quot;
-                    onClick={() => setFilters({
-                      types: [], category: '', minPrice: 0, maxPrice: 10000, minRating: 0, sort: 'relevance'})}
-                  >
-                    Clear All
-                  </Button>
-                )}
-              </div>
-              <FilterSidebar,
-filters={filters}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                onFiltersChange={handleFiltersChange}
+                filters={filters}                onFiltersChange={handleFiltersChange}
                 availableCategories={availableCategories}
               />;
             </div>;
           </div>;
 ;
           {/* Main Content */}
-<<<<<<< HEAD
           <div className="flex-1">;
             {loading && results.length === 0 ? (;
               <div className="flex justify-center py-12">;
@@ -1090,38 +579,18 @@ filters={filters}
               </div>;
             ) :results.length === 0 && searchTerm ? (;
               <NoResultsState ;
-                searchTerm={searchTerm} ;
-=======
-          <div className=&quot;flex-1&quot;>
-            {loading && results.length === 0 ? (
-              <div className=&quot;flex justify-center py-12&quot;>
-                <Loader2 className=&quot;h-8 w-8 animate-spin&quot; />              </div>
-            ) : results.length === 0 && searchTerm ? (
-              <NoResultsState,
-searchTerm={searchTerm} 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                onNewSearch={handleSearch}
+                searchTerm={searchTerm} ;                onNewSearch={handleSearch}
               />;
             ) :(;
               <>;
                 {/* Results Grid/List */}
-<<<<<<< HEAD
                 <div className={viewMode === 'grid' ;
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6";
                   :"space-y-4 mb-6";
                 }>;
                   {results.map((result) => (;
                     <SearchResultCard;
-                      key={`${result.type}-${result.id}`}
-=======
-                <div className={viewMode === 'grid' 
-                  ? &quot;grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6&quot;
-                  : &quot;space-y-4 mb-6&quot
-                }>
-                  {results.map((result) => (                    <SearchResultCard,
-key={`${result.type}-${result.id}`}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                      result={result}
+                      key={`${result.type}-${result.id}`}                      result={result}
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
@@ -1129,7 +598,6 @@ key={`${result.type}-${result.id}`}
                 </div>;
 ;
                 {/* Load More Button */}
-<<<<<<< HEAD
                 {hasMore && (;
                   <div className="text-center">;
                     <Button ;
@@ -1143,23 +611,7 @@ key={`${result.type}-${result.id}`}
                           Loading...;
                         </>;
                       ) :(;
-                        'Load More Results';
-=======
-                {hasMore && (
-                  <div className=&quot;text-center&quot;>
-                    <Button,
-onClick={loadMore} 
-                      disabled={loading}
-                      variant=&quot;outline&quot;                    >
-                      {loading ? (
-                        <>
-                          <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
-                          Loading...
-                        </>
-                      ) : (
-                        'Load More Results'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                      )}
+                        'Load More Results';                      )}
                     </Button>;
                   </div>;
                 )}
@@ -1168,15 +620,105 @@ onClick={loadMore}
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
     </div>;
   ),;
 },;
-;
-=======
-    </div>
-  )
-},
-
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-export default SearchResultsPage, 
+;export default SearchResultsPage, 
+ return (<span className= {;
+  className ;
+}> {;
+  parts.map ( (part, index) => part.toLowerCase () === searchTerm.toLowerCase () ? (</mark>) : (part) ) ;
+}</span>) ;
+};
+//Search Result Card Component const handleClick = () => {;
+  if (result.url) {;
+  return (<div onClick={;
+  handleClick ;
+}className= {;
+  cardClass ;
+}> {;
+  result.image && (<div className= {;
+  viewMode === 'grid' ? "mb-3" : "flex-shrink-0" ;
+}> <img src= {;
+  result.image ;
+}alt= {;
+  result.title ;
+}className= {'";
+  viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded" ;
+}";
+}<div className="flex-1" > <div className="flex items-start justify-between mb-2" > <div> </div>) ;
+}</div> </Badge>) ) ;
+}</div> </div>) ;
+}</div> </div> </div>) ;
+};";
+//Filter Sidebar Component return (<div className="space-y-6" > <div> <Checkbox id= {;
+  option.id ;
+}checked= {;
+  filters.types.includes (option.id) ;
+}onCheckedChange= {;
+  (checked) => handleTypeChange (option.id, !!checked) ;
+}/> </label> </div>) ) ;
+}</div> </div> <Separator /> <div> ";
+}> <SelectTrigger> <SelectValue placeholder="All Categories" /> </SelectTrigger> <SelectContent> </SelectItem>) ) ";
+}</SelectContent> </Select> </div> <Separator /> <div> <h3 className="font-semibold mb-3" >Price Range</h3> <div className="px-2" > <Slider </div> </div> </div> <Separator /> <div> ";
+}> <SelectTrigger> <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="0" >Any Rating</SelectItem> <SelectItem value="1" >1+ Stars</SelectItem> <SelectItem value="2" >2+ Stars</SelectItem> <SelectItem value="3" >3+ Stars</SelectItem> <SelectItem value="4" >4+ Stars</SelectItem> <SelectItem value="4.5" >4.5+ Stars</SelectItem> </SelectContent> </Select> </div> </div>) ;
+};
+//No Results Component ];";
+  suggestion ;
+}</Button>) ) ;
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;
+};
+//Main Search Results Page Component setTotalCount (data.totalCount);
+setCurrentPage (data.page);
+setHasMore (data.hasMore);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);";
+}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {;
+  /* Mobile Filter Toggle */ ;
+}<Sheet open= {;
+  showFilters ;
+}onOpenChange= {;
+  setShowFilters ";
+}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {;
+  filters ;
+}onFiltersChange= {;
+  handleFiltersChange ;
+}availableCategories= {;
+  availableCategories ;
+}/> </div> </SheetContent> </Sheet> </div> </div>) ";
+}</div> <Button variant="ghost" size="sm" onClick={;
+  () => setFilters ({';
+  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance' ;
+}) ;
+}> Clear All </Button>) ;
+}</div> <FilterSidebar filters= {;
+  filters ;
+}onFiltersChange= {;
+  handleFiltersChange ;
+}availableCategories= {;
+  availableCategories ;
+}/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {;
+  searchTerm ;
+}onNewSearch= {;
+  handleSearch ;
+}/> <SearchResultCard key= {;
+  `$ {;
+  result.type ;
+}-$ {;
+  result.id ;
+}` ;
+}result= {;
+  result ;
+}searchTerm= {;
+  searchTerm ;
+}viewMode= {;
+  viewMode ;
+}/>) ) ;
+}</div> > {'";
+  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results') ;
+}</Button> </div>) ;
+}</>) ;
+}</div> </div>) ;
+}</div>) ;
+};
+export default SearchResultsPage;
+'"

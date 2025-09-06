@@ -30,20 +30,10 @@ export interface TalentMatch {;
   matched_skills:string[],;
   created_at:string;
 }
-<<<<<<< HEAD
 ;
 export interface MatchResult {;
   talentId:string,;
   score:number,;
   matchedSkills:string[],;
   reason?:string;
-}
-=======
-
-export interface MatchResult {
-  talentId: string,
-  score: number,
-  matchedSkills: string[],
-  reason?: string
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} 

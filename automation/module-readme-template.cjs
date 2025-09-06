@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 ;
 const ROOT = process.cwd();
-<<<<<<< HEAD
 ;
 const MODULES = [;
   '/core/auth','/core/user','/core/marketplace','/core/payments','/core/messaging','/core/analytics','/core/roles','/core/talent','/core/client',;
@@ -22,28 +21,7 @@ const TEMPLATE_SECTIONS = [;
   '## Boundaries',;
   '## Public API',;
   '## Data & Storage',;
-  '## Owners',;
-=======
-
-const MODULES = [
-  '/core/auth','/core/user','/core/marketplace','/core/payments','/core/messaging','/core/analytics','/core/roles','/core/talent','/core/client';
-  '/ai/gpt','/ai/resume-generator','/ai/proposal-writer','/ai/contract-writer','/ai/assistant','/ai/prompts';
-  '/dao/proposals','/dao/voting','/dao/quorum','/dao/staking','/dao/snapshot-integration';
-  '/token/rewards','/token/pricing-engine','/token/escrow','/token/payout-engine','/token/wallet';
-  '/academy/courses','/academy/certifications','/academy/quiz','/academy/video','/academy/ai-tutor';
-  '/governance/manifesto','/governance/constitution','/governance/roadmap','/governance/changelog';
-  '/deployments/multiverse','/deployments/subdomains','/deployments/config-templates','/deployments/environments';
-  '/api/docs','/api/partners','/api/integrations','/api/webhooks'
-];
-
-const TEMPLATE_SECTIONS = [
-  '## Purpose';
-  '## Boundaries';
-  '## Public API';
-  '## Data & Storage';
-  '## Owners';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-];
+  '## Owners',;];
 ;
 function ensureDir(p) {;
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive:true });

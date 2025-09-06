@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { GetServerSideProps } from 'next',;
 import fs from 'fs',;
@@ -10,8 +9,6 @@ import { Input } from '@/components/ui/input',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react',;
 import { logErrorToProduction } from '@/utils/productionLogger',;
-;
-;
 interface LogEntry {;
   id:string,;
   timestamp:string,;
@@ -37,47 +34,7 @@ interface LogEntry {;
     memory?:number,;
     timing?:number,;
     fps?:number,;
-  },;
-=======
-import { useState, useEffect } from 'react',
-import { GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react',
-import { logErrorToProduction } from '@/utils/productionLogger',
-interface LogEntry {
-  id: string,
-  timestamp: string,
-  level: 'debug' | 'info' | 'warn' | 'error' | 'critical',
-  message: string,
-  category: string,
-  context?: Record<string unknown>,
-  stack?: string,
-  url?: string,
-  userAgent?: string,
-  userId?: string,
-  sessionId: string,
-  source: 'client' | 'server' | 'middleware' | 'api',
-  component?: string,
-  feature?: string,
-  error?: {
-    name: string,
-    message: string,
-    stack?: string,
-    cause?: unknown
-  },
-  performance?: {
-    memory?: number,
-    timing?: number,
-    fps?: number
-  }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  },;}
 ;
 interface LogsPageProps {;
   logs:LogEntry[],;
@@ -86,7 +43,6 @@ interface LogsPageProps {;
   totalCount:number,;
   lastUpdated:string;
 }
-<<<<<<< HEAD
 ;
 const LogLevelIcon = ({ level } { level:LogEntry['level'] }) => {;
   switch (level) {;
@@ -380,78 +336,32 @@ export default function LogsPage({ logs:initialLogs, errorCount, warningCount, t
                           <details className="mt-2">;
                             <summary className="cursor-pointer">Stack Trace</summary>;
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>;
-                          </details>;
-=======
-const _LogLevelIcon = (_{_level}: {_level: LogEntry['level']}) => {_switch (level) {
-    case 'debug':
-      return <Info className="h-4 w-4 text-blue-500" />,
-    case 'info':
-      return <Info className="h-4 w-4 text-green-500" />,
-    case 'warn':
-      return <AlertTriangle className="h-4 w-4 text-yellow-500" />,
-    case 'error':
-      return <AlertCircle className="h-4 w-4 text-red-500" />,
-    case 'critical':
-      return <XCircle className="h-4 w-4 text-red-700" />,
-    default: return <Info className="h-4 w-4 text-gray-500" />  }
-},
-
-const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
-  const colors = {
-    debug: 'bg-blue-100 text-blue-800',
-    info: 'bg-green-100 text-green-800',
-    warn: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    critical: 'bg-red-200 text-red-900'},
-      return <Info className="h-4 w-4 text-gray-500" />;}
-};
-
-const _LogLevelBadge = (_{_level}: {_level: LogEntry['level']}) => {_const _colors = {
-    debug: 'bg-blue-100 text-blue-800', _info: 'bg-green-100 text-green-800', _warn: 'bg-yellow-100 text-yellow-800', _error: 'bg-red-100 text-red-800', _critical: 'bg-red-200 text-red-900'};
-
-  return (
-    <Badge className={_colors[level]}>
-      {_level.toUpperCase()}
-    </Badge>
-  )
-},
-
-export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
-  const [logs, setLogs] = useState<LogEntry[]>(initialLogs),
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [levelFilter, setLevelFilter] = useState<string>('all'),
-  const [categoryFilter, setCategoryFilter] = useState<string>('all'),
-  const [sourceFilter, setSourceFilter] = useState<string>('all'),
-  const [isLoading, setIsLoading] = useState(false),
-
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean),
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean),
-
-  useEffect(() => {
-    let filtered = logs,
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(log =>
+                          </details>;    if (searchTerm) {
+      filtered = filtered.filter(log => 
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
+      )    }
 
-    // Level filter
     if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter)
+      filtered = filtered.filter(log => log.level === levelFilter);
     }
 
-    // Category filter
     if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter)
+      filtered = filtered.filter(log => log.category === categoryFilter);
     }
 
-    // Source filter
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter)
+    setFilteredLogs(filtered);
+  }, [logs, searchTerm, levelFilter, categoryFilter]);
+
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case 'debug': return 'bg-blue-100 text-blue-800';
+      case 'info': return 'bg-green-100 text-green-800';
+      case 'warn': return 'bg-yellow-100 text-yellow-800';
+      case 'error': return 'bg-red-100 text-red-800';
+      case 'critical': return 'bg-red-200 text-red-900';
+      default: return 'bg-gray-100 text-gray-800';
     }
     setFilteredLogs(filtered)
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),
@@ -514,9 +424,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           </Button>
           <Button onClick={exportLogs} variant=&quot;outline&quot;>
             <Download className=&quot;h-4 w-4 mr-2&quot; />            Export
-          </Button>
-        </div>
-      </div>
+          </Button>        </div>
 
       {/* Summary Cards */}
       <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4&quot;>        <Card>
@@ -610,10 +518,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 {sources.map(source => (
                   <SelectItem key={source} value={source}>{source}</SelectItem>                ))}
               </SelectContent>
-            </Select>
-          </div>
-        </CardContent>
-      </Card>
+            </Select>          </div>
+        </div>
 
       {_/* Logs Table */}
       <Card>
@@ -663,12 +569,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                           <details className=&quot;mt-2&quot;>
                             <summary className=&quot;cursor-pointer&quot;>Stack Trace</summary>
                             <pre className=&quot;mt-1 text-xs overflow-x-auto&quot;>{log.error.stack}</pre>                          </details>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                         )}
                       </div>;
                     </details>;
                   )}
-<<<<<<< HEAD
                   ;
                   <div className="flex items-center justify-between text-xs text-muted-foreground">;
                     <div>;
@@ -753,17 +657,7 @@ export const getServerSideProps:GetServerSideProps = async () => {;
         warningCount:0,;
         totalCount:0,;
         lastUpdated:new Date().toISOString()}},;
-  }
-=======
-                  
-                  <div className=&quot;flex items-center justify-between text-xs text-muted-foreground&quot;>
-                    <div>
-                      Session: {_log.sessionId}
-                      {_log.userId && ` • User: ${log.userId}`}
-                    </div>
-                    {_log.performance && (
-                      <div>{formatPerformance(log.performance)}</div>
-                    )}
+  }                    </div>
                   </div>
                   
                   {log.url && (
@@ -774,15 +668,14 @@ export const getServerSideProps:GetServerSideProps = async () => {;
               ))
             ) : (
               <div className=&quot;text-center text-muted-foreground py-8&quot;>
-                No logs found matching the current filters.
-              </div>
+                No logs found matching the current filters.              </div>
             )}
           </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
+        </div>
+      </main>
+    </>
+  );
+};
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
@@ -838,5 +731,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
         warningCount: 0,
         totalCount: 0,
         lastUpdated: new Date().toISOString()}}  }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }, 

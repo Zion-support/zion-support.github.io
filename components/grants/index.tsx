@@ -70,5 +70,4 @@ export default function GrantsPage() {
         {items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div>}
       </div>
     </EnhancedLayout>
-  )
-}
+  )}

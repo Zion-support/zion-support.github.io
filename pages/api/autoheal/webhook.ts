@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 ;
@@ -48,13 +47,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     console.error(e),;
     return res.status(500).json({ error:'Failed to process webhook' }),;
   }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { Octokit } from '@octokit/rest',
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
@@ -95,5 +88,3 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
   } catch (e) {
     console.error(e),
     return res.status(500).json({ error: 'Failed to process webhook' })  }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}

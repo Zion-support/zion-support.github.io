@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -58,30 +57,13 @@ export default function CompanyWorkspace() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
-  ),;
-=======
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate, useParams } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-import { useWhitelabel } from "@/context/WhitelabelContext",export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string },
-  const { user } = useAuth(),
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
-  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
-  
-  if (isLoading) {
-    return (
-      <div className=&quot;flex items-center justify-center min-h-screen&quot;>
-        <div className=&quot;animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan&quot;></div>
-      </div>
-    )
-  }
+  ),;  
+}//In white-label mode, use the tenant's theme instead of the company's theme const effectiveTheme = isWhitelabel ? {
+  primaryColor: tenant?.primary color || company.theme?.primaryColor;
+backgroundColor: company.theme?.backgroundColor || 'var (--background) ';
+textColor: company.theme?.textColor || 'var (--foreground) ' 
+}: company.theme;
+//Check if user has access to this company workspace const hasAccess = true, //For demo purposes, always grant access if (!hasAccess) {
   
   if (error || !company) {
     return <Navigate to="/not-found" />  }
@@ -136,5 +118,4 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
       <Footer />
     </ProtectedRoute>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

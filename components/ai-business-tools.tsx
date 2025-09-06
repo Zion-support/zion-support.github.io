@@ -436,5 +436,4 @@ href=&quot;/saas-marketplace&quot;
         </div>
       </section>
     </>
-  )
-}
+  )}

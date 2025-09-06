@@ -287,5 +287,4 @@ initial={{ opacity: 0 }}
         </motion.div>
       </div>
     </footer>
-  )
-}
+  )}

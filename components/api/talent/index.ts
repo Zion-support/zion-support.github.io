@@ -93,5 +93,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       return res.status(500).json({ error: e.message })    }
   }
 
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
-}
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}

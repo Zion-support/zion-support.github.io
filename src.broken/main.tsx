@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // // // console.log("main.tsx:Start"),;
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
@@ -82,19 +81,7 @@ try {;
         <pre>${(error as Error).stack}</pre>;
         <p>Please check the console for more details.</p>;
       </div>;
-    `,;
-=======
-// // // console.log("main.tsx: Start"),
-import React from 'react',
-import ReactDOM from 'react-dom/client',
-import App from './App.tsx',
-import './index.css',
-import { HelmetProvider } from 'react-helmet-async',
-import { BrowserRouter as Router } from 'react-router-dom',
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query',
-import { showApiError } from '@/utils/apiErrorHandler',
-import './utils/globalFetchInterceptor',import React from 'react';
-import ReactDOM from 'react-dom/client';
+    `,;import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './utils/globalFetchInterceptor';
@@ -171,7 +158,6 @@ try {_// Render the app with proper provider structure
         <p>Please check the console for more details.</p>
       </div>
     `
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
 }
 ;

@@ -49,5 +49,4 @@ export default function LanguageSwitchPrompt() {
           <button className=&quot;px-3 py-1 rounded border border-amber-300 dark:border-amber-700&quot; onClick={decline}>{t('lang.switch_decline')}</button>        </div>
       </div>
     </div>
-  )
-}
+  )}

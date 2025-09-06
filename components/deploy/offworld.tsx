@@ -39,5 +39,4 @@ export default function OffworldDeploy() {
           <div className=&quot;text-sm text-gray-600&quot;>You can open via any IPFS gateway or offline node.</div>        </div>
       )}
     </div>
-  )
-}
+  )}

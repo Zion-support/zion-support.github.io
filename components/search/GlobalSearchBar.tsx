@@ -81,5 +81,4 @@ type=&quot;button&quot;
         </div>;
       )}
     </form>
-  )
-}
+  )}

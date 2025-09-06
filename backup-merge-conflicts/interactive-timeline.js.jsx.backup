@@ -1,4 +1,32 @@
-
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence, useScroll} from 'framer-motion';
+import {Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function InteractiveTimeline("props": "any) {;
+    const [currentEventIndex", setCurrentEventIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(autoPlay);
+    const [playbackSpeed, setPlaybackSpeed] = useState(1);
+    const [selectedEvent, setSelectedEvent] = useState(null);
+    const [showFilters, setShowFilters] = useState(false);
+    const [filters, setFilters] = useState({;
+        status[],;
+        category[],;
+        priority[],;
+        "progress": "0;
+    "});
+    const [viewMode, setViewMode] = useState('timeline');
+    const [zoomLevel, setZoomLevel] = useState(1);
+    const timelineRef = useRef(null);
+    const {"scrollYProgress": "_scrollYProgress"} = useScroll({"target": "timelineRef",;
+        offset["start end", "end start"];});
+    // Filter events based on current filters;
+    const filteredEvents = events.filter(event => {const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
+        return matchesStatus && matchesCategory && matchesPriority});
+    // Auto-play functionality;
+    useEffect(() => {;
+        if (!isPlaying || filteredEvents.length === 0);
 
         progress: 0
     }
@@ -16,8 +44,6 @@
     // Auto-play functionality
     useEffect(() => {
         if (!isPlaying || filteredEvents.length === 0)
-
-            return;
         const interval = setInterval(() => {;
             setCurrentEventIndex(prev => {;
                 const next = (prev + 1) % filteredEvents.length;
@@ -78,13 +104,14 @@
     // Reset timeline;
     const resetTimeline = useCallback(() => {setCurrentEventIndex(0);
         setIsPlaying(false)}, []);
-
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+    // Export timeline;
+    const exportTimeline = useCallback(() => {;
+        const dataBlob = new Blob([dataStr], { "type": 'application/json' });
     // Export timeline
     const exportTimeline = useCallback(() => {
         const dataBlob = new Blob([dataStr], { type: 'application/json' }
     );
-
-        const url = URL.createObjectURL(dataBlob);
         const link = document.createElement('a');
         link.href = url;
         link.download = `timeline-${new Date().toISOString().split('T')[0]}.json`;
@@ -102,7 +129,16 @@
     }, []);
     if (!enabled || filteredEvents.length === 0);
         return null;
-
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+    return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>;
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">;
+        <div>;
+          <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>;
+          <p className="text-zinc-300 text-sm">Track project milestones and progress</p>;
+        </div>;
+        ;
+        <div className="flex items-center gap-2">;
     return (
         <div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>
       {/* Header */}
@@ -113,8 +149,6 @@
         </div>
         
         <div className="flex items-center gap-2">
-
-          {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">;
             {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode;
                 ? 'bg-zion-cyan text-zion-blue-dark';
@@ -485,6 +519,8 @@
 "}} exit = {;
   { "scale": "0.9",;
   "opacity": "0 ;
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
 
 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
@@ -520,8 +556,6 @@
                     <span className="text-zinc-400 text-sm">Participants:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {selectedEvent.participants.map((participant, index) => (<Badge key={index} variant="outline" className="text-xs">
-
-                          {participant}
                         </Badge>))}
                     </div>;
                   </div>)}
@@ -539,6 +573,35 @@
           </motion.div>)}
       </AnimatePresence>;
     </div>)}
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</div>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</div>
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
+:backup-merge-conflicts/interactive-timeline.js.jsx.backup
 
 </motion>
 </motion>

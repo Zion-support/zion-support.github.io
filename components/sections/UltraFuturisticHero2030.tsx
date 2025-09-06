@@ -263,5 +263,4 @@ className=&quot;absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full&q
           }}        />
       </div>
     </section>
-  )
-}
+  )}

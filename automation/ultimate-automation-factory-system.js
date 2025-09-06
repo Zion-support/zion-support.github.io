@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 import fs from 'fs',;
@@ -116,11 +114,7 @@ if (import.meta.url === `fil:e://${process.argv[1]}`) {,;
 };
 ,;
 export default UltimateAutomationFactory,;
-;
-=======
-=======
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-import fs from 'fs';
+;import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 ;
@@ -233,17 +227,11 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
   });
 };
 ;
-<<<<<<< HEAD
-export default UltimateAutomationFactory;    process.exit(0)
-  }).catch(error => {,
-    console.error('Ultimate Automation Factory: failed:', error),
+export default UltimateAutomationFactory;    process.exit(0)  }).catch(error => {,
+    console.error('Ultimate Automation Factory failed:', error),
     process.exit(1)
   })
-},
+};
 ,
 export default UltimateAutomationFactory,
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-export default UltimateAutomationFactory;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

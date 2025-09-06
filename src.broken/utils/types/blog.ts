@@ -3,23 +3,13 @@ export interface BlogSEO {;
   metaDescription:string,;
   ogImageUrl?:string;
 }
-<<<<<<< HEAD
 ;
 export type PostStatus = 'draft' | 'published',;
 ;
 export interface BlogMetrics {;
   views:number,;
   likes:number,;
-  shares:number;
-=======
-export type PostStatus = 'draft' | 'published',
-
-export interface BlogMetrics {
-  views: number,
-  likes: number,
-  shares: number
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  shares:number;}
 ;
 export interface BlogPost {;
   id:string,;
@@ -35,3 +25,4 @@ export interface BlogPost {;
   status:PostStatus,;
   metrics:BlogMetrics;
 }
+ export type PostStatus = 'draft' | 'published';

@@ -42,7 +42,6 @@ function scanTodos(root) {;
 ;
 function ghRequest(method, urlPath, token, body) {;
   const [owner, repo] = (process.env.GITHUB_REPOSITORY || '').split('/');
-<<<<<<< HEAD
   const options = {;
     hostname:'api.github.com',;
     path:`/repos/${owner}/${repo}${urlPath}`,;
@@ -51,19 +50,7 @@ function ghRequest(method, urlPath, token, body) {;
       'User-Agent':'zion-autobot',;
       'Accept':'application/vnd.github+json',;
       'Authorization':`Bearer ${token}`,;
-    },;
-=======
-  const options = {
-    hostname: 'api.github.com';
-    path: `/repos/${owner}/${repo}${urlPath}`;
-    method;
-    headers: {
-      'User-Agent': 'zion-autobot';
-      'Accept': 'application/vnd.github+json';
-      'Authorization': `Bearer ${token}`;
-    };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    },;  };
   return new Promise((resolve, reject) => {;
     const req = https.request(options, (res) => {;
       let data = '';

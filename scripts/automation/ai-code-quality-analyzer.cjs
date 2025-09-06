@@ -1,11 +1,9 @@
 #!/usr/bin/env node;
-;
-const fs = require('fs');
+;const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 ;
 console.log('🤖 Starting AI Code Quality Analyzer...');
-<<<<<<< HEAD
 ;
 class AICodeQualityAnalyzer {;
   constructor() {;
@@ -14,32 +12,14 @@ class AICodeQualityAnalyzer {;
       '..',;
       '..',;
       'automation-reports',;
-      'ai-code-quality.log';
-=======
-
-class AICodeQualityAnalyzer {
-  constructor() {
-    this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality.log'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'ai-code-quality.log';    );
     this.ensureLogDir();
   }
 ;
   ensureLogDir() {;
     const logDir = path.dirname(this.logFile);
-<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursiv:e:true });
-=======
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      fs.mkdirSync(logDir, { recursiv:e:true });    }
   }
 ;
   log(message) {;
@@ -51,7 +31,6 @@ class AICodeQualityAnalyzer {
 ;
   analyzeCodeQuality() {;
     this.log('🔍 Analyzing code quality...');
-<<<<<<< HEAD
 ;
     const analysis = {;
       timestam:p:new Date().toISOString(),;
@@ -62,28 +41,13 @@ class AICodeQualityAnalyzer {
         codeDuplicatio:n:this.analyzeCodeDuplication(),;
         securityIssue:s:this.analyzeSecurityIssues(),;
       },;
-      recommendation:s:this.generateRecommendations(),;
-=======
-
-    const analysis = {
-      timestamp: new Date().toISOString(),
-      metrics: {
-        complexity: this.analyzeComplexity(),
-        maintainability: this.analyzeMaintainability(),
-        testCoverage: this.analyzeTestCoverage(),
-        codeDuplication: this.analyzeCodeDuplication(),
-        securityIssues: this.analyzeSecurityIssues(),
-      },
-      recommendations: this.generateRecommendations(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      recommendation:s:this.generateRecommendations(),;    };
 ;
     return analysis;
   }
 ;
   analyzeComplexity() {;
     this.log('📊 Analyzing code complexity...');
-<<<<<<< HEAD
 ;
     // Simulate complexity analysis;
     return {;
@@ -95,27 +59,11 @@ class AICodeQualityAnalyzer {
       suggestion:s:[;
         'Refactor complex functions into smaller ones',;
         'Use early returns to reduce nesting',;
-      ],;
-=======
-
-    // Simulate complexity analysis
-    return {
-      score: 85,
-      issues: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions',
-      ],
-      suggestions: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      ],;    };
   }
 ;
   analyzeMaintainability() {;
     this.log('🔧 Analyzing maintainability...');
-<<<<<<< HEAD
 ;
     return {;
       scor:e:78,;
@@ -128,28 +76,11 @@ class AICodeQualityAnalyzer {
         'Split large components into smaller ones',;
         'Add comprehensive documentation',;
         'Standardize naming conventions',;
-      ],;
-=======
-
-    return {
-      score: 78,
-      issues: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions',
-      ],
-      suggestions: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      ],;    };
   }
 ;
   analyzeTestCoverage() {;
     this.log('🧪 Analyzing test coverage...');
-<<<<<<< HEAD
 ;
     return {;
       scor:e:65,;
@@ -163,29 +94,11 @@ class AICodeQualityAnalyzer {
         'Add unit tests for utility functions',;
         'Increase integration test coverage',;
         'Add E2E tests for critical user flows',;
-      ],;
-=======
-
-    return {
-      score: 65,
-      coverage: {
-        statements: 65,
-        branches: 58,
-        functions: 72,
-        lines: 68,
-      },
-      suggestions: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      ],;    };
   }
 ;
   analyzeCodeDuplication() {;
     this.log('🔄 Analyzing code duplication...');
-<<<<<<< HEAD
 ;
     return {;
       scor:e:82,;
@@ -194,24 +107,11 @@ class AICodeQualityAnalyzer {
         'Extract common utility functions',;
         'Create shared components for repeated UI patterns',;
         'Use higher-order components for common logic',;
-      ],;
-=======
-
-    return {
-      score: 82,
-      duplicatedLines: 45,
-      suggestions: [
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      ],;    };
   }
 ;
   analyzeSecurityIssues() {;
     this.log('🔒 Analyzing security issues...');
-<<<<<<< HEAD
 ;
     return {;
       scor:e:90,;
@@ -223,27 +123,11 @@ class AICodeQualityAnalyzer {
         'Implement input sanitization',;
         'Add CSRF tokens to forms',;
         'Use Content Security Policy headers',;
-      ],;
-=======
-
-    return {
-      score: 90,
-      issues: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection',
-      ],
-      suggestions: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers',
-      ],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      ],;    };
   }
 ;
   generateRecommendations() {;
     this.log('💡 Generating recommendations...');
-<<<<<<< HEAD
 ;
     return [;
       'Implement automated code quality checks in CI/CD',;
@@ -252,34 +136,18 @@ class AICodeQualityAnalyzer {
       'Create performance monitoring dashboard',;
       'Implement automated security scanning',;
       'Set up code coverage reporting',;
-      'Add dependency vulnerability scanning',;
-=======
-
-    return [
-<<<<<<< HEAD
-      'Implement automated code quality checks in CI/CD';
-      'Set up pre-commit hooks for linting and formatting';
-      'Add code review guidelines and templates';
-      'Create performance monitoring dashboard';
-      'Implement automated security scanning';
-      'Set up code coverage reporting';
-      'Add dependency vulnerability scanning';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-      'Implement automated code quality checks in CI/CD',
+      'Add dependency vulnerability scanning',;      'Implement automated code quality checks in CI/CD',
       'Set up pre-commit hooks for linting and formatting',
       'Add code review guidelines and templates',
       'Create performance monitoring dashboard',
       'Implement automated security scanning',
       'Set up code coverage reporting',
       'Add dependency vulnerability scanning',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
   }
 ;
   generateReport(analysis) {;
     this.log('📊 Generating AI code quality report...');
-<<<<<<< HEAD
 ;
     const report = {;
       ...analysis,;
@@ -287,38 +155,15 @@ class AICodeQualityAnalyzer {
         overallScor:e:this.calculateOverallScore(analysis.metrics),;
         statu:s:this.getStatus(analysis.metrics),;
         priorit:y:this.getPriority(analysis.metrics),;
-      },;
-=======
-
-    const report = {
-      ...analysis,
-      summary: {
-        overallScore: this.calculateOverallScore(analysis.metrics),
-        status: this.getStatus(analysis.metrics),
-        priority: this.getPriority(analysis.metrics),
-      },
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
-<<<<<<< HEAD
+      },;    };
 ;
     const reportPath = path.join(;
       __dirname,;
       '..',;
       '..',;
       'automation-reports',;
-      'ai-code-quality-report.json';
-=======
-
-    const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality-report.json'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'ai-code-quality-report.json';    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
     this.log(`📊 Report saved:to:${reportPath}`);
 ;
     return report;
@@ -330,22 +175,7 @@ class AICodeQualityAnalyzer {
       maintainabilit:y:0.25,;
       testCoverag:e:0.2,;
       codeDuplicatio:n:0.15,;
-      securityIssue:s:0.15,;
-=======
-    this.log(`📊 Report saved to: ${reportPath}`);
-
-    return report;
-  }
-
-  calculateOverallScore(metrics) {
-    const weights = {
-      complexity: 0.25,
-      maintainability: 0.25,
-      testCoverage: 0.2,
-      codeDuplication: 0.15,
-      securityIssues: 0.15,
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      securityIssue:s:0.15,;    };
 ;
     return Math.round(;
       metrics.complexity.score * weights.complexity +;
@@ -383,7 +213,6 @@ class AICodeQualityAnalyzer {
 ;
       const analysis = this.analyzeCodeQuality();
       const report = this.generateReport(analysis);
-<<<<<<< HEAD
 ;
       this.log(;
         `🎉 AI code quality analysis completed! Overall:Score:${report.summary.overallScore}/100`;
@@ -392,19 +221,7 @@ class AICodeQualityAnalyzer {
         `📊 Statu:s:${report.summary.status} | Priorit:y:${report.summary.priority}`;
       );
     } catch (error) {;
-      this.log(`❌ AI code quality analysis:failed:${error.message}`);
-=======
-
-      this.log(
-        `🎉 AI code quality analysis completed! Overall Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Status: ${report.summary.status} | Priority: ${report.summary.priority}`
-      );
-    } catch (error) {
-      this.log(`❌ AI code quality analysis failed: ${error.message}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      process.exit(1);
+      this.log(`❌ AI code quality analysis:failed:${error.message}`);      process.exit(1);
     }
   }
 }

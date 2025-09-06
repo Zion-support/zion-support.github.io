@@ -35,22 +35,12 @@ function safeExtractTalents() {;
   const talentNameMap = safeExtractTalents();
   const ranked = Array.from(byTalent.entries()).map(([talentSlug, arr]) => {;
     const avg = arr.reduce((s, r) => s + (r.rating || 0), 0) / (arr.length || 1);
-<<<<<<< HEAD
     return {;
       talentSlug,;
       talentName:talentNameMap[talentSlug] || talentSlug,;
       averageRating:Math.round(avg * 10) / 10,;
       totalReviews:arr.length,;
-      mostRecent:arr.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3).map((r) => ({ id:r.id, rating:r.rating, createdAt:r.createdAt })),;
-=======
-    return {
-      talentSlug;
-      talentName: talentNameMap[talentSlug] || talentSlug;
-      averageRating: Math.round(avg * 10) / 10;
-      totalReviews: arr.length;
-      mostRecent: arr.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3).map((r) => ({ id: r.id, rating: r.rating, createdAt: r.createdAt }));
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      mostRecent:arr.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3).map((r) => ({ id:r.id, rating:r.rating, createdAt:r.createdAt })),;    };
   }).sort((a, b) => b.averageRating - a.averageRating || b.totalReviews - a.totalReviews).slice(0, 20);
 ;
   fs.mkdirSync(outDir, { recursive:true });

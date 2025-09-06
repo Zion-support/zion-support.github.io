@@ -89,5 +89,4 @@ export async function getStaticProps() {_try {
       props: {
         updatedAt: null, _items: []},
       revalidate: 300};
-  }
-}
+  }}

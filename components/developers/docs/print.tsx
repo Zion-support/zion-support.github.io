@@ -41,5 +41,4 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-  )
-}
+  )}

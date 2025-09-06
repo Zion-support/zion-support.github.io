@@ -9,6 +9,7 @@ class ComprehensiveSyntaxFixer {;
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
+    this.startTime = Date.now();
   }
 ;
   log(message) {;
@@ -35,9 +36,9 @@ class ComprehensiveSyntaxFixer {;
       if (content !== originalContent) {;
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed:${path.relative(this.projectRoot, filePath)}`);
-        return true;
+        this.log(`✅ Fixed:${path.relative(this.projectRoot, filePath)}`);        return true;
       }
+
       return false;
     } catch (error) {;
       this.errors.push({ file:filePath, error:error.message });
@@ -48,9 +49,7 @@ class ComprehensiveSyntaxFixer {;
 ;
   fixCommonSyntaxIssues(content) {;
     // Remove merge conflict markers;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    ;
+    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    ;
     // Fix malformed semicolons and commas;
     content = content.replace(/,\s*;/g, ';');
     content = content.replace(/;\s*,/g, ',');
@@ -119,8 +118,7 @@ class ComprehensiveSyntaxFixer {;
   }
 ;
   getAllFiles(dir, extensions) {;
-    let files = [];
-    const items = fs.readdirSync(dir);
+    let files = [];    const items = fs.readdirSync(dir);
     ;
     for (const item of items) {;
       const fullPath = path.join(dir, item);
@@ -131,12 +129,98 @@ class ComprehensiveSyntaxFixer {;
         if (!['node_modules', '.next', '.git', 'dist', 'build', 'out'].includes(item)) {;
           files = files.concat(this.getAllFiles(fullPath, extensions));
         }
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);
+      } else if (extensions.some(ext => item.endsWith(ext))) {;        files.push(fullPath);
       }
     }
     ;
     return files;
+  }
+
+  async runTests() {
+    this.log('🧪 Running tests...');
+    
+    try {
+      execSync('npm run test:smoke', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 30000 
+      });
+      this.log('✅ Tests passed');
+      return true;
+    } catch (error) {
+      this.log(`❌ Tests failed: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  async buildProject() {
+    this.log('🏗️ Building project...');
+    
+    try {
+      execSync('npm run build', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 120000 
+      });
+      this.log('✅ Build successful');
+      return true;
+    } catch (error) {
+      this.log(`❌ Build failed: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  generateReport() {
+    const duration = Date.now() - this.startTime;
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      fixedFiles: this.fixedFiles.length,
+      errors: this.errors.length,
+      files: this.fixedFiles,
+      errorDetails: this.errors
+    };
+
+    const reportPath = path.join(this.projectRoot, 'syntax-fix-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📄 Report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Comprehensive Syntax Fixer...');
+    
+    try {
+      // Fix critical files first
+      await this.fixCriticalFiles();
+      
+      // Try to build
+      const buildSuccess = await this.buildProject();
+      
+      if (!buildSuccess) {
+        // If build fails, fix all files
+        await this.fixAllFiles();
+        
+        // Try building again
+        await this.buildProject();
+      }
+      
+      // Run tests
+      await this.runTests();
+      
+      // Generate report
+      const report = this.generateReport();
+      
+      this.log('🎉 Comprehensive Syntax Fixer completed!');
+      this.log(`📊 Fixed ${report.fixedFiles} files`);
+      this.log(`❌ ${report.errors} errors encountered`);
+      
+      return report;
+    } catch (error) {
+      this.log(`💥 Comprehensive Syntax Fixer failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
   }
 }
 ;

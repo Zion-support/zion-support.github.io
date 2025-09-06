@@ -177,5 +177,4 @@ export default function FuturisticFooter() {
       <div className=&quot;absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse&quot; />
       <div className=&quot;absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000&quot; />
       <div className=&quot;absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500&quot; />    </footer>
-  )
-}
+  )}

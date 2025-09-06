@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -306,62 +305,18 @@ export default function Revolutionary2025ServicesShowcase() {;
                         {service.popular && (;
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">;
                             POPULAR;
-                          </div>;
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Search, Filter, Star, Users, TrendingUp,
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi,
-  Package, Bot, Car, Building2, Monitor, Cpu,
-  Zap, Atom, Database, Cloud, Lock, Code,
-  Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react',
-
-// Import the new revolutionary services,
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = [
+                          </div>;  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    id: 'ai-consciousness',
-    title: '🧠 AI Consciousness & Emotional Intelligence',
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20'
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
-    id: 'quantum-emerging',
-    title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
-    icon: Atom,
-    color: 'from-blue-500 to-cyan-500',
-    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
-    gradient: 'from-blue-500/20 to-cyan-500/20'
-  },
-  {
-    id: 'space-tech',
-    title: '🚀 Space Technology & Satellite',
-    description: 'Space mission management and satellite operations',
-    icon: Rocket,
-    color: 'from-indigo-500 to-blue-500',
-    services: allServices.filter(s => s.category.includes('Space Technology')),
-    gradient: 'from-indigo-500/20 to-blue-500/20'
-  },
+  duration: 0.8 
+}
+}viewport= {
   {
     id: 'cybersecurity',
     title: '🔒 Next-Generation Cybersecurity',
@@ -602,35 +557,20 @@ key={service.id}
                         {service.popular && (
                           <div className=&quot;absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>                            POPULAR
                           </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                         )}
 ;
                         {/* Service Icon */}
-<<<<<<< HEAD
                         <div className="text-4xl mb-4">{service.icon}</div>;
 ;
                         {/* Service Title */}
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
-=======
-                        <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
-
-                        {/* Service Title */}
-                        <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors&quot;>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                          {service.name}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;                          {service.name}
                         </h3>;
 ;
                         {/* Tagline */}
-<<<<<<< HEAD
-                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-=======
-                        <p className=&quot;text-gray-300 text-sm mb-4 leading-relaxed&quot;>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                          {service.tagline}
+                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">;                          {service.tagline}
                         </p>;
 ;
                         {/* Price */}
-<<<<<<< HEAD
                         <div className="text-3xl font-bold text-white mb-4">;
                           {service.price}
                           <span className="text-lg text-gray-400 font-normal">{service.period}</span>;
@@ -644,28 +584,11 @@ key={service.id}
                               <li key={featureIndex} className="flex items-center text-xs text-gray-300">;
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
                                 {feature}
-                              </li>;
-=======
-                        <div className=&quot;text-3xl font-bold text-white mb-4&quot;>
-                          {service.price}
-                          <span className=&quot;text-lg text-gray-400 font-normal&quot;>{service.period}</span>
-                        </div>
-
-                        {/* Features */}
-                        <div className=&quot;space-y-2 mb-6&quot;>
-                          <h4 className=&quot;text-sm font-semibold text-purple-400&quot;>Key Features</h4>
-                          <ul className=&quot;space-y-1&quot;>
-                            {service.features.slice(0, 4).map((feature, featureIndex) => (
-                              <li key={featureIndex} className=&quot;flex items-center text-xs text-gray-300&quot;>
-                                <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
-                                {feature}                              </li>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                            ))}
+                              </li>;                            ))}
                           </ul>;
                         </div>;
 ;
                         {/* Market Data */}
-<<<<<<< HEAD
                         <div className="grid grid-cols-2 gap-3 mb-6">;
                           <div className="bg-gray-800/50 rounded-lg p-3">;
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>;
@@ -766,111 +689,13 @@ key={service.id}
                                 {service.technology.slice(0, 6).map((tech, techIndex) => (;
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">;
                                     {tech}
-                                  </span>;
-=======
-                        <div className=&quot;grid grid-cols-2 gap-3 mb-6&quot;>
-                          <div className=&quot;bg-gray-800/50 rounded-lg p-3&quot;>
-                            <div className=&quot;text-xs text-gray-400 mb-1&quot;>Market Size</div>
-                            <div className=&quot;text-sm text-gray-200&quot;>{service.marketSize}</div>
-                          </div>
-                          <div className=&quot;bg-gray-800/50 rounded-lg p-3&quot;>
-                            <div className=&quot;text-xs text-gray-400 mb-1&quot;>Growth Rate</div>
-                            <div className=&quot;text-sm text-gray-200&quot;>{service.growthRate}</div>
-                          </div>
-                        </div>
-
-                        {/* Action Buttons */}
-                        <div className=&quot;flex space-x-3 mb-4&quot;>
-                          <Link href={service.link} target=&quot;blank&quot; rel=&quot;noopener noreferrer&quot;>
-                            <button className=&quot;flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm&quot;>
-                              <ExternalLink className=&quot;w-4 h-4 mr-2 inline&quot; />                              Learn More
-                            </button>
-                          </Link>
-                          <Link href=&quot;/contact&quot;>
-                            <button className=&quot;px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300 text-sm&quot;>
-                              Contact
-                            </button>
-                          </Link>
-                        </div>
-
-                        {/* Contact Info */}
-                        <div className=&quot;grid grid-cols-1 gap-2 text-xs&quot;>
-                          <div className=&quot;flex items-center gap-2 text-purple-400&quot;>
-                            <Phone className=&quot;w-3 h-3&quot; />
-                            <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className=&quot;hover:text-white&quot;>
-                              {service.contactInfo.mobile}
-                            </Link>
-                          </div>
-                          <div className=&quot;flex items-center gap-2 text-blue-400&quot;>
-                            <Mail className=&quot;w-3 h-3&quot; />
-                            <a href={`mailto:${service.contactInfo.email}`} className=&quot;hover:text-white&quot;>
-                              {service.contactInfo.email}
-                            </Link>                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              ) : (
-                <motion.div,
-key=&quot;list&quot;
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className=&quot;space-y-6&quot;                >
-                  {sortedServices.map((service, index) => (
-                    <motion.div,
-key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className=&quot;bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 rounded-xl p-6 backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300&quot;
-                    >
-                      <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
-                        {/* Left Column */}
-                        <div className=&quot;flex-1&quot;>
-                          <div className=&quot;flex items-start gap-4 mb-4&quot;>
-                            <div className=&quot;text-4xl&quot;>{service.icon}</div>
-                            <div className=&quot;flex-1&quot;>
-                              <div className=&quot;flex items-center gap-3 mb-2&quot;>
-                                <h3 className=&quot;text-xl font-bold text-white&quot;>{service.name}</h3>
-                                {service.popular && (
-                                  <span className=&quot;bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full&quot;>                                    POPULAR
-                                  </span>
-                                )}
-                              </div>
-                              <p className=&quot;text-gray-300 text-sm&quot;>{service.tagline}</p>
-                            </div>
-                          </div>
-                          
-                          <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>{service.description}</p>                          
-                          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
-                            <div>
-                              <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Key Features</h4>
-                              <ul className=&quot;space-y-1&quot;>
-                                {service.features.slice(0, 4).map((feature, featureIndex) => (
-                                  <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                                    <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-                                    {feature}                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div>
-                              <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Technology Stack</h4>
-                              <div className=&quot;flex flex-wrap gap-2&quot;>
-                                {service.technology.slice(0, 6).map((tech, techIndex) => (
-                                  <span key={techIndex} className=&quot;bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded&quot;>
-                                    {tech}                                  </span>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                                ))}
+                                  </span>;                                ))}
                               </div>;
                             </div>;
                           </div>;
                         </div>;
 ;
                         {/* Right Column */}
-<<<<<<< HEAD
                         <div className="lg:w-80 space-y-4">;
                           {/* Price */}
                           <div className="text-center">;
@@ -931,74 +756,12 @@ key={service.id}
                           </div>;
                         </div>;
                       </div>;
-                    </motion.div>;
-=======
-                        <div className=&quot;lg:w-80 space-y-4&quot;>
-                          {/* Price */}
-                          <div className=&quot;text-center&quot;>
-                            <div className=&quot;text-3xl font-bold text-white mb-1&quot;>
-                              {service.price}
-                              <span className=&quot;text-lg text-gray-400 font-normal&quot;>{service.period}</span>                            </div>
-                            <div className=&quot;text-sm text-gray-400&quot;>30-day free trial</div>
-                          </div>
-
-                          {/* Market Data */}
-                          <div className=&quot;grid grid-cols-2 gap-3&quot;>
-                            <div className=&quot;bg-gray-800/50 rounded-lg p-3 text-center&quot;>
-                              <div className=&quot;text-xs text-gray-400 mb-1&quot;>Market Size</div>
-                              <div className=&quot;text-sm text-gray-200&quot;>{service.marketSize}</div>
-                            </div>
-                            <div className=&quot;bg-gray-800/50 rounded-lg p-3 text-center&quot;>
-                              <div className=&quot;text-xs text-gray-400 mb-1&quot;>Growth Rate</div>
-                              <div className=&quot;text-sm text-gray-200&quot;>{service.growthRate}</div>
-                            </div>
-                          </div>
-
-                          {/* ROI */}
-                          <div className=&quot;bg-green-500/20 border border-green-500/30 rounded-lg p-3&quot;>
-                            <div className=&quot;text-xs text-green-400 mb-1&quot;>Expected ROI</div>
-                            <div className=&quot;text-sm text-green-300&quot;>{service.roi}</div>
-                          </div>
-
-                          {/* Action Buttons */}
-                          <div className=&quot;space-y-3&quot;>
-                            <Link href={service.link} target=&quot;blank&quot; rel=&quot;noopener noreferrer&quot;>
-                              <button className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300&quot;>
-                                <ExternalLink className=&quot;w-4 h-4 mr-2 inline&quot; />                                Learn More
-                              </button>
-                            </Link>
-                            <Link href=&quot;/contact&quot;>
-                              <button className=&quot;w-full px-4 py-3 border border-gray-600 text-gray-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300&quot;>
-                                Contact Sales
-                              </button>
-                            </Link>
-                          </div>
-
-                          {/* Contact Info */}
-                          <div className=&quot;space-y-2 text-xs&quot;>
-                            <div className=&quot;flex items-center gap-2 text-purple-400&quot;>
-                              <Phone className=&quot;w-3 h-3&quot; />
-                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className=&quot;hover:text-white&quot;>
-                                {service.contactInfo.mobile}
-                              </Link>
-                            </div>
-                            <div className=&quot;flex items-center gap-2 text-blue-400&quot;>
-                              <Mail className=&quot;w-3 h-3&quot; />
-                              <a href={`mailto:${service.contactInfo.email}`} className=&quot;hover:text-white&quot;>
-                                {service.contactInfo.email}
-                              </Link>                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                  ))}
+                    </motion.div>;                  ))}
                 </motion.div>;
               )}
             </AnimatePresence>;
 ;
             {/* No Results */}
-<<<<<<< HEAD
             {filteredServices.length === 0 && (;
               <div className="text-center py-16">;
                 <div className="text-6xl mb-4">🔍</div>;
@@ -1013,29 +776,11 @@ key={service.id}
                 >;
                   Clear Filters;
                 </button>;
-              </div>;
-=======
-            {filteredServices.length === 0 && (
-              <div className=&quot;text-center py-16&quot;>
-                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
-                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
-                <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search terms or filters</p>
-                <button,
-onClick={() => {
-                    setSearchTerm(''),
-                    setSelectedCategory('all')
-                  }}
-                  className=&quot;bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors&quot;                >
-                  Clear Filters
-                </button>
-              </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            )}
+              </div>;            )}
           </div>;
         </section>;
 ;
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">;
           <div className="container mx-auto text-center">;
             <motion.div;
@@ -1097,66 +842,7 @@ onClick={() => {
         </section>;
       </div>;
     </>;
-  );
-=======
-        <section className=&quot;py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot;>
-          <div className=&quot;container mx-auto text-center&quot;>            <motion.div,
-initial={_{ opacity: 0, y: 30}}
-              whileInView={_{ opacity: 1, y: 0}}
-              transition={_{ duration: 0.8}}
-              viewport={_{ once: true}}
-            >
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-                Ready to Transform Your Business?
-              </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-                Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation.
-              </p>
-              
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8&quot;>
-                <div className=&quot;bg-gray-800/50 border border-gray-700/50 rounded-lg p-6&quot;>
-                  <Phone className=&quot;w-8 h-8 text-purple-400 mx-auto mb-4&quot; />
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Call Us</h3>
-                  <p className=&quot;text-gray-300 mb-3&quot;>{contactInfo.mobile}</p>
-                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className=&quot;text-purple-400 hover:text-purple-300&quot;>                    Call Now →
-                  </Link>
-                </div>
-                
-                <div className=&quot;bg-gray-800/50 border border-gray-700/50 rounded-lg p-6&quot;>
-                  <Mail className=&quot;w-8 h-8 text-blue-400 mx-auto mb-4&quot; />
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Email Us</h3>
-                  <p className=&quot;text-gray-300 mb-3&quot;>{contactInfo.email}</p>
-                  <a href={`mailto:${contactInfo.email}`} className=&quot;text-blue-400 hover:text-blue-300&quot;>                    Send Email →
-                  </Link>
-                </div>
-                
-                <div className=&quot;bg-gray-800/50 border border-gray-700/50 rounded-lg p-6&quot;>
-                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-4&quot; />
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Visit Us</h3>
-                  <p className=&quot;text-gray-300 mb-3 text-sm&quot;>{contactInfo.address}</p>
-                  <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-green-400 hover:text-green-300&quot;>                    Get Directions →
-                  </Link>
-                </div>
-              </div>
-
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-                <Link href=&quot;/contact&quot;>
-                  <button className=&quot;bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;>
-                    Start Your Transformation
-                  </button>
-                </Link>
-                <Link href={contactInfo.website}>
-                  <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover: border-purple-500 hover:text-purple-400 transition-all duration-300 text-lg">                <Link href={contactInfo.website}>
-                  <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300 text-lg">
-                    Visit Website
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  );  once: true 
+}
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now → </Link> </div> Send Email → </Link> </div> Get Directions → </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
 }

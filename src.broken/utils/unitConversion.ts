@@ -15,7 +15,6 @@ export function kgToLbs(kg:number):number {;
 export function lbsToKg(lbs:number):number {;
   return lbs / 2.20462;
 }
-<<<<<<< HEAD
 ;
 export function formatDimensions(;
   widthCm:number,;
@@ -36,24 +35,9 @@ export function formatWeight(weightKg:number, unit:UnitSystem):string {;
   return unit === 'imperial';
     ? `${kgToLbs(weightKg).toFixed(1)} lb`;
     :`${weightKg} kg`,;
+}export type UnitSystem = 'metric' | 'imperial';
+}export function formatWeight (weightKg: number, unit: UnitSystem) : string {
+  return unit === 'imperial' ? `$ {
+  kgToLbs (weightKg) .toFixed (1) 
+}lb` 
 }
-=======
-
-export function formatDimensions(
-  widthCm: number,
-  heightCm: number,
-  depthCm: number,
-  unit: UnitSystem
-): string {
-  if (unit === 'imperial') {
-    const w = cmToIn(widthCm).toFixed(1),
-    const h = cmToIn(heightCm).toFixed(1),
-    const d = cmToIn(depthCm).toFixed(1),
-    return `${w} x ${h} x ${d} in`
-  }
-  return `${widthCm} x ${heightCm} x ${depthCm} cm`}
-
-export function formatWeight(_weightKg: number, _unit: UnitSystem): string {_return unit === 'imperial'
-    ? `${kgToLbs(weightKg).toFixed(1)} lb`
-    : `${weightKg} kg`}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -85,5 +85,4 @@ export default function TalentGrid(_{region, service}: Props) {const items = Rea
         </div>;
       ))}
     </div>
-  )
-}
+  )}

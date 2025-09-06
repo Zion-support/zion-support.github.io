@@ -22,5 +22,4 @@ export default function AutomationStatusPage() {
         <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
       )}
     </div>
-  )
-}
+  )}

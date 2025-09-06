@@ -521,5 +521,4 @@ export default function AISeosuitePage() {_const _features = [
         </div>
       </section>
     </>
-  )
-}
+  )}

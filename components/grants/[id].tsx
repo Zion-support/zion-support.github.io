@@ -100,5 +100,4 @@ export default function GrantDetailPage() {
         </aside>
       </div>
     </EnhancedLayout>
-  )
-}
+  )}

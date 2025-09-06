@@ -5,7 +5,6 @@ const { chromium } = require('playwright');
 ;
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 const OUT_DIR = path.join(process.cwd(), 'public', 'automation-reports', 'visual');
-<<<<<<< HEAD
 ;
 const ROUTES = Array.from(new Set([;
   '/',;
@@ -15,20 +14,7 @@ const ROUTES = Array.from(new Set([;
   '/contact',;
   '/products',;
   '/services',;
-  '/blog';
-=======
-
-const ROUTES = Array.from(new Set([
-  '/';
-  '/dashboard/client';
-  '/dashboard/talent';
-  '/about';
-  '/contact';
-  '/products';
-  '/services';
-  '/blog'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-]));
+  '/blog';]));
 ;
 function safeName(route) {;
   return route.replace(/\//g, '_').replace(/^_?$/, 'home') + '.png';
@@ -62,18 +48,10 @@ async function capture() {;
   await browser.close();
 ;
   const reportPath = path.join(process.cwd(), 'public', 'automation-reports', 'visual-report.json');
-<<<<<<< HEAD
   await fs.promises.writeFile(reportPath, JSON.stringify({;
     generatedAt:new Date().toISOString(),;
     baseUrl:BASE_URL,;
-    results,;
-=======
-  await fs.promises.writeFile(reportPath, JSON.stringify({
-    generatedAt: new Date().toISOString();
-    baseUrl: BASE_URL;
-    results;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  }, null, 2));
+    results,;  }, null, 2));
   console.log('Report written:', path.relative(process.cwd(), reportPath));
 }
 ;

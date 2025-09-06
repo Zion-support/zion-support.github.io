@@ -14,5 +14,4 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className=&quot;border rounded-md p-3 text-sm&quot;>
       <blockquote className=&quot;italic opacity-90&quot;>“{quote}”</blockquote>
       <figcaption className=&quot;mt-2 font-medium opacity-80&quot;>— {author}</figcaption>    </figure>
-  )
-}
+  )}

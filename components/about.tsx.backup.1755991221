@@ -16,5 +16,4 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-=======
 export default function About() { return null; }

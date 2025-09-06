@@ -51,14 +51,8 @@ class AppImprover {;
       } else {;
         this.issues.push('next.config.js not found');
       }
-<<<<<<< HEAD
     } catch (error) {;
-      this.issues.push(`Error reading next.config.j:s:${error.message}`);
-=======
-    } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.issues.push(`Error reading next.config.j:s:${error.message}`);    }
   }
 ;
   checkPackageJson() {;
@@ -79,14 +73,8 @@ class AppImprover {;
       }
 ;
       this.log('✅ Package.json analyzed');
-<<<<<<< HEAD
     } catch (error) {;
-      this.issues.push(`Error reading package.jso:n:${error.message}`);
-=======
-    } catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.issues.push(`Error reading package.jso:n:${error.message}`);    }
   }
 ;
   checkAppStructure() {;
@@ -94,14 +82,8 @@ class AppImprover {;
     requiredDirs.forEach(dir => {;
       if (fs.existsSync(dir)) {;
         this.log(`✅ ${dir} directory exists`);
-<<<<<<< HEAD
       } else {;
-        this.issues.push(`Missing:directory:${dir}`);
-=======
-      } else {
-        this.issues.push(`Missing directory: ${dir}`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      }
+        this.issues.push(`Missing:directory:${dir}`);      }
     });
   }
 ;
@@ -122,7 +104,6 @@ class AppImprover {;
     // Check for unused dependencies;
     this.improvements.push('Run npm audit to check for unused dependencies');
   }
-<<<<<<< HEAD
 ;
   createOptimizedNextConfig() {;
     const optimizedConfig = `/** @type {import('next').NextConfig} */;
@@ -172,63 +153,7 @@ const nextConfig = {;
         ...config.resolve.fallback,;
         f:s:false,;
         ne:t:false,;
-        tl:s:false;
-=======
-
-  createOptimizedNextConfig() {
-    const optimizedConfig = `/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: false },
-  typescript: { ignoreBuildErrors: false },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  
-  // Image optimization
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  },
-  
-  // Security headers
-  async headers() {
-    return [{
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
-        ]
-      }
-    ];
-  },
-  
-  // Bundle analyzer
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      };
+        tl:s:false;      };
     }
     return config;
   }
@@ -256,12 +181,7 @@ class PerformanceOptimizer {;
     if (fs.existsSync(buildDir)) {;
       const stats = this.getDirectorySize(buildDir);
       this.metrics.bundleSize = stats;
-<<<<<<< HEAD
-      console.log(\`Bundle:size:\${(stats / 1024 / 1024).toFixed(2)} MB\`);
-=======
-      console.log(\`Bundle size: \${(stats / 1024 / 1024).toFixed(2)} MB\`);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      console.log(\`Bundle:size:\${(stats / 1024 / 1024).toFixed(2)} MB\`);    }
   }
 ;
   getDirectorySize(dirPath) {;
@@ -281,22 +201,12 @@ class PerformanceOptimizer {;
     ;
     return totalSize;
   }
-<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
       timestam:p:new Date().toISOString(),;
       metric:s:this.metrics,;
-      recommendation:s:this.generateRecommendations();
-=======
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      recommendations: this.generateRecommendations()
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
+      recommendation:s:this.generateRecommendations();    };
 ;
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
     console.log('Performance report generated');
@@ -341,30 +251,16 @@ class SecurityAuditor {;
 ;
   async runAudit() {;
     console.log('🔒 Running security audit...');
-<<<<<<< HEAD
     try {;
-      const result = execSync('npm audit --json', { encodin:g:'utf8' });
-=======
-    try {
-      const result = execSync('npm audit --json', { encoding: 'utf8' });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      const audit = JSON.parse(result);
+      const result = execSync('npm audit --json', { encodin:g:'utf8' });      const audit = JSON.parse(result);
       ;
       if (audit.vulnerabilities) {;
         Object.keys(audit.vulnerabilities).forEach(pkg => {;
           const vuln = audit.vulnerabilities[pkg];
-<<<<<<< HEAD
           this.issues.push({;
             packag:e:pkg,;
             severit:y:vuln.severity,;
-            descriptio:n:vuln.description;
-=======
-          this.issues.push({
-            package: pkg,
-            severity: vuln.severity,
-            description: vuln.description
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-          });
+            descriptio:n:vuln.description;          });
         });
       }
       ;
@@ -377,21 +273,14 @@ class SecurityAuditor {;
   async fixIssues() {;
     if (this.issues.length > 0) {;
       console.log('🔧 Attempting to fix security issues...');
-<<<<<<< HEAD
       try {;
-        execSync('npm audit fix', { stdi:o:'inherit' });
-=======
-      try {
-        execSync('npm audit fix', { stdio: 'inherit' });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-        this.fixes.push('Applied automatic security fixes');
+        execSync('npm audit fix', { stdi:o:'inherit' });        this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {;
         console.log('❌ Could not apply automatic fixes');
       }
     }
   }
-<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
@@ -400,19 +289,7 @@ class SecurityAuditor {;
       fixe:s:this.fixes,;
       summar:y:{;
         totalIssue:s:this.issues.length,;
-        fixesApplie:d:this.fixes.length;
-=======
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.issues,
-      fixes: this.fixes,
-      summary: {
-        totalIssues: this.issues.length,
-        fixesApplied: this.fixes.length
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      }
+        fixesApplie:d:this.fixes.length;      }
     };
 ;
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
@@ -432,7 +309,6 @@ module.exports = SecurityAuditor;`;
     fs.writeFileSync('scripts/security-auditor.js', securityScript);
     this.log('✅ Created security auditor script');
   }
-<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
@@ -442,33 +318,11 @@ module.exports = SecurityAuditor;`;
       summar:y:{;
         totalIssue:s:this.issues.length,;
         totalImprovement:s:this.improvements.length,;
-      },;
-=======
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.issues,
-      improvements: this.improvements,
-      summary: {
-        totalIssues: this.issues.length,
-        totalImprovements: this.improvements.length,
-      },
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    };
-<<<<<<< HEAD
+      },;    };
 ;
     fs.writeFileSync(;
       'app-analysis-report.json',;
-      JSON.stringify(report, null, 2);
-=======
-
-    fs.writeFileSync(
-      'app-analysis-report.json',
-      JSON.stringify(report, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
-<<<<<<< HEAD
+      JSON.stringify(report, null, 2);    );
 ;
     console.log('\n📊 App Analysis:Report:');
     console.log(`❌ Issues:found:${this.issues.length}`);
@@ -482,24 +336,7 @@ module.exports = SecurityAuditor;`;
     if (this.improvements.length > 0) {;
       console.log('\nImprovement:s:');
       this.improvements.forEach(improvement =>;
-        console.log(`  - ${improvement}`);
-=======
-
-    console.log('\n📊 App Analysis Report:');
-    console.log(`❌ Issues found: ${this.issues.length}`);
-    console.log(`🚀 Improvements suggested: ${this.improvements.length}`);
-
-    if (this.issues.length > 0) {
-      console.log('\nIssues:');
-      this.issues.forEach(issue => console.log(`  - ${issue}`));
-    }
-
-    if (this.improvements.length > 0) {
-      console.log('\nImprovements:');
-      this.improvements.forEach(improvement =>
-        console.log(`  - ${improvement}`)
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      );
+        console.log(`  - ${improvement}`);      );
     }
   }
 ;
@@ -518,14 +355,8 @@ module.exports = SecurityAuditor;`;
 ;
 if (require.main === module) {;
   const improver = new AppImprover();
-<<<<<<< HEAD
   improver.run().catch(error => {;
-    console.error('App improvement:failed:', error);
-=======
-  improver.run().catch(error => {
-    console.error('App improvement failed:', error);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    process.exit(1);
+    console.error('App improvement:failed:', error);    process.exit(1);
   });
 }
 ;

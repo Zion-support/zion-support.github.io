@@ -115,5 +115,4 @@ export default function GrantsAdminPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
-}
+  )}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',;
 ;
 function getRefCode():string {;
@@ -88,24 +87,68 @@ function Stat({ label, value } { label:string, value:number | string }) {;
       <div className="text-2xl font-semibold">{value}</div>;
     </div>;
   ),;
-=======
-import { useEffect, useMemo, useState } from 'react',
-
-function getRefCode(): string {
-  if (typeof window === 'undefined') return '',
-  return localStorage.getItem('ref_code') || ''
+interface AffiliateStats {
+  totalEarnings: number;
+  monthlyEarnings: number;
+  totalReferrals: number;
+  conversionRate: number;
+  pendingPayouts: number;
 }
 
-export default function AffiliateDashboard() {
-  const [code, setCode] = useState<string>(''),
-  const [metrics, setMetrics] = useState<any>(null),
-  const [amount, setAmount] = useState<string>(''),
-  const [msg, setMsg] = useState<string>(''),
+interface Referral {
+  id: string;
+  email: string;
+  status: 'pending' | 'converted' | 'paid';
+  commission: number;
+  date: string;
+}
+
+const mockStats: AffiliateStats = {
+  totalEarnings: 12500,
+  monthlyEarnings: 2500,
+  totalReferrals: 45,
+  conversionRate: 12.5,
+  pendingPayouts: 750
+};
+
+const mockReferrals: Referral[] = [
+  {
+    id: '1',
+    email: 'user1@example.com',
+    status: 'converted',
+    commission: 500,
+    date: '2025-01-15T10:00:00Z'
+  },
+  {
+    id: '2',
+    email: 'user2@example.com',
+    status: 'pending',
+    commission: 250,
+    date: '2025-01-14T15:30:00Z'
+  },
+  {
+    id: '3',
+    email: 'user3@example.com',
+    status: 'paid',
+    commission: 750,
+    date: '2025-01-13T09:15:00Z'
+  }
+];
+
+const AffiliateDashboard: React.FC = () => {
+  const [stats, setStats] = useState<AffiliateStats | null>(null);
+  const [referrals, setReferrals] = useState<Referral[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'overview' | 'referrals' | 'payouts'>('overview');
 
   useEffect(() => {
-    const c = getRefCode(),
-    setCode(c)
-  }, []),
+    // Simulate loading data
+    setTimeout(() => {
+      setStats(mockStats);
+      setReferrals(mockReferrals);
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     if (!code) return,
@@ -128,13 +171,10 @@ export default function AffiliateDashboard() {
       if (!res.ok) throw new Error(json.error || 'Failed'),
       setMsg('Payout requested')
     } catch (e: any) {
-      setMsg(e?.message || 'Error')
-    }
-  }
+      setMsg(e?.message || 'Error')    }
+  };
 
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
-
-  if (!code) {
+  if (loading) {
     return (
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -158,12 +198,18 @@ export default function AffiliateDashboard() {
         <div className=&quot;flex items-center justify-between&quot;>
           <div>
             <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>Estimated Payout</div>
-            <div className=&quot;text-2xl font-bold&quot;>{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
+            <div className=&quot;text-2xl font-bold&quot;>{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>          </div>
+          <div className="bg-white rounded-lg shadow p-6">
+            <h3 className="text-sm font-medium text-gray-500 mb-2">Monthly Earnings</h3>
+            <p className="text-3xl font-bold text-blue-600">${stats?.monthlyEarnings.toLocaleString()}</p>
           </div>
-          <div className=&quot;flex gap-2&quot;>
-            <input className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Amount (optional)&quot; value={amount} onChange={e=>setAmount(e.target.value)} />
-            <button className=&quot;px-3 py-2 rounded bg-indigo-600 text-white&quot; onClick={requestPayout}>Request Payout</button>
-            <a href={exportUrl} className=&quot;px-3 py-2 rounded border&quot;>Export CSV</Link>
+          <div className="bg-white rounded-lg shadow p-6">
+            <h3 className="text-sm font-medium text-gray-500 mb-2">Total Referrals</h3>
+            <p className="text-3xl font-bold">{stats?.totalReferrals}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-6">
+            <h3 className="text-sm font-medium text-gray-500 mb-2">Conversion Rate</h3>
+            <p className="text-3xl font-bold text-purple-600">{stats?.conversionRate}%</p>
           </div>
         </div>
         {msg && <p className=&quot;mt-2 text-sm&quot;>{msg}</p>}      </div>
@@ -177,5 +223,4 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{label}</div>
       <div className=&quot;text-2xl font-semibold&quot;>{value}</div>    </div>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

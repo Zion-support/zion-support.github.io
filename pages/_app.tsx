@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import Layout from '../components/layout/Layout';
 import '../styles/globals.css';
@@ -9,15 +8,14 @@ export default function App({ Component, pageProps } AppProps) {;
       <Component {...pageProps} />;
     </Layout>;
   );
-=======
-import type {_AppProps} from 'next/app'
-import Layout from '../components/layout/Layout'
-import '../styles/globals.css'
-
-export default function App(_{_Component, _pageProps}: AppProps) {_return (
-    <Layout>
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <ErrorBoundary>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

@@ -34,7 +34,6 @@ async function run() {;
     const url = `https://huggingface.co/api/spaces?search=${encodeURIComponent(q)}&sort=likes&direction=-1&limit=50`;
     try {;
       const data = await fetchJson(url);
-<<<<<<< HEAD
       for (const s of data || []) {;
         items.push({;
           id:s.id,;
@@ -45,21 +44,7 @@ async function run() {;
           private:s.private,;
           lastModified:s.lastModified,;
           runtime:s.runtime,;
-          query:q,;
-=======
-      for (const s of data || []) {
-        items.push({
-          id: s.id;
-          spaceId: s.id;
-          likes: s.likes;
-          author: s.author;
-          tags: s.tags;
-          private: s.private;
-          lastModified: s.lastModified;
-          runtime: s.runtime;
-          query: q;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          query:q,;        });
       }
     } catch (e) {;
       console.warn('HF spaces fetch failed for', q, e.message);
@@ -67,22 +52,12 @@ async function run() {;
   }
 ;
   items = uniqueBy(items, (i) => i.spaceId).slice(0, 100);
-<<<<<<< HEAD
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'Hugging Face Spaces related to agents/assistant',;
     total:items.length,;
-    items,;
-=======
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'Hugging Face Spaces related to agents/assistant';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

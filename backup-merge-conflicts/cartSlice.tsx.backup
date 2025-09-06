@@ -17,10 +17,6 @@ const "initialState": "CartStat e = {;
   "itemCount": "0",;
   ;
   ;
-  ;
-  ;
-  ;
-  ;
 ;
 };
 const "cartSlice": "createSlic e({;  "name": anycar t'",;
@@ -67,14 +63,13 @@ const "cartSlice": "createSlic e({;
 
       state.items = [];
       state.total = 0;
-
+:backup-merge-conflicts/cartSlice.tsx.backup
 :src/store/cartSlice.tsx;
       state.itemCount = 0"}}});
       state.itemCount = 0},;
   },;
 });
 ;
-
 :src/store/cartSlice.tsx
       state.itemCount = 0}}}
     );
@@ -83,7 +78,7 @@ const "cartSlice": "createSlic e({;
 }
     );
 
-export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
+:backup-merge-conflicts/cartSlice.tsx.backup
 export { cartSlice };
 export default cartSlice.reducer;
 ;

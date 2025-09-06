@@ -258,5 +258,4 @@ export default function AIFinancialPlanningPlatform() {_const _features = [
         </section>
       </div>
     </>
-  )
-}
+  )}

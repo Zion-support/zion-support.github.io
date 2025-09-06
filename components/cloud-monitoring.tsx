@@ -480,5 +480,4 @@ export default function CloudMonitoringPage() {_const _features = [
         </div>
       </section>
     </>
-  )
-}
+  )}

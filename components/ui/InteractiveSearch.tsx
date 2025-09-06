@@ -17,5 +17,4 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         </button>
       )}
     </motion.div>
-  )
-}
+  )}

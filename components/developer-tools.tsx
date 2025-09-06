@@ -445,5 +445,4 @@ export default function DeveloperToolsPage() {_const _developerTools = [
         </div>
       </section>
     </>
-  )
-}
+  )}

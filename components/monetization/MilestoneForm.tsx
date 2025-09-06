@@ -84,5 +84,4 @@ export default function MilestoneForm({ onSubmit }: Props) {
         {_loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-  )
-}
+  )}

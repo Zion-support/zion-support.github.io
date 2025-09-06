@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -83,85 +82,23 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
         </div>;
       </form>;
     </div>;
-  ),;
-=======
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Mail, Send } from 'lucide-react'
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",interface ProfileContactProps {
-  email?: string,
-  profileName: string,
-  profileType: 'service' | 'talent'
-}
-
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState(""),
-  const [subject, setSubject] = useState(""),
-  const [isSending, setIsSending] = useState(false),  
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSending(true),
-    
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false),
-      setMessage(""),
-      setSubject(""),
-      toast({
-        title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`})
-    }, 1000)
-  },    }, 1000);
-  };
-
-  return (
-    <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8&quot;>
-      <h3 className=&quot;text-xl font-bold text-white mb-4 flex items-center&quot;>
-        <Mail className=&quot;mr-2 h-5 w-5 text-zion-cyan&quot; />
-        Contact
-      </h3>
-      
-      {email && (
-        <div className=&quot;mb-4 text-zion-slate-light&quot;>
-          <span className=&quot;block&quot;>Email: </span>          <a 
-            href={`mailto:${email}`} 
-            className=&quot;text-zion-cyan hover:underline truncate block&quot;
-          >
-            {email}
-          </Link>
-        </div>
-      )}
-      
-      <form onSubmit={handleSendMessage}>
-        <div className=&quot;space-y-4&quot;>
-          <div>
-            <Input
-              placeholder=&quot;Subject&quot;
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;              required
-            />
-          </div>
-          <div>
-            <Textarea
-              placeholder={`Message to ${profileName}...`}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className=&quot;bg-zion-blue border-zion-blue-light text-white min-h-[120px]&quot;              required
-            />
-          </div>
-          <Button 
-            type=&quot;submit&quot; 
-            className=&quot;w-full bg-zion-cyan hover:bg-zion-cyan/90&quot;
-            disabled={isSending}
-          >
-            <Send className=&quot;mr-2 h-4 w-4&quot; />
-            {isSending ? &quot;Sending...&quot; : &quot;Send Message&quot;}          </Button>
-        </div>
-      </form>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  ),;}
+ interface ProfileContactProps {;
+  email?: string;
+profileName: string;
+profileType: 'service' | 'talent' ;
+}export function ProfileContact ({;
+  email,  profileName, profileType ;
+}: ProfileContactProps) {;
+  const handleSendMessage = (e: React.FormEvent) => {;
+  e.preventDefault ();
+setIsSending (true);
+//Here would be the actual API call to send the message setTimeout ( () => {;
+  ;
+}, 1000);
+};
+  `mailto:$ {;
+  email ;
+}` ";
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
+}'"

@@ -42,7 +42,6 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
   React.useEffect(() => {
@@ -66,22 +65,12 @@ try {
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <SnackbarProvider maxSnack={3}>
-            <ToastInitializer />
-=======
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
-          <WhitelabelProvider>
+            <ToastInitializer />          <WhitelabelProvider>
             <Router>
               <AuthProvider>
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-<<<<<<< HEAD
                       <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
                         <ViewModeProvider>
                           <CartProvider>
@@ -93,22 +82,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                           </CartProvider>
                         </ViewModeProvider>
                         <LanguageDetectionPopup />
-                      </ErrorBoundary>
-=======
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
-                    </LanguageProvider>
+                      </ErrorBoundary>                    </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
-<<<<<<< HEAD
           </SnackbarProvider>
         </QueryClientProvider>
       </HelmetProvider>
@@ -151,10 +130,3 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 registerServiceWorker();
-=======
-        </Provider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
->>>>>>> origin/85f672-codex/implement-wishlist-functionality

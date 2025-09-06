@@ -31,5 +31,4 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-  )
-}
+  )}

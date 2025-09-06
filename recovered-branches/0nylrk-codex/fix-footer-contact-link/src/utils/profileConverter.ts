@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
 ;
@@ -28,26 +27,15 @@ export function convertProfileToTalentProfile(profile:ProfileData | any):TalentP
     hourly_rate:profile.hourlyRate || 0,;
     rating_count:profile.reviewCount || 0,;
     average_rating:profile.rating || 0;
-  },;
-=======
-import { ProfileData } from "@/types/profile",
-import { TalentProfile } from "@/types/talent",export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
-  // Handle both ProfileData and existing TalentProfile inputs,
-export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {_// Handle both ProfileData and existing TalentProfile inputs
-  
-  // If this is already a TalentProfile, just return it,
-if (profile.professionaltitle !== undefined) {
-    return profile
-  }  
-  // Convert ProfileData to TalentProfile,
-return {id: profile.id, user_id: profile.id, full_name: profile.name, professional_title: profile.title, bio: profile.bio || '', summary: profile.bio?.substring(0, 150), profile_picture_url: profile.avatarUrl, years_experience: 3, _// Default value,
-skills: profile.skills?.map(_(skill: { name: string}) => skill.name) || [],
-    availabilitytype: profile.availability?.status === 'available' ? 'fulltime' :
-                      profile.availability?.status === 'limited' ? 'parttime' : 'unavailable',
-    timezone: 'UTC',
-    hourlyrate: profile.hourlyRate || 0,
-    ratingcount: profile.reviewCount || 0,
-    averagerating: profile.rating || 0
-  }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  },; export function convertProfileToTalentProfile (profile: ProfileData | any) : TalentProfile {
+  //Handle both ProfileData and existing TalentProfile inputs //Convert ProfileData to TalentProfile return {
+  id: profile.id, user id: profile.id, full name: profile.name, professional title: profile.title, bio: profile.bio || '', summary: profile.bio?.substring (0, 150), profile picture url: profile.avatarUrl, years experience: 3, // Default value skills: profile.skills?.map ( (skill: {
+  name: string 
+}) => skill.name) || [];
+availability type: profile.availability?.status === 'available'? 'full time': profile.availability?.status === 'limited'? 'part time': 'unavailable';
+timezone: 'UTC';
+hourly rate: profile.hourlyRate || 0;
+rating count: profile.reviewCount || 0;
+average rating: profile.rating || 0 
+}
 }

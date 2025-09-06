@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -7,23 +6,13 @@ import { corsHeaders } from "../_shared/cors.ts",;
 interface AnalyzeRequest {;
   content:string,;
   contentType:string,;
-  flagId?:string;
-=======
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
-import { corsHeaders } from "../_shared/cors.ts",interface AnalyzeRequest {
-  content: string,
-  contentType: string,
-  flagId?: string
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  flagId?:string;}
 ;
 interface AnalysisResult {;
   classification:string,;
   explanation:string,;
   success:boolean;
 }
-<<<<<<< HEAD
 ;
 // Initialize environment and clients;
 const initializeServices = () => {;
@@ -210,35 +199,9 @@ serve(async (req) => {;
         status:statusCode, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
       }
-    ),;
-=======
-
-// Initialize environment and clients
-const initializeServices = () => {
-  const supabaseUrl = Deno.env.get("SUPABASE_URL"),
-  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
-  const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
-  
-  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
-    throw new Error("Missing required environment variables")  }
-  
-  return {
-    supabase: createClient(supabaseUrl, supabaseServiceKey),
-    openaiApiKey
-  }
-},
-
-// Validate request content
-const validateRequest = (data: unknown): AnalyzeRequest => {
-  if (!data || typeof data !== 'object') {
-    throw new Error("Invalid request body")  }
-  
-  const request = data as AnalyzeRequest,
-  
-  if (!request.content) {
-    throw new Error("No content provided for analysis")
-  }
-  
+    ),;  
+}const request = data as AnalyzeRequest;
+if (!request.content) {
   if (!request.contentType) {
     throw new Error("No content type provided")  
   if (!request.contentType) {
@@ -445,6 +408,51 @@ serve(_async (req) => {_// Handle CORS preflight requests
       {_status: statusCode, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
       }
     )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   }
-}),;
+}),;}return request;
+};
+//Create prompt for OpenAI const createAnalysisPrompt = (contentType: string, content: string) : string => {
+  return ` You are an AI fraud detection assistant for the Zion AI Marketplace. Analyze this $ {
+  contentType 
+}for signs of fraud, spam, phishing, or abuse. Content to analyze: Respond with one of these classifications: SAFE / SUSPICIOUS /DANGEROUS followed by a brief explanation (max 1-2 sentences) of your reasoning. //Call OpenAI API for content analysis ];
+temperature: 0.3;
+max tokens: 150 
+}) 
+});
+}return {
+  classification, explanation 
+}
+}catch (error) {
+  
+}
+};
+flagId: string;
+classification: string;
+explanation: string 
+};
+  supabase, openaiApiKey 
+}= initializeServices ();
+//Parse and validate request const requestData = await req.json () .catch (err => {
+  //Create prompt and analyze with OpenAI const prompt = createAnalysisPrompt (contentType, content);
+const {
+  classification, explanation 
+}= await analyzeWithOpenAI (prompt, openaiApiKey);
+//Update flag if flagId was provided if (flagId) {
+  await updateFraudFlag (supabase, flagId, classification, explanation) 
+}//Return the analysis result const result: AnalysisResult = {
+  classification: classification.toLowerCase ();
+explanation;
+success: true 
+};
+return new Response (JSON.stringify ({
+  error: error.message || "An unexpected error occurred";
+success: false 
+});
+{
+  status: statusCode;
+headers: {
+  ...corsHeaders, "Content-Type" : "application/json" 
+}
+}) 
+}
+});

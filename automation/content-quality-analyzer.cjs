@@ -7,7 +7,6 @@
 ;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 class ContentQualityAnalyzer {;
   constructor() {;
@@ -15,18 +14,7 @@ class ContentQualityAnalyzer {;
       totalFiles:0,;
       issues:[],;
       recommendations:[],;
-      scores:{}
-=======
-
-class ContentQualityAnalyzer {
-  constructor() {
-    this.analysis = {
-      totalFiles: 0;
-      issues: [];
-      recommendations: [];
-      scores: {}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      scores:{}    };
   }
 ;
   async analyzeContent() {;
@@ -117,16 +105,9 @@ class ContentQualityAnalyzer {
       issues.push(`${filename} Multiple consecutive spaces detected`);
       score -= 5;
     }
-<<<<<<< HEAD
     ;
     if (content.match(/\n{3,}/)) {;
-      issues.push(`${filename} Excessive line breaks detected`);
-=======
-    
-    if (content.match(/\n{3}/)) {
-      issues.push(`${filename}: Excessive line breaks detected`);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      score -= 3;
+      issues.push(`${filename} Excessive line breaks detected`);      score -= 3;
     }
     ;
     if (!content.includes('# ')) {;
@@ -174,16 +155,9 @@ class ContentQualityAnalyzer {
       issues.push(`${filename} Multiple consecutive spaces detected`);
       score -= 5;
     }
-<<<<<<< HEAD
     ;
     if (content.match(/\n{3,}/)) {;
-      issues.push(`${filename} Excessive line breaks detected`);
-=======
-    
-    if (content.match(/\n{3}/)) {
-      issues.push(`${filename}: Excessive line breaks detected`);
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      score -= 3;
+      issues.push(`${filename} Excessive line breaks detected`);      score -= 3;
     }
     ;
     if (content.length < 50) {;
@@ -223,7 +197,7 @@ class ContentQualityAnalyzer {
 ;
   printReport() {;
     console.log('\n📊 Content Quality Analysis Report');
-    console.log('=====================================');
+    console.log('==');
     console.log(`Total files analyzed:${this.analysis.totalFiles}`);
     console.log(`Overall quality score:${this.analysis.overallScore.toFixed(1)}/100`);
     console.log(`Total issues found:${this.analysis.issues.length}`);

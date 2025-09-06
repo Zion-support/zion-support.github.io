@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
@@ -312,19 +309,6 @@ const ProductListingCardComponent = ({
             )}
           </div>
         </div>
-      </div>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import React from 'react';
-export function ProductListingCard() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    </div>
+      </div>    </div>
   );
 }

@@ -29,5 +29,4 @@ export async function getStaticProps() {
     const content = fs.readFileSync(file, 'utf8'),
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {
-    return { props: { content: null, generatedAt: null }, revalidate: 300 }  }
-}
+    return { props: { content: null, generatedAt: null }, revalidate: 300 }  }}

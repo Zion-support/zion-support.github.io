@@ -38,22 +38,12 @@ function collectTodos() {;
       const lines = text.split(/\r?\n/);
       lines.forEach((line, idx) => {;
         const m = line.match(TODO_REGEX);
-<<<<<<< HEAD
         if (m) {;
           items.push({;
             type:m[1].toUpperCase(),;
             text:m[2].trim(),;
             file:rel(f),;
-            line:idx + 1,;
-=======
-        if (m) {
-          items.push({
-            type: m[1].toUpperCase();
-            text: m[2].trim();
-            file: rel(f);
-            line: idx + 1;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          });
+            line:idx + 1,;          });
         }
       });
     } catch {}
@@ -85,7 +75,6 @@ function createIssue(token, repo, title, body) {;
   return new Promise((resolve) => {;
     const data = JSON.stringify({ title, body });
     const [owner, name] = repo.split('/');
-<<<<<<< HEAD
     const options = {;
       hostname:'api.github.com',;
       path:`/repos/${owner}/${name}/issues`,;
@@ -96,21 +85,7 @@ function createIssue(token, repo, title, body) {;
         'Accept':'application/vnd.github+json',;
         'Content-Type':'application/json',;
         'Content-Length':Buffer.byteLength(data),;
-      },;
-=======
-    const options = {
-      hostname: 'api.github.com';
-      path: `/repos/${owner}/${name}/issues`;
-      method: 'POST';
-      headers: {
-        'User-Agent': 'todo-issue-bot';
-        'Authorization': `token ${token}`;
-        'Accept': 'application/vnd.github+json';
-        'Content-Type': 'application/json';
-        'Content-Length': Buffer.byteLength(data);
-      };
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      },;    };
     const req = https.request(options, (res) => {;
       res.on('data', () => {});
       res.on('end', () => resolve());

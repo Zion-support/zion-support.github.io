@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components/ui/EmptyState';
 ;
@@ -20,25 +19,8 @@ export default function FavoritesPage() {;
         {favorites.map(f => <li key={f}>{f}</li>)}
       </ul>;
     </div>;
-  );
-=======
-import EmptyState from '../../components/ui/EmptyState'
-
-export default function FavoritesPage() {const [favorites, setFavorites] = useState<string[]>([])
-  useEffect_(() => {
-    const raw = localStorage.getItem('zion.favorites')
-    setFavorites(raw ? JSON.parse(raw) : [])}, [])
-
-  if (!favorites.length) {
-    return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; ctaLabel=&quot;Browse Talent&quot; ctaHref=&quot;/talent&quot; />
-  }
-
-  return (
-    <div>
-      <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
-      <ul className=&quot;list-disc pl-6&quot;>
-        {favorites.map(f => <li key={f}>{f}</li>)}      </ul>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  );import EmptyState from '../../components/ui/EmptyState' export default function FavoritesPage () {
+  const [favorites, setFavorites] = useState<string[]> ([]) useEffect ( () => {
+  const raw = localStorage.getItem ('zion.favorites') setFavorites (raw ? JSON.parse (raw) : []) 
+}, []) </ul> </div>) 
 }

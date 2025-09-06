@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 ;
@@ -28,8 +27,5 @@ export function useConversationState() {;
     setActiveConversation,;
     isLoading,;
     setIsLoading},;
+} /** * Hook to manage messaging state */ 
 }
-=======
-import { useState } from 'react',
-import { Conversation, Message } from '@/types/messaging',}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

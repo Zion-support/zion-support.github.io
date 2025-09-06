@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -34,19 +31,6 @@ export default function ProductPage() {
       <p className="mb-6">{product.description}</p>
       <Button onClick={handleAdd} disabled={adding}>
         {adding ? 'Adding...' : 'Add to Cart'}
-      </Button>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import React from 'react';
-export function ProductPage() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    </div>
+      </Button>    </div>
   );
 }

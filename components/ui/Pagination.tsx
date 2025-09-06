@@ -27,5 +27,4 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       <EnhancedButton variant=&quot;secondary&quot; size=&quot;md&quot; onClick={() => goTo(page + 1)} disabled={!canNext}>        Next
       </EnhancedButton>
     </div>
-  )
-}
+  )}

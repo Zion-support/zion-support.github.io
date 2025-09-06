@@ -77,5 +77,4 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
-	)
-}
+	)}

@@ -77,5 +77,4 @@ const result = await Promise.allSettled([
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 },
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }],
       referralConversions: 2,
-      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})  }
-}
+      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})  }}

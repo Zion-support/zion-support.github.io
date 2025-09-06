@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -90,27 +89,18 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups";
-          className="bg-zion-blue border border-zion-blue-light text-white";
-=======
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Sparkles } from "lucide-react",interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
-  }) => void,
-  isLoading: boolean,
-  initialValues?: {
-    title?: string,
-    category?: string,
-    keyFeatures?: string,
-    targetAudience?: string
-  }
+          className="bg-zion-blue border border-zion-blue-light text-white";  onSubmit: (formData: {
+  title: string;
+category: string;
+keyFeatures: string;
+targetAudience: string 
+}) => void;
+isLoading: boolean;
+initialValues?: {
+  title?: string;
+category?: string;
+keyFeatures?: string;
+targetAudience?: string 
 }
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
@@ -195,14 +185,12 @@ export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AI
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
           className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           disabled={isLoading}
         />;
       </div>;
       <Button ;
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
-<<<<<<< HEAD
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
       >;
         {isLoading ? (;
@@ -215,19 +203,15 @@ export function AIListingForm(_{_onSubmit, _isLoading, _initialValues = {} }: AI
         )}
       </Button>;
     </div>;
-  ),;
-=======
-        className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2&quot;      >
-        {_isLoading ? (
-          <>Generating Optimized Content...</>
-        ) : (
-          <>
-            <Sparkles className=&quot;h-4 w-4 mr-2&quot; />
-            Generate Optimized Content
-          </>
-        )}
-      </Button>
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}export function AIListingForm ({
+  onSubmit, isLoading, initialValues = {
+  
+}
+}: AIListingFormProps) {
+  if (!title || !category) {
+  toast ({
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
+}</Button> </div>) 
 }

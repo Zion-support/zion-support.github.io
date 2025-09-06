@@ -16,5 +16,4 @@ export default function FAQ({ items }: Props) {
         ))}
       </div>
     </div>
-  )
-}
+  )}

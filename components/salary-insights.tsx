@@ -261,5 +261,4 @@ export default function SalaryInsightsPage() {
         </div>
       </div>
     </div>
-  )
-}
+  )}

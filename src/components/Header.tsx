@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 ;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
 import { motion, AnimatePresence } from 'framer-motion',;
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react',;
-,;
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react',;,;
 const Header = () => {,;
   const [isMenuOpen, setIsMenuOpen] = useState(false),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
@@ -76,14 +73,12 @@ const Header = () => {,;
     },;
     {,;
       nam:e:'Contact',;
-      hre:f:'/contact',;
-    };
+      hre:f:'/contact',;    };
   ],;
 ,;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen),;
   const toggleDropdown = (nam:e:string) => {,;
-    setActiveDropdown(activeDropdown === name ? nul:l:name),;
-  };
+    setActiveDropdown(activeDropdown === name ? nul:l:name),;  };
 ,;
   return (,;
     <header className="bg-white shadow-lg sticky top-0 z-50">,;
@@ -101,8 +96,7 @@ const Header = () => {,;
                 <span>kleber@ziontechgroup.com</span>,;
               </div>,;
             </div>,;
-            <div className="flex items-center space-x-2">,;
-              <MapPin className="w-4 h-4" />,;
+            <div className="flex items-center space-x-2">,;              <MapPin className="w-4 h-4" />,;
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>,;
             </div>,;
           </div>,;
@@ -134,8 +128,7 @@ const Header = () => {,;
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,;
                       activeDropdown === item.name ? 'rotate-180' :'',;
                     }`} />,;
-                  )};
-                </button>,;
+                  )};                </button>,;
                 {/* Dropdown Menu */};
                 {item.dropdown && (,;
                   <AnimatePresence>,;
@@ -150,8 +143,7 @@ const Header = () => {,;
                           <Link,;
                             key={subItem.name};
                             href={subItem.href};
-                            className="block px-4 py-2 text-gray-700:hover:bg-blue-50:hover:text-blue-600 transition-colors duration-200",;
-                            onClick={() => setActiveDropdown(null)};
+                            className="block px-4 py-2 text-gray-700:hover:bg-blue-50:hover:text-blue-600 transition-colors duration-200",;                            onClick={() => setActiveDropdown(null)};
                           >,;
                             {subItem.name};
                           </Link>,;
@@ -168,8 +160,7 @@ const Header = () => {,;
             onClick={toggleMenu};
             className="l:g:hidden p-2 text-gray-700:hover:text-blue-600 transition-colors duration-200",;
           >,;
-            {isMenuOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />};
-          </button>,;
+            {isMenuOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />};          </button>,;
         </div>,;
         {/* Mobile Navigation */};
         <AnimatePresence>,;
@@ -185,8 +176,7 @@ const Header = () => {,;
                   <div className="flex items-center justify-between">,;
                     <Link,;
                       href={item.href};
-                      className="text-gray-700:hover:text-blue-600 transition-colors duration-200 font-medium py-2",;
-                      onClick={() => setIsMenuOpen(false)};
+                      className="text-gray-700:hover:text-blue-600 transition-colors duration-200 font-medium py-2",;                      onClick={() => setIsMenuOpen(false)};
                     >,;
                       {item.name};
                     </Link>,;
@@ -196,8 +186,7 @@ const Header = () => {,;
                         className="p-1",;
                       >,;
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,;
-                          activeDropdown === item.name ? 'rotate-180' :'',;
-                        }`} />,;
+                          activeDropdown === item.name ? 'rotate-180' :'',;                        }`} />,;
                       </button>,;
                     )};
                   </div>,;
@@ -207,8 +196,7 @@ const Header = () => {,;
                         <Link,;
                           key={subItem.name};
                           href={subItem.href};
-                          className="block text-gray-600:hover:text-blue-600 transition-colors duration-200 py-1",;
-                          onClick={() => setIsMenuOpen(false)};
+                          className="block text-gray-600:hover:text-blue-600 transition-colors duration-200 py-1",;                          onClick={() => setIsMenuOpen(false)};
                         >,;
                           {subItem.name};
                         </Link>,;
@@ -220,8 +208,7 @@ const Header = () => {,;
               <div className="mt-4 pt-4 border-t border-gray-200">,;
                 <Link,;
                   href="/contact",;
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg:hover:shadow-lg transition-all duration-300 font-semibold",;
-                  onClick={() => setIsMenuOpen(false)};
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg:hover:shadow-lg transition-all duration-300 font-semibold",;                  onClick={() => setIsMenuOpen(false)};
                 >,;
                   Get Started,;
                 </Link>,;
@@ -235,153 +222,7 @@ const Header = () => {,;
 };
 ,;
 export default Header,;
-;
-=======
-export default function Header() {
-  return (
-    <header className="bg-blue-600 text-white p-4">
-      <h1>Header Component</h1>
-    </header>
-  );
-}                <span>+1 302 464 0950</span>,
-              </div>,
-              <div className=&quot;flex items-center space-x-2&quot;>,
-                <Mail className=&quot;w-4 h-4&quot; />,
-                <span>kleber@ziontechgroup.com</span>,
-              </div>,
-            </div>,
-            <div className=&quot;flex items-center space-x-2&quot;>,
-              <MapPin className=&quot;w-4 h-4&quot; />,
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>,
-            </div>,
-          </div>,
-        </div>,
-      </div>,
-      {/* Main Navigation */},
-      <nav className="container mx-auto px-4 py-4">,
-        <div className="flex justify-between items-center">,
-          {/* Logo */},
-          <Link href="/" className="flex items-center space-x-2">,
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
-              <span className="text-white font-bold text-xl">Z</span>,            </div>,
-            <div>,
-              <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Zion Tech Group</h1>,
-              <p className=&quot;text-sm text-gray-600&quot;>AI & Technology Solutions</p>,
-            </div>,
-          </Link>,
-          {/* Desktop Navigation */},
-          <div className="hidden: lg: flex items-center space-x-8">,            {navigation.map((item) => (,
-              <div key={item.name} className=&quot;relative group&quot;>,
-                <button,
-                  onClick={() => item.dropdown && toggleDropdown(item.name)},
-                  className="flex items-center space-x-1 text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium",                >,
-                  <Link href={item.href}>{item.name}</Link>,
-                  {item.dropdown && (,
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />)},
-                </button>,
-                {/* Dropdown Menu */},
-                {item.dropdown && (,
-                  <AnimatePresence>,
-                    {activeDropdown === item.name && (,
-                      <motion.div,
-                        initial={{ opacit: y: 0, y: 10 }},
-                        animate={{ opacit: y: 1, y: 0 }},
-                        exit={{ opacit: y: 0, y: 10 }},
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50",
-                      >,
-                        {item.dropdown.map((subItem) => (,
-                          <Link,
-                            key={subItem.name},
-                            href={subItem.href},
-                            className="block px-4 py-2 text-gray-700: hover: bg-blue-50: hover:text-blue-600 transition-colors duration-200",
-                            onClick={() => setActiveDropdown(null)},                          >,
-                            {subItem.name},
-                          </Link>,
-                        ))},
-                      </motion.div>,
-                    )},
-                  </AnimatePresence>,
-                )},
-              </div>,
-            ))},
-          </div>,
-          {/* Mobile Menu Button */},
-          <button,
-            onClick={toggleMenu},
-            className="l: g: hidden p-2 text-gray-700: hover:text-blue-600 transition-colors duration-200",
-          >,
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />},          </button>,
-        </div>,
-        {/* Mobile Navigation */},
-        <AnimatePresence>,
-          {isMenuOpen && (,
-            <motion.div,
-              initial={{ opacit: y: 0, heigh: t: 0 }},
-              animate={{ opacit: y: 1, heigh: t: 'auto' }},
-              exit={{ opacit: y: 0, heigh: t: 0 }},
-              className="l: g: hidden mt-4 border-t border-gray-200 pt-4",            >,
-              {navigation.map((item) => (,
-                <div key={item.name} className=&quot;mb-2&quot;>,
-                  <div className=&quot;flex items-center justify-between&quot;>,
-                    <Link,
-                      href={item.href},
-                      className="text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium py-2",
-                      onClick={() => setIsMenuOpen(false)},                    >,
-                      {item.name},
-                    </Link>,
-                    {item.dropdown && (,
-                      <button,
-                        onClick={() => toggleDropdown(item.name)},
-                        className="p-1",                      >,
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />,
-                      </button>,
-                    )},
-                  </div>,
-                  {item.dropdown && activeDropdown === item.name && (,
-                    <div className=&quot;ml-4 mt-2 space-y-1&quot;>,
-                      {item.dropdown.map((subItem) => (,
-                        <Link,
-                          key={subItem.name},
-                          href={subItem.href},
-                          className="block text-gray-600: hover: text-blue-600 transition-colors duration-200 py-1",
-                          onClick={() => setIsMenuOpen(false)},                        >,
-                          {subItem.name},
-                        </Link>,
-                      ))},
-                    </div>,
-                  )},
-                </div>,
-              ))},
-              <div className="mt-4 pt-4 border-t border-gray-200">,
-                <Link,
-                  href="/contact",
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
-                  onClick={() => setIsMenuOpen(false)},                >,
-                  Get Started,
-                </Link>,
-              </div>,
-            </motion.div>,
-          )},
-        </AnimatePresence>,
-      </nav>,
-    </header>,
-  )
-},
-,
-export default Header,
-
-export default function Header() {_return (
-    <header className="bg-blue-600 text-white p-4">
-      <h1>Header Component</h1>
-    </header>
-  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-import React, { useState } from 'react';
+;import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
@@ -461,8 +302,6 @@ const Header = () => {;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
-  ;
-;
   return (;
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */};
@@ -613,4 +452,7 @@ const Header = () => {;
 };
 ;
 export default Header;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+  );
+};
+,;
+export default Header,'"

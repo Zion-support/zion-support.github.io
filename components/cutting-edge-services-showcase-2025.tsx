@@ -26,34 +26,95 @@ const heroStats = [
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
 ]];
 
-const serviceCategories = [
+const serviceCategories = [  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+  hidden: {
+  opacity: 0 
+};
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1 
+}
+}
+};
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0 
+};
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5 
+}
+}
+};
+return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title> > Cutting-Edge Services <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90" > Showcase 2025 </span> </motion.h1> <motion.p > Discover revolutionary technology solutions that are reshaping industries and defining the future. From AI consciousness to space mining, experience the cutting edge of innovation. </motion.p> {
+  /* Hero Stats */ 
+}<motion.div </div>) ) 
+}</motion.div> {
+  /* CTA Buttons */ 
+}<motion.div > <a href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > Explore Services <ArrowRight className="ml-2 w-5 h-5" /> </a> <a href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105" > Get Started </a> </motion.div> </motion.div> </div> </section> <button onClick= {
+  () => setSelectedCategory ('all') 
+}className= {
+  `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $ {
+  selectedCategory === 'all' ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white' : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
+}` 
+}> All ({
+  allServices.length 
+}) </button> {
+  serviceCategories.map ( (category) => (<button key= {
+  category.title 
+}onClick= {
+  () => setSelectedCategory (category.title) 
+}className= {
+  `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $ {
+  selectedCategory === category.title ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white' : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10' 
+}` 
+}> {
+  category.title 
+}({
+  category.count 
+}) </button>) ) 
+}</div> <button onClick= {
+  () => setViewMode ('grid') 
+}className= {
+  `p-2 rounded-lg transition-all duration-300 $ {
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70' 
+}` 
+}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  () => setViewMode ('list') 
+}className= {
+  `p-2 rounded-lg transition-all duration-300 $ {
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70' 
+}` 
+}> <List className="w-5 h-5" /> </button> </div> </motion.div> </div> </section> > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id 
+}variants= {
+  itemVariants 
+}className= {
+  `group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 $ {
+  viewMode === 'list' ? 'flex flex-col lg:flex-row' : '' 
+}` 
+}> </p> </div> <div className="ml-4" > <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center" > <Star className="w-6 h-6 text-cyan-400" /> </div> </div> </div> <span key= {
+  tagIndex 
+}className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20" > {
+  tag 
+}</span>) ) 
+}</div> </li>) ) 
+}</ul> </div> > Learn More <ExternalLink className="ml-1 w-4 h-4" /> </a> <a href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
+}</motion.div> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/70 mb-6" >Try adjusting your search terms or category filter</p> <button > Clear Filters </button> </motion.div>) 
+}</div> </section> <motion.div initial= {
   {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
-    count: cuttingEdgeAIServices2025.length
-  },
+  opacity: 0, y: 30 
+}
+}whileInView= {
   {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeQuantumServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
-    count: cuttingEdgeQuantumServices2025.length
-  },
+  opacity: 1, y: 0 
+}
+}transition= {
   {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeEnterpriseITServices2025,
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
-    count: cuttingEdgeEnterpriseITServices2025.length
-  },
+  duration: 0.8 
+}
+}viewport= {
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
@@ -432,5 +493,4 @@ href={`tel:${contactInfo.mobile}`}
         </section>
       </Layout>
     </>
-  )
-}
+  )}

@@ -57,5 +57,4 @@ className="flex-1 border rounded px-3 py-2 text-sm"
         <button type=&quot;submit&quot; className=&quot;bg-gray-900 text-white text-sm rounded px-3 py-2&quot;>Send</button>
       </form>
     </div>
-  )
-}
+  )}

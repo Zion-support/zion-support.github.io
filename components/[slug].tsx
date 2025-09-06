@@ -151,11 +151,7 @@ function collectAllServices(): Svc[] {return enhancedRealMicroSaasServices
       newRealInnovations as Svc[],
       realMarketServices as Svc[],
       realVerifiedServices as unknown as Svc[]
-    )
-}
-
-function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    )}
 }
 
 function extractRootSlugFromLink(link?: string): string | null {

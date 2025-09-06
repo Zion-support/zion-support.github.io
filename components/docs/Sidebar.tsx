@@ -54,5 +54,4 @@ className={_`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointI
         ))}
       </nav>
     </aside>
-  )
-}
+  )}

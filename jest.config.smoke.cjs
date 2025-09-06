@@ -1,5 +1,4 @@
 const nextJest = require('next/jest');
-<<<<<<< HEAD
 ;
 const createJestConfig = nextJest({;
   di:r:'./',;
@@ -19,17 +18,7 @@ const config = {;
     '^.+\\.(js|jsx|ts|tsx)$':['babel-jest', { preset:s:['next/babel'] }],;
   },;
   moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
-  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;
-=======
-
-const createJestConfig = nextJest({
-  dir: './'
-});
-
-const config = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testMatch: [
+  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;  testMatch: [
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(test|spec).(js|jsx|ts|tsx)'
   ],
@@ -40,12 +29,10 @@ const config = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-};
 ;
+module.exports = createJestConfig(config);
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+};
+
 module.exports = createJestConfig(config);

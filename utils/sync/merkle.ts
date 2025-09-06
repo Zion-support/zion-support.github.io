@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import crypto from "crypto",;
 import { ProposalVoteEntry } from "./types",;
 ;
@@ -20,31 +19,7 @@ export function computeMerkleRootFromVotes(votes:ProposalVoteEntry[]):string {;
     .slice();
     .sort((a, b) => a.voterId.localeCompare(b.voterId));
     .map(leafHashForVote),;
-  return computeMerkleRootFromLeaves(leaves),;
-=======
-import crypto from "crypto",
-import { ProposalVoteEntry } from "./types",
-export function sha256Hex(input: string): string {
-  return crypto.createHash("sha256").update(input).digest("hex")
-}
-
-export function leafHashForVote(vote: ProposalVoteEntry): string {
-  const canonical = JSON.stringify({
-    voterId: vote.voterId,
-    weight: vote.weight,
-    choice: vote.choice}),
-  return sha256Hex(canonical)
-}
-
-export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
-  if (!votes || votes.length === 0) return sha256Hex("EMPTY"),
-  const leaves = votes
-    .slice()
-    .sort((a, b) => a.voterId.localeCompare(b.voterId))
-    .map(leafHashForVote),
-  return computeMerkleRootFromLeaves(leaves)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  return computeMerkleRootFromLeaves(leaves),;}
 ;
 export function computeMerkleRootFromLeaves(leaves:string[]):string {;
   if (leaves.length === 0) return sha256Hex("EMPTY"),;
@@ -56,15 +31,9 @@ export function computeMerkleRootFromLeaves(leaves:string[]):string {;
       const right = i + 1 < layer.length ? layer[i + 1] :left,;
       next.push(sha256Hex(left + right));
     }
-<<<<<<< HEAD
     layer = next,;
   }
-  return layer[0],;
-=======
-    layer = next  }
-  return layer[0]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  return layer[0],;}
 ;
 export function verifyVotesAgainstMerkleRoot(;
   votes:ProposalVoteEntry[],;
@@ -72,4 +41,6 @@ export function verifyVotesAgainstMerkleRoot(;
 ):boolean {;
   const root = computeMerkleRootFromVotes(votes),;
   return root === merkleRoot;
+ 
+}return layer[0] 
 }

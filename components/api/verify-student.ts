@@ -53,5 +53,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const match = talents.find(_(t: unknown) => t.email === email && (!programTrack || t.programTrack === programTrack));
   const verified = Boolean(match && match.certificationStatus === "completed");
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
-  return res.status(200).json({verified})
-}
+  return res.status(200).json({verified})}

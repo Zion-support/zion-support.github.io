@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -85,96 +84,44 @@ export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
         onScoreUpdated={handleScoreUpdated}
       />;
     </>;
-  ),;
-=======
-import { useState } from "react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { useJobApplications } from "@/hooks/useJobApplications",import {
-  ApplicationsTable,
-  EmptyState,
-  ErrorState,
-  LoadingState,
-  ScoreDialog
-} from "./applications",
-interface JobApplicationsTableProps {
-  jobId: string
-}
-
-export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-  const { 
-    applications,
-    isLoading,
-    error,
-    updateApplicationStatus,
-    markApplicationAsViewed,
-    refetch
-  } = useJobApplications(jobId),
-import {_ApplicationsTable, _EmptyState, _ErrorState, _LoadingState, _ScoreDialog} from "./applications";
-
-interface JobApplicationsTableProps {_jobId: string;}
-
-export function JobApplicationsTable(_{_jobId}: JobApplicationsTableProps) {_const { 
-    applications, _isLoading, _error, _updateApplicationStatus, _markApplicationAsViewed, _refetch} = useJobApplications(jobId);
-
-  const [processingId, setProcessingId] = useState<string | null>(null),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  const [showScoreDialog, setShowScoreDialog] = useState(false),
-  
-  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
-    setProcessingId(applicationId),
-    try {
-      await updateApplicationStatus(applicationId, newStatus),
-      // If it's not already viewed, mark it as viewed
-      const application = applications.find(app => app.id === applicationId),
-      if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId)
-      }
-    } finally {
-      setProcessingId(null)
-    }
-  },
-
-  const handleViewScore = (application: JobApplication) => {
-    setSelectedApplication(application),
-    setShowScoreDialog(true)
-  },
-
-  const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId)
-  },
-
-  const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch()
-  },
-
-  if (isLoading) {
-    return <LoadingState />
-  }
-
-  if (error) {
-    return <ErrorState error={error} />
-  }
-
-  if (applications.length === 0) {
-    return <EmptyState />
-  }
-  return (
-    <>
-      <ApplicationsTable
-        applications={_applications}
-        processingId={_processingId}
-        onViewApplication={_handleViewApplication}
-        onStatusChange={_handleStatusChange}
-        onViewScore={_handleViewScore}
-      />
-
-      <ScoreDialog
-        open={_showScoreDialog}
-        onOpenChange={_setShowScoreDialog}
-        application={_selectedApplication}
-        onScoreUpdated={_handleScoreUpdated}
-      />
-    </>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ import {
+  ApplicationsTable;
+EmptyState;
+ErrorState;
+LoadingState;
+ScoreDialog interface JobApplicationsTableProps {
+  jobId: string 
+}export function JobApplicationsTable ({
+  jobId 
+}: JobApplicationsTableProps) {
+  const {
+  applications;
+isLoading;
+error;
+updateApplicationStatus;
+markApplicationAsViewed;
+refetch 
+}= useJobApplications (jobId);
+const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
+const [showScoreDialog, setShowScoreDialog] = useState (false);
+return (<> <ApplicationsTable applications= {
+  applications 
+}processingId= {
+  processingId 
+}onViewApplication= {
+  handleViewApplication 
+}onStatusChange= {
+  handleStatusChange 
+}onViewScore= {
+  handleViewScore 
+}/> <ScoreDialog open= {
+  showScoreDialog 
+}onOpenChange= {
+  setShowScoreDialog 
+}application= {
+  selectedApplication 
+}onScoreUpdated= {
+  handleScoreUpdated 
+}/> </>) 
 }

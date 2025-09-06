@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -10,8 +9,6 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-;
-;
 interface GeneratedContent {;
   description:string,;
   tags:string[],;
@@ -163,36 +160,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-=======
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import Skeleton from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-import {logErrorToProduction} from '@/utils/productionLogger',interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-}
-
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {
-    title?: string,
-    category?: string,
-    keyFeatures?: string,
-    targetAudience?: string
-  }
+              className="bg-zion-blue border border-zion-blue-light text-white";}
+}export function AIListingGenerator ({;
+  onApplyGenerated, initialValues = {;
+  ;
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
@@ -335,14 +306,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
               className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
               disabled={isLoading}
             />;
           </div>;
           <Button ;
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
-<<<<<<< HEAD
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
           >;
             {isLoading ? (;
@@ -425,83 +394,51 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </Card>;
       )}
     </div>;
-  ),;
-=======
-            className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2&quot;          >
-            {_isLoading ? (
-              <>Generating Optimized Content...</>
-            ) : (
-              <>
-                <Sparkles className=&quot;h-4 w-4 mr-2&quot; />
-                Generate Optimized Content
-              </>
-            )}
-          </Button>
-        </CardContent>
-      </Card>
-
-      {isLoading && (
-        <Card className=&quot;border border-zion-blue-light bg-zion-blue-dark overflow-hidden&quot;>          <CardHeader>
-            <Skeleton className=&quot;h-8 w-3/4 bg-zion-blue-light/20&quot; />
-          </CardHeader>
-          <CardContent className=&quot;space-y-4&quot;>
-            <Skeleton className=&quot;h-32 w-full bg-zion-blue-light/20&quot; />
-            <div className=&quot;flex flex-wrap gap-2&quot;>
-              {[...Array(5)].map((_, i) => (
-                <Skeleton key={i} className=&quot;h-6 w-16 bg-zion-blue-light/20&quot; />
-              ))}
-            </div>
-            <Skeleton className=&quot;h-8 w-1/3 bg-zion-blue-light/20&quot; />
-            <div className=&quot;space-y-2&quot;>
-              {[...Array(3)].map((_, i) => (
-                <Skeleton key={i} className=&quot;h-6 w-full bg-zion-blue-light/20&quot; />              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {generatedContent && !isLoading && (
-        <Card className=&quot;border border-zion-blue-light bg-zion-blue-dark&quot;>          <CardHeader>
-            <CardTitle className=&quot;text-white&quot;>Generated Content</CardTitle>
-          </CardHeader>
-          <CardContent className=&quot;space-y-4&quot;>
-            <div>
-              <h3 className=&quot;text-sm font-medium text-zion-slate-light mb-2&quot;>Description</h3>
-              <p className=&quot;text-white&quot;>{generatedContent.description}</p>
-            </div>
-            
-            <div>
-              <h3 className=&quot;text-sm font-medium text-zion-slate-light mb-2&quot;>Tags</h3>
-              <div className=&quot;flex flex-wrap gap-2&quot;>
-                {generatedContent.tags.map((tag, index) => (
-                  <Badge key={index}>{tag}</Badge>                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className=&quot;text-sm font-medium text-zion-slate-light mb-2&quot;>Suggested Price Range</h3>
-              <p className=&quot;text-white&quot;>${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
-            </div>
-            
-            <div>
-              <h3 className=&quot;text-sm font-medium text-zion-slate-light mb-2&quot;>Key Selling Points</h3>
-              <ul className=&quot;list-disc pl-5 text-white space-y-1&quot;>
-                {generatedContent.keyPoints.map((point, index) => (
-                  <li key={index}>{point}</li>                ))}
-              </ul>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button
-              onClick={handleApply}
-              className=&quot;w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white&quot;            >
-              Apply to My Listing
-              <ArrowRight className=&quot;ml-2 h-4 w-4&quot; />
-            </Button>
-          </CardFooter>
-        </Card>
-      )}
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+}: AIListingGeneratorProps) {;
+  const [isLoading,  setIsLoading] = useState (false);
+const [generatedContent, setGeneratedContent] = useState (null as GeneratedContent | null);
+  target: {;
+  value: string ;
 }
+}, field: string) => {;
+  switch (field) {;
+  case 'title': setTitle (e.target.value);
+break;';
+case 'category': setCategory (e.target.value);
+break;';
+case 'keyFeatures': setKeyFeatures (e.target.value);
+break;';
+case 'targetAudience': const handleGenerate = async () => {;
+  if (!title || !category) {;
+  toast ({;
+  return;
+}setIsLoading (true);
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsLoading (false) ;
+}
+};
+const handleApply = () => {;
+  if (generatedContent && onApplyGenerated) {;
+  onApplyGenerated (generatedContent);
+toast ({;
+  ;
+}
+};
+<CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ";
+}</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) ;
+}</div> </CardContent> </Card>) ";
+}<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {;
+  generatedContent.description ;
+}</p> </div> <div>) ) ;
+}</div> </div> <div>) ) ";
+}</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
+}</div>) ;
+}'"

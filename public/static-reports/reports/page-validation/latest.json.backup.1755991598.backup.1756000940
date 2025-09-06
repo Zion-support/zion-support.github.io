@@ -1,6 +1,5 @@
 {
   "summary": {
-=======
     "totalFiles": 0,
     "filesWithIssues": 0,
     "totalIssues": 0,
@@ -10,9 +9,4 @@
   },
   "results": [],
   "buildBreakingFiles": [],
-<<<<<<< HEAD
-  "generatedAt": "2025-08-21T00:25:44.309Z"
-=======
-  "generatedAt": "2025-08-20T22:03:55.516Z"
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-3603
-}
+  "generatedAt": "2025-08-21T00:25:44.309Z"}

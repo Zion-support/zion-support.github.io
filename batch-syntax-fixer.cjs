@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       "timestamp":new Date().toISOString(),;
       "totalFiles":files.length,;
       "fixedFiles":this.fixedFiles.length,;
@@ -7,19 +6,7 @@
 ;
     fs.writeFileSync(;
       path.join(this.projectRoot, 'batch-syntax-fix-report.json'),;
-      JSON.stringify(report, null, 2);
-=======
-      "timestamp": new Date().toISOString();
-      "totalFiles": files.length;
-      "fixedFiles": this.fixedFiles.length;
-      "errors": this.errors;
-      "fixedFileList": this.fixedFiles};
-
-    fs.writeFileSync(
-      path.join(this.projectRoot, 'batch-syntax-fix-report.json');
-      JSON.stringify(report, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      JSON.stringify(report, null, 2);    );
 ;
     this.log('📊 Report saved to batch-syntax-fix-report.json');
   }
@@ -28,15 +15,7 @@
 // Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');

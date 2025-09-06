@@ -20,7 +20,6 @@ function fixAdvancedSyntaxIssues(filePath) {;
     content = content.replace(/&quot;/g, '"');
     content = content.replace(/&lt;/g, '<');
     content = content.replace(/&gt;/g, '>');
-<<<<<<< HEAD
 ;
     // Fix import statements;
     content = content.replace(;
@@ -47,37 +46,7 @@ function fixAdvancedSyntaxIssues(filePath) {;
     );
     content = content.replace(;
       /export const (\w+):(\w+)\[\] = \[;/g,;
-      'export const $1:$2[] = [];';
-=======
-
-    // Fix import statements
-    content = content.replace(
-      /import React from 'react',/g;
-      "import React from 'react';"
-    );
-    content = content.replace(
-      /import React from "react",/g;
-      'import React from "react";'
-    );
-    content = content.replace(
-      /import { JSX } from 'react',/g;
-      "import { JSX } from 'react';"
-    );
-
-    // Fix export statements
-    content = content.replace(
-      /export default function (\w+)\(\): JSX\.Element \{/g;
-      'export default function $1(): JSX.Element {'
-    );
-    content = content.replace(
-      /export interface (\w+) \{;/g;
-      'export interface $1 {'
-    );
-    content = content.replace(
-      /export const (\w+): (\w+)\[\] = \[;/g;
-      'export const $1: $2[] = [];'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'export const $1:$2[] = [];';    );
 ;
     // Fix JSX syntax;
     content = content.replace(/&lt;main&gt;/g, '<main>');
@@ -101,20 +70,11 @@ function fixAdvancedSyntaxIssues(filePath) {;
     // Fix semicolon issues;
     content = content.replace(/;\s*,/g, ';');
     content = content.replace(/,\s*;/g, ';');
-<<<<<<< HEAD
 ;
     // Fix React component syntax;
     content = content.replace(;
       /const (\w+) = \(\) => \{/g,;
-      'const $1 = () => {';
-=======
-
-    // Fix React component syntax
-    content = content.replace(
-      /const (\w+) = \(\) => \{/g;
-      'const $1 = () => {'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'const $1 = () => {';    );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
 ;
     // Fix TypeScript interface syntax;
@@ -135,7 +95,6 @@ function fixAdvancedSyntaxIssues(filePath) {;
 ;
     // Fix console statements;
     content = content.replace(/console\.log\(/g, '// console.log(');
-<<<<<<< HEAD
 ;
     // Fix specific parsing errors;
     content = content.replace(;
@@ -148,23 +107,7 @@ function fixAdvancedSyntaxIssues(filePath) {;
     );
     content = content.replace(;
       /export default function App\(\):JSX\.Element \{/g,;
-      'export default function App():JSX.Element {';
-=======
-
-    // Fix specific parsing errors
-    content = content.replace(
-      /import React from 'react',/g;
-      "import React from 'react';"
-    );
-    content = content.replace(
-      /import { JSX } from 'react',/g;
-      "import { JSX } from 'react';"
-    );
-    content = content.replace(
-      /export default function App\(\): JSX\.Element \{/g;
-      'export default function App(): JSX.Element {'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'export default function App():JSX.Element {';    );
 ;
     // Fix vite config issues;
     if (filePath.includes('vite.config.ts')) {;

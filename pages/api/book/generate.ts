@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 ;
@@ -37,14 +36,9 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   }
 ;
   res.status(200).json({ chapters:drafted }),;
-}
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' }),
-    return
+}  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
   }
 
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
@@ -76,4 +70,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.status(200).json({ chapters: drafted })}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

@@ -9,5 +9,4 @@ export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
       {Array.from({ length: lines }).map((_, idx) => (
         <div key={idx} className=&quot;skeleton h-4 rounded&quot; />      ))}
     </div>
-  )
-}
+  )}

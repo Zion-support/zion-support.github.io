@@ -288,5 +288,4 @@ export default function UltraAdvancedFuturisticBackground({
       
       {_children}
     </div>
-  )
-}
+  )}

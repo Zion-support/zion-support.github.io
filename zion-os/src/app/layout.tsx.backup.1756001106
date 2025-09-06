@@ -1,15 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-<<<<<<< HEAD
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
-=======
-import { SessionProvider } from "next-auth/react";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { OnboardingWalkthrough } from "@/components/OnboardingWalkthrough";
-import { LayoutWrapper } from "@/components/LayoutWrapper";
->>>>>>> origin/cursor/improve-user-onboarding-and-guided-walkthrough-0414
-
 export const metadata = {
   title: "Zion Tech Group - AI-Powered Enterprise Solutions & Autonomous Systems",
   description: "Leading provider of AI-powered enterprise solutions, autonomous business systems, quantum computing, and next-generation technology services. Transform your business with cutting-edge AI technology.",
@@ -38,7 +30,6 @@ export const viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <body className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Header */}
         <header className="sticky top-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
@@ -158,19 +149,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
             </div>
           </div>
-        </footer>
-=======
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
-        <SessionProvider>
-          <AuthProvider>
-            <LayoutWrapper>
-              <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
-            </LayoutWrapper>
-            <OnboardingWalkthrough />
-          </AuthProvider>
-        </SessionProvider>
->>>>>>> origin/cursor/improve-user-onboarding-and-guided-walkthrough-0414
-      </body>
+        </footer>      </body>
     </html>
   );
 }

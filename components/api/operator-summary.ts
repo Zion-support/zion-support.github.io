@@ -19,5 +19,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
   } catch (e) {
-    res.status(200).json({ summary: [], error: 'Failed to compute summary' })  }
-}
+    res.status(200).json({ summary: [], error: 'Failed to compute summary' })  }}

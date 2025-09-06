@@ -98,5 +98,4 @@ for (const t of localTracks) {
         ))}
       </div>
     </div>
-  )
-}
+  )}

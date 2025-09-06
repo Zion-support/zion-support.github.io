@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -64,36 +63,104 @@ const AdminReviewsPage:NextPage = () => {;
   ),;
 },;
 ;
-=======
-import React, { useEffect, useState } from 'react',
-import type { NextPage } from 'next',
-import type { Review } from '../../types/reviews',
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
+interface Review {
+  id: string;
+  userId: string;
+  userName: string;
+  rating: number;
+  comment: string;
+  status: 'pending' | 'approved' | 'rejected';
+  createdAt: string;
+  projectId?: string;
+  projectName?: string;
+}
 
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([]),
-  const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState(''),
+const mockReviews: Review[] = [
+  {
+    id: '1',
+    userId: 'user123',
+    userName: 'John Doe',
+    rating: 5,
+    comment: 'Excellent work! The team delivered exactly what we needed on time and within budget.',
+    status: 'pending',
+    createdAt: '2025-01-15T10:00:00Z',
+    projectId: 'proj1',
+    projectName: 'E-commerce Platform'
+  },
+  {
+    id: '2',
+    userId: 'user456',
+    userName: 'Jane Smith',
+    rating: 4,
+    comment: 'Good communication and quality work. Would recommend for future projects.',
+    status: 'approved',
+    createdAt: '2025-01-14T15:30:00Z',
+    projectId: 'proj2',
+    projectName: 'Mobile App Development'
+  },
+  {
+    id: '3',
+    userId: 'user789',
+    userName: 'Mike Johnson',
+    rating: 2,
+    comment: 'Project was delayed and had some issues with the final deliverable.',
+    status: 'pending',
+    createdAt: '2025-01-13T09:15:00Z',
+    projectId: 'proj3',
+    projectName: 'Web Application'
+  }
+];
 
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
-    if (res.ok) {
-      setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+const AdminReviewsPage: React.FC = () => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('all');
+
+  useEffect(() => {
+    // Simulate loading reviews
+    setTimeout(() => {
+      setReviews(mockReviews);
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  const handleStatusChange = (reviewId: string, newStatus: Review['status']) => {
+    setReviews(prev => 
+      prev.map(review => 
+        review.id === reviewId 
+          ? { ...review, status: newStatus }
+          : review
+      )
+    );
+  };
+
+  const filteredReviews = reviews.filter(review => 
+    filter === 'all' || review.status === filter
+  );
+
+  const pendingReviews = reviews.filter(r => r.status === 'pending');
+  const approvedReviews = reviews.filter(r => r.status === 'approved');
+  const rejectedReviews = reviews.filter(r => r.status === 'rejected');
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'approved': return 'bg-green-100 text-green-800';
+      case 'rejected': return 'bg-red-100 text-red-800';
+      case 'pending': return 'bg-yellow-100 text-yellow-800';
+      default: return 'bg-gray-100 text-gray-800';
     }
-  }
+  };
 
-  useEffect(() => { refresh() }, []),
-
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
-    const res = await fetch('/api/reviews/moderate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},
-      body: JSON.stringify({ action, reviewId })}),
-    if (res.ok) refresh()
-  }
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span
+        key={i}
+        className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+      >
+        ★
+      </span>
+    ));
+  };
 
   return (
     <main className=&quot;max-w-5xl mx-auto p-6 space-y-6&quot;>
@@ -116,9 +183,7 @@ const AdminReviewsPage: NextPage = () => {
                 <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>              </div>
             </div>
           ))}
-          {_!pending.length && <div>No pending reviews.</div>}
-        </div>
-      </section>
+          {_!pending.length && <div>No pending reviews.</div>}        </div>
 
       <section className=&quot;enhanced-card&quot;>
         <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
@@ -127,5 +192,4 @@ const AdminReviewsPage: NextPage = () => {
   )
 },
 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 export default AdminReviewsPage,

@@ -43,20 +43,12 @@ export interface InterviewRequest {;
   interview_type:InterviewType,;
   title?:string;
 }
-<<<<<<< HEAD
 ;
 export interface InterviewResponse {;
   interview_id:string,;
   status:InterviewStatus,;
   alternative_date?:string,;
   message?:string;
-}
-=======
-
-export interface InterviewResponse {
-  interview_id: string,
-  status: InterviewStatus,
-  alternative_date?: string,
-  message?: string
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} export type InterviewStatus = | 'requested' | 'confirmed' | 'declined' | 'rescheduled' | 'completed' | 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';

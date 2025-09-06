@@ -14,8 +14,7 @@ interface SEOHeadProps {
   nofollow?: boolean;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Technology Solutions',
+const SEOHead: React.FC<SEOHeadProps> = ({  title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
   canonicalUrl,

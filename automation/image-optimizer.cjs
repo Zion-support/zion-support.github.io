@@ -58,7 +58,6 @@ async function main() {;
       console.warn('Failed image:', f, e.message);
     }
   }
-<<<<<<< HEAD
 ;
   const report = {;
     generatedAt:new Date().toISOString(),;
@@ -66,18 +65,7 @@ async function main() {;
     items:results,;
   };
   const reportFile = path.join(ROOT, 'public', 'automation-reports', 'image-optimizer-report.json');
-  await fs.promises.mkdir(path.dirname(reportFile), { recursive:true });
-=======
-
-  const report = {
-    generatedAt: new Date().toISOString();
-    totalSaved: results.reduce((a, r) => a + r.saved, 0);
-    items: results;
-  };
-  const reportFile = path.join(ROOT, 'public', 'automation-reports', 'image-optimizer-report.json');
-  await fs.promises.mkdir(path.dirname(reportFile) { recursive: true });
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  await fs.promises.writeFile(reportFile, JSON.stringify(report, null, 2));
+  await fs.promises.mkdir(path.dirname(reportFile), { recursive:true });  await fs.promises.writeFile(reportFile, JSON.stringify(report, null, 2));
   console.log('Image optimizer report written:', path.relative(ROOT, reportFile));
 }
 ;

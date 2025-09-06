@@ -57,5 +57,4 @@ export default function LanguageSwitcher() {
         </ul>;
       )}
     </div>
-  )
-}
+  )}

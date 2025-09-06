@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Interface } from 'ethers',;
 ;
@@ -31,15 +30,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   } catch (e:any) {;
     return res.status(400).json({ error:e?.message || 'Failed to prepare deployment tx' }),;
   }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { Interface } from 'ethers',
-// Simple ABI for demonstration (release/refund)
-const abi = [
-  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
-],
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -60,5 +51,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })  }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}

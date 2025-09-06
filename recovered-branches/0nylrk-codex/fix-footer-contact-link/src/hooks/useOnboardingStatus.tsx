@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -62,31 +61,8 @@ export function useOnboardingStatus() {;
     fetchOnboardingStatus(),;
   }, [user]),;
   ;
-  return status,;
-=======
-import { useState, useEffect } from "react",
-import { useAuth } from "./useAuth",
-import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
-  profileCompleted: boolean,
-  skillsAdded: boolean,
-  availabilitySet: boolean,
-  matchReceived: boolean,
-  jobPosted: boolean,
-  inviteSent: boolean,
-  responseReceived: boolean
-}
-
-export function useOnboardingStatus() {
-  const { user } = useAuth(),
-  const [status, setStatus] = useState<OnboardingStatus>({
-    profileCompleted: false,
-    skillsAdded: false,
-    availabilitySet: false,
-    matchReceived: false,
-    jobPosted: false,
-    inviteSent: false,
-    responseReceived: false
-  }),
+  return status,;}
+}catch (err) {
   
   useEffect(() => {
     const fetchOnboardingStatus = async () => {
@@ -144,5 +120,8 @@ const { data, error} = await supabase
   }, [user]),
   
   return status
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+}
+};
+}, [user]);
+return status;
 }

@@ -134,8 +134,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
               )}
               <p className="text-sm">{notification.message}</p>
             </div>
-            {onDismiss && (
-              <button
+            {onDismiss && (              <button
                 onClick={() => onDismiss(notification.id)}
                 className="ml-4 text-gray-400 hover:text-gray-600"
               >

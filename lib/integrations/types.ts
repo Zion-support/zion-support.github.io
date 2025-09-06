@@ -18,7 +18,6 @@ export interface IntegrationProviderMeta {;
   oauthScopes?:string[],;
   icon?:string;
 }
-<<<<<<< HEAD
 ;
 export type SyncStatus = 'connected' | 'warning' | 'disconnected',;
 ;
@@ -28,19 +27,7 @@ export interface SyncRules {;
   pushNotesMode?:'auto' | 'manual',;
   // ATS rules;
   autoSyncApplicants?:boolean,;
-  autoUploadResumes?:boolean,;
-=======
-export type SyncStatus = 'connected' | 'warning' | 'disconnected',
-
-export interface SyncRules {
-  // CRM rules
-  autoCreateContacts?: boolean,
-  pushNotesMode?: 'auto' | 'manual',
-  // ATS rules
-  autoSyncApplicants?: boolean,
-  autoUploadResumes?: boolean
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  autoUploadResumes?:boolean,;}
 ;
 export interface ProviderConnection {;
   providerId:IntegrationProviderId,;
@@ -82,3 +69,6 @@ export interface IntegrationsState {;
   overrides:ManualOverride[],;
   events:ZapierEvent[];
 }
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';

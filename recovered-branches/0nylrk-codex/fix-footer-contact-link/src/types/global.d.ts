@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { ReactNode } from 'react',;
 ;
 // Extend FeatureCardProps to include key for mapping;
@@ -9,19 +8,7 @@ declare module '@/components/FeatureCard' {;
     description:string,;
     icon:ReactNode,;
     className?:string,;
-    key?:number | string;
-=======
-import { ReactNode } from 'react',
-// Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {
-    title: string,
-    description: string,
-    icon: ReactNode,
-    className?: string,
-    key?: number | string
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  }
+    key?:number | string;  }
 }
 ;
 // Extend ListingScoreCardProps to include key for mapping;
@@ -51,7 +38,6 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     key?:string | number;
   }
 }
-<<<<<<< HEAD
 ;
 // Extend ProductListingCardProps to include key for mapping;
 declare module '@/components/ProductListingCard' {;
@@ -61,15 +47,5 @@ declare module '@/components/ProductListingCard' {;
     onRequestQuote:(listingId:string) => void,;
     key?:string | number;
   }
+} 
 }
-=======
-
-// Extend ProductListingCardProps to include key for mapping
-declare module '@/components/ProductListingCard' {
-  export interface ProductListingCardProps {
-    listing: any,
-    view: any,
-    onRequestQuote: (listingId: string) => void,
-    key?: string | number
-  }}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

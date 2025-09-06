@@ -44,5 +44,4 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
-}
+  )}

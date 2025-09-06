@@ -39,7 +39,6 @@ export interface PartnerReferralLink {;
   conversions:number,;
   created_at:string;
 }
-<<<<<<< HEAD
 ;
 export interface PartnerPayout {;
   id:string,;
@@ -49,16 +48,4 @@ export interface PartnerPayout {;
   method:string,;
   created_at:string,;
   completed_at?:string;
-}
-=======
-
-export interface PartnerPayout {
-  id: string,
-  partner_id: string,
-  amount: number,
-  status: 'pending' | 'processing' | 'completed' | 'failed',
-  method: string,
-  created_at: string,
-  completed_at?: string
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} 

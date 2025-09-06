@@ -5,38 +5,18 @@ function fixObjectSyntax(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1:"$2",');
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1:"$2"');
 ;
     // Fix semicolons in array elements;
-    content = content.replace(/"([^"]*)"\s*;/g, '"$1",');
-=======
-
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*,;/g, '$1: "$2",');
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"');
-
-    // Fix semicolons in array elements
-    content = content.replace(/"([^"]*)"\s*,;/g, '"$1",');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
-<<<<<<< HEAD
+    content = content.replace(/"([^"]*)"\s*;/g, '"$1",');    content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
 ;
     // Fix semicolons in function declarations;
     content = content.replace(;
       /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g,;
-      'function $1() {';
-=======
-
-    // Fix semicolons in function declarations
-    content = content.replace(
-      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g,
-      'function $1() {'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      'function $1() {';    );
 ;
     // Fix semicolons in const/let declarations;
     content = content.replace(/(const|let)\s+(\w+)\s*=\s*\[\s*;/g, '$1 $2 = [');

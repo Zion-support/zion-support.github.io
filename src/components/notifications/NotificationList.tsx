@@ -16,7 +16,6 @@ interface NotificationListProps {;
   onDismiss:(id:string) => Promise<void>,;
   onRetry:() => void;
 }
-<<<<<<< HEAD
 ;
 export const NotificationList:React.FC<NotificationListProps> = ({;
   loading,;
@@ -68,54 +67,18 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
       )}
     </ScrollArea>;
   ),;
-},;
-=======
-
-export const NotificationList: React.FC<NotificationListProps> = ({
-  loading,
-  error,
-  notifications,
-  onMarkAsRead,
-  onDismiss,
-  onRetry
-}) => {
-  return (
-    <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>      {error ? (
-        <div className=&quot;p-8 text-center text-amber-500&quot;>
-          <p>{error}</p>
-          <Button 
-            variant=&quot;outline&quot; 
-            size=&quot;sm&quot; 
-            className=&quot;mt-2&quot;
-            onClick={onRetry}          >
-            Try Again
-          </Button>
-        </div>
-      ) : loading ? (
-        <div className=&quot;p-4 space-y-4&quot;>
-          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
-          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
-          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
-        </div>
-      ) : notifications.length === 0 ? (
-        <div className=&quot;p-8&quot;>
-          <EmptyState
-            icon={<Bell className=&quot;h-8 w-8&quot; />}
-            title=&quot;No Notifications&quot;
-            description=&quot;You're all caught up.&quot;
-            action={{ text: 'Refresh', onClick: onRetry }}
-            className=&quot;border-none bg-transparent&quot;          />
-        </div>
-      ) : (_notifications.map((notification) => (
-          <NotificationItem
-            key={_notification.id}
-            notification={_notification}
-            onMarkAsRead={_onMarkAsRead}
-            onDismiss={_onDismiss}
-          />
-        ))
-      )}
-    </ScrollArea>
-  )
-},
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+},; {;
+  error ? (<div className="p-8 text-center text-amber-500" > <p> {;
+  error ";
+}</p> <Button > Try Again </Button> </div>) : loading ? (<div className="p-4 space-y-4" > <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> </div>) : notifications.length === 0 ? (<div className="p-8" > <EmptyState /> </div>) : (notifications.map ( (notification) => (<NotificationItem key= {;
+  notification.id ;
+}notification= {;
+  notification ;
+}onMarkAsRead= {;
+  onMarkAsRead ;
+}onDismiss= {;
+  onDismiss ;
+}/>) ) ) ;
+}</ScrollArea>) ;
+};
+"

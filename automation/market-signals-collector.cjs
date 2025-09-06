@@ -23,22 +23,12 @@ function extractItems(xml) {;
   }
   return items;
 }
-<<<<<<< HEAD
 ;
 async function main() {;
   fs.mkdirSync(outDir, { recursive:true });
   const sources = [;
     'https://hnrss.org/frontpage',;
-    'https://hnrss.org/newest?points=200',;
-=======
-
-async function main() {
-  fs.mkdirSync(outDir, { recursive: true });
-  const sources = [
-    'https://hnrss.org/frontpage';
-    'https://hnrss.org/newest?points=200';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  ];
+    'https://hnrss.org/newest?points=200',;  ];
   const keywords = ['AI', 'Artificial Intelligence', 'LLM', 'OpenAI', 'Anthropic', 'Llama', 'DeepSeek', 'RAG', 'Vector'];
 ;
   const collected = [];

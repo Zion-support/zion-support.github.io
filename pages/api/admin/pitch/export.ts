@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 ;
@@ -34,22 +33,10 @@ function escapeHtml(str:string) {;
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,'),;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdminFromApi } from '../../../../utils/auth',
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req),
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' }),
-
-  const { slides, format, version } = req.body || {},
-  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' }),
-
-  if (format === 'gslides') {
-    // TODO: integrate Google Slides API and return created deck URL
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`,
-    return res.status(200).json({ url })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
 
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -69,5 +56,3 @@ function escapeHtml(str: string) {
     .replace(/>/g, '>')
     .replace(/"/g, '"')
     .replace(/'/g, '&#039,')
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}

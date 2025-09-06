@@ -57,5 +57,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   doc.addPage(),
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
-  doc.end()
-}
+  doc.end()}

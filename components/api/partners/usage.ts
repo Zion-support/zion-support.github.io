@@ -20,5 +20,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   if (!auth) {_return res.status(401).json({ error: "Unauthorized"});
   }
   const _summary = await calculateUsageSummary(auth.partner.id);
-  return res.status(200).json({_summary});
-}
+  return res.status(200).json({_summary});}

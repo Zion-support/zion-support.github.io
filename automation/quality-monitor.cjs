@@ -37,18 +37,10 @@ qualityChecks.forEach(check => {;
     console.log(`❌ ${check.name} FAILED`);
   }
 });
-<<<<<<< HEAD
 ;
 fs.writeFileSync(;
   'automation/reports/quality-report.json',;
-  JSON.stringify(report, null, 2);
-=======
-
-fs.writeFileSync(
-  'automation/reports/quality-report.json';
-  JSON.stringify(report, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-);
+  JSON.stringify(report, null, 2););
 console.log(;
   '📄 Quality report saved to automation/reports/quality-report.json';
 );

@@ -347,5 +347,4 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
         </section>
       </div>
     </>
-  )
-}
+  )}

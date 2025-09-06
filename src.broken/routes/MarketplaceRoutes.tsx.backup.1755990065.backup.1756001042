@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -111,18 +108,3 @@ const MarketplaceRoutes = () => {
 };
 
 export default MarketplaceRoutes;
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import React from 'react';
-export function MarketplaceRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

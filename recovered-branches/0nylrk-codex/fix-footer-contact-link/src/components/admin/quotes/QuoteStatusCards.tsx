@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -78,18 +77,12 @@ export const QuoteStatusCards:React.FC<QuoteStatusCardsProps> = ({ statusCounts 
       </Card>;
     </div>;
   ),;
-},;
-=======
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",interface QuoteStatusCardsProps {
-  statusCounts: {
-    new: number,
-    in_review: number,
-    responded: number,
-    accepted: number,
-    closed: number
-  }
+},;  statusCounts: {
+  new: number;
+in review: number;
+responded: number;
+accepted: number;
+closed: number 
 }
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
@@ -168,4 +161,3 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
     </div>
   )
 },
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

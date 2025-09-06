@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const nextConfig = {;
   reactStrictMode:true,;
   eslint:{;
@@ -60,39 +58,7 @@ const nextConfig = {;
           '**/performance-*.txt';
         ],;
         poll:1000,;
-        aggregateTimeout:300;
-=======
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com'
-    ],
-    formats: ['image/webp', 'image/avif'],    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-=======
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webpimage/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        aggregateTimeout:300;    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000
   },
   webpack: (config, { dev, isServer }) => {
@@ -103,8 +69,6 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300
-<<<<<<< HEAD
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       }
 const nextConfig = {_reactStrictMode: true, _eslint: {
     ignoreDuringBuilds: true, },
@@ -120,16 +84,41 @@ const nextConfig = {_reactStrictMode: true, _eslint: {
     }
     return config;
   }
-<<<<<<< HEAD
 };
 ;
-export default nextConfig;
-=======
-}
+export default nextConfig;      };
+    }
+    return config;
+  }
+};
 
-module.exports = nextConfig
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-=======
+export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
       };
     }
     return config;
@@ -137,4 +126,3 @@ module.exports = nextConfig
 };
 
 export default nextConfig;
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

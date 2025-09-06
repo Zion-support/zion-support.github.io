@@ -19,7 +19,6 @@ class QuickSyntaxFixer {;
       }
 ;
       const originalContent = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
       const content = originalContent;
         // Remove merge conflict markers;
         .replace(/[\s\S]*?;
@@ -38,15 +37,6 @@ class QuickSyntaxFixer {;
         .replace(/;+/g, ';');
 ;
         // Fix semicolons before commas;
-=======
-      const content = originalContent
-        // Remove merge conflict markers
-<<<<<<< HEAD
-=======
-        .replace(/[\s\S]*?
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
 
@@ -60,7 +50,6 @@ class QuickSyntaxFixer {;
         .replace(/;+/g, ';')
 
         // Fix semicolons before commas
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         .replace(/;\s*,/g, ',');
 ;
       if (content !== originalContent) {;
@@ -79,7 +68,6 @@ class QuickSyntaxFixer {;
 ;
   async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
-<<<<<<< HEAD
 ;
     // Fix critical files first;
     const criticalFiles = [;
@@ -90,21 +78,7 @@ class QuickSyntaxFixer {;
       'scripts/fix-syntax-errors.cjs',;
       'scripts/performance-monitor.cjs',;
       'scripts/security-audit.cjs',;
-      'scripts/health-check.cjs',;
-=======
-
-    // Fix critical files first
-    const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx';
-      '.eslintrc.js';
-      'ecosystem.config.cjs';
-      'run-automation-suite.cjs';
-      'scripts/fix-syntax-errors.cjs';
-      'scripts/performance-monitor.cjs';
-      'scripts/security-audit.cjs';
-      'scripts/health-check.cjs';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    ];
+      'scripts/health-check.cjs',;    ];
 ;
     let fixedCount = 0;
     for (const file of criticalFiles) {;
@@ -125,3 +99,10 @@ if (require.main === module) {;
 }
 ;
 module.exports = QuickSyntaxFixer;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"

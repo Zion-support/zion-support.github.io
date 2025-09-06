@@ -262,5 +262,4 @@ export default function UltraFuturisticFooter2028() {
         <div className=&quot;absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl&quot;></div>
         <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl&quot;></div>      </div>
     </footer>
-  )
-}
+  )}

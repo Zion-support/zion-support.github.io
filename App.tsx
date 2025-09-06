@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { JSX } from 'react';
 ;
 export default function App():JSX.Element {;
@@ -7,14 +6,12 @@ export default function App():JSX.Element {;
       <h1>Hello App</h1>;
     </main>;
   );
-}
-=======
+}import React, { JSX } from 'react';
 
-import React, { JSX } from 'react';
 export default function App(): JSX.Element {
   return (
     <main>
-      <h1>Hello App</h1>
+      <h1>Zion Tech Group</h1>
+      <p>Welcome to our application</p>
     </main>
   )}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

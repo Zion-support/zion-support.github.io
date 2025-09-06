@@ -33,7 +33,6 @@ export interface OnboardingNotificationParams {;
   missingMilestone:string,;
   userRole:'talent' | 'client';
 }
-<<<<<<< HEAD
 ;
 export interface SystemNotificationParams {;
   userId:string,;
@@ -42,15 +41,4 @@ export interface SystemNotificationParams {;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
-}
-=======
-
-export interface SystemNotificationParams {
-  userId: string,
-  title: string,
-  message: string,
-  actionUrl?: string | null,
-  actionText?: string | null,
-  sendEmail?: boolean
-}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+} export type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';

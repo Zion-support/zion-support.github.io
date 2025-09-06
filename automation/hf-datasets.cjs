@@ -21,7 +21,6 @@ async function run() {;
     const url = `https://huggingface.co/api/datasets?search=${encodeURIComponent(q)}&sort=downloads&direction=-1&limit=50`;
     try {;
       const data = await fetchJson(url);
-<<<<<<< HEAD
       for (const d of data || []) {;
         items.push({;
           id:d.id,;
@@ -30,19 +29,7 @@ async function run() {;
           tags:d.tags,;
           author:d.author,;
           lastModified:d.lastModified,;
-          query:q,;
-=======
-      for (const d of data || []) {
-        items.push({
-          id: d.id;
-          downloads: d.downloads;
-          likes: d.likes;
-          tags: d.tags;
-          author: d.author;
-          lastModified: d.lastModified;
-          query: q;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        });
+          query:q,;        });
       }
     } catch (e) {;
       console.warn('HF datasets fetch failed for', q, e.message);
@@ -50,24 +37,13 @@ async function run() {;
   }
 ;
   const seen = new Set();
-<<<<<<< HEAD
   items = items.filter((i) => (seen.has(i.id) ? false :seen.add(i.id))).slice(0, 100);
 ;
   const payload = {;
     generatedAt:new Date().toISOString(),;
     description:'Hugging Face datasets related to agents/governance/DAO',;
     total:items.length,;
-    items,;
-=======
-  items = items.filter((i) => (seen.has(i.id) ? false : seen.add(i.id))).slice(0, 100);
-
-  const payload = {
-    generatedAt: new Date().toISOString();
-    description: 'Hugging Face datasets related to agents/governance/DAO';
-    total: items.length;
-    items;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  };
+    items,;  };
 ;
   ensureDir(OUTPUT_PATH);
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2));

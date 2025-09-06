@@ -64,5 +64,4 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           <button onClick={() => onAction('ban', adminNotes)} className=&quot;px-3 py-2 rounded bg-gray-800 text-white&quot;>Ban User</button>        </div>
       </div>
     </div>
-  )
-}
+  )}

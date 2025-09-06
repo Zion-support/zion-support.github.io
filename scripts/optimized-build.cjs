@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const process = require('process');
 const { runPreDeployChecks, analyzeAndReport } = require('./deploy-optimization.cjs');
-<<<<<<< HEAD
 ;
 // Enhanced memory and performance optimizations;
 const optimizedEnv = {;
@@ -50,51 +49,7 @@ const optimizedEnv = {;
   ;
   // Bundle splitting optimizations;
   NEXT_PRIVATE_WEBPACK_OPTIMIZE_CHUNKS:"true",;
-  NEXT_PRIVATE_MINIMIZE_BUNDLE_SIZE:"true",;
-=======
-
-// Enhanced memory and performance optimizations
-const optimizedEnv = {
-  ...process.env;
-  // Memory management
-  NODE_OPTIONS: "--no-deprecation --max-old-space-size=6144 --no-warnings --max-semi-space-size=64";
-  NODE_ENV: "production";
-  // Critical build optimizations (prevents 18+ minute hanging)
-  NEXT_TELEMETRY_DISABLED: "1";
-  CI: "true";
-  SKIP_TYPE_CHECK: "true", // Skip type checking to speed up build
-  
-  // CRITICAL: Anti-hanging optimizations
-  NEXT_DISABLE_CSS_INLINE: "true";
-  NEXT_DISABLE_SOURCE_MAPS: "true";
-  GENERATE_SOURCEMAP: "false";
-  NEXT_BUILD_WORKERS: "1", // Single worker prevents memory issues
-  NEXT_PRIVATE_BUILD_CACHE: "false", // Disable to prevent memory buildup
-  NEXT_PRIVATE_STATIC_OPTIMIZATION: "false", // Disable to prevent timeout
-  
-  // CRITICAL FIX: Completely disable build trace collection (prevents hanging)
-  NEXT_DISABLE_TRACE_COLLECTION: "true";
-  NEXT_PRIVATE_OUTPUT_TRACE: "false";
-  // Let plugin handle file tracing as per netlify.toml config
-  // NEXT_PRIVATE_OUTPUT_FILE_TRACING controlled by netlify.toml
-  
-  // System optimizations
-  UV_THREADPOOL_SIZE: "4", // Limit thread pool
-  NODE_NO_WARNINGS: "1";
-  NEXT_PRIVATE_MINIMIZE_BUILD_TIME: "true";
-  // Bundle optimization
-  NEXT_PRIVATE_STANDALONE: "false", // Standard build for Netlify
-  ANALYZE: process.argv.includes('--analyze') ? "true" : "false";
-  // Performance settings
-  WEBPACK_CACHE: "false", // Disable webpack cache to prevent memory issues
-  NEXT_PRIVATE_WEBPACK_LAYER_CACHING: "false";
-  // EventEmitter optimization (prevents memory leaks)
-  NODE_MAX_LISTENERS: "50";
-  // Bundle splitting optimizations
-  NEXT_PRIVATE_WEBPACK_OPTIMIZE_CHUNKS: "true";
-  NEXT_PRIVATE_MINIMIZE_BUNDLE_SIZE: "true";
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-};
+  NEXT_PRIVATE_MINIMIZE_BUNDLE_SIZE:"true",;};
 ;
 console.log("🚀 Starting ENHANCED build for 176+ pages...");
 console.log("📊 Memory limit:6GB");
@@ -126,7 +81,6 @@ console.log('📦 Ensuring TypeScript is available...');
 // Force reinstall all dependencies including devDependencies;
 // This is needed because Netlify sets NODE_ENV=production which skips devDependencies;
 console.log('🔄 Installing all dependencies (including devDependencies)...');
-<<<<<<< HEAD
 try {;
   execSync('npm install --production=false', {;
     stdio:'inherit',;
@@ -134,18 +88,7 @@ try {;
     env:{;
       ...process.env,;
       NODE_ENV:'development', // Temporarily override NODE_ENV;
-      NPM_CONFIG_PRODUCTION:'false' // Also ensure npm config doesn't skip devDependencies;
-=======
-try {
-  execSync('npm install --production=false', {
-    stdio: 'inherit';
-    cwd: process.cwd();
-    env: {
-      ...process.env;
-      NODE_ENV: 'development', // Temporarily override NODE_ENV
-      NPM_CONFIG_PRODUCTION: 'false' // Also ensure npm config doesn't skip devDependencies
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    }
+      NPM_CONFIG_PRODUCTION:'false' // Also ensure npm config doesn't skip devDependencies;    }
   });
   console.log('✅ Dependencies installed successfully');
 } catch (error) {;
@@ -181,20 +124,11 @@ async function main() {;
   ;
   // Enhanced build execution with better error handling;
   console.log("\n🏗️  Starting build process...");
-<<<<<<< HEAD
   ;
   buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {;
     env:optimizedEnv,;
     stdio:'inherit',;
-    shell:true;
-=======
-  
-  buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {
-    env: optimizedEnv;
-    stdio: 'inherit';
-    shell: true
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-  });
+    shell:true;  });
   ;
   buildProcess.on('error', (error) => {;
     console.error("❌ Build process error:", error.message);
@@ -211,18 +145,10 @@ async function main() {;
       // Bundle analysis if requested;
       if (process.argv.includes('--analyze')) {;
         console.log("\n📊 Running bundle analysis...");
-<<<<<<< HEAD
         try {;
           execSync('npx @next/bundle-analyzer', { ;
             env:optimizedEnv,;
-            stdio:'inherit' ;
-=======
-        try {
-          execSync('npx @next/bundle-analyzer', { 
-            env: optimizedEnv;
-            stdio: 'inherit' 
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          });
+            stdio:'inherit' ;          });
         } catch (analyzeError) {;
           console.warn("⚠️  Bundle analysis failed, but build was successful");
         }
@@ -369,18 +295,10 @@ async function executeBuildSequence() {;
     }
 ;
     console.log("\n🏗️  Starting build process...");
-<<<<<<< HEAD
     buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {;
       env:optimizedEnv,;
       stdio:'inherit',;
-      shell:true;
-=======
-    buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {
-      env: optimizedEnv;
-      stdio: 'inherit';
-      shell: true
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      shell:true;    });
 ;
     buildProcess.on('error', (error) => {;
       console.error("❌ Build process error:", error.message);
@@ -396,18 +314,10 @@ async function executeBuildSequence() {;
 ;
         if (process.argv.includes('--analyze')) {;
           console.log("\n📊 Running bundle analysis...");
-<<<<<<< HEAD
           try {;
             execSync('npx @next/bundle-analyzer', {;
               env:optimizedEnv,;
-              stdio:'inherit';
-=======
-          try {
-            execSync('npx @next/bundle-analyzer', {
-              env: optimizedEnv;
-              stdio: 'inherit'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            });
+              stdio:'inherit';            });
           } catch (analyzeError) {;
             console.warn("⚠️  Bundle analysis failed, but build was successful");
           }

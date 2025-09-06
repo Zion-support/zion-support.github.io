@@ -8,20 +8,11 @@ class CompleteImprovementSuite {;
   constructor() {;
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.stats = {;
       "mergeConflicts":{ resolved:0, "failed":0 },;
       "syntaxErrors":{ fixed:0, "failed":0 },;
       "prsProcessed":{ merged:0, "failed":0 },;
-      "improvements":{ applied:0, "failed":0 }
-=======
-    this.stats = {
-      "mergeConflicts": { resolved: 0, "failed": 0 };
-      "syntaxErrors": { fixed: 0, "failed": 0 };
-      "prsProcessed": { merged: 0, "failed": 0 };
-      "improvements": { applied: 0, "failed": 0 }
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      "improvements":{ applied:0, "failed":0 }    };
   }
 ;
   ensureDirectories() {;
@@ -191,10 +182,9 @@ class CompleteImprovementSuite {;
     try {;
       const content = fs.readFileSync(filePath, 'utf8');
       return (;
-        content.includes('<<<<<<< HEAD') ||;
-        content.includes('=======') ||;
-        content.includes('>>>>>>> ');
-      );
+        content.includes('') ||;
+        content.includes('') ||;
+        content.includes('      );
     } catch (error) {;
       return false;
     }
@@ -207,13 +197,11 @@ class CompleteImprovementSuite {;
 ;
       // Remove merge conflict markers and keep HEAD version;
       content = content.replace(;
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,;
-        '$1';
+        /\n(.*?)\n\n(.*?)\n        '$1';
       );
 ;
       // Clean up any remaining markers;
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-;
+      content = content.replace(/;
       if (content !== originalContent) {;
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(;
@@ -355,7 +343,6 @@ class CompleteImprovementSuite {;
 ;
     // Phase 4:Commit and push;
     const pushSuccess = await this.commitAndPush();
-<<<<<<< HEAD
 ;
     // Generate final report;
     const finalReport = {;
@@ -369,30 +356,12 @@ class CompleteImprovementSuite {;
 ;
     fs.writeFileSync(;
       path.join(this.reportsDir, 'complete-improvement-report.json'),;
-      JSON.stringify(finalReport, null, 2);
-=======
-
-    // Generate final report
-    const finalReport = {
-      timestamp: new Date().toISOString(),
-      "results": this.results,
-      "summary": {
-        totalMergeConflictsResolved: this.results.mergeConflicts.resolved,
-        "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
-        "totalImprovementsApplied": this.results.improvements.applied,
-        "pushSuccessful": pushSuccess}};
-
-    fs.writeFileSync(
-      path.join(this.reportsDir, 'complete-improvement-report.json');
-      JSON.stringify(finalReport, null, 2)
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    );
+      JSON.stringify(finalReport, null, 2);    );
 ;
     this.log('🎉 Complete Improvement Suite Finished');
     this.log("📊 "Summary":");
     this.log(;
-      `   - Merge conflicts resolved:${finalReport.summary.totalMergeConflictsResolved}`;
-    );
+      `   - Merge conflicts resolved:${finalReport.summary.totalMergeConflictsResolved}`;    );
     this.log(;
       `   - Syntax errors "fixed":${finalReport.summary.totalSyntaxErrorsFixed}`;
     );
@@ -406,10 +375,7 @@ class CompleteImprovementSuite {;
 // Run the complete improvement suite;
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD;
-=======;
-=======;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52;
+;
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

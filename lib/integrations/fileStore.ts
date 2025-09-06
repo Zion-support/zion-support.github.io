@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs',;
 import path from 'path',;
 import { IntegrationsState } from './types',;
@@ -35,43 +34,5 @@ export function writeState(mutator:(state:IntegrationsState) => void):Integratio
   const current = readState(),;
   mutator(current),;
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8'),;
-  return current,;
-=======
-import fs from 'fs',
-import path from 'path',
-import { IntegrationsState } from './types',
-const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations'),
-const STATE_FILE = path.join(DATA_DIR, 'state.json'),
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true })
-  }
-  if (!fs.existsSync(STATE_FILE)) {
-    const initial: IntegrationsState = {
-      connections: [],
-      logs: [],
-      overrides: [],
-      events: []},
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')
-  }
-}
-
-export function readState(): IntegrationsState {
-  ensureDataDir(),
-  try {
-    const raw = fs.readFileSync(STATE_FILE, 'utf8'),
-    return JSON.parse(raw) as IntegrationsState
-  } catch (error) {
-    return { connections: [], logs: [], overrides: [], events: [] }
-  }
-}
-
-export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
-  ensureDataDir(),
-  const current = readState(),
-  mutator(current),
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8'),
-  return current
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  return current,;}
+ 

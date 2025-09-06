@@ -57,5 +57,14 @@ export default function ServiceCard(_{_service, _onSelect}) {_const _navigate = 
         <Heart className=&quot;w-4 h-4&quot; />
       </button>
       <h3 className=&quot;text-white font-medium&quot;>{service.title}</h3>    </div>
-  )
+  )}
+};
+const handleSave = (e) => {
+  e.stopPropagation ();
+toast.info ('Log in to save favorites');
+navigate (`/login?next=$ {
+  encodeURIComponent (location.pathname + location.search) 
+}`);
+return 
+}> <Heart className="w-4 h-4" /> </button> </div>) 
 }

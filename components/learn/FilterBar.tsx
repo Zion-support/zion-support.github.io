@@ -37,5 +37,4 @@ className=&quot;border rounded px-3 py-2 bg-white dark:bg-black&quot;
         <option value=&quot;false">Paid</option>
       </select>
     </div>
-  )
-}
+  )}

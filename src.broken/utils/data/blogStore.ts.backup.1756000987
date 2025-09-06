@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.broken/utils/data/blogStore.ts
+:src.broken/utils/data/blogStore.ts
 // Stub blog store utility - placeholder for missing functionality
 export const getBlogPost = (id: string) => {
   // Placeholder implementation
@@ -9,7 +9,6 @@ export const getBlogMetrics = (id: string, metric: string) => {
   // Placeholder implementation
   return { id, metric, value: 0 };
 };
-=======
 import fs from 'fs';
 import path from 'path';
 import { BlogPost } from '@/utils/types/blog';
@@ -87,4 +86,3 @@ export function incrementMetric(id: string, metric: keyof BlogPost['metrics']): 
   writePosts(posts);
   return posts[idx];
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/data/blogStore.ts

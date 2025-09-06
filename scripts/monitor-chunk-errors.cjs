@@ -36,7 +36,6 @@ class ChunkErrorMonitor {;
               if (fs.existsSync(chunkPath)) {;
                 const stats = fs.statSync(chunkPath);
                 const sizeKB = Math.round(stats.size / 1024);
-<<<<<<< HEAD
                 ;
                 if (sizeKB > 250) {;
                   issues.push({;
@@ -45,19 +44,7 @@ class ChunkErrorMonitor {;
                     chunk,;
                     sizeKB,;
                     severity:sizeKB > 500 ? 'high' :'medium',;
-                    recommendation:'Consider code splitting or lazy loading';
-=======
-                
-                if (sizeKB > 250) {
-                  issues.push({
-                    type: 'large-chunk';
-                    page;
-                    chunk;
-                    sizeKB;
-                    severity: sizeKB > 500 ? 'high' : 'medium';
-                    recommendation: 'Consider code splitting or lazy loading'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-                  });
+                    recommendation:'Consider code splitting or lazy loading';                  });
                 }
               }
             });
@@ -75,7 +62,6 @@ class ChunkErrorMonitor {;
           const chunkPath = path.join(chunksDir, vendorChunk);
           const stats = fs.statSync(chunkPath);
           const sizeKB = Math.round(stats.size / 1024);
-<<<<<<< HEAD
           ;
           if (sizeKB > 200) {;
             issues.push({;
@@ -83,37 +69,16 @@ class ChunkErrorMonitor {;
               chunk:vendorChunk,;
               sizeKB,;
               severity:sizeKB > 400 ? 'high' :'medium',;
-              recommendation:'Consider optimizing vendor bundle splitting';
-=======
-          
-          if (sizeKB > 200) {
-            issues.push({
-              type: 'large-vendor-chunk';
-              chunk: vendorChunk;
-              sizeKB;
-              severity: sizeKB > 400 ? 'high' : 'medium';
-              recommendation: 'Consider optimizing vendor bundle splitting'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            });
+              recommendation:'Consider optimizing vendor bundle splitting';            });
           }
         });
       }
-<<<<<<< HEAD
       ;
     } catch (error) {;
       issues.push({;
         type:'analysis-error',;
         error:error.message,;
-        severity:'low';
-=======
-      
-    } catch (error) {
-      issues.push({
-        type: 'analysis-error';
-        error: error.message;
-        severity: 'low'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        severity:'low';      });
     }
     ;
     return issues;
@@ -127,7 +92,6 @@ class ChunkErrorMonitor {;
     try {;
       if (fs.existsSync(configPath)) {;
         const configContent = fs.readFileSync(configPath, 'utf8');
-<<<<<<< HEAD
         ;
         // Check for problematic configurations;
         const checks = [;
@@ -154,37 +118,7 @@ class ChunkErrorMonitor {;
                 value,;
                 severity:'low',;
                 recommendation:'Large chunks may cause loading issues on slow connections';
-              } null;
-=======
-        
-        // Check for problematic configurations
-        const checks = [
-          {
-            pattern: /maxAsyncRequests:\s*(\d+)/;
-            check: (match) => {
-              const value = parseInt(match[1]);
-              return value > 30 ? {
-                type: 'config-warning';
-                setting: 'maxAsyncRequests';
-                value;
-                severity: 'medium';
-                recommendation: 'Consider reducing maxAsyncRequests to prevent too many concurrent chunk requests'
-              } : null;
-            }
-          };
-          {
-            pattern: /maxSize:\s*(\d+)/g;
-            check: (match) => {
-              const value = parseInt(match[1]);
-              return value > 250000 ? {
-                type: 'config-warning';
-                setting: 'maxSize';
-                value;
-                severity: 'low';
-                recommendation: 'Large chunks may cause loading issues on slow connections'
-              } : null;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            }
+              } null;            }
           }
         ];
         ;
@@ -198,20 +132,11 @@ class ChunkErrorMonitor {;
           }
         });
       }
-<<<<<<< HEAD
     } catch (error) {;
       issues.push({;
         type:'config-analysis-error',;
         error:error.message,;
-        severity:'low';
-=======
-    } catch (error) {
-      issues.push({
-        type: 'config-analysis-error';
-        error: error.message;
-        severity: 'low'
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        severity:'low';      });
     }
     ;
     return issues;
@@ -224,7 +149,6 @@ class ChunkErrorMonitor {;
     // High priority recommendations;
     const highSeverityIssues = [...buildIssues, ...configIssues];
       .filter(issue => issue.severity === 'high');
-<<<<<<< HEAD
     ;
     if (highSeverityIssues.length > 0) {;
       recommendations.push({;
@@ -235,27 +159,12 @@ class ChunkErrorMonitor {;
           'Implement dynamic imports for large components',;
           'Split vendor bundles more granularly',;
           'Consider lazy loading for non-critical features';
-        ];
-=======
-    
-    if (highSeverityIssues.length > 0) {
-      recommendations.push({
-        priority: 'high';
-        title: 'Critical Chunk Size Issues';
-        description: `Found ${highSeverityIssues.length} high-severity chunk issues that may cause ChunkLoadErrors`;
-        actions: [
-          'Implement dynamic imports for large components';
-          'Split vendor bundles more granularly';
-          'Consider lazy loading for non-critical features'
-        ]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      });
+        ];      });
     }
     ;
     // Medium priority recommendations;
     const mediumSeverityIssues = [...buildIssues, ...configIssues];
       .filter(issue => issue.severity === 'medium');
-<<<<<<< HEAD
     ;
     if (mediumSeverityIssues.length > 0) {;
       recommendations.push({;
@@ -281,36 +190,7 @@ class ChunkErrorMonitor {;
         'Monitor chunk loading performance',;
         'Test on slow network connections',;
         'Implement service worker for caching';
-      ];
-=======
-    
-    if (mediumSeverityIssues.length > 0) {
-      recommendations.push({
-        priority: 'medium';
-        title: 'Chunk Optimization Opportunities';
-        description: `Found ${mediumSeverityIssues.length} optimization opportunities`;
-        actions: [
-          'Review webpack splitChunks configuration';
-          'Optimize bundle splitting strategy';
-          'Consider preloading critical chunks'
-        ]
-      });
-    }
-    
-    // General recommendations
-    recommendations.push({
-      priority: 'low';
-      title: 'Preventive Measures';
-      description: 'General recommendations to prevent ChunkLoadErrors';
-      actions: [
-        'Implement proper error boundaries';
-        'Add retry logic for failed chunk loads';
-        'Monitor chunk loading performance';
-        'Test on slow network connections';
-        'Implement service worker for caching'
-      ]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    });
+      ];    });
     ;
     return recommendations;
   }
@@ -322,7 +202,6 @@ class ChunkErrorMonitor {;
     const buildIssues = this.analyzeBuildOutput();
     const configIssues = this.analyzeNextConfig();
     const recommendations = this.generateRecommendations(buildIssues, configIssues);
-<<<<<<< HEAD
     ;
     const report = {;
       timestamp:new Date().toISOString(),;
@@ -349,37 +228,7 @@ class ChunkErrorMonitor {;
         'Monitor chunk loading errors in production',;
         'Test on various network conditions',;
         'Consider implementing progressive loading';
-      ];
-=======
-    
-    const report = {
-      timestamp: new Date().toISOString();
-      summary: {
-        totalIssues: buildIssues.length + configIssues.length;
-        buildIssues: buildIssues.length;
-        configIssues: configIssues.length;
-        highSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'high').length;
-        mediumSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'medium').length;
-        lowSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'low').length
-      };
-      buildAnalysis: {
-        issues: buildIssues;
-        summary: `Analyzed build output and found ${buildIssues.length} potential chunk-related issues`
-      };
-      configAnalysis: {
-        issues: configIssues;
-        summary: `Analyzed Next.js config and found ${configIssues.length} potential configuration issues`
-      };
-      recommendations;
-      nextSteps: [
-        'Review high-severity issues first';
-        'Implement the ChunkErrorHandler utility';
-        'Monitor chunk loading errors in production';
-        'Test on various network conditions';
-        'Consider implementing progressive loading'
-      ]
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    };
+      ];    };
     ;
     // Save report to file;
     fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
@@ -390,7 +239,7 @@ class ChunkErrorMonitor {;
   // Display report in console;
   displayReport(report) {;
     console.log('\n📊 Chunk Error Analysis Report');
-    console.log('=====================================');
+    console.log('==');
     ;
     // Summary;
     console.log(`\n📈 Summary:`);

@@ -10,5 +10,4 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
         </div>
       </div>
       <a href={url} className=&quot;mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded&quot;>Download PDF</a>    </div>
-  )
-}
+  )}

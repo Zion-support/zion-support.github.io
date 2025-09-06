@@ -7,11 +7,7 @@ export default {
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
-<<<<<<< HEAD
-    'no-undef': 'off'
-=======
-    'no-undef': 'off',
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
+    'no-undef': 'off'    'no-undef': 'off',
   },
   ignorePatterns: [
     'node_modules/',
@@ -22,12 +18,8 @@ export default {
     'coverage/',
     '*.config.js',
     '*.config.cjs',
-<<<<<<< HEAD
     '*.config.mjs'
-  ]
-};
-=======
+  ]};
     '*.config.mjs',
   ],
 };
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

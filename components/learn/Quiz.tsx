@@ -52,5 +52,4 @@ export default function Quiz({ questions, onComplete }: Props) {
       ))}
       <button onClick={submit} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Submit Quiz</button>
       {submitted && <div className=&quot;text-sm&quot;>Score: {score} / {questions.length}</div>}    </div>
-  )
-}
+  )}

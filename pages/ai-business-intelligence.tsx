@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -337,61 +336,7 @@ export default function AIBusinessIntelligencePage() {;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
                     Most Popular;
-                  </div>;
-=======
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Brain, BarChart3, TrendingUp, Users, Target, Zap,
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-export default function AIBusinessIntelligencePage() {
-  const features = [
-    {
-      icon: Brain,
-      title: &quot;Predictive Analytics&quot;,
-      description: &quot;Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.&quot;,
-      color: &quot;from-purple-500 to-pink-500&quot
-    },
-    {
-      icon: BarChart3,
-      title: &quot;Real-time Dashboards&quot;,
-      description: &quot;Monitor key performance indicators in real-time with customizable, interactive dashboards.&quot;,
-      color: &quot;from-blue-500 to-cyan-500&quot
-    },
-    {
-      icon: TrendingUp,
-      title: &quot;Performance Optimization&quot;,
-      description: &quot;Automatically identify bottlenecks and optimize business processes for maximum efficiency.&quot;,
-      color: &quot;from-green-500 to-emerald-500&quot
-    },
-    {
-      icon: Users,
-      title: &quot;Customer Insights&quot;,
-      description: &quot;Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.&quot;,
-      color: &quot;from-orange-500 to-red-500&quot
-    },
-    {
-      icon: Target,
-      title: &quot;Strategic Planning&quot;,
-      description: &quot;Data-driven decision making with scenario modeling and risk assessment capabilities.&quot;,
-      color: &quot;from-indigo-500 to-purple-500&quot
-    },
-    {
-      icon: Zap,
-      title: &quot;Automated Reporting&quot;,
-      description: &quot;Generate comprehensive reports automatically, saving hours of manual work each week.&quot;,
-      color: &quot;from-yellow-500 to-orange-500&quot
-    }
-  ],
-
-  const benefits = [
-    "Increase revenue by 25-40% through data-driven insights",
-    "Reduce operational costs by 15-30% with process optimization",
-    "Improve customer retention by 20-35% with predictive analytics",
+                  </div>;    "Improve customer retention by 20-35% with predictive analytics",
     "Accelerate decision-making by 60% with real-time data",
     "Reduce manual reporting time by 80% with automation",
     "Achieve 99.9% data accuracy with AI-powered validation"
@@ -520,9 +465,7 @@ href="#demo"
                 Watch Demo
               </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </motion.div>        </div>
 
       {_/* Features */}
       <section className="py-20 bg-white">
@@ -535,9 +478,14 @@ initial={_{ opacity: 0, y: 20}}
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Features</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Everything you need to transform your business data into strategic insights.
-            </p>
-          </motion.div>
+              Everything you need to transform your business data into strategic insights.            </p>
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• Sales forecasting</li>
+              <li>• Customer behavior prediction</li>
+              <li>• Risk assessment</li>
+              <li>• Market trend analysis</li>
+            </ul>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -554,10 +502,8 @@ key={feature.title}
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </motion.div>
-            ))}
-          </div>
+            ))}          </div>
         </div>
-      </section>
 
       {_/* Benefits */}
       <section className="py-20 bg-slate-50">
@@ -644,11 +590,9 @@ key={useCase.industry}
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <p className="text-green-800 font-medium">Results: {useCase.results}</p>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>            ))}
           </div>
         </div>
-      </section>
 
       {_/* Pricing */}
       <section className="py-20 bg-slate-900">
@@ -679,14 +623,12 @@ key={plan.plan}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                     Most Popular
                   </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                 )}
                 ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>;
                   <div className="text-4xl font-bold text-slate-900 mb-2">;
                     {plan.price}
-<<<<<<< HEAD
                     <span className="text-lg text-slate-600">{plan.period}</span>;
                   </div>;
                   <p className="text-slate-600">{plan.description}</p>;
@@ -745,33 +687,12 @@ key={plan.plan}
 ;
       <EnhancedFooter />;
     </>;
-  );
-=======
-                    <span className="text-lg text-slate-600">{plan.period}</span>
-                  </div>
-                  <p className="text-slate-600">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map(_(feature) => (
-                    <li key={feature} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-slate-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a,
-href="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+  );          </div>
         </div>
-      </section>
+      </main>
+    </Layout>
+  );
+};
 
       {_/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
@@ -806,5 +727,4 @@ href="/contact"
       <EnhancedFooter />
     </>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

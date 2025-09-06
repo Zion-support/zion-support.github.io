@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -30,41 +29,7 @@ interface OptimizedImageProps {;
   blurDataURL?:string,;
   loading?:'lazy' | 'eager',;
   style?:React.CSSProperties,;
-  objectPosition?:string;
-=======
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { motion, AnimatePresence } from 'framer-motion',
-import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { imageOptimization } from '@/utils/performance',
-import { logWarn } from '@/utils/productionLogger',
-interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty',
-  placeholderColor?: string,
-  priority?: boolean,
-  quality?: number,
-  sizes?: string,
-  onLoad?: () => void,
-  onError?: () => void,
-  fallbackSrc?: string,
-  aspectRatio?: string,
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down',
-  lazy?: boolean,
-  retryCount?: number,
-  showLoadingProgress?: boolean,
-  fill?: boolean,
-  blurDataURL?: string,
-  loading?: 'lazy' | 'eager',
-  style?: React.CSSProperties,
-  objectPosition?: string
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  objectPosition?:string;}
 ;
 interface ImageMetrics {;
   loadTime:number,;
@@ -72,7 +37,6 @@ interface ImageMetrics {;
   format:string,;
   wasOptimized:boolean;
 }
-<<<<<<< HEAD
 ;
 export const OptimizedImage:React.FC<OptimizedImageProps> = ({;
   src,;
@@ -283,216 +247,9 @@ export const OptimizedImage:React.FC<OptimizedImageProps> = ({;
             exit={{ opacity:0 }}
             transition={{ duration:0.3 }}
             className="absolute inset-0";
-          >;
-=======
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  placeholder = 'shimmer',
-  placeholderColor = '#f3f4f6',
-  priority = false,
-  quality = 75,
-  sizes,
-  onLoad,
-  onError,
-  fallbackSrc,
-  aspectRatio,
-  objectFit = 'cover',
-  lazy = true,
-  retryCount = 3,
-  showLoadingProgress = false,
-  fill = false,
-  blurDataURL,
-  loading = 'lazy',
-  style,
-  objectPosition = 'center',
-  ...props
-}) => {
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isInView, setIsInView] = useState(!lazy || priority),
-  const [currentSrc, setCurrentSrc] = useState(src),
-  const [retries, setRetries] = useState(0),
-  const [loadProgress, setLoadProgress] = useState(0),
-  const imgRef = useRef<HTMLImageElement>(null),
-  const observerRef = useRef<IntersectionObserver>(),
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),
-  const loadStartTime = useRef<number>(0),
-
-  // Intersection Observer for lazy loading,
-useEffect(() => {
-    if (!lazy || priority || isInView) return,
-
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries,
-        if (entry && entry.isIntersecting) {
-          setIsInView(true),
-          observerRef.current?.disconnect()
-        }
-      },
-      {
-        rootMargin: '50px', // Start loading 50px before image comes into view,
-threshold: 0.1
-      }
-    ),
-
-    if (imgRef.current) {
-      observerRef.current.observe(imgRef.current)
-    }
-
-    return () => {
-      observerRef.current?.disconnect()
-    }
-  }, [lazy, priority, isInView]),
-
-  // Start load time tracking,
-useEffect(() => {
-    loadStartTime.current = window.window.window.performance.now()
-  }, [src]),
-
-  // Monitor image performance,
-useEffect(() => {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries(),
-        entries.forEach((entry) => {
-          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming,
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0,
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,
-            
-            setMetrics({
-              loadTime,
-              fileSize,
-              format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',
-              wasOptimized: src.includes('/next/image')
-            }),
-
-            // Log slow or large images,
-if (loadTime > 2000) {
-              logWarn('Slow image loading: ', {
-                src,
-                loadTime: `${loadTime.toFixed(2)}ms`,
-                size: `${(fileSize / 1024).toFixed(2)}KB`
-              })
-            }
-
-            if (fileSize > 500 * 1024) {
-              logWarn('Large image detected: ', {
-                src,
-                size: `${(fileSize / 1024).toFixed(2)}KB`,
-                loadTime: `${loadTime.toFixed(2)}ms`
-              })            }
-          }
-        })
-      }),
-
-      observer.observe({ entryTypes: ['resource'] }),
-      return () => observer.disconnect()
-    }
-    
-    return () => {}, // Return empty cleanup function for the else case
-  }, [src]),
-
-  // Generate optimized URLs,
-const optimizedSrc = isInView ? imageOptimization.optimizeUrl(currentSrc, width, quality) : '',
-  const srcSet = isInView && sizes ? imageOptimization.generateSrcSet(currentSrc) : '',
-
-  // Handle image load,
-const handleLoad = () => {
-    setIsLoading(false),
-    setHasError(false),
-    setLoadProgress(100),
-    onLoad?.()
-  },
-
-  // Handle image error with retry logic,
-const handleError = () => {
-    if (retries < retryCount) {
-      setRetries(prev => prev + 1),
-      // Retry with a slight delay,
-setTimeout(() => {
-        setCurrentSrc(src + `?retry=${retries + 1}`)
-      }, 1000 * (retries + 1))
-    } else if (fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc),
-      setRetries(0)
-    } else {
-      setIsLoading(false),
-      setHasError(true),
-      onError?.()
-    }
-  },
-
-  // Simulate loading progress for demo purposes,
-useEffect(() => {
-    if (!isLoading || !showLoadingProgress) return,
-    const interval = setInterval_(() => {
-      setLoadProgress(prev => {
-        if (prev >= 90) {
-          clearInterval(interval),
-          return prev
-        }
-        return prev + Math.random() * 15
-      })
-    }, 100),
-    return () => clearInterval(interval)
-  }, [isLoading, showLoadingProgress]),
-
-  // Generate placeholder based on type,
-const generatePlaceholder = () => {
-    if (placeholder === 'none') return null,
-
-    const placeholderClassName = cn(
-      'absolute inset-0 flex items-center justify-center',
-      placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse',
-      placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50',
-      placeholder === 'color' && 'bg-gray-200'
-    ),
-    if (placeholder === 'color') {
-      return (
-        <div,
-className={placeholderClassName}
-          style={_{ backgroundColor: placeholderColor}}
-        />
-      )
-    }
-
-    return (
-      <div className={placeholderClassName}>
-        <ImageIcon className=&quot;h-8 w-8 text-gray-400&quot; />      </div>
-    )
-  },
-
-  // Container styles,
-const containerStyle: React.CSSProperties = {
-    aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
-    width: width ? `${width}px` : undefined,
-    height: height ? `${height}px` : undefined},
-  return (
-    <div,
-ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={containerStyle}
-    >
-      <AnimatePresence>
-        {_/* Placeholder */}
-        {_(isLoading || !isInView) && !hasError && (
-          <motion.div,
-initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className=&quot;absolute inset-0&quot;          >
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            {generatePlaceholder()}
+          >;            {generatePlaceholder()}
             ;
             {/* Loading progress */}
-<<<<<<< HEAD
             {showLoadingProgress && isLoading && loadProgress > 0 && (;
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">;
                 <motion.div;
@@ -501,21 +258,9 @@ initial={{ opacity: 1 }}
                   animate={{ width:`${loadProgress}%` }}
                   transition={{ duration:0.3 }}
                 />;
-              </div>;
-=======
-            {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className=&quot;absolute bottom-0 left-0 right-0 h-1 bg-gray-200&quot;>
-                <motion.div,
-className=&quot;h-full bg-blue-500&quot;
-                  initial={{ width: 0 }}
-                  animate={{ width: `${loadProgress}%` }}
-                  transition={{ duration: 0.3 }}                />
-              </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            )}
+              </div>;            )}
           </motion.div>;
         )}
-<<<<<<< HEAD
 ;
         {/* Error state */}
         {hasError && (;
@@ -535,34 +280,11 @@ className=&quot;h-full bg-blue-500&quot;
         {/* Actual image */}
         {isInView && !hasError && (;
           <motion.img;
-            src={optimizedSrc}
-=======
-
-        {_/* Error state */}
-        {hasError && (
-          <motion.div,
-initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className=&quot;absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400&quot;
-          >
-            <AlertTriangle className=&quot;h-8 w-8 mb-2&quot; />
-            <span className=&quot;text-sm&quot;>Failed to load image</span>
-            {retries > 0 && (
-              <span className=&quot;text-xs mt-1&quot;>Retried {retries} times</span>            )}
-          </motion.div>
-        )}
-
-        {_/* Actual image */}
-        {isInView && !hasError && (
-          <motion.img,
-src={optimizedSrc}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-            srcSet={srcSet}
+            src={optimizedSrc}            srcSet={srcSet}
             alt={alt}
             loading={priority ? 'eager' :'lazy'}
             onLoad={handleLoad}
             onError={handleError}
-<<<<<<< HEAD
             className={cn(;
               'w-full h-full transition-opacity duration-300',;
               `object-${objectFit}`,;
@@ -641,88 +363,10 @@ export const ImageGallery:React.FC<ImageGalleryProps> = ({;
               {image.caption && (;
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">;
                   <p className="text-sm">{image.caption}</p>;
-                </div>;
-=======
-            className={cn(
-              'w-full h-full transition-opacity duration-300', _`object-${objectFit}`,
-              isLoading ? 'opacity-0' : 'opacity-100'
-            )}
-            initial={_{ opacity: 0}}
-            animate={_{ opacity: isLoading ? 0 : 1}}
-            transition={_{ duration: 0.3}}
-          />
-        )}
-      </AnimatePresence>
-    </div>
-  )
-},
-
-// Gallery component with optimized loading,
-interface ImageGalleryProps {
-  images: Array<{
-    src: string,
-    alt: string,
-    caption?: string
-  }>,
-  columns?: number,
-  aspectRatio?: string,
-  className?: string,
-  onImageClick?: (index: number) => void
-}
-
-export const ImageGallery: React.FC<ImageGalleryProps> = ({
-  images,
-  columns = 3,
-  aspectRatio = '16/9',
-  className,
-  onImageClick
-}) => {
-  const [loadedCount, setLoadedCount] = useState(0),
-
-  const handleImageLoad = () => {
-    setLoadedCount(prev => prev + 1)
-  },
-
-  return (
-    <div className={cn('space-y-4', className)}>
-      <div className=&quot;flex justify-between items-center&quot;>
-        <h3 className=&quot;text-lg font-semibold&quot;>Gallery</h3>
-        <span className=&quot;text-sm text-muted-foreground&quot;>
-          {loadedCount}/{images.length} loaded        </span>
-      </div>
-      
-      <div,
-className={_`grid gap-4`}
-        style={_{ 
-          gridTemplateColumns: `repeat(${columns}, 1fr)` 
-        }}
-      >
-        {images.map(_(image, index) => (_<motion.div,
-key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className=&quot;group cursor-pointer&quot;
-            onClick={() => onImageClick?.(index)}          >
-            <div className=&quot;relative&quot;>
-              <OptimizedImage,
-src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
-                className=&quot;rounded-lg group-hover:scale-105 transition-transform duration-300&quot;
-                onLoad={handleImageLoad}
-                priority={index < 3} // Prioritize first 3 images
-              />
-              
-              {image.caption && (
-                <div className=&quot;absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg&quot;>
-                  <p className=&quot;text-sm&quot;>{image.caption}</p>                </div>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-              )}
+                </div>;              )}
             </div>;
           </motion.div>;
         ))}
-<<<<<<< HEAD
       </div>;
     </div>;
   ),;
@@ -773,56 +417,106 @@ export const OptimizedAvatar:React.FC<OptimizedAvatarProps> = ({;
         </div>;
       )}
     </div>;
-  ),;
-=======
-      </div>
-    </div>
-  )
-},
-
-// Avatar component with optimized loading,
-interface OptimizedAvatarProps {
-  src?: string,
-  alt: string,
-  size?: 'sm' | 'md' | 'lg' | 'xl',
-  fallback?: string,
-  className?: string
+  ),;}, 
+ ;
 }
-
-export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
-  src,
-  alt,
-  size = 'md',
-  fallback,
-  className
-}) => {
-  const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
-  },
-
-  const initials = fallback || alt.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
-  return (
-    <div className={cn('relative rounded-full overflow-hidden', sizeClasses[size], className)}>
-      {src ? (
-        <OptimizedImage,
-src={src}
-          alt={alt}
-          aspectRatio=&quot;1/1&quot;
-          objectFit=&quot;cover&quot;
-          fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder=&quot;color&quot;
-          placeholderColor=&quot;#f3f4f6&quot;
-          priority={true}
-          className=&quot;rounded-full&quot;
-        />
-      ) : (
-        <div className=&quot;w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold&quot;>
-          {initials}        </div>
-      )}
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}, 
+}
+}) ;
+});
+return () => observer.disconnect () ;
+}return () => {;
+  ;
+}, //Return empty cleanup function for the else case ;
+}, [src]);
+//Generate optimized URLs const interval = setInterval ( () => {;
+  setLoadProgress (prev => {;
+  if (prev >= 90) {;
+  return () => clearInterval (interval) ;
+}, [isLoading, showLoadingProgress]);
+//Generate placeholder based on type if (placeholder === 'color') {;
+  return (<div className= {;
+  placeholderClassName ;
+}style= {;
+  {;
+  backgroundColor: placeholderColor ;
+}
+}/>) ;
+}return (</div>) ;
+};
+//Container styles return (<div ref= {;
+  imgRef ;
+}className= {';
+  cn ('relative overflow-hidden', className) ;
+}style= {;
+  containerStyle ;
+}> <AnimatePresence> {;
+  /* Placeholder */ ;
+}{;
+  (isLoading || !isInView) && !hasError && (<motion.div > {;
+  generatePlaceholder () ;
+}/> </div>) ;
+}</motion.div>) ;
+}{;
+  /* Error state */ ;
+}{;
+  hasError && (<motion.div) ;
+}</motion.div>) ;
+}{;
+  /* Actual image */ ;
+}{;
+  isInView && !hasError && (<motion.img src= {;
+  optimizedSrc ;
+}srcSet= {;
+  srcSet ;
+}alt= {;
+  alt ;
+}loading= {';
+  priority ? 'eager' : 'lazy' ;
+}onLoad= {;
+  handleLoad ;
+}onError= {;
+  handleError ;
+}className= {';
+  cn ('w-full h-full transition-opacity duration-300', `object-$ {;
+  objectFit ;
+}`;';
+isLoading ? 'opacity-0' : 'opacity-100') ;
+}initial= {;
+  {;
+  opacity: 0 ;
+}
+}animate= {;
+  {;
+  opacity: isLoading ? 0 : 1 ;
+}
+}transition= {;
+  {;
+  duration: 0.3 ;
+}
+}/>) ;
+}</AnimatePresence> </div>) ;
+};
+//Gallery component with optimized loading </span> </div> <div className= {;
+  `grid gap-4` ;
+}style= {;
+  {;
+  gridTemplateColumns: `repeat ($ {;
+  columns ;
+}, 1fr) ` ;
+}
+}> {;
+  images.map ( (image, index) => (<motion.div key= {;
+  index ;
+}> <div className="relative" > <OptimizedImage </div>) ;
+}</div> </motion.div>) ) ;
+}</div> </div>) ;
+};
+//Avatar component with optimized loading return (<div className= {';
+  cn ('relative rounded-full overflow-hidden',  sizeClasses[size], className) ;
+}> {;
+  src ? (<OptimizedImage src= {;
+  src ;
+}</div>) ;
+}</div>) ;
+};
+'"

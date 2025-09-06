@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
-/* eslint-disable */;
-const { execSync } = require('child_process');
+/* eslint-disable */;const { execSync } = require('child_process');
 ;
 function run(cmd) {;
   console.log(`[auto-fix] ${cmd}`);

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form",;
 import { ;
   FormField,;
@@ -76,99 +75,11 @@ export function PaymentTermsFields({ ;
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
-            </FormItem>;
-=======
-import { UseFormReturn } from "react-hook-form",import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",import { 
-  Select,
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select",
-import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "./ContractForm",interface PaymentTermsFieldsProps {
-  form: UseFormReturn<ContractFormValues>,
-  talent: TalentProfile,
-  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
-}
-
-export function PaymentTermsFields({ 
-  form,
-  talent,
-  handleMilestonesGenerated 
-}: PaymentTermsFieldsProps) {
-  return (
-    <>
-      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
-        <FormField,
-control={form.control}
-          name=&quot;paymentTerms&quot;
-          render={({ field }) => (
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
-interface PaymentTermsFieldsProps {form: UseFormReturn<ContractFormValues>;
-  talent: TalentProfile,
-  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void}
-
-export function PaymentTermsFields(_{form, talent, handleMilestonesGenerated}: PaymentTermsFieldsProps) {return (_<>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField,
-control={form.control}
-          name="paymentTerms"
-          render={_({ field}) => (
-            <FormItem>
-              <FormLabel>Payment Terms</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder=&quot;Select payment terms&quot; />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value=&quot;hourly&quot;>Hourly Rate</SelectItem>
-                  <SelectItem value=&quot;fixed&quot;>Fixed Price</SelectItem>
-                  <SelectItem value=&quot;milestone&quot;>Milestone Payments</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
-        <FormField,
-control={form.control}
-          name=&quot;paymentAmount&quot;
-          render={({ field }) => (            <FormItem>
-              <FormLabel>Payment Amount</FormLabel>
-              <FormControl>
-                <Input,
-placeholder={form.getValues(&quot;paymentTerms&quot;) === &quot;hourly&quot; ? &quot;$X per hour&quot; : &quot;Total $X&quot} 
-                  {...field} 
-                />
-              </FormControl>
-              <FormDescription>
-                {form.getValues(&quot;paymentTerms&quot;) === &quot;milestone&quot; && 
-                  &quot;You can define specific milestone amounts in the contract text or use AI to suggest milestones&quot}              </FormDescription>
-              <FormMessage />
-            </FormItem>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          )}
+            </FormItem>;          )}
         />;
       </div>;
 ;
       {/* Project Milestones */}
-<<<<<<< HEAD
       {form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions;
@@ -183,21 +94,37 @@ placeholder={form.getValues(&quot;paymentTerms&quot;) === &quot;hourly&quot; ? &
         </div>;
       )}
     </>;
-  ),;
-=======
-      {form.watch(&quot;paymentTerms&quot;) === &quot;milestone&quot; && (
-        <div className=&quot;pt-2&quot;>
-          <MilestoneSuggestions,
-projectName={form.getValues(&quot;projectName&quot;) || &quot;Project&quot}
-            scopeSummary={form.getValues(&quot;scopeSummary&quot;) || "&quot}
-            startDate={form.getValues(&quot;startDate&quot;) || new Date()}
-            endDate={form.getValues(&quot;endDate&quot;)}
-            projectType={form.getValues(&quot;projectName&quot;).includes(&quot;AI&quot;) ? &quot;AI/ML&quot; : 
-                        form.getValues(&quot;projectName&quot;).includes(&quot;Web&quot;) ? &quot;Web Development&quot; : &quot;Other"}
-            onMilestonesGenerated={handleMilestonesGenerated}          />
-        </div>
-      )}
-    </>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+SelectValue interface PaymentTermsFieldsProps {
+  form: UseFormReturn<ContractFormValues>;
+talent: TalentProfile;
+handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void 
+}export function PaymentTermsFields ({
+  form;
+talent;
+handleMilestonesGenerated 
+}: PaymentTermsFieldsProps) {
+  return (<> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
+  form.control 
+}name="paymentTerms" render= {
+  ({
+  field 
+}) => (field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select payment terms" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="hourly" >Hourly Rate</SelectItem> <SelectItem value="fixed" >Fixed Price</SelectItem> <SelectItem value="milestone" >Milestone Payments</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Payment Amount</FormLabel> <FormControl> <Input </FormDescription> <FormMessage /> </FormItem>) 
+}/> </div> /> </div>) 
+}</>) 
 }

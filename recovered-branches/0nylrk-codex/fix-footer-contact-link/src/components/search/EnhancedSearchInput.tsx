@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -72,90 +71,10 @@ export function EnhancedSearchInput({ ;
         />;
         <Input;
           ref={inputRef}
-          type="text";
-=======
-import React, { useState, useEffect, useRef } from "react",
-import { Search, X } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",interface EnhancedSearchInputProps {
-  value: string,
-  onChange: (value: string) => void,
-  placeholder?: string,
-  searchSuggestions: SearchSuggestion[]
-}
-
-export function EnhancedSearchInput({ 
-  value,
-  onChange, 
-  placeholder = &quot;Search...&quot;, 
-  searchSuggestions 
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false),
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-import React, {useState, useEffect, useRef} from "react";
-
-interface EnhancedSearchInputProps {value: string,
-  onChange: (value: string) => void;
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[]}
-
-export function EnhancedSearchInput(_{value, onChange, placeholder = "Search...", searchSuggestions}: EnhancedSearchInputProps) {const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Filter suggestions based on input value,
-useEffect_(() => {
-    if (!value) {
-      // Show recent searches when input is empty,
-setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
-      return
-    }    
-    const filtered = searchSuggestions.filter(suggestion => 
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    ),
-    
-    // Sort suggestions to prioritize those that start with the search term,
-filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
-      return aStartsWith - bStartsWith
-    }),    
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
-  }, [value, searchSuggestions]),
-
-  // Handle clicks outside the component to close suggestions,
-useEffect_(() => {function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false)
-      }    }
-    
-    document.addEventListener("mousedown", handleClickOutside),
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, []),
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion),
-    setIsFocused(false),
-    inputRef.current?.blur()
-  },
-  
-  return (
-    <div className=&quot;relative w-full&quot; ref={containerRef}>
-      <div className=&quot;relative&quot;>        <Search,
-className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
-        />
-        <Input,
-ref={inputRef}
-          type=&quot;text&quot;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          value={value}
+          type="text";          value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-<<<<<<< HEAD
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
         />;
         {value && (;
@@ -175,26 +94,40 @@ ref={inputRef}
         visible={isFocused}
       />;
     </div>;
-  ),;
-=======
-          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
-        />
-        {value && (
-          <button,
-className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;            onClick={() => onChange('')}
-          >
-            <X className=&quot;h-4 w-4&quot; />
-          </button>
-        )}
-      </div>
-      
-      <AutocompleteSuggestions,
-suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-      />
-    </div>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+ interface EnhancedSearchInputProps {
+  value: string;
+onChange: (value: string) => void;
+placeholder?: string;
+searchSuggestions: SearchSuggestion[] 
+}export function EnhancedSearchInput ({
+  value;
+onChange;
+placeholder = "Search...";
+searchSuggestions 
+}: EnhancedSearchInputProps) {
+  const [isFocused, setIsFocused] = useState (false);
+const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]> ([]);
+const inputRef = useRef<HTMLInputElement> (null);
+const containerRef = useRef<HTMLDivElement> (null);
+if (!value) {
+  //Show recent searches when input is empty const filtered = searchSuggestions.filter (suggestion => suggestion.text.toLowerCase () .includes (value.toLowerCase () ) );
+//Sort suggestions to prioritize those that start with the search term setFilteredSuggestions (filtered.slice (0, 8) ), //Limit to 8 suggestions 
+}, [value, searchSuggestions]);
+//Handle clicks outside the component to close suggestions useEffect ( () => {
+  function handleClickOutside (event: MouseEvent) {
+  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {
+  
+}<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick= {
+  () => onChange ('') 
+}> <X className="h-4 w-4" /> </button>) 
+}</div> <AutocompleteSuggestions suggestions= {
+  filteredSuggestions 
+}searchTerm= {
+  value 
+}onSelectSuggestion= {
+  handleSelectSuggestion 
+}visible= {
+  isFocused 
+}/> </div>) 
 }

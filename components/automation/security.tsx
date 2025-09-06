@@ -35,5 +35,4 @@ export default function SecurityAudit({ report }: Props) {
       <pre className=&quot;whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto&quot;>
 {JSON.stringify(report, null, 2)}      </pre>
     </div>
-  )
-}
+  )}

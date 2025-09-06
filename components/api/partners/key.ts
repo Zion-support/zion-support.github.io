@@ -44,5 +44,4 @@ const now = new Date().toISOString();
   const newKey = {id: uuidv4(), partnerId: auth.partner.id, key: uuidv4(), active: true, createdAt: now, rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
   await saveApiKeys(keys);
-  return res.status(201).json({apiKey: newKey.key})
-}
+  return res.status(201).json({apiKey: newKey.key})}

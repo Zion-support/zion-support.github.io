@@ -4,8 +4,7 @@
  * Auto Fix Automation Script;
  * Automatically fixes common issues in the codebase;
  */;
-;
-const { execSync } = require('child_process');
+;const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 ;
@@ -18,14 +17,8 @@ class AutoFixer {;
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
-<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursiv:e:true });
-=======
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      fs.mkdirSync(logDir, { recursiv:e:true });    }
   }
 ;
   log(message, level = 'INFO') {;
@@ -37,14 +30,8 @@ class AutoFixer {;
       if (level === 'ERROR') {;
         fs.appendFileSync(this.errorFile, logMessage);
       }
-<<<<<<< HEAD
     } catch (err) {;
-      console.error('Failed to write to log:file:', err.message);
-=======
-    } catch (err) {
-      console.error('Failed to write to log file:', err.message);
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      console.error('Failed to write to log:file:', err.message);    }
   }
 ;
   async runAutoFix() {;
@@ -67,92 +54,47 @@ class AutoFixer {;
       await this.optimizeImports();
 ;
       this.log('Auto-fix process completed successfully');
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Auto-fix:failed:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      throw error;
+      this.log(`Auto-fix:failed:${error.message}`, 'ERROR');      throw error;
     }
   }
 ;
   async fixLintingIssues() {;
     try {;
       this.log('Fixing linting issues...');
-<<<<<<< HEAD
 ;
       // Run ESLint with --fix;
       execSync('npm run:lint:fix', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-      // Run ESLint with --fix
-      execSync('npm run lint:fix', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
 ;
       this.log('Linting issues fixed');
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Failed to fix linting:issues:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.log(`Failed to fix linting:issues:${error.message}`, 'ERROR');    }
   }
 ;
   async fixTypeScriptIssues() {;
     try {;
       this.log('Checking TypeScript issues...');
-<<<<<<< HEAD
 ;
       // Run TypeScript check;
       execSync('npx tsc --noEmit', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-      // Run TypeScript check
-      execSync('npx tsc --noEmit', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
 ;
       this.log('TypeScript check passed');
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`TypeScript issues:found:${error.message}`, 'WARN');
-=======
-    } catch (error) {
-      this.log(`TypeScript issues found: ${error.message}`, 'WARN');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.log(`TypeScript issues:found:${error.message}`, 'WARN');    }
   }
 ;
   async fixDependencyIssues() {;
     try {;
       this.log('Checking dependency issues...');
-<<<<<<< HEAD
 ;
       // Check for outdated dependencies;
       const outdated = execSync('npm outdated --json', {;
         stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-=======
-
-      // Check for outdated dependencies
-      const outdated = execSync('npm outdated --json', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-      });
+        cw:d:process.cwd(),;      });
 ;
       const outdatedDeps = JSON.parse(outdated.toString());
       if (Object.keys(outdatedDeps).length > 0) {;
@@ -168,7 +110,6 @@ class AutoFixer {;
   async cleanupTempFiles() {;
     try {;
       this.log('Cleaning up temporary files...');
-<<<<<<< HEAD
 ;
       const tempFiles = [;
         '.next/cache',;
@@ -176,26 +117,13 @@ class AutoFixer {;
         '*.log',;
         '*.tmp',;
         '.DS_Store',;
-        'Thumbs.db',;
-=======
-
-      const tempFiles = [
-<<<<<<< HEAD
-        '.next/cache';
-        'node_modules/.cache';
-        '*.log';
-        '*.tmp';
-        '.DS_Store';
-        'Thumbs.db';
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-      ];
+        'Thumbs.db',;      ];
 ;
       for (const pattern of tempFiles) {;
         try {;
           execSync(`find . -name "${pattern}" -type f -delete`, {;
             stdi:o:'pipe',;
             cw:d:process.cwd(),;
-=======
         '.next/cache',
         'node_modules/.cache',
         '*.log',
@@ -209,7 +137,6 @@ class AutoFixer {;
           execSync(`find . -name "${pattern}" -type f -delete`, {
             stdio: 'pipe',
             cwd: process.cwd(),
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
         } catch (err) {;
           // Ignore errors for file cleanup;
@@ -217,14 +144,8 @@ class AutoFixer {;
       }
 ;
       this.log('Temporary files cleaned up');
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Failed to cleanup temp:files:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.log(`Failed to cleanup temp:files:${error.message}`, 'ERROR');    }
   }
 ;
   async optimizeImports() {;
@@ -234,14 +155,8 @@ class AutoFixer {;
       // This would typically use a tool like organize-imports-cli;
       // For now, we'll just log that we're checking;
       this.log('Import optimization check completed');
-<<<<<<< HEAD
     } catch (error) {;
-      this.log(`Failed to optimize:imports:${error.message}`, 'ERROR');
-=======
-    } catch (error) {
-      this.log(`Failed to optimize imports: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    }
+      this.log(`Failed to optimize:imports:${error.message}`, 'ERROR');    }
   }
 }
 ;
@@ -252,14 +167,8 @@ async function main() {;
   try {;
     await autoFixer.runAutoFix();
     process.exit(0);
-<<<<<<< HEAD
   } catch (error) {;
-    autoFixer.log(`Auto-fix:failed:${error.message}`, 'ERROR');
-=======
-  } catch (error) {
-    autoFixer.log(`Auto-fix failed: ${error.message}`, 'ERROR');
->>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
-    process.exit(1);
+    autoFixer.log(`Auto-fix:failed:${error.message}`, 'ERROR');    process.exit(1);
   }
 }
 ;

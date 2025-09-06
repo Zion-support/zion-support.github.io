@@ -74,5 +74,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-}
+  res.status(405).end('Method Not Allowed')}

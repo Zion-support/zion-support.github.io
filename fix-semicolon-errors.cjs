@@ -5,7 +5,6 @@ function fixSemicolonErrors(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 ;
     // Fix semicolons in import statements;
     content = content.replace(;
@@ -13,22 +12,10 @@ function fixSemicolonErrors(filePath) {;
       (match, imports) => {;
         const cleanImports = imports;
           .split(',');
-          .map(imp => imp.trim().replace(/;+$/, ''));
-=======
-
-    // Fix semicolons in import statements
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];?/g,
-      (match, imports) => {
-        const cleanImports = imports
-          .split(',')
-          .map(imp => imp.trim().replace(/;+$/, ''))
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-          .join(', ');
+          .map(imp => imp.trim().replace(/;+$/, ''));          .join(', ');
         return match.replace(imports, cleanImports);
       }
     );
-<<<<<<< HEAD
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
@@ -38,20 +25,7 @@ function fixSemicolonErrors(filePath) {;
     content = content.replace(/\[([^\]]+)\]/g, (match, arrayContent) => {;
       const cleanArray = arrayContent;
         .split(',');
-        .map(item => item.trim().replace(/;+$/, ''));
-=======
-
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2');
-
-    // Fix semicolons in array elements
-    content = content.replace(/\[([^\]]+)\]/g, (match, arrayContent) => {
-      const cleanArray = arrayContent
-        .split(',')
-        .map(item => item.trim().replace(/;+$/, ''))
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-        .join(', ');
+        .map(item => item.trim().replace(/;+$/, ''));        .join(', ');
       return `[${cleanArray}]`;
     });
 ;

@@ -336,5 +336,4 @@ href="https://ziontechgroup.com"
         </div>
       </section>
     </div>
-  )
-}
+  )}

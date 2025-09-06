@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -27,12 +26,8 @@ export default function Custom404() {;
         </div>;
       </main>;
     </>;
-=======
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-
-export default function Custom404() {_return (
+const Custom404: React.FC = () => {
+  return (
     <>
       <Head>
         <title>404 - Page Not Found</title>
@@ -46,13 +41,11 @@ export default function Custom404() {_return (
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
           <p className="text-xl text-gray-600 mb-8">Page not found</p>
           <Link href="/" className="text-blue-600 hover:text-blue-800">
-            Go back home          >
-            Go Home
+            Go back home          >            Go Home
           </Link>
         </div>
       </div>
     </>
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
 }
 import type { NextPage } from 'next';

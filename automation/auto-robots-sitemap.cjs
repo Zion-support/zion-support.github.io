@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
  ;
 const fs = require('fs');
@@ -24,36 +23,7 @@ if (content !== before) {;
     execSync('git add -A');
     execSync('git config user.name "zion-bot"');
     execSync('git config user.email "bot@zion.app"');
-    execSync('git commit -m "chore(automation):ensure robots.txt has sitemap" || true');
-=======
-#!/usr/bin/env node
- 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-
-const root = process.cwd()
-const robotsPath = path.join(root, 'public', 'robots.txt')
-const siteUrl = (process.env.SITE_URL || process.env.NETLIFY_SITE_URL || 'https://zion.app').replace(/\/$/, '')
-const sitemapLine = `Sitemap: ${siteUrl}/sitemap.xml\n`
-
-let before = ''
-if (fs.existsSync(robotsPath)) before = fs.readFileSync(robotsPath, 'utf8')
-
-let content = before || 'User-agent: *\nAllow: /\n\n'
-if (!content.includes('Sitemap:')) content += sitemapLine
-else content = content.replace(/Sitemap:[^\n]*\n?/g, sitemapLine)
-
-if (content !== before) {
-  fs.mkdirSync(path.dirname(robotsPath) { recursive: true })
-  fs.writeFileSync(robotsPath, content)
-  try {
-    execSync('git add -A')
-    execSync('git config user.name "zion-bot"')
-    execSync('git config user.email "bot@zion.app"')
-    execSync('git commit -m "chore(automation): ensure robots.txt has sitemap" || true')
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-    try { execSync('git push') } catch {}
+    execSync('git commit -m "chore(automation):ensure robots.txt has sitemap" || true');    try { execSync('git push') } catch {}
   } catch {}
   console.log('[robots] updated robots.txt');
 } else {;

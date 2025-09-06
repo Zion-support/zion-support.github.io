@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -118,42 +117,14 @@ export function ApplicationsTable({ ;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
-                      application={application}
-=======
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { ClickableBadge } from "@/components/ui/clickable-badge",import { 
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
-}
-
-export function ApplicationsTable({ 
-  applications,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState(false),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+                      application={application}}: ApplicationsTableProps) {
+  const [hireModalOpen, setHireModalOpen] = useState (false);
+const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
+const handleHireClick = (application: JobApplication) => {
+  setSelectedApplication (application);
+setHireModalOpen (true) 
+};
+//This will be called after the hire confirmation is completed toast ({
   
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
@@ -244,7 +215,6 @@ variant=&quot;outline&quot;
                     </ClickableBadge>
                     <ApplicationActions,
 application={application}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                       processingId={processingId}
                       onViewApplication={onViewApplication}
                       onStatusChange={onStatusChange}
@@ -253,7 +223,6 @@ application={application}
                 </TableCell>;
               </TableRow>;
             ))}
-<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -266,20 +235,34 @@ application={application}
         onConfirm={handleHireConfirmed}
       />;
     </>;
-  ),;
-=======
-          </TableBody>
-        </Table>
-      </div>
-      
-      {_/* Hire Confirmation Modal */}
-      <HireConfirmationModal,
-isOpen={hireModalOpen}
-        onClose={_() => setHireModalOpen(false)}
-        application={selectedApplication || undefined}
-        onConfirm={handleHireConfirmed}
-      />
-    </>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+  ),;}
+};
+  applications.map ( (application) => (<TableRow key= {
+  application.id 
+}> <TableCell> />) : (<User className="h-4 w-4" />) 
+}</Avatar> <div> </div> </div> </div> </TableCell> onClick= {
+  () => onViewScore (application) 
+}> {
+  application.match score 
+}% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) 
+}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
+  application 
+}processingId= {
+  processingId 
+}onViewApplication= {
+  onViewApplication 
+}onStatusChange= {
+  onStatusChange 
+}/> </div> </TableCell> </TableRow>) ) 
+}</TableBody> </Table> </div> {
+  /* Hire Confirmation Modal */ 
+}<HireConfirmationModal isOpen= {
+  hireModalOpen 
+}onClose= {
+  () => setHireModalOpen (false) 
+}application= {
+  selectedApplication || undefined 
+}onConfirm= {
+  handleHireConfirmed 
+}/> </>) 
 }

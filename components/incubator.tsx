@@ -11,5 +11,4 @@ export default function IncubatorPage() {
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className=&quot;px-4 py-2 border rounded&quot;>View Incubator Projects</a></a>        </div>
       </div>
     </EnhancedLayout>
-  )
-}
+  )}

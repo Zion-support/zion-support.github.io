@@ -1,4 +1,6 @@
-
+:backup-merge-conflicts/itServicesData.ts.backup
+:src/data/itServicesData.ts
+:backup-merge-conflicts/itServicesData.ts.backup
 
 export interface ITService {;
   "id": "string;
@@ -1706,7 +1708,6 @@ export const IT_SERVICES: ITService[] = [;,
     },
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],",
     marketSize: "$25.6 billion by 2025";,",
-
 export interface ITService {
   id: string;
   title: string;
@@ -2711,9 +2712,10 @@ export const IT_SERVICES: ITService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;Firewall rules&quot;, &quot;VPN encryption&quot;, &quot;Access control&quot;, &quot;Network segmentation&quot;]
     },
-
-    competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],
+:backup-merge-conflicts/itServicesData.ts.backup
+    competitors: [&quot;Cisco&quot;, &quot;HPE&quot;, &quot;Dell Technologies&quot;, &quot;Juniper&quot;, &quot;Fortinet&quot;],
+    marketSize: &quot;$25.6 billion by 2025&quot;    competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],
     marketSize: "$25.6 billion by 2025"
   }
 ];
-
+:backup-merge-conflicts/itServicesData.ts.backup

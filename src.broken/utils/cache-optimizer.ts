@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Utility functions for cache-optimizer,;
 export const cache-optimizer = {,;
   // TODO:Implement utility functions;
@@ -62,69 +61,4 @@ export const cache-optimizer = {,;
 // Caching optimization added;
 // Caching optimization added;
 // Caching optimization added;
-// Caching optimization added;
-=======
-// Utility functions for cache-optimizer,
-export const cache-optimizer = {,
-  // TODO: Implement utility functions
-},// Caching optimization added,
-// Caching optimization added,
-// Caching optimization added,// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
-// Caching optimization added
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+// Caching optimization added; // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added // Caching optimization added 

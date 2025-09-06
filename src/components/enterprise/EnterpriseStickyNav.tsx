@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
@@ -34,44 +33,10 @@ export function EnterpriseStickyNav() {;
         </div>;
       </div>;
     </nav>;
-  );
-=======
-import { useState } from "react",
-import { Menu } from 'lucide-react'
-import Link from "next/link",export function EnterpriseStickyNav() {
-  const [open, setOpen] = useState(false),
-  return (
-    <nav className=&quot;sticky top-16 z-40 bg-card border-b border-border&quot;>
-      <div className=&quot;container mx-auto px-4 md:px-6&quot;>
-        <div className=&quot;flex items-center justify-between h-12&quot;>
-import Link from "next/link";
-
-export function EnterpriseStickyNav() {_const [open, _setOpen] = useState(false);
-  return (_<nav className="sticky top-16 z-40 bg-card border-b border-border">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-12">
-          <button
-            className=&quot;md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary&quot;
-            onClick={() => setOpen(!open)}
-            aria-label=&quot;Toggle navigation&quot;
-            aria-expanded={open}          >
-            <Menu className=&quot;h-6 w-6&quot; />
-          </button>
-          <ul className={`${open ? &quot;flex&quot; : &quot;hidden&quot;} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>            <li>
-              <Link href="#features" className="text-sm font-medium hover: text-primary">Features</Link>            </li>
-            <li>
-              <Link href=&quot;#pricing&quot; className=&quot;text-sm font-medium hover:text-primary&quot;>Pricing</Link>
-            </li>
-            <li>
-              <Link href=&quot;#testimonials&quot; className=&quot;text-sm font-medium hover:text-primary&quot;>Testimonials</Link>
-            </li>
-            <li>
-              <Link href=&quot;#contact&quot; className=&quot;text-sm font-medium hover:text-primary&quot;>Contact Us</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
-}
+  );}
+ export function EnterpriseStickyNav () {;
+  const [open, setOpen] = useState (false);
+return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <div className="container mx-auto px-4 md:px-6" > <div className="flex items-center justify-between h-12" > md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"onClick={;
+  () => setOpen (!open) ";
+}> <Menu className=" h-6 w-6"/> </button> <li> </li> <li> <Link href=" #pricing"className=" text-sm font-medium hover:text-primary">Pricing</Link> </li> <li> <Link href=" #testimonials"className=" text-sm font-medium hover:text-primary">Testimonials</Link> </li> <li> <Link href=" #contact"className=" text-sm font-medium hover:text-primary" >Contact Us</Link> </li> </ul> </div> </div> </nav>) ;
+}"

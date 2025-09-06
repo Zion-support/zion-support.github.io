@@ -429,5 +429,4 @@ export default function AiToolsPage() {_const _aiTools = [
         </div>
       </section>
     </>
-  )
-}
+  )}

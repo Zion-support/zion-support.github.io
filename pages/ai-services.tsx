@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-<<<<<<< HEAD
 ;
 export default function AIServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
@@ -386,29 +385,27 @@ export default function AIServicesPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 }
-=======
-
-export default function AIServices() {_return (
+const AIServicesPage: React.FC = () => {
+  return (
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Advanced AI services including autonomous AI agents, _financial trading systems, _legal document analysis, _and more."
-        />
-        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+        <meta name="description" content="Advanced AI services and solutions" />
       </Head>
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
-            <p className="text-xl text-slate-300 text-center">
-              Advanced artificial intelligence solutions for your business.
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our comprehensive AI solutions and services designed to transform your business.
             </p>
-          </div>        </main>
-      </ErrorBoundary>
+          </div>
+        </div>
+      </div>
     </>
   );
-}
-  );}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+};
+
+export default AIServicesPage;

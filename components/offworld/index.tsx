@@ -69,5 +69,4 @@ export default function OffworldConsole() {
       </section>
 
       {status && <p className=&quot;text-sm text-gray-700&quot;>{status}</p>}    </div>
-  )
-}
+  )}
