@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -124,10 +123,10 @@ export function ProductGallery({
             />          </div>
         </DialogContent>
       )}
-    </Dialog>
-  )
-}
-}
+    </Dialog>;
+  );
+};
+};
 =======
 import React, { useState, Suspense } from 'react',;
 import {;
@@ -274,4 +273,4 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

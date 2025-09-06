@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -8,7 +15,7 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 =======
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -21,36 +28,18 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 
   const getRegionEmoji = (countryName: string): string => {
 <<<<<<< HEAD
-    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string, string> = {;
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
-      "Germany": "🇩🇪"
-      "France": "🇫🇷";
-      "Japan": "🇯🇵";
-      "China": "🇨🇳";
-      "Brazil": "🇧🇷";
-      "India": "🇮🇳";
-      "Russia": "🇷🇺";
-      "Singapore": "🇸🇬";
-      "South Korea": "🇰🇷";
-      "South Africa": "🇿🇦";
-      // Default if no flag is found
-      "default": "🌐"
-    }
-    return emojiMap[countryName] |emojiMap["default"]
-  }
-  // Get response time estimate based on country
-  const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
 =======
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -148,6 +137,15 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
             isPopular 
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+<<<<<<< HEAD
+          }`}
+        >
+          Select Service
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+=======
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
@@ -248,6 +246,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       </CardFooter>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

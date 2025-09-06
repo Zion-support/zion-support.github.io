@@ -1,25 +1,12 @@
 <<<<<<< HEAD
-
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
-export default function ProjectPage() {
-  const router = useRouter()
-  const { projectId } = router.query as { projectId?: string }
-  const [project, setProject] = useState<any | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [note, setNote] = useState("")
-  const headers = {
-    "x-demo-user-role": "client"
-    "x-demo-user-id": "client-1"
-    // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent"
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
+import { useEffect, useState } from "react",;
+import { useRouter } from "next/router",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
 =======
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -27,13 +14,20 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   useEffect(() => {
     async function load() {
       if (!projectId) return
@@ -90,17 +84,11 @@ export default function ProjectPage() {
       setShowFeedback(true)
 <<<<<<< HEAD
     }
-  }
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
-    const json = await res.json()
 =======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
     } catch (error) {
@@ -137,6 +125,10 @@ export default function ProjectPage() {
 }
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
+<<<<<<< HEAD
+      {loading && <div>Loading…</div>}
+      {error && <div className="text-red-600">{error}</div>}
+=======
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -147,7 +139,7 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
@@ -161,7 +153,7 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </span>
           </div>
           <section className="rounded border p-4">
@@ -338,7 +330,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </ul>
           </section>
           <section className="rounded border p-4">
@@ -362,7 +354,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -389,7 +381,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
@@ -403,7 +395,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -425,7 +417,8 @@ export default function ProjectPage(req, res) {
         userHeaders={headers}
       />
     </div>
-  )
+  );
+};
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -467,5 +460,5 @@ export default function ProjectPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

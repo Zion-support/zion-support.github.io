@@ -2,9 +2,8 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-
-import Link from 'next/link'
-import { TalentProfile } from '@/types/talent'
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 =======
@@ -15,6 +14,7 @@ import Link from "next/link",
 import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface TalentCardProps {
@@ -33,6 +33,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void
 
   isAuthenticated: boolean
+<<<<<<< HEAD
 }
 export function TalentCard({
 
@@ -91,8 +92,7 @@ export function TalentCard({
                   onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
 =======
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -172,6 +172,7 @@ export function TalentCard({;
               {talent.profile_picture_url && !avatarError ? (;
                 <Image;
                   src={talent.profile_picture_url} ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   alt={talent.full_name || 'Talent Avatar'}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   fill={true}
@@ -229,7 +230,7 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -254,7 +255,7 @@ export function TalentCard({;
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
@@ -283,16 +284,17 @@ export function TalentCard({;
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
-                </span>
+                </span>;
               ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
+              {(talent.skills?.length || 0) > 5 && (
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length || 0) - 5} more
                 </span>
               )}
-            </div>
-          </div>
+            </div>;
+          </div>;
         )}
+
         <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -369,7 +371,7 @@ export function TalentCard({;
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
@@ -395,7 +397,10 @@ export function TalentCard({;
         </div>
       </div>
     </Card>
-  )
+  );
+};
+}
+}
 }
 =======
               size="sm"
@@ -412,4 +417,4 @@ export function TalentCard({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

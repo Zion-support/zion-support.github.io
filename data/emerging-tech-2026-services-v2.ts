@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface EmergingTech2026ServiceV2 {
+export interface EmergingTech2026ServiceV2 {;
   id: string;
   name: string;
   tagline: string;
@@ -677,12 +677,12 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'
-    launchDate: '2026-06-15'
-    customers: 65
-    rating: 4.9
-    reviews: 45
-  }
+      'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',
+    launchDate: '2026-06-15',
+    customers: 65,
+    rating: 4.9,
+    reviews: 45,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -695,8 +695,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9
 
     reviews: 45
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV2 {;
@@ -1092,6 +1090,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     customers: 65,;
     rating: 4.9;
     reviews: 45;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

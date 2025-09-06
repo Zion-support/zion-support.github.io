@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import { useState, useEffect } from 'react,
+import { useState, useEffect } from 'react,;
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue};
 export default useDebounce,
 export const useDebounce = <T>(value: T, delay: number): T => {,
@@ -13,56 +7,14 @@ export const useDebounce = <T>(value: T, delay: number): T => {,
     const handler = setTimeout(() => {,
       setDebouncedValue(value)}, delay),
     return () => {,
-      clearTimeout(handler)}}, [value, delay]),
+      clearTimeout(handler)}}, [value, delay]),;
   return debouncedValue};
 export default useDebounce,
 <<<<<<< HEAD
 ,
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-,
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-import { useState, useEffect } from 'react
-import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue}
-export default useDebounce
-export const useDebounce = <T>(value: T, delay: number): T => {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value)
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value)}, delay)
-    return () => {
-      clearTimeout(handler)}}, [value, delay])
-  return debouncedValue}
-export default useDebounce
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+;
 import { useState, useEffect } from 'react';
-export const useDebounce = <T>(value: T, delay: number): T => {
+export const useDebounce = <T>(value: T, delay: number): T => {;
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
   useEffect(() => {
     const handler = setTimeout(() => {

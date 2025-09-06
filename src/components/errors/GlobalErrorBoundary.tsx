@@ -2,13 +2,20 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+=======
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
-  AlertTriangle
-  RefreshCw
-  Home
-  Bug
-  Send
-  Clipboard
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  Send,
+<<<<<<< HEAD
+  Clipboard,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -28,13 +35,39 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
-  maxRetries?: number
-  showReportButton?: boolean
+=======
+  Clipboard,;
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface ErrorBoundaryState {;
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
+  retryCount: number;
+  userFeedback: string;
+  showDetails: boolean;
+}
+;
+interface ErrorBoundaryProps {;
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  maxRetries?: number;
+  showReportButton?: boolean;
   context?: string;  enableRetry?: boolean
   maxRetries?: number
   showReportButton?: boolean
   context?: string
 }
+<<<<<<< HEAD
+
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps
   ErrorBoundaryState
@@ -95,9 +128,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     // Report to Sentry
     Sentry.withScope(scope => {
       scope.setTag(
-        'errorBoundary'
-        this.props.context |'GlobalErrorBoundary'
-      )
+        'errorBoundary',
+        this.props.context || 'GlobalErrorBoundary';
+      );
       scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack
         retryCount: this.state.retryCount
@@ -107,10 +140,72 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     // Custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
+=======
+;
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
+  private retryTimeouts: NodeJS.Timeout[] = [];
+  constructor(props: ErrorBoundaryProps) {;
+    super(props);
+    this.state = {;
+      hasError: false,;
+      error: null,;
+      errorInfo: null,;
+      errorId: null,;
+      retryCount: 0,;
+      userFeedback: '',;
+      showDetails: false;
+    }
+  }
+;
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {;
+    return {;
+      hasError: true,;
+      error;
+    }
+  }
+;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    const errorId = this.generateErrorId();
+    // Enhanced error logging;
+    const enhancedError = {;
+      ...error,;
+      componentStack: errorInfo.componentStack,;
+      errorBoundary: this.props.context || 'GlobalErrorBoundary',;
+      timestamp: new Date().toISOString(),;
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',;
+      url: typeof window !== 'undefined' ? window.location.href : 'SSR',;
+      userId: this.getUserId(),;
+      buildInfo: this.getBuildInfo();
+    }
+;
+    // Log to console in development;
+    if (process.env.NODE_ENV === 'development') {;
+      console.group('🚨 Error Boundary Caught Error');
+      logErrorToProduction('Error:', { data: error });
+      logErrorToProduction('Error Info:', { data: errorInfo });
+      logErrorToProduction('Enhanced Error:', { data: enhancedError });
+      console.groupEnd();
+    }
+;
+    // Report to Sentry;
+    Sentry.withScope((scope) => {;
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary');
+      scope.setLevel('error');
+      scope.setContext('errorInfo', {;
+        componentStack: errorInfo.componentStack,;
+        retryCount: this.state.retryCount;
+      });
+      Sentry.captureException(error);
+    });
+    // Custom error handler;
+    if (this.props.onError) {;
+      this.props.onError(error, errorInfo);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     this.setState({
-      errorInfo
-      errorId
+      errorInfo,
+      errorId,
+<<<<<<< HEAD
     }) }
   componentWillUnmount() {
     // Clear any pending retry timeouts
@@ -246,11 +341,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     return 'This appears to be a temporary issue. Please try again.'
   }
   private retry = () => {
-    if (this.state.retryCount >= (this.props.maxRetries |3)) {
-      return
+    if (this.state.retryCount >= (this.props.maxRetries || 3)) {
+      return;
     }
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000; // Exponential backoff
-      return
+      return;
     }
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
     const timeout = setTimeout(() => {      this.setState({
@@ -289,8 +384,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
   private reportError = async () => {
-    if (!this.state.error |!this.state.errorId) return
-    if (!this.state.error |!this.state.errorId) return
+    if (!this.state.error || !this.state.errorId) return;
+    if (!this.state.error || !this.state.errorId) return;
     try {
       await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       // Could show a toast notification here
@@ -299,7 +394,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
   private reportError = async () => {
-    if (!this.state.error |!this.state.errorId) return
+    if (!this.state.error || !this.state.errorId) return;
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
@@ -329,106 +424,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }    }
   }
 =======
-'use client';
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  AlertTriangle,
-  RefreshCw,
-  Home,
-  Bug,
-  Send,
-  Clipboard,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface ErrorBoundaryState {;
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  retryCount: number;
-  userFeedback: string;
-  showDetails: boolean;
-}
-;
-interface ErrorBoundaryProps {;
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableRetry?: boolean;
-  maxRetries?: number;
-  showReportButton?: boolean;
-  context?: string;
-}
-;
-export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
-  private retryTimeouts: NodeJS.Timeout[] = [];
-  constructor(props: ErrorBoundaryProps) {;
-    super(props);
-    this.state = {;
-      hasError: false,;
-      error: null,;
-      errorInfo: null,;
-      errorId: null,;
-      retryCount: 0,;
-      userFeedback: '',;
-      showDetails: false;
-    }
-  }
-;
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {;
-    return {;
-      hasError: true,;
-      error;
-    }
-  }
-;
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    const errorId = this.generateErrorId();
-    // Enhanced error logging;
-    const enhancedError = {;
-      ...error,;
-      componentStack: errorInfo.componentStack,;
-      errorBoundary: this.props.context || 'GlobalErrorBoundary',;
-      timestamp: new Date().toISOString(),;
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',;
-      url: typeof window !== 'undefined' ? window.location.href : 'SSR',;
-      userId: this.getUserId(),;
-      buildInfo: this.getBuildInfo();
-    }
-;
-    // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {;
-      console.group('🚨 Error Boundary Caught Error');
-      logErrorToProduction('Error:', { data: error });
-      logErrorToProduction('Error Info:', { data: errorInfo });
-      logErrorToProduction('Enhanced Error:', { data: enhancedError });
-      console.groupEnd();
-    }
-;
-    // Report to Sentry;
-    Sentry.withScope((scope) => {;
-      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary');
-      scope.setLevel('error');
-      scope.setContext('errorInfo', {;
-        componentStack: errorInfo.componentStack,;
-        retryCount: this.state.retryCount;
-      });
-      Sentry.captureException(error);
-    });
-    // Custom error handler;
-    if (this.props.onError) {;
-      this.props.onError(error, errorInfo);
-    }
-
-    this.setState({
-      errorInfo,
-      errorId,
     });  }
 
   componentWillUnmount() {
@@ -588,8 +583,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     }
 
   };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
@@ -606,31 +601,27 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       if (this.props.fallback) {
 <<<<<<< HEAD
         return this.props.fallback
+=======
+        return this.props.fallback;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-      const canRetry =
+<<<<<<< HEAD
+      const canRetry = null;
         this.props.enableRetry !== false &&
         this.state.retryCount < (this.props.maxRetries |3)
       return (
         <div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20'>          <motion.div      }
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-      const canRetry = this.props.enableRetry !== false &&
-                       this.state.retryCount < (this.props.maxRetries |3)
-      return (
 =======
-        return this.props.fallback;
-
-      }
-
-      const severity = this.getErrorSeverity(this.state.error)
-      const suggestion = this.getErrorSuggestion(this.state.error)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
 
       return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -647,7 +638,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
                   <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -691,11 +682,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                   {this.state.retryCount > 0 && (
                     <p className='text-sm text-orange-600 dark:text-orange-400'>
                       Retry attempt: {this.state.retryCount}/
-                      {this.props.maxRetries |3}                    </p>                    {suggestion}
+                      {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
-                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries |3}
+                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
 =======
                 <div className="flex items-center justify-center gap-2 mt-2">
@@ -722,7 +713,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   )}
                 </div>
                 {/* Action Buttons */}
@@ -730,7 +721,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
 =======
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
@@ -746,6 +737,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <Home className='h-4 w-4' />
                     Go Home
                   </Button>
+<<<<<<< HEAD
                   <Button
                     onClick={() =>
                       this.setState({ showDetails: !this.state.showDetails })
@@ -776,6 +768,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <Home className="h-4 w-4" />
                     Go Home
                   </Button>
+                  <Button 
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost" 
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+=======
 
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
@@ -783,7 +782,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     size="sm"
                     className="flex items-center gap-2"
                   >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
@@ -791,7 +790,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Error Details */}
                 <AnimatePresence>
                   {this.state.showDetails && (
@@ -803,7 +802,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                       className='border-t pt-4'
 =======
                       className="border-t pt-4"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className="space-y-4">
                         <div>
@@ -818,13 +817,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                       <div className="space-y-4">
                         <div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
                             {this.state.error.message}
                           </code>
                         </div>
-<<<<<<< HEAD
                         {process.env.NODE_ENV === 'development' &&
                           this.state.error.stack && (
                             <div>
@@ -836,6 +834,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                               </pre>
                             </div>
                           )}
+
+<<<<<<< HEAD
                         <div className='flex gap-2'>
                           <Button
                             onClick={this.copyErrorDetails}
@@ -844,7 +844,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                           >
                             <Clipboard className='h-4 w-4 mr-2' />
 =======
-
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -857,7 +856,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
@@ -871,11 +870,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
@@ -893,9 +893,17 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 <<<<<<< HEAD
       )
     return this.props.children
+=======
+      );
+
+    }
+
+    return this.props.children;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
+<<<<<<< HEAD
   const [error, setError] = React.useState<Error | null>(null)
   React.useEffect((,) => {
     if (error) {
@@ -926,17 +934,10 @@ export default GlobalErrorBoundary
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
   return WrappedComponent
 }
-export default GlobalErrorBoundary
+
+export default GlobalErrorBoundary;
+;
 =======
-      );
-
-    }
-
-    return this.props.children;
-  }
-
-// Hook for programmatic error boundary
-export const useErrorBoundary = () => {
   const [error, setError] = React.useState<Error | null>(null);
   React.useEffect(() => {;
     if (error) {;
@@ -964,4 +965,4 @@ export const withErrorBoundary = <P extends object>(;
 }
 ;
 export default GlobalErrorBoundary;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

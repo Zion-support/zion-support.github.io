@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
@@ -18,6 +17,8 @@ interface QuickAccessProps {
   className?: string;
   style?: React.CSSProperties
 export function QuickAccess({ className, style }: QuickAccessProps) {
+  const { t } = useTranslation()
+=======
 
   const { t } = useTranslation()
   const quickLinks = [
@@ -87,6 +88,7 @@ interface QuickAccessProps {
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -119,6 +121,19 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/community"
     },
     {
+<<<<<<< HEAD
+      title: t('home.tool_mobile_app', 'Mobile App'),
+      description: t('home.tool_mobile_app_desc', 'Zion on the go'),
+      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
+      link: '/mobile-launch',
+    },
+  ]
+  return (
+    <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-8'>
+          <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
+=======
       title: t('home.tool_mobile_appMobile App'),
       description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
@@ -139,15 +154,19 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {t('home.quick_access_title', 'Quick Access')}
           </h2>
           <p className="text-zion-slate-light text-lg">
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
+<<<<<<< HEAD
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
+=======
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {quickLinks.map((link, index) => (
             <Link
               key={index}
@@ -167,11 +186,11 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
               </div>
             </Link>
 import React, { useState } from 'react'
-import { motion  } from 'framer-motion'
-export default function Page() {"
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
+import { motion  } from 'framer-motion';
+export default function Page() {";
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
@@ -340,8 +359,9 @@ export default function Page() {"
     </section>
   )
 export default QuickAccess }
-export default QuickAccess
 
+export default QuickAccess;
+;
 =======
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
@@ -363,4 +383,4 @@ export default QuickAccess
 }
 ;
 export default QuickAccess;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

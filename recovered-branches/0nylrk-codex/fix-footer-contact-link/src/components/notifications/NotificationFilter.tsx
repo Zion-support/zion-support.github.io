@@ -2,16 +2,15 @@ import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 <<<<<<< HEAD
-export type FilterType =
-  | "all"
-  | "unread"
-  | "onboarding"
-  | "messages"
-  | "system";
+<<<<<<< HEAD
+import React from 'react';
+import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
+
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+
 interface NotificationFilterProps {
-  filter: FilterType;
-  onFilterChange: (filter: FilterType) => void;
-}
+  filter: FilterType,
+  onFilterChange: (filter: FilterType) => void
 =======
 import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
@@ -19,12 +18,25 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+export type FilterType =
+  | "all"
+  | "unread"
+  | "onboarding"
+  | "messages"
+  | "system";
+
+interface NotificationFilterProps {
+  filter: FilterType;
+  onFilterChange: (filter: FilterType) => void;
+>>>>>>> main
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
-  filter
-  onFilterChange
+  filter,
+  onFilterChange,
 }) => {
   return (
     <div className="border-b border-zion-blue-light">
@@ -52,10 +64,12 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   );
-}
-
+};
 =======
   )
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

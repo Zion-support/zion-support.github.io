@@ -1,6 +1,6 @@
 
+export interface ListingCategory {;
 <<<<<<< HEAD
-export interface ListingCategory {
   id: string;
   name: string;
 
@@ -8,7 +8,8 @@ export interface ListingCategory {
 
   icon: string
 }
-export interface ProductListing {
+
+export interface ProductListing {;
   id: string;
   title: string;
   description: string;
@@ -38,7 +39,8 @@ export interface ProductListing {
   location?: string, // Adding location property to fix TypeScript errors
   availability?: string, // Adding availability property to fix TypeScript errors
 }
-export interface ListingItem {
+
+export interface ListingItem {;
   id: string;
   title: string;
   category: string;
@@ -49,7 +51,6 @@ export interface ListingItem {
 export type ListingView = 'grid' | 'list';
 
 =======
-export interface ListingCategory {;
   id: string,;
   name: string,;
   description: string,;
@@ -89,5 +90,6 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type ListingView = 'grid' | 'list';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -11,9 +11,9 @@ import { motion } from 'framer-motion';
     | 'consciousness';
   children?: React.ReactNode;
 export default function UltraFuturisticBackground2038({
-  intensity = 'medium'
-  theme = 'consciousness'
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({
+  intensity = 'medium',
+  theme = 'consciousness',
+  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
   intensity = 'medium';
   theme = 'consciousness';
   children
@@ -256,7 +256,8 @@ export default function UltraFuturisticBackground2038({
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4']
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           }
-    }
+    };
+
     const colors = getThemeColors();
     // Enhanced particle system with consciousness and quantum effects
     let particles: Array<{
@@ -373,7 +374,7 @@ export default function UltraFuturisticBackground2038({
 =======
               ctx.fillRect(x, y, 20, 20);            }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           }
         }
@@ -502,6 +503,7 @@ export default function UltraFuturisticBackground2038({
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill();
         }
+
 <<<<<<< HEAD
         // Boundary wrapping with quantum tunneling effect
         if (
@@ -530,15 +532,9 @@ export default function UltraFuturisticBackground2038({
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
 =======
-
-        // Standard particle rendering
-        if (particle.type === 'particle') {
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
-<<<<<<< HEAD
-=======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Regenerate particles
@@ -590,8 +586,8 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20'
                 style={{
+                  left: `${(i * 5) % 100}%`,
 <<<<<<< HEAD
-                  left: `${(i * 5) % 100}%`
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32];
@@ -601,10 +597,9 @@ export default function UltraFuturisticBackground2038({
                   repeat: Infinity
                   ease: "easeInOut"
 =======
-                  left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   height: [32, 64, 32]
@@ -646,7 +641,7 @@ export default function UltraFuturisticBackground2038({
 =======
                   top: `${(i * 7) % 100}%`,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -671,8 +666,8 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
+                  left: `${(i * 12) % 100}%`,
 <<<<<<< HEAD
-                  left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
@@ -684,14 +679,14 @@ export default function UltraFuturisticBackground2038({
                   scale: [1, 1.5, 1];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
-                  duration: 6 + i * 0.5
-                  repeat: Infinity
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
 =======
-                  left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-                  ease: "easeInOut"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -709,7 +704,7 @@ export default function UltraFuturisticBackground2038({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {children}
     </div>
   );
@@ -753,5 +748,10 @@ animate ();
 }</div>) 
 }</div> {
   children 
+<<<<<<< HEAD
+}</div>)   )
+}
+;
+=======
 }</div>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

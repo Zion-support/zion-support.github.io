@@ -26,12 +26,18 @@ import { Zap, Star } from 'lucide-react';
   ArrowRight,
   Play,
   AlertTriangle,
-  Clock,
+  Clock,;
   Database,;
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+export default function APITestingSuitePage() {;
+=======
 } from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function APITestingSuitePage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -296,7 +302,6 @@ export default function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
-
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>
@@ -445,7 +450,7 @@ export default function APITestingSuitePage() {
 
                       {feature.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </p>
                   </div>
                 </div>
@@ -457,7 +462,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -466,7 +471,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -522,7 +527,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -623,7 +628,7 @@ export default function APITestingSuitePage() {
 
                       </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   ))}
                 </div>
@@ -631,7 +636,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -646,7 +651,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -696,7 +701,7 @@ export default function APITestingSuitePage() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </Card>
@@ -715,7 +720,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -747,6 +752,7 @@ export default function APITestingSuitePage() {
                     </span>
                   </div>
                 )}
+
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -775,10 +781,9 @@ export default function APITestingSuitePage() {
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
-
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -800,7 +805,7 @@ export default function APITestingSuitePage() {
 
                 </Button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Card>
             ))}
           </div>
@@ -809,7 +814,7 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -819,7 +824,7 @@ export default function APITestingSuitePage() {
 =======
 
             Ready to Test Your APIs?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -850,7 +855,9 @@ export default function APITestingSuitePage() {
     </>
 <<<<<<< HEAD
 );
+}
+
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

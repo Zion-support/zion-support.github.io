@@ -1,5 +1,5 @@
-import React from 'react',
 <<<<<<< HEAD
+import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
@@ -58,7 +58,7 @@ export default function RAGEvaluationLabPage() {
           </div>
           const useCases = [ 'Enterprise Knowledge Management', 'Customer
           Support Systems', 'Research & Development', 'Content Generation
-          Platforms', 'Educational Applications', 'Legal & Compliance Systems'
+          Platforms', 'Educational Applications', 'Legal & Compliance Systems';
           ];
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
@@ -80,7 +80,9 @@ export default function RAGEvaluationLabPage() {
     </>
   );
 
+}
 =======
+import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
 export default function RAGEvaluationLabPage() {
@@ -183,4 +185,4 @@ export default function RAGEvaluationLabPage(req, res) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,24 +1,25 @@
 <<<<<<< HEAD
-import {
 
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
-
-import { SortFilterProps } from "@/types/filters";
+<<<<<<< HEAD
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
 =======
-
+=======
+>>>>>>> main
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { SortFilterProps } from "@/types/filters";
+>>>>>>> main
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -39,10 +40,9 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 import {;
   Select,;
   SelectContent,;
@@ -70,6 +70,9 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
       </Select>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {AuthContext} from "@/context/auth/AuthContext";
+import type { UserDetails as AuthUserDetails } from "@/types/auth";
+// Define types for our context
+export interface UserDetails {;
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[];
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string
+=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
@@ -60,6 +82,7 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface AuthContextType {;
@@ -101,12 +124,18 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
+<<<<<<< HEAD
+export function AuthProvider({ children }: { children: ReactNode }) {;
+  const [user, setUser] = useState<UserDetails | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
 <<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
 =======
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Mock auth functions for now - these would connect to Supabase in a real implementation
@@ -298,15 +327,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
-// Custom hook to use the auth context
-export function useAuth(): AuthContextType {
-  const context = useContext(AuthContext);
 
+// Custom hook to use the auth context
+export function useAuth(): AuthContextType {;
+  const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
-  }
-  return context
-}
 =======
       console.warn("No wallet detected"),
       return
@@ -462,6 +488,7 @@ export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   return context;
 }

@@ -469,12 +469,12 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.'
-    launchDate: '2024-02-01'
-    customers: 789
-    rating: 4.8
-    reviews: 912
-  }
+      'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
+    launchDate: '2024-02-01',
+    customers: 789,
+    rating: 4.8,
+    reviews: 912,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -487,6 +487,8 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8
 
     reviews: 912
+  }
+];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasV2 {;
@@ -749,3 +751,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

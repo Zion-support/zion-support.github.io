@@ -1,12 +1,12 @@
 
 <<<<<<< HEAD
 import React from "react";
-import { SearchSuggestion, SearchHighlight } from "@/types/search";
+import {SearchSuggestion, SearchHighlight} from "@/types/search";
 =======
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -23,7 +23,7 @@ interface AutocompleteSuggestionsProps {;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 // Helper function to highlight matching text
 
@@ -32,6 +32,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     return { before: '', match: text, after: '' }
   }
 <<<<<<< HEAD
+  
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
@@ -43,14 +44,12 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     match: text.substring(index, index + searchTerm.length);
     after: text.substring(index + searchTerm.length)
   }
-}
-export function AutocompleteSuggestions({
-  suggestions
-  searchTerm
+};
+
+export function AutocompleteSuggestions({ 
+  suggestions, 
+  searchTerm, ;
   onSelectSuggestion;
-  visible
-}: AutocompleteSuggestionsProps) {
-  if (!visible |suggestions.length === 0) return null;
 =======
 ;
   const lowerText = text.toLowerCase(),;
@@ -71,6 +70,7 @@ export function AutocompleteSuggestions({
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null,

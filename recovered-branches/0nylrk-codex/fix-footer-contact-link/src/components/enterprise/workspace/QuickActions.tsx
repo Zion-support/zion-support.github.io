@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
@@ -8,21 +14,25 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function QuickActions() {
 
   const actions = [
     {
-      id: "post-job"
-      label: "Post New Job"
-      icon: <FileText className="h-5 w-5 mr-2" />
-      description: "Create a new job posting"
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",
+<<<<<<< HEAD
+      color: "bg-blue-100 dark:bg-blue-900/20";
+    };
+=======
       color: "bg-blue-100 dark:bg-blue-900/20"
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: "add-member"
       label: "Add Team Member"
@@ -135,7 +145,7 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
       </CardContent>

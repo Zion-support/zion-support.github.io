@@ -12,8 +12,7 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'l
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { toast  } from 'sonner';
 export default function ProjectRoom() {
-
-  const { projectId } = useParams() as { projectId: string }
+  const { projectId } = useParams() as { projectId: string },;
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -68,6 +67,7 @@ export default function ProjectRoom() {;
       isMuted: false;
     }
   ]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
@@ -95,8 +95,9 @@ export default function ProjectRoom() {;
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
@@ -104,16 +105,8 @@ export default function ProjectRoom() {;
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`)
     }
-  }
-
+  };
 =======
-  },
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -144,6 +137,7 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -313,5 +307,7 @@ export default function ProjectRoom() {;
 }
 =======
 }
+<<<<<<< HEAD
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

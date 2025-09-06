@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJsonFile } from "../../../../utils/api/storage";
+import { requireSuperadminApi } from "../../../../utils/api/auth";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const id = String(req.query.id |"");
@@ -12,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ opens: u.opens |0 });
   res.status(200).json({ opens: u.opens |0 });
 }
-
 =======
   if (!u) return res.status(404).json({ error: 'Not found' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

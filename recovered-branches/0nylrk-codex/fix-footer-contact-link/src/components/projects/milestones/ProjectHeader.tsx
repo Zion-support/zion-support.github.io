@@ -1,16 +1,23 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
+=======
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+>>>>>>> main
 interface ProjectHeaderProps {
   title: string;
 }
-export function ProjectHeader({ title }: ProjectHeaderProps) {
 
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
-
+<<<<<<< HEAD
 =======
 import React from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -22,8 +29,11 @@ interface ProjectHeaderProps {;
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> main
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -41,11 +51,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
-<<<<<<< HEAD
   );
-}
-=======
-  )
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

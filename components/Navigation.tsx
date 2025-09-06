@@ -45,7 +45,7 @@ import {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
-  Search,
+  Search,;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
@@ -63,45 +63,7 @@ import SearchModal from './SearchModal';
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  Menu
-  X
-  ChevronDown
-  ChevronRight
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-  ArrowRight
-  Building
-  Users
-  ShoppingCart
-  Shield
-  Zap
-  Globe
-  BarChart3
-  Search
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-export default function Navigation() {
+export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -529,21 +491,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface EmergingTech2026Service {
+export interface EmergingTech2026Service {;
   id: string;
   name: string;
   tagline: string;
@@ -709,12 +709,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
-    launchDate: '2026-04-20'
-    customers: 180
-    rating: 4.8
-    reviews: 120
-  }
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
+    launchDate: '2026-04-20',
+    customers: 180,
+    rating: 4.8,
+    reviews: 120,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -727,8 +727,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8
 
     reviews: 120
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
@@ -1124,6 +1122,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

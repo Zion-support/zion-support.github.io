@@ -1,5 +1,5 @@
+export interface SpecializedITSolution2026 {;
 <<<<<<< HEAD
-export interface SpecializedITSolution2026 {
   id: string;
   name: string;
   tagline: string;
@@ -594,35 +594,33 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
-    launchDate: '2024-05-25'
-    customers: 67
-    rating: 4.4
-    reviews: 33
-  }
+      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
+    launchDate: '2024-05-25',
+    customers: 67,
+    rating: 4.4,
+    reviews: 33,
+  },;
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
-    solution => solution.category === category
+    solution => solution.category === category;
   );
-}
-export const getPopularSpecializedITSolutions2026 = () => {
+};
+
+export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return specializedITSolutions2026.filter(solution => {
+  return specializedITSolutions2026.filter(solution => {;
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
   })
-}
-
 =======
-export interface SpecializedITSolution2026 {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -985,5 +983,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

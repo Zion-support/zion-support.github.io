@@ -5,15 +5,17 @@ import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
 import {cn} from "@/lib/utils"
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
 =======
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Breadcrumb = React.forwardRef<
   HTMLElement,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
@@ -96,21 +98,22 @@ const BreadcrumbEllipsis = ({
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
-export {
+ 
 <<<<<<< HEAD
+export {;
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-  BreadcrumbEllipsis}
-
 =======
+export {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   BreadcrumbEllipsis}
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -7,8 +7,7 @@ import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
-
-export function TokenDisplay() {
+export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
 =======
 import React from "react",
@@ -19,6 +18,7 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -96,4 +96,4 @@ export function TokenDisplay() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

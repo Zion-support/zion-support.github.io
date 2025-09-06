@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-  X
-  Building2
-  Code
-  Smartphone
-  Cloud
-  Shield
-  Zap
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
-  Phone
-  Mail
-
-  ExternalLink
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -155,4 +153,8 @@ export default Sidebar;
 };
 
 export default Sidebar;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

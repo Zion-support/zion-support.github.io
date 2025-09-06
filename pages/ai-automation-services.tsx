@@ -2,11 +2,9 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Zap, Brain, Code, Shield, Users, TrendingUp;
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Cpu, Rocket, Globe, BarChart3, Settings
- } from 'lucide-react';
+<<<<<<< HEAD
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
 const contactInfo = {
@@ -104,10 +102,8 @@ const benefits = [
     icon: BarChart3
     color: 'text-pink-400'
   },];
+
 =======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {;
   Zap, Brain, Code, Shield, Users, TrendingUp,;
@@ -193,7 +189,7 @@ const benefits = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AIAutomationServices() {
   return (
     <Layout>
@@ -329,7 +325,7 @@ export default function AIAutomationServices() {
   }
 }
             className="max-w-4xl mx-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
@@ -341,7 +337,7 @@ export default function AIAutomationServices() {
 =======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 AI Automation
               </span>
               <br />
@@ -353,7 +349,6 @@ export default function AIAutomationServices() {
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
-
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -366,7 +361,7 @@ export default function AIAutomationServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -377,7 +372,7 @@ export default function AIAutomationServices() {
 =======
               <Link href="/contact" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -397,7 +392,7 @@ export default function AIAutomationServices() {
 }
         <div className="absolute top-20 left-10 opacity-20 animate-float">
           <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -448,7 +443,7 @@ export default function AIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -496,7 +491,7 @@ export default function AIAutomationServices() {
   }
 }
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
@@ -513,7 +508,7 @@ export default function AIAutomationServices() {
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
@@ -579,7 +574,7 @@ export default function AIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -627,7 +622,7 @@ export default function AIAutomationServices() {
   }
 }
                 className="animated-border"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -746,7 +741,7 @@ export default function AIAutomationServices() {
                   </div>
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -758,7 +753,7 @@ export default function AIAutomationServices() {
 =======
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Started
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </Link>
                   </div>
                 </div>
@@ -814,7 +809,7 @@ export default function AIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -862,7 +857,7 @@ export default function AIAutomationServices() {
   }
 }
                 className="text-center group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
@@ -927,7 +922,7 @@ export default function AIAutomationServices() {
   }
 }
             className="max-w-4xl mx-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
@@ -944,7 +939,7 @@ export default function AIAutomationServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -958,7 +953,7 @@ export default function AIAutomationServices() {
 =======
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -968,7 +963,7 @@ export default function AIAutomationServices() {
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
 =======
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Monitoring</div>
@@ -985,10 +980,13 @@ export default function AIAutomationServices() {
           </motion.div>
         </div>
       </section>
-    </Layout>
 <<<<<<< HEAD
+    </Layout>;
 );
+
+}
 =======
+    </Layout>
   )
             className="max-w-4xl mx-auto";
           >;
@@ -1037,4 +1035,4 @@ export default function AIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

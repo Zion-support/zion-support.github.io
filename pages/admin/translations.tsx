@@ -1,10 +1,8 @@
 <<<<<<< HEAD
-import dynamic from 'next/dynamic';
-
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false })
-
+import dynamic from 'next/dynamic',;
 =======
 import dynamic from 'next/dynamic'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function TranslationsAdminPage() {
@@ -12,6 +10,10 @@ export default function TranslationsAdminPage() {
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
+<<<<<<< HEAD
+  );
+};
+=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -31,3 +33,4 @@ export default function TranslationsAdminPage() {_return (
   }
 }
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

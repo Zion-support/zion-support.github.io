@@ -1,7 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest } from 'next';
-export function extractClientIp(req: NextApiRequest): string | null {
-  const xff = (req.headers['x-forwarded-for'] as string) |'';
+
+export function extractClientIp(req: NextApiRequest): string | null {;
+  const xff = (req.headers['x-forwarded-for'] as string) || '';
   const ip =
     xff.split(',')[0]?.trim() |
     (req.headers['x-real-ip'] as string) |
@@ -10,7 +11,8 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 }
-export function getClientIp(req: any): string {
+
+export function getClientIp(req: any): string {;
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
@@ -20,4 +22,4 @@ export function getClientIp(req: any): string {
 }
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

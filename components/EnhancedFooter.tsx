@@ -6,14 +6,14 @@ import React from 'react';
 import Link from 'next/link';
 
 import {
-  Brain
-  Mail
-  Phone
-  MapPin
-  Globe
-  Github
-  Linkedin
-  Twitter;
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,;
+  Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -61,18 +61,21 @@ const EnhancedFooter: React.FC = () => {
     }
   ];
   const socialLinks = [
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 <<<<<<< HEAD
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
       icon: Linkedin
     }
     {
-      name: 'Twitter'
-      href: 'https://twitter.com/ziontechgroup'
-      icon: Twitter
-    }
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   return (
     <footer className='bg-slate-950 border-t border-white/10'>
       <div className='max-w-7xl mx-auto px-6 py-16'>
@@ -153,7 +156,7 @@ const EnhancedFooter: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -198,7 +201,7 @@ const EnhancedFooter: React.FC = () => {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -207,7 +210,9 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };export default EnhancedFooter;  )
-}
+};
+
+<<<<<<< HEAD
 export default EnhancedFooter;
 import React from "react";
   FileText
@@ -246,6 +251,7 @@ export default function EnhancedFooter() {const scrollToTop = () => {";
       { name: "Terms of Service", href: "/terms" },";
       { name: "Cookie Policy", href: "/cookies" }]}
   const socialLinks = [];
+
   return (;
     <footer className="bg-gray-900 text-white">";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
@@ -411,8 +417,6 @@ company updates.;
       </button>
     </footer>
   )}"'
-
-<<<<<<< HEAD
 =======
 export default EnhancedFooter;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

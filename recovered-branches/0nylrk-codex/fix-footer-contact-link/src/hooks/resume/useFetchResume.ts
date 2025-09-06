@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Resume  } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-export function useFetchResume() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+export function useFetchResume() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -75,11 +75,12 @@ export function useFetchResume() {;
           setResume(null),;
           setIsLoading(false),;
           return null;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         throw resumeError
       }
 <<<<<<< HEAD
+      
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -192,7 +193,7 @@ export function useFetchResume() {;
   },;
   return {;
     isLoading,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     error;
     resume;
 

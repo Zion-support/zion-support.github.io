@@ -2,26 +2,36 @@
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
+import { format } from 'date-fns'
+import { toast } from '@/hooks/use-toast'
+import { supabase } from '@/integrations/supabase/client'
+import { Review, ReviewStatus } from '@/types/reviews'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
+=======
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
 import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 import {
-
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+<<<<<<< HEAD
+  DialogTitle,
 } from '@/components/ui/dialog'
   DropdownMenu
   DropdownMenuContent
@@ -86,40 +96,7 @@ export function ReviewsModerationTable({
         description: `Review has been ${data.status}.`
       })
       onRefresh()
-
-      setViewDetailsOpen(false)
-    }
-    onError: (error: Error,) => {
-      toast({
-
-        title: 'Error'
-        description: `Failed to update review: ${error.message}`
-        variant: 'destructive'
-      })
-    }
-  })
-  const getInitials = (name: string,) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase()
-  }
 =======
-import { useState } from "react",
-import { useMutation } from "@tanstack/react-query",
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { Review, ReviewStatus } from "@/types/reviews",
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -161,12 +138,26 @@ export function ReviewsModerationTable({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
+<<<<<<< HEAD
+        variant: 'destructive',
+      })
+    },
+  })
+  const getInitials = (name: string,) => {
+    return name
+      .split(' ')
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+  }
+=======
         variant: "destructive"})
     }}),
 
@@ -179,7 +170,7 @@ export function ReviewsModerationTable({
       .toUpperCase()
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -202,6 +193,7 @@ export function ReviewsModerationTable({
 <<<<<<< HEAD
   }
   const handleApprove = (reviewId: string) => {
+<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -222,7 +214,6 @@ export function ReviewsModerationTable({
       </div>
     )
   }
-
   return (
     <>
       <Table>
@@ -244,11 +235,8 @@ export function ReviewsModerationTable({
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |''}                      />
+                        alt={review.reviewer_profile.display_name || ''}                      />
 =======
-  }
-
-  const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
@@ -412,7 +400,7 @@ export function ReviewsModerationTable({;
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
                       />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
@@ -492,7 +480,7 @@ export function ReviewsModerationTable({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </Button>
                     </>
                   )}
@@ -543,7 +531,7 @@ export function ReviewsModerationTable({;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -572,13 +560,13 @@ export function ReviewsModerationTable({;
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
 <<<<<<< HEAD
-                        alt={selectedReview.reviewer_profile.display_name |''}                      />
+                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -598,7 +586,7 @@ export function ReviewsModerationTable({;
                           ? getInitials(selectedReview.reviewer_profile.display_name);
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </Avatar>
                   <div>
@@ -638,7 +626,7 @@ export function ReviewsModerationTable({;
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {selectedReview.communication_rating && (
                     <Badge variant="outline">
                       Communication: {selectedReview.communication_rating}/5
@@ -669,7 +657,7 @@ export function ReviewsModerationTable({;
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </Badge>
                   )}
                 </div>
@@ -756,7 +744,7 @@ export function ReviewsModerationTable({;
                 >;
                   Mark as Approved;
                 </Button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </DialogFooter>
           </DialogContent>
@@ -771,10 +759,10 @@ export function ReviewsModerationTable({;
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
   return (<div className="flex"> {
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
-  star
-}/>) )
-}</div>)
+  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
+  star ;
+}/>) ) ;
+}</div>) ;
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
@@ -809,7 +797,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
-}</AvatarFallback>)
+}</AvatarFallback>) 
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
@@ -843,4 +831,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
     </>;
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

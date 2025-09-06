@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Sparkles} from "lucide-react";
+=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -9,7 +17,7 @@ import { Sparkles } from "lucide-react";
 =======
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -33,6 +41,14 @@ interface AIListingFormProps {
   }
 }
 
+<<<<<<< HEAD
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+=======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
 <<<<<<< HEAD
   const { toast } = useToast();
@@ -46,6 +62,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [category, setCategory] = useState(initialValues.category || ""),
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSubmit = () => {
@@ -116,9 +133,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           disabled={isLoading}
         />
       </div>
-      <Button
-        onClick={handleSubmit}
-        disabled={isLoading |!title |!category}
+      <Button 
 =======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -212,6 +227,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />;
       </div>;
       <Button;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -13,10 +13,9 @@ export default function EnterpriseIT({ }: EnterpriseITProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/EnterpriseIT.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

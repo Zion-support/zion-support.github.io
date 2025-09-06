@@ -16,8 +16,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormDescription,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  FormDescription,;
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
@@ -25,15 +24,14 @@ import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
+
 <<<<<<< HEAD
 export function AdditionalClausesFields({
   form
 }: AdditionalClausesFieldsProps) {
   return (
     <FormField
-
 =======
-
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -63,7 +61,7 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -84,12 +82,12 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                     <Checkbox
 <<<<<<< HEAD
                       checked={field.value?.includes("nda")}
-                      onCheckedChange={(checked) => {
-                        const currentValues = field.value |[];
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "nda")
+                              currentValues.filter((value) => value !== "nda"),
 =======
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
@@ -98,7 +96,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             );
                       }}
                     />
@@ -119,7 +117,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 =======
             />;
             <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -133,7 +131,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                         return checked
                           ? field.onChange([...currentValues, "ip"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "ip")
+                              currentValues.filter((value) => value !== "ip"),
 =======
                       checked={field.value?.includes('ip')}
                       onCheckedChange={(checked) => {;
@@ -142,7 +140,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             );
                       }}
                     />
@@ -163,7 +161,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 =======
             />;
             <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -178,8 +176,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, "termination"])
                           : field.onChange(
                               currentValues.filter(
-                                (value) => value !== "termination"
-                              )
+                                (value) => value !== "termination",
+                              ),
 =======
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
@@ -188,7 +186,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             );
                       }}
                     />
@@ -209,7 +207,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 =======
             />;
             <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
@@ -225,8 +223,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, "revisions"])
                           : field.onChange(
                               currentValues.filter(
-                                (value) => value !== "revisions"
-                              )
+                                (value) => value !== "revisions",
+                              ),
 =======
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
@@ -235,7 +233,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             );
                       }}
                     />
@@ -258,6 +256,6 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
     />
 =======
     />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }

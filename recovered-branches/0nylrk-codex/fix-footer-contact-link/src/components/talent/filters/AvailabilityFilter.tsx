@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {AvailabilityFilterProps} from "@/types/filters";
+=======
 import { ChevronDown, ChevronUp } from "lucide-react",
 <<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
@@ -7,7 +13,7 @@ import { AvailabilityFilterProps } from "@/types/filters";
 =======
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -23,8 +29,24 @@ export function AvailabilityFilter({
 }: AvailabilityFilterProps) {
 =======
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+const AVAILABILITY_OPTIONS = [
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+  { id: "project", label: "Project-based" },
+];
+>>>>>>> main
 
+export function AvailabilityFilter({
+  selectedAvailability,
+  toggleAvailability,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -38,6 +60,10 @@ export function AvailabilityFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map((option) => (
@@ -90,7 +116,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {option.label}
               </label>
             </div>
@@ -100,3 +126,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>
   );
 }
+;

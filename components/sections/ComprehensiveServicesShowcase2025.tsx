@@ -2,23 +2,23 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Database
-  Cloud
-  Lock
-  Rocket
-  Users
-  DollarSign
-  Target
-  Award
-  Phone;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  Users,
+  DollarSign,
+  Target,
+  Award,;
+  Phone,;
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
@@ -125,8 +125,9 @@ const ComprehensiveServicesShowcase2025 = () => {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
       </div>
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+
 <<<<<<< HEAD
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -138,12 +139,11 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 =======
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -171,7 +171,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
@@ -217,7 +217,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                     {category.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                 </div>
               </div>
@@ -227,7 +227,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -238,7 +238,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   >
                     {/* Service Header */}
                     <div className='mb-4'>
@@ -259,7 +259,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                         {service.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </p>
                     </div>
                     {/* Features */}
@@ -298,7 +298,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Pricing */}
                     <div className='mb-4'>
                       <div className='flex items-center justify-between'>
@@ -395,7 +395,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                     {/* CTA Button */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
@@ -404,7 +404,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </motion.div>
@@ -413,7 +413,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -423,7 +423,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -475,12 +475,12 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
     </section>
   );
-}
+};
+
+<<<<<<< HEAD
 export default ComprehensiveServicesShowcase2025;  )
 }
 export default ComprehensiveServicesShowcase2025;
-
-<<<<<<< HEAD
 =======
 export default ComprehensiveServicesShowcase2025;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,11 +1,9 @@
 import Head from 'next/head';
 <<<<<<< HEAD
-
-import React from 'react'
-
+import React from 'react',
 =======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Update202508150406() {
   return (
     <>
@@ -68,7 +66,7 @@ export default function Update202508150406() {
 =======
               <h2 className='text-2xl font-bold mb-4 text-yellow-400'>
                 Future Innovations
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </h2>
               <ul className='space-y-4'>
                 <li className='flex items-start'>
@@ -127,7 +125,8 @@ export default function Update202508150406() {
     </>
 <<<<<<< HEAD
   )
-}
+};
+;
 =======
   );
   } catch (error) {
@@ -135,4 +134,4 @@ export default function Update202508150406() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

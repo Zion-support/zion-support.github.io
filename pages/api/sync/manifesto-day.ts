@@ -1,10 +1,9 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
-  readState
-  writeState
-  upsertEvent
+  readState,
+  writeState,
+  upsertEvent,;
 } from "../../../utils/sync/storage";
 
 import { signPayload } from "../../../utils/sync/signature";
@@ -16,20 +15,9 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const state = readState();
-  if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" });
-  }
-  const { milestoneId, title, timestamp } = req.body as {
-    milestoneId: string;
-    title: string;
-    timestamp?: number;
-  }
-  if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" });
-  const version = nextVersionFor(state, milestoneId);
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -45,6 +33,7 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
     } catch (error) {
@@ -109,11 +98,10 @@ export default async function handler(req, res) {
         } catch {}
       })
   );
+
   return res
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
-}
-
 =======
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
@@ -204,5 +192,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

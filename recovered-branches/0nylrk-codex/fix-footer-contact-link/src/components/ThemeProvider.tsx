@@ -31,13 +31,12 @@ const initialState: ThemeProviderState = {
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
 <<<<<<< HEAD
-  children
+  children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(&quot;theme&quot;) as Theme) |defaultTheme
 =======
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -84,6 +83,11 @@ export function ThemeProvider({
 }
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
+
+<<<<<<< HEAD
+  if (context === undefined);
+    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
+=======
   if (context === undefined)
 <<<<<<< HEAD
     throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
@@ -91,6 +95,7 @@ export const useTheme = () => {
 }
 =======
     throw new Error("useTheme must be used within a ThemeProvider")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return context
 }

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmptyMatchesCard } from "./EmptyMatchesCard";
+import { JobMatchCard } from "./JobMatchCard";
+=======
 
 import { useEffect, useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -11,15 +19,24 @@ interface SuggestedTalentsProps {
 =======
 import { EmptyMatchesCard } from "./EmptyMatchesCard",
 import { JobMatchCard } from "./JobMatchCard",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SuggestedTalentsProps {
   jobId: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   jobTitle?: string
 }
+
+<<<<<<< HEAD
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
+  const [talents, setTalents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+=======
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true),
@@ -136,6 +153,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   }
   useEffect(() => {
     if (jobId) {
+<<<<<<< HEAD
       fetchSuggestedTalents();
     }
   }, [jobId]);
@@ -154,12 +172,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     }
   });
 =======
-      setIsProcessing(false)
-    })
-  },
-
-  useEffect(() => {
-    if (jobId) {
       fetchSuggestedTalents()
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -250,7 +262,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       matchPercent: talent.match_score || 85;
       skills: talent.talent_profile?.skills || []}
   }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Card className="border-zion-blue-light bg-zion-blue">
@@ -260,7 +272,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -299,4 +311,4 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

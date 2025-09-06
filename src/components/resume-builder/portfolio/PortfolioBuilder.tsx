@@ -1,8 +1,11 @@
-
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
+import { useState, useEffect } from 'react'
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
+import { ProjectForm } from './ProjectForm'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
 import { FilePlus, Loader2 } from 'lucide-react'
 import { ProjectCard  } from './ProjectCard';
 import { ProjectForm  } from './ProjectForm';
@@ -21,15 +24,16 @@ export function PortfolioBuilder() {
     fetchProjects()
   }
   const handleEditSuccess = () => {
-    setEditingProject(null)
-    fetchProjects()
-  }
-  const handleDeleteProject = async (projectId: string) => {
+    setEditingProject(null);
+    fetchProjects();
+  };
+  const handleDeleteProject = async (projectId: string) => {;
     const success = await deleteProject(projectId);    if (success) {
       fetchProjects()
     }
   }
 =======
+
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -60,7 +64,7 @@ export function PortfolioBuilder() {;
     }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -88,27 +92,14 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
-=======
-        <Button 
-          onClick={() => setShowAddProject(true)} 
-          className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
-          Add Project
-        </Button>
-      </div>
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
-<<<<<<< HEAD
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-            <ProjectForm              project={editingProject |undefined}
+            <ProjectForm              project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -134,6 +125,19 @@ export function PortfolioBuilder() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
 =======
+        <Button 
+          onClick={() => setShowAddProject(true)} 
+          className="gap-2"
+          disabled={showAddProject || !!editingProject}
+        >
+          <FilePlus className="h-4 w-4" />
+          Add Project
+        </Button>
+      </div>
+      
+      {/* Edit or Add Form */}
+      {(showAddProject || editingProject) && (
+        <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -155,7 +159,7 @@ export function PortfolioBuilder() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -175,7 +179,7 @@ export function PortfolioBuilder() {;
           <Card className='text-center py-12'>
 =======
           <Card className="text-center py-12">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -197,9 +201,8 @@ export function PortfolioBuilder() {;
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-                <Button
-                  onClick={() => setShowAddProject(true)}
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Button 
                   onClick={() => setShowAddProject(true)} 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -216,9 +219,13 @@ export function PortfolioBuilder() {;
     </div>
   )
 }
+;
+}
+}
+}
 =======
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

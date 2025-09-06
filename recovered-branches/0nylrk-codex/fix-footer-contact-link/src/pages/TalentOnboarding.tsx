@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function TalentOnboarding() {;
+  const { user, isLoading } = useAuth();
+=======
 import React from "react",
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
 import { Header } from "@/components/Header",
@@ -13,6 +23,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // If not authenticated, redirect to login
@@ -73,4 +84,4 @@ export default function TalentOnboarding() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

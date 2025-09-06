@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Sparkles, ArrowRight} from "@/components/icons";
+import {supabase} from "@/integrations/supabase/client";
+import {Badge} from "@/components/ui/badge";
+=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -6,9 +18,9 @@ import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Sparkles, ArrowRight } from "@/components/icons",
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
+import { supabase } from "@/integrations/supabase/client",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface GeneratedContent {
 
   description: string
@@ -19,6 +31,7 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
+<<<<<<< HEAD
 }
 interface AIListingGeneratorProps {
 
@@ -29,17 +42,18 @@ interface AIListingGeneratorProps {
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
+  }
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
 =======
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -67,7 +81,6 @@ interface AIListingGeneratorProps {;
     category?: string,;
     keyFeatures?: string,;
     targetAudience?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 
@@ -88,6 +101,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
@@ -173,7 +187,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       if (data.error) {
         throw new Error(data.error)
@@ -276,9 +290,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               disabled={isLoading}
             />
           </div>
-          <Button
-            onClick={handleGenerate}
-            disabled={isLoading |!title |!category}
+          <Button 
 =======
 ;
       setGeneratedContent(data.generated),;
@@ -364,6 +376,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             />;
           </div>;
           <Button;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

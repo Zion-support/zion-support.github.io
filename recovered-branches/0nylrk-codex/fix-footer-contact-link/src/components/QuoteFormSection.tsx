@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {Button} from "./ui/button";
+import {Input} from "./ui/input";
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+export function QuoteFormSection() {;
+=======
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+export function QuoteFormSection() {
+>>>>>>> main
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 <<<<<<< HEAD
@@ -7,21 +24,13 @@ import { useState } from "react";
 =======
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = (e: React.FormEvent) => {
 <<<<<<< HEAD
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
-    }, 1000);
-  }
-=======
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -31,7 +40,16 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  };
+>>>>>>> main
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -136,6 +154,10 @@ export function QuoteFormSection() {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               <div className="mt-6">
                 <label
                   htmlFor="interest"
@@ -145,13 +167,13 @@ export function QuoteFormSection() {
                 </label>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
                   {[
-                    "AI Products/Services"
-                    "IT Equipment"
-                    "Server Solutions"
-                    "Storage Solutions"
-                    "Networking"
-                    "24/7 Support"
-                    "Recycling Services"
+                    "AI Products/Services",
+                    "IT Equipment",
+                    "Server Solutions",
+                    "Storage Solutions",
+                    "Networking",
+                    "24/7 Support",
+                    "Recycling Services",
                   ].map((item, index) => (
                     <div key={index} className="flex items-center">
                       <input
@@ -160,10 +182,7 @@ export function QuoteFormSection() {
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
 <<<<<<< HEAD
-                      <label
-                        htmlFor={`interest-${index}`}
-                        className="ml-2 text-sm text-zion-slate-light"
-                      >
+<<<<<<< HEAD
 =======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
@@ -269,14 +288,24 @@ export function QuoteFormSection() {;
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+>>>>>>> main
                         {item}
                       </label>
                     </div>
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               <div className="mt-6">
                 <label
                   htmlFor="message"
@@ -290,6 +319,10 @@ export function QuoteFormSection() {;
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               <div className="mt-6">
                 <Button
                   type="submit"

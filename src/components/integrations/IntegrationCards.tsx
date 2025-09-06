@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+  ArrowRight,
+  Check,
+  ExternalLink,
+  Slack,
+  Briefcase,
+  Users,
+} from 'lucide-react'
 =======
 
 import React from "react",
@@ -9,22 +25,7 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-  ArrowRight
-  Check
-  ExternalLink
-  Slack
-  Briefcase
-  Users
-} from 'lucide-react'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface IntegrationCardProps {
   title: string
   description: string
@@ -33,17 +34,10 @@ interface IntegrationCardProps {
   href?: string
   onConnect?: () => void
 <<<<<<< HEAD
-export function IntegrationCard({
-  title
-  description
-  icon
-  status = 'disconnected'
-  href
-  onConnect
-}: IntegrationCardProps) {
 =======
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function IntegrationCard({
   title,
   description,
@@ -116,7 +110,7 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending",;
   href?: string,;
   onConnect?: () => void;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function IntegrationCard({
@@ -195,7 +189,7 @@ export function IntegrationCard({
   );
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -235,7 +229,7 @@ export function IntegrationCards() {
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
         icon={<Briefcase className="h-5 w-5" />}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
       <IntegrationCard
@@ -247,8 +241,10 @@ export function IntegrationCards() {
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
-    </div>
-  )
+    </div>;
+  );
+};
+}
 }
 =======
       />;
@@ -256,4 +252,4 @@ export function IntegrationCards() {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

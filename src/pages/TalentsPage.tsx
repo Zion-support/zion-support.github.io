@@ -1,7 +1,10 @@
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+
+
+    let filteredTalents = allTalents
+    }
+}
+;
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
@@ -613,4 +616,4 @@ export default function TalentsPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,11 +1,17 @@
 <<<<<<< HEAD
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import React from 'react'
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
+=======
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+
+<<<<<<< HEAD
 import React from "react"
 export default function ITSupportPage() {
 
@@ -44,12 +50,7 @@ export default function ITSupportPage() {
     }
   ]
     return (
-
 =======
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -78,7 +79,7 @@ export default function ITSupportPage() {
       avatar: "/placeholder.svg"}],
 
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -86,16 +87,19 @@ export default function ITSupportPage() {
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 <<<<<<< HEAD
       benefits = {benefits,}
-      testimonials = {testimonials,}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />
+      testimonials = {testimonials,};
+      ctaText="Get IT Support";
+      ctaLink="/request-quote";
+    />;
   );      benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
   )
+}
+;
+}
 }
 =======
       benefits={benefits}
@@ -146,4 +150,4 @@ export default function ITSupportPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

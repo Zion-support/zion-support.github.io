@@ -1,13 +1,8 @@
 
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
 <<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-=======
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React, { forwardRef } from "react"
+import { ChevronDown } from 'lucide-react'import { cn } from "@/lib/utils"
+import { SafeRef } from "@/types/ref-types"
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -25,12 +20,22 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
     return(<button
         ref={ref}
 SidebarMenuItem.displayName = "SidebarMenuItem"
-export { SidebarMenuItem, SidebarMenuGroup }
-export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup };
+};
+export { SidebarMenuItem, SidebarMenuGroup };
 }
-export { SidebarMenuItem, SidebarMenuGroup }
-
 =======
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+  icon?: React.ReactNode,
+  active?: boolean,
+  href?: string,
+  target?: string,
+  badge?: React.ReactNode
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -134,4 +139,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-export type AIAssistantProps = {
+export type AIAssistantProps = {;
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -13,13 +13,13 @@ export type AIAssistantProps = {
   authorizationToken?: string;
 }
 export default function AIAssistant({
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
+  buttonLabel = "Generate with AI",
+  title = "AI Writing Assistant",
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
+  authorizationToken,
+}: AIAssistantProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -179,8 +179,5 @@ export default function AIAssistant({
       )}
     </>
   );
-<<<<<<< HEAD
-}
-=======
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

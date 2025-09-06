@@ -1,25 +1,20 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { WorkExperience  } from '@/types/resume';
-import { Loader2, Edit, Trash2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Card, CardContent  } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {format} from 'date-fns';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {WorkExperience} from '@/types/resume';
+import {Loader2, Edit, Trash2} from 'lucide-react';
+import {useResume} from '@/hooks/useResume';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Card, CardContent} from '@/components/ui/card';
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -37,7 +32,8 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -168,28 +164,27 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: '',;
           location: ''}),;
         setEditingId(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (err: any) {
-      setError(err.message |'An error occurred')
+      setError(err.message || 'An error occurred')
     }
 <<<<<<< HEAD
-  }
+  };
+
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
-      ...work
-      start_date: formatDateValue(work.start_date)
+      ...work,
+      start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  }
+  };
+
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-  }
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent)
-  }
+  };
 =======
   },;
   const handleEdit = (work: WorkExperience) => {;
@@ -204,6 +199,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)

@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-
-import React from 'react';
+import React from 'react'
 import { CheckCircle } from 'lucide-react'
 
 import {
@@ -39,7 +38,6 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
   }
-
 =======
 interface VerifiedBadgeProps {
   verified: boolean;
@@ -66,7 +64,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <TooltipProvider>
       <Tooltip>
@@ -75,13 +73,21 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
 =======
           <span className="inline-flex text-blue-500">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
+<<<<<<< HEAD
+      </Tooltip>;
+    </TooltipProvider>;
+  );
+};
+}
+}
+=======
       </Tooltip>
     </TooltipProvider>
   )
@@ -90,4 +96,4 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

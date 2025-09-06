@@ -1,18 +1,14 @@
 
 <<<<<<< HEAD
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 =======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
@@ -27,6 +23,10 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),
  */
 export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
   try {
+<<<<<<< HEAD
+    // Normalize job skills and generate embeddings via OpenAI;
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
+=======
     // Normalize job skills and generate embeddings via OpenAI
 <<<<<<< HEAD
     const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
@@ -40,6 +40,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     }
 =======
     const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
     // Prepare job details for matching prompt
     const jobDetails = {
@@ -68,6 +69,12 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
   const matchInsertPromises = matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
       .from("job_talent_matches")
+<<<<<<< HEAD
+      .insert({;
+        job_id: jobId;
+        talent_id: match.talentId;
+        match_score: match.score;
+=======
       .insert({
 <<<<<<< HEAD
         job_id: jobId;
@@ -80,6 +87,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         job_id: jobId,
         talent_id: match.talentId,
         match_score: match.score,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         matched_skills: match.matchedSkills,
         reason: match.reason
       }),
@@ -109,6 +117,12 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _type: "job_match",
         _related_id: jobId
       })
+<<<<<<< HEAD
+    }
+  });
+  
+  await Promise.all(matchInsertPromises)
+=======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
@@ -173,6 +187,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
   await Promise.all(matchInsertPromises);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

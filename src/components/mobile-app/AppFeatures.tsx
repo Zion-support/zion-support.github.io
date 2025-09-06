@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 }
 const features = [
@@ -7,45 +6,42 @@ const features = [
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
   }
-  {
-    icon: <Clock className="h-10 w-10 text-zion-cyan" />
-    title: "1-Click Hiring"
-    description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
-  }
-  {
-    icon: <Award className="h-10 w-10 text-zion-cyan" />
-    title: "Resume Builder"
-    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
-  }
-  {
-    icon: <Zap className="h-10 w-10 text-zion-cyan" />
-    title: "Real-time Notifications"
-    description: "Get instant alerts about new job opportunities, messages, and hiring requests."
-  }
-]
 =======
+
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
     title: "Resume Builder",
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     icon: <Zap className="h-10 w-10 text-zion-cyan" />,
     title: "Real-time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
+<<<<<<< HEAD
+]
+=======
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -66,7 +62,7 @@ export const AppFeatures: React.FC = () => {
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
               <CardHeader>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
@@ -80,8 +76,8 @@ export const AppFeatures: React.FC = () => {
       </div>
     </section>
   )
-}
-{"
+};
+{";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;"
 title: "1-Click Hiring";"
 description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
@@ -105,12 +101,12 @@ export const AppFeatures: React.FC = () => {"
 }</div> <CardTitle className="text-white" > {
   feature.title "
 }</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-gray-300" > {
-  feature.description
+  feature.description 
 }</CardDescription>
-}</div> </div> </section>)
+}</div> </div> </section>) 
 }
-"
-
+";
+;
 =======
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
@@ -164,4 +160,4 @@ export const AppFeatures: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

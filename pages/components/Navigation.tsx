@@ -75,7 +75,7 @@ import {
   Truck,
   Users,
   X,
-  Zap,
+  Zap,;
 } from "lucide-react";
 =======
 <<<<<<< HEAD
@@ -396,7 +396,8 @@ const quickLinks = [
   { title: "Quote", href: "/quote", icon: FileText }
   { title: "API Docs", href: "/api-docs", icon: Code }
 ];
-export default function Navigation() {
+
+export default function Navigation() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 <<<<<<< HEAD

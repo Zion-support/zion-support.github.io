@@ -51,7 +51,6 @@ const HeroSection: React.FC = () => {
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         />
         {/* Grid Pattern */}
@@ -99,7 +98,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -120,7 +119,7 @@ const HeroSection: React.FC = () => {
 
           </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -138,7 +137,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -158,7 +157,11 @@ const HeroSection: React.FC = () => {
 
           </motion.p>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+          </motion.p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -168,7 +171,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link
               href='/contact'
@@ -199,7 +202,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -210,7 +213,7 @@ const HeroSection: React.FC = () => {
 =======
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -222,7 +225,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
                   <stat.icon className='w-8 h-8 text-blue-400' />
@@ -240,7 +243,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </motion.div>
         </motion.div>
@@ -248,7 +251,7 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -273,9 +276,12 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
 =======
 };
 
+<<<<<<< HEAD
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
 export default HeroSection;
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -296,7 +302,6 @@ export default HeroSection;
 export default HeroSection;  )
 }
 export default HeroSection;
-
 =======
     </section>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Leaf, Server, Cloud} from "lucide-react";
+import {Link} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+export default function GreenIT() {
+  const greenITSolutions = [
+    {
+      title: "Energy-Efficient Hardware",;
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+=======
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -9,7 +22,6 @@ import { AppLayout } from "@/layout/AppLayout";
 =======
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -21,6 +33,7 @@ export default function GreenIT() {
 =======
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       icon: Server},
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
@@ -136,7 +149,6 @@ export default function GreenIT() {
     </AppLayout>
   )
 <<<<<<< HEAD
-}
 =======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -255,6 +267,7 @@ export default function GreenIT() {;
       </main>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

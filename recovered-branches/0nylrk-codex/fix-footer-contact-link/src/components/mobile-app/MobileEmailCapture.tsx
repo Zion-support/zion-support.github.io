@@ -1,23 +1,12 @@
 
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
-export const MobileEmailCapture: React.FC = () => {
+export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email |isSubmitting) return;
-    setIsSubmitting(true)
-    try {
-      // In a real implementation, this would connect to a backend service
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSuccess(true);
-      setEmail("");
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -26,6 +15,7 @@ export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -90,8 +80,6 @@ export const MobileEmailCapture: React.FC = () => {
     </section>
   )
 <<<<<<< HEAD
-}
-
 =======
 },
 import React, { useState } from "react",;
@@ -154,5 +142,6 @@ export const MobileEmailCapture: React.FC = () => {;
       </div>;
     </section>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

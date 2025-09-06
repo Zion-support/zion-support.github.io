@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Progress} from "@/components/ui/progress";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
@@ -8,20 +14,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function UsageOverview() {
   // Mock usage data
 
   const usage = {
     jobPosts: {
-      used: 32
-      total: 100
+      used: 32,
+      total: 100,
+<<<<<<< HEAD
+      percentage: 32;
+    };
+=======
       percentage: 32
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     interviews: {
       used: 45
       total: 150
@@ -117,7 +127,6 @@ export function UsageOverview() {
     </Card>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -212,6 +221,7 @@ export function UsageOverview() {;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

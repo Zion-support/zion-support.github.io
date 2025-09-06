@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Skeleton} from "@/components/ui/skeleton";
+import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+=======
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -8,9 +21,9 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
-<<<<<<< HEAD
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
-import { formatDistanceToNow } from "date-fns";
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Transaction {
 
   id: string
@@ -31,9 +44,11 @@ interface Transaction {
   }
   service?: {
     title?: string
+<<<<<<< HEAD
   }
 }
-export function TransactionHistory() {
+
+export function TransactionHistory() {;
   const { user } = useAuth();
   const { toast } = useToast();
 
@@ -73,26 +88,6 @@ export function TransactionHistory() {
       });
       if (error) throw error;
 =======
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
-interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
-  completed_at?: string,
-  refunded_at?: string,
-  cancelled_at?: string,
-  provider?: {
-    display_name?: string
-  },
-  service?: {
-    title?: string
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -163,6 +158,7 @@ export function TransactionHistory() {;
       }),
       
       if (error) throw error,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
@@ -513,7 +509,7 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           )}
                         </CardDescription>
                       </div>
@@ -534,7 +530,7 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-                    {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :

@@ -6,8 +6,7 @@ import { useTranslation } from 'react-i18next';
 export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
-
-  const shareUrl =
+  const shareUrl = null;
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -74,51 +73,25 @@ export function SocialShareSection() {
         toast({
           title: "Link Copied!",
           description: "The link has been copied to your clipboard"})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       })
       .catch(() => {
         toast({
+          title: t('errors.failed_to_copy'),
 <<<<<<< HEAD
-          title: t('errors.failed_to_copy')
-          description: 'Please try again or copy the URL manually'
-          variant: 'destructive'
+          description: 'Please try again or copy the URL manually',
+          variant: 'destructive',
         })
       })
   }
-  const shareLinks = [
-    {
-      name: 'Twitter'
-      icon: <Twitter className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
-      onClick: shareToTwitter
-    }
-    {
-      name: 'Facebook'
-      icon: <Facebook className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80'
-      onClick: shareToFacebook
-    }
-    {
-      name: 'LinkedIn'
-      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80'
-      onClick: shareToLinkedIn
-    }
-    {
-      name: 'Copy Link'
-      icon: <Link className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80'
-      onClick: copyLinkToClipboard
-    }
-  ]
 =======
-          title: t('errors.failed_to_copy'),
           description: "Please try again or copy the URL manually",
           variant: "destructive"
         })
       })
   },
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const shareLinks = [
     {
       name: "Twitter",
@@ -139,6 +112,14 @@ export function SocialShareSection() {
       onClick: shareToLinkedIn
     },
     {
+<<<<<<< HEAD
+      name: 'Copy Link',
+      icon: <Link className='h-5 w-5' aria-hidden='true' />,
+      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',
+      onClick: copyLinkToClipboard,
+    },
+  ]
+=======
       name: "Copy Link",
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
@@ -146,6 +127,7 @@ export function SocialShareSection() {
     }],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,10 +161,10 @@ export function SocialShareSection() {
   toast ({
   title: t ('errors.failed to copy')
 })
-}
-}</div> </div> </div> </section>)
-}'"
-}
+};
+}</div> </div> </div> </section>) ;
+}'";
+};
 =======
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
@@ -281,4 +263,4 @@ export function SocialShareSection() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

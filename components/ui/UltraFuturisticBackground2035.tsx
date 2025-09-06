@@ -366,35 +366,34 @@ const UltraFuturisticBackground2035: React.FC<
                 scaleX: [0, 1, 0]
               }}
 <<<<<<< HEAD
-              transition={{
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
                 ease: 'easeInOut',              }}
 
               }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
-
-<<<<<<< HEAD
 =======
 export default UltraFuturisticBackground2035;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

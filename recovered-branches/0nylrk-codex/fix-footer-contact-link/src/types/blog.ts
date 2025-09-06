@@ -1,12 +1,13 @@
+export interface BlogAuthor {;
 <<<<<<< HEAD
-export interface BlogAuthor {
   name: string;
 
   title: string
 
   avatarUrl: string
 }
-export interface BlogPost {
+
+export interface BlogPost {;
   id: string;
   title: string;
   slug: string;
@@ -26,7 +27,7 @@ export interface BlogPost {
   updatedAt?: string
 }
 // Type for generated blog content
-export interface GeneratedBlogContent {
+export interface GeneratedBlogContent {;
   title: string;
   metaDescription: string;
   body: string;
@@ -37,7 +38,7 @@ export interface GeneratedBlogContent {
   imagePrompt?: string
 }
 // Type for generated newsletter content
-export interface GeneratedNewsletterContent {
+export interface GeneratedNewsletterContent {;
   subject: string;
   previewText: string;
 
@@ -46,7 +47,6 @@ export interface GeneratedNewsletterContent {
   cta: string
 }
 =======
-export interface BlogAuthor {;
   name: string,;
   title: string,;
   avatarUrl: string;
@@ -88,4 +88,4 @@ export interface GeneratedNewsletterContent {;
   cta: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

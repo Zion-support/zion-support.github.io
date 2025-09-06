@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ExternalLink} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {HireRequestModal} from "@/components/profile/hire-request";
+import {useAuthStatus} from "@/hooks/talent";
+import {UserProfile} from "@/types/auth";
+import {useNavigate} from "react-router-dom";
+=======
 import React, { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -6,17 +17,19 @@ import { ExternalLink } from "lucide-react",
 import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
-<<<<<<< HEAD
-import { UserProfile } from "@/types/auth";
-import { useNavigate } from "react-router-dom";
+import { UserProfile } from "@/types/auth",
+import { useNavigate } from "react-router-dom",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentCardFooterProps {
 
   profile: TalentProfile
   onViewProfile: (id: string) => void
 
   onRequestHire?: (profile: TalentProfile) => void
+<<<<<<< HEAD
 }
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
 
@@ -50,14 +63,8 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id |'')
     }
-  }
+  };
 =======
-import { UserProfile } from "@/types/auth",
-import { useNavigate } from "react-router-dom",
-interface TalentCardFooterProps {
-  profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void
 import React, { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -107,7 +114,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id || '');
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>
@@ -142,9 +149,9 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           >
             Hire
           </Button>
-          <Button
-            variant="outline"
-            size="sm"
+          <Button 
+            variant="outline" 
+            size="sm" 
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -156,7 +163,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+=======
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -9,40 +17,28 @@ import {
 =======
 import { Button } from "@/components/ui/button",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
+  FormMessage,;
+} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea'; import {
+=======
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
 import {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes",
-import { toast } from "sonner",
-import { FileText } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Textarea } from '@/components/ui/textarea'; import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
+<<<<<<< HEAD
+  SelectValue,
 } from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
 import { disputeReasonLabels } from '@/types/disputes'
@@ -74,7 +70,39 @@ export function DisputeForm({
   const { createDispute } = useDisputes()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [files, setFiles] = useState<File[]>([])
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      reason_code: '',
+      description: '',
+      attachments: [],
+    },
+  })
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
+    if (e.target.files) {
+      const newFiles = Array.from(e.target.files),
+      setFiles(prev => [...prev, ...newFiles])
+      form.setValue('attachments', [...files, ...newFiles])
+    }
+  }
+  const removeFile = (index: number) => {
+    const newFiles = [...files],
+    newFiles.splice(index, 1)
+    setFiles(newFiles)
+    form.setValue('attachments', newFiles)
+  }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSubmitting(true)
 =======
+  SelectValue} from "@/components/ui/select",
+import { Input } from "@/components/ui/input",
+import { disputeReasonLabels } from "@/types/disputes",
+import { useDisputes } from "@/hooks/useDisputes",
+import { toast } from "sonner",
+import { FileText } from 'lucide-react'
+
+const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
   description: z.string()
@@ -154,13 +182,18 @@ export function DisputeForm({
     try {
       setIsSubmitting(true),
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
+<<<<<<< HEAD
+        description: values.description,
+      })
+=======
         description: values.description}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
@@ -168,12 +201,13 @@ export function DisputeForm({
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
 <<<<<<< HEAD
+
         toast.success('Your dispute has been submitted')
 =======
         
         toast.success("Your dispute has been submitted"),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
@@ -182,11 +216,10 @@ export function DisputeForm({
 <<<<<<< HEAD
       logErrorToProduction('Error submitting dispute:', { data: error })
       toast.error('Failed to submit dispute. Please try again.')
-
 =======
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } finally {
       setIsSubmitting(false)
     }
@@ -200,7 +233,7 @@ export function DisputeForm({
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -219,7 +252,7 @@ export function DisputeForm({
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -393,7 +426,7 @@ export function DisputeForm({;
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {...field}
                   />
                 </FormControl>
@@ -405,6 +438,7 @@ export function DisputeForm({;
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
             <FormControl>
+<<<<<<< HEAD
               <div className='space-y-4'>
                 <Input
                   type='file'
@@ -432,10 +466,6 @@ export function DisputeForm({;
                           </Button>
                         </li>
 =======
-          
-          <FormItem>
-            <FormLabel>Attachments (optional)</FormLabel>
-            <FormControl>
               <div className="space-y-4">
                 <Input 
                   type="file" 
@@ -460,7 +490,7 @@ export function DisputeForm({;
                             Remove;
                           </Button>;
                         </li>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       ))}
                     </ul>
                   </div>
@@ -474,7 +504,7 @@ export function DisputeForm({;
 =======
           
           <div className="flex justify-end space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {onCancel && (
               <Button type="button" variant="outline" onClick={onCancel}>
                 Cancel
@@ -518,9 +548,9 @@ description: values.description
 }</SelectItem>) )
 }</SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) )
-}</ul> </div>)
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
-}'"}
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+}</ul> </div>) ;
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+}'"};
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -35,27 +35,27 @@
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
-  publishedTime
+  publishedTime 
 }/>
 }{
   modifiedTime && <meta property="article:modified time" content= {
-  modifiedTime
+  modifiedTime 
 }/>
 }{
   author && <meta property="article:author" content= {
-  author
+  author 
 }/>
 }{
   section && <meta property="article:section" content= {
-  section
+  section 
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
-  tag
+  tag 
 }/>
-}</>)
+}</>) 
 }{
   /* Structured Data */
 }<script
@@ -165,7 +165,7 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -244,7 +244,7 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -302,7 +302,6 @@ export default SEO;            __html: JSON.stringify(structuredData)
 export default SEO;  )
 }
 export default SEO;
-
 =======
     </Head>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

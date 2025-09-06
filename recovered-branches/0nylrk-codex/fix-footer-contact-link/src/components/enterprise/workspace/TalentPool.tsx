@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { Button } from "@/components/ui/button";
 =======
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function TalentPool() {
   // Mock talent data
 
@@ -41,8 +47,13 @@ export function TalentPool() {
 =======
       id: "talent-1",
       name: "Jessica Lee",
+<<<<<<< HEAD
+      role: "UI/UX Designer",;
+      skills: ["Figma", "Sketch", "User Testing"];
+=======
       role: "UI/UX Designer",
       skills: ["Figma", "Sketch", "User Testing"],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       status: "available",
       match: 95
     },
@@ -185,7 +196,7 @@ export function TalentPool() {;
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>

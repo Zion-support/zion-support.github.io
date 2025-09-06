@@ -4,36 +4,34 @@ import Head from 'next/head',
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
-  Search
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Rocket
-  Zap
-  Brain
-  Globe
-  Shield
-  Phone
-  Mail;
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Zap,
+  Brain,
+  Globe,
+  Shield,
+  Phone,;
+  Mail,;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 =======
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 <<<<<<< HEAD
+
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
@@ -138,9 +136,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       y: 0
       opacity: 1
       transition: {
-        duration: 0.5
-      }
-    },  }
+        duration: 0.5,
+      },
+    },  };
+
 =======
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
@@ -313,7 +312,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Head>
@@ -405,7 +404,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
               className="mb-8"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
@@ -477,7 +476,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
               className="max-w-4xl mx-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -530,7 +529,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   >
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
@@ -608,7 +607,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -683,7 +682,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <Star className="w-4 h-4 text-yellow-500 fill-current" />
                           <span className="text-white text-sm">{service.rating}</span>
                           <span className="text-gray-400 text-sm">({service.reviews})</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-blue-400" />
@@ -703,7 +702,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         <div className="flex items-center space-x-2">
                           <Clock className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300 text-sm">{service.setupTime}</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                         <div className="flex items-center space-x-2">
                           <Zap className="w-4 h-4 text-yellow-400" />
@@ -804,7 +803,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                           <span className="flex items-center justify-center space-x-2">
@@ -853,7 +852,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
                 className="text-center py-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
                 <button
@@ -868,6 +867,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   Clear Filters
                 </button>
               </motion.div>
+<<<<<<< HEAD
             )}
           </div>
         </section>
@@ -879,19 +879,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 =======
-                    setSearchTerm(''),
-                    setSelectedCategory('all'),
-                    setSelectedPriceRange('all')
-                  }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
-                  Clear Filters
-                </button>
-              </motion.div>
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -927,7 +914,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -947,7 +934,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-white font-semibold mb-2">Call Us</h3>
                   <p className="text-blue-300">+1 302 464 0950</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -967,7 +954,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </button>
               </Link>
             </motion.div>
@@ -1019,4 +1006,4 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

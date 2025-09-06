@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {JobsList} from "@/components/jobs/JobsList";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Link} from "react-router-dom";
+import {JobStatus} from "@/types/jobs";
+import {SEO} from "@/components/SEO";
+import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {SuggestedTalents} from "@/components/jobs/SuggestedTalents";
+import {useJobs} from "@/hooks/useJobs";
+import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSteps";
+import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
+import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
+import {useIsMobile} from "@/hooks/use-mobile";
+=======
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -26,6 +45,7 @@ function ClientDashboardContent() {
   const isMobile = useIsMobile();
 =======
 import { useIsMobile } from "@/hooks/use-mobile",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -209,7 +229,7 @@ function ClientDashboardContent() {;
           </div>;
           <div>;
             <div className="sticky top-4 space-y-6">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Active Projects Card */}
               <ActiveProjectsCard />
               {/* Upcoming Interviews Card */}
@@ -246,14 +266,4 @@ export default function ClientDashboard() {
     </ProtectedRoute>
   )
 }
-=======
 ;
-export default function ClientDashboard() {;
-  return (;
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

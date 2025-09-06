@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -46,9 +45,7 @@ import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { BLOG_POSTS } from "@/data/blog-posts"
 =======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -66,7 +63,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BlogPost() {
 
   const router = useRouter()
@@ -94,9 +91,9 @@ export default function BlogPost() {
         setRelatedPosts(related)
         setIsLoading(false)
         return } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err })
-        setError('Failed to load article')
-      }
+        logErrorToProduction('Failed to fetch blog post', { data: err });
+        setError('Failed to load article');
+      };
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -197,7 +194,7 @@ export default function BlogPost() {;
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -223,6 +220,7 @@ export default function BlogPost() {;
     )
   }
 <<<<<<< HEAD
+
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -240,26 +238,6 @@ export default function BlogPost() {;
       default:
         return '#'
   }
-  const articleLd = {
-    '@context': 'https://schema.org'
-    '@type': 'BlogPosting'
-    headline: post.title
-    description: post.excerpt
-    image: post.featuredImage
-    datePublished: post.publishedDate
-    author: {
-      '@type': 'Person'
-      name: post.author.name
-    }
-  }
-
-  return (
-    <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
 =======
 ;
   // Helper function to get share URL;
@@ -278,6 +256,7 @@ export default function BlogPost() {;
     }
   },
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -286,6 +265,19 @@ export default function BlogPost() {;
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
+<<<<<<< HEAD
+      '@type': 'Person',
+      name: post.author.name,
+    },
+  }
+  return (
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join(', ')}
+        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+=======
       "@type": "Person",
       name: post.author.name}},
   
@@ -311,7 +303,7 @@ export default function BlogPost() {;
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -332,7 +324,7 @@ export default function BlogPost() {;
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -419,7 +411,7 @@ export default function BlogPost() {;
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
               <ImageWithRetry
                 src={post.featuredImage}
-                alt={post.featuredImageAlt |post.title}
+                alt={post.featuredImageAlt || post.title}
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder.svg'              />
             </div>
@@ -541,7 +533,7 @@ export default function BlogPost() {;
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   #{tag}
                 </span>
               ))}
@@ -552,7 +544,7 @@ export default function BlogPost() {;
             
             <Separator className="my-12 bg-zion-blue-light" />
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -568,7 +560,7 @@ export default function BlogPost() {;
                         <ImageWithRetry
                           src={relatedPost.featuredImage}
                           alt={
-                            relatedPost.featuredImageAlt |relatedPost.title
+                            relatedPost.featuredImageAlt || relatedPost.title
                           }
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
@@ -597,21 +589,21 @@ export default function BlogPost() {;
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
+
 <<<<<<< HEAD
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
 =======
-
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
@@ -622,7 +614,7 @@ export default function BlogPost() {;
                 to accelerate your projects.
 =======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </p>
             </div>
             {/* Navigation */}
@@ -942,10 +934,10 @@ export default function BlogPost() {return ("
           Professional BlogPost services to help your business grow.
         </p>
       </div>
-  )
-}
-}
-}
+  );
+};
+};
+};
 =======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
@@ -970,4 +962,4 @@ export default function BlogPost() {return ("
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

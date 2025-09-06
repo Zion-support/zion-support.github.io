@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+=======
 import React from 'react',
 import Head from 'next/head',
 <<<<<<< HEAD
@@ -169,6 +177,7 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -224,6 +233,72 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
+<<<<<<< HEAD
+    features: [
+      'Quantum Encryption',
+      'Network Optimization',
+      'Security Monitoring',
+    ],
+  },];
+
+const heroFeatures = [
+  {
+    title: 'Quantum Computing',
+    description:
+      'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
+    icon: Atom,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+  },
+  {
+    title: 'AI-Powered Automation',
+    description:
+      'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600',
+  },
+  {
+    title: 'Edge Computing',
+    description:
+      'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',
+    icon: Wifi,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600',
+  },
+  {
+    title: 'Zero Trust Security',
+    description:
+      'Continuous verification and monitoring that provides comprehensive protection against modern threats.',
+    icon: Shield,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
+  },];
+
+const testimonials = [
+  {
+    name: 'Dr. Jennifer Martinez',
+    role: 'CTO, QuantumTech Industries',
+    company: 'QuantumTech Industries',
+    content:
+      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
+    rating: 5,
+    avatar: '👩‍🔬',
+  },  {
+    name: 'Robert Thompson',
+    role: 'Infrastructure Director, EdgeNet Solutions',
+    company: 'EdgeNet Solutions',
+    content:
+      'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
+    rating: 5,
+    avatar: '👨‍💼',
+  },  {
+    name: 'Lisa Chang',
+    role: 'Security CISO, SecureCorp International',
+    company: 'SecureCorp International',
+    content:
+      'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
+    rating: 5,
+    avatar: '👩‍🔒',
+  },];
+
+=======
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
 import React from 'react';
 import Head from 'next/head';
@@ -362,7 +437,7 @@ const testimonials = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
@@ -409,7 +484,7 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
@@ -454,7 +529,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -522,7 +597,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -570,7 +645,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="relative group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -634,7 +709,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
@@ -645,6 +720,7 @@ export default function AdvancedITInfrastructureServices() {
               edge computing, security, and data centers
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -654,10 +730,6 @@ export default function AdvancedITInfrastructureServices() {
                 viewport={{ once: true }}
                 className='relative'
 =======
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
-            </p>
-          </motion.div>
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
@@ -687,7 +759,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="relative"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -735,7 +807,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                       className="relative group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -790,7 +862,7 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -879,7 +951,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -927,7 +999,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1003,7 +1075,7 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -1041,7 +1113,7 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1054,14 +1126,17 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
       </section>
-    </Layout>
 <<<<<<< HEAD
+    </Layout>;
 );
+
+}
 =======
+    </Layout>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

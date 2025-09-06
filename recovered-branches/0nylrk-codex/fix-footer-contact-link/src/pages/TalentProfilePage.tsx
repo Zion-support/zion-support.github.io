@@ -1,4 +1,31 @@
 
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {useParams, useNavigate} from "react-router-dom";
+import {TalentProfile} from "@/components/profile/TalentProfile";
+import {ProfileLoadingState} from "@/components/profile/ProfileLoadingState";
+import {ProfileErrorState} from "@/components/profile/ProfileErrorState";
+import {BackToDirectoryButton} from "@/components/profile/BackToDirectoryButton";
+import {useTalentProfile} from "@/hooks/useTalentProfile";
+import {HireRequestModal} from "@/components/profile/hire-request";
+import {useAuthStatus} from "@/hooks/talent";
+import {MessageTalentModal} from "@/components/messaging/MessageTalentModal";
+import {StickyAction} from "@/components/ui/sticky-action";
+import {Handshake, MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {useAuth} from "@/hooks/useAuth";
+import {UserProfile} from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+export default function TalentProfilePage() {
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { id } = useParams() as { id?: string };
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+=======
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -37,6 +64,7 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Create a compatible UserProfile from UserDetails or the authenticated user
@@ -133,7 +161,7 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -182,6 +210,8 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile 
         profile={profile} 
+<<<<<<< HEAD
+=======
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -209,7 +239,7 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -239,7 +269,7 @@ export default function TalentProfilePage() {;
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}

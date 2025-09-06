@@ -1,8 +1,16 @@
 
 <<<<<<< HEAD
-import { format  } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
+import {format} from 'date-fns';
+import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
+export const formatDateForDB = (date: Date | string | undefined) => {
+  if (!date) return undefined,
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
+};
+
+// Error handling with toast
+export const handleResumeError = (e: any, errorMessage: string) => {;
+  console.error(`Error: ${errorMessage}`, e);
 =======
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
@@ -20,6 +28,7 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {
   console.error(`Error: ${errorMessage}`, e),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   toast({
 <<<<<<< HEAD
     title: "Error"
@@ -40,14 +49,12 @@ export const handleResumeError = (e: any, errorMessage: string) => {
 // Success notification
 export const showSuccessToast = (title: string, description: string) => {
   toast({
-    title
+    title,
+<<<<<<< HEAD
+=======
     description
   }),
   return true
-<<<<<<< HEAD
-}
-
-=======
 },
 import { format } from 'date-fns',;
 import { toast } from '@/hooks/use-toast',;
@@ -70,10 +77,13 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 export const showSuccessToast = (title: string, description: string) => {;
   toast({;
     title,;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     description;
   });
-  return true;
+  return true
 };
+<<<<<<< HEAD
+=======
 
 export default UseResumeUtils;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

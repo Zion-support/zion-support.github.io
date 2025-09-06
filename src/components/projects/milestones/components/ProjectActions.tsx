@@ -1,8 +1,7 @@
-
 <<<<<<< HEAD
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import Link from 'next/link';
+import React from 'react'
+import {Button} from '@/components/ui/button'
+import Link from 'next/link'
 import { ShieldAlert } from 'lucide-react'
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
@@ -11,12 +10,7 @@ interface ProjectActionsProps {
   disputeId?: string;
   isTalent: boolean;
   onAddMilestone: () => void
-export function ProjectActions({
-
-  projectId
-  isUnderDispute
-  disputeId
-  isTalent
+=======
 
 =======
 import React from 'react',;
@@ -32,6 +26,7 @@ interface ProjectActionsProps {;
   onAddMilestone: () => void;
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ProjectActions({
   projectId,
   isUnderDispute,
@@ -53,7 +48,7 @@ export function ProjectActions({
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
 =======
             <ShieldAlert className="h-4 w-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             View Active Dispute
           </Link>
         </Button>
@@ -72,9 +67,9 @@ export function ProjectActions({
           Add Milestone
         </Button>
       )}
-    </div>
-  )
-}
+    </div>;
+  );
+};
 =======
         <RaiseDisputeButton 
           projectId={projectId}
@@ -90,4 +85,4 @@ export function ProjectActions({
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

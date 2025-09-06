@@ -352,12 +352,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       }
       realImplementation: true
       implementationDetails:
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-      launchDate: '2025-02-18'
-      customers: 178
-      rating: 4.8
-      reviews: 112
-    }
+        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
+      customers: 178,
+      rating: 4.8,
+      reviews: 112,
+    },;
   ];    features: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
@@ -519,8 +519,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.8
 
     reviews: 112
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
@@ -779,6 +777,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     customers: 178,;
     rating: 4.8;
     reviews: 112;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

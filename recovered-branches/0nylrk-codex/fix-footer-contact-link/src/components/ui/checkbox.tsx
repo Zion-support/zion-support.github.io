@@ -1,12 +1,12 @@
 'use client';
+
 <<<<<<< HEAD
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import {Check} from 'lucide-react';
-import {cn} from '@/lib/utils';
 =======
-
 "use client"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -45,6 +45,9 @@ export { Checkbox }
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
+<<<<<<< HEAD
+export { Checkbox };
+=======
 export { Checkbox }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

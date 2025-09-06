@@ -54,7 +54,7 @@ export default function ITServices() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

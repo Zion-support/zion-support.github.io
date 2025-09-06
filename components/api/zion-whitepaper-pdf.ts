@@ -2,8 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 
 import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage()
@@ -17,8 +17,8 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  const editionParam = (req.query.edition as string) |'full';
+) {;
+  const editionParam = (req.query.edition as string) || 'full';
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
@@ -28,7 +28,9 @@ export default async function handler(
     'Content-Disposition'
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
@@ -63,6 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
+
   const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
   // End
@@ -80,6 +83,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   doc.end()
 }
+
+}
+}
 =======
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
@@ -87,4 +93,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

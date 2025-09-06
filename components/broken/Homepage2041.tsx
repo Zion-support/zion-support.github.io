@@ -7,26 +7,26 @@ import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-  ArrowRight
-  Star
-  Search
-  Shield
-  Globe
-  TrendingUp
-  Brain
-  Atom
-  Zap
-  Cpu
-  Cloud
-  BarChart3
-  Lock
-  Rocket
-  Eye
-  Sparkles
-  Target
-  Users
-  Award
-  Clock;} from 'lucide-react';import {
+  ArrowRight,
+  Star,
+  Search,
+  Shield,
+  Globe,
+  TrendingUp,
+  Brain,
+  Atom,
+  Zap,
+  Cpu,
+  Cloud,
+  BarChart3,
+  Lock,
+  Rocket,
+  Eye,
+  Sparkles,
+  Target,
+  Users,
+  Award,;
+  Clock,;} from 'lucide-react';import { ;
   ArrowRight;
   Star
 
@@ -79,9 +79,10 @@ const Homepage2041: React.FC = () => {
   ];
   const testimonials = [
     {
-      name: 'Dr. Sarah Chen'
-      role: 'Chief AI Officer, FutureTech Inc.'
-      company: 'FutureTech Inc.'
+<<<<<<< HEAD
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer, FutureTech Inc.',
+      company: 'FutureTech Inc.',
       content:
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
@@ -105,7 +106,7 @@ const Homepage2041: React.FC = () => {
       avatar: '👩‍🔬'
     }
   ];
-<<<<<<< HEAD
+
   const stats = [
     { number: '500+', label: 'Revolutionary Services', icon: Rocket }
     { number: '50+', label: 'Quantum Solutions', icon: Atom }
@@ -165,9 +166,6 @@ const Homepage2041: React.FC = () => {
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
 =======
 
-  const testimonials = [
-    {
-
                 />
 
               ))}
@@ -177,7 +175,7 @@ const Homepage2041: React.FC = () => {
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -297,10 +295,12 @@ const Homepage2041: React.FC = () => {
 =======
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
+<<<<<<< HEAD
+=======
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -313,7 +313,7 @@ const Homepage2041: React.FC = () => {
 =======
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -336,7 +336,7 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </motion.div>
           </div>
@@ -344,7 +344,7 @@ const Homepage2041: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Services Section */}
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
@@ -358,7 +358,7 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -380,14 +380,14 @@ const Homepage2041: React.FC = () => {
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
-            <motion.div
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 =======
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -407,14 +407,14 @@ const Homepage2041: React.FC = () => {
             </motion.div>
 <<<<<<< HEAD
             <motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div
+              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
 =======
 
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -446,10 +446,12 @@ const Homepage2041: React.FC = () => {
 =======
             <motion.div 
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -470,14 +472,14 @@ const Homepage2041: React.FC = () => {
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
-            <motion.div
+            <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 =======
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -491,7 +493,7 @@ const Homepage2041: React.FC = () => {
 =======
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -529,7 +531,7 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </motion.div>
           </div>
@@ -537,7 +539,7 @@ const Homepage2041: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -551,7 +553,7 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -610,8 +612,11 @@ Math.random () * 100
 =======
 };
 
+<<<<<<< HEAD
+Math.random () * 100 
+=======
   Math.random () * 100 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }%`;
 top: `$ {
   Math.random () * 100
@@ -668,5 +673,11 @@ export default Homepage2041;
 }</motion.div>) ) 
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
+<<<<<<< HEAD
+export default Homepage2041;  )
+};
+
 export default Homepage2041;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default Homepage2041;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

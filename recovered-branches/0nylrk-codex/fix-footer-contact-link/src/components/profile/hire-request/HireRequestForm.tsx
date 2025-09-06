@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {useHireRequestForm, FormValues} from "./useHireRequestForm";
+import {Button} from "@/components/ui/button";
+import {DialogFooter} from "@/components/ui/dialog";
+import {Form} from "@/components/ui/form";
+import {Loader2} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {PersonalInfoFields} from "./PersonalInfoFields";
+import {ProjectDetailsField} from "./ProjectDetailsField";
+import {TimelineField} from "./TimelineField";
+import {BudgetFields} from "./BudgetFields";
+export interface HireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,;
+  initialJobTitle?: string;
+=======
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -24,7 +41,7 @@ export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   userDetails?: {
     name?: string,
     email?: string,
@@ -49,8 +66,13 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 =======
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
+<<<<<<< HEAD
+    onClose: onSubmitSuccess || onClose, ;
+    initialJobTitle;
+=======
     onClose: onSubmitSuccess || onClose, 
     initialJobTitle,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     userDetails 
   }),
   
@@ -153,7 +175,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>;
             ) : (;
               'Submit Request';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </Button>
         </DialogFooter>

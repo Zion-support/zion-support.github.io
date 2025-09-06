@@ -1,38 +1,29 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+const path = require('path'),;
+=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...');
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
-      return true;
-    }
-    return false;
-  } catch (error) {console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
-}
-// Function to get all files recursively;
-function getAllFiles(dir, extensions) {let files = [];
-=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
+    const originalContent = content,;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/
+=======
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -47,6 +38,14 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
+  let files = [],;
+  try {;
+    const items = fs.readdirSync(dir),;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item),;
+      const stat = fs.statSync(fullPath),;
+=======
   let files = [];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {;
@@ -54,6 +53,7 @@ function getAllFiles(dir, extensions) {;
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 <<<<<<< HEAD
@@ -138,7 +138,11 @@ async function main() {;
         console.log('Found merge conflicts in:', conflictFiles.trim()),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
+        const files = conflictFiles.trim().split('\n'),;
+=======
         const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         for (const file of files) {;
           if (file.trim()) {;
 <<<<<<< HEAD
@@ -178,6 +182,17 @@ async function main() {;
     // Now scan for and fix any remaining merge conflicts in files;
     console.log('🔍 Scanning for merge conflicts in files...'),;
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
+<<<<<<< HEAD
+    let fixedCount = 0,;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8'),;
+        if (content.includes('') || content.includes('
+}
+}
+}
+}
+=======
     let fixedCount = 0;
     for (const file of files) {;
       try {;
@@ -237,4 +252,4 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

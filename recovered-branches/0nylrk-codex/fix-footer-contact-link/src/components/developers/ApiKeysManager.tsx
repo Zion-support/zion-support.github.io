@@ -9,7 +9,7 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -25,25 +25,12 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
 <<<<<<< HEAD
-  const {
+  const { ;
     keys;
-
-    loading
-    newApiKey;
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
-
-    revokeApiKey;
-    clearNewApiKey
-  } = useApiKeys();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
 =======
   const { 
     keys,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -195,6 +182,8 @@ export function ApiKeysManager() {
 =======
                         <Checkbox 
                           id={scope.value} 
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -316,7 +305,7 @@ export function ApiKeysManager() {;
                       <div key={scope.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={scope.value} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -467,7 +456,7 @@ export function ApiKeysManager() {;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}

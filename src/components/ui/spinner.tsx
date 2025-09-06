@@ -1,5 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
+Spinner.displayName = 'Spinner'
+export default Spinner; import React from 'react'
 import { Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
@@ -10,7 +11,7 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
   size?: number | string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
@@ -18,23 +19,11 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
     <Loader2
       ref = {ref,}
       {...props}
-<<<<<<< HEAD
       className = {cn('animate-spin', className),}
       width = {size,}
       height = {size,}
     />
-  )
-)
-Spinner.displayName = 'Spinner'
-export default Spinner;
-
-=======
-      className={cn('animate-spin', className)}
-      width={size}
-      height={size}
-    />;
   );
 ),;
 Spinner.displayName = 'Spinner';
 export default Spinner;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

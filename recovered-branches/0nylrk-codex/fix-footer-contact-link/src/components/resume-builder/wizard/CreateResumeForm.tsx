@@ -1,17 +1,13 @@
 
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
-export const CreateResumeForm = ({
+export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
-  isLoading
-}: CreateResumeFormProps) => {
-  const [newResumeTitle, setNewResumeTitle] = useState('');
 =======
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -21,6 +17,7 @@ import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isLoading 
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
@@ -74,7 +71,7 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
@@ -102,8 +99,7 @@ export const CreateResumeForm = ({;
     </Card>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -96,7 +96,7 @@ const UltraAdvancedQuantumBackground: React.FC<
 =======
           this.y = Math.random() * canvas.height;        }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 <<<<<<< HEAD
@@ -294,7 +294,7 @@ const UltraAdvancedQuantumBackground: React.FC<
 =======
             ctx.stroke();          }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -405,7 +405,7 @@ const UltraAdvancedQuantumBackground: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -444,28 +444,27 @@ const UltraAdvancedQuantumBackground: React.FC<
       </div>
     </div>
   );
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-            delay: 2
-          }}
-        />
-      </div>
-    </div>
-  );
-}
-export default UltraAdvancedQuantumBackground;  )
-}
-export default UltraAdvancedQuantumBackground;
-
+};
 =======
 
         style={{ zIndex: 1 }}
       />
 
       {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+            delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

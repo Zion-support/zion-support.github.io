@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -10,6 +9,7 @@ import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ProfileBadgeProps {
@@ -45,8 +45,13 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
+<<<<<<< HEAD
+;
+  const { icon: Icon, text, colors } = badgeConfig[type];
+=======
 
   const { icon: Icon, text, colors } = badgeConfig[type],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className={cn(
@@ -60,7 +65,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
@@ -100,6 +104,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
       <span>{text}</span>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

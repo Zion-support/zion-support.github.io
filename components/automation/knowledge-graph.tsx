@@ -1,17 +1,17 @@
 <<<<<<< HEAD
-
-}
-) )
-}</ul> </section> <section>) )
+};
+) ) 
+}</ul> </section> <section>) ) 
 }</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {;
 =======
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function KnowledgeGraph({ report }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (

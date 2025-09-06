@@ -1,15 +1,14 @@
 <<<<<<< HEAD
-
 import React, { useState } from 'react'
 import { Dispute, DisputeStatus } from '@/types/disputes'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import {  Table,  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+import {  Table,  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components/ui/table'
 import Skeleton from '@/components/ui/skeleton'
 import { formatDistanceToNow } from 'date-fns'
@@ -23,17 +22,17 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
     'all'
   )
-  const filteredDisputes =
+  const filteredDisputes = null;
     statusFilter === 'all'
       ? disputes
       : disputes.filter(dispute => dispute.status === statusFilter)
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
-        return 'default'
-      case 'under_review':
-        return 'secondary'
-      case 'resolved':
+        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -115,6 +114,29 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           ))}
         </div>
 =======
+TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from 'lucide-react'
+import Link from "next/link",
+type DisputesListProps = {
+  disputes: Dispute[],
+  isLoading: boolean
 },
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
@@ -146,7 +168,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -160,7 +182,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
 =======
                 <TableHead className="text-right">Actions</TableHead>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -185,16 +207,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
         <h3 className='text-xl font-medium'>No disputes found</h3>
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    )
-  }
-  if (disputes.length === 0) {
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-        <h3 className="text-xl font-medium">No disputes found</h3>
-        <p className="text-muted-foreground mt-2">
 =======
                 </TableRow>
 import React, { useState } from "react",;
@@ -270,16 +282,26 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         </div>;
       </div>;
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   if (disputes.length === 0) {
     return (
+<<<<<<< HEAD
+      <div className='text-center py-12 border rounded-md bg-muted/20'>
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
+        <h3 className='text-xl font-medium'>No disputes found</h3>
+        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+        <h3 className="text-xl font-medium">No disputes found</h3>
+        <p className="text-muted-foreground mt-2">
+=======
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </p>
       </div>
     )
@@ -319,8 +341,40 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 =======
 
   return (
+<<<<<<< HEAD
+    <div className='space-y-4'>
+      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
+        <Button
+          variant={statusFilter === 'all' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('all')}
+          size='sm'        >
+          All
+        </Button>
+        <Button
+          variant={statusFilter === 'open' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('open')}
+          size='sm'        >
+          Open
+        </Button>
+        <Button
+          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('under_review')}
+          size='sm'        >
+          Under Review
+        </Button>
+        <Button
+          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('resolved')}
+          size='sm'        >
+          Resolved
+        </Button>
+        <Button
+          variant={statusFilter === 'closed' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('closed')}
+          size='sm'        >    <div className="space-y-4">
+=======
     <div className="space-y-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -335,7 +389,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
           size="sm"
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           size="sm"
         >
           Open
@@ -346,7 +400,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
           size="sm"
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           size="sm"
         >
           Under Review
@@ -357,7 +411,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
           size="sm"
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           size="sm"
         >
           Resolved
@@ -368,7 +422,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
           size="sm"
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           size="sm"
         >
           Closed
@@ -379,7 +433,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 =======
 
       <div className="border rounded-md overflow-hidden">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Table>
           <TableHeader>
             <TableRow>
@@ -401,7 +455,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
             </TableRow>
           </TableHeader>
           <TableBody>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className="font-mono text-xs">
@@ -409,23 +463,23 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
                 <TableCell>
 <<<<<<< HEAD
-                  {dispute.project?.title |'Unknown Project'}
+                  {dispute.project?.title || 'Unknown Project'}
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
                     <span>
                       Client:{' '}
-                      {dispute.client_profile?.display_name |'Unknown Client'}
+                      {dispute.client_profile?.display_name || 'Unknown Client'}
                     </span>
                     <span>
                       Talent:{' '}
-                      {dispute.talent_profile?.display_name |'Unknown Talent'}                    </span>
+                      {dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>
                   </div>
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
-                    addSuffix: true
-                  })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+                    addSuffix: true,
+                  })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 =======
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
@@ -436,7 +490,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                     </span>
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </span>
                   </div>
                 </TableCell>
@@ -469,7 +523,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -499,11 +553,13 @@ if (isLoading) {"
   dispute.id "
 }> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
-  addSuffix: true
-})
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}"}
+  addSuffix: true 
+}) 
+}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
+}</TableBody> </Table> </div> </div>) ;
+}"};
+}
+}
 =======
           </TableBody>;
         </Table>;
@@ -512,4 +568,4 @@ if (isLoading) {"
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

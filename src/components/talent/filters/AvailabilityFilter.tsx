@@ -27,7 +27,7 @@ const AVAILABILITY_OPTIONS = [
 ],
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -37,7 +37,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 =======
         className="flex w-full items-center justify-between text-white font-medium"
       >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -48,7 +48,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map(option => (
@@ -62,8 +62,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 import { Checkbox } from "@/components/ui/checkbox"
 import { AvailabilityFilterProps } from "@/types/filters"
 const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" }
-  { id: "part_time", label: "Part-time" }
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
 =======
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
@@ -77,7 +77,7 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   { id: "project", label: "Project-based" }
 ]
 
@@ -125,11 +125,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   AVAILABILITY OPTIONS.map (option => (<div key= {
   option.id "
 }className="flex items-center" > <Checkbox > {
-  option.label
-}</label> </div>) )
-}</div>)
-}</div>)
-}"}
+  option.label 
+}</label> </div>) ) 
+}</div>) ;
+}</div>) ;
+}"};
 =======
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
@@ -143,4 +143,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -22,14 +21,19 @@ import { ExportPanel } from "./ExportPanel",
 import { Button } from "@/components/ui/button",
 import { toast } from "sonner",
 export type AppPlatform = "ios" | "android",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type AppMetadataValues = {
-  appTitle: string
-  shortDescription: string
-  longDescription: string
-  keywords: string[]
-  version: string
+  appTitle: string,
+  shortDescription: string,
+  longDescription: string,
+  keywords: string[],
+  version: string,
+<<<<<<< HEAD
+  platform: AppPlatform;
+};
+=======
   platform: AppPlatform
 <<<<<<< HEAD
 }
@@ -50,6 +54,7 @@ export const MetadataManager: React.FC = () => {
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
 =======
 },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
@@ -60,9 +65,15 @@ const defaultValues: AppMetadataValues = {
   platform: "ios"
 },
 
+<<<<<<< HEAD
+export const MetadataManager: React.FC = () => {;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+=======
 export const MetadataManager: React.FC = () => {
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
   const [isSaving, setIsSaving] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Separate form instances for each platform
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
@@ -111,7 +122,7 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
-          <Button
+          <Button 
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -146,8 +157,6 @@ export const MetadataManager: React.FC = () => {
     </div>
   )
 <<<<<<< HEAD
-}
-
 =======
 },
 import React, { useState } from "react",;
@@ -244,5 +253,6 @@ export const MetadataManager: React.FC = () => {;
       </Tabs>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

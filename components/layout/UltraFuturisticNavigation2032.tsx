@@ -7,87 +7,86 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  MenuIcon
-  CloseIcon
-  ChevronRightIcon;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  MenuIcon,
+  CloseIcon,;
+  ChevronRightIcon,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -339,8 +338,11 @@ const serviceCategories = [
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
@@ -361,7 +363,8 @@ const companyLinks = [
   { name: 'Support', href: '/support' }
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
-export default function UltraFuturisticNavigation2032() {
+
+export default function UltraFuturisticNavigation2032() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -580,7 +583,7 @@ export default function UltraFuturisticNavigation2032() {
 
             {/* Desktop Navigation */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
@@ -604,7 +607,7 @@ export default function UltraFuturisticNavigation2032() {
 
                                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               </Link>
                             ))}
                           </div>
@@ -629,7 +632,7 @@ export default function UltraFuturisticNavigation2032() {
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Get Started
                 </button>
               </Link>
@@ -637,7 +640,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -657,7 +660,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -670,7 +673,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -737,6 +740,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
                     </Link>
                   ))}
+
                   {/* Services Accordion */}
                   <div className='space-y-2'>
 =======
@@ -747,7 +751,7 @@ export default function UltraFuturisticNavigation2032() {
                   {/* Services Accordion */}
                   <div className='space-y-2'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <button
                       onClick={() =>
                         setActiveCategory(activeCategory === 0 ? null : 0)
@@ -801,7 +805,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -829,7 +833,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -841,7 +845,7 @@ export default function UltraFuturisticNavigation2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -886,10 +890,12 @@ export default function UltraFuturisticNavigation2032() {
     </>
   );
 }
+
+}
 =======
 
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

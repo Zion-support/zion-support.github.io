@@ -1,13 +1,14 @@
 <<<<<<< HEAD
-import { Input } from "@/components/ui/input";
+import { Input } from '@/components/ui/input'
 import { SearchIcon } from 'lucide-react'
-import { SearchFilterProps } from "@/types/filters";
+import { SearchFilterProps } from '@/types/filters'
 =======
 import { Input } from "@/components/ui/input",
 import { SearchIcon } from 'lucide-react'
 import { SearchFilterProps } from "@/types/filters",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="mb-6">
       <div className="relative">
@@ -29,7 +30,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
 =======
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Input
           id="talent-search"
           type="text"
@@ -43,14 +44,15 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">
 =======
         <p id="talent-search-help" className="sr-only">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           Type a name or skill to filter results
         </p>
       </div>
     </div>
   )
 <<<<<<< HEAD
-}
+};
+;
 =======
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
@@ -80,4 +82,4 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

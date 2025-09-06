@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -9,8 +8,10 @@ type TalentItem = {
   talentName: string;
   averageRating: number;
   totalReviews: number;
-}
-type Props = { items: TalentItem[] }
+};
+
+type Props = { items: TalentItem[] };
+
 =======
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
@@ -18,7 +19,7 @@ import path from 'path',
 import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -70,6 +71,23 @@ export default TopTalentsPage;
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
+<<<<<<< HEAD
+  const p = path.join(
+    process.cwd(),
+    "public",
+    "automations",
+    "top-talents.json",;
+  );
+  let items: TalentItem[] = [];
+  try {
+    const raw = fs.readFileSync(p, "utf8");
+    const data = JSON.parse(raw);
+    items = data.items || [];
+  } catch {}
+  return { props: { items } };
+};
+
+=======
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
   let items: TalentItem[] = [],
   try {
@@ -87,5 +105,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default TopTalentsPage;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

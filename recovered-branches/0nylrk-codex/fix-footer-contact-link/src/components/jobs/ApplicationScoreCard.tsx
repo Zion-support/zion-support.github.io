@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
+import {toast} from "sonner";
+import {JobApplication} from "@/types/jobs";
+=======
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -11,19 +21,25 @@ import { JobApplication } from "@/types/jobs";
 =======
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
+
+<<<<<<< HEAD
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
+=======
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 <<<<<<< HEAD
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
 =======
   const [isScoring, setIsScoring] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -61,13 +77,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         'trigger_resume_scoring';
         { application_id: application.id }
       );
-      if (error) throw error;
-      toast.success("Resume scoring has been initiated");
-      // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0;
-      const maxAttempts = 10;
-      const checkScore = async () => {
-        attempts++;
 =======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -113,6 +122,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       ),
       
       if (error) throw error,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
       toast.success("Resume scoring has been initiated"),
       
@@ -157,7 +167,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       setIsScoring(false)
       toast.error(`Failed to score resume: ${error.message}`)
     }
-  }
+  };
 =======
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -199,7 +209,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Render the score result or button to score
   return (
@@ -271,9 +281,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
-                    )}
 =======
                       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -297,7 +307,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                   </div>;
                 </details>;
               </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </div>
         ) : (

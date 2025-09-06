@@ -1,14 +1,5 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
 <<<<<<< HEAD
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
+
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -29,21 +20,42 @@ export function ContractBuilder({
   const [generatedContract, setGeneratedContract] = useState<string | null>(null)
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-  const handleLoadTemplate = null;
-          onClose()
+  )
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {
+    setFormValues(templateData)
+  }
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract);
+    setActiveTab("preview");    if (onContractGenerated) {
+      onContractGenerated(contract)
+    }
+  }
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);          onClose()
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
       />
     )
-  }
 =======
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { SmartContractBuilder } from "./SmartContractBuilder",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -62,7 +74,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -76,7 +88,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Button
                 variant="secondary"
                 size="sm"
@@ -88,7 +100,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           </div>
 <<<<<<< HEAD
           <TabsContent value="form" className="pt-4">
-            <ContractForm
+            <ContractForm 
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
@@ -98,7 +110,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
-              <ContractPreview
+              <ContractPreview 
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -173,4 +185,4 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

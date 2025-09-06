@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import {
   Card
   CardContent
@@ -7,20 +6,25 @@ import {
   CardHeader
   CardTitle
 } from '@/components/ui/card'
-
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
   name: string
   points: number
-<<<<<<< HEAD
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
   entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {
+  name: string,
+  points: number
+<<<<<<< HEAD
+}
+
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[]
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Trophy } from 'lucide-react';
@@ -31,8 +35,8 @@ export interface LeaderboardEntry {;
 ;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   name: string
 
@@ -54,7 +58,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
         <div className='space-y-2'>        <CardTitle className="flex items-center gap-2">
 =======
         <CardTitle className="flex items-center gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -72,7 +76,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
           {entries.map((e, idx) => (
             <div
               key={e.name}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
@@ -84,8 +88,9 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
           ))}
         </div>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
+};
 }
 =======
               <span className="text-sm">{e.points} pts</span>
@@ -97,4 +102,4 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

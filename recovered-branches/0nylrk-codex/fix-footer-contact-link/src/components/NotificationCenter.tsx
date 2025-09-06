@@ -1,31 +1,9 @@
 
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
-
-import {Bell} from '@/components/icons';
-import {Button} from '@/components/ui/button';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {useNotifications} from '@/context/notifications/NotificationContext';
-import {toast} from 'sonner';
-import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
-import {FilterType} from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC = () => {
-  const {
-    filteredNotifications
-    unreadCount
-    markAsRead
-    markAllAsRead;
-    dismissNotification
-    loading;
-    filter;
-    setFilter;
-    fetchNotifications
-  } = useNotifications();
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 =======
 import React, { useState, useEffect } from 'react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -43,8 +21,13 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
+<<<<<<< HEAD
+    markAsRead, ;
+    markAllAsRead;
+=======
     markAsRead, 
     markAllAsRead,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     dismissNotification, 
     loading,
     filter,
@@ -118,6 +101,7 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMarkAllAsRead = async () => {
@@ -170,7 +154,7 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
@@ -181,14 +165,10 @@ export const NotificationCenter: React.FC = () => {;
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
         />
-        <NotificationFilter
-          filter={filter as FilterType}
-          onFilterChange={handleFilterChange}
+        <NotificationFilter 
+          filter={filter as FilterType} 
+          onFilterChange={handleFilterChange} 
         />
-<<<<<<< HEAD
-        <NotificationList
-=======
-        
         <NotificationList 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           loading={loading}
@@ -203,13 +183,12 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>
     </Popover>
   )
-}
-
 =======
         />;
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

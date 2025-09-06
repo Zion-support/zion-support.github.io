@@ -1,14 +1,25 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {format} from 'date-fns';
+import {Check, ArrowDown, X} from "lucide-react";
+import {useDisputeCheck} from '@/hooks/useDisputeCheck';
+import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+=======
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { format  } from 'date-fns';
-import { Check, ArrowDown, X } from "lucide-react";
-import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
+import { Check, ArrowDown, X } from "lucide-react",
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface MilestoneCardProps {
 
   id: string
@@ -21,8 +32,10 @@ interface MilestoneCardProps {
   onApprove?: (id: string) => Promise<void>
 
   onReject?: (id: string) => Promise<void>
+<<<<<<< HEAD
 }
-export function MilestoneCard({
+
+export function MilestoneCard({ ;
   id;
   projectId;
 
@@ -47,25 +60,7 @@ export function MilestoneCard({
       case 'rejected':
         return 'bg-red-500';
       default: return 'bg-gray-500'
-    }
-  }
 =======
-import { Button } from "@/components/ui/button",
-import { format } from 'date-fns',
-import { Check, ArrowDown, X } from "lucide-react",
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
-interface MilestoneCardProps {
-  id: string,
-  projectId: string,
-  title: string,
-  description?: string,
-  amount: number,
-  status: string,
-  dueDate?: string,
-  onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>
 import React from 'react',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -110,6 +105,7 @@ export function MilestoneCard({;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
   
@@ -176,7 +172,6 @@ export function MilestoneCard({;
       </CardFooter>
     </Card>
   )
-}
 =======
           </div>;
           <div className="flex gap-2">;
@@ -230,6 +225,7 @@ export function MilestoneCard({;
       </CardFooter>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

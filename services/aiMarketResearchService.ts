@@ -1,5 +1,5 @@
+export interface MarketTrend {;
 <<<<<<< HEAD
-export interface MarketTrend {
   id: string;
   keyword: string;
   searchVolume: number;
@@ -11,7 +11,8 @@ export interface MarketTrend {
 
   timestamp: Date
 }
-export interface CompetitorAnalysis {
+
+export interface CompetitorAnalysis {;
   id: string;
   competitorName: string;
   website: string;
@@ -27,7 +28,8 @@ export interface CompetitorAnalysis {
 
   lastUpdated: Date
 }
-export interface MarketSegment {
+
+export interface MarketSegment {;
   id: string;
   name: string;
   size: number;
@@ -40,7 +42,8 @@ export interface MarketSegment {
 
   solutions: string[]
 }
-export interface MarketReport {
+
+export interface MarketReport {;
   id: string;
   title: string;
   industry: string;
@@ -55,7 +58,8 @@ export interface MarketReport {
 
   expiresAt: Date
 }
-export interface MarketResearchRequest {
+
+export interface MarketResearchRequest {;
   industry: string;
   targetMarket: string;
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -65,7 +69,8 @@ export interface MarketResearchRequest {
 
   customMetrics?: string[]
 }
-export interface MarketResearchResponse {
+
+export interface MarketResearchResponse {;
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -80,7 +85,8 @@ export interface MarketResearchResponse {
 
   estimatedROI: number
 }
-export class AIMarketResearchService {
+
+export class AIMarketResearchService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -215,7 +221,6 @@ export class AIMarketResearchService {
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
 =======
-export interface MarketTrend {;
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -436,5 +441,6 @@ export class AIMarketResearchService {;
   }
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -13,10 +13,9 @@ export default function Accessibility({ }: AccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/Accessibility.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

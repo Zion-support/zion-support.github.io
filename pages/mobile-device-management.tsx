@@ -1,26 +1,15 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
-export default function MDMPage() {
-  const features = [
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions']
-  const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' }
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' }
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }]
-  const references = [
-    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
-    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
-    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
-
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
+;
 =======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
@@ -56,7 +45,7 @@ export default function MDMPage() {
 =======
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </header>
           <section>
@@ -108,7 +97,7 @@ export default function MDMPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </section>
           <section className="text-center">
@@ -120,9 +109,14 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+  );
+};
+=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

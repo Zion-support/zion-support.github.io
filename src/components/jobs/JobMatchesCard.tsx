@@ -11,8 +11,8 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
+import { format } from 'date-fns'
+import { JobMatch } from '@/types/jobs'
 =======
 
 import { useState } from "react",
@@ -22,13 +22,12 @@ import { Button } from "@/components/ui/button",
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-
 <<<<<<< HEAD
 export function JobMatchesCard({
   match
@@ -38,6 +37,8 @@ export function JobMatchesCard({
 }: JobMatchCardProps) {
   const job = match.job
   if (!job) return null
+=======
+}
 
 =======
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
@@ -45,7 +46,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
   if (!job) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -143,7 +144,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               ))}
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
@@ -151,6 +152,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>
         )}
 <<<<<<< HEAD
+
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
@@ -161,7 +163,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -196,7 +198,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
@@ -209,11 +211,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               Decline
             </Button>
           </div>
-        )}
-      </CardFooter>
-    </Card>
-  )
-}
 =======
             <Button 
               variant="outline" 
@@ -223,10 +220,15 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               Decline;
             </Button>;
           </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
+};
+}
+=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

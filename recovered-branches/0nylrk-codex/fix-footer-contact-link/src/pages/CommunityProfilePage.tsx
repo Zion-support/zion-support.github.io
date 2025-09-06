@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useParams, Link} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {formatDistanceToNow} from "date-fns";
+import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community";
+import PostCard from "@/components/community/PostCard";
+import UserBadges from "@/components/community/UserBadges";
+import ReputationDisplay from "@/components/community/ReputationDisplay";
+=======
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -17,7 +33,7 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
 =======
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -181,11 +197,19 @@ const userPosts: ForumPost[] = [
   }
 ],
 
+<<<<<<< HEAD
+export default function CommunityProfilePage() {;
+  const { userId } = useParams();
+  const [user, setUser] = useState<CommunityUser | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [posts, setPosts] = useState<ForumPost[]>([]);
+=======
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
   const [user, setUser] = useState<CommunityUser | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [posts, setPosts] = useState<ForumPost[]>([]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -227,7 +251,7 @@ export default function CommunityProfilePage() {
   }
   return (
     <AppLayout>
-      <SEO
+      <SEO 
 =======
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
@@ -371,7 +395,7 @@ export default function CommunityProfilePage() {;
   return (;
     <AppLayout>;
       <SEO;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -522,7 +546,6 @@ export default function CommunityProfilePage() {;
     </AppLayout>
   )
 <<<<<<< HEAD
-}
 =======
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
@@ -634,6 +657,7 @@ export default function CommunityProfilePage() {;
       </div>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

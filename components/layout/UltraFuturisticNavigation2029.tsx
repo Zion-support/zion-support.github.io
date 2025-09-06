@@ -7,62 +7,61 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Timer;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Briefcase
-
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,;
+  Timer,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -388,8 +387,11 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavItems = [
@@ -402,7 +404,8 @@ const mainNavItems = [
   { name: 'Support', href: '/support', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
-export default function UltraFuturisticNavigation2029() {
+
+export default function UltraFuturisticNavigation2029() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -431,7 +434,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -469,7 +472,7 @@ export default function UltraFuturisticNavigation2029() {
 
               {contactInfo.website.replace('https://', '')}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </a>
           </div>
         </div>
@@ -553,9 +556,18 @@ export default function UltraFuturisticNavigation2029() {
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+=======
+
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
               ))}
               {/* Services Dropdown */}
+<<<<<<< HEAD
               <div className='relative group'>
                 <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
                   <Briefcase
@@ -573,17 +585,7 @@ export default function UltraFuturisticNavigation2029() {
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
 =======
 
-              </div>
-            </motion.div>
-
-            {/* Desktop Navigation */}
-
-                </Link>
-              ))}
-
-              {/* Services Dropdown */}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -594,7 +596,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -657,7 +659,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             ))}
                           </div>
                         </div>
@@ -669,7 +671,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -679,7 +681,7 @@ export default function UltraFuturisticNavigation2029() {
 =======
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 Get Started
               </motion.button>
@@ -698,7 +700,7 @@ export default function UltraFuturisticNavigation2029() {
 
               >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -708,7 +710,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -720,7 +722,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
@@ -785,7 +787,7 @@ export default function UltraFuturisticNavigation2029() {
                   ))}
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mobile Services */}
                 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -837,7 +839,7 @@ export default function UltraFuturisticNavigation2029() {
 
                               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </Link>
                           ))}
                         </div>
@@ -848,7 +850,7 @@ export default function UltraFuturisticNavigation2029() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mobile CTA */}
                 <div className='mt-8'>
                   <motion.button
@@ -881,4 +883,4 @@ export default function UltraFuturisticNavigation2029() {
       <div className='h-20' />
     </>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

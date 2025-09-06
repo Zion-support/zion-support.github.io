@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, {
   useState
   useRef
@@ -8,11 +7,10 @@ import React, {
   KeyboardEvent
 } from 'react'
 import { Button } from '@/components/ui/button'
-
 =======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Send } from 'lucide-react'
 interface ChatInputProps {
 <<<<<<< HEAD
@@ -39,10 +37,10 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message, setMessage] = useState('')
   const inputRef = useRef<HTMLTextAreaElement>(null)
   useEffect(() => {
-    // Focus input when component mounts
-    inputRef.current?.focus()
-  }, [])
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []);
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e.preventDefault();    if (message.trim() && !disabled) {
       onSend(message)
       setMessage('') }      setMessage('')
@@ -94,6 +92,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -114,7 +113,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -132,13 +131,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         disabled={!message.trim() || disabled}
       >
         <Send className="h-5 w-5" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </Button>
     </form>
   )
 }
 <<<<<<< HEAD
-        disabled={!message.trim() |disabled}
+        disabled={!message.trim() || disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
@@ -146,4 +145,4 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   )
 }
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

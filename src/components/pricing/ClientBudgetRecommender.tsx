@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -12,6 +11,7 @@ import {
 import { PricingSuggestionBox } from './PricingSuggestionBox'
 import { useAuth } from '@/hooks/useAuth'
 =======
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
@@ -23,21 +23,22 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
 <<<<<<< HEAD
   jobTitle: string
   category: string
   timeline?: string
-  scope?: string
-  experienceLevel?: string
+  scope?: string;
+  experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-  jobTitle: string
-  category: string
-  timeline?: string
-  scope?: string
-  experienceLevel?: string
+  jobTitle: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
+<<<<<<< HEAD
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
 export const ClientBudgetRecommender: React.FC<
@@ -54,14 +55,14 @@ export const ClientBudgetRecommender: React.FC<
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-    if (!jobTitle |!category) {
-      return
+    if (!jobTitle || !category) {
+      return;
     }
     setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
-        jobTitle
-        category
+        jobTitle,;
+        category;
       };        jobTitle
         category}
       if (timeline) params.timeline = timeline
@@ -80,19 +81,7 @@ export const ClientBudgetRecommender: React.FC<
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: 'client'
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
 =======
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -151,6 +140,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -158,7 +148,13 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+          accepted: true,
+        })
+      }
+    }
+  }
+=======
           accepted: true
         })
       }
@@ -168,7 +164,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 =======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       <div>
@@ -189,7 +185,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </Button>
         ) : (
           <PricingSuggestionBox
@@ -215,8 +211,7 @@ return (<div className="space-y-4" > <div> {"
 }</div> </div>)
 }
 '"  )
-}
-
+},
 =======
             rateType="hourly"
           />
@@ -225,4 +220,4 @@ return (<div className="space-y-4" > <div> {"
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

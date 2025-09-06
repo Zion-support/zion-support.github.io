@@ -1,29 +1,20 @@
 
 <<<<<<< HEAD
 import React from 'react';
-import { Navigate  } from 'react-router-dom';
-import { useAuth  } from '@/hooks/useAuth';
-import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import {Navigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
+import {useWhitelabel} from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
-
-  children: React.ReactNode
-
+  children: React.ReactNode,;
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
-  children;
 
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
   adminOnly = false;
-  tenantAdminAllowed = false
-  requiredUserType
-}) => {
-  const { user, isLoading } = useAuth();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
-  const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
 =======
 import React from 'react',
 import { Navigate } from 'react-router-dom',
@@ -40,6 +31,7 @@ export interface ProtectedRouteProps {
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children,
   adminOnly = false,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
@@ -126,5 +118,6 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 ;
   return <>{children}</>;
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default ProtectedRoute;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

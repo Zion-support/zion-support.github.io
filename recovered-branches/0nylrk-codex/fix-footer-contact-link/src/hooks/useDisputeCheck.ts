@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
+  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
+  const [disputeId, setDisputeId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 =======
 import { useState, useEffect } from "react",
@@ -15,6 +15,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -83,8 +84,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
     isUnderDispute
     disputeStatus
     disputeId;
-    isLoading
-
+    isLoading 
 =======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -141,6 +141,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

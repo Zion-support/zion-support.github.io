@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface PracticalBusinessSolution2029 {
+export interface PracticalBusinessSolution2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -86,9 +86,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'
     ]
     useCases: [
-      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
-    ],    features: [
-
+      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
+    ],    features: [;
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -479,13 +478,15 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular)
-}
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+};
+
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category)
-}
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
+};
+
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029.filter(service => {
+  return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -948,21 +949,22 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     reviews: 198
   }
 ];
-export const getPopularPracticalBusinessSolutions2029 = () => {
+
+export const getPopularPracticalBusinessSolutions2029 = () => {;
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
   return practicalBusinessSolutions2029.filter(
-    service => service.category === category
+    service => service.category === category;
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return practicalBusinessSolutions2029.filter(service => {
+  return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -1361,8 +1363,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 ]}}
     return price >= minPrice && price <= maxPrice
   })
-}
-
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
@@ -1771,5 +1771,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

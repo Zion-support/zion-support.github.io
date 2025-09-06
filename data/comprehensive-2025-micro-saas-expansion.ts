@@ -1,11 +1,6 @@
 <<<<<<< HEAD
-=======
-import { ServiceVariant } from '../types/service-variants',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
-}
-<<<<<<< HEAD
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
 //Healthcare AI Services {
   id: 'ai-healthcare-diagnostics-platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -342,6 +337,8 @@ benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalabili
 capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
 marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
 }];
+=======
+import { ServiceVariant } from '../types/service-variants',
 
 =======
 
@@ -1196,4 +1193,4 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

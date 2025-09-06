@@ -20,7 +20,7 @@ function generateSessionId(): string {
   window.localStorage.setItem('zion_support_session_id', id);
   return id
 }
-export default function ChatWidget() {
+export default function ChatWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -72,9 +72,12 @@ export default function ChatWidget() {
           eventType,
           payload,
         }),
+<<<<<<< HEAD
+      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
       });    } catch {}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }
 <<<<<<< HEAD
@@ -93,12 +96,12 @@ export default function ChatWidget() {
         })
       });
 <<<<<<< HEAD
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation(true)
 =======
       setShowEscalation(true);    } catch {}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }
 <<<<<<< HEAD
@@ -172,6 +175,8 @@ export default function ChatWidget() {
   return (
 <<<<<<< HEAD
     <div className='fixed bottom-4 right-4 z-50'>      }
+
+<<<<<<< HEAD
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1;
@@ -189,11 +194,8 @@ export default function ChatWidget() {
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
-    }
-  }
 =======
-    <div className='fixed bottom-4 right-4 z-50'>
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -251,7 +253,7 @@ export default function ChatWidget() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }
                 >
                   {m.content}
@@ -288,7 +290,7 @@ export default function ChatWidget() {
 
                   >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {q}
                   </button>
                 ))}
@@ -316,6 +318,7 @@ export default function ChatWidget() {
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
@@ -332,7 +335,9 @@ export default function ChatWidget() {
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 />
                 <button
                   onClick={() => onSend()}
@@ -372,7 +377,8 @@ export default function ChatWidget() {
     </div>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

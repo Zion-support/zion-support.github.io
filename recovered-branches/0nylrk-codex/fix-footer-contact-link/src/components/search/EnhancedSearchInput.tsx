@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from "react";
+import {Search, X} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+import {SearchSuggestion} from "@/types/search";
+=======
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -27,6 +34,7 @@ export function EnhancedSearchInput({
 =======
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -34,8 +42,13 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
+<<<<<<< HEAD
+export function EnhancedSearchInput({ ;
+  value;
+=======
 export function EnhancedSearchInput({ 
   value,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -70,17 +83,6 @@ export function EnhancedSearchInput({
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, []);
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
-    setIsFocused(false)
-    inputRef.current?.blur()
-  }
-
 =======
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -128,6 +130,7 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
     
@@ -171,7 +174,7 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}

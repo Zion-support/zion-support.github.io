@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
+const getSteps = (t: any,) => [
 =======
 
 import React from 'react',
@@ -21,6 +22,7 @@ interface HowItWorksSectionProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getSteps = (t: any) => [
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
 <<<<<<< HEAD
     title: t('how_it_works.post')
@@ -38,10 +40,11 @@ const getSteps = (t: any) => [
     icon: Handshake
   }
   {
-    title: t('how_it_works.done')
-    description: t('how_it_works.done_desc')
-    icon: Check
-  }
+    title: t('how_it_works.done'),
+    description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
+    icon: Check,
+  },
 ]
 import React, { useState } from 'react'
 export /**
@@ -92,10 +95,10 @@ export default function Page() {
     duration: "Ongoing","
     success: "100% client retention"}
 ]
-const stats = [ "
-  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },"
-  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },"
-  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },"
+const stats = [ ";
+  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
+  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
+  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
   { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };]
   const [hoveredStep, setHoveredStep] = useState < number | null> (null)
   const [activeStep, setActiveStep] = useState < number> (0)
@@ -123,27 +126,13 @@ export function HowItWorksSection({
   const { t } = useTranslation()
   const steps = getSteps(t)
 =======
-    title: t('how_it_works.post'),
-    description: t('how_it_works.post_desc'),
-    icon: Send},
-  {
-    title: t('how_it_works.match'),
-    description: t('how_it_works.match_desc'),
-    icon: Search},
-  {
-    title: t('how_it_works.hire_buy'),
-    description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake},
-  {
-    title: t('how_it_works.done'),
-    description: t('how_it_works.done_desc'),
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation(),
   const steps = getSteps(t),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -154,14 +143,13 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           </p>
         </div>
         <div className='relative'>
-
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
@@ -226,8 +214,8 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
-}
-}
+};
+};
 =======
 
         <div className="relative">
@@ -318,4 +306,4 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

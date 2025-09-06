@@ -1,5 +1,5 @@
+export interface QRCodeOptions {;
 <<<<<<< HEAD
-export interface QRCodeOptions {
   text: string;
   size?: number;
   foregroundColor?: string;
@@ -15,7 +15,8 @@ export interface QRCodeOptions {
     height: number
   }
 }
-export interface QRCodeResult {
+
+export interface QRCodeResult {;
   dataUrl: string;
   options: QRCodeOptions;
   generatedAt: Date;
@@ -26,7 +27,8 @@ export interface QRCodeResult {
     height: number
   }
 }
-export interface QRCodeTemplate {
+
+export interface QRCodeTemplate {;
   id: string;
   name: string;
   description: string;
@@ -181,7 +183,6 @@ class QRCodeService {
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'personal'
 =======
-export interface QRCodeOptions {;
   text: string,;
   size?: number,;
   foregroundColor?: string,;
@@ -364,18 +365,19 @@ class QRCodeService {;
         description: 'Quick dial with pre-filled number',;
         options: { size: 256, errorCorrectionLevel: 'M' },;
         category: 'personal';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     ]
   }
 <<<<<<< HEAD
+
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
 =======
 ;
   getErrorCorrectionInfo(): Record<string any> {;
     return this.ERROR_CORRECTION_LEVELS;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   private validateOptions(options: QRCodeOptions): void {
     if (!options.text |options.text.trim().length === 0) {
@@ -417,6 +419,8 @@ class QRCodeService {;
     `;
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
+<<<<<<< HEAD
+
   private generateVCard(data: any): string {
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n'
     vcard += `FN:${data.name}\n`;
@@ -436,10 +440,6 @@ class QRCodeService {;
     if (data.encryption !== 'nopass') {
       wifiString += `P:${data.password},`
 =======
-    `,
-    
-    return `data: image/svg+xml,base64,${btoa(svg)}`
-  }
 ;
   private generateVCard(data: any): string {;
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n',;
@@ -460,12 +460,13 @@ class QRCodeService {;
     wifiString += `T:${data.encryption},`,;
     if (data.encryption !== 'nopass') {;
       wifiString += `P:${data.password},`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     if (data.hidden) {
       wifiString += 'H: true,'
     }
 <<<<<<< HEAD
+    
     wifiString += ;
     return wifiString
   }
@@ -489,11 +490,12 @@ class QRCodeService {;
     if (data.body) params.push(`body=${encodeURIComponent(data.body)}`),;
     if (params.length > 0) {;
       mailto += `?${params.join('&')}`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return mailto
   }
 <<<<<<< HEAD
+
   private generateSMSString(data: any): string {
     let smsString = `sms:${data.phone}`;
     if (data.message) {
@@ -504,11 +506,12 @@ class QRCodeService {;
     let smsString = `sms:${data.phone}`,;
     if (data.message) {;
       smsString += `?body=${encodeURIComponent(data.message)}`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return smsString
   }
 <<<<<<< HEAD
+
   private generateGeoString(data: any): string {
     let geoString = `geo:${data.latitude},${data.longitude}`;
     if (data.altitude) {
@@ -519,7 +522,7 @@ class QRCodeService {;
     let geoString = `geo:${data.latitude},${data.longitude}`,;
     if (data.altitude) {;
       geoString += `,${data.altitude}`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -527,6 +530,7 @@ class QRCodeService {;
     return geoString
   }
 <<<<<<< HEAD
+
   // Utility methods
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {
     canFit: boolean;
@@ -555,7 +559,7 @@ class QRCodeService {;
       canFit: textLength <= maxCapacity,;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,;
       maxCapacity;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
@@ -565,6 +569,7 @@ class QRCodeService {;
 <<<<<<< HEAD
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
+<<<<<<< HEAD
     console.log('QR Code saved:', qrCode.options.text)
   }
 }
@@ -572,8 +577,7 @@ export const qrCodeService = new QRCodeService();
 
 =======
 
-  saveQRCode(qrCode: QRCodeResult): void {
-    // In a real app, this would save to storage
+=======
     // // // console.log('QR Code saved:', qrCode.options.text)
 ;
   saveQRCode(qrCode: QRCodeResult): void {;
@@ -582,5 +586,6 @@ export const qrCodeService = new QRCodeService();
   }
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const qrCodeService = new QRCodeService();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

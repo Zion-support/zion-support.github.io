@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+
+
+export default ActiveFiltersBar; import React from 'react'
+import { X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+interface SearchFilters {
+  types: string[],
+  category: string,
+  minPrice: number,
+  maxPrice: number,
+  minRating: number,
+  sort: string
 =======
 import React from 'react',;
 import { X } from 'lucide-react';
@@ -11,6 +24,7 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -210,14 +224,14 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
 <<<<<<< HEAD
       {activeFilters.map(filter => (
-        <Badge
+        <Badge 
           key = {filter.key,}
-          variant="secondary"
 =======
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           variant="secondary" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="flex items-center gap-1 pl-2 pr-1"
@@ -233,7 +247,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             onClick = {(,) => removeFilter(filter.key),}
 =======
             onClick={() => removeFilter(filter.key)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -247,15 +261,17 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         onClick = {onClearAll,}
 =======
         onClick={onClearAll}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className="text-xs h-6 px-2"
       >
         Clear all
       </Button>
     </div>
   )
-}
-export default ActiveFiltersBar
+},
+
+export default ActiveFiltersBar,
+<<<<<<< HEAD
 interface Filter {
   key: string
   value: string
@@ -268,12 +284,9 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-      </button>
-    </div>
-  )}
-'"
-
-<<<<<<< HEAD
+      </button>;
+    </div>;
+  )};
+'";
 =======
-export default ActiveFiltersBar,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

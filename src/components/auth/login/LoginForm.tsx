@@ -1,7 +1,21 @@
 <<<<<<< HEAD
-
-import { useState } from "react";
-import { useRouter  } from 'next/router';
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { LogIn, User, Eye, EyeOff } from 'lucide-react'
+import { fireEvent } from '@/lib/analytics'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useState } from "react"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { useAuth } from "@/context/auth/AuthProvider"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 =======
 import {
   Form,
@@ -19,20 +33,20 @@ import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+<<<<<<< HEAD
+  FormMessage,
 } from '@/components/ui/form'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import Link from 'next/link'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
 import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
 const loginSchema = z.object({
   email: z
@@ -50,15 +64,29 @@ export function LoginForm() {
   const [isResending, setIsResending] = useState(false)
   const [verificationMessage, setVerificationMessage] = useState('')
   const router = useRouter()
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any,
+    defaultValues: {
+      email: '',
+      password: '',
+      rememberMe: false,
+    },
+  })
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return;
+    try {
+      setIsSubmitting(true),
+      // Pass email and password to the login function
+      const result = await login(data.email, data.password, data.rememberMe);
+      if (result?.error) {;
+        let errorMessage = 'Login failed. Please try again.'; // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (
+            result.error.message.toLowerCase().includes('email not confirmed')
+          ) {
+            errorMessage =
+              'Your email is not confirmed. Please check your inbox for a confirmation link.'
 =======
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -108,20 +136,12 @@ export function LoginForm() {
       const result = await login(data.email, data.password, data.rememberMe)
 =======
       const result = await login(data.email, data.password, data.rememberMe),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
-<<<<<<< HEAD
-          if (
-            result.error.message.toLowerCase().includes('email not confirmed')
-          ) {
-            errorMessage =
-              'Your email is not confirmed. Please check your inbox for a confirmation link.'
-=======
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           } else {
             errorMessage = result.error.message
           }
@@ -139,7 +159,7 @@ export function LoginForm() {
     const email = form.getValues('email')
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' })
-      return
+      return;
     }
     setIsResending(true)
     setVerificationMessage('')
@@ -169,7 +189,7 @@ export function LoginForm() {
     const email = form.getValues('email')
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' })
-      return
+      return;
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   }
@@ -274,7 +294,7 @@ export function LoginForm() {;
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -319,7 +339,7 @@ export function LoginForm() {;
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <FormControl>
                 <div className="relative">
                   <Input
@@ -334,7 +354,7 @@ export function LoginForm() {;
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
@@ -397,7 +417,7 @@ export function LoginForm() {;
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
@@ -409,7 +429,7 @@ export function LoginForm() {;
           control={form.control}
           name='rememberMe'
           render={({
-            field
+            field,
           }: {
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>
           }) => (
@@ -496,7 +516,7 @@ export function LoginForm() {;
           name="rememberMe"
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <FormControl>
                 <Checkbox
                   checked={field.value}
@@ -508,7 +528,7 @@ export function LoginForm() {;
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
@@ -618,7 +638,7 @@ export function LoginForm() {;
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Check status
           </Button>
         </div>
@@ -644,7 +664,7 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-return
+return;
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -673,7 +693,7 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-return
+return;
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -715,4 +735,4 @@ return
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

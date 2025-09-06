@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {AIMatchmaker} from "@/components/AIMatchmaker";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {toast} from "@/hooks/use-toast";
+import {MatchResult} from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {;
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+=======
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -25,6 +39,7 @@ import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
@@ -83,21 +98,9 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-            <AIMatchmaker
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
-            
             <AIMatchmaker 
+<<<<<<< HEAD
+=======
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -162,6 +165,7 @@ export default function AIMatcherPage() {;
               </Select>;
             </div>;
             <AIMatchmaker;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />;
@@ -172,5 +176,7 @@ export default function AIMatcherPage() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -15,6 +15,7 @@ interface SafeConsole {
   log: (message: string) => void
 }
 <<<<<<< HEAD
+
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -41,7 +42,7 @@ class MockApp {
 
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
 =======
 ;
 // Declare available globals;
@@ -67,12 +68,13 @@ class MockApp {;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return Promise.resolve()
   }
 }
 <<<<<<< HEAD
+
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -89,11 +91,12 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   return `AI response to: ${prompt}`
 }
 <<<<<<< HEAD
+
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -130,7 +133,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     case 'help':
     default: await respond(
@@ -163,5 +166,6 @@ export default app;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default app;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

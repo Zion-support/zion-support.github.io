@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {useParams, Link} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent} from "@/components/ui/card";
+import {Separator} from "@/components/ui/separator";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle} from "lucide-react";
+import {formatDistanceToNow, format} from "date-fns";
+import {ForumPost, ForumReply} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
+import ReplyCard from "@/components/community/ReplyCard";
+import ReplyForm from "@/components/community/ReplyForm";
+import {useToast} from "@/hooks/use-toast";
+=======
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -21,6 +40,7 @@ import { useToast } from "@/hooks/use-toast";
 =======
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -148,6 +168,14 @@ const mockReplies: ForumReply[] = [
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
+<<<<<<< HEAD
+  // Cast the result instead to provide the expected shape.;
+  const { postId } = useParams() as { postId?: string };
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [post, setPost] = useState(mockPost);
+  const [replies, setReplies] = useState(mockReplies);
+=======
   // Cast the result instead to provide the expected shape.
 <<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
@@ -165,6 +193,7 @@ export default function ForumPostPage() {
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
@@ -640,7 +669,7 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {post.authorRole}
                     </Badge>
                   )}

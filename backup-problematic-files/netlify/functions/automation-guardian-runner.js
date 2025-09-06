@@ -1,11 +1,8 @@
 <<<<<<< HEAD:netlify/functions/automation-guardian-runner.js
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-
-  const abs = path.resolve(__dirname, '....', relPath)
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true })
-  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
-
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
 =======
 <<<<<<< HEAD:backup-problematic-files/netlify/functions/automation-guardian-runner.js
 const path = require('path'),;
@@ -13,6 +10,7 @@ const { spawnSync } = require('child_process'),;
 function runNode(relPath, args = []) {;
   const abs = path.resolve(__dirname, '....', relPath),;
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/automation-guardian-runner.js
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/automation-guardian-runner.js
 }
@@ -47,8 +45,7 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
 <<<<<<< HEAD:netlify/functions/automation-guardian-runner.js
-}
-
+},
 =======
 },;
 =======
@@ -94,4 +91,4 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 },
 >>>>>>> main:netlify/functions/automation-guardian-runner.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/automation-guardian-runner.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/automation-guardian-runner.js

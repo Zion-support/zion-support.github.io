@@ -4,7 +4,7 @@ import { useState  } from 'react';
 import {useState} from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-export default function OffworldConsole() {
+export default function OffworldConsole() {;
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -31,7 +31,7 @@ export default function OffworldConsole() {
     });
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
   async function syncProfile() {
-    setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) })
+    setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
@@ -139,6 +139,8 @@ export default function OffworldConsole() {
     </div>
 );
 }
+
+}
 =======
     setStatus('Broadcasting manifesto...');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -2,35 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Brain
-  Rocket
-  Dna
-  Globe
-  Shield
-  Wifi
-  Package
-  Bot
-  Car
-  Building2
-  DollarSign
-  Monitor
-  Users
-  Cpu
-  Zap
-  Atom
-  Database
-  Cloud
-  Lock
-  Code;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,;
+  Code,;
 } from 'lucide-react';
-import Link from 'next/link';import {
+import Link from 'next/link';import { ;
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -315,7 +315,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -388,10 +388,9 @@ import Link from 'next/link';
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
 <<<<<<< HEAD
-                  </Link>
-                )}
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Link>
                 )}
 
@@ -409,7 +408,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         <div className='p-4'>
                           <div className='text-sm text-gray-400 mb-3'>
@@ -449,7 +448,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
@@ -462,7 +461,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -513,7 +512,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -587,7 +586,7 @@ import Link from 'next/link';
 
                       <span>{item.name}</span>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </Link>
                   )}
                 </div>
@@ -653,12 +652,12 @@ import Link from 'next/link';
       </AnimatePresence>
     </nav>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraAdvancedNavigation;  )
 }
 export default UltraAdvancedNavigation;
-
-<<<<<<< HEAD
 =======
 export default UltraAdvancedNavigation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

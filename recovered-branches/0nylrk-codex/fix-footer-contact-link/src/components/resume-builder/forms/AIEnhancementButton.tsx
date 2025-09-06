@@ -1,9 +1,9 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2  } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Sparkles, Loader2} from 'lucide-react';
+import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -14,33 +14,13 @@ interface AIEnhancementButtonProps {
   buttonText?: string;
   className?: string
 }
-export function AIEnhancementButton({
+
+export function AIEnhancementButton({;
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-
   buttonText = "Enhance with AI";
-  className
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
-  const handleEnhance = async () => {
-    if (!currentContent |currentContent.trim().length < 10) {
-      setError('Please enter at least some basic content before enhancing');
-      return
-    }
-    setError(null);
-    const enhancedContent = await enhanceContent(
-      currentContent;
-      enhancementType;
-      context
-    );
-    if (enhancedContent) {
-      onEnhanced(enhancedContent)
-    }
-  }
-
 =======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -61,6 +41,7 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -71,6 +52,20 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
+<<<<<<< HEAD
+    
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context
+    );
+    
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  };
+=======
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -82,6 +77,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (

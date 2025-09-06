@@ -6,9 +6,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
-    const raw = null;
-    res.status(200).json({ items })
+  try {;
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
   } catch {
     res.status(200).json({ items: [] });
   }

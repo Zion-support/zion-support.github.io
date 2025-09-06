@@ -1,20 +1,17 @@
 
 <<<<<<< HEAD
 import React, { useState } from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+export function TeamManagement() {;
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
 =======
 import React, { useState } from "react",
 import {
@@ -49,6 +46,7 @@ import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Mock team members data
@@ -440,7 +438,7 @@ export function TeamManagement() {;
                         variant="ghost";
                         size="sm";
                         className="text-destructive hover:text-destructive";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

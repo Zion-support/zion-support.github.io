@@ -1,153 +1,26 @@
-import React from 'react',
 <<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-  Handshake
-  Globe
-  Rocket
-  Brain
-  Atom
-  Shield
-  ArrowRight
-  ExternalLink
-  Star
-  Users
-  Clock
-  TrendingUp;
+  Handshake,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Users,
+  Clock,;
+  TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-export default function PartnersPage() {
-  const partners = [
-    {
-      name: 'Microsoft Azure'
-      category: 'Cloud Infrastructure'
-      description:
-        'Strategic partnership for enterprise cloud solutions and AI services'
-      logo: '/api/placeholder/200/100'
-      website: 'https://azure.microsoft.com'
-      partnership: 'Technology Alliance'
-      benefits: [
-        'Joint go-to-market'
-        'Technical integration'
-        'Co-selling opportunities'
-      ]
-      icon: Globe
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      name: 'NVIDIA'
-      category: 'AI & Computing'
-      description:
-        'Collaboration on GPU-accelerated AI and quantum computing solutions'
-      logo: '/api/placeholder/200/100'
-      website: 'https://nvidia.com'
-      partnership: 'Technology Partner'
-      benefits: ['Hardware optimization', 'Joint R&D', 'Market expansion']
-      icon: Brain
-      color: 'from-green-500 to-emerald-500'
-    }
-    {
-      name: 'IBM Quantum'
-      category: 'Quantum Computing'
-      description:
-        'Partnership for quantum computing research and enterprise solutions'
-      logo: '/api/placeholder/200/100'
-      website: 'https://quantum-computing.ibm.com'
-      partnership: 'Research Partner'
-      benefits: ['Quantum access', 'Joint research', 'Enterprise deployment']
-      icon: Atom
-      color: 'from-purple-500 to-pink-500'
-    }
-    {
-      name: 'Cisco'
-      category: 'Cybersecurity'
-      description:
-        'Strategic alliance for network security and threat detection solutions'
-      logo: '/api/placeholder/200/100'
-      website: 'https://cisco.com'
-      partnership: 'Security Alliance'
-      benefits: ['Network integration', 'Security solutions', 'Global reach']
-      icon: Shield
-      color: 'from-red-500 to-orange-500'
-    }
-    {
-      name: 'AWS'
-      category: 'Cloud Services'
-      description:
-        'Partnership for scalable cloud infrastructure and AI services'
-      logo: '/api/placeholder/200/100'
-      website: 'https://aws.amazon.com'
-      partnership: 'Technology Partner'
-      benefits: ['Cloud infrastructure', 'AI services', 'Global expansion']
-      icon: Rocket
-      color: 'from-yellow-500 to-orange-500'
-    }
-    {
-      name: 'Intel'
-      category: 'Hardware & AI'
-      description:
-        'Collaboration on AI-optimized hardware and edge computing solutions'
-      logo: '/api/placeholder/200/100'
-      website: 'https://intel.com'
-      partnership: 'Technology Partner'
-      benefits: [
-        'Hardware optimization'
-        'Edge computing'
-        'Performance tuning'
-      ]
-      icon: Brain
-      color: 'from-indigo-500 to-purple-500'
-    },  ];
-  const partnershipTypes = [
-    {
-      title: 'Technology Alliance'
-      description: 'Deep technical integration and joint product development'
-      benefits: ['Shared technology roadmap', 'Joint R&D', 'Co-innovation']
-      icon: Handshake
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      title: 'Go-to-Market'
-      description: 'Joint sales and marketing initiatives for mutual growth'
-      benefits: [
-        'Co-selling opportunities'
-        'Joint marketing'
-        'Revenue sharing'
-      ]
-      icon: Rocket
-      color: 'from-purple-500 to-pink-500'
-    }
-    {
-      title: 'Research Partnership'
-      description: 'Collaborative research in emerging technologies'
-      benefits: ['Joint publications', 'Shared IP', 'Academic collaboration']
-      icon: Brain
-      color: 'from-emerald-500 to-teal-500'
-    }
-    {
-      title: 'Channel Partnership'
-      description:
-        'Distribution and reseller partnerships for market expansion'
-      benefits: [
-        'Channel enablement'
-        'Training programs'
-        'Support collaboration'
-      ]
-      icon: Users
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-  const stats = [
-    { number: '50+', label: 'Strategic Partners', icon: Handshake }
-    { number: '100+', label: 'Joint Projects', icon: Rocket }
-    { number: '25+', label: 'Countries', icon: Globe }
-    { number: '300%', label: 'Growth Rate', icon: TrendingUp }
-  ];
-
 =======
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -156,6 +29,7 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function PartnersPage() {
   const partners = [
     {
@@ -222,6 +96,11 @@ export default function PartnersPage() {
       partnership: "Technology Partner",
       benefits: ["Hardware optimization", "Edge computing", "Performance tuning"],
       icon: Brain,
+<<<<<<< HEAD
+      color: 'from-indigo-500 to-purple-500',;
+    },  ];
+
+=======
       color: "from-indigo-500 to-purple-500"
       } catch (error) {
     console.error("Error:", error);
@@ -229,6 +108,7 @@ export default function PartnersPage() {
   }
 }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const partnershipTypes = [
     {
       title: "Technology Alliance",
@@ -328,7 +208,7 @@ export default function PartnersPage() {
   }
 }
             className="mb-8"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
@@ -351,7 +231,7 @@ export default function PartnersPage() {
 =======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Building the future of technology through strategic partnerships and collaboration
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </p>
           </motion.div>
           <motion.div
@@ -640,7 +520,7 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="text-center"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -703,7 +583,7 @@ export default function PartnersPage(req, res) {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -749,7 +629,7 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
@@ -839,7 +719,7 @@ export default function PartnersPage(req, res) {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -885,7 +765,7 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -955,7 +835,7 @@ export default function PartnersPage(req, res) {
                     </ul>
                   </div>
                   <div className="flex items-center justify-between">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <a
                       href={partner.website  } catch (error) {
     console.error("Error:", error);
@@ -1024,7 +904,7 @@ export default function PartnersPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Partner with Us?
@@ -1046,11 +926,11 @@ export default function PartnersPage(req, res) {
       <EnhancedFooter />
     </div>
 <<<<<<< HEAD
-)
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
-}</ul> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
-}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
+),
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
+}</ul> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
+}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
@@ -1093,4 +973,4 @@ export default function PartnersPage(req, res) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

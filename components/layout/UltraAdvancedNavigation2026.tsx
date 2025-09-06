@@ -5,6 +5,32 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,;
+  MessageCircle,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, 
+  BookOpen, MessageCircle 
 
 import {
   Menu
@@ -33,9 +59,9 @@ import {
   Microscope, DollarSign, Home, Users, Briefcase
   BookOpen, MessageCircle
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -270,8 +296,11 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
@@ -475,8 +504,11 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
+<<<<<<< HEAD
+=======
 
   ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
@@ -499,7 +531,7 @@ const UltraAdvancedNavigation2026 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -624,7 +656,7 @@ const UltraAdvancedNavigation2026 = () => {
 
             {/* Desktop Navigation */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -658,7 +690,7 @@ const UltraAdvancedNavigation2026 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   All Services
                 </Link>
                 <Link
@@ -702,7 +734,7 @@ const UltraAdvancedNavigation2026 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -722,7 +754,7 @@ const UltraAdvancedNavigation2026 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -739,7 +771,7 @@ const UltraAdvancedNavigation2026 = () => {
 
             onClick={() => setIsOpen(false)}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -810,7 +842,7 @@ const UltraAdvancedNavigation2026 = () => {
 
                           onClick={() => setIsOpen(false)}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         >
                           {subItem.name}
                         </Link>
@@ -898,18 +930,18 @@ const UltraAdvancedNavigation2026 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
-
-<<<<<<< HEAD
 =======
 export default UltraAdvancedNavigation2026;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

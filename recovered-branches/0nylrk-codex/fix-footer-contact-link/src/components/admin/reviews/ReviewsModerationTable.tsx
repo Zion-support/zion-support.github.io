@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -7,12 +6,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
 =======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
@@ -21,6 +14,7 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import {
   Table,
@@ -51,9 +45,16 @@ interface ReviewsModerationTableProps {
 
   onRefresh: () => void
 }
+
+<<<<<<< HEAD
+export function ReviewsModerationTable({;
+  reviews;
+  isLoading;
+=======
 export function ReviewsModerationTable({
   reviews,
   isLoading,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
 <<<<<<< HEAD
@@ -219,8 +220,6 @@ export function ReviewsModerationTable({
                   <Avatar className="h-8 w-8">
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
 =======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
@@ -371,6 +370,7 @@ export function ReviewsModerationTable({;
                   <Avatar className="h-8 w-8">;
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -473,7 +473,7 @@ export function ReviewsModerationTable({;
                 </div>;
               </TableCell>;
             </TableRow>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </TableBody>
       </Table>

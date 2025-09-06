@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Wallet, Info, Check, ChevronRight, ArrowUpRight} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+export function OnChainExport() {;
+  const [isConnected, setIsConnected] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const { toast } = useToast();
+  const { user } = useAuth();
+=======
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
@@ -34,6 +49,7 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast(),
   const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleConnectWallet = async () => {
@@ -114,12 +130,17 @@ export function OnChainExport() {
       })
     } finally {
       setIsExporting(false)
+<<<<<<< HEAD
+    };
+  };
+=======
     }
 <<<<<<< HEAD
   }
 
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -182,7 +203,8 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   )
-}
+};
+;
 =======
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -317,4 +339,4 @@ export function OnChainExport() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

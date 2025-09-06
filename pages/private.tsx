@@ -12,16 +12,24 @@ interface PrivatePageProps {user: SupabaseUser;
 =======
 interface PrivatePageProps {;
   user: SupabaseUser;
+<<<<<<< HEAD
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
     <>
       <Head>
+<<<<<<< HEAD
+        <title>Private Profile - Zion Tech Marketplace</title>;
+        <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
+      </Head>
+      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
+=======
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
@@ -29,7 +37,7 @@ export default function PrivatePage({ user }: PrivatePageProps) {
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
 =======
       <div className="container max-w-4xl mx-auto py-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -86,12 +94,11 @@ export default function PrivatePage({ user }: PrivatePageProps) {
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
-                <div>
-                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
 =======
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div>
                   <span className="font-medium">Last Sign In: </span>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -120,7 +127,7 @@ export default function PrivatePage({ user }: PrivatePageProps) {
             <div className=&quot;flex gap-2&quot;>
 =======
             <div className="flex gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Button asChild>
                 <Link href="/dashboard">
                   Go to Dashboard
@@ -139,16 +146,20 @@ export default function PrivatePage({ user }: PrivatePageProps) {
   )
 <<<<<<< HEAD
 }
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
+;
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
+  const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
-  if (error |!data?.user) {return {;
+  if (error || !data?.user) {;
+    return {;
       redirect: {;
         destination: '/auth/login';
         permanent: false}}
   }
-  return {props: {;
+;
+  return {;
+    props: {;
       user: data.user}}
-}
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -181,5 +192,5 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 } ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

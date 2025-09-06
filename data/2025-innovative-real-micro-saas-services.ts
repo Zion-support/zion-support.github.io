@@ -1,8 +1,7 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeMicroSaasService {
-
+export interface InnovativeMicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -638,12 +637,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       }
       realImplementation: true
       implementationDetails:
-        'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.'
-      launchDate: '2024-02-20'
-      customers: 42
-      rating: 4.7
-      reviews: 20
-    }
+        'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
+      launchDate: '2024-02-20',
+      customers: 42,
+      rating: 4.7,
+      reviews: 20,
+    },;
   ];    features: [
       'AI-powered contract analysis and reviewLegal risk identification and assessmentDocument comparison and analysisLegal research and case law analysisCompliance checking and monitoringLegal document generationIntegration with legal systemsMobile legal app';
       'Multi-language legal supportPredictive legal analytics'
@@ -704,8 +703,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4.7;
     reviews: 20
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnhancedRealMicroSaasService {;
@@ -1189,6 +1186,7 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42,;
     rating: 4.7;
     reviews: 20;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

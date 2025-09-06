@@ -17,7 +17,6 @@ export function EmptyState({
   description
   onRetry
   showRetry = false
-
 =======
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
@@ -34,7 +33,7 @@ export function EmptyState({
   description,
   onRetry,
   showRetry = false,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   icon
 }: EmptyStateProps) {
   return (
@@ -103,23 +102,24 @@ export function EmptyState({;
       )}
       {showRetry && onRetry && (;
         <Button;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
 <<<<<<< HEAD
-        </Button>
-      )}
-    </div>
-  )
-}
 =======
           Try Again
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </Button>
       )}
     </div>;
   );
 } ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

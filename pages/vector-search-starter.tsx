@@ -1,20 +1,16 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Search, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function VectorSearchStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/vector-search-starter'))
-  if (!service) return null
-
+import React from 'react',;
+import Head from 'next/head',;
+import { Phone, Mail, MapPin, Check, ArrowRight, Search, Star } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 =======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Search, Star } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function VectorSearchStarterPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/vector-search-starter'))
   if (!service) return null,
@@ -48,7 +44,7 @@ export default function VectorSearchStarterPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">
@@ -71,7 +67,7 @@ export default function VectorSearchStarterPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400 hover:text-white"><Phone /><a href={`tel:${service.contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{service.contactInfo.mobile}</Link></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</Link></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</Link></div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </div>
@@ -87,5 +83,8 @@ export default function VectorSearchStarterPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;

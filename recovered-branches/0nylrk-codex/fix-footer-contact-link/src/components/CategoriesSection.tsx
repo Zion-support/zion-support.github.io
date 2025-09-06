@@ -1,33 +1,14 @@
 
 <<<<<<< HEAD
-
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
-const categories = [
-  {
-    title: "Services"
-    description: "On-demand IT support, consulting, development, and more";
-    icon: <Briefcase className="w-10 h-10" />
-    link: "/services"
-    color: "from-purple-500 to-indigo-600"}
-  {
-    title: "Talents"
-    description: "Connect with AI experts, developers, and tech specialists";
-    icon: <Users className="w-10 h-10" />
-    link: "/talent"
-    color: "from-cyan-500 to-blue-600"}
-  {
-    title: "Equipment"
-    description: "Rent or buy specialized hardware, servers, and devices";
-    icon: <HardDrive className="w-10 h-10" />
-    link: "/equipment"
-    color: "from-amber-500 to-orange-600"}
 =======
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const categories = [
   {
     title: "Services",
@@ -59,15 +40,13 @@ const specialServices = [
 <<<<<<< HEAD
     title: "IT Onsite Services"
     link: "/it-onsite-services"
+<<<<<<< HEAD
   }
 ];
 
 interface CategoriesSectionProps {
   showTitle?: boolean
-}
 =======
-    title: "IT Onsite Services",
-    link: "/it-onsite-services"
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
@@ -104,6 +83,7 @@ const specialServices = [;
 ];
 interface CategoriesSectionProps {;
   showTitle?: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -164,7 +144,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>
   )
 <<<<<<< HEAD
-}
+};
 =======
           </div>;
         </div>;
@@ -180,5 +160,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>;
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

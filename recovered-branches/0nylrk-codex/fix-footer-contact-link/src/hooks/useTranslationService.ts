@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -9,7 +8,8 @@ interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
 }
-export function useTranslationService() {
+
+export function useTranslationService() {;
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -77,7 +77,7 @@ export function useTranslationService() {;
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -132,6 +132,6 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

@@ -56,8 +56,7 @@ declare module 'lovable-tagger' {;
 }
 // Add Node.js globals
 <<<<<<< HEAD
-  }
-}
+
 =======
 declare let __dirname: string,
 declare let process: {
@@ -73,6 +72,7 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

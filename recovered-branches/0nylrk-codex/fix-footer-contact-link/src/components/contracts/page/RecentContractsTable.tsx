@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 interface Contract {
@@ -11,6 +10,7 @@ interface Contract {
 }
 interface RecentContractsTableProps {
 =======
+
 import { Button } from "@/components/ui/button",
 interface Contract {
   id: string,
@@ -30,7 +30,7 @@ interface Contract {;
 }
 ;
 interface RecentContractsTableProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -111,12 +111,11 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
           </tbody>
         </table>
       </div>
-    </>
 =======
           </tbody>;
         </table>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

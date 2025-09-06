@@ -28,6 +28,9 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
 =======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
@@ -57,6 +60,7 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 ;
     log(message) {;
@@ -197,15 +201,16 @@ class AggressiveSyntaxFixer {;
         return errorPatterns.some(pattern => pattern.test(content))
     }
 <<<<<<< HEAD
+
     createValidFile(filePath) {
 
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
-if (ext === '.tsx' |ext === '.jsx') {
-
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
+        
+if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
 default function ${validFileName}() {
   return (
@@ -253,7 +258,7 @@ const ${validFileName} = {;
 const ${validFileName} = {;
   // TODO: Implement ${validFileName} functionality;
 }`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         return `// ${validFileName} placeholder
 const ${validFileName} = {}`
@@ -341,6 +346,9 @@ process.on('SIGTERM', () => {
   process.exit(0)
 }),
 
+<<<<<<< HEAD
+;
+=======
 ;
 module.exports = AggressiveSyntaxFixer,;
 // Graceful shutdown handling;
@@ -354,4 +362,4 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

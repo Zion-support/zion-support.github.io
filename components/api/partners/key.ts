@@ -4,9 +4,9 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  authenticateRequest
-  listApiKeys
-  saveApiKeys;
+  authenticateRequest,
+  listApiKeys,;
+  saveApiKeys,;
 } from '../../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
@@ -17,7 +17,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -35,7 +35,7 @@ export default async function handler(
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -72,6 +72,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(201).json({ apiKey: newKey.key })
 }
+
+}
+}
 =======
   const newKey = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

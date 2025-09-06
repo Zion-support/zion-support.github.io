@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/hf-spaces.json';
+import data from '../../data/hf-spaces.json',;
 =======
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/hf-spaces.json',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function HfSpacesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -20,12 +20,17 @@ export default function HfSpacesPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+<<<<<<< HEAD
               <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
 =======
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
-        <ul className="mt-6 space-y-4">
-          {items.map((it, idx) => (
-            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</Link>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
@@ -44,3 +49,4 @@ export default function HfSpacesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

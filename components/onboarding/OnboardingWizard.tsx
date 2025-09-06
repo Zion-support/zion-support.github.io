@@ -3,10 +3,11 @@ import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
 <<<<<<< HEAD
+export default function OnboardingWizard() {;
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function OnboardingWizard() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -14,12 +15,16 @@ export default function OnboardingWizard() {
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
   const [step, setStep] = useState(0)
 
   const isClient = user?.role === 'client'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const steps = useMemo(() => {
     if (isClient) {
       return [
@@ -47,9 +52,9 @@ export default function OnboardingWizard() {
           )
         }
         {
-          title: 'Invite or message talent'
-          content: <p>Send invites or start a conversation to move fast.</p>
-        }
+          title: 'Invite or message talent',;
+          content: <p>Send invites or start a conversation to move fast.</p>,;
+        },;
       ];
     }
     return [
@@ -117,7 +122,9 @@ export default function OnboardingWizard() {
       }
     ];
   }, [isClient, setUser]);
-  if (!user |user.onboardingCompleted) return null;
+
+  if (!user || user.onboardingCompleted) return null;
+
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>
       <div className='flex items-center justify-between'>
@@ -225,4 +232,4 @@ export default function OnboardingWizard() {
       </div>
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

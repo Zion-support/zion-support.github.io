@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+=======
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -8,10 +15,16 @@ import { cn } from "@/lib/utils";
 =======
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
+
+<<<<<<< HEAD
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
+  const location = useLocation();
+  const currentPath = location.pathname;
+=======
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 <<<<<<< HEAD
 
@@ -20,6 +33,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 =======
   const location = useLocation(),
   const currentPath = location.pathname,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const navigationItems = [
@@ -75,7 +89,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     </div>
   )
 }
-export default ApiDocsLayout;
 
 =======
 import React from "react",;
@@ -143,5 +156,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   );
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default ApiDocsLayout;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

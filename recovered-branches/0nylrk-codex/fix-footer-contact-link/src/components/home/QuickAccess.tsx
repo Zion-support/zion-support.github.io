@@ -16,20 +16,25 @@ import {
   MessageSquare, 
   Smartphone 
 } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function QuickAccess() {
   const quickLinks = [
     {
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs"
-      icon: <Search className="h-6 w-6 text-zion-cyan" />
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+<<<<<<< HEAD
+      link: "/match";
+    };
+=======
       link: "/match"
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
@@ -186,7 +191,7 @@ export function QuickAccess() {;
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
       </div>

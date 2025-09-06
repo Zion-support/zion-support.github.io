@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import {useState} from "react";
+import {MatchResultItem} from "@/lib/ai-matchmaking";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
+import {Skeleton} from "@/components/ui/skeleton";
+import {cn} from "@/lib/utils";
+=======
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -18,6 +29,7 @@ interface AIMatchingResultsProps {
 =======
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -26,6 +38,14 @@ interface AIMatchingResultsProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   serviceType?: string
 }
+
+<<<<<<< HEAD
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+=======
 export function AIMatchingResults({
 <<<<<<< HEAD
   matches;
@@ -41,6 +61,7 @@ export function AIMatchingResults({
   onSelectMatch,
   isLoading = false,
   projectDescription = "",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all"),
@@ -167,7 +188,7 @@ export function AIMatchingResults({;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         </CardContent>
       </Card>

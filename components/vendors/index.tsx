@@ -84,29 +84,30 @@ export default function VendorsPage({ vendors }: Props) {
       <div className='text-center text-xs text-gray-500'>
         Powered by Zion • Co-brand available
       </div>
-    </div>
 <<<<<<< HEAD
+    </div>;
   );
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } }
 };      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
-    </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </div>
   );
 }
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } }
 };  return { props: { vendors } }
-}
+};
 
 <<<<<<< HEAD
+}
 =======
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

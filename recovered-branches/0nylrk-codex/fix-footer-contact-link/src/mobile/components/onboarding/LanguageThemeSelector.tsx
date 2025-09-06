@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
@@ -9,7 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Moon, Sun, Check } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Language {
 
   code: string
@@ -18,11 +25,17 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "🇺🇸" }
-  { code: "es", name: "Español", flag: "🇪🇸" }
-  { code: "fr", name: "Français", flag: "🇫🇷" }
-  { code: "de", name: "Deutsch", flag: "🇩🇪" }
-  { code: "zh", name: "中文", flag: "🇨🇳" }]
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "zh", name: "中文", flag: "🇨🇳" }],
+
+<<<<<<< HEAD
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+=======
 export function LanguageThemeSelector() {
 <<<<<<< HEAD
   const { theme, setTheme } = useTheme();
@@ -31,7 +44,7 @@ export function LanguageThemeSelector() {
 =======
   const { theme, setTheme } = useTheme(),
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="space-y-8 px-4">
@@ -100,7 +113,7 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Check className="h-4 w-4 text-primary" />
                 )}
               </CardContent>
@@ -128,7 +141,7 @@ export function LanguageThemeSelector() {;
               )}
             </CardContent>
           </Card>
-          <Card
+          <Card 
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -149,6 +162,14 @@ export function LanguageThemeSelector() {;
       </div>
     </div>
   )
+=======
+            </CardContent>;
+          </Card>;
+        </div>;
+      </div>;
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 =======
             </CardContent>;

@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
 =======
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
@@ -56,7 +56,7 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 =======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</Link>
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -85,7 +85,7 @@ export default function AgenticRAGPage() {_const _contactInfo = {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -115,14 +115,19 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
 =======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
+<<<<<<< HEAD
+	);
+};
+=======
 	)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

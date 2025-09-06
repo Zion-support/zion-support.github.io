@@ -27,9 +27,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
+<<<<<<< HEAD
+export function UserMenu() {;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+=======
 import { Link } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
@@ -46,6 +51,7 @@ import {
 export function UserMenu() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSignOut = async () => {
@@ -213,4 +219,4 @@ export function UserMenu() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

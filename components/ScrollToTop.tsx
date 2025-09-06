@@ -9,14 +9,8 @@ import { ChevronUp } from 'lucide-react';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-import { ChevronUp } from 'lucide-react';
-export default function ScrollToTop() {
-=======
-<<<<<<< HEAD
-import { ChevronUp } from 'lucide-react';
-
-export default function ScrollToTop() {
-=======
+export default function ScrollToTop() {;
+  const [isVisible, setIsVisible] = useState(false);
 
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -162,7 +156,7 @@ const ScrollToTop: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
@@ -256,34 +250,10 @@ const ScrollToTop: React.FC = () => {
 };
 
 <<<<<<< HEAD
-export default ScrollToTop;
-=======
-  )
+export default ScrollToTop;  )
 };
 
 export default ScrollToTop;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-}
-export default ScrollToTop;  )
-}
-export default ScrollToTop;
-<<<<<<< HEAD
-
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 export default ScrollToTop;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

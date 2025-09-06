@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { ProfileSkill } from "@/types/profile";
+import {Badge} from "@/components/ui/badge";
+import {ProfileSkill} from "@/types/profile";
 =======
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Badge } from "@/components/ui/badge";
+import { ProfileSkill } from "@/types/profile";
+>>>>>>> main
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -13,6 +18,10 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col">
@@ -24,6 +33,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
+<<<<<<< HEAD
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
 <<<<<<< HEAD
               <div
@@ -38,10 +48,30 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
 =======
               <div 
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+<<<<<<< HEAD
+=======
+
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+>>>>>>> main
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+=======
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
+=======
+  );
+>>>>>>> main
 }
 ;
 export function ProfileSkills({ skills }: ProfileSkillsProps) {;
@@ -69,6 +99,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+;

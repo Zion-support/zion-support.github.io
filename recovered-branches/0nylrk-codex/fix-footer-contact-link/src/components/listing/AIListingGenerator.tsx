@@ -1,13 +1,23 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Sparkles} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {AIListingForm} from "./AIListingForm";
+import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
-<<<<<<< HEAD
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface GeneratedContent {
 
   description: string
@@ -18,6 +28,7 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
+<<<<<<< HEAD
 }
 interface AIListingGeneratorProps {
 
@@ -31,7 +42,7 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
@@ -54,16 +65,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (error) {
         throw new Error(error.message)
 =======
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -114,7 +115,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       if (data.error) {
         throw new Error(data.error)
@@ -174,6 +175,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
+<<<<<<< HEAD
+=======
 ;
       setGeneratedContent(data.generated),;
       toast({;
@@ -216,7 +219,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initialValues={initialValues}
           />
         </CardContent>

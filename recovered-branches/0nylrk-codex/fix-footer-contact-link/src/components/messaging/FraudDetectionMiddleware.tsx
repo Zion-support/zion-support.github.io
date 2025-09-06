@@ -7,10 +7,6 @@ import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode
-}
-// Interface for the context
-interface FraudDetectionContextType {
-  scanMessageContent: (
 =======
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
@@ -19,6 +15,7 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 // Interface for the context;
@@ -50,11 +47,16 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+<<<<<<< HEAD
+  undefined as FraudDetectionContextType | undefined;
+);
+=======
   undefined as FraudDetectionContextType | undefined
 <<<<<<< HEAD
 );
 =======
 ),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
@@ -66,11 +68,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
+      // First do a quick local check using the fraud detection service;
+      const quickCheck = checkMessage(content);
+=======
       // First do a quick local check using the fraud detection service
 <<<<<<< HEAD
       const quickCheck = checkMessage(content);
 =======
       const quickCheck = checkMessage(content),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // If the quick check finds suspicious content, flag it
@@ -111,6 +118,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           };
       }
 <<<<<<< HEAD
+      
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -126,6 +134,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { isSafe: true }, // Default to safe on error
       }
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (data.classification === 'dangerous') {
@@ -143,6 +152,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { 
           isSafe: false,
           explanation: data.explanation
+<<<<<<< HEAD
+=======
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -153,7 +164,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
       */
@@ -176,14 +187,12 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   )
 }
 // Hook to use the fraud detection context
-export const useFraudDetection = () => {
+export const useFraudDetection = () => {;
   const context = React.useContext(FraudDetectionContext);
   if (context === undefined) {
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
   return context
-}
-
 =======
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
@@ -207,5 +216,6 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

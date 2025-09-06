@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from "lucide-react";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from "lucide-react";
 =======
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from "lucide-react";
+>>>>>>> main
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -17,6 +22,10 @@ export function PageHero() {
         Professional IT onsite support services with transparent pricing across
         190+ countries worldwide
       </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
@@ -28,6 +37,10 @@ export function PageHero() {
             worldwide
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Clock className="h-8 w-8 text-zion-cyan" />
@@ -38,6 +51,10 @@ export function PageHero() {
             cities
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <DollarSign className="h-8 w-8 text-zion-cyan" />
@@ -53,10 +70,9 @@ export function PageHero() {
       </div>
     </div>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react";
 export function PageHero() {;
@@ -91,6 +107,9 @@ export function PageHero() {;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -23,35 +23,55 @@ export default function Custom500() {
             </h2>
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
 <<<<<<< HEAD
-              Something went wrong on our end. We&apos,re working to fix it.
+              Something went wrong on our end. We&apos,re working to fix it. 
 =======
               Something went wrong on our end. We're working to fix it.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
+<<<<<<< HEAD
+            <Link 
+              href="/" 
+=======
             <Link
               href="/"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <Link 
+                href="/about" 
+=======
               <Link
                 href="/about"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
+<<<<<<< HEAD
+              <Link 
+                href="/services" 
+=======
               <Link
                 href="/services"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
+<<<<<<< HEAD
+              <Link 
+                href="/contact" 
+=======
               <Link
                 href="/contact"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Contact
@@ -62,6 +82,9 @@ export default function Custom500() {
       </div>
     </>
   )
+<<<<<<< HEAD
+};
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -126,3 +149,4 @@ export default function Custom500(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

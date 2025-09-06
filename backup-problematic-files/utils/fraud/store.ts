@@ -1,4 +1,5 @@
 <<<<<<< HEAD:utils/fraud/store.ts
+export interface FraudRecord {;
 =======
 <<<<<<< HEAD:backup-problematic-files/utils/fraud/store.ts
 import fs from 'fs-extra',;
@@ -273,8 +274,8 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'
     createdAt: partial.createdAt ?? new Date().toISOString()}
 }
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/store.ts
 export interface FraudRecord {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -285,7 +286,8 @@ export interface FraudRecord {
   adminId?: string;
   resolution?: string;
 }
-export interface MonthlyReport {
+
+export interface MonthlyReport {;
   month: string;
   totalCases: number;
   resolvedCases: number;
@@ -340,4 +342,4 @@ export const getFraudStore = () => fraudStore;
 =======
 export const getFraudStore = () => fraudStore;
 >>>>>>> main:utils/fraud/store.ts
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/store.ts
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts

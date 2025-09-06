@@ -1,25 +1,34 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { Skill } from '@/types/resume';
+import {Skill} from '@/types/resume';
+export interface SkillsFormProps {;
+=======
+import { Skill } from "@/types/resume";
 export interface SkillsFormProps {
+>>>>>>> main
   resumeId: string;
   skills: Skill[];
   onComplete: () => void;
-  onBack: () => void
+  onBack: () => void;
 }
-export interface SkillItemProps {
+
+export interface SkillItemProps {;
   skill: Skill;
   category: string;
-  onDelete: (id: string, category: string) => Promise<void>
+  onDelete: (id: string, category: string) => Promise<void>;
 }
-export interface SkillCategoryProps {
+
+export interface SkillCategoryProps {;
   category: string;
   skills: Skill[];
-  onDelete: (id: string, category: string) => Promise<void>
+  onDelete: (id: string, category: string) => Promise<void>;
 }
-export interface AddSkillFormProps {
+
+export interface AddSkillFormProps {;
   resumeId: string;
-  onAddSkill: (skill: Skill) => Promise<boolean>;
+<<<<<<< HEAD
+  onAddSkill: (skill: Skill) => Promise<boolean>,
   defaultCategory?: string
 =======
 import { Skill } from '@/types/resume',;
@@ -46,15 +55,14 @@ export interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
+>>>>>>> main
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
-
   onSuccess: () => Promise<void>;
 }
-<<<<<<< HEAD
-
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

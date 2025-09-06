@@ -1,52 +1,21 @@
 import React from 'react';
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage() {
-
-  const router = useRouter();
-  const {
-    type
-    recipientId
-    recipientName
-    jobId
-    jobTitle
-    talentId
-    talentName
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+export default function ComposePage() {;
 =======
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
-<<<<<<< HEAD
-  React.useEffect(() => {
-    if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
-  if (!user) return null;
-  const headerTitle =
-    type === 'invite'
-      ? `Invite ${recipientName |talentName |'Talent'}`
-      : type === 'apply'
-        ? `Apply to ${jobTitle |'Job'}`
-        : 'New Message';
-  const context =
-    type === 'invite'
-      ? { type: 'invite', jobId, jobTitle, talentId, talentName }
-      : type === 'apply'
-        ? { type: 'application', jobId, jobTitle }
-        : { type: 'general' }
-  const onSend = async () => {
-    if (!recipientId && !talentId) return alert('Missing recipient');
-    if (!message.trim() && !file && !linkUrl) return;
-=======
   React.useEffect(() => {;
     if (!loading && !user) router.replace('/auth');
   }, [loading, user, router]),;
@@ -67,24 +36,22 @@ export default function ComposePage(req, res) {
     : { type: 'general' },;
   const onSend = async () => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
+      const mime = file.type || 'application/octet-stream';
 <<<<<<< HEAD
-      const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
 =======
-      const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -205,6 +172,8 @@ export default function ComposePage(req, res) {
     </div>
 <<<<<<< HEAD
 );
+
+}
 =======
   )
   } catch (error) {
@@ -212,4 +181,4 @@ export default function ComposePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

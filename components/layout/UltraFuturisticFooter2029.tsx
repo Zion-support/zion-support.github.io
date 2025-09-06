@@ -7,30 +7,30 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Star
-  Rocket
-  Brain
-  Atom
-  Building
-  Briefcase
-  Microscope
-  Twitter
-  Facebook
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  Zap
-  Sparkles
-  Shield
-  Cpu
-  Database;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Rocket,
+  Brain,
+  Atom,
+  Building,
+  Briefcase,
+  Microscope,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,;
+  Database,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
@@ -216,6 +216,7 @@ const UltraFuturisticFooter2029 = () => {
                 <p className='text-sm text-gray-400'>Innovating the Future</p>
               </div>
             </div>
+<<<<<<< HEAD
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
               technology solutions. Transforming businesses with cutting-edge
@@ -283,14 +284,6 @@ const UltraFuturisticFooter2029 = () => {
           </div>
 =======
 
-];
-
-const UltraFuturisticFooter2029 = () => {
-  return (
-
-              </div>
-            </div>
-
             {/* Social Links */}
 
                 </a>
@@ -299,7 +292,7 @@ const UltraFuturisticFooter2029 = () => {
             </div>
           </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Service Categories */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -309,7 +302,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -345,7 +338,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -356,7 +349,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Link
                   key={link.name}
                   href={link.href}
@@ -375,7 +368,7 @@ const UltraFuturisticFooter2029 = () => {
 
                   <span>{link.name}</span>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
               ))}
             </div>
@@ -383,7 +376,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -392,7 +385,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div key={section.title}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
                     {section.title}
@@ -425,7 +418,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Bottom Footer */}
       <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -434,7 +427,7 @@ const UltraFuturisticFooter2029 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               © 2025 Zion Tech Group. All rights reserved.
             </div>
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
@@ -508,12 +501,14 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
 
-<<<<<<< HEAD
+}
 =======
 export default UltraFuturisticFooter2029;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

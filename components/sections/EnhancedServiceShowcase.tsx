@@ -2,23 +2,22 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Zap
-  Shield
-  Rocket
-  Brain
-  Globe
-  Lock
-  Code
-  Database
-  Cloud;
-
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Rocket,
+  Brain,
+  Globe,
+  Lock,
+  Code,
+  Database,;
+  Cloud,;
 import Button from '../ui/Button';
 interface Service {
   id: string;
@@ -241,6 +240,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     }
     return filtered.slice(0, maxServices)
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+
   const stats = [
     { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' }
     { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers |0), 0), icon: Users, color: 'text-green-400' }
@@ -261,7 +261,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {title}
           </motion.h2>
           <motion.p
@@ -281,7 +281,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             {subtitle}
           </motion.p>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -291,7 +291,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {stats.map((stat, index) => (
               <div key={index} className='text-center'>
@@ -320,7 +320,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.div>
         </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Filters */}
         {showFilters && (
           <motion.div
@@ -331,7 +331,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -364,7 +364,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                       <option key={category.id} value={category.id}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {category.icon} {category.name}
                       </option>
                     ))}
@@ -373,7 +373,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -397,7 +397,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                       <option key={range.id} value={range.id}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {range.name}
                       </option>
                     ))}
@@ -406,7 +406,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -430,7 +430,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                       <option key={option.id} value={option.id}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {option.name}
                       </option>
                     ))}
@@ -454,7 +454,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -468,7 +468,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
@@ -480,6 +480,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       ⭐ Most Popular
+=======
+                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
+
+                      ⭐ Most Popular
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   )}
 =======
@@ -505,7 +511,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
@@ -524,7 +530,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                       {service.tagline}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </p>
                   </div>
                   {/* Features */}
@@ -534,7 +540,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
@@ -562,7 +568,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -608,7 +614,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                       {service.roi}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   </div>
                   {/* Market Position */}
@@ -627,7 +633,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Button
                       href={service.link}
                       variant='primary'
@@ -672,7 +678,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -683,7 +689,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
@@ -732,12 +738,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       </div>
     </section>
   );
-}
+};
+
+<<<<<<< HEAD
 export default EnhancedServiceShowcase;  )
 }
 export default EnhancedServiceShowcase;
 
-<<<<<<< HEAD
+}
+}
+}
+}
+}
+}
 =======
 export default EnhancedServiceShowcase;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

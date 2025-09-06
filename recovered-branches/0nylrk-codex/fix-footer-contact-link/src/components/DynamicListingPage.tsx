@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Slider} from "@/components/ui/slider";
+import {ProductListing, ListingView} from "@/types/listings";
+import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+interface PriceRange {
+  min: number,
+  max: number
+}
+
+interface DynamicListingPageProps {
+  title: string,
+  description: string,
+  categorySlug: string,
+  listings: ProductListing[],
+  categoryFilters: { label: string, value: string }[],
+  initialPrice?: PriceRange
+}
+
+export function DynamicListingPage({;
+  title;
+  description;
+  categorySlug;
+  listings: allListings,
+  categoryFilters;
+=======
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -81,6 +115,7 @@ export function DynamicListingPage({;
   categorySlug,;
   listings: allListings,;
   categoryFilters,;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -219,7 +254,7 @@ export function DynamicListingPage({;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           }
         })
@@ -242,7 +277,7 @@ export function DynamicListingPage({;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {description}
           </p>
         </div>
@@ -298,7 +333,7 @@ export function DynamicListingPage({;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {filter.label}
                       </SelectItem>
                     ))}
@@ -340,7 +375,7 @@ export function DynamicListingPage({;
                     step={(priceRange.max - priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -417,14 +452,14 @@ export function DynamicListingPage({;
                           ))}
                           <span className="ml-1">& Up</span>;
                         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                     </Button>
                   ))}
                 </div>
               </div>
-              <Button
-                variant="outline"
+              <Button 
+                variant="outline" 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
 <<<<<<< HEAD
@@ -513,6 +548,8 @@ export function DynamicListingPage({;
                   <ProductListingCard
 =======
                   <ProductListingCard 
+<<<<<<< HEAD
+=======
                 </div>;
               </div>;
               <Button;
@@ -595,7 +632,7 @@ export function DynamicListingPage({;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -633,7 +670,7 @@ export function DynamicListingPage({;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >

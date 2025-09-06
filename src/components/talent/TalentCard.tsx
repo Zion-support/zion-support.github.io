@@ -1,6 +1,17 @@
 <<<<<<< HEAD
-import React from 'react';
-import { useRouter  } from 'next/router';
+
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard'; import React from 'react'
+import { useRouter } from 'next/router'
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { FavoriteButton } from "@/components/FavoriteButton"
+import { TalentProfile } from "@/types/talent"
+import { RatingStars } from '@/components/RatingStars'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { useCart } from '@/context/CartContext'
 =======
 import React from 'react',
 import { useRouter } from 'next/router',
@@ -20,7 +31,7 @@ import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface TalentCardProps {
 
   talent: TalentProfile
@@ -45,7 +56,7 @@ export interface TalentCardProps {;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 const TalentCardComponent = ({
   talent
@@ -61,7 +72,18 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  }
+<<<<<<< HEAD
+=======
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  },
+
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
@@ -86,7 +108,7 @@ const TalentCardComponent = ({
 =======
       onClick={handleViewProfile}
       tabIndex={0}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -101,7 +123,7 @@ const TalentCardComponent = ({
 =======
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -131,7 +153,7 @@ const TalentCardComponent = ({
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -154,7 +176,7 @@ const TalentCardComponent = ({
             </div>;
           </div>;
         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -163,19 +185,11 @@ const TalentCardComponent = ({
               {skills.map((skill, index,) => (
                 <span
                   key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
-                  {skill}
-                </span>
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
 =======
               {skills.map((skill, index) => (
                 <span 
                   key={index}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
@@ -205,7 +219,7 @@ const TalentCardComponent = ({
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -215,7 +229,7 @@ const TalentCardComponent = ({
                 onClick = {handleRequestHire,}
 =======
                 onClick={handleRequestHire}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -226,9 +240,9 @@ const TalentCardComponent = ({
               variant="ghost"
 <<<<<<< HEAD
               onClick={(e,) => {
-                e.stopPropagation()
 =======
               onClick={(e) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 handleViewProfile()
@@ -252,6 +266,11 @@ TalentCard.displayName = 'TalentCard'
 =======
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
+<<<<<<< HEAD
+;
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';
+=======
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
@@ -293,4 +312,4 @@ TalentCard.displayName = 'TalentCard',
 },;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,6 @@
 <<<<<<< HEAD
-
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react'
+import { Button } from '@/components/ui/button'
 =======
 return (
     <div className='flex space-x-2'>
@@ -9,10 +8,9 @@ return (
 
 import React from "react",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
-
 <<<<<<< HEAD
   flagId: string
   status: string
@@ -37,6 +35,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         aria-label="View details"
         onClick = {(,) => alert("View details (would open a detailed view)"),}
 =======
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+}
+
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (
     <div className="flex space-x-2">
@@ -46,7 +49,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="View Details"
         aria-label="View details"
         onClick={() => alert("View details (would open a detailed view)")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <Eye className="h-4 w-4" />
       </Button>
@@ -91,11 +94,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>
   )
-}
-'"}
-  )
-}
-
+};
+'"},;
+  );
+};
 =======
         variant="ghost"
         size="icon"
@@ -193,4 +195,4 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

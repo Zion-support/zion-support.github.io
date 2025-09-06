@@ -1,37 +1,11 @@
 
 <<<<<<< HEAD
-
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
-export function FeatureCTAs() {
-  const features = [
-    {
-      title: "AI Talent Matching"
-      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
-      icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
-      link: "/marketplace"
-      badge: "Popular"
-      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
-    }
-    {
-      title: "Talent Directory"
-      description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.";
-      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
-      link: "/talent"
-      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
-    }
-    {
-      title: "Services Marketplace"
-      description: "Discover professional tech and AI services for your business needs, from development to consulting.";
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
-      link: "/services"
-      badge: "New"
-      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
-    }
 =======
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -52,12 +26,18 @@ import {
   Building,
   Clock
 } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export function FeatureCTAs() {
   const features = [
     {
+<<<<<<< HEAD
+      title: "AI Talent Matching",;
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
+=======
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -320,7 +300,7 @@ export function FeatureCTAs() {;
                 <div className="flex justify-between items-start">;
                   {feature.icon}
                   {feature.badge && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

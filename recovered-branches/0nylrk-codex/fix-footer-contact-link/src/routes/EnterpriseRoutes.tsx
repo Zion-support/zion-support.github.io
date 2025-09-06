@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import EnterprisePlans from "../pages/EnterprisePlans";
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";
+import CompanyWorkspace from "../pages/CompanyWorkspace";
+import EnterpriseBilling from "../pages/EnterpriseBilling";
+import ZionHireAI from "../pages/ZionHireAI";
+=======
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import EnterprisePlans from "../pages/EnterprisePlans",
@@ -10,7 +19,7 @@ import ZionHireAI from "../pages/ZionHireAI";
 =======
 import EnterpriseBilling from "../pages/EnterpriseBilling",
 import ZionHireAI from "../pages/ZionHireAI",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const EnterpriseRoutes = () => {
   return (
     <Routes>
@@ -32,6 +41,8 @@ export default EnterpriseRoutes;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default EnterpriseRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -55,5 +66,6 @@ const EnterpriseRoutes = () => {;
     </Routes>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default EnterpriseRoutes;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

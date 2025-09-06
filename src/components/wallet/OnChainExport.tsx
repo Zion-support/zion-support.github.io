@@ -1,16 +1,15 @@
 
-import React, { useState } from "react",
 <<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
-  Tooltip;
+  Tooltip
   TooltipContent;
   TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
+  TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
+import { useAuth } from "@/hooks/useAuth"
 export function OnChainExport() {
 
   const [isConnected, setIsConnected] = useState(false)
@@ -23,6 +22,7 @@ export function OnChainExport() {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
 =======
+import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -44,7 +44,7 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (!ethereum) {
         toast({
           title: "Wallet not detected"
@@ -52,20 +52,20 @@ export function OnChainExport() {
           variant: "destructive"
 <<<<<<< HEAD
         })
-        return
+        return;
       }
+      
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0]
-}
-
-  )
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+};
+  );
+};
 }
 =======
         }),
         return
       }
-      
       // Request accounts
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
@@ -302,4 +302,4 @@ export function OnChainExport() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

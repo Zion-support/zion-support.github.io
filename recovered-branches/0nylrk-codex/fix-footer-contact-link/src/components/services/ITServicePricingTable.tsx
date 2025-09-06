@@ -1,22 +1,33 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+import {useState, useMemo} from "react";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Globe, Search, ArrowUpDown} from "lucide-react";
+import {Button} from "@/components/ui/button";
+export function ITServicePricingTable() {;
+=======
 import { useState, useMemo } from "react";
 import {
-  onsiteServicePricing
-  CountryPricing
+  onsiteServicePricing,
+  CountryPricing,
 } from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input";
 import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from "@/components/ui/table";
-
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+export function ITServicePricingTable() {
+>>>>>>> main
+  const [searchQuery, setSearchQuery] = useState("");
 =======
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -24,30 +35,35 @@ import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
-    direction: "ascending" | "descending"
+    direction: "ascending" | "descending";
   }>({
+    key: "country",
+    direction: "ascending",
+  });
 
     key: "country"
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
 <<<<<<< HEAD
-    let filteredData = [...onsiteServicePricing];
-=======
     let filteredData = [...onsiteServicePricing],
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    let filteredData = [...onsiteServicePricing];
+
+>>>>>>> main
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()),
       );
     }
+
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -57,35 +73,36 @@ export function ITServicePricingTable() {
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
 <<<<<<< HEAD
-      return 0;
-    });
-    return filteredData;
-  }, [onsiteServicePricing, searchQuery, sortConfig]);
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key
-      direction:
-        sortConfig.key === key && sortConfig.direction === "ascending"
-          ? "descending"
-          : "ascending"
-    });
-  }
-=======
       return 0
     }),
     
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
+=======
+      return 0;
+    });
+
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+>>>>>>> main
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
+<<<<<<< HEAD
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      direction:
+        sortConfig.key === key && sortConfig.direction === "ascending"
+          ? "descending"
+          : "ascending",
+    });
+  };
+>>>>>>> main
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
@@ -252,7 +269,7 @@ export function ITServicePricingTable() {;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </TableBody>
         </Table>

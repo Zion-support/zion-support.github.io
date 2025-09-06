@@ -1,10 +1,17 @@
 
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+=======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface TalentCardProps {
 
   talent: TalentProfile
@@ -14,8 +21,10 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void
 
   isAuthenticated: boolean
+<<<<<<< HEAD
 }
-export function TalentCard({
+
+export function TalentCard({;
   talent;
   onViewProfile;
   onRequestHire;
@@ -42,19 +51,8 @@ export function TalentCard({
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }
-  }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[];
+  };
 =======
-import { Link } from "react-router-dom",
-import { TalentProfile } from "@/types/talent",
-export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
@@ -96,6 +94,7 @@ export function TalentCard({;
       onToggleSave(talent.id, !isSaved);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
@@ -144,7 +143,7 @@ export function TalentCard({;
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -228,7 +227,7 @@ export function TalentCard({;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </div>
           <div className="flex items-center gap-2">

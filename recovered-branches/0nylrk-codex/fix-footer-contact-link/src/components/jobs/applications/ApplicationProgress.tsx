@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
+=======
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
@@ -15,6 +21,7 @@ export function ApplicationProgress({
 =======
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -26,6 +33,22 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
   const getProgressValue = () => {
     switch (status) {
+<<<<<<< HEAD
+      case "new":;
+        return 20;
+      case "viewed":
+        return 40;
+      case "shortlisted":
+        return 60;
+      case "interview":
+        return 80;
+      case "hired":
+        return 100;
+      case "rejected":
+        return 100;
+      default:
+        return 0;
+=======
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -33,6 +56,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 <<<<<<< HEAD
   }
@@ -48,8 +72,10 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
+=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -199,4 +225,4 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

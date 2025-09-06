@@ -1,15 +1,19 @@
 <<<<<<< HEAD
-
-import React, { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { useDisputes } from "@/hooks/useDisputes";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router';
+import { useDisputes } from '@/hooks/useDisputes';
+import { logErrorToProduction } from '@/utils/productionLogger'; import { useRouter } from 'next/router'
+import { useDisputes } from "@/hooks/useDisputes"
+import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
-  Dispute
-  disputeReasonLabels
-  DisputeMessage
-  DisputeStatus
-  ResolutionType
+  Dispute,
+  disputeReasonLabels,
+  DisputeMessage,
+  DisputeStatus,
+<<<<<<< HEAD
+  ResolutionType,
 } from '@/types/disputes'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
@@ -58,7 +62,7 @@ export function DisputeDetail() {
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === 'admin'
   useEffect(() => {
-    if (!disputeId) return
+    if (!disputeId) return;
     const loadDisputeData = async () => {
       setIsLoading(true)
       try {
@@ -66,7 +70,7 @@ export function DisputeDetail() {
         if (!disputeData) {
           toast.error('Dispute not found')
           router.push('/dashboard/disputes')
-          return
+          return;
         }
         setDispute(disputeData)
         const messagesData = await getDisputeMessages(disputeId)
@@ -81,14 +85,9 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router])
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return
+    if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status)
 =======
-import {
-  Dispute,
-  disputeReasonLabels,
-  DisputeMessage,
-  DisputeStatus,
   ResolutionType,;
 } from '@/types/disputes';
 
@@ -164,7 +163,7 @@ export function DisputeDetail() {
     if (!disputeId) return,
 
     const success = await updateDisputeStatus(disputeId, status),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })
@@ -174,29 +173,46 @@ export function DisputeDetail() {
     }
   }
   const handleResolveDispute = async () => {
-    if (!disputeId) return
+    if (!disputeId) return;
     if (!resolution.summary) {
       toast.error('Please provide a resolution summary')
+      return;
+=======
+      toast.error("Failed to update dispute status")
+    }
+  },
+
+  const handleResolveDispute = async () => {
+    if (!disputeId) return,
+    
+    if (!resolution.summary) {
+      toast.error("Please provide a resolution summary"),
       return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     const success = await resolveDispute(disputeId, {
-      summary: resolution.summary
+      summary: resolution.summary,
+<<<<<<< HEAD
       resolution_type:
         (resolution.resolution_type as ResolutionType) |'compromise'
     })
+=======
+      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (success && dispute) {
       setDispute({
-        ...dispute
-        resolution_summary: resolution.summary
-        resolution_type: resolution.resolution_type
-        resolved_at: new Date().toISOString()
+        ...dispute,
+        resolution_summary: resolution.summary,
+        resolution_type: resolution.resolution_type,
+<<<<<<< HEAD
+        resolved_at: new Date().toISOString(),
       })
     } else {
       toast.error('Failed to resolve dispute')
     }
   }
   const handleSendMessage = async () => {
-    if (!disputeId |!message.trim()) return
+    if (!disputeId || !message.trim()) return;
     setIsSending(true)
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin)
@@ -213,26 +229,6 @@ export function DisputeDetail() {
     }
   }
 =======
-      toast.error("Failed to update dispute status")
-    }
-  },
-
-  const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
-    if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
-      return
-    }
-    
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
-    if (success && dispute) {
-      setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()})
     } else {
       toast.error("Failed to resolve dispute")
@@ -357,7 +353,7 @@ export function DisputeDetail() {;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -378,7 +374,7 @@ export function DisputeDetail() {;
 =======
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </Button>
       </div>
     )
@@ -386,11 +382,12 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
+<<<<<<< HEAD
       case 'open':
-        return 'default'
-      case 'under_review':
-        return 'secondary'
-      case 'resolved':
+        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -399,9 +396,6 @@ export function DisputeDetail() {;
     }
   }
 =======
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
       case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
@@ -410,7 +404,7 @@ export function DisputeDetail() {;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -443,6 +437,17 @@ export function DisputeDetail() {;
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
         </div>
+<<<<<<< HEAD
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            onClick={() => router.push('/dashboard/disputes')}
+          >
+            Back to List
+          </Button>
+          {isAdmin && dispute?.status === 'open' && (
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
+=======
         
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => router.push("/dashboard/disputes")}>
@@ -451,7 +456,7 @@ export function DisputeDetail() {;
           {isAdmin && dispute?.status === "open" && (
             <Button onClick={() => handleStatusChange("under_review")}>
               Start Review
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </Button>
           )}
         </div>
@@ -540,7 +545,7 @@ export function DisputeDetail() {;
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -553,7 +558,7 @@ export function DisputeDetail() {;
 =======
             
             <TabsContent value="overview" className="space-y-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -571,28 +576,24 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
 =======
                   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className="font-medium">Description</h3>
                     <p className="whitespace-pre-wrap">{dispute.description}</p>
                   </div>
 <<<<<<< HEAD
-                  <div>
-                    <h3 className='font-medium'>Project</h3>
-                    <p>{dispute.project?.title |'Unknown Project'}</p>
-                    <p className='text-sm text-muted-foreground'>
-                      {dispute.project?.scope_summary}
-                    </p>
-                  </div>
 =======
                   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
+<<<<<<< HEAD
+=======
                   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {dispute.milestone_id && (
                     <div>
                       <h3 className="font-medium">Related Milestone</h3>
@@ -638,10 +639,21 @@ export function DisputeDetail() {;
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
                       </li>
+<<<<<<< HEAD
+                      {dispute.status !== 'open' && (
+                        <li className='flex gap-2 items-center'>
+                          <Badge
+                            variant='outline'
+                            className='h-6 w-6 rounded-full p-0 flex items-center justify-center'
+                          >
+                            2
+                          </Badge>
+=======
                       
                       {dispute.status !== "open" && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <span>Under review</span>
                         </li>
                       )}
@@ -674,7 +686,7 @@ export function DisputeDetail() {;
 =======
               
               {dispute.status === "resolved" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -687,7 +699,7 @@ export function DisputeDetail() {;
 =======
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
@@ -700,7 +712,7 @@ export function DisputeDetail() {;
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </CardContent>
                 </Card>
@@ -711,7 +723,7 @@ export function DisputeDetail() {;
 =======
             
             <TabsContent value="messages" className="space-y-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
@@ -804,7 +816,7 @@ export function DisputeDetail() {;
                             </div>;
                           );
                         });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </div>
                 </CardContent>
@@ -833,7 +845,7 @@ export function DisputeDetail() {;
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </Button>
                     </div>
                   </div>
@@ -845,7 +857,7 @@ export function DisputeDetail() {;
 =======
             
             <TabsContent value="attachments">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -862,7 +874,7 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {isAdmin && (
               <TabsContent value="admin" className="space-y-6">
                 <Card>
@@ -900,7 +912,7 @@ export function DisputeDetail() {;
                           variant="outline" 
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         >
                           Mark as Open
                         </Button>
@@ -924,7 +936,7 @@ export function DisputeDetail() {;
 =======
                     
                     {dispute.status !== "resolved" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
@@ -948,7 +960,7 @@ export function DisputeDetail() {;
                           />
                           
                           <div className="grid grid-cols-2 gap-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             <div>
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
@@ -976,9 +988,6 @@ export function DisputeDetail() {;
                           <Button onClick={handleResolveDispute}>
                             Resolve Dispute
                           </Button>
-                        </div>
-                      </div>
-                    )}
 =======
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
@@ -993,6 +1002,7 @@ export function DisputeDetail() {;
                           </div>
                           
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       </div>
                     )}
@@ -1047,7 +1057,7 @@ export function DisputeDetail() {;
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               </div>
                               <span className="text-xs opacity-70">
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
@@ -1082,7 +1092,7 @@ export function DisputeDetail() {;
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <Button
                           variant="outline"
                           onClick={() => {
@@ -1098,14 +1108,13 @@ export function DisputeDetail() {;
                                 )
                                 setAdminNote('')
                               }) }
-
 =======
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
                             }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           }}
                         >
                           Add Admin Note
@@ -1123,7 +1132,7 @@ export function DisputeDetail() {;
 =======
         
         <div className="space-y-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
@@ -1178,6 +1187,19 @@ export function DisputeDetail() {;
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
+              <div className='flex justify-center'>
+                <ArrowDown className='h-6 w-6 text-muted-foreground' />
+              </div>
+              <div className='flex items-start gap-4'>
+                <Avatar className='h-10 w-10'>
+                  <AvatarImage
+                    src={dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name || 'Talent avatar'
+                    }
+                  />
+=======
               
               <div className="flex justify-center">
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />
@@ -1186,6 +1208,7 @@ export function DisputeDetail() {;
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
                   <AvatarImage src={dispute.talent_profile?.avatar_url} alt={dispute.talent_profile?.display_name || "Talent avatar"} />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <AvatarFallback>T</AvatarFallback>
                 </Avatar>
                 <div>
@@ -1201,7 +1224,7 @@ export function DisputeDetail() {;
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1236,7 +1259,7 @@ export function DisputeDetail() {;
 }, [disputeId, getDisputeById, getDisputeMessages, router])
 }
 const handleResolveDispute = async () => {
-  if (!disputeId) return
+  if (!disputeId) return;
 if (!resolution.summary) {
 }const success = await resolveDispute (disputeId, {
   summary: resolution.summary
@@ -1250,7 +1273,7 @@ resolved at: new Date () .toISOString ()
 }else {
 }
 const handleSendMessage = async () => {
-  if (!disputeId |!message.trim () ) return
+  if (!disputeId || !message.trim () ) return;
 try {
 }catch (error) {
   logErrorToProduction ('Error sending message:', {
@@ -1334,4 +1357,6 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

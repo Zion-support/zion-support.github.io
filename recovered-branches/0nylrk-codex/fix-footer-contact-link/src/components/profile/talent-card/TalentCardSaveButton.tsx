@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Heart} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+=======
 import React from "react",
 import { Heart } from "lucide-react",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 =======
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -30,8 +36,13 @@ export function TalentCardSaveButton({
 =======
 
 export function TalentCardSaveButton({ 
+<<<<<<< HEAD
+  profileId, ;
+  profileName;
+=======
   profileId, 
   profileName,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isSaved, 
   onToggleSave,
   isAuthenticated 
@@ -57,14 +68,7 @@ export function TalentCardSaveButton({
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
-    toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites"
-      description: localIsSaved
-        ? `${profileName} has been removed from your favorites`
-        : `${profileName} has been added to your favorites`;
-      variant: "default"
-    })
-  }
+    
 =======
       }),
       return
@@ -106,6 +110,7 @@ export function TalentCardSaveButton({;
       onToggleSave(profileId, !localIsSaved);
     }
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -132,7 +137,6 @@ export function TalentCardSaveButton({;
     </button>
   )
 <<<<<<< HEAD
-}
 =======
 ;
     toast({;
@@ -157,6 +161,7 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

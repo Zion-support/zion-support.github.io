@@ -13,10 +13,9 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

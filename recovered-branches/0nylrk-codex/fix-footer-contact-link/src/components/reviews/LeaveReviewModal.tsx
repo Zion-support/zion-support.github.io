@@ -1,6 +1,13 @@
 
 <<<<<<< HEAD
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ReviewForm} from "./ReviewForm";
+import {useReviews} from "@/hooks/useReviews";
+=======
+import { useState, useEffect } from "react",
 import {
   Dialog;
   DialogContent;
@@ -10,8 +17,9 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ReviewForm } from "./ReviewForm";
-import { useReviews } from "@/hooks/useReviews";
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface LeaveReviewModalProps {
 
   projectId: string
@@ -20,8 +28,10 @@ interface LeaveReviewModalProps {
   isOpen: boolean
 
   onClose: () => void
+<<<<<<< HEAD
 }
-export function LeaveReviewModal({
+
+export function LeaveReviewModal({;
   projectId;
   revieweeId;
   revieweeName;
@@ -54,24 +64,6 @@ export function LeaveReviewModal({
       if (success) {
         handleOpenChange(false)
 =======
-import { useState, useEffect } from "react",
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ReviewForm } from "./ReviewForm",
-import { useReviews } from "@/hooks/useReviews",
-interface LeaveReviewModalProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  isOpen: boolean,
-  onClose: () => void
 import { useState, useEffect } from "react",;
 import {;
   Dialog,;
@@ -123,15 +115,15 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       return success
     }
 <<<<<<< HEAD
-  }
-
+  };
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (

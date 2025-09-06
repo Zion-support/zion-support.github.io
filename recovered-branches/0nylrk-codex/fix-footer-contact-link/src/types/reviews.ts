@@ -1,8 +1,8 @@
 
 <<<<<<< HEAD
-
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
-export interface Review {
+
+export interface Review {;
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -24,7 +24,8 @@ export interface Review {
     avatar_url?: string
   }
 }
-export interface ReviewReport {
+
+export interface ReviewReport {;
   id: string;
   review_id: string;
   reporter_id: string;
@@ -69,4 +70,4 @@ export interface ReviewReport {;
   resolved_at?: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

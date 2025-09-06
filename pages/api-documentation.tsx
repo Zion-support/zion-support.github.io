@@ -1,5 +1,5 @@
-import React from 'react',
 <<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {
@@ -18,9 +18,12 @@ export default function APIDocumentationPage() {
         </h1>
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
-    </Layout>
+    </Layout>;
   );
+
+}
 =======
+import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function APIDocumentationPage() {
@@ -59,4 +62,4 @@ export default function APIDocumentationPage(req, res) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

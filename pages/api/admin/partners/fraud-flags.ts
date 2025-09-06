@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-import { getServerSupabase } from '../../../../utils/supabase/server';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const code = (req.query.code as string)?.toLowerCase()
@@ -32,8 +32,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flags })
 
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
+  };
+};
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -60,3 +63,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

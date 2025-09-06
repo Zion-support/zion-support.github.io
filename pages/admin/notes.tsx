@@ -1,34 +1,9 @@
-import { useEffect, useState } from 'react';
 <<<<<<< HEAD
-
-type Note = {
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
-  createdAt: number
-}
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true)
-  const [notes, setNotes] = useState<Note[]>([])
-  const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    async function load() {
-      setLoading(true)
-      try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin])
-
+import { useEffect, useState } from 'react',;
+;
 =======
+import { useEffect, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Note = {
   id: string;
   targetType: string;
@@ -86,6 +61,14 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+<<<<<<< HEAD
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+=======
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,3 +87,4 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

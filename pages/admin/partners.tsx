@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
@@ -80,10 +79,6 @@ const AdminPartnersPage: React.FC = () => {
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-    const json = await res.json();
-    setFlags(json.flags |[]);
-
-  }
 =======
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
@@ -121,14 +116,18 @@ export default function AdminPartners(req, res) {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+
+=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -190,7 +189,7 @@ export default function AdminPartners(req, res) {
   }
 }
                     className="w-24 border rounded px-2 py-1"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -393,6 +392,10 @@ export default function AdminPartners(req, res) {
       </main>
     </>
   );
+
+}
+}
+}
 =======
       )  } catch (error) {
     console.error("Error:", error);
@@ -406,4 +409,4 @@ export default function AdminPartners(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

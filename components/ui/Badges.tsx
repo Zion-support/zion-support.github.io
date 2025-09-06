@@ -1,8 +1,8 @@
 import React from 'react';
 
 export function TrustBadge({
-  type
-}: {
+  type,
+}: {;
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -17,9 +17,9 @@ export function TrustBadge({
     </span>
   );
 export function MicroTestimonial({
-  quote
-  author
-}: {
+  quote,
+  author,
+}: {;
   quote: string;
   author: string;
 }) {
@@ -45,11 +45,14 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className="border rounded-md p-3 text-sm">
       <blockquote className="italic opacity-90">“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
-    </figure>
 <<<<<<< HEAD
+    </figure>;
 );
 }
+
+}
 =======
+    </figure>
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

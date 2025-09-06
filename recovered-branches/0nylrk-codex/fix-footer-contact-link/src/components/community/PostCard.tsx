@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {ForumPost} from "@/types/community";
+import {ProfileBadge} from "@/components/profile/ProfileBadge";
+=======
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -13,7 +25,7 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge";
 =======
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PostCardProps {
 
   post: ForumPost
@@ -22,12 +34,17 @@ interface PostCardProps {
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
+    <Card className={cn(;
+      "transition-shadow hover: shadow-md";
+=======
     <Card className={cn(
 <<<<<<< HEAD
       "transition-shadow hover: shadow-md";
       post.isPinned && "border-zion-purple/50"
 =======
       "transition-shadow hover:shadow-md",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       post.isPinned && "border-zion-purple/50",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       post.isFeatured && "bg-zion-purple/5"
@@ -109,7 +126,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {tag}
               </Badge>
             ))}
@@ -155,5 +172,6 @@ export default PostCard;
     </Card>;
   );
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default PostCard;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

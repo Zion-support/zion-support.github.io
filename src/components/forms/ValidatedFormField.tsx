@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, { useState, useEffect } from 'react'
 import {
   FormField
@@ -10,11 +9,11 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,;
+  SelectValue;
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
@@ -27,17 +26,26 @@ interface ValidationRule {
   pattern?: RegExp;
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
-  name: string;
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
+  name: string
+  label: string
+  type?:
+    | 'text'
+    | 'email'
+    | 'password'
+    | 'tel'
+    | 'url'
+    | 'number'
+    | 'textarea'
+    | 'select'
+    | 'checkbox'
+  placeholder?: string
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string, label: string }[],
-  form: any, // React Hook Form control
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
+  options?: { value: string; label: string }[]
+  form: any; // React Hook Form control
+  className?: string
+  disabled?: boolean
+  showValidIcon?: boolean
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -68,7 +76,7 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
-      return
+      return;
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -104,36 +112,6 @@ export function ValidatedFormField({
     if (validation.custom) {
       return validation.custom(value)
     }
-    return null
-  }
-  const getValidationIcon = () => {
-    if (!showValidIcon |!isTouched |validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
-        return (
-          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
-        )
-      case 'valid':
-        return <CheckCircle className='h-4 w-4 text-green-500' />
-      case 'invalid':
-        return <AlertCircle className='h-4 w-4 text-red-500' />
-      default:
-        return null
-    }
-  }
-  const getFieldClasses = () => {
-    if (!isTouched) return ''
-    switch (validationState) {
-      case 'valid':
-        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
-      case 'invalid':
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-      default:
-        return ''
-    }
-  }
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className)
 =======
 import React, { useState, useEffect } from 'react';
 
@@ -229,8 +207,38 @@ export function ValidatedFormField({;
 
     return null
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const getValidationIcon = () => {
+<<<<<<< HEAD
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null
+    switch (validationState) {
+      case 'validating':
+        return (
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
+    }
+  }
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -271,7 +279,7 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     switch (type) {
       case 'textarea':
         return (
@@ -285,7 +293,7 @@ export function ValidatedFormField({;
               disabled={disabled}
               className={baseClasses}
               rows={4}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
@@ -318,7 +326,7 @@ export function ValidatedFormField({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {option.label}
                   </SelectItem>
                 ))}
@@ -333,7 +341,7 @@ export function ValidatedFormField({;
 =======
         ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case 'checkbox':
         return (
           <div className="flex items-center space-x-2">
@@ -350,7 +358,7 @@ export function ValidatedFormField({;
 =======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {label}
             </label>
             {getValidationIcon()}
@@ -360,7 +368,7 @@ export function ValidatedFormField({;
 =======
         ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case 'password':
         return (
           <div className="relative">
@@ -373,7 +381,7 @@ export function ValidatedFormField({;
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -394,7 +402,7 @@ export function ValidatedFormField({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -408,7 +416,7 @@ export function ValidatedFormField({;
 =======
         ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       default:
         return (
           <div className="relative">
@@ -460,7 +468,7 @@ export function ValidatedFormField({;
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -469,7 +477,7 @@ export function ValidatedFormField({;
                   <p className='text-sm text-muted-foreground'>{description}</p>
 =======
                   <p className="text-sm text-muted-foreground">{description}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             )}
@@ -487,7 +495,7 @@ export function ValidatedFormField({;
               <span className='text-red-500 ml-1'>*</span>
             )}          </FormLabel>
           <FormControl>{renderField()}</FormControl>
-          {(fieldError |description) && (
+          {(fieldError || description) && (
             <div className='space-y-1'>
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
@@ -515,7 +523,7 @@ export function ValidatedFormField({;
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {fieldError.message}
                 </FormMessage>
               )}
@@ -524,7 +532,7 @@ export function ValidatedFormField({;
                 <p className='text-sm text-muted-foreground'>{description}</p>
 =======
                 <p className="text-sm text-muted-foreground">{description}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </div>
           )}
@@ -575,10 +583,9 @@ export const commonValidations = {
   }
 }
     }
-  }}
-    }
-  }}
-
+  }},
+    };
+  }};
 =======
     />;
   );
@@ -622,4 +629,4 @@ export const commonValidations = {;
       return null;
     }
   }};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

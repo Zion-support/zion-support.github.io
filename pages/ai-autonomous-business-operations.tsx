@@ -13,24 +13,13 @@ export default function AIAutonomousBusinessOperations() {
 			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
 <<<<<<< HEAD
 			pricePerMonthUSD={3500}
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Average ROI 5–12x within 120 days"
-			features={[
-				"Autonomous KPI monitoring and anomaly detection"
-				"Agentic workflows for ticket triage, billing, collections, and renewals"
-				"Human-in-the-loop approvals and audit trails"
-				"Playbooks for incident response and customer recovery"
-				"Compliance logging and role-based access"
-
-				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-			]}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
 =======
 			pricePerMonthUSD={3500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -40,6 +29,14 @@ export default function AIAutonomousBusinessOperations() {
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+<<<<<<< HEAD
+			]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
+		/>
+	)
+};
+=======
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -50,7 +47,6 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
@@ -62,3 +58,4 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

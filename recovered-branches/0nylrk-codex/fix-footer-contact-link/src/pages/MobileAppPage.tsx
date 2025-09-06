@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -20,7 +19,7 @@ import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
 import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>
@@ -44,6 +43,8 @@ export default MobileAppPage;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default MobileAppPage,
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -71,5 +72,6 @@ const MobileAppPage: React.FC = () => {;
     </AppLayout>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default MobileAppPage;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

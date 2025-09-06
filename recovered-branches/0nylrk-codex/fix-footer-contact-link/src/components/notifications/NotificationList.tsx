@@ -7,6 +7,19 @@ import { Button  } from '@/components/ui/button';
 import { NotificationItem  } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>,
+  onRetry: () => void
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
 =======
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -45,6 +58,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error,
   notifications,
   onMarkAsRead,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDismiss,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onRetry
@@ -86,10 +100,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 <<<<<<< HEAD
     </ScrollArea>
   )
-}
-
 =======
     </ScrollArea>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

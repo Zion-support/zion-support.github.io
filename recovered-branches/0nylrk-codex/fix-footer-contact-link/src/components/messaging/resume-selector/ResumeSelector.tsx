@@ -38,6 +38,21 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
+<<<<<<< HEAD
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+  const [selectedOption, setSelectedOption] = useState<
+    "recent" | "select" | "upload";
+  >("recent");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
+    null,
+  );
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFile, setCustomFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { resume, fetchResume } = useResume();
+
+=======
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -61,7 +76,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   const { resume, fetchResume } = useResume(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -115,11 +130,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     if (selected) {
       (setSelectedResume(selected), onResumeSelected(selected));
     }
-  }
-  // Handle custom file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
+  };
+
 =======
         setIsLoading(false)
 import React, { useState, useEffect } from 'react',;
@@ -194,6 +206,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     }
   },
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -203,10 +216,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
+          title: "Invalid file type",
+          description: "Please upload a PDF file",
 <<<<<<< HEAD
-          title: "Invalid file type"
-          description: "Please upload a PDF file"
-          variant: "destructive"
+          variant: "destructive",
         });
         return;
       }
@@ -231,26 +244,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     ) {
       return;
     }
-    try {
-      setIsLoading(true);
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume);
-      // Create download link
-      const url = URL.createObjectURL(pdfBlob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `${selectedResume.title |"Resume"}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      // Clean up
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      toast({
-        title: "Success!"
-        description: "Your resume has been downloaded."
-      });
+
 =======
-          title: "Invalid file type",
-          description: "Please upload a PDF file",
           variant: "destructive"
         }),
         return
@@ -287,6 +282,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       return;
     }
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     try {
       setIsLoading(true),
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),
@@ -350,11 +346,18 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
+<<<<<<< HEAD
+      <RadioGroup
+        value={selectedOption}
+        onValueChange={(value) =>
+          handleOptionChange(value as "recent" | "select" | "upload")
+        }
+=======
       
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -364,7 +367,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">Select from saved versions</Label>
@@ -372,7 +375,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
@@ -440,20 +443,21 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       {/* Resume selection options based on radio selection */}
       {selectedOption === 'recent' && resume && (;
         <ResumePreviewCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />
       )}
 <<<<<<< HEAD
+
       {selectedOption === "select" && (
         <SelectResumeSection
 =======
 ;
       {selectedOption === 'select' && (;
         <SelectResumeSection;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -462,21 +466,23 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         />
       )}
 <<<<<<< HEAD
+
       {selectedOption === "upload" && (
         <UploadSection
 =======
 ;
       {selectedOption === 'upload' && (;
         <UploadSection;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           customFile={customFile}
           onFileUpload={handleFileUpload}
         />
       )}
 <<<<<<< HEAD
+
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">
         <Button 
@@ -496,4 +502,4 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

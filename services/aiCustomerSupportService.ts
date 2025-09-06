@@ -1,5 +1,5 @@
+export interface Attachment {;
 <<<<<<< HEAD
-export interface Attachment {
   id: string;
   filename: string;
   originalName: string;
@@ -11,7 +11,8 @@ export interface Attachment {
 
   uploadedBy: string
 }
-export interface SupportTicket {
+
+export interface SupportTicket {;
   id: string;
   title: string;
   description: string;
@@ -31,7 +32,8 @@ export interface SupportTicket {
   firstResponseTime?: number, // in minutes
   resolutionTime?: number, // in hours
 }
-export interface TicketMessage {
+
+export interface TicketMessage {;
   id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
@@ -42,7 +44,8 @@ export interface TicketMessage {
 
   attachments: Attachment[]
 }
-export interface Customer {
+
+export interface Customer {;
   id: string;
   name: string;
   email: string;
@@ -57,7 +60,8 @@ export interface Customer {
 
   createdAt: Date
 }
-export interface SupportAgent {
+
+export interface SupportAgent {;
   id: string;
   name: string;
   email: string;
@@ -79,7 +83,8 @@ export interface AgentPerformance {
   firstResponseTime: number, // in minutes
   escalationRate: number, // percentage
 }
-export interface ChatbotSession {
+
+export interface ChatbotSession {;
   id: string;
   customerId: string;
   startTime: Date;
@@ -93,7 +98,8 @@ export interface ChatbotSession {
 
   satisfaction: number, // 1-5
 }
-export interface ChatbotMessage {
+
+export interface ChatbotMessage {;
   id: string;
   content: string;
   sender: 'customer' | 'bot';
@@ -103,7 +109,8 @@ export interface ChatbotMessage {
 
   confidence?: number
 }
-export interface KnowledgeBaseArticle {
+
+export interface KnowledgeBaseArticle {;
   id: string;
   title: string;
   content: string;
@@ -117,7 +124,8 @@ export interface KnowledgeBaseArticle {
 
   createdBy: string
 }
-export interface SupportAnalytics {
+
+export interface SupportAnalytics {;
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
@@ -130,7 +138,8 @@ export interface SupportAnalytics {
 
   agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
 }
-export interface AIRecommendation {
+
+export interface AIRecommendation {;
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
   title: string;
   description: string;
@@ -273,7 +282,6 @@ class AICustomerSupportService {
         lastUpdated: new Date('2025-01-05')
         createdBy: 'agent_001'
 =======
-export interface Attachment {;
   id: string,;
   filename: string,;
   originalName: string,;
@@ -533,11 +541,12 @@ class AICustomerSupportService {;
         notHelpful: 12,;
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     ]
   }
 <<<<<<< HEAD
+
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -545,29 +554,33 @@ class AICustomerSupportService {;
       status: 'open';
       attachments: [];
       messages: [];
-      createdAt: new Date()
+      createdAt: new Date(),
       updatedAt: new Date()
-    }
+    };
+
     this.tickets.push(ticket);
     this.updateAnalytics();
     return ticket
   }
+
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
     const ticket = this.tickets.find(t => t.id === ticketId);
     if (ticket) {
       ticket.assignedAgentId = agentId;
       ticket.status = 'in_progress';
-      ticket.updatedAt = new Date()
+      ticket.updatedAt = new Date(),
       this.updateAnalytics()
     }
   }
+
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
     const ticket = this.tickets.find(t => t.id === ticketId);
     if (ticket) {
       ticket.status = status;
       ticket.updatedAt = new Date();
+      
       if (status === 'resolved') {
-        ticket.resolvedAt = new Date()
+        ticket.resolvedAt = new Date(),
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
 =======
@@ -606,13 +619,15 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
+      
       this.updateAnalytics()
     }
   }
 <<<<<<< HEAD
+
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId);
     if (!ticket) {
@@ -722,20 +737,22 @@ class AICustomerSupportService {;
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return message
   }
 <<<<<<< HEAD
+
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
-    if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
+    
+    if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
 =======
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -748,6 +765,7 @@ class AICustomerSupportService {;
     }
   }
 <<<<<<< HEAD
+
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (session) {
@@ -795,7 +813,7 @@ class AICustomerSupportService {;
     },;
     this.knowledgeBase.push(article),;
     return article;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -806,6 +824,7 @@ class AICustomerSupportService {;
     ).sort((a, b) => b.views - a.views)
   }
 <<<<<<< HEAD
+
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -902,11 +921,12 @@ class AICustomerSupportService {;
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return recommendations
   }
 <<<<<<< HEAD
+
   private updateAnalytics(): void {
     const totalTickets = this.tickets.length;
     const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
@@ -1001,7 +1021,7 @@ class AICustomerSupportService {;
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
@@ -1033,9 +1053,9 @@ class AICustomerSupportService {;
   }
 }
 <<<<<<< HEAD
-export const aiCustomerSupportService = new AICustomerSupportService();
 
 =======
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const aiCustomerSupportService = new AICustomerSupportService();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

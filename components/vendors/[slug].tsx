@@ -3,12 +3,13 @@ import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
 <<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
 =======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function VendorProfilePage({ vendor }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
@@ -45,6 +46,7 @@ export default function VendorProfilePage({ vendor }: Props) {
     }
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
 <<<<<<< HEAD
@@ -119,6 +121,7 @@ export default function VendorProfilePage({ vendor }: Props) {
           </div>
         </div>
       )}
+
       {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (
         <div>
           <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>
@@ -154,11 +157,6 @@ export default function VendorProfilePage({ vendor }: Props) {
                 </div>
 =======
 
-    }
-  }
-
-  return (
-
         </div>
       </div>
 
@@ -171,7 +169,7 @@ export default function VendorProfilePage({ vendor }: Props) {
 
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             ))}
           </div>
@@ -205,13 +203,12 @@ export default function VendorProfilePage({ vendor }: Props) {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const slug = String(ctx.params?.slug |'');
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
 <<<<<<< HEAD
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -221,8 +218,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
     </div>
   );
 }
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
-  const slug = String(ctx.params?.slug |'');
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
@@ -232,4 +230,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026AIService {
+export interface Innovative2026AIService {;
   id: string;
   name: string;
   tagline: string;
@@ -461,11 +461,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
-    launchDate: '2025-06-20'
-    customers: 1900
-    rating: 4.8
-    reviews: 950
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
+    launchDate: '2025-06-20',
+    customers: 1900,
+    rating: 4.8,
+    reviews: 950,;
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -479,8 +479,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8
 
     reviews: 950
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
@@ -744,6 +742,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

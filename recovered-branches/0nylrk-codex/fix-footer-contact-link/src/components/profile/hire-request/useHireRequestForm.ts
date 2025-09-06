@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {useHireRequest} from "@/hooks/useHireRequest";
+import {TalentProfile} from "@/types/talent";
+=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -9,7 +17,7 @@ import { TalentProfile } from "@/types/talent";
 =======
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -21,17 +29,23 @@ interface UseHireRequestFormProps {
     email?: string
 
     id?: string
+<<<<<<< HEAD
   }
 }
-export interface FormValues {
+
+export interface FormValues {;
   requesterName: string;
   requesterEmail: string;
   projectOverview: string;
   timeline: string;
+  budgetMin: number,
+  budgetMax: number
+}
+
+export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { submitHireRequest } = useHireRequest();
 =======
-    name?: string,
-    email?: string,
-    id?: string
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -70,6 +84,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 =======
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { submitHireRequest } = useHireRequest(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Define the form schema with validation rules
@@ -161,6 +176,14 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+<<<<<<< HEAD
+        }
+      };
+
+      const result = await submitHireRequest(requestData);
+      if (result.success) {
+        onClose()
+=======
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -213,7 +236,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       const result = await submitHireRequest(requestData),;
       if (result.success) {;
         onClose();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (error) {
       console.error("Error submitting hire request:", error)
@@ -227,8 +250,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     isSubmitting;
 
     onSubmit
-  }
-}
 =======
     } catch (error) {;
       console.error("Error submitting hire request:", error);
@@ -240,6 +261,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
     onSubmit;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

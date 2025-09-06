@@ -1,5 +1,6 @@
 <<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
+
+export default InstallPrompt; import React, { useEffect, useState } from 'react'
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 
 import { Button } from '@/components/ui/button'
@@ -32,7 +33,7 @@ interface BeforeInstallPromptEvent extends Event {;
     platform: string;
   }>,;
   prompt(): Promise<void>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -51,8 +52,8 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
-    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
-      return
+    if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
+      return;
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -123,6 +124,12 @@ export const InstallPrompt: React.FC = () => {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+    </>;
+  );
+};
+export default InstallPrompt;
+=======
     </>
   )
 <<<<<<< HEAD
@@ -135,4 +142,4 @@ export default InstallPrompt;
 export default InstallPrompt,
 =======
 >>>>>>> main
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -2,12 +2,11 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {ChevronDown} from 'lucide-react';
-import {cn} from '@/lib/utils';
-const Accordion = AccordionPrimitive.Root;
 =======
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 
@@ -54,15 +53,9 @@ const AccordionTrigger = React.forwardRef<
       {children}
 <<<<<<< HEAD
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
-const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>
-  React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
 =======
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -89,6 +82,9 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
+<<<<<<< HEAD
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+=======
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

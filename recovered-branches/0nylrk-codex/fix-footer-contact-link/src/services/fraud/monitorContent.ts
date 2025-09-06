@@ -7,8 +7,7 @@ import { flagContent } from './flagContent';
 /**
  * Create a monitoring system helper to easily monitor any content
  */
-
-export const monitorContent = async (
+export const monitorContent = async (;
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -25,7 +24,6 @@ export const monitorContent = async (
       r.includes('bypass')
     )) {
       severity = 'dangerous'
-    }
 =======
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
@@ -51,6 +49,7 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -75,10 +74,6 @@ export const monitorContent = async (;
       // // // console.log('Auto-hiding dangerous content:', contentId),
       // Code to hide content would go here
 <<<<<<< HEAD
-    }
-  }
-}
-
 =======
 ;
     await flagContent(;
@@ -96,6 +91,7 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {;
       // // // console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 };

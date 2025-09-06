@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export type ModerationModalProps = {;
+=======
 
 export type ModerationModalProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag: any | null;
   onClose: () => void;
   onAction: (
@@ -8,10 +12,10 @@ export type ModerationModalProps = {
     adminNotes?: string
   ) => Promise<void>;
 export default function ModerationModal({
-  flag
-  onClose
-  onAction
-}: ModerationModalProps) {
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -124,4 +128,4 @@ export default function ModerationModal({
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

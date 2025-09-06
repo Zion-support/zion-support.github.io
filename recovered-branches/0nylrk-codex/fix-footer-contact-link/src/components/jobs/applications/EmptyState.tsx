@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+=======
 
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
@@ -6,7 +11,7 @@ import { Link } from "react-router-dom";
 =======
 import { Card, CardContent } from "@/components/ui/card",
 import { Link } from "react-router-dom",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EmptyState() {
   return (
     <Card className="bg-muted/30">
@@ -19,11 +24,12 @@ export function EmptyState() {
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
       </CardContent>
-    </Card>
 <<<<<<< HEAD
+    </Card>;
   );
 }
 =======
+    </Card>
   )
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -44,4 +50,4 @@ export function EmptyState() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

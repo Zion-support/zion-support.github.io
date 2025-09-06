@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import { PerformanceMetrics } from '../types';
 export const measurePerformance = (): PerformanceMetrics | null => {
-  if (typeof window === 'undefined' |!('performance' in window)) {
+  if (typeof window === 'undefined' || !('performance' in window)) {;
     return null;
   }
   try {
@@ -24,8 +24,9 @@ export const measurePerformance = (): PerformanceMetrics | null => {
     console.warn('Error measuring performance:', error);
     return null;
   }
-}
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
+};
+
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -66,9 +67,11 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
   } else {
     overall = 'good';
   }
-  return { overall, scores }
-}
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+
+  return { overall, scores };
+};
+
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -76,7 +79,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
-}
+};
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

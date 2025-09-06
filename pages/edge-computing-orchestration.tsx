@@ -1,5 +1,5 @@
-import React from 'react',
 <<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
@@ -8,6 +8,7 @@ import { Cpu, Network, Zap, Shield, Database, Globe;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -16,7 +17,7 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function EdgeComputingPage() {
 
   const features = [
@@ -179,6 +180,15 @@ export default function EdgeComputingPage() {
     },
     {
       icon: Globe,
+<<<<<<< HEAD
+      title: 'Global Distribution',
+      description:
+        'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
+      color: 'from-yellow-500 to-orange-500',
+    },;
+  ];
+
+=======
       title: "Global Distribution",
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
@@ -188,6 +198,7 @@ export default function EdgeComputingPage() {
   }
 }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
     "Cut bandwidth costs by 60% through local data processing",
@@ -499,7 +510,7 @@ export default function EdgeComputingPage(req, res) {
   }
 }
             className="text-center"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -1223,7 +1234,7 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </ul>
                 <a
                   href="/contact"
@@ -1275,7 +1286,7 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1302,6 +1313,8 @@ export default function EdgeComputingPage(req, res) {
     </>
 <<<<<<< HEAD
 );
+
+}
 =======
   )
   } catch (error) {
@@ -1309,4 +1322,4 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

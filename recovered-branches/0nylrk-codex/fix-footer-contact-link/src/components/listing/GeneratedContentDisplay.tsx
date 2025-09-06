@@ -11,11 +11,11 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
 } from "@/components/ui/card";
 <<<<<<< HEAD
 =======
@@ -27,6 +27,7 @@ import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -61,7 +62,7 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   content: GeneratedContent;
   onApply: () => void
 }
@@ -87,7 +88,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
@@ -99,7 +100,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               >
 =======
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {tag}
               </Badge>
             ))}
@@ -108,7 +109,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
@@ -118,7 +119,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -137,11 +138,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-    </Card>
 <<<<<<< HEAD
-  );
-}
 =======
+    </Card>
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -149,6 +148,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
 }

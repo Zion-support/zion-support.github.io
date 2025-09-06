@@ -14,17 +14,16 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 <<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
-      </main>
-    </div>
-  )
-}
-export default ReleaseNotesAgent;
-
 =======
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </main>
     </div>
   )
 },
+<<<<<<< HEAD
+
+export default ReleaseNotesAgent,;
+=======
 export default ReleaseNotesAgent,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

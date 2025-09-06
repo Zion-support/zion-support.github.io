@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {BadgeCheck} from "lucide-react";
+import {TalentCardAvatar} from "./TalentCardAvatar";
+import {TalentCardAvailability} from "./TalentCardAvailability";
+=======
 import React from "react",
 import { BadgeCheck } from "lucide-react",
 <<<<<<< HEAD
@@ -23,6 +29,7 @@ export function TalentCardHeader({
 =======
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -31,8 +38,13 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 }
 
+<<<<<<< HEAD
+export function TalentCardHeader({ ;
+  fullName;
+=======
 export function TalentCardHeader({ 
   fullName,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   professionalTitle, 
   profilePicture, 
   availabilityType,
@@ -99,4 +111,4 @@ export function TalentCardHeader({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

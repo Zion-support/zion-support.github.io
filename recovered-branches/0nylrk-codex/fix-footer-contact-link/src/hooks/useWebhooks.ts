@@ -1,26 +1,28 @@
 
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
-export interface Webhook {
+
+export interface Webhook {;
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
-  created_at: string
+  created_at: string,
   last_triggered_at: string | null
 }
-export interface TestWebhookResult {
+
+export interface TestWebhookResult {;
   status: number;
-  statusText: string
+  statusText: string,
   responseBody: string
 }
-export function useWebhooks() {
+
+export function useWebhooks() {;
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
@@ -68,6 +70,7 @@ export function useWebhooks() {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Helper to get the base URL for webhook functions
@@ -115,9 +118,9 @@ export function useWebhooks() {
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch webhooks')
+        throw new Error(result.error || 'Failed to fetch webhooks')
       }
-      setWebhooks(result.webhooks |[])
+
 =======
 ;
 export function useWebhooks() {;
@@ -159,6 +162,7 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to fetch webhooks');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       setWebhooks(result.webhooks || [])
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (err) {
@@ -218,11 +222,7 @@ export function useWebhooks() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to create webhook')
       }
-      // Add the new webhook to the list
-      setWebhooks(prev => [result.webhook, ...prev]);
-      toast({
-        title: "Webhook Created"
-        description: "Your webhook has been created successfully."});
+
 =======
 ;
       setWebhooks(result.webhooks || []);
@@ -267,6 +267,7 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to create webhook');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
@@ -328,6 +329,7 @@ export function useWebhooks() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to update webhook')
       }
+
 =======
 ;
       // Add the new webhook to the list;
@@ -372,7 +374,7 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to update webhook');
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
@@ -442,11 +444,7 @@ export function useWebhooks() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to delete webhook')
       }
-      // Remove the webhook from the list
-      setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
-      toast({
-        title: "Webhook Deleted"
-        description: "The webhook has been deleted successfully."});
+
 =======
 ;
       // Update the webhook in the list;
@@ -493,6 +491,7 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to delete webhook');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
@@ -556,12 +555,7 @@ export function useWebhooks() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to test webhook')
       }
-      // Store test result
-      setTestResult({
-        status: result.status;
-        statusText: result.statusText
-        responseBody: result.responseBody
-      });
+
 =======
 ;
       // Remove the webhook from the list;
@@ -607,6 +601,7 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to test webhook');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Store test result
       setTestResult({
         status: result.status,
@@ -642,6 +637,7 @@ export function useWebhooks() {;
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
+<<<<<<< HEAD
     }
   }
   return {
@@ -656,14 +652,7 @@ export function useWebhooks() {;
     testWebhook;
 
     clearTestResult: () => setTestResult(null)
-  }
-}
 =======
-        variant: "destructive",
-        title: "Error testing webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-    } finally {
-      setLoading(false)
 ;
       // Store test result;
       setTestResult({;
@@ -701,6 +690,7 @@ export function useWebhooks() {;
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

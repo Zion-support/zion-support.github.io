@@ -4,8 +4,7 @@ import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {
-
+export default function GlobalSearchBar() {;
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -113,7 +112,9 @@ export default function GlobalSearchBar() {
 <<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
-  }
+  };
+
+<<<<<<< HEAD
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
@@ -144,11 +145,9 @@ export default function GlobalSearchBar() {
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
 =======
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
-
                 >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {s}
                 </button>
               </li>
@@ -162,4 +161,4 @@ export default function GlobalSearchBar() {
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

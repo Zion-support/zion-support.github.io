@@ -1,6 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { getFlagById } from '../../../../../utils/moderationDb';
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
+import { getFlagById } from '../../../../../utils/moderationDb',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = parseUserFromRequest(req),
+  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
@@ -14,9 +18,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!flag) return res.status(404).json({ error: 'Not found' })
     return res.status(200).json({ flag })
   }
-  res.setHeader('AllowGET')
+
+  res.setHeader('AllowGET'),;
   return res.status(405).end('Method Not Allowed');
-}
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
+import { getFlagById } from '../../../../../utils/moderationDb';
 
 =======
   try {
@@ -43,4 +52,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

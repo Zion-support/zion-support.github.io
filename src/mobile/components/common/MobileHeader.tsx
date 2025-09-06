@@ -1,28 +1,13 @@
 <<<<<<< HEAD
-import React from "react";
-import { useRouter  } from 'next/router';
+import React from 'react'
+import { useRouter } from 'next/router'
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {
-=======
-import React from "react",
-import { useRouter } from 'next/router',
-import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-interface MobileHeaderProps {
-  title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,
-  onSettingsClick?: () => void
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  title: string;  showBack?: boolean;  title: string
+interface MobileHeaderProps {;
+  title: string;  showBack?: boolean;  title: string,
   showBack?: boolean
   showNotifications?: boolean
   showSettings?: boolean
@@ -44,6 +29,21 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+=======
+import React from "react",
+import { useRouter } from 'next/router',
+import { ChevronLeft, Bell, Settings } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+interface MobileHeaderProps {
+  title: string,
+  showBack?: boolean,
+  showNotifications?: boolean,
+  showSettings?: boolean,
+  className?: string,
+  onNotificationsClick?: () => void,
+  onSettingsClick?: () => void
+}
 
 =======
   title,
@@ -58,7 +58,7 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -136,10 +136,10 @@ export function MobileHeader({
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>            </Button>            <Button
-              variant="ghost"
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
 =======
             <Button 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               variant="ghost" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               size="icon"
@@ -150,9 +150,13 @@ export function MobileHeader({
 <<<<<<< HEAD
           )}
         </div>
-      </div>
-    </header>
+      </div>;
+    </header>;
   );  )
+}
+;
+}
+}
 }
 =======
             </Button>
@@ -229,4 +233,4 @@ export function MobileHeader({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

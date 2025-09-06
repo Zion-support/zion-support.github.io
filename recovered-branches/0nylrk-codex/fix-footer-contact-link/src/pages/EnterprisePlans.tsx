@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
+import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
+import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
+import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
+import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
+import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
+import {SEO} from "@/components/SEO";
+=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -13,7 +25,7 @@ import { SEO } from "@/components/SEO";
 =======
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function EnterprisePlans() {
   return (
     <>
@@ -34,7 +46,6 @@ export default function EnterprisePlans() {
     </>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -65,6 +76,6 @@ export default function EnterprisePlans() {;
       <Footer />;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

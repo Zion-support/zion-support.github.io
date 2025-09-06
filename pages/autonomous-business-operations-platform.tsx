@@ -1,96 +1,10 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Bot, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react'
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
-    {
-      icon: Bot
-      title: "AI Autonomous Management"
-      description: "Fully autonomous business operations with intelligent decision-making"
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      icon: Brain
-      title: "Cognitive Business Intelligence"
-      description: "Advanced AI that understands and optimizes your business processes"
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      icon: Workflow
-      title: "Automated Workflows"
-      description: "Seamless automation of complex business processes and operations"
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      icon: Shield
-      title: "Intelligent Security"
-      description: "AI-powered security monitoring and threat prevention"
-      color: "from-red-500 to-orange-500"
-    }
-  ]
-  const capabilities = [
-    "24/7 autonomous operation"
-    "Real-time decision making"
-    "Predictive analytics"
-    "Process optimization"
-    "Resource management"
-    "Performance monitoring"
-    "Risk assessment"
-    "Compliance automation"
-  ]
-  const industries = [
-    {
-      title: "Manufacturing"
-      description: "Automated production lines, quality control, and supply chain management"
-    }
-    {
-      title: "Healthcare"
-      description: "Patient care automation, medical device management, and administrative tasks"
-    }
-    {
-      title: "Finance"
-      description: "Automated trading, risk management, and compliance monitoring"
-    }
-    {
-      title: "Retail"
-      description: "Inventory management, customer service, and sales optimization"
-    }
-  ]
-  const benefits = [
-    {
-      icon: TrendingUp
-      title: "Increased Efficiency"
-      value: "300%"
-      description: "Boost in operational efficiency"
-    }
-    {
-      icon: DollarSign
-      title: "Cost Reduction"
-      value: "40%"
-      description: "Reduction in operational costs"
-    }
-    {
-      icon: Clock
-      title: "Time Savings"
-      value: "80%"
-      description: "Faster decision making"
-    }
-    {
-      icon: Users
-      title: "Team Productivity"
-      value: "250%"
-      description: "Increase in team productivity"
-    }
-  ]
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Bot, Brain, Cpu, Zap, Shield, Globe, 
 =======
 import React from 'react',
 import Head from 'next/head',
@@ -98,6 +12,7 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Bot, Brain, Cpu, Zap, Shield, Globe,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
@@ -127,11 +42,15 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Intelligent Security",
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
   const capabilities = [
     "24/7 autonomous operation",
@@ -143,6 +62,10 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Risk assessment",
     "Compliance automation"
   ],
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const industries = [
     {
       title: "Manufacturing",
@@ -159,11 +82,15 @@ const AutonomousBusinessOperationsPlatform = () => {
     {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
   const benefits = [
     {
@@ -189,11 +116,15 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Team Productivity",
       value: "250%",
       description: "Increase in team productivity"
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -216,7 +147,7 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -250,10 +181,10 @@ const AutonomousBusinessOperationsPlatform = () => {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
-                Transform your business with AI-powered autonomous operations that work 24/7
+                Transform your business with AI-powered autonomous operations that work 24/7, 
 =======
                 Transform your business with AI-powered autonomous operations that work 24/7,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -481,7 +412,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -526,7 +457,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -585,7 +516,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -630,7 +561,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -686,7 +617,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -731,7 +662,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -793,7 +724,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -838,7 +769,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -864,7 +795,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -916,6 +847,11 @@ export default AutonomousBusinessOperationsPlatform;
 
 =======
 },
+<<<<<<< HEAD
+
+export default AutonomousBusinessOperationsPlatform,;
+;
+=======
 export default AutonomousBusinessOperationsPlatform,
             >;
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
@@ -941,4 +877,4 @@ export default AutonomousBusinessOperationsPlatform,
   );
 },;
 export default AutonomousBusinessOperationsPlatform;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

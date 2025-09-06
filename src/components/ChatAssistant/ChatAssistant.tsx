@@ -1,8 +1,27 @@
 <<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
+    if (!messageContent.trim()) return;
 import React, {
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  useContext} from 'react',
+import { AuthContext } from '../../context/auth/AuthContext'
+import { useDebounce } from '../../hooks/useDebounce'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { ChatMessage } from './ChatMessage'
+import { ChatInput } from './ChatInput'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { X } from 'lucide-react'
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
 =======
 import React, {;
   useState,;
@@ -24,6 +43,7 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface ChatAssistantProps {;
@@ -270,15 +290,15 @@ export function ChatAssistant({
     valueOrFn: Message[] | ((val: Message[],) => Message[])
   ) => {
     if (isGuest) {
-      const newMessages =
+      const newMessages = null;
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
           : valueOrFn
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
       setLoggedInMessages(newMessages)
     }
   }
@@ -375,7 +395,7 @@ export function ChatAssistant({
             onClick = {onClose,}
 =======
             onClick={onClose}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -413,7 +433,7 @@ export function ChatAssistant({
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {q}
                     </Button>
                   ))}
@@ -456,7 +476,7 @@ export function ChatAssistant({
                 onClick = {handleModalCancel,}
 =======
                 onClick={handleModalCancel}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -466,7 +486,7 @@ export function ChatAssistant({
                 onClick = {handleModalSendConfirm,}
 =======
                 onClick={handleModalSendConfirm}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -476,10 +496,11 @@ export function ChatAssistant({
         </div>
       )}
     </div>
-  )
-}
+  );
 <<<<<<< HEAD
-}
+};
+};
 =======
+}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

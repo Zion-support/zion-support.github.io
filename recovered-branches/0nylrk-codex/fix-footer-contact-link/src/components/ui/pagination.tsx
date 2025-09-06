@@ -1,12 +1,10 @@
 <<<<<<< HEAD
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
-import {cn} from '@/lib/utils';
-import {ButtonProps, buttonVariants} from '@/components/ui/button';
-const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
 =======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
@@ -182,6 +180,10 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
+<<<<<<< HEAD
+  PaginationPrevious,;
+};
+=======
   />;
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -267,4 +269,4 @@ export {;
   PaginationNext;
   PaginationPrevious}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

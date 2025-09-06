@@ -1,5 +1,5 @@
+export interface InnovativeAIService {;
 <<<<<<< HEAD
-export interface InnovativeAIService {
   id: string;
   name: string;
   tagline: string;
@@ -783,12 +783,12 @@ export const innovativeAIServices: InnovativeAIService[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
-    launchDate: '2024-08-01'
-    customers: 67
-    rating: 4.7
-    reviews: 34
-  }
+      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
+    launchDate: '2024-08-01',
+    customers: 67,
+    rating: 4.7,
+    reviews: 34,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -803,10 +803,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7
 
     reviews: 34
-  }
-];
 =======
-export interface InnovativeAIService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -1277,6 +1274,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
     customers: 67,;
     rating: 4.7,;
     reviews: 34;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

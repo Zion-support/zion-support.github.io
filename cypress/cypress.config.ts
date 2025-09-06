@@ -8,14 +8,25 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser.family === 'chromium') {
+=======
+import { defineConfig } from 'cypress',;
+export default defineConfig({;
+  e2e: {;
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+    supportFile: 'cypress/support/e2e.ts',;
+    experimentalModifyObstructiveThirdPartyCode: true,;
+    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
+    setupNodeEvents(on, config) {;
+      on('before:browser:launch', (browser = {}, launchOptions) => {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
       });export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000', // Standard Next.js port
-
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -67,21 +78,7 @@ export default defineConfig({
     toConsole: true
   }
 });
-
 =======
-import { defineConfig } from 'cypress',;
-export default defineConfig({;
-  e2e: {;
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts',;
-    experimentalModifyObstructiveThirdPartyCode: true,;
-    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-    setupNodeEvents(on, config) {;
-      on('before:browser:launch', (browser = {}, launchOptions) => {;
-        if (browser.family === 'chromium') {;
-          launchOptions.args.push('--disable-ipv6');
-        }
-        return launchOptions;
       });
     },;
     env: {;
@@ -100,4 +97,4 @@ export default defineConfig({;
     toConsole: true;
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

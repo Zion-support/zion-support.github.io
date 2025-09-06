@@ -5,9 +5,9 @@ import React from "react";
 
 import React from "react";
 export default function CertificatePreview({
-  courseId
-  userId = "demo-user"
-}: {
+  courseId,
+  userId = "demo-user",
+}: {;
   courseId: string;
   userId?: string;
 }) {
@@ -32,7 +32,15 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+=======
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

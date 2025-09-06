@@ -1,12 +1,11 @@
 
 <<<<<<< HEAD
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
-export const useJobApplications = (jobId?: string) => {
+export const useJobApplications = (jobId?: string) => {;
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +21,7 @@ export const useJobApplications = (jobId?: string) => {
   const [applications, setApplications] = useState<JobApplication[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const fetchApplications = async () => {
@@ -213,22 +213,11 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         return false
       }
 <<<<<<< HEAD
-      // Add the new application to the local state
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      toast.success("Application submitted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
-      return false
-    }
-  }
 =======
 ;
       const { data, error: fetchError } = await query,;
@@ -279,6 +268,7 @@ export const useJobApplications = (jobId?: string) => {;
         }
         return false;
       }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
       // Add the new application to the local state
       const newApplication = data as JobApplication,
@@ -383,9 +373,6 @@ export const useJobApplications = (jobId?: string) => {;
     applyToJob;
     updateApplicationStatus
     markApplicationAsViewed
-  }
-}
-
 =======
 ;
       // Add the new application to the local state;
@@ -455,6 +442,7 @@ export const useJobApplications = (jobId?: string) => {;
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

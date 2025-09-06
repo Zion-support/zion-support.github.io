@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import {AppPlatform, AppMetadataValues} from "./MetadataManager";
+import {toast} from "sonner";
+=======
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -9,7 +17,7 @@ import { toast } from "sonner";
 =======
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -20,10 +28,16 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
-      let content: string
-      let fileName: string
+      let content: string,
+      let fileName: string,
+      
+<<<<<<< HEAD
+      if (format === 'json') {;
+        content = JSON.stringify(metadata, null, 2);
+=======
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -77,11 +91,16 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     } catch (error) {
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
+<<<<<<< HEAD
+    };
+  };
+=======
     }
 <<<<<<< HEAD
   }
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const trackAnalytics = () => {
@@ -130,8 +149,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     </Card>
   )
 <<<<<<< HEAD
-}
-
 =======
 },
 import React from "react",;
@@ -225,5 +242,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

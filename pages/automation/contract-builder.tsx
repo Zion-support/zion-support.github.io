@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker',;
+import { useRouter } from 'next/router',;
+type PaymentType = 'hourly' | 'fixed',
 
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -103,8 +107,6 @@ export default function ContractBuilderPage() {
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`
     a.click()
 
-    URL.revokeObjectURL(url)
-  }
 =======
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -154,6 +156,7 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     try {
       const body = {;
         talentName;
@@ -333,13 +336,12 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 <<<<<<< HEAD
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
 =======
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
             {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -351,7 +353,7 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       </form>
       {contract && (
@@ -370,7 +372,8 @@ export default function ContractBuilderPage(req, res) {
         </div>
       )}
     </div>
-  )
+  );
+};
 =======
             {contract  } catch (error) {
     console.error("Error:", error);
@@ -390,5 +393,5 @@ export default function ContractBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

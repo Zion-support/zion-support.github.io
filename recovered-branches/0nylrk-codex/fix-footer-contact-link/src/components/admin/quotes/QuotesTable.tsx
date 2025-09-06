@@ -19,16 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
-interface QuotesTableProps {
-
-  quotes: QuoteRequest[]
-  isArchived?: boolean;
-  isLoading: boolean
-  updateStatus: (id: string, status: QuoteStatus) => void
-  toggleArchive: (id: string, isArchived: boolean) => void
-  deleteQuote: (id: string) => void
-
+import {formatDate} from "@/utils/dateUtils";
 =======
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
@@ -50,6 +41,7 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -60,6 +52,15 @@ interface QuotesTableProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails: (quote: QuoteRequest) => void
 }
+
+<<<<<<< HEAD
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+=======
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
   quotes;
@@ -75,6 +76,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   deleteQuote,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
@@ -392,7 +394,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </div>
                 </TableCell>
@@ -404,12 +406,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>
     </div>
   )
-}
-
 =======
         </TableBody>;
       </Table>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

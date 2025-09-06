@@ -1,30 +1,21 @@
 
-import { Button } from "./ui/button",
 <<<<<<< HEAD
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
-import { toast } from "./ui/use-toast";
+import {Button} from "./ui/button";
+import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
+import {toast} from "./ui/use-toast";
 export function SocialShareSection() {
-  // Current URL and text to share
-
+  // Current URL and text to share;
   const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
-  // Social sharing functions
-  const shareToTwitter = () => {
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
-  }
-  const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
-  }
-  const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
-  }
 =======
+import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
 import { toast } from "./ui/use-toast",
 export function SocialShareSection() {
   // Current URL and text to share
   const shareUrl = encodeURIComponent(window.location.href),
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Social sharing functions
   const shareToTwitter = () => {
@@ -124,7 +115,6 @@ export function SocialShareSection() {
       </div>
     </section>
   )
-}
 =======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -194,6 +184,7 @@ export function SocialShareSection() {;
           <div className="flex flex-wrap gap-3">;
             {shareLinks.map((link, index) => (;
               <Button;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

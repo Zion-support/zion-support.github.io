@@ -1,29 +1,37 @@
 <<<<<<< HEAD
 import React, {
-  createContext
-  useContext
-  useEffect
-  useMemo
-  useState;} from 'react';} from 'react';
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+
 export type UserRole = 'client' | 'talent';
-export type User = {
+
 =======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type User = {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
   onboardingCompleted: boolean;
-}
 <<<<<<< HEAD
-export type UserContextValue = {
+};
+
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export type UserContextValue = {;
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
-  completeOnboarding: () => void;};}
+<<<<<<< HEAD
+  completeOnboarding: () => void;};};
+
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 const DEFAULT_USER: User = {
   id: 'u_001'
@@ -35,11 +43,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
   useEffect(() => {
     try {
 =======
-;
-export type UserContextValue = {;
-  user: User | null;
-  setUser: (user: User | null) => void;
-  logout: () => void;
   completeOnboarding: () => void;
 }
 ;
@@ -54,7 +57,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {;
     try {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
@@ -66,6 +69,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
     }
   }, []);
 <<<<<<< HEAD
+
   useEffect(() => {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -80,11 +84,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
         setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    })
     [user]
   );
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
-export function useUser() {
-  const ctx = useContext(UserContext);
-  if (!ctx) throw new Error('useUser must be used within UserProvider');
-  return ctx;
+
 =======
   useEffect(() => {;
     try {;
@@ -97,11 +97,14 @@ export function useUser() {
     setUser;
     logout: () => setUser(null);
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
-export function useUser() {
+export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+<<<<<<< HEAD
+=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -5,20 +5,20 @@
 import React from "react";
 import Head from "next/head";
 import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Shield,
+  Star,;
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-    s.link.endsWith("/quantum-internet-security-platform")
+    s.link.endsWith("/quantum-internet-security-platform"),;
   );
   if (!service) return null;
 
@@ -134,8 +134,8 @@ export default function QuantumInternetSecurityPage() {
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD:pages-disabled/quantum-iot.tsx
-}
 =======
 >>>>>>> main:pages-disabled/quantum-iot.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx

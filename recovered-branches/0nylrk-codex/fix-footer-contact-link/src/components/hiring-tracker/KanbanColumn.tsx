@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import {Droppable} from "react-beautiful-dnd";
+import {JobApplication} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "./CandidateCard";
+=======
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -8,7 +15,7 @@ import { CandidateCard } from "./CandidateCard";
 =======
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface KanbanColumnProps {
 
   id: string
@@ -18,11 +25,20 @@ interface KanbanColumnProps {
 
   count: number
 }
+
+<<<<<<< HEAD
+export function KanbanColumn({;
+  id;
+  title;
+  description;
+  applications;
+=======
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -84,6 +100,8 @@ export function KanbanColumn({
                 <CandidateCard
 =======
                 <CandidateCard 
+<<<<<<< HEAD
+=======
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -156,7 +174,7 @@ export function KanbanColumn({;
             >;
               {applications.map((application, index) => (;
                 <CandidateCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={application.id}
                   application={application}
                   index={index}

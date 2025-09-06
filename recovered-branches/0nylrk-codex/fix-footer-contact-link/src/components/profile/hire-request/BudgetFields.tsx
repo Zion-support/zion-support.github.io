@@ -1,20 +1,23 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> main
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
+<<<<<<< HEAD
+  form: UseFormReturn<FormValues>,
   talent?: TalentProfile
 =======
 import React from "react",
@@ -35,7 +38,11 @@ import { FormValues } from "./useHireRequestForm",;
 interface BudgetFieldsProps {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+>>>>>>> main
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
@@ -62,6 +69,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
           </FormItem>
         )}
       />
+
       <FormField
         control={form.control}
         name="budgetMax"
@@ -87,3 +95,4 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
     </>
   );
 }
+;

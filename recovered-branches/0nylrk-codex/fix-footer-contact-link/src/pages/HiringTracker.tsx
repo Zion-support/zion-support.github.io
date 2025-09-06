@@ -27,6 +27,7 @@ import { Briefcase } from "lucide-react",
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -65,14 +66,6 @@ function HiringTrackerContent() {
     </>
   )
 <<<<<<< HEAD
-}
-export default function HiringTracker() {
-  return (
-    <ProtectedRoute>
-      <HiringTrackerContent />
-    </ProtectedRoute>
-  )
-}
 =======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -122,6 +115,7 @@ function HiringTrackerContent() {;
       <Footer />;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export default function HiringTracker() {;
@@ -132,4 +126,3 @@ export default function HiringTracker() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

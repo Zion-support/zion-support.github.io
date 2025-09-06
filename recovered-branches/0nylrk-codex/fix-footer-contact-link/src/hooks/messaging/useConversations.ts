@@ -1,16 +1,16 @@
 
 <<<<<<< HEAD
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { supabase  } from '@/integrations/supabase/client';
-import { Conversation, ConversationContextData  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Conversation, ConversationContextData} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
-export function useConversations(
+export function useConversations(;
   user: UserWithProfile;
   setConversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
@@ -134,7 +134,6 @@ export function useConversations(
           .single();
         if (createError) throw createError;
         conversationId = newConversation.id
-      }
 =======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -269,6 +268,7 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -309,14 +309,11 @@ export function useConversations(;
         description: "Please try again later"
         variant: "destructive"
       })
+<<<<<<< HEAD
     }
   }
   return {
 =======
-        title: "Failed to create conversation",
-        description: "Please try again later",
-        variant: "destructive"
-      })
 ;
       // Send the initial message;
       await supabase;
@@ -343,7 +340,7 @@ export function useConversations(;
     }
   };
   return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     fetchConversations;
 
     createConversation}

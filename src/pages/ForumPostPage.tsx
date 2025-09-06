@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+import {useState} from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { SEO } from "@/components/SEO"
+import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'import { formatDistanceToNow, format } from "date-fns"
+import { ForumPost, ForumReply } from "@/types/community"
+import { useAuth } from "@/hooks/useAuth"
+import ReplyCard from "@/components/community/ReplyCard"
+import ReplyForm from "@/components/community/ReplyForm"
+import {useToast} from "@/hooks/use-toast"
+=======
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -21,17 +39,26 @@ import { useToast } from "@/hooks/use-toast";
 =======
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
+<<<<<<< HEAD
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?"
+=======
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   authorId: "user1",
   authorName: "Alex Johnson",
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
+<<<<<<< HEAD
+  tags: ["machine-learning", "fine-tuning", "gpt"]
+=======
   tags: ["machine-learning", "fine-tuning", "gpt"],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -39,27 +66,13 @@ const mockPost: ForumPost = {
   replyCount: 4,
   isAnswered: true,
   isFeatured: true
+<<<<<<< HEAD
+}
+=======
 },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-const mockPost: ForumPost = {
-  id: "1"
-  title: "Best practices for AI model fine-tuning"
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?"
-  authorId: "user1"
-  authorName: "Alex Johnson"
-  authorAvatar: "https://i.pravatar.cc/150?img=3"
-  authorRole: "Verified Talent"
-  categoryId: "ai-tools"
-  tags: ["machine-learning", "fine-tuning", "gpt"]
-  createdAt: "2025-04-01T12:00:00Z"
-  updatedAt: "2025-04-01T12:00:00Z"
-  upvotes: 48
-  downvotes: 2
-  replyCount: 4
-  isAnswered: true
-  isFeatured: true
-}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data for replies
 const mockReplies: ForumReply[] = [
   {
@@ -123,7 +136,11 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z",
     upvotes: 12,
     downvotes: 0
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     id: "reply2",
     postId: "1",
@@ -135,11 +152,19 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T16:15:00Z",
     upvotes: 8,
     downvotes: 0
+<<<<<<< HEAD
+  }
+  {
+    id: "reply3",
+    postId: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs."
+=======
   },
   {
     id: "reply3",
     postId: "1",
     content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     authorId: "user4",
     authorName: "Emma Davis",
     authorRole: "ML Research Lead",
@@ -148,7 +173,11 @@ const mockReplies: ForumReply[] = [
     upvotes: 15,
     downvotes: 0,
     isAnswer: true
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     id: "reply4",
     postId: "1",
@@ -160,9 +189,12 @@ const mockReplies: ForumReply[] = [
     upvotes: 4,
     downvotes: 0
   }
+<<<<<<< HEAD
+]
+=======
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -177,21 +209,8 @@ export default function ForumPostPage() {
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId
   // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin'
-      return
-    }
-  const handlePinPost = () => {
-    if (!isAdminOrMod) return
-    setPost({ ...post, isPinned: !post.isPinned })
-  const handleLockPost = () => {
-    if (!isAdminOrMod) return
-    setPost({ ...post, isLocked: !post.isLocked })
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
-}
-
-  )
-}
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
+      return;
 =======
   const router = useRouter(),
   const postId = router.query.postId as string,
@@ -226,6 +245,7 @@ export default function ForumPostPage() {
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
@@ -323,8 +343,12 @@ export default function ForumPostPage() {
   },
 
   const handlePinPost = () => {
+<<<<<<< HEAD
+    if (!isAdminOrMod) return;
+=======
     if (!isAdminOrMod) return,
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
@@ -333,8 +357,12 @@ export default function ForumPostPage() {
   },
 
   const handleLockPost = () => {
+<<<<<<< HEAD
+    if (!isAdminOrMod) return;
+=======
     if (!isAdminOrMod) return,
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({
@@ -343,6 +371,12 @@ export default function ForumPostPage() {
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+<<<<<<< HEAD
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
+};
+  );
+};
+=======
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
   return (
@@ -759,4 +793,4 @@ export default function ForumPostPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

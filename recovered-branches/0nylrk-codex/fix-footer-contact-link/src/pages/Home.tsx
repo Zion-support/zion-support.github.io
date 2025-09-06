@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {BenefitsSection} from "@/components/BenefitsSection";
+import {HowItWorksSection} from "@/components/HowItWorksSection";
+import {NewsletterSection} from "@/components/NewsletterSection";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {SEO} from "@/components/SEO";
+import {HeroSection} from "@/components/HeroSection";
+import {QuickAccess} from "@/components/home/QuickAccess";
+import {FeatureCTAs} from "@/components/home/FeatureCTAs";
+import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+=======
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -16,7 +31,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 =======
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -40,7 +55,6 @@ export default function Home() {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from 'react',;
 import { Header } from "@/components/Header",;
@@ -77,6 +91,6 @@ export default function Home() {;
       <Footer />;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

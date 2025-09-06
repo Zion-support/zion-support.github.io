@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+export function ApiWebhooks() {
+  // Sample webhook event payload
+  const newApplicationPayload = `{;
+  "event_type": "new_application";
+  "created_at": "2023-06-10T15: 42:31Z";
+=======
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 <<<<<<< HEAD
@@ -8,13 +19,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function ApiWebhooks() {
   // Sample webhook event payload
 
   const newApplicationPayload = `{
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "data": {
 <<<<<<< HEAD
     "application_id": "app-123456";
@@ -80,6 +91,7 @@ export function ApiWebhooks() {
   }
 }`;
   const messageReceivedPayload = `{
+<<<<<<< HEAD
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {
@@ -115,24 +127,9 @@ function verifyWebhookSignature(req, res, next) {
   if (signature !== expectedSignature) {
     return res.status(401).send('Invalid signature')
   }
+  
   next()
-}
-// Webhook endpoint with signature verification
-app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body;
 =======
-    "quote_id": "quote-123",
-    "client_id": "client-456",
-    "talent_id": "talent-789",
-    "project_name": "Website Redesign",
-    "budget_min": 5000,
-    "budget_max": 8000,
-    "status": "new",
-    "created_at": "2023-06-15T11:30:00Z"
-  }
-}`,
-
-  const messageReceivedPayload = `{
   "event_type": "message_received",
   "created_at": "2023-06-18T14:22:15Z",
   "data": {
@@ -227,6 +224,7 @@ function verifyWebhookSignature(req, res, next) {;
   }
 ;
   next();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 // Webhook endpoint with signature verification
@@ -527,5 +525,6 @@ app.listen(3000, () => {;
   );
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default ApiWebhooks;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

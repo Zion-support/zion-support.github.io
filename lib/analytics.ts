@@ -1,13 +1,13 @@
 // Analytics utilities
 export const trackEvent = (event: string, data?: any) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {;
     window.gtag('event', event, data);
   }
 }
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_path: url
+      page_path: url,;
     });
   }
 }
@@ -16,7 +16,7 @@ export const trackEvent = (
   eventName: string
   properties?: Record<string, string | number | boolean>
 ) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {;
     window.gtag('event', eventName, properties);
   }
 }
@@ -24,19 +24,17 @@ export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
 <<<<<<< HEAD
-      page_path: url
-    });
-  }
-}
+      page_path: url,;
 =======
       page_path: url,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     });
   }
 };
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const measurePerformance = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
+  if (typeof window !== 'undefined' && 'performance' in window) {;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart
@@ -55,20 +53,20 @@ interface WebVitalMetric {
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
-      value: Math.round(metric.value)
-      event_category: 'Web Vitals'
-      event_label: metric.id
-      non_interaction: true
+      value: Math.round(metric.value),
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      non_interaction: true,;
     });
   }
 }
 // Track events
 export const event = ({
-  action
-  category
-  label
-  value
-}: {
+  action,
+  category,
+  label,
+  value,
+}: {;
   action: string;
   category: string;
   label?: string;

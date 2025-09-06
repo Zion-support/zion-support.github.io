@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {ChatBotPanel} from "./ChatBotPanel";
+import {MessageSquare, Info, X} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useTheme} from "@/hooks/useTheme";
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  
+  return (
+    <>
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
@@ -35,6 +49,7 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button

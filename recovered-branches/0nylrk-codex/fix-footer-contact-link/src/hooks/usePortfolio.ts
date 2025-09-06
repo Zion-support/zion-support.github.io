@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { useState, useCallback  } from 'react';
-import { PortfolioProject  } from '@/types/resume';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-export function usePortfolio() {
+import {useState, useCallback} from 'react';
+import {PortfolioProject} from '@/types/resume';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from '@/hooks/use-toast';
+export function usePortfolio() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -86,6 +86,7 @@ export function usePortfolio() {;
     
     setIsLoading(true),
     setError(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
@@ -156,9 +157,6 @@ export function usePortfolio() {;
     if (!user) {
       setError('You must be logged in to update a portfolio project')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -202,6 +200,7 @@ export function usePortfolio() {;
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -274,9 +273,6 @@ export function usePortfolio() {;
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -319,6 +315,7 @@ export function usePortfolio() {;
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -417,6 +414,6 @@ export function usePortfolio() {;
     addProject;
     updateProject;
     deleteProject;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

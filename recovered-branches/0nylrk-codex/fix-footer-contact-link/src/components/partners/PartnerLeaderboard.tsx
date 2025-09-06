@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Crown, Medal, Trophy} from "lucide-react";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 <<<<<<< HEAD
@@ -17,6 +23,7 @@ interface LeaderboardEntry {
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -36,15 +43,18 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-      referrals: 178
-      earnings: 4500
-
+      referrals: 178,
+      earnings: 4500,
+<<<<<<< HEAD
+      badges: ["gold", "trending"];
+    };
+=======
       badges: ["gold", "trending"]
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
 
       id: "2"
@@ -97,6 +107,7 @@ export function PartnerLeaderboard() {
       earnings: 2175
 
       badges: ["newcomer"]
+<<<<<<< HEAD
     }
   ];
   // Function to render rank badge
@@ -134,15 +145,6 @@ export function PartnerLeaderboard() {
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
 =======
-    },
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -238,7 +240,7 @@ export function PartnerLeaderboard() {;
                   className={`flex items-center justify-between p-3 rounded-md ${;
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -298,7 +300,7 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </div>
         </CardContent>

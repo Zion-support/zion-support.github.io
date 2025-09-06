@@ -1,13 +1,11 @@
 
 <<<<<<< HEAD
 import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
-export default function PaymentSuccess() {
-
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
   const navigate = useNavigate();
-
 =======
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -15,6 +13,7 @@ import { useNavigate } from 'react-router-dom',
 import { CheckCircle2 } from 'lucide-react',
 export default function PaymentSuccess() {
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -34,7 +33,7 @@ export default function PaymentSuccess() {
           >
             Go to Dashboard
           </Button>
-          <Button
+          <Button 
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -46,7 +45,6 @@ export default function PaymentSuccess() {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -82,6 +80,7 @@ export default function PaymentSuccess() {;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

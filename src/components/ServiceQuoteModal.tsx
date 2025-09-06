@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-
-...formData;            startDate: startDate?.toISOString()
+...formData;            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
+;
 =======
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
@@ -486,4 +486,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

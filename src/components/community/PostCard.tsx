@@ -36,23 +36,24 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
 <<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+<<<<<<< HEAD
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+
   return (
     <Card data-testid="post-card" className={cn(
       "transition-shadow hover:shadow-md"
-export const PostCard = React.memo(PostCardComponent)
-PostCard.displayName = 'PostCard'
-export default PostCard
-
-=======
-
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
+export const PostCard = React.memo(PostCardComponent);
+PostCard.displayName = 'PostCard';
 export default PostCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+}
+=======
+export default PostCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,46 +1,63 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { HelpCategory } from "./types";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
 =======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HelpCategory } from "./types";
+>>>>>>> main
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
-  searchQuery: string
+  searchQuery: string;
 }
+
 export function HelpCategoryList({
-  categories
-  onCategorySelect
-  searchQuery
+  categories,
+  onCategorySelect,
+  searchQuery,
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description
             .toLowerCase()
-            .includes(searchQuery.toLowerCase()) |
+            .includes(searchQuery.toLowerCase()) ||
           category.articles.some(
             (article) =>
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
+<<<<<<< HEAD
+      );
+=======
+              article.content.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
+      )
+>>>>>>> main
+    : categories;
+=======
       )
     : categories,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   if (filteredCategories.length === 0) {
     return (
@@ -130,7 +147,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>
           </CardContent>
         </Card>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       ))}
     </div>
   );

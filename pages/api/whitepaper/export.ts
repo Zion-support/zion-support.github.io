@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { markdown, tokenName } = req.body |{}
@@ -10,14 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
   const url = `data: text/html,base64,${base64}`
 
-  res.status(200).json({ url })
-}
-function escapeHtml(str: string) {
-  return String(str)
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
-    .replace(/>/g, '&gt,')
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -26,11 +20,22 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
+}
+
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,');
+};
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -73,5 +78,5 @@ function escapeHtml(str: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

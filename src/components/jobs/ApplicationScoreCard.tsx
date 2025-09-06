@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import { useState } from "react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { supabase } from "@/integrations/supabase/client"
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner"
+import { JobApplication } from "@/types/jobs"
+=======
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -12,6 +21,7 @@ interface ApplicationScoreCardProps {
 =======
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -24,7 +34,11 @@ interface ApplicationScoreCardProps {
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 <<<<<<< HEAD
-  const [isScoring, setIsScoring] = useState(false);
+  const [isScoring, setIsScoring] = useState(false)
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number'
+      let attempts = 0
+      const maxAttempts = 10
 =======
   const [isScoring, setIsScoring] = useState(false),
 
@@ -37,12 +51,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
 
-<<<<<<< HEAD
-  const hasScore = typeof application.match_score === 'number'
-      let attempts = 0
-      const maxAttempts = 10
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
@@ -90,7 +99,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
   // Trigger the scoring process
@@ -124,15 +133,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
-          setIsScoring(false)
-          toast.error("Failed to check scoring status")
-          return
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
         }
         if (data.scored_at) {
-          setIsScoring(false)
-          toast.success("Resume scoring completed")
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication)
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+<<<<<<< HEAD
+          return;
+=======
           return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
 <<<<<<< HEAD
         if (attempts < maxAttempts) {
@@ -140,21 +153,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         } else {
           setIsScoring(false)
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
         }
       }
       setTimeout(checkScore, 3000)
     } catch (error: any) {
       setIsScoring(false)
       toast.error(`Failed to score resume: ${error.message}`)
-    }
-  }
 =======
-        
-        if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000)
-        } else {
-          setIsScoring(false),
-          toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
@@ -192,6 +198,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -266,9 +273,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
-                    )}
 =======
                       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -289,9 +296,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
-                    )}
 =======
                       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -311,15 +318,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
+            <Button 
 <<<<<<< HEAD
-            <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
 =======
-            <Button 
               onClick={handleScore} 
               disabled={isScoring}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="w-full"
             >
               {isScoring ? (
@@ -335,13 +341,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
 <<<<<<< HEAD
       </CardContent>
-    </Card>
-  )
-}
-=======
-      </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+};
+=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

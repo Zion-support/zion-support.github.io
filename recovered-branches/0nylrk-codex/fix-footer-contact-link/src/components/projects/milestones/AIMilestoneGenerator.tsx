@@ -21,7 +21,8 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
-export function AIMilestoneGenerator({
+
+export function AIMilestoneGenerator({;
   scope;
   startDate;
   endDate;
@@ -73,7 +74,7 @@ export function AIMilestoneGenerator({
     } catch (error) {
       return dateString
     }
-  }
+  };
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -149,6 +150,7 @@ export function AIMilestoneGenerator({;
       return dateString;
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (

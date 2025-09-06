@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/components/ui/use-toast";
+import {useTranslation} from "react-i18next";
+import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
+import {useIsMobile} from "@/hooks/use-mobile";
+import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
+import {useTranslationService} from "@/hooks/useTranslationService";
+export default function TranslationManager() {;
+  const { t, i18n } = useTranslation();
+  const isMobile = useIsMobile();
+  const { supportedLanguages } = useLanguage();
+  const { translateContent, isTranslating } = useTranslationService();
+=======
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -40,6 +62,7 @@ export default function TranslationManager() {
   const isMobile = useIsMobile(),
   const { supportedLanguages } = useLanguage(),
   const { translateContent, isTranslating } = useTranslationService(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -128,13 +151,6 @@ export default function TranslationManager() {
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      });
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
 =======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
@@ -240,6 +256,7 @@ export default function TranslationManager() {;
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -343,8 +360,8 @@ export default function TranslationManager() {;
 
   return (
     <>
-      <SEO
-        title={t('translation.manager_title')}
+      <SEO 
+        title={t('translation.manager_title')} 
 =======
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
@@ -427,7 +444,7 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description={t('translation.manager_description')}
       />
       <Header />
@@ -465,7 +482,7 @@ export default function TranslationManager() {;
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

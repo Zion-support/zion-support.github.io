@@ -1,12 +1,11 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
-
-export const useAdminQuotes = () => {
+export const useAdminQuotes = () => {;
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -47,8 +46,9 @@ export const useAdminQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
+    
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
       return false
@@ -57,6 +57,7 @@ export const useAdminQuotes = () => {;
       return false
     }
 <<<<<<< HEAD
+    
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -84,12 +85,7 @@ export const useAdminQuotes = () => {;
         return false
       }
     }
-    return true
-  });
-  // Update quote status mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
+    
 =======
 ;
     // Search filter;
@@ -122,6 +118,7 @@ export const useAdminQuotes = () => {;
       }
     }
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return true
   }),
 
@@ -206,11 +203,11 @@ export const useAdminQuotes = () => {;
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 <<<<<<< HEAD
-    }
+    };
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to delete quote: " + error.message
+        description: "Failed to delete quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -229,7 +226,7 @@ export const useAdminQuotes = () => {;
     setDateRange
     updateStatus: (id: string, status: QuoteStatus) =>
       updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
 =======
     },
     onError: (error: Error) => {
@@ -314,7 +311,7 @@ export const useAdminQuotes = () => {;
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

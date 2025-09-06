@@ -6,93 +6,93 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 
 import {
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Target as TargetIcon
-  Zap as ZapIcon2
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Cpu as CpuIcon
-  Cloud as CloudIcon
-  Bot as BotIcon
-  Lock as LockIcon
-  BarChart3 as BarChart3Icon
-  TrendingUp as TrendingUpIcon
-  Users as UsersIcon
-  Award as AwardIcon
-  Star as StarIcon
-  Check as CheckIcon
-  ArrowRight as ArrowRightIcon
-  ExternalLink as ExternalLinkIcon
-  Phone as PhoneIcon
-  Mail as MailIcon
-  MapPin as MapPinIcon
-  Trophy
-  FlaskConical as FlaskConicalIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Target as TargetIcon,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Cloud as CloudIcon,
+  Bot as BotIcon,
+  Lock as LockIcon,
+  BarChart3 as BarChart3Icon,
+  TrendingUp as TrendingUpIcon,
+  Users as UsersIcon,
+  Award as AwardIcon,
+  Star as StarIcon,
+  Check as CheckIcon,
+  ArrowRight as ArrowRightIcon,
+  ExternalLink as ExternalLinkIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Trophy,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -101,14 +101,13 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-export default function InnovativeServicesPage() {
+export default function InnovativeServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -393,7 +392,7 @@ export default function InnovativeServicesPage() {
 
                         <option key={category.name} value={category.name}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {category.name} ({category.count})
                         </option>
                       ))}
@@ -407,7 +406,7 @@ export default function InnovativeServicesPage() {
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
@@ -426,7 +425,7 @@ export default function InnovativeServicesPage() {
 
                         <option key={range.value} value={range.value}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {range.label}
                         </option>
                       ))}
@@ -440,7 +439,7 @@ export default function InnovativeServicesPage() {
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
@@ -459,7 +458,7 @@ export default function InnovativeServicesPage() {
 
                         <option key={option.value} value={option.value}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {option.value}
                         </option>
                       ))}
@@ -475,7 +474,7 @@ export default function InnovativeServicesPage() {
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${
@@ -509,7 +508,7 @@ export default function InnovativeServicesPage() {
 
                       </button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   </div>
                 </div>
@@ -592,7 +591,7 @@ export default function InnovativeServicesPage() {
                           )}
                         </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -600,7 +599,7 @@ export default function InnovativeServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -705,7 +704,7 @@ export default function InnovativeServicesPage() {
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -780,7 +779,7 @@ export default function InnovativeServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -789,7 +788,7 @@ export default function InnovativeServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -851,7 +850,7 @@ export default function InnovativeServicesPage() {
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -861,7 +860,12 @@ export default function InnovativeServicesPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
+}
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

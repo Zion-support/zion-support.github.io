@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -37,16 +46,24 @@ export function ProfileContact({
 =======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ProfileContactProps {
   email?: string,
   profileName: string,
   profileType: 'service' | 'talent'
 }
 
+<<<<<<< HEAD
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+=======
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -62,7 +79,44 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: "service" | "talent";
+}
+
+export function ProfileContact({
+  email,
+  profileName,
+  profileType,
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      (setSubject(""),
+        toast({
+          title: "Message Sent",
+          description: `Your message has been sent to ${profileName}.`,
+        }));
+    }, 1000);
+  };
+>>>>>>> main
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -70,6 +124,10 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
@@ -81,6 +139,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           </Link>
         </div>
       )}
+
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
@@ -113,10 +172,13 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       </form>
     </div>
 <<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
   );
+>>>>>>> main
 }
 =======
-  )
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -198,4 +260,4 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

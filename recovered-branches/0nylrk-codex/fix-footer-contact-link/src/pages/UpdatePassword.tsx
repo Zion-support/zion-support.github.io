@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useNavigate, useLocation} from "react-router-dom";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
+import {LockKeyhole} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {toast} from "@/hooks/use-toast";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {cleanupAuthState} from "@/utils/authUtils";
+=======
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -34,7 +50,7 @@ import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { cleanupAuthState } from "@/utils/authUtils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -62,6 +78,15 @@ export default function UpdatePassword() {
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
+<<<<<<< HEAD
+export default function UpdatePassword() {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+=======
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false),
   const [accessToken, setAccessToken] = useState<string | null>(null),
@@ -69,6 +94,7 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false),
   const navigate = useNavigate(),
   const location = useLocation(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize react-hook-form
@@ -187,6 +213,8 @@ export default function UpdatePassword() {
                   <Button 
                     className="mt-3 text-xs"
                     variant="outline"
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from "react",;
 import { useNavigate, useLocation } from "react-router-dom",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -312,7 +340,7 @@ export default function UpdatePassword() {;
                   <Button;
                     className="mt-3 text-xs";
                     variant="outline";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     onClick={() => navigate('/forgot-password')}
                   >
                     Request new reset link
@@ -417,7 +445,6 @@ export default function UpdatePassword() {;
     </>
   )
 <<<<<<< HEAD
-}
 =======
                       name="confirmPassword";
                       render={({ field }) => (;
@@ -456,6 +483,7 @@ export default function UpdatePassword() {;
       <Footer />;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

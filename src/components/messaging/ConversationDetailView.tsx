@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react'
+import { format } from 'date-fns'
+import { MessageSquare } from 'lucide-react'import { useMessaging } from '@/context/MessagingContext'
+import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { useAuth } from '@/hooks/useAuth'
+import { MessageBubble } from './MessageBubble'
+import { DateDivider } from './DateDivider'
+export function ConversationDetailView() {
+  const { user } = useAuth()
+  const { 
+    activeConversation
+    activeMessages, 
+    sendMessage, 
+    loadMessages
+  } = useMessaging()
+  const [messageText, setMessageText] = useState('')
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLTextAreaElement | null>(null)
+        {/* Header */}
+=======
 
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
@@ -106,6 +129,7 @@ export function ConversationDetailView() {;
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
@@ -150,11 +174,11 @@ export function ConversationDetailView() {;
                   <img
 <<<<<<< HEAD
                     src = {activeConversation.context_data.image_url,}
-                    alt = {activeConversation.context_data.title |"Context",}
+                    alt = {activeConversation.context_data.title || "Context",}
 =======
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="object-cover"
                     loading="lazy"
                   />
@@ -210,7 +234,7 @@ export function ConversationDetailView() {;
               </div>;
             </div>;
           ));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -225,8 +249,6 @@ export function ConversationDetailView() {;
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref = {inputRef,}
-          />
-          <Button
 =======
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
@@ -234,6 +256,7 @@ export function ConversationDetailView() {;
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           />
           <Button 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -243,12 +266,15 @@ export function ConversationDetailView() {;
             Send
           </Button>
         </form>
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+};
+=======
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -271,4 +297,4 @@ export function ConversationDetailView() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -9,9 +8,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -26,11 +22,17 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
+<<<<<<< HEAD
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+=======
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderStepContent = () => {
@@ -134,6 +136,15 @@ function BasicsStep() {
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
+<<<<<<< HEAD
+            rows={4}
+          />
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -243,6 +254,7 @@ function BasicsStep() {;
     </Card>;
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function ExperienceStep() {
@@ -601,7 +613,7 @@ function SkillsStep() {;
                   >;
                     <Trash2 className="h-4 w-4 text-destructive" />;
                   </Button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             ))}
@@ -643,5 +655,7 @@ function SkillsStep() {;
 }
 =======
 }
+<<<<<<< HEAD
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

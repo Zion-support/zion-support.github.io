@@ -1,7 +1,6 @@
 <<<<<<< HEAD
-
-> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
-}</select> </>)
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+}</select> </>) 
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -17,18 +16,14 @@
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
 }
 export default function ResumePreviewPage({
-  initialData
-  versions = []
-}: ResumePreviewPageProps) {
+  initialData,
+  versions = [],
+}: ResumePreviewPageProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
-  const activeData = useMemo(() => {
-    if (selectedVersionId === 'current') return initialData;
-    const found = versions.find(v => v.id === selectedVersionId);
-    return found?.data |initialData;
-  }, [selectedVersionId, initialData, versions]);
+
 =======
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
@@ -43,6 +38,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
   const targetRef = useRef<HTMLDivElement>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData,
     const found = versions.find(v => v.id === selectedVersionId),
@@ -74,7 +70,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -111,7 +107,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
       </div>
     </div>
   );
-export const getServerSideProps: GetServerSideProps = async ctx => {
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.();
   if (!user) {
@@ -172,15 +169,20 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
         link: 'https://example.com'
       }
       {
-        title: 'AI Marketplace'
-        description: 'Talent dashboard with export features.'
-      }
-    ]
-  }
+        title: 'AI Marketplace',
+        description: 'Talent dashboard with export features.',
+      },
+    ],;
+  };
+
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
 
+return { props: { initialData, versions } };
+};
+
+}
 =======
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -257,4 +259,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   }
 }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

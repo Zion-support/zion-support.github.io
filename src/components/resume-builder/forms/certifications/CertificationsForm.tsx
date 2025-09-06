@@ -1,10 +1,8 @@
-
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
+import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Form } from '@/components/ui/form'
+import { Certification } from '@/types/resume'
 import { Loader2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
@@ -79,10 +77,10 @@ export function CertificationsForm({
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message |'An error occurred')
-    }
-  }
-  const handleEdit = (cert: Certification) => {
+      setError(err.message || 'An error occurred');
+    };
+  };
+  const handleEdit = (cert: Certification) => {;
     setEditingId(cert.id!);    form.reset({
       ...cert
   }
@@ -99,6 +97,7 @@ export function CertificationsForm({
     }
   }
 =======
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -182,7 +181,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div>
@@ -197,15 +196,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           certifications={certifications}
           onEdit={handleEdit}
           onDelete={handleDelete}        />
-      )}
-      <div className='bg-muted/40 p-6 rounded-lg'>
-        <h3 className='text-md font-medium mb-4'>
 =======
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -222,10 +219,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
-            <div className='flex justify-between pt-2'>
 =======
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
             <div className="flex justify-between pt-2">
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -236,25 +233,21 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   if (editingId) {
 <<<<<<< HEAD
                     setEditingId(null)
-                    form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-                      credential_url: ''
-                    })
-
 =======
                     setEditingId(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+<<<<<<< HEAD
+                      credential_url: '',
+                    })
+=======
                       credential_url: ''})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   } else {
                     onBack()
                   }
@@ -280,7 +273,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Next
                 </Button>
               </div>
@@ -298,4 +291,4 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -7,20 +7,20 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-  TrendingUp
-  Star
-  Users
-  Zap
-  Brain
-  Atom
-  Sparkles
-  Shield
-  Target
-  Cloud
-  DollarSign
-  BarChart3
-  Target as TargetIcon
-  Award;
+  TrendingUp,
+  Star,
+  Users,
+  Zap,
+  Brain,
+  Atom,
+  Sparkles,
+  Shield,
+  Target,
+  Cloud,
+  DollarSign,
+  BarChart3,
+  Target as TargetIcon,;
+  Award,;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -28,7 +28,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-export default function MarketPricing2026() {
+export default function MarketPricing2026() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   // Combine all 2026 services
@@ -166,9 +166,11 @@ export default function MarketPricing2026() {
 =======
       allServices.length,
 
+<<<<<<< HEAD
+=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       <div className='min-h-screen'>
         <Head>
@@ -230,7 +232,7 @@ export default function MarketPricing2026() {
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -334,7 +336,7 @@ export default function MarketPricing2026() {
 
                     {categories.map(category => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
@@ -368,7 +370,7 @@ export default function MarketPricing2026() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-white font-semibold mb-3'>
@@ -393,7 +395,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </div>
                 </div>
@@ -404,7 +406,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Market Analysis Section */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
@@ -413,7 +415,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -440,7 +442,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -449,7 +451,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='text-4xl mb-4'>📊</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -482,7 +484,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='text-4xl mb-4'>🎯</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -514,7 +516,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='text-4xl mb-4'>🚀</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -548,7 +550,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -578,7 +580,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
                     {/* Service Header */}
@@ -606,7 +608,7 @@ export default function MarketPricing2026() {
                       )}
                     </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -653,7 +655,7 @@ export default function MarketPricing2026() {
 
                     {/* Pricing Section */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </div>
                     </div>
                     {/* Market Position */}
@@ -670,7 +672,7 @@ export default function MarketPricing2026() {
 
                         {service.marketPosition}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </p>
                     </div>
                     {/* ROI & Customers */}
@@ -680,7 +682,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {service.roi.split(' ')[0]}
                         </div>
                         <div className='text-gray-400 text-xs'>ROI</div>
@@ -724,7 +726,7 @@ export default function MarketPricing2026() {
 
                             {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </li>
                         ))}
                       </ul>
@@ -732,7 +734,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Technology Stack */}
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -768,7 +770,7 @@ export default function MarketPricing2026() {
 
                             +{service.technology.length - 3} more
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </span>
                         )}
                       </div>
@@ -785,7 +787,7 @@ export default function MarketPricing2026() {
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       View Details
                     </a>
@@ -796,7 +798,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -828,7 +830,7 @@ export default function MarketPricing2026() {
           </div>
         </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -837,7 +839,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -846,7 +848,7 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -922,7 +924,13 @@ export default function MarketPricing2026() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+}
+
+}
+}
+}
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

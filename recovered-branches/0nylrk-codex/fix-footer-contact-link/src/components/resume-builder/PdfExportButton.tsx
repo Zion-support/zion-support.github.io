@@ -1,16 +1,8 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
-  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -20,10 +12,12 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
+
+export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
 =======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -52,7 +46,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
@@ -173,7 +167,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     </DropdownMenu>
   )
 <<<<<<< HEAD
-}
 =======
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -264,6 +257,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

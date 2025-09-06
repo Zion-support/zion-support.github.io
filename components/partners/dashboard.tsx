@@ -8,12 +8,20 @@ export default function PartnerDashboard() {
 =======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+=======
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
 
   const [token, setToken] = useState<string | null>(null);
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [usage, setUsage] = useState<any>(null);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [loading, setLoading] = useState(false);
@@ -160,7 +168,7 @@ export default function PartnerDashboard() {
 
                     ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </ul>
                 </div>
               </div>
@@ -200,4 +208,4 @@ export default function PartnerDashboard() {
 }
 =======
         </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

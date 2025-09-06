@@ -31,8 +31,7 @@ import {
   Star,
   TrendingUp,
   Award,
-<<<<<<< HEAD
-  Clock,
+  Clock,;
 } from "lucide-react";
 =======
   Clock
@@ -172,9 +171,8 @@ export default function NewsletterPage() {
   }
 ];
 
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
->>>>>>> origin/automation-improvements-final
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -233,21 +231,6 @@ export default function NewsletterPage() {
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
-=======
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
-<<<<<<< HEAD
-
-=======
-                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
-              </p>
-              
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -503,16 +486,6 @@ export default function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
-<<<<<<< HEAD
-
-=======
-                Subscribe now and start receiving valuable insights delivered to your inbox every week.
-              </p>
-              
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

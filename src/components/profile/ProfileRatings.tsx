@@ -72,6 +72,8 @@ export function ProfileRatings({
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId])
+  return (
+=======
 
   return (
 =======
@@ -117,7 +119,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId]),
   
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
@@ -136,7 +138,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value='positive'>Positive</TabsTrigger>
               <TabsTrigger value='critical'>Critical</TabsTrigger>
             </TabsList>
-            <TabsContent value='all'>              <ReviewsList
+            <TabsContent value='all'>              <ReviewsList        
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -158,6 +160,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
+            
             <TabsContent value="positive">
               <ReviewsList
 =======
@@ -183,7 +186,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -194,6 +197,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <TabsContent value="critical">
@@ -233,9 +237,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }isLoading= {
   isLoading
 }onReportReview= {
-  reportReview
-}/> </TabsContent> </Tabs> </div> </div> </div>)
-}"}
+  reportReview ;
+}/> </TabsContent> </Tabs> </div> </div> </div>) ;
+}"};
+}
+}
+}
 =======
               />;
             </TabsContent>;
@@ -246,4 +253,4 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

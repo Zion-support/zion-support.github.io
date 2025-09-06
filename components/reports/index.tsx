@@ -3,7 +3,7 @@ import ContentCategorizer from '../../components/ContentCategorizer';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ReportsIndex() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -43,17 +43,20 @@ export default function ReportsIndex() {
   }
 }
         <div className="mt-12 text-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
             ← Back to home
           </Link>
         </div>
       </main>
-    </div>
 <<<<<<< HEAD
+    </div>;
   );
 }
+
+}
 =======
+    </div>
   )
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
@@ -69,4 +72,4 @@ export default function ReportsIndex() {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,15 +1,15 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { MainNavigation  } from './MainNavigation';
-import { Logo  } from '@/components/header/Logo';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { Menu, X  } from 'lucide-react';
-import { MobileMenu  } from '@/components/header/MobileMenu';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-export function AppHeader() {
+import {useState} from 'react';
+import {useMessaging} from '@/context/MessagingContext';
+import {MainNavigation} from './MainNavigation';
+import {Logo} from '@/components/header/Logo';
+import {ModeToggle} from '@/components/ModeToggle';
+import {Menu, X} from 'lucide-react';
+import {MobileMenu} from '@/components/header/MobileMenu';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {MobileBottomNav} from '@/components/header/MobileBottomNav';
+export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -21,7 +21,6 @@ export function AppHeader() {
     unreadCount = count
   } catch (error) {
     console.warn('Messaging context not available')
-  }
 =======
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -42,6 +41,7 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

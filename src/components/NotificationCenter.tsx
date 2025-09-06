@@ -1,13 +1,5 @@
 <<<<<<< HEAD
 
-
-    unreadCount
-    markAsRead
-  const handleFilterChange = (newFilter: FilterType,) => {
-    setFilter(newFilter as any)
-  }
-  return (
-    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
 =======
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
@@ -27,6 +19,7 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -42,6 +35,13 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+<<<<<<< HEAD
+  const handleFilterChange = (newFilter: FilterType,) => {
+    setFilter(newFilter as any)
+  }
+  return (
+    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
+=======
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -121,7 +121,7 @@ export const NotificationCenter: React.FC = () => {;
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -153,21 +153,21 @@ export const NotificationCenter: React.FC = () => {;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+        <NotificationHeader 
 <<<<<<< HEAD
-        <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
         />
-        <NotificationFilter
+        <NotificationFilter 
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
         />
-        <NotificationList
+        <NotificationList 
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
@@ -179,10 +179,8 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>
     </Popover>
   )
-}
-
+};
 =======
-        <NotificationHeader 
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
@@ -205,4 +203,4 @@ export const NotificationCenter: React.FC = () => {;
     </Popover>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,9 +1,7 @@
 <<<<<<< HEAD
 export interface PasswordStrengthResult {
-
-  password: string
-
-  score: number, // 0-100
+  password: string,
+  score: number, // 0-100;
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
   feedback: string[];
   suggestions: string[];
@@ -23,7 +21,8 @@ export interface PasswordStrengthResult {
   }
   warnings: string[]
 }
-export interface CommonPasswordData {
+
+export interface CommonPasswordData {;
   commonPasswords: Set<string>;
 
   commonWords: Set<string>
@@ -242,7 +241,7 @@ class PasswordStrengthService {;
     if (score >= 60) return 'medium',;
     if (score >= 40) return 'weak',;
     return 'very-weak';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   /**
    * Check if password contains common words
@@ -286,6 +285,7 @@ class PasswordStrengthService {;
     return Math.log2(Math.pow(charset, password.length))
   }
 <<<<<<< HEAD
+
   /**
    * Estimate time to crack password
    */
@@ -316,7 +316,7 @@ class PasswordStrengthService {;
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,;
     return `${Math.ceil(seconds / 31536000)} years`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   /**
    * Generate feedback based on password analysis
@@ -369,6 +369,7 @@ class PasswordStrengthService {;
       suggestions.push('Avoid keyboard patterns like qwerty or 123456')
     }
 <<<<<<< HEAD
+
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
@@ -379,7 +380,7 @@ class PasswordStrengthService {;
     suggestions.push('Use unique passwords for each account'),;
     suggestions.push('Consider a password manager for secure storage'),;
     return suggestions;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   /**
    * Generate security warnings
@@ -401,6 +402,7 @@ class PasswordStrengthService {;
     return warnings
   }
 <<<<<<< HEAD
+
   /**
    * Generate a strong password
    */
@@ -431,12 +433,13 @@ class PasswordStrengthService {;
     // Fill the rest randomly;
     for (let i = 4, i < length, i++) {;
       password += charset[Math.floor(Math.random() * charset.length)];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     // Shuffle the password
     return password.split('').sort(() => Math.random() - 0.5).join('')
   }
 <<<<<<< HEAD
+
   /**
    * Generate a memorable passphrase
    */
@@ -461,7 +464,7 @@ class PasswordStrengthService {;
     for (let i = 0, i < wordCount, i++) {;
       const word = words[Math.floor(Math.random() * words.length)],;
       passphrase += (i === 0 ? '' : '-') + word;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return passphrase
   }
@@ -471,6 +474,7 @@ class PasswordStrengthService {;
   addCommonPassword(password: string): void {
     this.commonPasswords.add(password.toLowerCase())
   }
+
   /**
    * Remove password from common list
    */
@@ -478,6 +482,7 @@ class PasswordStrengthService {;
     this.commonPasswords.delete(password.toLowerCase())
   }
 <<<<<<< HEAD
+
   /**
    * Get service statistics
    */
@@ -492,8 +497,6 @@ class PasswordStrengthService {;
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
-export { PasswordStrengthService }
-
 =======
 ;
   /**;
@@ -511,5 +514,6 @@ export { PasswordStrengthService }
 // Export singleton instance;
 export const passwordStrengthService = new PasswordStrengthService(),;
 // Export the class for custom instances;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export { PasswordStrengthService };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

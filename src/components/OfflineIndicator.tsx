@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react'
 import { WifiOff, Wifi } from 'lucide-react'
 =======
 import { useState, useEffect } from 'react',
@@ -17,6 +17,11 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine
       setIsOnline(online)
 =======
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
+
+export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -25,7 +30,7 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -50,7 +55,7 @@ export const OfflineIndicator = () => {;
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
 <<<<<<< HEAD
@@ -58,10 +63,10 @@ export const OfflineIndicator = () => {;
     updateOnlineStatus()
     // Listen for online/offline events
     window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
-    return () => {
-      window.removeEventListener('online', updateOnlineStatus)
-      window.removeEventListener('offline', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
     } }, [showOfflineAlert]);      window.removeEventListener('offline', updateOnlineStatus)
     }
   }, [showOfflineAlert])
@@ -87,7 +92,6 @@ export const OfflineIndicator = () => {;
     </div>
   )
 } }
-
 =======
   }, [showOfflineAlert]),
 
@@ -114,4 +118,4 @@ export const OfflineIndicator = () => {;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

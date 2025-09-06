@@ -1,10 +1,9 @@
 <<<<<<< HEAD
-
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import { Calendar, ArrowRight } from 'lucide-react'
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -75,7 +74,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -134,11 +133,14 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-    </section>
-  )
 <<<<<<< HEAD
+    </section>;
+  );
+};
 }
 =======
+    </section>
+  )
 import React from "react",;
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -204,4 +206,4 @@ export function EnterpriseCTA() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

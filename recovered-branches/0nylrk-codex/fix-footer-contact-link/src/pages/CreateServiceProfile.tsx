@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
 import React from "react";
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 =======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -22,7 +22,6 @@ export default function CreateServiceProfile() {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
@@ -41,6 +40,6 @@ export default function CreateServiceProfile() {;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

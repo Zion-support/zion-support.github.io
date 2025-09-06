@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Education} from '@/types/resume';
@@ -9,7 +8,7 @@ import {format} from 'date-fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({
+export function EducationForm({ ;
   resumeId;
   educationEntries
   onComplete
@@ -76,29 +75,33 @@ export function EducationForm({;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
+
     if (success) {
       setEditingId(null)
     }
 <<<<<<< HEAD
-  }
+  };
+
   const handleEdit = (edu: Education) => {
-    setEditingId(edu.id!)
+    setEditingId(edu.id!),
     // Form reset happens in the child component
-  }
+  };
+
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this education entry?')) {
       await deleteEducation(id)
     }
-  }
+  };
+
   const handleCancel = () => {
     if (editingId) {
       setEditingId(null)
     } else {
       onBack()
     }
-  }
+  };
 =======
   },;
   const handleEdit = (edu: Education) => {;
@@ -117,7 +120,7 @@ export function EducationForm({;
       onBack();
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="space-y-6">
@@ -127,15 +130,15 @@ export function EducationForm({;
           Add your educational background and academic achievements.
         </p>
       </div>
-      <EducationList
-        educationEntries={educationEntries}
+      <EducationList 
+        educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}

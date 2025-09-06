@@ -1,25 +1,26 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Interview } from "@/types/interview",
-import { useAuth } from "@/hooks/useAuth",
-import { useInterviews } from "@/hooks/useInterviews",
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 <<<<<<< HEAD
-import { toast } from "@/components/ui/use-toast";
-import { InterviewResponseForm } from "./InterviewResponseForm";
+import React, { useState } from "react";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Interview} from "@/types/interview";
+import {useAuth} from "@/hooks/useAuth";
+import {useInterviews} from "@/hooks/useInterviews";
+import {format, formatDistanceToNow, isPast, parseISO} from "date-fns";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {InterviewResponseForm} from "./InterviewResponseForm";
 interface InterviewCardProps {
 
   interview: Interview
 
   onRefresh: () => Promise<void>
 }
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
+
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
@@ -45,14 +46,19 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     } else {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
     }
-  }
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true)
-    const success = await respondToInterview(interview.id, {
-      interview_id: interview.id
-      status
-    });
+  };
 =======
+import React, { useState } from "react",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Interview } from "@/types/interview",
+import { useAuth } from "@/hooks/useAuth",
+import { useInterviews } from "@/hooks/useInterviews",
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
 interface InterviewCardProps {
@@ -102,6 +108,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       return `Starts in ${formatDistanceToNow(interviewDate)}`;
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -192,7 +199,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
     } else {
       return interview.client_name |'Client'
     }
-  }
+  };
 =======
   },;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -262,7 +269,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       return interview.client_name || 'Client';
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -336,9 +343,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
             </AlertDialog>
           )}
 <<<<<<< HEAD
+          
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className="grid grid-cols-2 gap-2">
@@ -367,7 +375,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
                   <Video className="h-4 w-4 mr-2" />
 =======
                   <Video className="h-4 w-4 mr-2" /> 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}

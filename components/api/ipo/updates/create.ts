@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import { v4 as uuidv4 } from 'uuid';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
   if (req.method !== 'POST')
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   updates.unshift(update);
   writeJsonFile('updates.json', updates);
-  res.status(200).json(update);export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(update);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req.body |{}
@@ -33,6 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(update)
 <<<<<<< HEAD
 }
-=======
+<<<<<<< HEAD
+
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

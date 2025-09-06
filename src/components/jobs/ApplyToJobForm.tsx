@@ -1,6 +1,16 @@
 <<<<<<< HEAD
-import { useState } from "react";
-import { useRouter  } from 'next/router';
+    import { useRouter } from 'next/router'
+import { useJobApplications } from "@/hooks/useJobApplications"
+import { useResume } from "@/hooks/useResume"
+import { useAuth } from "@/hooks/useAuth"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
+import { Job } from "@/types/jobs"
+import { toast } from "sonner"
 =======
 import { useState } from "react",
 import { useRouter } from 'next/router',
@@ -21,7 +31,7 @@ import { toast } from "sonner";
 =======
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplyToJobFormProps {
 
   job: Job
@@ -30,7 +40,6 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
-
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -45,20 +54,22 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
-      return
+      return;
     }
+    
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
-      return
+      return;
     }
+    
     setIsSubmitting(true)
     setError(null)
     try {
       const success = await applyToJob(
         job.id
         coverLetter
-        selectedResumeId |undefined
-        resumeFile |undefined
+        selectedResumeId || undefined
+        resumeFile || undefined
       )
       if (success) {
         toast.success("Your application has been submitted!")
@@ -101,7 +112,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         if (onSuccess) {
           onSuccess()
         }
@@ -114,11 +125,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     }
 <<<<<<< HEAD
   }
-
 =======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -130,7 +140,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -159,7 +169,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -304,7 +314,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                         {resume.basic_info.title || "Untitled Resume"}
                       </SelectItem>;
                     );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }
                   return null
                 })}
@@ -344,8 +354,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           />
         </div>
       </div>
+<<<<<<< HEAD
+=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="flex justify-end gap-2">
         <Button
           type="button"
@@ -358,7 +370,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
         >
           Cancel
@@ -395,9 +407,9 @@ handleSubmit
 }return null
 })
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
-}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
-}</Button> </div> </form>)
-}"}
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
+}</Button> </div> </form>) ;
+}"};
 =======
         </Button>;
       </div>;
@@ -405,4 +417,4 @@ handleSubmit
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

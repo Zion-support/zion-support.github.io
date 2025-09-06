@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
+export function useDisputes() {;
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -17,7 +29,7 @@ export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -227,7 +239,7 @@ export function useDisputes() {
     }
   }
   const resolveDispute = async (
-    disputeId: string
+    disputeId: string, 
 =======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -370,7 +382,7 @@ export function useDisputes() {;
   },;
   const resolveDispute = async (;
     disputeId: string,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     resolution: { summary: string, resolution_type: string }
   ): Promise<boolean> => {
     try {
@@ -522,8 +534,6 @@ export function useDisputes() {;
     getDisputeMessages
 
     addDisputeMessage
-  }
-}
 =======
   ): Promise<boolean> => {;
     try {;
@@ -618,6 +628,7 @@ export function useDisputes() {;
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

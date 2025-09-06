@@ -7,6 +7,17 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
+  id: string
+name: string
+avatar?: string
+lastMessage: string
+timestamp: string
+unreadCount: number
+isTyping?: boolean 
+}interface MobileConversationListProps {
+  conversations: Conversation[]
+  activeConversation?: string
+  onSelectConversation: (id: string) => void
 =======
 
 import React from "react",
@@ -48,17 +59,7 @@ interface MobileConversationListProps {;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-  id: string
-name: string
-avatar?: string
-lastMessage: string
-timestamp: string
-unreadCount: number
-isTyping?: boolean
-}interface MobileConversationListProps {
-  conversations: Conversation[]
-  activeConversation?: string
-  onSelectConversation: (id: string) => void
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function MobileConversationList({
 <<<<<<< HEAD
   conversations
@@ -140,7 +141,7 @@ export function MobileConversationList({
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -174,7 +175,7 @@ export function MobileConversationList({
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                   {conversation.unreadCount > 0 && (
 <<<<<<< HEAD
@@ -185,7 +186,7 @@ export function MobileConversationList({
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   )}
                 </div>
               </div>
@@ -195,8 +196,9 @@ export function MobileConversationList({
           </div>
         ))}
       </div>
-    </div>
-  )
+    </div>;
+  );
+};
 }
 =======
             <div className="border-t border-border ml-12"></div>
@@ -207,4 +209,4 @@ export function MobileConversationList({
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

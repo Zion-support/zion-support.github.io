@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
@@ -13,6 +12,7 @@ import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function Calendar({
@@ -87,6 +87,8 @@ function Calendar({
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+<<<<<<< HEAD
+=======
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -140,18 +142,19 @@ function Calendar({;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {...props}
     />
   )
 }
 <<<<<<< HEAD
 Calendar.displayName = "Calendar";
-export { Calendar }
 
 =======
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export { Calendar };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

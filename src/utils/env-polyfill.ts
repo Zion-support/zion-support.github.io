@@ -25,8 +25,13 @@ const createProcessObject = () => ({
 =======
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
+<<<<<<< HEAD
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+}
+=======
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Create a safe process object
 const createProcessObject = () => ({
   env: { ...defaultEnv },
@@ -34,9 +39,13 @@ const createProcessObject = () => ({
   platform: 'browser',
   arch: 'x64',
   version: '18.0.0',
+<<<<<<< HEAD
+  browser: true,
+})
+=======
   browser: true}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
@@ -84,7 +93,7 @@ export function isDevelopment(): boolean {
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 // Export the polyfilled process object
-export const processEnv =
+export const processEnv = null;
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process.env
     : {
@@ -95,9 +104,12 @@ export const processEnv =
       }
 console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
-export default safeEnv
-export default safeEnv
-
+export default safeEnv;
+export default safeEnv;
+}
+}
+}
+}
 =======
     (globalThis as any).process.env = { ...defaultEnv }
   }
@@ -160,4 +172,4 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},;
 // // // console.log('✅ Environment polyfill loaded successfully'),;
 export default safeEnv;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

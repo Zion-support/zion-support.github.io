@@ -2,30 +2,32 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
-    nodes: []
-    edges: []
-  }
+    nodes: [],
+    edges: [];
+  };
 }
 export function getGitStatus() {
   return {
-    connected: false
-    branch: 'main'
-  }
+    connected: false,
+    branch: 'main';
+  };
 }
-export function getSourceMapWithExistence(): SourceNode[] {
+
+export function getSourceMapWithExistence(): SourceNode[] {;
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
-export interface DeployTemplateResult {
+
+export interface DeployTemplateResult {;
   createdPaths: string[];
   skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
-  if (!fs.existsSync(dirPath)) {
+  if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
   }
 export function deployBasicTemplateForPath(
   repoRelativePath: string
-): DeployTemplateResult {
+): DeployTemplateResult {;
   const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
@@ -48,4 +50,11 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths }
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return { createdPaths, skippedPaths };
+
+}
+}
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

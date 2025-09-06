@@ -9,15 +9,15 @@ import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({
-  endpoint
-}: {
+  endpoint,
+}: {;
   endpoint: EndpointSpec;
 }) {
 <<<<<<< HEAD
 =======
 
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <div className='space-y-4'>
 
       <div>
@@ -80,13 +80,11 @@ export default function EndpointDetail({
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
             ))}
-          </ul>
-        </div>
-      )}
 =======
 
             ))}
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </ul>
         </div>
       )}
@@ -108,10 +106,13 @@ export default function EndpointDetail({
 
             ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </ul>
         </div>
       )}
     </div>
   );
+}
+
+}
 }

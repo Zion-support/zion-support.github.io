@@ -1,4 +1,35 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Filter} from "lucide-react";
+import {SearchFilter} from "./filters/SearchFilter";
+import {SortFilter} from "./filters/SortFilter";
+import {SkillsFilter} from "./filters/SkillsFilter";
+import {AvailabilityFilter} from "./filters/AvailabilityFilter";
+import {RegionFilter} from "./filters/RegionFilter";
+import {ExperienceFilter} from "./filters/ExperienceFilter";
+import {PriceFilter} from "./filters/PriceFilter";
+import {FilterSidebarProps} from "@/types/filters";
+export function FilterSidebar({;
+  searchTerm;
+  setSearchTerm;
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
+  expandedSections;
+  toggleSection;
+  sortOption;
+  setSortOption;
+  clearFilters;
+=======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from "lucide-react",
@@ -14,7 +45,6 @@ import { FilterSidebarProps } from "@/types/filters";
 =======
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -33,6 +63,7 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -103,7 +134,7 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

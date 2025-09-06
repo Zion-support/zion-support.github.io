@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -324,17 +323,14 @@ export const real2036ITServices = [
       'Reduced recovery time'
     ]
     useCases: [
-      'Data center recovery'
-      'Cloud recovery'
-      'Application recovery'
-      'Business continuity'
-    ]
-  }
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+  },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-  }
-];
-
 =======
 export const real2036ITServices = [;
   {;
@@ -546,6 +542,7 @@ export const real2036ITServices = [;
     useCases: [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
     ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

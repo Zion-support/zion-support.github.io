@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer'
@@ -416,21 +415,18 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization'
     ]
     integrations: [
-      'CRM systems'
-      'E-commerce platforms'
-      'Analytics tools'
-      'Social media platforms'
-      'Marketing tools'
-    ]
-    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
-  }
+      'CRM systems',
+      'E-commerce platforms',
+      'Analytics tools',
+      'Social media platforms',
+      'Marketing tools',
+    ],
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
-  }
-];
-
 =======
 export const innovativeMicroSaasSolutions2025 = [;
   {;
@@ -637,6 +633,7 @@ export const innovativeMicroSaasSolutions2025 = [;
     ],;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

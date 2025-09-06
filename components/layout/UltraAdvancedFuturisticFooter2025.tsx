@@ -2,23 +2,23 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  ArrowUp,
+  Crown,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Users,
+  BookOpen,
+  Briefcase,;
+  Atom,;
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -445,16 +445,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
+            key={i}  };
+
 <<<<<<< HEAD
-            key={i}  }
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
 =======
-            key={i}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
@@ -609,7 +608,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ziontechgroup.com
                   </a>
                 </div>
@@ -658,7 +657,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -669,7 +668,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -713,7 +712,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 ))}
               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -725,7 +724,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -747,7 +746,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 =======
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -761,7 +760,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -772,7 +771,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -824,7 +823,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         onClick={scrollToTop}
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -835,14 +834,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       </motion.button>
     </footer>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
-
-<<<<<<< HEAD
 =======
 export default UltraAdvancedFuturisticFooter2025;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

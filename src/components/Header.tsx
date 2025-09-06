@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Button from './Button';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,26 +16,18 @@ const Header: React.FC = () => {
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
-            <Button variant="primary" size="small">
-              Get Started
-            </Button>
-          </nav>
-
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-300 hover:text-white"
@@ -46,7 +38,6 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-700">
@@ -69,9 +60,9 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
-      </div>
+      </nav>
     </header>
-  );
-};
+  )
+}
 
 export default Header;

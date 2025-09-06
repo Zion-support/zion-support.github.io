@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import Link from 'next/link';
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+import {useEffect, useState} from 'react';
+import InteractiveSearch from '../../components/ui/InteractiveSearch';
+export default function JobsListPage() {;
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
+
+=======
 import Link from 'next/link',
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
 <<<<<<< HEAD
@@ -33,6 +47,7 @@ import InteractiveSearch from '../../components/ui/InteractiveSearch',
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
@@ -56,6 +71,8 @@ export default function JobsListPage() {
       )}
     </div>
 );
+
+}
 =======
           ))  } catch (error) {
     console.error("Error:", error);
@@ -75,4 +92,4 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

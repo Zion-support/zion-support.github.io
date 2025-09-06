@@ -64,14 +64,13 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   loading="lazy"
 <<<<<<< HEAD
                   onError={(
-                    e: React.SyntheticEvent<HTMLImageElement, Event>
-                  ) => {
+                    e: React.SyntheticEvent<HTMLImageElement, Event>,
+                  ) => {;
                     const target = e.currentTarget as HTMLImageElement;
-
 =======
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -174,4 +173,4 @@ export function BlogSection() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

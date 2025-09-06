@@ -6,9 +6,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
@@ -24,7 +24,7 @@ const TALENTS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+) {;
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -68,7 +68,11 @@ createdAt: now
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || 'pending',
     partnerId: auth.partner.id,
+<<<<<<< HEAD
+createdAt: now,
+=======
     createdAt: now,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   records.push(record);

@@ -1,5 +1,5 @@
+export interface SpaceTechService {;
 <<<<<<< HEAD
-export interface SpaceTechService {
   id: string;
   name: string;
   tagline: string;
@@ -721,12 +721,12 @@ export const spaceTechServices: SpaceTechService[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
-    launchDate: '2024-03-10'
-    customers: 500
-    rating: 4.9
-    reviews: 250
-  }
+      'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
+    launchDate: '2024-03-10',
+    customers: 500,
+    rating: 4.9,
+    reviews: 250,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -739,10 +739,7 @@ export const spaceTechServices: SpaceTechService[] = [
     rating: 4.9
 
     reviews: 250
-  }
-];
 =======
-export interface SpaceTechService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -1170,6 +1167,7 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500,;
     rating: 4.9,;
     reviews: 250;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

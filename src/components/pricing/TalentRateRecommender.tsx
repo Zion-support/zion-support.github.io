@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 interface TalentRateRecommenderProps {
   skills: string[]
   yearsExperience: number
@@ -9,18 +8,11 @@ interface TalentRateRecommenderProps {
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  getTalentRateSuggestion
-  PricingSuggestion
-  TalentRateParams
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService"
-import { PricingSuggestionBox } from "./PricingSuggestionBox"
-import { useAuth } from "@/hooks/useAuth"
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { 
   getTalentRateSuggestion,
   PricingSuggestion,
@@ -51,8 +43,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-    if (skills.length === 0 |yearsExperience <= 0) {
-      return
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return;
     }
     setIsLoading(true)
     try {
@@ -129,7 +121,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
       onSuggestionApplied(suggestedRate),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -147,7 +139,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 =======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       <div>
@@ -189,13 +181,12 @@ return (<div className="space-y-4" > <div> {"
 }onApplySuggestion= {
   handleApplySuggestion
 }rateType= {
-  rateType
-}/>)
-}</div> </div>)
-}
-'"}
-}
-
+  rateType 
+}/>) 
+}</div> </div>) ;
+};
+'"};
+};
 =======
             suggestion={suggestion}
             isLoading={isLoading}
@@ -207,4 +198,4 @@ return (<div className="space-y-4" > <div> {"
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

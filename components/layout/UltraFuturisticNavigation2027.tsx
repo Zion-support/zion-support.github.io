@@ -7,42 +7,42 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  Zap
-  Sparkles
-  ChevronDown
-  ChevronRight
-  Brain
-  Atom
-  Globe
-  Shield
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Rocket
-  Star
-  TrendingUp
-  Users
-  Target
-  Award
-  Phone
-  Mail
-  MapPin
-  ExternalLink
-  Building;} from 'lucide-react';import {
-  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
-  Brain, Atom, Globe, Shield, Cpu, Database
-  Cloud, Smartphone, Palette, Search, MessageSquare
+  Menu,
+  X,
+  Zap,
+  Sparkles,
+  ChevronDown,
+  ChevronRight,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Rocket,
+  Star,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,;
+  Building,;} from 'lucide-react';import {
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
+  Brain, Atom, Globe, Shield, Cpu, Database, 
+  Cloud, Smartphone, Palette, Search, MessageSquare, ;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
@@ -280,8 +280,11 @@ const companyLinks = [
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
@@ -321,8 +324,7 @@ const technologyLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function UltraFuturisticNavigation2027() {
+export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -643,6 +645,31 @@ export default function UltraFuturisticNavigation2027() {
         {      icon: <Building className="w-5 h-5" />
       color: 'from-indigo-500 to-purple-600'
       children: [
+        { 
+          href: '/cloud-platform',
+          description: 'Scalable cloud infrastructure',
+          price: 'Custom',
+<<<<<<< HEAD
+          icon: '☁️',
+        },
+        {          name: 'Edge Computing Orchestration',
+          href: '/services/edge-computing-orchestration',
+          description: 'Distributed edge management',
+          price: '$3,499/month',
+          icon: '🌐',
+        },
+        {          name: 'AI Operations Center',
+          href: '/services/enterprise-ai-operations-center',
+          description: 'Centralized AI management',
+          price: '$8,999/month',
+          icon: '🏢',
+        },
+        {          name: 'Infrastructure Drift Detection',
+          href: '/services/infrastructure-drift-detector',
+          description: 'Automated infrastructure monitoring',
+          price: '$2,999/month',
+          icon: '🔍',
+        },
         {
           href: '/cloud-platform'
           description: 'Scalable cloud infrastructure'
@@ -678,6 +705,9 @@ export default function UltraFuturisticNavigation2027() {
         }
       ]
     }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -754,61 +784,6 @@ export default function UltraFuturisticNavigation2027() {
                 Zion Tech Group
               </div>
               <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
-=======
-        {          name: 'AI Consciousness Platform',
-          href: '/services/ai-consciousness-platform',
-          description: 'Advanced AI consciousness simulation',
-          price: '$5,999/month',
-          icon: '🧠',
-        },
-        {          name: 'Quantum Machine Learning',
-          href: '/services/quantum-machine-learning',
-          description: 'Quantum-powered ML platform',
-          price: '$12,999/month',
-          icon: '⚛️',
-        },
-        {          name: 'Autonomous AI Agents',
-          href: '/services/autonomous-ai-agents',
-          description: 'Self-operating AI systems',
-          price: '$4,999/month',
-          icon: '🤖',
-        },
-        {          name: 'AI Content Factory',
-          href: '/services/ai-content-factory',
-          description: 'Automated content creation',
-          price: '$299/month',
-
-          name: 'AI Content Factory',
-          href: '/services/ai-content-factory',
-          description: 'Automated content creation',
-          price: '$299/month',
-
-          name: 'Smart Inventory Manager',
-          href: '/services/smart-inventory-manager',
-          description: 'AI-powered inventory optimization',
-          price: '$199/month',
-
-          name: 'Customer Success Automation',
-          href: '/services/customer-success-automation',
-          description: 'Automated customer retention',
-          price: '$399/month',
-
-          name: 'AI Sales Coach',
-          href: '/services/ai-sales-coach',
-          description: 'Intelligent sales training',
-          price: '$249/month',
-
-          name: 'Smart HR Assistant',
-          href: '/services/smart-hr-assistant',
-          description: 'AI-powered HR automation',
-          price: '$349/month',
-
-          name: 'Cloud Platform',
-          href: '/cloud-platform',
-          description: 'Scalable cloud infrastructure',
-          price: 'Custom',
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Revolutionary Technology Solutions
               </div>
             </div>
@@ -829,7 +804,7 @@ export default function UltraFuturisticNavigation2027() {
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -851,7 +826,7 @@ export default function UltraFuturisticNavigation2027() {
 
                 </motion.button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.name && (
@@ -864,7 +839,7 @@ export default function UltraFuturisticNavigation2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -937,7 +912,7 @@ export default function UltraFuturisticNavigation2027() {
 
                               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </Link>
                           ))}
                         </div>
@@ -956,7 +931,7 @@ export default function UltraFuturisticNavigation2027() {
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
               <a
@@ -995,7 +970,7 @@ export default function UltraFuturisticNavigation2027() {
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'
@@ -1011,7 +986,7 @@ export default function UltraFuturisticNavigation2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1031,7 +1006,7 @@ export default function UltraFuturisticNavigation2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -1044,7 +1019,7 @@ export default function UltraFuturisticNavigation2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='container mx-auto px-4 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -1104,7 +1079,7 @@ export default function UltraFuturisticNavigation2027() {
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -1231,10 +1206,10 @@ export default function UltraFuturisticNavigation2027() {
 }</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion.div>)
 }</AnimatePresence> </header>)
 };export default UltraFuturisticNavigation2027;  )
-}
-export default UltraFuturisticNavigation2027;
+};
 
 <<<<<<< HEAD
+export default UltraFuturisticNavigation2027;
 =======
 export default UltraFuturisticNavigation2027;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

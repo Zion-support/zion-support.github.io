@@ -1,15 +1,4 @@
 <<<<<<< HEAD
-=======
-import React from "react",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import { Clock, Briefcase } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
 import React from 'react'
 import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
@@ -24,7 +13,15 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
-
+=======
+import React from "react",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
@@ -41,7 +38,7 @@ function ProjectsContent() {
 <<<<<<< HEAD
 =======
         </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
@@ -50,14 +47,10 @@ function ProjectsContent() {
 <<<<<<< HEAD
           <div className='grid gap-6'>
             {projects.map(project => (
-              <Card key={project.id}>
-                <CardHeader>
-                  <CardTitle className='flex items-center gap-2'>
-                    <Briefcase className='h-5 w-5 text-primary' />
-                    <span>{project.job?.title |'Project'}</span>
 =======
           <div className="grid gap-6">
             {projects.map((project) => (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -80,9 +73,9 @@ function ProjectsContent() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {project.job?.description |"Project details"}
 =======
                   <p className="text-sm text-muted-foreground line-clamp-2">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {project.job?.description || "Project details"}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </p>
@@ -148,7 +141,7 @@ function ProjectsContent() {;
                   </Button>;
                 </CardFooter>;
               </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         )}
@@ -158,17 +151,19 @@ function ProjectsContent() {;
   )
 export default function Projects() {
   return <ProjectsContent /> }
-export default function Projects() {
-  return <ProjectsContent />
-}
 =======
       </main>;
     </>;
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
 export default function Projects() {;
   return <ProjectsContent />;
+};
 }
+<<<<<<< HEAD
+}
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

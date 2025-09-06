@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { LoginForm } from "./LoginForm";
+import { SocialLogin } from "./SocialLogin";
+=======
 
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
@@ -6,7 +11,7 @@ import { SocialLogin } from "./SocialLogin";
 =======
 import { LoginForm } from "./LoginForm",
 import { SocialLogin } from "./SocialLogin",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function LoginCard() {
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -25,11 +30,9 @@ export function LoginCard() {
         <LoginForm />
         <SocialLogin />
       </div>
-    </div>
 <<<<<<< HEAD
-  );
-}
 =======
+    </div>
   )
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
@@ -52,6 +55,7 @@ export function LoginCard() {;
         <LoginForm />;
         <SocialLogin />;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }

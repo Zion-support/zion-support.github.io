@@ -1,13 +1,14 @@
 
-import { useState, useEffect } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
 <<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import {useState, useEffect} from "react";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 interface HiringAnalyticsProps {
   jobId?: string
 }
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
 
@@ -61,9 +62,9 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   }, [applications]);
   if (isLoading) {
     return <div>Loading analytics data...</div>
-  }
-  if (!applications |applications.length === 0) {
 =======
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
 
@@ -131,6 +132,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   }, [applications]);
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
   if (!applications || applications.length === 0) {

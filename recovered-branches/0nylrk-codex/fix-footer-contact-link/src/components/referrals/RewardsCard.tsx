@@ -1,13 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralReward} from "@/types/referrals";
+import {formatDate} from "@/utils/referralUtils";
+import {BadgeDollarSign, Badge} from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
@@ -15,11 +12,22 @@ import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
+>>>>>>> main
 interface RewardsCardProps {
   rewards: ReferralReward[];
-  isLoading: boolean
+  isLoading: boolean;
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
@@ -113,6 +121,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+  )
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
@@ -121,6 +131,9 @@ import { BadgeDollarSign, Badge } from "lucide-react",;
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
+=======
+  );
+>>>>>>> main
 }
 ;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
@@ -210,6 +223,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
         </div>;
       </CardContent>;
     </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+;

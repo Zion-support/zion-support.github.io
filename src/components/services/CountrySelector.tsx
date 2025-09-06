@@ -1,6 +1,16 @@
 <<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+  CountryPricing,
+  onsiteServicePricing,
+} from '@/data/onsiteServicePricing'
 =======
 
 import { useState, useEffect } from "react",
@@ -9,23 +19,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-  CountryPricing
-  onsiteServicePricing
-} from '@/data/onsiteServicePricing'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange
-  selectedCountry
-}: CountrySelectorProps) {
+export function CountrySelector({;
+  onCountryChange,;
+  selectedCountry;
+}: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
@@ -34,7 +35,6 @@ export function CountrySelector({
   // Set top/popular countries
   useEffect(() => {
 <<<<<<< HEAD
-
     const popular = [
       'United States'
       'United Kingdom'
@@ -52,13 +52,13 @@ export function CountrySelector({
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country =
-      onsiteServicePricing.find(item => item.country === countryName) |null
+    const country = null;
+      onsiteServicePricing.find(item => item.country === countryName) || null
     onCountryChange(country)
 <<<<<<< HEAD
   }
@@ -66,6 +66,7 @@ export function CountrySelector({
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -180,7 +181,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -191,6 +192,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     </div>
   )
 }
+;
 =======
           </div>;
         </SelectContent>;
@@ -199,4 +201,4 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

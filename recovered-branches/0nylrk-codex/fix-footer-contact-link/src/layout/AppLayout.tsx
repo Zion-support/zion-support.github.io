@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {AppHeader} from "./AppHeader";
+import {Footer} from "@/components/Footer";
+=======
 import React from "react",
 <<<<<<< HEAD
 import { AppHeader } from "./AppHeader";
@@ -6,7 +11,7 @@ import { Footer } from "@/components/Footer";
 =======
 import { AppHeader } from "./AppHeader",
 import { Footer } from "@/components/Footer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AppLayoutProps {
 
   children: React.ReactNode
@@ -24,7 +29,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       {!hideFooter && <Footer />}
     </div>
   )
-}
 =======
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
@@ -44,6 +48,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
       {!hideFooter && <Footer />}
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

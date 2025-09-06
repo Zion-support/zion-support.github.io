@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -9,7 +8,7 @@ import {useResume} from '@/hooks/useResume';
 import {BulkAddSkillsProps} from './types';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Textarea} from '@/components/ui/textarea';
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
+export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   const [bulkSkills, setBulkSkills] = useState('');
   const [error, setError] = useState<string | null>(null);
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
@@ -94,16 +93,17 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
     } catch (err: any) {
       setError(err.message |'Failed to categorize skills')
     }
 <<<<<<< HEAD
-  }
+  };
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -123,7 +123,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-        <Button
+        <Button 
           onClick={handleCategorizeSkills}
 <<<<<<< HEAD
           disabled={isEnhancing |!bulkSkills.trim()}
@@ -147,8 +147,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     </div>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

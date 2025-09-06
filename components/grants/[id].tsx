@@ -7,10 +7,9 @@ import {useRouter} from 'next/router';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
-export default function GrantDetailPage() {
-
+export default function GrantDetailPage() {;
   const router = useRouter();
-  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
   const { id } = router.query as { id: string }
   const [item, setItem] = useState<GrantApplication | null>(null);
@@ -25,9 +24,12 @@ export default function GrantDetailPage() {
       .finally(() => setLoading(false));  }, [id]);
   const addUpdate = async () => {
 <<<<<<< HEAD
-    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
 =======
     if (!id || !updateContent.trim()) return;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }, [id]);
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }, [id]);
@@ -225,8 +227,9 @@ export default function GrantDetailPage() {
       </div>
     </EnhancedLayout>
 );
+}
 =======
     </EnhancedLayout>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
-]
+] 
 =======
  ] 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -501,7 +500,7 @@ const supportLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -563,7 +562,7 @@ const supportLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -613,7 +612,7 @@ const supportLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -641,7 +640,7 @@ const supportLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -677,8 +676,10 @@ const supportLinks = [
                         }`} 
                       />
                     </button>
+<<<<<<< HEAD
+=======
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -715,7 +716,7 @@ const supportLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">

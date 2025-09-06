@@ -1,9 +1,11 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
 
   Select
@@ -70,7 +72,7 @@ export function MobileResumeBuilder() {
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           Basics
         </Button>
@@ -83,7 +85,7 @@ export function MobileResumeBuilder() {
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           Experience
         </Button>
@@ -96,7 +98,7 @@ export function MobileResumeBuilder() {
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           Education
         </Button>
@@ -109,7 +111,7 @@ export function MobileResumeBuilder() {
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           Skills
         </Button>
@@ -124,8 +126,10 @@ export function MobileResumeBuilder() {
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
+<<<<<<< HEAD
+=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -158,10 +162,10 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
 <<<<<<< HEAD
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
             rows = {4,}
           />
         </div>
@@ -170,9 +174,6 @@ function BasicsStep() {
   )
 }
 =======
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -282,6 +283,7 @@ function BasicsStep() {;
     </Card>;
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function ExperienceStep() {
@@ -289,7 +291,8 @@ function ExperienceStep() {
   const addExperience = () => {
     const newId = (experiences.length + 1).toString()
     setExperiences([...experiences, { id: newId }])
-  }
+  },
+  
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
 <<<<<<< HEAD
@@ -299,11 +302,10 @@ function ExperienceStep() {
   }
   const removeSkill = (id: string,) => {
     setSkills(skills.filter(skill => skill.id !== id))
-  }
-}
-  )
-}
-
+  };
+};
+  );
+};
 =======
   },
   
@@ -653,4 +655,4 @@ function SkillsStep() {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

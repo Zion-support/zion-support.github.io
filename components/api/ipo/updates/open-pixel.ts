@@ -4,11 +4,8 @@ import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const id = String(req.query.id |"");
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id);
@@ -18,8 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
   const pixel = Buffer.from(
-    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-    "base64"
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    "base64",
   );
   res.setHeader("Content-Type", "image/gif");
   res.setHeader(

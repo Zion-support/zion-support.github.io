@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
+=======
 
 import React from "react",
 <<<<<<< HEAD
@@ -6,7 +11,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 =======
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterpriseHero() {
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
@@ -57,11 +62,12 @@ export function EnterpriseHero() {
           </div>
         </div>
       </div>
-    </section>
 <<<<<<< HEAD
+    </section>;
   );
 }
 =======
+    </section>
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -115,4 +121,4 @@ export function EnterpriseHero() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

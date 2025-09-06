@@ -9,12 +9,15 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+<<<<<<< HEAD
+FormMessage,;
+=======
+  FormMessage,
+>>>>>>> main
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -27,7 +30,7 @@ interface ReplyFormValues {
   content: string;
 }
 
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({
     defaultValues: {
@@ -41,7 +44,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     } finally {
       setIsSubmitting(false);
     }
-  }
+  };
 =======
 
 import { useState } from "react",
@@ -97,6 +100,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       setIsSubmitting(false);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -119,7 +123,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                       }
 =======
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -146,5 +150,8 @@ export default ReplyForm;
   )
 },
 
+<<<<<<< HEAD
+export default ReplyForm;
+=======
 export default ReplyForm,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

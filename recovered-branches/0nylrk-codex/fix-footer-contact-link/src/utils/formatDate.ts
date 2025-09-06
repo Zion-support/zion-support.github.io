@@ -6,8 +6,7 @@
  * @param format Optional format specification
  * @returns Formatted date string
  */
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
+export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -86,14 +85,15 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday';
       } else {;
         return dateObj.toLocaleDateString();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     default: return dateObj.toLocaleDateString()
   }
 <<<<<<< HEAD
-}
+};
 =======
 },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
@@ -101,15 +101,24 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
  * @param date Date to format
  * @returns Time ago string (e.g., "2 hours ago")
  */
-export const timeAgo = (date: Date | string | number): string => {
 <<<<<<< HEAD
+export const timeAgo = (date: Date | string | number): string => {;
   const dateObj = new Date(date);
   const now = new Date();
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
-  let interval = Math.floor(seconds / 31536000)
+=======
+export const timeAgo = (date: Date | string | number): string => {
+  const dateObj = new Date(date),
+  const now = new Date(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
+  
+  let interval = Math.floor(seconds / 31536000),
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
+<<<<<<< HEAD
+  
   interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`
@@ -127,18 +136,7 @@ export const timeAgo = (date: Date | string | number): string => {
     return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
   }
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
-}
-
 =======
-  const dateObj = new Date(date),
-  const now = new Date(),
-  
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
-  
-  let interval = Math.floor(seconds / 31536000),
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
 ;
   interval = Math.floor(seconds / 2592000),;
   if (interval >= 1) {;
@@ -161,5 +159,6 @@ export const timeAgo = (date: Date | string | number): string => {
   }
 ;
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

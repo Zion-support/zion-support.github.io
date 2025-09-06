@@ -1,15 +1,15 @@
 
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
 <<<<<<< HEAD
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 interface EquipmentSpecification {
 
   name: string
@@ -36,18 +36,15 @@ interface EquipmentDetails {
 
   warranty?: string;
   returnPolicy?: string
-}
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
 =======
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface EquipmentSpecification {
@@ -86,6 +83,7 @@ interface EquipmentDetails {;
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 // Sample data - in a real app this would come from an API
@@ -226,11 +224,19 @@ export default function EquipmentDetail() {
 =======
 },
 
+<<<<<<< HEAD
+export default function EquipmentDetail() {;
+  const { equipmentId } = useParams() as { equipmentId?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+=======
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [quantity, setQuantity] = useState(1),
   const [isAdding, setIsAdding] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
@@ -495,7 +501,7 @@ export default function EquipmentDetail() {;
                           className="w-full h-full object-cover";
                         />;
                       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </div>
                 )}
@@ -558,7 +564,7 @@ export default function EquipmentDetail() {;
                 </Tabs>;
               </div>;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -579,7 +585,7 @@ export default function EquipmentDetail() {;
 <<<<<<< HEAD
 =======
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
@@ -675,7 +681,7 @@ export default function EquipmentDetail() {;
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-                  <Button
+                  <Button 
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

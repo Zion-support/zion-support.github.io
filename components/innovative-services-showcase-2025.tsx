@@ -7,37 +7,36 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-  Search
-  Filter
-  Star
-  CheckCircle
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  Users
-  Award
-  Zap
-  Globe
-  Cpu
-  Database
-  Lock
-  Cloud
-  Stethoscope
-  GraduationCap
-  Leaf
-  Truck;
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Award,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  Stethoscope,
+  GraduationCap,
+  Leaf,;
+  Truck,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
-  Search, Filter, Star, CheckCircle, ArrowRight
-
+  Search, Filter, Star, CheckCircle, ArrowRight, ;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -172,7 +171,8 @@ const serviceCategories = [
   },];    badge: 'Popular'
   }
 ];
-export default function InnovativeServicesShowcase2025() {
+
+export default function InnovativeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -294,7 +294,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -304,7 +304,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -392,7 +392,7 @@ export default function InnovativeServicesShowcase2025() {
 
               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Category Filter */}
               <div>
                 <select
@@ -413,7 +413,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Sort By */}
               <div>
                 <select
@@ -451,7 +451,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 {/* Service Header */}
                 <div className='mb-6'>
@@ -496,7 +496,7 @@ export default function InnovativeServicesShowcase2025() {
 
                     {service.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                 </div>
                 {/* Features */}
@@ -540,7 +540,7 @@ export default function InnovativeServicesShowcase2025() {
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -591,7 +591,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -620,7 +620,7 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -629,7 +629,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -638,7 +638,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -661,7 +661,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -670,7 +670,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -692,7 +692,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -714,7 +714,7 @@ export default function InnovativeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -732,4 +732,9 @@ export default function InnovativeServicesShowcase2025() {
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 }
+;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
-import {cn} from '@/lib/utils';
 =======
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 
@@ -41,8 +41,9 @@ const Separator = React.forwardRef<
 );
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 <<<<<<< HEAD
-export { Separator }
+
+export { Separator };
 =======
 export { Separator }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React, { useState } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -44,6 +43,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === 'talents' ? (
                     <Avatar className='h-12 w-12'>        <Card key={item.id} className="overflow-hidden">
 =======
+
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -85,7 +85,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -115,7 +115,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -136,14 +136,34 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
+                  )}
+                  <div>
+                    <h3 className="font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                  </div>
+                </div>
+                <button 
+                  className="h-8 w-8 flex items-center justify-center"
+                  onClick={() => toggleSaved(item.id)}
+                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </button>
+              </div>
 =======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
+<<<<<<< HEAD
+=======
                   >
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -237,15 +257,20 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {badge}
                   </Badge>;
                 ))}
               </div>
+<<<<<<< HEAD
+              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
+              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
+=======
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -274,6 +299,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 )}
 <<<<<<< HEAD
                 {item.match && (
+<<<<<<< HEAD
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -296,7 +322,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 =======
                 
                 {item.match && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -316,7 +343,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
               >
@@ -325,14 +352,19 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
             </div>
           </CardContent>
         </Card>
-      ))}
 <<<<<<< HEAD
-    </div>
-  )
-}
+      ))};
 =======
+      ))}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
+};
 }
+<<<<<<< HEAD
+}
+}
+}
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -10,24 +10,24 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  GitBranch
-  Zap
-  Shield
-  BarChart3
-  Check
-  Star
-  GitPullRequest
-  Cpu;
+  GitBranch,
+  Zap,
+  Shield,
+  BarChart3,
+  Check,
+  Star,
+  GitPullRequest,;
+  Cpu,;
 } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
-    {
 <<<<<<< HEAD
+    {;
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
     {
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
       description: 'Automated build, test, and deployment workflows';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
@@ -73,11 +73,15 @@ export default function DevOpsAutomationPage() {
     },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
 =======
+    {
       icon: <GitBranch className='w-6 h-6' />,
 
 export default function DevOpsAutomationPage() {
   const features = [
     {
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  ];
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
@@ -396,7 +400,7 @@ export default function DevOpsAutomationPage() {
 
                 </Card>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -404,7 +408,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -413,7 +417,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -458,7 +462,7 @@ export default function DevOpsAutomationPage() {
 
                 </Card>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -466,7 +470,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -475,7 +479,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -537,7 +541,7 @@ export default function DevOpsAutomationPage() {
 
                           {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </li>
                       ))}
                     </ul>
@@ -550,14 +554,14 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
                       className={`w-full ${
-                        plan.popular
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 =======
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       }`}
                     >
                       {plan.cta}
@@ -571,7 +575,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -581,7 +585,7 @@ export default function DevOpsAutomationPage() {
 =======
 
                 How We Compare to the Competition
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -670,7 +674,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -679,7 +683,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -727,7 +731,7 @@ export default function DevOpsAutomationPage() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Card>
               ))}
             </div>
@@ -736,7 +740,7 @@ export default function DevOpsAutomationPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -745,7 +749,7 @@ export default function DevOpsAutomationPage() {
 =======
 
               Ready to Automate Your DevOps?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
@@ -787,6 +791,7 @@ export default function DevOpsAutomationPage() {
     </>
   );
 }
+;
 =======
               <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

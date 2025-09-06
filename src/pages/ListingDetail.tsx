@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
@@ -16,16 +15,23 @@ import { toast } from '@/hooks/use-toast';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
 } from '@/components/ui/dialog';
 
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const router = useRouter();
+  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const { user } = useAuth();
+  const { formatPrice } = useCurrency();
+=======
 
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
@@ -64,6 +70,7 @@ export default function ListingDetail() {
   const [isChatOpen, setIsChatOpen] = useState(false),
   const { user } = useAuth(),
   const { formatPrice } = useCurrency(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
@@ -200,7 +207,7 @@ export default function ListingDetail() {;
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -214,14 +221,14 @@ export default function ListingDetail() {;
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {listing.images.map((image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
 <<<<<<< HEAD
-                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
                           index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
@@ -251,7 +258,7 @@ export default function ListingDetail() {;
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -273,7 +280,7 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -321,7 +328,7 @@ export default function ListingDetail() {;
                       </div>
                       <div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -397,7 +404,7 @@ export default function ListingDetail() {;
                     {listing.category}
                   </Badge>
                   {listing.featured && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -416,13 +423,13 @@ export default function ListingDetail() {;
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
 <<<<<<< HEAD
-                            'h-5 w-5'
+                            'h-5 w-5',
                             i < Math.floor(listing.rating!)
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
@@ -458,7 +465,7 @@ export default function ListingDetail() {;
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </span>
                   </div>
                 )}
@@ -492,7 +499,7 @@ export default function ListingDetail() {;
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
@@ -503,30 +510,15 @@ export default function ListingDetail() {;
                 <div className='space-y-3 mb-8'>
 =======
                 </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
 <<<<<<< HEAD
-=======
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
-                        toast({
-                          title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
-                        })
-                <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (;
-                    <PaymentButton;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       amount = {listing.price,}
@@ -540,7 +532,6 @@ export default function ListingDetail() {;
                           description: 'Redirecting to secure checkout...'
                         });
                       }}
-<<<<<<< HEAD
                     />
                   ) : (
                     <Button
@@ -560,6 +551,27 @@ export default function ListingDetail() {;
                   </Button>
                 </div>
 =======
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout..."
+                        })
+                <div className="space-y-3 mb-8">;
+                  {listing.price !== null ? (;
+                    <PaymentButton;
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+                      buttonText="Buy Now";
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
+                      onPaymentInitiated={() => {;
+                        toast({;
+                          title: "Payment Processing";
+                          description: "Redirecting to secure checkout...";
+                        });
+                      }}
                     />;
                   ) : (;
                     <Button;
@@ -582,7 +594,7 @@ export default function ListingDetail() {;
                   </Button>
                 </div>
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -602,12 +614,11 @@ export default function ListingDetail() {;
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-
 =======
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
@@ -649,7 +660,7 @@ export default function ListingDetail() {;
                       </div>
                     )}
                     <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
@@ -658,7 +669,7 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
 =======
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
@@ -754,7 +765,7 @@ export default function ListingDetail() {;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
@@ -770,7 +781,7 @@ export default function ListingDetail() {;
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             profileType="service"
           />
         </DialogContent>
@@ -794,4 +805,4 @@ export default function ListingDetail() {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

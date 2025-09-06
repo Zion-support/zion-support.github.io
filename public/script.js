@@ -1,7 +1,5 @@
 <<<<<<< HEAD
-
-//Zion Tech Group Website JavaScript
-})
+//Zion Tech Group Website JavaScript 
 
 // Search function
 function performSearch(query) {
@@ -11,16 +9,9 @@ function performSearch(query) {
     const searchResults = document.querySelector('.search-results')
     if (searchResults) {
         const results = [
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
-
-            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item =>
-            item.title.toLowerCase().includes(query)
-
-        )
-
+            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
+            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
+            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
 =======
 // Zion Tech Group Website JavaScript;
 document.addEventListener('DOMContentLoaded', function() {;
@@ -306,6 +297,7 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
@@ -323,6 +315,7 @@ function performSearch(query) {;
         } else {
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>'
             searchResults.style.display = 'block'
+<<<<<<< HEAD
         }
     }
 }
@@ -366,59 +359,7 @@ function initializeTooltips() {
                 this.tooltip.remove()
 
                 this.tooltip = null
-            }
-        })
-    })
-}
-// Modal initialization
-function initializeModals() {
-
-    const modalTriggers = document.querySelectorAll('[data-modal]')
-    const modals = document.querySelectorAll('.modal')
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault()
-            const modalId = this.dataset.modal
-            const modal = document.getElementById(modalId)
-            if (modal) {
-                modal.classList.add('active')
-
-                document.body.style.overflow = 'hidden'
-            }
-        })
-    })
-    // Close modal on overlay click
-    modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === this) {
-
-                this.classList.remove('active')
-
-                document.body.style.overflow = ''
-            }
-        })
-        // Close modal on close button click
-
-        const closeBtn = modal.querySelector('.modal-close')
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active')
-
-                document.body.style.overflow = ''
-            })
-        }
-    })
-    // Close modal on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.classList.contains('active')) {
 =======
-            ).join(''),
-            searchResults.style.display = 'block'
-        } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-            searchResults.style.display = 'block'
         ].filter(item =>;
             item.title.toLowerCase().includes(query);
         ),;
@@ -470,10 +411,58 @@ function initializeTooltips() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
                 this.tooltip = null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
         });
     });
 }
+<<<<<<< HEAD
+
+// Modal initialization
+function initializeModals() {
+    const modalTriggers = document.querySelectorAll('[data-modal]'),
+    const modals = document.querySelectorAll('.modal'),
+    
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault(),
+            const modalId = this.dataset.modal,
+            const modal = document.getElementById(modalId),
+            
+            if (modal) {
+                modal.classList.add('active'),
+                document.body.style.overflow = 'hidden'
+            }
+        })
+    }),
+    
+    // Close modal on overlay click
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active'),
+                document.body.style.overflow = ''
+            }
+        }),
+        
+        // Close modal on close button click
+        const closeBtn = modal.querySelector('.modal-close'),
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active'),
+                document.body.style.overflow = ''
+            })
+        }
+    }),
+    
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    modal.classList.remove('active'),
+                    document.body.style.overflow = ''
+=======
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -514,16 +503,7 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-                }
-            });
-        }
-    });
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-                    modal.classList.remove('active')
-
-                    document.body.style.overflow = ''
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }
             })
         }
@@ -559,6 +539,7 @@ function trackEvent(eventName, eventData = {}) {
     console.log('Event tracked:', eventName, eventData)
 
     // Implement your analytics tracking here
+<<<<<<< HEAD
 }
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
@@ -638,12 +619,14 @@ document.addEventListener('click', function(e) {
     }
 })
 // Log performance when page is fully loaded
+window.addEventListener('load', logPerformance),
 
-window.addEventListener('load', logPerformance)
-
+}
+}
+}
+}
+}
 =======
-    // // // console.log('Event tracked:', eventName, eventData),
-    // Implement your analytics tracking here
 ;
 // Performance monitoring;
 function logPerformance() {;
@@ -682,4 +665,4 @@ document.addEventListener('click', function(e) {;
 }),;
 // Log performance when page is fully loaded;
 window.addEventListener('load', logPerformance),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

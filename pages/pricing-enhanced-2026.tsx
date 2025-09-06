@@ -1,7 +1,48 @@
 <<<<<<< HEAD
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import Card from '../components/ui/Card',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',;
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+export default function PricingEnhanced2026Page() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  const popularServices = getPopularServices(),
+  
+  // Combine all services for comprehensive pricing
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...innovative2026AIServicesV3,
+    ...emergingTech2026ServicesV3,
+    ...enterpriseIT2026ServicesV3
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -186,6 +227,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Enhanced pricing tiers with more realistic and comprehensive offerings
@@ -369,7 +411,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -383,7 +425,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
@@ -419,13 +461,19 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+              Achieve remarkable ROI with transparent, competitive pricing.
+            </p>
+            {/* Billing Cycle Toggle */}
+=======
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
@@ -437,7 +485,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -476,7 +524,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -504,7 +552,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -536,7 +584,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -559,13 +607,14 @@ export default function PricingEnhanced2026Page(req, res) {
                       </div>
 <<<<<<< HEAD
                     )}
+                    
 =======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -591,7 +640,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -692,7 +741,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -764,7 +813,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </ul>
                       <Button
                         variant="primary"
@@ -778,7 +827,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -836,7 +885,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -906,7 +955,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </ul>
                       <div className="flex space-x-2">
                         <Button
@@ -921,7 +970,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -999,7 +1048,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1020,7 +1069,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1036,7 +1085,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1051,9 +1100,14 @@ export default function PricingEnhanced2026Page(req, res) {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
+  );
+};
+=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

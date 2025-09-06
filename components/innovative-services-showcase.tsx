@@ -7,23 +7,22 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Shield
-  DollarSign
-  Users
-  Clock
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink;} from 'lucide-react';import {
-  Star, TrendingUp, Zap, Brain, Rocket, Shield
-
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  DollarSign,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -34,11 +33,12 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
 
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -160,6 +160,7 @@ export default function InnovativeServicesShowcase() {
       color: 'from-purple-600 to-indigo-700'
     },  ];
 <<<<<<< HEAD
+
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
@@ -199,7 +200,7 @@ export default function InnovativeServicesShowcase() {
     }
   ];
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -295,7 +296,7 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -330,7 +331,7 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -413,7 +414,7 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -428,7 +429,7 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -447,7 +448,7 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -533,7 +534,7 @@ export default function InnovativeServicesShowcase() {
 =======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -570,7 +571,7 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -648,7 +649,7 @@ export default function InnovativeServicesShowcase() {
 =======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -679,7 +680,7 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -751,7 +752,8 @@ export default function InnovativeServicesShowcase() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

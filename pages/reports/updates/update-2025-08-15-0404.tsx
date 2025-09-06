@@ -1,11 +1,9 @@
 import Head from 'next/head';
 <<<<<<< HEAD
-
-import React from 'react'
-
+import React from 'react',
 =======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Update202508150404() {
   return (
     <>
@@ -98,7 +96,7 @@ export default function Update202508150404() {
             </div>
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Automation Metrics
               </h2>
@@ -123,7 +121,8 @@ export default function Update202508150404() {
     </>
 <<<<<<< HEAD
   )
-}
+};
+;
 =======
   );
   } catch (error) {
@@ -131,4 +130,4 @@ export default function Update202508150404() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

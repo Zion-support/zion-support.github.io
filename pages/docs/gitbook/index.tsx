@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
   const items = fs.readdirSync(dir)
   return items.map((name) => {
@@ -11,16 +10,6 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
-}
-export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook')
-  const sections = fs.existsSync(base)
-    ? list(base, base).map((entry) => ({
-        title: entry.name
-        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
-    : []
-
-  return { props: { sections }, revalidate: 600 }
 =======
 import fs from 'fs';
 import path from 'path';
@@ -35,6 +24,7 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
   });
   } catch (error) {
@@ -77,6 +67,15 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 <<<<<<< HEAD
                     {it.rel}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 =======
                     {it.rel  } catch (error) {
     console.error("Error:", error);
@@ -106,3 +105,4 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

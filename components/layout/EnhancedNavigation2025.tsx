@@ -58,7 +58,7 @@
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </>)
 };export default EnhancedNavigation2025;
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -132,7 +132,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Submenu */}
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
@@ -195,7 +195,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
@@ -214,7 +214,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -228,7 +228,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -250,7 +250,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -300,7 +300,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
               <div className="p-6">
@@ -332,7 +332,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
@@ -363,7 +363,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">
                   <Link
@@ -406,7 +406,7 @@ export default function EnhancedNavigation2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>

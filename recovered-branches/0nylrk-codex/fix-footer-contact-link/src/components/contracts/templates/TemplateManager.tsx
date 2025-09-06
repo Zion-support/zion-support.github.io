@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {useContractTemplates} from "@/hooks/useContractTemplates";
+import {ContractTemplate} from "@/types/contracts";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {TemplateList} from "./TemplateList";
+import {TemplateSaveForm} from "./TemplateSaveForm";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+import {useToast} from "@/hooks/use-toast";
+=======
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
@@ -12,7 +23,7 @@ import { useToast } from "@/hooks/use-toast";
 =======
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 import { useToast } from "@/hooks/use-toast",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -21,10 +32,18 @@ interface TemplateManagerProps {
 
   currentValues?: ContractFormValues
 }
+
+<<<<<<< HEAD
+export function TemplateManager({;
+  isOpen;
+  onClose;
+  onSelectTemplate;
+=======
 export function TemplateManager({
   isOpen,
   onClose,
   onSelectTemplate,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
@@ -83,6 +102,8 @@ export function TemplateManager({
               <Button 
                 variant="outline" 
                 onClick={() => setMode("save")}
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;
 import { ContractTemplate } from "@/types/contracts",;
@@ -137,12 +158,13 @@ export function TemplateManager({;
                 variant="outline";
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 onClick={() => setMode("save")}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
-            <TemplateList
+            <TemplateList 
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
@@ -162,6 +184,8 @@ export function TemplateManager({;
 =======
               setMode("list"),
               setSelectedTemplate(null)
+<<<<<<< HEAD
+=======
               onEdit={(template) => {;
                 setSelectedTemplate(template);
                 setMode("save");
@@ -173,7 +197,7 @@ export function TemplateManager({;
             onCancel={() => {;
               setMode("list");
               setSelectedTemplate(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}

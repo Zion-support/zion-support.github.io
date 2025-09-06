@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -39,6 +38,7 @@ interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
+=======
 
 const formSchema = z.object({
   date: z
@@ -88,6 +88,7 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -97,6 +98,18 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
+<<<<<<< HEAD
+  title: z.string().min(3, 'Please provide a brief title for the interview.'),
+  notes: z.string().optional(),
+})
+export function InterviewRequestForm({
+  talent,
+  onClose,
+  userDetails,
+}: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+=======
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
@@ -104,17 +117,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+      title: `Interview with ${talent.full_name}`,
 <<<<<<< HEAD
-      title: `Interview with ${talent.full_name}`
-      duration: '30'
-      platform: 'zoom'
-      notes: ''
-      meetingLink: ''
-    }
+      duration: '30',
+      platform: 'zoom',
+      notes: '',
+      meetingLink: '',
+    },
   })
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
@@ -123,7 +136,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         description: 'Please log in to schedule an interview'
         variant: 'destructive'
       })
-      return
+      return;
     }
     setIsSubmitting(true)
     try {
@@ -132,32 +145,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const scheduledDate = new Date(dateTimeString)
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration)
-      await requestInterview({
-        talent_id: talent.id
-        client_id: userDetails.id
-        scheduled_date: scheduledDate.toISOString()
-        duration_minutes: durationMinutes
-        notes: values.notes
-        meeting_platform: values.platform as any
-        meeting_link: values.meetingLink
-        interview_type: 'video'
-        title: values.title
-      })
-      toast({
-        title: 'Interview requested'
-        description: `Your interview request with ${talent.full_name} has been sent.`
-      })
-      onClose()
-    } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error })
-      toast({
-        title: 'Failed to schedule interview'
-        description:
-          'An error occurred while scheduling the interview. Please try again.'
-        variant: 'destructive'
-      })
 =======
-      title: `Interview with ${talent.full_name}`,
       duration: "30",
       platform: "zoom",
       notes: "",
@@ -182,6 +170,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       await requestInterview({
         talent_id: talent.id,
         client_id: userDetails.id,
@@ -190,6 +179,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
+<<<<<<< HEAD
+        interview_type: 'video',
+        title: values.title,
+      })
+      toast({
+        title: 'Interview requested',
+        description: `Your interview request with ${talent.full_name} has been sent.`,
+      })
+      onClose()
+    } catch (error) {
+      logErrorToProduction('Failed to schedule interview:', { data: error })
+      toast({
+        title: 'Failed to schedule interview',
+        description:
+          'An error occurred while scheduling the interview. Please try again.',
+        variant: 'destructive',
+      })
+=======
         interview_type: "video",
         title: values.title
       }),
@@ -204,36 +211,36 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } finally {
       setIsSubmitting(false)
     }
   }
   const timeSlots = [
 <<<<<<< HEAD
-    '09:00'
-    '09:30'
-    '10:00'
-    '10:30'
-    '11:00'
-    '11:30'
-    '12:00'
-    '12:30'
-    '13:00'
-    '13:30'
-    '14:00'
-    '14:30'
-    '15:00'
-    '15:30'
-    '16:00'
-    '16:30'
-    '17:00'
-    '17:30'
-    '18:00'
-    '18:30'
-    '19:00'
-    '19:30'
-    '20:00'
+    '09:00',
+    '09:30',
+    '10:00',
+    '10:30',
+    '11:00',
+    '11:30',
+    '12:00',
+    '12:30',
+    '13:00',
+    '13:30',
+    '14:00',
+    '14:30',
+    '15:00',
+    '15:30',
+    '16:00',
+    '16:30',
+    '17:00',
+    '17:30',
+    '18:00',
+    '18:30',
+    '19:00',
+    '19:30',
+    '20:00',
   ]
 =======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
@@ -242,7 +249,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
@@ -250,7 +257,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
 <<<<<<< HEAD
-              src={talent.profile_picture_url |'/placeholder.svg'}
+              src={talent.profile_picture_url || '/placeholder.svg'}
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
@@ -260,7 +267,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               className="h-full w-full object-cover"
               loading="lazy"
             />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -280,7 +287,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder="Brief title for the interview" {...field} />
@@ -293,6 +300,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
+<<<<<<< HEAD
             name='date'
             render={({
               field
@@ -301,15 +309,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             }) => (
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
 =======
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
             name="date"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -320,7 +324,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                           'w-full pl-3 text-left font-normal'
                           !field.value && 'text-muted-foreground'
                         )}                      >
-
 =======
                         variant="outline"
                         className={cn(
@@ -328,7 +331,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                           !field.value && "text-muted-foreground"
                         )}
                       >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {field.value ? (
                           format(field.value, "PPP")
                         ) : (
@@ -355,7 +358,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     />
                   </PopoverContent>
                 </Popover>
@@ -544,7 +547,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -559,7 +562,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {time}
                       </SelectItem>
                     ))}
@@ -591,7 +594,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <FormLabel>Duration</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -629,7 +632,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <FormLabel>Platform</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -671,7 +674,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -685,6 +688,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
         )}
 <<<<<<< HEAD
+
         <FormField
           control={form.control}
           name='notes'
@@ -710,7 +714,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {...field}
                 />
               </FormControl>
@@ -741,10 +745,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   logErrorToProduction ('Failed to schedule interview:', {
   data: error
 })
-toast ({
-}finally {
-  setIsSubmitting (false)
-}"
+toast ({;
+}finally {;
+  setIsSubmitting (false) ;
+}";
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
@@ -784,4 +788,4 @@ toast ({
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -30,7 +30,7 @@ export default function QuantumCybersecurityPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
@@ -39,8 +39,12 @@ export default function QuantumCybersecurityPlatform() {
       </div>
     </>
   )
+<<<<<<< HEAD
+};
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

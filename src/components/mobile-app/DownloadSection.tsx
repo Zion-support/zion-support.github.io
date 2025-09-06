@@ -1,15 +1,15 @@
-
 <<<<<<< HEAD
 }
 import React from "react"
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
 import { logInfo } from '@/utils/productionLogger'
 =======
+
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",
 import { logInfo } from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -25,15 +25,9 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
 <<<<<<< HEAD
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
-                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
-              />
 =======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -53,7 +47,7 @@ export const DownloadSection: React.FC = () => {
 =======
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -64,12 +58,12 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
 <<<<<<< HEAD
-}
-"
-
+  );
+};
+";
 =======
+  )
 },
 import React from "react",;
 import { QrCodeIcon } from 'lucide-react';
@@ -114,4 +108,4 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

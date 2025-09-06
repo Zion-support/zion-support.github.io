@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
-export interface PartnerProfile {
+
+export interface PartnerProfile {;
   id: string;
   user_id: string;
   name: string;
@@ -25,7 +26,8 @@ export interface PartnerProfile {
 
   commission_rate?: number
 }
-export interface PartnerSettings {
+
+export interface PartnerSettings {;
   id: string;
   commission_rate: number;
 
@@ -33,7 +35,8 @@ export interface PartnerSettings {
 
   is_payouts_enabled: boolean
 }
-export interface PartnerReferralLink {
+
+export interface PartnerReferralLink {;
   id: string;
   name: string;
   url: string;
@@ -45,7 +48,8 @@ export interface PartnerReferralLink {
 
   created_at: string
 }
-export interface PartnerPayout {
+
+export interface PartnerPayout {;
   id: string;
   partner_id: string;
   amount: number;
@@ -108,4 +112,4 @@ export interface PartnerPayout {;
   completed_at?: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
@@ -6,7 +12,7 @@ import { toast } from "@/hooks/use-toast";
 =======
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ResourceItem {
 
   id: string
@@ -31,8 +37,13 @@ export function PartnerResources() {
     }
 =======
       id: 'logo-pack',
+<<<<<<< HEAD
+      title: 'Zion AI Logo Pack',;
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+=======
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
@@ -237,7 +248,7 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -296,6 +307,7 @@ export function PartnerResources() {;
     </div>
   )
 <<<<<<< HEAD
+};
 =======
           </div>;
         </CardContent>;
@@ -349,5 +361,5 @@ export function PartnerResources() {;
       </Card>;
     </div>;
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

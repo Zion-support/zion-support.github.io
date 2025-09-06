@@ -1,29 +1,17 @@
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video  } from 'lucide-react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import {MessageSquare, Video} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components/messaging';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {toast} from 'sonner';
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
-  const {
+  const { ;
     conversations;
-
-    activeConversation
-    setActiveConversation
-
-    markAsRead;
-    fetchConversations;
-    isLoading
-  } = useMessaging();
-
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
 =======
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
@@ -37,6 +25,7 @@ import { useNavigate } from 'react-router-dom',
 export default function MessagingInbox() {
   const { 
     conversations,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     activeConversation, 
     setActiveConversation, 
     markAsRead,
@@ -205,7 +194,7 @@ export default function MessagingInbox() {;
                 </div>;
               ) : (;
                 <ConversationsList;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   conversations={conversations}
                   activeConversation={activeConversation}
                   setActiveConversation={setActiveConversation}

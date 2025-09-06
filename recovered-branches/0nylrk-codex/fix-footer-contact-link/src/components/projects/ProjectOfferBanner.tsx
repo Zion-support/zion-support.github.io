@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Bell, Calendar, X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {useProjects} from "@/hooks/useProjects";
+import {Project} from "@/types/projects";
+export function ProjectOfferBanner() {;
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+=======
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
@@ -21,6 +35,7 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -44,7 +59,6 @@ export function ProjectOfferBanner() {
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
-  }
 =======
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -77,6 +91,7 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

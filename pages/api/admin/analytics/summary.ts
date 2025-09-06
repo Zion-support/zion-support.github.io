@@ -1,7 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { ensureAdminFromApi } from '../../../../utils/auth';
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+type EventRow = {
+  name: string,
+  page?: string,
+  userType?: string,
+  properties?: Record<string, any>,
+  at: string
+},
 
 type EventRow = {
 <<<<<<< HEAD
@@ -30,6 +38,13 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (end && t > end) continue
         rows.push(obj)
       } catch {}
+    }
+    return rows
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { ensureAdminFromApi } from '../../../../utils/auth';
 
 =======
   name: string;
@@ -64,6 +79,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return rows;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   } catch {
     return [];
   }
@@ -98,14 +114,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value)
-  const days = Object.keys(byDay).sort()
-  const line = days.map((d) => ({ date: d, value: byDay[d] }))
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
-  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
-}
+    .sort((a, b) => b.value - a.value),
 
+  const days = Object.keys(byDay).sort(),
+  const line = days.map((d) => ({ date: d, value: byDay[d] })),
+
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
+;
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+};
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -125,4 +143,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

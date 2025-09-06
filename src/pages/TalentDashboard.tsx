@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
@@ -32,6 +31,16 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
 import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
+function TalentDashboardContent() {
+  const { user } = useAuth()
+  const [activeTab, setActiveTab] = useState('job-matches')
+  const onboardingStatus = useOnboardingStatus()
+  const showAdvanced = null;
+    onboardingStatus.profileCompleted &&
+    onboardingStatus.skillsAdded &&
+    onboardingStatus.availabilitySet &&
+    onboardingStatus.matchReceived
+=======
 
 function TalentDashboardContent() {
   const { user } = useAuth();
@@ -66,7 +75,7 @@ function TalentDashboardContent() {
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <SEO 
@@ -100,7 +109,7 @@ function TalentDashboardContent() {
 =======
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div>
             <Card className="mb-8">
               <CardHeader className="pb-2">
@@ -166,7 +175,7 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       Messages
                     </Link>
                   </Button>
@@ -176,7 +185,7 @@ function TalentDashboardContent() {
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
@@ -307,7 +316,7 @@ function TalentDashboardContent() {;
             </div>
             
             <Card className="mt-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
@@ -346,7 +355,7 @@ function TalentDashboardContent() {;
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
@@ -364,7 +373,7 @@ function TalentDashboardContent() {;
               </TabsContent>
               
               <TabsContent value="applications" className="mt-0">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
                   <Button variant="outline" asChild>
@@ -385,7 +394,7 @@ function TalentDashboardContent() {;
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       You haven't saved any jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
@@ -404,10 +413,10 @@ function TalentDashboardContent() {;
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
+      <TalentDashboardContent />;
+    </ProtectedRoute>;
+  );
+};
 =======
 }
 ;
@@ -419,4 +428,4 @@ export default function TalentDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

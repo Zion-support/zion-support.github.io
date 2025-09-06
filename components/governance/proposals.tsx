@@ -5,7 +5,7 @@ import path from 'path';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export async function getStaticProps() {
-  try {
+  try {;
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
     const raw = fs.readFileSync(p, 'utf8');
     return { props: { data: JSON.parse(raw) } }
@@ -13,9 +13,9 @@ export async function getStaticProps() {
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 export default function Proposals({
-  data
-}: {
-  data: { updatedAt: string | null; proposals: any[] }
+  data,
+}: {;
+  data: { updatedAt: string | null; proposals: any[] };
 }) {
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-4'>
@@ -74,11 +74,15 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         ))}
         {(!data.proposals |data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
-    </div>
 <<<<<<< HEAD
+    </div>;
 );
 }
+
+}
+}
 =======
+    </div>
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

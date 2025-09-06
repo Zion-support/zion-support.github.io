@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -10,11 +9,6 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-const profileSchema = z.object({
-  displayName: z.string().min(2, "Name must be at least 2 characters");
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
-type ProfileFormValues = z.infer<typeof profileSchema>;
 =======
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -31,6 +25,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -52,8 +47,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+<<<<<<< HEAD
+    switch (userType) {;
+      case "serviceProvider": return "Service Provider";
+=======
     switch (userType) {
       case "serviceProvider": return "Service Provider",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case "talent":
         return "Talent",
       case "client":
@@ -168,7 +168,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           />
           <FormField
@@ -227,7 +227,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
     </div>
   )
 <<<<<<< HEAD
-}
 =======
                   />;
                 </FormControl>;
@@ -245,6 +244,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       </Form>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

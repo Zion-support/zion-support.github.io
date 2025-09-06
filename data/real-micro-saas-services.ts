@@ -1,5 +1,5 @@
+export interface RealMicroSaasService {;
 <<<<<<< HEAD
-export interface RealMicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -1264,33 +1264,33 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       setupTime: '1 day'
     }
     features: [
-      'Provider adapters'
-      'Policy engine'
-      'PII redaction'
-      'Rate limits'
-    ]
-    benefits: ['Control spend', 'Reduce risk']
-    targetAudience: ['Platform teams', 'AI product']
-    marketPosition:
-      'Comparable to OpenRouter/EdenAI; adds governance and audit.'
-    competitors: ['OpenRouter', 'EdenAI', 'Helicone']
-    techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic']
-    realImplementation: true
-    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.'
-    roi: 'Cut model costs by 20–40%.'
-    useCases: ['Central model access', 'Safety']
-    integrations: ['OpenAI', 'Anthropic', 'Azure']
-    support: 'Priority support'
-    compliance: ['GDPR', 'SOC 2']
-    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway'
-    icon: '🛡️'
-    color: 'from-cyan-700 to-blue-800'
-    popular: true
-    launchDate: '2025-02-08'
-    customers: 42
-    rating: 4.8
-    reviews: 13
-  }
+      'Provider adapters',
+      'Policy engine',
+      'PII redaction',
+      'Rate limits',
+    ],
+    benefits: ['Control spend', 'Reduce risk'],
+    targetAudience: ['Platform teams', 'AI product'],
+    marketPosition:;
+      'Comparable to OpenRouter/EdenAI; adds governance and audit.',
+    competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
+    techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
+    realImplementation: true,
+    implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.',
+    roi: 'Cut model costs by 20–40%.',
+    useCases: ['Central model access', 'Safety'],
+    integrations: ['OpenAI', 'Anthropic', 'Azure'],
+    support: 'Priority support',
+    compliance: ['GDPR', 'SOC 2'],
+    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway',
+    icon: '🛡️',
+    color: 'from-cyan-700 to-blue-800',
+    popular: true,
+    launchDate: '2025-02-08',
+    customers: 42,
+    rating: 4.8,
+    reviews: 13,
+  },
   {
     id: 'serverless-lakehouse-starter'
     name: 'Serverless Lakehouse Starter'
@@ -1374,7 +1374,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
@@ -1409,7 +1409,7 @@ export const getServicesByCategory = (category: string) => {
   }
 ];
 // Helper functions
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
@@ -1450,39 +1450,37 @@ rating: 4.5;
 reviews: 14
 }
 export const serviceCategories = [
-  'Legal Technology'
-  'Customer Service & Support'
-  'Digital Marketing & SEO'
-  'Creative & Media'
-  'Data & Analytics'
-  'Human Resources'
-  'Sales & CRM'
-  'Market Research'
-  'Blockchain & Cryptocurrency'
-  'Cloud & DevOps'
-  'Database & Performance'
-  'Design & UI/UX'
-  'Development & DevOps'
-  'Business Intelligence'
-  'Quantum Computing'
-  'Cybersecurity'
-  'Metaverse & Virtual Reality'
-  'Web3 & DeFi'
-  'IoT & Edge Computing'
-  'Autonomous Vehicles & Robotics'
-  'Climate & Environmental'
-  'Biotechnology & Healthcare'
-  'Financial Technology'
-  'Education Technology'
-  'Enterprise IT'
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI/UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
-
 =======
-export interface RealMicroSaasService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -2331,4 +2329,4 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

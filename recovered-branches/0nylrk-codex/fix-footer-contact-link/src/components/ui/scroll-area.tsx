@@ -23,7 +23,7 @@ const ScrollArea = React.forwardRef<
 =======
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -61,9 +61,9 @@ const ScrollBar = React.forwardRef<
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 <<<<<<< HEAD
-export { ScrollArea, ScrollBar }
+export { ScrollArea, ScrollBar };
 =======
 
 export { ScrollArea, ScrollBar }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

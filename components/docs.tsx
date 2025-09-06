@@ -7,13 +7,13 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Star } from 'lucide-react';
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function DocsPage() {
 
   const contact = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
   const sections = [
@@ -115,7 +115,10 @@ export default function DocsPage() {
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
-  }
+  };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric'
@@ -188,7 +191,7 @@ export default function DocsPage() {
 
                     </li>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </ul>
               </Card>
@@ -259,9 +262,11 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+;
+}
 =======
 
               ))}
             </ul>
           </Card>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

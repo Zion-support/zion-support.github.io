@@ -1059,12 +1059,12 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       contactInfo: contact
       realImplementation: true
       implementationDetails:
-        'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
-      launchDate: '2023-10-01'
-      customers: 34
-      rating: 4.9
-      reviews: 28
-    }
+        'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
+      launchDate: '2023-10-01',
+      customers: 34,
+      rating: 4.9,
+      reviews: 28,
+    },;
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
@@ -1087,9 +1087,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     launchDate: '2023-10-01', customers: 34
     rating: 4.9
     reviews: 28
-  }
-];
-
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService {;
@@ -1841,6 +1838,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9;
     reviews: 28;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

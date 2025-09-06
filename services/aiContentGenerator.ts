@@ -1,5 +1,5 @@
+export interface ContentGenerationRequest {;
 <<<<<<< HEAD
-export interface ContentGenerationRequest {
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
@@ -9,7 +9,8 @@ export interface ContentGenerationRequest {
 
   targetAudience?: string
 }
-export interface ContentGenerationResponse {
+
+export interface ContentGenerationResponse {;
   content: string;
   wordCount: number;
   seoScore: number;
@@ -23,7 +24,8 @@ export interface ContentGenerationResponse {
     tags: string[]
   }
 }
-export interface ContentTemplate {
+
+export interface ContentTemplate {;
   id: string;
   name: string;
   description: string;
@@ -33,7 +35,8 @@ export interface ContentTemplate {
 
   price: number
 }
-export class AIContentGeneratorService {
+
+export class AIContentGeneratorService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -53,7 +56,6 @@ export class AIContentGeneratorService {
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
 =======
-export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
   tone: 'professional' | 'casual' | 'friendly' | 'formal',;
@@ -103,7 +105,7 @@ export class AIContentGeneratorService {;
         body: JSON.stringify(request)}),;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       return await response.json()
     } catch (error) {
@@ -112,6 +114,7 @@ export class AIContentGeneratorService {;
     }
   }
 <<<<<<< HEAD
+
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
       {
@@ -180,13 +183,14 @@ export class AIContentGeneratorService {;
         type: 'landing-page',;
         preview: 'Turn visitors into customers with compelling copy...',;
         price: 59;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     ]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 <<<<<<< HEAD
+
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -268,15 +272,16 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
   }
 }
 <<<<<<< HEAD
+
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
-  starter: {
+  starter: {;
     name: 'Starter';
     price: 29;
     period: '/month'
@@ -299,9 +304,6 @@ export const AI_CONTENT_PRICING = {
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
-  }
-}
-
 =======
 ;
 // Pricing tiers for the AI Content Generator;
@@ -329,6 +331,7 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

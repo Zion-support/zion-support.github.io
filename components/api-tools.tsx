@@ -41,9 +41,8 @@ import {
   ExternalLink,
   Play,
   BookOpen,
-  Github,
-  Terminal,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Github,;
+  Terminal,;} from 'lucide-react';import { ;
   Code;
   Database
   Globe
@@ -258,18 +257,18 @@ export default function ApiToolsPage() {
         'Hardware security module (HSM) support'
       ]
       pricing: {
-        free: '1,000 operations/month'
-        pro: '$119/month'
-        enterprise: 'Custom'
-      }
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
-      website: 'https://encrypt.api'
-      docs: 'https://docs.encrypt.api'
-      github: 'https://github.com/encrypt-api'
-      status: 'Live'
-      users: '4,200+'
-      responseTime: '<20ms'
-    }
+        free: '1,000 operations/month',
+        pro: '$119/month',
+        enterprise: 'Custom',
+      },
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
+      website: 'https://encrypt.api',
+      docs: 'https://docs.encrypt.api',
+      github: 'https://github.com/encrypt-api',
+      status: 'Live',
+      users: '4,200+',
+      responseTime: '<20ms',
+    },;
   ];
   const categories = [
     'All'
@@ -355,7 +354,7 @@ export default function ApiToolsPage() {
 
               <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -373,7 +372,7 @@ export default function ApiToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -385,7 +384,7 @@ export default function ApiToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -515,7 +514,7 @@ export default function ApiToolsPage() {
                         <ExternalLink className="w-4 h-4 mr-2" />
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         Visit API
                       </Button>
                       <Button
@@ -556,7 +555,7 @@ export default function ApiToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -565,7 +564,7 @@ export default function ApiToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -660,7 +659,10 @@ export default function ApiToolsPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

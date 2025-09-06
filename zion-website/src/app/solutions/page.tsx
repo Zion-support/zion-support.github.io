@@ -92,10 +92,16 @@ const implementationSteps = [
 export default function SolutionsPage() {
 =======
 
+<<<<<<< HEAD
+export default function SolutionsPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
 const Page: React.FC<PageProps> = ({ className }) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -152,7 +158,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
 className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
 =======
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -167,15 +173,12 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            Transforming Every Sector
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our AI solutions are designed to adapt and excel across diverse industries
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -214,15 +217,12 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            Our Proven Process
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            From initial assessment to ongoing optimization, we guide you through every step
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -256,14 +256,11 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            Ready to transform your business?
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Let's discuss how our AI solutions can accelerate your growth and give you a
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

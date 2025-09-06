@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -12,12 +11,13 @@ import {
   Form
   FormControl
   FormField
-  FormItem
-  FormLabel
+  FormItem;
+  FormLabel;
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
 =======
+
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -38,7 +38,7 @@ import {
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Form validation schema
 const updatePasswordSchema = z
   .object({
@@ -47,22 +47,20 @@ const updatePasswordSchema = z
       .min(8, "Password must be at least 8 characters")
 <<<<<<< HEAD
       .max(64, "Password must be less than 64 characters")
-    confirmPassword: z.string()})
-  .refine((data,) => data.password === data.confirmPassword, {
-    message: "Passwords do not match"
-    path: ["confirmPassword"]})
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
-}
-
-  )
-}
 =======
       .max(64, "Password must be less than 64 characters"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
+<<<<<<< HEAD
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+}
+  );
+};
+=======
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {
@@ -417,4 +415,4 @@ export default function UpdatePassword() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

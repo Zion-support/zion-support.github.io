@@ -11,7 +11,10 @@ import SEO from '../components/SEO',
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 ),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -21,17 +24,17 @@ export default function ServicesAdvertisingPage() {
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
+  ],
 <<<<<<< HEAD
-  ]
+
 				{/* New: Core micro SaaS and AI additions */}
 =======
-  ],
 				{/* New: Core micro SaaS and AI additions */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
@@ -42,7 +45,7 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 =======
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
   const pricingRefs = [
@@ -297,7 +300,10 @@ export default function ServicesAdvertisingPage(req, res) {
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
@@ -308,7 +314,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 =======
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -330,14 +336,11 @@ export default function ServicesAdvertisingPage(req, res) {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
 <<<<<<< HEAD
-                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] }
-                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] }
-                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] }
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] }
-                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
+              {[ 
 =======
+              {[
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
@@ -372,7 +375,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </section>
           <section>
@@ -402,7 +405,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
 =======
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -415,7 +418,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 =======
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -428,7 +431,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 =======
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -441,7 +444,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 =======
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -565,13 +568,17 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
+              {[ 
+=======
               {[
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
 <<<<<<< HEAD
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
@@ -690,7 +697,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -717,7 +724,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </section>
           <section>
@@ -746,7 +753,7 @@ export default function ServicesAdvertisingPage(req, res) {
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </section>
           <section>
@@ -767,12 +774,15 @@ export default function ServicesAdvertisingPage(req, res) {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
+<<<<<<< HEAD
+                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
+=======
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -787,7 +797,7 @@ export default function ServicesAdvertisingPage(req, res) {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+};
 =======
                 </Link>
               ))  } catch (error) {
@@ -806,5 +816,5 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

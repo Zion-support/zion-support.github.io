@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+=======
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -32,6 +42,7 @@ interface MobileChatViewProps {
 =======
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Message {
   id: string,
   content: string,
@@ -40,6 +51,39 @@ interface Message {
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+<<<<<<< HEAD
+}
+
+interface MobileChatViewProps {
+  contact: {
+    id: string,
+    name: string,
+    avatar?: string;
+    status?: string
+  };
+  messages: Message[],
+  onBack: () => void,
+  onSendMessage: (content: string) => void
+}
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
+=======
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -80,22 +124,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const navigate = useNavigate();
   const handleSend = () => {
     if (newMessage.trim() !== "") {
-      onSendMessage(newMessage);
-      setNewMessage("")
-    }
-  }
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      handleSend()
-    }
-  }
-=======
-  const [newMessage, setNewMessage] = useState(""),
-  const navigate = useNavigate(),
-  
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
       onSendMessage(newMessage),
       setNewMessage("")
 ;
@@ -114,6 +142,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
@@ -216,6 +245,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
+<<<<<<< HEAD
+=======
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
@@ -287,7 +318,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
               )}>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">

@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {JobApplication} from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download} from "lucide-react";
+import {Link} from "react-router-dom";
+import {StatusBadge} from "./StatusBadge";
+import {ApplicationProgress} from "./ApplicationProgress";
+import {toast} from "sonner";
+=======
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -13,12 +25,18 @@ import { toast } from "sonner";
 =======
 import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationCardProps {
   application: JobApplication
 }
+
+<<<<<<< HEAD
+export function ApplicationCard({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+=======
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
@@ -212,7 +230,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               </div>;
             )}
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </CardContent>
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -233,8 +251,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             </Button>
           </div>
         </div>
-        <Button
-          variant="secondary"
+        <Button 
+          variant="secondary" 
           size="sm"
           className="w-full"
           asChild

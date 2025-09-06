@@ -1,15 +1,14 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
 } from "../../../utils/auth";
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -24,10 +23,10 @@ export default async function handler(
     }
     return res.status(200).json({ dispute });
   }
+
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 }
-
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -85,4 +84,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

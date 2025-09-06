@@ -1,6 +1,5 @@
-
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 import { Loader2 } from 'lucide-react'
 
 import { NavigationButtonsProps } from './types'
@@ -17,18 +16,12 @@ export const NavigationButtons = ({
     <div className="flex justify-between">
       {onBack && (
         <Button variant='outline' onClick={onBack}>
-export const NavigationButtons = ({
-  onBack
-  onNext
-  isNextDisabled = false
-  backLabel = 'Back'
-  nextLabel = 'Next'
-  isLoading = false
-}: NavigationButtonsProps) => {
 =======
+
 import { Button } from "@/components/ui/button",
 import { Loader2 } from 'lucide-react'
 import { NavigationButtonsProps } from "./types",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -63,11 +56,10 @@ export const NavigationButtons = ({
         </Button>
       )}
     </div>
-  )
-}
-"  )
-}
-
+  );
+};
+"  );
+};
 =======
         <Button variant="outline" onClick={onBack}>
 import { Button } from "@/components/ui/button",;
@@ -96,4 +88,4 @@ export const NavigationButtons = ({;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -5,8 +5,10 @@ import Badges from './Badges';
 =======
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
@@ -26,7 +28,8 @@ function getUserId(): string {
   const generated = 'demo-user';
   window.localStorage.setItem('zion_user_id', generated);
   return generated;
-export default function WalletPanel() {
+
+export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -50,7 +53,8 @@ function getUserId(): string {
   window.localStorage.setItem("zion_user_id", generated);
   return generated
 }
-export default function WalletPanel() {
+
+export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -264,6 +268,7 @@ export default function WalletPanel() {
       </div>
     </div>
 );
+}
 =======
 
           </div>
@@ -272,5 +277,5 @@ export default function WalletPanel() {
       </div>
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

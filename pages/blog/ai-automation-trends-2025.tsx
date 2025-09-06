@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+=======
 import Head from 'next/head',
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -6,6 +10,7 @@ import React from 'react'
 
 =======
 import Link from 'next/link',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import React from 'react',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIAutomationTrends2025() {
@@ -242,7 +247,8 @@ export default function AIAutomationTrends2025() {
     </>
   )
 <<<<<<< HEAD
-}
+};
+;
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -250,4 +256,4 @@ export default function AIAutomationTrends2025() {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

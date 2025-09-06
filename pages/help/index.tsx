@@ -1,14 +1,15 @@
 import Link from 'next/link';
 <<<<<<< HEAD
-import { readJson  } from '../../utils/fsDb';
+import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-export async function getStaticProps() {
-
+export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
 
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
+  const categories = Array.from(new Set(articles.map(a => a.category)));
 =======
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
@@ -26,7 +27,7 @@ export async function getStaticProps() {;
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -50,6 +51,9 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
       ))}
     </div>
 );
+
+}
+}
 =======
               ))  } catch (error) {
     console.error("Error:", error);
@@ -70,4 +74,4 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

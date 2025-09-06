@@ -8,8 +8,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
-    const { address } = req.query as { address?: string }
+  try {;
+    const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
 
@@ -17,7 +17,7 @@ export default async function handler(
     return res.status(500).json({ error: e.message });
   }
   try {
-    const { address } = req.query as { address?: string }
+    const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {

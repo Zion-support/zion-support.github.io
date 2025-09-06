@@ -2,17 +2,11 @@
 import * as React from 'react';
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import {type, VariantProps} from 'class-variance-authority';
-import {cn} from '@/lib/utils';
-import {toggleVariants} from '@/components/ui/toggle';
-type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
-const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
-  size: 'default'
-  variant: 'default'
-});
 =======
 import * as React from "react"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
 import { type VariantProps } from "class-variance-authority"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/components/ui/toggle"
@@ -39,6 +33,8 @@ const ToggleGroup = React.forwardRef<
     </ToggleGroupContext.Provider>
   </ToggleGroupPrimitive.Root>
 ));
+<<<<<<< HEAD
+
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
 <<<<<<< HEAD
 const ToggleGroupItem = React.forwardRef<
@@ -51,6 +47,7 @@ const ToggleGroupItem = React.forwardRef<
   ) as ToggleGroupContextProps;
     >
 =======
+ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
 const ToggleGroupItem = React.forwardRef<;
   React.ElementRef<typeof ToggleGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &;
@@ -70,15 +67,21 @@ const ToggleGroupItem = React.forwardRef<;
       )}
       {...props}
     >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {children}
     </ToggleGroupPrimitive.Item>
   );
 });
+<<<<<<< HEAD
+
+ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
+
+export { ToggleGroup, ToggleGroupItem };
+=======
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 <<<<<<< HEAD
 export { ToggleGroup, ToggleGroupItem }
 =======
 export { ToggleGroup, ToggleGroupItem }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

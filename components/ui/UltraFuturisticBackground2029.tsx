@@ -22,8 +22,8 @@ interface EnergyField {
 
   pulse: number;
 export default function UltraFuturisticBackground2029({
-  children
-}: {
+  children,
+}: {;
   children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -50,8 +50,8 @@ interface EnergyField {
 
   pulse: number
 }
-export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -462,8 +462,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             rotate: [-45, 315]
             opacity: [0.2, 0.6, 0.2],          }}
           transition={{
-            duration: 10
-            repeat: Infinity
+            duration: 10,
+            repeat: Infinity,
             ease: 'easeInOut',          }}          }}
         />
         <motion.div
@@ -480,9 +480,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 =======
             duration: 10,
             repeat: Infinity,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
 
           }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -501,4 +506,4 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

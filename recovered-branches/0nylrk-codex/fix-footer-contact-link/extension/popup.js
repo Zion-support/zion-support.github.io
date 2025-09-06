@@ -11,6 +11,7 @@ async function ask() {
   document.getElementById('output').textContent = res.answer
 }
 <<<<<<< HEAD
+
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,9 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
-
-});
-
+}),
+;
 =======
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
@@ -43,4 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

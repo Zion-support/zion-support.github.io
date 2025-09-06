@@ -1,25 +1,28 @@
-
-import { format } from "date-fns",
 <<<<<<< HEAD
+import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 
 import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import {
-  Popover
-  PopoverContent
-  PopoverTrigger
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
 } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+=======
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
@@ -61,7 +64,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",;
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   form: UseFormReturn<ContractFormValues>;
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -85,7 +88,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
       />;
       <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         control={form.control}
         name="scopeSummary"
         render={({ field }) => (
@@ -151,7 +154,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
         />;
         <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           control={form.control}
           name="endDate"
           render={({ field }) => (
@@ -192,11 +195,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 <<<<<<< HEAD
         />
       </div>
-    </>
 =======
         />;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

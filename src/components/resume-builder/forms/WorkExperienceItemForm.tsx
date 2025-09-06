@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -26,8 +25,8 @@ import { Switch } from '@/components/ui/switch'
 import { format } from 'date-fns'
 
 import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton'
+import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog'
 =======
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -46,7 +45,7 @@ import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Define form schema
 
 const formSchema = z.object({
@@ -54,12 +53,12 @@ const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required')
   role_title: z.string().min(1, 'Role title is required')
   start_date: z.date({
-    required_error: 'Start date is required'
-  })
-  end_date: z.date().optional()
-  is_current: z.boolean().default(false)
-  description: z.string().optional()
-  location: z.string().optional()
+    required_error: "Start date is required"}),
+  end_date: z.date().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+<<<<<<< HEAD
+  location: z.string().optional(),
 })
 type FormValues = z.infer<typeof formSchema>
 interface WorkExperienceItemFormProps {
@@ -73,13 +72,6 @@ export function WorkExperienceItemForm({
 }: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false)
 =======
-  company_name: z.string().min(1, "Company name is required"),
-  role_title: z.string().min(1, "Role title is required"),
-  start_date: z.date({
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
   location: z.string().optional()}),
 
 type FormValues = z.infer<typeof formSchema>,
@@ -96,24 +88,20 @@ export function WorkExperienceItemForm({
   onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
 <<<<<<< HEAD
-      company_name: initialData?.company_name |''
-      role_title: initialData?.role_title |''
-      start_date: initialData?.start_date
-        ? new Date(initialData.start_date)
-        : new Date()
-      end_date: initialData?.end_date
-        ? new Date(initialData.end_date)
-        : undefined
-      is_current: initialData?.is_current |false
-      description: initialData?.description |''
-      location: initialData?.location |''
-    }
+      description: initialData?.description || '',
+      location: initialData?.location || '',
+    },
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -138,11 +126,6 @@ export function WorkExperienceItemForm({
     setIsEnhancementDialogOpen(false)
   }
 =======
-      company_name: initialData?.company_name || "",
-      role_title: initialData?.role_title || "",
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
-      is_current: initialData?.is_current || false,
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
   
@@ -172,7 +155,7 @@ export function WorkExperienceItemForm({
     setIsEnhancementDialogOpen(false)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Form {...form}>
@@ -187,7 +170,7 @@ export function WorkExperienceItemForm({
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
@@ -297,7 +280,7 @@ export function WorkExperienceItemForm({;
               name="role_title"
               render={({ field }: { field: any }) => (
                 <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -321,7 +304,7 @@ export function WorkExperienceItemForm({;
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -362,7 +345,7 @@ export function WorkExperienceItemForm({;
                       id="current-position"
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       I currently work here
                     </label>
                   </div>
@@ -387,7 +370,7 @@ export function WorkExperienceItemForm({;
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Start Date</FormLabel>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -405,7 +388,7 @@ export function WorkExperienceItemForm({;
                             !field.value && "text-muted-foreground"
                           )}
                         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {field.value ? (
                             format(field.value, "MMM yyyy")
                           ) : (
@@ -459,7 +442,7 @@ export function WorkExperienceItemForm({;
                 render={({ field }: { field: any }) => (
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -477,7 +460,7 @@ export function WorkExperienceItemForm({;
                               !field.value && "text-muted-foreground"
                             )}
                           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             {field.value ? (
                               format(field.value, "MMM yyyy")
                             ) : (
@@ -516,7 +499,7 @@ export function WorkExperienceItemForm({;
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               />
             )}
@@ -535,7 +518,7 @@ export function WorkExperienceItemForm({;
             render={({ field }: { field: any }) => (
               <FormItem>
                 <div className="flex justify-between items-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
@@ -545,6 +528,7 @@ export function WorkExperienceItemForm({;
                         content: field.value |''
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
+<<<<<<< HEAD
                       onEnhanced={content =>
                         form.setValue('description', content, {
                           shouldDirty: true
@@ -559,10 +543,6 @@ export function WorkExperienceItemForm({;
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className='text-xs'                    >
 =======
-                        enhancementType: "work-description",
-                        content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
@@ -573,7 +553,7 @@ export function WorkExperienceItemForm({;
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs"
                     >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       AI Writer
                     </Button>
                   </div>
@@ -586,7 +566,7 @@ export function WorkExperienceItemForm({;
 =======
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {...field}
                   />
                 </FormControl>
@@ -622,15 +602,15 @@ export function WorkExperienceItemForm({;
         title='Enhance Work Experience Description'
 =======
         title="Enhance Work Experience Description"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
         defaultOptions={{
 <<<<<<< HEAD
-          enhancementType: 'work-description'
-          content: form.getValues('description') |''
-          context: `${watchRoleTitle} at ${watchCompanyName}`
+          enhancementType: 'work-description',
+          content: form.getValues('description') || '',
+          context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -660,11 +640,11 @@ setIsEnhancementDialogOpen (false)
 }</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
-}"
-}
-}
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
+}";
+};
+};
 =======
           enhancementType: "work-description",
           content: form.getValues("description") || "",
@@ -675,4 +655,4 @@ setIsEnhancementDialogOpen (false)
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

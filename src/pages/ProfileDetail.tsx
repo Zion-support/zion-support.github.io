@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -30,6 +41,7 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -38,8 +50,13 @@ export default function ProfileDetail() {
       setError(null),
       try {
         if (!profileId) {
+<<<<<<< HEAD
+          setError("Profile ID is missing.");
+          return;
+=======
           setError("Profile ID is missing."),
           return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         const { data, error } = await supabase
           .from("talent_profiles")
@@ -55,8 +72,13 @@ export default function ProfileDetail() {
           throw new Error(error.message)
         }
         if (!data) {
+<<<<<<< HEAD
+          setError("Profile not found.");
+          return;
+=======
           setError("Profile not found."),
           return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         setProfileData(data)
       } catch (err: any) {
@@ -105,7 +127,7 @@ export default function ProfileDetail() {
     <>
       <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
 =======
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
@@ -193,7 +215,7 @@ export default function ProfileDetail() {;
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -250,7 +272,7 @@ export default function ProfileDetail() {;
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -339,8 +361,11 @@ export default function ProfileDetail() {;
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0,
+=======
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
             />
             {/* Contact Information */}
@@ -373,7 +398,7 @@ export default function ProfileDetail() {;
 =======
               </div>;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -401,7 +426,7 @@ export default function ProfileDetail() {;
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -422,7 +447,7 @@ export default function ProfileDetail() {;
                 {profileData.linkedin_url && (;
                   <a;
                     href={profileData.linkedin_url}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -477,4 +502,4 @@ export default function ProfileDetail() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,35 +1,12 @@
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
 <<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { SkeletonCard  } from '@/components/ui';
-import ErrorBoundary from "@/components/GlobalErrorBoundary";
-=======
-import { GradientHeading } from "@/components/GradientHeading",
-import { SkeletonCard } from '@/components/ui',
-import ErrorBoundary from "@/components/GlobalErrorBoundary",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { Folder } from 'lucide-react'
-import { CATEGORIES  } from '@/data/categories';
-import { NextSeo  } from '@/components/NextSeo';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface CategoryType {
-  id: string;
-  name: string;
-  slug: string;
-  icon: string
-<<<<<<< HEAD
-}
 
-
-      logErrorToProduction('Categories API error:', { data: response.statusText })
+      logErrorToProduction('Categories API error:', { data: response.statusText }),
       return CATEGORIES as CategoryType[]
-    fallbackData: initialCategories})
-  const categories = data |[]
+    fallbackData: initialCategories}),
+  const categories = data || []
   const isLoading = !data && !error
-
 }
-import React from "react"
+import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
 }
 const Categories: React.FC: = () => {,"
@@ -149,7 +126,37 @@ export default Categories""
   )}
 export: default Categories
 export default Categories," ]
-export default Categories"")))))))))
+export default Categories"")))))))));
+};
+=======
+import useSWR from 'swr',
+import { CategoryCard } from "@/components/CategoryCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SkeletonCard } from '@/components/ui',
+import ErrorBoundary from "@/components/GlobalErrorBoundary",
+import { Folder } from 'lucide-react'
+import { CATEGORIES } from '@/data/categories',
+import { NextSeo } from '@/components/NextSeo',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface CategoryType {
+  id: string,
+  name: string,
+  slug: string,
+  icon: string
+import useSWR from 'swr',;
+import { CategoryCard } from "@/components/CategoryCard",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { SkeletonCard } from '@/components/ui',;
+import ErrorBoundary from "@/components/GlobalErrorBoundary",;
+import { Folder } from 'lucide-react';
+import { CATEGORIES } from '@/data/categories',;
+import { NextSeo } from '@/components/NextSeo',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface CategoryType {;
+  id: string,;
+  name: string,;
+  slug: string,;
+  icon: string;
 }
 =======
 import useSWR from 'swr',;
@@ -251,4 +258,4 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

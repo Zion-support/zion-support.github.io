@@ -6,13 +6,13 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Car
-  Star;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,;
+  Star,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -20,14 +20,14 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/autonomous-vehicle-ai-platform')
+    s.link.endsWith('/autonomous-vehicle-ai-platform');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AutonomousVehicleAIPage() {
+export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
   if (!service) return null;
 
@@ -124,4 +124,8 @@ export default function AutonomousVehicleAIPage() {
 }
 =======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

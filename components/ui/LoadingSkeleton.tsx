@@ -42,8 +42,9 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-  )
-}
+  );
+};
+
 interface HeroSkeletonProps {
   className?: string
 }
@@ -60,8 +61,9 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 interface StatsSkeletonProps {
   className?: string
 }
@@ -81,17 +83,16 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
           ))}
         </div>
       </div>
-    </div>
+    </div>;
   );
 }
 export default Skeleton;  )
 }
 export default Skeleton;
-
 =======
 
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

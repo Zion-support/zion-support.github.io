@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import {cn} from "@/lib/utils";
+=======
 import React from "react",
 <<<<<<< HEAD
 import ReactMarkdown from "react-markdown";
@@ -6,7 +11,7 @@ import { cn } from "@/lib/utils";
 =======
 import ReactMarkdown from "react-markdown",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface MarkdownProps {
   content: string;
   className?: string
@@ -21,6 +26,8 @@ export function Markdown({ content, className }: MarkdownProps) {
 }
 =======
   )
+<<<<<<< HEAD
+=======
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
@@ -35,6 +42,6 @@ export function Markdown({ content, className }: MarkdownProps) {;
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

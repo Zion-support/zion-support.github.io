@@ -1,15 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
 import { motion } from 'framer-motion';
 import {
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
 } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -380,7 +379,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 
       </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
@@ -392,7 +391,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -440,18 +439,17 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             <div className="text-xs text-white/60">FID</div>
         </motion.div>
       )}
-<<<<<<< HEAD
+
       {/* Optimization Controls */}
+<<<<<<< HEAD
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
 =======
-
-      {/* Optimization Controls */}
       <div className='space-y-3'>        <button
 
         <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -489,7 +487,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
         )}
       </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -502,7 +500,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 =======
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -512,8 +510,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       </div>
     </div>
   );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
+};export default PerformanceOptimizer;};
       // Preload critical resources;
       preloadImages.forEach(image => {addResourceHint(image, 'image');
 '      });';
@@ -525,6 +522,8 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
+
+<<<<<<< HEAD
 {/* Preload critical resources */}
       {preloadImages.map((image, index) => (;
         <link;
@@ -627,9 +626,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null;
 }
 export default PerformanceOptimizer;
-
 =======
-};export default PerformanceOptimizer;
-
 export default PerformanceOptimizer;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

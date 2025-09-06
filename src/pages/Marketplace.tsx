@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
@@ -8,12 +8,12 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
-  ArrowUp
-  Filter
-  SortAsc
-  Sparkles
-  TrendingUp
-  Star
+  ArrowUp,
+  Filter,
+  SortAsc,
+  Sparkles,
+  TrendingUp,;
+  Star;
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -91,7 +91,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -106,10 +106,11 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
-    </CardContent>
-  </Card>
 <<<<<<< HEAD
+    </CardContent>;
+  </Card>;
 );
+
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string;
@@ -132,26 +133,56 @@ const FilterControls: React.FC<{
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
   loading: boolean;}> = ({
-  sortBy
-  setSortBy
-  filterCategory
-  setFilterCategory
-  categories
-  priceRange
-  setPriceRange
-  minAiScore
-  setMinAiScore
-  minRating
-  setMinRating
-  filterAvailability
-  setFilterAvailability
-  availabilityOptions
-  filterLocation
-  setFilterLocation
-  locations
-  showRecommended
-  setShowRecommended
-  loading
+=======
+    </CardContent>
+  </Card>
+),
+
+// Filter and sort controls
+const FilterControls: React.FC<{
+  sortBy: string,
+  setSortBy: (sort: string) => void,
+  filterCategory: string,
+  setFilterCategory: (category: string) => void,
+  categories: string[],
+  priceRange: [number, number],
+  setPriceRange: (range: [number, number]) => void,
+  minAiScore: number,
+  setMinAiScore: (score: number) => void,
+  minRating: number,
+  setMinRating: (rating: number) => void,
+  filterAvailability: string,
+  setFilterAvailability: (value: string) => void,
+  availabilityOptions: string[],
+  filterLocation: string,
+  setFilterLocation: (value: string) => void,
+  locations: string[],
+  showRecommended: boolean,
+  setShowRecommended: (show: boolean) => void,
+  loading: boolean
+}> = ({
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  sortBy,
+  setSortBy,
+  filterCategory,
+  setFilterCategory,
+  categories,
+  priceRange,
+  setPriceRange,
+  minAiScore,
+  setMinAiScore,
+  minRating,
+  setMinRating,
+  filterAvailability,
+  setFilterAvailability,
+  availabilityOptions,
+  filterLocation,
+  setFilterLocation,
+  locations,
+  showRecommended,
+  setShowRecommended,
+<<<<<<< HEAD
+  loading,
 }) => (
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
     {loading && (
@@ -235,50 +266,6 @@ const FilterControls: React.FC<{
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
 =======
-),
-
-// Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string,
-  setSortBy: (sort: string) => void,
-  filterCategory: string,
-  setFilterCategory: (category: string) => void,
-  categories: string[],
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
-  minAiScore: number,
-  setMinAiScore: (score: number) => void,
-  minRating: number,
-  setMinRating: (rating: number) => void,
-  filterAvailability: string,
-  setFilterAvailability: (value: string) => void,
-  availabilityOptions: string[],
-  filterLocation: string,
-  setFilterLocation: (value: string) => void,
-  locations: string[],
-  showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
-  loading: boolean
-}> = ({
-  sortBy,
-  setSortBy,
-  filterCategory,
-  setFilterCategory,
-  categories,
-  priceRange,
-  setPriceRange,
-  minAiScore,
-  setMinAiScore,
-  minRating,
-  setMinRating,
-  filterAvailability,
-  setFilterAvailability,
-  availabilityOptions,
-  filterLocation,
-  setFilterLocation,
-  locations,
-  showRecommended,
-  setShowRecommended,
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -366,7 +353,7 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
@@ -388,7 +375,7 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Locations</option>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
@@ -402,9 +389,6 @@ const FilterControls: React.FC<{
       className='flex items-center gap-2'    >
       <Sparkles className='h-4 w-4' />
       {showRecommended ? 'All Products' : 'Recommended'}
-    </Button>
-  </div>
-);
 =======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
@@ -413,6 +397,7 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Button>
   </div>
 ),
@@ -423,6 +408,16 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
+<<<<<<< HEAD
+export default function Marketplace() {;
+  const router = useRouter();
+  const { t } = useTranslation();
+  const { toast } = useToast();
+  const { isAuthenticated, user } = useAuth();
+  const firstRenderRef = useRef(true);
+  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+=======
 export default function Marketplace() {
 <<<<<<< HEAD
   const router = useRouter();
@@ -452,6 +447,7 @@ export default function Marketplace() {
   const firstRenderRef = useRef(true),
   const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const [sortBy, setSortBy] = useState('newest'),
   const [filterCategory, setFilterCategory] = useState(''),
@@ -474,7 +470,7 @@ export default function Marketplace() {
     if (user && user.userType !== 'admin') {
       toast({
 <<<<<<< HEAD
-        title: 'Admin Access Required'
+        title: 'Admin Access Required',
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -958,6 +954,7 @@ export default function Marketplace() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state with skeleton
@@ -1021,7 +1018,7 @@ export default function Marketplace() {;
       <AuthModal
         isOpen = {isAuthModalOpen,}
         onClose = {(,) => setIsAuthModalOpen(false),}
-        returnUrl={router.asPath} // Pass current path for better UX on return
+        returnUrl={router.asPath} // Pass current path for better UX on return;
       />
       {/* Header */}
       <motion.div
@@ -1105,7 +1102,7 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>;
         <p className="text-muted-foreground text-lg">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
@@ -1174,7 +1171,7 @@ export default function Marketplace() {;
           loading={isFetching}
         />;
       </motion.div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Product Grid */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -1193,7 +1190,7 @@ export default function Marketplace() {;
             <motion.div
               key={product.id}
               ref={index === products.length - 1 ? lastElementRef : null}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -1203,7 +1200,7 @@ export default function Marketplace() {;
               className='relative group'
 =======
               className="relative group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <ProductCard
                 product={{
@@ -1220,9 +1217,9 @@ export default function Marketplace() {;
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
+                  stock: product.stock,
 <<<<<<< HEAD
-                  stock: product.stock
-                  in_stock: (product.stock |0) > 0
+                  in_stock: (product.stock || 0) > 0,
                 }}
                 onBuy = {async () => {
                   if (!isAuthenticated) {
@@ -1230,30 +1227,7 @@ export default function Marketplace() {;
                     return; // Stop further execution
                   }                  try {
                     await router.push(`/checkout/${product.id}`);
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', {
-                      data: error
-                    });
-                    toast({
-                      title: 'Navigation Error'
-                      description:
-                        'Could not navigate to checkout. Please try again.'
-                      variant: 'destructive'
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed
-
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
 =======
-                  stock: product.stock,
                   in_stock: (product.stock || 0) > 0
                 }}
                 onBuy={async () => {;
@@ -1263,6 +1237,7 @@ export default function Marketplace() {;
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -1271,6 +1246,18 @@ export default function Marketplace() {;
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
+<<<<<<< HEAD
+                    throw error;
+                  }
+                }}
+                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
+              />
+
+              {/* AI Score Badge */}
+              {product.aiScore && product.aiScore > 90 && (
+                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
+                  <Sparkles className='h-3 w-3 mr-1' />
+=======
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
@@ -1291,11 +1278,12 @@ export default function Marketplace() {;
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   AI {product.aiScore}
                 </Badge>
               )}
 <<<<<<< HEAD
+
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
@@ -1310,7 +1298,7 @@ export default function Marketplace() {;
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </motion.div>
           ))}
@@ -1318,7 +1306,7 @@ export default function Marketplace() {;
       </motion.div>
       {/* Loading More Indicator */}
 <<<<<<< HEAD
-      {(isFetching |loading) && (
+      {(isFetching || loading) && (
         <motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
@@ -1336,7 +1324,7 @@ export default function Marketplace() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </motion.div>
@@ -1370,7 +1358,7 @@ export default function Marketplace() {;
             Showing {products.length} AI-powered solutions;
           </div>;
         </motion.div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
       {/* Scroll to Top Button */}
 <<<<<<< HEAD
@@ -1386,7 +1374,7 @@ export default function Marketplace() {;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -1601,6 +1589,23 @@ const Marketplace = () => {return (;
     </>;
   );
 }
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 =======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
@@ -1611,4 +1616,4 @@ const Marketplace = () => {return (;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

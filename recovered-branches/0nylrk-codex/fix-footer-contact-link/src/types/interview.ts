@@ -1,5 +1,12 @@
 
 <<<<<<< HEAD
+export type InterviewStatus = 
+  | 'requested' 
+  | 'confirmed' 
+  | 'declined' 
+  | 'rescheduled' 
+  | 'completed' ;
+  | 'cancelled';
 
 export type InterviewStatus =
   | 'requested'
@@ -10,7 +17,8 @@ export type InterviewStatus =
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
-export interface Interview {
+
+export interface Interview {;
   id: string;
   client_id: string;
   talent_id: string;
@@ -30,7 +38,8 @@ export interface Interview {
   client_avatar?: string
   talent_avatar?: string
 }
-export interface InterviewRequest {
+
+export interface InterviewRequest {;
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -41,7 +50,8 @@ export interface InterviewRequest {
   interview_type: InterviewType
   title?: string
 }
-export interface InterviewResponse {
+
+export interface InterviewResponse {;
   interview_id: string;
   status: InterviewStatus;
   alternative_date?: string
@@ -98,4 +108,4 @@ export interface InterviewResponse {;
   message?: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

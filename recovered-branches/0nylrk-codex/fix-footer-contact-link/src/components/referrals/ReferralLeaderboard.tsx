@@ -1,33 +1,38 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { Award } from "lucide-react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Award } from "lucide-react";
+>>>>>>> main
 interface LeaderboardEntry {
   rank: number;
   name: string;
-  referrals: number
+  referrals: number;
 }
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
-    { rank: 1, name: "Alex Johnson", referrals: 24 }
-    { rank: 2, name: "Jamie Smith", referrals: 18 }
-    { rank: 3, name: "Taylor Wong", referrals: 15 }
-    { rank: 4, name: "Casey Brown", referrals: 12 }
-    { rank: 5, name: "Jordan Lee", referrals: 10 }
+    { rank: 1, name: "Alex Johnson", referrals: 24 },
+    { rank: 2, name: "Jamie Smith", referrals: 18 },
+    { rank: 3, name: "Taylor Wong", referrals: 15 },
+    { rank: 4, name: "Casey Brown", referrals: 12 },
+    { rank: 5, name: "Jordan Lee", referrals: 10 },
   ];
+
   return (
     <Card>
       <CardHeader>
@@ -51,15 +56,12 @@ export function ReferralLeaderboard() {
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
 <<<<<<< HEAD
-                        ? "bg-slate-200 text-slate-800"
-                        : entry.rank === 3
-                          ? "bg-amber-200 text-amber-800"
-                          : "bg-muted text-muted-foreground"
-=======
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 interface LeaderboardEntry {;
@@ -103,7 +105,13 @@ export function ReferralLeaderboard() {;
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
+>>>>>>> main
                   }`}
                 >
                   {entry.rank}
@@ -120,3 +128,4 @@ export function ReferralLeaderboard() {;
     </Card>
   );
 }
+;

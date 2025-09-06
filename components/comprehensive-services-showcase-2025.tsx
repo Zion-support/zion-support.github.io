@@ -9,46 +9,46 @@ import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Search
-  Filter
-  Grid3X3
-  List
-  Star
-  Users
-  TrendingUp
-  Zap
-  Brain
-  Atom
-  Shield
-  Rocket
-  Palette
-  BookOpen
-  Truck
-  DollarSign
-  Settings
-  ArrowRight
-  ChevronDown
-  CheckCircle
-  Clock
-  Award
-  Target
-  Globe
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  BarChart3
-  Eye
-  Heart
-  Lightbulb
-  Palette as PaletteIcon
-  Code
-  Database
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Zap as ZapIcon
-  Target as TargetIcon;} from 'lucide-react';import {
-  Search, Filter, Grid3X3, List
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Palette,
+  BookOpen,
+  Truck,
+  DollarSign,
+  Settings,
+  ArrowRight,
+  ChevronDown,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  Palette as PaletteIcon,
+  Code,
+  Database,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Zap as ZapIcon,;
+  Target as TargetIcon,;} from 'lucide-react';import {
+  Search, Filter, Grid3X3, List, ;
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
@@ -144,9 +144,12 @@ const priceRanges = [
   { label: 'Under $50/month', value: 'under-50' },
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
+<<<<<<< HEAD
+  { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
+=======
   { label: 'Over $500/month', value: 'over-500' },];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ];
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' }
@@ -155,7 +158,8 @@ const sortOptions = [
   { label: 'Price: Low to High', value: 'price-low' }
   { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
 ];
-export default function ComprehensiveServicesShowcase2025() {
+
+export default function ComprehensiveServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -246,9 +250,9 @@ export default function ComprehensiveServicesShowcase2025() {
         default: return 0
       }
     });
-    setFilteredServices(filtered)
 =======
     switch (category) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
@@ -286,7 +290,9 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />
       default: return <Globe className="w-5 h-5" />
-  }
+  };
+
+<<<<<<< HEAD
   return (
     <Layout>
       <Head>
@@ -327,9 +333,8 @@ export default function ComprehensiveServicesShowcase2025() {
                 top: `${Math.random() * 100}%`
               }}            />
 =======
-
             />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
@@ -387,7 +392,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
                     {stat.icon}
@@ -413,7 +418,7 @@ export default function ComprehensiveServicesShowcase2025() {
               ))}
             </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search Bar */}
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
@@ -421,7 +426,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <input
                   type='text'
                   placeholder='Search for services, features, or solutions...'
@@ -457,7 +462,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                 <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -476,7 +481,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                     {category.count}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </span>
                 </button>
               ))}
@@ -489,7 +494,7 @@ export default function ComprehensiveServicesShowcase2025() {
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Price Range Filter */}
               <select
                 value={selectedPriceRange}
@@ -523,7 +528,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 ))}
               </select>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -554,7 +559,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                 <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
@@ -601,7 +606,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 {/* Category Badge */}
                 <div className='absolute top-4 right-4'>
@@ -631,7 +636,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                     {service.icon}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 </div>
                 {/* Service Info */}
@@ -639,7 +644,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {service.name}
                 </h3>
                 <p className='text-gray-400 mb-3 line-clamp-2'>
@@ -681,7 +686,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                 {/* Price */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
@@ -728,7 +733,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <div className='mb-4 text-xs text-gray-500'>
                   <div className='flex items-center justify-between'>                    <span>Market Size: {service.marketSize}</span>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
@@ -752,7 +757,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='flex items-start space-x-6'>
                   {/* Service Icon */}
@@ -772,7 +777,7 @@ export default function ComprehensiveServicesShowcase2025() {
 =======
 
                       <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
                           {service.name}
                         </h3>
@@ -799,7 +804,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                           {service.category}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </span>
                       </div>
                     </div>
@@ -817,7 +822,7 @@ export default function ComprehensiveServicesShowcase2025() {
 =======
 
                       </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
                         <span className='text-white font-medium'>
@@ -877,7 +882,7 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
                     </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
@@ -939,7 +944,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
@@ -948,7 +953,7 @@ export default function ComprehensiveServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1072,12 +1077,12 @@ top: `$ {
   duration: 0.8
 }viewport= {
   {
-<<<<<<< HEAD
-  once: true
-}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
-}
-=======
   once: true 
 
+<<<<<<< HEAD
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
+}
+;
+=======
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

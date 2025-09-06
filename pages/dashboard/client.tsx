@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
-
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'job', label: 'Job posted' }
@@ -11,9 +11,9 @@ const STEPS = [
 type StepKey = (typeof STEPS)[number]['key'];
 export default function ClientDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-    job: false
-    invite: false
-    response: false
+    job: false,
+    invite: false,
+    response: false,;
   });
   useEffect(() => {
     try {
@@ -35,8 +35,6 @@ export default function ClientDashboard() {
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
 =======
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'job', label: 'Job posted' },;
@@ -65,7 +63,7 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -106,6 +104,8 @@ export default function ClientDashboard(req, res) {
       </EnhancedCard>
     </div>
 );
+
+}
 =======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -128,4 +128,4 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

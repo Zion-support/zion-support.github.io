@@ -11,17 +11,21 @@ import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+export type EnhancedLayoutProps = {;
+=======
 export type EnhancedLayoutProps = {
-  children: React.ReactNode;}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  children: React.ReactNode;};
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 export type EnhancedLayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
+
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
-    const lng = i18n.resolvedLanguage |i18n.language;
+  useEffect(() => {;
+    const lng = i18n.resolvedLanguage || i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
   }, []);
@@ -55,3 +59,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

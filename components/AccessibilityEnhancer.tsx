@@ -197,7 +197,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       <div id="main-content">{children}</div>
     </>
   );
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+};
+
 export default AccessibilityEnhancer;
+=======
+export default AccessibilityEnhancer;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

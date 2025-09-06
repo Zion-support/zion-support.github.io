@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -17,6 +16,16 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+export function WebhooksManager() {
+  const {;
+    webhooks;
+    loading;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;
 =======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -47,6 +56,7 @@ export function WebhooksManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     clearTestResult
 <<<<<<< HEAD
   } = useWebhooks();
@@ -239,6 +249,8 @@ export function WebhooksManager() {
 =======
                         <Checkbox 
                           id={event.value} 
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -396,7 +408,7 @@ export function WebhooksManager() {;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={event.value} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
@@ -458,7 +470,7 @@ export function WebhooksManager() {;
             </DialogContent>;
           </Dialog>;
         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -545,8 +557,8 @@ export function WebhooksManager() {;
       </CardFooter>
 <<<<<<< HEAD
       {/* Test Webhook Dialog */}
-      <Dialog
-        open={showTestDialog !== null}
+      <Dialog 
+        open={showTestDialog !== null} 
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -566,7 +578,7 @@ export function WebhooksManager() {;
             if (showTestResult) {;
               setShowTestResult(false),;
               clearTestResult();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           }
         }}
@@ -689,7 +701,7 @@ export function WebhooksManager() {;
                 </Button>;
               </DialogFooter>;
             </>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         </DialogContent>
       </Dialog>

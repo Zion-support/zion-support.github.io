@@ -1,7 +1,8 @@
 
 <<<<<<< HEAD
 // Define types for the pricing recommendation
-export interface PricingSuggestion {
+<<<<<<< HEAD
+export interface PricingSuggestion {;
   minRate: number;
   maxRate: number;
 
@@ -9,7 +10,8 @@ export interface PricingSuggestion {
 
   explanation: string
 }
-export interface ClientBudgetParams {
+
+export interface ClientBudgetParams {;
   jobTitle: string;
   category: string;
   timeline?: string;
@@ -18,16 +20,16 @@ export interface ClientBudgetParams {
 
   experienceLevel?: string
 }
-export interface TalentRateParams {
+
+export interface TalentRateParams {;
   skills: string[];
 
   yearsExperience: number
 
   location?: string
 }
-=======
 
-// Define types for the pricing recommendation
+=======
 export interface PricingSuggestion {
   minRate: number,
   maxRate: number,
@@ -56,12 +58,16 @@ export interface TalentRateParams {;
   location?: string;
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock function to generate suggestions
 // In production, this would call an AI service or API
 export async function getClientBudgetSuggestion(params: ClientBudgetParams): Promise<PricingSuggestion> {
   try {
     // This would be replaced with an actual API call to an AI model
+<<<<<<< HEAD
+    // For now, we'll simulate a response based on job category;
+    const { jobTitle, category } = params;
+=======
     // For now, we'll simulate a response based on job category
 <<<<<<< HEAD
     const { jobTitle, category } = params;
@@ -77,6 +83,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       maxRate = 80
 =======
     const { jobTitle, category } = params,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000)),
@@ -109,6 +116,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       confidence = "Low"
     }
 <<<<<<< HEAD
+    
     // Adjust based on job title keywords
     const lowercaseTitle = jobTitle.toLowerCase();
     if (lowercaseTitle.includes("senior") |lowercaseTitle.includes("lead")) {
@@ -118,9 +126,6 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate -= 10;
       maxRate -= 15;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
-    }
-    // Generate explanation
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
 =======
 ;
     // Adjust based on job title keywords;
@@ -132,6 +137,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate -= 10,;
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     // Generate explanation
@@ -165,8 +171,9 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
   }
 }
 <<<<<<< HEAD
+
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
-  try {
+  try {;
     const { skills, yearsExperience, location } = params;
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -190,10 +197,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1.2
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {
         locationFactor = 0.8
-      }
-    }
-    const minRate = Math.round(baseRate * locationFactor * 0.9);
-    const maxRate = Math.round(baseRate * locationFactor * 1.2);
 =======
 ;
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
@@ -222,6 +225,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 0.8;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
     
@@ -257,12 +261,13 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let explanation = `Based on ${yearsExperience} years of experience`,;
     if (hasInDemandSkills) {;
       explanation += ` and your in-demand skills (${skills.join()})`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
 <<<<<<< HEAD
+    
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     return {
       minRate;
@@ -277,7 +282,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       maxRate,;
       confidence,;
       explanation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
@@ -313,11 +318,19 @@ export async function trackPricingSuggestion(data: {
 =======
 
 // Function to save pricing analytics data
+<<<<<<< HEAD
+export async function trackPricingSuggestion(data: {;
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+=======
 export async function trackPricingSuggestion(data: {
   userId: string,
   suggestionType: 'client' | 'talent',
   suggestedMin: number,
   suggestedMax: number,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   actualValue?: number,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   accepted: boolean
@@ -345,6 +358,8 @@ export async function trackPricingSuggestion(data: {
 =======
     console.error("Error tracking pricing suggestion:", error),
     return false
+<<<<<<< HEAD
+=======
 ;
 // Function to save pricing analytics data;
 export async function trackPricingSuggestion(data: {;
@@ -366,6 +381,7 @@ export async function trackPricingSuggestion(data: {;
   } catch (error) {;
     console.error("Error tracking pricing suggestion:", error);
     return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

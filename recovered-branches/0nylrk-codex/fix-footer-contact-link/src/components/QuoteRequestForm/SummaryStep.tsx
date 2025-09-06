@@ -1,19 +1,20 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData } from "@/types/quotes",
-import { Card, CardContent } from "@/components/ui/card",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
 <<<<<<< HEAD
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { toast } from "@/hooks/use-toast";
+import {useEffect, useState} from "react";
+import {QuoteFormData} from "@/types/quotes";
+import {Card, CardContent} from "@/components/ui/card";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {AIMatchingResults} from "@/components/AIMatchingResults";
+import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
+import {toast} from "@/hooks/use-toast";
 interface SummaryStepProps {
 
   formData: QuoteFormData
 
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
+
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false);
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
@@ -32,6 +33,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.timeline}
         `;
 =======
+import { useEffect, useState } from "react",
+import { QuoteFormData } from "@/types/quotes",
+import { Card, CardContent } from "@/components/ui/card",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
 interface SummaryStepProps {
@@ -67,6 +74,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
@@ -132,6 +140,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
+=======
       
         `,;
         // Get AI matches;
@@ -176,7 +186,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   return (;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -306,4 +316,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
       </div>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

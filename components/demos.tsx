@@ -24,23 +24,17 @@ import {
   CheckCircle,
   Zap,
   BarChart3,
-  Code,
+  Code,;
   Play,;
+<<<<<<< HEAD
+} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+export default function DemosPage() {;
+=======
 } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {
-  Mail
-  Lock
-  Link
-  FileText
-  CheckCircle
-  Zap
-  BarChart3
-  Code
-  Play;
-} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 export default function DemosPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
@@ -302,7 +296,7 @@ export default function DemosPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
@@ -317,7 +311,7 @@ export default function DemosPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -346,7 +340,7 @@ export default function DemosPage() {
 
                     Active Demo
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 )}
               </button>
@@ -357,7 +351,7 @@ export default function DemosPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -367,7 +361,7 @@ export default function DemosPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
@@ -399,7 +393,7 @@ export default function DemosPage() {
             </p>
           </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       </section>
       {/* Features */}
@@ -455,7 +449,7 @@ export default function DemosPage() {
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -553,7 +547,9 @@ export default function DemosPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

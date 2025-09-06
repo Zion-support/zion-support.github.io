@@ -1,17 +1,17 @@
-
 <<<<<<< HEAD
-  title = "Complete Your Profile"
+  title = "Complete Your Profile", 
 import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 =======
+
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface OnboardingStep {
   id: string
   label: string
@@ -63,6 +63,7 @@ export function OnboardingTracker({
   const progress = Math.round((completedSteps / steps.length) * 100),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
@@ -70,19 +71,18 @@ export function OnboardingTracker({
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
 <<<<<<< HEAD
+=======
+      
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+<<<<<<< HEAD
           style={{ width: `${progress}%` }}
         ></div>
       </div>
 =======
-      
-      {/* Progress bar */}
-      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 ;
 export function OnboardingTracker({;
   steps,;
@@ -104,7 +104,7 @@ export function OnboardingTracker({;
           style={{ width: `${progress}%` }}
         ></div>;
       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Steps list */}
       <div className="space-y-3">
         {steps.map((step) => (
@@ -146,15 +146,15 @@ export function OnboardingTracker({;
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-  step.link
-}> </Link> </Button>)
-}</div>) )
-}</div> </div>)
-}"}
+  step.link 
+}> </Link> </Button>) 
+}</div>) ) ;
+}</div> </div>) ;
+}"};
 =======
       </div>;
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

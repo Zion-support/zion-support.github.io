@@ -14,17 +14,16 @@ const TaxonomyAgent: NextPage = () => {
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
 <<<<<<< HEAD
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
-      </main>
-    </div>
-  )
-}
-export default TaxonomyAgent;
-
 =======
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </main>
     </div>
   )
 },
+<<<<<<< HEAD
+
+export default TaxonomyAgent,;
+=======
 export default TaxonomyAgent,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

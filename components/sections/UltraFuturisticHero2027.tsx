@@ -5,6 +5,24 @@ import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,;
+  CheckCircle,;} from 'lucide-react';
 
 import {
   Rocket
@@ -48,11 +66,13 @@ export default function UltraFuturisticHero2027() {
       color: 'from-green-400 to-emerald-400'
     }
     {
-      icon: Shield
-      text: 'Enterprise Security'
-      color: 'from-red-400 to-orange-400'
-    }
+      icon: Shield,
+      text: 'Enterprise Security',
+      color: 'from-red-400 to-orange-400',;
+    },;
   ];
+
+<<<<<<< HEAD
   const stats = [
     {
       number: '1000+'
@@ -74,6 +94,7 @@ export default function UltraFuturisticHero2027() {
     }
     { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
   ];
+
   return (
     <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
       {/* Background Elements */}
@@ -107,8 +128,7 @@ export default function UltraFuturisticHero2027() {
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 8
@@ -158,9 +178,9 @@ export default function UltraFuturisticHero2027() {
             scale: [1, 1.1, 1];
             opacity: [0.4, 0.7, 0.4]
           transition={{
+            duration: 12,
+            repeat: Infinity,
 <<<<<<< HEAD
-            duration: 12
-            repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 
           }}
@@ -174,8 +194,6 @@ export default function UltraFuturisticHero2027() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
 =======
-            duration: 12,
-            repeat: Infinity,
 
           }}
         />
@@ -184,7 +202,7 @@ export default function UltraFuturisticHero2027() {
 
           {/* Main Heading */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,7 +211,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -218,7 +236,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -235,7 +253,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -245,7 +263,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link
               href='/2027-services-showcase'
@@ -279,7 +297,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -290,7 +308,7 @@ export default function UltraFuturisticHero2027() {
 =======
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {features.map((feature, index) => (
               <motion.div
@@ -302,7 +320,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -323,7 +341,7 @@ export default function UltraFuturisticHero2027() {
 
                     {feature.text}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </h3>
                 </div>
               </motion.div>
@@ -332,7 +350,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -343,7 +361,7 @@ export default function UltraFuturisticHero2027() {
 =======
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -355,7 +373,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
@@ -391,7 +409,7 @@ export default function UltraFuturisticHero2027() {
             ))}
           </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -401,7 +419,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -422,7 +440,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -431,7 +449,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
@@ -445,7 +463,7 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </motion.div>
@@ -459,10 +477,18 @@ export default function UltraFuturisticHero2027() {
     </section>
   )
 }
+
+}
+}
+}
+}
+}
+}
+}
 =======
 
       {/* Bottom Glow */}
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

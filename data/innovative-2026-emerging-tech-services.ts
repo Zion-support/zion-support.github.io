@@ -535,14 +535,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       }
       realImplementation: true
       implementationDetails:
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
-      launchDate: '2026-01-25'
-      customers: 60
-      rating: 4.9
-      reviews: 30
-    }
+        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
+      launchDate: '2026-01-25',
+      customers: 60,
+      rating: 4.9,
+      reviews: 30,
+    },;
   ];
-export const getPopularEmergingTechServices = () => {
+
+export const getPopularEmergingTechServices = () => {;
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 // DNA Computing Platform realImplementation: true;
@@ -582,24 +583,22 @@ reviews: 30
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
   return innovative2026EmergingTechServices.filter(service =>
-    service.category.toLowerCase().includes(category.toLowerCase())
+    service.category.toLowerCase().includes(category.toLowerCase());
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return innovative2026EmergingTechServices.filter(service => {
+  return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });}
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return innovative2026EmergingTechServices.filter(service => {
+  return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-}
-
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
@@ -922,5 +921,6 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -28,6 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo)
     this.setState({ error, errorInfo })
@@ -77,16 +75,9 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
 <<<<<<< HEAD
       )
-=======
-      );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return this.props.children
   }
 }
-<<<<<<< HEAD
-export default ErrorBoundary
-=======
 
 export default ErrorBoundary;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

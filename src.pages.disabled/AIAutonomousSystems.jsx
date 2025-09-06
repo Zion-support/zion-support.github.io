@@ -13,10 +13,9 @@ export default function AIAutonomousSystems({ }: AIAutonomousSystemsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/AIAutonomousSystems.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

@@ -17,24 +17,17 @@ import {
   ArrowRight,
   Monitor,
   Gauge,
-  BarChart3,
+  BarChart3,;
   Clock,;
+<<<<<<< HEAD
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+export default function WebsitePerformanceMonitorPage() {;
+=======
 } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {
-  Activity
-  Zap
-  TrendingUp
-  AlertTriangle
-  CheckCircle
-  ArrowRight
-  Monitor
-  Gauge
-  BarChart3
-  Clock;
-} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
@@ -109,11 +102,10 @@ export default function WebsitePerformanceMonitorPage() {
     {
       name: 'User Experience'
       description:
-<<<<<<< HEAD
-        'Real user experience metrics and conversion impact analysis.'
-      icon: '👥'
-      color: 'text-pink-400'
-    },  ];      gradient: 'from-blue-400 to-cyan-500'}
+        'Real user experience metrics and conversion impact analysis.',
+      icon: '👥',
+      color: 'text-pink-400',
+    },  ];      gradient: 'from-blue-400 to-cyan-500'},
     {
       icon: <Gauge className="w-8 h-8 text-white" />
       title: 'Performance Metrics'
@@ -169,13 +161,6 @@ export default function WebsitePerformanceMonitorPage() {
       icon: '👥'
       color: 'text-pink-400'
     }
-=======
-        'Real user experience metrics and conversion impact analysis.',
-      icon: '👥',
-      color: 'text-pink-400',
-    },  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const pricing = [
     {
@@ -217,11 +202,11 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
+    };
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
 <<<<<<< HEAD
-    }
-      name: 'Enterprise'
-      price: '$199'
-      period: '/month'
       description:
         'For large organizations with critical performance requirements'
       features: [
@@ -239,6 +224,9 @@ export default function WebsitePerformanceMonitorPage() {
       ];
       popular: false
     }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
@@ -263,15 +251,6 @@ export default function WebsitePerformanceMonitorPage() {
       });
       setIsAnalyzing(false)
     }, 4000)
-=======
-    };
-
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-
-  };
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -442,7 +421,7 @@ export default function WebsitePerformanceMonitorPage() {
 
                       {feature.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </p>
                   </div>
                 </div>
@@ -454,7 +433,7 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Metrics Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -463,7 +442,7 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -507,7 +486,7 @@ export default function WebsitePerformanceMonitorPage() {
 
               </Card>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>
@@ -515,7 +494,7 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -675,7 +654,7 @@ export default function WebsitePerformanceMonitorPage() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </Card>
@@ -694,7 +673,7 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -726,6 +705,7 @@ export default function WebsitePerformanceMonitorPage() {
                     </span>
                   </div>
                 )}
+
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -754,10 +734,9 @@ export default function WebsitePerformanceMonitorPage() {
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
-
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -779,7 +758,7 @@ export default function WebsitePerformanceMonitorPage() {
 
                 </Button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Card>
             ))}
           </div>
@@ -788,7 +767,7 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -798,7 +777,7 @@ export default function WebsitePerformanceMonitorPage() {
 =======
 
             Ready to Monitor Your Website Performance?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our monitoring platform to keep
@@ -829,7 +808,8 @@ export default function WebsitePerformanceMonitorPage() {
     </>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

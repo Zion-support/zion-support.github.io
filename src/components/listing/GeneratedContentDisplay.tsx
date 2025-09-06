@@ -1,7 +1,7 @@
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 import { ArrowRight } from 'lucide-react'
 <<<<<<< HEAD
 =======
@@ -33,6 +33,14 @@ export function GeneratedContentDisplay({
   onApply
 }: GeneratedContentDisplayProps) {
 =======
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+
+interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -61,7 +69,7 @@ interface GeneratedContentDisplayProps {;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -86,7 +94,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
         
         <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
@@ -103,7 +111,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           </div>
         </div>
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
@@ -146,8 +154,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
       </CardFooter>
-    </Card>
-  )
+    </Card>;
+  );
+};
+}
+}
 }
 =======
         
@@ -181,4 +192,4 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

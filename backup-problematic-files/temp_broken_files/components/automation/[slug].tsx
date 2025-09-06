@@ -18,7 +18,7 @@ const AutomationDetail: NextPage = () => {const router = useRouter();
 return (
 =======
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
     <EnhancedLayout>
       <Head>
         <title>{_title} - Zion Tech Solutions</title>
@@ -41,4 +41,4 @@ export default AutomationDetail;
 },
 
 export default AutomationDetail,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx

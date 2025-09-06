@@ -1,25 +1,21 @@
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Linkedin
-  Twitter
-  Github
-  Award
-  Users
-  Globe
-  Code
-  Shield
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Award,
+  Users,
+  Globe,
+  Code,
+  Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
@@ -559,28 +555,7 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-    </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-    <>
-      <SEO
-        title='Our Team | Zion Tech Group'
-        description='Meet the leadership team at Zion Tech Group.'
-        canonical='/team'
-      />
-      <div className='container mx-auto px-4 py-16'>
-        <h1 className='text-4xl font-bold mb-4'>Our Team</h1>
-        <p className='text-gray-300 mb-8'>
-          Profiles coming soon. For inquiries, contact us.
-        </p>
-      </div>
-    </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    </Layout>;
   );
 }
 import Head from "next/head";
@@ -640,14 +615,7 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
-    </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    </>;
   );
   return (
     <>
@@ -664,13 +632,12 @@ export default function TeamPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 =======
-<<<<<<< HEAD
-=======
-import SEO from '../components/SEO';
-export default function TeamPage() {	return (
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -681,4 +648,5 @@ export default function TeamPage() {	return (
 	)
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

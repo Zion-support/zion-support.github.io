@@ -1,7 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 
-export type SmartNudgeBannerProps = {
+export type SmartNudgeBannerProps = {;
   role: 'talent' | 'client';
   userId?: string | null;
   message: string;
@@ -12,19 +12,20 @@ export default function SmartNudgeBanner({
   message
 }: SmartNudgeBannerProps) {
   const storageKey = React.useMemo(
-    () => `zion-nudge-${role}-${userId ?? 'anon'}`
-    [role, userId]
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client'
+  role: 'talent' | 'client',;
   userId?: string | null;
   message: string
-}
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+};
+
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -44,7 +45,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 =======
         localStorage.setItem(storageKey, 'dismissed');    } catch {}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
@@ -69,6 +70,8 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     </div>
 );
 }
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

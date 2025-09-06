@@ -10,20 +10,20 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
     variants: {
       variant: {
 <<<<<<< HEAD
-        default: "bg-primary text-primary-foreground hover:bg-primary/90"
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",;
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 =======
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
@@ -39,6 +39,11 @@ const buttonVariants = cva(
       variant: "default"
       size: "default"}}
 )
+
+<<<<<<< HEAD
+export interface ButtonProps;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+=======
 export interface ButtonProps
 <<<<<<< HEAD
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -49,6 +54,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 =======
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
@@ -99,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
     const Comp = asChild ? Slot : "button";
     return (;
       <Comp;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
@@ -112,6 +118,10 @@ Button.displayName = "Button"
 export { Button, buttonVariants }
 =======
 
+<<<<<<< HEAD
+export { Button, buttonVariants };
+;
+=======
 export { Button, buttonVariants }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

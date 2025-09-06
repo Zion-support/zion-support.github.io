@@ -27,14 +27,12 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 <<<<<<< HEAD
+;
   if (props.collapsible === &quot;none&quot;) {
-    return (
-      <div
-        className={cn(
-          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
 =======
 
   if (props.collapsible === "none") {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return (
       <div
         className={cn(
@@ -71,14 +69,11 @@ if (isMobile) {
   return (;
     <div;
       ref={ref}
+<<<<<<< HEAD
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 =======
-;
-  return (;
-    <div;
-      ref={ref}
       className="group peer hidden md:block text-sidebar-foreground"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -148,9 +143,13 @@ export const SidebarRail = React.forwardRef<
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
+<<<<<<< HEAD
+  HTMLButtonElement,;
+  React.ComponentProps<&quot;button&quot;>
+=======
   HTMLButtonElement,
   React.ComponentProps<"button">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -192,9 +191,13 @@ export const SidebarInset = React.forwardRef<
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,;
+  React.ComponentProps<&quot;main">
+=======
   HTMLDivElement,
   React.ComponentProps<"main">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >((props, ref) => {
   return (
     <main

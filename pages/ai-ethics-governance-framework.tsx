@@ -13,24 +13,13 @@ export default function AIEthicsGovernanceFramework() {
 			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
 <<<<<<< HEAD
 			pricePerMonthUSD={1599}
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Reduce compliance risk and accelerate approvals"
-			features={[
-				"AI risk register and DPIA templates"
-				"Bias/fairness tests, red-teaming workflows"
-				"Model cards, data sheets, and change logs"
-				"Prompt governance and access controls"
-				"Regulatory mapping (EU AI Act, NIST AI RMF)"
-
-				"Training and incident response runbooks"
-			]}
-			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
 =======
 			pricePerMonthUSD={1599  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -40,6 +29,14 @@ export default function AIEthicsGovernanceFramework() {
 				"Prompt governance and access controls",
 				"Regulatory mapping (EU AI Act, NIST AI RMF)",
 				"Training and incident response runbooks"
+<<<<<<< HEAD
+			]}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
+		/>
+	)
+};
+=======
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -50,7 +47,6 @@ export default function AIEthicsGovernanceFramework() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
@@ -62,3 +58,4 @@ export default function AIEthicsGovernanceFramework() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

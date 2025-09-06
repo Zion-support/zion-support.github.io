@@ -1,6 +1,13 @@
 
 <<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "./ContractForm";
 =======
 import { UseFormReturn } from "react-hook-form",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -32,7 +39,7 @@ import { ContractFormValues } from "./ContractForm";
 =======
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -47,9 +54,15 @@ export function PaymentTermsFields({
   handleMilestonesGenerated
 =======
 
+<<<<<<< HEAD
+export function PaymentTermsFields({ ;
+  form;
+  talent;
+=======
 export function PaymentTermsFields({ 
   form,
   talent,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   handleMilestonesGenerated 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: PaymentTermsFieldsProps) {
@@ -133,7 +146,7 @@ export function PaymentTermsFields({;
               </Select>
               <FormMessage />
             </FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         />
         <FormField

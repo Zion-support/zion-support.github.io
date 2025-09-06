@@ -1,20 +1,25 @@
 
 <<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
+import {supabase} from '@/integrations/supabase/client';
 =======
 import { supabase } from '@/integrations/supabase/client',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
+<<<<<<< HEAD
+      .select('id');
+      .limit(1);
+=======
       .select('id')
 <<<<<<< HEAD
       .limit(1);
 
 =======
       .limit(1),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (error && error.code === 'PGRST204') {
@@ -25,8 +30,6 @@ export async function ensureAnalyticsTablesExist() {
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error);
     // No need to create tables here, as this could be a connection error
-  }
-}
 =======
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
@@ -43,6 +46,7 @@ export async function ensureAnalyticsTablesExist() {;
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 
@@ -160,6 +164,10 @@ async function createAnalyticsTables() {
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
+<<<<<<< HEAD
+  }
+}
+=======
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -227,4 +235,4 @@ async function createAnalyticsTables() {;
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

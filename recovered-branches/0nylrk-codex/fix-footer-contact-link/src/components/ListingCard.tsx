@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Link} from "react-router-dom";
+=======
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
@@ -42,6 +47,7 @@ export function ListingCard({
 =======
 import { Badge } from "@/components/ui/badge",
 import { Link } from "react-router-dom",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -53,6 +59,28 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+}
+
+export function ListingCard({ ;
+  id;
+  title, 
+  description, 
+  image, 
+  category, 
+  tags, 
+  author, 
+  authorImage, 
+  className;
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+
+  return (
+    <Link 
+=======
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Link } from "react-router-dom",;
@@ -86,6 +114,7 @@ export function ListingCard({;
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
   return (;
     <Link;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",

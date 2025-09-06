@@ -12,7 +12,6 @@ export * from './analyzeEmail';
 export * from './flagContent';
 export * from './messageCheck';
 export * from './monitorContent';
-export * from './signupCheck';
 =======
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;
@@ -21,5 +20,6 @@ export * from './analyzeEmail',;
 export * from './flagContent',;
 export * from './messageCheck',;
 export * from './monitorContent',;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export * from './signupCheck';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

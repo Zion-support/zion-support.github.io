@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
 import React from "react";
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 =======
 import React from "react",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
@@ -20,8 +20,7 @@ export function SidebarContent({
 <<<<<<< HEAD
       {children}
     </div>
-  );
-}
+  )
 =======
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -36,6 +35,6 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
       {children}
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

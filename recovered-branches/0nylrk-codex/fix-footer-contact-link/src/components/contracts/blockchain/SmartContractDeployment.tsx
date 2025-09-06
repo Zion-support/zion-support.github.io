@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
+import {Loader2, ShieldCheck, Download} from "lucide-react";
+import {toast} from "sonner";
+=======
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -13,7 +25,7 @@ import { toast } from "sonner";
 =======
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -27,10 +39,15 @@ export function SmartContractDeployment({
   onDeploy;
 =======
 
+<<<<<<< HEAD
+export function SmartContractDeployment({ ;
+  solidityCode;
+  onDeploy;
+=======
 export function SmartContractDeployment({ 
   solidityCode,
   onDeploy,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -112,13 +129,12 @@ export function SmartContractDeployment({
 <<<<<<< HEAD
             <Switch
               id="deploy-blockchain"
+<<<<<<< HEAD
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
 =======
-            <Switch 
-              id="deploy-blockchain"
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -193,7 +209,7 @@ export function SmartContractDeployment({;
               onCheckedChange={(checked) => setDeploymentOptions({;
                 ...deploymentOptions,;
                 deployToChain: checked;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -205,16 +221,15 @@ export function SmartContractDeployment({;
 <<<<<<< HEAD
                 <RadioGroup
                   defaultValue={deploymentOptions.network}
+<<<<<<< HEAD
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;
                     network: value as BlockchainNetwork
 =======
-                <RadioGroup 
-                  defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -243,10 +258,15 @@ export function SmartContractDeployment({;
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    walletAddress: e.target.value
+=======
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   })}
                 />
               </div>
@@ -255,18 +275,16 @@ export function SmartContractDeployment({;
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
+<<<<<<< HEAD
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;
 
                     useEscrow: checked
 =======
-                <Switch 
-                  id="use-escrow"
-                  checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
@@ -300,6 +318,12 @@ export function SmartContractDeployment({;
       </CardFooter>
     </Card>
   )
+=======
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 =======
         </Button>;

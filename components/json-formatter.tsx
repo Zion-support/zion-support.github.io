@@ -3,20 +3,20 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
+  Code,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+  ArrowRight,
+  Download,
+  Upload,
+  Settings,;
+  Eye,;
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-export default function JSONFormatterPage() {
+export default function JSONFormatterPage() {;
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -373,7 +373,7 @@ export default function JSONFormatterPage() {
 
                       {getLineNumbers(inputJson)}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   )}
                   <textarea
@@ -391,8 +391,13 @@ export default function JSONFormatterPage() {
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
+
 <<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+                <div className='flex space-x-3'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
@@ -534,7 +539,7 @@ export default function JSONFormatterPage() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             </Card>
@@ -544,7 +549,7 @@ export default function JSONFormatterPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -554,7 +559,7 @@ export default function JSONFormatterPage() {
 =======
 
               Professional JSON Formatting Features
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -764,7 +769,8 @@ export default function JSONFormatterPage() {
     </>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -61,41 +61,41 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
     features: [
-      'Link shortener and branded domains'
-      'UTM builder and traffic quality scoring'
-      'Multi-touch attribution and deduplication'
-      'Automated payouts and tax forms'
-      'Fraud and bot detection'
-      'Partner portal and reports'
-    ]
-    popular: true
-    icon: '🔗'
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
-    marketPosition:
-      'Easier than enterprise suites; purpose-built for small teams.'
-    targetAudience: 'E-commerce, SaaS, Media'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge']
-    integrations: ['Stripe', 'Shopify', 'WooCommerce']
-    useCases: ['Partner programs', 'Influencer payouts']
-    roi: 'Grow partner-attributed revenue by 10–30%'
-    competitors: ['Impact.com (complex)', 'Tune (enterprise)']
-    marketSize: '$15B+ affiliate tech'
-    growthRate: '12% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Webhook ingestion, cookie-less heuristics'
-    launchDate: '2025-11-01'
-    customers: 35
-    rating: 4.6
-    reviews: 21
-  }
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
+      'Automated payouts and tax forms',
+      'Fraud and bot detection',
+      'Partner portal and reports',
+    ],
+    popular: true,
+    icon: '🔗',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-300',
+    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',
+    marketPosition:;
+      'Easier than enterprise suites; purpose-built for small teams.',
+    targetAudience: 'E-commerce, SaaS, Media',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    useCases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner-attributed revenue by 10–30%',
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    marketSize: '$15B+ affiliate tech',
+    growthRate: '12% CAGR',
+    variant: 'network-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Webhook ingestion, cookie-less heuristics',
+    launchDate: '2025-11-01',
+    customers: 35,
+    rating: 4.6,
+    reviews: 21,
+  },
   {
     id: 'return-management-saas'
     name: 'Return Management SaaS'
@@ -413,9 +413,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 9;
 		rating: 4.5
 		reviews: 6
-	}
-];
-
 =======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -609,6 +606,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 	}
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

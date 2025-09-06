@@ -10,18 +10,17 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Shield
-  Zap
-  BarChart3
-  Code
-  ArrowRight
-  Copy
-  RefreshCw
-  CheckCircle
-  AlertTriangle;
+  Shield,
+  Zap,
+  BarChart3,
+  Code,
+  ArrowRight,
+  Copy,
+  RefreshCw,
+  CheckCircle,;
+  AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-export default function APIRateLimiterPage() {
+export default function APIRateLimiterPage() {;
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -49,10 +48,13 @@ export default function APIRateLimiterPage() {
       Date.now().toString(36);
     setApiKey(key);  }
   const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 <<<<<<< HEAD
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
@@ -136,12 +138,12 @@ export default function APIRateLimiterPage() {
       default:
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
-  }
 =======
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -289,7 +291,7 @@ export default function APIRateLimiterPage() {
 
                       <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -314,7 +316,7 @@ export default function APIRateLimiterPage() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Time Window */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -334,7 +336,7 @@ export default function APIRateLimiterPage() {
 
                       <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -359,7 +361,7 @@ export default function APIRateLimiterPage() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* API Key Generation */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -426,7 +428,7 @@ export default function APIRateLimiterPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -440,7 +442,7 @@ export default function APIRateLimiterPage() {
 
                   Test Results
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -530,7 +532,7 @@ export default function APIRateLimiterPage() {
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
@@ -544,7 +546,7 @@ export default function APIRateLimiterPage() {
 
                         </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                     </div>
                   ))}
@@ -567,7 +569,7 @@ export default function APIRateLimiterPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -577,7 +579,7 @@ export default function APIRateLimiterPage() {
 =======
 
               Advanced Rate Limiting Features
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -717,17 +719,15 @@ const endpoint = '${endpoint |'/api/users'}';
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
 <<<<<<< HEAD
-    'Authorization': \`Bearer \${apiKey}\`
-    'X-RateLimit-Limit': '${rateLimit}'
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 =======
-    'Authorization': \`Bearer \${apiKey}\`,
-    'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 console.log('Response:', response.data);
@@ -783,7 +783,8 @@ headers = {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-response = requests.get(
+
+response = requests.get(;
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -808,7 +809,8 @@ headers = {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-response = requests.get(
+
+response = requests.get(;
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -874,4 +876,4 @@ print('Rate Limit Info:', {
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

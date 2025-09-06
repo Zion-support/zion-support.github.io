@@ -1,5 +1,5 @@
+export interface CustomerTicket {;
 <<<<<<< HEAD
-export interface CustomerTicket {
   id: string;
   customerId: string;
   subject: string;
@@ -18,7 +18,8 @@ export interface CustomerTicket {
 
   conversationHistory: CustomerMessage[]
 }
-export interface CustomerMessage {
+
+export interface CustomerMessage {;
   id: string;
   ticketId: string;
   senderId: string;
@@ -32,7 +33,8 @@ export interface CustomerMessage {
 
   confidence: number
 }
-export interface CustomerProfile {
+
+export interface CustomerProfile {;
   id: string;
   email: string;
   name: string;
@@ -53,7 +55,8 @@ export interface CustomerProfile {
   }
   tags: string[]
 }
-export interface AIResponse {
+
+export interface AIResponse {;
   id: string;
   ticketId: string;
   response: string;
@@ -65,7 +68,8 @@ export interface AIResponse {
 
   generatedAt: Date
 }
-export interface CustomerServiceMetrics {
+
+export interface CustomerServiceMetrics {;
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
@@ -81,7 +85,8 @@ export interface CustomerServiceMetrics {
     customerSatisfaction: number
   }>
 }
-export interface CustomerServiceRequest {
+
+export interface CustomerServiceRequest {;
   customerId: string;
   subject: string;
   description: string;
@@ -92,7 +97,8 @@ export interface CustomerServiceRequest {
 
   preferredChannel?: 'email' | 'chat' | 'phone'
 }
-export interface CustomerServiceResponse {
+
+export interface CustomerServiceResponse {;
   ticketId: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   aiResponse?: AIResponse;
@@ -102,7 +108,8 @@ export interface CustomerServiceResponse {
 
   assignedAgent?: string
 }
-export class AICustomerServiceService {
+
+export class AICustomerServiceService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -299,8 +306,8 @@ export class AICustomerServiceService {
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 =======
-export interface CustomerTicket {;
   id: string,;
   customerId: string,;
   subject: string,;
@@ -612,4 +619,4 @@ export class AICustomerServiceService {;
 }
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

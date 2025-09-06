@@ -119,7 +119,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 =======
         ctx.restore();      }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
 <<<<<<< HEAD
@@ -175,12 +175,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           }
         });
         ctx.restore()
-    }
 =======
         ctx.restore();      }
 
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -221,17 +221,17 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke();
         }
+
 <<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
-    }
 =======
-
         ctx.restore();      }
 
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -276,17 +276,19 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
-        ctx.restore();      }
+
 <<<<<<< HEAD
+        ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
-    }
 =======
+        ctx.restore();      }
 
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -482,7 +484,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           });
         });
@@ -529,7 +531,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
@@ -573,9 +575,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               rotate: [360, 180, 0]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
-<<<<<<< HEAD
-              duration: 10
-              repeat: Infinity
+              duration: 10,
+              repeat: Infinity,
               ease: 'easeInOut',            }}
           />
         </div>
@@ -590,8 +591,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-              duration: 10
-              repeat: Infinity
+              duration: 10,
+              repeat: Infinity,
+<<<<<<< HEAD
               ease: 'easeInOut',              ease: "easeInOut"
             }}
           />
@@ -606,13 +608,10 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
-
 =======
-              duration: 10,
-              repeat: Infinity,
 
             }}
           />
         </div>
       )}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

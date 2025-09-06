@@ -1,12 +1,11 @@
+import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
 <<<<<<< HEAD
-import { GetServerSideProps  } from 'next';
-import { useRouter  } from 'next/router';
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react'
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
+import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -59,10 +58,6 @@ const hasRating = (
   result.type === 'talent';
 interface SearchResultsPageProps {
 =======
-import { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
 import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -137,7 +132,7 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult =>;
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
 interface SearchResultsPageProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   initialResults: SearchResult[];
   query: string;
   slug: string;
@@ -254,7 +249,7 @@ function offlineSearch(
           const aRating =
             a.type === 'product' |a.type === 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
-            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -419,7 +414,7 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           return bRating - aRating;
         });
         break;
@@ -439,12 +434,13 @@ function offlineSearch(;
   const start = (page - 1) * limit;
   const paginated = all.slice(start, start + limit);
 <<<<<<< HEAD
-  return { results: paginated, totalCount: all.length }
+  return { results: paginated, totalCount: all.length };
+
 export default function SearchResultsPage({
-  initialResults
-  query
-  slug
-  totalCount
+  initialResults,
+  query,
+  slug,
+  totalCount,;
 }: SearchResultsPageProps) {  const router = useRouter();
 =======
   return { results: paginated, totalCount: all.length   } catch (error) {
@@ -461,7 +457,7 @@ export default function SearchResultsPage({
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -475,19 +471,6 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
-<<<<<<< HEAD
-  // Fetch search results
-  const fetchResults = async (searchTerm: string, page = 1) => {
-    try {
-      setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({
-        query: searchTerm
-        page: String(page)
-        limit: '12'
-        sort: sortBy
-      });      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-=======
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
     try {
@@ -499,33 +482,10 @@ export default function SearchResultsPage(req, res) {
         limit: '12';
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
-<<<<<<< HEAD
-      if (!response.ok) {
-        throw new Error(`Search API error: ${response.status}`);
-      }
-      const data = await response.json();
-      logInfo('Search results received:', { data: data });
-      setTotalResults(data.totalCount |data.results?.length |0);
-      if (page === 1) {
-        setResults(data.results |[]);
-      } else {
-        setResults(prev => [...prev, ...(data.results |[])]);
-      }
-    } catch (error) {
-      logErrorToProduction('Error fetching search results:', { data: error });
-      const offline = offlineSearch(searchTerm, page, 12, {
-        sortBy
-        category: categoryFilter !== 'all' ? categoryFilter : undefined
-        minPrice: minPrice ? Number(minPrice) : undefined
-        maxPrice: maxPrice ? Number(maxPrice) : undefined
-        minRating: minRating ? Number(minRating) : undefined
-      });
-=======
       if (!response.ok) {;
         throw new Error(`Search API error: ${response.status}`);
         } catch (error) {
@@ -683,6 +643,12 @@ export default function SearchResultsPage(req, res) {
     if (minPrice && r.type === 'product') {;
       if ((r.price ?? 0) < Number(minPrice)) {;
         return false;
+<<<<<<< HEAD
+      }
+    }
+    return true;  });
+
+=======
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -721,6 +687,7 @@ export default function SearchResultsPage(req, res) {
 }
     return true
   }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -816,6 +783,16 @@ export default function SearchResultsPage(req, res) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD
+                availability_type: 'available',
+              }}
+              onViewProfile={(id: string) => {
+                router.push(`/talent/${id}`);
+              }}
+              onRequestHire={talent => {
+                router.push(`/talent/${talent.id}?action=hire`);              }}
+              isAuthenticated={isAuthenticated}
+=======
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -840,7 +817,7 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           </div>
         ),
@@ -862,7 +839,8 @@ export default function SearchResultsPage(req, res) {
             </p>
           </div>
         );    }
-  }
+  };
+
 =======
           <div key={result.id} data-testid="result-card">
             <CategoryCard
@@ -911,7 +889,7 @@ export default function SearchResultsPage(req, res) {
   }
 }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <SEO
@@ -940,7 +918,7 @@ export default function SearchResultsPage(req, res) {
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
 =======
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -981,7 +959,7 @@ export default function SearchResultsPage(req, res) {
 }
               <div className="relative w-full lg:w-96">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Input
                   type="text"
                   value={searchQuery  } catch (error) {
@@ -1011,7 +989,7 @@ export default function SearchResultsPage(req, res) {
 }
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-2 flex-wrap">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Button
                   variant="outline"
                   size="sm"
@@ -1048,7 +1026,7 @@ export default function SearchResultsPage(req, res) {
                   <option value="price_desc">Price: High to Low</option>
                   <option value="rating">Highest Rated</option>
                 </select>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <select
                   value={categoryFilter  } catch (error) {
     console.error("Error:", error);
@@ -1087,7 +1065,7 @@ export default function SearchResultsPage(req, res) {
 }
                 </select>
                 <div className="flex items-center gap-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1143,7 +1121,7 @@ export default function SearchResultsPage(req, res) {
               <div className='flex items-center gap-2'>
 =======
               <div className="flex items-center gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1227,7 +1205,7 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
@@ -1278,7 +1256,7 @@ export default function SearchResultsPage(req, res) {
   );
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
-> = async (context: any) => {
+> = async (context: any) => {;
   const params = context.params;
   const slug = params?.slug as string
   // Convert slug back to query term
@@ -1293,38 +1271,6 @@ export const getServerSideProps: GetServerSideProps<
     let results = [];
     let totalCount = 0;
     if (response.ok) {
-      const data = await response.json();
-      results = data.results |[];
-      totalCount = data.totalCount |results.length;
-      logInfo(`Server-side fetch successful: ${results.length} results`);
-    } else {
-      logErrorToProduction(
-        `Search API error: ${response.status} ${response.statusText}`
-      );
-      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-      results = offline.results;
-      totalCount = offline.totalCount;    }
-    return {
-      props: {
-        initialResults: results
-        query
-        slug
-        totalCount
-      }
-    }
-  } catch (error) {
-    logErrorToProduction('Error fetching search results:', { data: error });
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-    return {
-      props: {
-        initialResults: offline.results
-        query
-        slug
-totalCount: offline.totalCount
-      }
-    };  }
-}
-
 =======
           )  } catch (error) {
     console.error("Error:", error);
@@ -1440,10 +1386,52 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
+    } else {
+      logErrorToProduction(
+        `Search API error: ${response.status} ${response.statusText}`
+      );
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;    }
+
+    return {
+      props: {
+        initialResults: results,
+        query,
+        slug,
+        totalCount,
+      },
+    };
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+
+    return {
+      props: {
+        initialResults: offline.results,
+        query,
+        slug,
+totalCount: offline.totalCount,
+      },
+    };  }
+};
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -1485,4 +1473,4 @@ export const getServerSideProps: GetServerSideProps<;
   }
 }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

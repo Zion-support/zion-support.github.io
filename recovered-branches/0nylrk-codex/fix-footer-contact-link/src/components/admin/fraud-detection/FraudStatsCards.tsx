@@ -1,21 +1,21 @@
-
 <<<<<<< HEAD
 import React from "react";
 import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 =======
+
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
 import { FraudStats } from "@/types/fraud",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
@@ -32,7 +32,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -45,7 +45,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -58,7 +58,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -71,7 +71,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
@@ -81,19 +81,17 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
+=======
     </div>
 <<<<<<< HEAD
-  );
-}
-
-=======
   )
 },
 import React from "react",;
@@ -152,9 +150,15 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
+);
+=======
   );
+>>>>>>> main
 };
+<<<<<<< HEAD
+=======
 
 export default FraudStatsCards;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

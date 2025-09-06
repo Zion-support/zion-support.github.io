@@ -7,8 +7,10 @@ import path from 'path';
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Experiment = {
   title: string;
 hypothesis?: string;
@@ -22,7 +24,7 @@ items: Experiment[] }
 export default function CurationPage({ updatedAt, items }: Props) {
 <<<<<<< HEAD
   return (type Experiment = {
-  title: string
+  title: string,;
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -45,6 +47,8 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
+
+<<<<<<< HEAD
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -74,35 +78,34 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
-=======
-  return (
-
-};
-
-export default function CurationPage({ updatedAt, items }: Props) {
-  return (
-
-                {exp.impact ? `Impact: ${exp.impact}/5` : null}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             )}
           </div>
         ))}
         {!items.length && (
-<<<<<<< HEAD
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
+          </div>
+        )}
+      </div>
+    </main>;
 =======
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
             Nothing to show yet.
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         )}
       </div>
     </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 <<<<<<< HEAD
 =======
@@ -111,10 +114,10 @@ export default function CurationPage({ updatedAt, items }: Props) {
 export async function getStaticProps() {
   try {
     const filePath = path.join(
-      process.cwd()
-      'data'
-      'ai-curation'
-      'growth-experiments.json'
+      process.cwd(),
+      'data',
+      'ai-curation',
+      'growth-experiments.json';
     );
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
     return {
@@ -135,31 +138,29 @@ export async function getStaticProps() {
       props: {
         updatedAt: null,}
 export async function getStaticProps() {
-  try {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
     return {
       props: {
-        updatedAt: parsed.updatedAt |null
-        items: parsed.items |[]
-      }
-      revalidate: 300
-    };        items: parsed.items |[]}
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    };        items: parsed.items || []},
       revalidate: 300}
   } catch {
     return {
       props: {
 <<<<<<< HEAD
-        updatedAt: null
-        items: []
-      }
-      revalidate: 300
-    }
-  }        items: []}
-
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
       revalidate: 300}
-}
 }
 =======
         updatedAt: null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

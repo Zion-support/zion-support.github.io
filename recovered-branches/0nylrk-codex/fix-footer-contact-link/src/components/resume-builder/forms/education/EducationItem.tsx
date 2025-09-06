@@ -1,17 +1,12 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { format } from "date-fns";
-import { Edit, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Education } from "@/types/resume";
-import { EducationItemProps } from "./types";
-export function EducationItem({
-  education
-  onEdit
-  onDelete
-}: EducationItemProps) {
-
+import {format} from 'date-fns';
+import {Edit, Trash2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Education} from '@/types/resume';
+import {EducationItemProps} from './types';
 =======
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
@@ -19,8 +14,21 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import { format } from "date-fns";
+import { Edit, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Education } from "@/types/resume";
+import { EducationItemProps } from "./types";
+export function EducationItem({
+  education,
+  onEdit,
+  onDelete,
+}: EducationItemProps) {
+>>>>>>> main
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -78,3 +86,4 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
     </Card>
   );
 }
+;

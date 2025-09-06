@@ -11,7 +11,7 @@ interface ResultsHeaderProps {;
   resultCount: number;
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -53,7 +53,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
 =======
           {resultCount === 0 ? (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
@@ -62,9 +62,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       )}
     </div>
   )
-  )
-}
-}
+  );
+};
+};
 =======
         </span>;
       )}
@@ -72,4 +72,4 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

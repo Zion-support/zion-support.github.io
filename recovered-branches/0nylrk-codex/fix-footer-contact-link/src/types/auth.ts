@@ -1,5 +1,5 @@
+export interface UserDetails {;
 <<<<<<< HEAD
-export interface UserDetails {
   id?: string;
   name?: string;
   email?: string;
@@ -15,7 +15,8 @@ export interface UserDetails {
   createdAt?: string;
   updatedAt?: string
 }
-export interface UserProfile {
+
+export interface UserProfile {;
   id?: string;
   displayName?: string;
   email: string;
@@ -34,7 +35,7 @@ export interface UserProfile {
   companyId?: string
 }
 // Update AuthContextType definition to match implementation
-export interface AuthContextType {
+export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
@@ -52,9 +53,7 @@ export interface AuthContextType {
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-}
 =======
-export interface UserDetails {;
   id?: string,;
   name?: string,;
   email?: string,;
@@ -105,6 +104,7 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

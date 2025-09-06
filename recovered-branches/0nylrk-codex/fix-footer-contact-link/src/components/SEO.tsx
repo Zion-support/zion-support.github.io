@@ -1,17 +1,9 @@
 
 <<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-interface SEOProps {
-
-  title: string
-  description: string
-
-  keywords?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  canonical?: string;
+import {Helmet} from "react-helmet-async";
 =======
 import { Helmet } from "react-helmet-async",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SEOProps {
   title: string,
   description: string,
@@ -22,10 +14,18 @@ interface SEOProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   noindex?: boolean
 }
+
+<<<<<<< HEAD
+export function SEO({;
+  title;
+  description;
+  keywords;
+=======
 export function SEO({
   title,
   description,
   keywords,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Default to the Google Drive image URL
 <<<<<<< HEAD
 
@@ -69,7 +69,6 @@ export function SEO({
     </Helmet>
   )
 <<<<<<< HEAD
-}
 =======
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
@@ -119,6 +118,7 @@ export function SEO({;
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

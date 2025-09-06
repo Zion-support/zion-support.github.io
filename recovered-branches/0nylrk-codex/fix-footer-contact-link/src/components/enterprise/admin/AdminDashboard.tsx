@@ -33,7 +33,7 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -65,16 +65,17 @@ import {
           <UsageStats />
         </TabsContent>
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
-    </div>
 <<<<<<< HEAD
+    </div>;
   );
 }
 =======
+    </div>
   )
 import React from "react",;
 import { AdminHeader } from "./AdminHeader",;
@@ -115,4 +116,4 @@ export function AdminDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

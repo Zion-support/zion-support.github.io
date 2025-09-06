@@ -12,18 +12,16 @@ import { formatDistanceToNow  } from 'date-fns';
 import { toast  } from 'sonner';
 import { useAuth  } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
+import {ApplyToJobModal} from '@/components/messaging/job-application';
+import {SEO} from '@/components/SEO';
+import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
-
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 =======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
@@ -47,6 +45,7 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -267,7 +266,7 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {skill}
                       </Badge>
                     ))}

@@ -1,7 +1,5 @@
 <<<<<<< HEAD
-
-')
-
+'),
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
@@ -77,29 +75,30 @@ function restorePage(pagePath) {;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
         backupContent = parts[1].split('>>>>>>>')[0];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
+    
     // Clean up the content
-
-    backupContent = backupContent.trim()
-
+    backupContent = backupContent.trim(),
+    
     // Ensure it has proper structure
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
 <<<<<<< HEAD
+    
     // Create a backup of the current corrupted file
-
-    const timestamp = Date.now()
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`
-    fs.writeFileSync(corruptedBackupPath, currentContent)
+    const timestamp = Date.now(),
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`,
+    fs.writeFileSync(corruptedBackupPath, currentContent),
+    
     // Restore the page
-    fs.writeFileSync(pagePath, backupContent)
-    return {
-      restored: true
-      backupUsed: backupPath
-
+    fs.writeFileSync(pagePath, backupContent),
+    
+    return { 
+      restored: true, 
+      backupUsed: backupPath,
       corruptedBackup: corruptedBackupPath
 =======
 ;
@@ -113,12 +112,16 @@ function restorePage(pagePath) {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
@@ -138,8 +141,15 @@ function fixSpecificPages() {
 
 =======
   },
+<<<<<<< HEAD
+  
+  console.log('🚀 Starting targeted page restoration...'),
+  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+  
+=======
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
@@ -154,10 +164,11 @@ function fixSpecificPages() {
       continue
     }
 <<<<<<< HEAD
-    console.log(`\n🔍 Checking: ${pagePath}`)
-    const result = restorePage(pagePath)
+    
+    console.log(`\n🔍 Checking: ${pagePath}`),
 =======
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const result = restorePage(pagePath),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (result.restored) {
@@ -166,32 +177,32 @@ function fixSpecificPages() {
       console.log(`   Used backup: ${result.backupUsed}`)
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
+      results.failed++,
 <<<<<<< HEAD
-      results.failed++
-      console.log(`❌ Failed: ${pagePath}`)
-
+      console.log(`❌ Failed: ${pagePath}`),
       console.log(`   Reason: ${result.reason}`)
     }
+    
     results.details.push({
-      file: pagePath
+      file: pagePath,
       ...result
     })
   }
+  
   // Generate summary
-
-  console.log('\n📊 Restoration Summary: ')
-  console.log(`   Total pages: ${results.total}`)
-  console.log(`   Restored: ${results.restored}`)
-  console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  console.log('\n📊 Restoration Summary: '),
+  console.log(`   Total pages: ${results.total}`),
+  console.log(`   Restored: ${results.restored}`),
+  console.log(`   Failed: ${results.failed}`),
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  
   // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
-
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+  
   return results
 =======
-      results.failed++,
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
 ;
@@ -258,27 +269,22 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
-<<<<<<< HEAD
-module.exports = {
 
-  restorePage
-  fixSpecificPages
-  findBestBackup
-}
+module.exports = {
+  restorePage,
+  fixSpecificPages,
+  findBestBackup;
+<<<<<<< HEAD
+},;
 
 =======
-;
-module.exports = {;
-  restorePage,;
-  fixSpecificPages,;
-  findBestBackup;
 };
 =======
 >>>>>>> main
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

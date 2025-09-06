@@ -1,14 +1,21 @@
 <<<<<<< HEAD
 import React, { forwardRef } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
+import { cn } from '@/lib/utils'
+import { SafeRef } from '@/types/ref-types'
+=======
+
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-
+<<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -33,16 +40,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
             onClick={() => setExpanded(!expanded)}          >
             <div className='flex items-center gap-2'>
 =======
-
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: string,
-  icon?: React.ReactNode,
-  defaultExpanded?: boolean,
-  showChevron?: boolean
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -70,7 +67,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             onClick={() => setExpanded(!expanded)}
           >
             <div className="flex items-center gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {icon}
               <span>{title}</span>
             </div>
@@ -84,7 +81,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 =======
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </button>
         )}
@@ -94,9 +91,9 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     )
   }
 )
-SidebarGroup.displayName = 'SidebarGroup'
-export { SidebarGroup }
-
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+}
 =======
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
@@ -113,4 +110,4 @@ export { SidebarGroup },
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

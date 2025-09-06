@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -14,10 +13,12 @@ import { Badge } from '@/components/ui/badge'
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
-  suggestion: PricingSuggestion | null;
-  isLoading: boolean;
-  onApplySuggestion: () => void;
+  suggestion: PricingSuggestion | null
+  isLoading: boolean
+  onApplySuggestion: () => void
+  rateType: 'hourly' | 'fixed'
 =======
+
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -33,6 +34,7 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 <<<<<<< HEAD
 
@@ -45,9 +47,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
+<<<<<<< HEAD
+  rateType,
+}) => {  if (isLoading) {
+=======
   rateType}) => {
   if (isLoading) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return (
       <Card className="border border-dashed border-muted">
         <CardContent className="flex items-center justify-center p-6">
@@ -57,7 +63,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 <<<<<<< HEAD
 =======
               Generating optimal pricing suggestion...
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </p>
           </div>
         </CardContent>
@@ -130,7 +136,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
@@ -162,7 +168,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
@@ -170,7 +176,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
@@ -194,7 +200,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 =======
 
         <div className="flex items-center justify-between">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -208,7 +214,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </p>
       </CardContent>
     </Card>
@@ -221,11 +227,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </p>
       </CardContent>
     </Card>
-  )
-}
-"  )
-}
-
+  );
+};
+"  );
+};
 =======
 },
 ;
@@ -279,4 +284,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -38,12 +38,12 @@ function isAuthorized(req: NextApiRequest) {
     token === process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }
@@ -78,12 +78,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.fundsReleased = (existing.fundsReleased |0) + tranche;
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
+
+<<<<<<< HEAD
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
 
-<<<<<<< HEAD
+}
+}
+}
 =======
   writeGrant(existing);
   res.status(200).json({ record: existing });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

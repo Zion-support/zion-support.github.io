@@ -1,13 +1,13 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { Conversation, Message  } from '@/types/messaging';
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
 /**
  * Hook to manage messaging state
  */
-export function useConversationState() {
-  const [messages, setMessages] = useState<Message[]>([]),
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
@@ -47,7 +47,7 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setActiveConversation;
     isLoading;
     setIsLoading}

@@ -1,12 +1,10 @@
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { GetServerSideProps  } from 'next';
-import fs from 'fs',
-import path from 'path';
-
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
 =======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import fs from 'fs';
 import path from 'path';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -16,20 +14,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 <<<<<<< HEAD
 import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,;
+  SelectValue,;
 } from '@/components/ui/select';
 import {
-  AlertTriangle
-  Info
-  AlertCircle
-  XCircle
-  Search
-  Download
-  RefreshCw;
+  AlertTriangle,
+  Info,
+  AlertCircle,
+  XCircle,
+  Search,
+  Download,;
+  RefreshCw,;
 } from 'lucide-react';
 
 =======
@@ -67,6 +65,12 @@ interface LogEntry {
 
 interface LogsPageProps {
 =======
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LogEntry {
+  id: string;
+  timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
   message: string;
   category: string;
@@ -101,7 +105,7 @@ interface LogsPageProps {
 }
 ;
 interface LogsPageProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -115,7 +119,7 @@ interface LogsPageProps {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -144,11 +148,11 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
 }
 export default function LogsPage({
-  logs: initialLogs
-  errorCount
-  warningCount
-  totalCount
-  lastUpdated
+  logs: initialLogs,
+  errorCount,
+  warningCount,
+  totalCount,
+  lastUpdated,;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 =======
       return <XCircle className="h-4 w-4 text-red-700" />,
@@ -193,7 +197,7 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
 export default function LogsPage(req, res) {
   try {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -201,6 +205,7 @@ export default function LogsPage(req, res) {
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
   );
@@ -244,10 +249,6 @@ export default function LogsPage(req, res) {
       default: return 'bg-gray-100 text-gray-800';    }
   }
   const exportLogs = () => {
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri =
-      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 =======
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -318,16 +319,20 @@ export default function LogsPage(req, res) {
 }
   },;
   const exportLogs = () => {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
 <<<<<<< HEAD
-  }
+
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
@@ -347,11 +352,8 @@ export default function LogsPage(req, res) {
   const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
+
 =======
-  },;
-  const formatTimestamp = (timestamp: string) => {;
-    return new Date(timestamp).toLocaleString();
-  };
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -361,7 +363,7 @@ export default function LogsPage(req, res) {
 }
     return parts.length > 0 ? parts.join() : null
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -387,7 +389,7 @@ export default function LogsPage(req, res) {
   }
 }
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -437,7 +439,7 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -497,7 +499,7 @@ export default function LogsPage(req, res) {
               </SelectContent>
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
@@ -545,7 +547,7 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -581,7 +583,7 @@ export default function LogsPage(req, res) {
                   <div className='text-sm font-medium'>{log.message}</div>
 =======
                   <div className="text-sm font-medium">{log.message}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
@@ -592,6 +594,7 @@ export default function LogsPage(req, res) {
                       </pre>
                     </details>
                   )}
+
 =======
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
@@ -606,7 +609,7 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -693,7 +696,7 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               ))
             ) : (
@@ -709,7 +712,7 @@ export default function LogsPage(req, res) {
   );
 }
 export const getServerSideProps: GetServerSideProps = async () => {
-  try {
+  try {;
     const logsDir = path.join(process.cwd(), 'logs');
     const logs: LogEntry[] = [];
               // Skip malformed log entries
@@ -742,16 +745,13 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch (error) {
     logErrorToProduction('Error reading logs:', error);    return {
       props: {
-        logs: []
-        errorCount: 0
-        warningCount: 0
-        totalCount: 0
-        lastUpdated: new Date().toISOString()
-      }
-    }
-  }
-}
-
+        logs: [],
+        errorCount: 0,
+        warningCount: 0,
+        totalCount: 0,
+        lastUpdated: new Date().toISOString(),
+      },
+    };
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -849,6 +849,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 };

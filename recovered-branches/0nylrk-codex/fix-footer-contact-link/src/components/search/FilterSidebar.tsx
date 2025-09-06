@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
+=======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -8,7 +15,7 @@ import { FilterOptions } from "@/types/search";
 =======
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FilterSidebarProps {
   filters: {
 
@@ -30,11 +37,20 @@ interface FilterSidebarProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onClearFilters: () => void
 }
+
+<<<<<<< HEAD
+export function FilterSidebar({;
+  filters;
+  filterOptions;
+  onFilterChange;
+  onRatingChange;
+=======
 export function FilterSidebar({
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -53,6 +69,8 @@ export function FilterSidebar({
           variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -88,7 +106,7 @@ export function FilterSidebar({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={onClearFilters}
         >
           Clear All

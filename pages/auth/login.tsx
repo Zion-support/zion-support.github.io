@@ -1,11 +1,10 @@
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useEffect, useState, FormEvent  } from 'react';
-import Link from 'next/link',
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
 =======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -15,25 +14,25 @@ import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
 <<<<<<< HEAD
 import type {
-  AuthError
-  User
-  AuthChangeEvent
-  Session;
+  AuthError,
+  User,
+  AuthChangeEvent,;
+  Session,;
 } from '@supabase/supabase-js';
 import {
-  logInfo
-  logWarn
-  logErrorToProduction;
+  logInfo,
+  logWarn,;
+  logErrorToProduction,;
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle,;
 } from '@/components/ui/card';
 const LoginPage = () => {
 =======
@@ -44,7 +43,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const LoginPage = () => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -111,6 +110,7 @@ const LoginPage = () => {;
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
+<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );        }
@@ -265,95 +265,9 @@ const LoginPage = () => {;
       });
     } finally {
       setIsProactivelyResending(false);    }
-  }
-  const handleLogin = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-    setIsEmailUnverified(false);
-    setVerificationEmailSent(false)
-    try {
-      logInfo('Attempting Supabase login with email:', { data: email });
-      const { data, error: signInError } =
-        await supabase.auth.signInWithPassword({
-          email
-          password
-        });
-      if (signInError) {
-        logErrorToProduction('Supabase sign-in error:', { data: signInError });
-        // Check if error is related to email verification
-        const messageIncludesEmailNotConfirmed =
-          signInError.message?.toLowerCase().includes('email not confirmed') |
-          signInError.message?.toLowerCase().includes('email_not_confirmed') |
-          signInError.message?.toLowerCase().includes('verify') |
-          signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code "email_not_verified"
-        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
-        const codeIsEmailNotVerified =
-          (signInError as any).code === 'email_not_verified';
-        if (messageIncludesEmailNotConfirmed |codeIsEmailNotVerified) {
-          setIsEmailUnverified(true);
-          setError({
-            name: 'EmailNotVerifiedError'
-            message:
-              'Please verify your email address before logging in. Check your inbox for a verification link.'
-          } as AuthError);
-          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
+  };
+
 =======
-  // States for the new proactive resend form;
-  const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
-  const [proactiveResendEmail, setProactiveResendEmail] = useState('');
-  const [isProactivelyResending, setIsProactivelyResending] = useState(false);
-  const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),;
-  // Using centralized Supabase client (imported at top);
-  // Effect for initial session check and auth state changes;
-  useEffect(() => {;
-    let mounted = true;
-    logInfo('LoginPage: Initial session check effect runs.');
-    const sessionTimeoutId = setTimeout(() => {;
-      if (mounted) {;
-        logWarn('LoginPage: Session check timeout after 5 seconds');
-        setSessionCheckTimedOut(true);
-        setIsCheckingSession(false), // Allow form to render if timeout;
-        setSessionChecked(true), // Mark check as complete even on timeout;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    }, 5000),;
-    const checkSessionAndListen = async () => {;
-      if (!mounted) return;
-      setIsCheckingSession(true);
-      try {
-        logInfo('LoginPage: Calling supabase.auth.getSession()');
-        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-        clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes;
-        if (!mounted) return,;
-        if (sessionError) {;
-          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError });
-          setError(sessionError as any), // Cast to any if type is too strict;
-        } else {;
-          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id });
-          setUser(session?.user ?? null);
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-        if (mounted) {;
-          logErrorToProduction('LoginPage: Exception during getSession:', { data:  e });
-          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } finally {;
-        if (mounted) {;
-          setIsCheckingSession(false);
-          setSessionChecked(true);
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -564,6 +478,7 @@ const LoginPage = () => {;
   }
 }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -672,6 +587,7 @@ const LoginPage = () => {;
       return () => clearTimeout(timer);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
 =======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
@@ -788,7 +704,7 @@ const LoginPage = () => {;
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -837,6 +753,7 @@ const LoginPage = () => {;
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
     );
     return null; // Or a minimal loader/empty div  }
+
 =======
     )
     return undefined, // Explicitly return undefined if condition is not met;
@@ -892,7 +809,7 @@ const LoginPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Head>
@@ -906,7 +823,7 @@ const LoginPage = () => {;
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -974,6 +891,46 @@ const LoginPage = () => {;
                   Email
                 </label>
                 <Input
+<<<<<<< HEAD
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+=======
                   id="email"
                   type="email"
                   value={email  } catch (error) {
@@ -1036,7 +993,7 @@ const LoginPage = () => {;
 }
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
               </p>
             </div>
@@ -1047,7 +1004,6 @@ const LoginPage = () => {;
 <<<<<<< HEAD
 );
 };export default LoginPage;
-
 =======
   )
 },
@@ -1081,4 +1037,4 @@ export default LoginPage,
   );
 },;
 export default LoginPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

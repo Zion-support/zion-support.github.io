@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {MapPin} from "lucide-react";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+=======
 import { MapPin } from "lucide-react",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 <<<<<<< HEAD
@@ -7,7 +14,13 @@ import { toast } from "@/hooks/use-toast";
 =======
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { toast } from "@/hooks/use-toast",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { MapPin } from "lucide-react";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+>>>>>>> main
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 }
@@ -25,10 +38,22 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
 =======
       title: "Processing your request",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+=======
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      description:
+        "You'll be redirected to our secure payment portal momentarily.",
+    });
+  };
+
+>>>>>>> main
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -62,7 +87,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
@@ -79,11 +104,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         billed separately.
       </p>
     </div>
-<<<<<<< HEAD
   );
-}
-=======
-  )
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

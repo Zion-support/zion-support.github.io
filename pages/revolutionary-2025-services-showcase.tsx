@@ -1,25 +1,23 @@
 <<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Search, Filter, Star, Users, TrendingUp
-  DollarSign, Clock, CheckCircle, ArrowRight
-  Brain, Rocket, Dna, Globe, Shield, Wifi
-  Package, Bot, Car, Building2, Monitor, Cpu
-  Zap, Atom, Database, Cloud, Lock, Code
-  Phone, Mail, MapPin, ExternalLink, ChevronDown
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight,
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code,
+  Phone, Mail, MapPin, ExternalLink, ChevronDown,
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react'
-// Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
+} from 'lucide-react',
+
+// Import the new revolutionary services;
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',;
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',;
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -116,35 +114,11 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500'
     services: allServices.filter(s => s.category.includes('Logistics'))
     gradient: 'from-orange-500/20 to-red-500/20'
-  }
-]
-export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [sortBy, setSortBy] = useState('popularity')
-  const [viewMode, setViewMode] = useState('grid')
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' |
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase())
-    return matchesSearch && matchesCategory
-  })
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''))
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''))
-      case 'rating':
-        return b.rating - a.rating
-      case 'customers':
-        return b.customers - a.customers
-      default: return b.popular ? 1 : -1
-    }
-  })
 =======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -257,6 +231,7 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ],;
@@ -309,7 +284,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
@@ -335,7 +310,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -381,7 +356,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -437,7 +412,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="all">All Categories</option>
@@ -481,7 +456,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="popularity">Most Popular</option>
@@ -500,7 +475,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')  } catch (error) {
@@ -557,7 +532,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
@@ -581,7 +556,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
                 <motion.div
@@ -612,7 +587,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
@@ -655,7 +630,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {service.popular && (
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
@@ -733,7 +708,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
                           <ul className="space-y-1">
@@ -766,7 +741,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -785,7 +760,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
@@ -807,7 +782,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
@@ -822,7 +797,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
   }
 }
                             </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                           <div className="flex items-center gap-2 text-blue-400">
                             <Mail className="w-3 h-3" />
@@ -837,7 +812,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
   }
 }
                             </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                         </div>
                       </div>
@@ -877,7 +852,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="space-y-6"
                 >
                   {sortedServices.map((service, index) => (
@@ -920,7 +895,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <div className="flex-1">
                           <div className="flex items-start gap-4 mb-4">
                             <div className="text-4xl">{service.icon}</div>
@@ -964,7 +939,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               </ul>
                             </div>
                             <div>
@@ -1074,7 +1049,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
@@ -1096,7 +1071,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
@@ -1111,7 +1086,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
   }
 }
                               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
                               <Mail className="w-3 h-3" />
@@ -1126,7 +1101,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
   }
 }
                               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </div>
                           </div>
                         </div>
@@ -1156,7 +1131,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
@@ -1175,7 +1150,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
@@ -1199,7 +1174,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
@@ -1273,6 +1248,10 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
         </section>
       </div>
     </>
+<<<<<<< HEAD
+  );
+};
+=======
   )
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1330,3 +1309,4 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

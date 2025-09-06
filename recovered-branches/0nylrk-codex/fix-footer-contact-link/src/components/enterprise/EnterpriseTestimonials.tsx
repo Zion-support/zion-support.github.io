@@ -5,6 +5,12 @@
 import React from "react";
 import { Quote } from "lucide-react";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,;
+} from "@/components/ui/carousel";
 
 <<<<<<< HEAD
   Carousel
@@ -117,9 +123,8 @@ export function EnterpriseTestimonials() {
           </div>
         </Carousel>
       </div>
-    </section>
+    </section>;
   );
-}
 =======
 import React from "react",;
 import { Quote } from "lucide-react",;
@@ -172,6 +177,7 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

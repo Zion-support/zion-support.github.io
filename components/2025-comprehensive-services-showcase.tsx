@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
 // All services combined const allServices = [ ...advancedAIMLServices;
 =======
  // All services combined const allServices = [ ...advancedAIMLServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -289,12 +288,9 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
             ))}
           </div>
 <<<<<<< HEAD
-          {/* Services Display */}
-          <AnimatePresence mode="wait">
-            {viewMode === 'grid' ? (
-              <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
@@ -329,7 +325,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
                       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -347,7 +343,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
@@ -362,8 +358,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -379,7 +377,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -390,7 +388,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -403,7 +401,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
@@ -421,7 +419,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
@@ -437,8 +435,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
+<<<<<<< HEAD
+=======
                           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -453,7 +453,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -463,7 +463,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
                             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             <a
                               href={service.link}
                               target="_blank"
@@ -485,7 +485,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -501,7 +501,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -516,7 +516,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -535,7 +535,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -553,7 +553,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -574,7 +574,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -625,5 +625,24 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 export default ComprehensiveServicesShowcase;
 <<<<<<< HEAD
 
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

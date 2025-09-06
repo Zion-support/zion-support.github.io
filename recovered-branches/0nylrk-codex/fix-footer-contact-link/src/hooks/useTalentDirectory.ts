@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
+=======
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 <<<<<<< HEAD
@@ -24,6 +34,7 @@ export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
     isAuthenticated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     userDetails, 
     savedTalents, 
     handleToggleSave 
@@ -147,8 +158,6 @@ export function useTalentDirectory() {
     toggleSection,
     handleToggleSave
 <<<<<<< HEAD
-  }
-}
 =======
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -233,6 +242,7 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

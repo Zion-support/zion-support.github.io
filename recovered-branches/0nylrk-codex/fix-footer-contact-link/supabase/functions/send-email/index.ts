@@ -1,15 +1,11 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -55,6 +51,8 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Resend } from "npm: resend@2.0.0",;
 const corsHeaders = {;
@@ -80,6 +78,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

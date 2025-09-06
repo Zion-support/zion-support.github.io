@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/stackexchange-insights.json';
+import data from '../../data/stackexchange-insights.json',;
 =======
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/stackexchange-insights.json',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function StackExchangeInsightsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -27,7 +27,14 @@ export default function StackExchangeInsightsPage() {
 <<<<<<< HEAD
                 {it.title}
               </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Score {it.score} · Answers {it.answer_count} · Tags: {(it.tags |[]).join(', ')}</div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Score {it.score} · Answers {it.answer_count} · Tags: {(it.tags || []).join(', ')}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
 =======
                 {it.title  } catch (error) {
     console.error("Error:", error);
@@ -52,3 +59,4 @@ export default function StackExchangeInsightsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

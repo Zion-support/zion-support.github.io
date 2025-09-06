@@ -9,8 +9,13 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -22,18 +27,14 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
+
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const openAiKey = Deno.env.get("OPENAI_API_KEY") || "";
+  
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  }
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-  try {
-    const { applicationId } = await req.json();
 =======
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
@@ -42,6 +43,7 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -137,16 +139,11 @@ serve(async (req) => {
     if (!resumeContent) {
       resumeContent = `
 <<<<<<< HEAD
-        Bio: ${application.talent_profile?.bio |""}
-        Cover Letter: ${application.cover_letter |""}
-        Skills: ${application.talent_profile?.skills?.join(", ") |""}
+        Bio: ${application.talent_profile?.bio || ""}
+        Cover Letter: ${application.cover_letter || ""}
+        Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
-      resumeSkills = application.talent_profile?.skills |[]
-    }
-    // 4. Prepare job details
-    const jobTitle = application.job?.title |"";
-    const jobDescription = application.job?.description |"";
-    const jobSkills = application.job?.skills |[];
+      resumeSkills = application.talent_profile?.skills || []
 =======
     );
   }
@@ -229,6 +226,7 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     // 4. Prepare job details
@@ -314,23 +312,14 @@ serve(async (req) => {
               }
               "suggestion": "Recommended for Review"
             }`
+<<<<<<< HEAD
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
-    }
-    const aiResult = await openAIResponse.json();
-    let matchResult;
-    try {
-      // Extract JSON from the response
-      const content = aiResult.choices[0].message.content;
-      matchResult = JSON.parse(content);
 =======
-              },
-              "suggestion": "Recommended for Review"
-            }`
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -394,6 +383,7 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     const aiResult = await openAIResponse.json(),
@@ -477,6 +467,10 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+      }
+    )
+=======
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -528,6 +522,7 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

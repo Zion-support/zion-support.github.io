@@ -3,7 +3,9 @@ interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 
   intensity?: 'low' | 'medium' | 'high';
 }
 <<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
-export default function UltraFuturisticBackground2036({variant = 'default';
+;
+export default function UltraFuturisticBackground2036({;
+  variant = 'default',;
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -208,10 +210,6 @@ export default function UltraFuturisticBackground2036({variant = 'default';
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-    }
-}, [variant, intensity])
 =======
 
 export default function UltraFuturisticBackground2036({ 
@@ -476,11 +474,16 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
       }
       window.removeEventListener('resize', resizeCanvas)
     }
+<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+}, [variant, intensity]),
+
+=======
   }, [variant, intensity]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas,
@@ -495,9 +498,10 @@ ref={canvasRef}
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
         )}
 <<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+;
 =======
         ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -510,18 +514,19 @@ key={i}
                   left: `${(i + 1) * 12.5}%`
                   transform: 'translateX(-50%)'
                 }}
-                animate={{opacity: [0.3, 0.8, 0.3]}}
-                transition={{duration: 3;
-                  repeat: Infinity;
+<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+                animate={{;
+                  opacity: [0.3, 0.8, 0.3]}}
+                transition={{;
+                  duration: 3,;
+                  repeat: Infinity,;
                   delay: i * 0.5}}
               />;
             ))}
           </div>;
         )}
+;
 =======
-                style={{                  left: `${(i + 1) * 12.5}%`,
-                  transform: 'translateX(-50%)'
-                }}
                 animate={_{
                   opacity: [0.3, 0.8, 0.3]}}
                 transition={_{
@@ -531,7 +536,7 @@ key={i}
           </div>;
         )}
         ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -554,7 +559,7 @@ key={i}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
             ))}
           </div>;
         )}

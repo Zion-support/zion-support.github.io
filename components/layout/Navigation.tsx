@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  Home
-  Brain
-  Cpu
-  Rocket
-  Phone
-  Mail
-  MapPin
-  Globe
-  ChevronDown;
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,;
+  ChevronDown,;
 } from 'lucide-react';
-import Link from 'next/link';import {
-  Menu, X, Home, Brain, Cpu, Rocket
-
-  Phone, Mail, MapPin, Globe, ChevronDown
- } from 'lucide-react';
+import Link from 'next/link';import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
 import Link from 'next/link';
 
   const [isOpen, setIsOpen] = useState(false);
@@ -184,7 +183,7 @@ import Link from 'next/link';
 =======
 
                       {/* Dropdown Menu */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -196,7 +195,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -242,7 +241,7 @@ import Link from 'next/link';
 
                               })}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </div>
                           </motion.div>
                         )}
@@ -264,7 +263,7 @@ import Link from 'next/link';
 
                     </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   )}
                 </div>
               ))}
@@ -277,7 +276,7 @@ import Link from 'next/link';
             {/* CTA Button */}
             <div className='hidden lg:block'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -316,7 +315,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -329,7 +328,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {/* Backdrop */}
             <div
@@ -347,8 +346,11 @@ import Link from 'next/link';
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
+<<<<<<< HEAD
+            
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -359,7 +361,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -444,7 +446,7 @@ import Link from 'next/link';
 
                             })}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                         </div>
                       ) : (
@@ -466,7 +468,7 @@ import Link from 'next/link';
 
                         </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                     </div>
                   ))}
@@ -474,7 +476,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -486,7 +488,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -529,12 +531,12 @@ import Link from 'next/link';
       </AnimatePresence>
     </>
   );
-}
+};
+
+<<<<<<< HEAD
 export default Navigation;  )
 }
 export default Navigation;
-
-<<<<<<< HEAD
 =======
 export default Navigation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAdminQuotes} from "@/hooks/useAdminQuotes";
+import {useAuth} from "@/hooks/useAuth";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Navigate} from "react-router-dom";
+import type { QuoteRequest } from "@/types/quotes";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";
+import {ExportToCSV} from "@/components/quotes/ExportToCSV";
+import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+
+export default function QuoteManager() {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+=======
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -36,6 +55,7 @@ import {
 export default function QuoteManager() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
@@ -190,7 +210,7 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
             {/* Filters */}
@@ -242,7 +262,7 @@ export default function QuoteManager() {;
           </div>
         </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -256,7 +276,7 @@ export default function QuoteManager() {;
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
         />
         <Footer />

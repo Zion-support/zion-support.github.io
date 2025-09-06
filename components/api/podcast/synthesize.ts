@@ -24,14 +24,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  ensureStorage();
   const { episodeId } = req.body |{}
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const { episodeId } = req.body |{}
@@ -104,6 +105,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       wavUrl: publicBase + '.wav'
       mp4Url: publicBase + '.mp4'}
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     return res.status(200).json({ episode });
   } catch (error: any) {
@@ -120,4 +122,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 =======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

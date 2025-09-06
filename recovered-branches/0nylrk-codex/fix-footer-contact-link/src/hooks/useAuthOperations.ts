@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import type { UserProfile } from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
+=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
@@ -11,7 +19,7 @@ import type { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast",
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
 import { cleanupAuthState } from "@/utils/authUtils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function useAuthOperations(
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
@@ -20,8 +28,13 @@ export function useAuthOperations(
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
+<<<<<<< HEAD
+    checkUrlForReferralCode();
+  }, []);
+=======
     checkUrlForReferralCode()
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading(true),
@@ -104,11 +117,13 @@ export function useAuthOperations(
         toast({
           variant: "destructive",
           title: "Error during signup",
+<<<<<<< HEAD
+=======
           description: error.message}),
         return { data: null, error: error.message }
           variant: "destructive",
           title: "Error during signup",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           description: error.message});
         return { data: null, error: error.message };
       }
@@ -290,12 +305,20 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Failed to update profile",
           description: error.message});
-        return { error: error.message };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+        return { error: error.message }
       }
       // Optimistically update the local user state
       setUser((prevUser) => {
         if (prevUser) {
+=======
+        return { error: error.message };
+      }
+;
+      // Optimistically update the local user state;
+      setUser((prevUser) => {;
+        if (prevUser) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           return { ...prevUser, ...profileData }
         }
         return prevUser
@@ -359,6 +382,13 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  };
+=======
         return prevUser;
       }),;
       toast({;
@@ -391,6 +421,7 @@ export function useAuthOperations(
       setIsLoading(false);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithFacebook = async () => {
@@ -412,6 +443,8 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+=======
   },;
   const loginWithFacebook = async () => {;
     setIsLoading(true),;
@@ -423,15 +456,16 @@ export function useAuthOperations(
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
-  }
+  };
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithTwitter = async () => {
@@ -453,6 +487,8 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+=======
   },;
   const loginWithTwitter = async () => {;
     setIsLoading(true),;
@@ -464,15 +500,16 @@ export function useAuthOperations(
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
-  }
+  };
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithWeb3 = async () => {
@@ -560,7 +597,7 @@ export function useAuthOperations(
     resetPassword,;
     updateProfile,;
     loginWithGoogle,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loginWithFacebook;
     loginWithTwitter;
 

@@ -9,34 +9,33 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,;
+  Gamepad2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -277,7 +276,7 @@ export default function ServicesShowcase2028() {
 
             {/* Stats */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </motion.div>
@@ -352,7 +351,7 @@ export default function ServicesShowcase2028() {
                       ))}
                     </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -372,7 +371,7 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -503,7 +502,7 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -529,7 +528,7 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -619,7 +618,7 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -628,7 +627,7 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -676,10 +675,15 @@ export default function ServicesShowcase2028() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-    </>
 <<<<<<< HEAD
+    </>;
 );
+}
+
+}
+}
 =======
+    </>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

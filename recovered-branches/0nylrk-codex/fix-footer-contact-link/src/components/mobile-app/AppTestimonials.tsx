@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -9,7 +8,7 @@ import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -90,9 +89,6 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
-
 =======
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -160,6 +156,7 @@ export const AppTestimonials: React.FC = () => {;
         </div>;
       </div>;
     </section>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

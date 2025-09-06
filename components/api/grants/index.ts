@@ -3,8 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
-  CreateGrantPayload
-  GrantApplication;
+  CreateGrantPayload,;
+  GrantApplication,;
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -20,7 +20,7 @@ function readAllGrants(): GrantApplication[] {
     return JSON.parse(raw) as GrantApplication;
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
@@ -38,7 +38,7 @@ function readAllGrants(): GrantApplication[] {
   })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
       return (
@@ -105,6 +105,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message |'Failed to create grant' })
     }
@@ -114,12 +115,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(405).end('Method Not Allowed')
 }
-=======
-      res.status(500).json({ error: e?.message || 'Failed to create grant' });
-    }
-    return;
-  }
 
-  res.setHeader('Allow', 'GET, POST');
+}
+}
+}
+=======
   res.status(405).end('Method Not Allowed');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

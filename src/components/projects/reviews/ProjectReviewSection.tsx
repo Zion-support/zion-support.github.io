@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import { Project  } from '@/types/projects';
-import { useState } from "react",
+import { Project } from '@/types/projects'
+import { useState } from 'react'
 import { Star } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -71,6 +71,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -83,13 +84,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         </CardDescription>
       </CardHeader>
 <<<<<<< HEAD
-      <CardContent>
-        {isCompleted ? (
-          <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
 =======
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -189,13 +186,14 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </div>
                 ) : null}
               </div>
             )}
 <<<<<<< HEAD
+
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
@@ -206,7 +204,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           </div>
         ) : (
@@ -229,10 +227,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
           onClose = {(,) => setIsReviewModalOpen(false),}
         />
       )}
-    </Card>
-  )
-}
-}
+    </Card>;
+  );
+};
+};
 =======
       </CardContent>;
       {/* Review Modal */}
@@ -249,4 +247,4 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+=======
 import React from 'react',
 import Head from 'next/head',
 <<<<<<< HEAD
@@ -167,6 +175,7 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -222,6 +231,72 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
+<<<<<<< HEAD
+    features: [
+      'Pipeline Management',
+      'Quality Assurance',
+      'Governance Automation',
+    ],
+  },];
+
+const heroFeatures = [
+  {
+    title: 'AI-Powered Automation',
+    description:
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+  },
+  {
+    title: 'Intelligent Optimization',
+    description:
+      'AI-driven optimization that continuously improves performance, security, and efficiency.',
+    icon: Sparkles,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600',
+  },
+  {
+    title: 'Autonomous Operations',
+    description:
+      'Self-managing systems that operate independently with minimal human intervention.',
+    icon: Settings,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600',
+  },
+  {
+    title: 'Predictive Analytics',
+    description:
+      'AI-powered insights that predict issues before they occur and optimize performance.',
+    icon: BarChart3,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
+  },];
+
+const testimonials = [
+  {
+    name: 'Dr. Michael Chen',
+    role: 'CTO, TechFlow Solutions',
+    company: 'TechFlow Solutions',
+    content:
+      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
+    rating: 5,
+    avatar: '👨‍💻',
+  },  {
+    name: 'Sarah Rodriguez',
+    role: 'DevOps Director, CloudScale Inc.',
+    company: 'CloudScale Inc.',
+    content:
+      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
+    rating: 5,
+    avatar: '👩‍💼',
+  },  {
+    name: 'David Kim',
+    role: 'Security Manager, SecureNet Corp.',
+    company: 'SecureNet Corp.',
+    content:
+      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
+    rating: 5,
+    avatar: '👨‍🔒',
+  },];
+
+=======
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
 import React from 'react';
 import Head from 'next/head';
@@ -359,7 +434,7 @@ const testimonials = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -406,7 +481,7 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -445,7 +520,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -513,7 +588,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
@@ -525,6 +600,7 @@ export default function AdvancedAIAutomationServices() {
               operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -534,10 +610,6 @@ export default function AdvancedAIAutomationServices() {
                 viewport={{ once: true }}
                 className='relative group'
 =======
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
-            </p>
-          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
               <motion.div
@@ -567,7 +639,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -631,7 +703,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -679,7 +751,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -727,7 +799,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                       className="relative group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -782,7 +854,7 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -871,7 +943,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -919,7 +991,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -995,7 +1067,7 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -1033,7 +1105,7 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1046,14 +1118,17 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
       </section>
-    </Layout>
 <<<<<<< HEAD
+    </Layout>;
 );
+
+}
 =======
+    </Layout>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,24 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/ui/select";
+import {Calendar} from "@/components/ui/calendar";
+import {Popover, PopoverTrigger, PopoverContent} from "@/components/ui/popover";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+import {cn} from "@/lib/utils";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
+import {format, addDays} from "date-fns";
+import {CalendarIcon, Check, Clock} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {useInterviews} from "@/hooks/useInterviews";
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -21,7 +41,7 @@ import { useInterviews } from "@/hooks/useInterviews";
 =======
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface InterviewRequestFormProps {
 
   talent: TalentProfile
@@ -52,9 +72,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
+<<<<<<< HEAD
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<z.infer<typeof formSchema>>({
@@ -373,7 +399,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </Popover>;
                 <FormMessage />;
               </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           />
           <FormField

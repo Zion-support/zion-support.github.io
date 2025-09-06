@@ -1,22 +1,23 @@
 <<<<<<< HEAD
-
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
 import { findProjectById } from "../../utils/dataStore";
+
 type Props = {
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-}
+};
+
 const ReviewSubmitPage: NextPage<Props> = ({
-  projectId
-  fromRole
-  fromId
-  valid
-  reason
+  projectId,
+  fromRole,
+  fromId,
+  valid,
+  reason,
 }) => {
 =======
 import React from 'react',
@@ -31,7 +32,7 @@ type Props = {
   reason?: string
 },
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -60,14 +61,16 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
     </main>
 <<<<<<< HEAD
   );
-}
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { projectId } = ctx.query as { projectId: string }
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const { projectId } = ctx.query as { projectId: string };
   const { role, fromId } = ctx.query as {
     role?: "client" | "talent";
     fromId?: string;
-  }
-  if (!projectId |!role |!fromId) {
+  };
+
+  if (!projectId || !role || !fromId) {
     return {
       props: {
         projectId: projectId |""
@@ -104,17 +107,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const expectedFromId =
     role === "client" ? project.clientId : project.talentSlug;
   const valid = expectedFromId === fromId;
+
   return {
     props: {
-      projectId
-      fromRole: role
-      fromId
-      valid
-      reason: valid ? null : "Invalid reviewer for this project"
-    }
+      projectId,
+      fromRole: role,
+      fromId,
+      valid,
+      reason: valid ? null : "Invalid reviewer for this project",
+    },
   } as any;
-}
-export default ReviewSubmitPage;
+};
 
 =======
   )
@@ -154,5 +157,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default ReviewSubmitPage;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

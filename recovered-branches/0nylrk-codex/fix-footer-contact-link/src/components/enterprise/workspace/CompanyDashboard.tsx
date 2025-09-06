@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React from "react";
+import { WorkspaceHeader } from "./WorkspaceHeader";
+import { SharedInbox } from "./SharedInbox";
+import { TeamStats } from "./TeamStats";
+import { QuickActions } from "./QuickActions";
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+export interface Company {;
+  id: string;
+  name: string;
+  logoUrl?: string;
+  theme?: {
+    primaryColor: string;
+    backgroundColor: string;
+    textColor: string;
+  };
+  plan: string;
+  teamSize: number;
+=======
 
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
@@ -10,29 +30,11 @@ import { TalentPool } from "./TalentPool";
 =======
 import { RecentActivity } from "./RecentActivity",
 import { TalentPool } from "./TalentPool",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface Company {
   id: string,
   name: string,
   logoUrl?: string,
   theme?: {
-<<<<<<< HEAD
-    primaryColor: string;
-    backgroundColor: string;
-
-    textColor: string;
-  }
-
-  plan: string;
-  teamSize: number;
-  teamLimit: number;
-  billingCycle: string;
-  workspaceUrl: string
-}
-interface CompanyDashboardProps {
-  company: Company;
-}
-=======
     primaryColor: string,
     backgroundColor: string,
     textColor: string
@@ -60,12 +62,18 @@ export interface Company {;
   },;
   plan: string,;
   teamSize: number,;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   teamLimit: number;
   billingCycle: string;
   workspaceUrl: string;
 }
+<<<<<<< HEAD
+
+interface CompanyDashboardProps {
+=======
 ;
 interface CompanyDashboardProps {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   company: Company;
 }
 
@@ -77,7 +85,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
@@ -87,17 +95,15 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
-    </div>
 <<<<<<< HEAD
-  );
-}
 =======
+    </div>
   )
 ;
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
@@ -115,6 +121,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {;
           <SharedInbox />;
         </div>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }

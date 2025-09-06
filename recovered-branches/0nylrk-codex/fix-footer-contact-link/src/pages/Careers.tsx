@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AppLayout} from "@/layout/AppLayout";
+=======
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -8,17 +16,21 @@ import { AppLayout } from "@/layout/AppLayout";
 =======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
-        title: "Senior Frontend Engineer"
-        location: "Remote"
-        type: "Full-time"
-        department: "Engineering"
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+<<<<<<< HEAD
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
+      };
+=======
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
 <<<<<<< HEAD
       }
@@ -31,6 +43,7 @@ export default function Careers() {
       }
 =======
       },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {
         title: "AI Research Engineer",
         location: "San Francisco, CA",
@@ -475,7 +488,7 @@ export default function Careers() {;
                         </div>;
                       </CardContent>;
                     </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </TabsContent>
               ))}
@@ -496,7 +509,6 @@ export default function Careers() {;
     </AppLayout>
   )
 <<<<<<< HEAD
-}
 =======
             </Tabs>;
           </div>;
@@ -514,6 +526,7 @@ export default function Careers() {;
       </main>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

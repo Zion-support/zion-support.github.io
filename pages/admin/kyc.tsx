@@ -1,10 +1,12 @@
 <<<<<<< HEAD
-
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../utils/kyc',;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AdminKycPage() {
 <<<<<<< HEAD
   const [queue, setQueue] = useState<KycProfile[]>([])
@@ -77,18 +79,15 @@ export default function AdminKycPage() {
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
+<<<<<<< HEAD
                   )}
 =======
-                  <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
-                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
-                  {p.flags && p.flags.length > 0 && (
-                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -125,9 +124,14 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
+  );
+};
+=======
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

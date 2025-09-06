@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Dialog, DialogContent} from "@/components/ui/dialog";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {Save} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {ContractForm, ContractFormValues} from "./components/ContractForm";
+import {ContractPreview} from "./components/ContractPreview";
+import {TemplateManager} from "./templates/TemplateManager";
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
+import {useSmartContracts} from "@/hooks/useSmartContracts";
+import {toast} from "sonner";
+=======
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -15,7 +29,7 @@ import { toast } from "sonner";
 =======
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -26,12 +40,22 @@ interface SmartContractBuilderProps {
 
   onDeploy?: (contractContent: string) => void
 }
+
+<<<<<<< HEAD
+export function SmartContractBuilder({;
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated;
+=======
 export function SmartContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
   onContractGenerated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -127,7 +151,7 @@ export function SmartContractBuilder({
     }
     setGeneratedContract(contract);
     setActiveTab("preview")
-  }
+  };
 =======
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
@@ -222,7 +246,7 @@ export function SmartContractBuilder({;
     setGeneratedContract(contract),
     setActiveTab("preview")
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -250,6 +274,8 @@ export function SmartContractBuilder({;
             <ContractForm
 =======
             <ContractForm 
+<<<<<<< HEAD
+=======
     setGeneratedContract(contract);
     setActiveTab("preview");
   };
@@ -276,7 +302,7 @@ export function SmartContractBuilder({;
           </div>;
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               talent={talent}
               clientName={clientName}
               initialValues={formValues}

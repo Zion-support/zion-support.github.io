@@ -3,6 +3,7 @@
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {
+<<<<<<< HEAD
   date: Date;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -21,14 +22,17 @@ export function DateDivider({ date }: DateDividerProps) {
         {format(date, "MMM d, yyyy")}
       </div>
       <div className="flex-1 border-t border-zion-purple/20"></div>
-    </div>
+    </div>;
   );
+=======
+  date: Date;
 }
 =======
 interface DateDividerProps {;
   date: Date;
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

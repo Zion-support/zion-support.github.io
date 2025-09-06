@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { useState, useMemo } from 'react'
 import {
@@ -27,6 +26,7 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing]
 =======
+
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
@@ -45,7 +45,7 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
@@ -100,6 +100,7 @@ export function ITServicePricingTable() {
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -124,7 +125,7 @@ export function ITServicePricingTable() {
       </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Table>
           <TableHeader className="bg-zion-blue">
             <TableRow>
@@ -141,7 +142,7 @@ export function ITServicePricingTable() {
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -159,7 +160,7 @@ export function ITServicePricingTable() {
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -188,7 +189,7 @@ export function ITServicePricingTable() {
                     <span className="text-white">{item.country}</span>
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </TableRow>
               ))
             ) : (
@@ -201,10 +202,10 @@ export function ITServicePricingTable() {
             )}
           </TableBody>
         </Table>
-      </div>
-    </div>
-  )
-}
+      </div>;
+    </div>;
+  );
+};
 =======
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
@@ -313,4 +314,4 @@ export function ITServicePricingTable() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

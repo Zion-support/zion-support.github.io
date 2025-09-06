@@ -1,31 +1,13 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
 export interface HireRequestData {
-  talent: {
+  talent: {;
     id: string;
     full_name: string;
-
-    professional_title: string
-
-    email?: string
-  }
-  requester: {
-    name: string;
-
-    email: string
-
-    id?: string
-  }
-  project: {
-    overview: string;
-    timeline: string;
-
-    budgetMin: number
-
 =======
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
@@ -35,6 +17,7 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     professional_title: string,
     email?: string
   },
@@ -51,7 +34,8 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
-export function useHireRequest() {
+
+export function useHireRequest() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -116,6 +100,18 @@ export function useHireRequest() {
         description: errorMessage,
         variant: "destructive"}),
       
+<<<<<<< HEAD
+      return { success: false, error: errorMessage }
+    } finally {
+      setIsSubmitting(false)
+    }
+  };
+  
+  return {
+    submitHireRequest;
+    isSubmitting;
+    error
+=======
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -176,6 +172,7 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

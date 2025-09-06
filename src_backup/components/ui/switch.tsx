@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 
 import {
-  SERVICE_CATEGORIES
-  ALL_SERVICES
-  AI_SERVICES
-  IT_SERVICES
-  MICRO_SAAS_SERVICES
-  CYBERSECURITY_SERVICES
-  DATA_ANALYTICS_SERVICES
-  CLOUD_SOLUTIONS;} from '@/data/servicesData';import {
+  SERVICE_CATEGORIES,
+  ALL_SERVICES,
+  AI_SERVICES,
+  IT_SERVICES,
+  MICRO_SAAS_SERVICES,
+  CYBERSECURITY_SERVICES,
+  DATA_ANALYTICS_SERVICES,;
+  CLOUD_SOLUTIONS,;} from '@/data/servicesData';import { ;
   SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
@@ -19,9 +19,8 @@ import {
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
- } from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution  } from '@/types/services';
-export function ServicesPage() {
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+export function ServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -89,6 +88,31 @@ export function ServicesPage() {
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
   }
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6">
+              Zion Tech Group Services
+            </h1>
+            <p className="text-xl mb-8 text-blue-100">
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
+              From cutting-edge artificial intelligence to robust infrastructure support.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+              >
 =======
 import React, { useState } from 'react',;
 import {;
@@ -164,6 +188,7 @@ export function ServicesPage() {;
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ✉️ Email Us
               </Link>
             </div>
@@ -183,7 +208,7 @@ export function ServicesPage() {;
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📍</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -211,7 +236,7 @@ export function ServicesPage() {;
               <span>kleber@ziontechgroup.com</span>
             </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
@@ -220,7 +245,7 @@ export function ServicesPage() {;
               </a>
 =======
               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
         </div>
@@ -247,7 +272,7 @@ export function ServicesPage() {;
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <input
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -278,7 +303,7 @@ export function ServicesPage() {;
           {selectedServices.map(service => (            <ServiceCard key={service.id} service={service} />        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 =======
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -292,7 +317,7 @@ export function ServicesPage() {;
             </p>          </div>          <div className="text-center py-12">
 =======
           <div className="text-center py-12">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
           </div>
@@ -309,7 +334,7 @@ export function ServicesPage() {;
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -327,7 +352,7 @@ export function ServicesPage() {;
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
@@ -341,7 +366,7 @@ export function ServicesPage() {;
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛡️</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
@@ -355,7 +380,7 @@ export function ServicesPage() {;
             <div className="text-center">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
@@ -404,7 +429,7 @@ export function ServicesPage() {;
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
             </div>
@@ -420,7 +445,7 @@ export function ServicesPage() {;
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -460,9 +485,9 @@ export function ServicesPage() {;
             >
               ✉️ Get Free Consultation
             </a>
-            <a
 =======
             </Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <a 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               href="https://ziontechgroup.com"
@@ -478,25 +503,6 @@ export function ServicesPage() {;
   );
 interface ServiceCardProps {
   service: ServiceSolution;  )
-}
-interface ServiceCardProps {
-  service: ServiceSolution
-}
-function ServiceCard({ service }: ServiceCardProps) {
-  const [showDetails, setShowDetails] = useState(false);
-  const getPopularPlan = () => {
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional
-  const popularPlan = getPopularPlan();
-
-  return (
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
 =======
   )
       <div className="bg-white py-16">;
@@ -578,12 +584,28 @@ function ServiceCard({ service }: ServiceCardProps) {
 ;
 interface ServiceCardProps {;
   service: ServiceSolution;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
   const [showDetails, setShowDetails] = useState(false),
 
   const getPopularPlan = () => {
+<<<<<<< HEAD
+    if (service.pricing.professional.popular)
+      return service.pricing.professional;
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
+    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
+    return service.pricing.professional
+
+  const popularPlan = getPopularPlan();
+
+  return (
+    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+=======
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
@@ -594,7 +616,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -617,7 +639,7 @@ function ServiceCard({ service }: ServiceCardProps) {
           className="w-full h-full object-cover"
         />
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
@@ -637,7 +659,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               AI Score: {service.aiScore}
             </span>;
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </div>
       {/* Service Content */}
@@ -682,7 +704,7 @@ function ServiceCard({ service }: ServiceCardProps) {
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
 
         {/* Provider Info */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
@@ -741,7 +763,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             </div>
             {popularPlan.popular && (
               <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Most Popular
               </span>
             )}
@@ -756,7 +778,7 @@ function ServiceCard({ service }: ServiceCardProps) {
         <div className="mb-4">
           <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
           <div className="flex flex-wrap gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {service.features.slice(0, 3).map((feature, index) => (
               <span 
                 key={index}
@@ -783,7 +805,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <span className="text-gray-500 text-xs">
                 +{service.features.length - 3} more
               </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </div>
         </div>
@@ -802,7 +824,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>
           <a
@@ -811,7 +833,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'          >            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
 =======
             className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             Call Now
           </Link>
@@ -834,7 +856,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                 <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
                   {service.benefits.slice(0, 3).map((benefit, index) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <li key={index}>{benefit}</li>
                   ))}
                 </ul>
@@ -847,7 +869,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 =======
                 <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {service.useCases.slice(0, 3).map((useCase, index) => (
                     <span 
                       key={index}
@@ -856,7 +878,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                     <span
                       key={index}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
                       {useCase}
@@ -874,7 +896,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 =======
                 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {service.technologies.slice(0, 4).map((tech, index) => (
                     <span 
                       key={index}
@@ -883,7 +905,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                     <span
                       key={index}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
                       {tech}
@@ -896,7 +918,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div className='grid grid-cols-2 gap-4 text-sm'>
 =======
               <div className="grid grid-cols-2 gap-4 text-sm">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div>
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
@@ -912,7 +934,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 </div>
                 <div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -942,7 +964,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                         {details.currency}{details.price}/{details.period}
                       </span>;
                     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </div>
               </div>
@@ -953,7 +975,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 =======
               <div className="bg-blue-50 rounded-lg p-4 text-center">
                 <p className="text-sm text-blue-800 mb-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
@@ -966,7 +988,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                   <a
                     href={`tel:+13024640950`}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
@@ -977,7 +999,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
 =======
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -991,9 +1013,20 @@ function ServiceCard({ service }: ServiceCardProps) {
     </div>
 );  )
 }
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 =======
       </div>;
     </div>;
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

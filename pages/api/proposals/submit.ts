@@ -1,12 +1,11 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
-  getProposal
-  updateProposalMeta
-  updateArtifacts
+  getProposal,
+  updateProposalMeta,
+  updateArtifacts,;
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -14,24 +13,46 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM |user;
-  if (!host |!user |!pass) throw new Error("Email not configured");
+  const from = process.env.EMAIL_FROM || user;
+<<<<<<< HEAD
+  if (!host || !user || !pass) throw new Error("Email not configured");
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
+=======
+  if (!host || !user || !pass) throw new Error('Email not configured');
+  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
@@ -64,21 +85,27 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
-      .json({ error: error?.message |"Submission failed" });
+      .json({ error: error?.message || "Submission failed" });
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-  const host = process.env.EMAIL_HOST;
-  const port = Number(process.env.EMAIL_PORT || 587);
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error('Email not configured');
-  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
-  await transporter.sendMail({ from, to, subject, text, attachments })
+;
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {},;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      await submitByEmail(to, subject, text);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -105,9 +132,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch {}
 
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Submission failed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    return res.status(200).json({ meta: updated });
+  } catch (error) {
+    return res.status(500).json({ error: error?.message || 'Submission failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

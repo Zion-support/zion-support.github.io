@@ -1,5 +1,5 @@
+export interface EmergingTechService2029V2 {;
 <<<<<<< HEAD
-export interface EmergingTechService2029V2 {
   id: string;
   name: string;
   description: string;
@@ -326,12 +326,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     funding: 'Series A funding, $80M valuation'
     exit: 'Acquisition by major creative platform'
     contact: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      website: 'https://ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
 
     ];
@@ -369,11 +369,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com'
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
 =======
-export interface EmergingTechService2029V2 {;
   id: string,;
   name: string,;
   description: string,;
@@ -602,6 +598,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 ];

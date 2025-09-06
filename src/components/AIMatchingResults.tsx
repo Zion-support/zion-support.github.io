@@ -6,8 +6,8 @@ import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
+import Skeleton from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
 =======
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -18,13 +18,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
-  isLoading?: boolean
-  projectDescription?: string
+  isLoading?: boolean;
+  projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem,) => void
@@ -33,6 +33,7 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+
 <<<<<<< HEAD
 export function AIMatchingResults({
 
@@ -183,8 +184,7 @@ export function AIMatchingResults({
                                       ? '/hour'
                                       : ''}
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                   </div>
                                 </div>
                               )}
@@ -234,7 +234,7 @@ export function AIMatchingResults({
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </TabsContent>
         ))}
@@ -242,10 +242,12 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
+};
+;
 }
 =======
       </Tabs>;
     </div>;
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

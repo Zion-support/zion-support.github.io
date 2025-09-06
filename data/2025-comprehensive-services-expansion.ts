@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface ComprehensiveService {
+export interface ComprehensiveService {;
   id: string;
   name: string;
   tagline: string;
@@ -43,11 +43,12 @@ export interface ComprehensiveService {
 
   reviews: number;
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -64,30 +65,30 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
     features: [
-      'Automated security vulnerability detection'
-      'Code quality scoring and metrics'
-      'Best practice recommendations'
-      'Integration with GitHub/GitLab'
-      'Custom rule configuration'
-      'Team performance analytics'
-      'Automated PR comments'
-      'Compliance checking (SOC2, HIPAA)'
-      'Performance impact analysis'
-    ]
-    popular: true
-    icon: '🔍'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-code-review-assistant'
-    marketPosition:
-      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.'
-    targetAudience: 'Development teams, DevOps engineers, CTOs'
-    trialDays: 14
-    setupTime: '2 hours'
-    category: 'Development & DevOps'
-    realService: true
-    technology: ['AI/ML, Static Analysis, Security Scanning']
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
+      'Automated security vulnerability detection',
+      'Code quality scoring and metrics',
+      'Best practice recommendations',
+      'Integration with GitHub/GitLab',
+      'Custom rule configuration',
+      'Team performance analytics',
+      'Automated PR comments',
+      'Compliance checking (SOC2, HIPAA)',
+      'Performance impact analysis',
+    ],
+    popular: true,
+    icon: '🔍',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    marketPosition:;
+      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
+    targetAudience: 'Development teams, DevOps engineers, CTOs',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'Development & DevOps',
+    realService: true,
+    technology: ['AI/ML, Static Analysis, Security Scanning'],
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -918,9 +919,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     customers: 234;
     rating: 4.8
     reviews: 178
-  }
-];
-
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
@@ -1616,6 +1614,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

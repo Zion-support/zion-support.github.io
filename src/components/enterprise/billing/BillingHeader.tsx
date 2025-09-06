@@ -1,15 +1,15 @@
-
 <<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 =======
+
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from "next/link",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -50,7 +50,7 @@ export function BillingHeader() {
             Contact Billing Support
           </Button>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
@@ -67,8 +67,9 @@ export function BillingHeader() {
   ) <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
-    </div>
-  )
+    </div>;
+  );
+};
 }
 =======
   )
@@ -105,4 +106,4 @@ export function BillingHeader() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -21,10 +21,14 @@ interface DiscussionPost {
   body: string
 const initialPosts: DiscussionPost[] = [
   {
-    id: 1,  time: string
-  title: string
-
+    id: 1,  time: string,
 =======
+import React, { useState } from "react",
+import { MessageCircle } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 interface DiscussionPost {
@@ -32,6 +36,7 @@ interface DiscussionPost {
   author: string,
   avatar?: string,
   time: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   title: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   body: string
@@ -41,6 +46,26 @@ const initialPosts: DiscussionPost[] = [
 <<<<<<< HEAD
 =======
     id: 1,
+<<<<<<< HEAD
+    author: 'Anna Zhou',
+    time: '2h ago',
+    title: 'What AI trends are you most excited for in 2025?',
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
+    id: 2,
+    author: 'David Kim',
+    time: '50m ago',
+    title: 'Quick tip: How to rank your Zion listing higher',
+    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
+  },
+]
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
+  const [newBody, setNewBody] = useState("")
+=======
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
@@ -59,25 +84,7 @@ export const CommunityDiscussion: React.FC = () => {
   const [newBody, setNewBody] = useState(""),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-    id: 1
-    author: 'Anna Zhou'
-    time: '2h ago'
-    title: 'What AI trends are you most excited for in 2025?'
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
-    id: 2
-    author: 'David Kim'
-    time: '50m ago'
-    title: 'Quick tip: How to rank your Zion listing higher'
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'
-  }
-]
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts)
-  const [showNew, setShowNew] = useState(false)
-  const [newTitle, setNewTitle] = useState('')
-  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("")
-  const [newBody, setNewBody] = useState("")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleAddPost = () => {
 <<<<<<< HEAD
     if (!newTitle.trim() |!newBody.trim()) return
@@ -100,6 +107,19 @@ export const CommunityDiscussion: React.FC = () => {
     setPosts([
       {
         id: Date.now(),
+<<<<<<< HEAD
+        author: 'You',
+        time: 'Now',
+        title: newTitle,
+        body: newBody,
+      },
+      ...posts,
+    ])
+    setNewTitle('')
+    setNewBody('')
+    setShowNew(false)
+  }
+=======
         author: "You",
         time: "Now",
         title: newTitle,
@@ -110,7 +130,7 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -136,7 +156,7 @@ export const CommunityDiscussion: React.FC = () => {
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </Button>
       </div>
       {showNew && (
@@ -251,7 +271,7 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
@@ -302,7 +322,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 Cancel
               </Button>
@@ -312,7 +332,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
 =======
                 size="sm"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() |!newBody.trim()}
@@ -406,7 +426,6 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>
   )
 }
-
 =======
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
@@ -440,4 +459,4 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

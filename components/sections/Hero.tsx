@@ -117,8 +117,6 @@ const Hero: React.FC<HeroProps> = ({
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
             {subtitle}
           </p>
-          {/* Action Buttons */}
-          {(primaryAction |secondaryAction) && (
 =======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
@@ -126,6 +124,7 @@ const Hero: React.FC<HeroProps> = ({
 
           </p>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -154,7 +153,7 @@ const Hero: React.FC<HeroProps> = ({
 
                 </Button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
               {secondaryAction && (
                 <Button
@@ -178,7 +177,7 @@ const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Stats Section */}
         {stats && (
           <div
@@ -211,7 +210,7 @@ const Hero: React.FC<HeroProps> = ({
 
                   {stat.label}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </div>
             ))}
@@ -273,6 +272,9 @@ const Hero: React.FC<HeroProps> = ({
 }
 export default Hero;
 
+}
+}
+}
 =======
 
       {/* Decorative Elements */}
@@ -281,4 +283,4 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

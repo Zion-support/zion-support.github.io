@@ -1,6 +1,6 @@
 
+export interface ResumeBasicInfo {;
 <<<<<<< HEAD
-export interface ResumeBasicInfo {
   id?: string;
   title: string;
 
@@ -8,7 +8,8 @@ export interface ResumeBasicInfo {
 
   summary?: string
 }
-export interface WorkExperience {
+
+export interface WorkExperience {;
   id?: string;
   company_name: string;
   role_title: string;
@@ -21,7 +22,8 @@ export interface WorkExperience {
 
   location?: string
 }
-export interface Education {
+
+export interface Education {;
   id?: string;
   institution: string;
   degree: string;
@@ -35,7 +37,8 @@ export interface Education {
 
   location?: string
 }
-export interface Skill {
+
+export interface Skill {;
   id?: string;
   name: string;
   proficiency?: number;
@@ -44,7 +47,8 @@ export interface Skill {
 
   years_experience?: number
 }
-export interface Certification {
+
+export interface Certification {;
   id?: string;
   name: string;
   issuing_organization: string;
@@ -55,7 +59,8 @@ export interface Certification {
 
   credential_url?: string
 }
-export interface PortfolioProject {
+
+export interface PortfolioProject {;
   id?: string;
   title: string;
   description?: string;
@@ -67,7 +72,8 @@ export interface PortfolioProject {
 
   pdf_url?: string
 }
-export interface Resume {
+
+export interface Resume {;
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -81,7 +87,6 @@ export interface Resume {
   is_active: boolean
 }
 =======
-export interface ResumeBasicInfo {;
   id?: string,;
   title: string,;
   headline?: string,;
@@ -154,4 +159,4 @@ export interface Resume {;
   is_active: boolean;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

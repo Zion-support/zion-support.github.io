@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Certification  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useCertifications() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Certification} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useCertifications() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -14,9 +14,6 @@ export function useCertifications() {
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -31,6 +28,7 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -76,9 +74,6 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to update certifications')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -107,6 +102,7 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to update certifications'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -152,9 +148,6 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to delete certifications')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -183,6 +176,7 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to delete certifications'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -217,8 +211,6 @@ export function useCertifications() {;
     updateCertification;
 
     deleteCertification
-  }
-}
 =======
 ;
     setIsLoading(true),;
@@ -242,6 +234,7 @@ export function useCertifications() {;
     addCertification;
     updateCertification;
     deleteCertification;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

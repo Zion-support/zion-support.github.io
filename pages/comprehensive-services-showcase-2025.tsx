@@ -2,7 +2,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-
+<<<<<<< HEAD
 import {motion, AnimatePresence} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
@@ -31,11 +31,9 @@ const pricingRanges = [
   '$300 - $500'
   '$500 - $800'
   '$800+',];
-export default function ComprehensiveServicesShowcase2025() {
+
+export default function ComprehensiveServicesShowcase2025() {;
 =======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -58,7 +56,7 @@ const pricingRanges = [;
 ];
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -111,24 +109,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       default:
         return 0;    }
   });
-  const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  }
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  }
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
+
 =======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
@@ -184,6 +165,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
   }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -316,7 +298,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -476,6 +458,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                         </span>
                       </div>
                     )}
+
                     {/* Service Icon */}
                     <div className='text-6xl mb-6'>{service.icon}</div>
                     {/* Service Info */}
@@ -1025,7 +1008,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -1037,6 +1020,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               ))}
             </div>
           )}
+
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className='text-center py-20'>
@@ -1346,7 +1330,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 Get in touch with our experts today.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
@@ -1390,8 +1374,9 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 );
 export default ComprehensiveServicesShowcase2025;
 
+}
 =======
   )
 },
 export default ComprehensiveServicesShowcase2025,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

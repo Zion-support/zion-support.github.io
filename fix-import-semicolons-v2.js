@@ -11,16 +11,16 @@ files.forEach((file) => {
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
-    content = content.replace(
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
-      (match) => {
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
         }

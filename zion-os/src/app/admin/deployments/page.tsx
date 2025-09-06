@@ -2,28 +2,28 @@
 'use client';
 import { useState, useEffect } from 'react';
 import {
-  Rocket
-  Clock
-  CheckCircle
-  AlertCircle
-  Play
-  Eye
-  Settings
-  Globe
-  Activity
-  Calendar
-  User
-  Building2
-  Shield
-  TrendingUp
-  Users
-  Zap
-  Sparkles
-  ArrowRight
-  RefreshCw
-  Pause
-  StopCircle
-  MapPin
+  Rocket,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Play,
+  Eye,
+  Settings,
+  Globe,
+  Activity,
+  Calendar,
+  User,
+  Building2,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  RefreshCw,
+  Pause,
+  StopCircle,
+  MapPin,;
 } from 'lucide-react';
 interface Deployment {
   id: string;
@@ -84,7 +84,8 @@ const mockDeployments: Deployment[] = [
     country: 'Singapore'
   }
 ];
-export default function DeploymentsPage() {
+
+export default function DeploymentsPage() {;
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -557,7 +558,7 @@ export default function DeploymentsPage() {;
           >;
             {label} ({count});
           </button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ))}
       </div>
       {/* Deployments Grid */}
@@ -685,7 +686,7 @@ export default function DeploymentsPage() {;
                     ></div>;
                   </div>;
                 </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </div>
             {/* Deployment Details */}
@@ -736,7 +737,7 @@ export default function DeploymentsPage() {;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
               {/* Features */}
@@ -779,7 +780,7 @@ export default function DeploymentsPage() {;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   )}
                 </div>
               </div>
@@ -812,7 +813,7 @@ export default function DeploymentsPage() {;
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             </div>
@@ -925,7 +926,7 @@ export default function DeploymentsPage() {;
               </div>;
             </div>;
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ))}
       </div>
       {/* Empty State */}
@@ -1016,8 +1017,6 @@ export default function DeploymentsPage() {;
     </div>
   );      )}
     </div>
-  );
-}
 =======
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
@@ -1043,6 +1042,7 @@ export default function DeploymentsPage() {;
         </div>;
       )}
     </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

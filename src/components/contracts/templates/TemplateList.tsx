@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 =======
 import { useState } from "react";
 interface TemplateListProps {
@@ -16,8 +17,8 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -28,6 +29,24 @@ import { useAuth } from "@/hooks/useAuth";
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+import { ContractTemplate } from "@/types/contracts"
+import { Button } from "@/components/ui/button"
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
+import { useContractTemplates } from "@/hooks/useContractTemplates"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useAuth } from "@/hooks/useAuth"
+// useRouter replaces the old useLocation hook from react-router
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -60,23 +79,11 @@ export function TemplateList({
     if (!user) {
       const currentPath = router.asPath
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`)
-      return
+      return;
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
 =======
-import { useAuth } from "@/hooks/useAuth",
-// useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router',
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -139,6 +146,7 @@ export function TemplateList({;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -174,7 +182,7 @@ export function TemplateList({;
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -221,13 +229,11 @@ export function TemplateList({;
             </div>
 <<<<<<< HEAD
             <Separator className="my-3" />
-            <Button
-              onClick = {() => onSelect(template),}
-              variant="outline"
 =======
             
             <Separator className="my-3" />
             
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
@@ -240,6 +246,7 @@ export function TemplateList({;
         </Card>
       ))}
 <<<<<<< HEAD
+      
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -268,8 +275,8 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
-return
-}await setDefaultTemplate.mutateAsync (templateId)
+return;
+}await setDefaultTemplate.mutateAsync (templateId) 
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -289,9 +296,9 @@ return
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-  handleDeleteConfirm
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
-}'"}
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
+}'"};
 =======
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -317,4 +324,4 @@ return
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

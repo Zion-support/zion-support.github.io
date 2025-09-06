@@ -20,14 +20,15 @@ function useFavorites() {
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
   return { favorites, remove }
 }
-export default function FavoritesPage() {
+
+export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div>
@@ -136,4 +137,4 @@ export default function FavoritesPage() {
           </ol>
         </nav>
       </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

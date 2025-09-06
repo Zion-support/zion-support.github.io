@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { GradientHeading } from '@/components/GradientHeading'
+import { Clock, Map, DollarSign } from 'lucide-react'
+=======
 
 <<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
@@ -6,7 +10,7 @@ import { Clock, Map, DollarSign } from 'lucide-react'
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from 'lucide-react'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -25,7 +29,7 @@ export function PageHero() {
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Map className="h-8 w-8 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
           <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
@@ -39,7 +43,7 @@ export function PageHero() {
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Clock className="h-8 w-8 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
@@ -94,16 +98,18 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>;
+  );
+};
+=======
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
@@ -140,4 +146,4 @@ export function PageHero() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -19,6 +19,9 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
+<<<<<<< HEAD:jest.setup.js
+      isFallback: false,
+=======
 <<<<<<< HEAD:backup-problematic-files/jest.setup.js
       isFallback: false
     }
@@ -35,6 +38,7 @@ jest.mock('next/image', () => ({
 }));
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
     };
   },
 }));
@@ -45,6 +49,19 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
+<<<<<<< HEAD:jest.setup.js
+
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+});
+=======
 >>>>>>> main:jest.setup.js
 
 // Mock Next.js Link component
@@ -90,3 +107,4 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js

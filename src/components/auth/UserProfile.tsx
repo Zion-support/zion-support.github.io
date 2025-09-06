@@ -93,7 +93,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
     router.push('/auth/login');
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (loading) {
     return (
       <Card className="w-full max-w-sm">
@@ -154,6 +154,13 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
 <<<<<<< HEAD
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
+          Sign Out
+        </Button>;
+      </CardContent>;
+    </Card>;
+  );
+}
+}
 =======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -163,9 +170,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
         </Button>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  )
-=======
   )
 } 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

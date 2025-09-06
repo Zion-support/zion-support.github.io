@@ -1,6 +1,5 @@
+export type Real2036InnovativeService = {;
 <<<<<<< HEAD
-
-export type Real2036InnovativeService = {
   id: string;
   name: string;
   tagline: string;
@@ -625,12 +624,12 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Cloud services'
     ]
     useCases: [
-      'Demand planning'
-      'Inventory management'
-      'Logistics optimization'
-      'Risk management'
-    ]
-  }
+      'Demand planning',
+      'Inventory management',
+      'Logistics optimization',
+      'Risk management',
+    ],
+  },;
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
@@ -641,11 +640,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
-  }
-];
-
 =======
-export type Real2036InnovativeService = {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -978,6 +973,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

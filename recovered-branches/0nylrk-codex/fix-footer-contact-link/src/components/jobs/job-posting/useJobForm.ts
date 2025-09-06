@@ -1,13 +1,21 @@
 
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { format  } from 'date-fns';
-import { toast } from "sonner";
-import { useNavigate  } from 'react-router-dom';
-import { jobSchema, JobSchemaType  } from './validation';
-import { useAuth } from "@/hooks/useAuth";
+import {useState, useEffect} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from "@hookform/resolvers/zod";
+import {format} from 'date-fns';
+import {toast} from "sonner";
+import {useNavigate} from 'react-router-dom';
+import {jobSchema, JobSchemaType} from './validation';
+import {useAuth} from "@/hooks/useAuth";
+export interface JobPostingProps {;
+  jobId?: string;
+  onSuccess?: () => void
+}
+
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
+  const { user } = useAuth();
+  const navigate = useNavigate();
 =======
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
@@ -17,7 +25,6 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface JobPostingProps {
   jobId?: string,
   onSuccess?: () => void
@@ -35,6 +42,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 =======
   const { user } = useAuth(),
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -135,6 +143,25 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
+<<<<<<< HEAD
+    }
+
+    setIsLoading(true);
+
+    try {
+      const publishedDate = startDate ? startDate.toString() : '';
+      const expiryDate = endDate ? endDate.toString() : '';
+
+      const jobData = {
+        ...values;
+        published_date: publishedDate;
+        expiry_date: expiryDate;
+        is_remote: isRemote,
+        user_id: user.id};
+
+      if (onSuccess) {
+        onSuccess()
+=======
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -197,6 +224,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       return jobData
@@ -206,6 +234,23 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       throw error
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+    }
+  };
+
+  return {
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
+    endDate, 
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    initialValues;
+    setInitialValues;
+    submitJob
+=======
 ;
       return jobData;
     } catch (error: any) {;
@@ -228,6 +273,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

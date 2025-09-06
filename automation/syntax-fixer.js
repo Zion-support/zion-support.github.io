@@ -144,8 +144,13 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+<<<<<<< HEAD
+,;
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
+=======
 ,
         if (content !== fs.readFileSync(file, "utf8")) {,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           modified = true
         },
 ,
@@ -155,14 +160,23 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           this.log(`Fixed export issues in ${file}`)
         }
       } catch (error) {,
+<<<<<<< HEAD
+this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     })
   },
 ,
   getSourceFiles() {,
+<<<<<<< HEAD
+    const files = [],;
+    const srcDir = path.join(process.cwd(), &quot;src&quot;),
+=======
     const files = [],
     const srcDir = path.join(process.cwd(), "src"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -198,8 +212,11 @@ this.log("=" * 50)
     try {,
       await this.fixSyntaxErrors(),
 ,
+<<<<<<< HEAD
+this.log("=" * 50),
+=======
       this.log("=" * 50),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
@@ -225,6 +242,11 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default SyntaxFixer,
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+;
+=======
 ;
     });
   },;
@@ -326,4 +348,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ;
 export default SyntaxFixer;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

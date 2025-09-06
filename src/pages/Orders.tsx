@@ -1,16 +1,21 @@
 <<<<<<< HEAD
-
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-
+  Table,
+  TableBody,
+  TableCell,
+<<<<<<< HEAD
+  TableHead,;
+  TableHeader;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 
@@ -27,21 +32,13 @@ import { Table;
 import { Badge  } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {
+export default function OrdersPage() {;
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
 =======
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
-import {
-  Table,
-  TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -55,7 +52,7 @@ export default function OrdersPage() {
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
   const getStatusBadge = (status: string) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     switch (status) {
       case 'in_escrow':
         return (
@@ -120,7 +117,7 @@ export default function OrdersPage() {
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       ) : (
         <Table>
@@ -141,7 +138,7 @@ export default function OrdersPage() {
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -162,6 +159,7 @@ export default function OrdersPage() {
     </div>
   );
 }
+;
 =======
           </TableBody>;
         </Table>;
@@ -170,4 +168,4 @@ export default function OrdersPage() {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

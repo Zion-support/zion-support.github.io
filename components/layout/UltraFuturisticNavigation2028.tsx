@@ -7,62 +7,61 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,;
+  BarChart3,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -452,8 +451,11 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
@@ -493,8 +495,7 @@ const resourceLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function UltraFuturisticNavigation2028() {
+export default function UltraFuturisticNavigation2028() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -514,7 +515,11 @@ export default function UltraFuturisticNavigation2028() {
   );
   return (
 <<<<<<< HEAD
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
+=======
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -585,7 +590,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Logo */}
           <div className='flex items-center'>
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -702,7 +707,7 @@ export default function UltraFuturisticNavigation2028() {
 
                               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </Link>
                           ))}
                         </div>
@@ -732,7 +737,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
               <Link
@@ -764,7 +769,7 @@ export default function UltraFuturisticNavigation2028() {
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />
@@ -815,7 +820,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -827,7 +832,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -904,7 +909,7 @@ export default function UltraFuturisticNavigation2028() {
 
                         </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       ))}
                     </div>
                   </div>
@@ -913,7 +918,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -958,7 +963,7 @@ export default function UltraFuturisticNavigation2028() {
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -977,7 +982,7 @@ export default function UltraFuturisticNavigation2028() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -1018,7 +1023,7 @@ export default function UltraFuturisticNavigation2028() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
               ))}
             </div>
@@ -1028,7 +1033,8 @@ export default function UltraFuturisticNavigation2028() {
     </nav>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

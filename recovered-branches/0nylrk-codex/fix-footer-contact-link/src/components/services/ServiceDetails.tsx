@@ -1,12 +1,12 @@
 
 <<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ServiceDetailsProps {
   country: string
 }
@@ -15,6 +15,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
+<<<<<<< HEAD
+    const dataCenters: Record<string, string[]> = {;
+      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
+      "United Kingdom": ["London", "Manchester", "Birmingham"];
+      "Germany": ["Frankfurt", "Berlin", "Munich"];
+      "Japan": ["Tokyo", "Osaka"];
+      "Australia": ["Sydney", "Melbourne", "Perth"];
+      "Singapore": ["Singapore Central"];
+      "Canada": ["Toronto", "Montreal", "Vancouver"];
+=======
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -23,6 +33,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Default for other countries
       "default": ["Major metropolitan areas"]
 <<<<<<< HEAD
@@ -214,7 +225,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {dc}
                 </div>
               ))}

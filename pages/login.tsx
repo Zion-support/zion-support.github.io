@@ -193,8 +193,7 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
-  DizzyFace2,
+  DizzyFace2,;
 } from "lucide-react";
 =======
   DizzyFace2
@@ -385,8 +384,8 @@ import {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: ""
-    password: ""
+    email: "",
+    password: "",;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

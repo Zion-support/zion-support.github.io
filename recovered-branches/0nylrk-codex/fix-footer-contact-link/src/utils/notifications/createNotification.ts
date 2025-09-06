@@ -1,12 +1,22 @@
 
 <<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { CreateNotificationParams, CreateNotificationResult } from './types';
+import {supabase} from "@/integrations/supabase/client";
+import {CreateNotificationParams, CreateNotificationResult} from './types';
+/**
+ * Creates a notification for a user and optionally sends an email notification
+ */
+export async function createNotification({;
+  userId;
+  title;
+  message;
+  type;
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
 =======
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -28,7 +38,7 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
@@ -92,7 +102,7 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -101,7 +111,7 @@ export async function createNotification({;
   } catch (error) {
 =======
   } catch (error) {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     console.error('Error creating notification:', error);
 
     return { success: false, error }

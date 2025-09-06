@@ -3,11 +3,11 @@
 html2pdf () .set (opt) .from (element) .save ()
 }
 export default function PdfExportButton({
-  targetRef
-  fileName = 'resume.pdf'
+  targetRef,
+  fileName = 'resume.pdf',;
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {
-  targetRef: React.RefObject<HTMLDivElement>
+  targetRef: React.RefObject<HTMLDivElement>,;
   fileName?: string;
   theme?: 'light' | 'dark'
 }
@@ -27,13 +27,7 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 html2pdf () .set (opt) .from (element) .save () 
 };
 
-export default function PdfExportButton({
-  targetRef,
-  fileName = 'resume.pdf',
-}: PdfExportButtonProps) {  const onClick = async () => {
-
-  const onClick = async () => {
-
+export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
     if (!targetRef.current) return;
     const element = targetRef.current;
 
@@ -69,4 +63,4 @@ export default function PdfExportButton({
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

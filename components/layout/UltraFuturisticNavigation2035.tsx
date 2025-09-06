@@ -7,67 +7,67 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  ChevronDown
-  X
-  Phone
-  Mail
-  MapPin
-  ArrowRight
-  Brain
-  Rocket
-  Shield
-  Zap
-  Target
-  Atom
-  BookOpen
-  Truck
-  DollarSign
-  BarChart3
-  Globe
-  Users
-  Star
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  Settings
-  Eye
-  Award
-  Clock
-  Heart
-  Lightbulb
-  Search
-  Grid
-  List
-  TrendingUp
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  User
-  ShoppingCart
-  Bell
-  HelpCircle
-  FileText
-  Video
-  Headphones
-  Code
-  Database
-  Network
-  Server
-  Monitor
-  Smartphone
-  Camera
-  Gamepad2
-  Palette
-  Music
-  Film
-  BookOpenCheck
-  Building
-  MessageCircle;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Shield,
+  Zap,
+  Target,
+  Atom,
+  BookOpen,
+  Truck,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Search,
+  Grid,
+  List,
+  TrendingUp,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  User,
+  ShoppingCart,
+  Bell,
+  HelpCircle,
+  FileText,
+  Video,
+  Headphones,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  Building,;
+  MessageCircle,;
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-  href: string;  icon?: React.ReactNode;import {
+  href: string;  icon?: React.ReactNode;import { ;
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -87,11 +87,11 @@ interface NavigationItem {
   badge?: string;
   title?: string;
 <<<<<<< HEAD
-  featured?: boolean
+  featured?: boolean;  featured?: boolean
 }
 =======
   featured?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -628,26 +628,26 @@ const navigationItems: NavigationItem[] = [
     ]
   }
   {
-    name: 'Enterprise IT'
-    href: '/enterprise-it'
-    icon: <Shield className='w-5 h-5' />,    description: 'Advanced enterprise infrastructure and security'
-    badge: 'Enterprise'
-    featured: true
-    children: [      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Unbreakable quantum encryption' }
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading', description: 'Ultra-fast quantum trading' }
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Future-proof internet security' }
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' }
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' }
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' }
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' }
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' }
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum-biological hybrid processing' }
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
-      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' }
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' }
-      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' }
-      { name: 'Quantum Metaverse', href: '/quantum-metaverse', description: 'Quantum-enhanced virtual worlds' }
-      { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' }
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className='w-5 h-5' />,    description: 'Advanced enterprise infrastructure and security',
+    badge: 'Enterprise',
+    featured: true,
+    children: [      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Unbreakable quantum encryption' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading', description: 'Ultra-fast quantum trading' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Future-proof internet security' },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum-biological hybrid processing' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse', description: 'Quantum-enhanced virtual worlds' },
+      { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology', description: 'Revolutionary space AI' }
     ]
   }
@@ -658,6 +658,7 @@ const navigationItems: NavigationItem[] = [
     badge: 'Enterprise'
     featured: true
     children: [
+<<<<<<< HEAD
       {
         name: 'Zero Trust Security'
         href: '/zero-trust-security-platform'
@@ -784,6 +785,9 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 const quickActions = [
   {
     name: 'Get Started'
@@ -930,7 +934,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }, []);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name)
-  }
+  };
+
   const closeDropdowns = () => {
     setActiveDropdown(null)
   }
@@ -966,7 +971,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   Revolutionary Technology
                 </div>              </div>
             </Link>
-            {/* Desktop Navigation */}  }
+            {/* Desktop Navigation */}  };
+
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -1064,7 +1070,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   </button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1077,7 +1083,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -1121,7 +1127,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
                               >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -1152,7 +1158,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                               </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             ))}
                           </div>
                         </div>
@@ -1165,7 +1171,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
@@ -1180,7 +1186,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   <Link
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1197,7 +1203,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -1225,7 +1231,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1245,7 +1251,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1291,7 +1297,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
 
                               {item.badge}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </span>
                           )}
                         </div>
@@ -1306,7 +1312,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -1350,7 +1356,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               </Link>
                             ))}
                           </motion.div>
@@ -1372,7 +1378,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           key={action.name}
                           href={action.href}
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1391,7 +1397,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>
@@ -1403,7 +1409,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a
@@ -1536,5 +1542,11 @@ export default UltraFuturisticNavigation2035;
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
 };
+<<<<<<< HEAD
+export default UltraFuturisticNavigation2035;  )
+};
+
 export default UltraFuturisticNavigation2035;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default UltraFuturisticNavigation2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

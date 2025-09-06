@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -13,21 +12,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." })
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
-  twitter: z.string().optional()
-  instagram: z.string().optional()
-  youtube: z.string().optional()
-  linkedin: z.string().optional()
-  niche: z.string().min(2, { message: "Please specify your niche." })
-  audience_size: z.string()
-  payout_method: z.string()
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
 =======
 import { useState } from "react",
 import { z } from "zod",
@@ -42,6 +26,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -56,9 +41,15 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+<<<<<<< HEAD
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+=======
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<PartnerFormValues>({
@@ -138,10 +129,6 @@ export function PartnerRegistrationForm() {
             payout_method: data.payout_method
             bio: data.bio
             status: 'pending', // Partners need approval
-          }
-        ])
-        .select();
-      if (error) throw error;
 =======
 import { useState } from "react",;
 import { z } from "zod",;
@@ -232,6 +219,7 @@ export function PartnerRegistrationForm() {;
             payout_method: data.payout_method,;
             bio: data.bio,;
             status: 'pending', // Partners need approval;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         ])
         .select(),
@@ -320,7 +308,7 @@ export function PartnerRegistrationForm() {;
     } finally {;
       setIsSubmitting(false);
     }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 control={form.control}
                 name="website"
                 render={({ field }) => (
@@ -380,7 +368,7 @@ export function PartnerRegistrationForm() {;
 =======
                 />;
                 <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   control={form.control}
                   name="linkedin"
                   render={({ field }) => (
@@ -480,8 +468,8 @@ export function PartnerRegistrationForm() {;
                 )}
               />
             </div>
-            <Button
-              type="submit"
+            <Button 
+              type="submit" 
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
@@ -492,4 +480,8 @@ export function PartnerRegistrationForm() {;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

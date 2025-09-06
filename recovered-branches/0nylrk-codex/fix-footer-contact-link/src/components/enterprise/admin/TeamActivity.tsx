@@ -4,13 +4,16 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
-
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+<<<<<<< HEAD
+TableRow,;
+=======
+  TableRow,
+>>>>>>> main
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -62,13 +65,13 @@ export function TeamActivity() {
       category: "candidates"
     }
     {
-      id: 6
-      user: "Jamie Smith"
-      action: "Updated budget"
-      target: "Monthly spending cap"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
-      category: "billing"
-    }
+      id: 6,
+      user: "Jamie Smith",
+      action: "Updated budget",
+      target: "Monthly spending cap",
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+      category: "billing",
+    },;
   ];
 <<<<<<< HEAD
   // Function to format the date in a readable way
@@ -346,7 +349,7 @@ export function TeamActivity() {;
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -357,7 +360,7 @@ export function TeamActivity() {;
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -377,4 +380,4 @@ export function TeamActivity() {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

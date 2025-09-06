@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -13,20 +10,20 @@ import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  CheckCircle
-  Users
-  Building
-  Globe
-  Award
-  Clock
-  BarChart3
-  Cloud
-  Shield
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  Globe,
+  Award,
+  Clock,
+  BarChart3,
+  Cloud,
+  Shield;
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -283,8 +280,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-<<<<<<< HEAD
+    </MainLayout>;
   );
 }
 <<<<<<< HEAD
@@ -306,6 +302,7 @@ import Head from 'next/head';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import Layout from '../components/Layout';
+
 export default function CaseStudiesPage() {
   return (
     <Layout>
@@ -325,17 +322,16 @@ export default function CaseStudiesPage() {
           Proven outcomes and detailed success stories. Coming soon.
         </p>
       </section>
-    </Layout>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    </Layout>;
   );
+
  </Head> </section> </Layout>
+=======
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+export default function CaseStudiesPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 	return (
 		<Layout>
 			<Head>
@@ -352,5 +348,28 @@ export default function CaseStudiesPage() {
 <<<<<<< HEAD
 }
 =======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage(req, res) {
+  try {
+	return (;
+		<Layout>;
+			<Head>;
+				<title>Case Studies | Zion Tech Group</title>;
+				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />;
+				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
+			</Head>;
+			<section className="container mx-auto px-4 py-24">;
+				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
+				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
+			</section>;
+		</Layout>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

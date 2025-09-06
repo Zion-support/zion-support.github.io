@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useMessaging} from "@/context/MessagingContext";
+import {toast} from "@/hooks/use-toast";
+import {ResumeSelector, ResumeOption} from "../resume-selector";
+import {MessageTab} from "./MessageTab";
+import {ResumeTab} from "./ResumeTab";
+import {Job} from "./types";
+=======
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -14,7 +27,7 @@ import { Job } from "./types";
 =======
 import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplyFormProps {
 
   job: Job
@@ -22,9 +35,16 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
+
+<<<<<<< HEAD
+export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+  const { createConversation } = useMessaging();
+  const { applyToJob } = useJobApplications();
+=======
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
 <<<<<<< HEAD
@@ -78,16 +98,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       );
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
+<<<<<<< HEAD
       }
       // Format message with proposal link if provided
       let fullMessage = message;
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
 =======
-      ),
-      
-      if (!applicationSuccess) {
-        throw new Error("Failed to submit application")
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -146,13 +163,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       let fullMessage = message,;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
 <<<<<<< HEAD
+      
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -174,7 +192,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
         await onApplySuccess(job.id)
-      }
 =======
 ;
       // Create context data for the conversation;
@@ -198,6 +215,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -237,6 +255,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           <MessageTab
 =======
           <MessageTab 
+<<<<<<< HEAD
+=======
 ;
       toast({;
         title: "Application sent",;
@@ -266,7 +286,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             message={message}
             setMessage={setMessage}
             proposalLink={proposalLink}

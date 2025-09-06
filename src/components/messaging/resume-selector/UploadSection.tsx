@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+=======
 
 <<<<<<< HEAD
 import React from 'react';
@@ -5,7 +9,7 @@ import { Button } from "@/components/ui/button";
 =======
 import React from 'react',
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -19,7 +23,7 @@ export function UploadSection({
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -58,7 +62,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 =======
       
       {customFile && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -69,10 +73,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>
         </div>
 <<<<<<< HEAD
-      )}
-    </div>
-  )
-}
 =======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -110,9 +110,14 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );
+};
 }
+<<<<<<< HEAD
+}
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

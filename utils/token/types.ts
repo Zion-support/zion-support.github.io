@@ -1,14 +1,19 @@
+<<<<<<< HEAD
+export type TokenSymbol = "ZION$",;
+=======
 export type TokenSymbol = "ZION$";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
+  | "redeem",;
+export interface TokenTransaction {;
 <<<<<<< HEAD
-  | "redeem";
-export interface TokenTransaction {id: string;
-  userId: string;
-  type: TokenTransactionType;
+  id: string,;
+  userId: string,;
+  type: TokenTransactionType,;
   amount: number, // positive integer tokens;
   reason: string;
   metadata?: Record<string, any>;
@@ -16,18 +21,7 @@ export interface TokenTransaction {id: string;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
-}
-export interface TokenConfig {symbol: TokenSymbol;
-  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-  earnRules: Record<string number>, // action -> tokens;
-  burnRules: Record<string number>, // feature -> tokens;
-}
-export interface WalletSummary {wallet: Wallet;
-  transactions: TokenTransaction[];
-  config: TokenConfig;
 =======
-  | "redeem",;
-export interface TokenTransaction {;
   id: string;
   userId: string;
   type: TokenTransactionType,;
@@ -48,26 +42,34 @@ export interface Wallet {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface TokenConfig {;
   symbol: TokenSymbol,;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+<<<<<<< HEAD
+  earnRules: Record<string number>, // action -> tokens;
+  burnRules: Record<string number>, // feature -> tokens;
+=======
   earnRules: Record<string, number>, // action -> tokens;
   burnRules: Record<string, number>, // feature -> tokens;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 export interface WalletSummary {;
   wallet: Wallet,;
   transactions: TokenTransaction[];
   config: TokenConfig;
+<<<<<<< HEAD
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

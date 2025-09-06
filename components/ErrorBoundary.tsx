@@ -1,12 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -17,6 +9,8 @@ interface Props {
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+}
+
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -36,6 +30,7 @@ interface Props {
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface State {
   hasError: boolean;
   error?: Error;
@@ -66,6 +61,8 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false }
   }
+<<<<<<< HEAD
+
   static getDerivedStateFromError(error: Error): State {
 <<<<<<< HEAD
     // Update state so the next render will show the fallback UI
@@ -215,30 +212,6 @@ class ErrorBoundary extends Component<Props, State> {
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
   } catch (error) {
     console.error("Error:", error);
@@ -325,7 +298,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
             <div className="space-y-3">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <button
                 onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
     console.error("Error:", error);
@@ -538,13 +511,22 @@ export default class ErrorBoundary extends Component<Props, State> {
               </pre>
             </details>
           )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       );
-    }
-    return this.props.children;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
+<<<<<<< HEAD
+
+class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props) {;
     super(props);
     this.state = { hasError: false }
 }
@@ -603,17 +585,9 @@ class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {
 }
 }
 export default ErrorBoundary;
-=======
-        </div>
-      );
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+}
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,4 +620,4 @@ export default ErrorBoundary;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

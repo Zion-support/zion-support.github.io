@@ -1,22 +1,22 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { Logo  } from '@/components/header/Logo';
-import { PointsBadge  } from '@/components/loyalty/PointsBadge';
-import { UserMenu  } from '@/components/header/UserMenu';
-import { LanguageSelector  } from '@/components/header/LanguageSelector';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { useAuth  } from '@/hooks/useAuth';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { useMessaging  } from '@/context/MessagingContext';
-import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions  } from '@/data/marketplaceData';
-import { slugify  } from '@/lib/slugify';
-import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu  } from '@/components/header/MobileMenu';
-import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { useState } from 'react'
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { Logo } from '@/components/header/Logo'
+import { PointsBadge } from '@/components/loyalty/PointsBadge'
+import { UserMenu } from '@/components/header/UserMenu'
+import { LanguageSelector } from '@/components/header/LanguageSelector'
+import { ModeToggle } from '@/components/ModeToggle'
+import { useAuth } from '@/hooks/useAuth'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useMessaging } from '@/context/MessagingContext'
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { slugify } from '@/lib/slugify'
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
+import { MobileMenu } from '@/components/header/MobileMenu'
+import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
@@ -38,9 +38,10 @@ export function PrimaryNav() {
     unreadCount = messaging.unreadCount
   } catch {
     // context not available
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  };
+;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault();
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -106,7 +107,7 @@ export function PrimaryNav() {;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <header
@@ -130,7 +131,7 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -146,10 +147,7 @@ export function PrimaryNav() {;
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`)
-                  } else if (
-                    sugg.type === 'doc' &&
-                    sugg.slug &&
-                    sugg.slug.startsWith('/')
+                  } else if (true) {}
                   ) {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)
@@ -236,7 +234,7 @@ export function PrimaryNav() {;
               <CartDrawer />
             </div>
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -285,7 +283,7 @@ export function PrimaryNav() {;
                       setLoginOpen(true);
                     }}
                   >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {t('auth.login')}
                   </Link>
                   <Link
@@ -307,7 +305,7 @@ export function PrimaryNav() {;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -341,7 +339,7 @@ export function PrimaryNav() {;
                   setLoginOpen(true);
                 }}
               >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {t('auth.login')}
               </Link>
             )}
@@ -366,7 +364,7 @@ export function PrimaryNav() {;
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -433,7 +431,7 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-  unreadCount
+  unreadCount 
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -508,6 +506,7 @@ setLoginOpen (true)
   )}
 '"`
 }
+;
 =======
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -528,4 +527,4 @@ setLoginOpen (true)
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

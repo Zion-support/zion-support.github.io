@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-
-export type AdminNotesPanelProps = {
+export type AdminNotesPanelProps = {;
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -13,9 +12,10 @@ type Note = {
   createdAt: number;
 }
 export default function AdminNotesPanel({
-  targetType
-  targetId
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+
 type Note = {
   id: string
   targetType: string
@@ -23,8 +23,9 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
-}
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -83,6 +84,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes();
     } finally {
+<<<<<<< HEAD
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
@@ -94,7 +96,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     } finally {
       setAdding(false)
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 <<<<<<< HEAD
@@ -179,7 +183,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     </div>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

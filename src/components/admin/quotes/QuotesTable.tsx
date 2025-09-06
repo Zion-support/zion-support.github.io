@@ -1,33 +1,31 @@
-
 <<<<<<< HEAD
   quotes
   isArchived = false
 import React from "react"
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, ;
+  TableRow ;
 } from "@/components/ui/table"; import { Button } from "@/components/ui/button"
-import {
+import { 
   DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
+  DropdownMenuContent, 
+  DropdownMenuItem, ;
+  DropdownMenuTrigger ;
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 import {formatDate} from "@/utils/dateUtils"
 interface QuotesTableProps {
-  quotes: QuoteRequest[]
+  quotes: QuoteRequest[],
   isArchived?: boolean
-  isLoading: boolean
-  updateStatus: (id: string, status: QuoteStatus,) => void
-  toggleArchive: (id: string, isArchived: boolean,) => void
-  deleteQuote: (id: string,) => void
-  onViewDetails: (quote: QuoteRequest,) => void
 =======
+quotes;
+  isArchived = false;
+import React from "react";
+
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
@@ -51,6 +49,7 @@ import { formatDate } from "@/utils/dateUtils",
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -62,19 +61,18 @@ interface QuotesTableProps {
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
-
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
-  deleteQuote
 =======
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   deleteQuote,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
@@ -165,7 +163,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
 =======
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {isArchived ? (
                       <>
                         <Button
@@ -229,9 +227,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+<<<<<<< HEAD
+                              } }}
+=======
                               }
                             }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -416,7 +417,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </div>
                 </TableCell>
@@ -427,14 +428,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
         </TableBody>
       </Table>
     </div>
-  )
-}
-'"
-
+  );
+};
+'";
 =======
         </TableBody>;
       </Table>;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

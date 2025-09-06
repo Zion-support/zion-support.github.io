@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
   import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
@@ -9,10 +8,22 @@ interface AIEnhancementButtonProps {
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
   buttonText?: string
-  className?: string
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 
+export function AIEnhancementButton({
+  options
+  onEnhanced
+  buttonText = "Enhance with AI"
+  className
+  variant = "ghost"
+  size = "sm"
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const [showActions, setShowActions] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
 =======
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
@@ -61,7 +72,7 @@ export function AIEnhancementButton({
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -71,7 +82,7 @@ export function AIEnhancementButton({
         variant: "destructive"
 <<<<<<< HEAD
       })
-      return
+      return;
     }
     const enhancedContent = await enhanceContent(options)
     if (enhancedContent) {
@@ -137,7 +148,7 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
@@ -151,7 +162,6 @@ export function AIEnhancementButton({;
     setShowActions(false)
     setGeneratedContent(null)
   }
-
 =======
   },
   
@@ -164,7 +174,7 @@ export function AIEnhancementButton({;
     setGeneratedContent(null)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -210,16 +220,13 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
+<<<<<<< HEAD
       variant = {variant,}
       size = {size,}
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
 =======
-  
-  return (
-    <Button
-      type="button"
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -288,7 +295,7 @@ export function AIEnhancementButton({;
       className={`gap-1 ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -296,9 +303,9 @@ export function AIEnhancementButton({;
         <Sparkles className="h-4 w-4" />
       )}
       <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
 <<<<<<< HEAD
+    </Button>;
+  );
 };"
 <Button type="button" variant="ghost" size="sm" onClick={
   handleAccept "
@@ -308,6 +315,8 @@ export function AIEnhancementButton({;
 }</Button>)
 }"}
 =======
+    </Button>
+  )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

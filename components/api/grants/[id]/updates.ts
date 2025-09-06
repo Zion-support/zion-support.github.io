@@ -27,8 +27,8 @@ function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id: string };
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -62,4 +62,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

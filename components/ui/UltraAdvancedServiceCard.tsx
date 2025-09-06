@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,;
+  Globe,;} from 'lucide-react';
 
 import {
   ArrowRight
@@ -19,7 +35,7 @@ import {
   Globe;} from 'lucide-react';
 interface UltraAdvancedServiceCardProps {
   service: {import {
-  ArrowRight, ExternalLink, Star, TrendingUp
+  ArrowRight, ExternalLink, Star, TrendingUp, ;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
 
@@ -67,6 +83,10 @@ interface UltraAdvancedServiceCardProps {
     launchDate: string;
     customers: number;
     rating: number;
+    reviews: number;
+  };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
     reviews: number;
   }
@@ -156,15 +176,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     }
   }
   const contentVariants = {
-    hidden: { opacity: 0, height: 0 }
+    hidden: { opacity: 0, height: 0 },
     visible: {
       height: 'auto'
       transition: {
-        duration: 0.5
-        ease: 'easeOut' as const
-      }
-    }
-  }
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
+
+<<<<<<< HEAD
         onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -201,11 +223,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       {/* Main Card */}
-      <div
+      <div 
 =======
-    hidden: { opacity: 0, height: 0 },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
@@ -249,7 +269,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -292,7 +312,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           {/* Price */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
           {/* Quick Stats */}
@@ -342,7 +362,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Expandable Content */}
           <AnimatePresence>
             {isExpanded && (
@@ -370,7 +390,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Features */}
                 <div>
                   <h4 className='text-white font-semibold mb-2'>
@@ -402,7 +422,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
@@ -410,7 +430,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -459,7 +479,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>
             <motion.button
@@ -487,7 +507,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 =======
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -499,7 +519,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Expand/Collapse Indicator */}
           <motion.div
             className='flex justify-center mt-4'
@@ -511,8 +531,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       </div>
     </motion.div>
   );
+};
+
 <<<<<<< HEAD
-}
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -532,8 +553,14 @@ export default UltraAdvancedServiceCard;
 
 export default UltraAdvancedServiceCard;
 
+}
+}
+}
+=======
+export default UltraAdvancedServiceCard;
+
           </motion.div>
         </div>
       </div>
     </motion.div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

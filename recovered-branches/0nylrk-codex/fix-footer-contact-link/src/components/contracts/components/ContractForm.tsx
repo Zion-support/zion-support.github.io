@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -34,7 +33,7 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
@@ -72,6 +71,16 @@ interface ContractFormProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
+
+<<<<<<< HEAD
+export function ContractForm({;
+  talent;
+  clientName;
+  initialValues;
+  onFormValuesChange;
+  onContractGenerated;
+  deployOptions;
+=======
 export function ContractForm({
   talent,
   clientName,
@@ -79,6 +88,7 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDeployOptionsChange
 }: ContractFormProps) {
 <<<<<<< HEAD
@@ -205,6 +215,7 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
@@ -292,7 +303,7 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -301,27 +312,22 @@ export function ContractForm({;
           <ProjectDetailsFields
             form={form}
           />
-<<<<<<< HEAD
-          <PaymentTermsFields
-            form={form}
-            talent={talent}
-            handleMilestonesGenerated={handleMilestonesGenerated}
-=======
-          
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
+=======
           />;
           <AdditionalClausesFields;
             form={form}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           />
-          <AdditionalClausesFields
+          <AdditionalClausesFields 
             form={form}
           />
-          <Button
-            type="submit"
+          <Button 
+            type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}
           >

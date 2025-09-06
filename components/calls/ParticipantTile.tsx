@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 
 import type {
-  RemoteParticipant
-  LocalParticipant
-  TrackPublication
-  Track;
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
 } from 'livekit-client';
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
@@ -12,16 +12,17 @@ type Props = {
   displayName?: string;
 }
 export default function ParticipantTile({
-  participant
-  isLocal
-  displayName
+  participant,
+  isLocal,
+  displayName,;
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {
   participant: RemoteParticipant | LocalParticipant
   isLocal?: boolean;
   displayName?: string
-}
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -95,4 +96,4 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

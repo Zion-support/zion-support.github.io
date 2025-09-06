@@ -1,11 +1,9 @@
 import Head from 'next/head';
 <<<<<<< HEAD
-
-import React from 'react'
-
+import React from 'react',
 =======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Update202508150402() {
   return (
     <>
@@ -120,7 +118,8 @@ export default function Update202508150402() {
     </>
 <<<<<<< HEAD
   )
-}
+};
+;
 =======
   );
   } catch (error) {
@@ -128,4 +127,4 @@ export default function Update202508150402() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

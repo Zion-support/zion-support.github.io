@@ -1,5 +1,5 @@
+export interface InvestmentPortfolio {;
 <<<<<<< HEAD
-export interface InvestmentPortfolio {
   id: string;
   userId: string;
   name: string;
@@ -18,7 +18,8 @@ export interface InvestmentPortfolio {
 
   updatedAt: Date
 }
-export interface PortfolioAsset {
+
+export interface PortfolioAsset {;
   id: string;
   symbol: string;
   name: string;
@@ -41,7 +42,8 @@ export interface PortfolioAsset {
     totalReturn: number
   }
 }
-export interface PortfolioPerformance {
+
+export interface PortfolioPerformance {;
   totalReturn: number;
   annualizedReturn: number;
   volatility: number;
@@ -55,7 +57,8 @@ export interface PortfolioPerformance {
 
   sortinoRatio: number
 }
-export interface InvestmentRecommendation {
+
+export interface InvestmentRecommendation {;
   id: string;
   userId: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -76,7 +79,8 @@ export interface InvestmentRecommendation {
 
   expiresAt: Date
 }
-export interface FinancialGoal {
+
+export interface FinancialGoal {;
   id: string;
   userId: string;
   name: string;
@@ -94,7 +98,8 @@ export interface FinancialGoal {
 
   updatedAt: Date
 }
-export interface MarketAnalysis {
+
+export interface MarketAnalysis {;
   id: string;
   market: string;
 
@@ -111,7 +116,8 @@ export interface MarketAnalysis {
 
   nextUpdate: Date
 }
-export interface FinancialPlan {
+
+export interface FinancialPlan {;
   id: string;
   userId: string;
   name: string;
@@ -160,7 +166,8 @@ export interface FinancialPlan {
 
   updatedAt: Date
 }
-export interface FinancialRequest {
+
+export interface FinancialRequest {;
   userId: string;
 
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
@@ -168,7 +175,8 @@ export interface FinancialRequest {
 
   preferences?: Record<string, any>
 }
-export interface FinancialResponse {
+
+export interface FinancialResponse {;
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -184,7 +192,8 @@ export interface FinancialResponse {
 
   estimatedFees: number
 }
-export class AIFinancialAdvisorService {
+
+export class AIFinancialAdvisorService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -379,7 +388,6 @@ export class AIFinancialAdvisorService {
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
 =======
-export interface InvestmentPortfolio {;
   id: string,;
   userId: string,;
   name: string,;
@@ -751,5 +759,6 @@ export class AIFinancialAdvisorService {;
   }
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

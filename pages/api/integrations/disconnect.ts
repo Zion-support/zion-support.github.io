@@ -1,10 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-import { writeState } from '[^']*';
-import { getProviderById } from '[^']*';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.body as { providerId?: string }
   if (!providerId |!getProviderById(providerId)) {
@@ -24,8 +23,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
   res.status(200).json({ ok: true });
 }
-
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -67,4 +66,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

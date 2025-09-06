@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -11,13 +10,14 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+=======
 
 =======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -38,7 +38,7 @@ export function ReferralLink({
 =======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -63,9 +63,8 @@ export function ReferralLink({
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-          
-          {copied && (
 <<<<<<< HEAD
+          {copied && (
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
   const handleCopy = () => {
@@ -100,7 +99,9 @@ export function ReferralLink({
           </div>
           {copied && (
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          
+          {copied && (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>
@@ -133,7 +134,7 @@ export function ReferralLink({
               size="sm"
               className="flex items-center gap-2"
               onClick={() => onShare('twitter')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <Twitter className="h-4 w-4" />
               Twitter
@@ -143,18 +144,17 @@ export function ReferralLink({
               variant='outline'
               size='sm'
               className='flex items-center gap-2'              onClick={() => onShare('facebook')}
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-              onClick = {() => onShare('facebook'),}
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
+<<<<<<< HEAD
+              onClick = {() => onShare('facebook'),}
+=======
               onClick={() => onShare('facebook')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <Facebook className="h-4 w-4" />
               Facebook
@@ -174,17 +174,22 @@ export function ReferralLink({
               onClick={() => onShare('linkedin')}
             >
               <Share className="h-4 w-4" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               LinkedIn
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+      </CardFooter>;
+    </Card>;
+  );
+};
+}
+}
+=======
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
-}
-=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -272,4 +277,4 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

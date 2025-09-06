@@ -8,6 +8,20 @@ import { Dialog;
 import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
+  title: string,
+  isOpen: boolean,
+  onClose: () => void,
+  onApply: (content: string) => void,
+  defaultOptions: AIEnhancementOptions,
+  initialContent?: string
+}
+
+export function AIEnhancementDialog({;
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
 =======
 import React from 'react',;
 import {;
@@ -41,6 +55,7 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   initialContent
 }: AIEnhancementDialogProps) {
 

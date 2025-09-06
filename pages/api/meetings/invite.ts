@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL |"";
@@ -8,7 +7,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -28,8 +27,10 @@ export default async function handler(
   } catch (e) {
     console.error(e);
     return res.status(500).json({ ok: false, error: "Failed to send invite" });
-
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -49,6 +50,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     console.error(e);
     return res.status(200).json({ ok: true, skipped: true });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

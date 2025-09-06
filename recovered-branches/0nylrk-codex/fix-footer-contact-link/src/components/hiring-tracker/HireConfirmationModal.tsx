@@ -1,41 +1,26 @@
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-=======
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication} from "@/types/jobs";
 export interface HireConfirmationModalProps {
-
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean,
+  onClose: () => void,;
   candidateData?: TalentProfile;
   application?: JobApplication;
-  onConfirm: () => void
-
+  onConfirm: () => void,
   isSubmitting?: boolean
 }
-export function HireConfirmationModal({
+
+export function HireConfirmationModal({ ;
   isOpen;
 
   onClose
@@ -59,6 +44,20 @@ export function HireConfirmationModal({
         variant: 'destructive'})
       return
 =======
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -115,8 +114,9 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
+
     if (!user) {
       toast({
         title: 'Not authenticated'
@@ -124,6 +124,7 @@ export function HireConfirmationModal({;
         variant: 'destructive'})
       return
     }
+
     if (!talentData) {
       toast({
         title: 'Missing talent data'
@@ -132,6 +133,7 @@ export function HireConfirmationModal({;
       return
     }
 <<<<<<< HEAD
+
     setIsLoading(true);
     // Create a new project
     try {
@@ -213,7 +215,7 @@ export function HireConfirmationModal({;
     } finally {
       setIsLoading(false)
     }
-  }
+  };
 =======
 ;
     setIsLoading(true),;
@@ -301,7 +303,7 @@ export function HireConfirmationModal({;
       setIsLoading(false);
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

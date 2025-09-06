@@ -5,7 +5,8 @@ function fixDoubleCommas(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
     if (fixedContent !== content) {

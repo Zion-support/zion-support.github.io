@@ -224,7 +224,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Floating Neon Shapes */}
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -309,7 +309,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -382,8 +382,10 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             ease: 'linear'
           }}
         />
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Energy Orbs */}
         <motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -443,7 +445,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
@@ -477,10 +479,14 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     </div>
   );
 };  )
-}
-export default UltraFuturisticBackground2045;
+};
 
 <<<<<<< HEAD
+export default UltraFuturisticBackground2045;
+
+}
+}
+}
 =======
 export default UltraFuturisticBackground2045;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,9 +1,9 @@
 
 <<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
+import {supabase} from "@/integrations/supabase/client";
 =======
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -17,11 +17,16 @@ export const ensureProfilesTableExists = async () => {
         SELECT FROM information_schema.tables
         WHERE table_schema = 'public'
         AND table_name = 'profiles'
+<<<<<<< HEAD
+      ),`;
+    });
+=======
       ),`
 <<<<<<< HEAD
     });
 =======
     }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If there's an error, log it and proceed with table creation
@@ -159,6 +164,17 @@ export const initializeDatabase = async () => {
     if (createError) {
       console.error('Error creating profiles table:', createError)
     } else {
+<<<<<<< HEAD
+      console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console.error('Error setting up profiles table:', error)
+  }
+};
+
+// Call this when the app starts to ensure the table exists
+export const initializeDatabase = async () => {
+=======
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
 /**;
@@ -258,6 +274,7 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   await ensureProfilesTableExists();
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

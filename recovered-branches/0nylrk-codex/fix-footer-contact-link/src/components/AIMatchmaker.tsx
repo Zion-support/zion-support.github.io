@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {AIMatchingResults} from "@/components/AIMatchingResults";
+import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
+import {Textarea} from "@/components/ui/textarea";
+import {Sparkles, Search} from "lucide-react";
+=======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -15,12 +25,21 @@ interface AIMatchmakerProps {
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
+
+<<<<<<< HEAD
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+=======
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
 <<<<<<< HEAD
   const [query, setQuery] = useState("");
@@ -32,6 +51,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [isMatchmaking, setIsMatchmaking] = useState(false),
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSearch = async () => {
@@ -96,10 +116,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         onMatchSelect(matchResult)
       }
     }
-  }
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item);
-
+  };
 =======
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
@@ -165,6 +182,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),

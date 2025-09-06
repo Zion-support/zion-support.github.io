@@ -8,21 +8,15 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
 =======
 <<<<<<< HEAD
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function Docs({ }: DocsProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD:ModernNavigation.tsx

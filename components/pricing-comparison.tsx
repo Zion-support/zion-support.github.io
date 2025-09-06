@@ -38,20 +38,20 @@ export default function PricingComparisonPage() {
           cons: ['Basic features', 'Limited templates', 'No advanced SEO']
           savings: 'Save $17/month with Zion'
         },        {
-          name: 'Writesonic'
-          pricing: '$19/month'
-          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']
-          cons: ['Higher pricingLimited customizationNo unlimited plan']
-          savings: 'Save $20/month with Zion'
-        }
-          name: 'Copy.ai'
-          pricing: '$36/month'
-          rating: '4.6/5'
-          pros: ['Unlimited words', 'Good value', 'Simple interface']
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
-          savings: 'Save $17/month with Zion'
-        },          pros: ['Unlimited wordsGood valueSimple interface']
-          cons: ['Basic featuresLimited templatesNo advanced SEO']
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion';
+        };
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
           savings: 'Save $17/month with Zion'
         }
           name: 'Writesonic'
@@ -342,7 +342,7 @@ export default function PricingComparisonPage() {
 
                     {insight.icon}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
@@ -355,7 +355,7 @@ export default function PricingComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -490,7 +490,7 @@ export default function PricingComparisonPage() {
 
                             {[...Array(5)].map((_, i) => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -506,7 +506,7 @@ export default function PricingComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -578,7 +578,7 @@ export default function PricingComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -587,7 +587,7 @@ export default function PricingComparisonPage() {
 =======
 
               Ready to Save Money and Get Better Features?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -648,4 +648,4 @@ export default function PricingComparisonPage() {
 }
 =======
               <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

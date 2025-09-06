@@ -61,9 +61,16 @@ const faqs = [
   {
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+
+<<<<<<< HEAD
+export default function ContactPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
 export default function ContactPage() {
   return (
     <div className="bg-black">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -138,7 +145,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Let's start a conversation
           </p>
         </div>
@@ -277,7 +284,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Common questions
           </p>
         </div>
@@ -305,7 +312,7 @@ export default function ContactPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

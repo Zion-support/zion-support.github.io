@@ -20,7 +20,7 @@ export default function Button({
   type = 'button'
   disabled = false
 }: ButtonProps) {
-  const baseClasses =
+  const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   const variantClasses = {
     primary:
@@ -57,10 +57,12 @@ export default function Button({
     </button>
 );
 }
+
+}
 =======
 
     >
       {children}
     </button>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

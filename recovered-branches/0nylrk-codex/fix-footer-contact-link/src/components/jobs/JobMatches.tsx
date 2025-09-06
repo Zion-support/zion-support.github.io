@@ -1,12 +1,11 @@
-
 <<<<<<< HEAD
 import React from "react";
 import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-  CardContent
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,;
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
@@ -14,26 +13,26 @@ import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 =======
+
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface JobMatchesProps {
   jobId: string
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
 <<<<<<< HEAD
-
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
+  const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
 
 =======
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <Card>
@@ -68,6 +67,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
       />
     );
   }
+
 =======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
@@ -111,7 +111,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       {matches.map((match) => (
@@ -143,7 +143,10 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
           skills={match.talent_profile?.skills || []}
         />
       ))}
+<<<<<<< HEAD
+    </div>
+=======
     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }

@@ -18,6 +18,20 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
       </div>
 =======
 
+<<<<<<< HEAD
+export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
+  return (
+    <div className="flex justify-between items-center mb-8">
+      <div>
+        <h1 className="text-3xl font-bold">Smart Contract Builder</h1>
+        <p className="text-muted-foreground mt-2">
+          Create legally binding agreements with optional blockchain deployment
+        </p>
+      </div>
+      <Button size="lg" onClick={onCreateClick}>
+        Create New Contract
+      </Button>
+=======
 import { Button } from "@/components/ui/button",
 interface ContractHeaderProps {
   onCreateClick: () => void
@@ -28,10 +42,6 @@ interface ContractHeaderProps {
         Create New Contract
       </Button>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {;
@@ -50,6 +60,7 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }

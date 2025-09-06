@@ -62,7 +62,7 @@ function fileName = path.basename(filePath, path.extname(filePath));
     // Also replace the export default
     fixedContent = fixedContent.replace(
       new RegExp(
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`)
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),;
       `export default ${functionName}`);
     // Replace in title and description
     fixedContent = fixedContent.replace(

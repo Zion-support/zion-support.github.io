@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { useState } from 'react'
+import { toast } from '@/hooks/use-toast'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { AIMatchingResults } from '@/components/AIMatchingResults'
+import { findMatches, MatchResult } from '@/lib/ai-matchmaking'
+import { Textarea } from '@/components/ui/textarea'
+=======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -8,7 +17,7 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { Textarea } from "@/components/ui/textarea";
 =======
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
@@ -18,7 +27,7 @@ onMatchSelect?: (match: any) => void
 className?: string
 }if (!query.trim () ) {
   toast ({
-  return
+  return;
 }setIsMatchmaking (true)
 setHasSearched (true)
 serviceType
@@ -28,14 +37,15 @@ serviceType
   data: error
 })
 toast ({
-  //Set empty matches to show no results found UI setMatches ([])
-}finally {
+  //Set empty matches to show no results found UI setMatches ([]) ;
+}finally {;
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
   onMatchSelect?: (match: any,) => void
   className?: string
 }
+
 <<<<<<< HEAD
 export function AIMatchmaker({
   serviceType = ''
@@ -46,14 +56,23 @@ export function AIMatchmaker({
   const [isMatchmaking, setIsMatchmaking] = useState(false)
   const [matches, setMatches] = useState([] as MatchResult[])
   const [hasSearched, setHasSearched] = useState(false)
+=======
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: 'Please enter a description'
-        description: "Tell us what you're looking for so we can find matches."
-        variant: 'destructive'
+        title: "Please enter a description",
+        description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
+        variant: 'destructive',
       })
-      return
+      return;
     }
     setIsMatchmaking(true)
     setHasSearched(true)
@@ -76,18 +95,6 @@ export function AIMatchmaker({
         variant: 'destructive'
       })
 =======
-
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
-
-  const handleSearch = async () => {
-    if (!query.trim()) {
-      toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
         variant: "destructive"}),
       return
     }
@@ -117,7 +124,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
         variant: "destructive"}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
@@ -138,8 +145,12 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     >
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
-          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
-
+          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
+          AI Matchmaker;
+        </CardTitle>;
+        <p className='text-sm text-zion-slate-light'>;
+          Describe what you&apos;re looking for and our AI will find the best
+          matches
 =======
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
@@ -215,11 +226,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </p>
       </CardHeader>
       <CardContent>
@@ -265,7 +276,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           </div>;
           {hasSearched && (;
             <AIMatchingResults;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -278,6 +289,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     </Card>
   )
 }
+
+}
+}
 =======
               projectDescription={query}
             />;
@@ -287,4 +301,4 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     </Card>;
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

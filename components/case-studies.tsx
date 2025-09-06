@@ -6,8 +6,10 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -26,7 +28,7 @@ export default function CaseStudiesPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-    </UltraFuturisticBackground>
+    </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -35,10 +37,17 @@ export default function CaseStudiesPage() {
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
       </div>
+<<<<<<< HEAD
+    </UltraFuturisticBackground>;
+  );
+}
+
+}
+=======
     </UltraFuturisticBackground>
   );
 <<<<<<< HEAD
 }
 =======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

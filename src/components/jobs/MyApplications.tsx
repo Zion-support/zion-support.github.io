@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+import { useState } from "react"
+import { useJobApplications } from "@/hooks/useJobApplications"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
+import Link from "next/link"
+import {ApplicationStatus} from "@/types/jobs"
+export function MyApplications() {
+  const { applications, isLoading, error } = useJobApplications()
+  const getStatusBadge = (status: ApplicationStatus,) => {
+    switch (status) {
+      case "new": return <Badge variant="secondary">New</Badge>
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
+=======
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -35,7 +51,7 @@ export function MyApplications() {
         return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
       case "rejected":
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       default:
         return <Badge variant="outline">{status}</Badge>
     }
@@ -75,7 +91,7 @@ export function MyApplications() {
       {applications.map((application,) => (
 =======
       {applications.map((application) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -176,7 +192,7 @@ export function MyApplications() {;
             <div className="space-y-3">;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {application.cover_letter}
                 </p>
               )}
@@ -199,11 +215,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-<<<<<<< HEAD
-                <Button
-                  variant="default"
-=======
-                
                 <Button 
                   variant="default" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -220,13 +231,11 @@ export function MyApplications() {;
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
     </div>;
   );
+<<<<<<< HEAD
+};
+=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

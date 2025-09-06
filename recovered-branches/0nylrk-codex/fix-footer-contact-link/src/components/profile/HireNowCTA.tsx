@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {HireRequestModal} from "./hire-request";
+import {useState} from "react";
+import {TalentProfile} from "@/types/talent";
+=======
 import { Button } from "@/components/ui/button",
 import { HireRequestModal } from "./hire-request",
 <<<<<<< HEAD
@@ -14,6 +20,7 @@ interface HireNowCTAProps {
 =======
 import { useState } from "react",
 import { TalentProfile } from "@/types/talent",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
@@ -23,8 +30,14 @@ interface HireNowCTAProps {
     hourly_rate?: number
   }
 }
+
+<<<<<<< HEAD
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false);
+=======
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleOpenModal = () => {
     setModalOpen(true)
@@ -53,7 +66,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -78,11 +91,9 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
           Schedule Interview
         </Button>
       </div>
-<<<<<<< HEAD
-      <HireRequestModal
-=======
-
       <HireRequestModal 
+<<<<<<< HEAD
+=======
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
 import { useState } from "react",;
@@ -136,7 +147,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
         </Button>;
       </div>;
       <HireRequestModal;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -156,6 +167,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   )
 }
 <<<<<<< HEAD
+
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
@@ -173,7 +185,6 @@ function calculateProfileCompleteness(profile: any) {
   });
 
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
-}
 =======
 ;
 // Helper function to calculate profile completeness;
@@ -192,6 +203,7 @@ function calculateProfileCompleteness(profile: any) {;
     totalFields++;
   });
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

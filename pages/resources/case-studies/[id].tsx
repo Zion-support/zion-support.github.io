@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -183,10 +190,11 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-  ]
-  const caseStudy = caseStudies.find(study => study.id === id)
-
 =======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -368,6 +376,7 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -384,7 +393,11 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
+              <Link 
+=======
               <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -430,7 +443,7 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -442,6 +455,15 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
+              <div 
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            <div className="text-center">
+              <Link 
+=======
               <div
                 className="prose prose-invert max-w-none"
 <<<<<<< HEAD
@@ -457,6 +479,7 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="text-center">
               <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -467,6 +490,10 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+  );
+};
+=======
   )
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
@@ -562,3 +589,4 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

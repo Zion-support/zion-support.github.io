@@ -1,12 +1,4 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-
 
 
 interface Notification {
@@ -18,7 +10,6 @@ interface Notification {
   read: boolean;
   actionUrl?: string;
 }
-
 
 =======
 import React, { useState } from 'react',;
@@ -302,4 +293,4 @@ export default function NotificationsPage() {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,12 +1,11 @@
-
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
+}; import React, { useState } from 'react'
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
+import { useAuth } from '@/hooks/useAuth'
+import { MilestoneCard } from './MilestoneCard'
+import { AddMilestoneForm } from './AddMilestoneForm'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
 import { EmptyState } from '@/components/ui/empty-state';
@@ -35,14 +34,15 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone
   onUploadDeliverable
   isSubmitting
-  onApprove
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false)
-  const handleSubmit = async (data: any) => {
+  onApprove,
+  onReject;
+}) => {;
+  const [showAddForm, setShowAddForm] = useState(false);
+  const handleSubmit = async (data: any) => {;
     await onCreateMilestone(data);    setShowAddForm(false)
   }
 =======
+
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -87,7 +87,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     setShowAddForm(false)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -135,8 +135,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onClick: () => setShowAddForm(true)
           } : undefined
         }
+<<<<<<< HEAD
+      />
+    )
+=======
       />;
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -158,8 +163,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+            <AddMilestoneForm 
 <<<<<<< HEAD
-            <AddMilestoneForm
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -187,9 +192,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   )
 }
 "
-
 =======
-            <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -217,4 +220,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

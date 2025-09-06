@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
-import { useState } from "react";
+import { useState } from 'react'
 =======
+
 import { useState } from "react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
@@ -15,25 +15,16 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
+<<<<<<< HEAD
 export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
-  const userTypes: UserTypeOption[] = [
-    {
 =======
-  id: "serviceProvider" | "talent" | "client",
-  name: string,
-  description: string,
-  icon: React.ElementType
-}
-
-interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
-  selectedType: string | null
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -48,6 +39,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Star
     },
     {
+<<<<<<< HEAD
+      id: 'client',
+      name: 'Client',
+      description: 'I want to discover and hire talent or services',
+      icon: User,
+    },
+  ]
+=======
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
@@ -56,24 +55,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-      id: 'serviceProvider'
-      name: 'Service Provider'
-      description: 'I want to offer services on the platform'
-      icon: Briefcase
-    }
-    {
-      id: 'talent'
-      name: 'Talent'
-      description: 'I want to showcase my skills and find opportunities'
-      icon: Star
-    }
-    {
-      id: 'client'
-      name: 'Client'
-      description: 'I want to discover and hire talent or services'
-      icon: User
-    }
-  ]
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -109,7 +91,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -124,11 +106,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               </div>
             </Button>
           )
-        })}
-      </div>
-    </div>
-  )
-}
 =======
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
@@ -203,10 +180,16 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               </div>;
             </Button>;
           );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         })}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+};
+}
+}
+=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

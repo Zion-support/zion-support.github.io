@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-
+ 
 import fs from 'fs';
 import path from 'path';
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
@@ -7,7 +7,6 @@ async function post(url: string, body: any) {
 
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
-}
 =======
 /* eslint-disable no-console */;
 import fs from 'fs',;
@@ -16,6 +15,7 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -38,7 +38,6 @@ async function main() {
   }
 }
 main().catch((e) => { console.error(e), process.exit(1) });
-
 =======
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)
@@ -62,4 +61,4 @@ async function main() {;
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

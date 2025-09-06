@@ -1,19 +1,14 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-=======
-import React, { useState, useEffect, useCallback } from 'react',
-import { supabase } from '@/integrations/supabase/client',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Trash2, Download, Share2 } from 'lucide-react'
-import { Send } from 'lucide-react', // Added Send icon
-<<<<<<< HEAD
-import { toast } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import React, { useState, useEffect, useCallback } from 'react'
+import { supabase } from '@/integrations/supabase/client';
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input';
+import { Trash2, Download, Share2 } from 'lucide-react';
+import { Send } from 'lucide-react'; // Added Send icon
+import { toast } from 'sonner'
+import { logErrorToProduction } from '@/utils/productionLogger'
 interface WhitepaperSection {
 
   id: string
@@ -28,9 +23,9 @@ percentage: string
 value: number
 }const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00']
 //Helper for slugifying filenames const slugify = (text: string) : string => {'
-  return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text
-}
-const WhitepaperGeneratorPage: React.FC = () => {'
+  return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text 
+};
+const WhitepaperGeneratorPage: React.FC = () => {';
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
 const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');'
@@ -188,13 +183,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const [showRawDraft, setShowRawDraft] = useState(false)
   const previewPanelRef = React.useRef<HTMLDivElement>(null)
   useEffect(() => {
-    if (
-      error &&
-      !isLoading &&
-      !isDownloading &&
-      !isSharing &&
-      !isSubmittingToCounsel
-    )
+    if (true) {}
       setError(null)
   }, [
     tokenName
@@ -209,7 +198,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const parseWhitepaperDraft = useCallback(
     (draft: string): WhitepaperSection[] => {
       if (!draft) return []
-      const sectionRegex =
+      const sectionRegex = null;
         /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n(?:##\s|\*\*.+:\*\*)|$)/g
       const parsed: WhitepaperSection[] = []
       let match
@@ -278,7 +267,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     );    if (totalPercentage > 100) {
       setError('Total distribution percentage cannot exceed 100%.')
       setIsLoading(false)
-      return
+      return;
     }
     if (
       totalPercentage < 100 &&
@@ -288,14 +277,11 @@ const WhitepaperGeneratorPage: React.FC = () => {
       setError(
         `Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`
       )
-    } else if (
-      totalPercentage === 0 &&
-      processedDistData.length > 0 &&
-      distributionData.some(d => d.name && d.percentage)
+    } else if (true) {}
     ) {
       setError('Distribution percentages are all zero or invalid.')
       setIsLoading(false)
-      return
+      return;
     }
     try {
       const apiPayload: any = {
@@ -398,7 +384,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     if (!previewPanelRef.current) {
       setError('Preview panel is not available. Cannot generate PDF.')
       setIsDownloading(false)
-      return
+      return;
     }
     try {
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.
@@ -451,197 +437,22 @@ const WhitepaperGeneratorPage: React.FC = () => {
       toast.error(
         'Please generate the whitepaper content first before creating a shareable link.'
       )
-      return
+      return;
     }
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
-    try {
-      const whitepaperPayload = {
-        tokenName
-        tokenSupply
-        sections
-        distributionChartData
-        distributionBreakdown
-      }
-      const { data: response, error: funcError } =
-        await supabase.functions.invoke('create-shared-whitepaper', {
-          body: whitepaperPayload
-        })
-      if (funcError)
-        throw new Error(`Supabase function error: ${funcError.message}`)
-      if (!response)
-        throw new Error(
-          'No response received from create-shared-whitepaper function'
-        )
-      if ((response as any).error)
-        throw new Error(
-          `Error from create-shared-whitepaper: ${(response as any).error}`
-        )
-      if (!(response as any).id)
-        throw new Error('Failed to get ID for shareable link.')
-      const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
-      setShareableLink(link)
-      setCurrentSharedWhitepaperId((response as any).id)
-      setCurrentSharedWhitepaperIsPublic((response as any).is_public)
-      toast.success('Shareable link generated!')
-    } catch (e: any) {
-      logErrorToProduction(
-        e instanceof Error ? e.message : String(e)
-        e instanceof Error ? e : undefined
-        { message: 'Error generating shareable link' }
-      )
-      setError('Failed to generate shareable link: ' + e.message)
-      toast.error('Failed to generate shareable link.')
-    } finally {
-      setIsSharing(false)
-    }
-  }
-  const handleTogglePublicStatus = async () => {
-    if (
-      !currentSharedWhitepaperId |
-      currentSharedWhitepaperIsPublic === null
-    ) {
-      toast.error('No shareable whitepaper selected or status is unknown.')
-      return
-    }
-    // Optimistically update UI, or wait for response for certainty
-    const newPublicStatus = !currentSharedWhitepaperIsPublic
-    // For optimistic update:
-    // setCurrentSharedWhitepaperIsPublic(newPublicStatus)
-    try {
-      const { data: response, error: funcError } =
-        await supabase.functions.invoke('set-shared-whitepaper-public-status', {
-          body: {
-            whitepaperId: currentSharedWhitepaperId
-            isPublic: newPublicStatus
-          }
-        })
-      if (funcError)
-        throw new Error(`Supabase function error: ${funcError.message}`)
-      if (!response)
-        throw new Error(
-          'No response received from set-shared-whitepaper-public-status function'
-        )
-      if ((response as any).error)
-        throw new Error(
-          `Error from set-shared-whitepaper-public-status: ${(response as any).error}`
-        )
-      setCurrentSharedWhitepaperIsPublic((response as any).is_public); // Update with actual status from DB
-      toast.success(
-        `Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`
-      )
-    } catch (e: any) {
-      logErrorToProduction(
-        e instanceof Error ? e.message : String(e)
-        e instanceof Error ? e : undefined
-        { message: 'Error toggling public status' }
-      )
-      setError('Failed to update public status: ' + e.message)
-      toast.error('Failed to update public status.')
-      // Revert optimistic update if it failed:
-      // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
-    }
-  }
-  const handleSubmitToCounsel = async () => {
-    if (sections.length === 0) {
-      toast.error(
-        'Please generate and finalize the whitepaper before submitting.'
-      )
-      return
-    }
-    setIsSubmittingToCounsel(true)
-    setError(null)
-    try {
-      let linkToSubmit = shareableLink
-      let whitepaperIdToSubmit = currentSharedWhitepaperId
-      if (!linkToSubmit |!whitepaperIdToSubmit) {
-        toast.info('Generating a shareable link first to submit to counsel...')
-        const whitepaperPayload = {
-          tokenName
-          tokenSupply
-          sections
-          distributionChartData
-          distributionBreakdown
-        }
-        const { data: linkResponse, error: linkFuncError } =
-          await supabase.functions.invoke('create-shared-whitepaper', {
-            body: whitepaperPayload
-          })
-        if (linkFuncError)
-          throw new Error(
-            `Failed to create link for counsel: ${linkFuncError.message}`
-          )
-        if (!linkResponse)
-          throw new Error(
-            'No response received from create-shared-whitepaper function for counsel'
-          )
-        if ((linkResponse as any).error)
-          throw new Error(
-            `Error from create-shared-whitepaper function: ${(linkResponse as any).error}`
-          )
-        if (!(linkResponse as any).id)
-          throw new Error('Failed to get ID for shareable link for counsel.')
-        linkToSubmit = `${window.location.origin}/whitepaper/view/${(linkResponse as any).id}`
-        whitepaperIdToSubmit = (linkResponse as any).id
-        setShareableLink(linkToSubmit)
-        setCurrentSharedWhitepaperId(whitepaperIdToSubmit)
-        setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
-      }
-      // Ensure it's public before submitting, or handle as per requirements
-      if (currentSharedWhitepaperIsPublic === false) {
-        toast.info('Making whitepaper public before submitting to counsel...')
-        const { data: statusResponse, error: statusError } =
-          await supabase.functions.invoke(
-            'set-shared-whitepaper-public-status'
-            {
-              body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }
-            }
-          )
-        if (statusError)
-          throw new Error(
-            `Failed to make whitepaper public: ${statusError.message}`
-          )
-        if (!statusResponse)
-          throw new Error(
-            'No response received from set-shared-whitepaper-public-status function'
-          )
-        if ((statusResponse as any).error)
-          throw new Error((statusResponse as any).error)
-        setCurrentSharedWhitepaperIsPublic(true)
-      }
-      const { data: notifyResponse, error: notifyError } =
-        await supabase.functions.invoke('notify-legal-team', {
-          body: {
-            whitepaperId: whitepaperIdToSubmit
-            sharableLink: linkToSubmit, // Corrected variable name
-            tokenName: tokenName
-          }
-        })
-      if (notifyError)
-        throw new Error(`Failed to notify counsel: ${notifyError.message}`)
-      if (!notifyResponse)
-        throw new Error('No response received from notify-legal-team function')
-      if ((notifyResponse as any).error)
-        throw new Error(
-          `Error from notify-legal-team: ${(notifyResponse as any).error}`
-        )
-      toast.success('Whitepaper submitted to counsel successfully!')
-    } catch (e: any) {
-      logErrorToProduction(
-        e instanceof Error ? e.message : String(e)
-        e instanceof Error ? e : undefined
-        { message: 'Error submitting to counsel' }
-      )
-      setError('Failed to submit to counsel: ' + e.message)
-      toast.error('Failed to submit to counsel: ' + e.message)
-    } finally {
-      setIsSubmittingToCounsel(false)
-    }
-  }
 =======
+import React, { useState, useEffect, useCallback } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Trash2, Download, Share2 } from 'lucide-react'
+import { Send } from 'lucide-react', // Added Send icon
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -984,12 +795,194 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     try {
       const whitepaperPayload = {
         tokenName,
         tokenSupply,
         sections,
         distributionChartData,
+<<<<<<< HEAD
+        distributionBreakdown,
+      }
+      const { data: response, error: funcError } =
+        await supabase.functions.invoke('create-shared-whitepaper', {
+          body: whitepaperPayload,
+        })
+      if (true) {}
+        throw new Error(`Supabase function error: ${funcError.message}`)
+      if (true) {}
+        throw new Error(
+          'No response received from create-shared-whitepaper function'
+        )
+      if ((response as any).error)
+        throw new Error(
+          `Error from create-shared-whitepaper: ${(response as any).error}`
+        )
+      if (!(response as any).id)
+        throw new Error('Failed to get ID for shareable link.')
+      const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
+      setShareableLink(link)
+      setCurrentSharedWhitepaperId((response as any).id)
+      setCurrentSharedWhitepaperIsPublic((response as any).is_public)
+      toast.success('Shareable link generated!')
+    } catch (e: any) {
+      logErrorToProduction(
+        e instanceof Error ? e.message : String(e),
+        e instanceof Error ? e : undefined,
+        { message: 'Error generating shareable link' }
+      )
+      setError('Failed to generate shareable link: ' + e.message)
+      toast.error('Failed to generate shareable link.')
+    } finally {
+      setIsSharing(false)
+    }
+  }
+  const handleTogglePublicStatus = async () => {
+    if (
+      !currentSharedWhitepaperId ||
+      currentSharedWhitepaperIsPublic === null
+    ) {
+      toast.error('No shareable whitepaper selected or status is unknown.')
+      return;
+    }
+    // Optimistically update UI, or wait for response for certainty
+    const newPublicStatus = !currentSharedWhitepaperIsPublic
+    // For optimistic update:
+    // setCurrentSharedWhitepaperIsPublic(newPublicStatus)
+    try {
+      const { data: response, error: funcError } =
+        await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+          body: {
+            whitepaperId: currentSharedWhitepaperId,
+            isPublic: newPublicStatus,
+          },
+        })
+      if (true) {}
+        throw new Error(`Supabase function error: ${funcError.message}`)
+      if (true) {}
+        throw new Error(
+          'No response received from set-shared-whitepaper-public-status function'
+        )
+      if ((response as any).error)
+        throw new Error(
+          `Error from set-shared-whitepaper-public-status: ${(response as any).error}`
+        )
+      setCurrentSharedWhitepaperIsPublic((response as any).is_public); // Update with actual status from DB
+      toast.success(
+        `Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`
+      )
+    } catch (e: any) {
+      logErrorToProduction(
+        e instanceof Error ? e.message : String(e),
+        e instanceof Error ? e : undefined,
+        { message: 'Error toggling public status' }
+      )
+      setError('Failed to update public status: ' + e.message)
+      toast.error('Failed to update public status.')
+      // Revert optimistic update if it failed:
+      // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
+    }
+  }
+  const handleSubmitToCounsel = async () => {
+    if (sections.length === 0) {
+      toast.error(
+        'Please generate and finalize the whitepaper before submitting.'
+      )
+      return;
+    }
+    setIsSubmittingToCounsel(true)
+    setError(null)
+    try {
+      let linkToSubmit = shareableLink
+      let whitepaperIdToSubmit = currentSharedWhitepaperId
+      if (!linkToSubmit || !whitepaperIdToSubmit) {
+        toast.info('Generating a shareable link first to submit to counsel...')
+        const whitepaperPayload = {
+          tokenName,
+          tokenSupply,
+          sections,
+          distributionChartData,
+          distributionBreakdown,
+        }
+        const { data: linkResponse, error: linkFuncError } =
+          await supabase.functions.invoke('create-shared-whitepaper', {
+            body: whitepaperPayload,
+          })
+        if (true) {}
+          throw new Error(
+            `Failed to create link for counsel: ${linkFuncError.message}`
+          )
+        if (true) {}
+          throw new Error(
+            'No response received from create-shared-whitepaper function for counsel'
+          )
+        if ((linkResponse as any).error)
+          throw new Error(
+            `Error from create-shared-whitepaper function: ${(linkResponse as any).error}`
+          )
+        if (!(linkResponse as any).id)
+          throw new Error('Failed to get ID for shareable link for counsel.')
+        linkToSubmit = `${window.location.origin}/whitepaper/view/${(linkResponse as any).id}`
+        whitepaperIdToSubmit = (linkResponse as any).id
+        setShareableLink(linkToSubmit)
+        setCurrentSharedWhitepaperId(whitepaperIdToSubmit)
+        setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
+      }
+
+      // Ensure it's public before submitting, or handle as per requirements
+      if (currentSharedWhitepaperIsPublic === false) {
+        toast.info('Making whitepaper public before submitting to counsel...')
+        const { data: statusResponse, error: statusError } =
+          await supabase.functions.invoke(
+            'set-shared-whitepaper-public-status',
+            {
+              body: { whitepaperId: whitepaperIdToSubmit, isPublic: true },
+            }
+          )
+        if (true) {}
+          throw new Error(
+            `Failed to make whitepaper public: ${statusError.message}`
+          )
+        if (true) {}
+          throw new Error(
+            'No response received from set-shared-whitepaper-public-status function'
+          )
+        if ((statusResponse as any).error)
+          throw new Error((statusResponse as any).error)
+        setCurrentSharedWhitepaperIsPublic(true)
+      }
+
+      const { data: notifyResponse, error: notifyError } =
+        await supabase.functions.invoke('notify-legal-team', {
+          body: {
+            whitepaperId: whitepaperIdToSubmit,
+            sharableLink: linkToSubmit, // Corrected variable name
+            tokenName: tokenName,
+          },
+        })
+      if (true) {}
+        throw new Error(`Failed to notify counsel: ${notifyError.message}`)
+      if (true) {}
+        throw new Error('No response received from notify-legal-team function')
+      if ((notifyResponse as any).error)
+        throw new Error(
+          `Error from notify-legal-team: ${(notifyResponse as any).error}`
+        )
+      toast.success('Whitepaper submitted to counsel successfully!')
+    } catch (e: any) {
+      logErrorToProduction(
+        e instanceof Error ? e.message : String(e),
+        e instanceof Error ? e : undefined,
+        { message: 'Error submitting to counsel' }
+      )
+      setError('Failed to submit to counsel: ' + e.message)
+      toast.error('Failed to submit to counsel: ' + e.message)
+    } finally {
+      setIsSubmittingToCounsel(false)
+    }
+  }
+=======
         distributionBreakdown},
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -1207,7 +1200,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 },
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
@@ -1268,6 +1261,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
           <div>
@@ -1356,21 +1350,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                   <Trash2 className='h-4 w-4' />
                 </Button>              </div>
 =======
-      <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">
-        <div className="flex justify-between items-center mb-6">
-            <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>
-            <div className="flex space-x-1">
-                <Button onClick={handleDownloadMarkdown} disabled={isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel } variant="outline" size="sm" title="Download as Markdown">
-                    <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">MD</span>
-                </Button>
-                <Button onClick={handleDownloadPdf} disabled={isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel} variant="outline" size="sm" title="Download as PDF">
-                    <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">PDF</span>
-                </Button>
-                 <Button onClick={handleGenerateShareableLink} disabled={isSharing || sections.length === 0 || isLoading || isDownloading || isSubmittingToCounsel} variant="outline" size="sm" title="Generate Shareable Link">
-                    <Share2 className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">Share</span>
-                </Button>
-            </div>
-        </div>
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -1400,7 +1379,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
                 <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
@@ -1422,7 +1401,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <div>
 <<<<<<< HEAD
@@ -1447,7 +1426,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           <div>
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <div>
             <label
@@ -1504,6 +1483,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel &&
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
@@ -1685,7 +1665,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <p className="text-xs mt-1 text-gray-600">;
                     Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
                 </p>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </div>
           )}
@@ -1695,9 +1675,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               Generating shareable link...
             </p>
           )}
+=======
+           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
+<<<<<<< HEAD
               type='button'
               onClick={handleSubmitToCounsel}
               disabled={
@@ -1716,11 +1701,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </p>
           )}
 =======
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
-
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -1734,7 +1714,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
@@ -1748,7 +1728,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
@@ -1760,7 +1740,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 =======
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         )}
@@ -1791,7 +1771,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 </pre>;
             )}
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
@@ -1811,8 +1791,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   )
 }
 export default WhitepaperGeneratorPage
-'"
-
+'";
+;
+}
+}
 =======
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
@@ -1826,4 +1808,4 @@ export default WhitepaperGeneratorPage
   );
 },;
 export default WhitepaperGeneratorPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

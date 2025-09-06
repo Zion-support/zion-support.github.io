@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {BookOpen, Code, Copy, Terminal} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+=======
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -10,7 +19,7 @@ import CodeBlock from "./CodeBlock";
 =======
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ApiDocumentation() {
   return (
 
@@ -59,6 +68,10 @@ export function ApiDocumentation() {
   method: 'GET'
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
+  };
+});
+=======
   }
 <<<<<<< HEAD
 });
@@ -66,6 +79,7 @@ const data = await response.json();
 console.log(data),`;
 =======
 }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const data = await response.json(),
 // // // console.log(data),`,
@@ -76,8 +90,8 @@ headers = {
 <<<<<<< HEAD
 }
 response = requests.get(
-    'https: //api.ziontechgroup.com/v1/jobs'
-    params={'limit': 10, 'category': 'development'}
+    'https: //api.ziontechgroup.com/v1/jobs',;
+    params={'limit': 10, 'category': 'development'};
     headers=headers
 )
 data = response.json()
@@ -153,7 +167,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               responseExamples={{
                 success: `{
@@ -191,8 +205,11 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
+<<<<<<< HEAD
+  ];
+=======
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "meta": {
     "total": 42,
     "page": 1,
@@ -235,7 +252,7 @@ headers = {
 <<<<<<< HEAD
 }
 job_id = 'job_abc123'
-response = requests.get(
+response = requests.get(;
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
     headers=headers
 )
@@ -276,7 +293,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               responseExamples={{
                 success: `{
@@ -398,7 +415,8 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 <<<<<<< HEAD
 }
-payload = {
+
+payload = {;
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
         'min': 5000;
@@ -490,7 +508,7 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               responseExamples={{
                 success: `{
@@ -566,8 +584,8 @@ headers = {
 <<<<<<< HEAD
 }
 response = requests.get(
-    'https: //api.ziontechgroup.com/v1/talent'
-    params={'skills': 'react,typescript'}
+    'https: //api.ziontechgroup.com/v1/talent',;
+    params={'skills': 'react,typescript'};
     headers=headers
 )
 data = response.json()
@@ -611,7 +629,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               responseExamples={{
                 success: `{
@@ -638,8 +656,11 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
+<<<<<<< HEAD
+  ];
+=======
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "meta": {
     "total": 28,
     "page": 1,
@@ -682,7 +703,7 @@ headers = {
 <<<<<<< HEAD
 }
 talent_id = 'talent_abc123'
-response = requests.get(
+response = requests.get(;
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
     headers=headers
 )
@@ -723,7 +744,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               responseExamples={{
                 success: `{
@@ -770,7 +791,7 @@ print(data)`;
         "issue_date": "2024-01-15"
       }
     ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }`
               }}
@@ -1329,7 +1350,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   }
 }`
               }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1391,8 +1412,7 @@ headers = {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-payload = {
+payload = {;
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -1471,7 +1491,7 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": [
-    {
+    {;
       "id": "quote_def456";
       "talent_id": "talent_abc123";
       "project_name": "E-commerce Website Redesign";
@@ -1778,7 +1798,7 @@ function EndpointSection({;
                 : method === 'PUT';
                 ? "border-yellow-500 text-yellow-400 font-mono";
                 : "border-red-500 text-red-400 font-mono";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           >
             {method}
@@ -1861,9 +1881,11 @@ function EndpointSection({;
     </div>
   )
 }
+
+;
 =======
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

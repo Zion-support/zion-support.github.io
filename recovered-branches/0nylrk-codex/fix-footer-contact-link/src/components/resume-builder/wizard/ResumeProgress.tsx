@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { Progress } from "@/components/ui/progress";
-import { ResumeProgressProps } from "./types";
-
+import {Progress} from "@/components/ui/progress";
+import {ResumeProgressProps} from "./types";
 =======
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Progress } from "@/components/ui/progress";
+import { ResumeProgressProps } from "./types";
+>>>>>>> main
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
   return (
     <div className="flex flex-col gap-1 w-full sm:w-auto">
@@ -17,9 +21,11 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
       <Progress value={progress} className="h-2 w-full sm: w-48" />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   );
-}
-
+};
 =======
   )
 },
@@ -38,4 +44,4 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
 };
 
 export default ResumeProgress;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

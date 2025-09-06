@@ -1,12 +1,12 @@
 import React from 'react';
 
 import {
-  Star
-  Quote
-  Users
-  Award
-  TrendingUp
-  CheckCircle;
+  Star,
+  Quote,
+  Users,
+  Award,
+  TrendingUp,;
+  CheckCircle,;
 } from 'lucide-react';
 
 interface Testimonial {
@@ -203,7 +203,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -246,7 +246,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                 {/* Testimonial Text */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -282,7 +282,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                     {testimonial.category}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </span>
                 </div>
               </div>
@@ -297,7 +297,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
           ))}
         </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -305,7 +305,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -370,12 +370,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
+
+<<<<<<< HEAD
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
-
-<<<<<<< HEAD
 =======
 export default EnhancedTestimonialsSection;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

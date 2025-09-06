@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
 =======
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+>>>>>>> main
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -19,10 +24,9 @@ export function EnterpriseCallToAction() {
       </p>
     </div>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button";
 export function EnterpriseCallToAction() {;
@@ -38,6 +42,9 @@ export function EnterpriseCallToAction() {;
       </p>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

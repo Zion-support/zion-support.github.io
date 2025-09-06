@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import React from 'react';
+import React from 'react'
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
@@ -71,11 +71,10 @@ export function FilterSidebar({
             </div>
           ))}
         </div>
-      </div>
-    </>
-  )}
-'"`
-
+      </div>;
+    </>;
+  )};
+'"`;
 =======
 import React from 'react',;
 interface FilterSidebarProps {;
@@ -94,4 +93,4 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

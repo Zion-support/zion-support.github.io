@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -125,7 +124,7 @@ const InitPage: NextPage = () => {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(state)}),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
@@ -138,6 +137,12 @@ const InitPage: NextPage = () => {;
 =======
     } catch (error) {
       setError(err.message || 'Unexpected error');
+<<<<<<< HEAD
+    } finally {
+      setSubmitting(false);    }
+  };
+
+=======
     } finally {;
       setSubmitting(false);
       } catch (error) {
@@ -146,7 +151,7 @@ const InitPage: NextPage = () => {;
   }
 }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-8">
       <div>
@@ -162,7 +167,7 @@ const InitPage: NextPage = () => {;
 =======
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -228,77 +233,9 @@ const InitPage: NextPage = () => {;
         </section>
 <<<<<<< HEAD
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div>
-            <label className='block text-sm font-medium'>Logo URL</label>
-            <input
-              className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
-              value={state.branding.logoUrl}
-              onChange={e =>
-                setState({
-                  ...state
-                  branding: { ...state.branding, logoUrl: e.target.value }
-                })
-              }
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Primary Color</label>
-            <input
-              type='color'
-              className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
-              value={state.branding.primaryColor}
-              onChange={e =>
-                setState({
-                  ...state
-                  branding: { ...state.branding, primaryColor: e.target.value }
-                })
-              }
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Secondary Color</label>
-            <input
-              type='color'
-              className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
-              value={state.branding.secondaryColor}
-              onChange={e =>
-                setState({
-                  ...state
-                  branding: {
-                    ...state.branding
-                    secondaryColor: e.target.value
-                  }
-                })
-              }
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Subdomain</label>
-            <input
-              className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
-              value={state.branding.subdomain}
-              onChange={e =>
-                setState({
-                  ...state
-                  branding: { ...state.branding, subdomain: e.target.value }
-                })
-              }
-            />
-          </div>
-        </section>
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-            <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
-            <div className='space-y-2'>
-              {Object.keys(state.modules).map(key => (
-                <label key={key} className='flex items-center gap-3 text-sm'>
-                  <input
-                    type='checkbox'
-                    checked={state.modules[key]}
-                    onChange={() => handleToggle('modules', key)}
-                  />                  <span>/{key}</span>
 =======
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
@@ -316,6 +253,19 @@ const InitPage: NextPage = () => {;
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
+<<<<<<< HEAD
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+            <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
+            <div className='space-y-2'>
+              {Object.keys(state.modules).map(key => (
+                <label key={key} className='flex items-center gap-3 text-sm'>
+                  <input
+                    type='checkbox'
+                    checked={state.modules[key]}
+                    onChange={() => handleToggle('modules', key)}
+                  />                  <span>/{key}</span>
+=======
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
@@ -324,7 +274,7 @@ const InitPage: NextPage = () => {;
                 <label key={key} className="flex items-center gap-3 text-sm">
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </label>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -369,9 +319,12 @@ const InitPage: NextPage = () => {;
       )}
     </div>
   );
-}
+};
+
 export default InitPage;
 
+}
+}
 =======
         <div className="flex items-center gap-3">
           <button disabled={submitting} className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60">
@@ -402,4 +355,4 @@ export default InitPage;
   );
 },;
 export default InitPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

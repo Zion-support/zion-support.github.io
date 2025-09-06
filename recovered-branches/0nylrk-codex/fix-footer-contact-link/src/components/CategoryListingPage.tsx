@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import {useState} from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
+=======
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -5,9 +16,10 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Example listing type
 interface Listing {
 
@@ -26,6 +38,34 @@ interface Listing {
   reviewCount?: number;
   price?: number | null;
   createdAt: string
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+  subcategory?: string,;
+  image?: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  aiScore?: number,;
+  rating?: number,;
+  reviewCount?: number,;
+  price?: number | null,;
+  createdAt: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 interface CategoryListingPageProps {
 
@@ -35,8 +75,10 @@ interface CategoryListingPageProps {
   sortOptions?: { label: string, value: string }[]
   filterOptions?: { label: string, value: string }[]
 }
-export function CategoryListingPage({
-  title
+<<<<<<< HEAD
+
+export function CategoryListingPage({ 
+  title, ;
   description;
   listings: initialListings
   sortOptions = [
@@ -97,59 +139,6 @@ export function CategoryListingPage({
             <GradientHeading>{title}</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 =======
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
-
-// Example listing type
-interface Listing {
-  id: string,
-  title: string,
-  description: string,
-  category: string,
-  subcategory?: string,
-  image?: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  price?: number | null,
-  createdAt: string
-import { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ListingScoreCard } from "@/components/ListingScoreCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-  subcategory?: string,;
-  image?: string,;
-  tags?: string[],;
-  author?: string,;
-  authorImage?: string,;
-  aiScore?: number,;
-  rating?: number,;
-  reviewCount?: number,;
-  price?: number | null,;
-  createdAt: string;
-}
-;
-interface CategoryListingPageProps {;
-  title: string,;
-  description: string,;
-  listings: Listing[],;
-  sortOptions?: { label: string, value: string }[],;
-  filterOptions?: { label: string, value: string }[];
-}
 ;
 export function CategoryListingPage({;
   title,;
@@ -212,7 +201,7 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {description}
             </p>
           </div>
@@ -279,7 +268,7 @@ export function CategoryListingPage({;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -337,7 +326,7 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         </div>
       </div>

@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/creator/CreatorSidebar";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { Footer } from "@/components/Footer";
 =======
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -58,7 +64,6 @@ export default function CreatorDashboard() {
       <SidebarTrigger />
     </SidebarProvider>
   )
-}
 =======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
@@ -74,6 +79,6 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { id } = req.body as { id: string },
+  if (!id) return res.status(400).json({ error: 'id required' }),
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,9 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     requests[idx].resolvedAt = Date.now()
 
     writeJson('support/requests.json', requests)
-  }
-  return res.status(200).json({ ok: true })
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -35,6 +40,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
   } catch (error) {
@@ -43,6 +49,9 @@ export default async function handler(req, res) {
   }
 }
   return res.status(200).json({ ok: true });
+<<<<<<< HEAD
+};
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,5 +64,5 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

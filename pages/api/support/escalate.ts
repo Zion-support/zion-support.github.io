@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -7,7 +6,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { sessionId, reason, tag } = req.body as {
     sessionId: string;
@@ -30,8 +29,11 @@ export default async function handler(
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
 }
-
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Session escalated' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -47,4 +49,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

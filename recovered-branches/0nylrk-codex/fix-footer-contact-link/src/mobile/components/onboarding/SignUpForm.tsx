@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "@/hooks/useAuth";
+import {AlertCircle} from "lucide-react";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+export function SignUpForm() {;
+  const navigate = useNavigate();
+  const { signup, login, loginWithGoogle } = useAuth();
+=======
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -26,6 +39,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert",
 export function SignUpForm() {
   const navigate = useNavigate(),
   const { signup, login, loginWithGoogle } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [formData, setFormData] = useState({
     email: "",
@@ -119,15 +133,16 @@ export function SignUpForm() {;
         }
 ;
         navigate("/mobile");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (err: any) {
       setError(err.message)
     } finally {
       setIsLoading(false)
     }
+  };
 <<<<<<< HEAD
-  }
+  
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()
@@ -138,6 +153,7 @@ export function SignUpForm() {;
 
 =======
   };
+=======
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
@@ -145,6 +161,7 @@ export function SignUpForm() {;
       setError(err.message);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -166,8 +183,8 @@ export function SignUpForm() {;
           </svg>
           Continue with Google
         </Button>
-        <Button
-          variant="outline"
+        <Button 
+          variant="outline" 
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -225,8 +242,8 @@ export function SignUpForm() {;
             placeholder="Create a password"
           />
         </div>
-        <Button
-          type="submit"
+        <Button 
+          type="submit" 
           className="w-full py-6"
           disabled={isLoading}
         >

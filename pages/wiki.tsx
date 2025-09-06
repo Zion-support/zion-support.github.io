@@ -1,5 +1,11 @@
-import React, { useMemo, useState } from 'react';
 <<<<<<< HEAD
+import React, { useMemo, useState } from 'react',;
+import {
+  generateZionWiki,
+  buildMarkdownFromWiki,
+  buildWikitextFromWiki,
+  operatorPrompt,
+  slugify} from '../utils/data/zionContent',
 
 import {
   generateZionWiki
@@ -21,13 +27,8 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       {copied ? 'Copied' : label}
     </button>
   )
-}
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-
 =======
+import React, { useMemo, useState } from 'react';
 import {;
   generateZionWiki,;
   buildMarkdownFromWiki,;
@@ -60,6 +61,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
@@ -84,7 +86,7 @@ export default function WikiPage() {
   }
 }
               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -96,7 +98,7 @@ export default function WikiPage() {
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
 =======
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </li>
         </ul>
       </aside>
@@ -120,6 +122,7 @@ export default function WikiPage() {
             ))}
           </section>
         ))}
+
 =======
             ))  } catch (error) {
     console.error("Error:", error);
@@ -132,7 +135,7 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -160,7 +163,7 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -168,6 +171,11 @@ export default function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
+<<<<<<< HEAD
+    </div>;
+  );
+};
+=======
     </div>
   )
   } catch (error) {
@@ -175,3 +183,4 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -7,20 +7,20 @@ import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 
 import {
-  Brain
-  Shield
-  Code
-  CheckCircle
-  Zap
-  ArrowRight
-  Star
-  TrendingUp
-  Users
-  Lock
-  Eye
-  BarChart3
-  Globe
-  Award;
+  Brain,
+  Shield,
+  Code,
+  CheckCircle,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Eye,
+  BarChart3,
+  Globe,;
+  Award,;
 } from 'lucide-react';
 <<<<<<< HEAD
 =======
@@ -244,7 +244,7 @@ const AICodeReviewSecurityScanner = () => {
 
                 </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -252,7 +252,7 @@ const AICodeReviewSecurityScanner = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Pricing Section */}
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -265,7 +265,7 @@ const AICodeReviewSecurityScanner = () => {
 =======
               className='text-center mb-16'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -357,7 +357,7 @@ const AICodeReviewSecurityScanner = () => {
 =======
 
                       : 'border-white/10'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }`}
                 >
                   {plan.popular && (
@@ -365,8 +365,8 @@ const AICodeReviewSecurityScanner = () => {
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>                        Most Popular
                       </span>
                     </div>
-                  )}                    plan.popular
-                      ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'
+                  )}                    plan.popular 
+                      ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
                       : 'border-white/10'
                   }`}
                 >
@@ -378,6 +378,7 @@ const AICodeReviewSecurityScanner = () => {
                       </span>
                     </div>
                   )}
+
 <<<<<<< HEAD
                   <div className='text-center mb-8'>
                     <h3 className='text-2xl font-bold text-white mb-2'>
@@ -408,8 +409,7 @@ const AICodeReviewSecurityScanner = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {feature}
                       </li>
                     ))}
@@ -433,7 +433,7 @@ const AICodeReviewSecurityScanner = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -446,7 +446,7 @@ const AICodeReviewSecurityScanner = () => {
 =======
               className='text-center mb-16'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -513,7 +513,7 @@ const AICodeReviewSecurityScanner = () => {
                       <p className="text-gray-300">{benefit.description}</p>
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   </motion.div>
                 ))}
@@ -567,7 +567,7 @@ const AICodeReviewSecurityScanner = () => {
 
                     </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </motion.div>
                 ))}
               </div>
@@ -577,7 +577,7 @@ const AICodeReviewSecurityScanner = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Use Cases Section */}
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -590,7 +590,7 @@ const AICodeReviewSecurityScanner = () => {
 =======
               className='text-center mb-16'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -643,7 +643,7 @@ const AICodeReviewSecurityScanner = () => {
 
                 </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -659,7 +659,7 @@ const AICodeReviewSecurityScanner = () => {
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -785,12 +785,12 @@ const AICodeReviewSecurityScanner = () => {
       </div>
     </>
   );
-}
+};
+
+<<<<<<< HEAD
 export default AICodeReviewSecurityScanner;  )
 }
 export default AICodeReviewSecurityScanner;
-
-<<<<<<< HEAD
 =======
 export default AICodeReviewSecurityScanner;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

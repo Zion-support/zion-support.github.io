@@ -1,16 +1,10 @@
 <<<<<<< HEAD
-
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([])
-  const [userId, setUserId] = useState("")
-  const [amount, setAmount] = useState(100)
-  const [reason, setReason] = useState("admin_action")
-  const [config, setConfig] = useState<any>(null)
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 =======
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]),
   const [userId, setUserId] = useState(""),
@@ -26,16 +20,11 @@ export default function AdminTokens() {
 
     setConfig(cfgRes)
 <<<<<<< HEAD
-  }
-  useEffect(() => {
-    load()
-  }, [])
-  async function issue() {
-
 =======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
   useEffect(() => {
@@ -91,13 +80,14 @@ export default function AdminTokens() {
     setConfig(data)
 <<<<<<< HEAD
   }
+
 =======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -154,6 +144,16 @@ export default function AdminTokens() {
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
+<<<<<<< HEAD
+            ))}
+            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
+          </div>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+=======
 ;
   async function saveConfig() {;
     const res = await fetch("/api/admin/tokens/config", {;
@@ -232,3 +232,4 @@ export default function AdminTokens() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

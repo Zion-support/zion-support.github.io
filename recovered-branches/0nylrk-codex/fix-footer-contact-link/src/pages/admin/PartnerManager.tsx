@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {toast} from "@/hooks/use-toast";
+import {Check, Flag, Search, Settings, X} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+=======
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -32,6 +48,7 @@ interface PartnerProfile {
 =======
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -48,34 +65,24 @@ interface PartnerProfile {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   commission_rate?: number
 }
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
+
 <<<<<<< HEAD
+export default function PartnerManager() {;
+  const [partners, setPartners] = useState<PartnerProfile[]>([]);
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-=======
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const navigate = useNavigate();
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-<<<<<<< HEAD
       navigate("/login");
       return
     }
@@ -175,6 +182,21 @@ export default function PartnerManager() {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
 =======
+export default function PartnerManager() {
+  const [partners, setPartners] = useState<PartnerProfile[]>([]),
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
+  const [commissionRate, setCommissionRate] = useState(25),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+
+  useEffect(() => {
+    if (!isAuthenticated) {
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -320,7 +342,7 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]),;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (error) {
       console.error("Error fetching partners:", error),
@@ -354,8 +376,6 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
-    setFilteredPartners(filtered)
-  }
 =======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
@@ -384,6 +404,7 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
     setFilteredPartners(filtered)
   },
@@ -518,7 +539,7 @@ export default function PartnerManager() {;
       case 'over100k': return 'Over 100,000';
       default: return size
     }
-  }
+  };
 =======
 ;
     setFilteredPartners(filtered);
@@ -602,6 +623,7 @@ export default function PartnerManager() {;
       default: return size;
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string) => {
@@ -694,7 +716,7 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -828,7 +850,6 @@ export default function PartnerManager() {;
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -940,6 +961,7 @@ export default function PartnerManager() {;
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+<<<<<<< HEAD
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -955,9 +977,6 @@ export default function PartnerManager() {;
               )}
             </div>
 =======
-                  <Button 
-                    variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
@@ -972,7 +991,7 @@ export default function PartnerManager() {;
                 </div>;
               )}
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         </DialogContent>
       </Dialog>
@@ -1032,10 +1051,11 @@ interface PartnerTableProps {
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
 <<<<<<< HEAD
-function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
+
+function PartnerTable({ 
+  partners, 
+  isLoading, 
+  onViewDetails, 
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1065,7 +1085,7 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   if (partners.length === 0) {
     return (
@@ -1136,11 +1156,6 @@ function PartnerTable({;
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-<<<<<<< HEAD
-                <Button
-                  variant="outline"
-=======
-                
                 <Button 
                   variant="outline" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {AppLayout} from "@/layout/AppLayout";
+import ForumCategories from "@/components/community/ForumCategories";
+import PostCard from "@/components/community/PostCard";
+import {useAuth} from "@/hooks/useAuth";
+import {ForumPost} from "@/types/community";
+=======
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -102,6 +114,7 @@ export default function CommunityPage() {
 =======
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -188,9 +201,15 @@ const recentPosts: ForumPost[] = [
   }
 ],
 
+<<<<<<< HEAD
+export default function CommunityPage() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
+=======
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -242,7 +261,6 @@ export default function CommunityPage() {
       </div>
     </AppLayout>
   )
-}
 =======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -389,6 +407,7 @@ export default function CommunityPage() {;
       </div>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

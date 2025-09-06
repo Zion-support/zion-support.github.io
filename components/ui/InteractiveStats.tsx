@@ -33,9 +33,9 @@ function useCounter(target: number, durationMs: number) {
   return value
 }
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function InteractiveStats() {
+export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -62,7 +62,7 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
 );
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function Stat({
   label
   value
@@ -85,4 +85,4 @@ function Stat({
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

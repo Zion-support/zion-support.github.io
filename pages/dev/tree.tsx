@@ -1,11 +1,15 @@
 <<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
+import React, { useEffect, useState } from 'react';
+import Tree, { TreeNode } from '../../components/ui/Tree';
 interface ApiResponse {
-
-  nodes: TreeNode[]
+  nodes: TreeNode[],
 status: {
-  gitConnected: boolean, gitBranch?: string
+  gitConnected: boolean, gitBranch?: string 
+export default function DevTreePage() {;
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [git, setGit] = useState<ApiResponse['status'] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>('');
 
 =======
 import React, { useEffect, useState } from "react",
@@ -28,6 +32,7 @@ export default function DevTreePage() {
   const [error, setError] = useState<string | null>(null),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const fetchTree = async (token?: string) => {
     try {
 <<<<<<< HEAD
@@ -167,13 +172,14 @@ export default function DevTreePage() {
       </div>
 <<<<<<< HEAD
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
+
 =======
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
@@ -184,6 +190,10 @@ export default function DevTreePage() {
       )}
     </div>
 );
+
+}
+}
+}
 =======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
@@ -324,4 +334,4 @@ export default function DevTreePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

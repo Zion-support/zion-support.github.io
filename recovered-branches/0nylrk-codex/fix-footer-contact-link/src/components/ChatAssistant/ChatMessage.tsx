@@ -1,16 +1,11 @@
 <<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-interface ChatMessageProps {
-
-  role: 'user' | 'assistant'
-  message: string
-
-  timestamp?: Date;
+import {cn} from "@/lib/utils";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 =======
 import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
@@ -18,12 +13,18 @@ interface ChatMessageProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   key?: string | number
 }
+
+<<<<<<< HEAD
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
+  const isUser = role === 'user';
+=======
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 <<<<<<< HEAD
 
   const isUser = role === 'user';
 =======
   const isUser = role === 'user',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -68,6 +69,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
       </div>
     </div>
   )
+};
 =======
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -114,5 +116,5 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
       </div>;
     </div>;
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

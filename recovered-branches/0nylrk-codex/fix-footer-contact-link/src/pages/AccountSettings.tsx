@@ -1,33 +1,24 @@
 
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Separator  } from '@/components/ui/separator';
-import { Switch  } from '@/components/ui/switch';
-import { Label  } from '@/components/ui/label';
-import { toast } from 'sonner';
-export default function AccountSettings() {
+import {useState, useEffect} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Wallet, Database, Save} from "lucide-react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Separator} from '@/components/ui/separator';
+import {Switch} from '@/components/ui/switch';
+import {Label} from '@/components/ui/label';
+import {toast} from 'sonner';
+export default function AccountSettings() {;
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  useEffect(() => {
-    try {
-
-      const saved = localStorage.getItem('account_settings');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        setDisplayWeb3(!!parsed.displayWeb3);
-        setDidHandle(parsed.didHandle |'');
-        setEnableBackup(!!parsed.enableBackup)
 =======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
@@ -48,6 +39,7 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
@@ -57,6 +49,8 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -84,17 +78,16 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (e) {
       console.error('Error loading account settings', e)
     }
 <<<<<<< HEAD
   }, []);
-  const handleSave = () => {
-    setIsSubmitting(true);
 =======
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSave = () => {
     setIsSubmitting(true),
@@ -186,7 +179,7 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       } catch (error) {
         console.error('ENS lookup error:', error)
@@ -196,10 +189,10 @@ export default function AccountSettings() {;
       toast.error(error.message |'Failed to connect wallet')
     }
 <<<<<<< HEAD
-  }
+  };
 =======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>

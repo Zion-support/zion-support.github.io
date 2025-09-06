@@ -30,8 +30,9 @@ interface Activity {
     avatar_url: string | null
   }
 }
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -105,7 +106,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
     if (projectId) {
@@ -127,8 +128,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return 'added a deliverable';
       default:
         return activity.action.replace(/_/g, ' ')
-    }
-  }
 =======
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
@@ -143,6 +142,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return 'added a deliverable';
       default:;
         return activity.action.replace(/_/g, ' ');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 

@@ -1,22 +1,31 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
-import { Badge } from "@/components/ui/badge";
+import {Badge} from "@/components/ui/badge";
 =======
 import React from "react",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> main
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+<<<<<<< HEAD
+  // Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
+=======
   // Get top skills (limit to 4)
 <<<<<<< HEAD
   const topSkills = skills.slice(0, 4) |[];
 =======
   const topSkills = skills.slice(0, 4) || [],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -43,7 +52,7 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {;
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {skill}
         </Badge>
       ))}

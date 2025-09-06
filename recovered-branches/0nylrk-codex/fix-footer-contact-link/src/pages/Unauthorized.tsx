@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ShieldAlert} from "lucide-react";
+=======
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -8,7 +15,7 @@ import { ShieldAlert } from "lucide-react";
 =======
 import { Footer } from "@/components/Footer",
 import { ShieldAlert } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Unauthorized() {
   return (
     <>
@@ -44,7 +51,6 @@ export default function Unauthorized() {
     </>
   )
 <<<<<<< HEAD
-}
 =======
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -85,6 +91,6 @@ export default function Unauthorized() {;
       <Footer />;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

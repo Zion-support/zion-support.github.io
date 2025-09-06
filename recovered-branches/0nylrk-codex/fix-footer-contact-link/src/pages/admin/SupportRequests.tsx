@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Search, Filter} from "lucide-react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+=======
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -14,7 +27,7 @@ import { SEO } from "@/components/SEO";
 =======
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -129,11 +142,19 @@ export default function SupportRequests() {
 =======
 ],
 
+<<<<<<< HEAD
+export default function SupportRequests() {;
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+=======
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Apply filters to the request data
@@ -250,7 +271,7 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -364,7 +385,7 @@ export default function SupportRequests() {;
                   className="pl-10"
                 />
               </div>
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -375,7 +396,7 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -386,7 +407,7 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -590,7 +611,7 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             {request.status}
                           </Badge>
                         </TableCell>

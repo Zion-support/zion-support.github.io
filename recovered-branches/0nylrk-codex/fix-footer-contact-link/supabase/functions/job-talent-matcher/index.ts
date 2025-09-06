@@ -1,21 +1,14 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {processJobMatching, storeMatchResults} from "./job-matching.ts";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -119,6 +112,10 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+      }
+    )
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
@@ -187,6 +184,7 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

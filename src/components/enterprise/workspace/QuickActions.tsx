@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React from 'react'
 import {
@@ -49,6 +48,7 @@ export function QuickActions() {
     }
   ]
 =======
+
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -87,6 +87,7 @@ export function QuickActions() {
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card>
       <CardHeader>
@@ -107,7 +108,7 @@ export function QuickActions() {
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
@@ -120,7 +121,7 @@ export function QuickActions() {
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
-            <Button
+            <Button 
 =======
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
@@ -170,7 +171,7 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -186,10 +187,6 @@ export function QuickActions() {;
             </Button>
           ))}
         </div>
-      </CardContent>
-    </Card>
-  )
-}
 =======
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
@@ -205,9 +202,14 @@ export function QuickActions() {;
             </Button>
           ))}
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </CardContent>;
     </Card>;
   );
+};
 }
+<<<<<<< HEAD
+}
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -7,9 +7,12 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
+=======
 export type TextareaProps = React.ComponentProps<"textarea">
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
@@ -30,10 +33,10 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
 )
 <<<<<<< HEAD
 Textarea.displayName = &quot;Textarea&quot;
-export { Textarea }
+export { Textarea };
 =======
 Textarea.displayName = "Textarea"
 
 export { Textarea }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

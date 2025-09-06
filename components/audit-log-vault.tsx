@@ -13,13 +13,14 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} f
 export default function AuditLogVaultPage() {
 
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  };
+
   const features = [
-    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
+    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns';
   ];
 
   return (
@@ -72,4 +73,7 @@ export default function AuditLogVaultPage() {
 =======
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

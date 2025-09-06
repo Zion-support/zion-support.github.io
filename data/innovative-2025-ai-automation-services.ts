@@ -1,5 +1,5 @@
+export interface InnovativeAIAutomationService {;
 <<<<<<< HEAD
-export interface InnovativeAIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -354,12 +354,12 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       }
       realImplementation: true
       implementationDetails:
-        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-      launchDate: '2025-03-01'
-      customers: 35
-      rating: 4.9
-      reviews: 28
-    }
+        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
+      launchDate: '2025-03-01',
+      customers: 35,
+      rating: 4.9,
+      reviews: 28,
+    },;
   ];    features: [
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
       'Comprehensive medical reportsHIPAA-compliant security'
@@ -388,10 +388,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9
 
     reviews: 28
-  }
-];
 =======
-export interface InnovativeAIAutomationService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -652,6 +649,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     customers: 35,;
     rating: 4.9,;
     reviews: 28;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

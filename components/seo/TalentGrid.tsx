@@ -30,9 +30,9 @@ export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
+        (p) => matchesRegion(p, region) && matchesService(p, service),
+      ),
+    [region, service],;
   );
 
   if (items.length === 0) {
@@ -80,8 +80,5 @@ export default function TalentGrid({ region, service }: Props) {
       ))}
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

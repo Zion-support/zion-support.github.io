@@ -1,9 +1,20 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+
 <<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate  } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {toast} from "sonner";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {useJobForm} from './useJobForm';
+import {BasicInfoFields} from './BasicInfoFields';
+import {DateFields} from './DateFields';
+import {DescriptionFields} from './DescriptionFields';
+import {useJobs} from "@/hooks/useJobs";
+import {JobSchemaType} from './validation';
 =======
-
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -27,11 +38,19 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface JobPostingFormProps {
   jobId?: string,
   onSuccess?: () => void
 }
+
+<<<<<<< HEAD
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
+  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("");
+=======
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 <<<<<<< HEAD
 
@@ -44,6 +63,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const { createJob, updateJob, getJobById } = useJobs(),
   const [isFormLoading, setIsFormLoading] = useState(false),
   const [editorContent, setEditorContent] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const {
@@ -155,7 +175,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
                   setValue(key, value as any);
                 } catch (e) {;
                   // Skip fields that don't exist in our form;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }
               }
             })
@@ -231,7 +251,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
         toast.success("Job posted successfully!"),;
         form.reset(),;
         setEditorContent("");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       if (onSuccess) {
         onSuccess()
@@ -266,8 +286,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
           </p>
         </div>
         <BasicInfoFields control={form.control} />
-        <DateFields
-          startDate={startDate}
+        <DateFields 
+          startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -314,20 +334,20 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
               type="checkbox";
               id="isRemote";
               checked={isRemote}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
             Remote
           </Label>
         </div>
-        <DescriptionFields
-          control={form.control}
+        <DescriptionFields 
+          control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
-        <Button type="submit" disabled={isSubmitting |isFormLoading}>
-          {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>
+          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
         </Button>
       </form>
     </Form>
@@ -336,5 +356,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 }
 =======
 }
+<<<<<<< HEAD
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

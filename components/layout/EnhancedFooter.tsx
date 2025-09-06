@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -92,12 +93,12 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
-    { name: 'AI Services', href: '/ai-services' }
-    { name: 'IT Services', href: '/it-services' }
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
-    { name: 'Micro SaaS', href: '/micro-saas' }
-    { name: 'Security', href: '/security' }
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },;
+    { name: 'Security', href: '/security' },;
+    { name: 'Case Studies', href: '/case-studies' },;
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -113,9 +114,15 @@ export default function EnhancedFooter() {
     { name: 'FAQ', href: '/faq' }
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },;
+  ];
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   ];
   return (
@@ -313,4 +320,8 @@ export default EnhancedFooter;
 };
 
 export default EnhancedFooter;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

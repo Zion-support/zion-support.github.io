@@ -24,7 +24,7 @@ exports.handler = async function() {;
   }
 },;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-dao.js
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -83,5 +83,7 @@ exports.handler = async function () {
 
 =======
 },
+<<<<<<< HEAD:netlify/functions/cron-weekly-dao.js
+=======
 >>>>>>> main:netlify/functions/cron-weekly-dao.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-dao.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-dao.js

@@ -5,22 +5,12 @@
 import React, { useRef } from "react"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-// These would be replaced with actual screenshots
-
-const mockScreenshots = [
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
-  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
-  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" }
-  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" }
-  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
-export const AppScreenshots: React.FC = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const scroll = (direction: "left" | "right",) => {
+import { Button } from "@/components/ui/button"
 =======
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -28,12 +18,17 @@ const mockScreenshots = [
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
+<<<<<<< HEAD
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const scroll = (direction: "left" | "right",) => {
+=======
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
 
   const scroll = (direction: "left" | "right") => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
@@ -45,7 +40,7 @@ export const AppScreenshots: React.FC = () => {
 =======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -58,7 +53,7 @@ export const AppScreenshots: React.FC = () => {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="relative">
           <Button
             variant="ghost"
@@ -70,16 +65,9 @@ export const AppScreenshots: React.FC = () => {
             <ChevronLeft className="h-6 w-6" />
           </Button>
 <<<<<<< HEAD
-          <div
-            ref = {scrollContainerRef,}
-            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {mockScreenshots.map((screenshot,) => (
-              <div
-                key = {screenshot.id,}
 =======
           
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -103,7 +91,7 @@ export const AppScreenshots: React.FC = () => {
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Button
             variant="ghost"
             size="icon"
@@ -116,13 +104,13 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
-  )
 <<<<<<< HEAD
-}
-'"}
-}
-
+  );
+};
+'"};
+};
 =======
+  )
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -196,4 +184,4 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

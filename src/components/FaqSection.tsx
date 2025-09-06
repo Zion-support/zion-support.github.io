@@ -1,13 +1,8 @@
 <<<<<<< HEAD
-
 import { GradientHeading } from './GradientHeading'
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
-} from '@/components/ui/accordion'
 =======
 import {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -67,12 +62,12 @@ export function FaqSection() {
             equipment rentals, and datacenter maintenance services
           </p>
         </div>
-
         <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>
           <div className='flex items-center mb-6'>
             <FileText className='h-6 w-6 text-zion-cyan mr-2' />
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>
           </div>
+<<<<<<< HEAD
           <Accordion type='single' collapsible className='w-full'>
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -90,10 +85,22 @@ import {
   AccordionItem
   AccordionTrigger} from "@/components/ui/accordion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+=======
+
+import { GradientHeading } from "./GradientHeading",
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger} from "@/components/ui/accordion",
+import { FileText } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const faqs = [
   {
     question: "How do I publish my AI product or service?"
     answer:
+<<<<<<< HEAD
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
   {
     question: "What types of AI jobs can I find or post?"
@@ -123,21 +130,7 @@ const faqs = [
     question: "How do I contact support?"
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}]
-
-<<<<<<< HEAD
 =======
-import { GradientHeading } from "./GradientHeading",
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from 'lucide-react'
-
-const faqs = [
-  {
-    question: "How do I publish my AI product or service?",
-    answer:
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
     question: "What types of AI jobs can I find or post?",
@@ -168,7 +161,7 @@ const faqs = [
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">
@@ -182,7 +175,7 @@ export function FaqSection() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
@@ -191,7 +184,7 @@ export function FaqSection() {
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
@@ -206,9 +199,10 @@ export function FaqSection() {
             ))}
           </Accordion>
         </div>
-      </div>
-    </section>
-  )
+      </div>;
+    </section>;
+  );
+};
 }
 =======
 import { GradientHeading } from "./GradientHeading",;
@@ -270,4 +264,4 @@ export function FaqSection() {;
             {faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

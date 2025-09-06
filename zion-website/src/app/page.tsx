@@ -1,14 +1,15 @@
 <<<<<<< HEAD
-import {
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
+import { 
+  LightBulbIcon,
+  CpuChipIcon, 
+  GlobeAltIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon;
 } from '@heroicons/react/24/outline';
 =======
 import React from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
@@ -108,7 +109,7 @@ export default function HomePage() {
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
         </div>
@@ -146,7 +147,7 @@ export default function HomePage() {
                     </a>
 =======
                     </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                 </dd>
               </div>
@@ -159,7 +160,7 @@ export default function HomePage() {
           </dl>;
         </div>;
       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -186,7 +187,7 @@ export default function HomePage() {
           </dl>;
         </div>;
       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -242,7 +243,7 @@ export default function HomePage() {
           </div>;
         </div>;
       </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -268,12 +269,11 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
-    </div>
-<<<<<<< HEAD
+    </div>;
   );
 }
 =======

@@ -1,16 +1,15 @@
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
-import Link from 'next/link';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
-import { AuthButtons  } from '@/components/AuthButtons';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
+import Link from 'next/link'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
+import { AuthButtons } from '@/components/AuthButtons'
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 import { toast } from '@/hooks/use-toast'
@@ -31,9 +30,9 @@ const SignupSchema = Yup.object({
   terms: Yup.boolean().oneOf(
     [true]
     'You must accept the terms and conditions'
-  )
-})
-export default function Signup() {
+  ),
+});
+export default function Signup() {;
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -59,9 +58,7 @@ export default function Signup() {
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
-      if (
-        err.code === 'NETWORK_ERROR' |
-        err.message?.includes('Network Error')
+      if (true) {}
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -176,9 +173,9 @@ export default function Signup() {
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
-        const errorMsg =
-          err.response?.data?.error |
-          err.response?.data?.message |
+        const errorMsg = null;
+          err.response?.data?.error ||
+          err.response?.data?.message ||
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -466,7 +463,7 @@ export default function Signup() {;
     return undefined
   }, [emailVerificationRequired, formik.values.email, router]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
@@ -613,7 +610,7 @@ export default function Signup() {;
                 data-testid='confirm-password-input'
                 value={formik.values.confirm}
                 onChange={formik.handleChange}
-                disabled={loading |emailVerificationRequired}
+                disabled={loading || emailVerificationRequired}
               />
               {formik.touched.confirm && formik.errors.confirm && (
                 <div className='text-red-500 text-sm'>
@@ -629,7 +626,7 @@ export default function Signup() {;
                 data-testid='terms-checkbox'
                 checked={formik.values.terms}
                 onChange={formik.handleChange}
-                disabled={loading |emailVerificationRequired}
+                disabled={loading || emailVerificationRequired}
               />
               <label htmlFor='terms' className='text-sm'>
                 I agree to the{' '}
@@ -645,6 +642,7 @@ export default function Signup() {;
             {formik.touched.terms && formik.errors.terms && (
               <div className='text-red-500 text-sm'>{formik.errors.terms}</div>
             )}
+
             {!emailVerificationRequired ? (
 =======
           <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
@@ -811,7 +809,7 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Button
                 type="button"
                 variant="outline"
@@ -868,7 +866,6 @@ export default function Signup() {;
                 </p>
               </div>
             )}
-
 =======
               <Button
                 type="button"
@@ -891,7 +888,7 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </form>
           {!emailVerificationRequired && (
             <div className="mt-6">
@@ -1006,15 +1003,15 @@ export default function Signup() {
   const form = useForm({
     resolver: zodResolver(signupSchema)
     defaultValues: {
-      displayName: "
-      email: "
-      password: "
-      confirmPassword: "
-      termsAccepted: false,
-}
-}) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
+      displayName: ",
+      email: ",
+      password: ",
+      confirmPassword: ",
+      termsAccepted: false,,
+},,;
+}) as UseFormReturn<SignupFormValues>;
+  // Form submission handler;
+  const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1027,7 +1024,7 @@ export default function Signup() {
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
         form.setError('email', { message: resData.message })
         toast.error('Email already registered – please login.')
-        return
+        return;
 }
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
@@ -1044,9 +1041,9 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
-          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
-          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-          return
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+          return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -1059,7 +1056,7 @@ export default function Signup() {
         form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })
         toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")
         // Potentially navigate to login or show a more specific error
-        return
+        return;
 }
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
@@ -1145,8 +1142,8 @@ const Signup = () => {
             </div>
     </>  )
 }
-}}
-}
+}};
+};
 =======
         </div>;
       </div>;
@@ -1154,4 +1151,4 @@ const Signup = () => {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

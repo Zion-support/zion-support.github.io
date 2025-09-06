@@ -1,6 +1,5 @@
-
 <<<<<<< HEAD
-import { useState  } from 'react';
+import { useState } from 'react'
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
@@ -20,10 +19,10 @@ const handleCopyClick = async () => {
   await navigator.clipboard.writeText (code)
 setCopied (true)
 setTimeout ( () => {
-  setCopied (false)
-}, 2000)
-}
-}> <pre className= {"
+  setCopied (false) ;
+}, 2000) ;
+};
+}> <pre className= {";
   cn ("p-4 overflow-auto";"
 showLineNumbers && "pl-12 relative")
 }> {"
@@ -33,11 +32,26 @@ showLineNumbers && "pl-12 relative")
 }className="h-6 leading-6" > {
   i + 1
 export function CodeBlock({
-  code
-  language = 'bash'
-  showLineNumbers = false
+=======
+
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react'
+import { cn } from "@/lib/utils",
+interface CodeBlockProps {
+  code: string,
+  language?: string,
+  showLineNumbers?: boolean,
+  className?: string
+}
+
+export function CodeBlock({ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  code,
+  language = 'bash',
+  showLineNumbers = false,
   className
 }: CodeBlockProps) {
+<<<<<<< HEAD
   const [copied, setCopied] = useState(false)
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code)
@@ -56,22 +70,6 @@ export function CodeBlock({
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
 =======
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
-interface CodeBlockProps {
-  code: string,
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
-}
-
-export function CodeBlock({ 
-  code,
-  language = 'bash',
-  showLineNumbers = false,
-  className
-}: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
   const handleCopyClick = async () => {
@@ -134,7 +132,7 @@ export function CodeBlock({;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
               </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         )}
@@ -161,19 +159,23 @@ export function CodeBlock({;
       </button>
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {language}
         </div>
       )}
 <<<<<<< HEAD
     </div>
   )
-export default CodeBlock
-
+export default CodeBlock;
+;
+}
+}
+}
+}
 =======
     </div>;
   );
 }
 ;
 export default CodeBlock;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

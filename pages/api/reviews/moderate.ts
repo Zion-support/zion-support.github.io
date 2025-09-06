@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -8,7 +7,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }
   const key = req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
@@ -47,6 +46,8 @@ export default async function handler(
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
+
+
 =======
 type Action = 'approve' | 'remove' | 'edit';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -198,5 +199,5 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

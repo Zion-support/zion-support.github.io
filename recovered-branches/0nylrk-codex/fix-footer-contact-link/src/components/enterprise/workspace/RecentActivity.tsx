@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+=======
 import React from "react",
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,23 +11,27 @@ import { Badge } from "@/components/ui/badge";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
-      id: "act-1"
-      user: "Michael Chen"
-      action: "posted a new job"
-      target: "Senior React Developer"
-      timestamp: "1h ago"
+      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",
+<<<<<<< HEAD
+      type: "job";
+    };
+=======
       type: "job"
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -117,7 +126,6 @@ export function RecentActivity() {
     </Card>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -208,6 +216,7 @@ export function RecentActivity() {;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

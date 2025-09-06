@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -7,18 +6,19 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
-  Form
-  FormControl
-  FormDescription
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 =======
+
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -28,10 +28,18 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
+
+<<<<<<< HEAD
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+=======
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 <<<<<<< HEAD
   const { control, register, watch, setValue } = form;
@@ -47,6 +55,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
@@ -175,7 +184,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               )}
             />;
             <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -199,7 +208,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 =======
             />;
             <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -210,7 +219,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Textarea
 =======
                     <Textarea 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -238,7 +247,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
@@ -247,7 +256,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <button
 =======
                     <button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300"
@@ -264,7 +273,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <FormField
               control={control}
               name="version"
@@ -282,9 +291,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
         </Form>
       </CardContent>
     </Card>
-  );
-}
-
+<<<<<<< HEAD
+);
 =======
                     <Input 
                       placeholder="e.g., 1.0.0"
@@ -299,5 +307,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

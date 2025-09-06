@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
+import {useRouter} from 'next/router';
 import useSWR from 'swr';
 
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function EditJobPage() {
+export default function EditJobPage() {;
 =======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -12,11 +12,13 @@ import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function EditJobPage(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
+<<<<<<< HEAD
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -37,6 +39,9 @@ export default function EditJobPage(req, res) {
   if (!job) return <div>Loading…</div>;
 
 =======
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
   useEffect(() => {;
     if (job) {;
       setTitle(job.title || '');
@@ -60,7 +65,7 @@ export default function EditJobPage(req, res) {
   }
 }
   if (!job) return <div>Loading…</div>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
@@ -82,6 +87,8 @@ export default function EditJobPage(req, res) {
     </div>
 <<<<<<< HEAD
 );
+
+}
 =======
   )
   } catch (error) {
@@ -89,4 +96,4 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

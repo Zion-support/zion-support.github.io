@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Search, Filter} from "lucide-react";
+=======
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -9,7 +16,7 @@ import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from "lucide-react",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -23,6 +30,17 @@ interface FraudFiltersProps {
 
   resetFilters: () => void
 }
+
+<<<<<<< HEAD
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  severityFilter;
+  setSeverityFilter;
+  contentTypeFilter;
+=======
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 <<<<<<< HEAD
   searchQuery;
@@ -42,6 +60,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   severityFilter,
   setSeverityFilter,
   contentTypeFilter,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   setContentTypeFilter,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   resetFilters}) => {
@@ -56,7 +75,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           className="pl-10"
         />
       </div>
-      <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
+      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -68,7 +87,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -79,7 +98,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
@@ -98,8 +117,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
 import React from "react",;
@@ -184,4 +202,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 };
 
 export default FraudFilters;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

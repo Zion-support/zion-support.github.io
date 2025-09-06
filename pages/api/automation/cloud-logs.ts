@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any[]> {;
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
   try {
 <<<<<<< HEAD
 
@@ -56,8 +57,13 @@ const dir = path.join(process.cwd(), 'automation_logs')
   }
 const remote = await fetchFromGitHub()
 
-  return res.status(200).json({ logs: remote })
+const remote = await fetchFromGitHub(),
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+  try {
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -155,6 +161,6 @@ export default async function handler(req, res) {
   }
 
   const remote = await fetchFromGitHub();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return res.status(200).json({ logs: remote });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
+};

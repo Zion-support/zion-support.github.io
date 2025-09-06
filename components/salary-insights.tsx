@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 import {
-  LineChart
-  BarChart
-  DonutChart;
+  LineChart,
+  BarChart,;
+  DonutChart,;
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -25,7 +25,8 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
-export default function SalaryInsightsPage() {
+
+export default function SalaryInsightsPage() {;
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -97,7 +98,7 @@ export default function SalaryInsightsPage() {
 =======
       setLoading(false);    }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 <<<<<<< HEAD
@@ -148,11 +149,9 @@ export default function SalaryInsightsPage() {
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
 <<<<<<< HEAD
-      } catch {}
-    })();
-  }
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       } catch {}
     })();
   }
@@ -443,7 +442,7 @@ export default function SalaryInsightsPage() {
               )}
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -453,6 +452,7 @@ export default function SalaryInsightsPage() {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+
 <<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
@@ -487,11 +487,10 @@ export default function SalaryInsightsPage() {
 );
 }
 =======
-
           {data && (
 
             </div>
           )}
 
           {data && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

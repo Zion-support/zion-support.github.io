@@ -41,7 +41,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
@@ -67,7 +67,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -85,7 +85,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
@@ -100,7 +100,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -115,7 +115,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -141,7 +141,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,22 +172,34 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
+                  This case study demonstrates the real impact of AI automation in manufacturing. 
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
+=======
                   This case study demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
+<<<<<<< HEAD
+                  <Link 
+=======
                   <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -200,6 +212,10 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+  );
+};
+=======
   )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -234,3 +250,4 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

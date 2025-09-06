@@ -8,7 +8,8 @@ type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -40,6 +41,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       console.warn('Screen share failed', e)
   }
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className='flex items-center gap-3'>
@@ -70,9 +72,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 );
 }
 =======
-
-    }
-  };
-
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

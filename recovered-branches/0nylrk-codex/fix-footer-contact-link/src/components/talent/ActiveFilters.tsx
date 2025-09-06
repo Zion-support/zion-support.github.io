@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {Button} from "@/components/ui/button";
+import {X} from "lucide-react";
+=======
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 <<<<<<< HEAD
@@ -20,6 +26,7 @@ interface ActiveFiltersProps {
 =======
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -34,6 +41,20 @@ interface ActiveFiltersProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   clearFilters: () => void
 }
+
+<<<<<<< HEAD
+export function ActiveFilters({;
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
+=======
 export function ActiveFilters({
   selectedSkills,
   toggleSkill,
@@ -45,6 +66,7 @@ export function ActiveFilters({
   setPriceRange,
   experienceRange,
   setExperienceRange,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -129,7 +151,7 @@ export function ActiveFilters({;
         <ClickableBadge;
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={() => toggleSkill(skill)}
         >
           {skill}
@@ -187,7 +209,6 @@ export function ActiveFilters({;
     </div>
   )
 <<<<<<< HEAD
-}
 =======
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -223,6 +244,7 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

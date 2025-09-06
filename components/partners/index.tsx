@@ -4,10 +4,23 @@ import Head from "next/head";
 =======
 import { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Partners() {
   const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
 
     name: ''
     entityType: ''
@@ -206,6 +219,7 @@ export default function Partners() {
       </div>
     </div>
 );
+}
 =======
 
           </div>
@@ -214,5 +228,5 @@ export default function Partners() {
       </div>
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

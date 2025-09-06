@@ -4,12 +4,12 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -20,24 +20,14 @@ export function PaymentMethods() {
 
   const paymentMethods = [
     {
-      id: "pm-1"
-      type: "credit_card"
-      brand: "Visa"
-      last4: "4242"
-      expMonth: 12
-      expYear: 2025
-      isDefault: true
-    }
-    {
-      id: "pm-2"
-      type: "credit_card"
-      brand: "Mastercard"
-      last4: "8888"
-      expMonth: 4
-      expYear: 2026
-      isDefault: false
-    }
-  ];
+      id: "pm-1",
+      type: "credit_card",
+      brand: "Visa",
+      last4: "4242",
+      expMonth: 12,
+      expYear: 2025,
+      isDefault: true,
+    },
 =======
 
 import React from "react",
@@ -45,6 +35,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: "pm-2",
       type: "credit_card",
@@ -52,9 +43,14 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
+      isDefault: false,
+    },;
+  ];
+=======
       isDefault: false}
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Card>
@@ -107,8 +103,6 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       </CardFooter>
     </Card>
 <<<<<<< HEAD
-  );
-}
 =======
   )
 import React from "react",;
@@ -187,6 +181,7 @@ export function PaymentMethods() {;
         </Button>;
       </CardFooter>;
     </Card>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
 ;

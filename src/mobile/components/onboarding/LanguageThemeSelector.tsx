@@ -1,7 +1,7 @@
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { useTheme } from '@/hooks/useTheme'
 import { Moon, Sun, Check } from 'lucide-react'
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,9 +34,14 @@ export function LanguageThemeSelector() {
         <p className="text-muted-foreground">Choose your preferred language</p>
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language,) => (
-            <Card
+            <Card 
               key = {language.code,}
 =======
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/hooks/useTheme",
+import { Moon, Sun, Check } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
 
 interface Language {
@@ -66,7 +71,7 @@ export function LanguageThemeSelector() {
           {languages.map((language) => (
             <Card 
               key={language.code}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
@@ -82,7 +87,7 @@ export function LanguageThemeSelector() {
                 {selectedLanguage === language.code && (
 <<<<<<< HEAD
                   <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
-            <Card
+            <Card 
 =======
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
@@ -113,7 +118,7 @@ export function LanguageThemeSelector() {;
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages.map((language) => (;
             <Card;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               key={language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
@@ -172,7 +177,7 @@ export function LanguageThemeSelector() {;
               theme === 'light' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }`}
             onClick={() => setTheme('light')}
           >
@@ -204,14 +209,13 @@ export function LanguageThemeSelector() {;
               )}
             </CardContent>
           </Card>
-          <Card
+          <Card 
             className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
-                ? "border-primary bg-primary/5"
 =======
           
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -229,10 +233,10 @@ export function LanguageThemeSelector() {;
             </CardContent>
           </Card>
         </div>
-      </div>
-    </div>
-  )
-}
+      </div>;
+    </div>;
+  );
+};
 =======
             </CardContent>;
           </Card>;
@@ -242,4 +246,4 @@ export function LanguageThemeSelector() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

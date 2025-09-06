@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/hooks/use-toast";
+import {useAuthStatus} from "@/hooks/talent";
+export function useSavedTalents() {;
+  const { isAuthenticated, userDetails } = useAuthStatus();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
@@ -18,6 +30,7 @@ export function useSavedTalents() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Fetch saved talents
@@ -28,6 +41,7 @@ export function useSavedTalents() {
       if (!isAuthenticated |!userDetails.id) {
         setIsLoading(false);
         return
+<<<<<<< HEAD
       }
       setIsLoading(true);
       try {
@@ -51,9 +65,6 @@ export function useSavedTalents() {
           } else {
             setSavedTalents([])
 =======
-      if (!isAuthenticated || !userDetails.id) {
-        setIsLoading(false),
-        return
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
@@ -93,7 +104,7 @@ export function useSavedTalents() {;
             setSavedTalents(talentData || []);
           } else {;
             setSavedTalents([]);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       } catch (error) {
@@ -201,6 +212,7 @@ export function useSavedTalents() {;
         description: "There was a problem updating your favorites. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
     }
   }
   // Check if talent is saved
@@ -215,10 +227,6 @@ export function useSavedTalents() {;
 
     isTalentSaved
 =======
-        title: "Error",
-        description: "There was a problem updating your favorites. Please try again.",
-        variant: "destructive"
-      })
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
         toast({;
@@ -291,6 +299,6 @@ export function useSavedTalents() {;
     isLoading;
     toggleSaveTalent;
     isTalentSaved;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import React, { useRef } from "react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
+import {Button} from "@/components/ui/button";
+=======
 import React, { useRef } from "react",
 <<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -6,20 +11,19 @@ import { Button } from "@/components/ui/button";
 =======
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // These would be replaced with actual screenshots
 
-const mockScreenshots = [
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
-  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
-  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" }
-  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" }
-  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
+<<<<<<< HEAD
+export const AppScreenshots: React.FC = () => {;
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+=======
 export const AppScreenshots: React.FC = () => {
 <<<<<<< HEAD
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 =======
   const scrollContainerRef = useRef<HTMLDivElement>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const scroll = (direction: "left" | "right") => {
@@ -53,7 +57,7 @@ export const AppScreenshots: React.FC = () => {
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-          <div
+          <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -71,10 +75,10 @@ export const AppScreenshots: React.FC = () => {
               </div>
             ))}
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -84,8 +88,6 @@ export const AppScreenshots: React.FC = () => {
     </section>
   )
 <<<<<<< HEAD
-}
-
 =======
 },
 import React, { useRef } from "react",;
@@ -156,5 +158,6 @@ export const AppScreenshots: React.FC = () => {;
       </div>;
     </section>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

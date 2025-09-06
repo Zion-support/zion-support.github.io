@@ -2,9 +2,12 @@
 import React, { useState } from "react";
 =======
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export interface TreeNode {;
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   path: string;
 
@@ -37,10 +40,9 @@ function NodeItem({
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
-  name: string
-  path: string
-  type: "folder" | "file"
-
+  name: string,
+  path: string,
+  type: "folder" | "file",;
   exists?: boolean;
   children?: TreeNode[]
 }
@@ -149,7 +151,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
 =======
     </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
       )}
@@ -161,7 +163,8 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
-    </div>
+<<<<<<< HEAD
+    </div>;
   );  )
 }
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -169,7 +172,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className="w-full">
       {nodes.map((n) => (
       ))}
-    </div>
+    </div>;
   );
 export default Tree;
 }</div> </div> {
@@ -196,16 +199,12 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
-  onDeploy
-}/>) )
-}</div>)
+  onDeploy 
+}/>) ) 
+}</div>) ;
 }export default Tree;}
 export default Tree;
-
 =======
-
-        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
-      ))}
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

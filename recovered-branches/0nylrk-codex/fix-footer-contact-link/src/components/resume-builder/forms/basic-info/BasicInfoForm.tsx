@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {Card} from "@/components/ui/card";
+import {RateOptimizationSection} from "../RateOptimizationSection";
+import {basicInfoSchema, BasicInfoFormData} from "./schema";
+import {PersonalInfoFields} from "./PersonalInfoFields";
+import {ContactFields} from "./ContactFields";
+export interface BasicInfoFormProps {;
+  resumeId?: string;
+  initialData?: Partial<BasicInfoFormData>;
+=======
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -24,12 +39,22 @@ import { ContactFields } from "./ContactFields",
 export interface BasicInfoFormProps {
   resumeId?: string,
   initialData?: Partial<BasicInfoFormData>,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSave: (data: BasicInfoFormData) => void,
   skills?: string[],
   yearsExperience?: number,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onComplete?: () => void
 }
+
+<<<<<<< HEAD
+export function BasicInfoForm({;
+  resumeId;
+  initialData = {};
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+=======
 export function BasicInfoForm({
 <<<<<<< HEAD
   resumeId;
@@ -44,7 +69,7 @@ export function BasicInfoForm({
   onSave,
   skills = [],
   yearsExperience = 0,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -126,18 +151,19 @@ export function BasicInfoForm({;
       Object.entries(initialData).forEach(([key, value]) => {;
         if (value !== undefined) {;
           form.setValue(key as keyof BasicInfoFormData, value as any);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       })
     }
 <<<<<<< HEAD
   }, [initialData, form]);
+
   const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data)
+    onSave(data),
     if (onComplete) {
       onComplete()
     }
-  }
+  };
 =======
   }, [initialData, form]),;
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -146,7 +172,7 @@ export function BasicInfoForm({;
       onComplete();
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Form {...form}>

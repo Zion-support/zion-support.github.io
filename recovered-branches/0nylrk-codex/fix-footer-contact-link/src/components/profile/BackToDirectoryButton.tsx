@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+=======
 import React from 'react',
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
@@ -7,7 +14,13 @@ import { ArrowLeft } from "lucide-react";
 =======
 import { Link } from "react-router-dom",
 import { ArrowLeft } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+>>>>>>> main
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -22,10 +35,9 @@ export function BackToDirectoryButton() {
       </Button>
     </div>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -41,6 +53,9 @@ export function BackToDirectoryButton() {;
       </Button>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

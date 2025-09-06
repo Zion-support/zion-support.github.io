@@ -2,8 +2,8 @@
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
-    const fs = require('fs')
-    if (fs.existsSync(filePath)) {
+    const fs = require('fs'),
+    if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
@@ -15,12 +15,13 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
+
 <<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
-  try {
+  try {;
     const fs = require('fs');
     const path = require('path');
     const dir = path.dirname(filePath)
@@ -29,32 +30,35 @@ export function writeJson<T>(filePath: string, data: T): void {
     }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 =======
-
 }
 ;
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 }
-export async function createDispute(dispute: DisputeCase): Promise<void> {
+
+export async function createDispute(dispute: DisputeCase): Promise<void> {;
   const all = await readAllDisputes();
   all.push(dispute);
   await writeAllDisputes(all);
 }
-export function getDisputeUploadDir(caseId: string): string {
+
+export function getDisputeUploadDir(caseId: string): string {;
   return path.join(UPLOADS_ROOT, caseId);
 }
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,6 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-import OpenAI from 'openai';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,7 +34,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Translation error', err)
 
     return res.status(500).json({ error: 'Translation failed' })
+  };
+};
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ translation: 'Translated content' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -119,6 +123,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

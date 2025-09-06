@@ -7,8 +7,7 @@ import { MessageAnalysisResult } from './types';
 /**
  * Check message for suspicious content
  */
-
-export const checkMessage = (messageContent: string): MessageAnalysisResult => {
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
   let severity: FraudSeverity = 'safe'
@@ -21,9 +20,6 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {
     ...analysis;
     severity
-  }
-}
-
 =======
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
@@ -46,6 +42,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
     severity;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

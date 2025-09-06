@@ -1,9 +1,9 @@
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
+import { useState } from 'react'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import CodeBlock from './CodeBlock'
 interface Param {
 
   name: string
@@ -28,8 +28,8 @@ export function ApiPlayground({
   }
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL |
+    const baseUrl = null;
+      process.env.NEXT_PUBLIC_API_URL ||
       (typeof window !== 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
     const searchParams = new URLSearchParams()
@@ -41,6 +41,9 @@ export function ApiPlayground({
       const query = searchParams.toString()
       if (query) url += `?${query}` }
 =======
+import { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
 interface Param {
@@ -89,6 +92,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       const query = searchParams.toString(),
       if (query) url += `?${query}`
     }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const options: RequestInit = {
@@ -99,17 +103,15 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         'Content-Type': 'application/json'
       }
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000)
+<<<<<<< HEAD
+      signal: AbortSignal.timeout(15000),
     }
     if (method !== 'GET' && method !== 'DELETE') {
 =======
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
-      // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
     if (method !== "GET" && method !== "DELETE") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
@@ -229,7 +231,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       <Input
@@ -240,13 +242,13 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 =======
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       />
       {params.map(p => (
         <Input
           key={p.name}
 <<<<<<< HEAD
-          value={paramValues[p.name] |''}
+          value={paramValues[p.name] || ''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
@@ -285,11 +287,11 @@ if (contentType?.includes ('application/json') ) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
-
+  p.name 
+}</div>) ;
+}export default ApiPlayground;
+'";
+}
 =======
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
@@ -311,4 +313,4 @@ if (contentType?.includes ('application/json') ) {
 }
 ;
 export default ApiPlayground;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

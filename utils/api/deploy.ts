@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+import fs from "fs",;
+import path from "path",;
+import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
+=======
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
-<<<<<<< HEAD
-function toSlug(name: string): string {return name;
-=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function toSlug(name: string): string {;
   return name;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -69,57 +72,68 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(;
       tokenConfigPath;
       JSON.stringify(;
-        {symbol: "ZION$";
-          decimals: 18;
-          enabled: input.tokenActivation;
-          stakingEnabled: input.modules.token;
-          escrowEnabled: true;
-          createdAt: nowIso()}
-        null;
+        {;
+          symbol: "ZION$",;
+          decimals: 18,;
+          enabled: input.tokenActivation,;
+          stakingEnabled: input.modules.token,;
+          escrowEnabled: true,;
+          createdAt: nowIso()},;
+        null,;
         2;
       );
-    );
-    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+    ),;
+    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" }),;
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
   }
+;
   // 3. Publish Assets;
-  const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);
-  const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);
-  const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);
-  const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);
-  const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`);
-  if (input.modules.roadmapWhitepaper) {ensureDir(docsDir);
+  const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`),;
+  const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`),;
+  const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`),;
+  const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`),;
+  const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`),;
+  if (input.modules.roadmapWhitepaper) {;
+    ensureDir(docsDir),;
     writeTextFile(;
-      wpPath;
+      wpPath,;
       `# Zion Protocol Whitepaper (v1.0)\n\nInstance: ${input.instanceName}\nRegion: ${input.deploymentRegion}\nToken: ${input.tokenActivation ? "Enabled" : "Disabled"}\n\n## Abstract\nZion OS unifies marketplace, AI, DAO, and media into a programmable nation-state.\n`;
-    );
-    assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" });
-    logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" });
+    ),;
+    assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" }),;
+    logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" }),;
     writeTextFile(;
-      roadmapPath;
+      roadmapPath,;
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
-    );
-    assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
+    ),;
+    assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" }),;
     writeTextFile(;
-      changelogPath;
+      changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
-    );
+    ),;
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
   }
-  if (input.modules.bookBuilder) {ensureDir(docsDir);
+;
+  if (input.modules.bookBuilder) {;
+    ensureDir(docsDir),;
     writeTextFile(;
-      bookPath;
+      bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
-    );
+    ),;
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" });
   }
-  if (input.modules.launchKit) {ensureDir(docsDir);
+;
+  if (input.modules.launchKit) {;
+    ensureDir(docsDir),;
     writeTextFile(;
-      trailerScriptPath;
+      trailerScriptPath,;
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;
-    );
+    ),;
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
+;
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir),;
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -299,6 +313,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   writeTextFile(;
 <<<<<<< HEAD
     summitEventPath;
@@ -341,6 +356,19 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   ),;
+<<<<<<< HEAD
+  assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),;
+  // 4. Activate Public Pages (record intent);
+  const pagesActivationPath = path.join(baseDir, "pages.json"),;
+  const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`,;
+  writeTextFile(;
+    pagesActivationPath,;
+    JSON.stringify(;
+      {;
+        activate: [;
+          "/about",;
+          "/manifesto",;
+=======
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json");
@@ -352,6 +380,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         activate: [;
           "/about";
           "/manifesto";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -362,15 +391,19 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   ),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+  assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
+=======
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
+    .map(([key]) => key),;
+  if (optionalModules.length > 0) {;
 <<<<<<< HEAD
-    .map(([key]) => key);
-  if (optionalModules.length > 0) {const optionalPath = path.join(baseDir, "optional-modules.json");
-    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
+    const optionalPath = path.join(baseDir, "optional-modules.json"),;
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
@@ -386,8 +419,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     summary;
     version}
 =======
-    .map(([key]) => key),;
-  if (optionalModules.length > 0) {;
     const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
@@ -418,5 +449,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

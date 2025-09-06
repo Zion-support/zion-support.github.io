@@ -1,6 +1,6 @@
 
+export interface FilterSidebarProps {;
 <<<<<<< HEAD
-export interface FilterSidebarProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedSkills: string[];
@@ -30,40 +30,39 @@ export interface FilterSidebarProps {
 
   isMobileFilterOpen?: boolean
 }
-export interface FilterComponentProps {
+
+export interface FilterComponentProps {;
   expanded: boolean;
 
   toggleSection: () => void
 
   isMobileFilterOpen?: boolean
 }
+
 export interface SkillsFilterProps extends FilterComponentProps {
-
-  selectedSkills: string[]
-
+  selectedSkills: string[],
   toggleSkill: (skill: string) => void
 }
+
 export interface AvailabilityFilterProps extends FilterComponentProps {
-
-  selectedAvailability: string[]
-
+  selectedAvailability: string[],
   toggleAvailability: (availability: string) => void
 }
+
 export interface RegionFilterProps extends FilterComponentProps {
-
-  selectedRegions: string[]
-
+  selectedRegions: string[],
   toggleRegion: (region: string) => void
 }
-export interface ExperienceFilterProps extends FilterComponentProps {
+
+export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
 }
-export interface PriceFilterProps extends FilterComponentProps {
+
+export interface PriceFilterProps extends FilterComponentProps {;
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void
 =======
-export interface FilterSidebarProps {;
   searchTerm: string,;
   setSearchTerm: (term: string) => void,;
   selectedSkills: string[],;
@@ -119,7 +118,7 @@ export interface ExperienceFilterProps extends FilterComponentProps {;
 export interface PriceFilterProps extends FilterComponentProps {;
   priceRange: [number, number],;
   setPriceRange: (range: [number, number]) => void;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export interface SearchFilterProps {
 
@@ -134,11 +133,4 @@ export interface SortFilterProps {
 
   setSortOption: (option: string) => void
 }
-=======
 ;
-export interface SortFilterProps {;
-  sortOption: string;
-  setSortOption: (option: string) => void;
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

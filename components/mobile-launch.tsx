@@ -5,7 +5,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -219,7 +219,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -246,14 +246,15 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
-export default function MobileLaunchPage() {
+
+export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
-export default function MobileLaunchPage() {
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -293,13 +294,17 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {
       setStatus('error');
-      setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
+<<<<<<< HEAD
+      setError(err?.message || 'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
       setStatus('success');
       setEmail('')
     } catch (err: any) {
       setStatus('error');
-      setError(err?.message |'Something went wrong.')
+      setError(err?.message || 'Something went wrong.')
+=======
+      setError(err?.message || 'Something went wrong.');    }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 <<<<<<< HEAD
@@ -504,7 +509,7 @@ export default function MobileLaunchPage() {
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -559,4 +564,4 @@ export default function MobileLaunchPage() {
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

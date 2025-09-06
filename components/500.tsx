@@ -8,15 +8,17 @@ interface 500Props {
 }
 
 const 500: React.FC<500Props> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className='min-h-screen flex items-center justify-center'>
       Something went wrong.
-    </div>
-  );export default function FiveHundred(){
+    </div>;
+  );export default function FiveHundred(){;
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
 <<<<<<< HEAD
 }
-=======
+<<<<<<< HEAD
+
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

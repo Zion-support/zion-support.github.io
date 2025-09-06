@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import {
   Card
@@ -21,8 +20,7 @@ import { Button } from "@/components/ui/button"
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
+=======
 
   const stats = {
     totalReferrals: 42
@@ -37,6 +35,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -44,11 +43,16 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+
+=======
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -82,7 +86,7 @@ export function PartnerDashboard() {
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 =======
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
@@ -91,7 +95,7 @@ export function PartnerDashboard() {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -114,10 +118,10 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
-            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
+            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -129,7 +133,7 @@ export function PartnerDashboard() {
 <<<<<<< HEAD
 =======
               ${stats.pendingRevenue} pending payout
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </p>
           </CardContent>
         </Card>
@@ -139,7 +143,7 @@ export function PartnerDashboard() {
 =======
       
       {/* Performance Chart */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -170,7 +174,7 @@ export function PartnerDashboard() {
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
           <Button variant="outline" size="sm">View All</Button>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -213,10 +217,10 @@ export function PartnerDashboard() {
             </p>
           </div>
         </CardContent>
-      </Card>
-    </div>
-  )
-}
+      </Card>;
+    </div>;
+  );
+};
 =======
     </div>
   )
@@ -310,4 +314,4 @@ export function PartnerDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

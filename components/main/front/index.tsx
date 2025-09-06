@@ -6,28 +6,29 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import {
-  Cpu
-  Gauge
-  GitBranch
-  Rocket
-  ShieldCheck
-  Zap
-  Activity
-  Globe
-  Layers
-  BarChart3
-  Search
-  Link2
-  Palette
-  LineChart;
+  Cpu,
+  Gauge,
+  GitBranch,
+  Rocket,
+  ShieldCheck,
+  Zap,
+  Activity,
+  Globe,
+  Layers,
+  BarChart3,
+  Search,
+  Link2,
+  Palette,;
+  LineChart,;
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
 <<<<<<< HEAD
+export default function MainFrontIndex() {;
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function MainFrontIndex() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
     stiffness: 90
@@ -237,7 +238,7 @@ export default function MainFrontIndex() {
 
         </nav>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
@@ -252,7 +253,7 @@ export default function MainFrontIndex() {
 
             onClick={() => setMobileOpen(false)}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -263,7 +264,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='mb-4 flex items-center justify-between'>
                 <div className='text-lg font-semibold'>Navigate</div>
@@ -365,7 +366,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero */}
       <div role='main' className='relative z-10'>        <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -376,7 +377,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -603,7 +604,7 @@ export default function MainFrontIndex() {
 
                 </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -643,7 +644,7 @@ export default function MainFrontIndex() {
 =======
 
               </a>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </Link>
             <Link href='#capabilities'>
               <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>
@@ -876,7 +877,7 @@ export default function MainFrontIndex() {
           className='mx-auto max-w-7xl px-6 pb-14'          id="engines"
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1074,7 +1075,7 @@ export default function MainFrontIndex() {
           className='mx-auto max-w-7xl px-6 pb-14'          id="innovations"
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1282,7 +1283,7 @@ export default function MainFrontIndex() {
 
                 )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </article>
             ))}
           </div>
@@ -1290,7 +1291,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Netlify Automations */}
         <motion.section
           id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
@@ -1301,7 +1302,7 @@ export default function MainFrontIndex() {
 =======
           transition={{ duration: 0.5 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1549,7 +1550,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -1557,7 +1558,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* AUTO-GENERATED: FRONT_ADS_START */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl'>
@@ -1676,7 +1677,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -1743,7 +1744,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -1751,7 +1752,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Suites */}
         <motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
@@ -1763,7 +1764,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1882,7 +1883,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Superpowers */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1894,7 +1895,7 @@ export default function MainFrontIndex() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Superpowers
           </h2>
@@ -1943,7 +1944,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Get Started */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1955,7 +1956,7 @@ export default function MainFrontIndex() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Get Started in Minutes
           </h2>
@@ -2032,7 +2033,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -2299,7 +2300,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -2307,7 +2308,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Outcomes */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -2319,7 +2320,7 @@ export default function MainFrontIndex() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcomes
           </h2>
@@ -2361,7 +2362,7 @@ export default function MainFrontIndex() {
 
                       </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </Link>
                   ))}
               </div>
@@ -2371,7 +2372,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Feature Map */}
         <motion.section
           id='feature-map'          initial={{ opacity: 0, y: 24 }}
@@ -2629,7 +2630,7 @@ export default function MainFrontIndex() {
 =======
           id='modules'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -2638,7 +2639,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Platform Modules
@@ -2759,6 +2760,7 @@ export default function MainFrontIndex() {
   </div>
 </section>
 /* AUTO:FRONT_INDEX_DIRECTORY_END */}
+
         {/* Platform Modules */}
         <motion.section
            id="modules"
@@ -2804,10 +2806,44 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
 =======
-                Icon: Rocket,
-                title: 'Autonomous Factories',
-                desc: 'Composable, domain‑specific automation factories.',
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        {/* Neural Feature Matrix */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        >
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
+            Neural Feature Matrix
+          </h2>
+          <p className='mx-auto mt-2 max-w-3xl text-center text-sm text-white/70'>
+            A denser, at-a-glance atlas of what Zion ships autonomously. Every
+            tile links to the live hub, report, or docs.
+          </p>
+          <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+            {[
+              {
+                label: 'Automation Hub',
+                desc: 'Factories, agents, workflows',
+                href: '/automation',
+              },
+              {
+                label: 'Main Sync Engine',
+                desc: 'Safe diffs to main',
+                href: '/automation',
+              },
+              {
+                label: 'Zero‑Ops Cloud',
+                desc: 'Run in the cloud, no servers',
                 href: '/automation',
               },
               {
@@ -3051,13 +3087,13 @@ export default function MainFrontIndex() {
 =======
             )}          </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </motion.section>
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Extended Feature Directory */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3068,7 +3104,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -3204,13 +3240,13 @@ export default function MainFrontIndex() {
 =======
             )}          </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </motion.section>
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Capability Deep Links */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3221,7 +3257,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -3348,7 +3384,7 @@ export default function MainFrontIndex() {
 
         </motion.section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Use Cases */}
         <motion.section
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
@@ -3360,7 +3396,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3498,13 +3534,13 @@ export default function MainFrontIndex() {
             ))}
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </motion.section>
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Capabilities */}
         <motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
@@ -3516,7 +3552,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3652,7 +3688,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -3660,7 +3696,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Why Zion */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3672,7 +3708,7 @@ export default function MainFrontIndex() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -3723,7 +3759,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Value Pillars */}
         <motion.section
           id='pillars'          initial={{ opacity: 0, y: 24 }}
@@ -3735,7 +3771,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3806,7 +3842,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -3814,7 +3850,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits */}
         <motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
@@ -3826,7 +3862,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-20'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3913,7 +3949,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits in Practice */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3924,7 +3960,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -4077,7 +4113,7 @@ export default function MainFrontIndex() {
           className='mx-auto max-w-7xl px-6 pb-14'          id="reports"
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4191,7 +4227,7 @@ export default function MainFrontIndex() {
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </a>
           </div>
         </motion.section>
@@ -4250,7 +4286,7 @@ export default function MainFrontIndex() {
         <motion.section
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4317,7 +4353,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -4325,7 +4361,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -4610,7 +4646,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4699,7 +4735,7 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
@@ -4707,7 +4743,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Capabilities Matrix */}
         <motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
@@ -4719,7 +4755,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-16'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4864,13 +4900,13 @@ export default function MainFrontIndex() {
             ))}
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </motion.section>
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits Directory */}
         <motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
@@ -4882,7 +4918,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-16'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4965,15 +5001,15 @@ export default function MainFrontIndex() {
 
                 </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
           </div>
         </motion.section>
 <<<<<<< HEAD
-        {/* AUTO-GENERATED: FRONT_ADS_START */}
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -5091,7 +5127,7 @@ export default function MainFrontIndex() {
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -5222,6 +5258,14 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </section>
+=======
+
+          {/* existing reports content */}
+        </section>
+
+        {/* New Intelligent Automations */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </div>
       {/* Back to top */}
       {showToTop && (
@@ -5234,7 +5278,7 @@ export default function MainFrontIndex() {
 =======
           aria-label='Scroll to top'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           ↑ Top
         </button>
@@ -5244,7 +5288,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className='mx-auto max-w-7xl px-6 pb-14'>
   <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -5418,9 +5462,9 @@ export default function MainFrontIndex() {
 /* AUTO-GENERATED: FRONT_ACTIONS_END */
 <<<<<<< HEAD
 }</div>
-}</div> </div> </div>) )
 =======
 }</div> 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div> </div>) ) 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div> </motion.section> {
@@ -5433,15 +5477,15 @@ export default function MainFrontIndex() {
   /* Autonomous Innovations */
 }<motion.section > </a> <a href="/.netlify/functions/revenue-ideas-lab" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><LineChart className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Revenue Ideas Lab</h3></div> <p className="mt-1 text-sm text-white/75" >Monetization experiments with safe, automatic repository sync.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> <a href="/.netlify/functions/autonomous-invention-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Autonomous Invention Orchestrator</h3></div> <p className="mt-1 text-sm text-white/75" >Continuously invents and applies front enhancements.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </div> </motion.section> </a>) )
 }</div> </section>) : (<Link href= {
-  card.href as string
+  card.href as string 
 }><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
-}</article>) )
+}</article>) ) 
 }</div> </section> {
   /* Netlify Automations */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold"> {
   f.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-  f.desc
+  f.desc 
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
 }</div> </motion.section> </a> <a href="/.netlify/functions/autonomous-invention-orchestrator" target="blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Autonomous Invention Orchestrator</div> <div className="mt-1 text-sm text-white/75" >Invents and curates fresh automations and safely syncs diffs to main.</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Trigger <span aria-hidden>↗</span></div> </a> </div> </section> {
   /* Feature Spotlight */
@@ -5470,7 +5514,7 @@ export default function MainFrontIndex() {
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Feature Map</h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" > A fast overview of what you can explore right now across the platform. </p> <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-  item.desc
+  item.desc 
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* AUTO: catalog injection for automated advertising */
@@ -5484,21 +5528,21 @@ export default function MainFrontIndex() {
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
-  item.desc
+  item.desc 
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Extended Feature Directory */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold"> {
   title
 }</h3></div> <p className="mt-1 text-sm text-white/75"> {
-  desc
+  desc 
 }</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Capability Deep Links */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   label as string
 }</div> <div className="mt-1 text-sm text-white/75"> {
-  desc as string
+  desc as string 
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Use Cases */
@@ -5512,7 +5556,7 @@ export default function MainFrontIndex() {
 }> <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30" > <div className="text-2xl font-extrabold tracking-tight" > {
   item.value
 }</div> <div className="mt-1 text-xs text-white/70" > {
-  item.label
+  item.label 
 }</div>
 }</div> </motion.section> {
   /* Capabilities */
@@ -5524,8 +5568,8 @@ export default function MainFrontIndex() {
   /* Value Pillars */
 }<motion.section </a> </a>) )
 }</div> </motion.section> {
-  /* Benefits */
-}<motion.section </a> </a>) )
+  /* Benefits */ 
+}<motion.section </a> </a>) ) 
 }</div> </div> </div>
 }</div> </motion.section> {
   /* Benefits in Practice */
@@ -5536,9 +5580,9 @@ export default function MainFrontIndex() {
 }> <a className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30" > <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0 0 12px rgba (52, 211, 153, 0.9) ]" /> <span className="text-sm text-white/80" ><span className="font-semibold text-white" > {
   b.label
 }</span> — {
-  b.desc
+  b.desc 
 }<span className="ml-1 text-cyan-300/90" >→</span></span>
-}</div> </motion.section> </a> </a>) )
+}</div> </motion.section> </a> </a>) ) 
 }</div> </section> {
   /* Ecosystem & Integrations */
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Ecosystem & Integrations</h2> <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" > <a href="/site-health" target="blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" > <Rocket className="h-5 w-5 text-cyan-300" /> <h3 className="text-lg font-semibold" >GitHub Actions</h3> </div> <p className="mt-1 text-sm text-white/75" >Live pipelines, logs, and artifacts powering automations.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Zero‑ops hosting and functions for maintenance schedules.</p> <div className="mt-3 text-xs text-cyan-300/90" >Learn more →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Realtime data and storage for emerging automation needs.</p> <div className="mt-3 text-xs text-cyan-300/90" >Explore →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Futuristic micro‑interactions and motion design system.</p> <div className="mt-3 text-xs text-cyan-300/90" >Docs →</div> </a> </div> </motion.section> {
@@ -5563,7 +5607,7 @@ export default function MainFrontIndex() {
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.title
 }</div> <div className="mt-1 text-sm text-white/75"> {
-  item.desc
+  item.desc 
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Benefits Directory */
@@ -5585,5 +5629,8 @@ export default function MainFrontIndex() {
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+=======
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

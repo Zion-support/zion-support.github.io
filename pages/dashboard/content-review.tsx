@@ -4,10 +4,11 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
+<<<<<<< HEAD
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie |'').split(';').reduce(
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
@@ -24,18 +25,13 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   return { props: {} }
 }
 export default function ContentReviewPage() {
-  const [filters, setFilters] = useState<{
+  const [filters, setFilters] = useState<{;
     status?: string;
     reason?: string;
     userEmail?: string;
     contentType?: string;
   }>({ status: 'pending' });  const query = useMemo(() => {
 =======
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GetServerSideProps } from 'next';
-import ModerationModal from '../../components/admin/ModerationModal';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -60,7 +56,7 @@ export default function ContentReviewPage(req, res) {
   try {
   const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
   const query = useMemo(() => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
@@ -107,7 +103,7 @@ export default function ContentReviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
@@ -249,6 +245,8 @@ export default function ContentReviewPage(req, res) {
       )}
     </EnhancedLayout>
 );
+
+}
 =======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
@@ -290,4 +288,4 @@ export default function ContentReviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

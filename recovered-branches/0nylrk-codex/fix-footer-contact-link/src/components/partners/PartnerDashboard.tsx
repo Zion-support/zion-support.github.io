@@ -1,37 +1,33 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  BarChart
-  DollarSign
-  LineChart
-  TrendingUp
-  Users
-} from "lucide-react";
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-  const stats = {
-    totalReferrals: 42
-    pendingReferrals: 8
-    completedReferrals: 34
-    conversionRate: 18.5
-    totalRevenue: 850.0
-    pendingRevenue: 200.0
-  }
-
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  BarChart,
+  DollarSign,
+  LineChart,
+  TrendingUp,
+  Users,
+} from "lucide-react";
+>>>>>>> main
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -39,11 +35,22 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
     totalRevenue: 850.00,
+<<<<<<< HEAD
+    pendingRevenue: 200.00;
+  };
+=======
     pendingRevenue: 200.00
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+  };
+
+>>>>>>> main
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -63,6 +70,10 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -77,6 +88,10 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -92,6 +107,10 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -109,6 +128,10 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -132,10 +155,9 @@ export function PartnerDashboard() {
       </Card>
     </div>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -224,6 +246,10 @@ export function PartnerDashboard() {;
       </Card>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

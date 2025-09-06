@@ -8,59 +8,62 @@ import { useRouter } from 'next/router';
 
 <<<<<<< HEAD
 import {
-  Menu
-  X
-  ChevronDown
-  ChevronRight
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Sparkles
-  Brain
-  Atom
-  Shield
-  DollarSign
-  FileText
-  BarChart3
-  MessageSquare
-  Truck
-  Users
-  Database
-  Cpu
-  Cloud
-  Play
-  Search
-  ShieldCheck
-  TrendingUp
-  Rocket
-  Zap
-  Check
-  Star
-  Clock
-  Target
-  Building
-  Award
-  ChartBar
-  Lock
-  Smartphone
-  Palette
-  Calendar
-  CreditCard
-  Settings
-  Code
-  BookOpen
-  Activity
-  Bot
-  ChevronRight as ChevronRightIcon
-  Eye
-  FlaskConical
-  Link as LinkIcon;
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,;
+  Link as LinkIcon,;
 import Button from '../ui/Button';
+<<<<<<< HEAD
+export default function NeoFuturisticNavigation() {;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default function NeoFuturisticNavigation() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -453,7 +456,6 @@ export default function NeoFuturisticNavigation() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {/* Services Dropdown */}
@@ -704,7 +706,7 @@ export default function NeoFuturisticNavigation() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -749,7 +751,7 @@ export default function NeoFuturisticNavigation() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Company Section */}
               <div>
                 <button

@@ -1,15 +1,23 @@
 
-import React, { useEffect, useState } from "react",
 <<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
 interface StickyActionProps {
   className?: string;
 
   children: React.ReactNode
 
   showAfterScroll?: number;
+  position?: "bottom" | "top"
+}
+
+export function StickyAction({;
+  className;
+  children;
+  showAfterScroll = 300;
 =======
+import React, { useEffect, useState } from "react",
 import { cn } from "@/lib/utils",
 import { motion, AnimatePresence } from "framer-motion",
 
@@ -17,7 +25,6 @@ interface StickyActionProps {
   className?: string,
   children: React.ReactNode,
   showAfterScroll?: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   position?: "bottom" | "top"
 }
 export function StickyAction({
@@ -33,6 +40,7 @@ export function StickyAction({
   className,
   children,
   showAfterScroll = 300,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false),
@@ -83,7 +91,6 @@ export function StickyAction({
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
-
 =======
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
@@ -125,7 +132,7 @@ export function StickyAction({;
       {isVisible && (;
         <motion.div;
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             className
           )}
         >

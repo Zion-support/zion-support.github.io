@@ -10,9 +10,15 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -57,7 +63,6 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {
         translations[targetLang] = content;
         continue
-      }
 =======
 ;
     // Prepare system prompt based on content type;
@@ -74,6 +79,7 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
         continue;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -98,6 +104,8 @@ serve(async (req) => {
               role: "user"
               content: `Translate the following ${contentType |"content"} from ${sourceLanguage} to ${targetLang}:
               ${content}
+<<<<<<< HEAD
+              
               Only provide the translated text, no explanations or additional comments.`}];
           temperature: 0.3})});
       if (!response.ok) {
@@ -106,15 +114,7 @@ serve(async (req) => {
       }
       const data = await response.json();
       translations[targetLang] = data.choices[0].message.content.trim()
-    }
 =======
-              role: "system",
-              content: systemPrompt},
-            {
-              role: "user",
-              content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
-              
-              ${content}
 ;
               Only provide the translated text, no explanations or additional comments.`}],;
           temperature: 0.3})}),;
@@ -125,6 +125,7 @@ serve(async (req) => {
 ;
       const data = await response.json(),;
       translations[targetLang] = data.choices[0].message.content.trim();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -144,9 +145,6 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 <<<<<<< HEAD
-  }
-});
-
 =======
 ;
     return new Response(;
@@ -164,6 +162,7 @@ serve(async (req) => {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

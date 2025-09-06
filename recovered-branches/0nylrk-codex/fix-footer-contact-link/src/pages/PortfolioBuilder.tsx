@@ -1,15 +1,13 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
-function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume');
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
 =======
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
@@ -19,6 +17,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
@@ -57,14 +56,4 @@ export default function PortfolioBuilder() {
     </ProtectedRoute>
   )
 }
-=======
 ;
-export default function PortfolioBuilder() {;
-  return (;
-    <ProtectedRoute>;
-      <PortfolioBuilderContent />;
-    </ProtectedRoute>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

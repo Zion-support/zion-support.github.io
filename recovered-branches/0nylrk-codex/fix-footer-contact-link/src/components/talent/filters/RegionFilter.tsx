@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {RegionFilterProps} from "@/types/filters";
+=======
 import { ChevronDown, ChevronUp } from "lucide-react",
 <<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
@@ -7,13 +13,19 @@ import { RegionFilterProps } from "@/types/filters";
 =======
 import { Checkbox } from "@/components/ui/checkbox",
 import { RegionFilterProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
+>>>>>>> main
 const REGION_OPTIONS = [
-  { id: "North America", label: "North America" }
-  { id: "Europe", label: "Europe" }
-  { id: "Asia", label: "Asia" }
-  { id: "South America", label: "South America" }
-  { id: "Australia", label: "Australia" }
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+<<<<<<< HEAD
   { id: "Africa", label: "Africa" }
 <<<<<<< HEAD
 ];
@@ -26,8 +38,18 @@ export function RegionFilter({
 }: RegionFilterProps) {
 =======
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  { id: "Africa", label: "Africa" },
+];
+>>>>>>> main
 
+export function RegionFilter({
+  selectedRegions,
+  toggleRegion,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -41,6 +63,10 @@ export function RegionFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map((region) => (
@@ -96,7 +122,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {region.label}
               </label>
             </div>
@@ -106,3 +132,4 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>
   );
 }
+;

@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React, { forwardRef } from "react";
+import {ChevronDown} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {SafeRef} from "@/types/ref-types";
+=======
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { SafeRef } from "@/types/ref-types";
 =======
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -26,7 +32,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
   badge?: React.ReactNode;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
@@ -56,7 +62,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         </a>
       )
 <<<<<<< HEAD
-    }
 =======
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;
@@ -72,6 +77,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           {badge && <span>{badge}</span>}
         </a>;
       );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -101,9 +107,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
   }
 <<<<<<< HEAD
 );
-SidebarMenuItem.displayName = "SidebarMenuItem";
 =======
 ),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
@@ -126,6 +132,8 @@ export { SidebarMenuItem, SidebarMenuGroup }
 =======
 },
 
+<<<<<<< HEAD
+=======
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
 SidebarMenuItem.displayName = "SidebarMenuItem",;
@@ -142,5 +150,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

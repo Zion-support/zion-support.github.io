@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
+import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
+import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
+import {Phone, Mail} from 'lucide-react';
+=======
 import React from 'react',
 import Head from 'next/head',
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
@@ -8,14 +16,13 @@ import { Phone, Mail } from 'lucide-react';
 =======
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
 import { Phone, Mail } from 'lucide-react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
 <<<<<<< HEAD
-
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -105,7 +112,7 @@ export default function Revolutionary2026ServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -236,6 +243,23 @@ export default function Revolutionary2026ServicesPage() {
 }
         />
       </Head>
+<<<<<<< HEAD
+      <main className='min-h-screen bg-gray-900'>
+        {/* Navigation */}
+        <Revolutionary2026UltimateNavigation />
+        {/* Hero Section */}
+        <Revolutionary2026UltimateHero />
+        {/* Services Showcase */}
+        <Revolutionary2026UltimateServicesShowcase />
+        {/* Additional Content Sections */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
+          <div className='max-w-7xl mx-auto relative z-10'>
+            {/* Why Choose Zion Tech Group */}
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+=======
       <main className="min-h-screen bg-gray-900">
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -271,6 +295,7 @@ export default function Revolutionary2026ServicesPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
@@ -279,6 +304,10 @@ export default function Revolutionary2026ServicesPage() {
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
+<<<<<<< HEAD
+            {/* Features Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
+=======
             {/* Features Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -286,6 +315,7 @@ export default function Revolutionary2026ServicesPage() {
 }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -363,7 +393,7 @@ export default function Revolutionary2026ServicesPage() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -391,10 +421,13 @@ export default function Revolutionary2026ServicesPage() {
           </div>
         </section>
       </main>
-    </>
 <<<<<<< HEAD
+    </>;
   );
+
+}
 =======
+    </>
   )
             <div className="text-center">;
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">;
@@ -433,4 +466,4 @@ export default function Revolutionary2026ServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -7,60 +7,59 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Rocket
-  Brain
-  Atom
-  Zap
-  Sparkles
-  Shield
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github
-  CheckCircle
-  Award
-  Star
-  Crown
-  Gem
-  Infinity
-  Heart
-  ShieldCheck
-  Users
-  Briefcase
-  BookOpen
-  Target
-  Microscope
-  Cpu
-  Database
-  Cloud
-  Lock
-  Home
-  Building
-  DollarSign
-  FileText
-  MessageSquare
-  MessageCircle
-  Newspaper
-  Handshake
-  LifeBuoy
-  Activity
-  ShoppingCart
-  UserCheck
-  BarChart
-  Palette
-  Video
-  LockIcon
-  GlobeIcon
-  CpuIcon;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Zap, Sparkles, Shield
-
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
+  Crown,
+  Gem,
+  Infinity,
+  Heart,
+  ShieldCheck,
+  Users,
+  Briefcase,
+  BookOpen,
+  Target,
+  Microscope,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Home,
+  Building,
+  DollarSign,
+  FileText,
+  MessageSquare,
+  MessageCircle,
+  Newspaper,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  ShoppingCart,
+  UserCheck,
+  BarChart,
+  Palette,
+  Video,
+  LockIcon,
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -270,11 +269,12 @@ const stats = [
 
 export default function UltraFuturisticFooter2034() {
   return (
-    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
 <<<<<<< HEAD
 export default function UltraFuturisticFooter2034() {
   return (
+<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 overflow-hidden'>
@@ -302,12 +302,9 @@ export default function UltraFuturisticFooter2034() {
               <motion.div
 =======
 
-export default function UltraFuturisticFooter2034() {
-  return (
-
               <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -316,7 +313,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -390,7 +387,7 @@ export default function UltraFuturisticFooter2034() {
                   ))}
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
@@ -398,7 +395,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>
@@ -426,7 +423,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -450,7 +447,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -491,7 +488,7 @@ export default function UltraFuturisticFooter2034() {
 
                               {service.price}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </span>
                           </Link>
                         ))}
@@ -512,7 +509,7 @@ export default function UltraFuturisticFooter2034() {
 
               <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -521,7 +518,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 {/* Quick Links */}
                 <div>
@@ -563,7 +560,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Company Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -598,7 +595,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Social Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -628,7 +625,7 @@ export default function UltraFuturisticFooter2034() {
 
                       </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </div>
                 </div>
@@ -638,7 +635,7 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Certifications */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -675,7 +672,7 @@ export default function UltraFuturisticFooter2034() {
 
                 </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </motion.div>
@@ -683,12 +680,16 @@ export default function UltraFuturisticFooter2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+<<<<<<< HEAD
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+=======
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -718,7 +719,9 @@ export default function UltraFuturisticFooter2034() {
 );
 }
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
-export default function UltraFuturisticFooter2034() {return (";
+;
+export default function UltraFuturisticFooter2034() {;
+  return (";
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
@@ -726,4 +729,4 @@ export default function UltraFuturisticFooter2034() {return (";
 =======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

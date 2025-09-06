@@ -19,8 +19,8 @@ interface LoadingState {
   retryCount: number
   isOnline: boolean
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>
-  fallback?: React.ReactNode
+  importFn: () => Promise<{ default: ComponentType<any> }>;
+  fallback?: React.ReactNode;
   errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
@@ -90,11 +90,15 @@ const EnhancedLoading: React.FC<{
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
+<<<<<<< HEAD
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
+=======
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -117,7 +121,7 @@ const EnhancedLoading: React.FC<{
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -139,7 +143,7 @@ const EnhancedError: React.FC<{
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
           )}
@@ -164,8 +168,11 @@ const EnhancedError: React.FC<{
             }
           </p>
           {retryCount > 0 && (
+<<<<<<< HEAD
+            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
+=======
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Retry {retryCount}/{maxRetries}
             </p>
           )}
@@ -186,7 +193,7 @@ const EnhancedError: React.FC<{
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Try Again
           </Button>
         )}
@@ -242,7 +249,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         })
       }, 100)
       return () => clearInterval(interval)
-    }
+    };
+;
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -471,7 +479,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   // Success state
   if (DynamicComponent) {
@@ -536,7 +544,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   );
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
@@ -568,10 +576,13 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //       </div>
 //     )
 //   }
-<<<<<<< HEAD
-// )
-export default DynamicComponentLoader; export default DynamicComponentLoader
-=======
 // );
+<<<<<<< HEAD
+;
+export default DynamicComponentLoader; export default DynamicComponentLoader ;
+;
+}
+}
+=======
 export default DynamicComponentLoader;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

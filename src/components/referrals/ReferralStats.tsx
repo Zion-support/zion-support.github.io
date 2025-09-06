@@ -1,11 +1,6 @@
-
 <<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from 'lucide-react'
-=======
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ReferralStats as ReferralStatsType } from '@/types/referrals'
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -21,6 +16,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ReferralStats as ReferralStatsType } from "@/types/referrals"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
+=======
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
@@ -29,10 +31,11 @@ interface ReferralStatsProps {
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-      title: 'Total Referrals'
-      icon: <Share className='h-5 w-5 text-muted-foreground' />
-      description: "People you've invited"
-    }
+<<<<<<< HEAD
+      title: 'Total Referrals',
+      icon: <Share className='h-5 w-5 text-muted-foreground' />,
+      description: "People you've invited",
+    },
     {
       title: 'Completed'
       value: stats.completedReferrals
@@ -85,7 +88,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"}],
 
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (
         <Card key={i}>
@@ -105,7 +108,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 =======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
@@ -114,9 +117,14 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
             )}
           </CardContent>
         </Card>
-      ))}
-    </div>
-  )
+      ))};
+    </div>;
+  );
+};
+}
+}
+}
+}
 }
 =======
               </>
@@ -174,4 +182,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

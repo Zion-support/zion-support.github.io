@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Briefcase, Star, User} from "lucide-react";
+import {Button} from "@/components/ui/button";
+=======
 import { useState } from "react",
 <<<<<<< HEAD
 import { Briefcase, Star, User } from "lucide-react";
@@ -6,7 +11,7 @@ import { Button } from "@/components/ui/button";
 =======
 import { Briefcase, Star, User } from "lucide-react",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -24,17 +29,19 @@ interface UserTypeSelectionProps {
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
-
-      id: "serviceProvider"
-      name: "Service Provider"
-      description: "I want to offer services on the platform"
-
+      id: "serviceProvider",
+      name: "Service Provider",
+      description: "I want to offer services on the platform",
+<<<<<<< HEAD
+      icon: Briefcase;
+    };
+=======
       icon: Briefcase
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
 
       id: "talent"
@@ -108,7 +115,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
     </div>
   )
-}
 =======
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -184,6 +190,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

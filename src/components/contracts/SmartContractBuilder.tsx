@@ -1,17 +1,5 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
 <<<<<<< HEAD
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
+
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -47,7 +35,7 @@ export function SmartContractBuilder({
   }
   // Convert ContractFormValues to contract content string
   const handleDeployContract = async () => {
-    if (!generatedContract) return
+    if (!generatedContract) return;
     try {
       setDeployStatus('deploying')
       const contractInfo = await deploySmartContract(generatedContract, deployOptions)
@@ -92,8 +80,8 @@ const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
 ]
 interface SmartContractBuilderProps {
   isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
+  onClose: () => void;
+  talent: TalentProfile;
   clientName: string; // Assuming clientName is passed as a prop
   onContractGenerated?: (contractContent: string) => void; // For Solidity
   onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown
@@ -121,9 +109,9 @@ export function SmartContractBuilder({
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
-    useEscrow: true
-    deployToChain: false // Default to not deploying to chain immediately
-})
+    useEscrow: true,
+    deployToChain: false // Default to not deploying to chain immediately;
+});
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
   // States for on-chain agreement UI and deployment
@@ -387,10 +375,61 @@ export function SmartContractBuilder({
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
+=======
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
+import { useSmartContracts } from "@/hooks/useSmartContracts",
+import { toast } from "sonner",
+import {logErrorToProduction} from '@/utils/productionLogger',
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle>Smart Contract Builder</DialogTitle>;
+          <DialogDescription>;
+            Create, customize, and deploy your smart contract or generate a legal draft.</DialogDescription>;
+        </DialogHeader>;
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
+          <div className="flex justify-between items-center mb-4">;
+            <TabsList className="grid grid-cols-3"> {/* Added new tab */}
+              <TabsTrigger value="form">1.Details</TabsTrigger>;
+              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
+              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
+            </TabsList>;
+            <div className="flex gap-2">;
+              <Button;
+                variant="outline";
+                size="sm";
+                onClick={() => setTemplateManagerOpen(true)}
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
+                Templates;
+              </Button>;
+            </div>;
+          </div>;
+          <TabsContent value="form" className="pt-4">;
+            <ContractForm;
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleFormSubmit}
+            />
+          </TabsContent>
+          
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
-                <ContractPreview
+                <ContractPreview 
+<<<<<<< HEAD
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
@@ -398,7 +437,7 @@ export function SmartContractBuilder({
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
-                    <Button
+                    <Button 
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -462,47 +501,6 @@ setActiveTab ("preview")
         </Tabs>
         <TemplateManager
 =======
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
-        <DialogHeader>;
-          <DialogTitle>Smart Contract Builder</DialogTitle>;
-          <DialogDescription>;
-            Create, customize, and deploy your smart contract or generate a legal draft.</DialogDescription>;
-        </DialogHeader>;
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
-          <div className="flex justify-between items-center mb-4">;
-            <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-              <TabsTrigger value="form">1.Details</TabsTrigger>;
-              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
-              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
-            </TabsList>;
-            <div className="flex gap-2">;
-              <Button;
-                variant="outline";
-                size="sm";
-                onClick={() => setTemplateManagerOpen(true)}
-                className="flex gap-1";
-              >;
-                <Save className="h-4 w-4" />;
-                Templates;
-              </Button>;
-            </div>;
-          </div>;
-          <TabsContent value="form" className="pt-4">;
-            <ContractForm;
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleFormSubmit}
-            />
-          </TabsContent>
-          
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <div>
-                <ContractPreview 
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -526,7 +524,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
@@ -537,6 +535,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     </Dialog>
   )}
 }
+;
 =======
         />;
       </DialogContent>;
@@ -544,4 +543,4 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,6 +25,7 @@ import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show loading while checking authentication
@@ -53,7 +65,6 @@ export default function PublishProduct() {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -102,6 +113,7 @@ export default function PublishProduct() {;
       <Footer />;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

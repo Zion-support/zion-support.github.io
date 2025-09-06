@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 const templates = {
   lulu: {
     sizes: [
@@ -16,8 +16,10 @@ const templates = {
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}}
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(templates)
+  res.status(200).json(templates);
+};
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 const templates = {;
   lulu: {;
     sizes: [;
@@ -38,5 +40,5 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

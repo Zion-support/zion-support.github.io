@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Switch} from "@/components/ui/switch";
+import {Badge} from "@/components/ui/badge";
+import {Separator} from "@/components/ui/separator";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {useAuth} from "@/hooks/useAuth";
+=======
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -39,7 +58,7 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -70,11 +89,19 @@ export function ServiceProviderRegistrationForm() {
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
+<<<<<<< HEAD
+export function ServiceProviderRegistrationForm() {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serviceTags, setServiceTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+=======
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [serviceTags, setServiceTags] = useState<string[]>([]),
   const [isGenerating, setIsGenerating] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
@@ -132,11 +159,7 @@ export function ServiceProviderRegistrationForm() {
       }
       reader.readAsDataURL(file)
     }
-  }
-  // Generate enhanced profile with AI
-  const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
+  };
 =======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -225,6 +248,7 @@ export function ServiceProviderRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -253,8 +277,6 @@ export function ServiceProviderRegistrationForm() {;
       });
       if (error) {
         throw new Error(error.message)
-      }
-      setGeneratedContent(data as { summary: string, services: string[] })
 =======
   },;
   // Generate enhanced profile with AI;
@@ -283,6 +305,7 @@ export function ServiceProviderRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
@@ -446,7 +469,7 @@ export function ServiceProviderRegistrationForm() {;
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [],;
             finalServices = [...new Set([...serviceTags, ...aiServices])];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
@@ -456,10 +479,6 @@ export function ServiceProviderRegistrationForm() {;
       } else if (generatedContent) {
         finalSummary = generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
-      }
-      // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser()
-      const userEmail = userData.user?.email;
 =======
         } catch (error) {;
           console.error("Error enhancing profile:", error),;
@@ -468,6 +487,7 @@ export function ServiceProviderRegistrationForm() {;
       } else if (generatedContent) {;
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
 
       // Get user email for notification
@@ -857,7 +877,7 @@ export function ServiceProviderRegistrationForm() {;
                     />;
                   </div>;
                 </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -1059,7 +1079,7 @@ export function ServiceProviderRegistrationForm() {;
 =======
                   </div>;
                 </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>

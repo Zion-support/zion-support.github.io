@@ -7,8 +7,8 @@
 }</tbody> </table> </div>)
 }</div>) import fs from 'fs';
 import path from 'path';
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
-export async function getServerSideProps() {
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
@@ -60,9 +60,13 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
           </table>
         </div>
       )}
-    </div>
 <<<<<<< HEAD
+    </div>;
 );
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 =======
   );

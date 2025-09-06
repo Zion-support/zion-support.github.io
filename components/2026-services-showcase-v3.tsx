@@ -11,10 +11,10 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 export default function ServicesShowcase2026V3() {
 
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
 
 <<<<<<< HEAD
   return (
@@ -47,7 +47,7 @@ export default function ServicesShowcase2026V3() {
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
@@ -56,7 +56,7 @@ export default function ServicesShowcase2026V3() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -117,7 +117,7 @@ export default function ServicesShowcase2026V3() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -202,7 +202,8 @@ export default function ServicesShowcase2026V3() {
     </UltraQuantumHolographicBackground>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

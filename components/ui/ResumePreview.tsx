@@ -1,6 +1,10 @@
 import React, { forwardRef } from 'react';
+<<<<<<< HEAD
+export type ResumeData = {;
+=======
 
 export type ResumeData = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   contact?: {
     email?: string;
@@ -44,8 +48,13 @@ export type ResumeData = {
     link?: string;
     technologies?: string[];
   }>;
-}
-export type ResumePreviewProps = {
+};
+=======
+
+    {children}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
@@ -69,7 +78,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   }>
 }
 export type ResumePreviewProps = {
-  data: ResumeData
+  data: ResumeData,;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 }
@@ -85,9 +94,9 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-    const portfolioItems = (data.portfolio |[]).slice(
-      0
-      Math.max(0, maxPortfolioItems)
+    const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems);
     );
 <<<<<<< HEAD
 =======
@@ -130,7 +139,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               {data.contact?.linkedin && (                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {data.contact.website}
                 </a>
               )}
@@ -162,7 +171,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Summary */}
           {data.summary && (
             <section className='mb-5'>
@@ -174,11 +183,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
 <<<<<<< HEAD
-          )}
-          {/* Skills & Technologies */}
-          {(data.skills?.length |data.technologies?.length) && (
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
 
           {/* Skills & Technologies */}
@@ -214,9 +221,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     {t}
                   </span>
                 ))}
-              </div>
-            </section>
-          )}
 =======
                   >                    {t}
 
@@ -229,6 +233,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
                   </span>
                 ))}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </section>
           )}
@@ -247,7 +252,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
 <<<<<<< HEAD
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
                   <div key={`exp-${idx}`}>
@@ -257,14 +262,13 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
-                        {(role.start |role.end) && (
-                          <span>
-                            {role.start |''}
+                        {(role.start || role.end) && (
 =======
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
 
                         {(role.start || role.end) && (
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <span>
                             {role.start || ''}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -312,10 +316,12 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start |ed.end]
 =======
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+<<<<<<< HEAD
+=======
 
                         .filter(Boolean)
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         .join(' • ')}
                     </div>
                   </div>
@@ -403,9 +409,19 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   }
 );
 ResumePreview.displayName = 'ResumePreview';
-export default ResumePreview;
 
 <<<<<<< HEAD
+export default ResumePreview;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
 =======
 export default ResumePreview;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

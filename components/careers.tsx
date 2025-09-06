@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 =======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -34,7 +33,8 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
-export default function Careers() {
+
+export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -148,11 +148,9 @@ export default function Careers() {
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
 <<<<<<< HEAD
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
@@ -170,10 +168,9 @@ export default function Careers() {
           </p>
         </motion.div>
 <<<<<<< HEAD
-        {/* Company Culture */}
-        <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Company Culture */}
         <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -196,10 +193,9 @@ export default function Careers() {
           </div>
         </motion.div>
 <<<<<<< HEAD
-        {/* Benefits */}
-        <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits */}
         <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -221,10 +217,9 @@ export default function Careers() {
           </div>
         </motion.div>
 <<<<<<< HEAD
-        {/* Job Openings */}
-        <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Job Openings */}
         <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -253,7 +248,7 @@ export default function Careers() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
@@ -316,10 +311,9 @@ export default function Careers() {
           )}
         </motion.div>
 <<<<<<< HEAD
-        {/* General Application */}
-        <motion.div
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* General Application */}
         <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

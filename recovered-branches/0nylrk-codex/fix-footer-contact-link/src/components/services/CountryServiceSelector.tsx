@@ -1,37 +1,45 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import {
-  onsiteServicePricing
-  CountryPricing
-} from "@/data/onsiteServicePricing";
-import { CountrySelector } from "./CountrySelector";
-
-import { PaymentSection } from "./PaymentSection";
-import { ServiceDetails } from "./ServiceDetails";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
 =======
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  onsiteServicePricing,
+  CountryPricing,
+} from "@/data/onsiteServicePricing";
+import { CountrySelector } from "./CountrySelector";
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
+>>>>>>> main
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
-  selectedCountry?: CountryPricing | null
+  selectedCountry?: CountryPricing | null;
 }
+
 export function CountryServiceSelector({
-  onCountryChange
-  selectedCountry: initialCountry
+  onCountryChange,
+  selectedCountry: initialCountry,
 }: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
-          onCountryChange={onCountryChange |(() => {})}
-          selectedCountry={initialCountry |null}
+          onCountryChange={onCountryChange || (() => {})}
+          selectedCountry={initialCountry || null}
         />
 <<<<<<< HEAD
-=======
         
+<<<<<<< HEAD
+=======
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;
@@ -49,10 +57,17 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
+=======
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+>>>>>>> main
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   );
 }
+;

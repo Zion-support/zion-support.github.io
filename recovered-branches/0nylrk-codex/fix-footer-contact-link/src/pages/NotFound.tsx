@@ -1,12 +1,10 @@
 <<<<<<< HEAD
-
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
-const NotFound = () => {
-  const location = useLocation();
 =======
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const NotFound = () => {
   const location = useLocation(),
 
@@ -40,6 +38,8 @@ export default NotFound;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default NotFound,
 import { useLocation } from "react-router-dom",;
 import { useEffect } from "react",;
@@ -63,5 +63,6 @@ const NotFound = () => {;
     </div>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default NotFound;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,15 +1,18 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 <<<<<<< HEAD
-export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
-  if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
+import { NextResponse } from 'next/server',;
+import type { NextRequest } from 'next/server',;
+export function middleware(request: NextRequest) {;
+  const { pathname } = request.nextUrl,;
+  if (pathname === '/dashboard' || pathname === '/dashboard/') {;
+    const role = request.cookies.get('userRole')?.value || 'talent',;
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
     return NextResponse.redirect(new URL(target, request.url));
   }
   return NextResponse.next();
 }
-export const config = {matcher: ['/dashboard/dashboard/']}
 =======
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {;
   const { pathname } = request.nextUrl;
   if (pathname === '/dashboard' || pathname === '/dashboard/') {;
@@ -27,6 +30,7 @@ export function middleware(request: NextRequest) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};

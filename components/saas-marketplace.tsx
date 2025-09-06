@@ -37,9 +37,8 @@ import {
   Cloud,
   ArrowRight,
   Star,
-  Check,
-  ExternalLink,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Check,;
+  ExternalLink,;} from 'lucide-react';import { ;
   Zap;
   Shield
   BarChart3
@@ -290,13 +289,13 @@ export default function SaaSMarketplacePage() {
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
-        'Lightning fast'
-        'Beautiful design'
-        'Great keyboard shortcuts'
-        'Git integration'
-      ]
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
-    }
+        'Lightning fast',
+        'Beautiful design',
+        'Great keyboard shortcuts',
+        'Git integration',
+      ],
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
+    },;
   ];
   const categories = [
     'All'
@@ -393,7 +392,7 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -452,7 +451,7 @@ export default function SaaSMarketplacePage() {
 
               <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -470,7 +469,7 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -483,7 +482,7 @@ export default function SaaSMarketplacePage() {
 =======
 
             </h2>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -530,7 +529,7 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -580,7 +579,7 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -590,7 +589,7 @@ export default function SaaSMarketplacePage() {
 =======
 
             Need Help Choosing?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -623,7 +622,10 @@ export default function SaaSMarketplacePage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

@@ -2,11 +2,9 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud;
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Zap, Users, BarChart3, Settings, Database
- } from 'lucide-react';
+<<<<<<< HEAD
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 
@@ -100,10 +98,8 @@ const benefits = [
     icon: BarChart3
     color: 'text-purple-400'
   },];
+
 =======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {;
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,;
@@ -189,7 +185,7 @@ const benefits = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CybersecurityServices() {
   return (
     <Layout>
@@ -318,7 +314,7 @@ export default function CybersecurityServices() {
   }
 }
             className="max-w-4xl mx-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400" />
@@ -330,7 +326,7 @@ export default function CybersecurityServices() {
 =======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
               <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Next-Generation
               </span>
               <br />
@@ -341,7 +337,6 @@ export default function CybersecurityServices() {
               Protect your business with cutting-edge cybersecurity solutions.
               From zero trust security to AI threat intelligence, we provide
               comprehensive protection that adapts to evolving threats.
-
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -354,7 +349,7 @@ export default function CybersecurityServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -365,7 +360,7 @@ export default function CybersecurityServices() {
 =======
               <Link href="/contact" className="group">
                 <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Get Protected</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -385,7 +380,7 @@ export default function CybersecurityServices() {
 }
         <div className="absolute top-20 left-10 opacity-20 animate-float">
           <div className="w-4 h-4 bg-red-400 rounded-full"></div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
@@ -436,7 +431,7 @@ export default function CybersecurityServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
@@ -484,7 +479,7 @@ export default function CybersecurityServices() {
   }
 }
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
@@ -501,7 +496,7 @@ export default function CybersecurityServices() {
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
@@ -568,7 +563,7 @@ export default function CybersecurityServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
@@ -616,7 +611,7 @@ export default function CybersecurityServices() {
   }
 }
                 className="animated-border"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -735,7 +730,7 @@ export default function CybersecurityServices() {
                   </div>
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -747,7 +742,7 @@ export default function CybersecurityServices() {
 =======
                     <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
                       Get Protected
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </Link>
                   </div>
                 </div>
@@ -803,7 +798,7 @@ export default function CybersecurityServices() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -851,7 +846,7 @@ export default function CybersecurityServices() {
   }
 }
                 className="text-center group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
@@ -916,7 +911,7 @@ export default function CybersecurityServices() {
   }
 }
             className="max-w-4xl mx-auto"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
@@ -933,7 +928,7 @@ export default function CybersecurityServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Start Your Security Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -947,7 +942,7 @@ export default function CybersecurityServices() {
 =======
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -957,7 +952,7 @@ export default function CybersecurityServices() {
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
 =======
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -974,10 +969,13 @@ export default function CybersecurityServices() {
           </motion.div>
         </div>
       </section>
-    </Layout>
 <<<<<<< HEAD
+    </Layout>;
 );
+
+}
 =======
+    </Layout>
   )
             className="max-w-4xl mx-auto";
           >;
@@ -1026,4 +1024,4 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

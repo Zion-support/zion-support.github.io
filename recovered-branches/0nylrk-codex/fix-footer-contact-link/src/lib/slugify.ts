@@ -1,10 +1,12 @@
 <<<<<<< HEAD
-
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return title
     .trim()
@@ -30,6 +32,8 @@ export function unslugify(slug: string, separator = "-"): string {
     .join(" ")
 <<<<<<< HEAD
 }
+
+;
 =======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
@@ -59,4 +63,4 @@ export function unslugify(slug: string, separator = "-"): string {;
     .join(" ");
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

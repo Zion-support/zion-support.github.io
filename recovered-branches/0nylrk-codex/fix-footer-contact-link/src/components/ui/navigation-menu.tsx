@@ -3,12 +3,12 @@ import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import {cva} from 'class-variance-authority';
 import {ChevronDown} from 'lucide-react';
-import {cn} from '@/lib/utils';
 =======
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 
@@ -35,20 +35,19 @@ const NavigationMenu = React.forwardRef<
 ));
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 <<<<<<< HEAD
+
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
-    ref={ref}
-    className={cn(
-      'group flex flex-1 list-none items-center justify-center space-x-1'
 =======
 const NavigationMenuList = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
@@ -156,20 +155,19 @@ const NavigationMenuViewport = React.forwardRef<
 NavigationMenuViewport.displayName =
   NavigationMenuPrimitive.Viewport.displayName;
 <<<<<<< HEAD
+
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>
   React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive.Indicator>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Indicator
-    ref={ref}
-    className={cn(
-      'top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in'
 =======
 const NavigationMenuIndicator = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
@@ -207,6 +205,10 @@ export {
   NavigationMenuTrigger,
   NavigationMenuLink,
   NavigationMenuIndicator,
+<<<<<<< HEAD
+  NavigationMenuViewport,;
+};
+=======
   NavigationMenuViewport}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

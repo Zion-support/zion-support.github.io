@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -22,7 +21,7 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
-export default function Index() {
+export default function Index() {;
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 =======
@@ -60,6 +59,7 @@ import {
 export default function Index() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Tools and features showcase
@@ -273,7 +273,7 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>

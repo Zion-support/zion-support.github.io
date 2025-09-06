@@ -56,7 +56,7 @@ export default function InteractiveCard({;
 =======
     >
       <div className="relative">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Animated background */}
         <div;
           className={`absolute inset-0 bg-gradient-to-r ${color} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`}
@@ -76,7 +76,7 @@ export default function InteractiveCard({;
         {/* Content */}
         <div className="relative z-10">
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {title}
           </h3>
           <p className="text-gray-400 leading-relaxed text-lg mb-6">
@@ -84,12 +84,12 @@ export default function InteractiveCard({;
           </p>;
           {/* Custom children or default arrow */}
 <<<<<<< HEAD
-{children |(
+{children || (
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
 =======
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -205,9 +205,12 @@ export function TestimonialCard({;
   return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
+<<<<<<< HEAD
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+=======
       <div className="text-4xl mb-4">💬</div>
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -223,7 +226,7 @@ export function TestimonialCard({;
 =======
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">

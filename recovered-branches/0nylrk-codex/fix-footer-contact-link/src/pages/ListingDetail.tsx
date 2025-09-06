@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Star, MessageSquare, Brain, Shield} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {AppLayout} from "@/layout/AppLayout";
+import {ProfileContact} from "@/components/profile/ProfileContact";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { id } = useParams() as { id?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+=======
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -31,6 +53,7 @@ export default function ListingDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
@@ -195,7 +218,7 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           }}
                         />
                       </div>
@@ -210,7 +233,7 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
 =======
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -273,7 +296,7 @@ export default function ListingDetail() {;
                             "h-5 w-5";
 =======
                             "h-5 w-5",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -325,7 +348,7 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       }}
                     />
                   ) : (
@@ -409,7 +432,6 @@ export default function ListingDetail() {;
     </AppLayout>
   )
 <<<<<<< HEAD
-}
 =======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
@@ -483,6 +505,7 @@ export default function ListingDetail() {;
       </Dialog>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

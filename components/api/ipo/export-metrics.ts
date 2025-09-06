@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 <<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [

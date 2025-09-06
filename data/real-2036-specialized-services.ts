@@ -1,6 +1,5 @@
+export type Real2036SpecializedService = {;
 <<<<<<< HEAD
-
-export type Real2036SpecializedService = {
   id: string;
   name: string;
   tagline: string;
@@ -459,12 +458,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Customer experience'
     ]
     technology: [
-      'Space systems'
-      'Safety protocols'
-      'Training technology'
-      'Customer management'
-    ]
-  }
+      'Space systems',
+      'Safety protocols',
+      'Training technology',
+      'Customer management',
+    ],
+  },;
 ];    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain-inspired computing for next-generation AI applications'
@@ -682,11 +681,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
-  }
-];
-
 =======
-export type Real2036SpecializedService = {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -925,6 +920,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

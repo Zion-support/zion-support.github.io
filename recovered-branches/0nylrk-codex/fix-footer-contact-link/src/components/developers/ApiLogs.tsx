@@ -9,23 +9,10 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
-
-export function ApiLogs() {
+export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]);
-
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }
-  // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  }
 =======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -40,6 +27,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
@@ -162,7 +150,7 @@ export function ApiLogs() {;
               onValueChange={(value) => {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">

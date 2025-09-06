@@ -7,25 +7,25 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  ArrowRight
-  Zap
-  Brain
-  Atom
-  Rocket
-  Star
-  TrendingUp
-  Shield
-  Globe
-  Cpu
-  Sparkles
-  Play
-  CheckCircle
-  Award
-  Users
-  Clock
-  Phone
-  Mail;} from 'lucide-react';import {
-  ArrowRight, Zap, Brain, Atom, Rocket, Star
+  ArrowRight,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Star,
+  TrendingUp,
+  Shield,
+  Globe,
+  Cpu,
+  Sparkles,
+  Play,
+  CheckCircle,
+  Award,
+  Users,
+  Clock,
+  Phone,;
+  Mail,;} from 'lucide-react';import {
+  ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
@@ -77,10 +77,11 @@ const stats = [
   { number: '2030', label: 'Future Ready', icon: Star },];
 export default function UltraFuturisticHero2030() {
   return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star }
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
 ];
 export default function UltraFuturisticHero2030() {
   return (
+<<<<<<< HEAD
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
 <<<<<<< HEAD
       {/* Background Glow Effects */}
@@ -99,14 +100,9 @@ export default function UltraFuturisticHero2030() {
         {/* Main Heading */}
 =======
 
-];
-
-export default function UltraFuturisticHero2030() {
-  return (
-
         {/* Main Heading */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,7 +112,7 @@ export default function UltraFuturisticHero2030() {
 =======
           className='mb-8'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -180,7 +176,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -190,7 +186,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <Link
             href='/contact'
@@ -232,7 +228,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -243,7 +239,7 @@ export default function UltraFuturisticHero2030() {
 =======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {features.map((feature, index) => (
             <motion.div
@@ -255,7 +251,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -278,7 +274,7 @@ export default function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -289,7 +285,7 @@ export default function UltraFuturisticHero2030() {
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -301,7 +297,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <stat.icon className='w-8 h-8 text-purple-400' />
@@ -324,7 +320,7 @@ export default function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -335,7 +331,7 @@ export default function UltraFuturisticHero2030() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
           </h3>
@@ -377,7 +373,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -387,7 +383,7 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -463,7 +459,7 @@ export default function UltraFuturisticHero2030() {
             ease: 'easeInOut',          }}
         />
       </div>
-    </section>
+    </section>;
   );            ease: "easeInOut"
 
           }}
@@ -475,4 +471,4 @@ export default function UltraFuturisticHero2030() {
 }
 =======
     </section>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

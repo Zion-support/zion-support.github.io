@@ -13,10 +13,9 @@ export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCa
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/AIAutonomousVentureCapitalist.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

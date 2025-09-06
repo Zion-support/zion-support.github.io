@@ -14,14 +14,14 @@ export default function AISolutionsPage() {
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
-        'Predictive Analytics'
-        'Pattern Recognition'
-        'Anomaly Detection'
-        'Recommendation Systems'
-      ],      icon: '🧠'
-      category: 'Core AI'
-      complexity: 'Advanced'
-    }
+        'Predictive Analytics',
+        'Pattern Recognition',
+        'Anomaly Detection',
+        'Recommendation Systems',
+      ],      icon: '🧠',
+      category: 'Core AI',
+      complexity: 'Advanced';
+    };
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -239,7 +239,7 @@ export default function AISolutionsPage() {
 =======
                     <Link
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {feature}
                         </li>
                       ))}
@@ -256,7 +256,7 @@ export default function AISolutionsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 ))}
               </div>
@@ -264,7 +264,7 @@ export default function AISolutionsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -274,7 +274,7 @@ export default function AISolutionsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {useCases.map((useCase, index) => (
                   <div
                     key={index}
@@ -307,7 +307,7 @@ export default function AISolutionsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -333,7 +333,7 @@ export default function AISolutionsPage() {
 
                     >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {tech}
                     </span>
                   ))}
@@ -343,7 +343,7 @@ export default function AISolutionsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Success Stories */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -440,7 +440,10 @@ export default function AISolutionsPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

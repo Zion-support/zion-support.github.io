@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+import React from "react"
+import { Apple, GithubIcon } from 'lucide-react'import { cn } from "@/lib/utils"
+import { logInfo } from '@/utils/productionLogger'
+interface AppStoreButtonsProps {
+  className?: string
+  appStoreUrl?: string
+  googlePlayUrl?: string
+  onAppStoreClick?: () => void
+  onGooglePlayClick?: () => void
+}
+
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+};  className,
+=======
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
 <<<<<<< HEAD
@@ -16,37 +34,20 @@ interface AppStoreButtonsProps {
   onGooglePlayClick?: () => void
 }
 
-<<<<<<< HEAD
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
-  className
-  appStoreUrl = "#"
-  googlePlayUrl = "#"
-};  className
-  appStoreUrl = "#"
-  googlePlayUrl = "#"
-  onAppStoreClick
-  onGooglePlayClick
-},) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!appStoreUrl |appStoreUrl === "#") {
-      e.preventDefault()
-      logInfo("App Store download clicked")
-      onAppStoreClick?.()
-    }
-  }
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!googlePlayUrl |googlePlayUrl === "#") {
-      e.preventDefault()
-      logInfo("Google Play download clicked")
-=======
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
   onGooglePlayClick
+<<<<<<< HEAD
+},) => {
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
+=======
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
       logInfo("App Store download clicked"),
@@ -54,7 +55,11 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     }
   },
 
+<<<<<<< HEAD
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
+=======
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
       logInfo("Google Play download clicked"),
@@ -73,7 +78,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         href={appStoreUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download on the App Store"
@@ -93,7 +98,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         href={googlePlayUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play"
@@ -118,8 +123,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
 import React from "react",;
@@ -199,4 +203,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

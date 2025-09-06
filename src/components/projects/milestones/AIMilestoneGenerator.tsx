@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -43,8 +42,8 @@ export function AIMilestoneGenerator({
     Record<string, boolean>
   >({})
   const handleGenerateMilestones = async () => {
-    if (!scope |!startDate |!projectType) {
-      return
+    if (!scope || !startDate || !projectType) {
+      return;
     }
     const input: MilestoneInput = {
       scope
@@ -85,6 +84,7 @@ export function AIMilestoneGenerator({
     }
   }
 =======
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -160,7 +160,7 @@ export function AIMilestoneGenerator({;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -172,13 +172,13 @@ export function AIMilestoneGenerator({;
 <<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scope |!startDate |!projectType}        >
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
 =======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -254,7 +254,7 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             AI Suggested
                           </Badge>
                         </div>
@@ -268,7 +268,6 @@ export function AIMilestoneGenerator({;
                         e.stopPropagation()
                         handleAddSingleMilestone(milestone) }}
                       className='mr-2'
-
 =======
                       variant="ghost"
                       size="sm"
@@ -277,7 +276,7 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -296,17 +295,21 @@ export function AIMilestoneGenerator({;
                   </AccordionContent>
                 </AccordionItem>
               ))}
+<<<<<<< HEAD
             </Accordion>
           </CardContent>
         </Card>
-      )}
-<<<<<<< HEAD
-    </div>
-  )
-}
+      )};
+    </div>;
+  );
+};
 =======
+            </Accordion>;
+          </CardContent>;
+        </Card>;
+      )}
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

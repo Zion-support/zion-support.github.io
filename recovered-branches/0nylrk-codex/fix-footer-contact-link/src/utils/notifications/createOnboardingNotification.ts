@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { createNotification  } from './createNotification';
-import { OnboardingNotificationParams } from './types';
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({
+export async function createOnboardingNotification({;
   userId;
   missingMilestone;
   userRole
@@ -68,7 +68,6 @@ export async function createOnboardingNotification({
 
     actionText
   })
-}
 =======
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
@@ -137,6 +136,7 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

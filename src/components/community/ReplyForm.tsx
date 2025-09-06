@@ -1,24 +1,20 @@
 <<<<<<< HEAD
-
-import { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
-} from '@/components/ui/form'
-import { Card, CardContent } from '@/components/ui/card'
+import { useState } from 'react'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
+  FormMessage,
+} from '@/components/ui/form'
+import { Card, CardContent } from '@/components/ui/card'
+=======
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -34,6 +30,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -45,10 +42,10 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: ''
-    }
-  })
-  const handleSubmit = async (values: ReplyFormValues) => {
+      content: '',;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
@@ -95,7 +92,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card>
       <CardContent className="pt-6">
@@ -142,7 +139,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -155,10 +152,16 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
-export default ReplyForm
+export default ReplyForm;
+;
+}
+}
+=======
+},
 
 <<<<<<< HEAD
 =======
 export default ReplyForm,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

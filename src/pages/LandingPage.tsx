@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
@@ -19,16 +18,21 @@ import { SocialShareSection } from '@/components/SocialShareSection';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/context/LanguageContext';
 import {
-  ArrowRight
-  Users
-  Zap
-  Settings
-  Search
-  MessageSquare
-  Sparkles
-  BarChart3
-  Smartphone
+  ArrowRight,
+  Users,
+  Zap,
+  Settings,
+  Search,
+  MessageSquare,
+  Sparkles,
+  BarChart3,;
+  Smartphone;
 } from 'lucide-react';
+export default function LandingPage() {;
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
+=======
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -58,7 +62,7 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -150,6 +154,16 @@ export default function LandingPage() {
   ],
 
   return (
+<<<<<<< HEAD
+    <div className='min-h-screen bg-zion-blue text-white'>
+      <SEO
+        title={t('home.seo_title')}
+        description={t('home.seo_description')}
+        keywords={t('home.seo_keywords')}
+        canonical='https://app.ziontechgroup.com/'      />
+      <Header />
+      <HeroSection />
+=======
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
         title={t("home.seo_title")} 
@@ -160,7 +174,7 @@ export default function LandingPage() {
       <Header />
       <HeroSection />
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -192,7 +206,7 @@ export default function LandingPage() {
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -231,6 +245,7 @@ export default function LandingPage() {
     </div>
   );
 }
+;
 =======
                 </div>
               </Link>
@@ -354,4 +369,4 @@ export default function LandingPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

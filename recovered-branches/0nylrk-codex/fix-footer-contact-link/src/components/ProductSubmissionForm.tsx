@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import z from "zod";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {useToast} from "@/hooks/use-toast";
+import {useNavigate} from "react-router-dom";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
+import {Sparkles} from "lucide-react";
+=======
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -37,7 +55,7 @@ import { Sparkles } from "lucide-react";
 =======
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -67,6 +85,15 @@ export function ProductSubmissionForm() {
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>,
 
+<<<<<<< HEAD
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [imagePreview, setImagePreview] = React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React.useState("manual");
+=======
 export function ProductSubmissionForm() {
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -74,6 +101,7 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false),
   const [imagePreview, setImagePreview] = React.useState(null as string | null),
   const [activeTab, setActiveTab] = React.useState("manual"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize the form
@@ -165,6 +193,7 @@ export function ProductSubmissionForm() {
         .single();
       if (productError) {
         throw new Error(productError.message)
+<<<<<<< HEAD
       }
       // If we have an image, upload it
       if (values.image) {
@@ -188,13 +217,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id);
         if (updateError) {
           throw new Error(updateError.message)
-        }
-      }
 =======
-        .single(),
-        
-      if (productError) {
-        throw new Error(productError.message)
 import React from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -323,6 +346,7 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
       
@@ -421,7 +445,7 @@ export function ProductSubmissionForm() {;
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             />
             <FormField

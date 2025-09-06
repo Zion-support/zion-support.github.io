@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
-import React from "react";
+import React from 'react'
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -41,7 +40,7 @@ export function EnterpriseTrustBadges() {
 import React from "react",
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -69,11 +68,14 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
-    </section>
-  )
 <<<<<<< HEAD
+    </section>;
+  );
+};
 }
 =======
+    </section>
+  )
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
@@ -107,4 +109,4 @@ export function EnterpriseTrustBadges() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

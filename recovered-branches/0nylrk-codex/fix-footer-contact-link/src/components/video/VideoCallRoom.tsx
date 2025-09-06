@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
+import './video-call.css';
+=======
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
-import './video-call.css';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
+import './video-call.css',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Participant {
 
   id: string
@@ -17,6 +26,7 @@ interface Participant {
   isVideoEnabled?: boolean;
   isScreenSharing?: boolean;
   isHost?: boolean
+<<<<<<< HEAD
 }
 interface VideoCallRoomProps {
 
@@ -28,9 +38,10 @@ interface VideoCallRoomProps {
   onToggleScreenShare?: (isSharing: boolean) => void
   className?: string
 }
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
-  roomId
-  participants = []
+
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
+  roomId,
+  participants = [], ;
   onLeave;
   onToggleMute;
   onToggleVideo;
@@ -68,17 +79,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     if (onToggleVideo) {
       onToggleVideo(newVideoState)
 =======
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
-import './video-call.css',
-interface Participant {
-  id: string,
-  name: string,
-  avatar?: string,
-  isMuted?: boolean,
-  isVideoEnabled?: boolean,
-  isScreenSharing?: boolean,
-  isHost?: boolean
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -145,14 +145,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     setIsVideoEnabled(newVideoState),;
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
+    
     // If turning video back on, ensure we're not in audio-only mode
     if (newVideoState) {
       setIsAudioOnly(false)
     }
 <<<<<<< HEAD
-  }
+  };
+
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -173,7 +175,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {
       onLeave()
     }
-  }
+  };
 =======
   },;
   const handleToggleScreenShare = () => {;
@@ -197,6 +199,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onLeave();
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -278,12 +281,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
-<<<<<<< HEAD
-          <Button
-            variant="outline"
-            size="icon"
-=======
-          
           <Button 
             variant="outline" 
             size="icon" 
@@ -293,11 +290,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
-<<<<<<< HEAD
-          <Button
-            variant="outline"
-=======
-          
           <Button 
             variant="outline" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -307,11 +299,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
-<<<<<<< HEAD
-          <Button
-            variant="outline"
-=======
-          
           <Button 
             variant="outline" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -321,8 +308,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
-          <Button
-            variant="destructive"
+          <Button 
+            variant="destructive" 
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -334,8 +321,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     </Card>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

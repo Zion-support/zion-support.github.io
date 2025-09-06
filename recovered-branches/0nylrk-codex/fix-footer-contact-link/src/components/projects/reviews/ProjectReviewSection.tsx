@@ -1,21 +1,15 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { useState } from "react";
-import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { ReviewsList } from "@/components/reviews/ReviewsList";
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
-import { useReviews } from "@/hooks/useReviews";
-
-import { Project } from "@/types/projects";
-import { useAuth } from "@/hooks/useAuth";
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
 =======
 import { useState } from "react",
 import { Star } from "lucide-react",
@@ -26,10 +20,37 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> main
 interface ProjectReviewSectionProps {
   project: Project;
 }
+
+<<<<<<< HEAD
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
+  const { user } = useAuth();
+  const { reviews, userReview, isLoading, reportReview } = useReviews(
+    project.id,
+  );
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+<<<<<<< HEAD
+=======
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -55,6 +76,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
@@ -72,7 +94,25 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  const isCompleted = project.status === "completed";
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+
+  const clientProfile = project.client_profile;
+  const talentProfile = project.talent_profile;
+
+  // Determine who the current user needs to review
+  const revieweeId = isClient ? project.talent_id : project.client_id;
+  const revieweeName = isClient
+    ? talentProfile?.full_name || "Talent"
+    : clientProfile?.display_name || "Client";
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
+  const hasLeftReview = userReview != null;
+
+>>>>>>> main
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -85,6 +125,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           submit feedback
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -185,12 +229,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   </div>
                 ) : null}
               </div>
             )}
+
             <ReviewsList
               reviews={reviews}
               isLoading={isLoading}
@@ -209,6 +254,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
           </div>
         )}
       </CardContent>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {/* Review Modal */}
 <<<<<<< HEAD
       {(isClient |isTalent) && (

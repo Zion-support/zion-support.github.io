@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import {useState, useMemo} from "react";
+import {ProductListing} from "@/types/listings";
+import {SearchSuggestion, FilterOptions} from "@/types/search";
+import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+export function useMarketplaceSearch() {
+  // Search state;
+  const [searchQuery, setSearchQuery] = useState("");
+=======
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 <<<<<<< HEAD
@@ -29,6 +38,7 @@ import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS 
 export function useMarketplaceSearch() {
   // Search state
   const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
@@ -164,6 +174,8 @@ export function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
+<<<<<<< HEAD
+=======
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -252,6 +264,7 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

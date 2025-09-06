@@ -1,25 +1,36 @@
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 export default function AdminDashboard() {
 
   const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Admin Dashboard'
-    description:
-      'Monitor marketplace activity, manage listings and view analytics in one place.'
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',;
+    name: 'Admin Dashboard',;
+    description:;
+      'Monitor marketplace activity, manage listings and view analytics in one place.';
     url: 'https://app.ziontechgroup.com/features/admin-dashboard',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Admin Dashboard"
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   }
+  return (
+    <>
+      <SEO
+        title='Admin Dashboard'
+        description='Gain insight into your marketplace with powerful administration tools.'
+        keywords='admin dashboard, analytics, manage listings'
+        canonical='https://app.ziontechgroup.com/features/admin-dashboard'
 =======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function AdminDashboard() {
@@ -45,7 +56,7 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -92,7 +103,7 @@ export default function AdminDashboard() {
             />
           </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
@@ -124,7 +135,7 @@ export default function AdminDashboard() {
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -141,10 +152,11 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
-  )
 <<<<<<< HEAD
-}
+  );
+};
 =======
+  )
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -214,4 +226,4 @@ export default function AdminDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

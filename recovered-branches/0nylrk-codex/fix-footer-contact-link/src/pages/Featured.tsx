@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {GradientHeading} from "@/components/GradientHeading";
+=======
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 =======
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Featured() {
   return (
     <>
@@ -45,7 +51,7 @@ export default function Featured() {;
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -54,3 +60,4 @@ export default function Featured() {;
     </>
   )
 }
+;

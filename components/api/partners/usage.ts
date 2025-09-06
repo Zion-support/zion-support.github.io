@@ -4,8 +4,8 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  authenticateRequest
-  calculateUsageSummary;
+  authenticateRequest,;
+  calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
 <<<<<<< HEAD
 =======
@@ -15,7 +15,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -27,7 +27,7 @@ export default async function handler(
   return res.status(200).json({ summary });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
+  if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -43,4 +43,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary })
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,13 +1,14 @@
 <<<<<<< HEAD
+
 =======
  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 
 }
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
+  try {;
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
@@ -31,8 +32,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 =======
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function TechRadar({ pypi, crates, github }: Props) {
+export default function TechRadar({ pypi, crates, github }: Props) {;
   const langs = Object.keys(github);
 
   return (

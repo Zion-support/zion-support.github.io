@@ -1,15 +1,28 @@
-
 <<<<<<< HEAD
-import React from 'react';
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import Skeleton from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification  } from '@/context/notifications';
-import { EmptyState } from '@/components/ui/empty-state';
+}; import React from 'react'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import Skeleton from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
+import { NotificationItem } from './NotificationItem'
+import { Notification } from '@/context/notifications'
+import { EmptyState } from '@/components/ui/empty-state'
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string,) => Promise<void>,
+  onDismiss: (id: string,) => Promise<void>,
+  onRetry: () => void
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({
+  loading
+  error
+  notifications
+  onMarkAsRead
 =======
+
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import Skeleton from '@/components/ui/skeleton',;
@@ -49,6 +62,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error,
   notifications,
   onMarkAsRead,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDismiss,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onRetry
@@ -95,10 +109,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ))
       )}
     </ScrollArea>
-  )
-}
-"
-
+  );
+};
+";
 =======
             key={notification.id}
             notification={notification}
@@ -110,4 +123,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

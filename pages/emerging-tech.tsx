@@ -1,25 +1,15 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
-export default function EmergingTechPage() {
-  const features = [
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation']
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
-
-  return (
-    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
+;
 =======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -58,7 +48,7 @@ export default function EmergingTechPage() {_const _features = [
 =======
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </header>
           <section>
@@ -91,7 +81,8 @@ export default function EmergingTechPage() {_const _features = [
         </div>
       </div>
     </Layout>
-  )
+  );
+};
 =======
                 </Link>
               ))  } catch (error) {
@@ -109,5 +100,5 @@ export default function EmergingTechPage() {_const _features = [
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

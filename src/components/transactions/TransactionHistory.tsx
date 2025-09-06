@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { useCurrency } from '@/hooks/useCurrency'
+import {logErrorToProduction} from '@/utils/productionLogger'
+=======
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -9,21 +13,21 @@ import { Badge } from "@/components/ui/badge",
 import Skeleton from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
-import { safeStorage } from "@/utils/safeStorage";
-import { useCurrency  } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { safeStorage } from "@/utils/safeStorage",
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Transaction {
-
-  id: string
-  user_id: string
-  provider_id: string
-  service_id: string
-  amount: number
-  currency: string
-  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled'
-  in_escrow: boolean
-  created_at: string
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+<<<<<<< HEAD
   completed_at?: string
   refunded_at?: string
   cancelled_at?: string
@@ -50,10 +54,11 @@ export function TransactionHistory() {
 
       if (!user) return []
           provider:profiles!provider_id(display_name)
-      query = query.order('created_at', { ascending: false })
-    }
-              const isClient = user?.id === transaction.user_id;              const isPending =
-                transaction.status === 'pending' |transaction.status === 'in_escrow'
+      query = query.order('created_at', { ascending: false }),;
+      ;
+    };
+              const isClient = user?.id === transaction.user_id;              const isPending = null;
+                transaction.status === 'pending' || transaction.status === 'in_escrow'
               const isInEscrow = transaction.in_escrow
               const canRelease = !isClient && isPending && isInEscrow
               const canCancel = isClient && isPending
@@ -65,20 +70,8 @@ export function TransactionHistory() {
 
   )
 }
+;
 =======
-import { safeStorage } from "@/utils/safeStorage",
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -621,4 +614,4 @@ export function TransactionHistory() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

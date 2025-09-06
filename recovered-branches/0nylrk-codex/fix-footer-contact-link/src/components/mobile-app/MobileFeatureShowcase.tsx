@@ -1,23 +1,28 @@
 
 <<<<<<< HEAD
 import React from "react";
+import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 =======
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-      title: "Hire from Anywhere"
+      icon: <Users className="h-8 w-8 text-zion-cyan" />,
+      title: "Hire from Anywhere",
+<<<<<<< HEAD
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
+    };
+=======
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
 <<<<<<< HEAD
     }
 =======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -85,8 +90,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   )
-}
-
 =======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
@@ -146,5 +149,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

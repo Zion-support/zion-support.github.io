@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {format, isPast, parseISO} from "date-fns";
+import {Link} from "react-router-dom";
+import {Calendar, Clock, Video} from "lucide-react";
+import {Avatar} from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {;
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -20,6 +35,7 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -140,7 +156,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </CardContent>

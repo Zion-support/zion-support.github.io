@@ -1,13 +1,5 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 <<<<<<< HEAD
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import {logErrorToProduction} from '@/utils/productionLogger';
+
 interface GeneratedContent {
 
   description: string
@@ -57,11 +49,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (data && (data as any).error) {
         throw new Error((data as any).error)
       }
-      setGeneratedContent((data as any)?.generated |null)
+
+      setGeneratedContent((data as any)?.generated || null)
 =======
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -87,7 +87,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -99,6 +99,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -112,8 +113,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           </p>
         </CardHeader>
         <CardContent>
+          <AIListingForm 
 <<<<<<< HEAD
-          <AIListingForm
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
@@ -121,7 +122,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         </CardContent>
       </Card>
 =======
-          <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -170,7 +170,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           />;
         </CardContent>;
       </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
@@ -234,14 +234,19 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   generatedContent && !isLoading && (<GeneratedContentDisplay content= {
   generatedContent
 }onApply= {
-  handleApply
-}/>)
-}</div>)
-}'"
+  handleApply 
+}/>) 
+}</div>) 
+}'";
+};
+}
+}
+}
+}
 }
 =======
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

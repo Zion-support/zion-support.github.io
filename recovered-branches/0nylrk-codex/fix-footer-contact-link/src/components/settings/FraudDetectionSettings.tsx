@@ -1,47 +1,48 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Switch  } from '@/components/ui/switch';
-import { Button  } from '@/components/ui/button';
-import { Label  } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Switch} from '@/components/ui/switch';
+import {Button} from '@/components/ui/button';
+import {Label} from '@/components/ui/label';
+import {ShieldAlert, Info} from 'lucide-react';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {toast} from '@/hooks/use-toast';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+export function FraudDetectionSettings() {;
+=======
+import React, { useState } from "react";
 import {
-
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { ShieldAlert, Info } from "lucide-react";
 import {
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
-
 export function FraudDetectionSettings() {
+>>>>>>> main
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] =
+    useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-
-  const handleSavePreferences = async () => {
-    if (!user?.id) return;
-    setIsSaving(true);
-    try {
-      // In a real implementation, we would save these preferences to the database
-      // For now, we'll just simulate a successful save
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
@@ -63,6 +64,7 @@ export function FraudDetectionSettings() {
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleSavePreferences = async () => {
     if (!user?.id) return,
@@ -73,21 +75,32 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  const handleSavePreferences = async () => {
+    if (!user?.id) return;
+
+    setIsSaving(true);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+>>>>>>> main
       toast({
-        title: "Settings saved"
-        description: "Your fraud detection preferences have been updated."
+        title: "Settings saved",
+        description: "Your fraud detection preferences have been updated.",
       });
     } catch (error) {
 <<<<<<< HEAD
-      console.error("Error saving preferences:", error);
-=======
       console.error('Error saving preferences:', error),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      console.error("Error saving preferences:", error);
+>>>>>>> main
       toast({
-        title: "Error"
-        description: "Failed to save your preferences. Please try again."
-        variant: "destructive"
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
+        variant: "destructive",
       });
     } finally {
       setIsSaving(false);
@@ -129,6 +142,10 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">
@@ -144,6 +161,10 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="ai-analysis">
@@ -160,6 +181,10 @@ export function FraudDetectionSettings() {
               />
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">
@@ -187,6 +212,10 @@ export function FraudDetectionSettings() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
           <div className="pt-2">
             <Button
               onClick={handleSavePreferences}
@@ -200,10 +229,13 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
 <<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
   );
+>>>>>>> main
 }
 =======
-  )
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -343,4 +375,4 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

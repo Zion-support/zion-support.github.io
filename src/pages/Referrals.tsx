@@ -1,42 +1,63 @@
 
 <<<<<<< HEAD
-import { useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useReferrals  } from '@/hooks/useReferrals';
-import { ReferralStats  } from '@/components/referrals/ReferralStats';
-import { ReferralLink  } from '@/components/referrals/ReferralLink';
-import { ReferralTable  } from '@/components/referrals/ReferralTable';
-import { RewardsCard  } from '@/components/referrals/RewardsCard';
-import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
-import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button  } from '@/components/ui/button';
-import { toast } from '@/hooks/use-toast';
+import { useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { useReferrals } from '@/hooks/useReferrals'
+import { ReferralStats } from '@/components/referrals/ReferralStats'
+import { ReferralLink } from '@/components/referrals/ReferralLink'
+import { ReferralTable } from '@/components/referrals/ReferralTable'
+import { RewardsCard } from '@/components/referrals/RewardsCard'
+import { ReferralGuide } from '@/components/referrals/ReferralGuide'
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from '@/components/ui/button'
+import { toast } from '@/hooks/use-toast'
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useRouter } from 'next/router'; // Changed from useNavigate
-export default function ReferralsPage() {
-
+export default function ReferralsPage() {;
   const router = useRouter(); // Changed from navigate
   const { isAuthenticated } = useAuth()
+=======
+import { useEffect } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { useReferrals } from '@/hooks/useReferrals',
+import { ReferralStats } from '@/components/referrals/ReferralStats',
+import { ReferralLink } from '@/components/referrals/ReferralLink',
+import { ReferralTable } from '@/components/referrals/ReferralTable',
+import { RewardsCard } from '@/components/referrals/RewardsCard',
+import { ReferralGuide } from '@/components/referrals/ReferralGuide',
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from '@/components/ui/button',
+import { toast } from '@/hooks/use-toast',
+import { Share, Users } from 'lucide-react'
+import { useRouter } from 'next/router', // Changed from useNavigate
+
+export default function ReferralsPage() {
+  const router = useRouter(), // Changed from navigate
+  const { isAuthenticated } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const {
-    isLoading
-    referralCode
-    referrals
-    rewards
-    stats
-    getReferralLink
-    copyReferralLink
-    shareOnSocialMedia
+    isLoading,
+    referralCode,
+    referrals,
+    rewards,
+    stats,
+    getReferralLink,
+    copyReferralLink,
+<<<<<<< HEAD
+    shareOnSocialMedia,
   } = useReferrals()
   useEffect(() => {
     if (!isAuthenticated) {
@@ -74,33 +95,6 @@ export default function ReferralsPage() {
         <Button className='flex items-center gap-2' onClick={copyReferralLink}>
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
 =======
-import { useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { useReferrals } from '@/hooks/useReferrals',
-import { ReferralStats } from '@/components/referrals/ReferralStats',
-import { ReferralLink } from '@/components/referrals/ReferralLink',
-import { ReferralTable } from '@/components/referrals/ReferralTable',
-import { RewardsCard } from '@/components/referrals/RewardsCard',
-import { ReferralGuide } from '@/components/referrals/ReferralGuide',
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from '@/components/ui/button',
-import { toast } from '@/hooks/use-toast',
-import { Share, Users } from 'lucide-react'
-import { useRouter } from 'next/router', // Changed from useNavigate
-
-export default function ReferralsPage() {
-  const router = useRouter(), // Changed from navigate
-  const { isAuthenticated } = useAuth(),
-  const {
-    isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {
@@ -117,7 +111,7 @@ export default function ReferralsPage() {
 
   return (
     <div className="container max-w-7xl py-10">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>
@@ -159,7 +153,7 @@ export default function ReferralsPage() {
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
@@ -190,7 +184,7 @@ export default function ReferralsPage() {
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <TabsContent value="rewards" className="p-0 mt-6">
               <RewardsCard rewards={rewards} isLoading={isLoading} />
             </TabsContent>
@@ -201,7 +195,7 @@ export default function ReferralsPage() {
 =======
 
         <div className="space-y-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <ReferralGuide />
           <ReferralLeaderboard />
         </div>
@@ -222,6 +216,7 @@ export default function ReferralsPage() {
 }/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>)
 }'"
 }
+;
 =======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -310,4 +305,4 @@ export default function ReferralsPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

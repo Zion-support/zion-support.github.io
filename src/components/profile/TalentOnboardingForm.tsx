@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { useForm, useFieldArray } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { useRouter } from 'next/router'
+import { logErrorToProduction } from '@/utils/productionLogger'
+=======
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod";
-import { useRouter  } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { z } from "zod",
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Form
   FormControl
@@ -48,16 +57,16 @@ import {logErrorToProduction} from '@/utils/productionLogger'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue
-} from "@/components/ui/select"
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth"
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
+import { supabase } from "@/integrations/supabase/client"
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -115,9 +124,10 @@ export function TalentOnboardingForm() {
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
 =======
+import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -137,14 +147,15 @@ import { supabase } from "@/integrations/supabase/client",
         toolsUsed: ''
       }
       availability: {
-        availabilityType: ''
-        timezone: ''
-        hourlyRate: ''
-        portfolioLinks: [{ url: '' }]
-        cv: undefined
-      }
-    }
-    mode: 'onChange'
+<<<<<<< HEAD
+        availabilityType: '',
+        timezone: '',
+        hourlyRate: '',
+        portfolioLinks: [{ url: '' }],
+        cv: undefined,
+      },
+    },
+    mode: 'onChange',
   })
   const {
     fields: projectFields
@@ -167,19 +178,8 @@ import { supabase } from "@/integrations/supabase/client",
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const file = e.target.files?.[0]
-    if (!file) return
+    if (!file) return;
 =======
-        fullName: user?.displayName || "",
-        professionalTitle: "",
-        profilePicture: undefined},
-      experience: {
-        bio: "",
-        keyProjects: [{ title: "", description: "" }],
-        yearsOfExperience: ""},
-      skills: {
-        skillsList: "",
-        toolsUsed: ""},
-      availability: {
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -202,7 +202,7 @@ import { supabase } from "@/integrations/supabase/client",
     const file = e.target.files?.[0],
     if (!file) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -211,10 +211,10 @@ import { supabase } from "@/integrations/supabase/client",
     }
     reader.readAsDataURL(file)
     // Store the file in the form data
-    form.setValue('basicInfo.profilePicture', file)
-  }
-  // Handle CV upload
-  const handleCvUpload = async (file: File) => {
+    form.setValue('basicInfo.profilePicture', file);
+  };
+  // Handle CV upload;
+  const handleCvUpload = async (file: File) => {;
     const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
       .from('resumes')
       .upload(fileName, file)
@@ -245,7 +245,7 @@ const form = useForm<TalentFormValues> ({
 }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
-if (!file) return
+if (!file) return;
 //Preview the image const reader = new FileReader ()
 reader.onloadend = () => {
   setProfilePictureUrl (reader.result as string)
@@ -403,4 +403,4 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
   return null;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
 <<<<<<< HEAD
+import React, { useEffect, useState } from 'react',;
+import type { NextPage } from 'next',;
+import type { Review } from '../../types/reviews',;
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
 const AdminReviewsPage: NextPage = () => {
@@ -15,17 +16,10 @@ const AdminReviewsPage: NextPage = () => {
       setAll(data.reviews)
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
-  }
-  useEffect(() => { refresh() }, [])
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
-    const res = await fetch('/api/reviews/moderate', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
-      body: JSON.stringify({ action, reviewId })})
-    if (res.ok) refresh()
-  }
 =======
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -40,6 +34,7 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
     } catch (error) {
@@ -99,11 +94,10 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
-<<<<<<< HEAD
-}
-export default AdminReviewsPage;
-
-=======
 },
+<<<<<<< HEAD
+
+export default AdminReviewsPage,;
+=======
 export default AdminReviewsPage,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

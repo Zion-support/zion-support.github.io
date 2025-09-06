@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -21,27 +20,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string }
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
-  // Load project data
-  useEffect(() => {
-    async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
-      if (projectData) {
-        setProject(projectData);
 =======
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
@@ -93,6 +71,7 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -210,7 +189,7 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       setIsLoading(false)
     }
@@ -1232,7 +1211,7 @@ function ProjectDetailsContent() {;
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1303,13 +1282,15 @@ function ProjectDetailsContent() {;
     </>
   )
 }
+
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
   )
-}
+};
+;
 =======
             </Card>;
           </div>;
@@ -1328,4 +1309,4 @@ export default function ProjectDetails() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -37,9 +37,8 @@ import {
   ExternalLink,
   Zap,
   Brain,
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
   Search;
   Filter
   TrendingUp
@@ -56,8 +55,7 @@ import {
   Globe;
   Rocket
 
-
-export default function ToolComparisonPage() {
+export default function ToolComparisonPage() {;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -326,89 +324,13 @@ export default function ToolComparisonPage() {
         'Reliable'
       ]
       cons: [
-        'Higher fees than some alternatives'
-        'Complex for beginners'
-        'Strict requirements'
-      ]
-      website: 'https://stripe.com'
-      icon: <DollarSign className='w-6 h-6' />
-      color: 'text-blue-400'
-    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable']
-      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements']
-      website: 'https://stripe.com'
-      icon: <DollarSign className="w-6 h-6" />
-      color: 'text-blue-400'
-    }
-    // Startup Tools
-    {
-      name: 'HubSpot'
-      category: 'Marketing & Sales'
-      pricing: 'Free - $45/month'
-      rating: 4.7
-      users: '135K+'
-      bestFor: 'B2B startups, SaaS companies, marketing teams'
-      pros: [
-        'Free tier'
-        'All-in-one solution'
-        'Great for beginners'
-        'Excellent support'
-      ]
-      cons: [
-        'Can get expensive'
-        'Complex for small teams'
-        'Limited customization'
-      ]
-      website: 'https://hubspot.com'
-      icon: <TrendingUp className='w-6 h-6' />
-      color: 'text-orange-400'
-    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support']
-      cons: ['Can get expensiveComplex for small teamsLimited customization']
-      website: 'https://hubspot.com'
-      icon: <TrendingUp className="w-6 h-6" />
-      color: 'text-orange-400'
-    }
-    {
-      name: 'Mailchimp'
-      category: 'Email Marketing'
-      pricing: 'Free - $59/month'
-      rating: 4.5
-      users: '12M+'
-      bestFor: 'E-commerce, content creators, small businesses'
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive']
-      website: 'https://mailchimp.com'
-      icon: <Users className='w-6 h-6' />
-      color: 'text-yellow-400'
-    },    {      bestFor: 'E-commerce, content creators, small businesses';
-      pros: ['Free tierEasy to useGood templatesAffordable']
-      cons: ['Limited free featuresBasic automationCan be expensive']
-      website: 'https://mailchimp.com'
-      icon: <Users className="w-6 h-6" />
-      color: 'text-yellow-400'
-    }
-    {
-      name: 'Calendly'
-      category: 'Productivity'
-      pricing: 'Free - $12/month'
-      rating: 4.8
-      users: '10M+'
-      bestFor: 'Sales teams, consultants, remote teams'
-      pros: [
-        'Free tier'
-        'Easy integration'
-        'Professional appearance'
-        'Time-saving'
-      ]
-      cons: [
-        'Limited free features'
-        'Basic customization'
-        'Can be expensive'
-      ]
-      icon: <Globe className='w-6 h-6' />
-      color: 'text-blue-400'
-    }
+        'Limited free features',
+        'Basic customization',
+        'Can be expensive',
+      ],
+      icon: <Globe className='w-6 h-6' />,
+      color: 'text-blue-400',
+    },
   ];
   const categories = [
     'All'
@@ -531,7 +453,7 @@ export default function ToolComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -620,7 +542,7 @@ export default function ToolComparisonPage() {
 
                 <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -643,7 +565,7 @@ export default function ToolComparisonPage() {
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
@@ -806,7 +728,7 @@ export default function ToolComparisonPage() {
         </div>
       </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -816,7 +738,7 @@ export default function ToolComparisonPage() {
 =======
 
               Detailed Analysis
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -913,7 +835,7 @@ export default function ToolComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -926,7 +848,7 @@ export default function ToolComparisonPage() {
 =======
                     href={tool.website}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {tool.pricing}
                   </span>
                   <Button
@@ -947,7 +869,7 @@ export default function ToolComparisonPage() {
 
                   </Button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </Card>
             ))}
@@ -957,7 +879,7 @@ export default function ToolComparisonPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -967,7 +889,7 @@ export default function ToolComparisonPage() {
 =======
 
             Need Help Choosing?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -999,7 +921,9 @@ export default function ToolComparisonPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

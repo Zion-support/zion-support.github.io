@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import {useEffect, useState} from "react";
+import {useNavigate, useSearchParams} from "react-router-dom";
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {SearchSuggestion} from "@/types/search";
+import {useAISearch} from "@/hooks/useAISearch";
+import {AppLayout} from "@/layout/AppLayout";
+export default function SearchPage() {;
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+  const initial = params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+=======
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -24,6 +39,7 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -97,7 +113,7 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>

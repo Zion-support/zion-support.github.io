@@ -5,7 +5,7 @@
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =
-  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
@@ -45,12 +45,16 @@ export default function EnhancedButton({
         className
       )}
       {...props}
+<<<<<<< HEAD
+    />;
+);
+=======
     />
   );
+>>>>>>> main
+}
 <<<<<<< HEAD
-}
 =======
-}
 
 const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
   return (
@@ -62,4 +66,4 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

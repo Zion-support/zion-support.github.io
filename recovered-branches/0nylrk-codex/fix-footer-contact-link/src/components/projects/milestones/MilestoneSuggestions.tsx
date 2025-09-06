@@ -8,6 +8,20 @@ import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date;
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+
+export function MilestoneSuggestions({;
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -40,6 +54,7 @@ export function MilestoneSuggestions({
   startDate,
   endDate,
   projectType,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
@@ -78,7 +93,7 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
-  }
+  };
 =======
 ;
 export function MilestoneSuggestions({;
@@ -113,7 +128,7 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="space-y-4">

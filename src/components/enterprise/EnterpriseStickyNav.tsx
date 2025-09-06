@@ -1,16 +1,14 @@
 <<<<<<< HEAD
-import { useState } from "react";
+import { useState } from 'react'
 import { Menu } from 'lucide-react'
 
-import Link from 'next/link'
-  const [ open, setOpen ] = useState(false)
 =======
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
@@ -29,7 +27,7 @@ export function EnterpriseStickyNav() {
             aria-expanded={open}
           >
             <Menu className="h-6 w-6" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
@@ -77,17 +75,19 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
             </li>
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
+    </nav>;
+  );
+};
+=======
     </nav>
   )
-<<<<<<< HEAD
-}
-=======
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
@@ -125,4 +125,4 @@ export function EnterpriseStickyNav() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

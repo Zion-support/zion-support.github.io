@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+
+
+}
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
@@ -202,11 +202,18 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-// Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
+// Main export with error boundary
+export default function EquipmentPage() {
   return (
+<<<<<<< HEAD
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  );
+};
+=======
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -624,4 +631,4 @@ export default function EquipmentPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

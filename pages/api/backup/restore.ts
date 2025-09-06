@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { cid } = req.query as { cid?: string }
   if (!cid) return res.status(400).json({ error: 'Missing cid' })
@@ -12,8 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json(data)
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message |'Restore failed' })
+    return res.status(500).json({ error: e?.message || 'Restore failed' })
+  };
+};
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   const { cid } = req.query as { cid?: string };
@@ -26,6 +29,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

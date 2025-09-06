@@ -6,6 +6,18 @@ import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean
+}
+
+export function SelectResumeSection({;
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
 =======
 import React from 'react',;
 import { FileText } from 'lucide-react',;
@@ -33,6 +45,7 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isLoading
 }: SelectResumeSectionProps) {
   return (

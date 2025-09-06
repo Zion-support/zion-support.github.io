@@ -7,44 +7,43 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  DollarSign
-  TrendingUp
-  Target as TargetIcon
-  Users as UsersIcon
-  Briefcase as BriefcaseIcon
-  BookOpen as BookOpenIcon
-  MessageCircle as MessageCircleIcon
-  Star as StarIcon;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
-
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  CheckCircle,
+  Home,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  DollarSign,
+  TrendingUp,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Briefcase as BriefcaseIcon,
+  BookOpen as BookOpenIcon,
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -340,14 +339,16 @@ export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
     }
-  }
-}
+  };
+};
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 }
 export default function UltraFuturisticFooter2032() {
   return (
+<<<<<<< HEAD
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0'>
@@ -473,26 +474,10 @@ export default function UltraFuturisticFooter2032() {
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
 =======
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },};
-
-export default function UltraFuturisticFooter2032() {
-  return (
-    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
-
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-
-};
-
-export default function UltraFuturisticFooter2032() {
-  return (
 
                     {contactInfo.website}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </a>
                 </div>
               </div>
@@ -503,7 +488,7 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -548,7 +533,7 @@ export default function UltraFuturisticFooter2032() {
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -586,7 +571,7 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -601,7 +586,7 @@ export default function UltraFuturisticFooter2032() {
 =======
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -617,7 +602,7 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Social Links */}
               <div>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -646,7 +631,7 @@ export default function UltraFuturisticFooter2032() {
 
                     </a>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </div>
               </div>
@@ -655,7 +640,7 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -666,7 +651,7 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Stay Ahead with Future Technology
               </h3>
               <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
@@ -754,7 +739,7 @@ export default function UltraFuturisticFooter2032() {
         >
           <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion.button>
       </div>
-    </footer>
+    </footer>;
   );
 }        <motion.button
           whileHover={{ scale: 1.1 }}
@@ -769,6 +754,8 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 );
 }
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

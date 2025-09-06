@@ -74,9 +74,13 @@ export default function Header() {;
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
           : 'bg-black/60 backdrop-blur-md border-b border-white/10';
       }`}
+<<<<<<< HEAD
+role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;
+=======
       role="banner"
       aria-label="Main navigation"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -103,22 +107,18 @@ export default function Header() {;
                 {item.name}
 <<<<<<< HEAD
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
-              </Link>
-            ))}
-            {/* Services Dropdown */}
-<div className=&quot;relative group&quot;>
-              <button
-                className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
-                aria-expanded=&quot;false&quot;
-                aria-haspopup=&quot;true&quot;
-                aria-label=&quot;Services menu&quot;
 =======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
+<<<<<<< HEAD
+<div className=&quot;relative group&quot;>
+=======
             <div className="relative group">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -157,7 +157,7 @@ export default function Header() {;
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
 =======
           <div className="hidden lg:flex items-center space-x-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -173,7 +173,7 @@ export default function Header() {;
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
 =======
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -222,7 +222,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 =======
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -240,7 +240,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 =======
               </div>
               <div className="pt-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"

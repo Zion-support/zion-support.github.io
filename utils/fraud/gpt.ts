@@ -3,7 +3,7 @@ import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
   source: MonitoredSource
-): Promise<GptClassification> {
+): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     const lower = text.toLowerCase();
@@ -55,17 +55,17 @@ export async function classifyWithGPT(
     } as GptClassification;
   } catch {
     return {
-      label: 'SUSPICIOUS'
-      reason: 'Invalid JSON from GPT'
-      confidence: 0.5
-    }
-  }export interface GptResult {
+      label: 'SUSPICIOUS',
+      reason: 'Invalid JSON from GPT',
+      confidence: 0.5,
+    };
+  }export interface GptResult {;
   label: string;
   confidence: number;
   reasoning: string
 }
 export async function analyzeWithGpt(data: any): Promise<GptResult> {
-  // Mock implementation - in production, this would call OpenAI API
+  // Mock implementation - in production, this would call OpenAI API;
   const suspicious = data.description && data.description.toLowerCase().includes('fraud');
   return {
     label: suspicious ? 'SUSPICIOUS' : 'SAFE'
@@ -73,6 +73,8 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
 }
+
+}
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

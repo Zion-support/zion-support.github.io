@@ -1,14 +1,12 @@
-
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useResume  } from '@/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Resume  } from '@/types/resume';
+  import { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { useResume } from '@/hooks/useResume'
+import { Tabs } from '@/components/ui/tabs'
+import { Card, CardContent } from '@/components/ui/card'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'import { Button } from '@/components/ui/button'
+import { Resume } from '@/types/resume'
 // Import components
 import { ResumeProgress  } from './ResumeProgress';
 import { EmptyResumeState  } from './EmptyResumeState';
@@ -67,6 +65,7 @@ export function ResumeWizard() {
   const handleResumeChange = (resumeId: string,) => {
     fetchResume(resumeId)
   }
+=======
 
 =======
 import { useState, useEffect } from 'react',;
@@ -135,7 +134,7 @@ export function ResumeWizard() {;
     fetchResume(resumeId)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -157,6 +156,7 @@ export function ResumeWizard() {;
     )
   }
 <<<<<<< HEAD
+  
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -169,6 +169,7 @@ export function ResumeWizard() {;
       />
     )
   }
+  
 =======
 ;
   if (!resume && !showNewResumeForm) {;
@@ -185,7 +186,7 @@ export function ResumeWizard() {;
     );
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -211,7 +212,7 @@ export function ResumeWizard() {;
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -219,14 +220,18 @@ export function ResumeWizard() {;
             <ResumeProgress resume={resume} progress={progress} />
           </div>
 <<<<<<< HEAD
+=======
+          
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps
               steps = {RESUME_STEPS,}
               activeTab = {activeTab,}
               onChange = {setActiveTab,}
             />
+<<<<<<< HEAD
             {resume && (
-              <ResumeStepContent
+              <ResumeStepContent 
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
@@ -266,18 +271,11 @@ export function ResumeWizard() {;
 }onNextStep= {
   nextStep
 }onPrevStep= {
-  prevStep
-}/>)
-}</Tabs> </CardContent> </Card> </div>)
-}'"}
+  prevStep 
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"};
 =======
-          
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <ResumeSteps 
-              steps={RESUME_STEPS} 
-              activeTab={activeTab} 
-              onChange={setActiveTab} 
-            />
             
             {resume && (
               <ResumeStepContent 
@@ -294,4 +292,4 @@ export function ResumeWizard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

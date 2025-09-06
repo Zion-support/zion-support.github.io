@@ -10,8 +10,8 @@ export default function UNBridge() {
     budgetOrResolution: 'USD 3M over 24 months'
     supportingMultiverses: 'Digital Labor, AI Ethics'
     promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-    language: 'en'
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',;
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -87,7 +87,6 @@ export default function UNBridge() {
       setLoading(false);
     }
 
-  }
 =======
 export default function UNBridge(req, res) {
   try {
@@ -194,7 +193,7 @@ export default function UNBridge(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -267,6 +266,7 @@ export default function UNBridge(req, res) {
             </button>
           </div>
           {translated && (
+<<<<<<< HEAD
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated}
             </div>
@@ -287,21 +287,6 @@ export default function UNBridge(req, res) {
               Submit (Email)
             </button>
 =======
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
-            {result?.markdown || 'No draft yet'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-          <div className="flex items-center gap-2">
-            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
-            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
-            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
-          </div>
-          {translated && (
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -317,7 +302,7 @@ export default function UNBridge(req, res) {
           <div className="flex items-center gap-2">
             <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
             <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -354,6 +339,8 @@ export default function UNBridge(req, res) {
       </div>
     </div>
 );
+
+}
 =======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
@@ -390,4 +377,4 @@ export default function UNBridge(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

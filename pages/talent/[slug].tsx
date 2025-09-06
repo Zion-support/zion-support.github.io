@@ -1,23 +1,10 @@
 <<<<<<< HEAD
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
-const TalentProfile: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [responseLog, setResponseLog] = useState<
-    Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
-  >([]);
-  const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {
-    setResponseLog((prev) => [
-      ...prev
-      { action, at: new Date().toISOString() }
-    ]);
-  }
 =======
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -25,6 +12,7 @@ import { useRouter } from 'next/router',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
@@ -102,5 +90,6 @@ export default TalentProfile;
     </div>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default TalentProfile;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

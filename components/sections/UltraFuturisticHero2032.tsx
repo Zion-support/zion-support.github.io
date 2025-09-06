@@ -3,22 +3,22 @@ import { motion  } from 'framer-motion';
 import Link from 'next/link';
 
 import {
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  Star
-  ArrowRight
-  Play
-  CheckCircle
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
@@ -85,7 +85,7 @@ const featuredServices = [
 export default function UltraFuturisticHero2032() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
-  }
+  };
 ];
 export default function UltraFuturisticHero2032() {
   return (
@@ -119,7 +119,7 @@ export default function UltraFuturisticHero2032() {
           ))}
         </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Gradient Orbs */}
         <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse' />
@@ -153,7 +153,7 @@ export default function UltraFuturisticHero2032() {
 
         </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -163,7 +163,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -179,7 +179,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -199,7 +199,11 @@ export default function UltraFuturisticHero2032() {
 =======
         </motion.p>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+        </motion.p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -209,7 +213,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <Link
             href='/services'
@@ -241,7 +245,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Stats Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -252,7 +256,7 @@ export default function UltraFuturisticHero2032() {
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -264,7 +268,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -294,7 +298,7 @@ export default function UltraFuturisticHero2032() {
           ))}
         </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -304,7 +308,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -324,7 +328,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <Link
                   href={service.href}
@@ -358,7 +362,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -368,7 +372,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -439,7 +443,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -449,7 +453,7 @@ export default function UltraFuturisticHero2032() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -458,8 +462,8 @@ export default function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
-    </section>
 <<<<<<< HEAD
+    </section>;
   );      >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -472,5 +476,6 @@ export default function UltraFuturisticHero2032() {
   )
 }
 =======
+    </section>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

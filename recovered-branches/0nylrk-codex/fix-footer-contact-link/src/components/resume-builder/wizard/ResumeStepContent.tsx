@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import {TabsContent} from "@/components/ui/tabs";
+import {Resume} from "@/types/resume";
+import {BasicInfoForm} from '../forms/basic-info';
+import {WorkExperienceForm} from '../forms/WorkExperienceForm';
+import {EducationForm} from '../forms/EducationForm';
+import {SkillsForm} from '../forms/SkillsForm';
+import {CertificationsForm} from '../forms/CertificationsForm';
+import {PreviewResume} from '../PreviewResume';
+=======
 import { TabsContent } from "@/components/ui/tabs",
 <<<<<<< HEAD
 import { Resume } from "@/types/resume";
@@ -16,7 +26,7 @@ import { EducationForm } from '../forms/EducationForm',
 import { SkillsForm } from '../forms/SkillsForm',
 import { CertificationsForm } from '../forms/CertificationsForm',
 import { PreviewResume } from '../PreviewResume',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -32,8 +42,13 @@ export const ResumeStepContent = ({
   onPrevStep
 =======
 
+<<<<<<< HEAD
+export const ResumeStepContent = ({ ;
+  activeTab;
+=======
 export const ResumeStepContent = ({ 
   activeTab,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   resume, 
   onNextStep, 
   onPrevStep 
@@ -57,6 +72,8 @@ export const ResumeStepContent = ({
         <WorkExperienceForm
 =======
         <WorkExperienceForm 
+<<<<<<< HEAD
+=======
 import { TabsContent } from "@/components/ui/tabs",;
 import { Resume } from "@/types/resume",;
 import { BasicInfoForm } from '../forms/basic-info',;
@@ -93,7 +110,7 @@ export const ResumeStepContent = ({;
       </TabsContent>;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
@@ -137,19 +154,16 @@ export const ResumeStepContent = ({;
         <PreviewResume
           resume={resume as Resume}
           onBack={onPrevStep}
+<<<<<<< HEAD
         />
       </TabsContent>
     </>
   )
-}
-
 =======
-        <PreviewResume 
-          resume={resume as Resume} 
-          onBack={onPrevStep}
         />;
       </TabsContent>;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

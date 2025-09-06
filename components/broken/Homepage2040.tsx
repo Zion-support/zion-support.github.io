@@ -1,9 +1,7 @@
 <<<<<<< HEAD
-
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
-  opacity: 0
-}
+  opacity: 0 
 =======
 import React from 'react';
 
@@ -18,6 +16,7 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
@@ -282,24 +281,23 @@ const Homepage2040: React.FC = () => {
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
-              <motion.h1
+              <motion.h1 
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
-              <motion.p
+              <motion.p 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
 <<<<<<< HEAD
-              {/* Enhanced CTA Section */}
-              <motion.div
 =======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Enhanced CTA Section */}
               <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -328,7 +326,7 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -388,7 +386,7 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -442,7 +440,7 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -511,10 +509,9 @@ const Homepage2040: React.FC = () => {
                         </span>
                       </div>
 <<<<<<< HEAD
-                      {/* CTA Button */}
-                      <Link
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* CTA Button */}
                       <Link 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -530,7 +527,7 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* View All Services Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -554,7 +551,7 @@ const Homepage2040: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -577,7 +574,7 @@ const Homepage2040: React.FC = () => {
               >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
-              <motion.div
+              <motion.div 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >

@@ -5,8 +5,8 @@ export default function InstagramRedirect() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //instagram.com/ziontechgroup')
-    }
+      window.location.replace('https: //instagram.com/ziontechgroup'),
+    };
   }, []);
   return (
     <>
@@ -30,6 +30,7 @@ export default function InstagramRedirect() {
     </>
   );
 
+}
 =======
 export default function InstagramRedirect(req, res) {
   try {
@@ -78,4 +79,4 @@ export default function InstagramRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

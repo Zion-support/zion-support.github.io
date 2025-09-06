@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Progress  } from '@/components/ui/progress';
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
@@ -33,16 +33,16 @@ export function BundleAnalyzer() {
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
-    const show =
-      process.env.NODE_ENV === 'development' |
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
-    if (!show) return
+    if (!show) return;
     setIsVisible(true)
     collectBundleInfo()
   }, [])
   const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
       // Get performance entries for script resources
@@ -73,15 +73,15 @@ export function BundleAnalyzer() {
       })
       // Estimate gzipped size (roughly 70% of original)
       const gzippedSize = totalSize * 0.7
-      const cacheHitRate =
+      const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-        totalSize
-        gzippedSize
-        chunkCount: chunkData.length
-        loadTime: totalLoadTime / chunkData.length
-        cacheHitRate: cacheHitRate * 100
-      })
+        totalSize,
+        gzippedSize,
+        chunkCount: chunkData.length,;
+        loadTime: totalLoadTime / chunkData.length,;
+        cacheHitRate: cacheHitRate * 100;
+      });
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
@@ -112,6 +112,7 @@ export function BundleAnalyzer() {
   if (!shouldShow) {
     return null
   }
+
 =======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -225,7 +226,7 @@ export function BundleAnalyzer() {;
     return null;
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -243,7 +244,7 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           Bundle Analyzer
         </Button>
       </div>
@@ -288,7 +289,7 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ✕
               </Button>
             </div>
@@ -351,7 +352,7 @@ export function BundleAnalyzer() {;
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -366,7 +367,7 @@ export function BundleAnalyzer() {;
                       >
 =======
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -392,6 +393,9 @@ export function BundleAnalyzer() {;
       </Card>
     </div>
   )
+} 
+
+}
 }
 =======
             <div className="text-xs text-muted-foreground">
@@ -403,4 +407,4 @@ export function BundleAnalyzer() {;
     </div>;
   );
 } ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

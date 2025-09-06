@@ -281,8 +281,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             scale: [1, 0.9, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
-            duration: 7
-            repeat: Infinity
+            duration: 7,
+            repeat: Infinity,
             ease: 'easeInOut',          }}          }}
         />
         <motion.div
@@ -301,10 +301,14 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 =======
             duration: 7,
             repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Quantum Energy Particles */}
@@ -312,7 +316,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -343,21 +347,20 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               scale: [0, 1, 0]
             }}
 <<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 2
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
 =======
-
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
               ease: 'easeInOut',            }}
 
             }}
@@ -366,7 +369,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         ))}
       </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
@@ -415,11 +418,15 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
                 ease: 'easeInOut',              }}
 
               }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           ))}
         </svg>
@@ -427,18 +434,18 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraAdvancedFuturisticBackgroundV2;    </div>
   )
 }
 export default UltraAdvancedFuturisticBackgroundV2;
-
-<<<<<<< HEAD
 =======
 export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

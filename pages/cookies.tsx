@@ -1,37 +1,23 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-  Shield
-  Settings
-  Info
-  ExternalLink
-  ArrowRight
-  CheckCircle
-  XCircle
-  AlertTriangle
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-    necessary: true
-    analytics: false
-    marketing: false
-    functional: false
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
   });
   const cookieTypes = [
     {
@@ -372,42 +358,11 @@ import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
 =======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function CookiesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO
-        title='Cookie Policy | Zion Tech Group'
-        description='Information about cookies used by Zion Tech Group.'
-        canonical='https://ziontechgroup.com/cookies/'
-      />
-      <div className='container mx-auto px-4 py-24 text-white'>
-        <div className='max-w-3xl mx-auto space-y-6'>
-          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
-          <p className='text-gray-300'>
-            We use minimal, privacy‑respecting analytics. Some third‑party
-            embeds may set cookies. You can block non‑essential cookies via your
-            browser.
-          </p>
-          <ul className='list-disc list-inside text-gray-300 space-y-1'>
-<<<<<<< HEAD
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
-<<<<<<< HEAD
-=======
-}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -444,23 +399,24 @@ export default function CookiesPage() {
             </a>
           </p>
         </div>
+<<<<<<< HEAD
       </Layout>
-    </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    </>;
   );
+
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
 }
 =======
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

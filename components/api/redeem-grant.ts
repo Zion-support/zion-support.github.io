@@ -6,9 +6,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
@@ -24,7 +24,7 @@ const REDEMPTIONS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+) {;
   const started = Date.now();
   const auth = await authenticateRequest(req)
   if (!auth) {
@@ -42,8 +42,7 @@ export default async function handler(
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -58,8 +57,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
+  const { studentEmail, grantCode, courseId } = req.body || {};
+  if (!studentEmail || !grantCode || !courseId) {
+<<<<<<< HEAD
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
@@ -81,10 +81,9 @@ redeemedAt: now
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
+}
+}
+}
 =======
-
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

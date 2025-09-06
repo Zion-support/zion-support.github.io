@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+import {FilterSidebar} from "@/components/talent/FilterSidebar";
+import {TalentResults} from "@/components/talent/TalentResults";
+import {useTalentDirectory} from "@/hooks/useTalentDirectory";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+export default function TalentDirectory() {;
+  const navigate = useNavigate();
+=======
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -17,7 +32,7 @@ import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent",
 export default function TalentDirectory() {
   const navigate = useNavigate(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const navigate = useNavigate();
   // Use our custom hook to manage state
@@ -197,7 +212,7 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
               <Button
@@ -211,7 +226,7 @@ export default function TalentDirectory() {;
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Results */}
             <TalentResults
               filteredTalents={filteredTalents}
@@ -241,7 +256,7 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 experienceRange;
                 setExperienceRange;
 

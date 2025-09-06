@@ -2,7 +2,7 @@
  password.toLowerCase () .includes (pattern) );
 =======
 password.toLowerCase () .includes (pattern) );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -42,7 +42,7 @@ export default async function handler(
 
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
@@ -196,4 +196,4 @@ export default async function handler(
 }
 =======
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

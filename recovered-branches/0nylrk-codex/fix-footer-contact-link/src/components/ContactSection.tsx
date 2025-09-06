@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+=======
 
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
@@ -6,7 +11,7 @@ import { Mail } from "lucide-react";
 =======
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -89,11 +94,9 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
 <<<<<<< HEAD
-  );
-}
 =======
+    </section>
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -180,6 +183,7 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </section>;
   );
 }

@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {InterviewCard} from "@/components/interviews/InterviewCard";
+import {Button} from "@/components/ui/button";
+import {Calendar, Clock, Video} from "lucide-react";
+import {format, isAfter, parseISO, startOfDay} from "date-fns";
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
+=======
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -22,6 +39,7 @@ import { format, isAfter, parseISO, startOfDay } from "date-fns",
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -134,6 +152,8 @@ function InterviewsContent() {
 =======
               <InterviewCard 
                 key={interview.id} 
+<<<<<<< HEAD
+=======
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -206,7 +226,7 @@ function InterviewsContent() {;
             {interviews.map((interview) => (;
               <InterviewCard;
                 key={interview.id} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 interview={interview}
                 onRefresh={async () => {
                   await fetchInterviews()
@@ -308,6 +328,14 @@ function InterviewsContent() {;
       <Footer />
     </>
   )
+=======
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export default function Interviews() {
   return (
@@ -316,21 +344,4 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
-=======
-          </TabsContent>;
-        </Tabs>;
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
 ;
-export default function Interviews() {;
-  return (;
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

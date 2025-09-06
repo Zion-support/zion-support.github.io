@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -14,7 +13,7 @@
   const imgRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!lazy |priority |isInView) return
+    if (!lazy || priority || isInView) return;
     const observer = new IntersectionObserver(
       ([entry],) => {
         if (entry && entry.isIntersecting) {
@@ -70,13 +69,14 @@ export function OptimizedImage({;
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 <<<<<<< HEAD
       {
         rootMargin: '50px', // Start loading 50px before the image enters viewport
       }
+<<<<<<< HEAD
     )
     if (imgRef.current) {
       observer.observe(imgRef.current)
@@ -107,9 +107,6 @@ export function OptimizedImage({;
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL
-    // Generate a simple gray blur placeholder
-    return `data:image/svg+xml;base64,${Buffer.from(
-      `<svg width="${width |400}" height="${height |300}" xmlns="http://www.w3.org/2000/svg">
 =======
     ),;
     if (imgRef.current) {;
@@ -144,6 +141,7 @@ export function OptimizedImage({;
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
     
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -204,7 +202,7 @@ export function OptimizedImage({;
     >;
       {isInView && !hasError && (;
         <Image;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           src={getOptimizedSrc(src)}
           alt={alt}
           width={width}
@@ -216,7 +214,7 @@ export function OptimizedImage({;
           onLoad={handleLoad}
           onError={handleError}
 <<<<<<< HEAD
-          className={cn(            'transition-opacity duration-300'
+          className={cn(            'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 =======
@@ -224,7 +222,7 @@ export function OptimizedImage({;
             'transition-opacity duration-300',;
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {...props}
         />
       )}
@@ -235,7 +233,7 @@ export function OptimizedImage({;
 =======
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
       {/* Error fallback */}
       {hasError && (
@@ -279,7 +277,7 @@ export function OptimizedImage({;
                 />
               </svg>
               <span className="text-xs">Image not available</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           )}
         </div>
@@ -308,8 +306,8 @@ export function preloadImage(src: string): Promise<void> {
     img.src = src
   })
 // Utility to get image dimensions
-export function getImageDimensions(
-  src: string
+export function getImageDimensions(;
+  src: string;
 ): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
     const img = new window.Image()
@@ -324,7 +322,6 @@ export function getImageDimensions(
     img.src = src
   })
 }
-
 =======
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
@@ -367,4 +364,4 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     img.src = src;
   });
 } ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

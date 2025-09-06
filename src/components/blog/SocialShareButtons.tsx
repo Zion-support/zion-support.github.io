@@ -1,11 +1,18 @@
-import React from 'react';
 <<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
   title: string
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+  const shareUrl = null;
+    typeof window !== 'undefined'
+      ? encodeURIComponent(window.location.href)
+      : ''
+  const shareText = encodeURIComponent(title)
 =======
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast',;
@@ -26,7 +33,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',
   const shareText = encodeURIComponent(title),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
@@ -46,8 +53,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       '_blank'
     )
   }
-  const copyLink = () => {
-    if (typeof window === 'undefined') return
 =======
   },
 
@@ -59,9 +64,9 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   },
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const copyLink = () => {
     if (typeof window === 'undefined') return,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -104,10 +109,10 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
           <span>{btn.label}</span>
         </Button>
       ))}
-    </div>
-  )
-}
-}
+    </div>;
+  );
+};
+};
 =======
   },
 
@@ -162,4 +167,4 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -11,11 +11,6 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 
 export function TalentCardHeader({
-  fullName
-  professionalTitle
-  profilePicture
-  availabilityType
-
 =======
 
 import React from "react",
@@ -31,6 +26,7 @@ interface TalentCardHeaderProps {
 }
 
 export function TalentCardHeader({ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   fullName,
   professionalTitle, 
   profilePicture, 
@@ -50,7 +46,7 @@ export function TalentCardHeader({
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
@@ -62,8 +58,9 @@ export function TalentCardHeader({
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
-    </div>
-  )
+    </div>;
+  );
+};
 }
 =======
           
@@ -113,4 +110,4 @@ export function TalentCardHeader({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

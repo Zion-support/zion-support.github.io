@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
+=======
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
@@ -9,16 +17,23 @@ import { NoJobsCard } from "./NoJobsCard";
 =======
 import { JobMatchesCard } from "./JobMatchesCard",
 import { NoJobsCard } from "./NoJobsCard",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SuggestedJobsProps {
   talentId?: string
 }
+
+<<<<<<< HEAD
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+=======
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 <<<<<<< HEAD
   const { user } = useAuth();
 =======
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -99,7 +114,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
@@ -164,6 +179,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply}
                 onDecline={handleDecline}
                 showApplied={true}
+<<<<<<< HEAD
               />
             ))}
           </div>
@@ -172,12 +188,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     </div>
   )
 }
+;
 =======
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
               />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

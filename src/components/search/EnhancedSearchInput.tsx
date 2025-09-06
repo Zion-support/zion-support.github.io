@@ -1,11 +1,6 @@
 <<<<<<< HEAD
-
-
+          
 import { logInfo, logWarn } from '@/utils/productionLogger'
-interface EnhancedSearchInputProps {
-  value: string
-  onChange: (value: string,) => void
-
 =======
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
@@ -20,6 +15,7 @@ import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -27,17 +23,16 @@ interface EnhancedSearchInputProps {
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
-   */
 <<<<<<< HEAD
-
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+   */;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;  /**
-
 =======
+   */
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
   /**
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -49,9 +44,8 @@ export function EnhancedSearchInput({
   onChange
   onSelectSuggestion
   placeholder = "Search..."
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-<<<<<<< HEAD
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -64,6 +58,7 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
+<<<<<<< HEAD
   const [isFocused, setIsFocused] = useState(false)
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([])
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
@@ -76,18 +71,6 @@ export function EnhancedSearchInput({
   const [loading, setLoading] = useState(false)
   const debounced = useDebounce(value, 200)
 =======
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
-import { Search, X  } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-export function EnhancedSearchInput({;
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = "Search...",
-  searchSuggestions
-}: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false),
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
@@ -101,14 +84,14 @@ export function EnhancedSearchInput({;
 
   const debounced = useDebounce(value, 200),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
-          setApiSuggestions([])
-          return
+          setApiSuggestions([]),
 <<<<<<< HEAD
+          return;
         }
         setLoading(true)
         try {
@@ -120,6 +103,7 @@ export function EnhancedSearchInput({;
             if (Array.isArray(data)) {
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
 =======
+          return
 import React, { useState, useEffect, useRef, useMemo } from "react",;
 import { useTranslation } from "react-i18next",;
 import { Search, X } from 'lucide-react';
@@ -182,7 +166,7 @@ export function EnhancedSearchInput({;
             const data = await response.json(),;
             if (Array.isArray(data)) {;
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           } else {
             // Silently fail for search suggestions - don't show error toast
@@ -208,7 +192,7 @@ export function EnhancedSearchInput({;
         (searchSuggestions |[]).filter(s => s.type === 'recent')
       )
       setHighlightedIndex(-1)
-      return
+      return;
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
@@ -296,7 +280,7 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
@@ -306,7 +290,7 @@ export function EnhancedSearchInput({;
       logWarn('onSelectSuggestion callback not provided')
 =======
       logWarn('onSelectSuggestion callback not provided'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -314,8 +298,8 @@ export function EnhancedSearchInput({;
       } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
         router.push(`/blog/${suggestionObj.slug}`)
       } else {
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 <<<<<<< HEAD
-        router.push(`/search/${suggestionObj.slug |slugify(suggestionObj.text)}`)
       }
     }
     setIsFocused(false)
@@ -333,7 +317,7 @@ export function EnhancedSearchInput({;
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
       if(!currentValue) {
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'))
-        return
+        return;
 }
       const filtered = suggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(currentValue.toLowerCase())
@@ -348,10 +332,10 @@ export function EnhancedSearchInput({;
     [setFilteredSuggestions] // setFilteredSuggestions from useState is stable
   )
   useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-}
+  // TODO: Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+};
 }, []); [])
     debouncedFilterSuggestions(value, searchSuggestions)
     setHighlightedIndex(-1)
@@ -390,7 +374,7 @@ export function EnhancedSearchInput({;
         setHighlightedIndex(-1)
         inputRef.current?.blur()
 }
-      return
+      return;
 }
     switch(e.key) {
       case 'ArrowDown':
@@ -444,7 +428,6 @@ export function EnhancedSearchInput({;
     }
   }
 =======
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -518,7 +501,7 @@ export function EnhancedSearchInput({;
     }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div
       className="relative w-full"
@@ -538,7 +521,7 @@ export function EnhancedSearchInput({;
           ref = {inputRef,}
 =======
           ref={inputRef}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -588,7 +571,7 @@ export function EnhancedSearchInput({;
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -617,7 +600,7 @@ export function EnhancedSearchInput({;
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
@@ -694,7 +677,8 @@ break
     </div>
   )
 }
+;
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

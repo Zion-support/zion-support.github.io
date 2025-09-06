@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
@@ -8,7 +7,7 @@ import {Button} from "./ui/button";
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const services = [
   {
     title: "Servers"
@@ -71,7 +70,7 @@ export function GlobalServiceSection() {
     </section>
   )
 <<<<<<< HEAD
-}
+};
 =======
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
@@ -116,5 +115,5 @@ export function GlobalServiceSection() {;
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4">;
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

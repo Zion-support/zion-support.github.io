@@ -5,8 +5,8 @@ export default function GitHubRedirect() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //github.com/Zion-Holdings')
-    }
+      window.location.replace('https: //github.com/Zion-Holdings'),
+    };
   }, []);
   return (
     <>
@@ -30,6 +30,7 @@ export default function GitHubRedirect() {
     </>
   );
 
+}
 =======
 export default function GitHubRedirect(req, res) {
   try {
@@ -78,4 +79,4 @@ export default function GitHubRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

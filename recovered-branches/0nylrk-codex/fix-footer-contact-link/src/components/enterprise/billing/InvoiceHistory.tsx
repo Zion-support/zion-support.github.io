@@ -1,12 +1,12 @@
 
 <<<<<<< HEAD
 import React from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Download, FileText, Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {toast} from "@/hooks/use-toast";
 =======
 import React from "react",
 import {
@@ -26,52 +26,21 @@ import { toast } from "@/hooks/use-toast";
 =======
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function InvoiceHistory() {
   // Mock invoice data
 
   const invoices = [
     {
 <<<<<<< HEAD
-      id: "INV-1234"
+      id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
-      status: "paid"
-      period: "May 2025"}
-    {
-      id: "INV-1233"
-      date: "Apr 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Apr 2025"}
-    {
-      id: "INV-1232"
-      date: "Mar 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Mar 2025"}
-    {
-      id: "INV-1231"
-      date: "Feb 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Feb 2025"}
-    {
-      id: "INV-1230"
-      date: "Jan 1, 2025";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Jan 2025"}
-    {
-      id: "INV-1229"
-      date: "Dec 1, 2024";
-      amount: "$1,999.00";
-      status: "paid"
-      period: "Dec 2024"}]
 =======
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       status: "paid",
       period: "May 2025"},
     {
@@ -206,7 +175,6 @@ export function InvoiceHistory() {
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import {;
@@ -349,6 +317,7 @@ export function InvoiceHistory() {;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

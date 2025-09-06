@@ -1,23 +1,36 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
-import { Star } from "lucide-react";
-
+import {Star} from "lucide-react";
 =======
 import React from "react",
 import { Star } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { Star } from "lucide-react";
+>>>>>>> main
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-    { value: "4.8", label: "App Store Rating" }
-    { value: "50K+", label: "Downloads" }
-    { value: "96%", label: "User Satisfaction" }
+    { value: "4.8", label: "App Store Rating" },
+    { value: "50K+", label: "Downloads" },
+    { value: "96%", label: "User Satisfaction" },
+<<<<<<< HEAD
+<<<<<<< HEAD
+    { value: "12M+", label: "Matches Made" };
+=======
+    { value: "12M+", label: "Matches Made" },
+>>>>>>> main
+  ];
+=======
     { value: "12M+", label: "Matches Made" }
 <<<<<<< HEAD
   ];
 =======
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -33,6 +46,10 @@ export const CommunityTrust: React.FC = () => {
             mobile app to connect, hire, and work
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
           {stats.map((stat, index) => (
@@ -75,9 +92,13 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
@@ -101,10 +122,12 @@ export const CommunityTrust: React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
-  );
-}
-
-=======
   )
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> main
+};
+=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

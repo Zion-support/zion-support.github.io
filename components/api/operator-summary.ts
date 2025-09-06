@@ -5,7 +5,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
     const r = await fetch(
-      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
     );
     const metrics = await r.json();
     const jobs24 =

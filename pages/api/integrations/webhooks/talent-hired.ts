@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -7,7 +6,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { talent } = req.body as { talent?: Record<string, any> }
   if (!talent) return res.status(400).json({ error: "Missing talent payload" });
@@ -35,8 +34,8 @@ export default async function handler(
     results.push({ providerId: conn.providerId, ok: true });
 
   }
-  res.status(200).json({ ok: true, results });
-}
+<<<<<<< HEAD
+res.status(200).json({ ok: true, results });
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -76,5 +75,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -13,7 +13,7 @@ import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -67,11 +67,19 @@ export default function Signup() {
 
 type SignupFormValues = z.infer<typeof signupSchema>,
 
+<<<<<<< HEAD
+export default function Signup() {;
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize react-hook-form
@@ -263,7 +271,7 @@ export default function Signup() {;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   />
                   <FormField

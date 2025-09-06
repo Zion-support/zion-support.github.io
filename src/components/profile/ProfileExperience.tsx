@@ -1,6 +1,5 @@
-
 <<<<<<< HEAD
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
+import { ProfileExperience as ProfileExperienceType } from '@/types/profile'
 import { Briefcase } from 'lucide-react'
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[]
@@ -19,6 +18,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
       <div className="space-y-6">
         {experience.map((exp,) => (
 =======
+
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from 'lucide-react'
 
@@ -33,7 +33,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
       
       <div className="space-y-6">
         {experience.map((exp) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div key={exp.id} className="flex">
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
@@ -43,7 +43,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -56,10 +56,11 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
           </div>
         ))}
       </div>
-    </div>
-  )
+    </div>;
+  );
+};
 }
-
+}
 =======
               <p className="text-zion-slate">{exp.description}</p>
             </div>
@@ -97,4 +98,4 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

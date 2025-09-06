@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "use client";
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -65,29 +61,10 @@ import {
   GraduationCap,
   Factory,
   Truck,
-  CreditCard,
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  Menu
-  X
-  ChevronDown
-  Code
-  Smartphone
-  Cloud
-  Database
-  Shield
-  Zap
-  Building
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+  CreditCard,;
 } from "lucide-react";
 
-export default function Header() {
+export default function Header() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -135,11 +112,11 @@ export default function Header() {
       icon: Shield
     }
     {
-      title: "Performance Optimization"
-      description: "Speed and efficiency improvements"
-      href: "/services/performance"
-      icon: Zap
-    }
+      title: "Performance Optimization",
+      description: "Speed and efficiency improvements",
+      href: "/services/performance",
+      icon: Zap,
+    },
   ];
   const solutionsDropdown = [
     {
@@ -161,11 +138,11 @@ export default function Header() {
       icon: Heart
     }
     {
-      title: "Educational Platforms"
-      description: "Learning management systems"
-      href: "/solutions/education"
-      icon: GraduationCap
-    }
+      title: "Educational Platforms",
+      description: "Learning management systems",
+      href: "/solutions/education",
+      icon: GraduationCap,
+    },
   ];
   const industriesDropdown = [
     { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory }
@@ -211,23 +188,44 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-            <Link href="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                <Brain className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
             </Link>
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+        {/* Mobile Menu */}
 =======
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -355,34 +353,6 @@ const Header = () => {
 >>>>>>> origin/automation-improvements-final
           </div>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-          <nav className="hidden md:flex space-x-8">
-=======
-          <nav className="hidden lg:flex space-x-8">
->>>>>>> origin/main
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
           <div className="hidden lg:flex items-center space-x-8">
 <<<<<<< HEAD
             {/* Services Dropdown */}
@@ -471,10 +441,32 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+=======
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 border-t border-gray-200 pt-4"
@@ -692,7 +684,7 @@ const Header = () => {
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   Get Started
                 </Link>
@@ -712,4 +704,4 @@ const Header = () => {
 };
 
 export default Header;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

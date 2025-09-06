@@ -7,7 +7,7 @@ function getFilePath(fileName: string): string {
 }
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
-    if (fs.existsSync(filePath)) {
+    if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
@@ -16,19 +16,22 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   }
   return defaultValue;
 }
-export function writeJsonFile<T>(fileName: string, data: T): void {
+
+export function writeJsonFile<T>(fileName: string, data: T): void {;
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
 }
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
+
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+}
 =======
 import fs from 'fs';
 import path from 'path';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,5 @@
+export interface BlockchainWeb3Service {;
 <<<<<<< HEAD
-export interface BlockchainWeb3Service {
   id: string;
   name: string;
   tagline: string;
@@ -410,17 +410,17 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
-      'Community support, developer documentation, custom development services, and enterprise solutions.'
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
-    link: 'https://ziontechgroup.com/web3-social-media-platform'
-    icon: '🌐'
-    color: 'from-purple-500 to-indigo-600'
-    popular: true
-    launchDate: '2024-01-01'
-    customers: 25000
-    rating: 4.6
-    reviews: 18000
-  }
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+    link: 'https://ziontechgroup.com/web3-social-media-platform',
+    icon: '🌐',
+    color: 'from-purple-500 to-indigo-600',
+    popular: true,
+    launchDate: '2024-01-01',
+    customers: 25000,
+    rating: 4.6,
+    reviews: 18000,
+  },;
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
@@ -437,10 +437,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.6
 
     reviews: 18000
-  }
-];
 =======
-export interface BlockchainWeb3Service {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -702,6 +699,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

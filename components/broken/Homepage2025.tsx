@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-
-}
 =======
  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
@@ -219,5 +218,23 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }export default Homepage2025;export default Homepage2025;
 <<<<<<< HEAD
 
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

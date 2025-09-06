@@ -181,7 +181,7 @@ export default function CloudNativeAutomation() {
                   infrastructure, we&apos,re exploring emerging technologies
 =======
                   infrastructure, we're exploring emerging technologies
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>

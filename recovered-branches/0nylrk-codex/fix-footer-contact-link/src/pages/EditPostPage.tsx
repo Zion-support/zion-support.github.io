@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumPost, ForumCategory} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
+=======
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -12,7 +23,7 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PostFormValues {
 
   title: string
@@ -44,24 +55,15 @@ const mockPost: ForumPost = {
 },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-const mockPost: ForumPost = {
-  id: "1"
-  title: "Best practices for AI model fine-tuning"
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
-  authorId: "user1"
-  authorName: "Alex Johnson"
-  authorAvatar: "https://i.pravatar.cc/150?img=3"
-  authorRole: "Verified Talent"
-  categoryId: "ai-tools"
-  tags: ["machine-learning", "fine-tuning", "gpt"];
-  createdAt: "2025-04-01T12:00:00Z"
-  updatedAt: "2025-04-01T12:00:00Z"
-  upvotes: 48
-  downvotes: 2
-  replyCount: 12
-  isAnswered: true
-  isFeatured: true
-}
+<<<<<<< HEAD
+export default function EditPostPage() {;
+  const { postId } = useParams() as { postId?: string };
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 export default function EditPostPage() {
 <<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
@@ -77,6 +79,7 @@ export default function EditPostPage() {
   const { user } = useAuth(),
   const [post, setPost] = useState<ForumPost | null>(mockPost),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -193,16 +196,15 @@ export default function EditPostPage() {
           <span className="text-sm font-medium">Edit</span>
         </div>
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        <PostForm
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          isEditing={true}
+        <PostForm 
+          initialValues={initialValues} 
+          onSubmit={handleSubmit} 
+          isEditing={true} 
         />
       </div>
     </AppLayout>
   )
 <<<<<<< HEAD
-}
 =======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
@@ -345,6 +347,7 @@ export default function EditPostPage() {;
       </div>;
     </AppLayout>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

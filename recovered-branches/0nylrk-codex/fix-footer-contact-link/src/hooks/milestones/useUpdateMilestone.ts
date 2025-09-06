@@ -1,20 +1,15 @@
 
 <<<<<<< HEAD
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
-export const useUpdateMilestone = () => {
+export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-  const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
-    if (!user) return false;
-    try {
-      setIsSubmitting(true);
 =======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
@@ -26,6 +21,7 @@ export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false,
@@ -141,6 +137,15 @@ export const useUpdateMilestone = () => {
       return false
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+    }
+  };
+  
+  return {
+    updateMilestoneStatus;
+    updateMilestone;
+    isSubmitting
+=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -207,6 +212,7 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

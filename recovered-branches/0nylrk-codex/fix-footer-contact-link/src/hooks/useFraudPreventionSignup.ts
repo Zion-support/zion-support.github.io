@@ -1,10 +1,10 @@
 
 <<<<<<< HEAD
-import { useState, useCallback  } from 'react';
-import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-export function useFraudPreventionSignup() {
+import {useState, useCallback} from 'react';
+import {checkSignupPatterns} from '@/services/fraud/signupCheck';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from '@/hooks/use-toast';
+export function useFraudPreventionSignup() {;
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
@@ -17,7 +17,7 @@ export function useFraudPreventionSignup() {
       console.error('Error getting IP:', error);
       return undefined
     }
-  }
+  };
 =======
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
@@ -36,6 +36,7 @@ export function useFraudPreventionSignup() {;
       return undefined;
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Check if the signup attempt might be fraudulent
@@ -115,6 +116,26 @@ export function useFraudPreventionSignup() {;
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
           return false
+<<<<<<< HEAD
+        }
+        
+        // Otherwise, allow but flag for review
+        return true
+      }
+      
+      // No suspicious patterns found
+      return true
+    } catch (error) {
+      console.error('Error in fraud check:', error);
+      // On error, allow the signup but log the error
+      return true
+    } finally {
+      setIsCheckingFraud(false)
+    }
+  }, []);
+  
+  return {
+=======
   },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
@@ -169,7 +190,7 @@ export function useFraudPreventionSignup() {;
     }
   }, []);
   return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     isCheckingFraud;
 
     checkFraudBeforeSignup}

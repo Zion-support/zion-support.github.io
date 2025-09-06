@@ -1,17 +1,20 @@
 
 <<<<<<< HEAD
 import React from 'react';
-import { Link  } from 'react-router-dom';
-import { Logo  } from './Logo';
-import { UserMenu  } from './UserMenu';
-import { LanguageSelector  } from './LanguageSelector';
-import { MainNavigation  } from '@/layout/MainNavigation';
-import { useAuth  } from '@/hooks/useAuth';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import {Link} from 'react-router-dom';
+import {Logo} from './Logo';
+import {UserMenu} from './UserMenu';
+import {LanguageSelector} from './LanguageSelector';
+import {MainNavigation} from '@/layout/MainNavigation';
+import {useAuth} from '@/hooks/useAuth';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {generateSearchSuggestions} from "@/data/marketplaceData";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+export interface HeaderProps {;
+  hideLogin?: boolean;
+  customLogo?: string;
 =======
 import React from 'react',
 import { Link } from 'react-router-dom',
@@ -25,10 +28,10 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   customTheme?: {
 
     primaryColor: string
@@ -36,6 +39,15 @@ export interface HeaderProps {
     textColor: string
   }
 }
+
+<<<<<<< HEAD
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+=======
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -56,6 +68,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const navigate = useNavigate(),
   const [query, setQuery] = useState(""),
   const searchSuggestions = generateSearchSuggestions(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
@@ -109,12 +122,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="flex items-center gap-2">
           <LanguageSelector />
 <<<<<<< HEAD
-          {!hideLogin && <UserMenu />}
-        </div>
-      </div>
-    </header>
-  )
-}
 =======
 import React from 'react',;
 import { Link } from 'react-router-dom',;
@@ -182,6 +189,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </form>;
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {!hideLogin && <UserMenu />}
         </div>;
       </div>;

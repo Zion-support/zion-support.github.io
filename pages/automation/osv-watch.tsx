@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/security/osv-report.json';
+import data from '../../data/security/osv-report.json',;
 =======
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/security/osv-report.json',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
@@ -30,7 +30,7 @@ export default function OsvWatchPage() {
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
 <<<<<<< HEAD
-                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary |''}</li>
+                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
                   ))}
                 </ul>
               </li>
@@ -39,7 +39,8 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
-  )
+  );
+};
 =======
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
@@ -67,5 +68,5 @@ export default function OsvWatchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

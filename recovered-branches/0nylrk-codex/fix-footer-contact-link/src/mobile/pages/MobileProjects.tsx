@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileProjectView} from "../components/projects/MobileProjectView";
+=======
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { MobileProjectView } from "../components/projects/MobileProjectView";
 =======
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileProjectView } from "../components/projects/MobileProjectView",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock data
 
 const projectData = {
@@ -100,6 +106,8 @@ export function MobileProjects() {
 =======
         <MobileProjectView 
           project={projectData} 
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -155,11 +163,12 @@ export function MobileProjects() {;
       <main className="py-4">;
         <MobileProjectView;
           project={projectData} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           milestones={milestonesData}
         />
       </main>
       <BottomNavigation />
     </div>
   )
-}
+};
+;

@@ -1,25 +1,15 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
-
-  return (
-    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
+;
 =======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
@@ -58,7 +48,7 @@ export default function EnterpriseITPage() {_const _features = [
 =======
               <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </header>
           <section>
@@ -91,7 +81,8 @@ export default function EnterpriseITPage() {_const _features = [
         </div>
       </div>
     </Layout>
-  )
+  );
+};
 =======
                 </Link>
               ))  } catch (error) {
@@ -109,5 +100,5 @@ export default function EnterpriseITPage() {_const _features = [
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

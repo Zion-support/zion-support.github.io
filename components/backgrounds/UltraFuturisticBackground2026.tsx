@@ -282,8 +282,8 @@ const UltraFuturisticBackground2026: React.FC<
             rotate: [0, 180, 360]
             scale: [1, 1.1, 1],          }}
           transition={{
-            duration: 12
-            repeat: Infinity
+            duration: 12,
+            repeat: Infinity,
             ease: 'linear',          }}
         />
         <motion.div
@@ -323,10 +323,14 @@ const UltraFuturisticBackground2026: React.FC<
 =======
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Energy Field Effects */}
@@ -334,7 +338,7 @@ const UltraFuturisticBackground2026: React.FC<
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           animate={{
@@ -358,8 +362,8 @@ const UltraFuturisticBackground2026: React.FC<
           animate={{
             y: ['-100%', '100%'],          }}
           transition={{
-            duration: 20
-            repeat: Infinity
+            duration: 20,
+            repeat: Infinity,
             ease: 'linear',          }}          }}
         />
         <motion.div
@@ -376,10 +380,14 @@ const UltraFuturisticBackground2026: React.FC<
 =======
             duration: 20,
             repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Content */}
@@ -391,7 +399,9 @@ const UltraFuturisticBackground2026: React.FC<
       </div>
     </div>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraFuturisticBackground2026;
       {/* Holographic Overlay */}
       <div className="fixed inset-0 pointer-events-none z-40">
@@ -402,8 +412,6 @@ export default UltraFuturisticBackground2026;
   )
 }
 export default UltraFuturisticBackground2026;
-
-<<<<<<< HEAD
 =======
 export default UltraFuturisticBackground2026;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

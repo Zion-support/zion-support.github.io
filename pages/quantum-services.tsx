@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
+export default function QuantumServicesPage() {
+  const features = [
+    'Quantum-inspired optimization & annealing strategies',
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',
+    'Quantum-safe cryptography assessments and roadmaps',
+    'R&D ideation for quantum-ready workloads',;
+  ];
+
+=======
 import React from 'react',
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -30,6 +45,7 @@ import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 export default function QuantumServicesPage() {
   const features = [
     'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
@@ -98,13 +114,15 @@ export default function QuantumServicesPage() {
               <Shield className="w-5 h-5 text-purple-400" />
               <span>Post-quantum readiness assessments and migration planning</span>
             </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+
+}
 =======
   )
   } catch (error) {
@@ -112,4 +130,4 @@ export default function QuantumServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

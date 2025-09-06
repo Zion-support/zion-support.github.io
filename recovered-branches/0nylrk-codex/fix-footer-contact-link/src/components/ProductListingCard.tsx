@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import {useNavigate} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {ProductListing} from "@/types/listings";
+import {Star, DollarSign} from "lucide-react";
+=======
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -25,6 +32,7 @@ export function ProductListingCard({
 import { ProductListing } from "@/types/listings",
 import { Star, DollarSign } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -32,8 +40,13 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
+<<<<<<< HEAD
+  listing, ;
+  view = 'grid';
+=======
   listing, 
   view = 'grid',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -141,7 +154,7 @@ export function ProductListingCard({;
   };
   return (;
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
@@ -179,7 +192,7 @@ export function ProductListingCard({;
           </div>
 =======
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -218,7 +231,7 @@ export function ProductListingCard({;
               </span>
 =======
               </span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </div>
           <div className="flex gap-2">

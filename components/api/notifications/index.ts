@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 import {
-  NotificationItem
-  NotificationType;
+  NotificationItem,;
+  NotificationType,;
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
@@ -17,7 +17,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
+  try {;
     const userId = getUserId(req);
     const {
       filter = 'all'
@@ -31,7 +31,7 @@ export default async function handler(
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const userId = getUserId(req);
     const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>;
     // If countOnly, return unread count quickly

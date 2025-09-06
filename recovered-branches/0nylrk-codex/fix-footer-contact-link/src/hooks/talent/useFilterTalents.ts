@@ -1,8 +1,8 @@
 
 <<<<<<< HEAD
-import { useState, useMemo  } from 'react';
-import { TalentProfile } from '@/types/talent';
-export function useFilterTalents(talents: TalentProfile[]) {
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -106,7 +106,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         talent.bio?.toLowerCase().includes(lowerSearch) ||;
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch));
       );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     // Filter by selected skills
     if (selectedSkills.length > 0) {
@@ -124,6 +124,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         selectedAvailability.includes(talent.availability_type |'')
       )
     }
+    
     // Filter by location/region
     if (selectedRegions.length > 0) {
       result = result.filter(talent =>
@@ -133,6 +134,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       )
     }
 <<<<<<< HEAD
+    
     // Filter by price range
     result = result.filter(talent => {
       const hourlyRate = talent.hourly_rate |0;
@@ -146,16 +148,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     // Sort talents
     switch (sortOption) {
       case 'price-low':
-        result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
-        break;
-      case 'price-high':
-        result.sort((a, b) => (b.hourly_rate |0) - (a.hourly_rate |0));
-        break;
-      case 'rating':
-        result.sort((a, b) => (b.average_rating |0) - (a.average_rating |0));
-        break;
-      case 'experience':
-        result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 =======
 ;
     // Filter by price range;
@@ -183,6 +176,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         break;
       case 'price-high':
         result.sort((a, b) => (b.hourly_rate || 0) - (a.hourly_rate || 0));
@@ -198,8 +192,10 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break
     }
 <<<<<<< HEAD
+    
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
+  
   return {
     filteredTalents;
     searchTerm;
@@ -232,7 +228,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption,;
     setSortOption,;
     toggleSkill,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     toggleAvailability;
     toggleRegion;
 

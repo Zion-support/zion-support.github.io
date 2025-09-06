@@ -1,5 +1,5 @@
+export interface InnovativeMicroSaas {;
 <<<<<<< HEAD
-export interface InnovativeMicroSaas {
   id: string;
   name: string;
   tagline: string;
@@ -455,12 +455,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
-    launchDate: '2024-01-30'
-    customers: 3200
-    rating: 4.8
-    reviews: 1600
-  }
+      'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',
+    launchDate: '2024-01-30',
+    customers: 3200,
+    rating: 4.8,
+    reviews: 1600,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -473,10 +473,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     rating: 4.8
 
     reviews: 1600
-  }
-];
 =======
-export interface InnovativeMicroSaas {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -732,6 +729,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     customers: 3200,;
     rating: 4.8,;
     reviews: 1600;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -7,11 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
-  Calendar
-  Clock
-  DollarSign
-  Tag
-  Users
+  Calendar,
+  Clock,
+  DollarSign,
+  Tag,;
+  Users;
   Briefcase;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -34,6 +34,18 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+  deadline?: string;
+
+export default function JobDetails() {;
+  const router = useRouter(); // Init router
+  const { jobId: rawJobId } = router.query; // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {
+    job: Job | undefined;
+    isLoading: boolean;
+    error: any;
+  };
+  const { user, isAuthenticated } = useAuth();
 =======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
@@ -62,7 +74,6 @@ interface Job {;
   category: string,;
   deadline?: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   deadline?: string;
 export default function JobDetails() {
@@ -89,6 +100,7 @@ export default function JobDetails() {
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
   const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
   const { user, isAuthenticated } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel(),
   
@@ -120,7 +132,7 @@ export default function JobDetails() {
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </>
     )
   }
@@ -167,8 +179,16 @@ export default function JobDetails() {
     setIsApplyModalOpen(false)
   },
 
+<<<<<<< HEAD
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+  };
+  const isOwnJob = user?.id === job.client_id;
+=======
 
   const isOwnJob = user?.id === job.client_id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -204,7 +224,7 @@ export default function JobDetails() {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
@@ -349,7 +369,7 @@ export default function JobDetails() {;
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </div>
                 </div>
@@ -359,7 +379,7 @@ export default function JobDetails() {;
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -397,6 +417,7 @@ export default function JobDetails() {;
                     Apply Now
                   </Button>
                 )}
+
 =======
                 
                 <div className="flex items-start">
@@ -427,7 +448,7 @@ export default function JobDetails() {;
                   </Button>;
                 )}
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -445,18 +466,18 @@ export default function JobDetails() {;
           </div>;
         </div>;
       </main>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
           job={{
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
 <<<<<<< HEAD
-            id: job.id
-            title: job.title
-            description: job.description
-            company_name: job.company_name ?? 'Company'
-            budget: formatBudget(job.budget)
-            client_id: job.client_id
+            client_id: job.client_id,
           }}
 
           isOpen={isApplyModalOpen}
@@ -495,12 +516,8 @@ const isOwnJob = user?.id === job.client id;
 }'"
 }
 }
+;
 =======
-            id: job.id,
-            title: job.title,
-            description: job.description,
-            company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
             client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
@@ -510,4 +527,4 @@ const isOwnJob = user?.id === job.client id;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

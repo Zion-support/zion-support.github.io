@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 }
 import React, { useState, useEffect } from "react"
@@ -9,6 +8,7 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile()
   useEffect((,) => {
 =======
+
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X } from 'lucide-react'
@@ -18,7 +18,7 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile(),
   
   useEffect(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
@@ -35,7 +35,7 @@ export const AppStoreBanner: React.FC = () => {
     safeStorage.setItem("appBannerDismissed", "true")
   }
   // Only render on mobile devices
-  if (!isMobile |!isVisible) return null
+  if (!isMobile || !isVisible) return null
 =======
       }, 2000),
       
@@ -52,7 +52,7 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -78,13 +78,13 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  )
 <<<<<<< HEAD
-}
-'"}
-}
-
+  );
+};
+'"};
+};
 =======
+  )
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
@@ -137,4 +137,4 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

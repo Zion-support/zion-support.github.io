@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import {
@@ -22,7 +21,15 @@ interface TabDefinition {
   label: string;
   icon: LucideIcon
 export function DeveloperPortal() {
-  const { user } = useAuth();
+  const { user } = useAuth()
+  const [activeTab, setActiveTab] = useState<string>('documentation')
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: 'documentation', label: 'Documentation', icon: BookOpen },
+    { id: 'api-keys', label: 'API Keys', icon: Key },
+    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
+    { id: 'logs', label: 'Logs', icon: List },
+  ]
 =======
 
 import { useState } from "react",
@@ -65,6 +72,7 @@ export function DeveloperPortal() {
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
@@ -194,7 +202,7 @@ export function DeveloperPortal() {;
       </div>;
       {/* Tab content */}
       <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -204,16 +212,17 @@ export function DeveloperPortal() {;
   )
 }
 <<<<<<< HEAD
+
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
   )
-}
-}
-  )
-}
+};
+};
+  );
+};
 =======
 ;
 export default function ProtectedDeveloperPortal() {;
@@ -224,4 +233,4 @@ export default function ProtectedDeveloperPortal() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

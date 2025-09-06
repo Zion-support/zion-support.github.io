@@ -32,7 +32,7 @@ export default function BiotechAIResearchPlatformPage() {
 =======
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </div>
@@ -48,5 +48,8 @@ export default function BiotechAIResearchPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
-import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path);
+};
 =======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -13,11 +16,21 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 }
 =======
 },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-  const route = findRouteByPath(path)
+  const route = findRouteByPath(path),
+<<<<<<< HEAD
+  return route?.requiredAuth === true;
+};
+
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (;
+  path: string;
+  isAuthenticated: boolean;
+=======
   return route?.requiredAuth === true
 <<<<<<< HEAD
 }
@@ -29,6 +42,7 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -50,7 +64,7 @@ export const canAccessRoute = (
   return true
 }
 // Get breadcrumb items for a path
-export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
@@ -73,8 +87,6 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
-}
-
 =======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 // Find a route by path in the complete sitemap;
@@ -130,5 +142,6 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   }
 ;
   return breadcrumbs;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

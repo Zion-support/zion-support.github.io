@@ -1,15 +1,12 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -41,6 +38,8 @@ serve(async (req) => {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
 const corsHeaders = {;
@@ -61,24 +60,24 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       )
     }
 <<<<<<< HEAD
+
     const configuration = new Configuration({
       apiKey: Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
-Title: ${title}
-Key Features: ${keyFeatures |"Not specified"}
-Target Audience: ${targetAudience |"General users"}
+    
 =======
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
@@ -143,6 +142,10 @@ The description should: 1. Be approximately 200-300 words
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+      }
+    )
+=======
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -174,6 +177,7 @@ The description should: 1. Be approximately 200-300 words;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

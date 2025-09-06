@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -303,20 +302,20 @@ export const real2026Q2Additions = [
       'Ticketing and customer portals'
     ]
     useCases: [
-      'MSPs and IT providers'
-      'Internal IT for SMBs'
-      'BYOD governance'
-    ]
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow']
-    competitors: ['Atera', 'NinjaOne']
-    price: '$4'
-    period: '/device/month'
-    trialDays: 14
-    setupTime: 'Fast'
-    marketPosition: 'Cost-effective RMM for partners and IT teams'
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-  }
+      'MSPs and IT providers',
+      'Internal IT for SMBs',
+      'BYOD governance',
+    ],
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors: ['Atera', 'NinjaOne'],
+    price: '$4',
+    period: '/device/month',
+    trialDays: 14,
+    setupTime: 'Fast',
+    marketPosition: 'Cost-effective RMM for partners and IT teams',
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
+  },;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
@@ -329,9 +328,6 @@ export const real2026Q2Additions = [
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-  }
-];
-
 =======
 export const real2026Q2Additions = [;
   {;
@@ -535,6 +531,7 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

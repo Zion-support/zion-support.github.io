@@ -15,14 +15,14 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight
 import React from "react";
 import Link from "next/link";
 import {
-  Phone
-  Mail
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  ArrowRight
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ArrowRight,;
 } from "lucide-react";
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -35,10 +35,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-export default function Footer() {
+export default function Footer() {;
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -147,19 +144,6 @@ export default function Footer() {
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
             </p>
-
-=======
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
-              quantum computing, blockchain, IoT, and digital transformation services.
-            </p>
-            
->>>>>>> origin/automation-improvements-final
-=======
-              Leading technology solutions provider specializing in AI
-              cybersecurity, cloud infrastructure, quantum computing
-              blockchain, IoT, and digital transformation services.
-            </p>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -324,43 +308,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-=======
-=======
-            <h3 className="text-lg font-semibold mb-6>Services</h3>
-            <div className="space-y-4">
-              {Object.entries(services).map(([category, links]) => (
-                <div key={category}>
-                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
-                  <ul className="space-y-1>
-                    {links.slice(0, 3).map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-              ))}
-            </ul>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -395,21 +342,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -443,27 +375,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-            
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (

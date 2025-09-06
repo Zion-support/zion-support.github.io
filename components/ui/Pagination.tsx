@@ -1,24 +1,29 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
+export type PaginationProps = {;
+=======
 
 export type PaginationProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-  page
-  pageSize
-  total
-  onChange
+  page,
+  pageSize,
+  total,
+  onChange,;
 }: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+  page: number,
+  pageSize: number,
+  total: number,
+  onChange: (nextPage: number) => void;
+};
+
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -163,4 +168,4 @@ export default Pagination;
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

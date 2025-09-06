@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+=======
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -9,7 +17,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 =======
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function IntegrationsPage() {
   return (
     <ProtectedRoute adminOnly={true}>
@@ -25,7 +33,6 @@ export default function IntegrationsPage() {
     </ProtectedRoute>
   )
 <<<<<<< HEAD
-}
 =======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -47,6 +54,6 @@ export default function IntegrationsPage() {;
       <Footer />;
     </ProtectedRoute>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

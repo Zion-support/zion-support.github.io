@@ -1,5 +1,5 @@
-import React from 'react',
 <<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
@@ -35,10 +35,12 @@ export default function AIPoweredDevOpsPlatformPage() {
         industries={['SaaS', 'E-commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com/ai-powered-devops-platform'
       />
-    </>
+    </>;
   );
 
+}
 =======
+import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredDevOpsPlatformPage() {
@@ -90,4 +92,4 @@ export default function AIPoweredDevOpsPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

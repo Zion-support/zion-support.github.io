@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {SkillsFilterProps} from "@/types/filters";
+=======
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { SkillsFilterProps } from "@/types/filters";
 =======
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -110,7 +116,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {skill}
               </label>
             </div>
@@ -119,4 +125,5 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       )}
     </div>
   )
-}
+};
+;

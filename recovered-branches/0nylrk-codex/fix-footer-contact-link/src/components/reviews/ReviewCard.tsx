@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+=======
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
@@ -22,6 +34,15 @@ import { Textarea } from "@/components/ui/textarea";
 =======
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+=======
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { Star, Flag, User } from "lucide-react";
+import { Review } from "@/types/reviews";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> main
 import {
   Dialog,
   DialogContent,
@@ -29,13 +50,27 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> main
 interface ReviewCardProps {
   review: Review;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
 }
+
+<<<<<<< HEAD
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+<<<<<<< HEAD
+=======
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
 <<<<<<< HEAD
   const [reportReason, setReportReason] = useState("");
@@ -58,6 +93,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState(""),
   const [isReporting, setIsReporting] = useState(false),
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleReport = async () => {
     if (!reportReason.trim()) return,
@@ -75,7 +111,25 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const renderStars = (rating?: number) => {
     if (!rating) return null,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  const handleReport = async () => {
+    if (!reportReason.trim()) return;
+
+    setIsReporting(true);
+    const success = await onReport(review.id, reportReason);
+    setIsReporting(false);
+
+    if (success) {
+      setReportReason("");
+      setIsReportDialogOpen(false);
+    }
+  };
+
+  const renderStars = (rating?: number) => {
+    if (!rating) return null;
+
+>>>>>>> main
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -86,13 +140,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         ))}
       </div>
 <<<<<<< HEAD
-    );
-  }
-=======
     )
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    );
+  };
+
+>>>>>>> main
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -100,14 +155,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .join("")
       .toUpperCase()
 <<<<<<< HEAD
-      .substring(0, 2);
-  }
-
-=======
       .substring(0, 2)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      .substring(0, 2);
+  };
+
+>>>>>>> main
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -128,12 +183,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               ) : (
                 <AvatarFallback>
 <<<<<<< HEAD
-                  {review.reviewer_profile?.display_name
-                    ? getInitials(review.reviewer_profile.display_name)
-                    : "??"}
-                </AvatarFallback>
-=======
                   {review.reviewer_profile?.display_name ? 
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from "lucide-react",;
@@ -207,35 +259,33 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               ) : (;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     getInitials(review.reviewer_profile.display_name) : "??"}
-                </AvatarFallback>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
+>>>>>>> main
+                </AvatarFallback>
               )}
             </Avatar>
           )}
-<<<<<<< HEAD
-=======
-          
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           <div>
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
-                : review.reviewer_profile?.display_name |"User"}
+                : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
               {formatDistanceToNow(new Date(review.created_at), {
-                addSuffix: true
+                addSuffix: true,
               })}
             </div>
           </div>
-=======
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
-            </div>;
-          </div>;
-        </div>;
-        <div className="flex">;
+        </div>
+<<<<<<< HEAD
+        <div className="flex">
           {renderStars(review.rating)}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
@@ -244,10 +294,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-      {(review.communication_rating |
-        review.quality_rating |
-        review.timeliness_rating |
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+=======
+
+        <div className="flex">{renderStars(review.rating)}</div>
+      </div>
+
+      <div className="mb-4">
+        <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
+      </div>
+
+      {(review.communication_rating ||
+        review.quality_rating ||
+        review.timeliness_rating ||
         review.would_work_again !== undefined) && (
+>>>>>>> main
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -258,6 +319,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -266,6 +328,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.timeliness_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
@@ -274,6 +337,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -287,13 +351,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
           </div>
         </div>
-      )}
 =======
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -306,16 +369,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-                If you believe this review violates our community guidelines
+                If you believe this review violates our community guidelines,
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
               className="min-h-[100px]"
             />
+
             <DialogFooter>
               <Button
                 variant="outline"
@@ -325,7 +393,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               </Button>
               <Button
                 onClick={handleReport}
-                disabled={!reportReason.trim() |isReporting}
+                disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
               </Button>
@@ -334,11 +402,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
-  )
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

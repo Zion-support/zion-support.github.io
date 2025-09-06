@@ -93,9 +93,9 @@ type IconProps = LucideIcons.LucideProps;
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>
-    return <LucideIcon {...props} />
-  }
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -111,7 +111,8 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
     iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
 });
-export const {
+
+export const {;
   LayoutGrid;
   List;
   Zap;
@@ -177,9 +178,9 @@ export const {
   BookOpen;
   Key;
   Tag} = iconExports;
-// Also export all original icons from lucide-react
-export * from 'lucide-react';
 
+// Also export all original icons from lucide-react;
+export * from 'lucide-react';
 =======
 import React from 'react',;
 import * as LucideIcons from 'lucide-react',;
@@ -360,4 +361,4 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

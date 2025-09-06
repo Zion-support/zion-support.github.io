@@ -12,6 +12,11 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
   const score = application.match_score |0;
 =======
 
+<<<<<<< HEAD
+export function ScoreBadge({ application }: ScoreBadgeProps) {;
+  const score = application.match_score || 0;
+
+=======
 import { JobApplication } from "@/types/jobs",
 interface ScoreBadgeProps {
   application: JobApplication
@@ -20,7 +25,7 @@ interface ScoreBadgeProps {
 export function ScoreBadge({ application }: ScoreBadgeProps) {
   const score = application.match_score || 0,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -57,4 +62,4 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

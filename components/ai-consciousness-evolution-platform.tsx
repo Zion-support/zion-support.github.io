@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
 =======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -90,4 +89,13 @@ visible: {
 };
 
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

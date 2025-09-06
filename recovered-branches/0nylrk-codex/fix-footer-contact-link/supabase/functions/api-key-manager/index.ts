@@ -1,24 +1,24 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-interface CreateKeyRequest {
-  name: string;
-  scopes: string[]
 =======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
+<<<<<<< HEAD
+=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 interface RegenerateKeyRequest {;
@@ -275,7 +275,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
     if (keyError) {
       console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
-        status: 500
+        status: 500,
         headers: { 'Content-Type': 'application/json' }})
 =======
 ;
@@ -533,14 +533,16 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
-    if (!keyIds |keyIds.length === 0) {
+
+    if (!keyIds || keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
-        status: 200
+        status: 200,
         headers: { 'Content-Type': 'application/json' }})
     }
 <<<<<<< HEAD
+
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
     const { data: logs, error: logsError, count } = await supabase
@@ -549,23 +551,22 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       .in('api_key_id', ids)
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
+
     if (logsError) {
       console.error('Error fetching API logs:', logsError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
-        status: 500
+        status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
+
     return new Response(JSON.stringify({ logs, count }), {
-      status: 200
+      status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in getApiLogs:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500
-
+      status: 500,
       headers: { 'Content-Type': 'application/json' }})
-  }
-}
 =======
 ;
     // Get logs for those keys;
@@ -591,6 +592,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
       status: 500;
       headers: { 'Content-Type': 'application/json' }});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

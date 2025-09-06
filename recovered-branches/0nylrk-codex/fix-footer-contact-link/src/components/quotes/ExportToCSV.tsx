@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+=======
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 import { Download } from "lucide-react";
@@ -6,7 +11,7 @@ import type { QuoteRequest } from "@/types/quotes";
 =======
 import { Download } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -15,8 +20,13 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
+<<<<<<< HEAD
+    const headers = [;
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+=======
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       'StatusCreated Date'
 <<<<<<< HEAD
     ];
@@ -115,6 +125,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button 
       variant="outline" 
+<<<<<<< HEAD
+=======
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
@@ -177,7 +189,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (;
     <Button;
       variant="outline";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
@@ -187,13 +199,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       Export CSV
     </Button>
   )
-}
-
 =======
     >;
       <Download size={16} />;
       Export CSV;
     </Button>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

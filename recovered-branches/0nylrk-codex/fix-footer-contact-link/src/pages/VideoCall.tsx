@@ -1,16 +1,16 @@
 
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
+import {useState, useEffect} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';
+import {Button} from '@/components/ui/button';
+import {toast} from 'sonner';
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitions, so avoid passing a type argument to prevent TS2347.;
   const { roomId } = useParams();
 
   const navigate = useNavigate();
@@ -64,6 +64,7 @@ export default function VideoCall() {;
       isMuted: false;
     }
   ]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleJoinCall = () => {
@@ -101,8 +102,9 @@ export default function VideoCall() {;
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
@@ -110,15 +112,8 @@ export default function VideoCall() {;
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`)
     }
-  }
+  };
 =======
-  },
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -154,7 +149,7 @@ export default function VideoCall() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>
@@ -200,11 +195,7 @@ export default function VideoCall() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

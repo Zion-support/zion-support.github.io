@@ -4,11 +4,9 @@ import Head from 'next/head',
 =======
 import {useState} from 'react';
 import Head from 'next/head';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function OffworldDeploy() {
-  const [cid, setCid] = useState<string | null>(null),
-  const [status, setStatus] = useState<string>(''),
+export default function OffworldDeploy() {;
+  const [cid, setCid] = useState<string | null>(null);
+  const [status, setStatus] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -30,6 +28,7 @@ export default function OffworldDeploy() {
 
   }
   return (
+<<<<<<< HEAD
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
       setError(e.message)
@@ -84,6 +83,7 @@ export default function OffworldDeploy() {
 );
 }
 =======
+    <div className='min-h-screen p-8'>
 
     }
   }
@@ -94,4 +94,4 @@ export default function OffworldDeploy() {
       )}
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

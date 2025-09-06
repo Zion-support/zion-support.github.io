@@ -2,7 +2,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
 };
 export default function ServicesOverviewPage() {
   return (
@@ -61,7 +61,7 @@ export default function ServicesOverviewPage() {
         />
       </div>{" "}
       <CTA />{" "}
-    </div>
+    </div>;
   );
 }
 function ServiceCard({

@@ -1,102 +1,8 @@
 <<<<<<< HEAD
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
-
-interface ProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats';
-  description?: string;
-interface ConnectionMap {
-  [providerId: string]: any
-function StatusIcon({
-  status
-}: {
-  status: 'connected' | 'warning' | 'disconnected'
-}) {
-  const label =
-    status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
-  return (
-    <span className='text-xl' title={status}>
-      {label}
-    </span>
-  );
-interface ConnectionMap {
-  [key: string]: boolean
-const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [syncRules, setSyncRules] = useState<any>({
-    autoCreateContacts: true
-    pushNotesMode: 'auto'
-    autoSyncApplicants: true
-    autoUploadResumes: true
-  });
-  async function refresh() {
-    const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json())
-      fetch('/api/integrations/status').then(r => r.json())
-    ]);
-    setProviders(p.providers |[]);
-    setConnections(s.connections |{});
-  }
-  useEffect(() => {
-    refresh();
-  }, []);
-  async function connect(providerId: string) {
-    setLoading(true)
-    try {
-      // Open mock oauth popup
-      window.open(
-        `/api/integrations/oauth/${providerId}/start`
-        'oauth'
-        'width=500,height=700'
-      );
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId, syncRules })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-  async function disconnect(providerId: string) {
-    setLoading(true)
-    try {
-      await fetch('/api/integrations/disconnect', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-  async function resync(providerId: string) {
-    setLoading(true)
-    try {
-      await fetch('/api/integrations/resync', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }
-  }
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm')
-      ats: providers.filter(p => p.category === 'ats')
-    })
-    [providers]
-  );
+import React, { useState } from 'react';
 =======
 import { useEffect, useMemo, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -143,6 +49,47 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
+<<<<<<< HEAD
+    } finally {
+      setLoading(false);
+    }  }
+
+  async function disconnect(providerId: string) {
+    setLoading(true),
+    try {
+      await fetch('/api/integrations/disconnect', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+      });
+      await refresh();
+    } finally {
+      setLoading(false);
+    }  }
+
+  async function resync(providerId: string) {
+    setLoading(true),
+    try {
+      await fetch('/api/integrations/resync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ providerId }),
+      });
+      await refresh();
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  const grouped = useMemo(
+    () => ({
+      crm: providers.filter(p => p.category === 'crm'),
+      ats: providers.filter(p => p.category === 'ats'),
+    }),
+    [providers]
+  );
+
+=======
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,7 +134,7 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -238,6 +185,7 @@ export default function AdminIntegrationsPage() {
         </div>
       </div>
     );  }
+
 =======
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
@@ -256,7 +204,7 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -418,6 +366,46 @@ export default function AdminIntegrationsPage() {
 }
   return (
     <>
+<<<<<<< HEAD
+      <Head>
+        <title>Admin Integrations • Zion</title>
+      </Head>
+      <main className='container mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
+        <p className='text-sm text-gray-600 mb-6'>
+          Connect your CRM and ATS to sync contacts, applicants, and activity.
+        </p>
+        <section className='mb-8'>
+          <h2 className='text-lg font-semibold mb-3'>CRM</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.crm.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-3'>ATS</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.ats.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
+          <div className='text-sm text-gray-600'>Polling endpoints:</div>
+          <ul className='list-disc pl-6 text-sm mt-2'>
+            <li>
+              New Zion Job Posted → GET{' '}
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
+            </li>
+            <li>
+              Talent Matched → GET{' '}
+              <code>
+                /api/integrations/zapier/talent-matched?since=TIMESTAMP
+              </code>
+            </li>          </ul>
+=======
       <Head><title>Admin Integrations • Zion</title></Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
@@ -449,7 +437,7 @@ export default function AdminIntegrationsPage() {
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </section>
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
@@ -465,17 +453,18 @@ function ManualOverrideForm() {
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+
   async function save() {
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),
     });
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
-
   }
+
 =======
   )
   } catch (error) {
@@ -497,7 +486,7 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -514,6 +503,13 @@ function ManualOverrideForm() {
     </div>
 <<<<<<< HEAD
 );
+
+}
+}
+}
+}
+}
+}
 =======
   ),
   } catch (error) {
@@ -521,4 +517,4 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

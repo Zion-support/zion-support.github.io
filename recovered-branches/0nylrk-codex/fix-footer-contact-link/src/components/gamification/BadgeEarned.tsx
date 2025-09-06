@@ -1,18 +1,12 @@
 
 <<<<<<< HEAD
 import React from "react";
-import { getBadgeMeta, BadgeKey } from "./badgeConfig";
-interface BadgeEarnedProps {
-
-  badge: BadgeKey
-
-  size?: number;
-  showName?: boolean;
-  showDesc?: boolean;
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 =======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -21,6 +15,13 @@ interface BadgeEarnedProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   earnedDate?: string
 }
+
+<<<<<<< HEAD
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+  badge;
+  size = 44;
+  showName = true;
+=======
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 <<<<<<< HEAD
   badge;
@@ -36,6 +37,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge,
   size = 44,
   showName = true,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   showDesc = false,
   earnedDate}) => {
   const meta = getBadgeMeta(badge),
@@ -100,7 +102,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {meta.name}
         </span>
       )}
@@ -115,10 +117,9 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 <<<<<<< HEAD
     </div>
   )
-}
-
 =======
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,28 +1,33 @@
 <<<<<<< HEAD
-import React from 'react',
+import React from 'react';
 import Head from 'next/head';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Star
-  Cpu;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Star,;
+  Cpu,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIIoTPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-iot-platform');
+  );  if (!service) return null;
+
 =======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'))
   if (!service) return null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Layout>
       <Head>
@@ -85,6 +90,8 @@ export default function AIIoTPlatformPage() {
       </main>
     </Layout>
 );
+
+}
 =======
       </div>
     </Layout>
@@ -94,4 +101,4 @@ export default function AIIoTPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

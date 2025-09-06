@@ -1,8 +1,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -95,7 +94,21 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
-}
+});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Starting automatic merge conflict resolution...');
+
+// Get list of files with merge conflicts
+const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+const conflictFiles = gitStatus.split('\n')
+  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+  .map(line => line.split(' ').pop())
+  .filter(file => file && file !== '');
 
 console.log(`\n🎉 Merge conflict resolution complete!`);
 console.log(`✅ Resolved: ${resolvedCount} files`);
@@ -165,10 +178,24 @@ function resolveMergeConflicts() {
     }
 }
 
-if (resolveMergeConflicts()) {
-    console.log('Ready to commit merge resolution');
+<<<<<<< HEAD
+// Resolve conflicts for each file
+conflictFiles.forEach(resolveConflicts);
+
+console.log('🎉 Merge conflict resolution completed!');
+console.log('Files resolved:', conflictFiles.length);
+
+// Check if there are any remaining conflicts
+const remainingConflicts = execSync('git status --porcelain', { encoding: 'utf8' })
+  .split('\n')
+  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+
+if (remainingConflicts.length === 0) {
+  console.log('✅ All conflicts resolved successfully!');
 } else {
-    console.log('Failed to resolve merge conflicts');
-    process.exit(1);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
 }
+=======
+console.log('\n🎉 Merge conflict resolution completed!');
+>>>>>>> main
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

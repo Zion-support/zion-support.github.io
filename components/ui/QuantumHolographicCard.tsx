@@ -2,16 +2,16 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-  Star
-  Zap
-  Shield
-  TrendingUp
-  ArrowRight
-  ExternalLink
-  Check
-  Users
-  Clock
-  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -169,8 +169,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+
 <<<<<<< HEAD
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
   return (
     <motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -218,15 +219,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             )}
           </div>
 =======
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
-
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
+=======
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
@@ -327,7 +328,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
                   <span>{feature}</span>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </motion.div>
               ))}
             </div>
@@ -335,7 +336,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -413,14 +414,14 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
           {/* ROI and competitors */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </div>
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* CTA Button */}
           <motion.a
             href={service.link}
@@ -428,7 +429,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -466,12 +467,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       </div>
     </motion.div>
   );
-}
+};
+
+<<<<<<< HEAD
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
-
-<<<<<<< HEAD
 =======
 export default QuantumHolographicCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

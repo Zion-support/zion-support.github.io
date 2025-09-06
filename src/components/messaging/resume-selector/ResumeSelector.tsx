@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'
+import { Button } from "@/components/ui/button"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import { Plus, Loader2 } from 'lucide-react'import { useResume } from "@/hooks/useResume"
+import { exportResumeToPDF } from "@/utils/pdfExport"
+import { toast } from "@/components/ui/use-toast"
+import { ResumePreviewCard } from './ResumePreviewCard'
+import { UploadSection } from './UploadSection'
+import { SelectResumeSection } from './SelectResumeSection'
+import { ResumeOption, ResumeSelectorProps } from './types'
+import {logErrorToProduction} from '@/utils/productionLogger'
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent')
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([])
+  const [customFile, setCustomFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const { resume, fetchResume } = useResume()
+=======
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -38,7 +60,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   const { resume, fetchResume } = useResume(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
@@ -46,7 +68,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       setIsLoading(true)
 =======
       setIsLoading(true),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       try {
         await fetchResume()
       } catch (error) {
@@ -56,12 +78,12 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 <<<<<<< HEAD
       }
     }
-            return
+            return;
       }
-}
-
-  )
-}
+  ;
+};
+  );
+};
 =======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -337,4 +359,4 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

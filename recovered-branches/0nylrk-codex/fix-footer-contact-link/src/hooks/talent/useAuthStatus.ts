@@ -1,8 +1,8 @@
 
 <<<<<<< HEAD
-import { useState } from 'react';
+import {useState} from 'react';
 export function useAuthStatus() {
-  // Mock authenticated status
+  // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
@@ -40,8 +40,6 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
-  }
-}
 =======
 import { useState } from 'react',;
 export function useAuthStatus() {;
@@ -82,6 +80,7 @@ export function useAuthStatus() {;
     savedTalents;
     handleToggleSave;
     toggleAuth;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

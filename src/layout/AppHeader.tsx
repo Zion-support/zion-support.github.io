@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+  const showTagline = router.pathname === '/'
 =======
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -20,6 +21,7 @@ import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router',
 export function AppHeader() {
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
   const isMobile = useIsMobile(),
@@ -60,7 +62,7 @@ export function AppHeader() {
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -88,7 +90,7 @@ export function AppHeader() {
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -108,12 +110,11 @@ export function AppHeader() {
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
-                  e.preventDefault()
-                  // For the main login link, we might not have a specific returnTo beyond current page
 =======
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -133,7 +134,7 @@ export function AppHeader() {
                 aria-label = {t('auth.signup'),}
 =======
                 aria-label={t('auth.signup')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -154,11 +155,16 @@ export function AppHeader() {
 <<<<<<< HEAD
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+<<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
+=======
+            onClick={() => setMobileMenuOpen(false)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu
+            <MobileMenu 
+<<<<<<< HEAD
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -166,24 +172,16 @@ export function AppHeader() {
           </div>
         </div>
 =======
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-<<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
       setActiveNav(null)
@@ -775,10 +773,10 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  )
 }
-=======
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

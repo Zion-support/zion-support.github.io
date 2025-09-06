@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const Blueprint20250818123006: React.FC = () => {
   const blueprintDetails = {
 <<<<<<< HEAD
@@ -78,6 +82,10 @@ const Blueprint20250818123006: React.FC = () => {
     lastUpdated: '2025-08-18 12:30:06',
     version: '1.5.0'
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const edgeNodes = [
     {
       name: 'North America',
@@ -106,12 +114,18 @@ const Blueprint20250818123006: React.FC = () => {
       status: 'deploying',
       health: 'good',
       latency: '45ms'
+<<<<<<< HEAD
+    }
+  ];
+
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [
     {
       feature: 'Global Load Balancing',
@@ -136,6 +150,11 @@ const Blueprint20250818123006: React.FC = () => {
       description: 'Real-time monitoring of edge node performance',
       benefit: 'Proactive issue detection and resolution',
       status: 'implemented'
+<<<<<<< HEAD
+    }
+  ];
+
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -143,6 +162,7 @@ const Blueprint20250818123006: React.FC = () => {
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -151,7 +171,8 @@ const Blueprint20250818123006: React.FC = () => {
       default: return 'text-gray-400';
 <<<<<<< HEAD
     }
-  }
+  };
+
 =======
       } catch (error) {
     console.error("Error:", error);
@@ -159,7 +180,7 @@ const Blueprint20250818123006: React.FC = () => {
   }
 }
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const getHealthColor = (health: string) => {
     switch (health) {
       case 'excellent': return 'bg-green-500/20 text-green-400';
@@ -169,7 +190,8 @@ const Blueprint20250818123006: React.FC = () => {
       default: return 'bg-gray-500/20 text-gray-400';
 <<<<<<< HEAD
     }
-  }
+  };
+
 =======
       } catch (error) {
     console.error("Error:", error);
@@ -177,7 +199,7 @@ const Blueprint20250818123006: React.FC = () => {
   }
 }
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -194,7 +216,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -228,7 +250,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Status</h3>
@@ -259,7 +281,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -276,7 +298,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{node.description}</p>
@@ -313,7 +335,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -330,7 +352,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -354,7 +376,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Network Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -362,8 +384,13 @@ const Blueprint20250818123006: React.FC = () => {
               <div className="text-6xl font-bold text-purple-400 mb-4">🌐</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Global Edge Network</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
+                Our edge computing network provides distributed computing capabilities across 
+                multiple geographic regions, ensuring low-latency access and high availability 
+=======
                 Our edge computing network provides distributed computing capabilities across
                 multiple geographic regions, ensuring low-latency access and high availability
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 for users worldwide.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
@@ -395,7 +422,7 @@ const Blueprint20250818123006: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -425,6 +452,8 @@ const Blueprint20250818123006: React.FC = () => {
         </div>
 <<<<<<< HEAD
         {/* Navigation */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
 =======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -434,18 +463,27 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
             All Blueprints
           </Link>
+<<<<<<< HEAD
+          <Link 
+=======
           <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+<<<<<<< HEAD
+          <Link 
+=======
           <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -459,5 +497,8 @@ const Blueprint20250818123006: React.FC = () => {
 }
 =======
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default Blueprint20250818123006;

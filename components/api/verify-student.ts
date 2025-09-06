@@ -6,9 +6,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
 } from '../../utils/api/partnerAuth';
 <<<<<<< HEAD
 =======
@@ -23,7 +23,7 @@ const TALENTS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+) {;
   const started = Date.now();
   const auth = await authenticateRequest(req)
   if (!auth) {
@@ -42,7 +42,8 @@ export default async function handler(
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'email required' });
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -74,8 +75,11 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   return res.status(200).json({ verified });  return res.status(200).json({ verified })
 }
 
+}
+}
+}
 =======
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -12,7 +12,7 @@ export default function Reports() {
           <Link href="/metrics/performance.json"><a className="text-blue-600">Open JSON →</a></Link>
 =======
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
@@ -24,7 +24,7 @@ export default function Reports() {
 =======
             <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
         <div className="border rounded p-5">
@@ -34,11 +34,14 @@ export default function Reports() {
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</a></Link>
 =======
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 import Link from 'next/link';
 export default function Reports(req, res) {
   try {
@@ -73,3 +76,4 @@ export default function Reports(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

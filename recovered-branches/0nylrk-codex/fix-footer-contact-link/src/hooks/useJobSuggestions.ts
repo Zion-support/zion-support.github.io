@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -12,6 +21,7 @@ import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -127,6 +137,7 @@ export function useJobSuggestions(talentId?: string) {
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
+<<<<<<< HEAD
     }
   }
   // Filter matches by status
@@ -145,9 +156,6 @@ export function useJobSuggestions(talentId?: string) {
 
       declinedMatches
 =======
-        title: "Error",
-        description: "Failed to update job status",
-        variant: "destructive"})
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -236,7 +244,7 @@ export function useJobSuggestions(talentId?: string) {;
       viewedMatches;
       appliedMatches;
       declinedMatches;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 }

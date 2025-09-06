@@ -1,14 +1,8 @@
 
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
-import {WebhooksManager} from "@/components/developers/WebhooksManager";
-import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
-import {ApiLogs} from "@/components/developers/ApiLogs";
 =======
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -21,6 +15,7 @@ import {
   Terminal, 
   Webhook 
 } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -34,6 +29,12 @@ interface TabDefinition {
 
   icon: LucideIcon
 }
+
+<<<<<<< HEAD
+export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+=======
 export function DeveloperPortal() {
 <<<<<<< HEAD
   const { user } = useAuth();
@@ -43,6 +44,7 @@ export function DeveloperPortal() {
 =======
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Define the tabs
@@ -143,7 +145,7 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -169,14 +171,4 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
   )
 }
-=======
 ;
-export default function ProtectedDeveloperPortal() {;
-  return (;
-    <ProtectedRoute>;
-      <DeveloperPortal />;
-    </ProtectedRoute>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

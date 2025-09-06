@@ -7,31 +7,31 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,;
+  CheckCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -216,7 +216,7 @@ const certifications = [
   'PCI DSS Level 1'
   'FedRAMP Authorized',];
 export default function UltraFuturisticFooter2030() {
-  return (
+  return (;
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>];
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
@@ -232,6 +232,7 @@ const certifications = [
 
 export default function UltraFuturisticFooter2030() {
   return (
+<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
 <<<<<<< HEAD
       {/* Animated Background */}
@@ -352,14 +353,9 @@ export default function UltraFuturisticFooter2030() {
                     {contactInfo.website.replace('https://', '')}
 =======
 
-];
-
-export default function UltraFuturisticFooter2030() {
-  return (
-
                     {contactInfo.website.replace('https://', '')}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </a>
                 </div>
               </div>
@@ -371,7 +367,7 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -408,7 +404,7 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Quick Links */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -460,7 +456,7 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -468,7 +464,7 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>Connect & Trust</span>
               </h4>
               {/* Social Links */}
@@ -510,7 +506,7 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -518,7 +514,7 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -544,12 +540,16 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+<<<<<<< HEAD
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+=======
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -586,4 +586,10 @@ export default function UltraFuturisticFooter2030() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
+}
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

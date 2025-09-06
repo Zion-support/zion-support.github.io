@@ -1,16 +1,15 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-  AdminActionRecord
-  GptClassification
-  GptClassificationLabel
-  MonitoredSource
-  StoredFraudRecord
+  AdminActionRecord,
+  GptClassification,
+  GptClassificationLabel,
+  MonitoredSource,
+  StoredFraudRecord,;
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -24,7 +23,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.status(405).json({ error: "Method not allowed" });
     return;
 
@@ -102,7 +101,7 @@ export default async function handler(
   } catch (e: any) {
     res
       .status(500)
-      .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -275,6 +274,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

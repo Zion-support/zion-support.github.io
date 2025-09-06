@@ -14,11 +14,11 @@ export default function QuantumCybersecurityPage() {
 
   const features = [
     {
-      icon: Shield
-      title: "Quantum-Resistant Encryption"
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
-      color: "from-blue-500 to-cyan-500"
-    }
+      icon: Shield,
+      title: "Quantum-Resistant Encryption",
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
+      color: "from-blue-500 to-cyan-500";
+    };
     {
       icon: Lock
       title: "Zero-Trust Architecture"
@@ -147,7 +147,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -187,7 +187,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -205,7 +205,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -228,7 +228,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Benefits */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -265,7 +265,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -294,7 +294,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Threat Landscape */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -312,7 +312,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
@@ -335,7 +335,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Compliance */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -353,7 +353,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -370,7 +370,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -386,7 +386,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -402,7 +402,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -421,7 +421,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Pricing */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -439,7 +439,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -471,7 +471,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -494,7 +494,7 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -527,4 +527,8 @@ export default function QuantumCybersecurityPage() {
       <EnhancedFooter />
     </>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

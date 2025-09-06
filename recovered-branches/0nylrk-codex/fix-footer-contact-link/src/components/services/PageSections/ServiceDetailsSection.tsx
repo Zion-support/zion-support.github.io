@@ -1,18 +1,24 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {CountryServiceSelector} from "../CountryServiceSelector";
 =======
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceSelector } from "../CountryServiceSelector";
+>>>>>>> main
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void
+  setSelectedCountry: (country: CountryPricing | null) => void;
 }
+
 export function ServiceDetailsSection({
-  selectedCountry
-  setSelectedCountry
+  selectedCountry,
+  setSelectedCountry,
 }: ServiceDetailsSectionProps) {
   return (
     <div id="service-details" className="mt-12">
@@ -55,8 +61,9 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: S
             Choose a country from the options above to see service details and pricing;
           </p>;
         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>
   );
 }
+;

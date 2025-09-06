@@ -15,11 +15,14 @@ export function UploadSection({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
+<<<<<<< HEAD
+=======
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -47,7 +50,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 <<<<<<< HEAD
 =======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -59,10 +62,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>
         </div>
 <<<<<<< HEAD
-      )}
-    </div>
-  );
-}
 =======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -100,6 +99,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );

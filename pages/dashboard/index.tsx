@@ -34,7 +34,7 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </section>
       <section>
@@ -52,6 +52,7 @@ const Dashboard: NextPage = () => {
 }
 export default Dashboard;
 
+export default Dashboard,;
 =======
           icon={<span>💬</span>  } catch (error) {
     console.error("Error:", error);
@@ -69,4 +70,4 @@ export default Dashboard;
   );
 },;
 export default Dashboard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

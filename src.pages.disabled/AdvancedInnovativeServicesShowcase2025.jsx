@@ -13,10 +13,9 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 }
-=======
+}
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======

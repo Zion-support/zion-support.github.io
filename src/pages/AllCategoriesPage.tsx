@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+import { CategoryCard } from '@/components/CategoryCard'
+import { GradientHeading } from '@/components/GradientHeading'
+import ErrorBoundary from '@/components/GlobalErrorBoundary'
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -134,7 +134,7 @@ export default function AllCategoriesPage() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category.title}
                 title={category.title}
                 description={category.description}
@@ -153,9 +153,11 @@ export default function AllCategoriesPage() {;
             ))}
           </div>
         </ErrorBoundary>
-      </div>
-    </div>
-  )
+      </div>;
+    </div>;
+  );
+};
+}
 }
 =======
                 // The CategoryCard itself is a Link to its specific category page;
@@ -170,4 +172,4 @@ export default function AllCategoriesPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

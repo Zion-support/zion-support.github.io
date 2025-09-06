@@ -1,12 +1,11 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Conversation, Message } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 const FILE = "conversations.json";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!rateLimit(req, res)) return;
   if (req.method === "POST") {
     const { conversationId, sender, text, attachments } = req.body |{}
@@ -26,15 +25,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const now = new Date().toISOString();
     const msg: Message = {
-      id: uuidv4()
-      conversationId: String(conversationId)
-      sender: { type: sender.type, id: String(sender.id) }
-      text: text ? String(text) : undefined
-      attachments: Array.isArray(attachments) ? attachments : undefined
-      createdAtIso: now
-      readBy: [{ participantId: String(sender.id), readAtIso: now }]
-    }
+      id: uuidv4(),
+      conversationId: String(conversationId),
+      sender: { type: sender.type, id: String(sender.id) },
+      text: text ? String(text) : undefined,
+      attachments: Array.isArray(attachments) ? attachments : undefined,
+      createdAtIso: now,
+      readBy: [{ participantId: String(sender.id), readAtIso: now }],
+    };
+    conversations[idx].messages.push(msg);
+    conversations[idx].updatedAtIso = now;
+    writeJsonFile<Conversation[]>(FILE, conversations);
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    res.status(200).json({ messages: [] });
+  } else if (req.method === 'POST') {
+    res.status(201).json({ message: 'Message sent' });
+  } else {
+    res.setHeader('Allow', ['GET', 'POST']);
+    res.status(405).end('Method Not Allowed');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -70,11 +94,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
-    writeJsonFile<Conversation[]>(FILE, conversations);
+    writeJsonFile<Conversation[]>(FILE, conversations),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     res.status(201).json({ message: msg });
     return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+
   if (req.method === "GET") {
 =======
 
@@ -87,21 +119,39 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
       res.status(404).json({ error: "Conversation not found" });
 =======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const { conversationId } = req.query;
+    const conversations = readJsonFile<Conversation[]>(FILE, []),;
+    const conv = conversations.find((c) => c.id === String(conversationId));
+    if (!conv) {;
       res.status(404).json({ error: 'Conversation not found' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
     }
     res.status(200).json({ conversation: conv });
     return;
   }
 <<<<<<< HEAD
+
   res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
-
 =======
-
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

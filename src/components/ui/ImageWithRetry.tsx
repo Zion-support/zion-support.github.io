@@ -1,11 +1,21 @@
 <<<<<<< HEAD
-import React, { useState } from 'react',
-import Image, { type ImageProps } from 'next/image';
+import React, { useState } from 'react'
+import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-  src: string;
-  alt?: string;
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
+  src: string;  alt?: string
   /** Source to use if the main src fails */
+  fallbackSrc?: string
+  /** CSS class for the retry button */
+  retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string,
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string,
+  alt?: string
+  /** Source to use if the main src fails */
+  fallbackSrc?: string
+  /** CSS class for the retry button */
+  retryClassName?: string;  retryClassName?: string
 =======
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
@@ -17,6 +27,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
@@ -37,21 +48,20 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,
 <<<<<<< HEAD
-
-  src
-  alt = ''
-  fallbackSrc = '/images/image-placeholder.svg'
-  className
-  retryClassName
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
   const handleError = () => {
     setFailed(true)
     setCurrentSrc(fallbackSrc) }
-  const handleRetry = () => {
-    setFailed(false)
+  const handleRetry = () => {;
+    setFailed(false);
     setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
   }
   const handleRetry = () => {
@@ -87,14 +97,11 @@ export function ImageWithRetry({
       )}
     </div>
   )
-export default ImageWithRetry
-
+export default ImageWithRetry;
+;
+}
+}
 =======
-  src,
-  alt = '',
-  fallbackSrc = '/images/image-placeholder.svg',
-  className,
-  retryClassName,
   ...props
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src),
@@ -136,4 +143,4 @@ export default ImageWithRetry
 }
 ;
 export default ImageWithRetry;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

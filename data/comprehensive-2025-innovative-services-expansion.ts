@@ -54,7 +54,7 @@ const contact = {
 }
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
-  {
+  {;
     id: 'ai-content-generation-platform';
     name: 'AI Content Generation Platform';
     tagline: 'Create high-quality content at scale with AI';
@@ -938,5 +938,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketAdvantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default comprehensiveInnovativeServices;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

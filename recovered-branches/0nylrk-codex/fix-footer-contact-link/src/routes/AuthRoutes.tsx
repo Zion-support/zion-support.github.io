@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+=======
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -14,7 +26,7 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding";
 =======
 import TalentOnboarding from "@/pages/TalentOnboarding",
 import ServiceOnboarding from "@/pages/ServiceOnboarding",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -57,6 +69,8 @@ export default AuthRoutes;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default AuthRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -104,5 +118,6 @@ const AuthRoutes = () => {;
     </Routes>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default AuthRoutes;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -6,19 +6,19 @@ import { useState } from 'react'
 import { Draggable } from '@/lib/dnd-stub'
 import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
-import { JobApplication } from '@/types/jobs'
-import { Card, CardContent } from '@/components/ui/card'
+import { JobApplication } from '@/types/jobs';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
-  MessageSquare
-  User
-  FileText
-  MoreVertical
-  Calendar
-  AlertTriangle
-  BriefcaseIcon
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,;
+  BriefcaseIcon;
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -38,8 +38,8 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
-import { toast } from '@/hooks/use-toast'
-import { HireConfirmationModal } from './HireConfirmationModal'
+import { toast } from '@/hooks/use-toast';
+import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next/image'; // Import next/image
 
 interface CandidateCardProps {
@@ -52,7 +52,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showHireModal, setShowHireModal] = useState(false)
   const [avatarError, setAvatarError] = useState(false)
   // Check if application is stalled (no activity for 7 days)
-  const isStalled =
+  const isStalled = null;
     application.updated_at &&
     new Date(application.updated_at).getTime() <
       Date.now() - 7 * 24 * 60 * 60 * 1000
@@ -69,14 +69,14 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed t
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
 <<<<<<< HEAD
-      title: 'Notes saved'
-      description: 'Your notes have been saved'
+      title: 'Notes saved',
+      description: 'Your notes have been saved',
     })
     setShowNotes(false)
   }
@@ -87,7 +87,14 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
       description: 'Offer has been sent to the talent.'
     })
   }
-  const candidateName = application.talent_profile?.full_name |'Candidate'
+  const candidateName = application.talent_profile?.full_name || 'Candidate'
+  return (
+    <>
+      <Draggable draggableId={application.id} index={index}>
+        {provided => (
+          <Card
+            className='mb-2 p-0 shadow-sm border'
+            ref={provided.innerRef}            {...provided.draggableProps}
 =======
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -178,7 +185,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
@@ -239,7 +246,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>
                 </div>
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -356,7 +363,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -371,7 +378,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -478,9 +485,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 }application= {
   application
 }onConfirm= {
-  handleHireConfirmed
-}/> </>)
-}'"}
+  handleHireConfirmed 
+}/> </>) 
+}'"};
+;
 =======
                 
                 <Button 
@@ -507,4 +515,4 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

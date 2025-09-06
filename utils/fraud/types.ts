@@ -6,9 +6,10 @@ export type AdminActionType =
   | 'flag_content'
   | 'remove_content'
   | 'investigate'
-  | 'dismiss'
+  | 'dismiss';
   | 'escalate';
-export interface AdminAction {
+
+export interface AdminAction {;
   id: string;
   caseId: string;
   type: AdminActionType;
@@ -19,14 +20,16 @@ export interface AdminAction {
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
 }
-export interface FraudDetectionResult {
+
+export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
 }
-export interface FraudDetectionConfig {
+
+export interface FraudDetectionConfig {;
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -49,9 +52,9 @@ export interface FraudDetectionConfig {
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidenceThreshold: number
-  }
+    confidenceThreshold: number,
+  };
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

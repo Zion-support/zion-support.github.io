@@ -23,7 +23,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500])
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -33,7 +33,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
         className="flex w-full items-center justify-between text-white font-medium"
       >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <span>Hourly Rate</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -75,7 +75,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
       
       {expanded && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
@@ -114,7 +114,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           </div>;
           <Slider;
             aria-label="Hourly rate range";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -122,19 +122,22 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             onValueChange={handleChange}
 <<<<<<< HEAD
             className='mt-6'          />            className="mt-6"
+            className="mt-6"
+          />
+        </div>
+      )};
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="mt-6"
           />
         </div>
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
+};
 }
+<<<<<<< HEAD
+}
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,18 +1,19 @@
 <<<<<<< HEAD
-export type WatchlistMatch = {
+export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-}
-export type AmlCheckResult = {
+};
+
+export type AmlCheckResult = {;
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: 'mock' | 'remote';
-}
-export interface AmlProvider {
+};
+export interface AmlProvider {;
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 }
@@ -34,8 +35,9 @@ class MockAmlProvider implements AmlProvider {
     return { status: 'clear' }
   }
 }
-export function getAmlProvider(): AmlProvider {
+
+export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

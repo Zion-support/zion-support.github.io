@@ -16,14 +16,13 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' || stored === 'client') {
 <<<<<<< HEAD
-      if (stored === 'talent' |stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
 =======
-      if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch {}
   }, []);
@@ -45,13 +44,15 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
       {children}
     </AuthContext.Provider>
   );
-export function useAuth() {
+
+export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
 }
-export function useAuth() {
+
+export function useAuth() {;
 return useContext(AuthContext);
 }
 =======
   return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

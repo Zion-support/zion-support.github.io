@@ -15,25 +15,24 @@ interface PaymentSectionProps {
   selectedCountry: CountryPricing
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
   const handlePaymentInitiated = () => {
     toast({
 <<<<<<< HEAD
-      title: 'Processing your request'
+      title: 'Processing your request',
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })
   }
-
 =======
       title: "Processing your request",
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -57,9 +56,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         Price includes transportation and first hour onsite. Additional hours
         billed separately.
       </p>
-    </div>
-  )
-}"}
+    </div>;
+  );
+}"};
 =======
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 import { MapPin } from 'lucide-react';
@@ -103,4 +102,4 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

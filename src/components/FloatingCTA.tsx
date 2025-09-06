@@ -1,16 +1,15 @@
 <<<<<<< HEAD
-
-import { Button } from "@/components/ui/button",
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
-    // Cleanup function
-}
+    // Cleanup function;
+};
 }, []); [])
     // Show CTA after 5 seconds
       setIsVisible(true) }, 5000)
@@ -36,13 +35,6 @@ import { X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-export function FloatingCTA() {
-  const [ isVisible, setIsVisible ] = useState(false)
-  const [ isClosed, setIsClosed ] = useState(false)
-  useEffect((,) => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      const threshold = 600; // Show CTA after scrolling 600px
 =======
 export function FloatingCTA() {
 
@@ -51,14 +43,25 @@ import Link from "next/link",
 import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
+<<<<<<< HEAD
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isClosed, setIsClosed ] = useState(false),
+;
+  useEffect((,) => {;
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px
+=======
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (scrollPosition > threshold && !isClosed) {
@@ -107,6 +110,7 @@ export function FloatingCTA() {
   if (!isVisible) return null,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -136,7 +140,7 @@ export function FloatingCTA() {
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -168,6 +172,7 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
   )}
 '"
 }
+;
 =======
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
@@ -225,4 +230,4 @@ export function FloatingCTA() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,5 @@
-
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2 } from 'lucide-react'
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
@@ -11,7 +9,7 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string
-export function AIEnhancementButton({
+=======
 
   currentContent
   enhancementType
@@ -39,6 +37,7 @@ interface AIEnhancementButtonProps {;
   className?: string;
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -47,14 +46,13 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
-  const [error, setError] = useState<string | null>(null),
-  
+<<<<<<< HEAD
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
-      setError('Please enter at least some basic content before enhancing'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      return
+      setError('Please enter at least some basic content before enhancing')
+      return;
     }
     setError(null)
     const enhancedContent = await enhanceContent(
@@ -67,11 +65,28 @@ export function AIEnhancementButton({
     }
 <<<<<<< HEAD
   }
-
 =======
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
+      return
+    }
+;
+    setError(null),;
+    const enhancedContent = await enhanceContent(;
+      currentContent,;
+      enhancementType,;
+      context;
+    );
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Button
       type="button"
@@ -84,30 +99,32 @@ export function AIEnhancementButton({
 =======
       onClick={handleEnhance}
       disabled={isEnhancing}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-        <Sparkles className="h-3 w-3" />
-      )}
-      <span className="text-xs">{buttonText}</span>
-    </Button>
 <<<<<<< HEAD
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
   );      onClick={handleEnhance}
       disabled={isEnhancing}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <Sparkles className="h-3 w-3" />
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
 }
-=======
-  )
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

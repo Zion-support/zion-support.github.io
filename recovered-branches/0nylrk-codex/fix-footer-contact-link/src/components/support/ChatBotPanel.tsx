@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {Separator} from "@/components/ui/separator";
+import {toast} from "@/components/ui/use-toast";
+import {cn} from "@/lib/utils";
+import {ChatMessage} from "./ChatMessage";
+import {QuickReplyButton} from "./QuickReplyButton";
+import {Send, Loader2} from "lucide-react";
+import {useTheme} from "@/hooks/useTheme";
+=======
 import React, { useState, useRef, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -14,7 +27,7 @@ import { useTheme } from "@/hooks/useTheme";
 =======
 import { Send, Loader2 } from "lucide-react",
 import { useTheme } from "@/hooks/useTheme",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -50,6 +63,15 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
+<<<<<<< HEAD
+      timestamp: new Date()}]),;
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { theme } = useTheme();
+=======
       timestamp: new Date()}]),
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
@@ -57,6 +79,7 @@ export function ChatBotPanel() {
   const scrollAreaRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   const { theme } = useTheme(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Auto-scroll to bottom when messages change
@@ -120,6 +143,7 @@ export function ChatBotPanel() {;
       inputRef.current.focus();
     }
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async (text: string = inputValue) => {
@@ -177,6 +201,8 @@ export function ChatBotPanel() {;
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
+<<<<<<< HEAD
+=======
   }, []),;
   const handleSendMessage = async (text: string = inputValue) => {;
     if (!text.trim()) return,;
@@ -203,7 +229,7 @@ export function ChatBotPanel() {;
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       } else {
         // Reset failed attempts if successful
@@ -227,6 +253,8 @@ export function ChatBotPanel() {;
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
+<<<<<<< HEAD
+=======
     } catch (error) {;
       console.error("Error in AI chat:", error),;
       toast({;
@@ -236,15 +264,16 @@ export function ChatBotPanel() {;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
         suggestEscalation();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
-  }
+  };
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const sendToAIAssistant = async (message: string) => {
@@ -273,6 +302,7 @@ export function ChatBotPanel() {;
         };
       }
 <<<<<<< HEAD
+      
       const data = await response.json();
       return {
         success: true
@@ -283,7 +313,7 @@ export function ChatBotPanel() {;
       return {;
         success: true,;
         message: data.message;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (error) {
       console.error("Error in AI chat:", error),
@@ -298,21 +328,12 @@ export function ChatBotPanel() {;
 <<<<<<< HEAD
       }
     }
-  }
-  const suggestEscalation = () => {
-    const escalationMessage: Message = {
-      id: `bot-escalation-${Date.now()}`
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
-      sender: "bot"
-      timestamp: new Date()}
-    setMessages((prev) => [...prev, escalationMessage]);
-    // Log this interaction for the support team
-    logSupportEscalation()
-  }
+  };
 =======
       };
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
@@ -506,7 +527,7 @@ export function ChatBotPanel() {;
         <div className="flex flex-col gap-4">;
           {messages.map((message) => (;
             <ChatMessage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}
@@ -610,7 +631,6 @@ export function ChatBotPanel() {;
     </div>
   )
 <<<<<<< HEAD
-}
 =======
 ;
       {failedAttempts >= 3 && (;
@@ -672,6 +692,7 @@ export function ChatBotPanel() {;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

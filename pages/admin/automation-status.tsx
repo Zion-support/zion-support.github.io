@@ -1,9 +1,10 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -21,8 +22,9 @@ const AutomationStatus: NextPage = () => {
 }
 export default AutomationStatus;
 
+export default AutomationStatus,;
 =======
   );
 };
 export default AutomationStatus;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

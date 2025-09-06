@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+=======
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -8,11 +15,17 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
+<<<<<<< HEAD
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+=======
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 <<<<<<< HEAD
   const location = useLocation();
@@ -22,6 +35,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const navItems = [
@@ -188,7 +202,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               <item.icon className="h-5 w-5 mb-1" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}

@@ -1,17 +1,16 @@
 <<<<<<< HEAD
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import {
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart
-  Lightbulb, Search, Grid, List, TrendingUp
-  User, ShoppingCart, Bell, HelpCircle, FileText
-  Video, Headphones, Code, Database, Network, Server
-  Monitor, Smartphone, Camera, Gamepad2, Palette
-  Music, Film, BookOpenCheck, Building, MessageCircle
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
+import { 
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
+  Lightbulb, Search, Grid, List, TrendingUp, 
+  User, ShoppingCart, Bell, HelpCircle, FileText, 
+  Video, Headphones, Code, Database, Network, Server, 
+  Monitor, Smartphone, Camera, Gamepad2, Palette, 
+  Music, Film, BookOpenCheck, Building, MessageCircle, 
 =======
 import React from 'react',
 import Layout from '../components/layout/Layout',
@@ -25,11 +24,11 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
@@ -220,11 +219,15 @@ const Solutions: NextPage = () => {
       period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
   const solutionCapabilities = [
     {
@@ -256,11 +259,15 @@ const Solutions: NextPage = () => {
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
   const caseStudies = [
     {
@@ -295,11 +302,15 @@ const Solutions: NextPage = () => {
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+<<<<<<< HEAD
+    }
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -317,7 +328,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -344,6 +355,16 @@ const Solutions: NextPage = () => {
                 Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+                <a 
+                  href="/contact" 
+=======
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
@@ -356,6 +377,7 @@ const Solutions: NextPage = () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <a
                   href="/contact"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -402,7 +424,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -447,7 +469,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -460,7 +482,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -516,7 +538,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -601,7 +623,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -614,7 +636,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -626,6 +648,9 @@ const Solutions: NextPage = () => {
                         {feature}
                       </li>
                     ))}
+                  </ul>
+                  <a 
+                    href="/contact" 
 =======
                         {feature  } catch (error) {
     console.error("Error:", error);
@@ -642,6 +667,7 @@ const Solutions: NextPage = () => {
                   </ul>
                   <a
                     href="/contact"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -685,7 +711,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -717,6 +743,16 @@ const Solutions: NextPage = () => {
                 Partner with us to build industry-specific solutions that drive your business forward
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
+=======
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
@@ -729,6 +765,7 @@ const Solutions: NextPage = () => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <a
                   href="/contact"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -746,6 +783,11 @@ export default Solutions;
 
 =======
 },
+<<<<<<< HEAD
+
+export default Solutions,;
+;
+=======
 export default Solutions,
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">;
@@ -776,4 +818,4 @@ export default Solutions,
   );
 },;
 export default Solutions;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

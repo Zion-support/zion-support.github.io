@@ -9,63 +9,62 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Star
-  TrendingUp
-  Users
-  Award
-  Clock
-  Heart
-  Brain
-  Atom
-  Shield
-  Rocket
-  Zap
-  Globe
-  CheckCircle
-  ArrowRight
-  Search
-  Filter
-  ChevronDown
-  ChevronUp
-  Eye
-  Play
-  Sparkles
-  Target
-  Microscope
-  Lock
-  Cloud
-  BarChart3
-  Settings
-  Cpu
-  Database
-  Network
-  Server
-  ShieldCheck
-  GlobeIcon
-  StarIcon
-  TrendingUpIcon
-  UsersIcon
-  CheckCircleIcon
-  ArrowRightIcon
-  CpuIcon
-  DollarSign
-  Phone
-  Mail
-  MapPin
-  Dna
-  Target as TargetIcon
-  Shield as ShieldIcon
-  BookOpen
-  Sparkles as SparklesIcon
-  Zap as ZapIcon
-  Brain as BrainIcon
-  Play as PlayIcon;
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Heart,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Zap,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  ChevronDown,
+  ChevronUp,
+  Eye,
+  Play,
+  Sparkles,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Cpu,
+  Database,
+  Network,
+  Server,
+  ShieldCheck,
+  GlobeIcon,
+  StarIcon,
+  TrendingUpIcon,
+  UsersIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  CpuIcon,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
+  Dna,
+  Target as TargetIcon,
+  Shield as ShieldIcon,
+  BookOpen,
+  Sparkles as SparklesIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,;
+  Play as PlayIcon,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
-  Star, TrendingUp, Users, Award, Clock, Heart
-  Brain, Atom, Shield, Rocket, Zap, Globe
-
+  Star, TrendingUp, Users, Award, Clock, Heart, 
+  Brain, Atom, Shield, Rocket, Zap, Globe, ;
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -125,7 +124,8 @@ const stats = [
   { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-export default function UltimateFuturisticServicesShowcase2025() {
+
+export default function UltimateFuturisticServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -308,7 +308,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -316,7 +316,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -366,7 +366,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
                   <option key={category.title} value={category.title}>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {category.title} ({category.count})
                   </option>
                 ))}
@@ -374,7 +374,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -383,7 +383,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <option value='popular'>Most Popular</option>
                 <option value='price-low'>Price: Low to High</option>
@@ -458,7 +458,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
           >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -492,7 +492,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {service.icon}
                     </div>
                   </div>
@@ -579,7 +579,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   </div>
                 </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -590,7 +590,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -708,7 +708,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
                         {contactInfo.email}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </a>
                     </div>
                   </div>
@@ -719,7 +719,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className='text-center py-16'>
@@ -752,7 +752,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
@@ -761,7 +761,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -810,7 +810,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
     </Layout>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

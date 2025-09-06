@@ -13,7 +13,8 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
   } catch {
     return null;
   }
-export default function Web3LoginButton() {
+
+export default function Web3LoginButton() {;
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
@@ -23,7 +24,8 @@ export default function Web3LoginButton() {
   useEffect(() => {    return did.lens |did.ens |null
   } catch { return null }
 }
-export default function Web3LoginButton() {
+
+export default function Web3LoginButton() {;
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
   const [displayName, setDisplayName] = useState<string | null>(null);
@@ -62,6 +64,8 @@ export default function Web3LoginButton() {
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
+
+<<<<<<< HEAD
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
@@ -90,6 +94,7 @@ export default function Web3LoginButton() {
         )}
       </div>
     );  }
+
   return (
     <>    )
   }
@@ -114,9 +119,14 @@ export default function Web3LoginButton() {
     </>
 );
 }
+
+}
+}
+}
+}
 =======
   }
 
   return (
     <>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

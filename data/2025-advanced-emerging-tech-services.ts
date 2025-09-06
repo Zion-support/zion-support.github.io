@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const advancedEmergingTechServices2025 = [
   {
     id: 'space-mining-operations-platform'
@@ -633,17 +632,14 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },;
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
-];
-
 =======
 export const advancedEmergingTechServices2025 = [;
   {;
@@ -875,6 +871,7 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

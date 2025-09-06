@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {useForm, type, UseFormReturn} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Mail} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+=======
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -30,7 +44,7 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -45,9 +59,15 @@ export default function ForgotPassword() {
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
+<<<<<<< HEAD
+export default function ForgotPassword() {;
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
+=======
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize react-hook-form
@@ -160,6 +180,7 @@ export default function ForgotPassword() {
     </>
   )
 }
+;
 =======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -233,4 +254,4 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

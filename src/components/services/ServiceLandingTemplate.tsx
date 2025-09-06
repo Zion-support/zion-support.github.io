@@ -1,13 +1,17 @@
+<<<<<<< HEAD
+import React from 'react'
+=======
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
+<<<<<<< HEAD
 }
 export interface Testimonial {
   name: string;
@@ -16,33 +20,15 @@ export interface Testimonial {
   avatar?: string
 }
 interface ServiceLandingTemplateProps {
-  title: string;
+  title: string
   subtitle: string;
-  heroImage?: string;
   description: string;
   benefits: Benefit[];
-  testimonials: Testimonial[];
-  ctaText: string;
+  features?: string[];
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
   ctaLink: string
-}
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-
-  title
-  subtitle
-  description
-  benefits
-  features = []
-  stats = []
-  ctaText
-  ctaLink
-}) => {
 =======
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import Image from "next/image",
-export interface Benefit {
-  title: string,
-  description: string,
-  icon?: React.ReactNode
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -70,6 +56,7 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -80,8 +67,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   benefits,
   testimonials,
   ctaText,
+<<<<<<< HEAD
+  ctaLink,
+}) => {
+=======
   ctaLink}) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -111,7 +102,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {description}
           </p>
         </div>
@@ -139,6 +130,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
+
       {features.length > 0 && (
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -156,6 +148,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
+
       {stats.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -172,6 +165,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
+
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -190,8 +184,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-}
-
+};
+;
 =======
 
       <section className="py-16 bg-zion-blue-light">
@@ -270,4 +264,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
     </div>
   )
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

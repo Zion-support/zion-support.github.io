@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
+export function useCompanyWorkspace(companySlug?: string) {;
+  const [company, setCompany] = useState<Company | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
 import { useState, useEffect } from "react",
 <<<<<<< HEAD
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
@@ -13,7 +21,7 @@ export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -56,14 +64,14 @@ export function useCompanyWorkspace(companySlug?: string) {
           name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),
           logoUrl: "/placeholder.svg",
           theme: {
+            primaryColor: "#4f46e5",
+            backgroundColor: "#ffffff",
+            textColor: "#1f2937"},
+          plan: "Teams",
+          teamSize: 5,
+          teamLimit: 10,
+          billingCycle: "Monthly",
 <<<<<<< HEAD
-            primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
-          plan: "Teams";
-          teamSize: 5;
-          teamLimit: 10;
-          billingCycle: "Monthly"
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)
       }
@@ -72,13 +80,6 @@ export function useCompanyWorkspace(companySlug?: string) {
   }, [companySlug]);
 
 =======
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"},
-          plan: "Teams",
-          teamSize: 5,
-          teamLimit: 10,
-          billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai.com`}),
         setError(null)
 import { useState, useEffect } from "react",;
@@ -129,6 +130,6 @@ export function useCompanyWorkspace(companySlug?: string) {;
       setIsLoading(false);
     }, 1000), // Simulate loading delay;
   }, [companySlug]);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return { company, isLoading, error }
 }

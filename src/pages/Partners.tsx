@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -19,22 +19,6 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-export default function Partners() {
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState('overview');
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-  useEffect(() => {
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
-
-import { useState, useEffect } from "react";
-import { useTranslation  } from 'react-i18next';
 =======
 
 import { Button } from "@/components/ui/button",
@@ -50,21 +34,47 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from 'next/router',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default function Partners() {;
+  logInfo('PartnersPage rendering');
+  const [activeTab, setActiveTab] = useState('overview');
+  const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const router = useRouter();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+  useEffect(() => {
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
+import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
 
-  logInfo('PartnersPage rendering')
-  const [activeTab, setActiveTab] = useState("overview")
-  const { t } = useTranslation()
-  const { user, isAuthenticated } = useAuth()
-  const router = useRouter()
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
+  logInfo('PartnersPage rendering'),
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { t } = useTranslation(),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+
+<<<<<<< HEAD
   useEffect((,) => {
-    async function checkHealth() {
-      try {
+    async function checkHealth() {;
+      try {;
         const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok);
         logErrorToProduction('Partner login auth health check failed', {
@@ -76,19 +86,6 @@ export default function Partners() {
     checkHealth();  }, []);    checkHealth()
   }, []);
 =======
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-export default function Partners() {
-
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-
   useEffect(() => {
     async function checkHealth() {
       try {
@@ -101,6 +98,7 @@ export default function Partners() {
     }
     checkHealth()
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // If not authenticated, display partner program info and signup CTA
@@ -128,7 +126,7 @@ export default function Partners() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -183,7 +181,7 @@ export default function Partners() {
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
                 <div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
                 </div>
@@ -195,7 +193,7 @@ export default function Partners() {
 =======
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <CardHeader>
               <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
               <CardDescription>{t('partner.organizations.desc')}</CardDescription>
@@ -247,7 +245,7 @@ export default function Partners() {
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
                 </div>
@@ -274,7 +272,7 @@ export default function Partners() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
@@ -293,7 +291,7 @@ export default function Partners() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <FileText className="h-6 w-6 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
               </CardHeader>
@@ -312,7 +310,7 @@ export default function Partners() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <PieChart className="h-6 w-6 text-zion-cyan" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
               </CardHeader>
@@ -320,7 +318,7 @@ export default function Partners() {
               <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner.steps.earn_desc')}</p>              <CardContent className="text-center text-sm text-zion-slate-light">
 =======
               <CardContent className="text-center text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <p>{t('partner.steps.earn_desc')}</p>
               </CardContent>
             </Card>
@@ -331,7 +329,7 @@ export default function Partners() {
 =======
 
         <div className="flex justify-center gap-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Button
             size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -368,13 +366,6 @@ export default function Partners() {
           )}
         </div>
       </div>
-    );
-  }
-  // Authenticated user view - Partner Dashboard
-  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
-
-  return (
-    <div className='container max-w-7xl py-10'>
 =======
             size="lg"
             variant="outline"
@@ -542,14 +533,18 @@ export default function Partners() {;
           )}
         </div>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     );
   }
 
   // Authenticated user view - Partner Dashboard
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user }),
   return (
+<<<<<<< HEAD
+    <div className='container max-w-7xl py-10'>
+=======
     <div className="container max-w-7xl py-10">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
@@ -570,7 +565,7 @@ export default function Partners() {;
           <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
         </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="flex gap-2">
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
@@ -633,7 +628,7 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -660,7 +655,7 @@ export default function Partners() {;
           <PartnerLeaderboard />
         </TabsContent>
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
@@ -668,7 +663,8 @@ export default function Partners() {;
     </div>
 <<<<<<< HEAD
   );
-  async function checkHealth () {try {}checkHealth () ;
+  async function checkHealth () {;
+  try {}checkHealth () ;
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 }</Button>) ;
@@ -680,8 +676,9 @@ export default function Partners() {;
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 }
+;
 =======
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import Image from "next/image";
+import Image from 'next/image'
 import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string
@@ -10,6 +10,10 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
 =======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
@@ -19,6 +23,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   linkedin?: string
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -46,9 +51,15 @@ const speakers: Speaker[] = [
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
+<<<<<<< HEAD
+    linkedin: '#',
+  },
+]
+=======
     linkedin: '#'}],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -86,7 +97,7 @@ export function SpeakersSection() {;
           {speakers.map((sp) => (;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -115,7 +126,7 @@ export function SpeakersSection() {;
                 {sp.twitter && (
                   <a
                     href={sp.twitter}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -146,7 +157,7 @@ export function SpeakersSection() {;
                   <a;
                     href={sp.linkedin}
                     aria-label="LinkedIn"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -156,16 +167,17 @@ export function SpeakersSection() {;
 <<<<<<< HEAD
 =======
                   </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             </div>
           ))}
 <<<<<<< HEAD
         </div>
-      </div>
-    </section>
-  )
+      </div>;
+    </section>;
+  );
+};
 }
 =======
         </div>;
@@ -174,4 +186,4 @@ export function SpeakersSection() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

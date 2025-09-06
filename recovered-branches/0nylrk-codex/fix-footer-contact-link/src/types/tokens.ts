@@ -1,13 +1,14 @@
 
+export interface Wallet {;
 <<<<<<< HEAD
-export interface Wallet {
   user_id: string;
 
   balance: number
   updated_at: string
 }
 export type TransactionType = 'earn' | 'burn';
-export interface TokenTransaction {
+
+export interface TokenTransaction {;
   id: string;
   user_id: string;
   amount: number;
@@ -17,7 +18,6 @@ export interface TokenTransaction {
   created_at: string
 }
 =======
-export interface Wallet {;
   user_id: string,;
   balance: number,;
   updated_at: string;
@@ -33,4 +33,4 @@ export interface TokenTransaction {;
   created_at: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

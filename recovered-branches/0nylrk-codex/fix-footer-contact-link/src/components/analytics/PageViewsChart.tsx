@@ -1,13 +1,14 @@
-
 <<<<<<< HEAD
 import React from "react";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
 } from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+=======
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
@@ -24,6 +25,7 @@ export function PageViewsChart({
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
@@ -42,13 +44,6 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart 
           title=""
 <<<<<<< HEAD
-          data={data |[]}
-          dataKeys={["views"]}
-          timeRange={timeRange}
-          onTimeRangeChange={onTimeRangeChange}
-        />
-      </CardContent>
-    </Card>
 =======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -69,13 +64,18 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
+        />
+      </CardContent>
+=======
         />;
       </CardContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

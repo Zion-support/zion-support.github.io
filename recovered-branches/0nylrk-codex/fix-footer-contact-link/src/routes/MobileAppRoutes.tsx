@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import {Route, Routes} from "react-router-dom";
+import MobileAppPage from "../pages/MobileAppPage";
+import MobileLaunchPage from "../pages/MobileLaunchPage";
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+=======
 import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import OpenAppRedirect from "../pages/OpenAppRedirect";
 =======
 import MobileLaunchPage from "../pages/MobileLaunchPage",
 import OpenAppRedirect from "../pages/OpenAppRedirect",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const MobileAppRoutes = () => {
   return (
     <Routes>
@@ -25,6 +31,8 @@ export default MobileAppRoutes;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default MobileAppRoutes,
 import { Route, Routes } from "react-router-dom",;
 import MobileAppPage from "../pages/MobileAppPage",;
@@ -41,5 +49,6 @@ const MobileAppRoutes = () => {;
     </Routes>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default MobileAppRoutes;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

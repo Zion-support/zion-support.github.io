@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -20,16 +17,6 @@ import Header from './Header';
 import Footer from './Footer';
 >>>>>>> origin/automation-improvements-final
 
-=======
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -41,39 +28,41 @@ interface LayoutProps {
   ogImage?: string;
   noIndex?: boolean;
 }
+
 const Layout: React.FC<LayoutProps> = ({
-  children
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
-  canonical = "https://ziontechgroup.com"
-  ogTitle
-  ogDescription
-  ogImage = "https://ziontechgroup.com/og-image.jpg"
-  noIndex = false
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical = "https://ziontechgroup.com",
+  ogTitle,
+  ogDescription,
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  noIndex = false,
 }) => {
   const jsonLd = {
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    name: "Zion Tech Group"
-    url: "https://ziontechgroup.com"
-    logo: "https://ziontechgroup.com/logo.png"
-    description: description
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.png",
+    description: description,
     address: {
-      "@type": "PostalAddress"
-      streetAddress: "364 E Main St STE 1008"
-      addressLocality: "Middletown"
-      addressRegion: "DE"
-      postalCode: "19709"
-      addressCountry: "US"
-    }
+      "@type": "PostalAddress",
+      streetAddress: "364 E Main St STE 1008",
+      addressLocality: "Middletown",
+      addressRegion: "DE",
+      postalCode: "19709",
+      addressCountry: "US",
+    },
     contactPoint: {
-      "@type": "ContactPoint"
-      telephone: "+1-302-464-0950"
-      contactType: "customer service"
-      email: "kleber@ziontechgroup.com"
-    }
-  }
+      "@type": "ContactPoint",
+      telephone: "+1-302-464-0950",
+      contactType: "customer service",
+      email: "kleber@ziontechgroup.com",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Head>
@@ -109,29 +98,6 @@ const Layout: React.FC<LayoutProps> = ({
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-=======
-=======
-import React, { ReactNode } from "react";
-
-interface LayoutProps {
-  children: ReactNode,
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  );
-}
-export default Layout;
 =======
 import React, { ReactNode } from "react";
 interface LayoutProps {
@@ -166,6 +132,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
 export default Layout;

@@ -5,8 +5,11 @@ import { Web3Login } from "./Web3Login",
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false);
-  const handleGoogle = null;
+  const [isLoading, setIsLoading] = useState(false)
+  const handleGoogle = () => {
+    setIsLoading(true)
+    window.location.href = '/auth/google'
+  }
 =======
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
@@ -22,7 +25,7 @@ export function SocialLogin() {
     window.location.href = '/auth/google'
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="mt-6">
       <div className="relative">
@@ -53,7 +56,7 @@ export function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -83,6 +86,12 @@ export function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
+        </Button>
+        <Web3Login />
+      </div>
+    </div>;
+  );
+};
 =======
           type="button"
           variant="outline"
@@ -102,15 +111,11 @@ export function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </Button>
         <Web3Login />
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -178,4 +183,4 @@ export function SocialLogin() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

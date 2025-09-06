@@ -1,25 +1,8 @@
-const { execSync } = require('child_process');
 <<<<<<< HEAD
-console.log('🚀 Starting simple merge process...');
-try {// Check git status;
-  console.log('📊 Checking git status...');
-  const status = execSync('git status --porcelain', { encoding: 'utf8' });
-  console.log('Git status:', status |'Clean working directory');
-  // Fetch latest changes;
-  console.log('📥 Fetching latest changes...');
-  execSync('git fetch --all --prune');
-  // Switch to main branch;
-  console.log('🔄 Switching to main branch...');
-  execSync('git checkout main');
-  // Pull latest changes;
-  console.log('📥 Pulling latest changes from main...');
-  try {execSync('git pull origin main');
-    console.log('✅ Successfully pulled latest changes');
-  } catch (error) {console.log('⚠️  Merge conflicts detected. Resolving...');
-    // Find files with merge conflicts;
-    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-    if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
+const { execSync } = require('child_process'),;
 =======
+const { execSync } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -45,7 +28,11 @@ try {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
+      const files = conflictFiles.trim().split('\n'),;
+=======
       const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       for (const file of files) {;
         if (file.trim()) {;
 <<<<<<< HEAD
@@ -109,7 +96,11 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
+<<<<<<< HEAD
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+=======
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -15,12 +18,21 @@ const listingSchema = null;
 =======
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
   image: z.string().optional()}),
 
+<<<<<<< HEAD
+      const maxRetries = 3
+  const sourceListings = listings
+}
+  )
+}
+;
+=======
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -339,4 +351,4 @@ const listingSchema = z.object({
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

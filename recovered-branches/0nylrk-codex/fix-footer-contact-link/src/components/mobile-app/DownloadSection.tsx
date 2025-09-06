@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import React from "react";
+import {QrCodeIcon} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
+=======
 import React from "react",
 <<<<<<< HEAD
 import { QrCodeIcon } from "lucide-react";
@@ -7,11 +13,17 @@ import { AppStoreButtons } from "./AppStoreButtons";
 =======
 import { QrCodeIcon } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import React from "react";
+import { QrCodeIcon } from "lucide-react";
+import { AppStoreButtons } from "./AppStoreButtons";
+>>>>>>> main
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
+
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -26,18 +38,14 @@ export const DownloadSection: React.FC = () => {
                 needs to the next level. Available on iOS and Android.
               </p>
 <<<<<<< HEAD
-              <AppStoreButtons
-                className="mb-8"
+              <AppStoreButtons 
+                className="mb-8" 
+<<<<<<< HEAD
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}
-                onGooglePlayClick={() =>
-                  console.log("Google Play button clicked")
-                }
+                onGooglePlayClick={() => console.log("Google Play button clicked")}
 =======
-              
-              <AppStoreButtons 
-                className="mb-8" 
 import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
@@ -61,13 +69,29 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => // // // console.log("App Store button clicked")}
                 onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+              <AppStoreButtons
+                className="mb-8"
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+                onAppStoreClick={() => console.log("App Store button clicked")}
+                onGooglePlayClick={() =>
+                  console.log("Google Play button clicked")
+                }
+>>>>>>> main
               />
+
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
@@ -82,9 +106,11 @@ export const DownloadSection: React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   );
-}
-
+};
 =======
   )
 },
@@ -109,4 +135,4 @@ export const DownloadSection: React.FC = () => {;
 };
 
 export default DownloadSection;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

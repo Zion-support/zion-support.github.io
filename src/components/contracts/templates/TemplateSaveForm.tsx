@@ -45,7 +45,7 @@ export function TemplateSaveForm({
     }
   })
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
-      return
+      return;
     }
     setSaving(true)
     try {
@@ -68,7 +68,6 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   }
-
 =======
 
 import { useState } from "react",
@@ -156,7 +155,7 @@ export function TemplateSaveForm({;
     }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -173,7 +172,7 @@ export function TemplateSaveForm({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
@@ -205,6 +204,7 @@ export function TemplateSaveForm({;
             </FormItem>
           )}
         />
+
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
 =======
@@ -252,7 +252,7 @@ export function TemplateSaveForm({;
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
@@ -279,10 +279,10 @@ try {
 }placeholder="Enter template name" />
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-  editTemplate ? "Update" : "Save"
-}Template`)
-}</Button> </div> </form> </Form>)
-}"}
+  editTemplate ? "Update" : "Save" 
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
+}"};
 =======
               `${editTemplate ? "Update" : "Save"} Template`
             )}
@@ -293,4 +293,4 @@ try {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

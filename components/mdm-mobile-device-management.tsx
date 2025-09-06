@@ -6,12 +6,12 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Smartphone;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,;
+  Smartphone,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -19,14 +19,14 @@ import { extraServices } from '../data/extra-services';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function MDMPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
+    s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-export default function MDMPage() {
+export default function MDMPage() {;
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -120,4 +120,8 @@ export default function MDMPage() {
 =======
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

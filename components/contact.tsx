@@ -1,9 +1,8 @@
 <<<<<<< HEAD
-
 const [isSubmitting, setIsSubmitting] = useState (false);
 =======
  const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
 ...quantumSpaceInnovations2029.filter (s => s.popular);
@@ -28,6 +27,7 @@ setSubmitSuccess (true);
   opacity: 0, x: -30
 =======
   opacity: 0, x: -30 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
@@ -314,7 +314,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -335,7 +335,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -354,7 +354,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -371,8 +371,10 @@ setSubmitSuccess (true);
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
+<<<<<<< HEAD
+=======
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
@@ -380,7 +382,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Price */}
                     <div className="mb-4">
                       <span className={`${service.textColor} font-semibold text-lg`}>
@@ -391,7 +393,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
@@ -406,7 +408,7 @@ setSubmitSuccess (true);
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -458,4 +460,20 @@ setSubmitSuccess (true);
 =======
   ),
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

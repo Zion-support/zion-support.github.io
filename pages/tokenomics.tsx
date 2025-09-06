@@ -4,13 +4,8 @@ import Head from 'next/head';
 
 type DistributionItem = { label: string; percent: number }
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-export default function TokenomicsWhitepaperBuilder() {
-=======
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export default function TokenomicsWhitepaperBuilder() {;
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -131,8 +126,16 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     value: string
   ) {
     setDistribution(prev => {      const copy = [...prev];
-      const item = { ...copy[index] }
 =======
+type DistributionItem = { label: string, percent: number };
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+export default function TokenomicsWhitepaperBuilder(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -235,6 +238,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const item = { ...copy[index] };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (key === 'percent') item.percent = Number(value);
@@ -285,7 +289,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
     if (!res.ok) {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       alert('Failed to create share link');
       return;
       } catch (error) {
@@ -301,6 +305,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -313,7 +318,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 =======
 }
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Head>
@@ -346,7 +351,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -434,7 +439,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </div>
             </div>
@@ -472,7 +477,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
               />
               <div className='flex gap-3'>
                 <button
-                  disabled={!isAdmin |isGenerating}
+                  disabled={!isAdmin || isGenerating}
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -494,7 +499,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -548,7 +553,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -569,7 +574,7 @@ function buildLocalMarkdown(input: {
 }
 ;
 function buildLocalMarkdown(input: {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -587,9 +592,6 @@ function buildLocalMarkdown(input: {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) |1;
 =======
 }
 ;
@@ -615,6 +617,7 @@ function jurisdictionalNote(j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
@@ -639,22 +642,6 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 }) {  // Very lightweight section filter: split by headings
-  const parts = useMemo(() => {
-    const sections = markdown.split(/\n## /g)
-    const map: Record<string, string> = {}
-    sections.forEach((s, i) => {
-      if (i === 0) return; // first is H1
-      const [titleLine, ...rest] = s.split('\n');
-      map[titleLine.trim()] = rest.join('\n');
-    });
-    return map;  }, [markdown]);
-  const content = parts[activeSection] |'';
-
-  return (
-<pre className='whitespace-pre-wrap text-sm leading-6'>
-      {content |markdown}
-    </pre>
-  );
 =======
       ))  } catch (error) {
     console.error("Error:", error);
@@ -670,6 +657,7 @@ function MarkdownPreview({
 }
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -682,6 +670,18 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
+<<<<<<< HEAD
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content || markdown}
+    </pre>
+  );
+
+}
+}
+}
+}
+}
+=======
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -706,4 +706,4 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

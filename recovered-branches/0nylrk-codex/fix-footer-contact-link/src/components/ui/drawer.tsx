@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import * as React from 'react';
 import {Drawer, as, DrawerPrimitive} from 'vaul';
-import {cn} from '@/lib/utils';
 =======
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 
@@ -49,6 +49,7 @@ const DrawerOverlay = React.forwardRef<
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 <<<<<<< HEAD
+
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive.Content>
@@ -56,9 +57,6 @@ const DrawerContent = React.forwardRef<
   <DrawerPortal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
-      ref={ref}
-      className={cn(
-        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
 =======
 const DrawerContent = React.forwardRef<;
   React.ElementRef<typeof DrawerPrimitive.Content>,;
@@ -67,6 +65,7 @@ const DrawerContent = React.forwardRef<;
   <DrawerPortal>;
     <DrawerOverlay />;
     <DrawerPrimitive.Content;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       ref={ref}
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
@@ -144,6 +143,7 @@ const DrawerTitle = React.forwardRef<
 ));
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
 <<<<<<< HEAD
+
 const DrawerDescription = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Description>
 </typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
@@ -155,7 +155,7 @@ const DrawerDescription = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <DrawerPrimitive.Description;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
@@ -163,18 +163,19 @@ const DrawerDescription = React.forwardRef<;
 ));
 DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
 <<<<<<< HEAD
+
 export {
-  Drawer
-  DrawerPortal
-  DrawerOverlay
-  DrawerTrigger
-  DrawerClose
-  DrawerContent
-  DrawerHeader
-  DrawerFooter
-  DrawerTitle
-  DrawerDescription
-}
+  Drawer,
+  DrawerPortal,
+  DrawerOverlay,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,;
+};
 =======
 export {;
   Drawer,;
@@ -188,4 +189,4 @@ export {;
   DrawerTitle;
   DrawerDescription}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

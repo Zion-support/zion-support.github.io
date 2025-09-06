@@ -1,13 +1,14 @@
 
+export interface SearchSuggestion {;
 <<<<<<< HEAD
-export interface SearchSuggestion {
   text: string;
 
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
 
   iconUrl?: string
 }
-export interface SearchHighlight {
+
+export interface SearchHighlight {;
   before: string;
 
   match: string
@@ -16,9 +17,8 @@ export interface SearchHighlight {
 }
 export interface FilterOptions {
   productTypes: {
-
-    label: string
-    value: string
+    label: string,
+    value: string;
   }[];
   locations: {
     label: string
@@ -30,9 +30,7 @@ export interface FilterOptions {
     value: string
   }[];
   ratingOptions: number[]
-}
 =======
-export interface SearchSuggestion {;
   text: string,;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
   iconUrl?: string;
@@ -58,6 +56,7 @@ export interface FilterOptions {;
     value: string;
   }[];
   ratingOptions: number[];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

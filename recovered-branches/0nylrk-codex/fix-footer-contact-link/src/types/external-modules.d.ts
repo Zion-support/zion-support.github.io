@@ -10,7 +10,6 @@ declare module "@radix-ui/react-navigation-menu";
 declare module "react-resizable-panels";
 declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
-declare module '@tanstack/react-query';
 =======
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
@@ -23,32 +22,15 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 declare module '@tanstack/react-query',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 declare module 'react-day-picker' {
-  export interface DateRange {
-    from?: Date,
-    to?: Date
 <<<<<<< HEAD
-=======
-declare module "cmdk",;
-declare module "@radix-ui/react-context-menu",;
-declare module "vaul",;
-declare module "@radix-ui/react-hover-card",;
-declare module "input-otp",;
-declare module "react-markdown",;
-declare module "@radix-ui/react-menubar",;
-declare module "@radix-ui/react-navigation-menu",;
-declare module "react-resizable-panels",;
-declare module "@radix-ui/react-toggle-group",;
-declare module "@radix-ui/react-toggle",;
-declare module '@tanstack/react-query',;
-declare module 'react-day-picker' {;
   export interface DateRange {;
-    from?: Date,;
-    to?: Date;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    from?: Date;
+    to?: Date
   }
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
@@ -56,8 +38,7 @@ declare module 'react-day-picker' {;
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
-}
-<<<<<<< HEAD
+};
 declare module 'sonner';
 declare module 'lucide-react' {
 
@@ -254,16 +235,16 @@ import {FC, SVGProps} from 'react';
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
-  export const Zap: LucideIcon
-  const icons: { [key: string]: LucideIcon }
+  export const Zap: LucideIcon,;
+  const icons: { [key: string]: LucideIcon };
   export default icons
-}
+};
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
   export const jsPDF: any
   export default jsPDF
-}
+};
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
@@ -291,10 +272,10 @@ declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any
   export type VariantProps<T extends (...args: any) => any> = any
 }
-declare module 'clsx' {
+declare module 'clsx' {;
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string
-}
+};
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -307,7 +288,8 @@ declare module 'react-hook-form' {
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
-  export interface UseFormReturn<
+
+  export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control<TFieldValues>
@@ -316,13 +298,15 @@ declare module 'react-hook-form' {
     formState: any
     [key: string]: any
   }
-  export function useForm<
+
+  export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
-  export function useFieldArray<
+  export function useFieldArray<;
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
-  export interface ControllerProps<
+
+  export interface ControllerProps<;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
@@ -333,7 +317,8 @@ declare module 'react-hook-form' {
     render: (props: any) => ReactElement
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
-  export interface FormProviderProps<
+
+  export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode
@@ -343,7 +328,7 @@ declare module 'react-hook-form' {
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues
   >(): UseFormReturn<TFieldValues>
-}
+};
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'react-dom';
@@ -354,8 +339,35 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
-
 =======
+  export interface DateRange {
+    from?: Date,
+    to?: Date
+declare module "cmdk",;
+declare module "@radix-ui/react-context-menu",;
+declare module "vaul",;
+declare module "@radix-ui/react-hover-card",;
+declare module "input-otp",;
+declare module "react-markdown",;
+declare module "@radix-ui/react-menubar",;
+declare module "@radix-ui/react-navigation-menu",;
+declare module "react-resizable-panels",;
+declare module "@radix-ui/react-toggle-group",;
+declare module "@radix-ui/react-toggle",;
+declare module '@tanstack/react-query',;
+declare module 'react-day-picker' {;
+  export interface DateRange {;
+    from?: Date,;
+    to?: Date;
+  }
+;
+  // Minimal placeholder for the DayPicker component used in the app;
+  // The actual library provides full typings but we stub them here so the;
+  // TypeScript compiler can understand the imports without requiring the real;
+  // type definitions.;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any;
+  export const DayPicker: any;
+}
 declare module 'sonner',;
 declare module 'lucide-react' {;
   import { FC, SVGProps } from 'react',;
@@ -648,4 +660,4 @@ declare module 'ws',;
 declare module 'recharts',;
 declare module 'next-themes';
 declare module 'tailwind-merge';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

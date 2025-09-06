@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {;
+  const { user } = useAuth();
+=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -20,6 +32,7 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function EnterpriseBilling() {
   const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Check if user has billing permissions
   const hasBillingAccess = user?.role === "enterprise_admin" || 
@@ -43,7 +56,6 @@ export default function EnterpriseBilling() {
     </ProtectedRoute>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -75,6 +87,7 @@ export default function EnterpriseBilling() {;
       <Footer />;
     </ProtectedRoute>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

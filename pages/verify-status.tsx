@@ -1,19 +1,17 @@
 <<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useState, useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
 <<<<<<< HEAD
 
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
+;
 export default function VerifyStatus() {
 
   const router = useRouter()
@@ -123,7 +121,18 @@ export default function VerifyStatus() {
     router.back()
   }
 
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
 =======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -175,6 +184,7 @@ export default function VerifyStatus(req, res) {
     setIsResending(true);
     setError('');
     setMessage('');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -292,7 +302,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -310,7 +320,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -352,7 +362,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -374,7 +384,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -398,7 +408,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {email && (
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
@@ -421,7 +431,7 @@ export default function VerifyStatus(req, res) {
             {/* Check Status Button */}
             <Button
               onClick={handleCheckStatus}
-              disabled={!email |isCheckingStatus}
+              disabled={!email || isCheckingStatus}
 =======
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
@@ -463,7 +473,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="w-full"
               variant="outline"
             >
@@ -483,7 +493,7 @@ export default function VerifyStatus(req, res) {
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
-              disabled={!email |isResending |countdown > 0}
+              disabled={!email || isResending || countdown > 0}
 =======
               )  } catch (error) {
     console.error("Error:", error);
@@ -507,7 +517,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="w-full"
               variant="secondary"
             >
@@ -556,7 +566,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="w-full"
             >
               Try Login
@@ -570,7 +580,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -584,7 +594,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -611,7 +621,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               variant="ghost"
               className="w-full text-sm"
             >
@@ -626,7 +636,7 @@ export default function VerifyStatus(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               variant="ghost"
               className="w-full text-sm"
             >
@@ -638,12 +648,12 @@ export default function VerifyStatus(req, res) {
     </AuthLayout>
   )
 <<<<<<< HEAD
-}
+};
 =======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

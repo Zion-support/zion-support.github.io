@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -10,7 +19,7 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 =======
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",
 import { CountryPricing } from "@/data/onsiteServicePricing",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -31,8 +40,13 @@ export function CountryTabs({
 
 =======
 
+<<<<<<< HEAD
+export function CountryTabs({ ;
+  popularCountries;
+=======
 export function CountryTabs({ 
   popularCountries,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
@@ -68,6 +82,8 @@ export function CountryTabs({
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -114,7 +130,7 @@ export function CountryTabs({;
               <CountryServiceCard;
                 key={country.country} ;
                 country={country} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />

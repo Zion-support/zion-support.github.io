@@ -25,13 +25,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req.method !== "POST")
+    if (req.method !== "POST");
       return res.status(405).json({ message: "Method not allowed" });
     const { service, description, timeline, budgetRange, email } =
       req.body |{}
@@ -60,6 +60,8 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
+
+<<<<<<< HEAD
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -100,4 +102,4 @@ export default async function handler(
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

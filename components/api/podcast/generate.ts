@@ -30,7 +30,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 function readEpisodes(): any[] {
   ensureStorage();
@@ -40,7 +40,8 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
   const id = uuidv4();
@@ -142,6 +143,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
 }
 }
+
+}
+}
 =======
     const episode = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

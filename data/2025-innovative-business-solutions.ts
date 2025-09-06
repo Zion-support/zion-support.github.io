@@ -606,12 +606,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launchDate: '2025-05-01'
-    customers: 38
-    rating: 4.7
-    reviews: 26
-  }
+      'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
+    launchDate: '2025-05-01',
+    customers: 38,
+    rating: 4.7,
+    reviews: 26,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -624,8 +624,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7
 
     reviews: 26
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
@@ -977,6 +975,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     customers: 38,;
     rating: 4.7;
     reviews: 26;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

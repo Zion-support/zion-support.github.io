@@ -1,15 +1,12 @@
 
 <<<<<<< HEAD
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
-export const useDeleteMilestone = () => {
+export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const deleteMilestone = async (milestoneId: string) => {
-    if (!user) return false;
 =======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
@@ -18,6 +15,7 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
@@ -61,6 +59,14 @@ export const useDeleteMilestone = () => {
       return false
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+    }
+  };
+  
+  return {
+    deleteMilestone;
+    isSubmitting
+=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -90,6 +96,7 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

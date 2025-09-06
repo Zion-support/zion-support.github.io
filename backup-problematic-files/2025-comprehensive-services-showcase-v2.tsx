@@ -3,165 +3,29 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import {
-  Brain
-  Atom
-  Shield
-  Target
-  Rocket
-  ArrowRight
-  Check
-  Star
-  TrendingUp
-  Users
-  Globe
-  Zap
-  Lock
-  Cloud
-  Smartphone
-  Building
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Rocket,
+  ArrowRight,
+  Check,
+  Star,
+  TrendingUp,
+  Users,
+  Globe,
+  Zap,
+  Lock,
+  Cloud,
+  Smartphone,
+  Building,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';
   Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react';
-// Import our new 2025 V2 innovative services
-import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
-import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
-import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
-import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 }
-  animate: { opacity: 1, y: 0 }
-  transition: { duration: 0.6 },};import { Zap, Star } from 'lucide-react';
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 }
-  animate: { opacity: 1, y: 0 }
-  transition: { duration: 0.6 }
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  },}
-export default function ComprehensiveServicesShowcase2025V2() {
-  const allNewServices = [      staggerChildren: 0.1
-    }
-  }
-}
-export default function ComprehensiveServicesShowcase2025V2() {
-  const allNewServices = [
-    ...innovativeMicroSaas2025ExpansionV2
-    ...innovativeITServices2025ExpansionV2
-    ...innovativeAIServices2025ExpansionV2
-    ...industrySpecificSolutions2025V2
-    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
-    ...innovativeITServices2025ExpansionV2;
-    ...innovativeAIServices2025ExpansionV2;
-    ...industrySpecificSolutions2025V2;
-    ...emergingTechBreakthroughs2025V2
-  const serviceCategories = [
-    {
-      id: 'micro-saas'
-      name: 'Innovative Micro SAAS'
-      icon: <Smartphone className='w-8 h-8' />
-      color: 'from-blue-500 to-cyan-500'
-      services: innovativeMicroSaas2025ExpansionV2
-      description: 'Cutting-edge micro SAAS solutions for modern businesses',      color: 'from-blue-500 to-cyan-500'
-      services: innovativeMicroSaas2025ExpansionV2
-      description: 'Cutting-edge micro SAAS solutions for modern businesses'
-    }
-    {
-      id: 'it-infrastructure'
-      name: 'IT Infrastructure Services'
-      icon: <Cloud className="w-8 h-8" />
-      color: 'from-purple-500 to-pink-500'
-      services: innovativeITServices2025ExpansionV2
-      description: 'Advanced IT infrastructure and security solutions'
-    }
-    {
-      id: 'ai-services'
-      name: 'AI & Machine Learning'
-      icon: <Brain className="w-8 h-8" />
-      color: 'from-green-500 to-emerald-500'
-      services: innovativeAIServices2025ExpansionV2
-      description: 'Intelligent AI solutions for business transformation'
-    }
-    {
-      id: 'industry-solutions'
-      name: 'Industry Solutions'
-      icon: <Building className="w-8 h-8" />
-      color: 'from-orange-500 to-red-500'
-      services: industrySpecificSolutions2025V2
-      description: 'Specialized solutions for specific industries'
-    }
-    {
-      id: 'emerging-tech'
-      name: 'Emerging Technology'
-      icon: <Atom className="w-8 h-8" />
-      color: 'from-indigo-500 to-purple-500'
-      services: emergingTechBreakthroughs2025V2
-      description: 'Breakthrough technologies of the future'
-    }
-    {
-      id: 'it-infrastructure'
-      name: 'IT Infrastructure Services'
-      icon: <Cloud className='w-8 h-8' />
-      color: 'from-purple-500 to-pink-500'
-      services: innovativeITServices2025ExpansionV2
-      description: 'Advanced IT infrastructure and security solutions'
-    }
-    {
-      id: 'ai-services'
-      name: 'AI & Machine Learning'
-      icon: <Brain className='w-8 h-8' />
-      color: 'from-green-500 to-emerald-500'
-      services: innovativeAIServices2025ExpansionV2
-      description: 'Intelligent AI solutions for business transformation'
-    }
-    {
-      id: 'industry-solutions'
-      name: 'Industry Solutions'
-      icon: <Building className='w-8 h-8' />
-      color: 'from-orange-500 to-red-500'
-      services: industrySpecificSolutions2025V2
-      description: 'Specialized solutions for specific industries'
-    }
-    {
-      id: 'emerging-tech'
-      name: 'Emerging Technology'
-      icon: <Atom className='w-8 h-8' />
-      color: 'from-indigo-500 to-purple-500'
-      services: emergingTechBreakthroughs2025V2
-      description: 'Breakthrough technologies of the future'
-    },  ];      description: 'Breakthrough technologies of the future'
-    }
-  ];
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-      <SEO
-        title='2025 Comprehensive Services Showcase V2 | Zion Tech Group'
-        description='Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions.'
-        keywords={[
-          'micro SAAS'
-          'IT infrastructure'
-          'AI services'
-          'industry solutions'
-          'emerging technology'
-          'Zion Tech Group'
-        ]}
-      />
-      {/* Hero Section */}
-      <section className='relative py-20 px-4 overflow-hidden'>
-        <div className='max-w-7xl mx-auto text-center'>
-          <motion.h1
-            className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="relative py-20 px-4 overflow-hidden">
 =======
 import React from 'react'
 import SEO from '../components/SEO'
@@ -171,10 +35,25 @@ import {
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 // Import our new 2025 V2 innovative services
 
+<<<<<<< HEAD
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 }
+  animate: { opacity: 1, y: 0 }
+  transition: { duration: 0.6 },};import { Zap, Star } from 'lucide-react';
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 }
+  animate: { opacity: 1, y: 0 }
+  transition: { duration: 0.6 }
+
+const staggerContainer = {
+  animate: {
+=======
 const _staggerContainer = {_animate: {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     transition: {
       staggerChildren: 0.1}
   }
@@ -192,6 +71,39 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     },
+<<<<<<< HEAD
+  },};
+
+export default function ComprehensiveServicesShowcase2025V2() {
+  const allNewServices = [      staggerChildren: 0.1
+    }
+  };
+};
+
+export default function ComprehensiveServicesShowcase2025V2() {
+  const allNewServices = [
+    ...innovativeMicroSaas2025ExpansionV2,
+    ...innovativeITServices2025ExpansionV2,
+    ...innovativeAIServices2025ExpansionV2,
+    ...industrySpecificSolutions2025V2,;
+    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
+    ...innovativeITServices2025ExpansionV2;
+    ...innovativeAIServices2025ExpansionV2;
+    ...industrySpecificSolutions2025V2;
+    ...emergingTechBreakthroughs2025V2
+  const serviceCategories = [
+    {
+      id: 'micro-saas'
+      name: 'Innovative Micro SAAS'
+      icon: <Smartphone className='w-8 h-8' />
+      color: 'from-blue-500 to-cyan-500'
+      services: innovativeMicroSaas2025ExpansionV2
+      description: 'Cutting-edge micro SAAS solutions for modern businesses',      color: 'from-blue-500 to-cyan-500'
+      services: innovativeMicroSaas2025ExpansionV2
+      description: 'Cutting-edge micro SAAS solutions for modern businesses'
+    };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: 'it-infrastructure',
       name: 'IT Infrastructure Services',
@@ -199,7 +111,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-purple-500 to-pink-500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
+<<<<<<< HEAD
+    };
+=======
     },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: 'ai-services',
       name: 'AI & Machine Learning',
@@ -207,7 +123,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-green-500 to-emerald-500',
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
+<<<<<<< HEAD
+    };
+=======
     },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: 'industry-solutions',
       name: 'Industry Solutions',
@@ -215,22 +135,91 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-orange-500 to-red-500',
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
+<<<<<<< HEAD
+    };
+=======
     },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
       icon: <Atom className="w-8 h-8" />,
       color: 'from-indigo-500 to-purple-500',
       services: emergingTechBreakthroughs2025V2,
+<<<<<<< HEAD
+      description: 'Breakthrough technologies of the future',
+    },
+    {
+      id: 'it-infrastructure',
+      name: 'IT Infrastructure Services',
+      icon: <Cloud className='w-8 h-8' />,
+      color: 'from-purple-500 to-pink-500',
+      services: innovativeITServices2025ExpansionV2,
+      description: 'Advanced IT infrastructure and security solutions',
+    },
+    {
+      id: 'ai-services',
+      name: 'AI & Machine Learning',
+      icon: <Brain className='w-8 h-8' />,
+      color: 'from-green-500 to-emerald-500',
+      services: innovativeAIServices2025ExpansionV2,
+      description: 'Intelligent AI solutions for business transformation',
+    },
+    {
+      id: 'industry-solutions',
+      name: 'Industry Solutions',
+      icon: <Building className='w-8 h-8' />,
+      color: 'from-orange-500 to-red-500',
+      services: industrySpecificSolutions2025V2,
+      description: 'Specialized solutions for specific industries',
+    },
+    {
+      id: 'emerging-tech',
+      name: 'Emerging Technology',
+      icon: <Atom className='w-8 h-8' />,
+      color: 'from-indigo-500 to-purple-500',
+      services: emergingTechBreakthroughs2025V2,
+      description: 'Breakthrough technologies of the future',
+    },  ];      description: 'Breakthrough technologies of the future'
+    }
+  ];
+=======
       description: 'Breakthrough technologies of the future'
     }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+      <SEO
+        title='2025 Comprehensive Services Showcase V2 | Zion Tech Group'
+        description='Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions.'
+        keywords={[
+          'micro SAAS',
+          'IT infrastructure',
+          'AI services',
+          'industry solutions',
+          'emerging technology',
+          'Zion Tech Group',
+        ]}
+      />
+      {/* Hero Section */}
+      <section className='relative py-20 px-4 overflow-hidden'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.h1
+            className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
   };
 
   return (_<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -246,14 +235,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
             initial={_{ opacity: 0, _y: 30}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             2025 V2 Comprehensive
             <br />
@@ -299,7 +284,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial={_{ opacity: 0, _y: 20}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8, _delay: 0.4}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <a
               href='#services'
@@ -329,15 +314,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
             className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="py-16 px-4 bg-black/20">
-=======
-
-      {_/* Contact Information */}
-      <section id="contact" className="py-16 px-4 bg-black/20">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-white mb-8"
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -363,6 +342,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
               </h3>
               <p className='text-cyan-400 text-lg'>{contactInfo.email}</p>
 =======
+
+      {_/* Contact Information */}
+      <section id="contact" className="py-16 px-4 bg-black/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-white mb-8"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -386,7 +371,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-cyan-400 text-lg">{_contactInfo.email}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
@@ -406,21 +391,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-7xl mx-auto'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
-=======
-              <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
-            </div>
-
-          </motion.div>
-        </div>
-      </section>
-
-      {_/* Services by Category */}
-      <section id="services" className="py-20 px-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-7xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -434,6 +407,18 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView='animate'
             viewport={{ once: true }}
 =======
+              <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
+            </div>
+
+          </motion.div>
+        </div>
+      </section>
+
+      {_/* Services by Category */}
+      <section id="services" className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -448,7 +433,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial="initial"
             whileInView="animate"
             viewport={_{ once: true}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {_serviceCategories.map((category) => (_<motion.div key={category.id} variants={_fadeInUp}>
                 <div className="text-center mb-12">
@@ -469,7 +454,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {_category.services.map((service) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <motion.div
                       key={service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
@@ -492,7 +477,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
                           {_service.marketSize}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                         <div className="flex items-center text-sm text-green-400">
                           <Star className="w-4 h-4 mr-2" />
@@ -503,13 +488,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <div className='mb-6'>
                         <div className='text-2xl font-bold text-white mb-2'>
                           Starting at{' '}
-                          {(service as any).pricing?.starter |service.price}
+                          {(service as any).pricing?.starter || service.price}
 =======
                       
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {_(service as any).pricing?.starter || service.price}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                         <div className="text-sm text-gray-400">
                           {_(service as any).pricing?.professional ? 
@@ -594,15 +579,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-7xl mx-auto'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">
-=======
-
-      {_/* Market Statistics */}
-      <section className="py-20 px-4 bg-black/20">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-7xl mx-auto">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -618,6 +597,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 =======
+
+      {_/* Market Statistics */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -632,7 +617,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='text-center'>
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
@@ -678,15 +663,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">
-=======
-
-      {_/* Call to Action */}
-      <section className="py-20 px-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-white mb-6"
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -701,6 +680,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 =======
+
+      {_/* Call to Action */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -714,7 +699,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
@@ -735,7 +720,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.4}}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <a
               href={`mailto:${contactInfo.email}`}

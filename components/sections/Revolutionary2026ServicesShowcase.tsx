@@ -2,14 +2,14 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Globe
-  Sparkles;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,;
+  Sparkles,;
 } from 'lucide-react';import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -20,8 +20,7 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
-  // Get featured services from each category
-
+  // Get featured services from each category;
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
@@ -67,7 +66,7 @@ export default function Revolutionary2026ServicesShowcase() {
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
       </div>
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
 
 <<<<<<< HEAD
   return (
@@ -86,7 +85,7 @@ export default function Revolutionary2026ServicesShowcase() {
 
         {/* Enhanced Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +95,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -179,7 +178,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
@@ -188,7 +187,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -287,8 +286,8 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-                  <Link
-                    href={service.link}
+                  <Link 
+                    href={service.link} 
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -314,7 +313,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Quantum Space Tech Services Section */}
         <motion.div
           variants={containerVariants}
@@ -323,7 +322,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -424,8 +423,8 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-                  <Link
-                    href={service.link}
+                  <Link 
+                    href={service.link} 
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -451,7 +450,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Metaverse & Digital Reality Services Section */}
         <motion.div
           variants={containerVariants}
@@ -460,7 +459,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -559,8 +558,8 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-                  <Link
-                    href={service.link}
+                  <Link 
+                    href={service.link} 
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -586,7 +585,7 @@ export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -598,7 +597,7 @@ export default function Revolutionary2026ServicesShowcase() {
 =======
 
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
               Ready to Experience the Future?
@@ -648,7 +647,8 @@ export default function Revolutionary2026ServicesShowcase() {
     </section>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

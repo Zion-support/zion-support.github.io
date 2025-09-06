@@ -2,12 +2,9 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award;
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
-  ShoppingCart
- } from 'lucide-react';
+<<<<<<< HEAD
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
 const contactInfo = {
@@ -152,9 +149,6 @@ const integrations = [
   'API Access',];
 
 =======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -280,6 +274,7 @@ const useCases = [;
   }
 }
 ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
@@ -339,7 +334,7 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -446,7 +441,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -492,7 +487,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
                 className="group relative"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -553,7 +548,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -599,7 +594,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
                 className="group"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -660,7 +655,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -710,7 +705,7 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -754,7 +749,7 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </ul>
                   <Link
                     href="/contact"
@@ -820,7 +815,7 @@ export default function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -918,7 +913,7 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
@@ -973,10 +968,13 @@ export default function AIContentIntelligencePlatform() {
           </motion.div>
         </div>
       </section>
-    </Layout>
 <<<<<<< HEAD
+    </Layout>;
 );
+
+}
 =======
+    </Layout>
   )
           >;
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
@@ -1039,4 +1037,4 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

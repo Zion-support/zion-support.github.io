@@ -5,14 +5,14 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -415,20 +415,6 @@ const microSaasCategories = [
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -440,13 +426,6 @@ const microSaasCategories = [
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

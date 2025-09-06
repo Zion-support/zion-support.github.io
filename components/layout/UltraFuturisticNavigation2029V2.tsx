@@ -7,64 +7,64 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  Search
-  ChevronDown
-  ChevronRight
-  Home
-  Users
-  Settings
-  HelpCircle
-  Mail
-  Phone
-  MapPin
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  Shield
-  Globe
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Globe2
-  Zap
-  Rocket
-  Brain
-  Sparkles
-  ShieldCheck
-  Target
-  Users2
-  Briefcase
-  Lightbulb
-  Award
-  Clock
-  CheckCircle;} from 'lucide-react';import {
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Users,
+  Settings,
+  HelpCircle,
+  Mail,
+  Phone,
+  MapPin,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Shield,
+  Globe,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Globe2,
+  Zap,
+  Rocket,
+  Brain,
+  Sparkles,
+  ShieldCheck,
+  Target,
+  Users2,
+  Briefcase,
+  Lightbulb,
+  Award,
+  Clock,;
+  CheckCircle,;} from 'lucide-react';import { ;
   Menu, X, Search, ChevronDown, ChevronRight;
 
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
@@ -372,8 +372,7 @@ const quickLinks = [
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function UltraFuturisticNavigation2029V2() {
+export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -396,7 +395,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -468,7 +467,7 @@ export default function UltraFuturisticNavigation2029V2() {
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -496,7 +495,7 @@ export default function UltraFuturisticNavigation2029V2() {
 
             </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Contact Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -536,7 +535,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -549,7 +548,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Search */}
@@ -607,7 +606,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 ))}
               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -647,7 +646,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 </div>
               </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -660,7 +659,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Mail className='w-4 h-4' />
@@ -686,7 +685,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -699,7 +698,7 @@ export default function UltraFuturisticNavigation2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -771,7 +770,7 @@ export default function UltraFuturisticNavigation2029V2() {
 
                           </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </Link>
                       ))}
                     </div>
@@ -785,7 +784,8 @@ export default function UltraFuturisticNavigation2029V2() {
     </nav>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

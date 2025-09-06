@@ -1,11 +1,18 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
+import {TooltipProvider} from "@/components/ui/tooltip"
+import {useIsMobile} from "@/hooks/use-mobile"
+import {cn} from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+=======
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -29,8 +36,14 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean
   onOpenChange?: (open: boolean) => void
 }
+
+<<<<<<< HEAD
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement;
+=======
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   SidebarProviderProps
 >(
   (
@@ -71,6 +84,7 @@ export const SidebarProvider = React.forwardRef<
           _setOpen(openState)
         }
 <<<<<<< HEAD
+
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -91,8 +105,6 @@ export const SidebarProvider = React.forwardRef<
         ) {
           event.preventDefault()
           toggleSidebar()
-        }
-      }
 =======
 ;
         // This sets the cookie to keep the sidebar state.;
@@ -115,6 +127,7 @@ export const SidebarProvider = React.forwardRef<
         ) {;
           event.preventDefault();
           toggleSidebar();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 
@@ -170,6 +183,10 @@ SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 =======
 
+<<<<<<< HEAD
+export { SidebarContext };
+;
+=======
 export { SidebarContext }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

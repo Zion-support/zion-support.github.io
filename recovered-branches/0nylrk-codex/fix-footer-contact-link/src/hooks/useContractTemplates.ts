@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import {useState} from "react";
+import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {ContractTemplate} from "@/types/contracts";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {;
+  const { user, isAuthenticated } = useAuth();
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+=======
 import { useState } from "react",
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -20,6 +34,7 @@ export function useContractTemplates() {
   const queryClient = useQueryClient(),
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Fetch templates for the current user
@@ -41,11 +56,6 @@ export function useContractTemplates() {
         .order('created_at', { ascending: false });
       if (error) {
         throw error
-      }
-      return data as ContractTemplate[]
-    }
-    enabled: isAuthenticated && !!user
-  });
 =======
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
@@ -78,6 +88,7 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       return data as ContractTemplate[]
@@ -136,7 +147,7 @@ export function useContractTemplates() {;
       } finally {
         setIsLoading(false)
       }
-    }
+    };
 =======
 ;
       return data as ContractTemplate[];
@@ -183,7 +194,7 @@ export function useContractTemplates() {;
         setIsLoading(false);
       }
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
@@ -272,7 +283,7 @@ export function useContractTemplates() {;
       } finally {
         setIsLoading(false)
       }
-    }
+    };
 =======
     },;
     onSuccess: () => {;
@@ -334,7 +345,7 @@ export function useContractTemplates() {;
         setIsLoading(false);
       }
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
       toast({
@@ -471,12 +482,12 @@ export function useContractTemplates() {;
         title: "Default template set"
         description: "Default contract template has been updated."})
 <<<<<<< HEAD
-    }
+    };
     onError: (error: Error) => {
       console.error("Error setting default template:", error);
       toast({
         title: "Failed to set default template";
-        description: "There was an error setting your default contract template."
+        description: "There was an error setting your default contract template.",
         variant: "destructive"})
     }
   });
@@ -587,6 +598,6 @@ export function useContractTemplates() {;
     updateTemplate;
     deleteTemplate;
     setDefaultTemplate;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

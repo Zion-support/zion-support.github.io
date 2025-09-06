@@ -83,7 +83,7 @@ const EnhancedNavigation: React.FC = () => {
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -117,7 +117,7 @@ const EnhancedNavigation: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Company Dropdown */}
             <div className="relative">
               <button
@@ -166,7 +166,7 @@ const EnhancedNavigation: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -178,7 +178,7 @@ const EnhancedNavigation: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
@@ -244,10 +244,10 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </nav>
   );
-}
-export default EnhancedNavigation;
+};
 
 <<<<<<< HEAD
+export default EnhancedNavigation;
 =======
 export default EnhancedNavigation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

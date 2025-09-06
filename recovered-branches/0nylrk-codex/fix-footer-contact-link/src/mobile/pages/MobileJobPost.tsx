@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -12,9 +11,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 =======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
@@ -33,11 +29,17 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
+<<<<<<< HEAD
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const goToNextStep = () => {
@@ -188,6 +190,14 @@ function RequirementsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
+          rows={5}
+        />
+      </div>
+    </div>
+  )
+}
+=======
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -334,6 +344,7 @@ function DetailsStep() {;
     </div>;
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
@@ -410,6 +421,8 @@ function RequirementsStep() {
 =======
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
+<<<<<<< HEAD
+=======
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -470,7 +483,7 @@ function RequirementsStep() {;
               {skill}
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 onClick={() => removeSkill(skill)}
               >
                 ×
@@ -503,20 +516,17 @@ function RequirementsStep() {;
           id="responsibilities"
           placeholder="List the key responsibilities for this role"
           rows={4}
+<<<<<<< HEAD
         />
       </div>
     </div>
   )
-}
 =======
-        <Textarea 
-          id="responsibilities" 
-          placeholder="List the key responsibilities for this role" 
-          rows={4}
         />;
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -638,5 +648,7 @@ function PreviewStep() {
 }
 =======
 }
+<<<<<<< HEAD
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

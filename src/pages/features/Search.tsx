@@ -1,25 +1,36 @@
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 export default function SearchFeature() {
 
   const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Advanced Search'
-    description:
-      'Quickly locate products, services and talent using intelligent search filters.'
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',;
+    name: 'Advanced Search',;
+    description:;
+      'Quickly locate products, services and talent using intelligent search filters.';
     url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Advanced Search"
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
+  return (
+    <>
+      <SEO
+        title='Advanced Search'
+        description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
+        keywords='search engine, filtering, tech marketplace search'
+        canonical='https://app.ziontechgroup.com/features/search'
 =======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -45,7 +56,7 @@ export default function SearchFeature() {
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -124,7 +135,7 @@ export default function SearchFeature() {
             </div>
           </div>
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
@@ -136,6 +147,7 @@ export default function SearchFeature() {
   )
 <<<<<<< HEAD
 }
+;
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -206,4 +218,4 @@ export default function SearchFeature() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

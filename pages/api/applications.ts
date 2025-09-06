@@ -1,7 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { rateLimit } from '../../utils/rate-limit';
-import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
-import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { v4 as uuidv4 } from 'uuid',;
+import { readJsonFile, writeJsonFile } from '../../utils/db',;
+import type { Application } from '../../utils/types',;
+import { rateLimit } from '../../utils/rateLimit',;
+const FILE = 'applications.json',
 
 <<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -44,9 +47,15 @@ createdAtIso: now}
     res.status(201).json({ application: app })
     return
   }
-  res.setHeader('AllowGET, POST')
-  res.status(405).end('Method Not Allowed')
-}
+
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed');
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { rateLimit } from '../../utils/rate-limit';
+import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
+import { v4 as uuidv4 } from 'uuid';
 
 =======
 type Application = {
@@ -113,4 +122,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

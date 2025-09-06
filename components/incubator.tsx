@@ -3,7 +3,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -24,7 +24,7 @@ export default function IncubatorPage() {
             <a className='px-4 py-2 border rounded'>View Incubator Projects</a>
           </Link>        </div>
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
   );
 }      <div className="max-w-3xl">
         <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>
@@ -39,4 +39,4 @@ export default function IncubatorPage() {
 }
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

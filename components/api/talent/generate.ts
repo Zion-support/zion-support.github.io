@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
   }
   const { name, title, bio, experience, skills } = req.body as {

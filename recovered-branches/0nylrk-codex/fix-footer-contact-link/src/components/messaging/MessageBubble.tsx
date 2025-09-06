@@ -6,6 +6,8 @@ import { PaperclipIcon  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
 import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
+  message: Message,
+  isUserMessage: boolean
 =======
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -15,6 +17,7 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
@@ -24,9 +27,13 @@ interface MessageBubbleProps {;
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-
+<<<<<<< HEAD
+    <div className={cn(;
+      "flex";
+=======
     <div className={cn(
       "flex",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(

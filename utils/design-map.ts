@@ -1,11 +1,13 @@
 <<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
-export interface TokenSet {
+
+export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
-export interface UIKit {
+
+export interface UIKit {;
   components: Record<string, any>;
   tokens: TokenSet;
 }
@@ -30,10 +32,11 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
-    }
-  }
+    };
+  };
 }
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
   return {
     components: {
@@ -45,8 +48,8 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
       }
     }
     tokens
-  }
+  };
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

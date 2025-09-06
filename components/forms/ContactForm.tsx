@@ -6,12 +6,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Mail
-  Phone
-  MapPin
-  Send
-  CheckCircle
-  AlertCircle;
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,;
+  AlertCircle,;
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -118,7 +118,7 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -153,7 +153,7 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Information */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -190,7 +190,7 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
                     <info.icon className='w-6 h-6 text-white' />
@@ -215,7 +215,7 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Additional Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -277,7 +277,7 @@ const ContactForm: React.FC = () => {
 =======
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -461,7 +461,7 @@ const ContactForm: React.FC = () => {
                     required
                     rows={5}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -509,12 +509,12 @@ const ContactForm: React.FC = () => {
       </div>
     </section>
   );
-}
+};
+
+<<<<<<< HEAD
 export default ContactForm;  )
 }
 export default ContactForm;
-
-<<<<<<< HEAD
 =======
 export default ContactForm;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -10,37 +10,42 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Activity
-  BarChart3
-  AlertTriangle
-  Clock
-  Database
-  Globe
-  Lock
-  Shield
-  TrendingUp
-  Users
-  Zap
-  ArrowRight
-  Play
-  CheckCircle
-  Star
-  Server
-  Cloud
-  Eye
-  Bell
-  Settings
-  Code;
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+  Settings,;
+  Code,;
 } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = [
-    {
 <<<<<<< HEAD
+    {;
       icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
+=======
+    {
+      icon: <Activity className='w-8 h-8 text-white' />,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CloudMonitoringPage() {
   const features = [
     {
-      icon: <Activity className='w-8 h-8 text-white' />
+      icon: <Activity className='w-8 h-8 text-white' />,
       description:
         'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
@@ -82,11 +87,13 @@ export default function CloudMonitoringPage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Auto-scaling'
       description:
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
+        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      gradient: 'from-teal-400 to-blue-500',
+    },;
   ];
+
+<<<<<<< HEAD
   const monitoringCapabilities = [
     {
       category: 'Infrastructure'
@@ -135,11 +142,8 @@ export default function CloudMonitoringPage() {
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
 =======
-      icon: <Activity className='w-8 h-8 text-white' />,
-
-export default function CloudMonitoringPage() {
-  const features = [
-    {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  ];
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
@@ -465,7 +469,7 @@ export default function CloudMonitoringPage() {
 
                   {feature.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </p>
               </Card>
             ))}
@@ -475,7 +479,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -484,7 +488,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -546,7 +550,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Use Cases Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -555,7 +559,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -623,7 +627,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Pricing Section */}
       <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -660,6 +664,7 @@ export default function CloudMonitoringPage() {
                     </span>
                   </div>
                 )}
+
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -686,10 +691,9 @@ export default function CloudMonitoringPage() {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
-
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -713,7 +717,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Integrations Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -763,7 +767,7 @@ export default function CloudMonitoringPage() {
 
               </Card>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>
@@ -771,7 +775,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -780,7 +784,7 @@ export default function CloudMonitoringPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to Monitor Your Infrastructure?
           </h2>
           <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -833,7 +837,12 @@ export default function CloudMonitoringPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
+}
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

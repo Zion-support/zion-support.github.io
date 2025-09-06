@@ -25,7 +25,7 @@ exports.handler = async () => {;
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -108,5 +108,9 @@ exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },
+<<<<<<< HEAD:netlify/functions/netlify-auto-healer-runner.js
+
+}
+=======
 >>>>>>> main:netlify/functions/netlify-auto-healer-runner.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js

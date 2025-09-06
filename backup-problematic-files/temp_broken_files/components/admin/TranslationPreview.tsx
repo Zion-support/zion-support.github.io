@@ -30,9 +30,14 @@ export default function TranslationPreview() {
             <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
               {translations[lng] || (lng === 'en' ? text : '')}            </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD:components/admin/TranslationPreview.tsx
+  );
+};
+=======
   )}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx

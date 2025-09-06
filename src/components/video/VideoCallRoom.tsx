@@ -1,12 +1,11 @@
 
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call.css';interface Participant {
   id: string
   name: string
@@ -26,6 +25,10 @@ interface VideoCallRoomProps {
   onToggleVideo?: (isEnabled: boolean) => void
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
 =======
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
@@ -62,17 +65,17 @@ interface VideoCallRoomProps {;
   onToggleVideo?: (isEnabled: boolean) => void,;
   onToggleScreenShare?: (isSharing: boolean) => void,;
   className?: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId
-  participants = []
-    const secs = seconds % 60
-};  onLeave
-  onToggleMute
-  onToggleVideo
-  onToggleScreenShare
-  className
+  participants = [], ;
+    const secs = seconds % 60;
+};  onLeave,
+  onToggleMute,
+  onToggleVideo,
+  onToggleScreenShare,
+  className 
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -167,7 +170,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
             participants.map((participant) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
@@ -213,7 +216,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
           <Button
             variant="outline"
@@ -303,7 +306,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Phone className="rotate-135" />
           </Button>
         </div>
@@ -311,8 +314,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

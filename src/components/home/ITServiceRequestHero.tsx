@@ -7,9 +7,8 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
-import { Loader2 } from 'lucide-react'
-
-import { useTranslation } from 'react-i18next'
+import { Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -43,12 +42,12 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
       transition: { duration: 0.5 }
 }
 }
-  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" }
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" }
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" }
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
-  ]
-import { motion  } from 'framer-motion'
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+  ];
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"
@@ -80,30 +79,9 @@ export function ITServiceRequestHero() {
         description: 'Name, email and location are required.'
         variant: 'destructive'
       })
-      return
+      return;
     }
     setIsSubmitting(true)
-    try {
-      const res = await axios.post('/api/onsite-request', {
-        name
-        email
-        phone
-        company
-        location
-        details
-      })
-      if (res.status === 200) {
-        toast({
-          title: 'Request received'
-          description:
-            "We've received your request. Our team will reach out shortly."
-        })
-        setName('')
-        setEmail('')
-        setPhone('')
-        setCompany('')
-        setLocation('')
-        setDetails('')
 =======
 import React, { useState } from "react",
 import Image from "next/image",
@@ -140,6 +118,7 @@ export function ITServiceRequestHero() {
     }
 
     setIsSubmitting(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     try {
       const res = await axios.post("/api/onsite-request", {
         name,
@@ -147,6 +126,22 @@ export function ITServiceRequestHero() {
         phone,
         company,
         location,
+<<<<<<< HEAD
+        details,
+      })
+      if (res.status === 200) {
+        toast({
+          title: 'Request received',
+          description:
+            "We've received your request. Our team will reach out shortly.",
+        })
+        setName('')
+        setEmail('')
+        setPhone('')
+        setCompany('')
+        setLocation('')
+        setDetails('')
+=======
         details}),
 
       if (res.status === 200) {
@@ -159,15 +154,15 @@ export function ITServiceRequestHero() {
         setCompany(""),
         setLocation(""),
         setDetails("")
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (err: any) {
       logErrorToProduction(err)
       toast({
 <<<<<<< HEAD
-        title: 'Submission Failed'
-        description: 'There was an error submitting your request.'
-        variant: 'destructive'
+        title: 'Submission Failed',
+        description: 'There was an error submitting your request.',
+        variant: 'destructive',
       })
     } finally {
       setIsSubmitting(false)
@@ -183,6 +178,7 @@ export function ITServiceRequestHero() {
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
@@ -210,6 +206,20 @@ export function ITServiceRequestHero() {
                 value={name}
                 onChange={e => setName(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
+=======
+              src="/logos/zion-logo.png"
+              alt="Zion logo"
+              width={200}
+              height={200}
+              className="w-full h-auto md:w-40"
+            />
+            <form onSubmit={handleSubmit} className="space-y-4 flex-1">
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+                required
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -218,10 +228,18 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Input
+<<<<<<< HEAD
                 type='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
+=======
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+                required
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -231,6 +249,7 @@ export function ITServiceRequestHero() {
               </p>
               <Input
                 value={phone}
+<<<<<<< HEAD
                 onChange={e => setPhone(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
               <p className='text-xs text-zion-slate-light'>
@@ -250,52 +269,7 @@ export function ITServiceRequestHero() {
                 value={location}
                 onChange={e => setLocation(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
-              />
-              <p className='text-xs text-zion-slate-light'>
-                {t(
-                  'onsite_form.location_helper'
-                  'Where do you need on-site support?'
-                )}
-              </p>
-              <Textarea
-                value={details}
-                onChange={e => setDetails(e.target.value)}
-                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />
-              <p className='text-xs text-zion-slate-light'>
-                {t(
-                  'onsite_form.details_helper'
-                  'Share any important context for our technicians.'
-                )}
-              </p>
-              <Button
-                type='submit'
-                disabled={isSubmitting}
-                className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
 =======
-              src="/logos/zion-logo.png"
-              alt="Zion logo"
-              width={200}
-              height={200}
-              className="w-full h-auto md:w-40"
-            />
-            <form onSubmit={handleSubmit} className="space-y-4 flex-1">
-              <Input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
-                required
-              />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helperEnter the main contact for this request.')}</p>
-              <Input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
-                required
-              />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.email_helper', "We'll confirm your request here.")}</p>
-              <Input
-                value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
@@ -311,10 +285,25 @@ export function ITServiceRequestHero() {
                 onChange={(e) => setLocation(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
+<<<<<<< HEAD
+                onChange={e => setDetails(e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />
+              <p className='text-xs text-zion-slate-light'>
+                {t(
+                  'onsite_form.details_helper',
+                  'Share any important context for our technicians.'
+                )}
+              </p>
+              <Button
+                type='submit'
+                disabled={isSubmitting}
+                className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >
+=======
                 onChange={(e) => setDetails(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
@@ -324,7 +313,7 @@ export function ITServiceRequestHero() {
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
@@ -351,8 +340,8 @@ export function ITServiceRequestHero() {
 }catch (err: any) {
   logErrorToProduction (err)
 toast ({
-}finally {
-  setIsSubmitting (false)
+}finally {;
+  setIsSubmitting (false) ;
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -384,6 +373,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'"
 }
 }
+;
 =======
 import React, { useState } from "react",;
 import Image from "next/image",;
@@ -530,4 +520,4 @@ export function ITServiceRequestHero() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

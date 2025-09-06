@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -11,17 +10,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
-
-
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+import {logErrorToProduction} from '@/utils/productionLogger';
 =======
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
@@ -35,6 +24,7 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function MessagingInbox() {
 
 <<<<<<< HEAD
@@ -55,18 +45,30 @@ export default function MessagingInbox() {
 =======
   const { 
     conversations,
+<<<<<<< HEAD
+    activeConversation, ;
+    setActiveConversation;
+    markAsRead;
+    fetchConversations;
+=======
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
+<<<<<<< HEAD
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+  
+  useEffect((,) => {
+=======
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
@@ -76,9 +78,19 @@ export default function MessagingInbox() {
         toast.error("Failed to load messages. Please try again.")
       }
 <<<<<<< HEAD
-    }
+    };
+    
     loadData()
   }, [fetchConversations]);
+  
+  const startVideoCall = () => {
+    if (!activeConversation) {
+      toast.error("Please select a conversation first");
+      return;
+    }
+    
+    const roomId = `msg-${activeConversation.id}`;
+    setActiveCall(roomId);
 =======
     },
     
@@ -91,30 +103,26 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-<<<<<<< HEAD
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
-
-=======
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
+<<<<<<< HEAD
+    });
+    // Navigate to video call page
+    router.push(`/call/${roomId}`), // Changed from navigate
+  };
+=======
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -127,11 +135,9 @@ export default function MessagingInbox() {
               Messages
             </h1>
 <<<<<<< HEAD
-            {activeConversation && (
-              <Button
-                onClick = {startVideoCall,}
 =======
             
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
@@ -146,7 +152,7 @@ export default function MessagingInbox() {
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -163,6 +169,7 @@ export default function MessagingInbox() {
                   markAsRead = {markAsRead,}
                 />
               )}
+              
 =======
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
@@ -249,7 +256,7 @@ export default function MessagingInbox() {;
                 />;
               )}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
@@ -287,4 +294,4 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

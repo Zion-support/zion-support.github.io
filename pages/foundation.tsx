@@ -1,6 +1,11 @@
-import Head from 'next/head',
+<<<<<<< HEAD
+import Head from 'next/head';
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
+=======
+import Head from 'next/head',
+import Link from 'next/link',
+import CharterGenerator from '../components/foundation/CharterGenerator',
 export default function FoundationPage() {
   return (
     <>
@@ -46,6 +51,7 @@ export default function FoundationPage() {
               <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">Report Q{q} 2025</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             ))  } catch (error) {
     console.error("Error:", error);
@@ -67,7 +73,7 @@ export default function FoundationPage() {
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
@@ -161,4 +167,4 @@ export default function FoundationPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

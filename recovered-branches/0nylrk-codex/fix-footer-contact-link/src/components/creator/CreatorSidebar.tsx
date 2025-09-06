@@ -4,24 +4,23 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import {
-
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
 } from "lucide-react";
 import {
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenu
-  SidebarMenuItem
-  SidebarMenuButton
-  SidebarGroupLabel
-  SidebarGroupContent
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,;
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
@@ -59,7 +58,7 @@ import {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -86,7 +85,7 @@ import {
 <<<<<<< HEAD
 =======
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -111,11 +110,9 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-    </Sidebar>
 <<<<<<< HEAD
-  );
-}
 =======
+    </Sidebar>
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
@@ -209,6 +206,7 @@ export function AppSidebar() {;
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Sidebar>;
   );
 }

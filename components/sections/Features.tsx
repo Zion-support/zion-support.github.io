@@ -56,7 +56,7 @@ const Features: React.FC<FeaturesProps> = ({
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (

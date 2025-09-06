@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
@@ -424,20 +423,17 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
-      'SOC2'
-      'ISO 27001'
-      'GDPR'
-      'CCPA'
-      'Intellectual property protection'
-    ]
-  }
+      'SOC2',
+      'ISO 27001',
+      'GDPR',
+      'CCPA',
+      'Intellectual property protection',
+    ],
+  },;
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
-  }
-];
-
 =======
 export const cuttingEdgeAIServices2025 = [;
   {;
@@ -644,6 +640,7 @@ export const cuttingEdgeAIServices2025 = [;
     ],;
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],;
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

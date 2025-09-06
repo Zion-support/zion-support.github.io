@@ -6,28 +6,29 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
-  Check
-  Shield
-  ShieldAlert
-  Lock
-  Phone
-  Mail
-  MapPin
-  ExternalLink;
+  Check,
+  Shield,
+  ShieldAlert,
+  Lock,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AIGuardrailsPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
   const features = [
     'Prompt/output policy engine with allow/deny lists'
     'Jailbreak and prompt injection detection'
@@ -46,7 +47,6 @@ export default function AIGuardrailsPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />
       </Head>
-
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -176,8 +176,8 @@ export default function AIGuardrailsPage() {
 		</UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
-}
 =======
 	);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

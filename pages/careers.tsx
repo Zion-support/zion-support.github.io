@@ -23,21 +23,21 @@ import { motion } from "framer-motion";
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-  Users
-  MapPin
-  Clock
-  DollarSign
-  ArrowRight
-  Heart
-  Star
-  Award
-  Coffee
-  Zap
-  Shield
-  Briefcase
-  GraduationCap
-  Globe
-  CheckCircle
+  Users,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  Coffee,
+  Zap,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Globe,
+  CheckCircle,;
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -456,18 +456,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </MainLayout>
-=======
-<<<<<<< HEAD
-    </MainLayout>
-=======
-    </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    </MainLayout>;
   );
 }

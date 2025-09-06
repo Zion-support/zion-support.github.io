@@ -1,5 +1,5 @@
+export interface ShortUrl {;
 <<<<<<< HEAD
-export interface ShortUrl {
   id: string;
   originalUrl: string;
   shortCode: string;
@@ -11,7 +11,8 @@ export interface ShortUrl {
 
   userId?: string
 }
-export interface UrlAnalytics {
+
+export interface UrlAnalytics {;
   totalClicks: number;
   uniqueVisitors: number;
   referrers: string[];
@@ -23,7 +24,8 @@ export interface UrlAnalytics {
 
   clickHistory: ClickEvent[]
 }
-export interface ClickEvent {
+
+export interface ClickEvent {;
   id: string;
   timestamp: Date;
   ipAddress: string;
@@ -37,7 +39,8 @@ export interface ClickEvent {
 
   os: string
 }
-export interface CreateShortUrlRequest {
+
+export interface CreateShortUrlRequest {;
   originalUrl: string;
   customCode?: string;
 
@@ -86,7 +89,6 @@ class UrlShortenerService {
       url.isActive = false
       return null
 =======
-export interface ShortUrl {;
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -169,11 +171,12 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return url
   }
 <<<<<<< HEAD
+
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this.urls.get(shortCode);
     if (!url) return;
@@ -208,7 +211,7 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date(),;
       if (!analytics.referrers.includes(clickData.referrer)) {;
         analytics.referrers.push(clickData.referrer);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       if (!analytics.countries.includes(clickData.country)) {
         analytics.countries.push(clickData.country)
@@ -221,13 +224,15 @@ class UrlShortenerService {;
       }
     }
   }
+
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
-    return this.analytics.get(shortCode) |null
+    return this.analytics.get(shortCode) || null
   }
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array.from(this.urls.values()).filter(url => url.userId === userId)
   }
 <<<<<<< HEAD
+
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     const url = this.urls.get(shortCode);
     if (!url |(userId && url.userId !== userId)) return false;
@@ -266,7 +271,7 @@ class UrlShortenerService {;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return result
   }
@@ -274,6 +279,7 @@ class UrlShortenerService {;
     return Math.random().toString(36).substr(2, 9)
   }
 <<<<<<< HEAD
+
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -308,5 +314,6 @@ export const urlShortenerService = new UrlShortenerService();
   }
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,34 +1,14 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-interface HireRequest {
-  talent: {
-    id: string;
-    full_name: string;
-    professional_title: string
-    email?: string
-  }
-  requester: {
-    name: string;
-    email: string
-    id?: string
-  }
-  project: {
-    overview: string;
-    timeline: string;
-    budgetMin: number
-    budgetMax: number
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -50,6 +30,8 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
     budgetMax: number
+<<<<<<< HEAD
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
@@ -73,7 +55,7 @@ interface HireRequest {;
     timeline: string,;
     budgetMin: number,;
     budgetMax: number;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 interface EnhancedContent {
@@ -202,7 +184,6 @@ serve(async (req) => {
       .select();
     if (requestError) {
       throw new Error(`Error storing hire request: ${requestError.message}`)
-    }
 =======
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
@@ -243,6 +224,7 @@ serve(async (req) => {
       .select(),;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -288,6 +270,7 @@ serve(async (req) => {
         });
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
+<<<<<<< HEAD
       }
     }
     // 4. Send email notification to talent
@@ -307,23 +290,6 @@ serve(async (req) => {
             <p><strong>Overview:</strong></p>
             <p>${project.overview}</p>
 =======
-        title: `New hiring request for ${talent.full_name}`,
-        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: "hire_request",
-        related_id: requestRecord[0].id
-      },
-      
-      const { error: notificationError } = await supabase
-        .rpc('create_notification', {
-          _user_id: adminId,
-          _title: adminNotificationContent.title,
-          _message: adminNotificationContent.message,
-          _type: adminNotificationContent.type,
-          _related_id: adminNotificationContent.related_id
-        }),
-        
-      if (notificationError) {
-        console.error("Error creating admin notification:", notificationError)
 ;
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -375,7 +341,7 @@ serve(async (req) => {
             <p><strong>Timeline:</strong> ${project.timeline}</p>;
             <p><strong>Overview:</strong></p>;
             <p>${project.overview}</p>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
@@ -424,6 +390,9 @@ serve(async (req) => {
         error: error.message 
       }),
       {
+<<<<<<< HEAD
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+=======
         headers: { ...corsHeaders, "Content-Type": "application/json" },
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
             <p>Best regards,<br>The Zion AI Marketplace Team</p>;
@@ -451,7 +420,7 @@ serve(async (req) => {
       }),;
       {;
         headers: { ...corsHeaders, "Content-Type": "application/json" },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         status: 500}
     )
   }

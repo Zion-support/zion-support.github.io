@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Apple, GithubIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+=======
 import React from "react",
 <<<<<<< HEAD
 import { Apple, GithubIcon } from "lucide-react";
@@ -6,7 +11,7 @@ import { cn } from "@/lib/utils";
 =======
 import { Apple, GithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AppStoreButtonsProps {
   className?: string,
   appStoreUrl?: string,
@@ -39,10 +44,17 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   }
 =======
 
+<<<<<<< HEAD
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+=======
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onAppStoreClick,
   onGooglePlayClick
 }) => {
@@ -79,11 +91,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </div>
 <<<<<<< HEAD
       </a>
-      <a
-        href={googlePlayUrl}
 =======
       </Link>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <a 
         href={googlePlayUrl} 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -110,8 +121,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 <<<<<<< HEAD
-}
-
+};
 =======
 },
 import React from "react",;
@@ -188,4 +198,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 };
 
 export default AppStoreButtons;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

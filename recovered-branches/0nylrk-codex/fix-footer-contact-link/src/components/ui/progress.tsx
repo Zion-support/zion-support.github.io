@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import * as React from 'react';
 import * as ProgressPrimitive from '@radix-ui/react-progress';
-import {cn} from '@/lib/utils';
 =======
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { cn } from "@/lib/utils"
 
@@ -33,7 +33,8 @@ const Progress = React.forwardRef<
   </ProgressPrimitive.Root>
 ));
 Progress.displayName = ProgressPrimitive.Root.displayName;
-export { Progress }
+
+export { Progress };
 =======
       className="h-full w-full flex-1 bg-primary transition-all"
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
@@ -43,4 +44,4 @@ export { Progress }
 Progress.displayName = ProgressPrimitive.Root.displayName;
 export { Progress }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

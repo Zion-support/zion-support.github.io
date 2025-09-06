@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
-  isOpen
-  onClose
-  defaultContext
-  defaultKind = 'general'
-  userHeaders
-}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({;
   isOpen;
   onClose;
   defaultContext;
@@ -45,11 +45,10 @@ export default function FeedbackModal({
         })
       });
 <<<<<<< HEAD
-    setLoading(false);
-    onClose(true);
 =======
 
     } catch {}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setLoading(false);
     onClose(true);
   }
@@ -71,7 +70,7 @@ export default function FeedbackModal({
 
             <button
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -165,6 +164,8 @@ export default function FeedbackModal({
 <<<<<<< HEAD
 );
 }
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

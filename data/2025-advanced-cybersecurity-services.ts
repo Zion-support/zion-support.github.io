@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedCybersecurityService {
+export interface AdvancedCybersecurityService {;
   id: string;
   name: string;
   tagline: string;
@@ -347,12 +347,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       }
       realImplementation: true
       implementationDetails:
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21
-    }
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
+      launchDate: '2024-09-25',
+      customers: 43,
+      rating: 4.7,
+      reviews: 21,
+    },;
   ];    features: [
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
       'Integration with IoT platformsMobile security management'
@@ -414,8 +414,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4.7;
     reviews: 21
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
@@ -679,6 +677,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43,;
     rating: 4.7;
     reviews: 21;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

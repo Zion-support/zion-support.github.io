@@ -1,10 +1,10 @@
 
 <<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ReferralGuide() {
 
   const steps = [
@@ -16,11 +16,13 @@ export function ReferralGuide() {
       title: "They sign up"
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
-      title: "They complete onboarding"
-      description: "Once they complete their profile setup, your referral is confirmed"}
+<<<<<<< HEAD
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 =======
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {
       title: "They complete onboarding",
       description: "Once they complete their profile setup, your referral is confirmed"},
@@ -53,7 +55,6 @@ export function ReferralGuide() {
       </CardContent>
     </Card>
   )
-}
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 export function ReferralGuide() {;
@@ -81,6 +82,7 @@ export function ReferralGuide() {;
           {steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

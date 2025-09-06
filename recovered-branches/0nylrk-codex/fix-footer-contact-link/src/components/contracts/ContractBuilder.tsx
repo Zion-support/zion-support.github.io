@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Dialog, DialogContent} from "@/components/ui/dialog";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {Save} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {ContractForm, ContractFormValues} from "./components/ContractForm";
+import {ContractPreview} from "./components/ContractPreview";
+import {TemplateManager} from "./templates/TemplateManager";
+import {SmartContractBuilder} from "./SmartContractBuilder";
+=======
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -13,7 +25,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder";
 =======
 import { TemplateManager } from "./templates/TemplateManager",
 import { SmartContractBuilder } from "./SmartContractBuilder",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -23,11 +35,20 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
+
+<<<<<<< HEAD
+export function ContractBuilder({;
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+=======
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -47,6 +68,7 @@ export function ContractBuilder({
     setActiveTab("preview")
     if (onContractGenerated) {
       onContractGenerated(contract)
+<<<<<<< HEAD
     }
   }
   if (showSmartContractBuilder) {
@@ -58,18 +80,6 @@ export function ContractBuilder({
 
           onClose()
 =======
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  },
-
-  const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract),
-    setActiveTab("preview"),
-    if (onContractGenerated) {
-      onContractGenerated(contract)
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -119,7 +129,7 @@ export function ContractBuilder({;
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }}
         talent={talent}
         clientName={clientName}

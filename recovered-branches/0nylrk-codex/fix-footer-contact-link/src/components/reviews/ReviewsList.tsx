@@ -1,20 +1,26 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
+import {Review} from "@/types/reviews";
+import {ReviewCard} from "./ReviewCard";
 =======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
+>>>>>>> main
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+
 export function ReviewsList({
-  reviews
-  isLoading
-  onReportReview
+  reviews,
+  isLoading,
+  onReportReview,
 }: ReviewsListProps) {
   if (isLoading) {
     return (
@@ -40,17 +46,14 @@ export function ReviewsList({
               </div>
             </div>
 <<<<<<< HEAD
-          ))}
-      </div>
-    );
-  }
-=======
             <div className="h-20 bg-muted rounded mb-3"></div>
             <div className="flex gap-2">
               <div className="h-6 w-16 bg-muted rounded"></div>
               <div className="h-6 w-16 bg-muted rounded"></div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
 interface ReviewsListProps {;
@@ -78,12 +81,15 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ))}
-      </div>;
+=======
+          ))}
+>>>>>>> main
+      </div>
     );
   }
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
@@ -94,19 +100,13 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       </div>
     );
   }
+
   return (
     <div className="space-y-4">
       {reviews.map((review) => (
-<<<<<<< HEAD
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
-=======
-        <ReviewCard 
-          key={review.id} 
-          review={review} 
-          onReport={onReportReview} 
-        />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       ))}
     </div>
   );
 }
+;

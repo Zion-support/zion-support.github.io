@@ -4,11 +4,15 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+<<<<<<< HEAD
+DialogTitle,;
+=======
+  DialogTitle,
+>>>>>>> main
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -35,7 +39,6 @@ export function ApplyToJobModal({
           onApplySuccess={onApplySuccess}
         />
       </DialogContent>
-    </Dialog>
 =======
 
 import React from 'react',
@@ -64,7 +67,7 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyT
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Dialog>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

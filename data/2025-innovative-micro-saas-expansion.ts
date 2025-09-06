@@ -351,12 +351,12 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       }
       realImplementation: true
       implementationDetails:
-        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
-      launchDate: '2024-07-15'
-      customers: 520
-      rating: 4.9
-      reviews: 267
-    }
+        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
+      launchDate: '2024-07-15',
+      customers: 520,
+      rating: 4.9,
+      reviews: 267,
+    },;
   ];    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
       'Automated milestone trackingCustom workflow automation'
@@ -386,8 +386,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.9
 
     reviews: 267
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
@@ -651,6 +649,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

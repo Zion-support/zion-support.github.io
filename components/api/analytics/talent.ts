@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
@@ -83,4 +83,7 @@ export default async function handler(
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+}
+
+}
 }

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { createClient  } from '@supabase/supabase-js';
+import {createClient} from '@supabase/supabase-js';
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -29,7 +29,7 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -158,6 +158,9 @@ async function createFineTune(filePath) {
 =======
   }),
   const job = await jobRes.json(),
+<<<<<<< HEAD
+  console.log('Fine-tune job created:', job.id)
+=======
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -187,7 +190,7 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 async function main() {
 
@@ -198,14 +201,14 @@ async function main() {
   await createFineTune('training-data.jsonl')
 }
 <<<<<<< HEAD
+
 main().catch((err) => {
   console.error('Training workflow failed', err)
-
-});
-
+}),
+;
 =======
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

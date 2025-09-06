@@ -1,45 +1,15 @@
 <<<<<<< HEAD
-
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
-import ResumePreview, {
-  ResumeData;
+import ResumePreview, {;
+  ResumeData,;
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
-export default function TalentPortfolio() {
+export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
-  const data: ResumeData = {
-    name: 'Your Name'
-    contact: {
-      email: 'you@example.com'
-      phone: '+1 555-123-4567'
-      location: 'City, Country'
-    }
-    summary: 'AI talent focused on LLM apps and marketplaces.'
-    skills: ['AI', 'TypeScript', 'Next.js']
-    technologies: ['OpenAI', 'Supabase']
-    experience: [
-      {
-        title: 'AI Engineer'
-        company: 'Zion'
-        start: '2023'
-        end: 'Present'
-        bullets: ['Built resume exporter.']
-      }
-    ]
-    education: [
-      {
-        institution: 'University of Example'
-        degree: 'B.Sc.'
-        start: '2016'
-        end: '2020'
-      }
-    ]
-    certifications: ['AWS SAA-C03']
-    portfolio: [{ title: 'Top Project', description: 'Showcase' }]
-  }
+
 =======
 import { GetServerSideProps } from 'next',
 import React, { useRef, useState } from 'react',
@@ -49,6 +19,7 @@ import { createServerClient } from '../../../utils/supabase/server',
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const ref = useRef<HTMLDivElement>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const data: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },
@@ -89,15 +60,16 @@ export default function TalentPortfolio() {
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
   );
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {;
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-return { props: {} }
-}
+return { props: {} };
+};
 
+}
 =======
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
@@ -125,4 +97,4 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

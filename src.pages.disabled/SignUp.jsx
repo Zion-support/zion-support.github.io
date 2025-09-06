@@ -1,11 +1,6 @@
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} \"from\": \'@/components / ui / form\'';\";\";
-<<<<<<< HEAD
+:src.pages.disabled/SignUp.jsx
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-<<<<<<< HEAD
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""

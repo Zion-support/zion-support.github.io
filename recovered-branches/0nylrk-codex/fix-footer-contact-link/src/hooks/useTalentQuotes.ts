@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
+import {useAuth} from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
-export const useTalentQuotes = () => {
+export const useTalentQuotes = () => {;
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -57,7 +57,7 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
@@ -134,11 +134,11 @@ export const useTalentQuotes = () => {;
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 <<<<<<< HEAD
-    }
+    };
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error.message
+        description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -156,7 +156,7 @@ export const useTalentQuotes = () => {;
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
 =======
     },
     onError: (error: Error) => {
@@ -229,7 +229,7 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

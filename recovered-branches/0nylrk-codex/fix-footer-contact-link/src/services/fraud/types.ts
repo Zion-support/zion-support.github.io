@@ -13,7 +13,7 @@ import { FraudSeverity } from '@/types/fraud',;
 export interface AnalysisResult {;
   isSuspicious: boolean;
   reasons: string[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
@@ -21,11 +21,13 @@ export interface MessageAnalysisResult extends AnalysisResult {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
 
@@ -39,4 +41,3 @@ export interface SignupCheckResult extends AnalysisResult {}
 ;
 export interface SignupCheckResult extends AnalysisResult {}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

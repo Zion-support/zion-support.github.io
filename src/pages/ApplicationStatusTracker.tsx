@@ -6,7 +6,7 @@ import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
-  const isMobile = null;
+  const isMobile = useIsMobile()
 =======
 
 import { SEO } from "@/components/SEO",
@@ -18,7 +18,7 @@ import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <SEO 
@@ -32,7 +32,7 @@ function ApplicationStatusTrackerContent() {
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
@@ -43,12 +43,13 @@ function ApplicationStatusTrackerContent() {
           <Card>
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications
+                <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
 =======
 
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -67,10 +68,10 @@ function ApplicationStatusTrackerContent() {
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
-      <ApplicationStatusTrackerContent />
-    </ProtectedRoute>
-  )
-}
+      <ApplicationStatusTrackerContent />;
+    </ProtectedRoute>;
+  );
+};
 =======
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -118,4 +119,4 @@ export default function ApplicationStatusTracker() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

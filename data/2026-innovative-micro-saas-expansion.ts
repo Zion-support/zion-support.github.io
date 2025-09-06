@@ -676,35 +676,28 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       contactInfo: contact
       realImplementation: true
       implementationDetails:
-        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.'
-      launchDate: '2024-03-15'
-      customers: 24
-      rating: 4.3
-      reviews: 18
-    }
+        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
+      launchDate: '2024-03-15',
+      customers: 24,
+      rating: 4.3,
+      reviews: 18,
+    },;
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
 ) => {
   return innovativeMicroSaasServices2026.filter(
-    service => service.category === category
+    service => service.category === category;
   );
-}
-export const getPopularInnovativeMicroSaasServices2026 = () => {
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
-  })
-}
-
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2026 {;
@@ -1104,9 +1097,15 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 },;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return innovativeMicroSaasServices2026.filter(service => {;
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
+};    return price >= minPrice && price <= maxPrice
+  })
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

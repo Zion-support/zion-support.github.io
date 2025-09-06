@@ -1,15 +1,15 @@
 
 <<<<<<< HEAD
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
@@ -23,9 +23,6 @@ serve(async (req) => {
     const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
-    }
-    // Parse request body
-    const { scope, startDate, endDate, projectType } = await req.json();
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -42,6 +39,7 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     // Parse request body
@@ -95,6 +93,8 @@ serve(async (req) => {;
     if (!response.ok) {
       throw new Error(data.error?.message |'Failed to generate milestones')
     }
+<<<<<<< HEAD
+
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data.choices[0].message.content.trim();
@@ -110,22 +110,10 @@ serve(async (req) => {;
   } catch (error) {
     console.error('Error generating milestones:', error);
     return new Response(
-      JSON.stringify({ error: error.message |'Failed to generate milestones' });
-      {
-        status: 500
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' });
+      { 
+        status: 500, 
 =======
-            role: 'system',
-            content: 'You are a project management expert that breaks work into appropriate milestones.'},
-          {
-            role: 'user',
-            content: prompt}],
-        temperature: 0.7})}),
-
-    const data = await response.json(),
-    
-    if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate milestones')
-    }
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
@@ -145,7 +133,7 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

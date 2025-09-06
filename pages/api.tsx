@@ -23,15 +23,15 @@ import { motion } from "framer-motion";
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
+  Code,
+  Check,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle,;
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -83,10 +83,10 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-  }'`
-        }
-      ]
-    }
+  }'`,
+        },
+      ],
+    },;
   ];
   const responseExamples = {
     success: {

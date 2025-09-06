@@ -1,6 +1,6 @@
 
+export interface TalentProfile {;
 <<<<<<< HEAD
-export interface TalentProfile {
   id: string;
   user_id: string;
   full_name: string;
@@ -24,7 +24,8 @@ export interface TalentProfile {
     description: string
   }[]
 }
-export interface TalentProfileFilters {
+
+export interface TalentProfileFilters {;
   search?: string;
   skills?: string[],
   availabilities?: string[],
@@ -32,7 +33,8 @@ export interface TalentProfileFilters {
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
-export interface HireRequest {
+
+export interface HireRequest {;
   id: string;
   clientId: string;
   talentId: string;
@@ -54,9 +56,7 @@ export interface HireRequest {
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
-}
 =======
-export interface TalentProfile {;
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -106,6 +106,7 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

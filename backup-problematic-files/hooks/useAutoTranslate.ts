@@ -1,5 +1,4 @@
 <<<<<<< HEAD:hooks/useAutoTranslate.ts
-import { useEffect, useMemo, useState  } from 'react';
 =======
 <<<<<<< HEAD:backup-problematic-files/hooks/useAutoTranslate.ts
 import { useEffect, useMemo, useState } from 'react',;
@@ -41,20 +40,20 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   return { translations, loading, error }
 }
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useAutoTranslate.ts
 import { useEffect, useMemo, useState } from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
-
-export type UseAutoTranslateResult = {
+export type UseAutoTranslateResult = {;
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
-  text: string
-  targets: string[]
-  debounceMs = 600
-): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+  text: string,
+  targets: string[],
+  debounceMs = 600;
+): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);

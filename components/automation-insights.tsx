@@ -12,10 +12,10 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
+      readTime: '8 min read',
+      featured: true;
+    };
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -169,7 +169,7 @@ export default function AutomationInsightsPage() {
               </div>
             </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -179,7 +179,7 @@ export default function AutomationInsightsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {automationTrends.map((trend, index) => (
                   <div
                     key={index}
@@ -221,7 +221,7 @@ export default function AutomationInsightsPage() {
 
                     </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 ))}
               </div>
@@ -229,7 +229,7 @@ export default function AutomationInsightsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -266,7 +266,7 @@ export default function AutomationInsightsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -278,7 +278,7 @@ export default function AutomationInsightsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -311,7 +311,8 @@ export default function AutomationInsightsPage() {
     </>
 <<<<<<< HEAD
 );
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

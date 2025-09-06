@@ -21,6 +21,14 @@ import { Link } from "react-router-dom";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {
   customLogo?: string;
+<<<<<<< HEAD
+  customColor?: string;
+}
+
+export function Logo({ customLogo, customColor }: LogoProps) {;
+  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
+
+=======
   customColor?: string;
 }
 
@@ -35,6 +43,7 @@ interface LogoProps {;
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided
@@ -60,9 +69,9 @@ export function Logo({ customLogo, customColor }: LogoProps) {
     </Link>
 <<<<<<< HEAD
   );
-}
 =======
   )
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

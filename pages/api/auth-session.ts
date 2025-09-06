@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
+;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
@@ -9,10 +9,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' })
     return
   }
-  res.status(200).json({ message: 'OK' })
-}
-
+  res.status(200).json({ message: 'OK' });
+};
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
 export default function handler(req, res) {
   try {
   const session = getSessionFromReq(req);
@@ -27,4 +28,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

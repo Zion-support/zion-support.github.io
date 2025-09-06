@@ -1,9 +1,5 @@
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 <<<<<<< HEAD
-import { ForumCategoryInfo } from "@/types/community";
+
 const categories: ForumCategoryInfo[] = [
   {
 
@@ -14,8 +10,12 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   }
 =======
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     id: "project-help"
     name: "Project Help"
@@ -40,7 +40,7 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: false,
     icon: "Code"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     id: "feedback"
     name: "Feedback & Feature Requests"
@@ -51,7 +51,7 @@ import { ForumCategoryInfo } from "@/types/community",
   }
 =======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     id: "announcements"
     name: "Announcements"
@@ -75,8 +75,8 @@ export const ForumCategories = () => {
     category => !category.adminOnly |isAdmin
   )
   return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
+      {visibleCategories.map((category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
 =======
 ],
@@ -102,7 +102,7 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -124,9 +124,9 @@ export const ForumCategories = () => {
 }
 export default ForumCategories
 "
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-export default ForumCategories
-
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+export default ForumCategories;
+;
 =======
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -207,4 +207,4 @@ export const ForumCategories = () => {;
   );
 };
 export default ForumCategories;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

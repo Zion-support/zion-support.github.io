@@ -10,8 +10,13 @@ import Button from '../components/ui/Button';
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function HolographicAICommunicationPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  };
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -111,4 +116,10 @@ export default function HolographicAICommunicationPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+
+;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

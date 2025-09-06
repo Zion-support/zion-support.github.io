@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
+=======
 import React from "react",
 <<<<<<< HEAD
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -6,19 +16,14 @@ import { CodeBlock } from "@/components/developers/CodeBlock";
 =======
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-<<<<<<< HEAD
-  -H "Authorization: Bearer YOUR_API_KEY"`
-const quickStartJs = `import axios from 'axios';
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
@@ -172,5 +177,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
   );
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default ApiGettingStarted;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

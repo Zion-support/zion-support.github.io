@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -57,8 +63,9 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
-}
-export default function OrderDetail() {
+};
+
+export default function OrderDetail() {;
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -96,8 +103,8 @@ export default function OrderDetail() {
     setOrder(mockOrder);
     setLoading(false);
   }, [router.query.id]);
-  if (loading) {
 
+  if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse">
@@ -111,6 +118,7 @@ export default function OrderDetail() {
       </div>
     );
   }
+
   if (!order) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -123,10 +131,81 @@ export default function OrderDetail() {
             </Button>
           </Link>
         </div>
+=======
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Button } from '@/components/ui/button',;
+import { Clipboard } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton',;
+import { useGetOrderQuery } from '@/hooks/useOrder',;
+import { generateInvoicePdf } from '@/utils/generateInvoicePdf',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from '@/hooks/use-toast',;
+import { OrderTimeline } from '@/components/orders/OrderTimeline',;
+export default function OrderDetailPage() {;
+  const router = useRouter(),;
+  const { orderId } = router.query as { orderId?: string },;
+  const { user } = useAuth(),;
+  const { data: order, isLoading } = useGetOrderQuery(orderId),;
+  const handleDownload = async () => {;
+    if (!order) return,;
+    const blob = await generateInvoicePdf(order),;
+    const url = URL.createObjectURL(blob),;
+    const link = document.createElement('a'),;
+    link.href = url,;
+    link.download = `invoice-${order.orderId}.pdf`,;
+    document.body.appendChild(link),;
+    link.click(),;
+    document.body.removeChild(link),;
+    URL.revokeObjectURL(url);
+  },;
+  const handleResend = async () => {;
+    if (!order || !user?.email) return,;
+    try {;
+      await supabase.functions.invoke('send-email', {;
+        body: {;
+          to: user.email,;
+          subject: `Receipt for order ${order.orderId}`,;
+          html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;
+        }
+      }),;
+      toast({ title: 'Receipt sent!' });
+    } catch (err) {;
+      toast({ title: 'Failed to send receipt', variant: 'destructive' });
+    }
+  },
+
+  const handleCopySummary = async () => {
+    if (!order) return,
+    const summary = [
+      `Order #${order.orderId}`,
+      `Date: ${new Date(order.date).toLocaleDateString()}`,
+      '',
+      'Items:',
+      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
+      '',
+      `Total: $${order.total.toFixed(2)}`,
+      '',
+      'Shipping Address:',
+      order.shippingAddress.name,
+      order.shippingAddress.street,
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
+
+    await navigator.clipboard.writeText(summary),
+    toast.success('Order summary copied to clipboard')
+  },
+
+  if (isLoading || !order) {
+    return (
+      <div className="container max-w-3xl py-10">
+        <Skeleton className="h-6 w-full" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </div>
     );
   }
   return (
+<<<<<<< HEAD
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -266,80 +345,8 @@ export default function OrderDetail() {
   );
 
 
+}
 =======
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-import { Button } from '@/components/ui/button',;
-import { Clipboard } from 'lucide-react';
-import Skeleton from '@/components/ui/skeleton',;
-import { useGetOrderQuery } from '@/hooks/useOrder',;
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf',;
-import { useAuth } from '@/hooks/useAuth',;
-import { supabase } from '@/integrations/supabase/client',;
-import { toast } from '@/hooks/use-toast',;
-import { OrderTimeline } from '@/components/orders/OrderTimeline',;
-export default function OrderDetailPage() {;
-  const router = useRouter(),;
-  const { orderId } = router.query as { orderId?: string },;
-  const { user } = useAuth(),;
-  const { data: order, isLoading } = useGetOrderQuery(orderId),;
-  const handleDownload = async () => {;
-    if (!order) return,;
-    const blob = await generateInvoicePdf(order),;
-    const url = URL.createObjectURL(blob),;
-    const link = document.createElement('a'),;
-    link.href = url,;
-    link.download = `invoice-${order.orderId}.pdf`,;
-    document.body.appendChild(link),;
-    link.click(),;
-    document.body.removeChild(link),;
-    URL.revokeObjectURL(url);
-  },;
-  const handleResend = async () => {;
-    if (!order || !user?.email) return,;
-    try {;
-      await supabase.functions.invoke('send-email', {;
-        body: {;
-          to: user.email,;
-          subject: `Receipt for order ${order.orderId}`,;
-          html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;
-        }
-      }),;
-      toast({ title: 'Receipt sent!' });
-    } catch (err) {;
-      toast({ title: 'Failed to send receipt', variant: 'destructive' });
-    }
-  },
-
-  const handleCopySummary = async () => {
-    if (!order) return,
-    const summary = [
-      `Order #${order.orderId}`,
-      `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
-      '',
-      `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
-      order.shippingAddress.name,
-      order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
-
-    await navigator.clipboard.writeText(summary),
-    toast.success('Order summary copied to clipboard')
-  },
-
-  if (isLoading || !order) {
-    return (
-      <div className="container max-w-3xl py-10">
-        <Skeleton className="h-6 w-full" />
-      </div>
-    )
-  }
-
-  return (
     <div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
 
@@ -382,4 +389,4 @@ export default function OrderDetailPage() {;
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

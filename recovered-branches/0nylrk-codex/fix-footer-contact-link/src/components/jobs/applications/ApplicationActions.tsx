@@ -1,7 +1,11 @@
 
 <<<<<<< HEAD
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
 =======
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -20,7 +24,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -29,10 +33,18 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+
+<<<<<<< HEAD
+export function ApplicationActions({;
+  application;
+  processingId;
+  onViewApplication;
+=======
 export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -83,8 +95,8 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button
-        variant="default"
+      <Button 
+        variant="default" 
         size="sm"
         asChild
       >
@@ -182,4 +194,4 @@ export function ApplicationActions({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

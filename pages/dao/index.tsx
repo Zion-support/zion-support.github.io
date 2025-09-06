@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+type Holder = { address: string, amount: string },
+
+=======
 import { useEffect, useState } from 'react';
 <<<<<<< HEAD
 
@@ -28,6 +34,7 @@ export default function DaoMetrics() {
 
 =======
 type Holder = { address: string, amount: string };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Metrics = {
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
@@ -133,7 +140,7 @@ export default function DaoMetrics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -145,9 +152,14 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

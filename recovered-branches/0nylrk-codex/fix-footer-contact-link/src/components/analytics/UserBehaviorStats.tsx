@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,7 +8,8 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
-export function UserBehaviorStats() {
+
+export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
 =======
 import { useQuery } from "@tanstack/react-query",
@@ -23,6 +23,7 @@ type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const { data: behaviorData, isLoading } = useQuery({
@@ -134,18 +135,15 @@ export function UserBehaviorStats() {;
           date,;
           ...events;
         }));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       return data |[]
     }
 <<<<<<< HEAD
   });
-  // Get the event types for chart data keys
-  const getEventTypes = () => {
-    if (!behaviorData |behaviorData.length === 0) return ['page_view'];
-    const allKeys = new Set<string>();
 =======
   }),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -211,9 +209,13 @@ export function UserBehaviorStats() {;
           title="Form Submissions" 
           description="Completed forms and sign-ups"
           isLoading={isLoading}
+<<<<<<< HEAD
+          count={
+            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
+=======
           count={;
             behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>
@@ -231,9 +233,13 @@ export function UserBehaviorStats() {;
           title="Conversions" 
           description="Goal completions"
           isLoading={isLoading}
+<<<<<<< HEAD
+          count={
+            behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
+=======
           count={;
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>

@@ -47,53 +47,15 @@ import {
   ChartBar,
   Clock,
   CheckCircle,
-  AlertCircle,
+  AlertCircle,;
   MessageSquare,;
+<<<<<<< HEAD
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+=======
 } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {
-  ExternalLink
-  Check
-  Star
-  Zap
-  Users
-  Globe
-  BarChart3
-  Bot
-  Cloud
-  Lock
-  Database
-  Code
-  Palette
-  Search
-  Mail
-  Calendar
-  CreditCard
-  FileText
-  Video
-  Music
-  Image
-  Globe2
-  Smartphone
-  Monitor
-  Server
-  Cpu
-  HardDrive
-  Brain
-  Target
-  TrendingUp
-  Shield
-  Rocket
-  Briefcase
-  Cog
-  Lightbulb
-  ChartBar
-  Clock
-  CheckCircle
-  AlertCircle
-  MessageSquare;
-} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -151,9 +113,9 @@ export default function BusinessToolsPage() {
     },    {          icon: <Calendar className="w-6 h-6" />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-      ]
-    }
-      category: 'Communication & Collaboration'
+      ];
+    };
+      category: 'Communication & Collaboration',
       tools: [
         {
           name: 'Slack'
@@ -433,10 +395,11 @@ export default function BusinessToolsPage() {
         }
       ]
     }
+<<<<<<< HEAD
 =======
-    }
 
   ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const businessInsights = [
@@ -626,7 +589,7 @@ export default function BusinessToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -731,7 +694,7 @@ export default function BusinessToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Button
                       href={tool.website}
                       variant='primary'
@@ -757,7 +720,7 @@ export default function BusinessToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -767,7 +730,7 @@ export default function BusinessToolsPage() {
 =======
 
               Productivity Tips & Best Practices
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -797,7 +760,7 @@ export default function BusinessToolsPage() {
 
               </Card>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>
@@ -805,7 +768,7 @@ export default function BusinessToolsPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -815,7 +778,7 @@ export default function BusinessToolsPage() {
 =======
 
             Ready to Transform Your Business Operations?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -859,4 +822,4 @@ export default function BusinessToolsPage() {
 }
 =======
             <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

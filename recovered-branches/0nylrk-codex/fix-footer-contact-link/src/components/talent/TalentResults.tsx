@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {TalentProfile} from "@/types/talent";
+import {ActiveFilters} from "@/components/talent/ActiveFilters";
+import {ResultsHeader} from "@/components/talent/ResultsHeader";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+=======
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -8,7 +15,7 @@ import { TalentGrid } from "@/components/talent/TalentGrid";
 =======
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -46,6 +53,17 @@ interface TalentResultsProps {
     clearFilters: () => void
   }
 }
+
+<<<<<<< HEAD
+export function TalentResults({;
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+=======
 export function TalentResults({
   filteredTalents,
   isLoading,
@@ -54,6 +72,7 @@ export function TalentResults({
   savedTalents,
   handleToggleSave,
   isAuthenticated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -100,7 +119,7 @@ export function TalentResults({;
 }: TalentResultsProps) {;
   return (;
     <div className="flex-1">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
       {/* Results count */}
@@ -124,10 +143,7 @@ export function TalentResults({;
     </div>
   )
 }
+<<<<<<< HEAD
 =======
-      />;
-    </div>;
-  );
-}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

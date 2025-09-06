@@ -6,21 +6,30 @@ import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function SecretsRotationAutomationPage() {
 
 <<<<<<< HEAD
   const features = [
-    "Automated key and secret rotation"
-    "JIT credentials with expirations"
-    "Policy approvals and audit trails"
-    "CI/CD integration (GitHub Actions, CircleCI)"
-    "Cloud KMS and Vault support"
+    "Automated key and secret rotation",
+    "JIT credentials with expirations",
+    "Policy approvals and audit trails",
+    "CI/CD integration (GitHub Actions, CircleCI)",
+    "Cloud KMS and Vault support",;
   ];
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+return (
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  return (
+>>>>>>> main
     <>
       <SEO
         title="Secrets Rotation Automation"

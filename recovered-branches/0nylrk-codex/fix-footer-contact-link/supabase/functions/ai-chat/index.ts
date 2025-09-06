@@ -1,14 +1,11 @@
 
 <<<<<<< HEAD
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-const openAIApiKey = Deno.env.get('OPENAI_API_KEY')
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
@@ -28,7 +25,7 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 interface RequestBody {
   messages: Message[]
@@ -39,6 +36,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+
   try {
     const { messages } = await req.json() as RequestBody;
     // Prepare the system message to define the assistant's behavior
@@ -61,11 +59,6 @@ serve(async (req) => {
     const data = await response.json();
     if (data.error) {
       throw new Error(data.error.message)
-    }
-    const assistantMessage = data.choices[0].message.content;
-    // Log this interaction for analytics (in a real implementation)
-    // This would track common questions, successful interactions, etc.
-    console.log('AI chat interaction logged');
 =======
 ;
   try {;
@@ -90,6 +83,7 @@ serve(async (req) => {
     const data = await response.json(),;
     if (data.error) {;
       throw new Error(data.error.message);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -107,9 +101,6 @@ serve(async (req) => {
       status: 500
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
 <<<<<<< HEAD
-  }
-});
-
 =======
 ;
     const assistantMessage = data.choices[0].message.content,;
@@ -123,6 +114,7 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

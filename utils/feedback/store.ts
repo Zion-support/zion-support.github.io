@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-export interface FeedbackRecord {
+export interface FeedbackRecord {;
   id: string;
   type: string;
   message: string;
@@ -9,17 +9,20 @@ export interface FeedbackRecord {
   ip: string;
 }
 const feedbackData: FeedbackRecord[] = [];
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
 }
-export function writeAll(rows: any[]): void {
+
+export function writeAll(rows: any[]): void {;
   console.log('Writing feedback rows:', rows.length);
   // Implementation would write to database or file
 }
-export function getAllFeedback(): FeedbackRecord[] {
+
+export function getAllFeedback(): FeedbackRecord[] {;
   return [...feedbackData];
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

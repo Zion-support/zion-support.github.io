@@ -1,3 +1,20 @@
+<<<<<<< HEAD:hooks/useLocalStorage.ts
+};
+export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
+  const [storedValue, setStoredValue] = useState<T>(() => {;
+    try {;
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) :initialValue} catch (error) {;
+      console.error(`Error reading localStorage key "${key}":`, error);
+      return initialValue};
+  });
+  const setValue = (valu:e:T | ((va:l:T) => T)) => {;
+    try {;
+      const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
+
+export function useLocalStorage<T>(key: string, initialValue: T) {
+// Get from local storage then parse stored json or return initialValue
+=======
 import { useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
@@ -9,14 +26,19 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 
 =======
   // Get from local storage then parse stored json or return initialValue
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
 
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
+<<<<<<< HEAD:hooks/useLocalStorage.ts
+    try {;
+=======
 >>>>>>> main:hooks/useLocalStorage.ts
     try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
@@ -65,6 +87,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
 
   return [storedValue, setValue] as const;
 }
+<<<<<<< HEAD:hooks/useLocalStorage.ts
+=======
 <<<<<<< HEAD:backup-problematic-files/hooks/useLocalStorage.ts
 },;
 export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
@@ -88,6 +112,7 @@ export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
 }
 };
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
@@ -95,4 +120,7 @@ export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
 };
 };
 };
+<<<<<<< HEAD:hooks/useLocalStorage.ts
+=======
 >>>>>>> main:hooks/useLocalStorage.ts
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useLocalStorage.ts

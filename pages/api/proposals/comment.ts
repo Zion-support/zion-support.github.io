@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -13,9 +12,9 @@ async function ensure() {
   }
 }
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -25,14 +24,23 @@ export default async function handler(
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-      id: Date.now().toString()
-      proposalId: body.proposalId
-      region: body.region |"Global"
-      author: body.author |"anon"
-      text: body.text |""
-      createdAt: new Date().toISOString()
-    }
+      id: Date.now().toString(),
+      proposalId: body.proposalId,
+      region: body.region || "Global",
+      author: body.author || "anon",
+      text: body.text || "",
+      createdAt: new Date().toISOString(),
+    };
+    data.comments.push(comment);
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res.status(201).json(comment);
+  }
+  res.status(405).json({ error: "Method not allowed" });
+}
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -65,9 +73,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(comment);
 
   }
-<<<<<<< HEAD
-  res.status(405).json({ error: "Method not allowed" });
-=======
-  res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

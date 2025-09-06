@@ -7,68 +7,68 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  ChevronDown
-  X
-  Phone
-  Mail
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Atom
-  Shield
-  DollarSign
-  BarChart3
-  Globe
-  Grid
-  Heart
-  Database
-  Cpu
-  Palette
-  Cloud
-  Network
-  TrendingUp
-  ShoppingCart
-  Settings
-  Building
-  Monitor
-  Zap
-  Eye
-  Infinity
-  Sparkles
-  Users
-  Lock
-  Code
-  Server
-  Layers
-  Globe2
-  Star
-  Award
-  Clock
-  CheckCircle
-  Zap as ZapIcon
-  Phone as PhoneIcon
-  Search
-  User
-  Bell
-  Cog
-  LogOut
-  Home
-  Info
-  FileText
-  Users as UsersIcon
-  Bot
-  MessageCircle
-  Linkedin
-  Twitter
-  Github
-  Youtube
-  MapPin;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-  href: string;  icon?: React.ReactNode;import {
+  href: string;  icon?: React.ReactNode;import { ;
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
   Brain, Rocket, Target, Atom, Shield;
@@ -91,10 +91,11 @@ interface NavigationItem {
   featured?: boolean;
   category?: string;
 <<<<<<< HEAD
-  color?: string
+  color?: string;  color?: string
 }
 =======
   color?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const navigationItems: NavigationItem[] = [
@@ -388,10 +389,10 @@ const navigationItems: NavigationItem[] = [
     category: 'company'
     color: 'from-gray-500 to-slate-500'
     children: [
-      {        name: 'Blog & Articles'
-        href: '/blog'
-        description: 'Latest insights and articles'
-        icon: <FileText className="w-4 h-4" />
+      {        name: 'Blog & Articles',
+        href: '/blog',
+        description: 'Latest insights and articles',
+        icon: <FileText className="w-4 h-4" />,
         featured: true
       }
       {
@@ -425,6 +426,7 @@ const navigationItems: NavigationItem[] = [
     category: 'company'
     color: 'from-gray-500 to-slate-500'
     children: [
+<<<<<<< HEAD
       {
         href: '/about'
         description: 'Our story and mission'
@@ -458,6 +460,9 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -497,6 +502,7 @@ const UltraFuturisticNavigation2047 = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   }
@@ -594,6 +600,7 @@ const UltraFuturisticNavigation2047 = () => {
     return () => window.removeEventListener('resize', handleResize);
 <<<<<<< HEAD
   }, []);
+
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -605,6 +612,7 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className='w-5 h-5 text-white' />
               </div>
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
+
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,7 +665,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -712,7 +720,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </Link>
                         ))}
                       </div>
@@ -725,7 +733,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -744,7 +752,7 @@ const UltraFuturisticNavigation2047 = () => {
 =======
 
                 <span>{contactInfo.mobile}</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </a>
             </div>
             <Link
@@ -786,7 +794,7 @@ const UltraFuturisticNavigation2047 = () => {
 
               )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </button>
           </div>
         </div>
@@ -794,7 +802,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -807,7 +815,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -848,7 +856,7 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         {item.children?.map(child => (
                           <Link
@@ -867,7 +875,7 @@ const UltraFuturisticNavigation2047 = () => {
 
                             onClick={closeMenu}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           >
                             {child.name}
                           </Link>
@@ -951,12 +959,12 @@ const UltraFuturisticNavigation2047 = () => {
       </AnimatePresence>
     </nav>
   );
-}
+};
+
+<<<<<<< HEAD
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
-
-<<<<<<< HEAD
 =======
 export default UltraFuturisticNavigation2047;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,11 @@
 
 <<<<<<< HEAD
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -13,9 +17,9 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentRateRecommenderProps {
 
   skills: string[]
@@ -24,39 +28,8 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number) => void
 
   rateType: "hourly" | "fixed"
-}
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills;
-  yearsExperience;
-  location;
-
-  onSuggestionApplied
-
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth();
-
-  const generateSuggestion = async () => {
-    if (skills.length === 0 |yearsExperience <= 0) {
-      return
-    }
-    setIsLoading(true);
-    try {
-      const params: TalentRateParams = {
-        skills;
-        yearsExperience
-        location}
-      const result = await getTalentRateSuggestion(params);
+<<<<<<< HEAD
 =======
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
-interface TalentRateRecommenderProps {
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  onSuggestionApplied: (value: number) => void,
-  rateType: "hourly" | "fixed"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -74,9 +47,24 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
-;
+
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+<<<<<<< HEAD
+  skills;
+  yearsExperience;
+  location;
+  onSuggestionApplied,
+  rateType}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
+
+  const generateSuggestion = async () => {
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return
+=======
   skills,;
   yearsExperience,;
   location,;
@@ -88,6 +76,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     setIsLoading(true),
@@ -124,7 +113,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         })
       }
     }
-  }
+  };
 =======
 ;
     setIsLoading(true),;
@@ -159,6 +148,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       }
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -186,11 +176,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       </div>
     </div>
   )
-}
-
 =======
       </div>;
     </div>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

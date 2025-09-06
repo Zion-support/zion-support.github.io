@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ArrowRight, Check, ExternalLink} from "lucide-react";
+=======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -17,6 +24,7 @@ interface IntegrationCardProps {
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -26,6 +34,15 @@ interface IntegrationCardProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onConnect?: () => void
 }
+
+<<<<<<< HEAD
+export function IntegrationCard({;
+  title;
+  description;
+  icon;
+  status = "disconnected";
+  href;
+=======
 export function IntegrationCard({
 <<<<<<< HEAD
   title;
@@ -38,7 +55,7 @@ export function IntegrationCard({
   icon,
   status = "disconnected",
   href,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -143,7 +160,7 @@ export function IntegrationCard({;
             <span>Connect</span>;
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </CardFooter>
     </Card>
@@ -160,3 +177,4 @@ export function IntegrationCards() {
     </div>
   )
 }
+;

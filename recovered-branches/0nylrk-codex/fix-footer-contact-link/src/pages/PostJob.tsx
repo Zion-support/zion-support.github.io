@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import {Header} from "@/components/header";
+import {Footer} from "@/components/Footer";
+import {JobPostingForm} from "@/components/jobs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+export default function PostJob() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  const isMobile = useIsMobile();
+=======
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -19,6 +32,7 @@ import { useIsMobile } from "@/hooks/use-mobile",
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth(),
   const isMobile = useIsMobile(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
@@ -54,7 +68,6 @@ export default function PostJob() {
     </>
   )
 <<<<<<< HEAD
-}
 =======
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
@@ -100,6 +113,7 @@ export default function PostJob() {;
       {isMobile && <div className="h-16"></div>}
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

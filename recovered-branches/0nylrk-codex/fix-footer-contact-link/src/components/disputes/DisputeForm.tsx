@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -38,7 +37,7 @@ import { DisputeReason, disputeReasonLabels } from "@/types/disputes",
 import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -73,10 +72,17 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
+<<<<<<< HEAD
+}: DisputeFormProps) {;
+  const { createDispute } = useDisputes();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+=======
 }: DisputeFormProps) {
   const { createDispute } = useDisputes(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<z.infer<typeof formSchema>>({
@@ -291,7 +297,7 @@ export function DisputeForm({;
                   <SelectContent>;
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </SelectContent>
                 </Select>
@@ -371,4 +377,8 @@ export function DisputeForm({;
       </Form>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

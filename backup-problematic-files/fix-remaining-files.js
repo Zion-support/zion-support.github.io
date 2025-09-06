@@ -89,11 +89,11 @@ const remainingCorruptedFiles = ["src/pages/services/Blockchain-Supply-Chain-Tra
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
-  const features = ["AI-powered ${displayName.toLowerCase()} optimization"
-    "Automated ${displayName.toLowerCase()} management"
-    "Real-time ${displayName.toLowerCase()} analytics"
-    "Predictive ${displayName.toLowerCase()} insights"
-    "Custom AI models for ${displayName.toLowerCase()}"
+  const features = ["AI-powered ${displayName.toLowerCase()} optimization",
+    "Automated ${displayName.toLowerCase()} management",
+    "Real-time ${displayName.toLowerCase()} analytics",
+    "Predictive ${displayName.toLowerCase()} insights",
+    "Custom AI models for ${displayName.toLowerCase()}",;
     "Enterprise-grade security and compliance"];
   const benefits = ["Improve ${displayName.toLowerCase()} performance by 50-80%"
     "Reduce operational costs by 35-65%"

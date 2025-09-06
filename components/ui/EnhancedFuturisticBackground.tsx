@@ -196,7 +196,7 @@ const EnhancedFuturisticBackground: React.FC<
 =======
           this.opacity *= 0.95;        }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 <<<<<<< HEAD
@@ -228,12 +228,12 @@ const EnhancedFuturisticBackground: React.FC<
       }
       isDead() {
 <<<<<<< HEAD
-        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
         ctx.restore()
 =======
         return this.life <= 0 || this.opacity < 0.01;      }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -364,6 +364,7 @@ const EnhancedFuturisticBackground: React.FC<
       }
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
 <<<<<<< HEAD
@@ -380,12 +381,7 @@ const EnhancedFuturisticBackground: React.FC<
             connections.push(new Connection(particles[i], particles[j]))
 =======
 
-      }
-
-      // Create connections between nearby particles
-      connections = [];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -473,10 +469,10 @@ const EnhancedFuturisticBackground: React.FC<
       <div className='relative z-10'>{children}</div>
     </div>
   );
-}
-export default EnhancedFuturisticBackground;
+};
 
 <<<<<<< HEAD
+export default EnhancedFuturisticBackground;
 =======
 export default EnhancedFuturisticBackground;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

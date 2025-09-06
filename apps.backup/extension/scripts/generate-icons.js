@@ -20,6 +20,10 @@ for (const size of sizes) {
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
+  console.log('generated', out)
+};
+=======
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -36,5 +40,5 @@ for (const size of sizes) {;
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console;
   // // // console.log('generated', out);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

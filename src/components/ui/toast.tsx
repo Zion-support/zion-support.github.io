@@ -3,11 +3,9 @@ import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { X } from 'lucide-react'
-
-import { cn } from '@/lib/utils'
-import { logInfo } from '@/utils/productionLogger'
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
 const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
-const ToastProvider = ToastPrimitives.Provider
 =======
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
@@ -15,6 +13,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { logInfo } from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const ToastProvider = ToastPrimitives.Provider
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -32,34 +31,15 @@ const ToastViewport = React.forwardRef<
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
       className
     )}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {...props}
   />
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 <<<<<<< HEAD
-const toastVariants = cva(
-  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full'
-  {
-    variants: {
-      variant: {
-        default: 'border bg-background text-foreground'
-        destructive:
-          'destructive border-destructive bg-destructive text-destructive-foreground'
-        success:
-          'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100'
-        warning:
-          'border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100'
-        info: 'border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100'
-      }
-    }
-    defaultVariants: {
-      variant: 'default'
-    }
-  }
-)
 =======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {
@@ -72,10 +52,16 @@ const toastVariants = cva(
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
+<<<<<<< HEAD
+      variant: 'default',
+    },
+  }
+)
+=======
       variant: "default"}}
 )
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
@@ -155,8 +141,9 @@ export {
 //     toast: (props: any,) => {
 //       // Implementation of toast functionality
 //       logInfo('Toast:', { data: props })
-//     }
-
+//     },;
+//   };
+// };
 =======
   return (
     <ToastPrimitives.Root
@@ -283,6 +270,6 @@ export {;
 //       // Implementation of toast functionality;
 //       logInfo('Toast:', { data: props });
 //     };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //   }
 // }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,28 +1,10 @@
 <<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-
-  averagePriceGap: number
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
-
-  recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-
-    createdAt: string
-    type: 'client' | 'talent'
-  }[];
-  isLoading: boolean
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
 =======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -43,6 +25,14 @@ interface PricingSuggestionAnalytics {
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
+<<<<<<< HEAD
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
+    totalSuggestions: 0;
+    acceptanceRate: 0;
+    averagePriceGap: 0;
+    suggestionsByCategory: [];
+    recentSuggestions: [];
+=======
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 <<<<<<< HEAD
     totalSuggestions: 0;
@@ -59,6 +49,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     averagePriceGap: 0,
     suggestionsByCategory: [],
     recentSuggestions: [],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     isLoading: true,
     error: null
   }),
@@ -148,7 +139,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         console.error("Error fetching pricing suggestion analytics:", error);
         setAnalytics({
           ...analytics;
-          isLoading: false
+          isLoading: false,
           error: "Failed to load pricing analytics data."
         })
       }
@@ -157,6 +148,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
   return analytics
+};
 =======
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
@@ -247,5 +239,5 @@ export function usePricingSuggestionAnalytics(days = 30) {;
     fetchAnalytics();
   }, [days]);
   return analytics;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

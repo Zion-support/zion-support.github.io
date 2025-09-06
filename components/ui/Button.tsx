@@ -18,15 +18,14 @@ interface ButtonProps {
   style?: React.CSSProperties
 }
 const Button: React.FC<ButtonProps> = ({
-
-  children
-  variant = "primary"
-  size = "md"
-  className = ""
-  onClick
-  disabled = false
-  type = "button"
-  asChild = false
+  children,
+  variant = "primary",
+  size = "md",
+  className = "",
+  onClick,
+  disabled = false,
+  type = "button",
+  asChild = false,
   ...props
 }) => {
   const baseClasses =
@@ -38,10 +37,11 @@ const Button: React.FC<ButtonProps> = ({
     ghost: "hover:bg-gray-100"
   }
   const sizeClasses = {
-    sm: "h-8 px-3 text-xs"
-    md: "h-10 px-4 py-2"
-    lg: "h-12 px-8 text-lg"
-  }
+    sm: "h-8 px-3 text-xs",
+    md: "h-10 px-4 py-2",
+    lg: "h-12 px-8 text-lg",
+  };
+
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {

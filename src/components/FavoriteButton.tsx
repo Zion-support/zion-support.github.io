@@ -1,5 +1,5 @@
-import React from 'react';
 <<<<<<< HEAD
+import React from 'react'
 import { Heart } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -18,14 +18,13 @@ interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-
-  const { isWishlisted, toggle } = useWishlist()
-  const { isAuthenticated } = useAuth()
-  const [loginOpen, setLoginOpen] = React.useState(false)
-  const handleClick = (e: React.MouseEvent) => {
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = (e: React.MouseEvent) => {;
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
-      return
+      return;
     }
     const wasWishlisted = isWishlisted(itemId)
     toggle(itemId)
@@ -39,6 +38,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   }
   const active = isWishlisted(itemId)
 =======
+import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -79,7 +79,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
   const active = isWishlisted(itemId),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <TooltipProvider>
@@ -90,6 +90,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
               className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
                 className
+<<<<<<< HEAD
               )}
               onClick={handleClick}
               aria-label={
@@ -136,10 +137,8 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+;
 =======
-              className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
-                className
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -180,4 +179,4 @@ className: {`w-4 h-4 transition-all duration-300 ${
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

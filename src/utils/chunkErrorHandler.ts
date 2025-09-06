@@ -12,16 +12,15 @@ interface ChunkErrorStats {
   userAgent: string;
   url: string
 class ChunkErrorHandler {
-
-  private errorStats: Map<string, ChunkErrorStats> = new Map()
-  private readonly MAX_RETRIES = 3
+  private errorStats: Map<string, ChunkErrorStats> = new Map();
+  private readonly MAX_RETRIES = 3;
   private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
     this.initializeGlobalHandlers()
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     // Handle webpack chunk loading errors
     window.addEventListener('error', event => {
       this.handleScriptError(event)
@@ -168,50 +167,6 @@ class ChunkErrorHandler {
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
     window.location.href = window.location.href + '?_t=' + Date.now()
-  }
-  private showFatalErrorMessage(): void {
-    // Create a user-friendly error message
-    const errorDiv = document.createElement('div')
-    errorDiv.style.cssText = `
-      position: fixed
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: rgba(0, 0, 0, 0.8)
-      color: white
-      display: flex
-      align-items: center
-      justify-content: center
-      z-index: 999999
-      font-family: system-ui, -apple-system, sans-serif
-    `
-    errorDiv.innerHTML = `
-      <div style="text-align: center; padding: 2rem; max-width: 500px;">
-        <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
-        <p style="margin-bottom: 1.5rem; line-height: 1.5;">
-          We're having trouble loading some parts of the application.
-          This might be due to a poor network connection or a temporary server issue.
-        </p>
-        <button onclick="window.location.reload()" style="
-          background: #0070f3
-          color: white
-          border: none
-          padding: 0.75rem 1.5rem
-          border-radius: 0.5rem
-          font-size: 1rem
-          cursor: pointer
-          margin-right: 1rem;        ">
-          Try Again
-        </button>
-        <button onclick="window.location.href='/'" style="
-          background: #666
-          color: white
-          border: none
-          padding: 0.75rem 1.5rem
-          border-radius: 0.5rem
-          font-size: 1rem
-          cursor: pointer
 =======
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
@@ -372,10 +327,28 @@ class ChunkErrorHandler {;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
     window.location.href = window.location.href + '?_t=' + Date.now();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+<<<<<<< HEAD
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+=======
     const errorDiv = document.createElement('div'),
     errorDiv.style.cssText = `
       position: fixed,
@@ -392,6 +365,7 @@ class ChunkErrorHandler {;
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -400,6 +374,26 @@ class ChunkErrorHandler {;
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
+          background: #0070f3
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+          margin-right: 1rem;        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+=======
           background: #0070f3,
           color: white,
           border: none,
@@ -419,7 +413,7 @@ class ChunkErrorHandler {;
           border-radius: 0.5rem,
           font-size: 1rem,
           cursor: pointer,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ">
           Go Home
         </button>
@@ -515,27 +509,31 @@ class ChunkErrorHandler {;
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return this.errorStats.get(sessionKey)!
   }
 <<<<<<< HEAD
+
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
       this.reloadPage()
     }) }
+
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
     const sessionKey = this.getSessionKey()
     const stats = this.errorStats.get(sessionKey)
     return stats ? stats.errorCount > 0 : false
   }
+
   // Public method to reset error state
   public resetErrorState(): void {
     const sessionKey = this.getSessionKey()
     this.errorStats.delete(sessionKey)
   }
+
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
@@ -544,9 +542,10 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
-        <button onclick="window.location.href='/'" style="
-export default chunkErrorHandler
-
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
 =======
 ;
   // Public method to manually trigger recovery;
@@ -574,4 +573,4 @@ export default chunkErrorHandler
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

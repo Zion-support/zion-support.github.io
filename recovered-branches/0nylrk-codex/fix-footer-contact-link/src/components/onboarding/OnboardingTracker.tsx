@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {CheckCircle, Circle, ArrowRight} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+=======
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -29,12 +36,25 @@ export function OnboardingTracker({
 =======
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
   action?: string
+<<<<<<< HEAD
+}
+
+interface OnboardingTrackerProps {
+  steps: OnboardingStep[],;
+  title?: string;
+  className?: string
+}
+
+export function OnboardingTracker({ ;
+  steps;
+=======
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -56,6 +76,7 @@ interface OnboardingTrackerProps {;
 
 export function OnboardingTracker({ 
   steps,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   title = "Complete Your Profile", 
   className 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -77,6 +98,8 @@ export function OnboardingTracker({
 =======
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+<<<<<<< HEAD
+=======
 ;
 export function OnboardingTracker({;
   steps,;
@@ -95,7 +118,7 @@ export function OnboardingTracker({;
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           style={{ width: `${progress}%` }}
         ></div>
       </div>

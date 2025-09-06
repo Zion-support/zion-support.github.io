@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import { GetServerSideProps } from 'next',;
+import { useState } from 'react',;
+import { readJson } from '../../utils/fsDb',;
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
   return { props: { initialRequests: requests } }
@@ -13,7 +12,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
 
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
-  }
 =======
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
@@ -23,6 +21,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { initialRequests: requests }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 },;
@@ -50,7 +49,7 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {requests.map((r) => (
           <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
             <div className="text-sm">
@@ -68,7 +67,8 @@ export default function SupportRequests(req, res) {
         ))}
       </div>
     </div>
-  )
+  );
+};
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -88,5 +88,5 @@ export default function SupportRequests(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

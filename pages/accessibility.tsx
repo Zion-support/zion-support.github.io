@@ -11,18 +11,18 @@ import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-  Eye
-  Ear
-  Hand
-  Brain
-  CheckCircle
-  AlertTriangle
-  Globe
-  Users
-  Shield
-  Zap
-  FileText
-  Settings
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+  AlertTriangle,
+  Globe,
+  Users,
+  Shield,
+  Zap,
+  FileText,
+  Settings;
 } from 'lucide-react';
 const accessibilityFeatures = [
   {
@@ -487,7 +487,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
-    </MainLayout>
+    </MainLayout>;
   );
 };
 

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2026Service {
+export interface Revolutionary2026Service {;
   id: string;
   name: string;
   tagline: string;
@@ -1230,12 +1230,12 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
-    launchDate: '2026-03-01'
-    customers: 45
-    rating: 4.8
-    reviews: 25
-  }
+      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',
+    launchDate: '2026-03-01',
+    customers: 45,
+    rating: 4.8,
+    reviews: 25,
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1248,8 +1248,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8
 
     reviews: 25
-  }
-];
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
@@ -1909,6 +1907,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 25;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

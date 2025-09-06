@@ -144,7 +144,11 @@ app.log.error(err);
 =======
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+<<<<<<< HEAD
+app.log.error(err);
+=======
   app.log.error(err);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   (process as any).exit(1);
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,12 +1,11 @@
 <<<<<<< HEAD
-
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -23,8 +22,8 @@ import { Input } from '@/components/ui/input'
   FormMessage
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -92,7 +91,7 @@ export function ContactPublisherModal({  isOpen,  isOpen
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true)
-      return
+      return;
     }
     const values = form.getValues()
     setIsSubmitting(true)
@@ -300,7 +299,7 @@ export function ContactPublisherModal({;
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -336,7 +335,7 @@ export function ContactPublisherModal({;
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -361,7 +360,7 @@ export function ContactPublisherModal({;
               name="message"
               render={({ field }: { field: any }) => (
                 <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -388,10 +387,10 @@ export function ContactPublisherModal({;
       </FocusLock>
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
-  ) </>
-  )
-}
+    </>;
+  ) </>;
+  );
+};
 =======
             />;
             <Button;
@@ -412,4 +411,4 @@ export function ContactPublisherModal({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

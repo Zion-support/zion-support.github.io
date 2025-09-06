@@ -1,4 +1,3 @@
-
 <<<<<<< HEAD
 import Link from 'next/link'
 import {
@@ -105,35 +104,55 @@ export function ApplicationActions({
             className="text-red-600"
           >
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import Link from "next/link",
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu",
+import { Button } from "@/components/ui/button",
+import { Eye, ChevronDown, Loader2 } from 'lucide-react'
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+
+interface ApplicationActionsProps {
+  application: JobApplication,
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 <<<<<<< HEAD
       <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
-      <Button
-        variant="default"
-        size="sm"
-        asChild
-      >
 =======
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
+<<<<<<< HEAD
+          Contact
+        </Link>
+      </Button>
+    </div>;
+  );
+};
+}
+=======
         <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           Contact
         </Link>
       </Button>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 import Link from "next/link",;
 import {;
   DropdownMenu,;
@@ -218,4 +237,4 @@ export function ApplicationActions({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

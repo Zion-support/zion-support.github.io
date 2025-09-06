@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -7,7 +6,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.body as { providerId?: string }
   if (!providerId |!getProviderById(providerId)) {
@@ -19,18 +18,17 @@ export default async function handler(
   const now = Date.now();
   writeState((s) => {
     s.logs.push({
-      id: `${now}-${providerId}-resync`
-      timestamp: now
-      providerId: providerId as any
-      level: "info"
-      action: "resync"
+      id: `${now}-${providerId}-resync`,
+      timestamp: now,
+      providerId: providerId as any,
+      level: "info",
+      action: "resync",
     });
     const target = s.connections.find((c) => c.providerId === providerId);
     if (target) target.lastSyncAt = now;
   });
   res.status(200).json({ ok: true });
 }
-
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -75,4 +73,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -40,10 +40,17 @@ export function LoginForm() {
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
+<<<<<<< HEAD
+export function LoginForm() {;
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
 export function LoginForm() {
   const { login, isLoading } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
@@ -163,7 +170,7 @@ export function LoginForm() {;
               </FormControl>;
               <FormMessage className="text-red-400" />;
             </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
         />
         <FormField

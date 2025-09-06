@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react'
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import { Button } from '@/components/ui/button'
+=======
 
 import React from "react",
 <<<<<<< HEAD
@@ -6,7 +11,7 @@ import { Button } from "@/components/ui/button";
 =======
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
@@ -18,8 +23,8 @@ interface ActiveFiltersProps {
   toggleRegion: (region: string) => void
   priceRange: [number, number]
   setPriceRange: (range: [number, number]) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number]) => void
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;interface ActiveFiltersProps {
   selectedSkills: string[]
   toggleSkill: (skill: string,) => void
@@ -34,6 +39,7 @@ interface ActiveFiltersProps {
 
   clearFilters: () => void
 }
+
 <<<<<<< HEAD
 export function ActiveFilters({
 
@@ -50,16 +56,18 @@ export function ActiveFilters({
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
-  const hasActiveFilters =
-    selectedSkills.length > 0 |
-    selectedAvailability.length > 0 |
-    selectedRegions.length > 0 |
-    experienceRange[0] !== 0 |
-    experienceRange[1] !== 15 |
-    priceRange[0] !== 50 |
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+<<<<<<< HEAD
     priceRange[1] !== 200
   if (!hasActiveFilters) return null
-
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>
@@ -92,18 +100,7 @@ export function ActiveFilters({
           onClick={() => toggleRegion(region)}        >
           {region}
           <X className='h-3 w-3' />
-        </ClickableBadge>
-      ))}
-      {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
-        <ClickableBadge
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => setPriceRange([50, 200])}        >
 =======
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -192,42 +189,54 @@ export function ActiveFilters({;
         >;
           {region}
           <X className="h-3 w-3" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </ClickableBadge>
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
+<<<<<<< HEAD
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setPriceRange([50, 200])}        >
+=======
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setPriceRange([50, 200])}
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 <<<<<<< HEAD
-      {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0, 15])}        >
 =======
-      
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
 <<<<<<< HEAD
+
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
+        Clear All
+      </Button>
+    </div>
+  );
+};
+}
 =======
       
       <Button 
@@ -236,14 +245,10 @@ export function ActiveFilters({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         Clear All
       </Button>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -280,4 +285,4 @@ export function ActiveFilters({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

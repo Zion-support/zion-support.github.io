@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { logInfo } from '@/utils/productionLogger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -20,26 +24,23 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
+    id: "getting-hired",
+    name: "Getting Hired",
 <<<<<<< HEAD
-
-    id: "getting-hired"
-    name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform."
     adminOnly: false
     icon: "Briefcase"
   }
 =======
-    id: "getting-hired",
-    name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "project-help": {
     id: "project-help"
     name: "Project Help"
@@ -64,7 +65,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Code"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "feedback": {
     id: "feedback"
     name: "Feedback & Feature Requests"
@@ -75,7 +76,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
   }
 =======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "announcements": {
     id: "announcements"
     name: "Announcements"
@@ -111,7 +112,7 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   user}: {
   categoryId: string
   category: ForumCategoryInfo
@@ -124,11 +125,6 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId)
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self,) =>
-    // Remove duplicates by id
-    index === self.findIndex(p => p.id === post.id)
-  )
 =======
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
@@ -136,13 +132,17 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
+  )
+=======
   ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Apply search filter
   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -155,6 +155,9 @@ function CategoryContent({
   const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
   const { isFollowed, follow, unfollow } = useFollowedCategories()
   const { toast } = useToast()
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
 =======
     : categoryPosts,
 
@@ -162,13 +165,10 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -267,8 +267,8 @@ function CategoryContent({;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -283,9 +283,8 @@ function CategoryContent({;
   const category = categoryId ? categoriesInfo[categoryId] : null
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
-
-  )
-}
+  );
+};
 =======
   },;
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
@@ -428,4 +427,4 @@ export default function ForumCategoryPage() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

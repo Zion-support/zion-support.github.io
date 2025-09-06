@@ -5,13 +5,14 @@ import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react";
 
 import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
 } from "./ui/table";
+<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -22,24 +23,13 @@ export function ComparisonSection() {
             See how Zion can drastically reduce your IT costs compared to
             traditional providers
 =======
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./ui/table";
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -117,18 +107,16 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 <<<<<<< HEAD
 =======
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
-    </section>
 <<<<<<< HEAD
-  );
-}
 =======
+    </section>
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
@@ -187,6 +175,7 @@ export function ComparisonSection() {;
           </div>;
         </div>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </section>;
   );
 }

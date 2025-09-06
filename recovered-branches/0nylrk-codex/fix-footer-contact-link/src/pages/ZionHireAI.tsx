@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {useWhitelabel} from "@/context/WhitelabelContext";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {Link} from "react-router-dom";
+export default function ZionHireAI() {;
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
+  const { isAuthenticated } = useAuth();
+=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -19,6 +34,7 @@ import { Link } from "react-router-dom",
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -267,7 +283,6 @@ export default function ZionHireAI() {
     </>
   )
 <<<<<<< HEAD
-}
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -525,6 +540,7 @@ export default function ZionHireAI() {;
       <Footer />;
     </>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,10 +1,18 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-import { ChatMessage  } from './ChatMessage';
-import { ChatInput  } from './ChatInput';
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {X} from "lucide-react";
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface Message {
 
   id: string
@@ -13,14 +21,15 @@ export interface Message {
   timestamp: Date
 
   read?: boolean
+<<<<<<< HEAD
 }
 export interface ChatAssistantProps {
 
   isOpen: boolean
   onClose: () => void
   recipient: {
-    id: string
-    name: string
+    id: string,
+    name: string,;
     avatarUrl?: string;
     role?: string
   }
@@ -30,7 +39,8 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
-export function ChatAssistant({
+
+export function ChatAssistant({;
   isOpen;
   onClose;
   recipient;
@@ -47,25 +57,7 @@ export function ChatAssistant({
       setMessages(initialMessages)
     }
   }, [initialMessages]);
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
 =======
-import React, { useState, useEffect, useRef, ReactNode } from 'react',
-import { ChatMessage } from './ChatMessage',
-import { ChatInput } from './ChatInput',
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { X } from "lucide-react",
-export interface Message {
-  id: string,
-  role: 'user' | 'assistant',
-  message: string,
-  timestamp: Date,
-  read?: boolean
 import React, { useState, useEffect, useRef, ReactNode } from 'react',;
 import { ChatMessage } from './ChatMessage',;
 import { ChatInput } from './ChatInput',;
@@ -111,6 +103,7 @@ export function ChatAssistant({;
       setMessages(initialMessages);
     }
   }, [initialMessages]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     scrollToBottom()
@@ -214,4 +207,8 @@ export function ChatAssistant({;
       </div>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

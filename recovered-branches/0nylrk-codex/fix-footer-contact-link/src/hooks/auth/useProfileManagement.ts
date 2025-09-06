@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+=======
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
@@ -7,7 +12,7 @@ import type { UserProfile } from "@/types/auth";
 =======
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -18,7 +23,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       }
       // Update user metadata
       const { error: authError } = await supabase.auth.updateUser({
-        data: {
+        data: {;
           display_name: data.displayName;
           user_type: data.userType
           headline: data.headline}});
@@ -39,6 +44,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update profiles table
@@ -109,6 +115,11 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       return { error }
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+    }
+  };
+
+=======
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;
@@ -145,6 +156,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(false);
     }
   };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return { updateProfile }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

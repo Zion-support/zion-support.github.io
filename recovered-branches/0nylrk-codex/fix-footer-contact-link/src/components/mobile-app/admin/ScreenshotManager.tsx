@@ -1,11 +1,11 @@
 
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
 <<<<<<< HEAD
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
+import React, { useState, useRef } from "react";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Upload, Trash2, Plus} from "lucide-react";
+import {AppPlatform} from "./MetadataManager";
+import {toast} from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -14,8 +14,9 @@ type Screenshot = {
   id: string
   url: string
   file: File
-}
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+};
+
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -23,11 +24,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
-  }
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+  };
 =======
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
@@ -56,6 +58,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -71,6 +74,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
+<<<<<<< HEAD
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
@@ -109,12 +113,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
-  }
+  };
 =======
-    const maxScreenshots = platform === "ios" ? 10 : 8,
-    const availableSlots = maxScreenshots - screenshots.length,
-    
-    if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -171,6 +171,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -240,12 +241,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>
     </Card>
   )
-}
-
 =======
         </div>;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

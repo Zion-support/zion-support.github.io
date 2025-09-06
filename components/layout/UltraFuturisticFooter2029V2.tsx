@@ -7,59 +7,58 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
-
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  MessageCircle,
+  Star,
+  Zap,
+  Sparkles,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  TrendingUp,
+  MessageSquare,
+  Calendar,
+  GraduationCap,
+  ShieldCheck,
+  Eye,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Globe2,
+  Bot,
+  Crown,;
+  Infinity,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, 
+  Brain, Rocket, Target, Shield, Cpu, ;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -330,8 +329,11 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
@@ -470,13 +472,17 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   },];
+<<<<<<< HEAD
 
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>      { name: 'Research', href: '/research' }
     ]
-  }
+  };
 ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
@@ -500,7 +506,7 @@ export default function UltraFuturisticFooter2029V2() {
 
             <motion.div
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -581,7 +587,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -623,7 +629,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Service Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -634,7 +640,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h3 className='text-2xl font-bold text-white text-center mb-8'>
             Featured 2029 Services
@@ -655,7 +661,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -704,7 +710,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -742,7 +748,7 @@ export default function UltraFuturisticFooter2029V2() {
 
             </motion.div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -753,7 +759,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               {socialLinks.map(social => (
                 <Link
@@ -780,7 +786,7 @@ export default function UltraFuturisticFooter2029V2() {
 
                 </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </motion.div>
           </div>
@@ -789,7 +795,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Newsletter Signup */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -800,7 +806,7 @@ export default function UltraFuturisticFooter2029V2() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -840,10 +846,12 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </motion.div>
-    </footer>
 <<<<<<< HEAD
+    </footer>;
 );
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+    </footer>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

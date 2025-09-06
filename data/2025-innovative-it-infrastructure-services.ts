@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator'
@@ -427,20 +426,17 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
-      'SOC2'
-      'ISO 27001'
-      'Uptime Institute'
-      'Energy Star'
-      'Industry-specific regulations'
-    ]
+      'SOC2',
+      'ISO 27001',
+      'Uptime Institute',
+      'Energy Star',
+      'Industry-specific regulations',
+    ],;
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
-  }
-];
-
 =======
 export const innovativeITInfrastructureServices2025 = [;
   {;
@@ -647,6 +643,7 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

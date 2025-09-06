@@ -83,63 +83,76 @@ declare let process: {;
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
-  export interface BadgeProps {
 <<<<<<< HEAD
-  }
+  export interface BadgeProps {};
+;
   export const Badge: React.FC<BadgeProps>;
 }
+;
 // FeatureCard type fixes;
-declare module '@/components/FeatureCard' {export interface FeatureCardProps {;
-    title: string;
-    description: string;
-    icon: React.ReactNode;
-    className?: string;
+declare module '@/components/FeatureCard' {;
+  export interface FeatureCardProps {;
+    title: string,;
+    description: string,;
+    icon: React.ReactNode,;
+    className?: string,;
     key?: number | string;
   }
 }
+;
 // ListingScoreCard type fixes;
-declare module '@/components/ListingScoreCard' {export interface ListingScoreCardProps {;
-    title: string;
-    description: string;
-    category: string;
-    image?: string;
-    tags?: string[];
-    author?: string;
-    authorImage?: string;
-    aiScore?: number;
-    rating?: number;
-    reviewCount?: number;
-    key?: string | number;
+declare module '@/components/ListingScoreCard' {;
+  export interface ListingScoreCardProps {;
+    title: string,;
+    description: string,;
+    category: string,;
+    image?: string,;
+    tags?: string[],;
+    author?: string,;
+    authorImage?: string,;
+    aiScore?: number,;
+    rating?: number,;
+    reviewCount?: number,;
+    key?: string | number,;
     variant?: string;
   }
+;
   export const ListingScoreCard: React.FC<ListingScoreCardProps>;
 }
+;
 // ChatMessage type fixes;
-declare module '@/components/ChatAssistant/ChatMessage' {export interface ChatMessageProps {;
-    role: 'user' | 'assistant';
-    message: string;
-    timestamp?: Date;
+declare module '@/components/ChatAssistant/ChatMessage' {;
+  export interface ChatMessageProps {;
+    role: 'user' | 'assistant',;
+    message: string,;
+    timestamp?: Date,;
     key?: string | number;
   }
 }
+;
 // ProductListingCard type fixes;
-declare module '@/components/ProductListingCard' {export interface ProductListingCardProps {;
-    listing: any;
+declare module '@/components/ProductListingCard' {;
+  export interface ProductListingCardProps {;
+    listing: any,;
     view?: any,  // Made optional to fix the errors;
-    onRequestQuote: (listingId: string) => void;
+    onRequestQuote: (listingId: string) => void,;
     key?: string | number;
   }
+;
   export const ProductListingCard: React.FC<ProductListingCardProps>;
 }
+;
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
+declare module '@livekit/components-react' {;
+  export interface VideoCallProps {;
+    room?: string,;
+    token?: string,;
+    serverUrl?: string,;
     onDisconnect?: () => void;
     className?: string;
 =======
+  export interface BadgeProps {
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
@@ -195,16 +208,16 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     message: string,;
     timestamp?: Date,;
     key?: string | number;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
+;
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
-<<<<<<< HEAD
-declare module '@livekit/components-styles' {// Empty stub for the styles;
-}
 =======
 ;
+<<<<<<< HEAD
+=======
 // ProductListingCard type fixes;
 declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
@@ -232,6 +245,7 @@ declare module '@livekit/components-react' {;
   export const LiveKitRoom: React.FC<any>;
 }
 ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }

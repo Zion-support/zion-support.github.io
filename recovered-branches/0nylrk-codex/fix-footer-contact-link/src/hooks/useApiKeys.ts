@@ -1,31 +1,33 @@
 
 <<<<<<< HEAD
-
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
-export interface ApiKey {
+
+export interface ApiKey {;
   id: string;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
-  expires_at: string | null
+  expires_at: string | null,
   is_active: boolean
 }
-export interface ApiLog {
+
+export interface ApiLog {;
   id: string;
   endpoint: string;
   method: string;
   status_code: number;
   created_at: string;
-  ip_address?: string
+  ip_address?: string,
   response_time_ms?: number
 }
-export function useApiKeys() {
+
+export function useApiKeys() {;
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -83,6 +85,7 @@ export function useApiKeys() {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [newApiKey, setNewApiKey] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Helper to get the base URL for API functions
@@ -130,9 +133,9 @@ export function useApiKeys() {
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch API keys')
+        throw new Error(result.error || 'Failed to fetch API keys')
       }
-      setKeys(result.keys |[])
+
 =======
 ;
 export function useApiKeys() {;
@@ -176,6 +179,7 @@ export function useApiKeys() {;
         throw new Error(result.error || 'Failed to fetch API keys');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       setKeys(result.keys || [])
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (err) {
@@ -234,15 +238,9 @@ export function useApiKeys() {;
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result.error |'Failed to create API key')
+        throw new Error(result.error || 'Failed to create API key')
       }
-      // Add the new key to the list
-      setKeys(prev => [{ ...result, key: undefined }, ...prev]);
-      // Store the actual key value temporarily so it can be displayed once
-      setNewApiKey(result.key);
-      toast({
-        title: "API Key Created"
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+
 =======
 ;
       setKeys(result.keys || []);
@@ -287,6 +285,7 @@ export function useApiKeys() {;
         throw new Error(result.error || 'Failed to create API key');
       }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       
@@ -353,6 +352,7 @@ export function useApiKeys() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to regenerate API key')
       }
+
 =======
 ;
       // Add the new key to the list;
@@ -400,7 +400,7 @@ export function useApiKeys() {;
         throw new Error(result.error || 'Failed to regenerate API key');
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Update the key in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...result, key: undefined } : key
@@ -473,8 +473,9 @@ export function useApiKeys() {;
       });
       const result = await response.json();
       if (!response.ok) {
-        throw new Error(result.error |'Failed to revoke API key')
+        throw new Error(result.error || 'Failed to revoke API key')
       }
+
 =======
 ;
       // Update the key in the list;
@@ -523,7 +524,7 @@ export function useApiKeys() {;
         throw new Error(result.error || 'Failed to revoke API key');
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Update the key's active status in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...key, is_active: false } : key
@@ -595,8 +596,9 @@ export function useApiKeys() {;
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch API logs')
       }
-      setLogs(result.logs |[]);
-      setTotalLogs(result.count |0);
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);
 =======
 ;
       // Update the key's active status in the list;
@@ -647,6 +649,7 @@ export function useApiKeys() {;
 
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
@@ -660,6 +663,7 @@ export function useApiKeys() {;
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
+<<<<<<< HEAD
     }
   }
   return {
@@ -676,14 +680,7 @@ export function useApiKeys() {;
     fetchApiLogs;
 
     clearNewApiKey: () => setNewApiKey(null)
-  }
-}
 =======
-        variant: "destructive",
-        title: "Error fetching API logs",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-    } finally {
-      setLoading(false)
 ;
       setLogs(result.logs || []),;
       setTotalLogs(result.count || 0),;
@@ -712,6 +709,7 @@ export function useApiKeys() {;
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

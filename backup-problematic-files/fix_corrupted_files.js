@@ -42,29 +42,10 @@ function fixCorruptedFile(filePath) {
     // Fix common corruption patterns
     content = content
       // Fix import statements with extra commas
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-      .replace(
-        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g
-        "import type { NextPage } from 'next'")
-      .replace(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
       .replace(;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
 =======
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
@@ -87,19 +68,7 @@ function fixCorruptedFile(filePath) {
       // Fix text content with extra commas
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
-<<<<<<< HEAD
-      // Fix export statements
-=======
-<<<<<<< HEAD
-      // Fix export statements
-=======
       // Fix export statements;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {FraudFlag, FraudStats} from "@/types/fraud";
+=======
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -15,6 +26,7 @@ import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Import refactored components
 import {
   FraudStatsCards,
@@ -24,6 +36,16 @@ import {
 } from "@/components/admin/fraud-detection",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+export default function FraudDetection() {;
+  const [flags, setFlags] = useState<FraudFlag[]>([]);
+  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [severityFilter, setSeverityFilter] = useState<string | null>(null);
+  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null);
+=======
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
@@ -37,6 +59,7 @@ export default function FraudDetection() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -178,7 +201,7 @@ export default function FraudDetection() {;
           flag.content_excerpt.toLowerCase().includes(query) ||;
           flag.reason.toLowerCase().includes(query);
       );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     // Apply status filter
     if (statusFilter) {
@@ -291,6 +314,8 @@ export default function FraudDetection() {;
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
+<<<<<<< HEAD
+=======
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
@@ -349,7 +374,7 @@ export default function FraudDetection() {;
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               disabled={isLoading}
             >
               Refresh Data
@@ -368,7 +393,7 @@ export default function FraudDetection() {;
 <<<<<<< HEAD
 =======
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <FraudFilters

@@ -26,6 +26,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function RoleManagement() {
@@ -82,7 +83,11 @@ export function RoleManagement() {
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
-      title: "Permission updated"
+      title: "Permission updated",
+<<<<<<< HEAD
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+=======
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
 <<<<<<< HEAD
   }
@@ -93,6 +98,7 @@ export function RoleManagement() {
     "Viewer": "Read-only access to candidates"}
 =======
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
@@ -220,41 +226,41 @@ export function RoleManagement() {
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.viewCandidates}
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.editCandidates}
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.createJobs}
+                  <Switch 
+                    checked={member.permissions.createJobs} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.manageTeam}
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "manageTeam", checked)
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
 <<<<<<< HEAD
-                  <Switch
-                    checked={member.permissions.viewBilling}
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
                     }
@@ -262,8 +268,6 @@ export function RoleManagement() {
                 </TableCell>
               </TableRow>
 =======
-                  <Switch 
-                    checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
 import React from "react",;
@@ -504,7 +508,7 @@ export function RoleManagement() {;
                   />;
                 </TableCell>;
               </TableRow>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </TableBody>
         </Table>

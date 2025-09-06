@@ -1,35 +1,21 @@
 <<<<<<< HEAD
+
+<<<<<<< HEAD
 import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {HelpCategoryList} from "./HelpCategoryList";
+import {HelpArticleList} from "./HelpArticleList";
+import {HelpArticleView} from "./HelpArticleView";
+import {HELP_CATEGORIES} from "./help-content";
+import {AppLayout} from "@/layout/AppLayout";
+import {Search} from "lucide-react";
+export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-
-  const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  }
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  }
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  }
-
 =======
-
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -44,6 +30,7 @@ export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
@@ -63,7 +50,40 @@ export default function HelpCenter() {
     setSelectedArticle(null)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleCategorySelect = (categoryId: string) => {
+    (setSelectedCategory(categoryId), setSelectedArticle(null));
+  };
+
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId);
+  };
+
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  const handleBackToArticles = () => {
+    setSelectedArticle(null);
+  };
+
+>>>>>>> main
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -75,6 +95,10 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support
             team.
           </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -84,12 +108,17 @@ export default function HelpCenter() {
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
 <<<<<<< HEAD
@@ -98,6 +127,8 @@ export default function HelpCenter() {
 =======
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
+<<<<<<< HEAD
+=======
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -155,15 +186,19 @@ export default function HelpCenter() {;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+            <TabsContent value="articles">
+              {!selectedCategory && !selectedArticle && (
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+>>>>>>> main
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />
               )}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -173,21 +208,14 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
-<<<<<<< HEAD
                   <HelpArticleList
-=======
-                  <HelpArticleList 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />
                 </>
               )}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               {selectedArticle && (
                 <>
                   <Button
@@ -201,11 +229,19 @@ export default function HelpCenter() {;
                 </>
               )}
             </TabsContent>
+<<<<<<< HEAD
+            <TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+=======
+
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">
                   Frequently Asked Questions
                 </h2>
+
+>>>>>>> main
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -214,11 +250,15 @@ export default function HelpCenter() {;
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
-                      or services. The process takes into account skills
+                      or services. The process takes into account skills,
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -230,6 +270,10 @@ export default function HelpCenter() {;
                       protects both parties throughout the engagement.
                     </p>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -241,6 +285,10 @@ export default function HelpCenter() {;
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -255,6 +303,10 @@ export default function HelpCenter() {;
                 </div>
               </div>
             </TabsContent>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -265,6 +317,10 @@ export default function HelpCenter() {;
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -285,6 +341,10 @@ export default function HelpCenter() {;
                         support@ziontechgroup.com
                       </Link>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -301,10 +361,18 @@ export default function HelpCenter() {;
                       </span>
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -313,6 +381,10 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -326,6 +398,10 @@ export default function HelpCenter() {;
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -338,15 +414,18 @@ export default function HelpCenter() {;
       </div>
     </AppLayout>
 <<<<<<< HEAD
-  );
-}
-=======
   )
+<<<<<<< HEAD
+=======
 ;
               {selectedArticle && (;
                 <>;
                   <Button;
                     variant="ghost";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

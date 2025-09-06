@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+    onboardingStatus.responseReceived
+function ClientDashboardContent() {
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all")
+  const { jobs, isLoading } = useJobs()
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null)
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("")
+  const isMobile = useIsMobile()
+  const onboardingStatus = useOnboardingStatus()
+  const showAdvanced = null;
+    onboardingStatus.jobPosted &&
+    onboardingStatus.inviteSent &&
+    onboardingStatus.responseReceived
+=======
 import { useState, useEffect } from "react",
 import { JobsList } from "@/components/jobs/JobsList",
 import { Button } from "@/components/ui/button",
@@ -36,9 +50,22 @@ function ClientDashboardContent() {
     onboardingStatus.inviteSent &&
     onboardingStatus.responseReceived,
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
+<<<<<<< HEAD
+      const firstJob = jobs[0]
+      if (firstJob) {
+        setSelectedJobId(firstJob.id)
+        setSelectedJobTitle(firstJob.title)
+      }
+    }
+  }, [jobs, selectedJobId])
+  const handleJobSelect = (jobId: string, jobTitle: string) => {
+    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
+  }
+=======
       const firstJob = jobs[0],
       if (firstJob) {
         setSelectedJobId(firstJob.id),
@@ -52,7 +79,7 @@ function ClientDashboardContent() {
     setSelectedJobTitle(jobTitle)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <SEO
@@ -148,7 +175,7 @@ function ClientDashboardContent() {;
             </Button>;
           </div>;
         </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -171,7 +198,7 @@ function ClientDashboardContent() {;
 <<<<<<< HEAD
 =======
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -258,7 +285,8 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>)
 }</div> </div> </div> </div> </main> </>)
 }export default function ClientDashboard () {
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
+;
 =======
           
           <div>
@@ -299,4 +327,4 @@ export default function ClientDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

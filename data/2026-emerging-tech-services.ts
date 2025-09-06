@@ -1,5 +1,5 @@
+export interface EmergingTechService2026 {;
 <<<<<<< HEAD
-export interface EmergingTechService2026 {
   id: string;
   name: string;
   tagline: string;
@@ -553,35 +553,33 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
-    launchDate: '2024-06-25'
-    customers: 56
-    rating: 4.4
-    reviews: 29
-  }
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
+    customers: 56,
+    rating: 4.4,
+    reviews: 29,
+  },;
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
-    service => service.category === category
+    service => service.category === category;
   );
-}
-export const getPopularEmergingTechServices2026 = () => {
+};
+
+export const getPopularEmergingTechServices2026 = () => {;
   return emergingTechServices2026.filter(service => service.popular);
 }
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return emergingTechServices2026.filter(service => {
+  return emergingTechServices2026.filter(service => {;
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
   })
-}
-
 =======
-export interface EmergingTechService2026 {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -906,5 +904,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
     const price = parseInt(service.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

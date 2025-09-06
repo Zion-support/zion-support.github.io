@@ -3,170 +3,27 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import {
-  Rocket
-  CheckCircle
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Zap
-  Users
-  Clock
-  Target
-  Star
-  FileText
-  Video
-  Code
-  Globe
-  Building;} from 'lucide-react';
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  Target,
+  Star,
+  FileText,
+  Video,
+  Code,
+  Globe,;
+  Building,;} from 'lucide-react';
 
-export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
-  const onboardingSteps = [
-    {
-      step: 1
-      title: 'Choose Your Path'
-      description: 'Select the technology area that best fits your needs'
-      icon: <Target className='w-8 h-8 text-cyan-400' />
-    },    {
-      step: 2
-      title: 'Define Requirements'
-      description: 'Tell us about your project goals and constraints'
-      icon: <FileText className='w-8 h-8 text-purple-400' />
-    },    {
-      step: 3
-      title: 'Get Your Proposal'
-      description: 'Receive a detailed proposal and implementation plan'
-      icon: <Star className='w-8 h-8 text-yellow-400' />
-    },    {
-      step: 4
-      title: 'Begin Implementation'
-      description: 'Start your journey with our expert team'
-      icon: <Rocket className='w-8 h-8 text-green-400' />
-    },  ];
-  const technologyPaths = [
-    {
-      id: 'ai-consciousness'
-      name: 'AI Consciousness & Emotional Intelligence'
-      description:
-        'Develop AI systems with genuine self-awareness and emotional intelligence'
-      icon: <Brain className='w-8 h-8 text-cyan-400' />
-      features: [
-        'AI consciousness development'
-        'Emotional intelligence training'
-        'Self-aware neural networks'
-        'Autonomous decision making'
-      ]
-      useCases: [
-        'Customer Success'
-        'HR Analytics'
-        'Mental Health'
-        'Education'
-      ]
-      timeline: '6-12 months'
-      complexity: 'Advanced'
-    }
-    {
-      id: 'quantum-computing'
-      name: 'Quantum Computing Solutions'
-      description:
-        'Leverage quantum computing for cryptography, optimization, and simulation'
-      icon: <Atom className='w-8 h-8 text-purple-400' />
-      features: [
-        'Quantum algorithms'
-        'Post-quantum cryptography'
-        'Quantum machine learning'
-        'Quantum simulation'
-      ]
-      useCases: [
-        'Financial Services'
-        'Healthcare'
-        'Research'
-        'Cybersecurity'
-      ]
-      timeline: '8-18 months'
-      complexity: 'Expert'
-    }
-    {
-      id: 'autonomous-systems'
-      name: 'Autonomous Business Systems'
-      description:
-        'Build self-managing and self-optimizing business operations'
-      icon: <Rocket className='w-8 h-8 text-green-400' />
-      features: [
-        'Process automation'
-        'Self-healing infrastructure'
-        'Predictive maintenance'
-        'Autonomous operations'
-      ]
-      useCases: ['Manufacturing', 'DevOps', 'Customer Service', 'Supply Chain']
-      timeline: '3-9 months'
-      complexity: 'Intermediate'
-    }
-    {
-      id: 'enterprise-solutions'
-      name: 'Enterprise Technology Platform'
-      description:
-        'Modernize your infrastructure with cloud-native and AI-powered solutions'
-      icon: <Building className='w-8 h-8 text-blue-400' />
-      features: [
-        'Cloud migration'
-        'Microservices architecture'
-        'AI-powered analytics'
-        'Security automation'
-      ]
-      useCases: [
-        'Digital Transformation'
-        'Legacy Modernization'
-        'Data Analytics'
-        'Security'
-      ]
-      timeline: '4-12 months'
-      complexity: 'Intermediate'
-    },  ];
-  const quickStartOptions = [
-    {
-      title: 'Free Consultation'
-      description: '30-minute session to discuss your needs'
-      duration: '30 min'
-      icon: <Users className='w-6 h-6' />
-      action: 'Schedule Call'
-      color: 'from-cyan-500 to-blue-600'
-    },    {
-      title: 'Demo Session'
-      description: 'See our technology in action'
-      duration: '45 min'
-      icon: <Video className='w-6 h-6' />
-      action: 'Book Demo'
-      color: 'from-purple-500 to-pink-600'
-    },    {
-      title: 'Technical Assessment'
-      description: 'Evaluate your current technology stack'
-      duration: '2 hours'
-      icon: <Code className='w-6 h-6' />
-      action: 'Start Assessment'
-      color: 'from-green-500 to-emerald-600'
-    },    {
-      title: 'Pilot Project'
-      description: 'Small-scale implementation to prove value'
-      duration: '4-8 weeks'
-      icon: <Rocket className='w-6 h-6' />
-      action: 'Discuss Pilot'
-      color: 'from-orange-500 to-red-600'
-    },  ];
-  const handlePathSelection = (pathId: string) => {
-    setSelectedPath(pathId);
-    setCurrentStep(2);  }
-  const handleNextStep = () => {
-    if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);    }
-  }
-  const handlePreviousStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);    }
-  }
 =======
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
@@ -178,6 +35,7 @@ import {
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const onboardingSteps = [
     {
       step: 1,
@@ -293,6 +151,25 @@ export default function GetStarted() {
       duration: '4-8 weeks',
       icon: <Rocket className="w-6 h-6" />,
       action: 'Discuss Pilot',
+<<<<<<< HEAD
+      color: 'from-orange-500 to-red-600',
+    },  ];
+
+  const handlePathSelection = (pathId: string) => {
+    setSelectedPath(pathId);
+    setCurrentStep(2);  };
+
+  const handleNextStep = () => {
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);    }
+  };
+
+  const handlePreviousStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);    }
+  };
+
+=======
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -322,7 +199,7 @@ export default function GetStarted() {
   }
 }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */  } catch (error) {
@@ -416,7 +293,7 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
@@ -468,7 +345,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   {step.step  } catch (error) {
@@ -508,7 +385,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -574,7 +451,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -594,7 +471,7 @@ export default function GetStarted() {
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
 =======
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -660,7 +537,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -705,7 +582,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -749,7 +626,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -761,7 +638,7 @@ export default function GetStarted() {
 =======
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -797,7 +674,7 @@ export default function GetStarted() {
                   <div className='flex justify-between pt-6'>
 =======
                   <div className="flex justify-between pt-6">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
@@ -864,7 +741,7 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -904,7 +781,7 @@ export default function GetStarted() {
   }
 }
                 className="group cursor-pointer"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -996,7 +873,7 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -1025,7 +902,8 @@ export default function GetStarted() {
       </section>
     </div>
 <<<<<<< HEAD
-)
+),
+
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1117,4 +995,4 @@ export default function GetStarted() {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

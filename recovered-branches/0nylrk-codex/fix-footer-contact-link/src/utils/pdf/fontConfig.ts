@@ -1,7 +1,7 @@
 
 <<<<<<< HEAD
-import { jsPDF } from 'jspdf';
-export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -18,7 +18,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
-      case 'montserrat':
+      case 'montserrat':;
         doc.setFont('helvetica');
         break;
       case 'open-sans':
@@ -68,6 +68,6 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     console.error('Error loading custom fonts:', error);
     // Fall back to default font;
     doc.setFont('helvetica');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

@@ -1,12 +1,13 @@
 
 <<<<<<< HEAD
 import React from "react";
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 =======
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const features = [
   {
 <<<<<<< HEAD
@@ -69,7 +70,7 @@ export function EnterpriseFeatures() {
       </div>
     </section>
   )
-}
+};
 =======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
@@ -114,5 +115,5 @@ export function EnterpriseFeatures() {;
           {features.map((feature) => (;
             <div;
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

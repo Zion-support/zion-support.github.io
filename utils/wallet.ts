@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -13,7 +13,7 @@ export async function connectMetaMask(): Promise<string[]> {
   }
 }
 export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     return [];
   }
   try {
@@ -26,7 +26,7 @@ export async function getAccounts(): Promise<string[]> {
   }
 }
 export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -40,7 +40,7 @@ export async function getBalance(address: string): Promise<string> {
   }
 }
 export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -60,9 +60,9 @@ declare global {
       request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
-    }
+    };
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

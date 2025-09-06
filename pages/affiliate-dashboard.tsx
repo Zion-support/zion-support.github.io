@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react',;
+;
+function getRefCode(): string {
+  if (typeof window === 'undefined') return '',
+  return localStorage.getItem('ref_code') || ''
+}
+
+export default function AffiliateDashboard() {
+  const [code, setCode] = useState<string>(''),
+  const [metrics, setMetrics] = useState<any>(null),
+  const [amount, setAmount] = useState<string>(''),
+  const [msg, setMsg] = useState<string>(''),
+
+  useEffect(() => {
+    const c = getRefCode(),
+    setCode(c)
+  }, []),
+
+  useEffect(() => {
+    if (!code) return,
+    (async () => {
+      try {
+        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
+        const json = await res.json(),
+        setMetrics(json)
+      } catch {}
+    })()
+  }, [code]),
+
+  async function requestPayout() {
+    setMsg(''),
+    try {
+      const res = await fetch('/api/partners/request-payout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
+      const json = await res.json(),
+      if (!res.ok) throw new Error(json.error || 'Failed'),
+      setMsg('Payout requested')
+    } catch (e: any) {
+      setMsg(e?.message || 'Error')
+    }
+=======
 import { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
 function getRefCode(): string {
@@ -47,6 +91,7 @@ function getRefCode(): string {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;
@@ -149,7 +194,7 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </div>
     </div>
   )
@@ -164,6 +209,10 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
+  );
+};
+=======
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -227,3 +276,4 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

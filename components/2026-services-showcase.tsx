@@ -7,22 +7,22 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Atom
-  Sparkles
-  Target;
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  Atom,
+  Sparkles,;
+  Target,;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -30,7 +30,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-export default function ServicesShowcase2026() {
+export default function ServicesShowcase2026() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -190,7 +190,7 @@ export default function ServicesShowcase2026() {
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -317,7 +317,7 @@ export default function ServicesShowcase2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -370,7 +370,7 @@ export default function ServicesShowcase2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -451,7 +451,7 @@ export default function ServicesShowcase2026() {
 
                             {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </li>
                         ))}
                       </ul>
@@ -459,7 +459,7 @@ export default function ServicesShowcase2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -484,7 +484,7 @@ export default function ServicesShowcase2026() {
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       Learn More
                     </a>
@@ -495,7 +495,7 @@ export default function ServicesShowcase2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -527,7 +527,7 @@ export default function ServicesShowcase2026() {
           </div>
         </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -536,7 +536,7 @@ export default function ServicesShowcase2026() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -615,7 +615,13 @@ export default function ServicesShowcase2026() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+}
+
+}
+}
+}
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

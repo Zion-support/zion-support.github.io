@@ -31,12 +31,17 @@ import {
   ArrowRight,
   Play,
   Shield,
-  Clock,
+  Clock,;
   TrendingUp,;
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+export default function CodeQualityCheckerPage() {;
+=======
 } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function CodeQualityCheckerPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
@@ -146,8 +151,11 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+<<<<<<< HEAD
+=======
 
   ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const pricing = [
@@ -471,7 +479,7 @@ export default function CodeQualityCheckerPage() {
 
                       {feature.description}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </p>
                   </div>
                 </div>
@@ -483,7 +491,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -492,7 +500,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -552,7 +560,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -664,7 +672,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -679,7 +687,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -735,7 +743,7 @@ export default function CodeQualityCheckerPage() {
 
                   </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </Card>
@@ -754,7 +762,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -786,6 +794,7 @@ export default function CodeQualityCheckerPage() {
                     </span>
                   </div>
                 )}
+
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -814,10 +823,9 @@ export default function CodeQualityCheckerPage() {
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
-
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -839,7 +847,7 @@ export default function CodeQualityCheckerPage() {
 
                 </Button>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Card>
             ))}
           </div>
@@ -848,7 +856,7 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -858,7 +866,7 @@ export default function CodeQualityCheckerPage() {
 =======
 
             Ready to Improve Your Code Quality?
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -889,7 +897,10 @@ export default function CodeQualityCheckerPage() {
     </>
 <<<<<<< HEAD
 );
+}
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

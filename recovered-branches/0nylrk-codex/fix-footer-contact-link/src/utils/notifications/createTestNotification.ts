@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { NotificationType  } from './types';
-import { createNotification } from './createNotification';
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
 /**
  * Demo function to create test notifications for the current user
  */
-export async function createTestNotification(userId: string) {
+export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 
   const randomType = types[Math.floor(Math.random() * types.length)]
@@ -33,7 +33,6 @@ export async function createTestNotification(userId: string) {
 
     actionText: actions[randomType].text
   })
-}
 =======
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
@@ -66,6 +65,7 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

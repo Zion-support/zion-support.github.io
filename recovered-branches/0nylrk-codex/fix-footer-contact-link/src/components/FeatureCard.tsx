@@ -1,21 +1,7 @@
-
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import React from "react";
-interface FeatureCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  className?: string;
-  key?: string | number, // Added key prop
-}
-export function FeatureCard({
-  title
-  description
-  icon
-  className
-}: FeatureCardProps) {
-  return (
+=======
 
     <div
       className={cn(
@@ -28,6 +14,7 @@ export function FeatureCard({
 =======
 import { cn } from "@/lib/utils",
 import React from "react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -50,11 +37,9 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
-    </div>
 <<<<<<< HEAD
-  );
-}
 =======
+    </div>
   )
 import { cn } from "@/lib/utils",;
 import React from "react",;
@@ -79,6 +64,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }

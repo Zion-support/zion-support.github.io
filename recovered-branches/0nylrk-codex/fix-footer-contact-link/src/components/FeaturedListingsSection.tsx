@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+=======
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 <<<<<<< HEAD
@@ -7,7 +13,7 @@ import { Link } from "react-router-dom";
 =======
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }
@@ -33,8 +39,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
+<<<<<<< HEAD
+      category: "AI Models",;
+      tags: ["AI", "NLP", "Machine Learning"];
+=======
       category: "AI Models",
       tags: ["AI", "NLP", "Machine Learning"],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
@@ -263,7 +274,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
             <ProductListingCard
               key={listing.id}
               listing={listing}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               view="grid"
               onRequestQuote={() => {}}
             />
@@ -281,7 +292,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     </section>
   )
 <<<<<<< HEAD
-}
 =======
         </div>;
         <div className="mt-10 text-center">;
@@ -295,6 +305,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       </div>;
     </section>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

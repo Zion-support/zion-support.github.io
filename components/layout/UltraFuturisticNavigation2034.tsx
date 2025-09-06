@@ -7,113 +7,112 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  HeartIcon
-  RocketIcon
-  ShieldIcon as ShieldIcon2
-  TargetIcon
-  MicroscopeIcon
-  StarIcon
-  ArrowRight
-  Infinity
-  Crown
-  Gem
-  Sparkles as SparklesIcon2
-  ShoppingCart
-  UserCheck
-  FileText
-  BarChart
-  PaletteIcon
-  VideoIcon
-  LockIcon as LockIcon2
-  GlobeIcon as GlobeIcon2
-  CpuIcon as CpuIcon2
-  Handshake
-  LifeBuoy
-  Activity
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  HeartIcon,
+  RocketIcon,
+  ShieldIcon as ShieldIcon2,
+  TargetIcon,
+  MicroscopeIcon,
+  StarIcon,
+  ArrowRight,
+  Infinity,
+  Crown,
+  Gem,
+  Sparkles as SparklesIcon2,
+  ShoppingCart,
+  UserCheck,
+  FileText,
+  BarChart,
+  PaletteIcon,
+  VideoIcon,
+  LockIcon as LockIcon2,
+  GlobeIcon as GlobeIcon2,
+  CpuIcon as CpuIcon2,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -374,8 +373,11 @@ const serviceCategories = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
 
 ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const quickLinks = [
@@ -434,7 +436,8 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
-export default function UltraFuturisticNavigation2034() {
+
+export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -472,7 +475,7 @@ export default function UltraFuturisticNavigation2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {contactInfo.mobile}
               </span>
             </div>
@@ -547,7 +550,7 @@ export default function UltraFuturisticNavigation2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -594,9 +597,15 @@ export default function UltraFuturisticNavigation2034() {
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+
+                >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
+
+<<<<<<< HEAD
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
@@ -646,13 +655,7 @@ export default function UltraFuturisticNavigation2034() {
                               href={service.href}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
 =======
-
-                >
-                  {link.name}
-                </Link>
-              ))}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             >
                               {service.name}
                             </Link>
@@ -708,7 +711,7 @@ export default function UltraFuturisticNavigation2034() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -740,6 +743,7 @@ export default function UltraFuturisticNavigation2034() {
                     {link.name}
                   </Link>
                 ))}
+
 <<<<<<< HEAD
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map(category => (
@@ -768,8 +772,7 @@ export default function UltraFuturisticNavigation2034() {
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -834,4 +837,4 @@ export default function UltraFuturisticNavigation2034() {
       <div className='h-20'></div>
     </>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -20,6 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type RewardOption = {
@@ -72,9 +72,15 @@ export function RedeemTokensCard() {
 =======
 ],
 
+<<<<<<< HEAD
+export function RedeemTokensCard() {;
+  const { wallet, spendTokens } = useWallet();
+  const [open, setOpen] = useState(false);
+=======
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet(),
   const [open, setOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRedeem = async (option: RewardOption) => {
@@ -140,7 +146,6 @@ export function RedeemTokensCard() {
     </Card>
   )
 <<<<<<< HEAD
-}
 =======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -244,6 +249,7 @@ export function RedeemTokensCard() {;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

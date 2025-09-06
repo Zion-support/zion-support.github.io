@@ -1,19 +1,13 @@
 
 <<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") |"";
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -166,6 +160,16 @@ serve(async (req) => {
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+<<<<<<< HEAD
+          }
+        }
+        
+        // Mark the interview as reminder sent
+        await supabase
+          .from('interviews')
+          .update({ reminder_sent: new Date().toISOString() })
+          .eq('id', interview.id)
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Resend } from "npm: resend@2.0.0",;
@@ -255,6 +259,7 @@ serve(async (req) => {;
           .from('interviews');
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
     
@@ -274,6 +279,8 @@ serve(async (req) => {;
 =======
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
+=======
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -283,6 +290,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

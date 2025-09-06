@@ -2,8 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
-  TrustMetricInputs
-  TrustScoreBreakdown;
+  TrustMetricInputs,;
+  TrustScoreBreakdown,;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -66,7 +66,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+) {;
   const { userId } = req.query;
   if (!userId |Array.isArray(userId))
     return res.status(400).json({ error: 'Invalid userId' });  if (!userId |Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
@@ -179,4 +179,4 @@ export default async function handler(
 }
 =======
   return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {useAuth} from "@/hooks/useAuth";
+import {Wallet} from "@/components/icons";
+import {toast} from "sonner";
+export function Web3Login() {;
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -8,10 +18,10 @@ import { toast } from "sonner";
 =======
 import { Wallet } from "@/components/icons",
 import { toast } from "sonner",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleWeb3Login = async () => {
     try {
@@ -64,10 +74,6 @@ export function Web3Login() {
           <Wallet className="h-5 w-5" />
         </>
 <<<<<<< HEAD
-      )}
-    </Button>
-  )
-}
 =======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -118,6 +124,7 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </Button>;
   );

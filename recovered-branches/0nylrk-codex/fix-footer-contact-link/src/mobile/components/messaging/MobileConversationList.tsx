@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+=======
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -28,6 +37,7 @@ interface MobileConversationListProps {
 =======
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Conversation {
   id: string,
   name: string,
@@ -36,6 +46,19 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[],
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+}
+
+export function MobileConversationList({;
+  conversations;
+  activeConversation;
+=======
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -63,6 +86,7 @@ interface MobileConversationListProps {;
 export function MobileConversationList({
   conversations,
   activeConversation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -116,7 +140,7 @@ export function MobileConversationList({
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
-                    {conversation.isTyping
+                    {conversation.isTyping 
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

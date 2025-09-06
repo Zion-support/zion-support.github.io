@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -71,9 +72,12 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
       </ul>
     </nav>
   );
-}
-export default InteractiveNavigation;}
+
+};
+
+export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -85,3 +89,4 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
+;

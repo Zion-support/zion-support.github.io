@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+=======
 
 <<<<<<< HEAD
 import React from 'react';
@@ -5,7 +9,7 @@ import { Button } from "@/components/ui/button";
 =======
 import React from 'react',
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Star } from 'lucide-react'
 interface SaveTalentButtonProps {
   talentId: string
@@ -32,6 +36,7 @@ interface SaveTalentButtonProps {
   onSave: (talentId: string,) => void
 
   isSaved: boolean
+<<<<<<< HEAD
 }
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
   return (
@@ -43,9 +48,9 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
     </Button>
-  )
-}}
-}
+  );
+}};
+};
 =======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -70,4 +75,4 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

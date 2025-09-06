@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Check, X} from "lucide-react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+=======
 import React from "react",
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
@@ -22,7 +29,7 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -45,15 +52,12 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]}
     {
 <<<<<<< HEAD
-      name: "Business"
+      name: "Business",;
       price: "$1,999";
-      billing: "/month"
-      description: "Ideal for growing companies"
-      users: "Up to 50 users"
-      popular: true
 =======
       name: "Business",
       price: "$1,999",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
@@ -191,7 +195,7 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                       <span className="font-bold text-xl">{plan.name}</span>
                       <div className="flex items-baseline mt-1">

@@ -1,9 +1,10 @@
 <<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -25,6 +26,7 @@ serve(async (req) => {
     const { modelId, jobId } = await req.json();
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
+<<<<<<< HEAD
     }
     // If we have a specific job ID, check that job
     // Otherwise, look up the job ID from our database first
@@ -39,11 +41,6 @@ serve(async (req) => {
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
 =======
-
-    const { modelId, jobId } = await req.json(),
-    
-    if (!modelId && !jobId) {
-      throw new Error("Either modelId or jobId is required")
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -77,8 +74,8 @@ serve(async (req) => {;
       // Mock response for demonstration (in real code, fetch from DB);
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`;
     }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
@@ -102,11 +99,6 @@ serve(async (req) => {;
       }
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-    const data = await response.json();
-    // Map OpenAI status to our internal status names
-    let status;
-    let error = null;
 =======
 ;
     // Check the status from OpenAI API;
@@ -126,6 +118,7 @@ serve(async (req) => {;
 ;
       const errorData = await response.json(),;
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     const data = await response.json(),
@@ -188,9 +181,6 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 <<<<<<< HEAD
-  }
-});
-
 =======
 ;
     const data = await response.json(),;
@@ -233,6 +223,7 @@ serve(async (req) => {;
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

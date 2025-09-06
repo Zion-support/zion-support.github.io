@@ -7,15 +7,15 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-  ArrowRight
-  Star
-  Zap
-  TrendingUp
-  Users
-  Award
-  Phone
-  Mail
-  MapPin;
+  ArrowRight,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
+  Phone,
+  Mail,;
+  MapPin,;
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -26,11 +26,12 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
+  };
+
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -141,7 +142,7 @@ export default function Revolutionary2030ServicesPage() {
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -225,7 +226,7 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -302,7 +303,7 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
@@ -405,7 +406,7 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -456,7 +457,7 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -531,6 +532,8 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 );  )
 }
+
+}
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

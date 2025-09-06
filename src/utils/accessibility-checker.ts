@@ -1,5 +1,5 @@
 // Accessibility checker utilities
-export const checkAccessibility = () => {
+export const checkAccessibility = () => {;
   console.log('Checking accessibility...');
 <<<<<<< HEAD
 }
@@ -9,7 +9,7 @@ export const validateAriaLabels = () => {
 =======
 };
 
-export const validateAriaLabels = () => {
+export const validateAriaLabels = () => {;
   console.log('Validating ARIA labels...');
 };
 

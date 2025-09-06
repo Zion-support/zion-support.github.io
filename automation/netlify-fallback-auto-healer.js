@@ -11,17 +11,9 @@ fallback: true
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
-  statusCode: 500;
-body: JSON.stringify ({
-  error: 'Fallback execution failed';
-
-message: error.message
-})
-};exports.handler = async (_event, _context) => {
-    console.log('auto-healer fallback executed locally')
-
 =======
 #!/usr/bin/env node
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
@@ -56,9 +48,8 @@ exports.handler = async (_event, _context) => {
 <<<<<<< HEAD
         }
     }
-
-}
-
+},
+;
 =======
 #!/usr/bin/env node;
 // Netlify Function Fallback: auto-healer;
@@ -87,4 +78,4 @@ exports.handler = async (_event, _context) => {;
         }
     }
 },;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -13,7 +12,7 @@ import path from 'path';
 const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
 const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
@@ -23,6 +22,7 @@ async function fetchJson(url: string) {;
   }
 }
 <<<<<<< HEAD
+
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 =======
@@ -33,7 +33,7 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -43,15 +43,17 @@ function writeJson(p: string, v: any) {
   }
 }
 <<<<<<< HEAD
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+  try {;
 =======
 ;
 export default async function handler(req, res) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date.now();
@@ -180,6 +182,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

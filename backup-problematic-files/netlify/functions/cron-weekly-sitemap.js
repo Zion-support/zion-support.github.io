@@ -23,7 +23,7 @@ exports.handler = async function() {;
   }
 },;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -92,5 +92,7 @@ exports.handler = async function () {
 
 =======
 },
+<<<<<<< HEAD:netlify/functions/cron-weekly-sitemap.js
+=======
 >>>>>>> main:netlify/functions/cron-weekly-sitemap.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-sitemap.js

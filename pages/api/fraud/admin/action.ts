@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -7,7 +6,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     return res.status(405).json({ error: "Method not allowed" });
   }
   const { fraudId, action, reason, adminId } = req.body |{}
@@ -20,17 +19,18 @@ export default async function handler(
     return res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-    id: `action-${Date.now()}`
-    fraudId
-    action
-    reason
-    adminId
-    timestamp: new Date().toISOString()
-  }
+    id: `action-${Date.now()}`,
+    fraudId,
+    action,
+    reason,
+    adminId,
+    timestamp: new Date().toISOString(),
+  };
+
   store.addAdminAction(adminAction);
+
   return res.status(200).json({ success: true, action: adminAction });
 }
-
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -145,4 +145,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

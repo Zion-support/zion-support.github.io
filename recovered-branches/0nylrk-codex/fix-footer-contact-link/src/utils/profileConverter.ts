@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { ProfileData } from "@/types/profile";
-import { TalentProfile } from "@/types/talent";
+import {ProfileData} from "@/types/profile";
+import {TalentProfile} from "@/types/talent";
 =======
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it
@@ -14,7 +14,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 <<<<<<< HEAD
   }
   // Convert ProfileData to TalentProfile
-  return {
+  return {;
     id: profile.id;
     user_id: profile.id;
     full_name: profile.name;
@@ -64,4 +64,4 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

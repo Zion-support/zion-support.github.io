@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
+import TalentProfilePage from "../pages/TalentProfilePage";
+import SavedTalentsPage from "../pages/SavedTalentsPage";
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
+=======
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
@@ -11,7 +21,7 @@ import ProfilePage from "../pages/ProfilePage";
 =======
 import CreateTalentProfile from "../pages/CreateTalentProfile",
 import ProfilePage from "../pages/ProfilePage",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const TalentRoutes = () => {
   return (
     <Routes>
@@ -45,6 +55,8 @@ export default TalentRoutes;
 =======
 },
 
+<<<<<<< HEAD
+=======
 export default TalentRoutes,
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -81,5 +93,6 @@ const TalentRoutes = () => {;
     </Routes>;
   );
 },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default TalentRoutes;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

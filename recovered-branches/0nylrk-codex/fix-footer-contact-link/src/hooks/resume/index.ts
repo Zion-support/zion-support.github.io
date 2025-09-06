@@ -1,15 +1,15 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { Resume  } from '@/types/resume';
-import { useFetchResume  } from './useFetchResume';
-import { useResumeActions  } from './useResumeActions';
-import { useWorkExperience  } from './useWorkExperience';
-import { useEducation  } from './useEducation';
-import { useSkills  } from './useSkills';
-import { useCertifications  } from './useCertifications';
-import { useResumeList  } from './useResumeList';
-export function useResume() {
+import {useState} from 'react';
+import {Resume} from '@/types/resume';
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+import {useWorkExperience} from './useWorkExperience';
+import {useEducation} from './useEducation';
+import {useSkills} from './useSkills';
+import {useCertifications} from './useCertifications';
+import {useResumeList} from './useResumeList';
+export function useResume() {;
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -82,7 +82,6 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-
 =======
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
@@ -166,4 +165,4 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

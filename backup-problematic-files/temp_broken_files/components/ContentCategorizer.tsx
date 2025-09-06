@@ -1,7 +1,8 @@
 <<<<<<< HEAD:components/ContentCategorizer.tsx
-import React, { useState, useEffect, useMemo } from 'react';
-import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+import React, { useState, useEffect, useMemo } from 'react',;
+import {;
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -35,7 +36,7 @@ interface ContentItem {
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 }
 interface ContentCategory {id: string;
   name: string;
@@ -46,14 +47,16 @@ interface ContentCategory {id: string;
   subcategories?: string[];
 }
 <<<<<<< HEAD:components/ContentCategorizer.tsx
-const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+;
+const ContentCategorizer: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),;
+  const [selectedType, setSelectedType] = useState('all'),;
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),;
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),;
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -68,6 +71,71 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
+    },;
+    {;
+      id: '2',;
+      title: 'Security Vulnerability Scan Results',;
+      href: '/reports/security-scan-2025-08-19',;
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',;
+      category: 'security',;
+      subcategory: 'vulnerability-scan',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['securityvulnerabilityscanremediation'],;
+      source: 'security-scanner',;
+      type: 'security';
+    },;
+    {;
+      id: '3',;
+      title: 'AI Model Performance Update',;
+      href: '/reports/ai-model-performance-2025-08-19',;
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',;
+      category: 'ai',;
+      subcategory: 'performance',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['aiperformanceoptimizationmetrics'],;
+      source: 'ai-monitor',;
+      type: 'update';
+    },;
+    {;
+      id: '4',;
+      title: 'Feature Deployment Summary',;
+      href: '/reports/feature-deployment-2025-08-19',;
+      desc: 'Overview of newly deployed features and their impact on user experience.',;
+      category: 'features',;
+      subcategory: 'deployment',;
+      date: '2025-08-19',;
+      relevance: 'medium',;
+      tags: ['featuresdeploymentuximpact'],;
+      source: 'deployment-tracker',;
+      type: 'feature';
+    },;
+    {;
+      id: '5',;
+      title: 'System Health Dashboard',;
+      href: '/reports/system-health-2025-08-19',;
+      desc: 'Real-time system performance metrics and infrastructure health status.',;
+      category: 'monitoring',;
+      subcategory: 'system-health',;
+      date: '2025-08-19',;
+      relevance: 'medium',;
+      tags: ['monitoringperformanceinfrastructurehealth'],;
+      source: 'health-monitor',;
+      type: 'report';
+    },;
+    {;
+      id: '6',;
+      title: 'User Behavior Insights',;
+      href: '/reports/user-behavior-2025-08-19',;
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',;
+      category: 'analytics',;
+      subcategory: 'user-behavior',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['analyticsuser-behaviorengagementoptimization'],;
+      source: 'behavior-analyzer',;
+      type: 'insight';
 =======
 
 const ContentCategorizer: React.FC = () => {
@@ -158,55 +226,7 @@ const contentItems: ContentItem[] = [
       tags: ['analyticsuser-behaviorengagementoptimization'],
       source: 'behavior-analyzer',
       type: 'insight'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-    }
-    {id: '2';
-      title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';
-      subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['securityvulnerabilityscanremediation'];
-      source: 'security-scanner';
-      type: 'security';
-    }
-    {id: '3';
-      title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';
-      subcategory: 'performance';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['aiperformanceoptimizationmetrics'];
-      source: 'ai-monitor';
-      type: 'update';
-    }
-    {id: '4';
-      title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';
-      desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';
-      subcategory: 'deployment';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['featuresdeploymentuximpact'];
-      source: 'deployment-tracker';
-      type: 'feature';
-    }
-    {id: '5';
-      title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';
-      desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';
-      subcategory: 'system-health';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['monitoringperformanceinfrastructurehealth'];
-      source: 'health-monitor';
-      type: 'report';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
     }
     {id: '6';
       title: 'User Behavior Insights';
@@ -300,15 +320,16 @@ const contentItems: ContentItem[] = [
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
 <<<<<<< HEAD:components/ContentCategorizer.tsx
-  ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+  ],;
+  const filteredItems = useMemo(() => {;
+    const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,;
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
+      const matchesType = selectedType === 'all' || item.type === selectedType,;
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -352,7 +373,7 @@ filtered.sort((a, b) => {
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
           break
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -415,7 +436,7 @@ value={selectedCategory}
                 setSelectedSubcategory('all')
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
@@ -432,7 +453,7 @@ value={selectedCategory}
 
           {_/* Subcategory Filter */}
           <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -458,7 +479,7 @@ value={selectedSubcategory}
 
           {_/* Content Type Filter */}
           <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -480,7 +501,7 @@ value={selectedType}
 
           {_/* Relevance Filter */}
           <div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -497,7 +518,7 @@ value={selectedRelevance}
 <<<<<<< HEAD:components/ContentCategorizer.tsx
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -531,7 +552,7 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           <button,
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
             Clear All Filters
           </button>
         </div>
@@ -580,7 +601,7 @@ key={category.id}
         </div>;
       </div>;
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -590,6 +611,7 @@ key={category.id}
       </div>;
       {/* Content Grid */}
 <<<<<<< HEAD:components/ContentCategorizer.tsx
+
                   {item.type}
                 </div>;
               </div>;
@@ -633,7 +655,7 @@ key={category.id}
                 </div>;
               </div>;
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -644,7 +666,7 @@ key={category.id}
 <<<<<<< HEAD:components/ContentCategorizer.tsx
 =======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -666,7 +688,7 @@ key={category.id}
                 )}
               </div>;
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -684,8 +706,9 @@ key={category.id}
                   Source: {item.source}
                 </span>
 <<<<<<< HEAD:components/ContentCategorizer.tsx
-                <a
-                  href={item.href}
+                <a 
+                  href={item.href} 
+
         })}
       </div>;
 =======
@@ -707,7 +730,7 @@ href={item.href}
         })}
       </div>;
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>

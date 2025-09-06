@@ -33,13 +33,18 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
+<<<<<<< HEAD
+  };    search;
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
     filters
     format: (format as any) |undefined}
@@ -65,15 +70,16 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
-  const type = (req.query.type as AdminType) |'';
+) {;
+  const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = (req.query.type as AdminType) |'';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured();
   if (req.method === 'GET') {
@@ -148,7 +154,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
 
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
@@ -170,12 +176,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         );
         return res.status(200).send(toCsv(pageItems));
 <<<<<<< HEAD
-      return res.status(200).json({ items: pageItems, total });
-    }
-  }
 =======
 
       }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -209,12 +213,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
-  }
 =======
       return res.status(200).json({ item: updated });    }
 
     }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -237,12 +241,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
   }
+
 <<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
 }
 =======
-
   return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

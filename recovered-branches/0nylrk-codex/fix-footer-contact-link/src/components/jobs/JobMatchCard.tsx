@@ -1,12 +1,22 @@
+<<<<<<< HEAD
+import React from 'react';
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {JobMatch} from "@/types/jobs";
+=======
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
+import { formatDistanceToNow } from "date-fns",
+import { JobMatch } from "@/types/jobs",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface JobMatchProps {
 
   matchId: string
@@ -23,8 +33,10 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void
 
   onInvite?: (matchId: string) => void
+<<<<<<< HEAD
 }
-export function JobMatchCard({
+
+export function JobMatchCard({ ;
   matchId;
 
   talentId
@@ -54,27 +66,8 @@ export function JobMatchCard({
     if (onInvite) {
       onInvite(matchId)
     }
-  }
-  // Generate a formatted date for display
-  const postedDate = new Date();
-
+  };
 =======
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-interface JobMatchProps {
-  matchId: string,
-  talentId: string,
-  name: string,
-  title: string,
-  company: string,
-  avatar: string,
-  location: string,
-  category: string,
-  matchPercent: number,
-  skills: string[],
-  onApply?: (matchId: string) => void,
-  onViewDetails?: (matchId: string) => void,
-  onInvite?: (matchId: string) => void
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -129,6 +122,7 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -206,13 +200,13 @@ export function JobMatchCard({;
       </CardContent>
     </Card>
   )
-}
 =======
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

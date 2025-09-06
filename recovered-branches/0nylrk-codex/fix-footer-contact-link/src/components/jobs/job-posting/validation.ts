@@ -1,13 +1,15 @@
 
 <<<<<<< HEAD
-
 import {z} from "zod";
+export const jobSchema = z.object({
+  title: z.string().min(3, {;
+    message: "Title must be at least 3 characters."});
 =======
 import { z } from "zod",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   company: z.string().min(3, {
     message: "Company name must be at least 3 characters."}),
   location: z.string().min(3, {
@@ -52,6 +54,8 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
   external_apply_link: z.string().url({
     message: "Please enter a valid URL."}).optional()}),
 
+<<<<<<< HEAD
+=======
 export type JobSchemaType = z.infer<typeof jobSchema>,
 import { z } from "zod",;
 export const jobSchema = z.object({;
@@ -79,5 +83,6 @@ export const jobSchema = z.object({;
   status: z.string().optional(),;
   external_apply_link: z.string().url({;
     message: "Please enter a valid URL."}).optional()});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export type JobSchemaType = z.infer<typeof jobSchema>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

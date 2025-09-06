@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+=======
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -9,10 +17,16 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
+
+<<<<<<< HEAD
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+=======
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 <<<<<<< HEAD
   const { isAuthenticated, isLoading, user } = useAuth();
@@ -23,6 +37,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 =======
   const { isAuthenticated, isLoading, user } = useAuth(),
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
@@ -129,4 +144,4 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

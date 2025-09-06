@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { useState  } from 'react';
+import { useState } from 'react'
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -19,18 +19,6 @@ export function PromptCard({ prompt }: PromptCardProps) {
           aria-label='Copy prompt'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-        </Button>
-        <Button
-          variant='secondary'
-          size='sm'
-          onClick={handleSend}
-          aria-label='Send to ZionGPT'
-        >
-          <Send className='w-4 h-4' />        </Button>
-      </div>
-    </div>
-  )
-}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
 =======
 import { useState } from 'react',;
 import { Copy, Send } from 'lucide-react';
@@ -62,15 +50,29 @@ export function PromptCard({ prompt }: PromptCardProps) {
           {copied ? 'Copied' : <Copy className="w-4 h-4" />}
         </Button>
         <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <Send className="w-4 h-4" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </Button>
+        <Button
+          variant='secondary'
+          size='sm'
+          onClick={handleSend}
+          aria-label='Send to ZionGPT'
+        >
+          <Send className='w-4 h-4' />        </Button>
       </div>
     </div>
   )
 <<<<<<< HEAD
+}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+          <Send className="w-4 h-4" />
+        </Button>
+      </div>;
+    </div>;
+  );
+};
 }
 =======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

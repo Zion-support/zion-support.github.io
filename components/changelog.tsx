@@ -8,11 +8,13 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>type Props = {
-  content: string | null
-  generatedAt: string | null
-}
+  content: string | null,
+  generatedAt: string | null;
+};
+
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
+<<<<<<< HEAD
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
 <<<<<<< HEAD
@@ -36,23 +38,19 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
           No changelog generated yet.
         </div>
       )}
+    </main>;
 =======
-
-};
-
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
 
           No changelog generated yet.
 
         </div>
       )}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
 export async function getStaticProps() {
-  try {
+  try {;
     const file = path.join(process.cwd(), 'CHANGELOG.md');
     const content = fs.readFileSync(file, 'utf8');
     return {
@@ -60,15 +58,15 @@ export async function getStaticProps() {
       revalidate: 300
     }
   } catch {
+    return { props: { content: null, generatedAt: null }, revalidate: 300 };
 <<<<<<< HEAD
-    return { props: { content: null, generatedAt: null }, revalidate: 300 }
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+
 }
 =======
-    return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

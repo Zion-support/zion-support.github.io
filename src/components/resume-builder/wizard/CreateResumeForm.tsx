@@ -1,19 +1,27 @@
+<<<<<<< HEAD
+import { useState } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Loader2 } from 'lucide-react'
+import { CreateResumeFormProps } from './types'
+export const CreateResumeForm = ({
+=======
 
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-
-import { CreateResumeFormProps } from './types'
-export const CreateResumeForm = ({
-  onCreateResume
-  onCancel
-  isLoading
+import { CreateResumeFormProps } from "./types",
+export const CreateResumeForm = ({ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  onCreateResume,
+  onCancel,
+  isLoading,
 }: CreateResumeFormProps) => {
+<<<<<<< HEAD
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -41,7 +49,7 @@ export const CreateResumeForm = ({
           </div>
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return
+    if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -67,12 +75,6 @@ export const CreateResumeForm = ({
             </Button>
           </div>
 =======
-import { CreateResumeFormProps } from "./types",
-export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel,
-  isLoading 
-}: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
   const handleSubmit = async () => {
@@ -130,7 +132,7 @@ export const CreateResumeForm = ({;
             </Button>
           </div>
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Button
             variant="ghost"
             onClick={onCancel}
@@ -139,7 +141,7 @@ export const CreateResumeForm = ({;
 <<<<<<< HEAD
 =======
             Cancel
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </Button>
         </div>
       </CardContent>
@@ -153,10 +155,10 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
   !newResumeTitle.trim () |isLoading
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)
 }
-'"}
-  )
-}
-
+'"},;
+;
+  );
+};
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

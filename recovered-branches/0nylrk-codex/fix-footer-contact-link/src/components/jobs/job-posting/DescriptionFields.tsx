@@ -1,14 +1,13 @@
-
 <<<<<<< HEAD
 import React from "react";
 import { Control } from "react-hook-form";
 import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -26,9 +25,8 @@ export function DescriptionFields({
   return (
     <>
       <FormField
-        control;
-                  field.onChange(e.target.value)
 =======
+
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -53,13 +51,18 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
+<<<<<<< HEAD
+              <Textarea
+=======
               <Textarea 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
@@ -162,6 +165,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 =======
       />;
     </>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }

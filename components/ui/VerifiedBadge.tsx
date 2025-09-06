@@ -1,12 +1,11 @@
 import React from 'react';
 <<<<<<< HEAD
+export function VerifiedBadge({ labels }: { labels: string[] }) {;
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function VerifiedBadge({ labels }: { labels: string[] }) {
-
-  if (!labels |labels.length === 0) return null;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  if (!labels || labels.length === 0) return null;
   return (
     <div className='flex gap-2 items-center'>
       {labels.map(label => (
@@ -38,4 +37,8 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
 }
 =======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,8 @@
 
 <<<<<<< HEAD
 // AI Matchmaking utility functions
-export interface MatchResultItem {
+
+export interface MatchResultItem {;
   id: string;
   title: string;
   description: string;
@@ -12,7 +13,8 @@ export interface MatchResultItem {
 
   image?: string
 }
-export interface MatchResult {
+
+export interface MatchResult {;
   item: MatchResultItem;
   score: number;
 
@@ -20,44 +22,7 @@ export interface MatchResult {
 
   reason: string
 }
-// Sample data for testing when API is not available
-const sampleData: MatchResultItem[] = [
-  {
-    id: "talent-1";
-    title: "Senior AI Engineer";
-    description: "Experienced AI engineer with expertise in machine learning and computer vision";
-    category: "Talent - Engineering";
 
-    price: 120
-
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
-  }
-  {
-    id: "service-1";
-    title: "AI Model Training";
-    description: "Custom AI model training service with data preparation and deployment";
-    category: "Services - AI Development";
-
-    price: 5000
-
-    skills: ["Machine Learning", "Model Training", "AI Deployment"]
-  }
-  {
-    id: "equipment-1";
-    title: "NVIDIA A100 GPU Server";
-    description: "High-performance GPU server for AI model training and inference";
-    category: "Equipment - Hardware";
-
-    price: 15000
-
-    skills: ["GPU Computing", "High Performance", "AI Hardware"]
-  }
-];
-// Function to find matches based on query and type
-export async function findMatches(
-  query: string;
-
-  type: string = ""
 =======
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
@@ -77,6 +42,7 @@ export interface MatchResult {;
   reason: string;
 }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -106,8 +72,13 @@ const sampleData: MatchResultItem[] = [
 ],
 
 // Function to find matches based on query and type
+<<<<<<< HEAD
+export async function findMatches(;
+  query: string;
+=======
 export async function findMatches(
   query: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   type: string = "",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   limit: number = 5
@@ -155,6 +126,8 @@ export async function findMatches(
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+<<<<<<< HEAD
+=======
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -214,6 +187,7 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

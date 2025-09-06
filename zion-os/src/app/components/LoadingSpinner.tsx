@@ -36,9 +36,15 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
           d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;
 =======
       <svg 
+<<<<<<< HEAD
+        className={`animate-spin ${sizeClasses[size]} text-current`} ;
+        viewBox=&quot;0 0 24 24&quot;
+        fill=&quot;none&quot;
+=======
         className={`animate-spin ${sizeClasses[size]} text-current`} 
         viewBox="0 0 24 24"
         fill="none"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <circle 
           className="opacity-25" 

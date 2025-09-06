@@ -96,5 +96,6 @@ i18n.on('languageChanged', (lng) => {;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
 }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default i18n;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

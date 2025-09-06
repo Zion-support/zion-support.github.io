@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+=======
 import Head from 'next/head',
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -9,6 +14,7 @@ export default function FrontLanding() {
 =======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -66,7 +72,7 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </nav>
       </header>
@@ -109,7 +115,7 @@ export default function FrontLanding() {
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
@@ -135,10 +141,10 @@ export default function FrontLanding() {
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
-                ['24/7', 'Autonomous']
-                ['Main', 'Direct Sync']
-                ['0 Ops', 'Cloud‑Native']
-                ['Safety', 'Guardrails']
+                ['24/7', 'Autonomous'],
+                ['Main', 'Direct Sync'],
+                ['0 Ops', 'Cloud‑Native'],
+                ['Safety', 'Guardrails'],
               ].map(([k, v]) => (                <motion.div
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
@@ -701,7 +707,7 @@ export default function FrontLanding(req, res) {
   }
 }
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
@@ -776,8 +782,10 @@ export default function FrontLanding(req, res) {
             </Link>          </div>
         </section>
       </main>
-    </div>
+    </div>;
   );
+
+}
 =======
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
@@ -836,4 +844,4 @@ export default function FrontLanding(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

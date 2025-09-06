@@ -1,11 +1,11 @@
 
 <<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Education  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useEducation() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Education} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useEducation() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -14,9 +14,6 @@ export function useEducation() {
     if (!user) {
       setError('You must be logged in to add education')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -31,6 +28,7 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -82,9 +80,6 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to update education')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -116,6 +111,7 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -167,9 +163,6 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to delete education')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
 =======
 ;
     setIsLoading(true),;
@@ -201,6 +194,7 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setIsLoading(true),
@@ -235,8 +229,6 @@ export function useEducation() {;
     updateEducation;
 
     deleteEducation
-  }
-}
 =======
 ;
     setIsLoading(true),;
@@ -260,6 +252,7 @@ export function useEducation() {;
     addEducation;
     updateEducation;
     deleteEducation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

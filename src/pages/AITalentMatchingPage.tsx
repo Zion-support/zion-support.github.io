@@ -1,12 +1,7 @@
 <<<<<<< HEAD
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-=======
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { Bot, Users, TrendingUp } from 'lucide-react'
-
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
 export default function AITalentMatchingPage() {
 
   const benefits = [
@@ -46,15 +41,14 @@ export default function AITalentMatchingPage() {
       title="AI Talent Matching"
       subtitle="Find the perfect talent with our AI-powered matching system"
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients."
-      benefits={benefits}
-      features={features}
-      stats={stats}
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-    />
-  )
-}
 =======
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
+export default function AITalentMatchingPage() {
+  const benefits = [
+    {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -125,12 +119,17 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       benefits={benefits}
-      testimonials={testimonials}
-      ctaText="Find Your AI Talent";
-      ctaLink="/request-quote";
+      features={features}
+      stats={stats}
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
     />;
   );
+<<<<<<< HEAD
+};
+=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

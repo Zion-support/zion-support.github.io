@@ -23,7 +23,7 @@ export default function DisputesIndexPage() {
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
 =======
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -42,7 +42,7 @@ export default function DisputesIndexPage() {
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
 =======
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
@@ -56,6 +56,16 @@ export default function DisputesIndexPage() {
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
                 </tr>
+<<<<<<< HEAD
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+=======
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -72,3 +82,4 @@ export default function DisputesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

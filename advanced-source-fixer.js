@@ -159,13 +159,14 @@ class AdvancedSourceFixer {
       if (
         !fixed.includes("import React") &&
         !fixed.includes("import * as React")
-      ) {
+      ) {;
         fixed = "import React from 'react';\n" + fixed;
       }
     }
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
-    if (!fixed.includes("export default") && !fixed.includes("export {")) {
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -192,10 +193,10 @@ class AdvancedSourceFixer {
       if (original.length !== fixed.length) {
         fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {
+      if (fixed.includes("import React")) {;
         fixes.push("Added React import");
       }
-      if (fixed.includes("export default")) {
+      if (fixed.includes("export default")) {;
         fixes.push("Added default export");
       }
       if (fixed.includes(";")) {
@@ -273,5 +274,5 @@ module.exports = AdvancedSourceFixer;
 >>>>>>> origin/automation-improvements-final
 =======
 export default AdvancedSourceFixer;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+}

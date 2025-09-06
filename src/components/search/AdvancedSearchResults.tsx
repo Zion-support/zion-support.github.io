@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
@@ -142,7 +141,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {part}
           </mark>
         ) : (
@@ -165,7 +164,7 @@ const SearchResultCard: React.FC<{
       router.push(result.url)
     }
   }
-  const cardClass =
+  const cardClass = null;
     viewMode === 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
@@ -181,10 +180,6 @@ const SearchResultCard: React.FC<{
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
             }          />
-        </div>
-      )}
-      <div className='flex-1'>
-        <div className='flex items-start justify-between mb-2'>
 =======
     </span>;
   );
@@ -215,6 +210,7 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       )}
       
@@ -298,7 +294,7 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {result.category}
               </Badge>
             )}
@@ -315,7 +311,7 @@ const SearchResultCard: React.FC<{;
             ))}
           </div>
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -386,7 +382,7 @@ const FilterSidebar: React.FC<{;
     })
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div>
@@ -406,7 +402,7 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {option.label}
               </label>
             </div>
@@ -434,7 +430,7 @@ const FilterSidebar: React.FC<{;
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -463,7 +459,7 @@ const FilterSidebar: React.FC<{;
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -485,7 +481,7 @@ const FilterSidebar: React.FC<{;
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -531,7 +527,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -626,7 +622,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {suggestion}
               </Button>
             ))}
@@ -641,7 +637,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -664,22 +660,6 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: []
-    category: ''
-    minPrice: 0
-    maxPrice: 10000
-    minRating: 0
-    sort: 'relevance'
-  })
-  const suggestions = generateSearchSuggestions()
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
 =======
 },
 
@@ -695,12 +675,25 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
+<<<<<<< HEAD
+    sort: 'relevance',
+  });
+  const suggestions = generateSearchSuggestions();
+  // Extract available categories from results for filter;
+  const availableCategories = useMemo(() => {;
+    const categories = new Set<string>();    results.forEach(result => {
+      if (result.category) categories.add(result.category)
+    })
+    return Array.from(categories).sort()
+  }, [results])
+=======
     sort: 'relevance'
   }),
 
@@ -715,7 +708,7 @@ export const AdvancedSearchResults: React.FC = () => {
     return Array.from(categories).sort()
   }, [results]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
@@ -732,7 +725,7 @@ export const AdvancedSearchResults: React.FC = () => {
   ) => {    if (!term.trim()) {
       setResults([])
       setTotalCount(0)
-      return
+      return;
     }
     setLoading(true)
     try {
@@ -808,10 +801,10 @@ export const AdvancedSearchResults: React.FC = () => {
     }
   }
   // Active filters count
-  const activeFiltersCount =
+  const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
-    (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
+    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0)
 =======
       const urlTerm = router.query.q as string,
@@ -954,7 +947,7 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -971,7 +964,7 @@ export const AdvancedSearchResults: React.FC = () => {;
 =======
               placeholder="Search products, talent, services, and more..."
             />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1002,7 +995,7 @@ export const AdvancedSearchResults: React.FC = () => {;
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1037,7 +1030,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
@@ -1074,7 +1067,7 @@ export const AdvancedSearchResults: React.FC = () => {;
               </Sheet>;
             </div>;
           </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </div>
       {searchTerm && (
@@ -1137,7 +1130,7 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
           {/* Main Content */}
           <div className="flex-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
@@ -1182,7 +1175,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </div>
                 {/* Load More Button */}
@@ -1200,7 +1193,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                       disabled={loading}
                       variant="outline"
                     >
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1227,9 +1220,9 @@ export default AdvancedSearchResults
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
-setCurrentPage (data.page)
-setHasMore (data.hasMore)
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+setCurrentPage (data.page);
+setHasMore (data.hasMore);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -1280,12 +1273,11 @@ setHasMore (data.hasMore)
 }
 export default AdvancedSearchResults
 '"
-export default AdvancedSearchResults
-export default AdvancedSearchResults
-
+export default AdvancedSearchResults, ;
+export default AdvancedSearchResults;
 =======
     </div>;
   );
 };
 export default AdvancedSearchResults;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

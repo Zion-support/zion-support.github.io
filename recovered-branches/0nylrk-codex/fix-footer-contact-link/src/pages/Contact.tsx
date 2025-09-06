@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import {useState} from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card} from "@/components/ui/card";
+import {toast} from "@/components/ui/use-toast";
+import z from "zod";
+import {ChatAssistant} from "@/components/ChatAssistant";
+import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
+import {AppLayout} from "@/layout/AppLayout";
+=======
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -16,18 +32,23 @@ import { AppLayout } from "@/layout/AppLayout";
 =======
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Contact() {
   const [formData, setFormData] = useState({
-
-    name: ""
-    email: ""
-    subject: ""
-
+    name: "",
+    email: "",
+    subject: "",
+<<<<<<< HEAD
+    message: "";
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+=======
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
@@ -240,8 +261,8 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <Button
-                  type="submit"
+                <Button 
+                  type="submit" 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}
                 >
@@ -614,7 +635,7 @@ export default function Contact() {;
           </div>;
         </div>;
       </main>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant
