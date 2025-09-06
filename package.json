@@ -11,7 +11,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.2",
