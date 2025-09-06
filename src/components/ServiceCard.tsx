@@ -5,7 +5,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
-  features: string[];
+  features?: string[];
   isActive?: boolean;
   onMouseEnter?: () => void;
 
@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
-  features,
+  features = [],
   isActive = false,
   onMouseEnter,
 ) => {

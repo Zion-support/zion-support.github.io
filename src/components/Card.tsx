@@ -1,13 +1,17 @@
 import React from 'react';
 
 interface CardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  title?: string;
+  description?: string;
   className?: string;
   hover?: boolean;
   glass?: boolean;
 
 const Card: React.FC<CardProps> = ({
   children,
+  title,
+  description,
   className = '',
   hover = true,
   glass = true,
@@ -20,6 +24,8 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div className={classes}>
+      {title && <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>}
+      {description && <p className="text-gray-300">{description}</p>}
       {children}
     </div>
   );
