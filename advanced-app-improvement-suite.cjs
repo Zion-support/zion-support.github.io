@@ -21,6 +21,7 @@ class AdvancedAppImprovementSuite {
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
+
   }
 
   log(message) {
@@ -252,6 +253,7 @@ class AdvancedAppImprovementSuite {
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;    }
+
   }
 }
 

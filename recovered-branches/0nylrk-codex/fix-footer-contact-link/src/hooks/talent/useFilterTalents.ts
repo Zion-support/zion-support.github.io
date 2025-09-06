@@ -137,3 +137,4 @@ export function useFilterTalents(talents: TalentProfile[]) {
     toggleRegion;
     clearFilters}
 }
+;

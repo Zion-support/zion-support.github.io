@@ -770,5 +770,5 @@ export default function JSONFormatterPage() {
         </div>
       </section>
     </>
-  );
+);
 }

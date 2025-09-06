@@ -1,30 +1,20 @@
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';import { ProjectCard } from './ProjectCard';
-import { ProjectForm } from './ProjectForm';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
+import { ProjectForm } from './ProjectForm'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
 import { FilePlus, Loader2 } from 'lucide-react'
-import { ProjectCard } from './ProjectCard';
-import { ProjectForm } from './ProjectForm';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
+import { ProjectCard } from './ProjectCard'
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
+  const [showAddProject, setShowAddProject] = useState(false)
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
     null
-  );
-
+  )
   useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
-
+    fetchProjects()
+  }, [fetchProjects])
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
   const [showAddProject, setShowAddProject] = useState(false),
@@ -35,27 +25,24 @@ export function PortfolioBuilder() {
   }, [fetchProjects]),
   
   const handleAddSuccess = () => {
-    setShowAddProject(false);
-    fetchProjects();
-  };
-
+    setShowAddProject(false)
+    fetchProjects()
+  }
   const handleEditSuccess = () => {
-    setEditingProject(null);
-    fetchProjects();
-  };
-
+    setEditingProject(null)
+    fetchProjects()
+  }
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);    if (success) {
-      fetchProjects();
+      fetchProjects()
     }
-  };
-
+  }
   if (isLoading) {
     return (
       <div className='flex justify-center items-center h-64'>
         <Loader2 className='h-8 w-8 animate-spin text-primary' />
       </div>
-    );
+    )
   }
 
   return (
@@ -87,13 +74,13 @@ export function PortfolioBuilder() {
             <ProjectForm              project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null);              }}
+                setShowAddProject(false)
+                setEditingProject(null) }}
             
             <ProjectForm 
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-                setShowAddProject(false);
+                setShowAddProject(false)
                 setEditingProject(null);                setEditingProject(null)
                 setEditingProject(null)
               }}
@@ -161,5 +148,6 @@ export function PortfolioBuilder() {
         )
       )}
     </div>
-  );
+  )
 }
+;

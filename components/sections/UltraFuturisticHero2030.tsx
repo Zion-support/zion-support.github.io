@@ -19,7 +19,7 @@ import {
   Users,
   Clock,
   Phone,
-  Mail,;} from 'lucide-react';import { 
+  Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, 
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
@@ -404,5 +404,5 @@ export default function UltraFuturisticHero2030() {
         />
       </div>
     </section>
-  );  )
+);  )
 }

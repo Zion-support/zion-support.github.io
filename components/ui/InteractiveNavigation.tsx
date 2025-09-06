@@ -46,8 +46,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                 </svg>
               )}
             </Link>
-
-            {/* Submenu */}
+{/* Submenu */}
             {item.submenu && activeItem === item.name && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}

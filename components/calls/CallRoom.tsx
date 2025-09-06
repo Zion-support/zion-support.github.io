@@ -178,5 +178,5 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         ))}
       </div>
     </div>
-  );
+);
 }

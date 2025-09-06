@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
-
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState('ava-chen');
   const [startDateIso, setStartDateIso] = useState<string>(
@@ -164,4 +163,4 @@ export default function ClientHirePage() {
         }}
       />
     </div>
-  );
+);

@@ -67,4 +67,4 @@ export default function EditJobPage() {
         </button>
       </div>
     </div>
-  );
+);

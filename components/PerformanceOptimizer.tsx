@@ -10,7 +10,6 @@ import {
   Database,
   Network,;
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -364,7 +363,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
   const performanceScore = getPerformanceScore();
   const performanceGrade = getPerformanceGrade(performanceScore);
 
-  
     >
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-xl font-bold text-white flex items-center gap-2'>
@@ -545,7 +543,7 @@ addResourceHint(image, 'image');
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
 
-      {/* Preload critical resources */}
+{/* Preload critical resources */}
       {preloadImages.map((image, index) => (;
         <link;
 key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}

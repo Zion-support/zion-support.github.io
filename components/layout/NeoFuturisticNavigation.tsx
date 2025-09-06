@@ -52,7 +52,6 @@ import {
   FlaskConical,
   Link as LinkIcon,;
 import Button from '../ui/Button';
-
 export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -417,7 +416,6 @@ export default function NeoFuturisticNavigation() {
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' },
   ];
 
-  
     >
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>
@@ -905,5 +903,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	);
+);
 }

@@ -12,7 +12,6 @@ import {
 import Layout from '../components/layout/Layout';
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer')
@@ -113,4 +112,4 @@ export default function AILegalContractAnalyzerPage() {
         </div>
       </main>
     </Layout>
-  );
+);

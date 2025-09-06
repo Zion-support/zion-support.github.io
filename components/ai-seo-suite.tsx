@@ -28,7 +28,6 @@ export default function AISeosuitePage() {
   const features = [
     {
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-
 export default function AISeosuitePage() {
   const features = [
     {
@@ -939,5 +938,5 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-  );
+);
 }

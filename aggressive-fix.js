@@ -33,10 +33,7 @@ function fixFile(filePath) {
     // Check if it's a React component file
     if (filePath.endsWith(".jsx") || filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
-<<<<<<< HEAD
-=======
-      if (content.trim() === "" || content.includes("") || content.includes("")) {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);

@@ -6,7 +6,7 @@ import {
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,;
+  History,
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -443,3 +443,4 @@ export default function PointsPage() {
     </div>
   );
 }
+;

@@ -139,3 +139,4 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   )
 }
+;

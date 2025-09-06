@@ -30,7 +30,7 @@ import {
   Leaf,
   Truck,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';import { 
+import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
@@ -672,3 +672,4 @@ export default function InnovativeServicesShowcase2025() {
     </Layout>
   );
 }
+;

@@ -77,3 +77,4 @@ export function addWorkExperienceSection(
   
   return yPos + 5
 }
+;

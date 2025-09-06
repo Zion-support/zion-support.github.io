@@ -117,7 +117,7 @@ class ApiClient {
         ...options,
         signal: controller.signal,
         headers: {
-          ...this.defaultHeaders,
+...this.defaultHeaders,
           ...options.headers,
         },
       });

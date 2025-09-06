@@ -44,5 +44,5 @@ export default async function handler(
     await supabase.from('trust_appeals').insert(appeal)
   } catch {}
 
-  return res.status(200).json({ ok: true, appeal });
+return res.status(200).json({ ok: true, appeal });
 }

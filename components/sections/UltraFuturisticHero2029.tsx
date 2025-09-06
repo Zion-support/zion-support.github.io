@@ -14,7 +14,6 @@ import {
   Globe,
   Sparkles,;
 } from 'lucide-react';
-
 export default function UltraFuturisticHero2029() {
   const features = [
     {

@@ -254,4 +254,4 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
         )}
       </main>
     </>
-  );
+);

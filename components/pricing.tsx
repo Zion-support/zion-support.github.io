@@ -23,7 +23,7 @@ import {
   ExternalLink,;} from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import { 
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
@@ -707,7 +707,7 @@ export default function PricingPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  );
+);
 
 }whileInView= {
   {

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/button';
@@ -10,21 +9,22 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ProductPage() {
 
   const router = useRouter();
-  const { id: rawId } = router.query,
+  const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
     NEW_PRODUCTS.find((p) => p.id === id) || null
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
-  useEffect((,) => {
+  useEffect(() => {
     // Update product if id changes and is available from router.query
     if (id) {
-      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);      setProduct(foundProduct || null)
+      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
+      setProduct(foundProduct || null);
     }
   }, [id]);
 
-  useEffect((,) => {
+  useEffect(() => {
     const fetchProduct = async () => {
       if (!id) return;
       try {
@@ -116,3 +116,4 @@ product.title ;
 }/> </Button> </div> </>) ;
 }';
 }
+;

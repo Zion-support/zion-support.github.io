@@ -11,7 +11,6 @@ import {InterviewCard} from "@/components/interviews/InterviewCard";
 import {Button} from "@/components/ui/button";
 import {Calendar, Clock, Video} from "lucide-react";
 import {format, isAfter, parseISO, startOfDay} from "date-fns";
-
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");

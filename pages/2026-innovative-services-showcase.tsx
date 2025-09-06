@@ -477,4 +477,4 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         </section>
       </div>
     </>
-  );
+);

@@ -22,7 +22,7 @@ import {
   Crown,;} from 'lucide-react';
 
 export default function UltraFuturisticHero2028() {
-  const features = [import { 
+  const features = [import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
@@ -395,5 +395,5 @@ export default function UltraFuturisticHero2028() {
         </motion.div>
       </motion.div>
     </section>
-  );
+);
 }

@@ -9,7 +9,6 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
-
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':

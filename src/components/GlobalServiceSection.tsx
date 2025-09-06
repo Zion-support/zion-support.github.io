@@ -1,13 +1,13 @@
-import { GradientHeading } from './GradientHeading';
+import { GradientHeading } from './GradientHeading'
 import {
   Server,
   HardDrive,
   Network,
   Clock,
   Recycle,
-  Truck,;
-} from 'lucide-react';
-import { Button } from './ui/button';
+  Truck,
+} from 'lucide-react'
+import { Button } from './ui/button'
 const services = [
   {
     title: 'Servers',
@@ -45,8 +45,7 @@ const services = [
       'Flexible rental options for temporary projects and scaling requirements',
     icon: <Truck className='h-10 w-10' />,
   },
-];
-
+]
 export function GlobalServiceSection() {
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>
@@ -95,5 +94,6 @@ export function GlobalServiceSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+;

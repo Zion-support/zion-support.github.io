@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 export type Course = {
   id: string;
   title: string;

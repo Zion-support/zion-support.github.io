@@ -187,8 +187,6 @@ const getServiceFeatures = (service: any) => {
 };  return []
 };
 
-
-
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -1024,7 +1022,7 @@ const getServiceFeatures = (service: any) => {
         </motion.div>
       </div>
     </div>
-  );        </div>
+);        </div>
       </div>
     </div>
   );

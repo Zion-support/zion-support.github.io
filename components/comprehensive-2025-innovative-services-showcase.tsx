@@ -22,7 +22,6 @@ import {
   Users,
   BarChart3,;
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
-
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
     {

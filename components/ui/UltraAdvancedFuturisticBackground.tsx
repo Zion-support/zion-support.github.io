@@ -1,4 +1,4 @@
- let animationFrameId: number;
+let animationFrameId: number;
 let particles: Array< {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);

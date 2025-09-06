@@ -1,4 +1,4 @@
- export type ToastType = 'success' | 'error' | 'info' | 'warning';
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {
@@ -88,7 +88,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
-  
     >
       <div className='flex items-start space-x-3'>
         <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>

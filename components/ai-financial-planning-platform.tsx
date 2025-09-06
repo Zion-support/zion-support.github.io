@@ -16,7 +16,7 @@ import {
   Monitor,
   Award,
   MessageCircle,
-  Calculator,;} from 'lucide-react';import { 
+  Calculator,;} from 'lucide-react';import {
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Calculator
@@ -483,5 +483,5 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-  );
+);
 }

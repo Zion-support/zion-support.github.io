@@ -4,7 +4,6 @@ import * as RechartsPrimitive from "recharts"
 import {useReactId} from "@/hooks/useReactId"
 
 import {cn} from "@/lib/utils"
-
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
@@ -353,3 +352,4 @@ export {
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
+;

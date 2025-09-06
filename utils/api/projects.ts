@@ -6,8 +6,10 @@ import {
   Milestone,
   MilestoneStatus,
   isMilestoneStatus
+
 } from '../types/milestones';
 import { CurrentUser } from './auth';
+
 export interface Milestone {
   id: string;
   title: string;
@@ -58,6 +60,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
+
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   

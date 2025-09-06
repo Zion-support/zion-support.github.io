@@ -122,8 +122,7 @@ export default async function handler(
       referralConversions: 2,
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
-
-    res.status(200).json({
+res.status(200).json({
       totals: {
         totalUsers,
         totalTalents,

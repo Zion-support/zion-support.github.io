@@ -3,22 +3,19 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { ReferralReward } from '@/types/referrals';
-import { formatDate } from '@/utils/referralUtils';
-import { BadgeDollarSign, Badge } from 'lucide-react';
-
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
-import { formatDate } from "@/utils/referralUtils";
+  CardTitle,
+} from '@/components/ui/card'
+import { ReferralReward } from '@/types/referrals'
+import { formatDate } from '@/utils/referralUtils'
 import { BadgeDollarSign, Badge } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
+interface RewardsCardProps {
+  rewards: ReferralReward[]
+  isLoading: boolean
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ReferralReward } from "@/types/referrals"
+import { formatDate } from "@/utils/referralUtils"
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean
@@ -42,7 +39,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    );  }            Your Rewards
+    ) }            Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
@@ -83,7 +80,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    );  }    )
+    ) }    )
   }
 
   return (
@@ -139,5 +136,5 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -25,6 +25,7 @@ export interface Service {
   href: string;
   icon: string;
   color: string;
+
 }
 
 export interface ServiceCategory {
@@ -52,6 +53,7 @@ export interface LoadingState {
   isLoading: boolean;
   error?: string;
   progress?: number;
+
 }
 
 export interface AnimationState {
@@ -77,6 +79,7 @@ export interface ContactForm {
   budget?: string;
   message: string;
   preferredContact: 'email' | 'phone' | 'both';
+
 }
 
 export interface Testimonial {
@@ -89,6 +92,7 @@ export interface Testimonial {
   rating: number;
   avatar?: string;
   image?: string;
+
   project?: string;
 }
 
@@ -107,6 +111,7 @@ export interface BlogPost {
   slug: string;
   featured?: boolean;
   readTime: number;
+
 }
 
 export interface TeamMember {
@@ -117,6 +122,7 @@ export interface TeamMember {
   bio: string;
   image: string;
   skills: string[];
+
   social: {
     linkedin?: string;
     twitter?: string;
@@ -125,12 +131,14 @@ export interface TeamMember {
   linkedin?: string;
   github?: string;
   twitter?: string;
+
 }
 
 export interface Project {
   id: string;
   title: string;
   name: string;
+
   description: string;
   image: string;
   technologies: string[];
@@ -142,44 +150,52 @@ export interface Project {
   startDate: Date;
   endDate: Date;
   budget: {
+
     allocated: number;
     spent: number;
     currency: string;
   };
   team: {
+
     lead: string;
     members: string[];
     external: string[];
   };
   client: {
+
     name: string;
     contact: string;
     industry: string;
   };
   deliverables: {
+
     name: string;
     description: string;
     status: 'pending' | 'in-progress' | 'completed' | 'review';
     dueDate: Date;
   }[];
   risks: {
+
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
     mitigation: string;
   }[];
   dependencies: {
+
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
   metrics: {
+
     name: string;
     value: number;
     unit: string;
     target: number;
   }[];
   lessons: {
+
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
@@ -193,6 +209,7 @@ export interface FAQ {
 }
 
 export interface PricingPlan {
+
   name: string;
   price: number;
   period: string;
@@ -213,6 +230,7 @@ export interface PricingTier {
   popular?: boolean;
   cta: string;
   description: string;
+
 }
 
 export interface NavigationItem {
@@ -230,6 +248,7 @@ export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
   url: string;
   label: string;
+
 }
 
 export interface FooterLink {
@@ -509,6 +528,7 @@ export interface FormField {
   };
 }
 
+
 // Environment
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -624,3 +644,4 @@ export interface SuccessResponse<T> {
 }
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
+

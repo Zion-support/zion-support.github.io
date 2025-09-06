@@ -59,8 +59,8 @@ class ComprehensiveAutomationFixer {
         let content = fs.readFileSync(indexPath, 'utf8');
         
         // Remove merge conflict markers
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?
+        content = content.replace(/
         
         // Ensure proper HTML structure
         if (!content.includes('<!DOCTYPE html>')) {
@@ -95,8 +95,8 @@ class ComprehensiveAutomationFixer {
         let content = fs.readFileSync(mainPath, 'utf8');
         
         // Remove merge conflict markers and fix syntax
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?
+        content = content.replace(/
         content = content.replace(/;\s*;/g, ';');
         content = content.replace(/ReactDOM\.createRoot\([^)]+\)\.render\(;/g, 'ReactDOM.createRoot(document.getElementById(\'root\')!).render(');
         content = content.replace(/import React from 'react',/g, 'import React from \'react\';');

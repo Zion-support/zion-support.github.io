@@ -897,7 +897,7 @@ const Homepage2043: React.FC = () => {
   );
 };
 
-  Math.random () * 100 
+Math.random () * 100 
 }%`;
 top: `$ {
   Math.random () * 100 

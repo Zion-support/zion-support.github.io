@@ -496,6 +496,6 @@ export default function PitchGenerator() {
             )}
           </div>
         </div>
-      </main>
+</main>
     </>
   );

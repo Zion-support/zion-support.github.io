@@ -1,4 +1,4 @@
- html2pdf () .set (opt) .from (element) .save () 
+html2pdf () .set (opt) .from (element) .save () 
 };
 
 export default function PdfExportButton({
@@ -38,5 +38,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria-label="Download as PDF"
       Download as PDF
     </button>
-  );
+);
 }

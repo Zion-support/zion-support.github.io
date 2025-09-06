@@ -166,8 +166,7 @@ const AdminPartnersPage: React.FC = () => {
             )}
           </ul>
         </div>
-
-        {/* Stats Cards */}
+{/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>

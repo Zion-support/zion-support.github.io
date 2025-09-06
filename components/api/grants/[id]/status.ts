@@ -80,7 +80,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;  }    return
   }
 
-  const payload = req.body as StatusUpdatePayload;
+const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);

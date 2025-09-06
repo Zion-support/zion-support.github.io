@@ -21,5 +21,5 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
     await client.query('ROLLBACK');
     throw err;
   } finally {
-    client.release();  }
+client.release();  }
 }

@@ -67,5 +67,5 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         {message}
       </div>
     </div>
-  );
+);
 }

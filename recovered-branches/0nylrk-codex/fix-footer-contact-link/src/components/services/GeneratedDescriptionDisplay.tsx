@@ -1,19 +1,23 @@
-
 import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
-import {Textarea} from "@/components/ui/textarea";
-import {Check, Pencil} from "lucide-react";
-
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
-  description: string,
-  onSave: (editedDescription: string) => void
+  description: string;
+  onSave: (editedDescription: string) => void;
 }
 
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
+export function GeneratedDescriptionDisplay({
+  description,
+  onSave,
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
@@ -24,8 +28,8 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false);
     toast({
       title: "Description Saved",
-      description: "Your edited description has been saved."
-    })
+      description: "Your edited description has been saved.",
+    });
   };
 
   return (
@@ -33,9 +37,9 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -68,7 +72,7 @@ export function GeneratedDescriptionDisplay({
       </CardContent>
       {isEditing && (
         <CardFooter>
-          <Button 
+          <Button
             onClick={handleSave}
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
@@ -77,5 +81,5 @@ export function GeneratedDescriptionDisplay({
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

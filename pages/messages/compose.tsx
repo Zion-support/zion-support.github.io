@@ -1,7 +1,6 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 import {useCurrentUser} from '../../hooks/useCurrentUser';
-
 export default function ComposePage() {
   const router = useRouter();
   const {
@@ -111,4 +110,4 @@ export default function ComposePage() {
         </div>
       </div>
     </div>
-  );
+);

@@ -59,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>
 </rss>`;
 
-  fs.writeFileSync(RSS_PATH, xml, 'utf8');
+fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
 }) .join ('\n');

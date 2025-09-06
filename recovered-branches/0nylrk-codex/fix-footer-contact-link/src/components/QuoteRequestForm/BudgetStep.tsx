@@ -175,4 +175,4 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       </div>
     </div>
   )
-}
+};

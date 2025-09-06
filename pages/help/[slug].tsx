@@ -56,4 +56,4 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
         </div>
       </div>
     </article>
-  );
+);

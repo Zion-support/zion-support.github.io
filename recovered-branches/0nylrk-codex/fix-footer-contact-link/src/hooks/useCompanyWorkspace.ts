@@ -51,3 +51,4 @@ export function useCompanyWorkspace(companySlug?: string) {
 
   return { company, isLoading, error }
 }
+;

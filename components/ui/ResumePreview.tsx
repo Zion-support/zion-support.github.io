@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-
 export type ResumeData = {
   name: string;
   contact?: {
@@ -89,7 +88,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
       Math.max(0, maxPortfolioItems)
     );
 
-    
       >
         <div className='p-8'>
           {/* Header */}

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 export default function OSDeployPage() {
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,9 +15,8 @@ export default function OSDeployPage() {
     }, 3000);
   };
 
-  const loading = false;
-  const message = '';
-  const messageType = 'success';
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
 
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
@@ -27,14 +26,14 @@ export default function OSDeployPage() {
       ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
       governance: 'Governance System',
-      treasury: 'Treasury Management'
+      treasury: 'Treasury Management';
     };
     return labels[key] || key;
   };
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities and automation',
+ai: 'Advanced AI capabilities and automation',
       blockchain: 'Secure blockchain infrastructure',
       governance: 'Decentralized governance mechanisms',
       treasury: 'Automated treasury management'
@@ -63,8 +62,9 @@ export default function OSDeployPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Instance Name *</label>
+                <label htmlFor="instanceName" className="block text-sm font-medium text-white/90">Instance Name *</label>
                 <input
+                  id="instanceName"
                   name="instanceName"
                   type="text"
                   required
@@ -74,8 +74,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Vertical</label>
+                <label htmlFor="vertical" className="block text-sm font-medium text-white/90">Vertical</label>
                 <select
+                  id="vertical"
                   name="vertical"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 >
@@ -90,8 +91,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Domain</label>
+                <label htmlFor="domain" className="block text-sm font-medium text-white/90">Domain</label>
                 <input
+                  id="domain"
                   name="domain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -100,8 +102,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Subdomain</label>
+                <label htmlFor="subdomain" className="block text-sm font-medium text-white/90">Subdomain</label>
                 <input
+                  id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -110,8 +113,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Default Language</label>
+                <label htmlFor="defaultLanguage" className="block text-sm font-medium text-white/90">Default Language</label>
                 <input
+                  id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -119,8 +123,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Region</label>
+                <label htmlFor="region" className="block text-sm font-medium text-white/90">Region</label>
                 <input
+                  id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -139,8 +144,9 @@ export default function OSDeployPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Token System</label>
+                <label htmlFor="tokenSystem" className="block text-sm font-medium text-white/90">Token System</label>
                 <select
+                  id="tokenSystem"
                   name="tokenSystem"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 >
@@ -151,8 +157,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Governance Type</label>
+                <label htmlFor="governanceType" className="block text-sm font-medium text-white/90">Governance Type</label>
                 <select
+                  id="governanceType"
                   name="governanceType"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 >
@@ -164,8 +171,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Country</label>
+                <label htmlFor="country" className="block text-sm font-medium text-white/90">Country</label>
                 <input
+                  id="country"
                   name="country"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -174,8 +182,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>
+                <label htmlFor="paymentGateway" className="block text-sm font-medium text-white/90">Payment Gateway</label>
                 <select
+                  id="paymentGateway"
                   name="paymentGateway"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 >
@@ -200,12 +209,15 @@ export default function OSDeployPage() {
               {FeatureKeys.map((k) => (
                 <label
                   key={k}
+                  htmlFor={`feature-${k}`}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group"
                 >
                   <input
+                    id={`feature-${k}`}
                     type="checkbox"
                     name="features"
                     value={k}
+                    aria-label={labelFor(k)}
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -227,10 +239,12 @@ export default function OSDeployPage() {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
+              <label htmlFor="treasury" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
+                  id="treasury"
                   type="checkbox"
                   name="treasury"
+                  aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
@@ -241,10 +255,12 @@ export default function OSDeployPage() {
                 </div>
               </label>
 
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
+              <label htmlFor="governance" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
+                  id="governance"
                   type="checkbox"
                   name="governance"
+                  aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
@@ -255,10 +271,12 @@ export default function OSDeployPage() {
                 </div>
               </label>
 
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
+              <label htmlFor="moderation" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
+                  id="moderation"
                   type="checkbox"
                   name="moderation"
+                  aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
@@ -269,10 +287,12 @@ export default function OSDeployPage() {
                 </div>
               </label>
 
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
+              <label htmlFor="partnerships" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
+                  id="partnerships"
                   type="checkbox"
                   name="partnerships"
+                  aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>

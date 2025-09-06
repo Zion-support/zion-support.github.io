@@ -53,7 +53,7 @@ import {
   Smartphone,
   BarChart3,
   Eye,
-  Timer,;} from 'lucide-react';import { 
+  Timer,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, 
@@ -791,7 +791,7 @@ export default function UltraFuturisticNavigation2029() {
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
-  );      <div className="h-20" />
+);      <div className="h-20" />
     </>
   );
 }

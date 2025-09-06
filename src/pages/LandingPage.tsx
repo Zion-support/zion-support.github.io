@@ -25,9 +25,8 @@ import {
   MessageSquare,
   Sparkles,
   BarChart3,
-  Smartphone,;
+  Smartphone,
 } from 'lucide-react';
-
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -160,3 +159,4 @@ export default function LandingPage() {
     </div>
   );
 }
+;

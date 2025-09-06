@@ -4,7 +4,6 @@ import Revolutionary2026UltimateNavigation from '../components/layout/Revolution
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import {Phone, Mail} from 'lucide-react';
-
 export default function Revolutionary2026ServicesPage() {
   return (
     <>

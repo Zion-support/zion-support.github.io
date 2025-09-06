@@ -156,3 +156,4 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     </DragDropContext>
   )
 }
+;

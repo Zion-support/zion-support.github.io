@@ -96,4 +96,4 @@ export default function TokenManager() {
       </div>
     </ProtectedRoute>
   )
-}
+};

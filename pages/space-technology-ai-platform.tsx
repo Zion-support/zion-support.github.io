@@ -54,7 +54,6 @@ export default function SpaceTechnologyAIPlatform() {
     'Northrop Grumman',
   ];
 
-  
     >
       <div className='min-h-screen'>
         <Head>
@@ -403,4 +402,4 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);

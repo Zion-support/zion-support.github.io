@@ -89,4 +89,4 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
   return analytics
-}
+};

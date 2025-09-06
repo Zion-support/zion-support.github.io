@@ -1,15 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import React from 'react'
+import Link from 'next/link'
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   logInfo,
-  logErrorToProduction as prodLogError,;
-} from '@/utils/productionLogger';
+  logErrorToProduction as prodLogError,
+} from '@/utils/productionLogger'
 interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string;
-
+  pageName?: string
 function PageErrorFallback({
   error,
   resetErrorBoundary,
@@ -19,16 +18,14 @@ function PageErrorFallback({
     error?.message?.includes('Auth0') ||
     error?.message?.includes('AUTH0') ||
     error?.message?.includes('authentication') ||
-    error?.message?.includes('environment');
-
+    error?.message?.includes('environment')
   const handleRefresh = () => {
     if (resetErrorBoundary) {
-      resetErrorBoundary();
+      resetErrorBoundary()
     } else {
-      window.location.reload();
+      window.location.reload()
     }
-  };
-
+  }
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -137,13 +134,11 @@ function PageErrorFallback({
         </div>
       </div>
     </div>
-  );
-
+  )
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
-  pageName?: string;
-  fallback?: React.ComponentType<FallbackProps>;
-
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
 export default function PageErrorBoundary({
   children,
   pageName,
@@ -153,8 +148,7 @@ export default function PageErrorBoundary({
     prodLogError(
       `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,
       error
-    );
-
+    )
     logErrorToProduction(
       error instanceof Error ? error.message : String(error),
       error instanceof Error ? error : undefined,
@@ -164,22 +158,20 @@ export default function PageErrorBoundary({
         errorBoundary: 'PageErrorBoundary',
         timestamp: new Date().toISOString(),
       }
-    );
-  };
-
+    )
+  }
   const FallbackComponent =
     fallback ||
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
-    ));
-
-  
+    ))
       onReset={() => {        // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
       }}
     >
       {children}
     </ErrorBoundary>
-  );
+  )
 } 
 } 
+}

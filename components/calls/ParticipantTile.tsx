@@ -5,7 +5,6 @@ import type {
   TrackPublication,
   Track,;
 } from 'livekit-client';
-
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
@@ -97,5 +96,5 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  );
+);
 }

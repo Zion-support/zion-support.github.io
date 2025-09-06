@@ -1,5 +1,4 @@
 import { Project } from '@/types/projects';
-
   {
     id: 'project-1',
     client_id: 'client-1',

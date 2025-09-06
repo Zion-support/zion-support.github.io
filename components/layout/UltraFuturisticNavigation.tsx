@@ -14,7 +14,6 @@ import {
   Atom,
   Shield,;
 } from 'lucide-react';
-
 interface UltraFuturisticNavigationProps {
   className?: string;
 
@@ -101,7 +100,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
-  
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
@@ -418,5 +416,5 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
-  );
+);
 }

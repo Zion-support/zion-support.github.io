@@ -1,4 +1,4 @@
- {
+{
   /* Robots Meta */ 
 }{
   noindex && <meta name="robots" content="noindex" /> 
@@ -55,7 +55,7 @@
 }{
   /* Structured Data */ 
 }<script 
-}] 
+}]
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',

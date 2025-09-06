@@ -10,7 +10,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-
 interface BasicInfoFieldsProps {
   control: Control<any>;
 }

@@ -17,7 +17,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,;
+  DialogTitle,
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
@@ -483,7 +483,7 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  );
+);
 
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;

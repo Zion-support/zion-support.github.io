@@ -22,13 +22,9 @@ export default function Training() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
 };
   )
-=======
-}  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 };
 
 export default Training;

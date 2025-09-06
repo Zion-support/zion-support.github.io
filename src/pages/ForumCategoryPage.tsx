@@ -1,37 +1,35 @@
-import { logInfo } from '@/utils/productionLogger';
+import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
+    description: "Tips, strategies, and questions about getting hired on the platform."
     adminOnly: false,
     icon: "Briefcase"
-  };
+  }
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
-  };
+  }
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
+    description: "Discuss AI tools, frameworks, and best practices."
     adminOnly: false,
     icon: "Code"
-  };
+  }
   "feedback": {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
-  };
+  }
   "announcements": {
     id: "announcements",
     name: "Announcements",
@@ -39,38 +37,34 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-};
-
+}
 const iconMap = {
-  "Briefcase": Briefcase;
-  "MessageSquare": MessageSquare;
-  "Code": Code;
-  "FileText": FileText;
+  "Briefcase": Briefcase
+  "MessageSquare": MessageSquare
+  "Code": Code
+  "FileText": FileText
   "Megaphone": Megaphone
-};
-
+}
 function CategoryContent({
-  categoryId;
-  category;
-  IconComponent;
+  categoryId
+  category
+  IconComponent
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
   user: any
 }) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const { featuredPosts, recentPosts } = useCommunity();
-
+  const [searchQuery, setSearchQuery] = useState("")
+  const { featuredPosts, recentPosts } = useCommunity()
   // Filter posts by category from context data
   const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId);
+    ...featuredPosts.filter(post => post.categoryId === categoryId)
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self,) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
-  );
-
+  )
   // Apply search filter
   const filteredPosts = searchQuery 
     ? categoryPosts.filter(post => 
@@ -78,12 +72,10 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : categoryPosts;
-
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
-  const { isFollowed, follow, unfollow } = useFollowedCategories();
-  const { toast } = useToast();
-
+    : categoryPosts
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin')
+  const { isFollowed, follow, unfollow } = useFollowedCategories()
+  const { toast } = useToast()
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -94,14 +86,13 @@ function CategoryContent({
     } else {
       follow(categoryId)
     }
-  };
-
+  }
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
-
+  const category = categoryId ? categoriesInfo[categoryId] : null
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
-  );
+  )
 }
+;

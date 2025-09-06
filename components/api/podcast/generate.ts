@@ -154,5 +154,5 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   } catch (error: any) {
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' })
-  };
+};
 }

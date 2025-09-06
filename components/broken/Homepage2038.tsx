@@ -22,7 +22,7 @@ import {
   CheckCircle,
   Sparkles,
   Infinity,
-  Zap as Lightning,;} from 'lucide-react';import { 
+  Zap as Lightning,;} from 'lucide-react';import {
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
@@ -32,7 +32,6 @@ import {
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices

@@ -1,5 +1,4 @@
-};
-
+}
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string,) => void,
@@ -13,14 +12,14 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
+  searchQuery
+  setSearchQuery
+  statusFilter
+  setStatusFilter
+  severityFilter
+  setSeverityFilter
+  contentTypeFilter
+  setContentTypeFilter
   resetFilters}) => {  return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
       <div className="relative flex-1">
@@ -77,7 +76,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-};
+}
 '"},
-;
-};
+
+}

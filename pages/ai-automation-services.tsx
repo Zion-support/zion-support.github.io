@@ -534,4 +534,4 @@ export default function AIAutomationServices() {
         </div>
       </section>
     </Layout>
-  );
+);

@@ -51,7 +51,7 @@ import {
   Globe2,
   Bot,
   Crown,
-  Infinity,;} from 'lucide-react';import { 
+  Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, 
   Facebook, Twitter, Linkedin, Instagram, Youtube;
@@ -780,5 +780,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  );
+);
 }

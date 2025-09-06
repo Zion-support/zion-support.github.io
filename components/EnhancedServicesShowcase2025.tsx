@@ -828,7 +828,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  );
+);
 };
 
 export default EnhancedServicesShowcase2025;  )

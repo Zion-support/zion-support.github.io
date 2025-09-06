@@ -1,11 +1,9 @@
 
 
-};
-import React, { useRef } from "react";
+}
+import React, { useRef } from "react"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -14,8 +12,7 @@ const mockScreenshots = [
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
 export const AppScreenshots: React.FC = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scroll = (direction: "left" | "right",) => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300,
@@ -23,8 +20,7 @@ export const AppScreenshots: React.FC = () => {
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth"})
     }
-  };
-
+  }
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -79,7 +75,7 @@ export const AppScreenshots: React.FC = () => {
       </div>
     </section>
   )
-};
+}
 '"},
-;
-};
+
+}

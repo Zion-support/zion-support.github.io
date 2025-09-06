@@ -1,11 +1,11 @@
- const AIConsciousnessEvolutionPlatform: React.FC = () => {
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
   opacity: 0, y: 20 
 }animate= {
   {
-  opacity: 1, y: 0 
+  opacity: 1, y: 0
 
 }transition= {
   {

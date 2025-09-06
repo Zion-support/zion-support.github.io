@@ -157,7 +157,6 @@ function trackEvent(eventName, eventData = {}) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
   entries.forEach (entry => {
   if (entry.isIntersecting) {
-  
 
 }) 
 }//Newsletter subscription submitBtn.disabled = true;
@@ -182,14 +181,12 @@ function trackEvent(eventName, eventData = {}) {
 }//Counter animation //Close modal on overlay click modals.forEach (modal => {
   modal.addEventListener ('click', function (e) {
   if (e.target === this) {
-  
 
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
   if (e.key === 'Escape') {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
-  
 
 }) 
 }//Performance monitoring 

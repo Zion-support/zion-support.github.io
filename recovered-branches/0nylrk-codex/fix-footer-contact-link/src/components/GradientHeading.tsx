@@ -21,3 +21,4 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
     </Tag>
   )
 }
+;

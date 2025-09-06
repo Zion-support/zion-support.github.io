@@ -21,7 +21,7 @@ import {
   CheckCircle,;} from 'lucide-react';
 
 export default function UltraFuturisticHero2027() {
-  const features = [import { 
+  const features = [import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Cpu, Database, Cloud, Lock, ArrowRight, 
   Star, TrendingUp, Users, CheckCircle
