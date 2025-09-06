@@ -4,14 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-"dev": "vite",
+    "dev": "vite",
     "build": "vite build",
-=======
-    "dev": "next dev",
-    "build": "next build",
-    "build:netlify": "node scripts/build-with-error-handling.js",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
