@@ -17,3 +17,5 @@ export const PerformanceMonitor = () => {
 
   return null;
 };
+
+export default PerformanceMonitor;

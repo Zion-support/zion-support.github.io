@@ -4,7 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
@@ -363,19 +362,6 @@
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.25.9"
-=======
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "lucide-react": "^0.542.0",
-    "next": "14.2.32",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
->>>>>>> 6199d33325d356a811744dafd75451003f1abecd
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -384,7 +370,6 @@
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.35.0",
-<<<<<<< HEAD
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -432,11 +417,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-=======
-    "eslint-config-next": "14.2.32",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.0.0"
-  }
->>>>>>> 6199d33325d356a811744dafd75451003f1abecd
 }

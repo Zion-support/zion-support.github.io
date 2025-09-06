@@ -12,7 +12,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
 
 // Service Pages
@@ -45,7 +44,6 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/services" element={<Services />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/pricing" element={<Pricing />} />
                   
                   {/* Service Routes */}
                   <Route path="/services/ai-services" element={<AIServices />} />
