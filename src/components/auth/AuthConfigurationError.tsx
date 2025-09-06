@@ -1,33 +1,28 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import {
   AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,
-  CheckCircle,;
-} from 'lucide-react';import { Button } from '@/components/ui/button';import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+  CheckCircle,
+} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean;
-
+  onRetry?: () => void
+  showSetupButton?: boolean
 export function AuthConfigurationError({
   onRetry,
   showSetupButton = true,
 }: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
-      onRetry();
+      onRetry()
     } else {
-      window.location.reload();    }
-  };
-
+      window.location.reload() }
+  }
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -38,8 +33,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     } else {
       window.location.reload()
     }
-  };
-
+  }
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -331,8 +325,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         </div>
       </div>
     </div>
-  );
-
-export default AuthConfigurationError;}
+  )
+export default AuthConfigurationError }
 
 export default AuthConfigurationError,

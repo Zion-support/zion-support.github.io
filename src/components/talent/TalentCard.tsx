@@ -1,15 +1,16 @@
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';import React from 'react';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { TalentProfile } from "@/types/talent";
-import { RatingStars } from '@/components/RatingStars';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
+
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'; import React from 'react'
+import { useRouter } from 'next/router'
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { FavoriteButton } from "@/components/FavoriteButton"
+import { TalentProfile } from "@/types/talent"
+import { RatingStars } from '@/components/RatingStars'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { useCart } from '@/context/CartContext'
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -42,7 +43,6 @@ const TalentCardComponent = ({
       onRequestHire(talent)
     }
   },
-
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
@@ -169,5 +169,6 @@ const TalentCardComponent = ({
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'

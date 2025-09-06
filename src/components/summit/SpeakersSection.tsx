@@ -1,18 +1,18 @@
-import Image from 'next/image';
-import { Twitter, Linkedin } from 'lucide-react';
+import Image from 'next/image'
+import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+  linkedin?: string
   linkedin?: string
 }
 interface Speaker {
   name: string,
   title: string,
   avatar: string,
-  twitter?: string;
+  twitter?: string
   linkedin?: string
 }
 
@@ -24,8 +24,7 @@ const speakers: Speaker[] = [
     twitter: '#',
     linkedin: '#',
   },
-];
-
+]
 export function SpeakersSection() {
   return (
     <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
@@ -89,6 +88,6 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 ;

@@ -47,33 +47,12 @@ declare let process: {;
     NODE_ENV: 'development' | 'production' | 'test',;
     PORT?: string;
   }
-<<<<<<< HEAD
 },
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
   export interface BadgeProps {
-<<<<<<< HEAD
-    className?: string,
-    variant?: "default" | "secondary" | "destructive" | "outline",
-    children?: React.ReactNode,
-    key?: string | number
-=======
-    className?: string;
-    variant?: &quot;default&quot; | &quot;secondary&quot; | &quot;destructive&quot; | &quot;outline&quot;;
-    children?: React.ReactNode;
-    key?: string | number;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-},;
-// Badge component type fixes;
-declare module '@/components/ui/badge' {;
-  export interface BadgeProps {;
-    className?: string,;
-    variant?: "default" | "secondary" | "destructive" | "outline",;
-    children?: React.ReactNode,;
-    key?: string | number;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
   }
 ;
   export const Badge: React.FC<BadgeProps>;

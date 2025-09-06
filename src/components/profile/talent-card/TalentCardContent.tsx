@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
-import { MapPin } from 'lucide-react';
-import { TalentCardSkills } from './TalentCardSkills';
-
-import React, { useState } from "react";
-import { MapPin } from 'lucide-react';
-import { TalentCardSkills } from "./TalentCardSkills";
+import React, { useState } from 'react'
+import { MapPin } from 'lucide-react'
+import { TalentCardSkills } from './TalentCardSkills'
+import React, { useState } from "react"
+import { TalentCardSkills } from "./TalentCardSkills"
 interface TalentCardContentProps {
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
-  skills: string[] | undefined;
-
+  summary: string | undefined
+  bio: string
+  timezone: string | undefined
+  skills: string[] | undefined
 export function TalentCardContent({
   summary,
   bio,
   timezone,
   skills,
 }: TalentCardContentProps) {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState(false)
   return (
     <div>
       {/* Location */}
@@ -55,6 +52,5 @@ export function TalentCardContent({
       
       <TalentCardSkills skills={skills} />
     </div>
-  );
+  )
 }
-;

@@ -112,7 +112,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
     },
   };
 
-  
     >
       {/* Background Glow */}
       <div

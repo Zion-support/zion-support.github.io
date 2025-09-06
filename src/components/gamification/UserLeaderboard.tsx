@@ -3,15 +3,14 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Trophy } from 'lucide-react';
+  CardTitle,
+} from '@/components/ui/card'
+import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
-  name: string;
-  points: number;
-
+  name: string
+  points: number
 interface UserLeaderboardProps {
-  entries: LeaderboardEntry[];
+  entries: LeaderboardEntry[]
   entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {
@@ -55,5 +54,5 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

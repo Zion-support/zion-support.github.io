@@ -88,7 +88,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
-  
     >
       <div className='flex items-start space-x-3'>
         <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>

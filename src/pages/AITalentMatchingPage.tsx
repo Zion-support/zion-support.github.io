@@ -1,6 +1,6 @@
-import React from "react";
-import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp, Star } from 'lucide-react';
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
@@ -18,8 +18,7 @@ export default function AITalentMatchingPage() {
       title: "Success Tracking",
       description: "Monitor performance and success rates of placements"
     }
-  ];
-
+  ]
   const features = [
     "Machine learning-based candidate matching",
     "Comprehensive skill assessment tools",
@@ -27,14 +26,12 @@ export default function AITalentMatchingPage() {
     "Automated interview scheduling",
     "Performance analytics dashboard",
     "Custom matching criteria"
-  ];
-
+  ]
   const stats = [
     { label: "Successful Placements", value: "95%" },
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
-  ];
-
+  ]
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -46,5 +43,5 @@ export default function AITalentMatchingPage() {
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />
-);
+  )
 }

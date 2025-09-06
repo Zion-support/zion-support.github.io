@@ -170,3 +170,4 @@ function MapColumn({
     </div>
   );
 }
+

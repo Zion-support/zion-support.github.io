@@ -1,28 +1,26 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
+  CardHeader,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
   ArrowRight,
   Check,
   ExternalLink,
   Slack,
   Briefcase,
-  Users,;
-} from 'lucide-react';
+  Users,
+} from 'lucide-react'
 interface IntegrationCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  status?: 'connected' | 'disconnected' | 'pending';
-  href?: string;
-  onConnect?: () => void;
-
+  title: string
+  description: string
+  icon: React.ReactNode
+  status?: 'connected' | 'disconnected' | 'pending'
+  href?: string
+  onConnect?: () => void
 export function IntegrationCard({
   title,
   description,
@@ -85,17 +83,17 @@ interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
+  status?: "connected" | "disconnected" | "pending"
+  href?: string
   onConnect?: () => void
 }
 
 export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status = "disconnected";
-  href;
+  title
+  description
+  icon
+  status = "disconnected"
+  href
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -140,8 +138,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  );
-
+  )
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>
@@ -168,7 +165,7 @@ export function IntegrationCards() {
         icon={<Users className='h-5 w-5' />}        onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
-  );
+  )
 }        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
@@ -181,5 +178,5 @@ export function IntegrationCards() {
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
     </div>
-  );
+  )
 }

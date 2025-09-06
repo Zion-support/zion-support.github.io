@@ -132,10 +132,6 @@ export default function ServicesIndexPage() {
     return acc
   }, {} as Record<string, Service[]>),
 
-
-
-
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

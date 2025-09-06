@@ -29,7 +29,7 @@ class AggressiveSyntaxFixer {
       const originalContent = content;
 
       // Remove merge conflict markers
-      content = content.replace(/[\s\S]*?
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
       
       // Fix common syntax errors
       content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*$/gm, 'import { $1 } from "$2";');

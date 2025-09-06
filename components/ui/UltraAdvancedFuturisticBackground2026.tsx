@@ -532,7 +532,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     enableMultidimensional,
   ]);
 
-  
     >
       <canvas
         ref={canvasRef}

@@ -1,18 +1,18 @@
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
-import { TalentProfile } from '@/types/talent';
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { TalentProfile } from '@/types/talent'
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean;
+  talent: TalentProfile
+  onViewProfile: (id: string) => void
+  onRequestHire: (talent: TalentProfile) => void
+  isSaved: boolean
+  onToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -30,38 +30,32 @@ export function TalentCard({
   onToggleSave,
   isAuthenticated,
 }: TalentCardProps) {
-  const [avatarError, setAvatarError] = useState(false);
-
+  const [avatarError, setAvatarError] = useState(false)
   const handleViewProfile = () => {
     if (onViewProfile) {
-      onViewProfile(talent.id);    }      onViewProfile(talent.id)
+      onViewProfile(talent.id) }      onViewProfile(talent.id)
     }
-  };
-
+  }
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(talent);    }
+      onRequestHire(talent) }
       onRequestHire(talent)
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  };
-
+  }
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     e.stopPropagation(),
     if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved);
+      onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
     }
-  };
-
-  const skills = talent.skills?.slice(0, 5) || [];
-  const talentNameInitial = talent.full_name?.charAt(0) || 'T';
-
-  
+  }
+  const skills = talent.skills?.slice(0, 5) || []
+  const talentNameInitial = talent.full_name?.charAt(0) || 'T'
     >
       <div className='p-6'>
         <div className='flex items-start'>
@@ -233,6 +227,6 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  );
+  )
 }
 ;

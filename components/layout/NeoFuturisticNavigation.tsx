@@ -416,7 +416,6 @@ export default function NeoFuturisticNavigation() {
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' },
   ];
 
-  
     >
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>

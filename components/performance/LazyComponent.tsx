@@ -2,7 +2,6 @@ import React from 'react'
 };
 import React, { Suspense, lazy } from 'react';
 
-
 interface LazyComponentProps {
   component: ComponentType<Record<string, unknown>>;
   fallback?: ReactNode;
@@ -23,7 +22,4 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',;
 },
-
-
-
 

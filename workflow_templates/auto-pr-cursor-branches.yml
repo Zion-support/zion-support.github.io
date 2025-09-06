@@ -2,15 +2,11 @@ name: Auto PR for Cursor Branches
 
 on:
 
-
   push: branches:
       - 'cursor/**'
   workflow_dispatch: {}
 
-
 concurrency:
-
-
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -20,15 +16,12 @@ concurrency:
 
 jobs:
 
-
   open-pr: - name: Checkout
            
           fetch-depth: 0
 
       - name: Create or update PR to main
 
-
-                
           token: "${{ secrets.GITHUB_TOKEN }}"
           base: main"
           branch: "${{ github.ref_name }}""
@@ -43,14 +36,10 @@ jobs:
 
       - name: Add automerge label (ensures label exists)
 
-
-                
           labels: automerge, automated
 
       - name: Enable auto-merge (squash)
 
-
-                
           token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-number: "${{ steps.cpr.outputs.pull-request-number || '' }}"
           merge-method: squash

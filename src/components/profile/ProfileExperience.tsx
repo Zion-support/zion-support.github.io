@@ -1,8 +1,7 @@
-import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
-import { Briefcase } from 'lucide-react';
+import { ProfileExperience as ProfileExperienceType } from '@/types/profile'
+import { Briefcase } from 'lucide-react'
 interface ProfileExperienceProps {
-  experience: ProfileExperienceType[];
-
+  experience: ProfileExperienceType[]
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
@@ -37,5 +36,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         ))}
       </div>
     </div>
-  );
+  )
 }

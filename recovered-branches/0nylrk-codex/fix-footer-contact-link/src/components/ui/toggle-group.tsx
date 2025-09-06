@@ -39,7 +39,6 @@ const ToggleGroupItem = React.forwardRef<
     ToggleGroupContext
   ) as ToggleGroupContextProps;
 
-  
     >
       {children}
     </ToggleGroupPrimitive.Item>

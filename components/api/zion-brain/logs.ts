@@ -32,7 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
-  
 
   return res.status(200).json({
     entries: entries.slice(-200),

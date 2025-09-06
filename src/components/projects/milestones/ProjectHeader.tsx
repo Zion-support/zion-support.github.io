@@ -1,10 +1,9 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import React from 'react'
+import { useRouter } from 'next/router'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
 interface ProjectHeaderProps {
-  title: string;
-
+  title: string
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
 
@@ -24,7 +23,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
-  );
-;
+  )
 }
 ;

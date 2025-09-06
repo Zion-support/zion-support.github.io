@@ -50,6 +50,7 @@ export function useMessageChannelHandler({
         if (onError) {
           onError(error as Error);
         }
+
       }
     },
     [onMessage, onError],

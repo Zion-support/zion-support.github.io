@@ -2,7 +2,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
 let particles: Array< {
-  
 
 const UltraFuturisticBackground2030: React.FC<
   UltraFuturisticBackground2030Props

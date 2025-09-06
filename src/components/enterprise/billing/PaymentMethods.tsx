@@ -1,20 +1,18 @@
-import React from 'react';
+import React from 'react'
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { CreditCard, Plus, Trash } from 'lucide-react';
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+  CardTitle,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { CreditCard, Plus, Trash } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { CreditCard, Plus, Trash } from 'lucide-react';
+import React from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
@@ -35,7 +33,7 @@ export function PaymentMethods() {
       expYear: 2026,
       isDefault: false,
     },
-  ];
+  ]
   return (
     <Card>
       <CardHeader>
@@ -106,6 +104,6 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  );
+  )
 }
 ;

@@ -363,7 +363,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
   const performanceScore = getPerformanceScore();
   const performanceGrade = getPerformanceGrade(performanceScore);
 
-  
     >
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-xl font-bold text-white flex items-center gap-2'>

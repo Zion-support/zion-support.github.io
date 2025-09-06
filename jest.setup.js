@@ -38,6 +38,7 @@ jest.mock("next/link", () => {
   };
 });
 
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -47,6 +48,7 @@ Object.defineProperty(window, 'matchMedia', {
     onchange: null,
     addListener: jest.fn(),
     removeListener: jest.fn(),
+
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -73,3 +75,4 @@ global.ResizeObserver = class ResizeObserver {
 beforeEach(() => {
   jest.clearAllMocks();
 });
+
