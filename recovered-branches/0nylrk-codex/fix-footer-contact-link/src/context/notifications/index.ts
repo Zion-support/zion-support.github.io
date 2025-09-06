@@ -1,14 +1,21 @@
+
+=======
 // Index utility
 export const Index = () => {
   // Implementation here
   return null;
 };
 
-<<<<<<< HEAD
-export * from './types';
-export * from './NotificationContext';
+
+export * from './types',;
+export * from './NotificationContext',;
+=======
 =======
 export * from './types',;
 export * from './NotificationContext',;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export * from './useNotificationOperations';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

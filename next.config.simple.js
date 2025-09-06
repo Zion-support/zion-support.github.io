@@ -1,5 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+=======
+
+
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -24,6 +28,7 @@ const nextConfig = {
 <<<<<<< HEAD
   // Output configuration
   output: 'standalone',
+
   // Trailing slash
   trailingSlash: false,
   // Base path
@@ -53,9 +58,5 @@ const nextConfig = {
   // Dist directory
   distDir: ".next",
 };
-<<<<<<< HEAD
 
-module.exports = nextConfig;
-=======
-module.exports = nextConfig;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+

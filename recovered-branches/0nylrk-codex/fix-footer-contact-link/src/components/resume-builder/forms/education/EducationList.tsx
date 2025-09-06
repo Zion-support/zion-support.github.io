@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
+
+
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
+
+
 interface EducationListProps {
-  educationEntries: Education[],
-  onEdit: (education: Education) => void,
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+
 =======
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
@@ -34,6 +38,10 @@ export function EducationList({
     return null;
   }
 
+
+
+
+
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -49,3 +57,5 @@ export function EducationList({
   );
 }
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

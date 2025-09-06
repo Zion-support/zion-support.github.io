@@ -1,4 +1,21 @@
-<<<<<<< HEAD
+
+
+
+      <main>;
+        <h1>CloudArchitectureChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+}
+export default CloudArchitectureChat;
+
+
+=======
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -7,28 +24,39 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const CloudArchitectureChat: NextPage = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>CloudArchitectureChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="CloudArchitectureChat blog post"
-        />{" "}
-      </Head>
-      <main>
-        <h1>CloudArchitectureChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  );
-};
 
-export default CloudArchitectureChat;
-=======
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
+const CloudArchitectureChat: NextPage = () => {
+  return (
+    <div>;
+      <Head>;
+        <title > CloudArchitectureChat - Zion Tech Solutions</title>;
+        <meta;
+          name="description";
+          content="CloudArchitectureChat blog post";
+        />{" "}
+      </Head>;
+      <main>;
+        <h1 > CloudArchitectureChat</h1>;
+        <p > Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>);
+}
+;
+export default CloudArchitectureChat;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

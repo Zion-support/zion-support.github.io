@@ -1,39 +1,44 @@
 import { useEffect, useCallback } from "react";
 
-// Define MessageEvent if not available
+// Define MessageEvent type if not available
+
+=======
+import { useEffect, useCallback  } from './react';
+;
+// Define MessageEvent if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Event {
   type: string;
   target: EventTarget | null;
 }
-
 type EventListener = (event: Event) => void;
 
+;
+
 interface EventTarget {
-  addEventListener(type: string, listener: EventListener): void;
-  removeEventListener(type: string, listener: EventListener): void;
+  addEventListener (type: string, listener: EventListener): void;
+  removeEventListener (type: string, listener: EventListener): void;
 }
-
 interface MessageEventSource {
-  postMessage(message: any, targetOrigin: string): void;
+  post_message (message: any, target_origin: string): void;
 }
-
 interface MessagePort {
-  postMessage(message: any): void;
-  start(): void;
-  close(): void;
+  post_message (message: any): void;
+  start (): void;
+  close (): void;
 }
 
-interface MessageEvent<T = any> extends Event {
+interface MessageEvent < T = any> extends Event {
+
   data: T;
   origin: string;
   lastEventId: string;
   source: MessageEventSource | null;
-  ports: ReadonlyArray<MessagePort>;
+  ports: ReadonlyArray < MessagePort>;
 }
-
 interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void;
-  onError?: (error: Error) => void;
+  on_message?: (message: unknown) => void;
+  on_error?: (error: Error) => void;
 }
 
 export function useMessageChannelHandler({
@@ -67,5 +72,6 @@ export function useMessageChannelHandler({
     return () => {
       window.removeEventListener("message", handleMessage);
     };
+
   }, [handleMessage]);
 }

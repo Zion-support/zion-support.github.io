@@ -75,6 +75,8 @@ export function ProjectDetailsStep({
       </div>
 <<<<<<< HEAD
       <div>
+
+
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
 =======
 
@@ -92,7 +94,9 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
-<<<<<<< HEAD
+
+
+
 =======
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -139,7 +143,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
               value={formData.contactInfo.name}
               onChange={(e) =>
                 updateFormData({
@@ -187,6 +193,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="email"
               type="email"
               placeholder="Your email address"
+
               value={formData.contactInfo.email}
               onChange={(e) =>
                 updateFormData({
@@ -230,6 +237,53 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
 <<<<<<< HEAD
 =======
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
+=======
+import { QuoteFormData  } from '@/types / quotes';
+import { Input  } from '@/components / ui / input';
+import { Label  } from '@/components / ui / label';
+import { Textarea  } from '@/components / ui / textarea';
+interface ProjectDetailsStepProps {
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+}
+export /**
+ * ProjectDetailsStep - Function description
+ */
+function ProjectDetailsStep() {
+  return (
+    <div className="space - y-6">;
+      <div>;
+        <h3 className="text - xl font - semibold text - white mb - 4">;
+          Tell us about your project;
+        </h3>;
+        <div className="space - y-4">;
+          <div>;
+            <Label html_for="project_name" className="text - zion - slate - light">;
+              Project Name;
+            </Label>;
+            <Input;
+              id="project_name";
+              placeholder="Enter a name for your project";
+              value={form_data.project_name}
+              on_change={(e) => updateFormData ({ project_name: e.target.value })}
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+          </div>;
+          <div>;
+            <Label;
+              html_for="project_description";
+              className="text - zion - slate - light";
+            >;
+              Project Description;
+            </Label>;
+            <Textarea;
+              id="project_description";
+              placeholder="Describe your project in detail...";
+              value={form_data.project_description}
+              on_change={(e) =>;
+                updateFormData ({ project_description: e.target.value });
+              }
+              className="min - h-32 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
             />;
           </div>;
         </div>;
@@ -241,4 +295,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
   );
 >>>>>>> main
 }
-;
+
+=======
+
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

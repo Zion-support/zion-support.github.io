@@ -45,11 +45,12 @@ interface BudgetFieldsProps {;
 >>>>>>> main
 }
 
-export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <>
+    <>;
       <FormField
-        control={form.control}
+        control={form && form.control}
         name="budgetMin"
         render={({ field }) => (
           <FormItem>
@@ -73,7 +74,8 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
 
       <FormField
         control={form.control}
-        name="budgetMax"
+        name="budget_min";
+
         render={({ field }) => (
           <FormItem>
             <FormLabel className="text-white">Budget (Max)</FormLabel>
@@ -97,3 +99,5 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   );
 }
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

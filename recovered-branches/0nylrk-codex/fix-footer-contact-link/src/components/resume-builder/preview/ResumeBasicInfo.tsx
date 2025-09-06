@@ -1,11 +1,12 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-import {ResumeBasicInfo} from '@/types/resume';
+import { ResumeBasicInfo  } from '@/types / resume';
+
 interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
-=======
-import { ResumeBasicInfo } from '@/types/resume';
+  basic_info: ResumeBasicInfo;
+}
+
+import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -29,3 +30,5 @@ export function ResumeBasicInfoSection({
   );
 }
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

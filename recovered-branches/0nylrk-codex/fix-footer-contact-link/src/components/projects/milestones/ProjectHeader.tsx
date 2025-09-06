@@ -19,10 +19,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 <<<<<<< HEAD
 =======
-import React from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { Button } from '@/components/ui/button',;
-import { ArrowLeft } from 'lucide-react',;
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
 }
@@ -42,6 +41,13 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           size="sm"
           className="mr-2"
           onClick={() => navigate(-1)}
+
+        </h1>;
+      </div>;
+    </div>);
+}
+
+=======
         >
           <ArrowLeft className="h-4 w-4 mr-1" />
           Back
@@ -53,3 +59,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
     </div>
   );
 }
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

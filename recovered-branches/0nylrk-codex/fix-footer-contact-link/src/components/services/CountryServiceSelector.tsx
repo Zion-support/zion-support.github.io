@@ -1,10 +1,12 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
+
+
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
 import {ServiceDetails} from "./ServiceDetails";
+
 =======
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
@@ -38,26 +40,8 @@ export function CountryServiceSelector({
         />
 <<<<<<< HEAD
         
-<<<<<<< HEAD
-=======
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
-import { CountrySelector } from "./CountrySelector",;
-import { PaymentSection } from "./PaymentSection",;
-import { ServiceDetails } from "./ServiceDetails",;
-interface CountryServiceSelectorProps {;
-  onCountryChange?: (country: CountryPricing | null) => void;
-  selectedCountry?: CountryPricing | null;
-}
-;
-export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {;
-  return (;
-    <div className="space-y-6">;
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
-        <CountrySelector;
-          onCountryChange={onCountryChange || (() => {})} ;
-          selectedCountry={initialCountry || null} ;
-        />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 =======
@@ -71,3 +55,5 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
   );
 }
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

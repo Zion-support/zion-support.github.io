@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
+
+import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
     {
@@ -13,21 +13,21 @@ const Services: React.FC = () => {
     {
       title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
+      features: ["AWS / Azure / GCP", "DevOps", "Microservices", "Auto-scaling"],
       icon: "☁️",
       color: "from-green-500 to-blue-600"
     },
     {
       title: "Web Development",
       description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
+      features: ["React / Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
       icon: "💻",
       color: "from-purple-500 to-pink-600"
     },
     {
       title: "Mobile Applications",
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
+      features: ["iOS / Android", "React Native", "Flutter", "App Store Optimization"],
       icon: "📱",
       color: "from-orange-500 to-red-600"
     },
@@ -46,7 +46,6 @@ const Services: React.FC = () => {
       color: "from-indigo-500 to-purple-600"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -57,10 +56,29 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
+=======
+const Services: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Comprehensive technology solutions designed to transform your business 
+            and drive innovation across all sectors.
+          </p>
+        </div>
+
+
       </div>
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
@@ -83,8 +101,8 @@ const Services: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
                   >
                     Learn More
@@ -97,6 +115,9 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
+
+
+
       </div>
       {/* Process Section */}
       <div className="py-20 bg-white">
@@ -106,6 +127,9 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+
+
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -134,6 +158,21 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -143,23 +182,51 @@ const Services: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Get Free Consultation
             </Link>
-            <Link 
-              to="/pricing" 
+            <Link
+              to="/pricing"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               View Pricing
             </Link>
+
+
+
           </div>
         </div>
       </div>
     </div>
+=======
+const Services: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-gray-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
+            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
+          </div>;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
+            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
+          </div>;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
+            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-};
 
+};
+;
 export default Services;
+

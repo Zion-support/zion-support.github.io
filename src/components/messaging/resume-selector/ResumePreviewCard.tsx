@@ -1,39 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Download } from 'lucide-react'
-import { Resume } from '@/types/resume'
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Resume } from "@/types/resume"
-interface ResumePreviewCardProps {
-  resume: Resume
-  onDownload: () => void
-  isLoading: boolean
-export function ResumePreviewCard({
-  resume,
-  onDownload,
-  isLoading,
-}: ResumePreviewCardProps) {
-=======
 
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
-import { Resume } from "@/types/resume",
-interface ResumePreviewCardProps {
-  resume: Resume,
-  onDownload: () => void,
-  isLoading: boolean
-}
 
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
@@ -44,20 +10,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
-<<<<<<< HEAD
-          <Button
-            variant='ghost'
-            size='sm'
-            onClick={onDownload}
-            disabled={isLoading}
-            className='h-8 w-8 p-0'          >
-            <Download className='h-4 w-4 text-zion-cyan' />
-            <span className='sr-only'>Download Resume</span>
-          </Button>
-        </div>
-        {resume.basic_info.summary && (
-          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
-=======
+
+
+
           <Button 
             variant="ghost" 
             size="sm" 
@@ -72,6 +27,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
+
 import React from 'react',;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -108,63 +64,115 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>;
         {resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
             {resume.basic_info.summary}
           </p>
         )}
-<<<<<<< HEAD
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {resume.skills && resume.skills.length > 0 && (
-          <div className='flex flex-wrap gap-1 mt-2'>
+          <div className="flex flex-wrap gap-1 mt-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {resume.skills.slice(0, 5).map((skill, index) => (
+=======
+            className='h-8 w-8 p-0'>;
+            <Download className='h-4 w-4 text-zion-cyan' />;
+            <span className='sr-only'>Download Resume</span>;
+          </Button>;
+        </div>;
+
+        {resume && resume.basic_info.summary && (;
+          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>;
+            {resume && resume.basic_info.summary}
+          </p>;
+        )}
+
+        {resume && resume.skills && resume && resume.skills.length > 0 && (;
+          <div className='flex flex-wrap gap-1 mt-2'>;
+            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
               <Badge
                 key={index}
                 variant='outline'
+
+
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs">;
+                +{resume && resume.skills.length - 5} more;
+              </Badge>;
+
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+
+
 =======
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge 
                 key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-<<<<<<< HEAD
-=======
-              >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-<<<<<<< HEAD
-              <Badge
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
-=======
+
               <Badge 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
               >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
-          </div>
-        )}
-<<<<<<< HEAD
-      </CardContent>
+=======
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
+            {resume.skills.slice (0, 5).map ((skill, index) => (
+              <Badge;
+                key = {index, }
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                {skill.name}
+              </Badge>))}
+            {resume.skills.length > 5 && (
+
+
+
+
 =======
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
-};
 }
-<<<<<<< HEAD
+
+  );
 }
+
 =======
+              <Badge;
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs'              >              <Badge;
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs";
+              >;
+                +{resume.skills.length - 5} more;
+              </Badge>)}
+          </div>)}
+      </CardContent>;
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,14 +1,17 @@
+
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
+
+interface ActionButtonsProps {
+  flag_id: string;
+  status: string;
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-<<<<<<< HEAD
-=======
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ActionButtonsProps {
   flagId: string,
   status: string,
@@ -16,40 +19,87 @@ interface ActionButtonsProps {
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
     <div className="flex space-x-2">
+=======
+
+interface ActionButtonsProps {;
+  flagId: string;
+  status: string;
+  onAction: (;
+    flagId: string,;
+    action: "warning" | "suspension" | "ban" | "ignore",;
+  ) => void;
+}
+
+export const ActionButtons: React.FC<ActionButtonsProps> = ({;
+  flagId,;
+  status,;
+  onAction,;
+}) => {;
+  return (
+    <div className="flex space-x-2">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="View Details"
         onClick={() => alert("View details (would open a detailed view)")}
-      >
-        <Eye className="h-4 w-4" />
-      </Button>
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
       <Button
         variant="ghost"
         size="icon"
         title="Send Warning"
+
+
         onClick={() => onAction(flagId, 'warning')}
         disabled={status === 'actioned' || status === 'ignored'}
+
+
       >
         <Info className="h-4 w-4" />
       </Button>
+=======
+        disabled={status === "actioned" || status === "ignored"}
+      >;
+        <Info className="h-4 w-4" />;
+      </Button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
+
+
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
+
+
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
+=======
+        disabled={status === "actioned" || status === "ignored"}
+      >;
+        <AlertTriangle className="h-4 w-4" />;
+      </Button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
+
+        disabled={status === "actioned" || status === "ignored"}
+=======
+
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
+
       >
         <Ban className="h-4 w-4" />
       </Button>
@@ -66,6 +116,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 <<<<<<< HEAD
     </div>;
 );
+
 =======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -111,14 +162,16 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="Ban User";
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
+
       >;
         <Ban className="h-4 w-4" />;
       </Button>;
-      {status === 'pending' && (;
-        <Button;
-          variant="ghost";
-          size="sm";
-          onClick={() => onAction(flagId, 'ignore')}
+      {status === "pending" && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => onAction(flagId, "ignore")}
         >;
           Ignore;
         </Button>;
@@ -131,3 +184,5 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 >>>>>>> main
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

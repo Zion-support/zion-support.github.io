@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
+
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
-interface PreviewResumeProps {
-  resume: Resume,
-  onBack: () => void
+
+
+
+
+
 =======
 import { Resume } from '@/types/resume',;
 import {;
@@ -38,6 +40,8 @@ interface PreviewResumeProps {
 >>>>>>> main
 }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
@@ -57,4 +61,5 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
     </div>
   );
 }
-;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

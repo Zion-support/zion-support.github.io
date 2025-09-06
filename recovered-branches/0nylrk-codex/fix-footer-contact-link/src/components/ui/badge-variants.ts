@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 =======
 import { cva } from "class-variance-authority",

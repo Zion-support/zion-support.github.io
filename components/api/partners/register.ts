@@ -1,47 +1,97 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createPartner } from "../../../utils/api/partnerAuth";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") {;
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
-    const { name, entityType, pointOfContact, useCaseType, brand } =
-      req.body || {};
+      req && req.body || {};
+
     if (
-      !name ||
-      !entityType ||
-      !pointOfContact?.email ||
-      !pointOfContact?.name ||
+      !name |
+      !entityType |
+      !pointOfContact?.email |
+      !pointOfContact?.name |
       !useCaseType
     ) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
     try {
       const { partner, apiKey } = await createPartner({
+        name
+        entityType
+        pointOfContact
+        useCaseType
+        brand
+      });
+      return res && res.status(201).json({
+        partner: {
+
+          id: partner && partner.id,
+          name: partner && partner.name,
+          status: partner && partner.status,
+          entityType: partner && partner.entityType,
+          useCaseType: partner && partner.useCaseType,
+          createdAt: partner && partner.createdAt,
+        },
+        apiKey: apiKey && apiKey.key,
+        dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
+
+      });
+    } catch (e) {
+      return res && res.status(500).json({ error: "Failed to create partner" });
+    }
+
+    return res && res.status(500).json({ error: "Failed to create partner" });
+
+  }
+
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_partner  } from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+    const { name, entity_type, pointOfContact, useCaseType, brand } =;
+      req.body || {}
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    try {
+      const { partner, api_key } = await create_partner ({
         name,
-        entityType,
+        entity_type,
         pointOfContact,
         useCaseType,
         brand,
       });
-      return res.status(201).json({
+      return res.status (201).json ({
         partner: {
           id: partner.id,
           name: partner.name,
           status: partner.status,
-          entityType: partner.entityType,
+          entity_type: partner.entity_type,
           useCaseType: partner.useCaseType,
-          createdAt: partner.createdAt,
+          created_at: partner.created_at,
         },
-        apiKey: apiKey.key,
-        dashboardUrl: `/partners/dashboard?pid=${partner.id}`,
+        api_key: api_key.key,
+        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
       });
     } catch (e) {
-      return res.status(500).json({ error: "Failed to create partner" });
+      return res.status (500).json ({ error: "Failed to create partner" });
     }
-    return res.status(500).json({ error: "Failed to create partner" });
+    return res.status (500).json ({ error: "Failed to create partner" });
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -33,8 +33,11 @@ export default function DesignMapPage(req, res) {
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
+
       const res = await fetch('/api/figma/wireframe-suggest', {;
         method: 'POST';
         headers: { 'Content-Type': 'application/json' };
@@ -73,6 +76,8 @@ export default function DesignMapPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -88,6 +93,8 @@ export default function DesignMapPage(req, res) {
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
+
+
 =======
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
@@ -122,6 +129,7 @@ export default function DesignMapPage(req, res) {
 >>>>>>> main
           </div>
         </div>
+
         <div className="grid md:grid-cols-2 gap-6">
           <MapColumn
             title="Foundations"
@@ -143,6 +151,8 @@ export default function DesignMapPage(req, res) {
             sections={designMap.products.mobile}
           />
         </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -209,20 +219,14 @@ export default function DesignMapPage(req, res) {
 <<<<<<< HEAD
   )
 =======
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            </pre>)}
         </div>;
       </section>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </>);
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
 =======

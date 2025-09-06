@@ -1,22 +1,27 @@
-<<<<<<< HEAD
+
+
+
+
 export const advancedITInfrastructureExpansion2025V2 = [
   {
+
+
     name: 'Autonomous DevOps Platform',
-    description: 'Self-managing DevOps automation platform',
+    description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
-    pricing: '$399/month',
+    pricing: '$399 / month',
       'Automated deployment',
-      'Self-healing infrastructure',
+      'Self - healing infrastructure',
       'Performance optimization',
       'Cost management',
     ],
   },
   {
     name: 'Autonomous IT Operations',
-    description: 'AI-powered IT operations automation',
+    description: 'AI - powered IT operations automation',
     category: 'Cloud & FinOps',
-    pricing: '$499/month',
-    features: [
+    pricing: '$499 / month',
+    features: [;
       'Incident automation',
       'Predictive maintenance',
       'Resource optimization',
@@ -25,10 +30,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Autonomous Vehicle AI',
-    description: 'AI-powered autonomous vehicle systems',
+    description: 'AI - powered autonomous vehicle systems',
     category: 'Transportation',
-    pricing: '$899/month',
-    features: [
+    pricing: '$899 / month',
+    features: [;
       'Vehicle control systems',
       'Safety monitoring',
       'Route optimization',
@@ -37,10 +42,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Blockchain Enterprise Platform',
-    description: 'Enterprise-grade blockchain infrastructure',
+    description: 'Enterprise - grade blockchain infrastructure',
     category: 'Financial Services',
-    pricing: '$649/month',
-    features: [
+    pricing: '$649 / month',
+    features: [;
       'Smart contract management',
       'Consensus mechanisms',
       'Security protocols',
@@ -51,8 +56,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Blockchain Infrastructure',
     description: 'Scalable blockchain infrastructure services',
     category: 'Financial Services',
-    pricing: '$449/month',
-    features: [
+    pricing: '$449 / month',
+    features: [;
       'Node management',
       'Network security',
       'Performance optimization',
@@ -60,11 +65,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-    name: 'Brain-Computer Interface',
-    description: 'Advanced brain-computer interface technology',
+    name: 'Brain - Computer Interface',
+    description: 'Advanced brain - computer interface technology',
     category: 'Healthcare',
-    pricing: '$1299/month',
-    features: [
+    pricing: '$1299 / month',
+    features: [;
       'Neural signal processing',
       'Interface protocols',
       'Safety systems',
@@ -75,8 +80,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Compliance Automation',
     description: 'Automated compliance management platform',
     category: 'Cybersecurity',
-    pricing: '$379/month',
-    features: [
+    pricing: '$379 / month',
+    features: [;
       'Regulatory tracking',
       'Automated reporting',
       'Audit management',
@@ -87,8 +92,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Customer Intelligence Platform',
     description: 'Comprehensive customer intelligence solution',
     category: 'AI & Data',
-    pricing: '$299/month',
-    features: [
+    pricing: '$299 / month',
+    features: [;
       'Customer analytics',
       'Behavior tracking',
       'Segmentation tools',
@@ -99,8 +104,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Data Analytics',
     description: 'Advanced data analytics platform',
     category: 'AI & Data',
-    pricing: '$249/month',
-    features: [
+    pricing: '$249 / month',
+    features: [;
       'Data processing',
       'Visualization tools',
       'Statistical analysis',
@@ -111,9 +116,9 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'DevOps Automation',
     description: 'Comprehensive DevOps automation platform',
     category: 'Cloud & FinOps',
-    pricing: '$329/month',
-    features: [
-      'CI/CD pipelines',
+    pricing: '$329 / month',
+    features: [;
+      'CI / CD pipelines',
       'Infrastructure as code',
       'Automated testing',
       'Deployment management',
@@ -123,8 +128,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Edge Computing',
     description: 'Edge computing infrastructure platform',
     category: 'Cloud & FinOps',
-    pricing: '$279/month',
-    features: [
+    pricing: '$279 / month',
+    features: [;
       'Edge node management',
       'Latency optimization',
       'Resource distribution',
@@ -133,10 +138,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Industrial Automation AI',
-    description: 'AI-powered industrial automation',
+    description: 'AI - powered industrial automation',
     category: 'Manufacturing',
-    pricing: '$599/month',
-    features: [
+    pricing: '$599 / month',
+    features: [;
       'Process automation',
       'Quality control',
       'Predictive maintenance',
@@ -147,8 +152,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Interplanetary Communication',
     description: 'Advanced interplanetary communication systems',
     category: 'Space Technology',
-    pricing: '$1499/month',
-    features: [
+    pricing: '$1499 / month',
+    features: [;
       'Deep space communication',
       'Signal processing',
       'Network management',
@@ -159,8 +164,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'IT Asset Management',
     description: 'Comprehensive IT asset management platform',
     category: 'Cloud & FinOps',
-    pricing: '$199/month',
-    features: [
+    pricing: '$199 / month',
+    features: [;
       'Asset tracking',
       'Lifecycle management',
       'Cost optimization',
@@ -169,10 +174,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Marketing AI Platform',
-    description: 'AI-powered marketing automation platform',
+    description: 'AI - powered marketing automation platform',
     category: 'AI & Data',
-    pricing: '$349/month',
-    features: [
+    pricing: '$349 / month',
+    features: [;
       'Campaign automation',
       'Personalization',
       'Performance tracking',
@@ -183,8 +188,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Metaverse Development Studio Pro',
     description: 'Professional metaverse development platform',
     category: 'Metaverse',
-    pricing: '$799/month',
-    features: [
+    pricing: '$799 / month',
+    features: [;
       '3D modeling tools',
       'Virtual world creation',
       'User interaction systems',
@@ -195,8 +200,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Metaverse Digital Reality Platform',
     description: 'Advanced metaverse platform infrastructure',
     category: 'Metaverse',
-    pricing: '$649/month',
-    features: [
+    pricing: '$649 / month',
+    features: [;
       'Virtual environment hosting',
       'User management',
       'Content creation tools',
@@ -205,10 +210,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Mobile Web Solutions',
-    description: 'Mobile-first web development platform',
+    description: 'Mobile - first web development platform',
     category: 'Developer Tools',
-    pricing: '$179/month',
-    features: [
+    pricing: '$179 / month',
+    features: [;
       'Responsive design',
       'Performance optimization',
       'Mobile analytics',
@@ -216,11 +221,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-    name: 'Multi-Cloud Management',
-    description: 'Unified multi-cloud management platform',
+    name: 'Multi - Cloud Management',
+    description: 'Unified multi - cloud management platform',
     category: 'Cloud & FinOps',
-    pricing: '$429/month',
-    features: [
+    pricing: '$429 / month',
+    features: [;
       'Cloud orchestration',
       'Cost optimization',
       'Security management',
@@ -231,8 +236,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Network Automation',
     description: 'Intelligent network automation platform',
     category: 'Cloud & FinOps',
-    pricing: '$299/month',
-    features: [
+    pricing: '$299 / month',
+    features: [;
       'Network provisioning',
       'Configuration management',
       'Performance optimization',
@@ -241,10 +246,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Neural Finance AI',
-    description: 'AI-powered financial neural networks',
+    description: 'AI - powered financial neural networks',
     category: 'Financial Services',
-    pricing: '$549/month',
-    features: [
+    pricing: '$549 / month',
+    features: [;
       'Neural network training',
       'Financial modeling',
       'Risk assessment',
@@ -253,10 +258,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Orbital Computing',
-    description: 'Space-based computing infrastructure',
+    description: 'Space - based computing infrastructure',
     category: 'Space Technology',
-    pricing: '$1199/month',
-    features: [
+    pricing: '$1199 / month',
+    features: [;
       'Satellite computing',
       'Orbital data processing',
       'Communication systems',
@@ -265,10 +270,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum AI Fusion',
-    description: 'Quantum-AI hybrid computing platform',
+    description: 'Quantum - AI hybrid computing platform',
     category: 'Quantum Computing',
-    pricing: '$899/month',
-    features: [
+    pricing: '$899 / month',
+    features: [;
       'Quantum algorithms',
       'AI integration',
       'Hybrid optimization',
@@ -276,23 +281,23 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-    name: 'Quantum Bio-Computing',
+    name: 'Quantum Bio - Computing',
     description: 'Quantum biological computing systems',
     category: 'Quantum Computing',
-    pricing: '$1099/month',
-    features: [
+    pricing: '$1099 / month',
+    features: [;
       'Biological algorithms',
       'Quantum processing',
-      'Bio-computing integration',
+      'Bio - computing integration',
       'Performance optimization',
     ],
   },
   {
     name: 'Quantum Compliance Automation',
-    description: 'Quantum-powered compliance automation',
+    description: 'Quantum - powered compliance automation',
     category: 'Quantum Computing',
-    pricing: '$649/month',
-    features: [
+    pricing: '$649 / month',
+    features: [;
       'Quantum algorithms',
       'Compliance automation',
       'Risk assessment',
@@ -301,10 +306,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Creativity Studio',
-    description: 'Quantum-powered creative platform',
+    description: 'Quantum - powered creative platform',
     category: 'Quantum Computing',
-    pricing: '$749/month',
-    features: [
+    pricing: '$749 / month',
+    features: [;
       'Quantum algorithms',
       'Creative tools',
       'Performance optimization',
@@ -313,10 +318,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum CRM Suite',
-    description: 'Quantum-powered customer relationship management',
+    description: 'Quantum - powered customer relationship management',
     category: 'Quantum Computing',
-    pricing: '$599/month',
-    features: [
+    pricing: '$599 / month',
+    features: [;
       'Quantum algorithms',
       'CRM functionality',
       'Performance optimization',
@@ -327,8 +332,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Quantum Data Center',
     description: 'Quantum computing data center infrastructure',
     category: 'Quantum Computing',
-    pricing: '$1299/month',
-    features: [
+    pricing: '$1299 / month',
+    features: [;
       'Quantum hardware',
       'Cooling systems',
       'Security protocols',
@@ -337,10 +342,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Encryption Gateway',
-    description: 'Quantum-powered encryption gateway',
+    description: 'Quantum - powered encryption gateway',
     category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
+    pricing: '$799 / month',
+    features: [;
       'Quantum encryption',
       'Security protocols',
       'Performance optimization',
@@ -349,10 +354,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Energy Optimization',
-    description: 'Quantum-powered energy optimization',
+    description: 'Quantum - powered energy optimization',
     category: 'Energy',
-    pricing: '$699/month',
-    features: [
+    pricing: '$699 / month',
+    features: [;
       'Quantum algorithms',
       'Energy modeling',
       'Optimization tools',
@@ -361,10 +366,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Financial Intelligence',
-    description: 'Quantum-powered financial intelligence',
+    description: 'Quantum - powered financial intelligence',
     category: 'Quantum Computing',
-    pricing: '$849/month',
-    features: [
+    pricing: '$849 / month',
+    features: [;
       'Quantum algorithms',
       'Financial modeling',
       'Risk assessment',
@@ -373,10 +378,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Identity Verification',
-    description: 'Quantum-powered identity verification',
+    description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
-    pricing: '$599/month',
-    features: [
+    pricing: '$599 / month',
+    features: [;
       'Quantum algorithms',
       'Identity verification',
       'Security protocols',
@@ -385,10 +390,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Internet Security',
-    description: 'Quantum-powered internet security',
+    description: 'Quantum - powered internet security',
     category: 'Quantum Computing',
-    pricing: '$749/month',
-    features: [
+    pricing: '$749 / month',
+    features: [;
       'Quantum algorithms',
       'Security protocols',
       'Threat detection',
@@ -399,8 +404,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Quantum Internet Security Gateway',
     description: 'Advanced quantum internet security gateway',
     category: 'Quantum Computing',
-    pricing: '$899/month',
-    features: [
+    pricing: '$899 / month',
+    features: [;
       'Quantum algorithms',
       'Gateway security',
       'Performance optimization',
@@ -409,10 +414,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Learning Accelerator',
-    description: 'Quantum-powered learning acceleration',
+    description: 'Quantum - powered learning acceleration',
     category: 'Quantum Computing',
-    pricing: '$649/month',
-    features: [
+    pricing: '$649 / month',
+    features: [;
       'Quantum algorithms',
       'Learning optimization',
       'Performance tracking',
@@ -421,10 +426,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Materials Discovery',
-    description: 'Quantum-powered materials discovery',
+    description: 'Quantum - powered materials discovery',
     category: 'Quantum Computing',
-    pricing: '$999/month',
-    features: [
+    pricing: '$999 / month',
+    features: [;
       'Quantum algorithms',
       'Materials modeling',
       'Discovery tools',
@@ -433,10 +438,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Network Security',
-    description: 'Quantum-powered network security',
+    description: 'Quantum - powered network security',
     category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
+    pricing: '$799 / month',
+    features: [;
       'Quantum algorithms',
       'Network security',
       'Threat detection',
@@ -447,8 +452,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Quantum Networking',
     description: 'Quantum networking infrastructure',
     category: 'Quantum Computing',
-    pricing: '$949/month',
-    features: [
+    pricing: '$949 / month',
+    features: [;
       'Quantum protocols',
       'Network management',
       'Performance optimization',
@@ -459,8 +464,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Quantum Neural Ecosystem',
     description: 'Quantum neural network ecosystem',
     category: 'Quantum Computing',
-    pricing: '$1099/month',
-    features: [
+    pricing: '$1099 / month',
+    features: [;
       'Quantum algorithms',
       'Neural networks',
       'Ecosystem management',
@@ -469,10 +474,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Risk Financial Manager',
-    description: 'Quantum-powered financial risk management',
+    description: 'Quantum - powered financial risk management',
     category: 'Quantum Computing',
-    pricing: '$899/month',
-    features: [
+    pricing: '$899 / month',
+    features: [;
       'Quantum algorithms',
       'Risk assessment',
       'Financial modeling',
@@ -481,10 +486,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Storage Solutions',
-    description: 'Quantum-powered storage solutions',
+    description: 'Quantum - powered storage solutions',
     category: 'Quantum Computing',
-    pricing: '$799/month',
-    features: [
+    pricing: '$799 / month',
+    features: [;
       'Quantum storage',
       'Data management',
       'Performance optimization',
@@ -493,10 +498,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Supply Chain Optimizer',
-    description: 'Quantum-powered supply chain optimization',
+    description: 'Quantum - powered supply chain optimization',
     category: 'Supply Chain',
-    pricing: '$699/month',
-    features: [
+    pricing: '$699 / month',
+    features: [;
       'Quantum algorithms',
       'Supply chain modeling',
       'Optimization tools',
@@ -505,10 +510,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Threat Detection',
-    description: 'Quantum-powered threat detection',
+    description: 'Quantum - powered threat detection',
     category: 'Quantum Computing',
-    pricing: '$849/month',
-    features: [
+    pricing: '$849 / month',
+    features: [;
       'Quantum algorithms',
       'Threat detection',
       'Security protocols',
@@ -517,10 +522,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Quantum Workload Orchestration',
-    description: 'Quantum-powered workload orchestration',
+    description: 'Quantum - powered workload orchestration',
     category: 'Quantum Computing',
-    pricing: '$749/month',
-    features: [
+    pricing: '$749 / month',
+    features: [;
       'Quantum algorithms',
       'Workload management',
       'Performance optimization',
@@ -531,8 +536,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Satellite Technology',
     description: 'Advanced satellite technology platform',
     category: 'Space Technology',
-    pricing: '$999/month',
-    features: [
+    pricing: '$999 / month',
+    features: [;
       'Satellite design',
       'Communication systems',
       'Performance monitoring',
@@ -543,8 +548,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Space Colonization Services',
     description: 'Space colonization planning and infrastructure',
     category: 'Space Technology',
-    pricing: '$1499/month',
-    features: [
+    pricing: '$1499 / month',
+    features: [;
       'Colonization planning',
       'Infrastructure design',
       'Resource management',
@@ -553,10 +558,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Space Cybersecurity',
-    description: 'Space-specific cybersecurity solutions',
+    description: 'Space - specific cybersecurity solutions',
     category: 'Space Technology',
-    pricing: '$799/month',
-    features: [
+    pricing: '$799 / month',
+    features: [;
       'Space security protocols',
       'Threat detection',
       'Incident response',
@@ -567,8 +572,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Space Data Analytics',
     description: 'Advanced space data analytics platform',
     category: 'Space Technology',
-    pricing: '$649/month',
-    features: [
+    pricing: '$649 / month',
+    features: [;
       'Data processing',
       'Analytics tools',
       'Visualization',
@@ -579,8 +584,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Space Mining Automation Platform',
     description: 'Automated space mining platform',
     category: 'Space Technology',
-    pricing: '$1199/month',
-    features: [
+    pricing: '$1199 / month',
+    features: [;
       'Mining automation',
       'Resource extraction',
       'Safety systems',
@@ -591,8 +596,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     name: 'Space Mining Platform',
     description: 'Comprehensive space mining platform',
     category: 'Space Technology',
-    pricing: '$999/month',
-    features: [
+    pricing: '$999 / month',
+    features: [;
       'Mining operations',
       'Resource management',
       'Safety protocols',
@@ -601,10 +606,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },
   {
     name: 'Space Resource Intelligence',
-    description: 'AI-powered space resource intelligence',
+    description: 'AI - powered space resource intelligence',
     category: 'Space Technology',
-    pricing: '$749/month',
-    features: [
+    pricing: '$749 / month',
+    features: [;
       'Resource mapping',
       'Intelligence analysis',
       'Planning tools',
@@ -612,30 +617,30 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-    name: 'Zero-Trust Security',
-    description: 'Comprehensive zero-trust security platform',
+    name: 'Zero - Trust Security',
+    description: 'Comprehensive zero - trust security platform',
     category: 'Cybersecurity',
-    pricing: '$599/month',
-    features: [
+    pricing: '$599 / month',
+    features: [;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
+
   },;
+
+
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
 =======
-export const advancedITInfrastructureExpansion2025V2 = [;
-  {;
-    name: 'Autonomous DevOps Platform',;
-    description: 'Self-managing DevOps automation platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$399/month',;
-    features: [;
-      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
+];      'Identity verification_access control_threat detection_performance monitoring';
     ];
+
   },;
   {;
     name: 'Autonomous IT Operations',;
@@ -1095,6 +1100,11 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

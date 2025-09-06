@@ -1,26 +1,32 @@
-<<<<<<< HEAD
+
+
 
 
     let filteredTalents = allTalents
     }
 }
 ;
+
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { TalentProfile } from '@/types/talent',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
+import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
+import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { TalentProfile  } from '@/types/talent';
+import { SkeletonCard  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+
+
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -435,6 +441,8 @@ export default function TalentsPage() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
+
+
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -455,6 +463,23 @@ export default function TalentsPage() {;
       </div>
     )
   }
+
+
+
+    }
+}
+
+=======
+
+
+=======
+;
+    let filtered_talents = all_talents;
+    }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
   // Error state
   if (error) {
@@ -604,4 +629,6 @@ export default function TalentsPage() {;
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

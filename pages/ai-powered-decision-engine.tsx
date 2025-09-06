@@ -1,20 +1,9 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
-export default function AiPoweredDecisionEngine() {
-	return (
-		<ServiceLanding
-			title="AI-Powered Decision Engine"
-			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
-			subtitle="Make better decisions, continuously"
-<<<<<<< HEAD
-			pricePerMonthUSD={279}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-			pricePerMonthUSD={279  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -26,33 +15,6 @@ export default function AiPoweredDecisionEngine() {
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
-<<<<<<< HEAD
-			]}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-		/>
-	)
-};
-=======
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

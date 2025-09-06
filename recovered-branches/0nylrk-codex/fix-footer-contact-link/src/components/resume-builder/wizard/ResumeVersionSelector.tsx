@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
+=======
+
+
+
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import {Button} from '@/components/ui/button';
@@ -60,6 +63,7 @@ export function ResumeVersionSelector({
         setSaveDialogOpen(false);
 <<<<<<< HEAD
         setNewResumeTitle('')
+
 =======
 import { useState } from 'react',;
 import {;
@@ -102,11 +106,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       }
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  };
-=======
-  },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex items-center gap-2">
@@ -161,6 +163,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
+
+
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -173,7 +177,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

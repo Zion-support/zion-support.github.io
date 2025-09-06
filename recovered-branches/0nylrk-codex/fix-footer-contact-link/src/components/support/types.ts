@@ -1,6 +1,19 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
+import { ReactNode  } from './react';
+
+export interface HelpArticle {
+  id: string;
+  title: string;
+  content: string;
+
+  last_updated: string;
+  tags: string[];
+
+}
+export interface HelpCategory {
+=======
+
 import {ReactNode} from "react";
 export interface HelpArticle {;
 =======
@@ -15,6 +28,8 @@ export interface HelpArticle {
 }
 
 export interface HelpCategory {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   description: string;
@@ -22,16 +37,23 @@ export interface HelpCategory {;
   articles: HelpArticle[];
 }
 
+
+
 export interface SupportTicket {;
+
+
   id: string;
-  userId: string;
+  user_id: string;
   subject: string;
   message: string;
-  status: "open" | "in-progress" | "resolved" | "closed";
+  status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
   createdAt: string;
   updatedAt: string;
 }
+
+=======
+
 =======
 import { ReactNode } from "react",
 export interface HelpArticle {
@@ -78,4 +100,7 @@ export interface SupportTicket {;
   updatedAt: string;
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

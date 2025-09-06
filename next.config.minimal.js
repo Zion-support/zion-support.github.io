@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
@@ -11,9 +12,5 @@ const nextConfig = {
   trailingSlash: false,
   distDir: ".next",
 };
-<<<<<<< HEAD
 
-module.exports = nextConfig;
-=======
-module.exports = nextConfig;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

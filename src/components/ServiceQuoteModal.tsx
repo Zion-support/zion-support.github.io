@@ -1,11 +1,33 @@
-<<<<<<< HEAD
+
+
+=======
+
 ...formData;            startDate: startDate?.toISOString(),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             endDate: endDate?.toISOString()}
         }
       })
+
 }
 }
+
+
+
+=======
+...form_data;            start_date: start_date?.toISOString (),
+            end_date: end_date?.toISOString ()}
+        }
+      });
+}
+}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 ;
+
 =======
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
@@ -485,4 +507,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

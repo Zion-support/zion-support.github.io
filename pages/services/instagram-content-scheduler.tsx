@@ -1,7 +1,5 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import UseTokensButton from '../../components/tokens/UseTokensButton',;
+
+
 const InstagramContentScheduler: NextPage = () => {
   return (
     <div>
@@ -17,10 +15,18 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
-},
-<<<<<<< HEAD
 
-export default InstagramContentScheduler,;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+
+},
 export default InstagramContentScheduler,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+=======
+},
+
+export default InstagramContentScheduler,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

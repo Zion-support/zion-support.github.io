@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 /**
  * Fix syntax errors in test files
  */
@@ -160,3 +161,4 @@ const fixer = new TestSyntaxFixer();
 fixer.run().catch(console.error);
 
 module.exports = TestSyntaxFixer;
+

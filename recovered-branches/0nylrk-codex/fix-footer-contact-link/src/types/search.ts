@@ -1,56 +1,34 @@
 
-export interface SearchSuggestion {;
-<<<<<<< HEAD
-  text: string;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
-  iconUrl?: string
+  icon_url?: string;
 }
-
-export interface SearchHighlight {;
+export interface SearchHighlight {
   before: string;
   match: string,
-  after: string
+  after: string;
 }
-
 export interface FilterOptions {
-  productTypes: {
+  product_types: {
     label: string,
     value: string;
   }[];
   locations: {
     label: string,
-    value: string
+    value: string;
   }[];
-  availabilityOptions: {
+  availability_options: {
     label: string,
-    value: string
+    value: string;
   }[];
-  ratingOptions: number[]
+  rating_options: number[];
+
+}
 =======
-  text: string,;
-  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
-  iconUrl?: string;
+
+
+export interface SearchSuggestion {;
+
 }
 ;
-export interface SearchHighlight {;
-  before: string,;
-  match: string,;
-  after: string;
-}
-;
-export interface FilterOptions {;
-  productTypes: {;
-    label: string,;
-    value: string;
-  }[],;
-  locations: {;
-    label: string,;
-    value: string;
-  }[],;
-  availabilityOptions: {;
-    label: string,;
-    value: string;
-  }[];
-  ratingOptions: number[];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
