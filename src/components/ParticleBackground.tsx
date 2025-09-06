@@ -1,7 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 
-const ParticleBackground: React.FC = () => {
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+}
+
+interface ParticleBackgroundProps {
+  particleCount?: number;
+  className?: string;
+}
+
+const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ 
+  particleCount = 50,
+  className = ''
+}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number>();
+  const particlesRef = useRef<Particle[]>([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -10,45 +29,27 @@ const ParticleBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationId: number;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    const createParticles = () => {
+      particlesRef.current = [];
+      for (let i = 0; i < particleCount; i++) {
+        particlesRef.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.5 + 0.1,
+        });
+      }
+    };
 
-    interface Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-    }
-
-    const particles: Particle[] = [];
-    const particleCount = 50;
-
-    // Create particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.2
-      });
-    }
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((particle) => {
-        // Update position
+    const updateParticles = () => {
+      particlesRef.current.forEach(particle => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -57,15 +58,22 @@ const ParticleBackground: React.FC = () => {
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+      });
+    };
 
-        // Draw particle
+    const drawParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      particlesRef.current.forEach(particle => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
         ctx.fill();
+      });
 
-        // Draw connections
-        particles.forEach((otherParticle) => {
+      // Draw connections between nearby particles
+      particlesRef.current.forEach((particle, i) => {
+        particlesRef.current.slice(i + 1).forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -80,23 +88,36 @@ const ParticleBackground: React.FC = () => {
           }
         });
       });
-
-      animationId = requestAnimationFrame(animate);
     };
 
+    const animate = () => {
+      updateParticles();
+      drawParticles();
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    resizeCanvas();
+    createParticles();
     animate();
 
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createParticles();
+    });
+
     return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [particleCount]);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ background: 'transparent' }}
+      className={`absolute inset-0 pointer-events-none ${className}`}
+      style={{ zIndex: -1 }}
     />
   );
 };

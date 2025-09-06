@@ -1,66 +1,67 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './components/ThemeProvider';
+import ErrorBoundary from './components/ErrorBoundary';
+import ScrollToTop from './components/ScrollToTop';
 
-// ServiceCard component
-const ServiceCard = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md text-center">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Pricing from './pages/Pricing';
+import NotFound from './pages/NotFound';
 
-// Card component
-const Card = ({ title, description }: { title: string; description: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
+// Service Pages
+import AIServices from './pages/AIServices';
+import ITServices from './pages/ITServices';
+import MicroSaaS from './pages/MicroSaaS';
+import Cybersecurity from './pages/Cybersecurity';
+import CloudMigration from './pages/CloudMigration';
+import MobileDevelopment from './pages/MobileDevelopment';
+
+// Additional Pages
+import FAQ from './pages/FAQ';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Support from './pages/Support';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Leading the future of technology with innovative solutions and cutting-edge expertise.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ServiceCard
-            title="AI Services"
-            description="Transform your business with cutting-edge AI solutions."
-            icon="✨"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions."
-            icon="🔒"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions."
-            icon="☁️"
-          />
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card title="Innovation" description="Pioneering the next generation of technology." />
-            <Card title="Expertise" description="Team of industry-leading professionals." />
-            <Card title="Reliability" description="Trusted solutions for critical operations." />
-            <Card title="Scalability" description="Solutions designed to grow with you." />
-            <Card title="Security" description="Robust protection for all your data." />
-            <Card title="Support" description="24/7 dedicated customer assistance." />
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen bg-background text-foreground">
+            <Routes>
+              {/* Main Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/pricing" element={<Pricing />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai-services" element={<AIServices />} />
+              <Route path="/services/it-services" element={<ITServices />} />
+              <Route path="/services/micro-saas" element={<MicroSaaS />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/services/cloud-solutions" element={<CloudMigration />} />
+              <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+              
+              {/* Additional Routes */}
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/support" element={<Support />} />
+              
+              {/* 404 Route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </div>
-        </div>
-      </div>
-    </div>
+        </Router>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

@@ -1,170 +1,207 @@
-import React from "react";
-
-// ServiceCard component
-const ServiceCard = ({ 
-  href, 
-  title, 
-  description, 
-  bullets, 
-  icon 
-}: { 
-  href: string; 
-  title: string; 
-  description: string; 
-  bullets: string[]; 
-  icon: string; 
-}) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <ul className="space-y-2 mb-4">
-      {bullets.map((bullet, index) => (
-        <li key={index} className="flex items-center text-sm text-gray-600">
-          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-          {bullet}
-        </li>
-      ))}
-    </ul>
-    <a 
-      href={href}
-      className="text-blue-600 hover:text-blue-800 font-medium"
-    >
-      Learn More →
-    </a>
-  </div>
-);
-
-// CTA component
-const CTA = () => (
-  <div className="bg-blue-600 text-white p-8 rounded-lg text-center">
-    <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-    <p className="text-xl mb-6">Let's discuss how our AI-powered solutions can drive your success.</p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <a 
-        href="/contact"
-        className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-      >
-        Get Started
-      </a>
-      <a 
-        href="/contact"
-        className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-      >
-        Schedule Consultation
-      </a>
-    </div>
-  </div>
-);
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Code, Database, Smartphone, Shield, Cloud, Globe } from 'lucide-react';
+import { Card } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const Services: React.FC = () => {
+  const services = [
+    {
+      icon: <Code className="w-12 h-12" />,
+      title: 'AI Services',
+      description: 'Custom AI solutions powered by machine learning and deep learning technologies',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Chatbots',
+        'Process Automation'
+      ],
+      href: '/services/ai-services'
+    },
+    {
+      icon: <Database className="w-12 h-12" />,
+      title: 'IT Services',
+      description: 'Comprehensive IT infrastructure and digital transformation solutions',
+      features: [
+        'System Architecture',
+        'Database Design',
+        'API Development',
+        'Legacy System Migration',
+        'Performance Optimization',
+        'Technical Consulting'
+      ],
+      href: '/services/it-services'
+    },
+    {
+      icon: <Smartphone className="w-12 h-12" />,
+      title: 'Micro SaaS',
+      description: 'Scalable software-as-a-service solutions for growing businesses',
+      features: [
+        'SaaS Architecture',
+        'Multi-tenancy',
+        'Subscription Management',
+        'Payment Integration',
+        'User Management',
+        'Analytics Dashboard'
+      ],
+      href: '/services/micro-saas'
+    },
+    {
+      icon: <Shield className="w-12 h-12" />,
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets',
+      features: [
+        'Security Audits',
+        'Penetration Testing',
+        'Compliance Management',
+        'Threat Detection',
+        'Data Encryption',
+        'Security Training'
+      ],
+      href: '/services/cybersecurity'
+    },
+    {
+      icon: <Cloud className="w-12 h-12" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Auto-scaling',
+        'Disaster Recovery',
+        'Cost Optimization'
+      ],
+      href: '/services/cloud-solutions'
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: 'Data Analytics',
+      description: 'Transform data into actionable insights with advanced analytics',
+      features: [
+        'Business Intelligence',
+        'Real-time Dashboards',
+        'Data Visualization',
+        'ETL Pipelines',
+        'Machine Learning Models',
+        'Custom Reports'
+      ],
+      href: '/services/data-analytics'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
-            <p className="text-gray-600">
-              Cutting-edge AI solutions for your business.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
-            <p className="text-gray-600">
-              Comprehensive IT solutions and support.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
-            <p className="text-gray-600">
-              Scalable cloud infrastructure and services.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            href="/services/micro-saas"
-            title="Micro SaaS"
-            description="End-to-end product development with billing, auth, and analytics"
-            bullets={[
-              "Foundational architecture",
-              "Billing + subscriptions",
-              "Growth analytics",
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            href="/services/ai-services"
-            title="AI Services"
-            description="LLM applications, RAG systems, and MLOps pipelines"
-            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-            icon="🤖"
-          />
-          <ServiceCard
-            href="/services/it-services"
-            title="IT Services"
-            description="Cloud migration, DevOps, and security solutions"
-            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-            icon="⚙️"
-          />
-          <ServiceCard
-            href="/services/ai-powered-crm"
-            title="AI-Powered CRM"
-            description="Revolutionary CRM with AI automation, predictive analytics, and 300% sales boost"
-            bullets={["Intelligent lead scoring", "Smart sales automation", "Advanced analytics", "AI customer service"]}
-            icon="🎯"
-          />
-          <ServiceCard
-            href="/services/ai-content-optimizer"
-            title="AI Content Optimizer"
-            description="AI-powered content creation and optimization that increases engagement by 400%"
-            bullets={["AI content generation", "SEO optimization", "Performance analytics", "Multi-language support"]}
-            icon="✍️"
-          />
-          <ServiceCard
-            href="/services/ai-finance-analyzer"
-            title="AI Finance Analyzer"
-            description="Advanced financial analysis with real-time insights and automated investment recommendations"
-            bullets={["Market analysis", "Portfolio optimization", "Financial planning", "Risk assessment"]}
-            icon="💰"
-          />
-          <ServiceCard
-            href="/services/ai-healthcare-assistant"
-            title="AI Healthcare Assistant"
-            description="Revolutionary healthcare AI for diagnosis support, patient monitoring, and treatment optimization"
-            bullets={["Diagnosis support", "Patient monitoring", "Clinical decisions", "Healthcare analytics"]}
-            icon="🏥"
-          />
-          <ServiceCard
-            href="/services/cybersecurity-suite"
-            title="Cybersecurity Suite"
-            description="Comprehensive security solutions with threat detection, monitoring, and 24/7 protection"
-            bullets={["Threat detection", "Vulnerability management", "Network security", "SOC services"]}
-            icon="🔒"
-          />
-          <ServiceCard
-            href="/services/cloud-optimization"
-            title="Cloud Optimization"
-            description="AI-powered cloud optimization that reduces costs by 40% and improves performance by 60%"
-            bullets={["Cost optimization", "Performance tuning", "Security hardening", "Migration services"]}
-            icon="☁️"
-          />
-        </div>
-        <CTA />
+    <>
+      <SEO
+        title="Our Services - Zion Tech Group"
+        description="Discover our comprehensive range of technology services including AI solutions, IT services, cybersecurity, cloud solutions, and more."
+        keywords="AI services, IT services, cybersecurity, cloud solutions, data analytics, micro SaaS, technology consulting"
+        url="/services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Header />
+        
+        <main>
+          {/* Hero Section */}
+          <section className="pt-20 pb-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <ScrollAnimation animation="slideUp" delay={0.2}>
+                <div className="text-center mb-16">
+                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                    Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
+                  </h1>
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Comprehensive technology solutions designed to accelerate your business growth 
+                    and digital transformation.
+                  </p>
+                </div>
+              </ScrollAnimation>
+            </div>
+          </section>
+
+          {/* Services Grid */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <ScrollAnimation
+                    key={index}
+                    animation="scale"
+                    delay={index * 0.1}
+                    className="group"
+                  >
+                    <Card className="h-full p-8 bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover:bg-gray-800/70 transition-all duration-300 hover:border-cyan-400/50">
+                      <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        {service.icon}
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-300 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      <ul className="space-y-2 mb-8">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-gray-300">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Button variant="outline" className="w-full group-hover:bg-cyan-400 group-hover:text-black group-hover:border-cyan-400 transition-all duration-300" asChild>
+                        <Link to={service.href}>
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </Card>
+                  </ScrollAnimation>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+              <ScrollAnimation animation="fadeIn" delay={0.2}>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss your project and find the perfect solution for your business needs.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" asChild>
+                    <Link to="/contact">
+                      Get Free Consultation
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" asChild>
+                    <Link to="/pricing">View Pricing</Link>
+                  </Button>
+                </div>
+              </ScrollAnimation>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
       </div>
-    )}
-    
-    <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-      {icon}
-    </div>
-    
-    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-      {title}
-    </h3>
-    
-    <p className="text-gray-300 mb-6 leading-relaxed">
-      {description}
-    </p>
+    </>
+  );
+};
 
 export default Services;
